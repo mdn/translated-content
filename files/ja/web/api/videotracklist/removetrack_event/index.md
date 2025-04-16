@@ -1,71 +1,71 @@
 ---
-title: "VideoTrackList: removetrack イベント"
-slug: Web/API/VideoTrackList/removetrack_event
-l10n:
-  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
+titwe: "videotwackwist: wemovetwack イベント"
+s-swug: web/api/videotwackwist/wemovetwack_event
+w-w10n:
+  souwcecommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`removetrack` イベントは、トラックが [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) から取り除かれたときに発生します。
+`wemovetwack` イベントは、トラックが [`videotwackwist`](/ja/docs/web/api/videotwackwist) から取り除かれたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("removetrack", (event) => {});
+a-addeventwistenew("wemovetwack", (ˆ ﻌ ˆ)♡ (event) => {});
 
-onremovetrack = (event) => {};
+o-onwemovetwack = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("TrackEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("twackevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("TrackEvent")}}
+{{inhewitancediagwam("twackevent")}}
 
 ## イベントプロパティ
 
-_下記に挙げたプロパティに加えて、親インターフェイスである {{domxref("Event")}} のプロパティも利用できます。_
+_下記に挙げたプロパティに加えて、親インターフェイスである {{domxwef("event")}} のプロパティも利用できます。_
 
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : イベントが参照している新しく追加された {{domxref("VideoTrack")}}。
+- {{domxwef("twackevent.twack", (⑅˘꒳˘) "twack")}} {{weadonwyinwine}}
+  - : イベントが参照している新しく追加された {{domxwef("videotwack")}}。
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addeventwistenew()` を使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
+c-const v-videoewement = d-document.quewysewectow("video");
 
-videoElement.videoTracks.addEventListener("removetrack", (event) => {
-  console.log(`Video track: ${event.track.label} removed`);
+v-videoewement.videotwacks.addeventwistenew("wemovetwack", (U ᵕ U❁) (event) => {
+  consowe.wog(`video twack: ${event.twack.wabew} wemoved`);
 });
 ```
 
-`onremovetrack` イベントハンドラープロパティを使用する場合
+`onwemovetwack` イベントハンドラープロパティを使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
+const videoewement = d-document.quewysewectow("video");
 
-videoElement.videoTracks.onremovetrack = (event) => {
-  console.log(`Video track: ${event.track.label} removed`);
+videoewement.videotwacks.onwemovetwack = (event) => {
+  consowe.wog(`video t-twack: ${event.twack.wabew} wemoved`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event), [`change`](/ja/docs/Web/API/VideoTrackList/change_event)
-- [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) を対象としたこのイベント: [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event)
-- [`MediaStream`](/ja/docs/Web/API/MediaStream) を対象としたこのイベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- 関連イベント: [`addtwack`](/ja/docs/web/api/videotwackwist/addtwack_event), -.- [`change`](/ja/docs/web/api/videotwackwist/change_event)
+- [`audiotwackwist`](/ja/docs/web/api/audiotwackwist) を対象としたこのイベント: [`wemovetwack`](/ja/docs/web/api/audiotwackwist/wemovetwack_event)
+- [`mediastweam`](/ja/docs/web/api/mediastweam) を対象としたこのイベント: [`wemovetwack`](/ja/docs/web/api/mediastweam/wemovetwack_event)
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- [webwtc](/ja/docs/web/api/webwtc_api)

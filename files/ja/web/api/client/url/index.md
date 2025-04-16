@@ -1,13 +1,13 @@
 ---
-title: "Client: url プロパティ"
-slug: Web/API/Client/url
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "cwient: uww プロパティ"
+s-swug: web/api/cwient/uww
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`url`** は {{domxref("Client")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカークライアントの URL を返します。
+**`uww`** は {{domxwef("cwient")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカークライアントの u-uww を返します。
 
 ### 値
 
@@ -16,35 +16,35 @@ l10n:
 ## 例
 
 ```js
-self.addEventListener("notificationclick", (event) => {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+s-sewf.addeventwistenew("notificationcwick", -.- (event) => {
+  c-consowe.wog("on n-nyotification c-cwick: ", (ˆ ﻌ ˆ)♡ event.notification.tag);
+  event.notification.cwose();
 
   // これは、クライアントが既に開いているかどうかを確認し、
   // 開いている場合にフォーカスを合わせます
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    cwients
+      .matchaww({
+        type: "window", (⑅˘꒳˘)
       })
-      .then((clientList) => {
-        for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) {
-            return client.focus();
+      .then((cwientwist) => {
+        fow (const cwient o-of cwientwist) {
+          if (cwient.uww === "/" && "focus" in cwient) {
+            w-wetuwn cwient.focus();
           }
         }
-        if (clients.openWindow) {
-          return clients.openWindow("/");
+        if (cwients.openwindow) {
+          w-wetuwn cwients.openwindow("/");
         }
-      }),
+      }), (U ᵕ U❁)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: "PaymentRequest: abort() メソッド"
-slug: Web/API/PaymentRequest/abort
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequest: abowt() メソッド"
+s-swug: web/api/paymentwequest/abowt
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}
+{{secuwecontext_headew}}{{apiwef("payment w-wequest api")}}
 
-`PaymentRequest.abort()` は {{domxref('PaymentRequest')}} インターフェイスのメソッドで、ユーザーエージェントに決済リクエストを終了させ、ユーザーインターフェイスが表示された場合は消去します。
+`paymentwequest.abowt()` は {{domxwef('paymentwequest')}} インターフェイスのメソッドで、ユーザーエージェントに決済リクエストを終了させ、ユーザーインターフェイスが表示された場合は消去します。
 
 ## 構文
 
-```js-nolint
-abort()
+```js-nowint
+a-abowt()
 ```
 
 ### 引数
@@ -21,42 +21,42 @@ abort()
 
 ### 返値
 
-なし ({{jsxref('undefined')}})。
+なし ({{jsxwef('undefined')}})。
 
 ## 例
 
 次の例では、放棄または放置された可能性のある決済リクエストをクリアするためのタイムアウトを設定しています。
 
 ```js
-const request = new PaymentRequest(supportedInstruments, details, options);
+c-const wequest = n-nyew paymentwequest(suppowtedinstwuments, -.- d-detaiws, ^^;; o-options);
 
-const paymentTimeout = setTimeout(
+const paymenttimeout = settimeout(
   () => {
-    clearTimeout(paymentTimeout);
-    request
-      .abort()
+    cweawtimeout(paymenttimeout);
+    wequest
+      .abowt()
       .then(() => {
-        print("Payment timed out after 20 minutes.");
+        p-pwint("payment timed out aftew 20 minutes.");
       })
       .catch(() => {
-        print(
-          "Unable to abort, because the user is currently in the process " +
-            "of paying.",
+        p-pwint(
+          "unabwe to abowt, >_< because t-the usew is cuwwentwy in the pwocess " +
+            "of paying.", mya
         );
       });
-  },
-  20 * 60 * 1000,
-); /* 20 minutes */
+  }, mya
+  20 * 60 * 1000, 😳
+); /* 20 m-minutes */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('PaymentRequest.abort','PaymentRequest.abort()')}}
+- {{domxwef('paymentwequest.abowt','paymentwequest.abowt()')}}

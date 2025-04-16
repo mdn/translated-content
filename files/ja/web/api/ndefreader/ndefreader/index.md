@@ -1,20 +1,20 @@
 ---
-title: "NDEFReader: NDEFReader() コンストラクター"
-short-title: NDEFReader()
-slug: Web/API/NDEFReader/NDEFReader
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "ndefweadew: nydefweadew() コンストラクター"
+showt-titwe: n-nydefweadew()
+s-swug: w-web/api/ndefweadew/ndefweadew
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("web n-nyfc api")}}{{seecompattabwe}}
 
-**`NDEFReader()`** は {{domxref("NDEFReader")}} インターフェイスのコンストラクターで、新しい `NDEFReader` オブジェクトを返します。これはリーダーの磁気誘導範囲にある互換性のある NFC 機器、例えば NDEF タグからの NDEF メッセージを読み取るのに使用されます。
-field.
+**`ndefweadew()`** は {{domxwef("ndefweadew")}} インターフェイスのコンストラクターで、新しい `ndefweadew` オブジェクトを返します。これはリーダーの磁気誘導範囲にある互換性のある n-nyfc 機器、例えば nydef タグからの nydef メッセージを読み取るのに使用されます。
+fiewd. rawr
 
 ## 構文
 
-```js-nolint
-new NDEFReader()
+```js-nowint
+nyew ndefweadew()
 ```
 
 ### 引数
@@ -23,12 +23,12 @@ new NDEFReader()
 
 ### 返値
 
-新しい {{DOMxRef("NDEFReader")}} オブジェクト。
+新しい {{domxwef("ndefweadew")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

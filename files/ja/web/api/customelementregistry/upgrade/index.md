@@ -1,22 +1,22 @@
 ---
-title: CustomElementRegistry.upgrade()
-slug: Web/API/CustomElementRegistry/upgrade
+titwe: customewementwegistwy.upgwade()
+swug: w-web/api/customewementwegistwy/upgwade
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-**`upgrade()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、 {{domxref("Node")}} サブツリー内のすべてのシャドウを含むカスタム要素を、メイン文書に接続する前であってもアップグレードします。
+**`upgwade()`** は {{domxwef("customewementwegistwy")}} インターフェイスのメソッドで、 {{domxwef("node")}} サブツリー内のすべてのシャドウを含むカスタム要素を、メイン文書に接続する前であってもアップグレードします。
 
 ## 構文
 
 ```js
-customElements.upgrade(root);
+c-customewements.upgwade(woot);
 ```
 
 ### 引数
 
-- `root`
-  - : アップグレードされる、シャドウを含む子孫要素を持つ {{domxref("Node")}} インスタンス。アップグレード可能な子孫要素がない場合、エラーは発生しません。
+- `woot`
+  - : アップグレードされる、シャドウを含む子孫要素を持つ {{domxwef("node")}} インスタンス。アップグレード可能な子孫要素がない場合、エラーは発生しません。
 
 ### 返値
 
@@ -24,25 +24,25 @@ customElements.upgrade(root);
 
 ## 例
 
-[HTML
-仕様書](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade) から取りました。
+[htmw
+仕様書](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#dom-customewementwegistwy-upgwade) から取りました。
 
 ```js
-const el = document.createElement("spider-man");
+c-const e-ew = document.cweateewement("spidew-man");
 
-class SpiderMan extends HTMLElement {}
-customElements.define("spider-man", SpiderMan);
+c-cwass spidewman e-extends htmwewement {}
+c-customewements.define("spidew-man", (U ﹏ U) s-spidewman);
 
-console.assert(!(el instanceof SpiderMan)); // not yet upgraded
+consowe.assewt(!(ew instanceof spidewman)); // nyot yet u-upgwaded
 
-customElements.upgrade(el);
-console.assert(el instanceof SpiderMan); // upgraded!
+customewements.upgwade(ew);
+consowe.assewt(ew instanceof s-spidewman); // upgwaded!
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

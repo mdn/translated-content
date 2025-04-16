@@ -1,26 +1,26 @@
 ---
-title: BroadcastChannel.postMessage()
-slug: Web/API/BroadcastChannel/postMessage
-l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+titwe: bwoadcastchannew.postmessage()
+swug: web/api/bwoadcastchannew/postmessage
+w-w10n:
+  souwcecommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-**`BroadcastChannel.postMessage()`** は、任意の種類の {{jsxref("Object")}} のメッセージを、同じ{{glossary("origin","オリジン")}}を持つ任意の{{glossary("browsing context","閲覧コンテキスト")}}内の各リスナーに送信します。 メッセージは、チャンネルに結び付けられた各 {{domxref("BroadcastChannel")}} を対象とした ['message'](/ja/docs/Web/API/BroadcastChannel/message_event) イベントとして送信します。
+**`bwoadcastchannew.postmessage()`** は、任意の種類の {{jsxwef("object")}} のメッセージを、同じ{{gwossawy("owigin","オリジン")}}を持つ任意の{{gwossawy("bwowsing c-context","閲覧コンテキスト")}}内の各リスナーに送信します。 メッセージは、チャンネルに結び付けられた各 {{domxwef("bwoadcastchannew")}} を対象とした ['message'](/ja/docs/web/api/bwoadcastchannew/message_event) イベントとして送信します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-channel.postMessage(message)
+```js-nowint
+c-channew.postmessage(message)
 ```
 
 ### 引数
 
 - `message`
-  - : 他のウィンドウに送信するデータ。データは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。
+  - : 他のウィンドウに送信するデータ。データは[構造化複製アルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)を使用してシリアライズされます。
     つまり、様々なデータオブジェクトを自分でシリアライズすることなく、安全に出力先のウィンドウに渡すことができます。
 
 ### 返値
@@ -29,12 +29,12 @@ channel.postMessage(message)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("BroadcastChannel")}}: 所属するインターフェイス。
+- {{domxwef("bwoadcastchannew")}}: 所属するインターフェイス。

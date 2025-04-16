@@ -1,85 +1,85 @@
 ---
-title: SVGAnimatedNumber
-slug: Web/API/SVGAnimatedNumber
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: svganimatednumbew
+swug: w-web/api/svganimatednumbew
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG のアニメーションする実数インターフェイス
+## s-svg のアニメーションする実数インターフェイス
 
-`SVGAnimatedNumber` インターフェイスは、アニメーション可能な基本型 [\<Number>](/ja/docs/Web/SVG/Guides/Content_type#number) の属性に使用されます。
+`svganimatednumbew` インターフェイスは、アニメーション可能な基本型 [\<numbew>](/ja/docs/web/svg/guides/content_type#numbew) の属性に使用されます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>float 型の <code>baseVal</code></li>
-          <li>読み取り専用の float 型の <code>animVal</code></li>
-        </ul>
+        <uw>
+          <wi>fwoat 型の <code>basevaw</code></wi>
+          <wi>読み取り専用の fwoat 型の <code>animvaw</code></wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedNumber"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/types.htmw#intewfacesvganimatednumbew"
+          >svg 1.1 (2nd e-edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedNumber.baseVal")}}</code></td>
-      <td>float</td>
+    <tw>
+      <td><code>{{domxwef("svganimatednumbew.basevaw")}}</code></td>
+      <td>fwoat</td>
       <td>
         アニメーションが適用される前の指定された属性の基本値です。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedNumber.animVal")}}</code></td>
-      <td>float</td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatednumbew.animvaw")}}</code></td>
+      <td>fwoat</td>
       <td>
-        指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値になります。指定された属性またはプロパティが現在アニメーションしていない場合、 <code>baseVal</code> と同じ値になります。
+        指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値になります。指定された属性またはプロパティが現在アニメーションしていない場合、 <code>basevaw</code> と同じ値になります。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-`SVGAnimatedNumber` インターフェイスは固有のメソッドを提供していません。
+`svganimatednumbew` インターフェイスは固有のメソッドを提供していません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

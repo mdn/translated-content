@@ -1,45 +1,45 @@
 ---
-title: "SVGElement: error イベント"
-short-title: error
-slug: Web/API/SVGElement/error_event
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "svgewement: ewwow イベント"
+s-showt-titwe: e-ewwow
+swug: w-web/api/svgewement/ewwow_event
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`error` イベントは SVG 要素が正しく読み込まれなかったり、スクリプト実行中にエラーが発生した場合に発生します。
+`ewwow` イベントは s-svg 要素が正しく読み込まれなかったり、スクリプト実行中にエラーが発生した場合に発生します。
 
-これは基本的に、DOM の標準の `error` イベントを実装しています。
+これは基本的に、dom の標準の `ewwow` イベントを実装しています。
 
 このイベントはキャンセルできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", ( ͡o ω ͡o ) (event) => {});
 
-onerror = (event) => {};
+onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-svgElem.addEventListener("error", () => {
-  console.log("SVG が正しく読み込まれませんでした。");
+s-svgewem.addeventwistenew("ewwow", UwU () => {
+  c-consowe.wog("svg が正しく読み込まれませんでした。");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

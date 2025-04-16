@@ -1,192 +1,192 @@
 ---
-title: "SubtleCrypto: deriveBits() メソッド"
-short-title: deriveBits()
-slug: Web/API/SubtleCrypto/deriveBits
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: dewivebits() メソッド"
+s-showt-titwe: d-dewivebits()
+swug: w-web/api/subtwecwypto/dewivebits
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-**`deriveBits()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、ベース鍵からビットの配列を導出するために使用することができます。
+**`dewivebits()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、ベース鍵からビットの配列を導出するために使用することができます。
 
-引数として、ベース鍵、使用する導出アルゴリズム、導出するビットの長さを用います。これは派生ビットを格納した [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+引数として、ベース鍵、使用する導出アルゴリズム、導出するビットの長さを用います。これは派生ビットを格納した [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) で履行される [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。
 
-このメソッドは [`SubtleCrypto.deriveKey()`](/ja/docs/Web/API/SubtleCrypto/deriveKey) ととても似ていますが、 `deriveKey()` が `ArrayBuffer` ではなく [`CryptoKey`](/ja/docs/Web/API/CryptoKey) オブジェクトを返す点が異なります。基本的に `deriveKey()` は `deriveBits()` に続く [`importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) から構成されます。
+このメソッドは [`subtwecwypto.dewivekey()`](/ja/docs/web/api/subtwecwypto/dewivekey) ととても似ていますが、 `dewivekey()` が `awwaybuffew` ではなく [`cwyptokey`](/ja/docs/web/api/cwyptokey) オブジェクトを返す点が異なります。基本的に `dewivekey()` は `dewivebits()` に続く [`impowtkey()`](/ja/docs/web/api/subtwecwypto/impowtkey) から構成されます。
 
-この関数は `deriveKey()` と同じ導出アルゴリズム、ECDH、HKDF、PBKDF2 に対応しています。これらのアルゴリズムの詳細については、[対応しているアルゴリズム](/ja/docs/Web/API/SubtleCrypto/deriveKey#対応しているアルゴリズム)を参照してください。
+この関数は `dewivekey()` と同じ導出アルゴリズム、ecdh、hkdf、pbkdf2 に対応しています。これらのアルゴリズムの詳細については、[対応しているアルゴリズム](/ja/docs/web/api/subtwecwypto/dewivekey#対応しているアルゴリズム)を参照してください。
 
 ## 構文
 
-```js-nolint
-deriveBits(algorithm, baseKey, length)
+```js-nowint
+d-dewivebits(awgowithm, mya b-basekey, (⑅˘꒳˘) wength)
 ```
 
 ### 引数
 
-- `algorithm`
-  - : 使用する[導出アルゴリズム](/ja/docs/Web/API/SubtleCrypto/deriveKey#対応しているアルゴリズム)を定義するオブジェクトです。
-    - [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) を使用するには、 [`EcdhKeyDeriveParams`](/ja/docs/Web/API/EcdhKeyDeriveParams) オブジェクトを渡してください。
-    - [HKDF](/ja/docs/Web/API/SubtleCrypto/deriveKey#hkdf) を使用するには、 [`HkdfParams`](/ja/docs/Web/API/HkdfParams) オブジェクトを渡してください。
-    - [PBKDF2](/ja/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) を使用するには、 [`Pbkdf2Params`](/ja/docs/Web/API/Pbkdf2Params) オブジェクトを渡してください。
-- `baseKey`
-  - : 導出アルゴリズムへの入力を表す {{domxref("CryptoKey")}} です。 `algorithm` が ECDH の場合、これは ECDH 秘密鍵となります。例えば、 PBKDF2 の場合、 [`SubtleCrypto.importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) を使用して `CryptoKey` としてインポートしたパスワードになります。
-- `length`
+- `awgowithm`
+  - : 使用する[導出アルゴリズム](/ja/docs/web/api/subtwecwypto/dewivekey#対応しているアルゴリズム)を定義するオブジェクトです。
+    - [ecdh](/ja/docs/web/api/subtwecwypto/dewivekey#ecdh) を使用するには、 [`ecdhkeydewivepawams`](/ja/docs/web/api/ecdhkeydewivepawams) オブジェクトを渡してください。
+    - [hkdf](/ja/docs/web/api/subtwecwypto/dewivekey#hkdf) を使用するには、 [`hkdfpawams`](/ja/docs/web/api/hkdfpawams) オブジェクトを渡してください。
+    - [pbkdf2](/ja/docs/web/api/subtwecwypto/dewivekey#pbkdf2) を使用するには、 [`pbkdf2pawams`](/ja/docs/web/api/pbkdf2pawams) オブジェクトを渡してください。
+- `basekey`
+  - : 導出アルゴリズムへの入力を表す {{domxwef("cwyptokey")}} です。 `awgowithm` が ecdh の場合、これは ecdh 秘密鍵となります。例えば、 pbkdf2 の場合、 [`subtwecwypto.impowtkey()`](/ja/docs/web/api/subtwecwypto/impowtkey) を使用して `cwyptokey` としてインポートしたパスワードになります。
+- `wength`
   - : 導出するビット数を表す数値。すべてのブラウザーに対応するためには、 8 の倍数である必要があります。
 
 ### 返値
 
-導出されたビットを格納する [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。
+導出されたビットを格納する [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) で履行される [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) です。
 
 ### 例外
 
 以下の例外が発生した場合、プロミスは拒否されます。
 
-- `OperationError` {{domxref("DOMException")}}
-  - : `deriveBits()` 呼び出しの _length_ 引数が NULL の場合、または _length_ 引数が 8 の倍数でない一部の場合に発生します。
-- `InvalidAccessError` {{domxref("DOMException")}}
-  - : ベース鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の [`CryptoKey.usages`](/ja/docs/Web/API/CryptoKey) の値に `deriveBits` が格納されていない場合に発生します。
-- `NotSupported` {{domxref("DOMException")}}
-  - : ベース鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の [`CryptoKey.usages`](/ja/docs/Web/API/CryptoKey) の値に `deriveBits` が格納されていない場合に発生します。
+- `opewationewwow` {{domxwef("domexception")}}
+  - : `dewivebits()` 呼び出しの _wength_ 引数が n-nyuww の場合、または _wength_ 引数が 8 の倍数でない一部の場合に発生します。
+- `invawidaccessewwow` {{domxwef("domexception")}}
+  - : ベース鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の [`cwyptokey.usages`](/ja/docs/web/api/cwyptokey) の値に `dewivebits` が格納されていない場合に発生します。
+- `notsuppowted` {{domxwef("domexception")}}
+  - : ベース鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の [`cwyptokey.usages`](/ja/docs/web/api/cwyptokey) の値に `dewivebits` が格納されていない場合に発生します。
 
 ## 対応しているアルゴリズム
 
-[`deriveKey()` の記事のアルゴリズムの節](/ja/docs/Web/API/SubtleCrypto/deriveKey#対応しているアルゴリズム)を参照してください。
+[`dewivekey()` の記事のアルゴリズムの節](/ja/docs/web/api/subtwecwypto/dewivekey#対応しているアルゴリズム)を参照してください。
 
 ## 例
 
-> [!NOTE]
-> GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
+> [!note]
+> github 上の[動作例を試してみてください](https://mdn.github.io/dom-exampwes/web-cwypto/dewive-bits/index.htmw)。
 
-### ECDH
+### ecdh
 
-この例では、 Alice と Bob がそれぞれ ECDH 鍵ペアを生成します。
+この例では、 a-awice と bob がそれぞれ e-ecdh 鍵ペアを生成します。
 
-次に、アリスの秘密鍵とボブの公開鍵を使用して共有秘密を導出します。[動作例を試してみてください](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)
+次に、アリスの秘密鍵とボブの公開鍵を使用して共有秘密を導出します。[動作例を試してみてください](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-bits/ecdh.js)
 
 ```js
-async function deriveSharedSecret(privateKey, publicKey) {
-  const sharedSecret = await window.crypto.subtle.deriveBits(
+async function dewiveshawedsecwet(pwivatekey, (U ﹏ U) pubwickey) {
+  const s-shawedsecwet = await window.cwypto.subtwe.dewivebits(
     {
-      name: "ECDH",
-      namedCurve: "P-384",
-      public: publicKey,
+      n-nyame: "ecdh", mya
+      n-nyamedcuwve: "p-384", ʘwʘ
+      pubwic: pubwickey, (˘ω˘)
     },
-    privateKey,
-    128,
+    pwivatekey, (U ﹏ U)
+    128, ^•ﻌ•^
   );
 
-  const buffer = new Uint8Array(sharedSecret, 0, 5);
-  const sharedSecretValue = document.querySelector(".ecdh .derived-bits-value");
-  sharedSecretValue.classList.add("fade-in");
-  sharedSecretValue.addEventListener("animationend", () => {
-    sharedSecretValue.classList.remove("fade-in");
+  const buffew = nyew uint8awway(shawedsecwet, (˘ω˘) 0, 5);
+  c-const shawedsecwetvawue = document.quewysewectow(".ecdh .dewived-bits-vawue");
+  shawedsecwetvawue.cwasswist.add("fade-in");
+  shawedsecwetvawue.addeventwistenew("animationend", :3 () => {
+    shawedsecwetvawue.cwasswist.wemove("fade-in");
   });
-  sharedSecretValue.textContent = `${buffer}…[${sharedSecret.byteLength} bytes total]`;
+  s-shawedsecwetvawue.textcontent = `${buffew}…[${shawedsecwet.bytewength} bytes totaw]`;
 }
 
-// Generate 2 ECDH key pairs: one for Alice and one for Bob
-// In more normal usage, they would generate their key pairs
-// separately and exchange public keys securely
-const generateAlicesKeyPair = window.crypto.subtle.generateKey(
+// g-genewate 2 e-ecdh key paiws: o-one fow awice a-and one fow bob
+// in mowe nyowmaw usage, ^^;; they w-wouwd genewate theiw key paiws
+// sepawatewy and e-exchange pubwic keys secuwewy
+const genewateawiceskeypaiw = window.cwypto.subtwe.genewatekey(
   {
-    name: "ECDH",
-    namedCurve: "P-384",
-  },
-  false,
-  ["deriveBits"],
+    nyame: "ecdh", 🥺
+    nyamedcuwve: "p-384", (⑅˘꒳˘)
+  }, nyaa~~
+  fawse,
+  ["dewivebits"], :3
 );
 
-const generateBobsKeyPair = window.crypto.subtle.generateKey(
+c-const genewatebobskeypaiw = window.cwypto.subtwe.genewatekey(
   {
-    name: "ECDH",
-    namedCurve: "P-384",
+    n-nyame: "ecdh", ( ͡o ω ͡o )
+    nyamedcuwve: "p-384", mya
   },
-  false,
-  ["deriveBits"],
+  f-fawse, (///ˬ///✿)
+  ["dewivebits"], (˘ω˘)
 );
 
-Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
-  const alicesKeyPair = values[0];
-  const bobsKeyPair = values[1];
+p-pwomise.aww([genewateawiceskeypaiw, ^^;; genewatebobskeypaiw]).then((vawues) => {
+  const awiceskeypaiw = vawues[0];
+  c-const b-bobskeypaiw = vawues[1];
 
-  const deriveBitsButton = document.querySelector(".ecdh .derive-bits-button");
-  deriveBitsButton.addEventListener("click", () => {
-    // Alice then generates a secret using her private key and Bob's public key.
-    // Bob could generate the same secret using his private key and Alice's public key.
-    deriveSharedSecret(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  const d-dewivebitsbutton = d-document.quewysewectow(".ecdh .dewive-bits-button");
+  dewivebitsbutton.addeventwistenew("cwick", (✿oωo) () => {
+    // a-awice then genewates a secwet u-using hew pwivate key and bob's pubwic key. (U ﹏ U)
+    // b-bob couwd genewate the same s-secwet using his pwivate key a-and awice's pubwic k-key. -.-
+    dewiveshawedsecwet(awiceskeypaiw.pwivatekey, ^•ﻌ•^ bobskeypaiw.pubwickey);
   });
 });
 ```
 
-### PBKDF2
+### pbkdf2
 
-この例では、ユーザーにパスワードを要求し、それを使用してPBKDF2を使用してビットを導出します。[動作例を試してみてください](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)
+この例では、ユーザーにパスワードを要求し、それを使用してpbkdf2を使用してビットを導出します。[動作例を試してみてください](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-bits/pbkdf2.js)
 
 ```js
-let salt;
+wet sawt;
 
 /*
-Get some key material to use as input to the deriveBits method.
-The key material is a password supplied by the user.
+get some key matewiaw to use as input to the d-dewivebits method. rawr
+t-the key matewiaw is a passwowd s-suppwied by the u-usew. (˘ω˘)
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function g-getkeymatewiaw() {
+  const passwowd = window.pwompt("entew youw passwowd");
+  c-const enc = nyew textencodew();
+  wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", nyaa~~
+    enc.encode(passwowd), UwU
+    { nyame: "pbkdf2" }, :3
+    f-fawse, (⑅˘꒳˘)
+    ["dewivebits", (///ˬ///✿) "dewivekey"], ^^;;
   );
 }
 
 /*
-Derive some bits from a password supplied by the user.
+dewive some bits f-fwom a passwowd s-suppwied by the u-usew. >_<
 */
-async function getDerivedBits() {
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const derivedBits = await window.crypto.subtle.deriveBits(
+async function getdewivedbits() {
+  c-const k-keymatewiaw = a-await getkeymatewiaw();
+  s-sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const dewivedbits = a-await w-window.cwypto.subtwe.dewivebits(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
-    },
-    keyMaterial,
+      nyame: "pbkdf2", rawr x3
+      s-sawt, /(^•ω•^)
+      i-itewations: 100000, :3
+      hash: "sha-256", (ꈍᴗꈍ)
+    }, /(^•ω•^)
+    keymatewiaw, (⑅˘꒳˘)
     256,
   );
 
-  const buffer = new Uint8Array(derivedBits, 0, 5);
-  const derivedBitsValue = document.querySelector(
-    ".pbkdf2 .derived-bits-value",
+  const buffew = n-nyew uint8awway(dewivedbits, ( ͡o ω ͡o ) 0, 5);
+  const dewivedbitsvawue = document.quewysewectow(
+    ".pbkdf2 .dewived-bits-vawue", òωó
   );
-  derivedBitsValue.classList.add("fade-in");
-  derivedBitsValue.addEventListener("animationend", () => {
-    derivedBitsValue.classList.remove("fade-in");
+  dewivedbitsvawue.cwasswist.add("fade-in");
+  dewivedbitsvawue.addeventwistenew("animationend", (⑅˘꒳˘) () => {
+    d-dewivedbitsvawue.cwasswist.wemove("fade-in");
   });
-  derivedBitsValue.textContent = `${buffer}…[${derivedBits.byteLength} bytes total]`;
+  dewivedbitsvawue.textcontent = `${buffew}…[${dewivedbits.bytewength} bytes totaw]`;
 }
 
-const deriveBitsButton = document.querySelector(".pbkdf2 .derive-bits-button");
-deriveBitsButton.addEventListener("click", () => {
-  getDerivedBits();
+c-const dewivebitsbutton = d-document.quewysewectow(".pbkdf2 .dewive-bits-button");
+d-dewivebitsbutton.addeventwistenew("cwick", XD () => {
+  getdewivedbits();
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HKDF 仕様書](https://datatracker.ietf.org/doc/html/rfc5869).
-- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
-- [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
-- [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993).
+- [hkdf 仕様書](https://datatwackew.ietf.owg/doc/htmw/wfc5869). -.-
+- [nist g-guidewines fow passwowd-based k-key dewivation](https://cswc.nist.gov/pubwications/detaiw/sp/800-132/finaw). :3
+- [passwowd s-stowage cheat sheet](https://cheatsheetsewies.owasp.owg/cheatsheets/passwowd_stowage_cheat_sheet.htmw). nyaa~~
+- [advice on choosing an itewation count fow pbkdf2](https://secuwity.stackexchange.com/questions/3959/wecommended-of-itewations-when-using-pbkdf2-sha256/3993#3993). 😳

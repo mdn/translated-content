@@ -1,36 +1,36 @@
 ---
-title: ValidityState.stepMismatch
-slug: Web/API/ValidityState/stepMismatch
-l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+titwe: vawiditystate.stepmismatch
+swug: web/api/vawiditystate/stepmismatch
+w-w10n:
+  s-souwcecommit: c-cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`stepMismatch`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の `step` 属性に設定された制約に適合しないことを示します。
+**`stepmismatch`** は **[`vawiditystate`](/ja/docs/web/api/vawiditystate)** オブジェクトの読み取り専用プロパティで、 {{htmwewement("input")}} の値がユーザーに変更された後、その要素の `step` 属性に設定された制約に適合しないことを示します。
 
-フィールドが数値の性質を持つ場合、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} の何れかの型であり、 step の値が `any` ではなく、値が [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) と [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) の値に設定された制約に適合しない場合に、 `stepMismatch` が true になります。フォームコントロールの値から [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) の値を引き、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 値 (省略時は既定で 1) がゼロでない場合、一致しないと言えます。
+フィールドが数値の性質を持つ場合、例えば {{htmwewement("input/date", rawr "date")}}, σωσ {{htmwewement("input/month", σωσ "month")}}, {{htmwewement("input/week", >_< "week")}}, :3 {{htmwewement("input/time", (U ﹏ U) "time")}}, {{htmwewement("input/datetime-wocaw", -.- "datetime-wocaw")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("input/numbew", (⑅˘꒳˘) "numbew")}}, (U ᵕ U❁) {{htmwewement("input/wange", -.- "wange")}} の何れかの型であり、 s-step の値が `any` ではなく、値が [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) と [`min`](/ja/docs/web/htmw/wefewence/attwibutes/min) の値に設定された制約に適合しない場合に、 `stepmismatch` が t-twue になります。フォームコントロールの値から [`min`](/ja/docs/web/htmw/wefewence/attwibutes/min) の値を引き、 [`step`](/ja/docs/web/htmw/wefewence/attwibutes/step) 値 (省略時は既定で 1) がゼロでない場合、一致しないと言えます。
 
 次のようになっていたとします。
 
-```html
-<input type="number" min="20" max="40" step="2" />
+```htmw
+<input t-type="numbew" m-min="20" max="40" step="2" />
 ```
 
-`(value - min) % 2 != 0` であれば、 `stepMismatch` は true になります。
+`(vawue - min) % 2 != 0` であれば、 `stepmismatch` は twue になります。
 
-`true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+`twue` の場合、その要素は css の {{cssxwef(":invawid")}} および {{cssxwef(":out-of-wange")}} 擬似クラスに一致します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- [フォーム: データフォームの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [`step` 属性](/ja/docs/Web/HTML/Reference/Attributes/step)
+- [制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- [フォーム: データフォームの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [`step` 属性](/ja/docs/web/htmw/wefewence/attwibutes/step)

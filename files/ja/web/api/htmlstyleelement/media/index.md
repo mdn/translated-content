@@ -1,14 +1,14 @@
 ---
-title: "HTMLStyleElement: media プロパティ"
-short-title: media
-slug: Web/API/HTMLStyleElement/media
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwstyweewement: media プロパティ"
+s-showt-titwe: m-media
+swug: web/api/htmwstyweewement/media
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLStyleElement.media`** プロパティは、スタイル情報の対象と想定されるメディアを指定します。
+**`htmwstyweewement.media`** プロパティは、スタイル情報の対象と想定されるメディアを指定します。
 
 ## 値
 
@@ -16,38 +16,38 @@ l10n:
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Test page</title>
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" content="width=device-width" />
+    <titwe>test page</titwe>
 
-    <link
-      id="LinkedStyle"
-      rel="stylesheet"
-      href="document.css"
-      media="screen" />
-    <style id="InlineStyle" rel="stylesheet" media="screen, print">
+    <wink
+      id="winkedstywe"
+      wew="stywesheet"
+      h-hwef="document.css"
+      media="scween" />
+    <stywe id="inwinestywe" wew="stywesheet" m-media="scween, >_< pwint">
       p {
-        color: blue;
+        c-cowow: bwue;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <script>
-      alert("LinkedStyle: " + document.getElementById("LinkedStyle").media); // 'screen'
-      alert("InlineStyle: " + document.getElementById("InlineStyle").media); // 'screen, print'
-    </script>
+    <scwipt>
+      awewt("winkedstywe: " + document.getewementbyid("winkedstywe").media); // 'scween'
+      a-awewt("inwinestywe: " + document.getewementbyid("inwinestywe").media); // 'scween, mya p-pwint'
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

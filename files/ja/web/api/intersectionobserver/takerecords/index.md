@@ -1,22 +1,22 @@
 ---
-title: "IntersectionObserver: takeRecords() メソッド"
-short-title: takeRecords()
-slug: Web/API/IntersectionObserver/takeRecords
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "intewsectionobsewvew: takewecowds() メソッド"
+s-showt-titwe: t-takewecowds()
+s-swug: web/api/intewsectionobsewvew/takewecowds
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-{{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。それぞれのオブジェクトは、前回明示的にこのメソッドが呼び出されるか、暗黙的にオブザーバーのコールバックが自動的に呼び出されて交差状態がチェックされたときから変更されたそれぞれの対象要素を表します。
+{{domxwef("intewsectionobsewvew")}} の **`takewecowds()`** メソッドは {{domxwef("intewsectionobsewvewentwy")}} オブジェクトの配列を返します。それぞれのオブジェクトは、前回明示的にこのメソッドが呼び出されるか、暗黙的にオブザーバーのコールバックが自動的に呼び出されて交差状態がチェックされたときから変更されたそれぞれの対象要素を表します。
 
-> [!NOTE]
+> [!note]
 > コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
 
 ## 構文
 
-```js-nolint
-takeRecords()
+```js-nowint
+t-takewecowds()
 ```
 
 ### 引数
@@ -25,16 +25,16 @@ takeRecords()
 
 ### 返値
 
-ルートとの交差状態が最後に調べられた時点以降に変更された対象要素ごとに 1 つずつ {{domxref("IntersectionObserverEntry")}} オブジェクトが入った配列。
+ルートとの交差状態が最後に調べられた時点以降に変更された対象要素ごとに 1 つずつ {{domxwef("intewsectionobsewvewentwy")}} オブジェクトが入った配列。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API)
+- [交差オブザーバー a-api](/ja/docs/web/api/intewsection_obsewvew_api)

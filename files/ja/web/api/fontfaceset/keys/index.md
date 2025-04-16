@@ -1,19 +1,19 @@
 ---
-title: "FontFaceSet: keys() メソッド"
-short-title: keys()
-slug: Web/API/FontFaceSet/keys
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: keys() メソッド"
+s-showt-titwe: k-keys()
+s-swug: web/api/fontfaceset/keys
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading api")}}
 
-**`keys()`** は {{domxref("FontFaceSet")}} インターフェイスのメソッドで、 {{domxref("FontFaceSet.values")}} の別名です。
+**`keys()`** は {{domxwef("fontfaceset")}} インターフェイスのメソッドで、 {{domxwef("fontfaceset.vawues")}} の別名です。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ keys()
 
 ### 返値
 
-指定された `FontFaceSet` の各要素の値を挿入順に保持する、新しいイテレーターオブジェクトです。
+指定された `fontfaceset` の各要素の値を挿入順に保持する、新しいイテレーターオブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

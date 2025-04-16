@@ -1,28 +1,28 @@
 ---
-title: FileSystemDirectoryHandle.resolve()
-slug: Web/API/FileSystemDirectoryHandle/resolve
-l10n:
-  sourceCommit: 8d965687d4c38365ac355d693e0692b9d628cc05
+titwe: fiwesystemdiwectowyhandwe.wesowve()
+swug: w-web/api/fiwesystemdiwectowyhandwe/wesowve
+w-w10n:
+  s-souwcecommit: 8d965687d4c38365ac355d693e0692b9d628cc05
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system a-access api")}}
 
-{{domxref("FileSystemDirectoryHandle")}} インターフェイスの **`resolve()`** メソッドは、親ハンドルから指定の子エントリーへのディレクトリー名の {{jsxref('Array')}} を返します。指定された子エントリーが配列の最後の要素になります。
+{{domxwef("fiwesystemdiwectowyhandwe")}} インターフェイスの **`wesowve()`** メソッドは、親ハンドルから指定の子エントリーへのディレクトリー名の {{jsxwef('awway')}} を返します。指定された子エントリーが配列の最後の要素になります。
 
 ## 構文
 
-```js-nolint
-resolve(possibleDescendant)
+```js-nowint
+w-wesowve(possibwedescendant)
 ```
 
 ### 引数
 
-- `possibleDescendant`
-  - : 相対パスを返す {{domxref('FileSystemHandle')}} です。
+- `possibwedescendant`
+  - : 相対パスを返す {{domxwef('fiwesystemhandwe')}} です。
 
 ### 返値
 
-文字列の {{jsxref('Array')}}、または `possibleDescendant` がこの {{domxref('FileSystemDirectoryHandle')}} の子孫でないときは `null` で解決する {{jsxref('Promise')}} を返します。
+文字列の {{jsxwef('awway')}}、または `possibwedescendant` がこの {{domxwef('fiwesystemdiwectowyhandwe')}} の子孫でないときは `nuww` で解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
@@ -30,27 +30,27 @@ resolve(possibleDescendant)
 
 ## 例
 
-以下の非同期関数は、`resolve()` を用いて、選択されたファイルの指定のディレクトリーハンドルを基準とする相対パスを取得します。
+以下の非同期関数は、`wesowve()` を用いて、選択されたファイルの指定のディレクトリーハンドルを基準とする相対パスを取得します。
 
 ```js
-async function returnPathDirectories(directoryHandle) {
+a-async function w-wetuwnpathdiwectowies(diwectowyhandwe) {
   // ファイルピッカーを開き、ファイルハンドルを得る
-  const [handle] = await self.showOpenFilePicker();
-  if (!handle) {
+  const [handwe] = await sewf.showopenfiwepickew();
+  if (!handwe) {
     // ユーザーがキャンセルしたか、ファイルを開くのに失敗した
-    return;
+    wetuwn;
   }
 
   // ハンドルがディレクトリーハンドル内に存在するかを確認する
-  const relativePaths = await directoryHandle.resolve(handle);
+  c-const wewativepaths = await diwectowyhandwe.wesowve(handwe);
 
-  if (relativePaths === null) {
+  if (wewativepaths === n-nyuww) {
     // ディレクトリーハンドル内に存在しない
-  } else {
-    // relativePath は相対パスを表す名前の配列
-    for (const name of relativePaths) {
+  } ewse {
+    // w-wewativepath は相対パスを表す名前の配列
+    fow (const nyame of wewativepaths) {
       // 各エントリーを記録する
-      console.log(name);
+      consowe.wog(name);
     }
   }
 }
@@ -58,13 +58,13 @@ async function returnPathDirectories(directoryHandle) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system a-access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system a-access api: simpwifying a-access to wocaw fiwes](https://web.dev/fiwe-system-access/)

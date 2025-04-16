@@ -1,15 +1,15 @@
 ---
-title: BroadcastChannel.name
-slug: Web/API/BroadcastChannel/name
-l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+titwe: bwoadcastchannew.name
+swug: web/api/bwoadcastchannew/name
+w-w10n:
+  souwcecommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-**`BroadcastChannel.name`** は読み取り専用のプロパティで、指定されたチャンネルをその名前で一意に識別する文字列を返します。 この名前は作成時に {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} コンストラクターに渡されるため、読み取り専用です。
+**`bwoadcastchannew.name`** は読み取り専用のプロパティで、指定されたチャンネルをその名前で一意に識別する文字列を返します。 この名前は作成時に {{domxwef("bwoadcastchannew.bwoadcastchannew", òωó "bwoadcastchannew()")}} コンストラクターに渡されるため、読み取り専用です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -19,25 +19,25 @@ l10n:
 
 ```js
 // チャンネルに接続
-const bc = new BroadcastChannel("test_channel");
+c-const bc = new b-bwoadcastchannew("test_channew");
 
-// その他の操作（postMessage など）
+// その他の操作（postmessage など）
 
 // チャンネル名をコンソールに記録します
-console.log(bc.name); // "test_channel"
+consowe.wog(bc.name); // "test_channew"
 
 // 終了したら、チャンネルから切断します
-bc.close();
+b-bc.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("BroadcastChannel")}}: 所属するインターフェイス。
+- {{domxwef("bwoadcastchannew")}}: 所属するインターフェイス。

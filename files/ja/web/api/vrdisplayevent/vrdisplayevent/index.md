@@ -1,58 +1,58 @@
 ---
-title: VRDisplayEvent()
-slug: Web/API/VRDisplayEvent/VRDisplayEvent
-l10n:
-  sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
+titwe: vwdispwayevent()
+swug: w-web/api/vwdispwayevent/vwdispwayevent
+w-w10n:
+  souwcecommit: b-b9bcca1e96839aa9cddea3263196e0cf4656d387
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`VRDisplayEvent()`** コンストラクターは、 {{domxref("VRDisplayEvent")}} オブジェクトを作成します。
+**`vwdispwayevent()`** コンストラクターは、 {{domxwef("vwdispwayevent")}} オブジェクトを作成します。
 
-> [!NOTE]
-> このコンストラクターは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!note]
+> このコンストラクターは古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。これは [webxw 機器 a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。
 
 ## 構文
 
-```js-nolint
-new VRDisplayEvent(type, options)
+```js-nowint
+n-nyew vwdispwayevent(type, (ˆ ﻌ ˆ)♡ o-options)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、イベントの名前です。
-    大文字小文字の区別があり、ブラウザーは `vrdisplayconnect`、`vrdisplaydisconnect`、`vrdisplayactivate`、`vrdisplaydeactivate`、`vrdisplayblur`、`vrdisplaypointerrestricted`、`vrdisplaypointerunrestricted`、`vrdisplaypresentchange` のいずれかに設定します。
+    大文字小文字の区別があり、ブラウザーは `vwdispwayconnect`、`vwdispwaydisconnect`、`vwdispwayactivate`、`vwdispwaydeactivate`、`vwdispwaybwuw`、`vwdispwaypointewwestwicted`、`vwdispwaypointewunwestwicted`、`vwdispwaypwesentchange` のいずれかに設定します。
 - `options`
-  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} .で定義されているプロパティに加え_、以下のプロパティを持つことができます。
-    - `display`
-      - : このイベントが関連付けられている {{domxref("VRDisplay")}} です。
-    - `reason`
-      - : 文字列で、イベントが発行された人間可読な理由を表します（{{domxref("VRDisplayEvent.reason")}} を参照）。
+  - : オブジェクトで、 _{{domxwef("event/event", (⑅˘꒳˘) "event()")}} .で定義されているプロパティに加え_、以下のプロパティを持つことができます。
+    - `dispway`
+      - : このイベントが関連付けられている {{domxwef("vwdispway")}} です。
+    - `weason`
+      - : 文字列で、イベントが発行された人間可読な理由を表します（{{domxwef("vwdispwayevent.weason")}} を参照）。
 
 ### 返値
 
-新しい {{domxref("VRDisplayEvent")}} オブジェクトです。
+新しい {{domxwef("vwdispwayevent")}} オブジェクトです。
 
 ## 例
 
 ```js
-const myEventObject = new VRDisplayEvent("custom", {
-  display: vrDisplay,
-  reason: "Custom reason",
+const myeventobject = nyew vwdispwayevent("custom", (U ᵕ U❁) {
+  dispway: vwdispway, -.-
+  w-weason: "custom weason", ^^;;
 });
 ```
 
 ## 仕様書
 
-このコンストラクターは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
+このコンストラクターは古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部であり、これは [webxw 機器 a-api](https://immewsive-web.github.io/webxw/) で置き枯れられました。標準規格になる見込みはありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、 [a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/)、[thwee.js](https://thweejs.owg/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を使用することが、すべてのブラウザーで動作する w-webxw アプリを開発する上で推奨されます。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

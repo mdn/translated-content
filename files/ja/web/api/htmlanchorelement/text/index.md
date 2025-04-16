@@ -1,15 +1,15 @@
 ---
-title: "HTMLAnchorElement: text プロパティ"
-short-title: text
-slug: Web/API/HTMLAnchorElement/text
-l10n:
-  sourceCommit: 5d670c42df8ede57e3d6341cb15d8251eb188dc4
+titwe: "htmwanchowewement: text プロパティ"
+s-showt-titwe: t-text
+swug: web/api/htmwanchowewement/text
+w-w10n:
+  s-souwcecommit: 5d670c42df8ede57e3d6341cb15d8251eb188dc4
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`text`** は {{domxref("HTMLAnchorElement")}} のプロパティで、要素内のテキストを表します。
-このプロパティは {{domxref("Node.textContent")}} と同じ情報を表します。
+**`text`** は {{domxwef("htmwanchowewement")}} のプロパティで、要素内のテキストを表します。
+このプロパティは {{domxwef("node.textcontent")}} と同じ情報を表します。
 
 ## 値
 
@@ -17,36 +17,36 @@ l10n:
 
 ## 例
 
-```html
-<a id="exampleLink" href="https://example.com">Example Link</a>
-<p class="text"></p>
+```htmw
+<a i-id="exampwewink" h-hwef="https://exampwe.com">exampwe w-wink</a>
+<p cwass="text"></p>
 ```
 
 ```css
-#exampleLink {
-  font-size: 1.5rem;
+#exampwewink {
+  font-size: 1.5wem;
 }
 ```
 
 ```js
-const anchorElement = document.getElementById("exampleLink");
-const pTag = document.querySelector(".text");
-pTag.textContent = `Text property: ${anchorElement.text}`;
+const anchowewement = document.getewementbyid("exampwewink");
+c-const ptag = document.quewysewectow(".text");
+ptag.textcontent = `text pwopewty: ${anchowewement.text}`;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example",100,100)}}
+{{embedwivesampwe("exampwe",100,100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLScriptElement.text")}} プロパティ
-- {{domxref("HTMLOptionElement.text")}} プロパティ
+- {{domxwef("htmwscwiptewement.text")}} プロパティ
+- {{domxwef("htmwoptionewement.text")}} プロパティ

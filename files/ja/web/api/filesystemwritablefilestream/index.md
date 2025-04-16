@@ -1,78 +1,78 @@
 ---
-title: FileSystemWritableFileStream
-slug: Web/API/FileSystemWritableFileStream
-l10n:
-  sourceCommit: 5a6f98403115fb88a4a123caf35e85e06ac0e3ee
+titwe: fiwesystemwwitabwefiwestweam
+swug: web/api/fiwesystemwwitabwefiwestweam
+w-w10n:
+  souwcecommit: 5a6f98403115fb88a4a123caf35e85e06ac0e3ee
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system a-access api")}}
 
-{{domxref('File System Access API')}} の **`FileSystemWritableFileStream`** インターフェイスは、便利なメソッドが追加された {{domxref('WritableStream')}} オブジェクトで、ディスク上の単一のファイルを扱います。このインターフェイスには {{domxref('FileSystemFileHandle.createWritable()')}} メソッドを通じてアクセスします。
+{{domxwef('fiwe s-system access a-api')}} の **`fiwesystemwwitabwefiwestweam`** インターフェイスは、便利なメソッドが追加された {{domxwef('wwitabwestweam')}} オブジェクトで、ディスク上の単一のファイルを扱います。このインターフェイスには {{domxwef('fiwesystemfiwehandwe.cweatewwitabwe()')}} メソッドを通じてアクセスします。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親の {{DOMxRef("WritableStream")}} からプロパティを継承します。_
+_親の {{domxwef("wwitabwestweam")}} からプロパティを継承します。_
 
 ## インスタンスメソッド
 
-_親の {{DOMxRef("WritableStream")}} からメソッドを継承します。_
+_親の {{domxwef("wwitabwestweam")}} からメソッドを継承します。_
 
-- {{domxref('FileSystemWritableFileStream.write')}}
+- {{domxwef('fiwesystemwwitabwefiwestweam.wwite')}}
   - : メソッドが呼ばれたファイルの現在のファイルカーソルオフセットにデータを書き込みます。
-- {{domxref('FileSystemWritableFileStream.seek')}}
+- {{domxwef('fiwesystemwwitabwefiwestweam.seek')}}
   - : 現在のファイルカーソルオフセットを指定の位置 (バイト単位) に移動します。
-- {{domxref('FileSystemWritableFileStream.truncate')}}
+- {{domxwef('fiwesystemwwitabwefiwestweam.twuncate')}}
   - : ストリームに対応するファイルのサイズを指定のバイト数にします。
 
 ## 例
 
-この非同期関数は「Save File」ピッカーを開き、このピッカーはファイルが選択されると {{domxref('FileSystemFileHandle')}} を返します。そして、{{domxref('FileSystemFileHandle.createWritable()')}} メソッドを用いて、このハンドルから書き込み可能なストリームを作成します。
+この非同期関数は「save f-fiwe」ピッカーを開き、このピッカーはファイルが選択されると {{domxwef('fiwesystemfiwehandwe')}} を返します。そして、{{domxwef('fiwesystemfiwehandwe.cweatewwitabwe()')}} メソッドを用いて、このハンドルから書き込み可能なストリームを作成します。
 
-その後、ユーザーが指定した {{domxref('Blob')}} をストリームに書き込み、ストリームを閉じます。
+その後、ユーザーが指定した {{domxwef('bwob')}} をストリームに書き込み、ストリームを閉じます。
 
 ```js
-async function saveFile() {
+a-async f-function savefiwe() {
   // 新しいハンドルを作成する
-  const newHandle = await window.showSaveFilePicker();
+  const nyewhandwe = await window.showsavefiwepickew();
 
-  // 書き込み先の FileSystemWritableFileStream を作成する
-  const writableStream = await newHandle.createWritable();
+  // 書き込み先の fiwesystemwwitabwefiwestweam を作成する
+  const wwitabwestweam = a-await nyewhandwe.cweatewwitabwe();
 
   // ファイルに書き込む
-  await writableStream.write(imgBlob);
+  await wwitabwestweam.wwite(imgbwob);
 
   // ファイルを閉じ、データをディスクに書き込む
-  await writableStream.close();
+  await w-wwitabwestweam.cwose();
 }
 ```
 
-以下では、`write()` メソッドに渡すことができる異なるオプションの例を示しています。
+以下では、`wwite()` メソッドに渡すことができる異なるオプションの例を示しています。
 
 ```js
 // データだけを渡す (オプションなし)
-writableStream.write(data);
+wwitabwestweam.wwite(data);
 
 // ストリームに指定の位置からデータを書き込む
-writableStream.write({ type: "write", position, data });
+w-wwitabwestweam.wwite({ type: "wwite", nyaa~~ position, /(^•ω•^) data });
 
 // 現在のファイルカーソルオフセットを指定の位置に移動する
-writableStream.write({ type: "seek", position });
+w-wwitabwestweam.wwite({ type: "seek", rawr p-position });
 
-// ファイルを size バイトにする
-writableStream.write({ type: "truncate", size });
+// ファイルを s-size バイトにする
+wwitabwestweam.wwite({ type: "twuncate", OwO size });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system a-access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

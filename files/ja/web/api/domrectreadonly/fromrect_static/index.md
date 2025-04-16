@@ -1,25 +1,25 @@
 ---
-title: "DOMRectReadOnly: fromRect() 静的メソッド"
-short-title: fromRect()
-slug: Web/API/DOMRectReadOnly/fromRect_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "domwectweadonwy: fwomwect() 静的メソッド"
+s-showt-titwe: f-fwomwect()
+s-swug: web/api/domwectweadonwy/fwomwect_static
+w-w10n:
+  souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`fromRect()`** は {{domxref("DOMRectReadOnly")}} オブジェクトの静的メソッドで、指定された位置と大きさで新しい `DOMRectReadOnly` オブジェクトを作成します。
+**`fwomwect()`** は {{domxwef("domwectweadonwy")}} オブジェクトの静的メソッドで、指定された位置と大きさで新しい `domwectweadonwy` オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-DOMRectReadOnly.fromRect()
-DOMRectReadOnly.fromRect(rectangle)
+```js-nowint
+d-domwectweadonwy.fwomwect()
+d-domwectweadonwy.fwomwect(wectangwe)
 ```
 
 ### 引数
 
-- `rectangle` {{optional_inline}}
+- `wectangwe` {{optionaw_inwine}}
 
   - : 矩形の位置と寸法を指定するオブジェクト。すべてのプロパティは既定で `0` です。プロパティは次の通りです。
 
@@ -30,12 +30,12 @@ DOMRectReadOnly.fromRect(rectangle)
 
 ### 返値
 
-{{domxref("DOMRectReadOnly")}} のインスタンスです。
+{{domxwef("domwectweadonwy")}} のインスタンスです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

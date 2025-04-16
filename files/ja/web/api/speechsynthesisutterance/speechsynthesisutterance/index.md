@@ -1,19 +1,19 @@
 ---
-title: "SpeechSynthesisUtterance: SpeechSynthesisUtterance() コンストラクター"
-short-title: SpeechSynthesisUtterance()
-slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "speechsynthesisuttewance: speechsynthesisuttewance() コンストラクター"
+s-showt-titwe: s-speechsynthesisuttewance()
+s-swug: web/api/speechsynthesisuttewance/speechsynthesisuttewance
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-`SpeechSynthesisUtterance()` は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのコンストラクターで、新しい `SpeechSynthesisUtterance` オブジェクトのインスタンスを返します。
+`speechsynthesisuttewance()` は {{domxwef("speechsynthesisuttewance")}} インターフェイスのコンストラクターで、新しい `speechsynthesisuttewance` オブジェクトのインスタンスを返します。
 
 ## 構文
 
-```js-nolint
-new SpeechSynthesisUtterance(text)
+```js-nowint
+n-nyew s-speechsynthesisuttewance(text)
 ```
 
 ### 引数
@@ -23,43 +23,43 @@ new SpeechSynthesisUtterance(text)
 
 ## 例
 
-以下のスニペットは [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) から抜粋したものです。
+以下のスニペットは [speech s-synthesizew demo](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speak-easy-synthesis) から抜粋したものです。
 
 ```js
-const synth = window.speechSynthesis;
+const synth = window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const i-inputfowm = document.quewysewectow("fowm");
+const inputtxt = document.quewysewectow("input");
+c-const voicesewect = document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+c-const voices = synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+inputfowm.onsubmit = (event) => {
+  event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  c-const uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  c-const sewectedoption =
+    v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (wet i = 0; i < voices.wength; i++) {
+    if (voices[i].name === s-sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
-  synth.speak(utterThis);
-  inputTxt.blur();
+  synth.speak(uttewthis);
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

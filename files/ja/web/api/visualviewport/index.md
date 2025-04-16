@@ -1,114 +1,114 @@
 ---
-title: VisualViewport
-slug: Web/API/VisualViewport
-l10n:
-  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
+titwe: visuawviewpowt
+swug: web/api/visuawviewpowt
+w-w10n:
+  souwcecommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
-{{APIRef("Visual Viewport")}}
+{{apiwef("visuaw v-viewpowt")}}
 
-**`VisualViewport`** は{{domxref("Visual Viewport API", "視覚的ビューポート API", "", "nocode")}} のインターフェイスで、指定されたウィンドウの視覚的ビューポートを表します。 iframe があるページでは、コンテナーページだけでなく、それぞれの iframe にも固有のウィンドウオブジェクトが存在します。ページ上の各ウィンドウには、そのウィンドウに関連付けられたプロパティを表す固有の `VisualViewport` が存在します。
+**`visuawviewpowt`** は{{domxwef("visuaw v-viewpowt api", rawr x3 "視覚的ビューポート api", (U ﹏ U) "", "nocode")}} のインターフェイスで、指定されたウィンドウの視覚的ビューポートを表します。 i-ifwame があるページでは、コンテナーページだけでなく、それぞれの i-ifwame にも固有のウィンドウオブジェクトが存在します。ページ上の各ウィンドウには、そのウィンドウに関連付けられたプロパティを表す固有の `visuawviewpowt` が存在します。
 
-ウィンドウの視覚的ビューポートは、 {{domxref("Window.visualViewport")}} を使用して取得することができます。
+ウィンドウの視覚的ビューポートは、 {{domxwef("window.visuawviewpowt")}} を使用して取得することができます。
 
-> [!NOTE]
-> レイアウトビューポートとは異なる視覚的ビューポート持つのは最上位のウィンドウのみです。したがって、一般的には最上位のウィンドウの `VisualViewport` オブジェクトのみが使用されます。 {{htmlelement("iframe")}} の場合、 {{domxref("VisualViewport.width")}} のような視覚的ビューポートのメトリクスは、常に {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}} などのレイアウトビューポートのメトリクスに対応します。
+> [!note]
+> レイアウトビューポートとは異なる視覚的ビューポート持つのは最上位のウィンドウのみです。したがって、一般的には最上位のウィンドウの `visuawviewpowt` オブジェクトのみが使用されます。 {{htmwewement("ifwame")}} の場合、 {{domxwef("visuawviewpowt.width")}} のような視覚的ビューポートのメトリクスは、常に {{domxwef("ewement.cwientwidth", (U ﹏ U) "document.documentewement.cwientwidth")}} などのレイアウトビューポートのメトリクスに対応します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("EventTarget")}} から継承したプロパティもあります。_
+_親インターフェイスである {{domxwef("eventtawget")}} から継承したプロパティもあります。_
 
-- {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの左端のオフセットを、レイアウトビューポートの左端からの CSS ピクセル数で返します。
-- {{domxref("VisualViewport.offsetTop")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの上端のオフセットを、レイアウトビューポートの上端からの CSS ピクセルで返します。
-- {{domxref("VisualViewport.pageLeft")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの x 座標を、初期包含ブロックの上端の原点からの相対 CSS ピクセル数で返します。
-- {{domxref("VisualViewport.pageTop")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの y 座標を、初期包含ブロックの上端の原点からの相対 CSS ピクセル数で返します。
-- {{domxref("VisualViewport.width")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの幅を、 CSS ピクセル単位で返します。
-- {{domxref("VisualViewport.height")}} {{ReadOnlyInline}}
-  - : 視覚的ビューポートの幅を、 CSS ピクセル単位で返します。
-- {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
+- {{domxwef("visuawviewpowt.offsetweft")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの左端のオフセットを、レイアウトビューポートの左端からの c-css ピクセル数で返します。
+- {{domxwef("visuawviewpowt.offsettop")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの上端のオフセットを、レイアウトビューポートの上端からの c-css ピクセルで返します。
+- {{domxwef("visuawviewpowt.pageweft")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの x-x 座標を、初期包含ブロックの上端の原点からの相対 css ピクセル数で返します。
+- {{domxwef("visuawviewpowt.pagetop")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの y 座標を、初期包含ブロックの上端の原点からの相対 css ピクセル数で返します。
+- {{domxwef("visuawviewpowt.width")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの幅を、 css ピクセル単位で返します。
+- {{domxwef("visuawviewpowt.height")}} {{weadonwyinwine}}
+  - : 視覚的ビューポートの幅を、 c-css ピクセル単位で返します。
+- {{domxwef("visuawviewpowt.scawe")}} {{weadonwyinwine}}
   - : 視覚ビューポートに適用されたピンチズームの倍率を返します。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("EventTarget")}} から継承したメソッドもあります。_
+_親インターフェイスである {{domxwef("eventtawget")}} から継承したメソッドもあります。_
 
 ## イベント
 
-これらのイベントは、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの関連する `onイベント名` プロパティに代入するかして待ち受けします。
+これらのイベントは、 {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} を使用するか、イベントリスナーをこのインターフェイスの関連する `onイベント名` プロパティに代入するかして待ち受けします。
 
-- {{domxref("VisualViewport/resize_event", "resize")}}
+- {{domxwef("visuawviewpowt/wesize_event", òωó "wesize")}}
   - : 視覚的ビューポートがリサイズされると発行されます。
-    `onresize` プロパティからも利用できます。
-- {{domxref("VisualViewport/scroll_event", "scroll")}}
+    `onwesize` プロパティからも利用できます。
+- {{domxwef("visuawviewpowt/scwoww_event", ʘwʘ "scwoww")}}
   - : 視覚的ビューポートがスクロールされると発行されます。
-    `onscroll` プロパティからも利用できます。
-- {{domxref("VisualViewport/scrollend_event", "scrollend")}}
+    `onscwoww` プロパティからも利用できます。
+- {{domxwef("visuawviewpowt/scwowwend_event", "scwowwend")}}
   - : 視覚的ビューポートでのスクロール操作が終了すると発行されます。
-    `onscrollend` プロパティからも利用できます。
+    `onscwowwend` プロパティからも利用できます。
 
 ## 例
 
 ### ズーム時に重なったボックスを非表示にする
 
-この例では、 [Visual Viewport の README](https://github.com/WICG/visual-viewport) から引用し、ユーザーがズームインした際に、オーバーレイされたボックス（例えば広告を含む）を非表示にするコードを少し書く方法を示しています。これは、ページをズームインする際のユーザーの使い勝手を向上させる良い方法です。[ライブサンプル](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html)も利用できます。
+この例では、 [visuaw viewpowt の weadme](https://github.com/wicg/visuaw-viewpowt) から引用し、ユーザーがズームインした際に、オーバーレイされたボックス（例えば広告を含む）を非表示にするコードを少し書く方法を示しています。これは、ページをズームインする際のユーザーの使い勝手を向上させる良い方法です。[ライブサンプル](https://wicg.github.io/visuaw-viewpowt/exampwes/hide-on-zoom.htmw)も利用できます。
 
 ```js
-const bottomBar = document.getElementById("bottom-bar");
-const viewport = window.visualViewport;
+c-const bottombaw = document.getewementbyid("bottom-baw");
+c-const viewpowt = window.visuawviewpowt;
 
-function resizeHandler() {
-  bottomBar.style.display = viewport.scale > 1.3 ? "none" : "block";
+function wesizehandwew() {
+  bottombaw.stywe.dispway = v-viewpowt.scawe > 1.3 ? "none" : "bwock";
 }
 
-window.visualViewport.addEventListener("resize", resizeHandler);
+window.visuawviewpowt.addeventwistenew("wesize", /(^•ω•^) w-wesizehandwew);
 ```
 
-### 位置のシミュレーション: device-fixed
+### 位置のシミュレーション: d-device-fixed
 
-この例も、 [Visual Viewport の README](https://github.com/WICG/visual-viewport) から引用したものですが、この API を使用して `position: device-fixed` という、要素を視覚的ビューポートに固定する方法を示しています。[ライブサンプル](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html)も利用できます。
+この例も、 [visuaw viewpowt の weadme](https://github.com/wicg/visuaw-viewpowt) から引用したものですが、この api を使用して `position: device-fixed` という、要素を視覚的ビューポートに固定する方法を示しています。[ライブサンプル](https://wicg.github.io/visuaw-viewpowt/exampwes/fixed-to-viewpowt.htmw)も利用できます。
 
 ```js
-const bottomBar = document.getElementById("bottom-bar");
-const viewport = window.visualViewport;
-function viewportHandler() {
-  const layoutViewport = document.getElementById("layoutViewport");
+c-const bottombaw = document.getewementbyid("bottom-baw");
+const viewpowt = window.visuawviewpowt;
+function v-viewpowthandwew() {
+  const w-wayoutviewpowt = d-document.getewementbyid("wayoutviewpowt");
 
-  // バーは position: fixed であるため、レイアウトビューポートの原点から
+  // バーは position: f-fixed であるため、レイアウトビューポートの原点から
   // 視覚的ビューポートのオフセットを差し引く必要があります。
-  const offsetLeft = viewport.offsetLeft;
-  const offsetTop =
-    viewport.height -
-    layoutViewport.getBoundingClientRect().height +
-    viewport.offsetTop;
+  c-const offsetweft = viewpowt.offsetweft;
+  c-const offsettop =
+    viewpowt.height -
+    wayoutviewpowt.getboundingcwientwect().height +
+    v-viewpowt.offsettop;
 
-  // これは style.left と style.top を設定することで、
+  // これは stywe.weft と stywe.top を設定することで、
   // width: 100% と同じことができます。
-  bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${
-    1 / viewport.scale
+  bottombaw.stywe.twansfowm = `twanswate(${offsetweft}px, ʘwʘ ${offsettop}px) scawe(${
+    1 / viewpowt.scawe
   })`;
 }
-window.visualViewport.addEventListener("scroll", viewportHandler);
-window.visualViewport.addEventListener("resize", viewportHandler);
+w-window.visuawviewpowt.addeventwistenew("scwoww", σωσ viewpowthandwew);
+w-window.visuawviewpowt.addeventwistenew("wesize", OwO v-viewpowthandwew);
 ```
 
-> [!NOTE]
-> このテクニックは慎重に使用しましょう。このように `position: device-fixed` を模倣すると、修正された要素がスクロール時にちらつくことがあります。
+> [!note]
+> このテクニックは慎重に使用しましょう。このように `position: d-device-fixed` を模倣すると、修正された要素がスクロール時にちらつくことがあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Viewports Explainer](https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md) — 視覚的ビューポートとレイアウトビューポートの違いなど、ウェブビューポートの概念に関する有益な説明が記載されています。
+- [web viewpowts expwainew](https://github.com/bokand/bokand.github.io/bwob/mastew/web_viewpowts_expwainew.md) — 視覚的ビューポートとレイアウトビューポートの違いなど、ウェブビューポートの概念に関する有益な説明が記載されています。

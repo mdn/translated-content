@@ -1,156 +1,156 @@
 ---
-title: IDBObjectStore
-slug: Web/API/IDBObjectStore
-l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+titwe: idbobjectstowe
+swug: web/api/idbobjectstowe
+w-w10n:
+  souwcecommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の **`IDBObjectStore`** インターフェイスは、データベース内のオブジェクトストアを表します。オブジェクトストア内のレコードは、キーによってソートされています。ソートしておくことで、高速な挿入、検索、そして順番での取り出しを可能にします。
+[indexeddb a-api](/ja/docs/web/api/indexeddb_api) の **`idbobjectstowe`** インターフェイスは、データベース内のオブジェクトストアを表します。オブジェクトストア内のレコードは、キーによってソートされています。ソートしておくことで、高速な挿入、検索、そして順番での取り出しを可能にします。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## インスタンスプロパティ
 
-- {{domxref("IDBObjectStore.indexNames")}} {{ReadOnlyInline}}
-  - : このオブジェクトストア内のオブジェクトの[インデックス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9)の名前のリストです。
-- {{domxref("IDBObjectStore.keyPath")}} {{ReadOnlyInline}}
-  - : このオブジェクトストアの[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AD%E3%83%BC%E3%83%91%E3%82%B9)です。この属性が `null` のときは、アプリケーションはそれぞれの更新操作のためにキーを提供しなければなりません。
-- {{domxref("IDBObjectStore.name")}}
+- {{domxwef("idbobjectstowe.indexnames")}} {{weadonwyinwine}}
+  - : このオブジェクトストア内のオブジェクトの[インデックス](/ja/docs/web/api/indexeddb_api/basic_tewminowogy#%e3%82%a4%e3%83%b3%e3%83%87%e3%83%83%e3%82%af%e3%82%b9)の名前のリストです。
+- {{domxwef("idbobjectstowe.keypath")}} {{weadonwyinwine}}
+  - : このオブジェクトストアの[キーパス](/ja/docs/web/api/indexeddb_api/basic_tewminowogy#%e3%82%ad%e3%83%bc%e3%83%91%e3%82%b9)です。この属性が `nuww` のときは、アプリケーションはそれぞれの更新操作のためにキーを提供しなければなりません。
+- {{domxwef("idbobjectstowe.name")}}
   - : このオブジェクトストアの名前です。
-- {{domxref("IDBObjectStore.transaction")}} {{ReadOnlyInline}}
-  - : このオブジェクトストアが属している {{domxref("IDBTransaction")}} オブジェクトです。
-- {{domxref("IDBObjectStore.autoIncrement")}} {{ReadOnlyInline}}
+- {{domxwef("idbobjectstowe.twansaction")}} {{weadonwyinwine}}
+  - : このオブジェクトストアが属している {{domxwef("idbtwansaction")}} オブジェクトです。
+- {{domxwef("idbobjectstowe.autoincwement")}} {{weadonwyinwine}}
   - : このオブジェクトストアのオートインクリメントフラグの値です。
 
 ## インスタンスメソッド
 
-- {{domxref("IDBObjectStore.add()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで `value` の[構造化複製](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone)を生成し、複製した値をオブジェクトストアに保存します。これはオブジェクトストアに新しいレコードを追加する操作です。
-- {{domxref("IDBObjectStore.clear()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを生成してすぐに返し、別のスレッドでこのオブジェクトストアをクリアします。これはオブジェクトストア内に現在ある全レコードを削除する操作です。
-- {{domxref("IDBObjectStore.count()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで指定のキーまたは {{domxref("IDBKeyRange")}} にマッチするレコードの数を返します。引数なしで呼ばれた場合は、ストア内の全レコードの数を返します。
-- {{domxref("IDBObjectStore.createIndex()")}}
-  - : バージョンの更新中に新しいインデックスを作成し、接続中のデータベースにおける新しい {{domxref("IDBIndex")}} を返します。
-- {{domxref("IDBObjectStore.delete()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、指定したキーによって選択されたストア内のオブジェクトを別のスレッドで削除します。これはオブジェクトストアから個別のレコードを削除する操作です。
-- {{domxref("IDBObjectStore.deleteIndex()")}}
+- {{domxwef("idbobjectstowe.add()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで `vawue` の[構造化複製](https://htmw.spec.naniwg.owg/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone)を生成し、複製した値をオブジェクトストアに保存します。これはオブジェクトストアに新しいレコードを追加する操作です。
+- {{domxwef("idbobjectstowe.cweaw()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを生成してすぐに返し、別のスレッドでこのオブジェクトストアをクリアします。これはオブジェクトストア内に現在ある全レコードを削除する操作です。
+- {{domxwef("idbobjectstowe.count()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで指定のキーまたは {{domxwef("idbkeywange")}} にマッチするレコードの数を返します。引数なしで呼ばれた場合は、ストア内の全レコードの数を返します。
+- {{domxwef("idbobjectstowe.cweateindex()")}}
+  - : バージョンの更新中に新しいインデックスを作成し、接続中のデータベースにおける新しい {{domxwef("idbindex")}} を返します。
+- {{domxwef("idbobjectstowe.dewete()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、指定したキーによって選択されたストア内のオブジェクトを別のスレッドで削除します。これはオブジェクトストアから個別のレコードを削除する操作です。
+- {{domxwef("idbobjectstowe.deweteindex()")}}
   - : バージョンの更新中に用い、接続中のデータベースから指定したインデックスを削除します。
-- {{domxref("IDBObjectStore.get()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、指定したキーによって選択されたストア内のオブジェクトを別のスレッドで返します。これはオブジェクトストアから特定のレコードを取り出す操作です。
-- {{domxref("IDBObjectStore.getKey()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内のオブジェクトのレコードキーを別のスレッドで取得して返します。
-- {{domxref("IDBObjectStore.getAll()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内のオブジェクトを全て取得します。引数なしで呼ばれた場合は、ストア内の全てのオブジェクトを取得します。
-- {{domxref("IDBObjectStore.getAllKeys()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内の全てのオブジェクトのレコードキーを取得します。引数なしで呼ばれた場合は、ストア内の全てのオブジェクトについて取得します。
-- {{domxref("IDBObjectStore.index()")}}
+- {{domxwef("idbobjectstowe.get()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、指定したキーによって選択されたストア内のオブジェクトを別のスレッドで返します。これはオブジェクトストアから特定のレコードを取り出す操作です。
+- {{domxwef("idbobjectstowe.getkey()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内のオブジェクトのレコードキーを別のスレッドで取得して返します。
+- {{domxwef("idbobjectstowe.getaww()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内のオブジェクトを全て取得します。引数なしで呼ばれた場合は、ストア内の全てのオブジェクトを取得します。
+- {{domxwef("idbobjectstowe.getawwkeys()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、指定したパラメーターにマッチするオブジェクトストア内の全てのオブジェクトのレコードキーを取得します。引数なしで呼ばれた場合は、ストア内の全てのオブジェクトについて取得します。
+- {{domxwef("idbobjectstowe.index()")}}
   - : このオブジェクトストアでインデックスを開きます。これは、たとえば、カーソルを用いてこのインデックスでソートされたレコードの列を得るのに用いることができます。
-- {{domxref("IDBObjectStore.openCursor()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで新しい {{domxref("IDBCursorWithValue")}} オブジェクトを返します。これはカーソルを用いて主キーでオブジェクトストアを走査するのに用います。
-- {{domxref("IDBObjectStore.openKeyCursor()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで新しい {{domxref("IDBCursor")}} を返します。これはキーでオブジェクトストアを走査するのに用います。
-- {{domxref("IDBObjectStore.put()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで `value` の[構造化複製](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone)を作成し、複製した値をオブジェクトストアに保存します。これはトランザクションのモードが `readwrite` のときに既存のレコードを更新する操作です。
+- {{domxwef("idbobjectstowe.opencuwsow()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで新しい {{domxwef("idbcuwsowwithvawue")}} オブジェクトを返します。これはカーソルを用いて主キーでオブジェクトストアを走査するのに用います。
+- {{domxwef("idbobjectstowe.openkeycuwsow()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで新しい {{domxwef("idbcuwsow")}} を返します。これはキーでオブジェクトストアを走査するのに用います。
+- {{domxwef("idbobjectstowe.put()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで `vawue` の[構造化複製](https://htmw.spec.naniwg.owg/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone)を作成し、複製した値をオブジェクトストアに保存します。これはトランザクションのモードが `weadwwite` のときに既存のレコードを更新する操作です。
 
 ## 例
 
-この例では、`onupgradeneeded` 関数内での {{domxref("IDBObjectStore.createIndex")}} を用いたデータ構造の更新から、{{domxref("IDBObjectStore.add")}} によるオブジェクトストアへのアイテムの追加まで、オブジェクトストアの様々な使用法を紹介します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+この例では、`onupgwadeneeded` 関数内での {{domxwef("idbobjectstowe.cweateindex")}} を用いたデータ構造の更新から、{{domxwef("idbobjectstowe.add")}} によるオブジェクトストアへのアイテムの追加まで、オブジェクトストアの様々な使用法を紹介します。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
 // 我々のデータベースを開きましょう
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const d-dbopenwequest = w-window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+d-dbopenwequest.onsuccess = (event) => {
+  n-note.innewhtmw += "<wi>データベースを初期化しました。</wi>";
 
   // データベースを開いた結果を db に格納します
-  db = DBOpenRequest.result;
+  db = dbopenwequest.wesuwt;
 };
 
 // このイベントは、データベースがまだ作成されていないか、
-// 上の window.indexedDB.open の行で新しいバージョン番号が
+// 上の window.indexeddb.open の行で新しいバージョン番号が
 // 指定されたかで、新しいバージョンのデータベースを作成する
 // 必要がある場合を処理します
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  c-const db = event.tawget.wesuwt;
 
-  db.onerror = (event) => {
-    note.innerHTML +=
-      "<li>データベースの読み込み中にエラーが発生しました。</li>";
+  db.onewwow = (event) => {
+    nyote.innewhtmw +=
+      "<wi>データベースの読み込み中にエラーが発生しました。</wi>";
   };
 
-  // このデータベース用の objectStore を作ります
+  // このデータベース用の o-objectstowe を作ります
 
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  const o-objectstowe = db.cweateobjectstowe("todowist", /(^•ω•^) {
+    keypath: "tasktitwe", rawr x3
   });
 
-  // objectStore に格納するデータアイテムを定義します
+  // objectstowe に格納するデータアイテムを定義します
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", (U ﹏ U) "houws", { u-unique: fawse });
+  objectstowe.cweateindex("minutes", (U ﹏ U) "minutes", (⑅˘꒳˘) { u-unique: f-fawse });
+  objectstowe.cweateindex("day", òωó "day", ʘwʘ { unique: fawse });
+  objectstowe.cweateindex("month", /(^•ω•^) "month", ʘwʘ { unique: f-fawse });
+  objectstowe.cweateindex("yeaw", σωσ "yeaw", OwO { unique: fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectstowe.cweateindex("notified", 😳😳😳 "notified", 😳😳😳 { unique: fawse });
 
-  note.innerHTML += "<li>オブジェクトストアを作成しました。</li>";
+  nyote.innewhtmw += "<wi>オブジェクトストアを作成しました。</wi>";
 };
 
 // オブジェクトストアに追加する新しいアイテムを作成します
-const newItem = [
+c-const nyewitem = [
   {
-    taskTitle: "Walk dog",
-    hours: 19,
-    minutes: 30,
-    day: 24,
-    month: "December",
-    year: 2013,
-    notified: "no",
+    tasktitwe: "wawk d-dog", o.O
+    h-houws: 19, ( ͡o ω ͡o )
+    m-minutes: 30, (U ﹏ U)
+    d-day: 24, (///ˬ///✿)
+    month: "decembew", >w<
+    yeaw: 2013, rawr
+    n-nyotified: "no", mya
   },
 ];
 
 // 読み書き用のトランザクションを開き、データを追加する準備をします
-const transaction = db.transaction(["toDoList"], "readwrite");
+const twansaction = db.twansaction(["todowist"], ^^ "weadwwite");
 
 // 全て完了した時、トランザクションの正常終了を報告します
-transaction.oncomplete = (event) => {
-  note.innerHTML += "<li>トランザクションが完了しました。</li>";
+t-twansaction.oncompwete = (event) => {
+  nyote.innewhtmw += "<wi>トランザクションが完了しました。</wi>";
 };
 
-transaction.onerror = (event) => {
-  note.innerHTML +=
-    "<li>トランザクションはエラーのため開けませんでした。アイテムの重複は許可されていません。</li>";
+twansaction.onewwow = (event) => {
+  nyote.innewhtmw +=
+    "<wi>トランザクションはエラーのため開けませんでした。アイテムの重複は許可されていません。</wi>";
 };
 
 // トランザクションでオブジェクトストアを作成します
-const objectStore = transaction.objectStore("toDoList");
-// オブジェクトストアに newItem オブジェクトを追加する要求をします
-const objectStoreRequest = objectStore.add(newItem[0]);
+const objectstowe = twansaction.objectstowe("todowist");
+// オブジェクトストアに n-nyewitem オブジェクトを追加する要求をします
+const objectstowewequest = o-objectstowe.add(newitem[0]);
 
-objectStoreRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>要求は成功しました。</li>";
+o-objectstowewequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>要求は成功しました。</wi>";
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

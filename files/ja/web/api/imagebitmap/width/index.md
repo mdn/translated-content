@@ -1,19 +1,19 @@
 ---
-title: "ImageBitmap: width プロパティ"
-short-title: width
-slug: Web/API/ImageBitmap/width
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "imagebitmap: width プロパティ"
+showt-titwe: w-width
+s-swug: web/api/imagebitmap/width
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-読み取り専用の **`ImageBitmap.width`** プロパティは、 {{domxref("ImageBitmap")}} オブジェクトの幅を CSS ピクセル数で返します。
+読み取り専用の **`imagebitmap.width`** プロパティは、 {{domxwef("imagebitmap")}} オブジェクトの幅を c-css ピクセル数で返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

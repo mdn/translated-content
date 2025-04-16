@@ -1,18 +1,18 @@
 ---
-title: FileSystemDirectoryHandle.values()
-slug: Web/API/FileSystemDirectoryHandle/values
-l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+titwe: fiwesystemdiwectowyhandwe.vawues()
+swug: w-web/api/fiwesystemdiwectowyhandwe/vawues
+w-w10n:
+  s-souwcecommit: c-c88a329069328522a5c20c054f9dbced9967dbd4
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref("FileSystemDirectoryHandle")}} インターフェイスの **`values()`** メソッドは、`FileSystemDirectoryHandle` オブジェクト内の各インデックスに対応する値を含む新しい _配列イテレーター_ を返します。
+{{domxwef("fiwesystemdiwectowyhandwe")}} インターフェイスの **`vawues()`** メソッドは、`fiwesystemdiwectowyhandwe` オブジェクト内の各インデックスに対応する値を含む新しい _配列イテレーター_ を返します。
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 引数
@@ -21,7 +21,7 @@ values()
 
 ### 返値
 
-新しい {{jsxref('Array')}} を返します。
+新しい {{jsxwef('awway')}} を返します。
 
 ## 例
 
@@ -29,13 +29,13 @@ values()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying access to wocaw f-fiwes](https://web.dev/fiwe-system-access/)

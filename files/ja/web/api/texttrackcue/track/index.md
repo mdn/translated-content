@@ -1,36 +1,36 @@
 ---
-title: TextTrackCue.track
-slug: Web/API/TextTrackCue/track
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwackcue.twack
+swug: w-web/api/texttwackcue/twack
+w-w10n:
+  s-souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`track`** は {{domxref("TextTrackCue")}} インターフェイスの読み取り専用プロパティで、このキューが所属する {{domxref("TextTrack")}} オブジェクトを返します。
+**`twack`** は {{domxwef("texttwackcue")}} インターフェイスの読み取り専用プロパティで、このキューが所属する {{domxwef("texttwack")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("TextTrack")}} オブジェクトです。
+{{domxwef("texttwack")}} オブジェクトです。
 
 ## 例
 
-以下の例では、新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承）を作成し、それをトラックに追加しています。 `track` の値はコンソールに表示されます。
+以下の例では、新しい {{domxwef("vttcue")}} （`texttwackcue` を継承）を作成し、それをトラックに追加しています。 `twack` の値はコンソールに表示されます。
 
 ```js
-let video = document.querySelector("video");
-let captiontrack = video.addTextTrack("captions", "Captions", "en");
-captiontrack.mode = "showing";
+w-wet v-video = document.quewysewectow("video");
+w-wet captiontwack = v-video.addtexttwack("captions", rawr "captions", σωσ "en");
+captiontwack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-captiontrack.addCue(cue1);
-console.log(cue1.track); // a TextTrack object.
+wet cue1 = nyew vttcue(0, σωσ 0.9, "hiwdy!");
+captiontwack.addcue(cue1);
+consowe.wog(cue1.twack); // a texttwack object. >_<
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

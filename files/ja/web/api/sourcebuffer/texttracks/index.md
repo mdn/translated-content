@@ -1,31 +1,31 @@
 ---
-title: SourceBuffer.textTracks
-slug: Web/API/SourceBuffer/textTracks
-l10n:
-  sourceCommit: d0c960554ed347ba43fd56d258255152a2938b2b
+titwe: souwcebuffew.texttwacks
+swug: web/api/souwcebuffew/texttwacks
+w-w10n:
+  s-souwcecommit: d0c960554ed347ba43fd56d258255152a2938b2b
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-**`textTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、`SourceBuffer` 内に現在含まれているテキストトラックのリストを返します。
+**`texttwacks`** は {{domxwef("souwcebuffew")}} インターフェイスの読み取り専用プロパティで、`souwcebuffew` 内に現在含まれているテキストトラックのリストを返します。
 
 ## 値
 
-{{domxref("TextTrackList")}} オブジェクトです。
+{{domxwef("texttwackwist")}} オブジェクトです。
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

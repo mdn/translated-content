@@ -1,13 +1,13 @@
 ---
-title: SourceBuffer.updating
-slug: Web/API/SourceBuffer/updating
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: souwcebuffew.updating
+swug: web/api/souwcebuffew/updating
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`updating`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、`SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}}、または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。
+**`updating`** は {{domxwef("souwcebuffew")}} インターフェイスの読み取り専用プロパティで、`souwcebuffew` が現在更新されているかどうか、つまり {{domxwef("souwcebuffew.appendbuffew()")}}、{{domxwef("souwcebuffew.appendstweam()")}}、または {{domxwef("souwcebuffew.wemove()")}} の操作が現在進行中かどうかを示します。
 
 ## 値
 
@@ -15,17 +15,17 @@ l10n:
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

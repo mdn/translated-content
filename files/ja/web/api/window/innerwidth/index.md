@@ -1,89 +1,89 @@
 ---
-title: "Window: innerWidth プロパティ"
-short-title: innerWidth
-slug: Web/API/Window/innerWidth
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: innewwidth プロパティ"
+showt-titwe: i-innewwidth
+s-swug: web/api/window/innewwidth
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{domxref("Window")}} の **`innerWidth`** プロパティは読み取り専用で、ウィンドウの内部の幅をピクセル単位で返します。これには垂直スクロールバーがある場合、その幅を含みます。
+{{domxwef("window")}} の **`innewwidth`** プロパティは読み取り専用で、ウィンドウの内部の幅をピクセル単位で返します。これには垂直スクロールバーがある場合、その幅を含みます。
 
-もっと詳細に言えば、`innerWidth` の値はウィンドウの{{Glossary("layout viewport", "レイアウトビューポート")}}の幅から取られます。ウィンドウの内部の高さは {{domxref("Window.innerHeight", "innerHeight")}} プロパティを使用して取ることができます。
+もっと詳細に言えば、`innewwidth` の値はウィンドウの{{gwossawy("wayout v-viewpowt", mya "レイアウトビューポート")}}の幅から取られます。ウィンドウの内部の高さは {{domxwef("window.innewheight", 😳 "innewheight")}} プロパティを使用して取ることができます。
 
 ## 値
 
 整数値で、ウィンドウのレイアウトビューポートの幅をピクセル単位で示します。このプロパティは読み取り専用で、既定値はありません。
 
-ウィンドウの幅を変更するには、 {{domxref("Window")}} の寸法の変更メソッドのうちの一つ、例えば {{domxref("Window.resizeBy", "resizeBy()")}} や {{domxref("Window.resizeTo", "resizeTo()")}} などを呼び出してください。
+ウィンドウの幅を変更するには、 {{domxwef("window")}} の寸法の変更メソッドのうちの一つ、例えば {{domxwef("window.wesizeby", XD "wesizeby()")}} や {{domxwef("window.wesizeto", :3 "wesizeto()")}} などを呼び出してください。
 
 ## 使用上の注意
 
-ウィンドウからスクロールバーや境界を引いた幅を取得するには、ルートの {{HTMLElement("html")}} 要素の {{domxref("Element.clientWidth", "clientWidth")}} プロパティを代わりに使用してください。
+ウィンドウからスクロールバーや境界を引いた幅を取得するには、ルートの {{htmwewement("htmw")}} 要素の {{domxwef("ewement.cwientwidth", 😳😳😳 "cwientwidth")}} プロパティを代わりに使用してください。
 
-`innerWidth` はすべてのウィンドウと、ウィンドウのように動作するすべてのオブジェクト、例えばタブやフレームで利用できます。
+`innewwidth` はすべてのウィンドウと、ウィンドウのように動作するすべてのオブジェクト、例えばタブやフレームで利用できます。
 
 ## 例
 
 ```js
 // これはビューポートの幅を返す
-console.log(window.innerWidth);
+c-consowe.wog(window.innewwidth);
 
 // これはフレームセット内のフレームビューポートの幅を返す
-console.log(self.innerWidth);
+c-consowe.wog(sewf.innewwidth);
 
 // これは直近のフレームセットのビューポートの幅を返す
-console.log(parent.innerWidth);
+c-consowe.wog(pawent.innewwidth);
 
 // これはもっとも外側のフレームセットのビューポートの幅を返す
-console.log(top.innerWidth);
+consowe.wog(top.innewwidth);
 ```
 
 ## デモ
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <code>resize</code>
+  <code>wesize</code>
   イベントを発行させるためにブラウザーのウィンドウの大きさを変えてください。
 </p>
 <p>ウィンドウの幅: <span id="width"></span></p>
 <p>ウィンドウの高さ: <span id="height"></span></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const heightOutput = document.querySelector("#height");
-const widthOutput = document.querySelector("#width");
+const heightoutput = document.quewysewectow("#height");
+c-const widthoutput = document.quewysewectow("#width");
 
-function updateSize() {
-  heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
+f-function updatesize() {
+  heightoutput.textcontent = window.innewheight;
+  w-widthoutput.textcontent = window.innewwidth;
 }
 
-updateSize();
-window.addEventListener("resize", updateSize);
+u-updatesize();
+w-window.addeventwistenew("wesize", -.- updatesize);
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Demo')}}
+{{embedwivesampwe('demo')}}
 
-{{LiveSampleLink('Demo', '別なページでこのデモコードの結果を見る')}}ことができます。
+{{wivesampwewink('demo', ( ͡o ω ͡o ) '別なページでこのデモコードの結果を見る')}}ことができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.outerWidth")}}
-- {{domxref("window.innerHeight")}}
-- {{domxref("window.outerHeight")}}
+- {{domxwef("window.outewwidth")}}
+- {{domxwef("window.innewheight")}}
+- {{domxwef("window.outewheight")}}

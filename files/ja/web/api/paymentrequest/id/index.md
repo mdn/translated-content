@@ -1,43 +1,43 @@
 ---
-title: "PaymentRequest: id プロパティ"
-slug: Web/API/PaymentRequest/id
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequest: id プロパティ"
+swug: w-web/api/paymentwequest/id
+w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}
+{{apiwef("payment w-wequest api")}}
 
-**`id`** は {{domxref("PaymentRequest")}} インターフェイスの読み取り専用プロパティで、特定の {{domxref("PaymentRequest")}} インスタンスに固有の識別子を返します。
+**`id`** は {{domxwef("paymentwequest")}} インターフェイスの読み取り専用プロパティで、特定の {{domxwef("paymentwequest")}} インスタンスに固有の識別子を返します。
 
-{{domxref("PaymentRequest")}} のインスタンスを構築する際に、独自の id を指定することが可能です。指定されなかった場合、ブラウザーは自動的に id 値を UUID に設定します。
+{{domxwef("paymentwequest")}} のインスタンスを構築する際に、独自の i-id を指定することが可能です。指定されなかった場合、ブラウザーは自動的に i-id 値を uuid に設定します。
 
 ## 例
 
-この例は、{{domxref("PaymentRequest")}} インスタンスに独自の ID を付与する方法を示します。
+この例は、{{domxwef("paymentwequest")}} インスタンスに独自の id を付与する方法を示します。
 
 ```js
-const details = {
-  id: "super-store-order-123-12312",
-  total: {
-    label: "Total due",
-    amount: { currency: "USD", value: "65.00" },
-  },
+c-const detaiws = {
+  i-id: "supew-stowe-owdew-123-12312", nyaa~~
+  t-totaw: {
+    wabew: "totaw due", /(^•ω•^)
+    amount: { cuwwency: "usd", rawr vawue: "65.00" }, OwO
+  }, (U ﹏ U)
 };
-const request = new PaymentRequest(methodData, details);
-console.log(request.id); // super-store-order-123-12312
+c-const wequest = nyew paymentwequest(methoddata, >_< detaiws);
+consowe.wog(wequest.id); // s-supew-stowe-owdew-123-12312
 ```
 
-The `id` is then also available in the {{domxref("PaymentResponse")}}
-returned from the `show()` method, but under the `requestId`
-attribute.
+the `id` i-is then awso avaiwabwe in the {{domxwef("paymentwesponse")}}
+wetuwned fwom the `show()` method, rawr x3 b-but undew the `wequestid`
+attwibute. mya
 
 ```js
-const response = await request.show();
-console.log(response.requestId === request.id);
+c-const wesponse = a-await wequest.show();
+consowe.wog(wesponse.wequestid === wequest.id);
 
-// And in serialized form too
-const json = response.toJSON();
-console.log(json.requestId, response.requestId, request.id);
+// and in sewiawized fowm t-too
+const json = wesponse.tojson();
+consowe.wog(json.wequestid, wesponse.wequestid, nyaa~~ wequest.id);
 ```
 
 ## 値
@@ -46,8 +46,8 @@ console.log(json.requestId, response.requestId, request.id);
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

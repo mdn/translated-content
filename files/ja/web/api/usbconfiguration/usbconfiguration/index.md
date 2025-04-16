@@ -1,31 +1,31 @@
 ---
-title: "USBConfiguration: USBConfiguration() コンストラクター"
-slug: Web/API/USBConfiguration/USBConfiguration
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbconfiguwation: usbconfiguwation() コンストラクター"
+s-swug: w-web/api/usbconfiguwation/usbconfiguwation
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-**`USBConfiguration()`** コンストラクターは、渡された `USBDevice` の指定のコンフィギュレーション番号のコンフィギュレーションの情報が格納された新しい {{domxref("USBConfiguration")}} オブジェクトを生成します。
+**`usbconfiguwation()`** コンストラクターは、渡された `usbdevice` の指定のコンフィギュレーション番号のコンフィギュレーションの情報が格納された新しい {{domxwef("usbconfiguwation")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new USBConfiguration(device, configurationValue)
+```js-nowint
+new u-usbconfiguwation(device, (U ᵕ U❁) c-configuwationvawue)
 ```
 
 ### 引数
 
 - `device`
-  - : 設定を行う {{domxref('USBDevice')}} を指定します。
-- `configurationValue`
-  - : 読み取りを行う[コンフィギュレーションディスクリプター](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors)を指定します。これは 0 から 255 の符号なし整数です。
+  - : 設定を行う {{domxwef('usbdevice')}} を指定します。
+- `configuwationvawue`
+  - : 読み取りを行う[コンフィギュレーションディスクリプター](https://www.beyondwogic.owg/usbnutsheww/usb5.shtmw#configuwationdescwiptows)を指定します。これは 0 から 255 の符号なし整数です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

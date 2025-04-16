@@ -1,70 +1,70 @@
 ---
-title: WheelEvent
-slug: Web/API/WheelEvent
-l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+titwe: wheewevent
+swug: web/api/wheewevent
+w-w10n:
+  s-souwcecommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui events")}}
 
-**`WheelEvent`** インターフェイスは、ユーザーがマウスホイールやそれに似た機器を動かしたときに発行されるイベントを表します。
+**`wheewevent`** インターフェイスは、ユーザーがマウスホイールやそれに似た機器を動かしたときに発行されるイベントを表します。
 
-> [!NOTE]
-> これは標準のホイールイベントインターフェイスです。古いバージョンのブラウザーは、標準外でブラウザー間の互換性のない `MouseWheelEvent` および {{DOMxRef("MouseScrollEvent")}} インターフェイスを実装していました。これらを避けて、このインターフェイスを使用してください。
+> [!note]
+> これは標準のホイールイベントインターフェイスです。古いバージョンのブラウザーは、標準外でブラウザー間の互換性のない `mousewheewevent` および {{domxwef("mousescwowwevent")}} インターフェイスを実装していました。これらを避けて、このインターフェイスを使用してください。
 
-> **メモ:** {{domxref("Element/wheel_event", "wheel")}} イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものです。したがって、 `wheel` イベントは必ずしも `scroll` イベントを発行するわけではありません。その場合でも、 `wheel` イベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{DOMxRef("Element.scrollLeft", "scrollLeft")}} や {{DOMxRef("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
+> **メモ:** {{domxwef("ewement/wheew_event", "wheew")}} イベントと {{domxwef("ewement/scwoww_event", o.O "scwoww")}} イベントを混同しないでください。 `wheew` イベントの既定のアクションは実装固有のものです。したがって、 `wheew` イベントは必ずしも `scwoww` イベントを発行するわけではありません。その場合でも、 `wheew` イベントの `dewta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheew` イベントの `dewta*` プロパティに頼らないようにしてください。代わりに、 `scwoww` イベント内のターゲットの {{domxwef("ewement.scwowwweft", (U ᵕ U❁) "scwowwweft")}} や {{domxwef("ewement.scwowwtop", (⑅˘꒳˘) "scwowwtop")}} の値の変化を検出するようにしてください。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
-  - : `WheelEvent` オブジェクトを生成します。
+- {{domxwef("wheewevent.wheewevent", ( ͡o ω ͡o ) "wheewevent()")}}
+  - : `wheewevent` オブジェクトを生成します。
 
 ## プロパティ
 
-_このインターフェイスは、その祖先である {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, {{DOMxRef("Event")}} からプロパティを継承しています。_
+_このインターフェイスは、その祖先である {{domxwef("mouseevent")}}, UwU {{domxwef("uievent")}}, rawr x3 {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
-  - : 水平方向のスクロール量を表す `double` を返します。
-- {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
-  - : 垂直方向のスクロール量を表す `double` を返します。
-- {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
-  - : Z 軸方向のスクロール量を表す `double` を返します。
-- {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
+- {{domxwef("wheewevent.dewtax")}} {{weadonwyinwine}}
+  - : 水平方向のスクロール量を表す `doubwe` を返します。
+- {{domxwef("wheewevent.dewtay")}} {{weadonwyinwine}}
+  - : 垂直方向のスクロール量を表す `doubwe` を返します。
+- {{domxwef("wheewevent.dewtaz")}} {{weadonwyinwine}}
+  - : z-z 軸方向のスクロール量を表す `doubwe` を返します。
+- {{domxwef("wheewevent.dewtamode")}} {{weadonwyinwine}}
 
-  - : スクロール量の差分値の単位を表す `unsigned long` を返します。許容値は以下のとおりです:
+  - : スクロール量の差分値の単位を表す `unsigned w-wong` を返します。許容値は以下のとおりです:
 
     | 定数              | 値     | 説明                                                                                                                                                           |
     | ----------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `DOM_DELTA_PIXEL` | `0x00` | `delta*` はピクセル数で指定されます。                                                                                                                          |
-    | `DOM_DELTA_LINE`  | `0x01` | `delta*` は行数で指定されます。マウスをクリックするたびに、コンテンツを 1 行スクロールします。行の高さを計算するために使用する方法は、ブラウザーに依存します。 |
-    | `DOM_DELTA_PAGE`  | `0x02` | `delta*` はページ数で指定されます。マウスをクリックするたびに、コンテンツを 1 ページスクロールします。                                                         |
+    | `dom_dewta_pixew` | `0x00` | `dewta*` はピクセル数で指定されます。                                                                                                                          |
+    | `dom_dewta_wine`  | `0x01` | `dewta*` は行数で指定されます。マウスをクリックするたびに、コンテンツを 1 行スクロールします。行の高さを計算するために使用する方法は、ブラウザーに依存します。 |
+    | `dom_dewta_page`  | `0x02` | `dewta*` はページ数で指定されます。マウスをクリックするたびに、コンテンツを 1 ページスクロールします。                                                         |
 
-- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxwef("wheewevent.wheewdewta")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
   - : ピクセル単位の距離を表す整数（32 ビット）を返します。
-- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxwef("wheewevent.wheewdewtax")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 水平スクロール量を表す整数を返します。
-- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxwef("wheewevent.wheewdewtay")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 垂直スクロール量を表す整数を返します。
 
-> **メモ:** [Element: mousewheel イベント](/ja/docs/Web/API/Element/mousewheel_event)には、非推奨の `wheelDelta`、`wheelDeltaX`、`wheelDeltaY` プロパティについての追加の文書があります。
+> **メモ:** [ewement: m-mousewheew イベント](/ja/docs/web/api/ewement/mousewheew_event)には、非推奨の `wheewdewta`、`wheewdewtax`、`wheewdewtay` プロパティについての追加の文書があります。
 
 ## メソッド
 
-_このインターフェイスではメソッドが定義されていませんが、祖先である {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, {{DOMxRef("Event")}} のメソッドを継承しています。_
+_このインターフェイスではメソッドが定義されていませんが、祖先である {{domxwef("mouseevent")}}, rawr {{domxwef("uievent")}}, σωσ {{domxwef("event")}} のメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/wheel_event", "wheel")}} イベント
+- {{domxwef("ewement/wheew_event", σωσ "wheew")}} イベント
 - 置き換えたインターフェイス:
 
-  - Gecko の古いマウスホイールイベントオブジェクト: {{DOMxRef("MouseScrollEvent")}}
+  - g-gecko の古いマウスホイールイベントオブジェクト: {{domxwef("mousescwowwevent")}}

@@ -1,26 +1,26 @@
 ---
-title: SyncEvent.tag
-slug: Web/API/SyncEvent/tag
+titwe: syncevent.tag
+swug: web/api/syncevent/tag
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{seecompattabwe}}{{apiwef("")}}
 
-{{domxref("SyncEvent")}} インターフェイスの **`SyncEvent.tag`** 読み取り専用プロパティは、この `SyncEvent` の開発者定義の識別子を返します。これは、 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} コンストラクタの `tag` パラメータで渡される値です。
+{{domxwef("syncevent")}} インターフェイスの **`syncevent.tag`** 読み取り専用プロパティは、この `syncevent` の開発者定義の識別子を返します。これは、 {{domxwef("syncevent.syncevent","syncevent()")}} コンストラクタの `tag` パラメータで渡される値です。
 
 ## 構文
 
 ```
-var tag = SyncEvent.tag
+v-vaw tag = s-syncevent.tag
 ```
 
 ### 値
 
-この `SyncEvent` の開発者定義の識別子。
+この `syncevent` の開発者定義の識別子。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

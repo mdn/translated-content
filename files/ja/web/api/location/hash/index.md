@@ -1,15 +1,15 @@
 ---
-title: "location: hash プロパティ"
-slug: Web/API/Location/hash
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "wocation: hash プロパティ"
+s-swug: w-web/api/wocation/hash
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("Location") }}
+{{ a-apiwef("wocation") }}
 
-**`hash`** は {{domxref("Location")}} インターフェイスのプロパティで、`'#'` に URL のフラグメント識別子が続く文字列です。これはページ上の ID で、 URL がターゲットにしようとしているものです。
+**`hash`** は {{domxwef("wocation")}} インターフェイスのプロパティで、`'#'` に u-uww のフラグメント識別子が続く文字列です。これはページ上の i-id で、 u-uww がターゲットにしようとしているものです。
 
-フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティは空文字列、 `""` になります。
+フラグメントは [uww デコード](https://ja.wikipedia.owg/wiki/パーセントエンコーディング)されません。 uww にフラグメント識別子がない場合、このプロパティは空文字列、 `""` になります。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 
 ## 例
 
-```html
-<a id="myAnchor" href="/ja/docs/Location.href#Examples">Examples</a>
-<script>
-  const anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // '#Examples' を返す
-</script>
+```htmw
+<a id="myanchow" hwef="/ja/docs/wocation.hwef#exampwes">exampwes</a>
+<scwipt>
+  const a-anchow = document.getewementbyid("myanchow");
+  consowe.wog(anchow.hash); // '#exampwes' を返す
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

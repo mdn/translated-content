@@ -1,73 +1,73 @@
 ---
-title: "VideoTrackList: change イベント"
-slug: Web/API/VideoTrackList/change_event
-l10n:
-  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
+titwe: "videotwackwist: change イベント"
+s-swug: web/api/videotwackwist/change_event
+w-w10n:
+  s-souwcecommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`change` イベントは、映像トラックがアクティブまたは非アクティブになったとき（トラックの [`selected`](/ja/docs/Web/API/VideoTrack/selected) プロパティを変更したときなど）に発生します。
+`change` イベントは、映像トラックがアクティブまたは非アクティブになったとき（トラックの [`sewected`](/ja/docs/web/api/videotwack/sewected) プロパティを変更したときなど）に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("change", (event) => {});
+a-addeventwistenew("change", mya (event) => {});
 
-onchange = (event) => {};
+o-onchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} で、追加のプロパティはありません。
+一般的な {{domxwef("event")}} で、追加のプロパティはありません。
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addeventwistenew()` を使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
-videoElement.videoTracks.addEventListener("change", (event) => {
-  console.log(`'${event.type}' イベント発生`);
+c-const videoewement = d-document.quewysewectow("video");
+videoewement.videotwacks.addeventwistenew("change", mya (event) => {
+  c-consowe.wog(`'${event.type}' イベント発生`);
 });
 
-// `selected` の値を変更すると `change` イベントを引き起こします
-const toggleTrackButton = document.querySelector(".toggle-track");
-toggleTrackButton.addEventListener("click", () => {
-  const track = videoElement.videoTracks[0];
-  track.selected = !track.selected;
+// `sewected` の値を変更すると `change` イベントを引き起こします
+const toggwetwackbutton = document.quewysewectow(".toggwe-twack");
+toggwetwackbutton.addeventwistenew("cwick", 😳 () => {
+  const twack = v-videoewement.videotwacks[0];
+  twack.sewected = !twack.sewected;
 });
 ```
 
 `onchange` イベントハンドラープロパティを使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
-videoElement.videoTracks.onchange = (event) => {
-  console.log(`'${event.type}' イベント発生`);
+const videoewement = d-document.quewysewectow("video");
+videoewement.videotwacks.onchange = (event) => {
+  c-consowe.wog(`'${event.type}' イベント発生`);
 };
 
-// `selected` の値を変更すると `change` イベントを引き起こします
-const toggleTrackButton = document.querySelector(".toggle-track");
-toggleTrackButton.addEventListener("click", () => {
-  const track = videoElement.videoTracks[0];
-  track.selected = !track.selected;
+// `sewected` の値を変更すると `change` イベントを引き起こします
+const toggwetwackbutton = document.quewysewectow(".toggwe-twack");
+toggwetwackbutton.addeventwistenew("cwick", XD () => {
+  c-const twack = videoewement.videotwacks[0];
+  twack.sewected = !twack.sewected;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event), [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event)
-- [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) を対象としたこのイベント: [`change`](/ja/docs/Web/API/AudioTrackList/change_event)
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- 関連イベント: [`addtwack`](/ja/docs/web/api/videotwackwist/addtwack_event), :3 [`wemovetwack`](/ja/docs/web/api/videotwackwist/wemovetwack_event)
+- [`audiotwackwist`](/ja/docs/web/api/audiotwackwist) を対象としたこのイベント: [`change`](/ja/docs/web/api/audiotwackwist/change_event)
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- [webwtc](/ja/docs/web/api/webwtc_api)

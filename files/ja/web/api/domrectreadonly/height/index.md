@@ -1,14 +1,14 @@
 ---
-title: "DOMRectReadOnly: height プロパティ"
-short-title: height
-slug: Web/API/DOMRectReadOnly/height
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domwectweadonwy: height プロパティ"
+s-showt-titwe: h-height
+swug: web/api/domwectweadonwy/height
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`height`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の高さを表します。
+**`height`** は **`domwectweadonwy`** インターフェイスの読み取り専用プロパティで、この `domwect` の高さを表します。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

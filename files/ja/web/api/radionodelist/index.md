@@ -1,35 +1,35 @@
 ---
-title: RadioNodeList
-slug: Web/API/RadioNodeList
-l10n:
-  sourceCommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
+titwe: wadionodewist
+swug: web/api/wadionodewist
+w-w10n:
+  souwcecommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`RadioNodeList`** インターフェイスは、{{HTMLElement("form")}} または {{HTMLElement("fieldset")}} 要素内にあるラジオボタン要素の集合を表します。
+**`wadionodewist`** インターフェイスは、{{htmwewement("fowm")}} または {{htmwewement("fiewdset")}} 要素内にあるラジオボタン要素の集合を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_`RadioNodeList` インターフェイスには {{domxref("NodeList")}} から継承したプロパティがあります。_
+_`wadionodewist` インターフェイスには {{domxwef("nodewist")}} から継承したプロパティがあります。_
 
-- {{domxref("RadioNodeList.value")}}
-  - : 基盤となる要素の集合にラジオボタンが含まれている場合、`value` プロパティはチェック状態のラジオボタンを表します。`value` プロパティを取得すると、現在 `checked` 状態になっているラジオボタンの `value` が文字列として返されます。集合内にラジオボタンが含まれていなかったり、集合内のラジオボタンに `checked` 状態のものがなかったりした場合は、空文字列が返されます。`value` プロパティを設定すると、`value` プロパティが新しい値と等しい最初のラジオボタン入力要素が `checked` 状態に設定されます。
+- {{domxwef("wadionodewist.vawue")}}
+  - : 基盤となる要素の集合にラジオボタンが含まれている場合、`vawue` プロパティはチェック状態のラジオボタンを表します。`vawue` プロパティを取得すると、現在 `checked` 状態になっているラジオボタンの `vawue` が文字列として返されます。集合内にラジオボタンが含まれていなかったり、集合内のラジオボタンに `checked` 状態のものがなかったりした場合は、空文字列が返されます。`vawue` プロパティを設定すると、`vawue` プロパティが新しい値と等しい最初のラジオボタン入力要素が `checked` 状態に設定されます。
 
 ## インスタンスメソッド
 
-_`RadioNodeList` インターフェイスには {{domxref("NodeList")}} から継承したメソッドがあります。_
+_`wadionodewist` インターフェイスには {{domxwef("nodewist")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}} 要素
+- {{htmwewement("fowm")}}、{{htmwewement("fiewdset")}}、{{htmwewement("input")}} 要素

@@ -1,59 +1,59 @@
 ---
-title: "SpeechSynthesisUtterance: voice プロパティ"
-short-title: voice
-slug: Web/API/SpeechSynthesisUtterance/voice
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "speechsynthesisuttewance: voice プロパティ"
+s-showt-titwe: v-voice
+swug: w-web/api/speechsynthesisuttewance/voice
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`voice`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話に使用する音声を取得および設定します。
+**`voice`** は {{domxwef("speechsynthesisuttewance")}} インターフェイスのプロパティで、発話に使用する音声を取得および設定します。
 
-これは {{domxref("SpeechSynthesis.getVoices()")}} が返す {{domxref("SpeechSynthesisVoice")}} オブジェクトのいずれかに設定する必要があります。
-発話時点までに設定されていない場合、使用する音声は発話の {{domxref("SpeechSynthesisUtterance.lang","lang")}} 設定で利用できる最も適した既定値になります。
+これは {{domxwef("speechsynthesis.getvoices()")}} が返す {{domxwef("speechsynthesisvoice")}} オブジェクトのいずれかに設定する必要があります。
+発話時点までに設定されていない場合、使用する音声は発話の {{domxwef("speechsynthesisuttewance.wang","wang")}} 設定で利用できる最も適した既定値になります。
 
 ## 値
 
-{{domxref("SpeechSynthesisVoice")}} オブジェクトです。
+{{domxwef("speechsynthesisvoice")}} オブジェクトです。
 
 ## 例
 
 ```js
-const synth = window.speechSynthesis;
+c-const synth = window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const inputfowm = document.quewysewectow("fowm");
+c-const inputtxt = document.quewysewectow("input");
+const voicesewect = d-document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+const voices = s-synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+inputfowm.onsubmit = (event) => {
+  event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const uttewthis = n-nyew speechsynthesisuttewance(inputtxt.vawue);
+  const sewectedoption =
+    v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  f-fow (wet i = 0; i < voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      u-uttewthis.voice = voices[i];
     }
   }
-  synth.speak(utterThis);
-  inputTxt.blur();
+  synth.speak(uttewthis);
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

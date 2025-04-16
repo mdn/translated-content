@@ -1,16 +1,16 @@
 ---
-title: "ByteLengthQueuingStrategy: highWaterMark プロパティ"
-short-title: highWaterMark
-slug: Web/API/ByteLengthQueuingStrategy/highWaterMark
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "bytewengthqueuingstwategy: highwatewmawk プロパティ"
+s-showt-titwe: h-highwatewmawk
+s-swug: web/api/bytewengthqueuingstwategy/highwatewmawk
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ByteLengthQueuingStrategy.highWaterMark`** は読み取り専用プロパティで、[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が適用される前に内部キューに格納することができる総バイト数を返します。
+**`bytewengthqueuingstwategy.highwatewmawk`** は読み取り専用プロパティで、[背圧](/ja/docs/web/api/stweams_api/concepts#背圧)が適用される前に内部キューに格納することができる総バイト数を返します。
 
-> **メモ:** [`CountQueuingStrategy()`](/ja/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) では `highWaterMark` 引数に単純な塊の数を指定しますが、 `ByteLengthQueuingStrategy()` では、 `highWaterMark` 引数はバイト数を指定します。具体的には、チャンクのストリームが指定された場合に、背圧が適用される前に内部キューに何バイト分のチャンクを格納することができるか（チャンクの数ではありません）を指定します。
+> **メモ:** [`countqueuingstwategy()`](/ja/docs/web/api/countqueuingstwategy/countqueuingstwategy) では `highwatewmawk` 引数に単純な塊の数を指定しますが、 `bytewengthqueuingstwategy()` では、 `highwatewmawk` 引数はバイト数を指定します。具体的には、チャンクのストリームが指定された場合に、背圧が適用される前に内部キューに何バイト分のチャンクを格納することができるか（チャンクの数ではありません）を指定します。
 
 ## 値
 
@@ -19,37 +19,37 @@ l10n:
 ## 例
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({
-  highWaterMark: 1 * 1024,
+c-const queuingstwategy = new b-bytewengthqueuingstwategy({
+  h-highwatewmawk: 1 * 1024, -.-
 });
 
-const readableStream = new ReadableStream(
+const weadabwestweam = nyew weadabwestweam(
   {
-    start(controller) {
+    stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, (ˆ ﻌ ˆ)♡
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, (⑅˘꒳˘)
+    cancew(eww) {
+      c-consowe.wog("stweam ewwow:", (U ᵕ U❁) eww);
+    }, -.-
   },
-  queuingStrategy,
+  queuingstwategy, ^^;;
 );
 
-const size = queuingStrategy.size(chunk);
-console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
+const size = q-queuingstwategy.size(chunk);
+consowe.wog(`highwatewmawk v-vawue: ${queuingstwategy.highwatewmawk}$`);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} コンストラクター
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", >_< "bytewengthqueuingstwategy()")}} コンストラクター

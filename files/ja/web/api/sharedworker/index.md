@@ -1,98 +1,98 @@
 ---
-title: SharedWorker
-slug: Web/API/SharedWorker
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: shawedwowkew
+swug: web/api/shawedwowkew
+w-w10n:
+  souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-**`SharedWorker`** インターフェイスは、ウィンドウ、iframe、ワーカーなど複数の閲覧コンテキストからアクセスできる、特定の種類のワーカーを表します。これらは専用ワーカーとは異なるインターフェイスを実装しており、異なるグローバルコンテキストである {{domxref("SharedWorkerGlobalScope")}} を持ちます。
+**`shawedwowkew`** インターフェイスは、ウィンドウ、ifwame、ワーカーなど複数の閲覧コンテキストからアクセスできる、特定の種類のワーカーを表します。これらは専用ワーカーとは異なるインターフェイスを実装しており、異なるグローバルコンテキストである {{domxwef("shawedwowkewgwobawscope")}} を持ちます。
 
-> [!NOTE]
-> SharedWorkerが複数の閲覧コンテキストからアクセスできる場合、それらの閲覧コンテキストはすべて、まったく同じオリジン（同じプロトコル、ホスト、ポート）を共有している必要があります。
+> [!note]
+> s-shawedwowkewが複数の閲覧コンテキストからアクセスできる場合、それらの閲覧コンテキストはすべて、まったく同じオリジン（同じプロトコル、ホスト、ポート）を共有している必要があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
-  - : 指定された URL のスクリプトを実行する共有ウェブワーカーを作成します。
+- {{domxwef("shawedwowkew.shawedwowkew", nyaa~~ "shawedwowkew()")}}
+  - : 指定された u-uww のスクリプトを実行する共有ウェブワーカーを作成します。
 
 ## インスタンスプロパティ
 
-_{{domxref("EventTarget")}} のプロパティを継承しています。_
+_{{domxwef("eventtawget")}} のプロパティを継承しています。_
 
-- {{domxref("SharedWorker.port")}} {{ReadOnlyInline}}
-  - : 共有ワーカーとの通信および制御に使用される {{domxref("MessagePort")}} オブジェクトを返します。
+- {{domxwef("shawedwowkew.powt")}} {{weadonwyinwine}}
+  - : 共有ワーカーとの通信および制御に使用される {{domxwef("messagepowt")}} オブジェクトを返します。
 
 ## イベント
 
-- {{domxref("SharedWorker.error_event", "error")}}
+- {{domxwef("shawedwowkew.ewwow_event", "ewwow")}}
   - : 共有ワーカーでエラーが発生したときに発行されます。
 
 ## メソッド
 
-_{{domxref("EventTarget")}} のメソッドを継承しています。_
+_{{domxwef("eventtawget")}} のメソッドを継承しています。_
 
 ## 例
 
-[基本的な共有ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）には 2 つの HTML ページがあり、それぞれでは JavaScript で単純な計算を行っています。異なるスクリプトが同じワーカーファイルを使用して計算を行っているため、ページが異なるウィンドウで実行されていても、どちらもアクセスすることができます。
+[基本的な共有ワーカーの例](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-shawed-wowkew)（[共有ワーカーを実行](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-shawed-wowkew/)）には 2 つの h-htmw ページがあり、それぞれでは j-javascwipt で単純な計算を行っています。異なるスクリプトが同じワーカーファイルを使用して計算を行っているため、ページが異なるウィンドウで実行されていても、どちらもアクセスすることができます。
 
-以下のコードでは `SharedWorker` オブジェクトを、 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して生成しています。どちらのスクリプトもこれを格納します。
+以下のコードでは `shawedwowkew` オブジェクトを、 {{domxwef("shawedwowkew.shawedwowkew", "shawedwowkew()")}} コンストラクターを使用して生成しています。どちらのスクリプトもこれを格納します。
 
 ```js
-const myWorker = new SharedWorker("worker.js");
+c-const mywowkew = n-nyew shawedwowkew("wowkew.js");
 ```
 
-どちらのスクリプトも、{{domxref("SharedWorker.port")}} プロパティを使用して作成された {{domxref("MessagePort")}} オブジェクトを通してワーカーにアクセスします。addEventListener を使用して onmessage イベントが関連づけられている場合、ポートはその `start()` メソッドを使用して手動で開始されます。
+どちらのスクリプトも、{{domxwef("shawedwowkew.powt")}} プロパティを使用して作成された {{domxwef("messagepowt")}} オブジェクトを通してワーカーにアクセスします。addeventwistenew を使用して onmessage イベントが関連づけられている場合、ポートはその `stawt()` メソッドを使用して手動で開始されます。
 
 ```js
-myWorker.port.start();
+mywowkew.powt.stawt();
 ```
 
-ポートが開始されると、どちらのスクリプトも `port.postMessage()` と `port.onmessage` を使用して、それぞれワーカーにメッセージを投稿し、ワーカーから送られたメッセージを処理します。
+ポートが開始されると、どちらのスクリプトも `powt.postmessage()` と `powt.onmessage` を使用して、それぞれワーカーにメッセージを投稿し、ワーカーから送られたメッセージを処理します。
 
 ```js
-first.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+fiwst.onchange = () => {
+  mywowkew.powt.postmessage([fiwst.vawue, /(^•ω•^) second.vawue]);
+  c-consowe.wog("message posted to wowkew");
 };
 
 second.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+  m-mywowkew.powt.postmessage([fiwst.vawue, rawr second.vawue]);
+  c-consowe.wog("message posted to wowkew");
 };
 
-myWorker.port.onmessage = (e) => {
-  result1.textContent = e.data;
-  console.log("Message received from worker");
+mywowkew.powt.onmessage = (e) => {
+  wesuwt1.textcontent = e.data;
+  consowe.wog("message w-weceived fwom wowkew");
 };
 ```
 
-ワーカー内部では {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} ハンドラーを使用して、前述と同じポートに接続します。そのワーカーに関連するポートは {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} イベントの `ports` プロパティでアクセスできます。それから {{domxref("MessagePort") }} を使用して、ワーカーを開始します。ポートを始めるには `start()` メソッドを、メインスレッドから送られるメッセージを処理するには `onmessage` ハンドラーを使用します。
+ワーカー内部では {{domxwef("shawedwowkewgwobawscope.connect_event", OwO "onconnect")}} ハンドラーを使用して、前述と同じポートに接続します。そのワーカーに関連するポートは {{domxwef("shawedwowkewgwobawscope/connect_event", (U ﹏ U) "connect")}} イベントの `powts` プロパティでアクセスできます。それから {{domxwef("messagepowt") }} を使用して、ワーカーを開始します。ポートを始めるには `stawt()` メソッドを、メインスレッドから送られるメッセージを処理するには `onmessage` ハンドラーを使用します。
 
 ```js
-onconnect = (e) => {
-  const port = e.ports[0];
+o-onconnect = (e) => {
+  const p-powt = e.powts[0];
 
-  port.addEventListener("message", (e) => {
-    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-    port.postMessage(workerResult);
+  powt.addeventwistenew("message", >_< (e) => {
+    const wowkewwesuwt = `wesuwt: ${e.data[0] * e.data[1]}`;
+    powt.postmessage(wowkewwesuwt);
   });
 
-  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+  powt.stawt(); // w-wequiwed when using addeventwistenew. rawr x3 othewwise cawwed impwicitwy by onmessage settew. mya
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Worker")}}
+- {{domxwef("wowkew")}}

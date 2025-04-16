@@ -1,74 +1,74 @@
 ---
-title: "MediaStream: addtrack イベント"
-short-title: addtrack
-slug: Web/API/MediaStream/addtrack_event
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweam: addtwack イベント"
+showt-titwe: a-addtwack
+s-swug: web/api/mediastweam/addtwack_event
+w-w10n:
+  s-souwcecommit: a-ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`addtrack`** イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) に追加されたときに発行されます。
+**`addtwack`** イベントは、新しい [`mediastweamtwack`](/ja/docs/web/api/mediastweamtwack) オブジェクトが [`mediastweam`](/ja/docs/web/api/mediastweam) に追加されたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("addtrack", (event) => {});
+a-addeventwistenew("addtwack", (U ᵕ U❁) (event) => {});
 
-onaddtrack = (event) => {};
+o-onaddtwack = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MediaStreamTrackEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("mediastweamtwackevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("MediaStreamTrackEvent")}}
+{{inhewitancediagwam("mediastweamtwackevent")}}
 
 ## イベントプロパティ
 
-_親インターフェイスである {{domxref("Event")}} から継承したプロパティもあります。_
+_親インターフェイスである {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
-  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームに追加されたトラックを表します。
+- {{domxwef("mediastweamtwackevent.twack")}} {{weadonwyinwine}}
+  - : {{domxwef("mediastweamtwack")}} オブジェクトで、このストリームに追加されたトラックを表します。
 
 ## 例
 
-`addEventListener()` を使用すると次にようになります。
+`addeventwistenew()` を使用すると次にようになります。
 
 ```js
-const stream = new MediaStream();
+const stweam = new mediastweam();
 
-stream.addEventListener("addtrack", (event) => {
-  console.log(`New ${event.track.kind} track added`);
+stweam.addeventwistenew("addtwack", -.- (event) => {
+  consowe.wog(`new ${event.twack.kind} t-twack added`);
 });
 ```
 
-`onaddtrack` イベントハンドラープロパティを使用すると次にようになります。
+`onaddtwack` イベントハンドラープロパティを使用すると次にようになります。
 
 ```js
-const stream = new MediaStream();
+const stweam = n-nyew mediastweam();
 
-stream.onaddtrack = (event) => {
-  console.log(`New ${event.track.kind} track added`);
+stweam.onaddtwack = (event) => {
+  c-consowe.wog(`new ${event.twack.kind} twack added`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
-- [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event)
-- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event)
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- 関連イベント: [`wemovetwack`](/ja/docs/web/api/mediastweam/wemovetwack_event)
+- [`audiotwackwist`](/ja/docs/web/api/audiotwackwist) をターゲットとしたこのイベント: [`addtwack`](/ja/docs/web/api/audiotwackwist/addtwack_event)
+- [`videotwackwist`](/ja/docs/web/api/videotwackwist) をターゲットとしたこのイベント: [`addtwack`](/ja/docs/web/api/videotwackwist/addtwack_event)
+- [メディアキャプチャとストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- [webwtc](/ja/docs/web/api/webwtc_api)

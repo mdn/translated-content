@@ -1,179 +1,179 @@
 ---
-title: "Window: error イベント"
-short-title: error
-slug: Web/API/Window/error_event
-l10n:
-  sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
+titwe: "window: ewwow イベント"
+s-showt-titwe: e-ewwow
+swug: w-web/api/window/ewwow_event
+w-w10n:
+  s-souwcecommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合 — 例えば、スクリプトに実行エラーがあった場合に {{domxref("Window")}} オブジェクトに発生します。
+`ewwow` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合 — 例えば、スクリプトに実行エラーがあった場合に {{domxwef("window")}} オブジェクトに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", OwO "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", 😳😳😳 (event) => {});
 
-onerror = (event, source, lineno, colno, error) => {};
+o-onewwow = (event, 😳😳😳 s-souwce, wineno, o.O cowno, ewwow) => {};
 ```
 
-> [!NOTE]
-> 歴史的な理由により、 `window` の `onerror` はイベントハンドラープロパティの中で唯一、複数の引数を受け取ります。
+> [!note]
+> 歴史的な理由により、 `window` の `onewwow` はイベントハンドラープロパティの中で唯一、複数の引数を受け取ります。
 
 ## イベント型
 
-イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxref("ErrorEvent")}} インスタンスであり、そうでない場合は {{domxref("Event")}} インスタンスです。
+イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxwef("ewwowevent")}} インスタンスであり、そうでない場合は {{domxwef("event")}} インスタンスです。
 
-{{InheritanceDiagram("ErrorEvent")}}
+{{inhewitancediagwam("ewwowevent")}}
 
 ## 使用上の注意
 
 ### イベントハンドラープロパティ
 
-歴史的な理由から、 `onerror` イベントハンドラープロパティは `Window` オブジェクトに対してのみ、他のイベントハンドラープロパティとは異なる動作をします。
+歴史的な理由から、 `onewwow` イベントハンドラープロパティは `window` オブジェクトに対してのみ、他のイベントハンドラープロパティとは異なる動作をします。
 
-これは `onerror` に割り当てられたハンドラーにのみ適用され、 `addEventListener()` を使用して追加したハンドラーには適用されないことに注意してください。
+これは `onewwow` に割り当てられたハンドラーにのみ適用され、 `addeventwistenew()` を使用して追加したハンドラーには適用されないことに注意してください。
 
 #### キャンセル
 
-イベントハンドラープロパティに割り当てられたほとんどのイベントハンドラーでは、ハンドラーから `false` を返すことで、イベントの既定値の動作を取り消すことができます。
+イベントハンドラープロパティに割り当てられたほとんどのイベントハンドラーでは、ハンドラーから `fawse` を返すことで、イベントの既定値の動作を取り消すことができます。
 
 ```js
-textarea.onkeydown = () => false;
+textawea.onkeydown = () => fawse;
 ```
 
-しかし、 `Window` の `error` イベントの既定の動作をイベントハンドラープロパティから取り消すためには、代わりに `true` を返す必要があります。
+しかし、 `window` の `ewwow` イベントの既定の動作をイベントハンドラープロパティから取り消すためには、代わりに `twue` を返す必要があります。
 
 ```js
-window.onerror = () => true;
+window.onewwow = () => twue;
 ```
 
 取り消された場合、エラーはコンソールに現れませんが、現在のスクリプトの実行は停止します。
 
 #### 引数
 
-イベントハンドラーのシグネチャは `addEventListener()` と `onerror` で異なります。 `Window.addEventListener()` に渡されるイベントハンドラーは、単一の {{domxref("ErrorEvent")}} オブジェクトを受け取りますが、 `onerror` ハンドラーは {{domxref("ErrorEvent")}} オブジェクトのプロパティと一致する 5 つの引数を受け取ります：
+イベントハンドラーのシグネチャは `addeventwistenew()` と `onewwow` で異なります。 `window.addeventwistenew()` に渡されるイベントハンドラーは、単一の {{domxwef("ewwowevent")}} オブジェクトを受け取りますが、 `onewwow` ハンドラーは {{domxwef("ewwowevent")}} オブジェクトのプロパティと一致する 5 つの引数を受け取ります：
 
 - `event`
-  - : 文字列で、関数を説明する人間が読むのに適したエラーメッセージが入ります。 {{domxref("ErrorEvent.message")}} と同じです。
-- `source`
+  - : 文字列で、関数を説明する人間が読むのに適したエラーメッセージが入ります。 {{domxwef("ewwowevent.message")}} と同じです。
+- `souwce`
   - : 文字列で、エラーが発生したスクリプトファイルの名前が入ります。
-- `lineno`
+- `wineno`
   - : 整数で、エラーが発生したスクリプトファイルの行番号が入ります。
-- `colno`
+- `cowno`
   - : 整数で、エラーが発生したスクリプトファイルの列番号が入ります。
-- `error`
-  - : 発生したエラーです。ふつうは {{jsxref("Error")}} オブジェクトです。
+- `ewwow`
+  - : 発生したエラーです。ふつうは {{jsxwef("ewwow")}} オブジェクトです。
 
 ```js
-window.onerror = (a, b, c, d, e) => {
-  console.log(`message: ${a}`);
-  console.log(`source: ${b}`);
-  console.log(`lineno: ${c}`);
-  console.log(`colno: ${d}`);
-  console.log(`error: ${e}`);
+w-window.onewwow = (a, ( ͡o ω ͡o ) b, c, (U ﹏ U) d, e) => {
+  consowe.wog(`message: ${a}`);
+  c-consowe.wog(`souwce: ${b}`);
+  consowe.wog(`wineno: ${c}`);
+  c-consowe.wog(`cowno: ${d}`);
+  consowe.wog(`ewwow: ${e}`);
 
-  return true;
+  wetuwn twue;
 };
 ```
 
-> [!NOTE]
-> これらの引数名は [HTML イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Attributes#event_handler_attributes)で監視可能で、最初の引数は `message` ではなく `event` と呼ばれます。
+> [!note]
+> これらの引数名は [htmw イベントハンドラー属性](/ja/docs/web/htmw/wefewence/attwibutes#event_handwew_attwibutes)で監視可能で、最初の引数は `message` ではなく `event` と呼ばれます。
 
-この特別な動作は `window` の `onerror` イベントハンドラーに対してのみ起こります。 [`Element.onerror`](/ja/docs/Web/API/HTMLElement/error_event) ハンドラーの場合は単一の {{domxref("ErrorEvent")}} オブジェクトを受け取ります。
+この特別な動作は `window` の `onewwow` イベントハンドラーに対してのみ起こります。 [`ewement.onewwow`](/ja/docs/web/api/htmwewement/ewwow_event) ハンドラーの場合は単一の {{domxwef("ewwowevent")}} オブジェクトを受け取ります。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+```htmw
+<div cwass="contwows">
+  <button i-id="scwipt-ewwow" t-type="button">genewate scwipt ewwow</button>
+  <img cwass="bad-img" />
 </div>
 
-<div class="event-log">
-  <label for="eventLog">Event log:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew f-fow="eventwog">event wog:</wabew>
+  <textawea
+    weadonwy
+    cwass="event-wog-contents"
+    wows="8"
+    c-cows="30"
+    id="eventwog"></textawea>
 </div>
 ```
 
 ```css hidden
-body {
-  display: grid;
-  grid-template-areas: "control log";
+b-body {
+  dispway: g-gwid;
+  gwid-tempwate-aweas: "contwow w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  g-gwid-awea: contwow;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
+wabew, (///ˬ///✿)
 button {
-  display: block;
+  dispway: bwock;
 }
 
 button {
-  height: 2rem;
-  margin: 0.5rem;
+  h-height: 2wem;
+  mawgin: 0.5wem;
 }
 
-img {
-  width: 0;
+i-img {
+  w-width: 0;
   height: 0;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const log = document.querySelector(".event-log-contents");
+const wog = document.quewysewectow(".event-wog-contents");
 
-window.addEventListener("error", (event) => {
-  log.textContent = `${log.textContent}${event.type}: ${event.message}\n`;
-  console.log(event);
+window.addeventwistenew("ewwow", >w< (event) => {
+  wog.textcontent = `${wog.textcontent}${event.type}: ${event.message}\n`;
+  c-consowe.wog(event);
 });
 
-const scriptError = document.querySelector("#script-error");
-scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+c-const scwiptewwow = document.quewysewectow("#scwipt-ewwow");
+s-scwiptewwow.addeventwistenew("cwick", rawr () => {
+  c-const badcode = "const s-s;";
+  evaw(badcode);
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ embedwivesampwe('wive_exampwe', mya '100%', '150px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `Element` を対象としたこのイベント: {{domxref("HTMLElement/error_event", "error")}} イベント
+- `ewement` を対象としたこのイベント: {{domxwef("htmwewement/ewwow_event", ^^ "ewwow")}} イベント

@@ -1,23 +1,23 @@
 ---
-title: SVGNumber
-slug: Web/API/SVGNumber
-l10n:
-  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
+titwe: svgnumbew
+swug: web/api/svgnumbew
+w-w10n:
+  s-souwcecommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGNumber`** インターフェイスは、{{cssxref("&lt;number&gt;")}} 基本データ型に対応します。
+**`svgnumbew`** インターフェイスは、{{cssxwef("&wt;numbew&gt;")}} 基本データ型に対応します。
 
-`SVGNumber` オブジェクトは読み取り専用として指定されていることがあり、その場合はオブジェクトを変更しようとすると例外が発生します。
+`svgnumbew` オブジェクトは読み取り専用として指定されていることがあり、その場合はオブジェクトを変更しようとすると例外が発生します。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGNumber.value")}}
+- {{domxwef("svgnumbew.vawue")}}
 
   - : 数値を表す浮動小数点数です。
 
-    メモ: `SVGNumber` が読み取り専用である場合、この値を変更しようとすると {{domxref("DOMException")}} が NO_MODIFICATION_ALLOWED_ERR のコードで発生します。
+    メモ: `svgnumbew` が読み取り専用である場合、この値を変更しようとすると {{domxwef("domexception")}} が n-nyo_modification_awwowed_eww のコードで発生します。
 
 ## インスタンスメソッド
 
@@ -25,8 +25,8 @@ _このインターフェイスは固有のメソッドを提供していませ�
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

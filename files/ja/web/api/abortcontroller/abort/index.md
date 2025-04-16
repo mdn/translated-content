@@ -1,79 +1,79 @@
 ---
-title: "AbortController: abort() メソッド"
-short-title: abort()
-slug: Web/API/AbortController/abort
-l10n:
-  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
+titwe: "abowtcontwowwew: abowt() メソッド"
+s-showt-titwe: abowt()
+s-swug: web/api/abowtcontwowwew/abowt
+w-w10n:
+  s-souwcecommit: c-c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`abort()`** は {{domxref("AbortController")}} インターフェイスのメソッドで、非同期操作を完了前に中止します。
-これは[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)、あらゆるレスポンス本体の消費、ストリームを中止することができます。
+**`abowt()`** は {{domxwef("abowtcontwowwew")}} インターフェイスのメソッドで、非同期操作を完了前に中止します。
+これは[フェッチリクエスト](/ja/docs/web/api/window/fetch)、あらゆるレスポンス本体の消費、ストリームを中止することができます。
 
 ## 構文
 
-```js-nolint
-abort()
-abort(reason)
+```js-nowint
+a-abowt()
+a-abowt(weason)
 ```
 
 ### 引数
 
-- `reason` {{optional_inline}}
-  - : 処理が中断された理由。JavaScript で任意の値を指定可能。
-    指定しなかった場合、理由は "AbortError" {{domxref("DOMException")}} に設定されます。
+- `weason` {{optionaw_inwine}}
+  - : 処理が中断された理由。javascwipt で任意の値を指定可能。
+    指定しなかった場合、理由は "abowtewwow" {{domxwef("domexception")}} に設定されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次のコードでは、動画のダウンロードを[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して行おうとします。
+次のコードでは、動画のダウンロードを[フェッチ a-api](/ja/docs/web/api/fetch_api) を使用して行おうとします。
 
-最初に {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
+最初に {{domxwef("abowtcontwowwew.abowtcontwowwew","abowtcontwowwew()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxwef("abowtsignaw")}} オブジェクトへの参照を {{domxwef("abowtcontwowwew.signaw")}} プロパティを使用して取り込みます。
 
-[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{signal}`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
+[フェッチリクエスト](/ja/docs/web/api/window/fetch)が開始されると、 `abowtsignaw` をリクエストのオプションオブジェクト（下記の `{signaw}`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxwef("abowtcontwowwew.abowt()")}} を呼び出すことでフェッチを中断できるようになります。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+const contwowwew = nyew abowtcontwowwew();
+const signaw = c-contwowwew.signaw;
 
-const url = "video.mp4";
-const downloadBtn = document.querySelector(".download");
-const abortBtn = document.querySelector(".abort");
+const uww = "video.mp4";
+const downwoadbtn = d-document.quewysewectow(".downwoad");
+const abowtbtn = d-document.quewysewectow(".abowt");
 
-downloadBtn.addEventListener("click", fetchVideo);
+downwoadbtn.addeventwistenew("cwick", rawr x3 fetchvideo);
 
-abortBtn.addEventListener("click", () => {
-  controller.abort();
-  console.log("Download aborted");
+abowtbtn.addeventwistenew("cwick", nyaa~~ () => {
+  c-contwowwew.abowt();
+  consowe.wog("downwoad a-abowted");
 });
 
-function fetchVideo() {
-  fetch(url, { signal })
-    .then((response) => {
-      console.log("Download complete", response);
+f-function fetchvideo() {
+  fetch(uww, /(^•ω•^) { signaw })
+    .then((wesponse) => {
+      consowe.wog("downwoad c-compwete", rawr wesponse);
     })
-    .catch((err) => {
-      console.error(`Download error: ${err.message}`);
+    .catch((eww) => {
+      consowe.ewwow(`downwoad ewwow: ${eww.message}`);
     });
 }
 ```
 
-> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` という名前の `DOMException` で拒否されます。
+> **メモ:** `abowt()` が呼び出されると、`fetch()` のプロミスは `abowtewwow` という名前の `domexception` で拒否されます。
 
-[GitHub に完全に動作する例](https://github.com/mdn/dom-examples/tree/main/abort-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-examples/abort-api/)も確認してください。
+[github に完全に動作する例](https://github.com/mdn/dom-exampwes/twee/main/abowt-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-exampwes/abowt-api/)も確認してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- [フェッチ api](/ja/docs/web/api/fetch_api)

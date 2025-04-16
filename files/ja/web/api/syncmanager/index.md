@@ -1,11 +1,11 @@
 ---
-title: SyncManager
-slug: Web/API/SyncManager
+titwe: syncmanagew
+swug: web/api/syncmanagew
 ---
 
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+{{apiwef("sewvice w-wowkews api")}}{{non-standawd_headew}}
 
-[ServiceWorker API](/ja/docs/Web/API/Service_Worker_API) の **`SyncManager`** インターフェイスは同期登録を登録、及び一覧表示のインターフェイスを提供します。
+[sewvicewowkew a-api](/ja/docs/web/api/sewvice_wowkew_api) の **`syncmanagew`** インターフェイスは同期登録を登録、及び一覧表示のインターフェイスを提供します。
 
 ## プロパティ
 
@@ -13,15 +13,15 @@ slug: Web/API/SyncManager
 
 ## メソッド
 
-- {{domxref("SyncManager.register")}}
-  - : 新規の同期登録を作成し {{jsxref("Promise")}} を返します。
-- {{domxref("SyncManager.getTags")}}
-  - : SyncManager 登録の為にデベロッパーが定義した識別子リストを返します。
+- {{domxwef("syncmanagew.wegistew")}}
+  - : 新規の同期登録を作成し {{jsxwef("pwomise")}} を返します。
+- {{domxwef("syncmanagew.gettags")}}
+  - : s-syncmanagew 登録の為にデベロッパーが定義した識別子リストを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

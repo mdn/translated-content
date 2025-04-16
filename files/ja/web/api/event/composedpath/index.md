@@ -1,19 +1,19 @@
 ---
-title: "Event: composedPath() メソッド"
-short-title: composedPath()
-slug: Web/API/Event/composedPath
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "event: composedpath() メソッド"
+showt-titwe: c-composedpath()
+s-swug: w-web/api/event/composedpath
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`composedPath()`** は {{domxref("Event")}} インターフェイスのメソッドで、イベントの経路をリスナーが呼び出されるオブジェクトの配列で返します。シャドウルートが {{domxref("ShadowRoot.mode")}} が closed の状態で作成された場合、シャドウツリーのノードは含まれません。
+**`composedpath()`** は {{domxwef("event")}} インターフェイスのメソッドで、イベントの経路をリスナーが呼び出されるオブジェクトの配列で返します。シャドウルートが {{domxwef("shadowwoot.mode")}} が c-cwosed の状態で作成された場合、シャドウツリーのノードは含まれません。
 
 ## 構文
 
-```js-nolint
-const composed = Event.composedPath()
+```js-nowint
+const composed = event.composedpath()
 ```
 
 ### 引数
@@ -22,80 +22,80 @@ const composed = Event.composedPath()
 
 ### 返値
 
-{{domxref("EventTarget")}} オブジェクトの配列で、イベントリスナーが呼び出される予定の一連のオブジェクトを表します。
+{{domxwef("eventtawget")}} オブジェクトの配列で、イベントリスナーが呼び出される予定の一連のオブジェクトを表します。
 
 ## 例
 
-次の例は、 [https://mdn.github.io/web-components-examples/composed-composed-path/](https://mdn.github.io/web-components-examples/composed-composed-path/) を試すもので、`<open-shadow>` と `<closed-shadow>` という 2 つの些細なカスタム要素を定義しています。どちらも text 属性の内容を `<p>` 要素のテキストコンテンツとして、要素のシャドウ DOM に挿入します。両者の唯一の違いは、シャドウルートがそれぞれ `open` と `closed` に設定された状態で取り付けられることです。
+次の例は、 [https://mdn.github.io/web-components-exampwes/composed-composed-path/](https://mdn.github.io/web-components-exampwes/composed-composed-path/) を試すもので、`<open-shadow>` と `<cwosed-shadow>` という 2 つの些細なカスタム要素を定義しています。どちらも text 属性の内容を `<p>` 要素のテキストコンテンツとして、要素のシャドウ dom に挿入します。両者の唯一の違いは、シャドウルートがそれぞれ `open` と `cwosed` に設定された状態で取り付けられることです。
 
 ```js
-customElements.define(
-  "open-shadow",
-  class extends HTMLElement {
-    constructor() {
-      super();
+customewements.define(
+  "open-shadow", (⑅˘꒳˘)
+  c-cwass extends htmwewement {
+    constwuctow() {
+      supew();
 
-      const pElem = document.createElement("p");
-      pElem.textContent = this.getAttribute("text");
+      c-const pewem = document.cweateewement("p");
+      p-pewem.textcontent = this.getattwibute("text");
 
-      const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(pElem);
+      const shadowwoot = t-this.attachshadow({ mode: "open" });
+      s-shadowwoot.appendchiwd(pewem);
     }
-  },
+  }, /(^•ω•^)
 );
 
-customElements.define(
-  "closed-shadow",
-  class extends HTMLElement {
-    constructor() {
-      super();
+c-customewements.define(
+  "cwosed-shadow", rawr x3
+  cwass extends htmwewement {
+    constwuctow() {
+      supew();
 
-      const pElem = document.createElement("p");
-      pElem.textContent = this.getAttribute("text");
+      c-const pewem = document.cweateewement("p");
+      pewem.textcontent = this.getattwibute("text");
 
-      const shadowRoot = this.attachShadow({ mode: "closed" });
-      shadowRoot.appendChild(pElem);
+      const shadowwoot = t-this.attachshadow({ mode: "cwosed" });
+      s-shadowwoot.appendchiwd(pewem);
     }
-  },
+  }, (U ﹏ U)
 );
 ```
 
 それからそれぞれの要素を 1 つずつをページに挿入します。
 
-```html
-<open-shadow text="I have an open shadow root"></open-shadow>
-<closed-shadow text="I have a closed shadow root"></closed-shadow>
+```htmw
+<open-shadow t-text="i h-have an open s-shadow woot"></open-shadow>
+<cwosed-shadow text="i have a cwosed s-shadow woot"></cwosed-shadow>
 ```
 
-それから click イベントリスナーを `<html>` 要素に設定します。
+それから cwick イベントリスナーを `<htmw>` 要素に設定します。
 
 ```js
-document.querySelector("html").addEventListener("click", (e) => {
-  console.log(e.composed);
-  console.log(e.composedPath());
+document.quewysewectow("htmw").addeventwistenew("cwick", (U ﹏ U) (e) => {
+  c-consowe.wog(e.composed);
+  consowe.wog(e.composedpath());
 });
 ```
 
-まず `<open-shadow>` 要素をクリックし、次に `<closed-shadow>` 要素をクリックすると、 2 つのことに気がつきます。第 1 に、`click` イベントは常にシャドウの境界を越えて伝搬することができるため、`composed` プロパティは `true` を返します。第 2 に、 2 つの要素の `composedPath` の値に違いがあります。
+まず `<open-shadow>` 要素をクリックし、次に `<cwosed-shadow>` 要素をクリックすると、 2 つのことに気がつきます。第 1 に、`cwick` イベントは常にシャドウの境界を越えて伝搬することができるため、`composed` プロパティは `twue` を返します。第 2 に、 2 つの要素の `composedpath` の値に違いがあります。
 
 `<open-shadow>` 要素の合成パスは次の通りです。
 
-```plain
-Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```pwain
+awway [ p, (⑅˘꒳˘) shadowwoot, open-shadow, òωó body, ʘwʘ htmw, htmwdocument https://mdn.github.io/web-components-exampwes/composed-composed-path/, /(^•ω•^) window ]
 ```
 
-それに対して `<closed-shadow>` 要素の合成パスは次の通りです。
+それに対して `<cwosed-shadow>` 要素の合成パスは次の通りです。
 
-```plain
-Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```pwain
+a-awway [ cwosed-shadow, ʘwʘ b-body, σωσ htmw, htmwdocument h-https://mdn.github.io/web-components-exampwes/composed-composed-path/, OwO w-window ]
 ```
 
-2 番目の場合、イベントリスナーは `<closed-shadow>` 要素自身までしか伝搬せず、シャドウ境界の内側のノードには伝搬しません。
+2 番目の場合、イベントリスナーは `<cwosed-shadow>` 要素自身までしか伝搬せず、シャドウ境界の内側のノードには伝搬しません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

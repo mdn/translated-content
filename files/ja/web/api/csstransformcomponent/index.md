@@ -1,37 +1,37 @@
 ---
-title: CSSTransformComponent
-slug: Web/API/CSSTransformComponent
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: csstwansfowmcomponent
+swug: web/api/csstwansfowmcomponent
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`CSSTransformComponent`** は {{domxref('CSS_Object_Model#css_typed_object_model','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、 {{domxref('CSSTransformValue')}} インターフェイスの一角です。
+**`csstwansfowmcomponent`** は {{domxwef('css_object_modew#css_typed_object_modew','css 型付きオブジェクトモデル','',' ')}}のインターフェイスで、 {{domxwef('csstwansfowmvawue')}} インターフェイスの一角です。
 
 ## インスタンスプロパティ
 
-- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : この座標変換が 2D か 3D かを示す論理値を返します。
+- {{domxwef("csstwansfowmcomponent.is2d")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : この座標変換が 2d か 3d かを示す論理値を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("CSSTransformComponent.toMatrix()")}} {{Experimental_Inline}}
-  - : 新しい {{domxref('DOMMatrix')}} オブジェクトを返します。
-- {{domxref("CSSTransformComponent.toString()")}} {{Experimental_Inline}}
+- {{domxwef("csstwansfowmcomponent.tomatwix()")}} {{expewimentaw_inwine}}
+  - : 新しい {{domxwef('dommatwix')}} オブジェクトを返します。
+- {{domxwef("csstwansfowmcomponent.tostwing()")}} {{expewimentaw_inwine}}
 
-  - : CSS の{{cssxref("transform-function","座標変換関数")}}の形の文字列です。
+  - : c-css の{{cssxwef("twansfowm-function","座標変換関数")}}の形の文字列です。
 
-    これは `is2D` の値を使用して、 2D または 3D 座標変換のどちらかを返します。例えば、コンポーネントが {{domxref("CSSRotate")}} を表し、 `is2D` が false の場合、返す文字列は CSS 座標変換の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate3d) 関数の形式を取ります。true の場合、返される文字列は 2 次元の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate) 関数の形になります。
+    これは `is2d` の値を使用して、 2d または 3d 座標変換のどちらかを返します。例えば、コンポーネントが {{domxwef("csswotate")}} を表し、 `is2d` が f-fawse の場合、返す文字列は c-css 座標変換の [`wotate3d()`](/ja/docs/web/css/twansfowm-function/wotate3d) 関数の形式を取ります。twue の場合、返される文字列は 2 次元の [`wotate3d()`](/ja/docs/web/css/twansfowm-function/wotate) 関数の形になります。
 
 ## 例
 
-To do
+t-to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

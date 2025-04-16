@@ -1,43 +1,43 @@
 ---
-title: "CSSUnparsedValue: entries() メソッド"
-slug: Web/API/CSSUnparsedValue/entries
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssunpawsedvawue: entwies() メソッド"
+s-swug: web/api/cssunpawsedvawue/entwies
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{apiwef("css t-typed o-om")}}
 
-**`CSSUnparsedValue.entries()`** メソッドは、指定されたオブジェクトの列挙可能なプロパティ `[key, value]` の組の配列を、{{jsxref("Statements/for...in", "for...in")}} ループで提供されるのと同じ順序で返します（違いは for-in ループがプロトタイプチェーン上のプロパティも列挙することです）。
+**`cssunpawsedvawue.entwies()`** メソッドは、指定されたオブジェクトの列挙可能なプロパティ `[key, rawr x3 v-vawue]` の組の配列を、{{jsxwef("statements/fow...in", rawr "fow...in")}} ループで提供されるのと同じ順序で返します（違いは f-fow-in ループがプロトタイプチェーン上のプロパティも列挙することです）。
 
 ## 構文
 
-```js-nolint
-entries(obj)
+```js-nowint
+e-entwies(obj)
 ```
 
 ### 引数
 
 - `obj`
-  - : {{domxref('CSSUnparsedValue')}} で、列挙可能な固有のプロパティの `[key, value]` の組を返します。
+  - : {{domxwef('cssunpawsedvawue')}} で、列挙可能な固有のプロパティの `[key, σωσ vawue]` の組を返します。
 
 ### 返値
 
-指定された `CSSUnparsedValue` の配列で、列挙可能な固有のプロパティの `[key, value]` の組。
+指定された `cssunpawsedvawue` の配列で、列挙可能な固有のプロパティの `[key, σωσ vawue]` の組。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
-- {{domxref("CSSUnparsedValue.forEach")}}
-- {{domxref("CSSUnparsedValue.keys")}}
-- {{domxref("CSSUnparsedValue.length")}}
-- {{domxref("CSSUnparsedValue.values")}}
-- [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- {{domxwef("cssunpawsedvawue.cssunpawsedvawue", >_< "cssunpawsedvawue()")}}
+- {{domxwef("cssunpawsedvawue.foweach")}}
+- {{domxwef("cssunpawsedvawue.keys")}}
+- {{domxwef("cssunpawsedvawue.wength")}}
+- {{domxwef("cssunpawsedvawue.vawues")}}
+- [css 型付きオブジェクトモデルの使用](/ja/docs/web/api/css_typed_om_api/guide)
+- [css 型付きオブジェクトモデル api](/ja/docs/web/api/css_typed_om_api)

@@ -1,13 +1,13 @@
 ---
-title: "HTMLAnchorElement: rel プロパティ"
-slug: Web/API/HTMLAnchorElement/rel
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: wew プロパティ"
+s-swug: web/api/htmwanchowewement/wew
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("a")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`htmwanchowewement.wew`** プロパティは [`wew`](/ja/docs/web/htmw/wefewence/attwibutes/wew) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{htmwewement("a")}} 要素で表されるリソースと現在の文書との関係を示します。
 
 ## 値
 
@@ -16,21 +16,21 @@ l10n:
 ## 例
 
 ```js
-const anchors = document.getElementsByTagName("a");
-for (const anchor of anchors) {
-  alert(`Rel: ${anchor.rel}`);
+c-const anchows = d-document.getewementsbytagname("a");
+f-fow (const a-anchow of anchows) {
+  awewt(`wew: ${anchow.wew}`);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("area")}} および {{HTMLElement("link")}} の同等のプロパティである {{domxref("HTMLAreaElement.rel")}} および {{domxref("HTMLLinkElement.rel")}}
-- まったく同じリストをトークンとして扱うもの: {{domxref("HTMLAnchorElement.relList")}}
+- {{htmwewement("awea")}} および {{htmwewement("wink")}} の同等のプロパティである {{domxwef("htmwaweaewement.wew")}} および {{domxwef("htmwwinkewement.wew")}}
+- まったく同じリストをトークンとして扱うもの: {{domxwef("htmwanchowewement.wewwist")}}

@@ -1,121 +1,121 @@
 ---
-title: "IDBOpenDBRequest: blocked イベント"
-slug: Web/API/IDBOpenDBRequest/blocked_event
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: "idbopendbwequest: bwocked イベント"
+s-swug: web/api/idbopendbwequest/bwocked_event
+w-w10n:
+  souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-`blocked` ハンドラーは、データベースへのオープン中の接続が同じデータベースの `versionchange` トランザクションをブロックしているとき実行されます。
+`bwocked` ハンドラーは、データベースへのオープン中の接続が同じデータベースの `vewsionchange` トランザクションをブロックしているとき実行されます。
 
 このイベントはキャンセルできず、バブリングしません。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", òωó "addeventwistenew()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("blocked", (event) => {});
+a-addeventwistenew("bwocked", ʘwʘ (event) => {});
 
-onblocked = (event) => {};
+o-onbwocked = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("IDBVersionChangeEvent")}} です。{{domxref("Event")}} を継承します。
+{{domxwef("idbvewsionchangeevent")}} です。{{domxwef("event")}} を継承します。
 
-{{InheritanceDiagram("IDBVersionChangeEvent")}}
+{{inhewitancediagwam("idbvewsionchangeevent")}}
 
 ## イベントプロパティ
 
-_親の {{domxref("Event")}} インターフェイスからもプロパティを継承します。_
+_親の {{domxwef("event")}} インターフェイスからもプロパティを継承します。_
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
+- {{ d-domxwef("idbvewsionchangeevent.owdvewsion") }} {{weadonwyinwine}}
   - : データベースの古いバージョンを返します。
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
+- {{ d-domxwef("idbvewsionchangeevent.newvewsion") }} {{weadonwyinwine}}
   - : データベースの新しいバージョンを返します。
 
 ## 例
 
-`addEventListener()` を用いた例:
+`addeventwistenew()` を用いた例:
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const d-dbopenwequest = window.indexeddb.open("todowist", /(^•ω•^) 4);
 
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラー発生");
+  d-db.onewwow = () => {
+    consowe.wog("データベースの作成中にエラー発生");
   };
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成します
+  c-const objectstowe = db.cweateobjectstowe("todowist", ʘwʘ {
+    k-keypath: "tasktitwe", σωσ
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  objectstowe.cweateindex("houws", OwO "houws", 😳😳😳 { unique: fawse });
+  objectstowe.cweateindex("minutes", 😳😳😳 "minutes", o.O { u-unique: fawse });
+  objectstowe.cweateindex("day", ( ͡o ω ͡o ) "day", (U ﹏ U) { u-unique: fawse });
+  o-objectstowe.cweateindex("month", (///ˬ///✿) "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", "yeaw", >w< { unique: fawse });
 };
 
-DBOpenRequest.onsuccess = (event) => {
+d-dbopenwequest.onsuccess = (event) => {
   // 同じデータベースをより高いバージョンで開いてみましょう
-  const req2 = indexedDB.open("toDoList", 5);
+  const weq2 = indexeddb.open("todowist", rawr 5);
 
-  // この場合、onblocked ハンドラーが実行されます
-  req2.addEventListener("blocked", () => {
-    console.log("要求がブロックされました");
+  // この場合、onbwocked ハンドラーが実行されます
+  weq2.addeventwistenew("bwocked", mya () => {
+    consowe.wog("要求がブロックされました");
   });
 };
 ```
 
-`onblocked` プロパティを用いた例:
+`onbwocked` プロパティを用いた例:
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = w-window.indexeddb.open("todowist", ^^ 4);
 
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+d-dbopenwequest.onupgwadeneeded = (event) => {
+  c-const d-db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベースの作成中にエラー発生");
+  db.onewwow = () => {
+    consowe.wog("データベースの作成中にエラー発生");
   };
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の o-objectstowe を作成します
+  const objectstowe = db.cweateobjectstowe("todowist", 😳😳😳 {
+    k-keypath: "tasktitwe", mya
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  objectstowe.cweateindex("houws", 😳 "houws", { unique: fawse });
+  objectstowe.cweateindex("minutes", -.- "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", 🥺 "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", o.O "month", { u-unique: fawse });
+  o-objectstowe.cweateindex("yeaw", /(^•ω•^) "yeaw", { u-unique: fawse });
 };
 
-DBOpenRequest.onsuccess = (event) => {
+dbopenwequest.onsuccess = (event) => {
   // 同じデータベースをより高いバージョンで開いてみましょう
-  const req2 = indexedDB.open("toDoList", 5);
+  const weq2 = i-indexeddb.open("todowist", nyaa~~ 5);
 
-  // この場合､onblocked ハンドラーが実行されます
-  req2.onblocked = () => {
-    console.log("要求がブロックされました");
+  // この場合､onbwocked ハンドラーが実行されます
+  w-weq2.onbwocked = () => {
+    consowe.wog("要求がブロックされました");
   };
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)

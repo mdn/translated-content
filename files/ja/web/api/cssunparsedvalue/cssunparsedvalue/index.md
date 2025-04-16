@@ -1,49 +1,49 @@
 ---
-title: "CSSUnparsedValue: CSSUnparsedValue() コンストラクター"
-slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssunpawsedvawue: cssunpawsedvawue() コンストラクター"
+s-swug: w-web/api/cssunpawsedvawue/cssunpawsedvawue
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{apiwef("css t-typed o-om")}}
 
-**`CSSUnparsedValue()`** はコンストラクターで、カスタムプロパティのプロパティ値を表す新しい {{domxref("CSSUnparsedValue")}} オブジェクトを生成します。
+**`cssunpawsedvawue()`** はコンストラクターで、カスタムプロパティのプロパティ値を表す新しい {{domxwef("cssunpawsedvawue")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new CSSUnparsedValue(members)
+```js-nowint
+n-nyew cssunpawsedvawue(membews)
 ```
 
 ### 引数
 
-- `members`
-  - : 文字列または {{domxref('CSSVariableReferenceValue')}} のどちらかの値を持つ配列です。
+- `membews`
+  - : 文字列または {{domxwef('cssvawiabwewefewencevawue')}} のどちらかの値を持つ配列です。
 
 ## 例
 
 ```js
-const value = new CSSUnparsedValue(["4deg"]);
-const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
+c-const vawue = nyew cssunpawsedvawue(["4deg"]);
+const vawues = new cssunpawsedvawue(["1em", -.- "#445566", (ˆ ﻌ ˆ)♡ "-45px"]);
 
-console.log(value); // CSSUnparsedValue {0: "4deg", length: 1}
-console.log(values); // CSSUnparsedValue {0: "1em", 1: "#445566", 2: "-45px", length: 3}
+consowe.wog(vawue); // c-cssunpawsedvawue {0: "4deg", (⑅˘꒳˘) wength: 1}
+consowe.wog(vawues); // c-cssunpawsedvawue {0: "1em", (U ᵕ U❁) 1: "#445566", -.- 2: "-45px", ^^;; wength: 3}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CSSUnparsedValue.entries")}}
-- {{domxref("CSSUnparsedValue.forEach")}}
-- {{domxref("CSSUnparsedValue.keys")}}
-- {{domxref("CSSUnparsedValue.length")}}
-- {{domxref("CSSUnparsedValue.values")}}
-- [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- {{domxwef("cssunpawsedvawue.entwies")}}
+- {{domxwef("cssunpawsedvawue.foweach")}}
+- {{domxwef("cssunpawsedvawue.keys")}}
+- {{domxwef("cssunpawsedvawue.wength")}}
+- {{domxwef("cssunpawsedvawue.vawues")}}
+- [css 型付きオブジェクトモデルの使用](/ja/docs/web/api/css_typed_om_api/guide)
+- [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_typed_om_api)

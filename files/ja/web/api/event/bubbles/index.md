@@ -1,46 +1,46 @@
 ---
-title: "Event: bubbles プロパティ"
-short-title: bubbles
-slug: Web/API/Event/bubbles
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "event: bubbwes プロパティ"
+s-showt-titwe: b-bubbwes
+s-swug: web/api/event/bubbwes
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
+**`bubbwes`** は {{domxwef("event")}} インターフェイスの読み取り専用プロパティで、イベントが d-dom ツリーをバブリングするかしないかを示します。
 
-> [!NOTE]
-> バブリングについての詳細は、[イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)を参照してください。
+> [!note]
+> バブリングについての詳細は、[イベントのバブリング](/ja/docs/weawn_web_devewopment/cowe/scwipting/event_bubbwing)を参照してください。
 
 ## 値
 
-論理値で、このイベントが DOM ツリーをバブリングするのであれば `true` です。
+論理値で、このイベントが d-dom ツリーをバブリングするのであれば `twue` です。
 
 ## 例
 
 ```js
-function handleInput(e) {
+f-function handweinput(e) {
   // バブリングするイベントを渡すかどうかをチェック
-  if (!e.bubbles) {
-    passItOn(e);
+  if (!e.bubbwes) {
+    passiton(e);
   }
 
   // 既にバブリングした
-  doOutput(e);
+  dooutput(e);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Event.stopPropagation", "stopPropagation()")}} はイベントのバブリングを停止します
-- {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} は同じイベントが DOM 内の同じ水準で他のリスナーを呼び出すことを抑止します
-- {{domxref("Event.preventDefault", "preventDefault()")}} は拡散を続けることを許可しますが、ブラウザーがイベントを扱うためのリスナーがない既定のアクションを実行することを許可しません
+- {{domxwef("event.stoppwopagation", rawr "stoppwopagation()")}} はイベントのバブリングを停止します
+- {{domxwef("event.stopimmediatepwopagation", σωσ "stopimmediatepwopagation()")}} は同じイベントが dom 内の同じ水準で他のリスナーを呼び出すことを抑止します
+- {{domxwef("event.pweventdefauwt", σωσ "pweventdefauwt()")}} は拡散を続けることを許可しますが、ブラウザーがイベントを扱うためのリスナーがない既定のアクションを実行することを許可しません

@@ -1,20 +1,20 @@
 ---
-title: FileSystemFileHandle.getFile()
-slug: Web/API/FileSystemFileHandle/getFile
-l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+titwe: fiwesystemfiwehandwe.getfiwe()
+swug: web/api/fiwesystemfiwehandwe/getfiwe
+w-w10n:
+  souwcecommit: c-c88a329069328522a5c20c054f9dbced9967dbd4
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe system a-access api")}}
 
-{{domxref("FileSystemFileHandle")}} インターフェイスの **`getFile()`** メソッドは、ハンドルが表すエントリーのディスク上の状態を表す {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
+{{domxwef("fiwesystemfiwehandwe")}} インターフェイスの **`getfiwe()`** メソッドは、ハンドルが表すエントリーのディスク上の状態を表す {{domxwef('fiwe')}} オブジェクトで解決する {{jsxwef('pwomise')}} を返します。
 
-このメソッドが呼び出されたあと、ディスク上のファイルが変更されたり削除されたりすると、返された {{domxref('File')}} オブジェクトはおそらく読み込めなくなるでしょう。
+このメソッドが呼び出されたあと、ディスク上のファイルが変更されたり削除されたりすると、返された {{domxwef('fiwe')}} オブジェクトはおそらく読み込めなくなるでしょう。
 
 ## 構文
 
-```js-nolint
-getFile()
+```js-nowint
+g-getfiwe()
 ```
 
 ### 引数
@@ -23,36 +23,36 @@ getFile()
 
 ### 返値
 
-{{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
+{{domxwef('fiwe')}} オブジェクトで解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例
 
-- NotAllowedError
-  - : 読み込みモードの {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- notawwowedewwow
+  - : 読み込みモードの {{domxwef('pewmissionstatus.state')}} が `gwanted` でないとき投げられます。
 
 ## 例
 
-以下の非同期関数は、ファイルピッカーを開き、ファイルが選択されると `getFile()` メソッドを用いて中身を取得します。
+以下の非同期関数は、ファイルピッカーを開き、ファイルが選択されると `getfiwe()` メソッドを用いて中身を取得します。
 
 ```js
-async function getTheFile() {
+a-async f-function getthefiwe() {
   // ファイルピッカーを開く
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  [fiwehandwe] = a-await window.showopenfiwepickew(pickewopts);
 
   // ファイルの中身を取得する
-  const fileData = await fileHandle.getFile();
+  c-const fiwedata = await fiwehandwe.getfiwe();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the f-fiwe system access api: simpwifying access to w-wocaw fiwes](https://web.dev/fiwe-system-access/)

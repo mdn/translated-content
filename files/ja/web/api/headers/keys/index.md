@@ -1,19 +1,19 @@
 ---
-title: "Headers: keys() メソッド"
-short-title: keys()
-slug: Web/API/Headers/keys
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "headews: keys() メソッド"
+s-showt-titwe: k-keys()
+swug: w-web/api/headews/keys
+w-w10n:
+  s-souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch API")}} {{AvailableInWorkers}}
+{{apiwef("fetch a-api")}} {{avaiwabweinwowkews}}
 
-**`Headers.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}オブジェクトを返します。キーは文字列です。です。
+**`headews.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを読み取ることができる{{jsxwef("itewation_pwotocows", (U ﹏ U) 'イテレーター', -.- '', (ˆ ﻌ ˆ)♡ 1)}}オブジェクトを返します。キーは文字列です。です。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -22,35 +22,35 @@ keys()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
+{{jsxwef("itewation_pwotocows", (⑅˘꒳˘) 'イテレーター', '', (U ᵕ U❁) 1)}}を返します。
 
 ## 例
 
 ```js
-// テスト用の Headers オブジェクトを作成
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/xml");
-myHeaders.append("Vary", "Accept-Language");
+// テスト用の headews オブジェクトを作成
+c-const myheadews = nyew headews();
+myheadews.append("content-type", -.- "text/xmw");
+myheadews.append("vawy", ^^;; "accept-wanguage");
 
 // キーを表示
-for (const key of myHeaders.keys()) {
-  console.log(key);
+fow (const key o-of myheadews.keys()) {
+  consowe.wog(key);
 }
 ```
 
 結果は次の通りです。
 
-```plain
+```pwain
 content-type
-vary
+v-vawy
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

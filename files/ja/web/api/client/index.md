@@ -1,38 +1,38 @@
 ---
-title: Client
-slug: Web/API/Client
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: cwient
+swug: web/api/cwient
+w-w10n:
+  souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`Client`** インターフェイスは、{{domxref("Worker")}} や {{domxref("SharedWorker")}} などの実行可能なコンテキストを表します。{{domxref("Window")}} クライアントは、より具体的な {{domxref("WindowClient")}} によって表されます。`Client`/`WindowClient` オブジェクトは {{domxref("Clients.matchAll","Clients.matchAll()")}} や {{domxref("Clients.get","Clients.get()")}} などのメソッドから取得できます。
+**`cwient`** インターフェイスは、{{domxwef("wowkew")}} や {{domxwef("shawedwowkew")}} などの実行可能なコンテキストを表します。{{domxwef("window")}} クライアントは、より具体的な {{domxwef("windowcwient")}} によって表されます。`cwient`/`windowcwient` オブジェクトは {{domxwef("cwients.matchaww","cwients.matchaww()")}} や {{domxwef("cwients.get","cwients.get()")}} などのメソッドから取得できます。
 
 ## メソッド
 
-- {{domxref("Client.postMessage()")}}
+- {{domxwef("cwient.postmessage()")}}
   - : メッセージをクライアントに送信します。
 
 ## プロパティ
 
-- {{domxref("Client.id")}} {{ReadOnlyInline}}
+- {{domxwef("cwient.id")}} {{weadonwyinwine}}
   - : 文字列としてのクライアントの汎用一意識別子。
-- {{domxref("Client.type")}} {{ReadOnlyInline}}
-  - : 文字列としてのクライアントの種類。`"window"`、`"worker"`、`"sharedworker"` のいずれかです。
-- {{domxref("Client.url")}} {{ReadOnlyInline}}
-  - : 文字列としてのクライアントの URL。
+- {{domxwef("cwient.type")}} {{weadonwyinwine}}
+  - : 文字列としてのクライアントの種類。`"window"`、`"wowkew"`、`"shawedwowkew"` のいずれかです。
+- {{domxwef("cwient.uww")}} {{weadonwyinwine}}
+  - : 文字列としてのクライアントの u-uww。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [is s-sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- [プロミス](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)

@@ -1,59 +1,59 @@
 ---
-title: "FileReaderSync: readAsDataURL() メソッド"
-short-title: readAsDataURL()
-slug: Web/API/FileReaderSync/readAsDataURL
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fiweweadewsync: weadasdatauww() メソッド"
+s-showt-titwe: w-weadasdatauww()
+s-swug: web/api/fiweweadewsync/weadasdatauww
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
+`weadasdatauww()` は {{domxwef("fiweweadewsync")}} インターフェイスのメソッドで、{{domxwef("fiwe")}} または {{domxwef("bwob")}} オブジェクトを同期的にデータ u-uww を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 i-i/o を可能にするため、[ワーカー](/ja/docs/web/api/wowkew)で[のみ利用可能](/ja/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)です。
 
 ## 構文
 
-```js-nolint
-readAsDataURL(File)
-readAsDataURL(Blob)
+```js-nowint
+w-weadasdatauww(fiwe)
+weadasdatauww(bwob)
 ```
 
 ### 引数
 
-- `blob`
-  - : 読み込み対象の {{DOMxRef("File")}} または {{DOMxRef("Blob")}} です。
+- `bwob`
+  - : 読み込み対象の {{domxwef("fiwe")}} または {{domxwef("bwob")}} です。
 
 ### 返値
 
-入力データをデータ URL として表す文字列です。
+入力データをデータ uww として表す文字列です。
 
 ## 例外
 
 このメソッドでは以下の例外が発生する可能性があります。
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : DOM の {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で表されるリソースが、消去されたなどの理由で見つからない場合に発生します。
-- `SecurityError` {{domxref("DOMException")}}
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : dom の {{domxwef("fiwe")}} または {{domxwef("bwob")}} で表されるリソースが、消去されたなどの理由で見つからない場合に発生します。
+- `secuwityewwow` {{domxwef("domexception")}}
   - : 以下の問題のある状況のいずれかが検出された場合に発生します。
     - リソースが第三者によって変更されている
     - 同時に行われる読み取りが多すぎる
     - リソースが指しているファイルがウェブから利用するには安全ではない（システムファイルなど）
-- `NotReadableError` {{domxref("DOMException")}}
+- `notweadabweewwow` {{domxwef("domexception")}}
   - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
-- `EncodingError` {{domxref("DOMException")}}
-  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
+- `encodingewwow` {{domxwef("domexception")}}
+  - : リソースがデータ uww であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- {{DOMxRef("File")}}
-- {{DOMxRef("FileReaderSync")}}
-- {{DOMxRef("FileReader")}}
-- {{ domxref("Blob") }}
+- [ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("fiwe")}}
+- {{domxwef("fiweweadewsync")}}
+- {{domxwef("fiweweadew")}}
+- {{ domxwef("bwob") }}

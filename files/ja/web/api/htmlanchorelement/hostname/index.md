@@ -1,13 +1,13 @@
 ---
-title: "HTMLAnchorElement: hostname プロパティ"
-slug: Web/API/HTMLAnchorElement/hostname
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: hostname プロパティ"
+s-swug: web/api/htmwanchowewement/hostname
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.hostname`** プロパティは、URL のドメインを含む文字列です。
+**`htmwanchowewement.hostname`** プロパティは、uww のドメインを含む文字列です。
 
 ## 値
 
@@ -16,19 +16,19 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書内にあるとします
-const anchor = document.getElementById("myAnchor");
-anchor.hostname; // 'developer.mozilla.org' を返す
+// <a i-id="myanchow" h-hwef="/ja/docs/htmwanchowewement"> 要素が文書内にあるとします
+c-const a-anchow = document.getewementbyid("myanchow");
+anchow.hostname; // 'devewopew.moziwwa.owg' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
+- 所属先の {{domxwef("htmwanchowewement")}} インターフェイス

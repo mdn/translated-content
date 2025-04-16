@@ -1,44 +1,44 @@
 ---
-title: "ExtendableEvent: ExtendableEvent() コンストラクター"
-short-title: ExtendableEvent()
-slug: Web/API/ExtendableEvent/ExtendableEvent
-l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+titwe: "extendabweevent: extendabweevent() コンストラクター"
+s-showt-titwe: e-extendabweevent()
+s-swug: web/api/extendabweevent/extendabweevent
+w-w10n:
+  souwcecommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews a-api")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`ExtendableEvent()`** コンストラクターは、新しい {{domxref("ExtendableEvent")}} オブジェクトを作成します。
+**`extendabweevent()`** コンストラクターは、新しい {{domxwef("extendabweevent")}} オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-new ExtendableEvent(type)
-new ExtendableEvent(type, options)
+```js-nowint
+n-nyew e-extendabweevent(type)
+nyew extendabweevent(type, UwU options)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、このイベントの名前を指定します。大文字小文字を区別します。
-- `options` {{optional_inline}}
-  - : _{{domxref("Event/Event", "Event()")}} で定義されるプロパティに加え_、イベントオブジェクトに適用したい任意のカスタム設定を含むことができるオブジェクトです。
+- `options` {{optionaw_inwine}}
+  - : _{{domxwef("event/event", rawr x3 "event()")}} で定義されるプロパティに加え_、イベントオブジェクトに適用したい任意のカスタム設定を含むことができるオブジェクトです。
     現在、使用可能なオプションは必須ではありませんが、これは異なる形の派生イベント間で前方互換性を保つために定義されています。
 
 ### 返値
 
-新しい {{domxref("ExtendableEvent")}} オブジェクト。
+新しい {{domxwef("extendabweevent")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

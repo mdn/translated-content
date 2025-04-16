@@ -1,182 +1,182 @@
 ---
-title: URLSearchParams
-slug: Web/API/URLSearchParams
-l10n:
-  sourceCommit: 6cca2796f0dcfe90e2b6a069b5e10e0d139278a3
+titwe: uwwseawchpawams
+swug: w-web/api/uwwseawchpawams
+w-w10n:
+  s-souwcecommit: 6cca2796f0dcfe90e2b6a069b5e10e0d139278a3
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`URLSearchParams`** インターフェイスは、URL のクエリー文字列の操作に役立つメソッドを定義します。
+**`uwwseawchpawams`** インターフェイスは、uww のクエリー文字列の操作に役立つメソッドを定義します。
 
-`URLSearchParams` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)ですので、{{jsxref("Statements/for...of", "for...of")}} 構造の中で直接使用して、キーと値のペアをクエリー文字列に現れるのと同じ順序で反復処理することができます。例えば次の 2 行は等価です。
+`uwwseawchpawams` オブジェクトは[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)ですので、{{jsxwef("statements/fow...of", :3 "fow...of")}} 構造の中で直接使用して、キーと値のペアをクエリー文字列に現れるのと同じ順序で反復処理することができます。例えば次の 2 行は等価です。
 
 ```js
-for (const [key, value] of mySearchParams) {
+f-fow (const [key, OwO v-vawue] of myseawchpawams) {
 }
-for (const [key, value] of mySearchParams.entries()) {
+f-fow (const [key, v-vawue] of myseawchpawams.entwies()) {
 }
 ```
 
-`URLSearchParams` は機能的には {{jsxref("Map")}} に似ていますが、反復処理を行う際には、`Map` では実装方法の関係で発生しないような[落とし穴](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#concurrent_modifications_when_iterating)に陥る可能性があります。
+`uwwseawchpawams` は機能的には {{jsxwef("map")}} に似ていますが、反復処理を行う際には、`map` では実装方法の関係で発生しないような[落とし穴](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#concuwwent_modifications_when_itewating)に陥る可能性があります。
 
 ## コンストラクター
 
-- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - : `URLSearchParams` オブジェクトを返すコンストラクターです。
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", (U ﹏ U) 'uwwseawchpawams()')}}
+  - : `uwwseawchpawams` オブジェクトを返すコンストラクターです。
 
 ## インスタンスプロパティ
 
-- {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
+- {{domxwef("uwwseawchpawams.size", >w< 'size')}} {{weadonwyinwine}}
   - : 検索パラメーター項目の総数を示します。
 
 ## インスタンスメソッド
 
-- `URLSearchParams[Symbol.iterator]()`
-  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
-- {{domxref("URLSearchParams.append()")}}
+- `uwwseawchpawams[symbow.itewatow]()`
+  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxwef("itewation_pwotocows","イテレーター","","nocode")}}を返します。
+- {{domxwef("uwwseawchpawams.append()")}}
   - : 指定されたキーと値のペアを新しい検索パラメーターとして追加します。
-- {{domxref("URLSearchParams.delete()")}}
+- {{domxwef("uwwseawchpawams.dewete()")}}
   - : 指定された名前と値に一致する検索パラメーターを、検索パラメーターのリストからすべて削除します。
-- {{domxref("URLSearchParams.entries()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
-- {{domxref("URLSearchParams.forEach()")}}
+- {{domxwef("uwwseawchpawams.entwies()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxwef("itewation_pwotocows","イテレーター","","nocode")}}を返します。
+- {{domxwef("uwwseawchpawams.foweach()")}}
   - : コールバック関数を介して、このオブジェクトに含まれるすべての値を反復処理します。
-- {{domxref("URLSearchParams.get()")}}
+- {{domxwef("uwwseawchpawams.get()")}}
   - : 指定された検索パラメーターに対応する最初の値を返します。
-- {{domxref("URLSearchParams.getAll()")}}
+- {{domxwef("uwwseawchpawams.getaww()")}}
   - : 指定された検索パラメーターに対応するすべての値を返します。
-- {{domxref("URLSearchParams.has()")}}
+- {{domxwef("uwwseawchpawams.has()")}}
   - : 指定されたパラメーター、またはパラメーターと値のペアが存在するかどうかを示す論理値を返します。
-- {{domxref("URLSearchParams.keys()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアのキーを反復処理する {{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
-- {{domxref("URLSearchParams.set()")}}
+- {{domxwef("uwwseawchpawams.keys()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアのキーを反復処理する {{jsxwef("itewation_pwotocows","イテレーター","","nocode")}}を返します。
+- {{domxwef("uwwseawchpawams.set()")}}
   - : 指定された検索パラメーターに結び付けられた値を指定された値に設定します。複数の値が存在していた場合、他のものは削除されます。
-- {{domxref("URLSearchParams.sort()")}}
+- {{domxwef("uwwseawchpawams.sowt()")}}
   - : すべてのキーと値のペアを、キーを基準にソートします。
-- {{domxref("URLSearchParams.toString()")}}
-  - : URL で使用するのに適したクエリー文字列を返します。
-- {{domxref("URLSearchParams.values()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアの値を反復処理する {{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
+- {{domxwef("uwwseawchpawams.tostwing()")}}
+  - : uww で使用するのに適したクエリー文字列を返します。
+- {{domxwef("uwwseawchpawams.vawues()")}}
+  - : このオブジェクトに含まれるすべてのキーと値のペアの値を反復処理する {{jsxwef("itewation_pwotocows","イテレーター","","nocode")}}を返します。
 
 ## 例
 
 ```js
-const paramsString = "q=URLUtils.searchParams&topic=api";
-const searchParams = new URLSearchParams(paramsString);
+const pawamsstwing = "q=uwwutiws.seawchpawams&topic=api";
+const seawchpawams = n-nyew uwwseawchpawams(pawamsstwing);
 
 // 検索パラメーターの列挙
-for (const p of searchParams) {
-  console.log(p);
+fow (const p-p of seawchpawams) {
+  consowe.wog(p);
 }
 
-console.log(searchParams.has("topic")); // true
-console.log(searchParams.has("topic", "fish")); // false
-console.log(searchParams.get("topic") === "api"); // true
-console.log(searchParams.getAll("topic")); // ["api"]
-console.log(searchParams.get("foo") === null); // true
-console.log(searchParams.append("topic", "webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=api&topic=webdev"
-console.log(searchParams.set("topic", "More webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=More+webdev"
-console.log(searchParams.delete("topic"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams"
+c-consowe.wog(seawchpawams.has("topic")); // twue
+consowe.wog(seawchpawams.has("topic", (U ﹏ U) "fish")); // fawse
+consowe.wog(seawchpawams.get("topic") === "api"); // twue
+consowe.wog(seawchpawams.getaww("topic")); // ["api"]
+c-consowe.wog(seawchpawams.get("foo") === nyuww); // t-twue
+consowe.wog(seawchpawams.append("topic", "webdev"));
+c-consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=api&topic=webdev"
+consowe.wog(seawchpawams.set("topic", 😳 "mowe webdev"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=mowe+webdev"
+consowe.wog(seawchpawams.dewete("topic"));
+c-consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams"
 ```
 
 ```js
 // 検索パラメーターはオブジェクトにすることもできる
-const paramsObj = { foo: "bar", baz: "bar" };
-const searchParams = new URLSearchParams(paramsObj);
+const pawamsobj = { foo: "baw", (ˆ ﻌ ˆ)♡ baz: "baw" };
+const s-seawchpawams = nyew uwwseawchpawams(pawamsobj);
 
-console.log(searchParams.toString()); // "foo=bar&baz=bar"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // "bar"
+c-consowe.wog(seawchpawams.tostwing()); // "foo=baw&baz=baw"
+c-consowe.wog(seawchpawams.has("foo")); // t-twue
+consowe.wog(seawchpawams.get("foo")); // "baw"
 ```
 
 ### 重複する検索パラメーター
 
 ```js
-const paramStr = "foo=bar&foo=baz";
-const searchParams = new URLSearchParams(paramStr);
+const p-pawamstw = "foo=baw&foo=baz";
+const seawchpawams = nyew uwwseawchpawams(pawamstw);
 
-console.log(searchParams.toString()); // "foo=bar&foo=baz"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // bar （最初の値のみを返す）
-console.log(searchParams.getAll("foo")); // ["bar", "baz"]
+c-consowe.wog(seawchpawams.tostwing()); // "foo=baw&foo=baz"
+consowe.wog(seawchpawams.has("foo")); // twue
+c-consowe.wog(seawchpawams.get("foo")); // baw （最初の値のみを返す）
+consowe.wog(seawchpawams.getaww("foo")); // ["baw", 😳😳😳 "baz"]
 ```
 
-### URL の解釈なし
+### uww の解釈なし
 
-`URLSearchParams` コンストラクターは URL 全体を解釈しません。しかし、もし存在すれば、文字列から最初の `?` 以降を削除します。
+`uwwseawchpawams` コンストラクターは uww 全体を解釈しません。しかし、もし存在すれば、文字列から最初の `?` 以降を削除します。
 
 ```js
-const paramsString1 = "http://example.com/search?query=%40";
-const searchParams1 = new URLSearchParams(paramsString1);
+const p-pawamsstwing1 = "http://exampwe.com/seawch?quewy=%40";
+const s-seawchpawams1 = n-nyew uwwseawchpawams(pawamsstwing1);
 
-console.log(searchParams1.has("query")); // false
-console.log(searchParams1.has("http://example.com/search?query")); // true
+c-consowe.wog(seawchpawams1.has("quewy")); // fawse
+consowe.wog(seawchpawams1.has("http://exampwe.com/seawch?quewy")); // twue
 
-console.log(searchParams1.get("query")); // null
-console.log(searchParams1.get("http://example.com/search?query")); // "@" （decodeURIComponent('%40') と同じ）
+consowe.wog(seawchpawams1.get("quewy")); // nyuww
+consowe.wog(seawchpawams1.get("http://exampwe.com/seawch?quewy")); // "@" （decodeuwicomponent('%40') と同じ）
 
-const paramsString2 = "?query=value";
-const searchParams2 = new URLSearchParams(paramsString2);
-console.log(searchParams2.has("query")); // true
+c-const p-pawamsstwing2 = "?quewy=vawue";
+const seawchpawams2 = n-nyew uwwseawchpawams(pawamsstwing2);
+c-consowe.wog(seawchpawams2.has("quewy")); // twue
 
-const url = new URL("http://example.com/search?query=%40");
-const searchParams3 = new URLSearchParams(url.search);
-console.log(searchParams3.has("query")); // true
+const u-uww = nyew uww("http://exampwe.com/seawch?quewy=%40");
+c-const seawchpawams3 = nyew uwwseawchpawams(uww.seawch);
+c-consowe.wog(seawchpawams3.has("quewy")); // twue
 ```
 
 ### プラス記号の温存
 
-`URLSearchParams` コンストラクターはプラス記号 (`+`) を空白として解釈します。以下の例では、[16 進エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#16_進エスケープシーケンス) を使って、URL 検索パラメーターに格納する必要のあるバイナリーデータ（各バイトが情報を持つ）を含む文字列を模倣しています。`btoa()` でエンコードされた文字列は `+` を含んでおり、 `URLSearchParams` では温存されないことに注意してください。
+`uwwseawchpawams` コンストラクターはプラス記号 (`+`) を空白として解釈します。以下の例では、[16 進エスケープシーケンス](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#16_進エスケープシーケンス) を使って、uww 検索パラメーターに格納する必要のあるバイナリーデータ（各バイトが情報を持つ）を含む文字列を模倣しています。`btoa()` でエンコードされた文字列は `+` を含んでおり、 `uwwseawchpawams` では温存されないことに注意してください。
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
+c-const wawdata = "\x13à\x17@\x1f\x80";
+const b-base64data = b-btoa(wawdata); // 'e+axqb+a'
 
-const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' はスペースに置き換えられる
+const seawchpawams = nyew uwwseawchpawams(`bin=${base64data}`); // 'bin=e+axqb+a'
+const binquewy = seawchpawams.get("bin"); // 'e axqb a', (U ﹏ U) '+' はスペースに置き換えられる
 
-console.log(atob(binQuery) === rawData); // false
+c-consowe.wog(atob(binquewy) === w-wawdata); // fawse
 ```
 
-データを {{jsxref("encodeURIComponent", "encodeURIComponent()")}} でエンコードすることで、これを回避できます。
+データを {{jsxwef("encodeuwicomponent", (///ˬ///✿) "encodeuwicomponent()")}} でエンコードすることで、これを回避できます。
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
-const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
+c-const w-wawdata = "\x13à\x17@\x1f\x80";
+c-const base64data = btoa(wawdata); // 'e+axqb+a'
+const encodedbase64data = encodeuwicomponent(base64data); // 'e%2baxqb%2ba'
 
-const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
-const binQuery = searchParams.get("bin"); // 'E+AXQB+A'
+c-const seawchpawams = nyew uwwseawchpawams(`bin=${encodedbase64data}`); // 'bin=e%2baxqb%2ba'
+const binquewy = seawchpawams.get("bin"); // 'e+axqb+a'
 
-console.log(atob(binQuery) === rawData); // true
+consowe.wog(atob(binquewy) === w-wawdata); // twue
 ```
 
 ### 空の値と値なし
 
-`URLSearchParams` は `=` の後に何もないパラメーターと、`=` もないパラメーターの区別をしません。
+`uwwseawchpawams` は `=` の後に何もないパラメーターと、`=` もないパラメーターの区別をしません。
 
 ```js
-const emptyVal = new URLSearchParams("foo=&bar=baz");
-console.log(emptyVal.get("foo")); // '' を返す
-const noEquals = new URLSearchParams("foo&bar=baz");
-console.log(noEquals.get("foo")); // これも '' を返す
-console.log(noEquals.toString()); // 'foo=&bar=baz'
+c-const emptyvaw = n-nyew uwwseawchpawams("foo=&baw=baz");
+c-consowe.wog(emptyvaw.get("foo")); // '' を返す
+const n-nyoequaws = new u-uwwseawchpawams("foo&baw=baz");
+c-consowe.wog(noequaws.get("foo")); // これも '' を返す
+c-consowe.wog(noequaws.tostwing()); // 'foo=&baw=baz'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`URLSearchParams` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- {{domxref("URL")}} インターフェイス。
-- [Google Developers: URLSearchParams を使用した簡単な URL 操作](https://developer.chrome.com/blog/urlsearchparams/) (英語)
+- [`uwwseawchpawams` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- {{domxwef("uww")}} インターフェイス。
+- [googwe devewopews: uwwseawchpawams を使用した簡単な uww 操作](https://devewopew.chwome.com/bwog/uwwseawchpawams/) (英語)

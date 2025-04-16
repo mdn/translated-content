@@ -1,14 +1,14 @@
 ---
-title: "PointerEvent: pressure プロパティ"
-short-title: pressure
-slug: Web/API/PointerEvent/pressure
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pointewevent: pwessuwe プロパティ"
+s-showt-titwe: p-pwessuwe
+swug: web/api/pointewevent/pwessuwe
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Pointer Events") }}
+{{ a-apiwef("pointew e-events") }}
 
-**`pressure`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、ポインター入力の正規化された圧力を示します。
+**`pwessuwe`** は {{domxwef("pointewevent")}} インターフェイスの読み取り専用プロパティで、ポインター入力の正規化された圧力を示します。
 
 ## 値
 
@@ -16,35 +16,35 @@ l10n:
 
 ## 例
 
-このスニペットでは、{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、そのイベントの `pressure` プロパティの値に応じてさまざまな関数が呼び出されます。
+このスニペットでは、{{domxwef("ewement/pointewdown_event", >_< "pointewdown")}} イベントが発生すると、そのイベントの `pwessuwe` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener(
-  "pointerdown",
+s-someewement.addeventwistenew(
+  "pointewdown", :3
   (event) => {
-    if (event.pressure === 0) {
+    if (event.pwessuwe === 0) {
       // 圧力なし
-      process_no_pressure(event);
-    } else if (event.pressure === 1) {
+      pwocess_no_pwessuwe(event);
+    } ewse if (event.pwessuwe === 1) {
       // 最大圧力
-      process_max_pressure(event);
-    } else {
+      pwocess_max_pwessuwe(event);
+    } ewse {
       // デフォルト
-      process_pressure(event);
+      p-pwocess_pwessuwe(event);
     }
-  },
-  false,
+  }, (U ﹏ U)
+  fawse, -.-
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Touch.force") }}
+- {{ domxwef("touch.fowce") }}

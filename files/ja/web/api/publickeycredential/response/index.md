@@ -1,73 +1,73 @@
 ---
-title: PublicKeyCredential.response
-slug: Web/API/PublicKeyCredential/response
-l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+titwe: pubwickeycwedentiaw.wesponse
+swug: web/api/pubwickeycwedentiaw/wesponse
+w-w10n:
+  souwcecommit: b-b7cd76af245c330c6a1a9f489602015fa0714044
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-**`response`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、このプロパティは {{domxref("AuthenticatorResponse")}} オブジェクトであり、資格情報の作成/取得のために認証先からユーザーエージェントに送信されるものです。このレスポンスに含まれる情報は、要求が正当なものであるかどうかを確認するために、依存している側のサーバーで使用されます。
+**`wesponse`** は {{domxwef("pubwickeycwedentiaw")}} インターフェイスの読み取り専用プロパティで、このプロパティは {{domxwef("authenticatowwesponse")}} オブジェクトであり、資格情報の作成/取得のために認証先からユーザーエージェントに送信されるものです。このレスポンスに含まれる情報は、要求が正当なものであるかどうかを確認するために、依存している側のサーバーで使用されます。
 
-`AuthenticatorResponse` は以下のどちらかです。
+`authenticatowwesponse` は以下のどちらかです。
 
-- {{domxref("AuthenticatorAttestationResponse")}} （`PublicKeyCredential` が {{domxref("CredentialsContainer.create()")}} で作成された場合）
-- {{domxref("AuthenticatorAssertionResponse")}} （`PublicKeyCredential` が {{domxref("CredentialsContainer.get()")}} から取得された場合）
+- {{domxwef("authenticatowattestationwesponse")}} （`pubwickeycwedentiaw` が {{domxwef("cwedentiawscontainew.cweate()")}} で作成された場合）
+- {{domxwef("authenticatowassewtionwesponse")}} （`pubwickeycwedentiaw` が {{domxwef("cwedentiawscontainew.get()")}} から取得された場合）
 
 資格情報の*生成*を検証するには、依存している側のサーバーは以下の両方を必要とします。
 
 - このレスポンス
-- 要求を検証するためのクライアントの拡張機能 （{{domxref("PublicKeyCredential.getClientExtensionResults()")}} で指定されたもの）
+- 要求を検証するためのクライアントの拡張機能 （{{domxwef("pubwickeycwedentiaw.getcwientextensionwesuwts()")}} で指定されたもの）
 
-> [!NOTE]
-> 既存の資格情報の取得を検証する場合、 `PublicKeyCredential` オブジェクト全体とクライアント拡張機能が依存している側のサーバーに必要です。
+> [!note]
+> 既存の資格情報の取得を検証する場合、 `pubwickeycwedentiaw` オブジェクト全体とクライアント拡張機能が依存している側のサーバーに必要です。
 
-> [!NOTE]
-> このプロパティは最上位のコンテキストでのみ使用することができます。例えば {{HTMLElement("iframe")}} では使用することができません。
+> [!note]
+> このプロパティは最上位のコンテキストでのみ使用することができます。例えば {{htmwewement("ifwame")}} では使用することができません。
 
 ## 値
 
-作成または取得の要求を検証するために、依存する側のスクリプトが受信し、依存する側がのサーバーに送信されるべきデータを含む {{domxref("AuthenticatorResponse")}} オブジェクトです。このオブジェクトには、クライアントからのデータ ({{domxref("AuthenticatorResponse/clientDataJSON")}}) と認証器からのデータが含まれます。
+作成または取得の要求を検証するために、依存する側のスクリプトが受信し、依存する側がのサーバーに送信されるべきデータを含む {{domxwef("authenticatowwesponse")}} オブジェクトです。このオブジェクトには、クライアントからのデータ ({{domxwef("authenticatowwesponse/cwientdatajson")}}) と認証器からのデータが含まれます。
 
 ## 例
 
 ```js
-const options = {
-  challenge: new Uint8Array(16) /* from the server */,
-  rp: {
-    name: "Example CORP",
-    id: "login.example.com",
+c-const options = {
+  c-chawwenge: n-nyew uint8awway(16) /* f-fwom the sewvew */, OwO
+  wp: {
+    nyame: "exampwe cowp", (U ﹏ U)
+    id: "wogin.exampwe.com", >_<
   },
-  user: {
-    id: new Uint8Array(16) /* from the server */,
-    name: "canand@example.com",
-    displayName: "Carina Anand",
+  u-usew: {
+    id: nyew uint8awway(16) /* fwom the s-sewvew */, rawr x3
+    nyame: "canand@exampwe.com", mya
+    d-dispwayname: "cawina anand", nyaa~~
   },
-  pubKeyCredParams: [
+  pubkeycwedpawams: [
     {
-      type: "public-key",
-      alg: -7,
+      type: "pubwic-key",
+      a-awg: -7, (⑅˘꒳˘)
     },
   ],
 };
 
-navigator.credentials
-  .create({ publicKey: options })
-  .then((pubKeyCredential) => {
-    const response = pubKeyCredential.response;
-    const clientExtResults = pubKeyCredential.getClientExtensionResults();
-    // Send response and client extensions to the server so that it can validate
-    // and create credentials
+nyavigatow.cwedentiaws
+  .cweate({ p-pubwickey: o-options })
+  .then((pubkeycwedentiaw) => {
+    const wesponse = pubkeycwedentiaw.wesponse;
+    const cwientextwesuwts = pubkeycwedentiaw.getcwientextensionwesuwts();
+    // send wesponse a-and cwient extensions to the sewvew so that it can vawidate
+    // and cweate c-cwedentiaws
   })
-  .catch((err) => {
-    // Deal with any error
+  .catch((eww) => {
+    // deaw w-with any ewwow
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

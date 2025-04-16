@@ -1,14 +1,14 @@
 ---
-title: "HTMLFormElement: acceptCharset プロパティ"
-short-title: acceptCharset
-slug: Web/API/HTMLFormElement/acceptCharset
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: acceptchawset プロパティ"
+s-showt-titwe: a-acceptchawset
+s-swug: web/api/htmwfowmewement/acceptchawset
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.acceptCharset`** プロパティは、指定された {{htmlelement("form")}} 要素で対応している[文字エンコーディング](/ja/docs/Glossary/Character_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
+**`htmwfowmewement.acceptchawset`** プロパティは、指定された {{htmwewement("fowm")}} 要素で対応している[文字エンコーディング](/ja/docs/gwossawy/chawactew_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
 
 ## 値
 
@@ -17,13 +17,13 @@ l10n:
 ## 例
 
 ```js
-let inputs = document.forms["myform"].acceptCharset;
+w-wet inputs = d-document.fowms["myfowm"].acceptchawset;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "DOMRectReadOnly: x プロパティ"
-short-title: x
-slug: Web/API/DOMRectReadOnly/x
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domwectweadonwy: x プロパティ"
+showt-titwe: x-x
+swug: w-web/api/domwectweadonwy/x
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`x`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、 `DOMRect` の原点の X 座標を表します。
+**`x`** は **`domwectweadonwy`** インターフェイスの読み取り専用プロパティで、 `domwect` の原点の x-x 座標を表します。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

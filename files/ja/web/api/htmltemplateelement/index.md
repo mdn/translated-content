@@ -1,44 +1,44 @@
 ---
-title: HTMLTemplateElement
-slug: Web/API/HTMLTemplateElement
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: htmwtempwateewement
+swug: w-web/api/htmwtempwateewement
+w-w10n:
+  souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-`HTMLTemplateElement` インターフェイスは、HTML の {{HTMLElement("template")}} 要素の内容にアクセスできるようにします。
+`htmwtempwateewement` インターフェイスは、htmw の {{htmwewement("tempwate")}} 要素の内容にアクセスできるようにします。
 
-> [!NOTE]
-> HTML パーサーは、{{HTMLElement("template")}} 要素を構文解析する際に、その `<template>` 属性に応じて、`HTMLTemplateElement` または {{domxref("ShadowRoot")}} のどちらかを生成する可能性があります。
-> `HTMLTemplateElement` が作成されると、"shadow" 属性がテンプレートから反映されます。
-> しかし、これらは有用ではありません。`HTMLTemplateElement` はシャドウルートではなく、シャドウルートに変更することができないからです。
+> [!note]
+> h-htmw パーサーは、{{htmwewement("tempwate")}} 要素を構文解析する際に、その `<tempwate>` 属性に応じて、`htmwtempwateewement` または {{domxwef("shadowwoot")}} のどちらかを生成する可能性があります。
+> `htmwtempwateewement` が作成されると、"shadow" 属性がテンプレートから反映されます。
+> しかし、これらは有用ではありません。`htmwtempwateewement` はシャドウルートではなく、シャドウルートに変更することができないからです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_このインターフェイスには {{domxwef("htmwewement")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
-  - : 読み取り専用の {{domxref("DocumentFragment")}} で、 {{HTMLElement("template")}} 要素のテンプレートの内容を表す DOM サブツリーを返します。
-- {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
-  - : 文字列で、関連付けられた `<template>` 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性の値を反映します。
-- {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootdelegatesfocus`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus) 属性の値を反映します。
-- {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性の値を反映します。
-- {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootserializable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) 属性の値を反映します。
+- {{domxwef("htmwtempwateewement.content", o.O "content")}} {{weadonwyinwine}}
+  - : 読み取り専用の {{domxwef("documentfwagment")}} で、 {{htmwewement("tempwate")}} 要素のテンプレートの内容を表す d-dom サブツリーを返します。
+- {{domxwef("htmwtempwateewement.shadowwootmode", (U ᵕ U❁) "shadowwootmode")}}
+  - : 文字列で、関連付けられた `<tempwate>` 要素の [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode) 属性の値を反映します。
+- {{domxwef("htmwtempwateewement.shadowwootdewegatesfocus", (⑅˘꒳˘) "shadowwootdewegatesfocus")}}
+  - : 論理値で、関連付けられた `<tempwate>` 要素の [`shadowwootdewegatesfocus`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootdewegatesfocus) 属性の値を反映します。
+- {{domxwef("htmwtempwateewement.shadowwootcwonabwe", ( ͡o ω ͡o ) "shadowwootcwonabwe")}}
+  - : 論理値で、関連付けられた `<tempwate>` 要素の [`shadowwootcwonabwe`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootcwonabwe) 属性の値を反映します。
+- {{domxwef("htmwtempwateewement.shadowwootsewiawizabwe", UwU "shadowwootsewiawizabwe")}}
+  - : 論理値で、関連付けられた `<tempwate>` 要素の [`shadowwootsewiawizabwe`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootsewiawizabwe) 属性の値を反映します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_このインターフェイスには {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

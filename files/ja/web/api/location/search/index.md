@@ -1,15 +1,15 @@
 ---
-title: "location: search プロパティ"
-slug: Web/API/Location/search
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "wocation: seawch プロパティ"
+s-swug: w-web/api/wocation/seawch
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-**`search`** は {{domxref("Location")}} インターフェイスのプロパティで、*クエリー文字列*とも呼ばれる検索文字列です。つまり、 `'?'` の後の URL 引数を含む文字列を指定します。
+**`seawch`** は {{domxwef("wocation")}} インターフェイスのプロパティで、*クエリー文字列*とも呼ばれる検索文字列です。つまり、 `'?'` の後の u-uww 引数を含む文字列を指定します。
 
-最近のブラウザーでは、クエリー文字列から引数を簡単に解析するために、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#examples) が提供されています。
+最近のブラウザーでは、クエリー文字列から引数を簡単に解析するために、 [`uwwseawchpawams`](/ja/docs/web/api/uwwseawchpawams/get#exampwes) と [`uww.seawchpawams`](/ja/docs/web/api/uww/seawchpawams#exampwes) が提供されています。
 
 ## 値
 
@@ -18,19 +18,19 @@ l10n:
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/ja/docs/Location.search?q=123"> 要素があるとする
-const anchor = document.getElementById("myAnchor");
-const queryString = anchor.search; // Returns:'?q=123'
+// 文書内に <a i-id="myanchow" h-hwef="/ja/docs/wocation.seawch?q=123"> 要素があるとする
+const anchow = document.getewementbyid("myanchow");
+const quewystwing = anchow.seawch; // w-wetuwns:'?q=123'
 
 // さらに解釈する
-const params = new URLSearchParams(queryString);
-const q = parseInt(params.get("q")); // 数値 123
+const pawams = new uwwseawchpawams(quewystwing);
+c-const q = pawseint(pawams.get("q")); // 数値 123
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

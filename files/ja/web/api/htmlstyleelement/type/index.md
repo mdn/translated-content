@@ -1,15 +1,15 @@
 ---
-title: "HTMLStyleElement: type プロパティ"
-short-title: type
-slug: Web/API/HTMLStyleElement/type
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwstyweewement: type プロパティ"
+s-showt-titwe: t-type
+swug: web/api/htmwstyweewement/type
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`HTMLStyleElement.type`** プロパティは、現在のスタイルの種類を返します。
-この値は [HTML の `<style>` 要素の `type` 属性](/ja/docs/Web/HTML/Reference/Elements/style#type)の値を反映します。
+**`htmwstyweewement.type`** プロパティは、現在のスタイルの種類を返します。
+この値は [htmw の `<stywe>` 要素の `type` 属性](/ja/docs/web/htmw/wefewence/ewements/stywe#type)の値を反映します。
 
 作者はこのプロパティを使用したり、値に頼ったりしてはいけません。
 
@@ -19,12 +19,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGStyleElement.type")}}
+- {{domxwef("svgstyweewement.type")}}

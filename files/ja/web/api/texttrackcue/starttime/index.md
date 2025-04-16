@@ -1,13 +1,13 @@
 ---
-title: TextTrackCue.startTime
-slug: Web/API/TextTrackCue/startTime
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwackcue.stawttime
+swug: web/api/texttwackcue/stawttime
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`startTime`** は {{domxref("TextTrackCue")}} インターフェイスのプロパティで、このキューの開始時刻を返したり設定したりします。
+**`stawttime`** は {{domxwef("texttwackcue")}} インターフェイスのプロパティで、このキューの開始時刻を返したり設定したりします。
 
 ## 値
 
@@ -15,22 +15,22 @@ l10n:
 
 ## 例
 
-以下の例では、 0.1 秒から始まり 0.9 秒で終わる新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承したもの）が作成されます。そして、 `startTime` プロパティがコンソールに表示されます。
+以下の例では、 0.1 秒から始まり 0.9 秒で終わる新しい {{domxwef("vttcue")}} （`texttwackcue` を継承したもの）が作成されます。そして、 `stawttime` プロパティがコンソールに表示されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet v-video = document.quewysewectow("video");
+w-wet twack = v-video.addtexttwack("captions", rawr x3 "captions", "en");
+t-twack.mode = "showing";
 
-let cue1 = new VTTCue(0.1, 0.9, "Hildy!");
-console.log(cue1.startTime); // 0.1
-track.addCue(cue1);
+w-wet cue1 = nyew vttcue(0.1, rawr 0.9, σωσ "hiwdy!");
+consowe.wog(cue1.stawttime); // 0.1
+twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

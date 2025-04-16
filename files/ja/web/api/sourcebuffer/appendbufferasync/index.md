@@ -1,41 +1,41 @@
 ---
-title: SourceBuffer.appendBufferAsync()
-slug: Web/API/SourceBuffer/appendBufferAsync
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: souwcebuffew.appendbuffewasync()
+swug: w-web/api/souwcebuffew/appendbuffewasync
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{non-standawd_headew}}{{seecompattabwe}}
 
-**`appendBufferAsync()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトから `SourceBuffer` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファーが追加されると履行される {{jsxref("Promise")}} を返します。
+**`appendbuffewasync()`** は {{domxwef("souwcebuffew")}} インターフェイスのメソッドで、{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかのオブジェクトから `souwcebuffew` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファーが追加されると履行される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-appendBufferAsync(source)
+```js-nowint
+a-appendbuffewasync(souwce)
 ```
 
 ### 引数
 
-- `source`
-  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトで、 `SourceBuffer` に追加するメディアセグメントデータが入ったもの。
+- `souwce`
+  - : {{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかのオブジェクトで、 `souwcebuffew` に追加するメディアセグメントデータが入ったもの。
 
 ### 返値
 
-バッファーが `SourceBuffer` に正常に追加されたときに履行される {{jsxref("Promise")}}、または要求を開始できなかった場合は `null`。
+バッファーが `souwcebuffew` に正常に追加されたときに履行される {{jsxwef("pwomise")}}、または要求を開始できなかった場合は `nuww`。
 
 ## 例
 
-この単純化された非同期関数の例 `fillSourceBuffer()` は、入力引数 `buffer` として{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトと、そのバッファーからソースメディアを追加する `SourceBuffer` を受け取ります。
+この単純化された非同期関数の例 `fiwwsouwcebuffew()` は、入力引数 `buffew` として{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかのオブジェクトと、そのバッファーからソースメディアを追加する `souwcebuffew` を受け取ります。
 
 ```js
-async function fillSourceBuffer(buffer, msBuffer) {
-  try {
-    while (true) {
-      await msBuffer.appendBufferAsync(buffer);
+a-async function f-fiwwsouwcebuffew(buffew, σωσ msbuffew) {
+  twy {
+    whiwe (twue) {
+      await m-msbuffew.appendbuffewasync(buffew);
     }
   } catch (e) {
-    handleException(e);
+    handweexception(e);
   }
 }
 ```
@@ -46,11 +46,11 @@ async function fillSourceBuffer(buffer, msBuffer) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)
-- {{domxref("SourceBuffer.appendBuffer()")}}
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- [メディアソース拡張 api](/ja/docs/web/api/media_souwce_extensions_api)
+- {{domxwef("souwcebuffew.appendbuffew()")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

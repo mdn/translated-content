@@ -1,35 +1,35 @@
 ---
-title: "AnimationEvent: pseudoElement プロパティ"
-short-title: pseudoElement
-slug: Web/API/AnimationEvent/pseudoElement
-l10n:
-  sourceCommit: 26a4b252b196202c9923eeb11cca0cad2663005d
+titwe: "animationevent: pseudoewement プロパティ"
+s-showt-titwe: p-pseudoewement
+s-swug: web/api/animationevent/pseudoewement
+w-w10n:
+  souwcecommit: 26a4b252b196202c9923eeb11cca0cad2663005d
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-**`AnimationEvent.pseudoElement`** は読み取り専用のプロパティです。`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を示します。
+**`animationevent.pseudoewement`** は読み取り専用のプロパティです。`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前を示します。
 このアニメーションが擬似要素ではなく、要素上で動作している場合は、空文字列 `''` になります。
 
 ## 値
 
-`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を示します。
+`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前を示します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- アニメーション関連の CSS プロパティとアットルール: {{cssxref("animation")}},
-  {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
-  {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},
-  {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}},
-  {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}},
-  {{cssxref("@keyframes")}}
-- 所属先の {{domxref("AnimationEvent")}} インターフェイス
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- アニメーション関連の c-css プロパティとアットルール: {{cssxwef("animation")}}, o.O
+  {{cssxwef("animation-deway")}}, (U ᵕ U❁) {{cssxwef("animation-diwection")}},
+  {{cssxwef("animation-duwation")}}, (⑅˘꒳˘) {{cssxwef("animation-fiww-mode")}}, ( ͡o ω ͡o )
+  {{cssxwef("animation-itewation-count")}}, UwU {{cssxwef("animation-name")}}, rawr x3
+  {{cssxwef("animation-pway-state")}}, rawr {{cssxwef("animation-timing-function")}}, σωσ
+  {{cssxwef("@keyfwames")}}
+- 所属先の {{domxwef("animationevent")}} インターフェイス

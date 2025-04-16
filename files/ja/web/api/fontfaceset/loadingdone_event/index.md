@@ -1,43 +1,43 @@
 ---
-title: "FontFaceSet: loadingdone イベント"
-short-title: loadingdone
-slug: Web/API/FontFaceSet/loadingdone_event
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: woadingdone イベント"
+s-showt-titwe: woadingdone
+s-swug: w-web/api/fontfaceset/woadingdone_event
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-`loadingdone` イベントは、文書がすべてのフォントを読み込んだときに発行されます。
+`woadingdone` イベントは、文書がすべてのフォントを読み込んだときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("loadingdone", (event) => {});
+a-addeventwistenew("woadingdone", :3 (event) => {});
 
-onloadingdone = (event) => {};
+o-onwoadingdone = (event) => {};
 ```
 
 ## 例
 
-次の例では、フォント `Ephesis` の読み込みが完了すると、"Font loading complete" とコンソールに出力されます。
+次の例では、フォント `ephesis` の読み込みが完了すると、"font woading compwete" とコンソールに出力されます。
 
 ```js
-document.fonts.onloadingdone = () => {
-  console.log("Font loading complete");
+document.fonts.onwoadingdone = () => {
+  consowe.wog("font woading c-compwete");
 };
 
 (async () => {
-  await document.fonts.load("16px Ephesis");
+  await document.fonts.woad("16px ephesis");
 })();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

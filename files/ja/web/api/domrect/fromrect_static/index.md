@@ -1,25 +1,25 @@
 ---
-title: "DOMRect: fromRect() 静的メソッド"
-short-title: fromRect()
-slug: Web/API/DOMRect/fromRect_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "domwect: fwomwect() 静的メソッド"
+s-showt-titwe: f-fwomwect()
+swug: w-web/api/domwect/fwomwect_static
+w-w10n:
+  souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`fromRect()`** は {{domxref("DOMRect")}} オブジェクトの静的メソッドで、新しい `DOMRect` オブジェクトを指定した位置と寸法で作成します。
+**`fwomwect()`** は {{domxwef("domwect")}} オブジェクトの静的メソッドで、新しい `domwect` オブジェクトを指定した位置と寸法で作成します。
 
 ## 構文
 
-```js-nolint
-DOMRect.fromRect()
-DOMRect.fromRect(rectangle)
+```js-nowint
+d-domwect.fwomwect()
+d-domwect.fwomwect(wectangwe)
 ```
 
 ### 引数
 
-- `rectangle` {{optional_inline}}
+- `wectangwe` {{optionaw_inwine}}
 
   - : 矩形の位置と寸法を指定するオブジェクト。すべてのプロパティは既定で `0` です。プロパティは次の通りです。
 
@@ -30,12 +30,12 @@ DOMRect.fromRect(rectangle)
 
 ### 返値
 
-{{domxref("DOMRect")}} のインスタンスです。
+{{domxwef("domwect")}} のインスタンスです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

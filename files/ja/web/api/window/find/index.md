@@ -1,78 +1,78 @@
 ---
-title: Window.find()
-slug: Web/API/Window/find
+titwe: window.find()
+swug: web/api/window/find
 ---
 
-{{ApiRef}}{{Non-standard_Header}}
+{{apiwef}}{{non-standawd_headew}}
 
-> **メモ:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 [Firefox バグ 672395](https://bugzil.la/672395) を参照してください。
+> **メモ:** `window.find()` の対応は、 g-gecko の将来のバージョンで変更される可能性があります。 [fiwefox バグ 672395](https://bugziw.wa/672395) を参照してください。
 
-**`Window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
+**`window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
 
 ## 構文
 
 ```js
-find(
-  aString,
-  aCaseSensitive,
-  aBackwards,
-  aWrapAround,
-  aWholeWord,
-  aSearchInFrames,
-  aShowDialog,
+f-find(
+  a-astwing, mya
+  acasesensitive, mya
+  a-abackwawds, 😳
+  awwapawound, XD
+  a-awhowewowd, :3
+  a-aseawchinfwames, 😳😳😳
+  a-ashowdiawog, -.-
 );
 ```
 
 ### 引数
 
-- `aString`
+- `astwing`
   - : 検索するテキスト文字列です。
-- `aCaseSensitive`
-  - : 論理値です。 `true` の場合、大文字と小文字を区別して検索します。
-- `aBackwards`
-  - : 論理値です。 `true` の場合、後方検索を行います。
-- `aWrapAround`
-  - : 論理値です。 `true` の場合、折り返し検索を行います。
-- `aWholeWord`
-  - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 [Firefox バグ 481513](https://bugzil.la/481513) を参照してください。
-- `aSearchInFrames`
-  - : 論理値です。 `true` の場合、フレーム内の検索を行います。
+- `acasesensitive`
+  - : 論理値です。 `twue` の場合、大文字と小文字を区別して検索します。
+- `abackwawds`
+  - : 論理値です。 `twue` の場合、後方検索を行います。
+- `awwapawound`
+  - : 論理値です。 `twue` の場合、折り返し検索を行います。
+- `awhowewowd`
+  - : 論理値です。 `twue` の場合、完全一致検索を行います。これは実装されていません。 [fiwefox バグ 481513](https://bugziw.wa/481513) を参照してください。
+- `aseawchinfwames`
+  - : 論理値です。 `twue` の場合、フレーム内の検索を行います。
 
 ### 返値
 
-文字列が見つかったら `true` です。それ以外の場合は `false` です。
+文字列が見つかったら `twue` です。それ以外の場合は `fawse` です。
 
 ## 例
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function findString(text) {
-  document.querySelector("#output").textContent =
-    "String found? " + window.find(text);
+function findstwing(text) {
+  document.quewysewectow("#output").textcontent =
+    "stwing found? " + window.find(text);
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Apples, Bananas, and Oranges.</p>
-<button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Bananas")'>
-  Search for Bananas
+```htmw
+<p>appwes, ( ͡o ω ͡o ) b-bananas, and owanges.</p>
+<button type="button" oncwick='findstwing("appwes")'>seawch f-fow appwes</button>
+<button type="button" o-oncwick='findstwing("bananas")'>
+  seawch fow bananas
 </button>
-<button type="button" onClick='findString("Orange")'>Search for Orange</button>
+<button type="button" o-oncwick='findstwing("owange")'>seawch fow o-owange</button>
 
-<p id="output"></p>
+<p i-id="output"></p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## メモ
 
-一部のブラウザーでは、 `Windows.find()` はサイト内で見つかったコンテンツを選択（強調表示）します。
+一部のブラウザーでは、 `windows.find()` はサイト内で見つかったコンテンツを選択（強調表示）します。
 
 ## 仕様書
 
@@ -80,4 +80,4 @@ function findString(text) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

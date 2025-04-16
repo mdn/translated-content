@@ -1,35 +1,35 @@
 ---
-title: USBInTransferResult
-slug: Web/API/USBInTransferResult
-l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+titwe: usbintwansfewwesuwt
+swug: w-web/api/usbintwansfewwesuwt
+w-w10n:
+  souwcecommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-[WebUSB API](/ja/docs/Web/API/WebUSB_API) の `USBInTransferResult` インターフェイスは、`USBDevice` インターフェイスの `transferIn()` および `controlTransferIn()` メソッドを呼び出した結果を提供します。これは、USB デバイスから USB ホストへのデータ転送の要求の結果を表します。
+[webusb a-api](/ja/docs/web/api/webusb_api) の `usbintwansfewwesuwt` インターフェイスは、`usbdevice` インターフェイスの `twansfewin()` および `contwowtwansfewin()` メソッドを呼び出した結果を提供します。これは、usb デバイスから u-usb ホストへのデータ転送の要求の結果を表します。
 
 ## コンストラクター
 
-- {{domxref("USBInTransferResult.USBInTransferResult", "USBInTransferResult()")}} {{Experimental_Inline}}
-  - : 指定の `status` および `data` フィールドを持つ新しい `USBInTransferResult` オブジェクトを生成します。
+- {{domxwef("usbintwansfewwesuwt.usbintwansfewwesuwt", òωó "usbintwansfewwesuwt()")}} {{expewimentaw_inwine}}
+  - : 指定の `status` および `data` フィールドを持つ新しい `usbintwansfewwesuwt` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : あれば、USB デバイスから受信したデータが格納された `DataView` オブジェクトを返します。
-- {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("usbintwansfewwesuwt.data")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : あれば、usb デバイスから受信したデータが格納された `dataview` オブジェクトを返します。
+- {{domxwef("usbintwansfewwesuwt.status")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
 
   - : 転送要求の状態を返します。以下のいずれかです。
 
     - `"ok"` — 転送は成功しました。
-    - `"stall"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。コントロールエンドポイントでのストールをクリアする必要はありません。バルクエンドポイントやインタラプトエンドポイントでのストールは、次の `transferIn()` の呼び出しの前に `clearHalt()` を呼び出してクリアする必要があります。
-    - `"babble"` — デバイスは想定より多くのデータで応答しました。
+    - `"staww"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。コントロールエンドポイントでのストールをクリアする必要はありません。バルクエンドポイントやインタラプトエンドポイントでのストールは、次の `twansfewin()` の呼び出しの前に `cweawhawt()` を呼び出してクリアする必要があります。
+    - `"babbwe"` — デバイスは想定より多くのデータで応答しました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: ウェブ NFC API
-slug: Web/API/Web_NFC_API
+titwe: ウェブ nyfc api
+swug: w-web/api/web_nfc_api
 ---
 
-{{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("web n-nyfc api")}}{{seecompattabwe}}
 
-ウェブ NFC API では、 NFC によるデータ交換を軽量な NFC Data Exchange Format (NDEF) メッセージにて行うことができます。
+ウェブ nyfc a-api では、 n-nfc によるデータ交換を軽量な n-nyfc d-data exchange fowmat (ndef) メッセージにて行うことができます。
 
-> [!NOTE]
-> デバイスやタグは、ウェブ NFC で使用するために NDEF レコード形式に対応するよう に特別にフォーマットし記録する必要があります。低レベルの操作は現在 API で対応していませんが、そのような機能を追加する API についての公開討論が行われています。
+> [!note]
+> デバイスやタグは、ウェブ n-nyfc で使用するために n-nydef レコード形式に対応するよう に特別にフォーマットし記録する必要があります。低レベルの操作は現在 api で対応していませんが、そのような機能を追加する api についての公開討論が行われています。
 
 ## インターフェイス
 
-- {{DOMxRef("NDEFMessage")}}
-  - : NDEF メッセージを表すインターフェイスであり、 `NDEFReader` オブジェクトを介して互換性のあるタグから受信したり、タグに送信したりすることができます。メッセージはメタデータと NDEF レコードから構成されます。
-- {{DOMxRef("NDEFReader")}}
-  - : 互換性のある NFC タグからメッセージを読み書きできるようにするインターフェイスです。メッセージは `NDEFMessage` オブジェクトとして表現されます。
-- {{DOMxRef("NDEFRecord")}}
-  - : NDEF レコードを表すインターフェイスであり、 NDEF メッセージに含めることができます。
+- {{domxwef("ndefmessage")}}
+  - : nydef メッセージを表すインターフェイスであり、 `ndefweadew` オブジェクトを介して互換性のあるタグから受信したり、タグに送信したりすることができます。メッセージはメタデータと nydef レコードから構成されます。
+- {{domxwef("ndefweadew")}}
+  - : 互換性のある n-nyfc タグからメッセージを読み書きできるようにするインターフェイスです。メッセージは `ndefmessage` オブジェクトとして表現されます。
+- {{domxwef("ndefwecowd")}}
+  - : nydef レコードを表すインターフェイスであり、 nydef メッセージに含めることができます。
 
 ## 仕様書
 
 | 仕様書                                    | 状態 | 備考 |
 | ----------------------------------------- | ---- | ---- |
-| [Web NFC](https://w3c.github.io/web-nfc/) | 草稿 |      |
+| [web nyfc](https://w3c.github.io/web-nfc/) | 草稿 |      |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

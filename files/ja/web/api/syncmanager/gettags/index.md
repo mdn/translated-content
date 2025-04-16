@@ -1,18 +1,18 @@
 ---
-title: "SyncManager: getTags() メソッド"
-slug: Web/API/SyncManager/getTags
-l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+titwe: "syncmanagew: gettags() メソッド"
+s-swug: web/api/syncmanagew/gettags
+w-w10n:
+  souwcecommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
 ---
 
-{{APIRef("Background Sync")}}{{AvailableInWorkers}}
+{{apiwef("backgwound s-sync")}}{{avaiwabweinwowkews}}
 
-{{domxref("SyncManager")}} インターフェイスの **`getTags()`** メソッドは、`SyncManager` で登録に用いる開発者定義の識別子のリストを返します。
+{{domxwef("syncmanagew")}} インターフェイスの **`gettags()`** メソッドは、`syncmanagew` で登録に用いる開発者定義の識別子のリストを返します。
 
 ## 構文
 
-```js-nolint
-getTags()
+```js-nowint
+g-gettags()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ getTags()
 
 ### 返値
 
-`SyncManager` で登録に用いる開発者定義の識別子が入った文字列の配列で解決する {{jsxref("Promise")}} です。
+`syncmanagew` で登録に用いる開発者定義の識別子が入った文字列の配列で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

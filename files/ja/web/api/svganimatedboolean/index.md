@@ -1,85 +1,85 @@
 ---
-title: SVGAnimatedBoolean
-slug: Web/API/SVGAnimatedBoolean
-l10n:
-  sourceCommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
+titwe: svganimatedboowean
+swug: w-web/api/svganimatedboowean
+w-w10n:
+  s-souwcecommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG アニメーションする論理値インターフェイス
+## s-svg アニメーションする論理値インターフェイス
 
-`SVGAnimatedBoolean` のインターフェイスは、論理値のうちアニメーション可能な型に使われます。
+`svganimatedboowean` のインターフェイスは、論理値のうちアニメーション可能な型に使われます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>論理値の <code>baseVal</code></li>
-          <li>読み取り専用の論理値の <code>animVal</code></li>
-        </ul>
+        <uw>
+          <wi>論理値の <code>basevaw</code></wi>
+          <wi>読み取り専用の論理値の <code>animvaw</code></wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedBoolean"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/types.htmw#intewfacesvganimatedboowean"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedBoolean.baseVal")}}</code></td>
+    <tw>
+      <td><code>{{domxwef("svganimatedboowean.basevaw")}}</code></td>
       <td>論理値</td>
       <td>
         アニメーションが適用される前の指定された属性の基本値です。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedBoolean.animVal")}}</code></td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatedboowean.animvaw")}}</code></td>
       <td>論理値</td>
       <td>
-        指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値が含まれます。指定された属性またはプロパティが現在アニメーションしていない場合、 <code>baseVal</code> と同じ値が含まれます。
+        指定された属性またはプロパティがアニメーションしている場合、その属性またはプロパティの現在のアニメーション値が含まれます。指定された属性またはプロパティが現在アニメーションしていない場合、 <code>basevaw</code> と同じ値が含まれます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-`SVGAnimatedBoolean` インターフェイスは固有のメソッドを提供していません。
+`svganimatedboowean` インターフェイスは固有のメソッドを提供していません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

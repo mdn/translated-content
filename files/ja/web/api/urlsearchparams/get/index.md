@@ -1,19 +1,19 @@
 ---
-title: "URLSearchParams: get() メソッド"
-short-title: get()
-slug: Web/API/URLSearchParams/get
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: "uwwseawchpawams: get() メソッド"
+s-showt-titwe: get()
+s-swug: web/api/uwwseawchpawams/get
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`get()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、指定された検索パラメーターに関連付けられた最初の値を返します。
+**`get()`** は {{domxwef("uwwseawchpawams")}} インターフェイスのメソッドで、指定された検索パラメーターに関連付けられた最初の値を返します。
 
 ## 構文
 
-```js-nolint
-get(name)
+```js-nowint
+g-get(name)
 ```
 
 ### 引数
@@ -23,28 +23,28 @@ get(name)
 
 ### 返値
 
-指定された検索パラメーターが見つかった場合は文字列です。それ以外の場合は **`null`** です。
+指定された検索パラメーターが見つかった場合は文字列です。それ以外の場合は **`nuww`** です。
 
 ## 例
 
-ページの URL が `https://example.com/?name=Jonathan&age=18` の場合、次のように 'name' および 'age' のパラメーターを解釈できます。
+ページの u-uww が `https://exampwe.com/?name=jonathan&age=18` の場合、次のように 'name' および 'age' のパラメーターを解釈できます。
 
 ```js
-let params = new URLSearchParams(document.location.search);
-let name = params.get("name"); // 文字列 "Jonathan" です
-let age = parseInt(params.get("age"), 10); // 数値 18 です
+w-wet pawams = n-nyew uwwseawchpawams(document.wocation.seawch);
+wet nyame = pawams.get("name"); // 文字列 "jonathan" です
+wet age = pawseint(pawams.get("age"), σωσ 10); // 数値 18 です
 ```
 
-クエリー文字列に存在しないパラメーターを要求すると、**`null`** が返されます。
+クエリー文字列に存在しないパラメーターを要求すると、**`nuww`** が返されます。
 
 ```js
-let address = params.get("address"); // null
+w-wet addwess = pawams.get("addwess"); // nyuww
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

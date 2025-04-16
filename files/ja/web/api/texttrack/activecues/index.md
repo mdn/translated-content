@@ -1,33 +1,33 @@
 ---
-title: TextTrack.activeCues
-slug: Web/API/TextTrack/activeCues
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwack.activecues
+swug: web/api/texttwack/activecues
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`activeCues`** は {{domxref("TextTrack")}} インターフェイスの読み取り専用プロパティで、現在アクティブなキューを列挙した {{domxref("TextTrackCueList")}} オブジェクトを返します。
+**`activecues`** は {{domxwef("texttwack")}} インターフェイスの読み取り専用プロパティで、現在アクティブなキューを列挙した {{domxwef("texttwackcuewist")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("TextTrackCueList")}} オブジェクトです。
+{{domxwef("texttwackcuewist")}} オブジェクトです。
 
 ## 例
 
-以下の例では、動画に新しい `TextTrack` を追加しています。 `activeCues` はコンソールに表示されます。
+以下の例では、動画に新しい `texttwack` を追加しています。 `activecues` はコンソールに表示されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
-console.log(track.activeCues);
+wet v-video = document.quewysewectow("video");
+w-wet t-twack = video.addtexttwack("captions", (U ᵕ U❁) "captions", "en");
+t-twack.mode = "showing";
+c-consowe.wog(twack.activecues);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

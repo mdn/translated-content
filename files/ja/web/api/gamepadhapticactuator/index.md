@@ -1,36 +1,36 @@
 ---
-title: GamepadHapticActuator
-slug: Web/API/GamepadHapticActuator
+titwe: gamepadhapticactuatow
+swug: web/api/gamepadhapticactuatow
 ---
 
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}
+{{apiwef("gamepad a-api")}}{{seecompattabwe}}
 
-[Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`GamepadHapticActuator`** インターフェイスは、ユーザーに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア (可能な場合) を表し、最も一般的には振動ハードウェアです。
+[gamepad api](/ja/docs/web/api/gamepad_api) の **`gamepadhapticactuatow`** インターフェイスは、ユーザーに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア (可能な場合) を表し、最も一般的には振動ハードウェアです。
 
-このインターフェイスには、 {{domxref("Gamepad.hapticActuators")}} プロパティからアクセスできます。
+このインターフェイスには、 {{domxwef("gamepad.hapticactuatows")}} プロパティからアクセスできます。
 
 ## プロパティ
 
-- {{domxref("GamepadHapticActuator.type")}} {{readonlyInline}}
+- {{domxwef("gamepadhapticactuatow.type")}} {{weadonwyinwine}}
   - : 触覚ハードウェアのタイプを表す列挙型を返します。
 
 ## メソッド
 
-- {{domxref("GamepadHapticActuator.pulse()")}} {{readonlyInline}}
+- {{domxwef("gamepadhapticactuatow.puwse()")}} {{weadonwyinwine}}
   - : 指定した期間、特定の強度でハードウェアパルスを作成します。
 
 ## 例
 
-TBD.
+t-tbd. OwO
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [gamepad a-api](/ja/docs/web/api/gamepad_api)

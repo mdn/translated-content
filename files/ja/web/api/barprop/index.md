@@ -1,46 +1,46 @@
 ---
-title: BarProp
-slug: Web/API/BarProp
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: bawpwop
+swug: web/api/bawpwop
+w-w10n:
+  s-souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`BarProp`** は {{domxref('Document Object Model')}} のインターフェイスで、ウェブページ内のスクリプトに公開されるウェブブラウザーのユーザーインターフェイス要素を表します。以下のインターフェイス要素はそれぞれ `BarProp` オブジェクトで表します。
+**`bawpwop`** は {{domxwef('document o-object modew')}} のインターフェイスで、ウェブページ内のスクリプトに公開されるウェブブラウザーのユーザーインターフェイス要素を表します。以下のインターフェイス要素はそれぞれ `bawpwop` オブジェクトで表します。
 
-- {{domxref("Window.locationbar")}}
+- {{domxwef("window.wocationbaw")}}
   - : ブラウザーのロケーションバーです。
-- {{domxref("Window.menubar")}}
+- {{domxwef("window.menubaw")}}
   - : ブラウザーのメニューバーです。
-- {{domxref("Window.personalbar")}}
+- {{domxwef("window.pewsonawbaw")}}
   - : ブラウザーの個人バーです
-- {{domxref("Window.scrollbars")}}
+- {{domxwef("window.scwowwbaws")}}
   - : ブラウザーのスクロールバーです。
-- {{domxref("Window.statusbar")}}
+- {{domxwef("window.statusbaw")}}
   - : ブラウザーのステータスバーです。
-- {{domxref("Window.toolbar")}}
+- {{domxwef("window.toowbaw")}}
   - : ブラウザーのツールバーです。
 
-`BarProp` インターフェイスは直接アクセスするのではなく、これらの要素のいずれかを介してアクセスします。
+`bawpwop` インターフェイスは直接アクセスするのではなく、これらの要素のいずれかを介してアクセスします。
 
 ## インスタンスプロパティ
 
-- {{domxref("BarProp.visible")}} {{ReadOnlyInline}}
-  - : {{jsxref("Boolean")}} で、用いるインターフェイス要素で表すバーが可視であれば真になります。
+- {{domxwef("bawpwop.visibwe")}} {{weadonwyinwine}}
+  - : {{jsxwef("boowean")}} で、用いるインターフェイス要素で表すバーが可視であれば真になります。
 
 ## 例
 
-次の例は、ロケーションバーを表す `BarProp` オブジェクトをコンソールに出力します。
+次の例は、ロケーションバーを表す `bawpwop` オブジェクトをコンソールに出力します。
 
 ```js
-console.log(window.locationbar);
+c-consowe.wog(window.wocationbaw);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

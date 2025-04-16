@@ -1,38 +1,38 @@
 ---
-title: "MIDIMessageEvent: MIDIMessageEvent() コンストラクター"
-slug: Web/API/MIDIMessageEvent/MIDIMessageEvent
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midimessageevent: midimessageevent() コンストラクター"
+s-swug: w-web/api/midimessageevent/midimessageevent
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-**`MIDIMessageEvent()`** コンストラクターは、新しい {{domxref("MIDIMessageEvent")}} オブジェクトを生成します。イベントは {{domxref("MIDIInput")}} が 1 個以上の MIDI メッセージの受信を完了した時に生成されるため、通常このコンストラクターは使用されません。
+**`midimessageevent()`** コンストラクターは、新しい {{domxwef("midimessageevent")}} オブジェクトを生成します。イベントは {{domxwef("midiinput")}} が 1 個以上の m-midi メッセージの受信を完了した時に生成されるため、通常このコンストラクターは使用されません。
 
 ## 構文
 
-```js-nolint
-new MIDIMessageEvent(type)
-new MIDIMessageEvent(type, options)
+```js-nowint
+n-nyew midimessageevent(type)
+n-nyew midimessageevent(type, UwU options)
 ```
 
 ### 引数
 
 - `type`
-  - : イベントの名前を表す文字列です。大文字と小文字は区別され、ブラウザーは常に `MIDIMessageEvent` に設定します。
-- `options` {{optional_inline}}
-  - : _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加えて_、以下のプロパティを持ちうるオブジェクトです。
+  - : イベントの名前を表す文字列です。大文字と小文字は区別され、ブラウザーは常に `midimessageevent` に設定します。
+- `options` {{optionaw_inwine}}
+  - : _{{domxwef("event/event", rawr x3 "event()")}} で定義されたプロパティに加えて_、以下のプロパティを持ちうるオブジェクトです。
     - `data`
-      - : MIDI メッセージのデータバイト列が格納された {{jsxref("Uint8Array")}} のインスタンスです。
+      - : midi メッセージのデータバイト列が格納された {{jsxwef("uint8awway")}} のインスタンスです。
 
 ### 返値
 
-新しい {{domxref("MIDIMessageEvent")}} オブジェクトを返します。
+新しい {{domxwef("midimessageevent")}} オブジェクトを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,31 +1,31 @@
 ---
-title: SourceBuffer.buffered
-slug: Web/API/SourceBuffer/buffered
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: souwcebuffew.buffewed
+swug: web/api/souwcebuffew/buffewed
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`buffered`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、`SourceBuffer` に現在バッファーされている時間範囲を正規化された {{domxref("TimeRanges")}} オブジェクトとして返します。
+**`buffewed`** は {{domxwef("souwcebuffew")}} インターフェイスの読み取り専用プロパティで、`souwcebuffew` に現在バッファーされている時間範囲を正規化された {{domxwef("timewanges")}} オブジェクトとして返します。
 
 ## 値
 
-{{domxref("TimeRanges")}} オブジェクトです。
+{{domxwef("timewanges")}} オブジェクトです。
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

@@ -1,55 +1,55 @@
 ---
-title: GravitySensor
-slug: Web/API/GravitySensor
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: gwavitysensow
+swug: web/api/gwavitysensow
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`GravitySensor`** インターフェイスは、デバイスの 3 軸それぞれにかかっている重力の測定値を提供します。
+[sensow a-apis](/ja/docs/web/api/sensow_apis) の **`gwavitysensow`** インターフェイスは、デバイスの 3 軸それぞれにかかっている重力の測定値を提供します。
 
-このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 a-api](/ja/docs/web/api/pewmissions_api) により `'accewewometew'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) でブロックされる可能性があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
-  - : 新しい `GravitySensor` オブジェクトを生成します。
+- {{domxwef("gwavitysensow.gwavitysensow", rawr "gwavitysensow()")}}
+  - : 新しい `gwavitysensow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_祖先の {{domxref('Accelerometer')}}、{{domxref('Sensor')}}、{{domxref('EventTarget')}} からプロパティを継承しています。_
+_祖先の {{domxwef('accewewometew')}}、{{domxwef('sensow')}}、{{domxwef('eventtawget')}} からプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_`GravitySensor` には独自のメソッドはありません。しかし、親インターフェイスの {{domxref("Sensor")}} および {{domxref("EventTarget")}} からメソッドを継承しています。_
+_`gwavitysensow` には独自のメソッドはありません。しかし、親インターフェイスの {{domxwef("sensow")}} および {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## イベント
 
-_`GravitySensor` には独自のイベントはありません。しかし、親インターフェイスの {{domxref('Sensor')}} からイベントを継承しています。_
+_`gwavitysensow` には独自のイベントはありません。しかし、親インターフェイスの {{domxwef('sensow')}} からイベントを継承しています。_
 
 ## 例
 
-重力は通常 {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで取得します。以下の例では、これを 1 秒に 60 回行います。
+重力は通常 {{domxwef('sensow.weading_event', σωσ 'weading')}} イベントコールバックで取得します。以下の例では、これを 1 秒に 60 回行います。
 
 ```js
-let gravitySensor = new GravitySensor({ frequency: 60 });
+w-wet gwavitysensow = n-nyew g-gwavitysensow({ f-fwequency: 60 });
 
-gravitySensor.addEventListener("reading", (e) => {
-  console.log(`X 軸方向の重力 ${gravitySensor.x}`);
-  console.log(`Y 軸方向の重力 ${gravitySensor.y}`);
-  console.log(`Z 軸方向の重力 ${gravitySensor.z}`);
+gwavitysensow.addeventwistenew("weading", (e) => {
+  consowe.wog(`x 軸方向の重力 ${gwavitysensow.x}`);
+  consowe.wog(`y 軸方向の重力 ${gwavitysensow.y}`);
+  consowe.wog(`z 軸方向の重力 ${gwavitysensow.z}`);
 });
 
-gravitySensor.start();
+gwavitysensow.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

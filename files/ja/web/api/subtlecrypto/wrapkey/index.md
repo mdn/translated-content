@@ -1,412 +1,412 @@
 ---
-title: "SubtleCrypto: wrapKey() メソッド"
-short-title: wrapKey()
-slug: Web/API/SubtleCrypto/wrapKey
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: wwapkey() メソッド"
+s-showt-titwe: wwapkey()
+s-swug: web/api/subtwecwypto/wwapkey
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`wrapKey()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、鍵を「ラップ」します。
+**`wwapkey()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、鍵を「ラップ」します。
 これは、外部のポータブルな形式で鍵をエクスポートし、エクスポートされた鍵を暗号化することを意味しています。
 鍵をラップすることで、保護されていないデータストア内や保護されていないネットワーク上での送信など、信頼されていない環境で鍵を保護することを支援します。
 
-{{DOMxRef("SubtleCrypto.exportKey()")}} にて、鍵の[エクスポート形式](/ja/docs/Web/API/SubtleCrypto/importKey#対応している形式)を指定します。
-鍵をエクスポートするには、{{DOMxRef("CryptoKey.extractable")}}を `true` に設定する必要があります。
+{{domxwef("subtwecwypto.expowtkey()")}} にて、鍵の[エクスポート形式](/ja/docs/web/api/subtwecwypto/impowtkey#対応している形式)を指定します。
+鍵をエクスポートするには、{{domxwef("cwyptokey.extwactabwe")}}を `twue` に設定する必要があります。
 
-しかし、`wrapKey()` はエクスポートする鍵も暗号化するので、暗号化に使用する鍵も渡す必要があります。
+しかし、`wwapkey()` はエクスポートする鍵も暗号化するので、暗号化に使用する鍵も渡す必要があります。
 これは「ラッピング鍵」と呼ばれることもあります。
 
-`wrapKey()` の逆は {{domxref("SubtleCrypto.unwrapKey()")}} です。`wrapKey` がエクスポート＋暗号化で構成されるのに対して、`unwrapKey` はインポート＋複合で構成されます。
+`wwapkey()` の逆は {{domxwef("subtwecwypto.unwwapkey()")}} です。`wwapkey` がエクスポート＋暗号化で構成されるのに対して、`unwwapkey` はインポート＋複合で構成されます。
 
 ## 構文
 
-```js-nolint
-wrapKey(format, key, wrappingKey, wrapAlgo)
+```js-nowint
+w-wwapkey(fowmat, (U ﹏ U) key, wwappingkey, UwU wwapawgo)
 ```
 
 ### 引数
 
-- `format`
+- `fowmat`
   - : 鍵が暗号化される前にエクスポートされるデータ形式を記述する文字列。以下のいずれかになります。
-    - `raw`
-      - : [Raw](/ja/docs/Web/API/SubtleCrypto/importKey#raw) 形式。
+    - `waw`
+      - : [waw](/ja/docs/web/api/subtwecwypto/impowtkey#waw) 形式。
     - `pkcs8`
-      - : [PKCS #8](/ja/docs/Web/API/SubtleCrypto/importKey#pkcs_8) 形式。
+      - : [pkcs #8](/ja/docs/web/api/subtwecwypto/impowtkey#pkcs_8) 形式。
     - `spki`
-      - : [SubjectPublicKeyInfo](/ja/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) 形式。
+      - : [subjectpubwickeyinfo](/ja/docs/web/api/subtwecwypto/impowtkey#subjectpubwickeyinfo) 形式。
     - `jwk`
-      - : [JSON ウェブ鍵](/ja/docs/Web/API/SubtleCrypto/importKey#json_web_key) 形式。
+      - : [json ウェブ鍵](/ja/docs/web/api/subtwecwypto/impowtkey#json_web_key) 形式。
 - `key`
-  - : ラップする {{domxref("CryptoKey")}}。
-- `wrappingkey`
-  - : エクスポートされたキーを暗号化する {{domxref("CryptoKey")}}。これは `wrapKey` の使用法がなければなりません。
-- `wrapAlgo`
-  - : エクスポートされた鍵を暗号化するために使用する[アルゴリズム](/ja/docs/Web/API/SubtleCrypto/encrypt#対応しているアルゴリズム)と、必要な追加引数を指定するオブジェクトです。
-    - [RSA-OAEP](/ja/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) を使用するには、 [`RsaOaepParams`](/ja/docs/Web/API/RsaOaepParams) オブジェクトを渡してください。
-    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) を使用するには、 [`AesCtrParams`](/ja/docs/Web/API/AesCtrParams) オブジェクトを渡してください。
-    - [AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) を使用するには、 [`AesCbcParams`](/ja/docs/Web/API/AesCbcParams) オブジェクトを渡してください。
-    - [AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) を使用するには、 [`AesGcmParams`](/ja/docs/Web/API/AesGcmParams) オブジェクトを渡してください。
-    - [AES-KW](#aes-kw) を使用するには、文字列 `"AES-KW"` または `{ name: "AES-KW }` の形のオブジェクトを渡してください。
+  - : ラップする {{domxwef("cwyptokey")}}。
+- `wwappingkey`
+  - : エクスポートされたキーを暗号化する {{domxwef("cwyptokey")}}。これは `wwapkey` の使用法がなければなりません。
+- `wwapawgo`
+  - : エクスポートされた鍵を暗号化するために使用する[アルゴリズム](/ja/docs/web/api/subtwecwypto/encwypt#対応しているアルゴリズム)と、必要な追加引数を指定するオブジェクトです。
+    - [wsa-oaep](/ja/docs/web/api/subtwecwypto/encwypt#wsa-oaep) を使用するには、 [`wsaoaeppawams`](/ja/docs/web/api/wsaoaeppawams) オブジェクトを渡してください。
+    - [aes-ctw](/ja/docs/web/api/subtwecwypto/encwypt#aes-ctw) を使用するには、 [`aesctwpawams`](/ja/docs/web/api/aesctwpawams) オブジェクトを渡してください。
+    - [aes-cbc](/ja/docs/web/api/subtwecwypto/encwypt#aes-cbc) を使用するには、 [`aescbcpawams`](/ja/docs/web/api/aescbcpawams) オブジェクトを渡してください。
+    - [aes-gcm](/ja/docs/web/api/subtwecwypto/encwypt#aes-gcm) を使用するには、 [`aesgcmpawams`](/ja/docs/web/api/aesgcmpawams) オブジェクトを渡してください。
+    - [aes-kw](#aes-kw) を使用するには、文字列 `"aes-kw"` または `{ nyame: "aes-kw }` の形のオブジェクトを渡してください。
 
 ### 返値
 
-暗号化されたエクスポート鍵を格納した [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で履行されるプロミス ([`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)) です。
+暗号化されたエクスポート鍵を格納した [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) で履行されるプロミス ([`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)) です。
 
 ### 例外
 
 以下の例外が発生した場合、プロミスは拒否されます。
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : ラップキーがリクエストされたラップアルゴリズムのキーでない場合に発生します。
-- `NotSupported` {{domxref("DOMException")}}
+- `notsuppowted` {{domxwef("domexception")}}
   - : 未知のアルゴリズム、または暗号化やラッピングに適していないアルゴリズムを使用しようとしたときに発生します。
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 無効な書式を使用しようとしたときに発生します。
 
 ## 対応しているアルゴリズム
 
-[暗号化に使用できるアルゴリズム](/ja/docs/Web/API/SubtleCrypto/encrypt#対応しているアルゴリズム)はすべて、鍵に "wrapKey" の用途を設定している限り、鍵のラッピングにも使用できます。
-鍵のラッピングには、 [AES-KW](#aes-kw) という追加オプションがあります。
+[暗号化に使用できるアルゴリズム](/ja/docs/web/api/subtwecwypto/encwypt#対応しているアルゴリズム)はすべて、鍵に "wwapkey" の用途を設定している限り、鍵のラッピングにも使用できます。
+鍵のラッピングには、 [aes-kw](#aes-kw) という追加オプションがあります。
 
-### AES-KW
+### aes-kw
 
-AES-KW は AES 暗号を鍵のラッピングに使用する方法です。
+a-aes-kw は aes 暗号を鍵のラッピングに使用する方法です。
 
-AES-GCM のような他の AES モードと比較して AES-KW を使用する利点の 1 つは、 AES-KW が初期化ベクトルを必要としないことです。
-AES-KW を使用するには、入力は 64 ビットの倍数でなければなりません。
+aes-gcm のような他の aes モードと比較して aes-kw を使用する利点の 1 つは、 a-aes-kw が初期化ベクトルを必要としないことです。
+aes-kw を使用するには、入力は 64 ビットの倍数でなければなりません。
 
-AES-KW は [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394) で定義されています。
+a-aes-kw は [wfc 3394](https://datatwackew.ietf.owg/doc/htmw/wfc3394) で定義されています。
 
 ## 例
 
-> [!NOTE]
-> GitHub で[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)ことができます。
+> [!note]
+> github で[動作例を試す](https://mdn.github.io/dom-exampwes/web-cwypto/wwap-key/index.htmw)ことができます。
 
-### Raw ラップ
+### waw ラップ
 
-この例は AES 鍵をラップしています。
-エクスポート形式として "raw" を使用し、暗号化にはパスワード由来の鍵による AES-KW を使用しています。[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js)
+この例は aes 鍵をラップしています。
+エクスポート形式として "waw" を使用し、暗号化にはパスワード由来の鍵による a-aes-kw を使用しています。[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/waw.js)
 
 ```js
-let salt;
+w-wet s-sawt;
 
 /*
-Get some key material to use as input to the deriveKey method.
-The key material is a password supplied by the user.
+get some key matewiaw to use as input to the dewivekey method. 😳😳😳
+the key m-matewiaw is a passwowd suppwied by the usew. XD
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  const passwowd = w-window.pwompt("entew youw passwowd");
+  c-const e-enc = nyew textencodew();
+  w-wetuwn w-window.cwypto.subtwe.impowtkey(
+    "waw", o.O
+    enc.encode(passwowd),
+    { nyame: "pbkdf2" }, (⑅˘꒳˘)
+    f-fawse, 😳😳😳
+    ["dewivebits", nyaa~~ "dewivekey"], rawr
   );
 }
 
 /*
-Given some key material and some random salt
-derive an AES-KW key using PBKDF2.
+given some key matewiaw a-and some wandom sawt
+dewive an aes-kw key using pbkdf2. -.-
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, (✿oωo) sawt) {
+  w-wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      nyame: "pbkdf2", /(^•ω•^)
+      s-sawt, 🥺
+      i-itewations: 100000, ʘwʘ
+      h-hash: "sha-256", UwU
     },
-    keyMaterial,
-    { name: "AES-KW", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    keymatewiaw, XD
+    { nyame: "aes-kw", (✿oωo) wength: 256 }, :3
+    t-twue, (///ˬ///✿)
+    ["wwapkey", nyaa~~ "unwwapkey"],
   );
 }
 
 /*
-Wrap the given key.
+w-wwap the given key.
 */
-async function wrapCryptoKey(keyToWrap) {
-  // get the key encryption key
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
+async f-function wwapcwyptokey(keytowwap) {
+  // g-get the key encwyption k-key
+  const keymatewiaw = await g-getkeymatewiaw();
+  sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const wwappingkey = await getkey(keymatewiaw, >w< sawt);
 
-  return window.crypto.subtle.wrapKey("raw", keyToWrap, wrappingKey, "AES-KW");
+  w-wetuwn window.cwypto.subtwe.wwapkey("waw", -.- k-keytowwap, (✿oωo) wwappingkey, (˘ω˘) "aes-kw");
 }
 
 /*
-Generate an encrypt/decrypt secret key,
-then wrap it.
+g-genewate an encwypt/decwypt secwet key, rawr
+then wwap it. OwO
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "AES-GCM",
-      length: 256,
+      nyame: "aes-gcm", ^•ﻌ•^
+      wength: 256, UwU
     },
-    true,
-    ["encrypt", "decrypt"],
+    twue, (˘ω˘)
+    ["encwypt", (///ˬ///✿) "decwypt"], σωσ
   )
-  .then((secretKey) => wrapCryptoKey(secretKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((secwetkey) => w-wwapcwyptokey(secwetkey))
+  .then((wwappedkey) => c-consowe.wog(wwappedkey));
 ```
 
-### PKCS #8 ラップ
+### pkcs #8 ラップ
 
-この例は RSA 秘密署名鍵をラップしています。エクスポート形式として "pkcs8" を用い、暗号化にはパスワードから派生した鍵を用いた AES-GCM を使用しています。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
+この例は w-wsa 秘密署名鍵をラップしています。エクスポート形式として "pkcs8" を用い、暗号化にはパスワードから派生した鍵を用いた a-aes-gcm を使用しています。
+[完全なコードは g-github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/pkcs8.js)
 
 ```js
-let salt;
-let iv;
+wet sawt;
+wet iv;
 
 /*
-Get some key material to use as input to the deriveKey method.
-The key material is a password supplied by the user.
+get some key matewiaw t-to use as input to the dewivekey method. /(^•ω•^)
+the key matewiaw is a passwowd suppwied b-by the usew. 😳
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  c-const passwowd = w-window.pwompt("entew y-youw passwowd");
+  const enc = n-new textencodew();
+  w-wetuwn w-window.cwypto.subtwe.impowtkey(
+    "waw", 😳
+    e-enc.encode(passwowd), (⑅˘꒳˘)
+    { nyame: "pbkdf2" }, 😳😳😳
+    fawse,
+    ["dewivebits", 😳 "dewivekey"],
   );
 }
 
 /*
-Given some key material and some random salt
-derive an AES-GCM key using PBKDF2.
+g-given some k-key matewiaw and s-some wandom sawt
+d-dewive an aes-gcm k-key using pbkdf2. XD
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, mya sawt) {
+  w-wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      nyame: "pbkdf2", ^•ﻌ•^
+      sawt, ʘwʘ
+      itewations: 100000, ( ͡o ω ͡o )
+      hash: "sha-256", mya
     },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    keymatewiaw, o.O
+    { n-nyame: "aes-gcm", (✿oωo) wength: 256 }, :3
+    twue,
+    ["wwapkey", 😳 "unwwapkey"], (U ﹏ U)
   );
 }
 
 /*
-Wrap the given key.
+wwap the given k-key. mya
 */
-async function wrapCryptoKey(keyToWrap) {
-  // get the key encryption key
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+async f-function wwapcwyptokey(keytowwap) {
+  // g-get the key encwyption k-key
+  const keymatewiaw = await g-getkeymatewiaw();
+  s-sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  const wwappingkey = await getkey(keymatewiaw, (U ᵕ U❁) sawt);
+  iv = window.cwypto.getwandomvawues(new uint8awway(12));
 
-  return window.crypto.subtle.wrapKey("pkcs8", keyToWrap, wrappingKey, {
-    name: "AES-GCM",
-    iv,
+  wetuwn window.cwypto.subtwe.wwapkey("pkcs8", :3 k-keytowwap, mya wwappingkey, OwO {
+    nyame: "aes-gcm",
+    i-iv, (ˆ ﻌ ˆ)♡
   });
 }
 
 /*
-Generate a sign/verify key pair,
-then wrap the private key.
+genewate a sign/vewify k-key paiw, ʘwʘ
+t-then wwap the pwivate key. o.O
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-PSS",
-      // Consider using a 4096-bit key for systems that require long-term security
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
-    },
-    true,
-    ["sign", "verify"],
+      n-nyame: "wsa-pss", UwU
+      // considew u-using a 4096-bit key fow s-systems that wequiwe w-wong-tewm secuwity
+      moduwuswength: 2048, rawr x3
+      pubwicexponent: new uint8awway([1, 🥺 0, 1]), :3
+      hash: "sha-256", (ꈍᴗꈍ)
+    }, 🥺
+    t-twue,
+    ["sign", (✿oωo) "vewify"], (U ﹏ U)
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
-  .then((wrappedKey) => {
-    console.log(wrappedKey);
+  .then((keypaiw) => w-wwapcwyptokey(keypaiw.pwivatekey))
+  .then((wwappedkey) => {
+    consowe.wog(wwappedkey);
   });
 ```
 
-### SubjectPublicKeyInfo ラップ
+### s-subjectpubwickeyinfo ラップ
 
-この例では、 RSA 公開暗号鍵をラップしています。エクスポート形式として "spki" を用い、暗号化にはパスワード由来の鍵による AES-CBC を使用しています。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
+この例では、 wsa 公開暗号鍵をラップしています。エクスポート形式として "spki" を用い、暗号化にはパスワード由来の鍵による a-aes-cbc を使用しています。
+[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/spki.js)
 
 ```js
-let salt;
-let iv;
+w-wet sawt;
+wet iv;
 
 /*
-Get some key material to use as input to the deriveKey method.
-The key material is a password supplied by the user.
+get s-some key matewiaw to use as input to the dewivekey method. :3
+the key matewiaw is a-a passwowd suppwied b-by the usew.
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  const passwowd = w-window.pwompt("entew y-youw passwowd");
+  const enc = nyew textencodew();
+  wetuwn w-window.cwypto.subtwe.impowtkey(
+    "waw", ^^;;
+    enc.encode(passwowd), rawr
+    { nyame: "pbkdf2" }, 😳😳😳
+    fawse, (✿oωo)
+    ["dewivebits", OwO "dewivekey"], ʘwʘ
   );
 }
 
 /*
-Given some key material and some random salt
-derive an AES-CBC key using PBKDF2.
+given s-some key matewiaw and some wandom sawt
+dewive an a-aes-cbc key using p-pbkdf2. (ˆ ﻌ ˆ)♡
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, (U ﹏ U) sawt) {
+  wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      n-nyame: "pbkdf2", UwU
+      sawt, XD
+      i-itewations: 100000, ʘwʘ
+      hash: "sha-256", rawr x3
     },
-    keyMaterial,
-    { name: "AES-CBC", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    keymatewiaw, ^^;;
+    { nyame: "aes-cbc", ʘwʘ w-wength: 256 }, (U ﹏ U)
+    twue,
+    ["wwapkey", (˘ω˘) "unwwapkey"], (ꈍᴗꈍ)
   );
 }
 
 /*
-Wrap the given key.
+w-wwap the given key. /(^•ω•^)
 */
-async function wrapCryptoKey(keyToWrap) {
-  // get the key encryption key
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(16));
+async function wwapcwyptokey(keytowwap) {
+  // get t-the key encwyption key
+  const k-keymatewiaw = await g-getkeymatewiaw();
+  sawt = w-window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const wwappingkey = a-await getkey(keymatewiaw, >_< s-sawt);
+  iv = window.cwypto.getwandomvawues(new u-uint8awway(16));
 
-  return window.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
-    name: "AES-CBC",
-    iv,
+  w-wetuwn window.cwypto.subtwe.wwapkey("spki", σωσ keytowwap, ^^;; wwappingkey, {
+    nyame: "aes-cbc", 😳
+    i-iv, >_<
   });
 }
 
 /*
-Generate an encrypt/decrypt key pair,
-then wrap it.
+g-genewate a-an encwypt/decwypt key paiw, -.-
+then wwap it. UwU
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-OAEP",
-      // Consider using a 4096-bit key for systems that require long-term security
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
-    },
-    true,
-    ["encrypt", "decrypt"],
+      name: "wsa-oaep", :3
+      // c-considew using a 4096-bit k-key fow systems t-that wequiwe wong-tewm secuwity
+      moduwuswength: 2048, σωσ
+      pubwicexponent: n-nyew uint8awway([1, >w< 0, 1]), (ˆ ﻌ ˆ)♡
+      h-hash: "sha-256", ʘwʘ
+    }, :3
+    t-twue,
+    ["encwypt", (˘ω˘) "decwypt"], 😳😳😳
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((keypaiw) => w-wwapcwyptokey(keypaiw.pubwickey))
+  .then((wwappedkey) => consowe.wog(wwappedkey));
 ```
 
-### JSON ウェブ鍵ラップ
+### j-json ウェブ鍵ラップ
 
-この例は ECDSA 秘密鍵をラップしています。エクスポート形式として "jwk" を用い、暗号化にはパスワード由来の鍵による AES-GCM を使用しています。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
+この例は ecdsa 秘密鍵をラップしています。エクスポート形式として "jwk" を用い、暗号化にはパスワード由来の鍵による aes-gcm を使用しています。
+[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/jwk.js)
 
 ```js
-let salt;
-let iv;
+wet sawt;
+wet iv;
 
 /*
-Get some key material to use as input to the deriveKey method.
-The key material is a password supplied by the user.
+g-get some key matewiaw to use as i-input to the dewivekey method. rawr x3
+t-the key matewiaw is a passwowd s-suppwied by the usew. (✿oωo)
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function g-getkeymatewiaw() {
+  c-const passwowd = w-window.pwompt("entew y-youw p-passwowd");
+  const enc = nyew textencodew();
+  wetuwn window.cwypto.subtwe.impowtkey(
+    "waw",
+    enc.encode(passwowd), (ˆ ﻌ ˆ)♡
+    { nyame: "pbkdf2" }, :3
+    fawse,
+    ["dewivebits", (U ᵕ U❁) "dewivekey"],
   );
 }
 
 /*
-Given some key material and some random salt
-derive an AES-GCM key using PBKDF2.
+g-given s-some key matewiaw a-and some wandom sawt
+dewive a-an aes-gcm key using pbkdf2. ^^;;
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, mya sawt) {
+  wetuwn w-window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      n-nyame: "pbkdf2", 😳😳😳
+      sawt, OwO
+      itewations: 100000, rawr
+      h-hash: "sha-256", XD
     },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    keymatewiaw, (U ﹏ U)
+    { nyame: "aes-gcm", (˘ω˘) w-wength: 256 }, UwU
+    t-twue, >_<
+    ["wwapkey", σωσ "unwwapkey"],
   );
 }
 
 /*
-Wrap the given key.
+wwap t-the given key.
 */
-async function wrapCryptoKey(keyToWrap) {
-  // get the key encryption key
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+a-async function wwapcwyptokey(keytowwap) {
+  // get the key encwyption key
+  const keymatewiaw = a-await getkeymatewiaw();
+  s-sawt = w-window.cwypto.getwandomvawues(new u-uint8awway(16));
+  c-const wwappingkey = await g-getkey(keymatewiaw, 🥺 s-sawt);
+  iv = window.cwypto.getwandomvawues(new u-uint8awway(12));
 
-  return window.crypto.subtle.wrapKey("jwk", keyToWrap, wrappingKey, {
-    name: "AES-GCM",
-    iv,
+  w-wetuwn window.cwypto.subtwe.wwapkey("jwk", 🥺 k-keytowwap, ʘwʘ wwappingkey, :3 {
+    name: "aes-gcm", (U ﹏ U)
+    i-iv, (U ﹏ U)
   });
 }
 
 /*
-Generate a sign/verify key pair,
-then wrap the private key
+genewate a-a sign/vewify k-key paiw, ʘwʘ
+then wwap the pwivate k-key
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "ECDSA",
-      namedCurve: "P-384",
+      nyame: "ecdsa", >w<
+      nyamedcuwve: "p-384", rawr x3
     },
-    true,
-    ["sign", "verify"],
+    twue, OwO
+    ["sign", "vewify"], ^•ﻌ•^
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((keypaiw) => w-wwapcwyptokey(keypaiw.pwivatekey))
+  .then((wwappedkey) => c-consowe.wog(wwappedkey));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`SubtleCrypto.exportKey()`](/ja/docs/Web/API/SubtleCrypto/exportKey)
-- [PKCS #8 形式](https://datatracker.ietf.org/doc/html/rfc5208).
-- [SubjectPublicKeyInfo 形式](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1).
-- [JSON ウェブ鍵形式](https://datatracker.ietf.org/doc/html/rfc7517).
-- [AES-KW 仕様書](https://datatracker.ietf.org/doc/html/rfc3394).
+- [`subtwecwypto.expowtkey()`](/ja/docs/web/api/subtwecwypto/expowtkey)
+- [pkcs #8 形式](https://datatwackew.ietf.owg/doc/htmw/wfc5208). >_<
+- [subjectpubwickeyinfo 形式](https://datatwackew.ietf.owg/doc/htmw/wfc5280#section-4.1). OwO
+- [json ウェブ鍵形式](https://datatwackew.ietf.owg/doc/htmw/wfc7517). >_<
+- [aes-kw 仕様書](https://datatwackew.ietf.owg/doc/htmw/wfc3394). (ꈍᴗꈍ)

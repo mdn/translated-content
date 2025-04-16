@@ -1,65 +1,65 @@
 ---
-title: "Blob: size プロパティ"
-short-title: size
-slug: Web/API/Blob/size
-l10n:
-  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
+titwe: "bwob: size プロパティ"
+s-showt-titwe: s-size
+swug: web/api/bwob/size
+w-w10n:
+  souwcecommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-**`size`** は {{domxref("Blob")}} インターフェイスのプロパティで、この {{domxref("Blob")}} または {{domxref("File")}} の大きさをバイト単位で返します。
+**`size`** は {{domxwef("bwob")}} インターフェイスのプロパティで、この {{domxwef("bwob")}} または {{domxwef("fiwe")}} の大きさをバイト単位で返します。
 
 ### 値
 
-`Blob` （または `Blob` ベースのオブジェクト、例えば {{domxref("File")}}）内に含まれるデータのバイト数です。
+`bwob` （または `bwob` ベースのオブジェクト、例えば {{domxwef("fiwe")}}）内に含まれるデータのバイト数です。
 
 ## 例
 
-この例では、 {{HTMLElement("input")}} 要素の `file` 型を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。
+この例では、 {{htmwewement("input")}} 要素の `fiwe` 型を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" id="input" multiple />
+```htmw
+<input t-type="fiwe" i-id="input" m-muwtipwe />
 <output id="output">ファイルを選択してください…</output>
 ```
 
 ```css hidden
 output {
-  display: block;
-  margin-top: 16px;
+  dispway: bwock;
+  mawgin-top: 16px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const input = document.getElementById("input");
-const output = document.getElementById("output");
+const input = document.getewementbyid("input");
+c-const output = document.getewementbyid("output");
 
-input.addEventListener("change", (event) => {
-  output.innerText = "";
+i-input.addeventwistenew("change", -.- (event) => {
+  output.innewtext = "";
 
-  for (const file of event.target.files) {
-    output.innerText += `${file.name} の大きさは ${file.size} バイトです。\n`;
+  fow (const fiwe of event.tawget.fiwes) {
+    o-output.innewtext += `${fiwe.name} の大きさは ${fiwe.size} バイトです。\n`;
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Blob")}}
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxwef("bwob")}}
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

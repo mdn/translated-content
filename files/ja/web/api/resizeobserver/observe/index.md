@@ -1,27 +1,27 @@
 ---
-title: "ResizeObserver: observe() メソッド"
-short-title: observe()
-slug: Web/API/ResizeObserver/observe
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wesizeobsewvew: obsewve() メソッド"
+s-showt-titwe: o-obsewve()
+swug: w-web/api/wesizeobsewvew/obsewve
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew api")}}
 
-**`observe()`** は {{domxref("ResizeObserver")}} インターフェイスのメソッドで、指定された {{domxref('Element')}} または {{domxref('SVGElement')}} の監視を開始します。
+**`obsewve()`** は {{domxwef("wesizeobsewvew")}} インターフェイスのメソッドで、指定された {{domxwef('ewement')}} または {{domxwef('svgewement')}} の監視を開始します。
 
 ## 構文
 
-```js-nolint
-observe(target)
-observe(target, options)
+```js-nowint
+o-obsewve(tawget)
+o-obsewve(tawget, (U ﹏ U) options)
 ```
 
 ### 引数
 
-- `target`
-  - : 監視する {{domxref('Element')}} または {{domxref('SVGElement')}} への参照。
-- `options` {{optional_inline}}
+- `tawget`
+  - : 監視する {{domxwef('ewement')}} または {{domxwef('svgewement')}} への参照。
+- `options` {{optionaw_inwine}}
 
   - : 監視のオプションを設定することができるオプションオブジェクトです。現在、設定可能なオプションは 1 つだけです。
 
@@ -30,15 +30,15 @@ observe(target, options)
       - : オブザーバーがどのボックスモデルの変更を観察するかを設定します。設定可能な値は以下の通りです。
 
         - `content-box` (既定値)
-          - : CSS　で定義されたコンテンツ領域のサイズ。
-        - `border-box`
-          - : CSS で定義されたボックス境界領域のサイズ。
-        - `device-pixel-content-box`
-          - : CSS で定義されたコンテンツ領域の大きさ。デバイスピクセル単位で、要素またはその祖先に対して CSS 変換を適用する前の値。
+          - : css　で定義されたコンテンツ領域のサイズ。
+        - `bowdew-box`
+          - : css で定義されたボックス境界領域のサイズ。
+        - `device-pixew-content-box`
+          - : css で定義されたコンテンツ領域の大きさ。デバイスピクセル単位で、要素またはその祖先に対して c-css 変換を適用する前の値。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
@@ -46,56 +46,56 @@ observe(target, options)
 
 ## 例
 
-次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) の例から取ったものです。
+次のスニペットは [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw) ([ソースを表示](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)) の例から取ったものです。
 
 ```js
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
+const wesizeobsewvew = n-nyew wesizeobsewvew((entwies) => {
+  fow (const e-entwy of entwies) {
+    if (entwy.contentboxsize) {
       // クロームが標準外の配列を使用しているかどうかのチェック
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize[0].inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize[0].inlineSize / 600,
-        )}rem`;
-      } else {
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize.inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize.inlineSize / 600,
-        )}rem`;
+      if (entwy.contentboxsize[0]) {
+        h1ewem.stywe.fontsize = `${math.max(
+          1.5, >_<
+          e-entwy.contentboxsize[0].inwinesize / 200,
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, rawr x3
+          e-entwy.contentboxsize[0].inwinesize / 600, mya
+        )}wem`;
+      } e-ewse {
+        h1ewem.stywe.fontsize = `${math.max(
+          1.5, nyaa~~
+          entwy.contentboxsize.inwinesize / 200, (⑅˘꒳˘)
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, rawr x3
+          entwy.contentboxsize.inwinesize / 600, (✿oωo)
+        )}wem`;
       }
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    } e-ewse {
+      h1ewem.stywe.fontsize = `${math.max(
+        1.5, (ˆ ﻌ ˆ)♡
+        entwy.contentwect.width / 200, (˘ω˘)
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(1, (⑅˘꒳˘) entwy.contentwect.width / 600)}wem`;
     }
   }
-  console.log("サイズが変更されました");
+  c-consowe.wog("サイズが変更されました");
 });
 
-resizeObserver.observe(divElem);
+wesizeobsewvew.obsewve(divewem);
 ```
 
-オプションオブジェクトを使った `observe()` の呼び出しは、次のようになります。
+オプションオブジェクトを使った `obsewve()` の呼び出しは、次のようになります。
 
 ```js
-resizeObserver.observe(divElem, { box: "border-box" });
+w-wesizeobsewvew.obsewve(divewem, (///ˬ///✿) { b-box: "bowdew-box" });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

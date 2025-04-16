@@ -1,37 +1,37 @@
 ---
-title: Plugin
-slug: Web/API/Plugin
+titwe: pwugin
+swug: web/api/pwugin
 ---
 
-{{ApiRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
+p-pwugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
 
-> [!NOTE]
-> 最新のブラウザーでは、 `Plugin` オブジェクトのプロパティを列挙することができなくなりました。
+> [!note]
+> 最新のブラウザーでは、 `pwugin` オブジェクトのプロパティを列挙することができなくなりました。
 
 ## プロパティ
 
-- {{domxref("Plugin.description")}} {{readonlyinline}}
+- {{domxwef("pwugin.descwiption")}} {{weadonwyinwine}}
   - : 人間の読みやすい形式の、プラグインに関する説明。
-- {{domxref("Plugin.filename")}} {{readonlyinline}}
+- {{domxwef("pwugin.fiwename")}} {{weadonwyinwine}}
   - : プラグインのファイルのファイル名。
-- {{domxref("Plugin.name")}} {{readonlyinline}}
+- {{domxwef("pwugin.name")}} {{weadonwyinwine}}
   - : プラグインの名称。
-- {{domxref("Plugin.version")}} {{readonlyinline}}
+- {{domxwef("pwugin.vewsion")}} {{weadonwyinwine}}
   - : プラグインのバージョン番号文字列。
 
 ## メソッド
 
-- {{domxref("Plugin.item")}}
-  - : 対応するコンテンツ型の MIME タイプを返します。対応する型のリストへのインデックス番号を指定します。
-- {{domxref("Plugin.namedItem")}}
-  - : 対応している項目の MIME タイプを返します。
+- {{domxwef("pwugin.item")}}
+  - : 対応するコンテンツ型の m-mime タイプを返します。対応する型のリストへのインデックス番号を指定します。
+- {{domxwef("pwugin.nameditem")}}
+  - : 対応している項目の m-mime タイプを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

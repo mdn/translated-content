@@ -1,13 +1,13 @@
 ---
-title: "location: pathname プロパティ"
-slug: Web/API/Location/pathname
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "wocation: pathname プロパティ"
+swug: w-web/api/wocation/pathname
+w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-**`pathname`** は {{domxref("Location")}} インターフェイスのプロパティで、その位置を表す URL のパスが入った文字列です。パスがない場合は空文字列になります。そうでない場合、`pathname` には最初の '/' に続いて URL のパス部分が入り、クエリー文字列やフラグメントは含みません。
+**`pathname`** は {{domxwef("wocation")}} インターフェイスのプロパティで、その位置を表す u-uww のパスが入った文字列です。パスがない場合は空文字列になります。そうでない場合、`pathname` には最初の '/' に続いて u-uww のパス部分が入り、クエリー文字列やフラグメントは含みません。
 
 ## 値
 
@@ -16,15 +16,15 @@ l10n:
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/ja/docs/Location.pathname"> 要素があるとする
-const anchor = document.getElementById("myAnchor");
-const result = anchor.pathname; // 返値:'/ja/docs/Location.pathname'
+// 文書内に <a i-id="myanchow" h-hwef="/ja/docs/wocation.pathname"> 要素があるとする
+c-const anchow = document.getewementbyid("myanchow");
+const wesuwt = anchow.pathname; // 返値:'/ja/docs/wocation.pathname'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

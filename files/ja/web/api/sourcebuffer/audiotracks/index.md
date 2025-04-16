@@ -1,32 +1,32 @@
 ---
-title: "SourceBuffer: audioTracks プロパティ"
-short-title: audioTracks
-slug: Web/API/SourceBuffer/audioTracks
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "souwcebuffew: audiotwacks プロパティ"
+s-showt-titwe: a-audiotwacks
+swug: w-web/api/souwcebuffew/audiotwacks
+w-w10n:
+  souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce e-extensions")}}
 
-**`audioTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、この `SourceBuffer` 内に現在含まれている音声トラックのリストを返します。
+**`audiotwacks`** は {{domxwef("souwcebuffew")}} インターフェイスの読み取り専用プロパティで、この `souwcebuffew` 内に現在含まれている音声トラックのリストを返します。
 
 ## 値
 
-{{domxref("AudioTrackList")}} オブジェクトです。
+{{domxwef("audiotwackwist")}} オブジェクトです。
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

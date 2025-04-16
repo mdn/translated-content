@@ -1,68 +1,68 @@
 ---
-title: "HTMLFormElement: reset イベント"
-short-title: reset
-slug: Web/API/HTMLFormElement/reset_event
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: weset イベント"
+s-showt-titwe: weset
+s-swug: web/api/htmwfowmewement/weset_event
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`reset`** イベントは {{HTMLElement("form")}} がリセットされたときに発行されます。
+**`weset`** イベントは {{htmwewement("fowm")}} がリセットされたときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener("reset", (event) => {});
+addeventwistenew("weset", mya (event) => {});
 
-onreset = (event) => {};
+o-onweset = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-この例は {{domxref("EventTarget.addEventListener()")}} を使用してフォームがリセットされるのを、実行されたときに現在の {{domxref("Event.timeStamp")}} をログ出力します。
+この例は {{domxwef("eventtawget.addeventwistenew()")}} を使用してフォームがリセットされるのを、実行されたときに現在の {{domxwef("event.timestamp")}} をログ出力します。
 
-### HTML
+### h-htmw
 
-```html
-<form id="form">
-  <label>Test field: <input type="text" /></label>
-  <br /><br />
-  <button type="reset">Reset form</button>
-</form>
-<p id="log"></p>
+```htmw
+<fowm i-id="fowm">
+  <wabew>test fiewd: <input type="text" /></wabew>
+  <bw /><bw />
+  <button type="weset">weset fowm</button>
+</fowm>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function logReset(event) {
-  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
+function w-wogweset(event) {
+  wog.textcontent = `fowm weset! 😳 t-timestamp: ${event.timestamp}`;
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
-form.addEventListener("reset", logReset);
+const fowm = document.getewementbyid("fowm");
+const wog = d-document.getewementbyid("wog");
+fowm.addeventwistenew("weset", XD w-wogweset);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の {{HTMLElement("form")}} 要素
+- h-htmw の {{htmwewement("fowm")}} 要素

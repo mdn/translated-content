@@ -1,58 +1,58 @@
 ---
-title: HIDDevice.sendFeatureReport()
-slug: Web/API/HIDDevice/sendFeatureReport
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: hiddevice.sendfeatuwewepowt()
+swug: web/api/hiddevice/sendfeatuwewepowt
+w-w10n:
+  souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} インターフェイスの **`sendFeatureReport()`** メソッドは、HID デバイスに Feature レポートを送信します。Feature レポートは、HID デバイスとアプリケーションが標準化されていない HID データを交換するための方法です。
+{{domxwef("hiddevice")}} インターフェイスの **`sendfeatuwewepowt()`** メソッドは、hid デバイスに featuwe レポートを送信します。featuwe レポートは、hid デバイスとアプリケーションが標準化されていない h-hid データを交換するための方法です。
 
-各レポート形式用にデバイスがサポートしている `reportId` は、{{domxref("HIDDevice.collections")}} から取得できます。
+各レポート形式用にデバイスがサポートしている `wepowtid` は、{{domxwef("hiddevice.cowwections")}} から取得できます。
 
 ## 構文
 
-```js-nolint
-sendFeatureReport(reportId, data)
+```js-nowint
+s-sendfeatuwewepowt(wepowtid, (ˆ ﻌ ˆ)♡ d-data)
 ```
 
 ### 引数
 
-- `reportId`
-  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+- `wepowtid`
+  - : 8 ビットのレポート i-id です。hid デバイスがレポート i-id を使わない場合、`0` を送信します。
 - `data`
-  - : {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで表されるバイト列です。
+  - : {{jsxwef("awwaybuffew")}}, (⑅˘꒳˘) {{jsxwef("typedawway")}}, (U ᵕ U❁) {{jsxwef("dataview")}} のいずれかで表されるバイト列です。
 
 ### 返値
 
-レポートの送信完了後 `undefined` で解決する {{jsxref("Promise")}} を返します。
+レポートの送信完了後 `undefined` で解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 何らかの理由でレポートの送信に失敗したとき投げられます。
 
 ## 例
 
-この例では、`sendFeatureReport()` によりデバイスを点滅させます。記事 [Connecting to uncommon HID devices](https://web.dev/hid/) で他の例や動くデモを見ることができます。
+この例では、`sendfeatuwewepowt()` によりデバイスを点滅させます。記事 [connecting t-to uncommon h-hid devices](https://web.dev/hid/) で他の例や動くデモを見ることができます。
 
 ```js
-const reportId = 1;
-for (let i = 0; i < 10; i++) {
+const wepowtid = 1;
+fow (wet i = 0; i < 10; i++) {
   // 消灯させます
-  await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  a-await device.sendfeatuwewepowt(wepowtid, -.- uint32awway.fwom([0, ^^;; 0]));
+  a-await waitfow(100);
   // 点灯させます
-  await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
-  await waitFor(100);
+  await device.sendfeatuwewepowt(wepowtid, >_< u-uint32awway.fwom([512, mya 0]));
+  await waitfow(100);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

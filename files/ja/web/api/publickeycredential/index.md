@@ -1,110 +1,110 @@
 ---
-title: PublicKeyCredential
-slug: Web/API/PublicKeyCredential
-l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+titwe: pubwickeycwedentiaw
+swug: w-web/api/pubwickeycwedentiaw
+w-w10n:
+  souwcecommit: b-b7cd76af245c330c6a1a9f489602015fa0714044
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-**`PublicKeyCredential`** インターフェイスは、パスワードの代わりにフィッシングやデータ消去に耐性のある非対称の鍵ペアを使用してサービスにログインするための資格情報である、公開鍵と秘密鍵のペアについての情報を提供します。これは {{domxref("Credential")}} を継承しており、[ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) が[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) へ拡張された際に作成されました。 {{domxref("Credential")}} を継承している他のインターフェイスとしては、 {{domxref("PasswordCredential")}} や {{domxref("FederatedCredential")}} があります。
+**`pubwickeycwedentiaw`** インターフェイスは、パスワードの代わりにフィッシングやデータ消去に耐性のある非対称の鍵ペアを使用してサービスにログインするための資格情報である、公開鍵と秘密鍵のペアについての情報を提供します。これは {{domxwef("cwedentiaw")}} を継承しており、[ウェブ認証 a-api](/ja/docs/web/api/web_authentication_api) が[資格情報管理 a-api](/ja/docs/web/api/cwedentiaw_management_api) へ拡張された際に作成されました。 {{domxwef("cwedentiaw")}} を継承している他のインターフェイスとしては、 {{domxwef("passwowdcwedentiaw")}} や {{domxwef("fedewatedcwedentiaw")}} があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-> [!NOTE]
-> このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> [!note]
+> このインターフェイスは最上位のコンテキストに限定されています。 {{htmwewement("ifwame")}} 要素の中で使用しても、何も効果がありません。
 
 ## インスタンスプロパティ
 
-- `PublicKeyCredential.type` {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : {{domxref("Credential")}} から継承しています。 `PublicKeyCredential` インスタンスの場合は、常に `public-key` に設定されています。
-- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : {{domxref("Credential")}} から継承しており、 {{domxref("PublicKeyCredential.rawId")}} の [base64url 符号化](/ja/docs/Glossary/Base64)になるようオーバーライドしています。
-- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : {{jsxref("ArrayBuffer")}} で、この `PublicKeyCredential` のグローバルに固有な識別子を保持します。この識別子は今後の {{domxref("CredentialsContainer.get")}} の呼び出しにおいて、資格情報を検索するのに使用することができます。
-- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : {{domxref("AuthenticatorResponse")}} オブジェクトのインスタンスです。これは `PublicKeyCredential` が {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} の呼び出しの結果だった場合であった場合は {{domxref("AuthenticatorAttestationResponse")}} 型に、 `PublicKeyCredential` が {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} の呼び出しの結果であった場合は {{domxref("AuthenticatorAssertionResponse")}} 型になります。
+- `pubwickeycwedentiaw.type` {{weadonwyinwine()}} {{secuwecontext_inwine}}
+  - : {{domxwef("cwedentiaw")}} から継承しています。 `pubwickeycwedentiaw` インスタンスの場合は、常に `pubwic-key` に設定されています。
+- {{domxwef("pubwickeycwedentiaw.id")}} {{weadonwyinwine()}} {{secuwecontext_inwine}}
+  - : {{domxwef("cwedentiaw")}} から継承しており、 {{domxwef("pubwickeycwedentiaw.wawid")}} の [base64uww 符号化](/ja/docs/gwossawy/base64)になるようオーバーライドしています。
+- {{domxwef("pubwickeycwedentiaw.wawid")}} {{weadonwyinwine()}} {{secuwecontext_inwine}}
+  - : {{jsxwef("awwaybuffew")}} で、この `pubwickeycwedentiaw` のグローバルに固有な識別子を保持します。この識別子は今後の {{domxwef("cwedentiawscontainew.get")}} の呼び出しにおいて、資格情報を検索するのに使用することができます。
+- {{domxwef("pubwickeycwedentiaw.wesponse")}} {{weadonwyinwine()}} {{secuwecontext_inwine}}
+  - : {{domxwef("authenticatowwesponse")}} オブジェクトのインスタンスです。これは `pubwickeycwedentiaw` が {{domxwef("cwedentiawscontainew.cweate()","navigatow.cwedentiaws.cweate()")}} の呼び出しの結果だった場合であった場合は {{domxwef("authenticatowattestationwesponse")}} 型に、 `pubwickeycwedentiaw` が {{domxwef("cwedentiawscontainew.get()","navigatow.cwedentiaws.get()")}} の呼び出しの結果であった場合は {{domxwef("authenticatowassewtionwesponse")}} 型になります。
 
 ## 静的メソッド
 
-- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
-  - : 静的メソッドで、認証機器が所属するプラットフォームがユーザーを*検証*する能力を持っているならば `true` で解決する {{jsxref("Promise")}} を返します。
+- {{domxwef("pubwickeycwedentiaw.isusewvewifyingpwatfowmauthenticatowavaiwabwe()")}} {{secuwecontext_inwine}}
+  - : 静的メソッドで、認証機器が所属するプラットフォームがユーザーを*検証*する能力を持っているならば `twue` で解決する {{jsxwef("pwomise")}} を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("PublicKeyCredential.getClientExtensionResults()")}} {{securecontext_inline}}
+- {{domxwef("pubwickeycwedentiaw.getcwientextensionwesuwts()")}} {{secuwecontext_inwine}}
   - : 何らかの拡張機能がリクエストされた場合、このメソッドはその拡張機能が処理した結果を返します。
 
 ## 例
 
-### PublicKeyCredential の新しいインスタンスを生成
+### p-pubwickeycwedentiaw の新しいインスタンスを生成
 
-ここでは、 {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} を用いて新しい資格情報を生成します。
+ここでは、 {{domxwef("cwedentiawscontainew.cweate()","navigatow.cwedentiaws.cweate()")}} を用いて新しい資格情報を生成します。
 
 ```js
-const publicKey = {
-  challenge: new Uint8Array([
-    21, 31, 105 /* 29 more random bytes generated by the server */,
+const pubwickey = {
+  chawwenge: nyew uint8awway([
+    21, 😳😳😳 31, 105 /* 29 m-mowe wandom bytes genewated by the sewvew */, 🥺
   ]),
-  rp: {
-    name: "Example CORP",
-    id: "login.example.com",
-  },
-  user: {
-    id: new Uint8Array(16),
-    name: "canand@example.com",
-    displayName: "Carina Anand",
-  },
-  pubKeyCredParams: [
+  w-wp: {
+    nyame: "exampwe c-cowp", mya
+    id: "wogin.exampwe.com", 🥺
+  }, >_<
+  usew: {
+    id: nyew uint8awway(16), >_<
+    nyame: "canand@exampwe.com", (⑅˘꒳˘)
+    d-dispwayname: "cawina anand", /(^•ω•^)
+  }, rawr x3
+  p-pubkeycwedpawams: [
     {
-      type: "public-key",
-      alg: -7,
-    },
+      t-type: "pubwic-key", (U ﹏ U)
+      awg: -7, (U ﹏ U)
+    }, (⑅˘꒳˘)
   ],
 };
 
-navigator.credentials
-  .create({ publicKey })
-  .then((newCredentialInfo) => {
-    const response = newCredentialInfo.response;
-    const clientExtensionsResults =
-      newCredentialInfo.getClientExtensionResults();
+nyavigatow.cwedentiaws
+  .cweate({ pubwickey })
+  .then((newcwedentiawinfo) => {
+    const wesponse = n-nyewcwedentiawinfo.wesponse;
+    const cwientextensionswesuwts =
+      nyewcwedentiawinfo.getcwientextensionwesuwts();
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((eww) => {
+    consowe.ewwow(eww);
   });
 ```
 
-### PublicKeyCredential の既存のインスタンスを取得
+### pubwickeycwedentiaw の既存のインスタンスを取得
 
-ここでは、 {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} を用いて認証機器から既存の資格情報を読み取ります。
+ここでは、 {{domxwef("cwedentiawscontainew.get()","navigatow.cwedentiaws.get()")}} を用いて認証機器から既存の資格情報を読み取ります。
 
 ```js
-const options = {
-  challenge: new Uint8Array([
-    /* bytes sent from the server */
-  ]),
+c-const options = {
+  chawwenge: n-nyew uint8awway([
+    /* b-bytes s-sent fwom the s-sewvew */
+  ]), òωó
 };
 
-navigator.credentials
-  .get({ publicKey: options })
-  .then((credentialInfoAssertion) => {
-    // send assertion response back to the server
-    // to proceed with the control of the credential
+nyavigatow.cwedentiaws
+  .get({ pubwickey: o-options })
+  .then((cwedentiawinfoassewtion) => {
+    // send assewtion wesponse b-back to the sewvew
+    // to pwoceed with the contwow of the cwedentiaw
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((eww) => {
+    consowe.ewwow(eww);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 親インターフェイスの {{domxref("Credential")}}
+- 親インターフェイスの {{domxwef("cwedentiaw")}}

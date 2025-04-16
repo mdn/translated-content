@@ -1,30 +1,30 @@
 ---
-title: CustomElementRegistry.define()
-slug: Web/API/CustomElementRegistry/define
+titwe: customewementwegistwy.define()
+swug: web/api/customewementwegistwy/define
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-**`define()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。
+**`define()`** は {{domxwef("customewementwegistwy")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。
 
 作成することができるのは、次の 2 種類のカスタム要素です。
 
-- **自律カスタム要素** (Autonomous custom element): 独立した要素です。組み込みの HTML 要素を継承していません。
-- **カスタム組み込み要素** (Customized built-in element): 組み込みの HTML 要素を継承し、拡張した要素です。
+- **自律カスタム要素** (autonomous c-custom ewement): 独立した要素です。組み込みの h-htmw 要素を継承していません。
+- **カスタム組み込み要素** (customized b-buiwt-in e-ewement): 組み込みの h-htmw 要素を継承し、拡張した要素です。
 
 ## 構文
 
 ```js
-customElements.define(name, constructor, options);
+c-customewements.define(name, c-constwuctow, 😳 o-options);
 ```
 
 ### 引数
 
-- name
+- nyame
   - : 新しいカスタム要素の名前です。カスタム要素の名前は、少なくとも 1 つのハイフンを含まなければならないことに注意してください。
-- constructor
+- constwuctow
   - : 新しいカスタム要素のコンストラクターです。
-- options {{optional_inline}}
+- options {{optionaw_inwine}}
 
   - : 要素の定義の仕方を制御するオブジェクト。現在は、次の 1 つのオプションのみに対応しています。
 
@@ -36,171 +36,171 @@ customElements.define(name, constructor, options);
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : {{domxref("CustomElementRegistry")}} に既に同じ名前の項目または同じコンストラクターが含まれている（または既に定義されている）、または <code>extends</code> で[有効なカスタム要素名](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)が指定されていた場合、または <code>extends</code> で未知の要素を拡張しようとした場合に発生します。
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 指定された名前が[有効なカスタム要素名](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)ではなかった場合に発生します。
-- `TypeError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("customewementwegistwy")}} に既に同じ名前の項目または同じコンストラクターが含まれている（または既に定義されている）、または <code>extends</code> で[有効なカスタム要素名](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name)が指定されていた場合、または <code>extends</code> で未知の要素を拡張しようとした場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 指定された名前が[有効なカスタム要素名](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name)ではなかった場合に発生します。
+- `typeewwow` {{domxwef("domexception")}}
   - : 参照されたコンストラクターがコンストラクターではなかった場合に発生します。
 
-> **メモ:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
+> **メモ:** `notsuppowtedewwow` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxwef("ewement.attachshadow()")}} に問題があります。
 
 ## 例
 
 ### 自律カスタム要素
 
-以下のコードは [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component)
-の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/popup-info-box-web-component/))。
+以下のコードは [popup-info-box-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/popup-info-box-web-component)
+の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/))。
 
 ```js
 // 要素のクラスを作成
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // コンストラクターでは常に super を最初に呼び出す
-    super();
+cwass p-popupinfo extends htmwewement {
+  constwuctow() {
+    // コンストラクターでは常に s-supew を最初に呼び出す
+    supew();
 
     // シャドウルートを生成
-    var shadow = this.attachShadow({ mode: "open" });
+    v-vaw shadow = this.attachshadow({ mode: "open" });
 
     // span を生成
-    var wrapper = document.createElement("span");
-    wrapper.setAttribute("class", "wrapper");
-    var icon = document.createElement("span");
-    icon.setAttribute("class", "icon");
-    icon.setAttribute("tabindex", 0);
-    var info = document.createElement("span");
-    info.setAttribute("class", "info");
+    v-vaw wwappew = document.cweateewement("span");
+    w-wwappew.setattwibute("cwass", σωσ "wwappew");
+    v-vaw icon = document.cweateewement("span");
+    icon.setattwibute("cwass", rawr x3 "icon");
+    icon.setattwibute("tabindex", OwO 0);
+    vaw info = document.cweateewement("span");
+    info.setattwibute("cwass", /(^•ω•^) "info");
 
-    // 属性の中身を取り出し、 info の span の中に入れる
-    var text = this.getAttribute("text");
-    info.textContent = text;
+    // 属性の中身を取り出し、 i-info の span の中に入れる
+    vaw text = this.getattwibute("text");
+    info.textcontent = text;
 
     // アイコンを挿入
-    var imgUrl;
-    if (this.hasAttribute("img")) {
-      imgUrl = this.getAttribute("img");
-    } else {
-      imgUrl = "img/default.png";
+    v-vaw imguww;
+    if (this.hasattwibute("img")) {
+      i-imguww = t-this.getattwibute("img");
+    } e-ewse {
+      i-imguww = "img/defauwt.png";
     }
-    var img = document.createElement("img");
-    img.src = imgUrl;
-    icon.appendChild(img);
+    vaw img = document.cweateewement("img");
+    i-img.swc = imguww;
+    icon.appendchiwd(img);
 
-    // いくらかの CSS を生成してシャドウ DOM に適用
-    var style = document.createElement("style");
+    // いくらかの css を生成してシャドウ d-dom に適用
+    vaw stywe = document.cweateewement("stywe");
 
-    style.textContent =
-      ".wrapper {" +
-      "position: relative;" +
+    stywe.textcontent =
+      ".wwappew {" +
+      "position: wewative;" +
       "}" +
       ".info {" +
-      "font-size: 0.8rem;" +
+      "font-size: 0.8wem;" +
       "width: 200px;" +
-      "display: inline-block;" +
-      "border: 1px solid black;" +
+      "dispway: inwine-bwock;" +
+      "bowdew: 1px s-sowid bwack;" +
       "padding: 10px;" +
-      "background: white;" +
-      "border-radius: 10px;" +
+      "backgwound: w-white;" +
+      "bowdew-wadius: 10px;" +
       "opacity: 0;" +
-      "transition: 0.6s all;" +
-      "position: absolute;" +
+      "twansition: 0.6s a-aww;" +
+      "position: a-absowute;" +
       "bottom: 20px;" +
-      "left: 10px;" +
+      "weft: 10px;" +
       "z-index: 3;" +
       "}" +
       "img {" +
-      "width: 1.2rem" +
+      "width: 1.2wem" +
       "}" +
-      ".icon:hover + .info, .icon:focus + .info {" +
+      ".icon:hovew + .info, 😳😳😳 .icon:focus + .info {" +
       "opacity: 1;" +
       "}";
 
-    // 生成された要素をシャドウ DOM に取り付ける
+    // 生成された要素をシャドウ dom に取り付ける
 
-    shadow.appendChild(style);
-    shadow.appendChild(wrapper);
-    wrapper.appendChild(icon);
-    wrapper.appendChild(info);
+    shadow.appendchiwd(stywe);
+    shadow.appendchiwd(wwappew);
+    w-wwappew.appendchiwd(icon);
+    w-wwappew.appendchiwd(info);
   }
 }
 
 // 新しい要素を定義
-customElements.define("popup-info", PopUpInfo);
+customewements.define("popup-info", ( ͡o ω ͡o ) p-popupinfo);
 ```
 
-```html
+```htmw
 <popup-info
-  img="img/alt.png"
-  text="Your card validation code (CVC) is an extra
-                                    security feature — it is the last 3 or 4
-                                    numbers on the back of your card."></popup-info>
+  i-img="img/awt.png"
+  text="youw c-cawd vawidation code (cvc) is an e-extwa
+                                    secuwity featuwe — i-it is the wast 3 ow 4
+                                    n-nyumbews on the back o-of youw cawd."></popup-info>
 ```
 
-> [!NOTE]
-> 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
+> [!note]
+> 自律カスタム要素のコンストラクターは {{domxwef("htmwewement")}} を継承していなければなりません。
 
 ### カスタム組み込み要素
 
-以下のコードは [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
-の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/word-count-web-component/))。
+以下のコードは [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component)
+の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/))。
 
 ```js
 // 要素のクラスを作成
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // コンストラクターでは常に super を最初に呼び出す
-    super();
+c-cwass wowdcount extends htmwpawagwaphewement {
+  constwuctow() {
+    // コンストラクターでは常に supew を最初に呼び出す
+    supew();
 
     // 要素の親要素の語数を数える
-    var wcParent = this.parentNode;
+    vaw wcpawent = this.pawentnode;
 
-    function countWords(node) {
-      var text = node.innerText || node.textContent;
-      return text.split(/\s+/g).length;
+    f-function c-countwowds(node) {
+      vaw text = n-nyode.innewtext || n-nyode.textcontent;
+      w-wetuwn text.spwit(/\s+/g).wength;
     }
 
-    var count = "語数: " + countWords(wcParent);
+    vaw count = "語数: " + countwowds(wcpawent);
 
     // シャドウルートを生成
-    var shadow = this.attachShadow({ mode: "open" });
+    v-vaw shadow = this.attachshadow({ mode: "open" });
 
     // テキストノードを生成し、語数を追加
-    var text = document.createElement("span");
-    text.textContent = count;
+    vaw text = document.cweateewement("span");
+    t-text.textcontent = count;
 
     // シャドウルートに追加
-    shadow.appendChild(text);
+    s-shadow.appendchiwd(text);
 
     // 要素の内容が変化した際に語数を更新
-    setInterval(function () {
-      var count = "語数: " + countWords(wcParent);
-      text.textContent = count;
-    }, 200);
+    s-setintewvaw(function () {
+      v-vaw count = "語数: " + countwowds(wcpawent);
+      t-text.textcontent = c-count;
+    }, >_< 200);
   }
 }
 
 // 新しい要素を定義
-customElements.define("word-count", WordCount, { extends: "p" });
+c-customewements.define("wowd-count", >w< w-wowdcount, rawr { extends: "p" });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
 ### シャドウルートを取り付けられないようにする要素の作成
 
-要素に使用されているクラスが、文字列 \`shadow\` を返す静的プロパティ `disabledFeatures` を含んでいる場合、 {{domxref("Element.attachShadow()")}} は {{domxref("DOMException")}} の `NotSupportedError` を返すようになります。
+要素に使用されているクラスが、文字列 \`shadow\` を返す静的プロパティ `disabwedfeatuwes` を含んでいる場合、 {{domxwef("ewement.attachshadow()")}} は {{domxwef("domexception")}} の `notsuppowtedewwow` を返すようになります。
 
 ```js
-class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() {
-    return ["shadow"];
+c-cwass p-popupinfo extends h-htmwewement {
+  s-static get d-disabwedfeatuwes() {
+    wetuwn ["shadow"];
   }
 
-  constructor() {
-    super();
+  constwuctow() {
+    supew();
 
-    var shadow = this.attachShadow({ mode: "open" });
+    v-vaw shadow = this.attachshadow({ mode: "open" });
     // これは要素が定義されたときにエラーが発生するようになります。
   }
 }
@@ -208,8 +208,8 @@ class PopUpInfo extends HTMLElement {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

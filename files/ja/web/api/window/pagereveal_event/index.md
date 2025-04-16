@@ -1,102 +1,102 @@
 ---
-title: "Window: pagereveal イベント"
-short-title: pagereveal
-slug: Web/API/Window/pagereveal_event
-l10n:
-  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
+titwe: "window: pageweveaw イベント"
+s-showt-titwe: p-pageweveaw
+s-swug: web/api/window/pageweveaw_event
+w-w10n:
+  s-souwcecommit: e-e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef("HTML DOM")}}{{seecompattable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-**`pagereveal`** イベントは、ネットワークから新しい文書を読み込んだり、文書（[バック/フォワードキャッシュ](/ja/docs/Glossary/bfcache) (bfcache) または[事前レンダリング](/ja/docs/Glossary/Prerender)）をアクティブにしたりして、文書が最初にレンダリングされたときに発行されます。
+**`pageweveaw`** イベントは、ネットワークから新しい文書を読み込んだり、文書（[バック/フォワードキャッシュ](/ja/docs/gwossawy/bfcache) (bfcache) または[事前レンダリング](/ja/docs/gwossawy/pwewendew)）をアクティブにしたりして、文書が最初にレンダリングされたときに発行されます。
 
-これは、文書間 (MPA) の移動の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)において、移動の流入ページからのアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、JavaScript で流入遷移アニメーションをカスタマイズしたりしたい場合などです。
+これは、文書間 (mpa) の移動の[ビュー遷移](/ja/docs/web/api/view_twansition_api)において、移動の流入ページからのアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、javascwipt で流入遷移アニメーションをカスタマイズしたりしたい場合などです。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("pagereveal", (event) => {});
-onpagereveal = (event) => {};
+a-addeventwistenew("pageweveaw", 🥺 (event) => {});
+onpageweveaw = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PageRevealEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("pageweveawevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PageRevealEvent")}}
+{{inhewitancediagwam("pageweveawevent")}}
 
 ## インスタンスプロパティ
 
-- {{domxref("PageRevealEvent.viewTransition")}} {{ReadOnlyInline}}
-- : イベントが発生したときに、アクティブなものがあれば、文書間のナビゲーションにおけるアクティブなビュー遷移を表す {{domxref("ViewTransition")}} オブジェクトを返します。それ以外の場合は `null` を返します。
+- {{domxwef("pageweveawevent.viewtwansition")}} {{weadonwyinwine}}
+- : イベントが発生したときに、アクティブなものがあれば、文書間のナビゲーションにおけるアクティブなビュー遷移を表す {{domxwef("viewtwansition")}} オブジェクトを返します。それ以外の場合は `nuww` を返します。
 
 ## 例
 
 ```js
-window.addEventListener("pagereveal", async (e) => {
-  // "from" 履歴項目が存在しない場合は戻る
-  if (!navigation.activation.from) return;
+window.addeventwistenew("pageweveaw", async (e) => {
+  // "fwom" 履歴項目が存在しない場合は戻る
+  if (!navigation.activation.fwom) w-wetuwn;
 
   // アクティブなビュー遷移が存在する場合のみ実行
-  if (e.viewTransition) {
-    const fromUrl = new URL(navigation.activation.from.url);
-    const currentUrl = new URL(navigation.activation.entry.url);
+  if (e.viewtwansition) {
+    const fwomuww = nyew u-uww(navigation.activation.fwom.uww);
+    const cuwwentuww = n-nyew uww(navigation.activation.entwy.uww);
 
     // プロフィールページからホームページに移動
-    // ~> VT 名を関連するリストアイテムに設定
-    if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
-      const profile = extractProfileNameFromUrl(fromUrl);
+    // ~> vt 名を関連するリストアイテムに設定
+    if (ispwofiwepage(fwomuww) && i-ishomepage(cuwwentuww)) {
+      const p-pwofiwe = extwactpwofiwenamefwomuww(fwomuww);
 
-      // view-transition-name の値をアニメーションする要素に設定
-      document.querySelector(`#${profile} span`).style.viewTransitionName =
+      // v-view-twansition-name の値をアニメーションする要素に設定
+      document.quewysewectow(`#${pwofiwe} span`).stywe.viewtwansitionname =
         "name";
-      document.querySelector(`#${profile} img`).style.viewTransitionName =
-        "avatar";
+      document.quewysewectow(`#${pwofiwe} img`).stywe.viewtwansitionname =
+        "avataw";
 
       // スナップショットが採られた後、名前を除去
       // そうすることで、次のナビゲーションの準備ができる
-      await e.viewTransition.ready;
-      document.querySelector(`#${profile} span`).style.viewTransitionName =
+      a-await e.viewtwansition.weady;
+      document.quewysewectow(`#${pwofiwe} span`).stywe.viewtwansitionname =
         "none";
-      document.querySelector(`#${profile} img`).style.viewTransitionName =
+      document.quewysewectow(`#${pwofiwe} img`).stywe.viewtwansitionname =
         "none";
     }
 
     // プロフィールページに移動
-    // ~> VT 名をメインタイトルと画像に設定
-    if (isProfilePage(currentUrl)) {
-      // view-transition-name の値をアニメーションする要素に設定
-      document.querySelector(`#detail main h1`).style.viewTransitionName =
+    // ~> vt 名をメインタイトルと画像に設定
+    i-if (ispwofiwepage(cuwwentuww)) {
+      // view-twansition-name の値をアニメーションする要素に設定
+      d-document.quewysewectow(`#detaiw m-main h-h1`).stywe.viewtwansitionname =
         "name";
-      document.querySelector(`#detail main img`).style.viewTransitionName =
-        "avatar";
+      d-document.quewysewectow(`#detaiw main img`).stywe.viewtwansitionname =
+        "avataw";
 
       // スナップショットが採られた後、名前を除去
       // そうすることで、次のナビゲーションの準備ができる
-      await e.viewTransition.ready;
-      document.querySelector(`#detail main h1`).style.viewTransitionName =
+      await e-e.viewtwansition.weady;
+      document.quewysewectow(`#detaiw main h1`).stywe.viewtwansitionname =
         "none";
-      document.querySelector(`#detail main img`).style.viewTransitionName =
+      d-document.quewysewectow(`#detaiw main img`).stywe.viewtwansitionname =
         "none";
     }
   }
 });
 ```
 
-> [!NOTE]
-> このコードの採取元のライブデモは、[List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) を参照してください。
+> [!note]
+> このコードの採取元のライブデモは、[wist of chwome devwew team membews](https://view-twansitions.netwify.app/pwofiwes/mpa/) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
-- {{domxref("Window.pageswap_event", "pageswap")}} event
+- [ビュー遷移 api の使用](/ja/docs/web/api/view_twansition_api/using)
+- {{domxwef("window.pageswap_event", >_< "pageswap")}} e-event

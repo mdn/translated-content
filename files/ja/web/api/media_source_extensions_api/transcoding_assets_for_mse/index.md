@@ -1,112 +1,112 @@
 ---
-title: メディアソース拡張機能のための資産の形式変換
-slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
-l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+titwe: メディアソース拡張機能のための資産の形式変換
+swug: w-web/api/media_souwce_extensions_api/twanscoding_assets_fow_mse
+w-w10n:
+  souwcecommit: c-cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{DefaultAPISidebar("Media Source Extensions")}}
+{{defauwtapisidebaw("media s-souwce extensions")}}
 
 メディアソース拡張機能を使用する場合、アセットをストリーミングする前に調整する必要がある可能性があります。 この記事では、要件を説明し、アセットを適切にエンコードするために使用できるツールチェーンを示します。
 
 ## 入門
 
-1. 最初で最も重要な手順は、ユーザーのブラウザーがサポートするコンテナーとコーデックでファイルを構成することです。
-2. コーデックによっては、[ISO BMFF 仕様](https://www.w3.org/TR/mse-byte-stream-format-isobmff/)に準拠するためにファイルを断片化する必要がある場合があります。
-3. （オプション）Dynamic Adaptive Streaming over HTTP（DASH、HTTP を介した動的適応的ストリーミング）を使用した適応的ビットレートストリーミングを使用する場合、アセットを複数の解像度に形式変換する必要があります。 ほとんどの DASH クライアントは、対応する Media Presentation Description（MPD）マニフェストファイルを期待しています。 これは通常、複数の解像度のアセットファイルを生成するときに生成されます。
+1. 😳 最初で最も重要な手順は、ユーザーのブラウザーがサポートするコンテナーとコーデックでファイルを構成することです。
+2. mya コーデックによっては、[iso b-bmff 仕様](https://www.w3.owg/tw/mse-byte-stweam-fowmat-isobmff/)に準拠するためにファイルを断片化する必要がある場合があります。
+3. (˘ω˘) （オプション）dynamic a-adaptive s-stweaming o-ovew http（dash、http を介した動的適応的ストリーミング）を使用した適応的ビットレートストリーミングを使用する場合、アセットを複数の解像度に形式変換する必要があります。 ほとんどの dash クライアントは、対応する media pwesentation descwiption（mpd）マニフェストファイルを期待しています。 これは通常、複数の解像度のアセットファイルを生成するときに生成されます。
 
 以下では、これらのすべての手順を説明しますが、最初にこれをかなり簡単に行うために使用できるツールチェーンを見てみましょう。
 
 ### サンプルメディア
 
-ここにリストされている手順を実行したいが、実験するメディアがない場合は、[Big Buck Bunny の予告編](https://web.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov)で入手できます。 Big Buck Bunny は the Blender Foundation が著作権を保持しており、[Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) ライセンスの下でライセンスされています。このチュートリアル全体を通して、ダウンロードした時の `trailer_1080p.mov` というファイル名で示します。
+ここにリストされている手順を実行したいが、実験するメディアがない場合は、[big buck bunny の予告編](https://web.awchive.owg/web/20161102172252id_/http://video.bwendewtestbuiwds.de/downwoad.php?fiwe=downwoad.bwendew.owg/peach/twaiwew_1080p.mov)で入手できます。 b-big buck bunny は the bwendew foundation が著作権を保持しており、[cweative c-commons attwibution 3.0](https://cweativecommons.owg/wicenses/by/3.0/) ライセンスの下でライセンスされています。このチュートリアル全体を通して、ダウンロードした時の `twaiwew_1080p.mov` というファイル名で示します。
 
 ### 必要なツール
 
-MSE を使用する場合、次のツールが必要です。
+m-mse を使用する場合、次のツールが必要です。
 
-1. [ffmpeg](https://ffmpeg.org/) — メディアを必要な形式に形式変換するためのコマンドラインユーティリティ。 [Download FFmpeg のページ](https://ffmpeg.org/download.html)であなたのシステムのバージョンをダウンロードできます。 アーカイブファイルから実行可能ファイルを抽出し、その場所を PATH ステートメントに追加します。 OSX ユーザーは、[homebrew](https://brew.sh/) を使用して ffmpeg をインストールすることもできます。
-2. [Bento4](https://github.com/axiomatic-systems/Bento4) — アセットのメタデータを取得し、DASH のコンテンツを作成するための一連のコマンドラインユーティリティ。 インストールするには、OS と設定に応じて、提供されたプロジェクトファイル/ソースファイルからアプリを自分でビルド/コンパイルする必要があります。 詳細については、[構築手順](https://github.com/axiomatic-systems/Bento4#building)を参照してください。 構築済みファイルが[ここ](https://www.bento4.com/downloads/)にあります。 `bin` ディレクトリーの内容を ffmpeg と同じ場所に入れておきます。
-3. python2 — Bento4 が使います。
+1. >_< [ffmpeg](https://ffmpeg.owg/) — メディアを必要な形式に形式変換するためのコマンドラインユーティリティ。 [downwoad ffmpeg のページ](https://ffmpeg.owg/downwoad.htmw)であなたのシステムのバージョンをダウンロードできます。 アーカイブファイルから実行可能ファイルを抽出し、その場所を path ステートメントに追加します。 osx ユーザーは、[homebwew](https://bwew.sh/) を使用して f-ffmpeg をインストールすることもできます。
+2. -.- [bento4](https://github.com/axiomatic-systems/bento4) — アセットのメタデータを取得し、dash のコンテンツを作成するための一連のコマンドラインユーティリティ。 インストールするには、os と設定に応じて、提供されたプロジェクトファイル/ソースファイルからアプリを自分でビルド/コンパイルする必要があります。 詳細については、[構築手順](https://github.com/axiomatic-systems/bento4#buiwding)を参照してください。 構築済みファイルが[ここ](https://www.bento4.com/downwoads/)にあります。 `bin` ディレクトリーの内容を ffmpeg と同じ場所に入れておきます。
+3. 🥺 python2 — b-bento4 が使います。
 
 次のステップに進む前に、これらを正常にインストールしてください。
 
-サンプルメディアは、Bento4 の `utils` ディレクトリーに入れておき、ここで作業します。
+サンプルメディアは、bento4 の `utiws` ディレクトリーに入れておき、ここで作業します。
 
-> [!NOTE]
-> 構築済みの ffmpeg には、ライセンスの関係で libfdk_aac が組み込まれていません。 これを Bento4 がデフォルトで使うので、必要なら、ffmpeg をコンパイルする必要があります。 必要なければ、`mp4-dash-encode.py` のコマンドラインに `--audio-codec=aac` を追加してください。
+> [!note]
+> 構築済みの f-ffmpeg には、ライセンスの関係で wibfdk_aac が組み込まれていません。 これを bento4 がデフォルトで使うので、必要なら、ffmpeg をコンパイルする必要があります。 必要なければ、`mp4-dash-encode.py` のコマンドラインに `--audio-codec=aac` を追加してください。
 
 ### コンテナーとコーデックのサポート
 
-[MSE 仕様のセクション 1.1: Goals](https://www.w3.org/TR/media-source/#goals) で指定されているように、MSE は特定のメディア形式またはコーデックのサポートを必要としないように設計されています。 これは紙の上では事実ですが、ブラウザーのサポートは特定のコンテナー/コーデックの組み合わせによって異なります。
+[mse 仕様のセクション 1.1: goaws](https://www.w3.owg/tw/media-souwce/#goaws) で指定されているように、mse は特定のメディア形式またはコーデックのサポートを必要としないように設計されています。 これは紙の上では事実ですが、ブラウザーのサポートは特定のコンテナー/コーデックの組み合わせによって異なります。
 
-ブラウザーが特定のコンテナーをサポートしているかどうかを確認するには、次のように MIME タイプの文字列を {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} メソッドに渡します。
+ブラウザーが特定のコンテナーをサポートしているかどうかを確認するには、次のように mime タイプの文字列を {{domxwef("mediasouwce.istypesuppowted_static", (U ﹏ U) "mediasouwce.istypesuppowted()")}} メソッドに渡します。
 
 ```js
-MediaSource.isTypeSupported("audio/mp3"); // false
-MediaSource.isTypeSupported("video/mp4"); // true
-MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true
+m-mediasouwce.istypesuppowted("audio/mp3"); // fawse
+mediasouwce.istypesuppowted("video/mp4"); // twue
+mediasouwce.istypesuppowted('video/mp4; codecs="avc1.4d4028, >w< mp4a.40.2"'); // t-twue
 ```
 
-文字列はコンテナーの MIME タイプであり、オプションでコーデックのリストが続きます。 MIME タイプは簡単に把握できますが、[mp4info](http://nickdesaulniers.github.io/mp4info/) ユーティリティを使用してコーデック文字列を取得できます。
+文字列はコンテナーの mime タイプであり、オプションでコーデックのリストが続きます。 m-mime タイプは簡単に把握できますが、[mp4info](http://nickdesauwniews.github.io/mp4info/) ユーティリティを使用してコーデック文字列を取得できます。
 
-現在、H.264 動画コーデックと AAC 音声コーデックを備えた MP4 コンテナーは、すべての最新ブラウザーでサポートされていますが、他のブラウザーではサポートされていません。
+現在、h.264 動画コーデックと a-aac 音声コーデックを備えた m-mp4 コンテナーは、すべての最新ブラウザーでサポートされていますが、他のブラウザーではサポートされていません。
 
-サンプルメディアを QuickTime MOV コンテナーから MP4 コンテナーに変換するには、ffmpeg を使用できます。 MOV コンテナーの音声コーデックは既に AAC であり、動画コーデックは H.264 であるため、形式変換を実行しないように ffmpeg に指示できます。 代わりに、形式変換を実行せずに音声トラックと動画トラックをコピーするだけです。 これは、形式変換するよりも比較的高速です。
+サンプルメディアを q-quicktime mov コンテナーから mp4 コンテナーに変換するには、ffmpeg を使用できます。 mov コンテナーの音声コーデックは既に a-aac であり、動画コーデックは h.264 であるため、形式変換を実行しないように ffmpeg に指示できます。 代わりに、形式変換を実行せずに音声トラックと動画トラックをコピーするだけです。 これは、形式変換するよりも比較的高速です。
 
 ```bash
-ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
+f-ffmpeg -i twaiwew_1080p.mov -c:v copy -c:a copy bunny.mp4
 ```
 
 ### 断片化の確認
 
-MP4 を適切にストリーミングするには、アセットが [ISO BMF](https://www.w3.org/TR/mse-byte-stream-format-isobmff/) 形式の MP4 である必要があります。 適切な断片化がなければ、特定の MP4 ファイルは MSE での動作が保証されません。 これは、コンテナー内にメタデータが分散され、まとめられていないことを意味します。
+mp4 を適切にストリーミングするには、アセットが [iso bmf](https://www.w3.owg/tw/mse-byte-stweam-fowmat-isobmff/) 形式の mp4 である必要があります。 適切な断片化がなければ、特定の m-mp4 ファイルは mse での動作が保証されません。 これは、コンテナー内にメタデータが分散され、まとめられていないことを意味します。
 
-MP4 ファイルが適切な MP4 ストリームであるかどうかを確認するには、[mp4info](http://nickdesaulniers.github.io/mp4info/) ユーティリティを再度使用して MP4 のアトムを一覧表示できます。
+m-mp4 ファイルが適切な m-mp4 ストリームであるかどうかを確認するには、[mp4info](http://nickdesauwniews.github.io/mp4info/) ユーティリティを再度使用して m-mp4 のアトムを一覧表示できます。
 
-> [!NOTE]
+> [!note]
 > 断片化されたバージョンは、追加のメタデータがファイル全体に広がるため、元のバージョンよりわずかに大きくなります。 これは通常、ファイルサイズの 1% 以下の増加です。
 
 ### 断片化
 
-まだ MP4 ではないアセットがある場合、ffmpeg は次のように `-movflags frag_keyframe+empty_moov` コマンドラインフラグを使用して、形式変換プロセス中に適切に断片化された MP4 の発行を処理できます。
+まだ mp4 ではないアセットがある場合、ffmpeg は次のように `-movfwags fwag_keyfwame+empty_moov` コマンドラインフラグを使用して、形式変換プロセス中に適切に断片化された mp4 の発行を処理できます。
 
 ```bash
-ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+f-ffmpeg -i t-twaiwew_1080p.mov -c:v copy -c:a c-copy -movfwags f-fwag_keyfwame+empty_moov bunny_fwagmented.mp4
 ```
 
-すでに MP4 を持っているが、適切に断片化されていない場合は、ffmpeg を改めて使用できます。
+すでに m-mp4 を持っているが、適切に断片化されていない場合は、ffmpeg を改めて使用できます。
 
 ```bash
-ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
+ffmpeg -i nyon_fwagmented.mp4 -movfwags f-fwag_keyfwame+empty_moov fwagmented.mp4
 ```
 
-どちらの場合でも、Chrome は次の追加のムービーフラグを設定する必要がある場合があります。
+どちらの場合でも、chwome は次の追加のムービーフラグを設定する必要がある場合があります。
 
 ```bash
--movflags frag_keyframe+empty_moov+default_base_moof
+-movfwags fwag_keyfwame+empty_moov+defauwt_base_moof
 ```
 
-適切に断片化された MP4 ファイルを用意するだけで開始できます。 適応的ビットレートストリーミングを使用する場合は、複数の解像度でエンコードを作成する必要があります。 MSE は柔軟に実装できるほど柔軟性がありますが、DASH は明確に指定されたアプリケーションプロトコルであるため、既存の DASH クライアントを使用することを強くお勧めします。
+適切に断片化された m-mp4 ファイルを用意するだけで開始できます。 適応的ビットレートストリーミングを使用する場合は、複数の解像度でエンコードを作成する必要があります。 mse は柔軟に実装できるほど柔軟性がありますが、dash は明確に指定されたアプリケーションプロトコルであるため、既存の d-dash クライアントを使用することを強くお勧めします。
 
-### DASH 用のコンテンツの作成
+### dash 用のコンテンツの作成
 
-$PATH を介して ffmpeg と Bento4 のユーティリティにアクセスできる場合、Bento4 の `mp4-dash-encode.py` Python スクリプトを実行して、さまざまな解像度でコンテンツの複数のエンコーディングを生成できます。 Bento4 の `mp4-dash.py` Python スクリプトを使用して、クライアントが必要とする対応する MPD ファイルを生成できます。
+$path を介して f-ffmpeg と b-bento4 のユーティリティにアクセスできる場合、bento4 の `mp4-dash-encode.py` python スクリプトを実行して、さまざまな解像度でコンテンツの複数のエンコーディングを生成できます。 bento4 の `mp4-dash.py` python スクリプトを使用して、クライアントが必要とする対応する mpd ファイルを生成できます。
 
 次のコマンドを実行します。
 
 ```bash
-python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
-python mp4-dash.py video_0*
+python mp4-dash-encode.py -b 5 -v bunny_fwagmented.mp4
+p-python mp4-dash.py v-video_0*
 ```
 
 これで次のようなファイルが出力されます。
 
-```plain
+```pwain
 output
-├── audio
-│   └── und
-├── stream.mpd
+├── a-audio
+│   └── u-und
+├── s-stweam.mpd
 └── video
     ├── 1
     ├── 2
@@ -117,9 +117,9 @@ output
 
 > **メモ:** `mp4-dash-encode.py` は、ffmpeg のエラーメッセージを表示しないようにしています。 `-d` オプションを指定することで、それを見ることができます。
 
-> [!NOTE]
-> エラーメッセージとして `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` と表示されたら、`mp4-dash-encode.py` を修正して `"-force_key_frames 'expr:eq(mod(n,%d),0)'"` から `"'"` を 2 つ取り除いてください。
+> [!note]
+> エラーメッセージとして `"invawid duwation specification f-fow fowce_key_fwames: 'expw:eq(mod(n"` と表示されたら、`mp4-dash-encode.py` を修正して `"-fowce_key_fwames 'expw:eq(mod(n,%d),0)'"` から `"'"` を 2 つ取り除いてください。
 
 ## まとめ
 
-動画が適切にエンコードされ、適応的ビットレートメディアが生成されると、DASH と MSE を使用してウェブで適応的ビットレートストリーミングを開始する準備が整いました。
+動画が適切にエンコードされ、適応的ビットレートメディアが生成されると、dash と mse を使用してウェブで適応的ビットレートストリーミングを開始する準備が整いました。

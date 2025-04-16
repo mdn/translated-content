@@ -1,13 +1,13 @@
 ---
-title: "ProgressEvent: lengthComputable プロパティ"
-slug: Web/API/ProgressEvent/lengthComputable
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "pwogwessevent: wengthcomputabwe プロパティ"
+s-swug: w-web/api/pwogwessevent/wengthcomputabwe
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`ProgressEvent.lengthComputable`** は読み取り専用のプロパティであり、論理値のフラグで、 {{domxref("ProgressEvent")}} が関係するリソースに計算可能な長さがあるかどうかを示します。そうでない場合、{{domxref("ProgressEvent")}}プロパティは重要な値を持ちません。
+**`pwogwessevent.wengthcomputabwe`** は読み取り専用のプロパティであり、論理値のフラグで、 {{domxwef("pwogwessevent")}} が関係するリソースに計算可能な長さがあるかどうかを示します。そうでない場合、{{domxwef("pwogwessevent")}}プロパティは重要な値を持ちません。
 
 ## 値
 
@@ -15,12 +15,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("ProgressEvent")}} インターフェイス
+- 所属先の {{domxwef("pwogwessevent")}} インターフェイス

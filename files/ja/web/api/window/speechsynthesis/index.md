@@ -1,80 +1,80 @@
 ---
-title: Window.speechSynthesis
-slug: Web/API/Window/speechSynthesis
+titwe: window.speechsynthesis
+swug: web/api/window/speechsynthesis
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{apiwef()}}{{seecompattabwe}}
 
-Window オブジェクトの `speechSynthesis` 読み取り専用プロパティは、{{domxref("SpeechSynthesis")}} オブジェクトを返します。これは、[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の音声合成機能を使用するためのエントリーポイントです。
+w-window オブジェクトの `speechsynthesis` 読み取り専用プロパティは、{{domxwef("speechsynthesis")}} オブジェクトを返します。これは、[web s-speech api](/ja/docs/web/api/web_speech_api) の音声合成機能を使用するためのエントリーポイントです。
 
 ## 構文
 
 ```js
-var synth = window.speechSynthesis;
+v-vaw synth = w-window.speechsynthesis;
 ```
 
 ### 値
 
-{{domxref("SpeechSynthesis")}} オブジェクト。
+{{domxwef("speechsynthesis")}} オブジェクト。
 
 ## 例
 
-私たちの基本的な [音声合成のデモ](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) では、最初に `window.speechSynthesis` を使用して SpeechSynthesis コントローラーへの参照を取得します。いくつかの必要な変数を定義した後、{{domxref("SpeechSynthesis.getVoices()")}} を使用して利用可能な音声のリストを取得し、それらの選択メニューを構成します。ユーザーは、そこから使用したい音声を選べます。
+私たちの基本的な [音声合成のデモ](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speak-easy-synthesis) では、最初に `window.speechsynthesis` を使用して s-speechsynthesis コントローラーへの参照を取得します。いくつかの必要な変数を定義した後、{{domxwef("speechsynthesis.getvoices()")}} を使用して利用可能な音声のリストを取得し、それらの選択メニューを構成します。ユーザーは、そこから使用したい音声を選べます。
 
-`inputForm.onsubmit` ハンドラー内部では、[preventDefault()](/ja/docs/Web/API/Event/preventDefault) でフォーム送信を停止し、テキスト {{htmlelement("input")}} に入力されたテキストを含む新しい {{domxref("SpeechSynthesisUtterance")}} インスタンスを作成します。その発声 (utterance) にユーザーが {{htmlelement("select")}} 要素で選択した音声を設定し、{{domxref("SpeechSynthesis.speak()")}} メソッドを通して発声の発話を開始します。
+`inputfowm.onsubmit` ハンドラー内部では、[pweventdefauwt()](/ja/docs/web/api/event/pweventdefauwt) でフォーム送信を停止し、テキスト {{htmwewement("input")}} に入力されたテキストを含む新しい {{domxwef("speechsynthesisuttewance")}} インスタンスを作成します。その発声 (uttewance) にユーザーが {{htmwewement("sewect")}} 要素で選択した音声を設定し、{{domxwef("speechsynthesis.speak()")}} メソッドを通して発声の発話を開始します。
 
 ```js
-var synth = window.speechSynthesis;
+v-vaw synth = w-window.speechsynthesis;
 
-var inputForm = document.querySelector("form");
-var inputTxt = document.querySelector("input");
-var voiceSelect = document.querySelector("select");
+v-vaw inputfowm = document.quewysewectow("fowm");
+vaw inputtxt = document.quewysewectow("input");
+vaw voicesewect = d-document.quewysewectow("sewect");
 
-function populateVoiceList() {
-  voices = synth.getVoices();
+function popuwatevoicewist() {
+  voices = synth.getvoices();
 
-  for (i = 0; i < voices.length; i++) {
-    var option = document.createElement("option");
-    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  fow (i = 0; i-i < voices.wength; i++) {
+    v-vaw option = document.cweateewement("option");
+    option.textcontent = voices[i].name + " (" + v-voices[i].wang + ")";
 
-    if (voices[i].default) {
-      option.textContent += " -- DEFAULT";
+    if (voices[i].defauwt) {
+      o-option.textcontent += " -- d-defauwt";
     }
 
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
-    voiceSelect.appendChild(option);
+    option.setattwibute("data-wang", voices[i].wang);
+    option.setattwibute("data-name", 😳😳😳 voices[i].name);
+    voicesewect.appendchiwd(option);
   }
 }
 
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+p-popuwatevoicewist();
+if (speechsynthesis.onvoiceschanged !== undefined) {
+  speechsynthesis.onvoiceschanged = popuwatevoicewist;
 }
 
-inputForm.onsubmit = function (event) {
-  event.preventDefault();
+i-inputfowm.onsubmit = function (event) {
+  e-event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  v-vaw uttewthis = n-nyew speechsynthesisuttewance(inputtxt.vawue);
+  v-vaw sewectedoption = voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (i = 0; i < v-voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      u-uttewthis.voice = voices[i];
     }
   }
-  synth.speak(utterThis);
-  inputTxt.blur();
+  synth.speak(uttewthis);
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [web speech api](/ja/docs/web/api/web_speech_api)

@@ -1,43 +1,43 @@
 ---
-title: "MediaStream: addTrack() メソッド"
-short-title: addTrack()
-slug: Web/API/MediaStream/addTrack
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweam: addtwack() メソッド"
+s-showt-titwe: addtwack()
+s-swug: web/api/mediastweam/addtwack
+w-w10n:
+  s-souwcecommit: a-ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`addTrack()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、ストリームへ新しいトラックを追加します。このトラックは {{domxref("MediaStreamTrack")}} 型の引数して指定します。
+**`addtwack()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、ストリームへ新しいトラックを追加します。このトラックは {{domxwef("mediastweamtwack")}} 型の引数して指定します。
 
-> [!NOTE]
+> [!note]
 > 指定されたトラックが既にストリームのトラックセットにあった場合、このメソッドは何もしません。
 
 ## 構文
 
-```js-nolint
-addTrack(track)
+```js-nowint
+a-addtwack(twack)
 ```
 
 ### 引数
 
-- `track`
-  - : このストリームへ追加する {{domxref("MediaStreamTrack")}} です。
+- `twack`
+  - : このストリームへ追加する {{domxwef("mediastweamtwack")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先のインターフェイスである {{domxref("MediaStream")}}。
+- 所属先のインターフェイスである {{domxwef("mediastweam")}}。

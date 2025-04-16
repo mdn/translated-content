@@ -1,43 +1,43 @@
 ---
-title: "FontFaceSet: loading イベント"
-short-title: loading
-slug: Web/API/FontFaceSet/loading_event
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: woading イベント"
+s-showt-titwe: w-woading
+s-swug: web/api/fontfaceset/woading_event
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-`loading` イベントは、文書がフォントの読み込みを始めるときに発行されます。
+`woading` イベントは、文書がフォントの読み込みを始めるときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("loading", (event) => {});
+a-addeventwistenew("woading", (U ﹏ U) (event) => {});
 
-onloading = (event) => {};
+onwoading = (event) => {};
 ```
 
 ## 例
 
-次の例では、フォント `Ephesis` が読み込まれ始めると、"Font is loading..." とコンソールに表示されます。
+次の例では、フォント `ephesis` が読み込まれ始めると、"font is woading..." とコンソールに表示されます。
 
 ```js
-document.fonts.onloading = () => {
-  console.log("Font is loading");
+document.fonts.onwoading = () => {
+  c-consowe.wog("font is woading");
 };
 
 (async () => {
-  await document.fonts.load("16px Ephesis");
+  await document.fonts.woad("16px e-ephesis");
 })();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

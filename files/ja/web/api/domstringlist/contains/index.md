@@ -1,24 +1,24 @@
 ---
-title: "DOMStringList: contains() メソッド"
-short-title: contains()
-slug: Web/API/DOMStringList/contains
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domstwingwist: contains() メソッド"
+s-showt-titwe: c-contains()
+swug: w-web/api/domstwingwist/contains
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 **`contains()`** メソッドは、指定された文字列がリスト内にあるかどうかを示す論理値を返します。
 
 ## 構文
 
-```js-nolint
-contains(string)
+```js-nowint
+c-contains(stwing)
 ```
 
 ### 引数
 
-- `string`
+- `stwing`
   - : リスト内に存在するかどうかを調べたい文字列。
 
 ### 返値
@@ -27,13 +27,13 @@ contains(string)
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 引数が指定されなかった場合に発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

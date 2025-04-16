@@ -1,111 +1,111 @@
 ---
-title: FileSystemDirectoryHandle
-slug: Web/API/FileSystemDirectoryHandle
-l10n:
-  sourceCommit: 0d5a4b01d76343553b449161d9f641e367f470e6
+titwe: fiwesystemdiwectowyhandwe
+swug: web/api/fiwesystemdiwectowyhandwe
+w-w10n:
+  s-souwcecommit: 0d5a4b01d76343553b449161d9f641e367f470e6
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref('File System Access API')}} の **`FileSystemDirectoryHandle`** インターフェイスは、ファイルシステムのディレクトリーへのハンドルを提供します。
+{{domxwef('fiwe s-system a-access api')}} の **`fiwesystemdiwectowyhandwe`** インターフェイスは、ファイルシステムのディレクトリーへのハンドルを提供します。
 
-このインターフェイスは、メソッド {{domxref('window.showDirectoryPicker()')}}・{{domxref('StorageManager.getDirectory()')}}・{{domxref('DataTransferItem.getAsFileSystemHandle()')}}・{{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} からアクセス可能です。
+このインターフェイスは、メソッド {{domxwef('window.showdiwectowypickew()')}}・{{domxwef('stowagemanagew.getdiwectowy()')}}・{{domxwef('datatwansfewitem.getasfiwesystemhandwe()')}}・{{domxwef('fiwesystemdiwectowyhandwe.getdiwectowyhandwe()')}} からアクセス可能です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親の {{DOMxRef("FileSystemHandle")}} からプロパティを継承します。_
+_親の {{domxwef("fiwesystemhandwe")}} からプロパティを継承します。_
 
 ## インスタンスメソッド
 
-_親の {{DOMxRef("FileSystemHandle")}} からメソッドを継承します。_
+_親の {{domxwef("fiwesystemhandwe")}} からメソッドを継承します。_
 
-- {{domxref('FileSystemDirectoryHandle.entries()')}}
-  - : オブジェクト自身の列挙可能なプロパティの `[key, value]` ペアの新しい _非同期イテレーター_ を返します。
-- {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
-  - : メソッドが呼ばれたディレクトリー内の指定の名前のファイルを表す {{domxref('FileSystemFileHandle')}} で解決する {{jsxref('Promise')}} を返します。
-- {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : メソッドが呼ばれたディレクトリー内の指定の名前のサブディレクトリーを表す {{domxref('FileSystemDirectoryHandle')}} で解決される {{jsxref('Promise')}} を返します。
-- {{domxref('FileSystemDirectoryHandle.keys()')}}
-  - : `FileSystemDirectoryHandle` 内の各アイテムのキーを含む新しい _非同期イテレーター_ を返します。
-- {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
+- {{domxwef('fiwesystemdiwectowyhandwe.entwies()')}}
+  - : オブジェクト自身の列挙可能なプロパティの `[key, 🥺 vawue]` ペアの新しい _非同期イテレーター_ を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.getfiwehandwe()')}}
+  - : メソッドが呼ばれたディレクトリー内の指定の名前のファイルを表す {{domxwef('fiwesystemfiwehandwe')}} で解決する {{jsxwef('pwomise')}} を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.getdiwectowyhandwe()')}}
+  - : メソッドが呼ばれたディレクトリー内の指定の名前のサブディレクトリーを表す {{domxwef('fiwesystemdiwectowyhandwe')}} で解決される {{jsxwef('pwomise')}} を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.keys()')}}
+  - : `fiwesystemdiwectowyhandwe` 内の各アイテムのキーを含む新しい _非同期イテレーター_ を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.wemoveentwy()')}}
   - : ディレクトリーハンドルに指定の名前のファイルまたはディレクトリーがある場合、非同期でエントリーを削除しようとします。
-- {{domxref('FileSystemDirectoryHandle.resolve()')}}
-  - : 親ハンドルから指定の子エントリーへのディレクトリー名の {{jsxref('Array')}} (最後の要素は指定した子エントリーの名前) で解決する {{jsxref('Promise')}} を返します。
-- {{domxref('FileSystemDirectoryHandle.values()')}}
-  - : `FileSystemDirectoryHandle` 内の各インデックスに対応する値を含む新しい _非同期イテレーター_ を返します。
-- [`FileSystemDirectoryHandle[Symbol.asyncIterator]()`](/ja/docs/Web/API/FileSystemDirectoryHandle/entries)
-  - : デフォルトでは `entries` 関数を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.wesowve()')}}
+  - : 親ハンドルから指定の子エントリーへのディレクトリー名の {{jsxwef('awway')}} (最後の要素は指定した子エントリーの名前) で解決する {{jsxwef('pwomise')}} を返します。
+- {{domxwef('fiwesystemdiwectowyhandwe.vawues()')}}
+  - : `fiwesystemdiwectowyhandwe` 内の各インデックスに対応する値を含む新しい _非同期イテレーター_ を返します。
+- [`fiwesystemdiwectowyhandwe[symbow.asyncitewatow]()`](/ja/docs/web/api/fiwesystemdiwectowyhandwe/entwies)
+  - : デフォルトでは `entwies` 関数を返します。
 
 ## 例
 
 以下の例では、指定の名前のディレクトリーハンドルを返します。指定したディレクトリーが存在しない場合は、作成されます。
 
 ```js
-const dirName = "directoryToGetName";
+c-const d-diwname = "diwectowytogetname";
 
-// ディレクトリーハンドル 'currentDirHandle' があると仮定
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+// ディレクトリーハンドル 'cuwwentdiwhandwe' があると仮定
+const subdiw = cuwwentdiwhandwe.getdiwectowyhandwe(diwname, >_< { cweate: twue });
 ```
 
-以下の非同期関数は、`resolve()` を用いて、選択されたファイルの指定のディレクトリーハンドルを基準とする相対パスを取得します。
+以下の非同期関数は、`wesowve()` を用いて、選択されたファイルの指定のディレクトリーハンドルを基準とする相対パスを取得します。
 
 ```js
-async function returnPathDirectories(directoryHandle) {
+a-async function wetuwnpathdiwectowies(diwectowyhandwe) {
   // ファイルピッカーを開いてファイルハンドルを得る
-  const handle = await self.showOpenFilePicker();
-  if (!handle) {
+  const handwe = a-await sewf.showopenfiwepickew();
+  if (!handwe) {
     // ユーザーがキャンセルしたか、ファイルを開くのに失敗した
-    return;
+    wetuwn;
   }
 
   // ハンドルがディレクトリーハンドルが表すディレクトリー内にあるかを確認する
-  const relativePaths = await directoryHandle.resolve(handle);
+  c-const wewativepaths = await diwectowyhandwe.wesowve(handwe);
 
-  if (relativePath === null) {
+  if (wewativepath === nyuww) {
     // ディレクトリーハンドル内にない
-  } else {
-    // relativePath は相対パスを表す名前の配列
+  } e-ewse {
+    // wewativepath は相対パスを表す名前の配列
 
-    for (const name of relativePaths) {
+    fow (const n-nyame o-of wewativepaths) {
       // 各エントリーを記録する
-      console.log(name);
+      consowe.wog(name);
     }
   }
 }
 ```
 
-以下の例では、ディレクトリーを再帰的に走査し、ディレクトリー内の各ファイルを表す {{domxref('FileSystemFileHandle')}} オブジェクトを返します。
+以下の例では、ディレクトリーを再帰的に走査し、ディレクトリー内の各ファイルを表す {{domxwef('fiwesystemfiwehandwe')}} オブジェクトを返します。
 
 ```js
-async function* getFilesRecursively(entry) {
-  if (entry.kind === "file") {
-    const file = await entry.getFile();
-    if (file !== null) {
-      file.relativePath = getRelativePath(entry);
-      yield file;
+async function* getfiweswecuwsivewy(entwy) {
+  if (entwy.kind === "fiwe") {
+    c-const fiwe = await entwy.getfiwe();
+    if (fiwe !== nyuww) {
+      fiwe.wewativepath = g-getwewativepath(entwy);
+      yiewd fiwe;
     }
-  } else if (entry.kind === "directory") {
-    for await (const handle of entry.values()) {
-      yield* getFilesRecursively(handle);
+  } e-ewse i-if (entwy.kind === "diwectowy") {
+    f-fow await (const h-handwe of entwy.vawues()) {
+      yiewd* g-getfiweswecuwsivewy(handwe);
     }
   }
 }
-for await (const fileHandle of getFilesRecursively(directoryHandle)) {
-  console.log(fileHandle);
+fow await (const fiwehandwe o-of getfiweswecuwsivewy(diwectowyhandwe)) {
+  consowe.wog(fiwehandwe);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: s-simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

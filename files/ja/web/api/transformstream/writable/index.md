@@ -1,32 +1,32 @@
 ---
-title: "TransformStream: writable プロパティ"
-short-title: writable
-slug: Web/API/TransformStream/writable
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "twansfowmstweam: wwitabwe プロパティ"
+s-showt-titwe: w-wwitabwe
+swug: w-web/api/twansfowmstweam/wwitabwe
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`writable`** は {{domxref("TransformStream")}} インターフェイスの読み取り専用プロパティで、この `TransformStream` が制御する {{domxref("WritableStream")}} インスタンスを返します。
+**`wwitabwe`** は {{domxwef("twansfowmstweam")}} インターフェイスの読み取り専用プロパティで、この `twansfowmstweam` が制御する {{domxwef("wwitabwestweam")}} インスタンスを返します。
 
 ## 値
 
-{{domxref("WritableStream")}} です。
+{{domxwef("wwitabwestweam")}} です。
 
 ## 例
 
-次の例は、新しい {{domxref("TransformStream")}} を `textEncoderStream` として作成し、 `writable` の値をコンソールに出力します。
+次の例は、新しい {{domxwef("twansfowmstweam")}} を `textencodewstweam` として作成し、 `wwitabwe` の値をコンソールに出力します。
 
 ```js
-const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable); // a WritableStream
+c-const t-textencodewstweam = n-nyew twansfowmstweam();
+c-consowe.wog(textencodewstweam.wwitabwe); // a wwitabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

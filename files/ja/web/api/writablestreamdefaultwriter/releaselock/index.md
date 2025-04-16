@@ -1,19 +1,19 @@
 ---
-title: "WritableStreamDefaultWriter: releaseLock() メソッド"
-short-title: releaseLock()
-slug: Web/API/WritableStreamDefaultWriter/releaseLock
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wwitabwestweamdefauwtwwitew: weweasewock() メソッド"
+s-showt-titwe: w-weweasewock()
+swug: w-web/api/wwitabwestweamdefauwtwwitew/weweasewock
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`releaseLock()`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスのメソッドで、対応するストリームのライターのロックを解除します。 ロックを解除すると、ライターはアクティブではなくなります。 ロックを解除したときに関連するストリームにエラーが発生した場合、ライターはこれ以降同じようにエラーが発生したように見えます。 そうでない場合、ライターは閉じられたように見えます。
+**`weweasewock()`** は {{domxwef("wwitabwestweamdefauwtwwitew")}} インターフェイスのメソッドで、対応するストリームのライターのロックを解除します。 ロックを解除すると、ライターはアクティブではなくなります。 ロックを解除したときに関連するストリームにエラーが発生した場合、ライターはこれ以降同じようにエラーが発生したように見えます。 そうでない場合、ライターは閉じられたように見えます。
 
 ## 構文
 
-```js-nolint
-releaseLock()
+```js-nowint
+w-weweasewock()
 ```
 
 ### 引数
@@ -22,40 +22,40 @@ releaseLock()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream(
+c-const wwitabwestweam = n-nyew wwitabwestweam(
   {
-    write(chunk) {
+    wwite(chunk) {
       // ...
-    },
-    close() {
+    }, >_<
+    cwose() {
       // ...
-    },
-    abort(err) {
+    }, :3
+    abowt(eww) {
       // ...
-    },
-  },
-  queuingStrategy,
+    }, (U ﹏ U)
+  }, -.-
+  queuingstwategy, (ˆ ﻌ ˆ)♡
 );
 
-// ...
+// ... (⑅˘꒳˘)
 
-const writer = writableStream.getWriter();
+c-const wwitew = wwitabwestweam.getwwitew();
 
 // ...
 
 // 必要に応じて、ストリームのライターのロックを解除します
-writer.releaseLock();
+wwitew.weweasewock();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

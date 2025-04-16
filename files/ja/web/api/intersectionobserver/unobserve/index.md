@@ -1,52 +1,52 @@
 ---
-title: "IntersectionObserver: unobserve() メソッド"
-short-title: unobserve()
-slug: Web/API/IntersectionObserver/unobserve
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "intewsectionobsewvew: unobsewve() メソッド"
+s-showt-titwe: u-unobsewve()
+s-swug: web/api/intewsectionobsewvew/unobsewve
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-{{domxref("IntersectionObserver")}} の **`unobserve()`** メソッドは、 `IntersectionObserver` に指定された対象要素の監視を停止するよう指示します。
+{{domxwef("intewsectionobsewvew")}} の **`unobsewve()`** メソッドは、 `intewsectionobsewvew` に指定された対象要素の監視を停止するよう指示します。
 
 ## 構文
 
-```js-nolint
-unobserve(target)
+```js-nowint
+u-unobsewve(tawget)
 ```
 
 ### 引数
 
-- `target`
-  - : 監視を停止する {{domxref("Element")}} を指定します。指定された要素を監視していない場合、このメソッドは何もせず、例外も発生しません。
+- `tawget`
+  - : 監視を停止する {{domxwef("ewement")}} を指定します。指定された要素を監視していない場合、このメソッドは何もせず、例外も発生しません。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 このスニペットは、オブザーバーが作成され、要素が監視され、そして監視が終了する様子を示しています。
 
 ```js
-const observer = new IntersectionObserver(callback);
-observer.observe(document.getElementById("elementToObserve"));
+const obsewvew = new intewsectionobsewvew(cawwback);
+obsewvew.obsewve(document.getewementbyid("ewementtoobsewve"));
 
 // …
 
-observer.unobserve(document.getElementById("elementToObserve"));
+o-obsewvew.unobsewve(document.getewementbyid("ewementtoobsewve"));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API)
-- {{domxref("IntersectionObserver.observe()")}}
+- [交差オブザーバー api](/ja/docs/web/api/intewsection_obsewvew_api)
+- {{domxwef("intewsectionobsewvew.obsewve()")}}

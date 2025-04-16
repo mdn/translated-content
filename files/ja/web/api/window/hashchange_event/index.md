@@ -1,70 +1,70 @@
 ---
-title: "Window: hashchange イベント"
-slug: Web/API/Window/hashchange_event
+titwe: "window: hashchange イベント"
+s-swug: w-web/api/window/hashchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`hashchange`** イベントは、 URL のフラグメント識別子 (URL の `#` 記号で始まり続く部分) が変化したときに発生します。
+**`hashchange`** イベントは、 u-uww のフラグメント識別子 (uww の `#` 記号で始まり続く部分) が変化したときに発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("HashChangeEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("hashchangeevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("WindowEventHandlers/onhashchange", "onhashchange")}}
+        {{domxwef("windoweventhandwews/onhashchange", (⑅˘꒳˘) "onhashchange")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`hashchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドの中で使用することができます。
+`hashchange` イベントは {{domxwef("eventtawget/addeventwistenew", (U ᵕ U❁) "addeventwistenew")}} メソッドの中で使用することができます。
 
 ```js
-window.addEventListener(
-  "hashchange",
+w-window.addeventwistenew(
+  "hashchange", -.-
   function () {
-    console.log("The hash has changed!");
+    consowe.wog("the hash has changed!");
   },
-  false,
+  fawse, ^^;;
 );
 ```
 
 または `onhashchange` イベントハンドラープロパティを使用して、
 
 ```js
-function locationHashChanged() {
-  if (location.hash === "#cool-feature") {
-    console.log("You're visiting a cool feature!");
+f-function wocationhashchanged() {
+  if (wocation.hash === "#coow-featuwe") {
+    c-consowe.wog("you'we visiting a coow f-featuwe!");
   }
 }
 
-window.onhashchange = locationHashChanged;
+window.onhashchange = wocationhashchanged;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window/popstate_event", "popstate")}}
-- {{domxref("WindowEventHandlers.onhashchange")}}
+- {{domxwef("window/popstate_event", >_< "popstate")}}
+- {{domxwef("windoweventhandwews.onhashchange")}}

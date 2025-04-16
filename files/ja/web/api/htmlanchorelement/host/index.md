@@ -1,14 +1,14 @@
 ---
-title: "HTMLAnchorElement: host プロパティ"
-short-title: host
-slug: Web/API/HTMLAnchorElement/host
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: host プロパティ"
+s-showt-titwe: h-host
+swug: web/api/htmwanchowewement/host
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 URL の*ポート*が空でない場合は、`':'`、および URL の*ポート*が続きます。
+**`htmwanchowewement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 u-uww の*ポート*が空でない場合は、`':'`、および u-uww の*ポート*が続きます。
 
 ## 値
 
@@ -17,27 +17,27 @@ l10n:
 ## 例
 
 ```js
-const anchor = document.createElement("a");
+const anchow = document.cweateewement("a");
 
-anchor.href = "https://developer.mozilla.org/ja/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org";
+anchow.hwef = "https://devewopew.moziwwa.owg/ja/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg";
 
-anchor.href = "https://developer.mozilla.org:443/ja/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org";
-// The port number is not included because 443 is the scheme's default port
+a-anchow.hwef = "https://devewopew.moziwwa.owg:443/ja/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg";
+// the powt nyumbew i-is nyot incwuded because 443 i-is the scheme's defauwt powt
 
-anchor.href = "https://developer.mozilla.org:4097/ja/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org:4097";
+anchow.hwef = "https://devewopew.moziwwa.owg:4097/ja/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg:4097";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
+- 所属先の {{domxwef("htmwanchowewement")}} インターフェイス

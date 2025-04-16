@@ -1,36 +1,36 @@
 ---
-title: "Event: initEvent() メソッド"
-short-title: initEvent()
-slug: Web/API/Event/initEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "event: initevent() メソッド"
+s-showt-titwe: i-initevent()
+s-swug: web/api/event/initevent
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ a-apiwef("dom") }}{{depwecated_headew}}
 
-**`Event.initEvent()`** メソッドは、 {{domxref("Document.createEvent()")}} を使用して作成されたイベント ({{ domxref("event") }}) の値を初期化するために使用します。
+**`event.initevent()`** メソッドは、 {{domxwef("document.cweateevent()")}} を使用して作成されたイベント ({{ d-domxwef("event") }}) の値を初期化するために使用します。
 
-この方法で初期化されたイベントは、 {{domxref("Document.createEvent()") }} メソッドで作成されている必要があります。
-このメソッドは {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
+この方法で初期化されたイベントは、 {{domxwef("document.cweateevent()") }} メソッドで作成されている必要があります。
+このメソッドは {{ d-domxwef("eventtawget.dispatchevent()") }} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
 配信されると、もう何もしません。
 
 > **メモ:** **このメソッドは廃止されているため、使用しないでください。**
-> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法の詳細が記載されています。
+> 代わりに、 {{domxwef("event.event", (ˆ ﻌ ˆ)♡ "event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/web/events/cweating_and_twiggewing_events)のページに、これらの使用方法の詳細が記載されています。
 
 ## 構文
 
-```js-nolint
-event.initEvent(type, bubbles, cancelable)
+```js-nowint
+event.initevent(type, (⑅˘꒳˘) bubbwes, cancewabwe)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、イベントの種類を定義します。
-- `bubbles`
-  - : 論理値で、イベントがイベントチェーンを通じてバブルアップするかどうかを決定します。設定されると、読み取り専用のプロパティ {{ domxref("Event.bubbles") }} がその値を提供します。
-- `cancelable`
-  - : 論理値で、イベントをキャンセルできるかどうかを定義します。設定されると、読み取り専用のプロパティ {{ domxref("Event.cancelable") }} がその値を提供します。
+- `bubbwes`
+  - : 論理値で、イベントがイベントチェーンを通じてバブルアップするかどうかを決定します。設定されると、読み取り専用のプロパティ {{ domxwef("event.bubbwes") }} がその値を提供します。
+- `cancewabwe`
+  - : 論理値で、イベントをキャンセルできるかどうかを定義します。設定されると、読み取り専用のプロパティ {{ domxwef("event.cancewabwe") }} がその値を提供します。
 
 ### 返値
 
@@ -40,33 +40,33 @@ event.initEvent(type, bubbles, cancelable)
 
 ```js
 // イベントを作成
-const event = document.createEvent("Event");
+const event = d-document.cweateevent("event");
 
 // バブルアップしキャンセルできないクリックイベントを
 // 作成
-event.initEvent("click", true, false);
+event.initevent("cwick", (U ᵕ U❁) twue, fawse);
 
 // イベントを待ち受けする
-elem.addEventListener(
-  "click",
+e-ewem.addeventwistenew(
+  "cwick", -.-
   (e) => {
-    // e.target が elem と一致
-  },
-  false,
+    // e.tawget が e-ewem と一致
+  }, ^^;;
+  fawse,
 );
 
-elem.dispatchEvent(event);
+ewem.dispatchevent(event);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - この非推奨のメソッドの代わりに使用するコンストラクター:
-  {{domxref("Event.Event", "Event()")}}。より具体的なイベントインターフェイスを作成するには、目的のイベントインターフェイスに対して定義されたコンストラクターを使用します。
+  {{domxwef("event.event", "event()")}}。より具体的なイベントインターフェイスを作成するには、目的のイベントインターフェイスに対して定義されたコンストラクターを使用します。

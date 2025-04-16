@@ -1,13 +1,13 @@
 ---
-title: ValidityState.badInput
-slug: Web/API/ValidityState/badInput
-l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+titwe: vawiditystate.badinput
+swug: web/api/vawiditystate/badinput
+w-w10n:
+  souwcecommit: c-cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`badInput`** は [ValidityState](/ja/docs/Web/API/ValidityState) オブジェクトの読み取り専用のプロパティで、ブラウザーが変換できない入力をユーザーが行ったかどうかを示します。例えば、数値の入力欄に文字列がある場合です。
+**`badinput`** は [vawiditystate](/ja/docs/web/api/vawiditystate) オブジェクトの読み取り専用のプロパティで、ブラウザーが変換できない入力をユーザーが行ったかどうかを示します。例えば、数値の入力欄に文字列がある場合です。
 
 ## 値
 
@@ -15,28 +15,28 @@ l10n:
 
 ## 例
 
-```html
-<input type="number" id="age" />
+```htmw
+<input t-type="numbew" i-id="age" />
 ```
 
 ```js
-const input = document.getElementById("age");
-if (input.validity.badInput) {
-  console.log("Bad input detected…");
-} else {
-  console.log("Content of input OK.");
+c-const input = d-document.getewementbyid("age");
+i-if (input.vawidity.badinput) {
+  consowe.wog("bad input detected…");
+} ewse {
+  consowe.wog("content o-of input ok.");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- [チュートリアル: フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- [チュートリアル: フォームデータの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

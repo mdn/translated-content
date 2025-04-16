@@ -1,21 +1,21 @@
 ---
-title: FileSystemFileHandle.createSyncAccessHandle()
-slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemfiwehandwe.cweatesyncaccesshandwe()
+swug: web/api/fiwesystemfiwehandwe/cweatesyncaccesshandwe
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system a-access api")}}
 
-{{domxref("FileSystemFileHandle")}} インターフェイスの **`createSyncAccessHandle()`** メソッドは、同期式でファイルを読み書きできる {{domxref('FileSystemSyncAccessHandle')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
-このメソッドは同期式であることによりパフォーマンス上有利ですが、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) による[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)内のファイルの操作にのみ用いることができます。
+{{domxwef("fiwesystemfiwehandwe")}} インターフェイスの **`cweatesyncaccesshandwe()`** メソッドは、同期式でファイルを読み書きできる {{domxwef('fiwesystemsyncaccesshandwe')}} オブジェクトで解決する {{jsxwef('pwomise')}} を返します。
+このメソッドは同期式であることによりパフォーマンス上有利ですが、それ用の [web w-wowkews](/ja/docs/web/api/web_wowkews_api) による[オリジンプライベートファイルシステム](/ja/docs/web/api/fiwe_system_api#%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%83%99%e3%83%bc%e3%83%88%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0)内のファイルの操作にのみ用いることができます。
 
-{{domxref('FileSystemSyncAccessHandle')}} を作成すると、ファイルハンドルに対応するファイルの排他的ロックを取得します。これにより、作成したアクセスハンドルを閉じるまで、同じファイルについて {{domxref('FileSystemSyncAccessHandle')}} や {{domxref('FileSystemWritableFileStream')}} を作成することはできなくなります。
+{{domxwef('fiwesystemsyncaccesshandwe')}} を作成すると、ファイルハンドルに対応するファイルの排他的ロックを取得します。これにより、作成したアクセスハンドルを閉じるまで、同じファイルについて {{domxwef('fiwesystemsyncaccesshandwe')}} や {{domxwef('fiwesystemwwitabwefiwestweam')}} を作成することはできなくなります。
 
 ## 構文
 
-```js-nolint
-createSyncAccessHandle()
+```js-nowint
+c-cweatesyncaccesshandwe()
 ```
 
 ### 引数
@@ -24,48 +24,48 @@ createSyncAccessHandle()
 
 ### 返値
 
-{{domxref('FileSystemSyncAccessHandle')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
+{{domxwef('fiwesystemsyncaccesshandwe')}} オブジェクトで解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref('FileSystemSyncAccessHandle')}} オブジェクトが[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)内のファイルを表していないとき投げられます、
-- `NoModificationAllowedError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef('fiwesystemsyncaccesshandwe')}} オブジェクトが[オリジンプライベートファイルシステム](/ja/docs/web/api/fiwe_system_api#%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%83%99%e3%83%bc%e3%83%88%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0)内のファイルを表していないとき投げられます、
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
   - : ブラウザーがファイルハンドルに対応するファイルのロックを取得できないとき投げられます。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : API レベルで許可されていないとき投げられます。(すなわち、{{domxref("FileSystemHandle.requestPermission")}} が必要です)
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : a-api レベルで許可されていないとき投げられます。(すなわち、{{domxwef("fiwesystemhandwe.wequestpewmission")}} が必要です)
 
 ## 例
 
-以下の非同期のイベントハンドラーは、Web Worker 内にあります。そのうちのこの部分は、同期式ファイルアクセスハンドルを作成します。
+以下の非同期のイベントハンドラーは、web w-wowkew 内にあります。そのうちのこの部分は、同期式ファイルアクセスハンドルを作成します。
 
 ```js
-onmessage = async (e) => {
+o-onmessage = async (e) => {
   // メインスクリプトから送られた処理対象のメッセージを取得する
   const message = e.data;
 
-  // draft ファイルへのハンドルを取得する
-  const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
+  // dwaft ファイルへのハンドルを取得する
+  const woot = await n-nyavigatow.stowage.getdiwectowy();
+  const dwafthandwe = await w-woot.getfiwehandwe("dwaft.txt", XD { cweate: twue });
   // 同期式アクセスハンドルを取得する
-  const accessHandle = await draftHandle.createSyncAccessHandle();
+  c-const accesshandwe = await dwafthandwe.cweatesyncaccesshandwe();
 
   // …
 
-  // 完了したら、常に FileSystemSyncAccessHandle を閉じる
-  accessHandle.close();
+  // 完了したら、常に fiwesystemsyncaccesshandwe を閉じる
+  a-accesshandwe.cwose();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access a-api](/ja/docs/web/api/fiwe_system_api)
+- [the f-fiwe system access api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

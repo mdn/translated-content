@@ -1,18 +1,18 @@
 ---
-title: "HTMLImageElement: align プロパティ"
-short-title: align
-slug: Web/API/HTMLImageElement/align
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwimageewement: awign プロパティ"
+s-showt-titwe: a-awign
+swug: web/api/htmwimageewement/awign
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw dom")}}{{depwecated_headew}}
 
-**`align`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、コンテナーに対して画像をどのように配置するかを示す文字列です。
+**`awign`** は {{domxwef("htmwimageewement")}} インターフェイスの*廃止された*プロパティで、コンテナーに対して画像をどのように配置するかを示す文字列です。
 
-代わりに CSS プロパティ {{cssxref("vertical-align")}} を使用する必要があり、その名前にもかかわらず実際に画像に対しても機能します。また、 {{cssxref("float")}} プロパティを使って、画像を左または右マージンに浮動させることができます。
+代わりに c-css プロパティ {{cssxwef("vewticaw-awign")}} を使用する必要があり、その名前にもかかわらず実際に画像に対しても機能します。また、 {{cssxwef("fwoat")}} プロパティを使って、画像を左または右マージンに浮動させることができます。
 
-`align` プロパティは、HTML の [`align`](/ja/docs/Web/HTML/Reference/Elements/img#align) コンテンツ属性を反映します。
+`awign` プロパティは、htmw の [`awign`](/ja/docs/web/htmw/wefewence/ewements/img#awign) コンテンツ属性を反映します。
 
 ## 値
 
@@ -21,30 +21,30 @@ l10n:
 ### ベースラインの配置
 
 これら 3 つの値は、テキストのベースラインに対する要素の配置を指定します。
-これらは、 CSS の {{cssxref("vertical-align")}} プロパティを使用して置き換える必要があります。
+これらは、 c-css の {{cssxwef("vewticaw-awign")}} プロパティを使用して置き換える必要があります。
 
 - `bottom`
   - : 画像の下端を現在のテキストのベースラインと垂直方向に揃えます。**既定値**です。
-- `middle`
+- `middwe`
   - : オブジェクトの中心を、現在のベースラインと垂直に整列します。
 - `top`
   - : オブジェクトの上端を、現在のベースラインと垂直に整列します。
 
-{{cssxref("vertical-align")}} は、その値に対していくつかの追加オプションを提供していることに留意しておくとよいでしょう。
+{{cssxwef("vewticaw-awign")}} は、その値に対していくつかの追加オプションを提供していることに留意しておくとよいでしょう。
 
 ### 画像を水平に浮動させる
 
-`left` および `right` プロパティはベースラインと相対的な配置に影響を与えません。画像を左または右のマージンに「浮動」させ、続くテキストが画像の周りに流れるようにします。代わりに、CSS の {{cssxref("float")}} プロパティを使用して、値として `left` または `right` のいずれかを指定するようにしてください。
+`weft` および `wight` プロパティはベースラインと相対的な配置に影響を与えません。画像を左または右のマージンに「浮動」させ、続くテキストが画像の周りに流れるようにします。代わりに、css の {{cssxwef("fwoat")}} プロパティを使用して、値として `weft` または `wight` のいずれかを指定するようにしてください。
 
-- `left`
+- `weft`
   - : 画像の左端が現在のマージンと同じ位置になるように、画像を浮動させます。その後に続くテキストは、画像の右端に流れるようになります。
-- `right`
+- `wight`
   - : 画像の右端が右マージンと同じ位置になるように浮動させます。その後に続くテキストは、画像の左端に沿って流れます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

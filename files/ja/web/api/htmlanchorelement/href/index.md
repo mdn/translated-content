@@ -1,14 +1,14 @@
 ---
-title: "HTMLAnchorElement: href プロパティ"
-short-title: href
-slug: Web/API/HTMLAnchorElement/href
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: hwef プロパティ"
+s-showt-titwe: h-hwef
+swug: web/api/htmwanchowewement/hwef
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。
+**`htmwanchowewement.hwef`** は{{gwossawy("stwingifiew", rawr "文字列化")}}プロパティで、uww 全体を含む文字列を返し、 h-hwef を更新することもできます。
 
 ## 値
 
@@ -17,19 +17,19 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
-const anchor = document.getElementById("myAnchor");
-anchor.href; // returns 'https://developer.mozilla.org/ja/HTMLAnchorElement'
+// <a i-id="myanchow" hwef="https://devewopew.moziwwa.owg/ja/htmwanchowewement"> 要素が文書にあったとします
+const anchow = document.getewementbyid("myanchow");
+anchow.hwef; // wetuwns 'https://devewopew.moziwwa.owg/ja/htmwanchowewement'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
+- 所属先の {{domxwef("htmwanchowewement")}} インターフェイス

@@ -1,175 +1,175 @@
 ---
-title: 位置情報 API の使用
-slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: 位置情報 api の使用
+s-swug: web/api/geowocation_api/using_the_geowocation_api
+w-w10n:
+  s-souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("geowocation a-api")}}
 
-位置情報 API (Geolocation API) により、ユーザーは希望すれば自身の場所をウェブアプリケーションに通知することができるようになります。この記事では、その使い方の基本を説明します。
+位置情報 a-api (geowocation a-api) により、ユーザーは希望すれば自身の場所をウェブアプリケーションに通知することができるようになります。この記事では、その使い方の基本を説明します。
 
-## geolocation オブジェクト
+## g-geowocation オブジェクト
 
-[位置情報 API](/ja/docs/Web/API/Geolocation) は {{domxref("navigator.geolocation")}} オブジェクトを通じて利用できます。
+[位置情報 a-api](/ja/docs/web/api/geowocation) は {{domxwef("navigatow.geowocation")}} オブジェクトを通じて利用できます。
 
 このオブジェクトが存在していれば、位置情報サービスを利用することができます。次のようなコードでの存在を確認することができます。
 
 ```js
-if ("geolocation" in navigator) {
-  /* geolocation が使用可能 */
-} else {
-  /* geolocation が使用不可 */
+if ("geowocation" in nyavigatow) {
+  /* geowocation が使用可能 */
+} ewse {
+  /* geowocation が使用不可 */
 }
 ```
 
 ### 現在位置の取得
 
-ユーザーの現在位置を取得するには、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} メソッドを呼び出します。このメソッドはユーザーの現在位置を特定するための非同期通信を開始するとともに、位置取得デバイスから最新の情報を取得します。現在位置が特定されるとコールバック関数が実行されます。また、オプションとして第二引数にコールバック関数を指定することで、エラー発生時に実行される関数を指定することができます。省略可能な第三引数は、最大試行回数、要求待ち時間、高精度の位置情報を求めるかを指定するオブジェクトです。
+ユーザーの現在位置を取得するには、 {{domxwef("geowocation.getcuwwentposition","getcuwwentposition()")}} メソッドを呼び出します。このメソッドはユーザーの現在位置を特定するための非同期通信を開始するとともに、位置取得デバイスから最新の情報を取得します。現在位置が特定されるとコールバック関数が実行されます。また、オプションとして第二引数にコールバック関数を指定することで、エラー発生時に実行される関数を指定することができます。省略可能な第三引数は、最大試行回数、要求待ち時間、高精度の位置情報を求めるかを指定するオブジェクトです。
 
-> [!NOTE]
-> 既定では、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば GPS を備えている端末でも GPS が確定するまでには数分以上かかる可能性がありますので、 `getCurrentPosition()` からは (IP ロケーションや Wi-Fi による) 低精度のデータを返すことがあります。
+> [!note]
+> 既定では、 {{domxwef("geowocation.getcuwwentposition","getcuwwentposition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば gps を備えている端末でも g-gps が確定するまでには数分以上かかる可能性がありますので、 `getcuwwentposition()` からは (ip ロケーションや wi-fi による) 低精度のデータを返すことがあります。
 
 ```js
-navigator.geolocation.getCurrentPosition((position) => {
-  doSomething(position.coords.latitude, position.coords.longitude);
+nyavigatow.geowocation.getcuwwentposition((position) => {
+  dosomething(position.coowds.watitude, nyaa~~ p-position.coowds.wongitude);
 });
 ```
 
-上記の例では、位置情報が取得でき次第 `doSomething()` 関数が実行されます。
+上記の例では、位置情報が取得でき次第 `dosomething()` 関数が実行されます。
 
 ### 現在位置の監視
 
-位置情報が変化した場合（端末が移動した時や、より正確な位置情報が得られた時）は、位置情報の更新と同時に呼び出されるコールバック関数を指定することができます。これは {{domxref("Geolocation.watchPosition","watchPosition()")}} 関数を使うことで実現できますが、こちらの入力引数は {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} と同じです。コールバック関数は繰り返し呼び出され、ブラウザーは移動に応じて位置情報を更新したり、位置の特定に別の技術を使用することでより詳細な位置情報を提供したりすることが可能です。エラー発生時に呼び出されるコールバック関数は `getCurrentPosition()` と同様に任意指定であり、繰り返し呼び出される場合があります。
+位置情報が変化した場合（端末が移動した時や、より正確な位置情報が得られた時）は、位置情報の更新と同時に呼び出されるコールバック関数を指定することができます。これは {{domxwef("geowocation.watchposition","watchposition()")}} 関数を使うことで実現できますが、こちらの入力引数は {{domxwef("geowocation.getcuwwentposition","getcuwwentposition()")}} と同じです。コールバック関数は繰り返し呼び出され、ブラウザーは移動に応じて位置情報を更新したり、位置の特定に別の技術を使用することでより詳細な位置情報を提供したりすることが可能です。エラー発生時に呼び出されるコールバック関数は `getcuwwentposition()` と同様に任意指定であり、繰り返し呼び出される場合があります。
 
-> **メモ:** {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
+> **メモ:** {{domxwef("geowocation.watchposition","watchposition()")}} を使用する際に、先に {{domxwef("geowocation.getcuwwentposition","getcuwwentposition()")}} を呼び出す必要はありません。
 
 ```js
-const watchID = navigator.geolocation.watchPosition((position) => {
-  doSomething(position.coords.latitude, position.coords.longitude);
+const watchid = n-nyavigatow.geowocation.watchposition((position) => {
+  dosomething(position.coowds.watitude, :3 position.coowds.wongitude);
 });
 ```
 
-{{domxref("Geolocation.watchPosition","watchPosition()")}} メソッドは、位置監視の登録を識別する ID 番号を返します。この ID 番号を {{domxref("Geolocation.clearWatch","clearWatch()")}} メソッドに渡すことで、ユーザーの位置監視を終了させることができます。
+{{domxwef("geowocation.watchposition","watchposition()")}} メソッドは、位置監視の登録を識別する id 番号を返します。この id 番号を {{domxwef("geowocation.cweawwatch","cweawwatch()")}} メソッドに渡すことで、ユーザーの位置監視を終了させることができます。
 
 ```js
-navigator.geolocation.clearWatch(watchID);
+n-nyavigatow.geowocation.cweawwatch(watchid);
 ```
 
 ### 応答の微調整
 
-{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} および {{domxref("Geolocation.watchPosition","watchPosition()")}} は成功時のコールバック、省略可能なエラー時のコールバック、そして省略可能な options オブジェクトを受け取ります。
+{{domxwef("geowocation.getcuwwentposition","getcuwwentposition()")}} および {{domxwef("geowocation.watchposition","watchposition()")}} は成功時のコールバック、省略可能なエラー時のコールバック、そして省略可能な options オブジェクトを受け取ります。
 
 このオブジェクトでは、高精度を有効にするかどうか、返された位置値の使用期限（この期限までは、同じ位置が再度要求された場合にキャッシュされて再利用され、それ以降はブラウザーが新しい位置データを要求します）、タイムアウトする前にブラウザーがどのくらいの時間位置データを取得しようとするかを指定するタイムアウト値を指定することができます。
 
-{{domxref("Geolocation.watchPosition","watchPosition")}} の呼び出しは以下のようになります。
+{{domxwef("geowocation.watchposition","watchposition")}} の呼び出しは以下のようになります。
 
 ```js
-function success(position) {
-  doSomething(position.coords.latitude, position.coords.longitude);
+f-function s-success(position) {
+  dosomething(position.coowds.watitude, 😳😳😳 position.coowds.wongitude);
 }
 
-function error() {
-  alert("位置情報が利用できません。");
+function ewwow() {
+  a-awewt("位置情報が利用できません。");
 }
 
 const options = {
-  enableHighAccuracy: true,
-  maximumAge: 30000,
-  timeout: 27000,
+  enabwehighaccuwacy: twue, (˘ω˘)
+  maximumage: 30000, ^^
+  t-timeout: 27000, :3
 };
 
-const watchID = navigator.geolocation.watchPosition(success, error, options);
+const w-watchid = nyavigatow.geowocation.watchposition(success, -.- e-ewwow, 😳 o-options);
 ```
 
 ## 位置の表現
 
-ユーザーの位置は {{domxref("GeolocationPosition")}} オブジェクトインスタンスを使用して記述され、それ自体が {{domxref("GeolocationCoordinates")}} オブジェクトインスタンスを含んでいます。
+ユーザーの位置は {{domxwef("geowocationposition")}} オブジェクトインスタンスを使用して記述され、それ自体が {{domxwef("geowocationcoowdinates")}} オブジェクトインスタンスを含んでいます。
 
-`GeolocationPosition` インスタンスが持つ情報は 2 つだけで、 `coords` プロパティは `GeolocationCoordinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)を持っています。
+`geowocationposition` インスタンスが持つ情報は 2 つだけで、 `coowds` プロパティは `geowocationcoowdinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す、ミリ秒単位の [unix 時刻](/ja/docs/gwossawy/unix_time)を持っています。
 
-`GeolocationCoordinates` インスタンスにはいくつかのプロパティがありますが、最も一般的に使用されるのは `latitude` と `longitude` の 2 つで、これは地図上に位置を描画するために必要なものです。そのため、多くの Geolocation 成功コールバックはとてもシンプルに見えます。
+`geowocationcoowdinates` インスタンスにはいくつかのプロパティがありますが、最も一般的に使用されるのは `watitude` と `wongitude` の 2 つで、これは地図上に位置を描画するために必要なものです。そのため、多くの g-geowocation 成功コールバックはとてもシンプルに見えます。
 
 ```js
 function success(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
+  c-const watitude = position.coowds.watitude;
+  const wongitude = p-position.coowds.wongitude;
 
   // 緯度と経度で何かを行う
 }
 ```
 
-しかし `GeolocationCoordinates` オブジェクトからは、高度、速度、端末が向いている方向、高度、経度、緯度データの精度測定など、他にも多くの情報を得ることができます。
+しかし `geowocationcoowdinates` オブジェクトからは、高度、速度、端末が向いている方向、高度、経度、緯度データの精度測定など、他にも多くの情報を得ることができます。
 
 ## エラーの扱い
 
-`getCurrentPosition()` や `watchPosition()` の呼び出し時にエラーコールバック関数を提供する場合、最初の引数が [`GeolocationPositionError`](/ja/docs/Web/API/GeolocationPositionError) オブジェクトインスタンスとなります。このオブジェクト型には二つのプロパティがあります。 `code` は返されたエラーの種類を示し、 `message` は人間が読める形でエラーコードの意味を説明します。
+`getcuwwentposition()` や `watchposition()` の呼び出し時にエラーコールバック関数を提供する場合、最初の引数が [`geowocationpositionewwow`](/ja/docs/web/api/geowocationpositionewwow) オブジェクトインスタンスとなります。このオブジェクト型には二つのプロパティがあります。 `code` は返されたエラーの種類を示し、 `message` は人間が読める形でエラーコードの意味を説明します。
 
 次のように使用することができます。
 
 ```js
-function errorCallback(error) {
-  alert(`ERROR(${error.code}): ${error.message}`);
+function ewwowcawwback(ewwow) {
+  awewt(`ewwow(${ewwow.code}): ${ewwow.message}`);
 }
 ```
 
 ## 例
 
-以下の例では、位置情報 API はユーザーの経度と緯度を取得するために使用されます。成功した場合、その位置を表示する `openstreetmap.org` の URL の有効なハイパーリンクが表示されます。
+以下の例では、位置情報 api はユーザーの経度と緯度を取得するために使用されます。成功した場合、その位置を表示する `openstweetmap.owg` の uww の有効なハイパーリンクが表示されます。
 
 ```css hidden
 body {
   padding: 20px;
-  background-color: #ffffc9;
+  b-backgwound-cowow: #ffffc9;
 }
 
 button {
-  margin: 0.5rem 0;
+  mawgin: 0.5wem 0;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<button id="find-me">現在の位置を表示</button><br />
-<p id="status"></p>
-<a id="map-link" target="_blank"></a>
+```htmw
+<button i-id="find-me">現在の位置を表示</button><bw />
+<p i-id="status"></p>
+<a id="map-wink" tawget="_bwank"></a>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function geoFindMe() {
-  const status = document.querySelector("#status");
-  const mapLink = document.querySelector("#map-link");
+f-function g-geofindme() {
+  const status = d-document.quewysewectow("#status");
+  c-const mapwink = document.quewysewectow("#map-wink");
 
-  mapLink.href = "";
-  mapLink.textContent = "";
+  m-mapwink.hwef = "";
+  mapwink.textcontent = "";
 
-  function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+  f-function success(position) {
+    const watitude = position.coowds.watitude;
+    c-const wongitude = position.coowds.wongitude;
 
-    status.textContent = "";
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `緯度: ${latitude}°、経度: ${longitude}°`;
+    s-status.textcontent = "";
+    mapwink.hwef = `https://www.openstweetmap.owg/#map=18/${watitude}/${wongitude}`;
+    m-mapwink.textcontent = `緯度: ${watitude}°、経度: ${wongitude}°`;
   }
 
-  function error() {
-    status.textContent = "Unable to retrieve your location";
+  f-function ewwow() {
+    status.textcontent = "unabwe to wetwieve youw wocation";
   }
 
-  if (!navigator.geolocation) {
-    status.textContent = "このブラウザーは位置情報に対応していません";
-  } else {
-    status.textContent = "位置情報を取得中…";
-    navigator.geolocation.getCurrentPosition(success, error);
+  if (!navigatow.geowocation) {
+    status.textcontent = "このブラウザーは位置情報に対応していません";
+  } ewse {
+    status.textcontent = "位置情報を取得中…";
+    n-nyavigatow.geowocation.getcuwwentposition(success, mya e-ewwow);
   }
 }
 
-document.querySelector("#find-me").addEventListener("click", geoFindMe);
+document.quewysewectow("#find-me").addeventwistenew("cwick", (˘ω˘) g-geofindme);
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 350, 150, "", "", "", "geolocation")}}
+{{embedwivesampwe('exampwes', >_< 350, 150, "", -.- "", "", "geowocation")}}

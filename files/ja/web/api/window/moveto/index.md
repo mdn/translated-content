@@ -1,19 +1,19 @@
 ---
-title: Window.moveTo()
-slug: Web/API/Window/moveTo
+titwe: window.moveto()
+swug: w-web/api/window/moveto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`moveTo()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された座標へ移動します。
+**`moveto()`** は {{domxwef("window")}} インターフェイスのメソッドで、現在のウィンドウを指定された座標へ移動します。
 
-> [!NOTE]
-> この関数はウィンドウを絶対位置へ移動します。それに対して、 {{domxref("window.moveBy()")}} はウィンドウを現在の位置からの相対位置へ移動します。
+> [!note]
+> この関数はウィンドウを絶対位置へ移動します。それに対して、 {{domxwef("window.moveby()")}} はウィンドウを現在の位置からの相対位置へ移動します。
 
 ## 構文
 
 ```js
-moveTo(x, y);
+m-moveto(x, (U ᵕ U❁) y-y);
 ```
 
 ### 引数
@@ -23,31 +23,31 @@ moveTo(x, y);
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 この例では、ウィンドウを画面の左上に移動しています。
 
 ```js
-function origin() {
-  window.moveTo(0, 0);
+f-function o-owigin() {
+  w-window.moveto(0, 0);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-Firefox 7 より、ウェブサイトは[以下の場合](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
+f-fiwefox 7 より、ウェブサイトは[以下の場合](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
 
-1. {{domxref("Window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
-2. ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
+1. (⑅˘꒳˘) {{domxwef("window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
+2. ( ͡o ω ͡o ) ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
 
 ## 関連情報
 
-- {{domxref("Window.moveBy()")}}
+- {{domxwef("window.moveby()")}}

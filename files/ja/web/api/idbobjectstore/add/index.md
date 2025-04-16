@@ -1,134 +1,134 @@
 ---
-title: "IDBObjectStore: add() メソッド"
-slug: Web/API/IDBObjectStore/add
-l10n:
-  sourceCommit: 7c693c1df4038a78e681cdcd3ca744bd4dc809b5
+titwe: "idbobjectstowe: add() メソッド"
+swug: w-web/api/idbobjectstowe/add
+w-w10n:
+  souwcecommit: 7c693c1df4038a78e681cdcd3ca744bd4dc809b5
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの **`add()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別スレッドで値の[構造化複製](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone)を生成し、この複製をオブジェクトストアに保存します。これはオブジェクトストアに新しいレコードを追加する操作です。
+{{domxwef("idbobjectstowe")}} インターフェイスの **`add()`** メソッドは、{{domxwef("idbwequest")}} オブジェクトを返し、別スレッドで値の[構造化複製](https://htmw.spec.naniwg.owg/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone)を生成し、この複製をオブジェクトストアに保存します。これはオブジェクトストアに新しいレコードを追加する操作です。
 
-`success` イベントが発火した後でもトランザクションは失敗するかもしれないので、追加操作が正常に完了したかを判定するには、`IDBObjectStore.add` 要求の `success` イベントに加え、トランザクションの `complete` イベントも監視してください。言い換えると、`success` イベントはトランザクションをキューに追加するのに成功した時点で発火します。
+`success` イベントが発火した後でもトランザクションは失敗するかもしれないので、追加操作が正常に完了したかを判定するには、`idbobjectstowe.add` 要求の `success` イベントに加え、トランザクションの `compwete` イベントも監視してください。言い換えると、`success` イベントはトランザクションをキューに追加するのに成功した時点で発火します。
 
-`add` メソッドは _挿入のみを行う_ メソッドです。引数 `key` をキーとするレコードがオブジェクトストア内に既に存在する場合、返される要求オブジェクトで `ConstraintError` のエラーイベントが発火します。既存のレコードを更新するには、かわりに {{domxref("IDBObjectStore.put")}} を用いてください。
+`add` メソッドは _挿入のみを行う_ メソッドです。引数 `key` をキーとするレコードがオブジェクトストア内に既に存在する場合、返される要求オブジェクトで `constwaintewwow` のエラーイベントが発火します。既存のレコードを更新するには、かわりに {{domxwef("idbobjectstowe.put")}} を用いてください。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-add(value)
-add(value, key)
+```js-nowint
+a-add(vawue)
+add(vawue, rawr x3 k-key)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 保存する値です。
-- `key` {{optional_inline}}
-  - : レコードを識別するキーです。指定されない場合は、`null` になります。
+- `key` {{optionaw_inwine}}
+  - : レコードを識別するキーです。指定されない場合は、`nuww` になります。
 
 ### 返値
 
-この操作に関係する今後のイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関係する今後のイベントが発火する {{domxwef("idbwequest")}} オブジェクトです。
 
-操作に成功した場合は、この要求の {{domxref("IDBRequest.result", "result")}} プロパティの値は新しいレコードのキーになります。
+操作に成功した場合は、この要求の {{domxwef("idbwequest.wesuwt", mya "wesuwt")}} プロパティの値は新しいレコードのキーになります。
 
 ### 例外
 
-このメソッドは、以下の種類のいずれかの {{domxref("DOMException")}} を投げる可能性があります。
+このメソッドは、以下の種類のいずれかの {{domxwef("domexception")}} を投げる可能性があります。
 
-- `ReadOnlyError` {{domxref("DOMException")}}
-  - : この操作に対応するトランザクションが読み取り専用[モード](/ja/docs/Web/API/IDBTransaction#モード定数)のとき投げられます。
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
-- `DataError` {{domxref("DOMException")}}
+- `weadonwyewwow` {{domxwef("domexception")}}
+  - : この操作に対応するトランザクションが読み取り専用[モード](/ja/docs/web/api/idbtwansaction#モード定数)のとき投げられます。
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} のトランザクションが実行中でないとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
   - : 以下のいずれかの条件を満たすとき投げられます。
     - オブジェクトストアがインラインキーを用いているかキージェネレーターが存在し、引数 `key` が指定されたとき。
     - オブジェクトストアがアウトラインキーを用いかつキージェネレーターも存在せず、引数 `key` が指定されないとき。
     - オブジェクトストアがインラインキーを用いているがキージェネレーターは存在せず、オブジェクトストアのキーパスが有効なキーを生成しないとき。
     - 引数 `key` が指定されたが、有効なキーでないとき。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("IDBObjectStore")}} が削除されたか取り除かれたとき投げられます。
-- `DataCloneError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("idbobjectstowe")}} が削除されたか取り除かれたとき投げられます。
+- `datacwoneewwow` {{domxwef("domexception")}}
   - : 保存されるデータが内部の構造化複製アルゴリズムで複製できなかったとき投げられます。
-- `ConstraintError` {{domxref("DOMException")}}
+- `constwaintewwow` {{domxwef("domexception")}}
   - : 主キー制約の違反により挿入操作に失敗したとき投げられます。(同じ主キーの値を持つレコードが既に存在するとき)
 
 ## 例
 
-以下のコード断片では、データベースの読み書きトランザクションを開き、`add()` を用いてオブジェクトストアにデータを追加します。トランザクションイベントハンドラーに設定された関数により、成功時または失敗時、トランザクションを開いた結果を報告することにも注目してください。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+以下のコード断片では、データベースの読み書きトランザクションを開き、`add()` を用いてオブジェクトストアにデータを追加します。トランザクションイベントハンドラーに設定された関数により、成功時または失敗時、トランザクションを開いた結果を報告することにも注目してください。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = w-window.indexeddb.open("todowist", nyaa~~ 4);
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースを初期化しました。</wi>";
 
   // データベースを開いた結果を変数 db に格納する
   // これは後でよく使う
-  db = DBOpenRequest.result;
+  db = dbopenwequest.wesuwt;
 
-  // addData() 関数を実行し、データをデータベースに追加する
-  addData();
+  // adddata() 関数を実行し、データをデータベースに追加する
+  adddata();
 };
 
-function addData() {
-  // IDB に挿入できる新規オブジェクトを生成する
-  const newItem = [
+f-function adddata() {
+  // idb に挿入できる新規オブジェクトを生成する
+  c-const nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      tasktitwe: "wawk d-dog", (⑅˘꒳˘)
+      houws: 19, rawr x3
+      minutes: 30, (✿oωo)
+      day: 24, (ˆ ﻌ ˆ)♡
+      m-month: "decembew", (˘ω˘)
+      yeaw: 2013, (⑅˘꒳˘)
+      n-notified: "no", (///ˬ///✿)
+    }, 😳😳😳
   ];
 
   // 読み書きトランザクションを開き、データを追加する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  c-const twansaction = db.twansaction(["todowist"], 🥺 "weadwwite");
 
   // すべて完了したとき、トランザクションの正常終了を報告する
-  transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>トランザクションが完了しました。</li>";
+  twansaction.oncompwete = (event) => {
+    nyote.innewhtmw += "<wi>トランザクションが完了しました。</wi>";
   };
 
-  transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>トランザクションはエラーのため開けませんでした。アイテムは重複させられません。</li>";
+  t-twansaction.onewwow = (event) => {
+    note.innewhtmw +=
+      "<wi>トランザクションはエラーのため開けませんでした。アイテムは重複させられません。</wi>";
   };
 
   // トランザクションでオブジェクトストアを生成する
-  const objectStore = transaction.objectStore("toDoList");
+  const objectstowe = twansaction.objectstowe("todowist");
 
-  // オブジェクトストアに newItem オブジェクトを追加する要求をする
-  const objectStoreRequest = objectStore.add(newItem[0]);
+  // オブジェクトストアに nyewitem オブジェクトを追加する要求をする
+  c-const objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = (event) => {
+  o-objectstowewequest.onsuccess = (event) => {
     // 要求の成功を報告する
-    note.innerHTML += "<li>要求に成功しました。</li>";
+    n-nyote.innewhtmw += "<wi>要求に成功しました。</wi>";
   };
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

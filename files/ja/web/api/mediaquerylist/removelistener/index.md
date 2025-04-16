@@ -1,21 +1,21 @@
 ---
-title: "MediaQueryList: removeListener() メソッド"
-short-title: removeListener()
-slug: Web/API/MediaQueryList/removeListener
-l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+titwe: "mediaquewywist: wemovewistenew() メソッド"
+s-showt-titwe: w-wemovewistenew()
+s-swug: web/api/mediaquewywist/wemovewistenew
+w-w10n:
+  souwcecommit: c-c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{apiwef("cssom")}}{{depwecated_headew}}
 
-**`removeListener()`** は {{DOMxRef("MediaQueryList")}} インターフェイスのメソッドで、 `MediaQueryListener` からリスナーを除去します。
+**`wemovewistenew()`** は {{domxwef("mediaquewywist")}} インターフェイスのメソッドで、 `mediaquewywistenew` からリスナーを除去します。
 
-古いブラウザーでは、 `MediaQueryList` はまだ {{DOMxRef("EventTarget")}} を継承していなかったため、このメソッドは {{DOMxRef("EventTarget.removeEventListener()")}} の別名として提供されました。対応する必要があるブラウザーで利用できる場合は、 `removeListener()` の代わりに `removeEventListener()` を使用してください。
+古いブラウザーでは、 `mediaquewywist` はまだ {{domxwef("eventtawget")}} を継承していなかったため、このメソッドは {{domxwef("eventtawget.wemoveeventwistenew()")}} の別名として提供されました。対応する必要があるブラウザーで利用できる場合は、 `wemovewistenew()` の代わりに `wemoveeventwistenew()` を使用してください。
 
 ## 構文
 
-```js-nolint
-removeListener(func)
+```js-nowint
+w-wemovewistenew(func)
 ```
 
 ### 引数
@@ -25,44 +25,44 @@ removeListener(func)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const paragraph = document.querySelector("p");
-const mediaQueryList = window.matchMedia("(max-width: 600px)");
+c-const p-pawagwaph = document.quewysewectow("p");
+const mediaquewywist = window.matchmedia("(max-width: 600px)");
 
-function screenTest(e) {
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
-    document.body.style.backgroundColor = "pink";
-  } else {
-    /* the viewport is more than 600 pixels wide */
-    paragraph.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "aquamarine";
+function scweentest(e) {
+  i-if (e.matches) {
+    /* the viewpowt is 600 p-pixews wide ow wess */
+    pawagwaph.textcontent = "this i-is a nawwow scween — 600px wide ow wess.";
+    document.body.stywe.backgwoundcowow = "pink";
+  } e-ewse {
+    /* the viewpowt i-is mowe t-than 600 pixews wide */
+    pawagwaph.textcontent = "this is a wide scween — mowe than 600px wide.";
+    d-document.body.stywe.backgwoundcowow = "aquamawine";
   }
 }
 
-mediaQueryList.addListener(screenTest);
+mediaquewywist.addwistenew(scweentest);
 
-// Later on, when it is no longer needed
-mediaQueryList.removeListener(screenTest);
+// watew on, nyaa~~ when it is nyo wongew nyeeded
+mediaquewywist.wemovewistenew(scweentest);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{DOMxRef("window.matchMedia()")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [プログラムによるメディアクエリーの評価](/ja/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

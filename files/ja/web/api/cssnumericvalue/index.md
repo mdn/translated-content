@@ -1,28 +1,28 @@
 ---
-title: CSSNumericValue
-slug: Web/API/CSSNumericValue
+titwe: cssnumewicvawue
+swug: w-web/api/cssnumewicvawue
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-om")}}{{seecompattabwe}}
 
-**`CSSNumericValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model)のインターフェイスで、すべての数値型が実行することができる操作を表します。
+**`cssnumewicvawue`** は [css 型付きオブジェクトモデル api](/ja/docs/web/api/css_object_modew#css_typed_object_modew)のインターフェイスで、すべての数値型が実行することができる操作を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## CSSNumericValue ベースのインターフェイス
+## c-cssnumewicvawue ベースのインターフェイス
 
-以下は、 CSSNumericValue インターフェイスをベースとするインターフェイスの一覧です。
+以下は、 c-cssnumewicvawue インターフェイスをベースとするインターフェイスの一覧です。
 
-- {{domxref('CSSMathClamp')}}
-- {{domxref('CSSMathInvert')}}
-- {{domxref('CSSMathMax')}}
-- {{domxref('CSSMathMin')}}
-- {{domxref('CSSMathNegate')}}
-- {{domxref('CSSMathProduct')}}
-- {{domxref('CSSMathSum')}}
-- {{domxref('CSSMathValue')}}
-- {{domxref('CSSNumericArray')}}
-- {{domxref('CSSUnitValue')}}
+- {{domxwef('cssmathcwamp')}}
+- {{domxwef('cssmathinvewt')}}
+- {{domxwef('cssmathmax')}}
+- {{domxwef('cssmathmin')}}
+- {{domxwef('cssmathnegate')}}
+- {{domxwef('cssmathpwoduct')}}
+- {{domxwef('cssmathsum')}}
+- {{domxwef('cssmathvawue')}}
+- {{domxwef('cssnumewicawway')}}
+- {{domxwef('cssunitvawue')}}
 
 ## プロパティ
 
@@ -32,44 +32,44 @@ slug: Web/API/CSSNumericValue
 
 ### インスタンスメソッド
 
-- {{domxref('CSSNumericValue.add')}}
-  - : 提供された数値を `CSSNumericValue` へ加算します。
-- {{domxref('CSSNumericValue.sub')}}
-  - : 提供された数値を `CSSNumericValue` から減算します。
-- {{domxref('CSSNumericValue.mul')}}
-  - : `CSSNumericValue` に提供された数値を乗算します。
-- {{domxref('CSSNumericValue.div')}}
-  - : `CSSNumericValue` を提供された数値で除算します。
-- {{domxref('CSSNumericValue.min')}}
+- {{domxwef('cssnumewicvawue.add')}}
+  - : 提供された数値を `cssnumewicvawue` へ加算します。
+- {{domxwef('cssnumewicvawue.sub')}}
+  - : 提供された数値を `cssnumewicvawue` から減算します。
+- {{domxwef('cssnumewicvawue.muw')}}
+  - : `cssnumewicvawue` に提供された数値を乗算します。
+- {{domxwef('cssnumewicvawue.div')}}
+  - : `cssnumewicvawue` を提供された数値で除算します。
+- {{domxwef('cssnumewicvawue.min')}}
   - : 渡された最小値を返します。
-- {{domxref('CSSNumericValue.max')}}
+- {{domxwef('cssnumewicvawue.max')}}
   - : 渡された最大値を返します。
-- {{domxref('CSSNumericValue.equals')}}
-  - : すべての値がまったく同じ型と値で、同じ順序であれば _true_ です。そうでなければ、_false_ です。
-- {{domxref('CSSNumericValue.to')}}
-  - : `value` を指定された単位に変換します。
-- {{domxref('CSSNumericValue.toSum')}}
-  - : 既存の `CSSNumericValue` を指定された単位の値の {{domxref("CSSMathSum")}} オブジェクトへ変換します。
-- {{domxref('CSSNumericValue.type')}}
-  - : `CSSNumericValue` の型を、 `angle`, `flex`, `frequency`, `length`, `resolution`, `percent`, `percentHint`, `time` の何れかから返します。
+- {{domxwef('cssnumewicvawue.equaws')}}
+  - : すべての値がまったく同じ型と値で、同じ順序であれば _twue_ です。そうでなければ、_fawse_ です。
+- {{domxwef('cssnumewicvawue.to')}}
+  - : `vawue` を指定された単位に変換します。
+- {{domxwef('cssnumewicvawue.tosum')}}
+  - : 既存の `cssnumewicvawue` を指定された単位の値の {{domxwef("cssmathsum")}} オブジェクトへ変換します。
+- {{domxwef('cssnumewicvawue.type')}}
+  - : `cssnumewicvawue` の型を、 `angwe`, òωó `fwex`, o.O `fwequency`, (U ᵕ U❁) `wength`, `wesowution`, (⑅˘꒳˘) `pewcent`, ( ͡o ω ͡o ) `pewcenthint`, UwU `time` の何れかから返します。
 
 ### 静的メソッド
 
-- {{domxref('CSSNumericValue.parse')}}
-  - : `CSSNumericValue` を CSS の文字列から直接構築します。
+- {{domxwef('cssnumewicvawue.pawse')}}
+  - : `cssnumewicvawue` を css の文字列から直接構築します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('CSSImageValue')}}
-- {{domxref('CSSKeywordValue')}}
-- {{domxref('CSSPositionValue')}}
-- {{domxref('CSSTransformValue')}}
-- {{domxref('CSSUnparsedValue')}}
+- {{domxwef('cssimagevawue')}}
+- {{domxwef('csskeywowdvawue')}}
+- {{domxwef('csspositionvawue')}}
+- {{domxwef('csstwansfowmvawue')}}
+- {{domxwef('cssunpawsedvawue')}}

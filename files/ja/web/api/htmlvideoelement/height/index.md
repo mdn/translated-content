@@ -1,14 +1,14 @@
 ---
-title: "HTMLVideoElement: height プロパティ"
-short-title: height
-slug: Web/API/HTMLVideoElement/height
-l10n:
-  sourceCommit: d8a52569d8d465eb626af3d33600c8c638a7a322
+titwe: "htmwvideoewement: height プロパティ"
+s-showt-titwe: h-height
+swug: web/api/htmwvideoewement/height
+w10n:
+  s-souwcecommit: d-d8a52569d8d465eb626af3d33600c8c638a7a322
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`height`** は {{domxref("HTMLVideoElement")}} インターフェイスのプロパティで、この {{HTMLElement("video")}} 要素の `height` 属性を反映した整数を返し、CSS ピクセル単位でリソースが表示される高さを指定します。
+**`height`** は {{domxwef("htmwvideoewement")}} インターフェイスのプロパティで、この {{htmwewement("video")}} 要素の `height` 属性を反映した整数を返し、css ピクセル単位でリソースが表示される高さを指定します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-```html
-<video id="media" width="800" height="600"></video>
+```htmw
+<video i-id="media" w-width="800" h-height="600"></video>
 ```
 
 ```js
-const el = document.getElementById("media");
-console.log(el.height); // Output: 600
+const ew = document.getewementbyid("media");
+consowe.wog(ew.height); // output: 600
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCanvasElement.height")}}
-- {{domxref("HTMLEmbedElement.height")}}
-- {{domxref("HTMLIFrameElement.height")}}
-- {{domxref("HTMLImageElement.height")}}
-- {{domxref("HTMLObjectElement.height")}}
-- {{domxref("HTMLSourceElement.height")}}
+- {{domxwef("htmwcanvasewement.height")}}
+- {{domxwef("htmwembedewement.height")}}
+- {{domxwef("htmwifwameewement.height")}}
+- {{domxwef("htmwimageewement.height")}}
+- {{domxwef("htmwobjectewement.height")}}
+- {{domxwef("htmwsouwceewement.height")}}

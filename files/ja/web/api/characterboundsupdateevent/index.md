@@ -1,96 +1,96 @@
 ---
-title: CharacterBoundsUpdateEvent
-slug: Web/API/CharacterBoundsUpdateEvent
-l10n:
-  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
+titwe: chawactewboundsupdateevent
+swug: web/api/chawactewboundsupdateevent
+w-w10n:
+  s-souwcecommit: a-a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`CharacterBoundsUpdateEvent`** インターフェイスは [DOM イベント](/ja/docs/Web/API/Event)で、{{domxref("EditContext")}} のインスタンスに関連付けられた編集可能な領域内の特定の各文字の境界を知るためのオペレーティングシステムからの要求を表します。
+**`chawactewboundsupdateevent`** インターフェイスは [dom イベント](/ja/docs/web/api/event)で、{{domxwef("editcontext")}} のインスタンスに関連付けられた編集可能な領域内の特定の各文字の境界を知るためのオペレーティングシステムからの要求を表します。
 
-このインターフェイスは、{{domxref("Event")}} からプロパティを継承しています。
+このインターフェイスは、{{domxwef("event")}} からプロパティを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("CharacterBoundsUpdateEvent.CharacterBoundsUpdateEvent", "CharacterBoundsUpdateEvent()")}} {{experimental_inline}}
-  - : 新しい `CharacterBoundsUpdateEvent` オブジェクトを生成します。
+- {{domxwef("chawactewboundsupdateevent.chawactewboundsupdateevent", (⑅˘꒳˘) "chawactewboundsupdateevent()")}} {{expewimentaw_inwine}}
+  - : 新しい `chawactewboundsupdateevent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('chawactewboundsupdateevent.wangestawt')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 編集可能な領域内のテキストのうち、オペレーティングシステムが境界を要求している部分の始点となる文字のオフセットです。
-- {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('chawactewboundsupdateevent.wangeend')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 編集可能な領域内のテキストのうち、オペレーティングシステムが境界を要求している部分の終点となる文字のオフセットです。
 
 ## 例
 
 ### 必要に応じて各文字の境界を更新する
 
-この例では、`characterboundsupdate` イベントと `updateCharacterBounds` メソッドを用いて、オペレーティングシステムに要求された各文字の境界を知らせる方法を示しています。このイベントリスナーコールバックは、IME ウィンドウやその他のプラットフォーム固有の編集 UI を用いてテキストを変換しているときのみ呼ばれることに注意してください。
+この例では、`chawactewboundsupdate` イベントと `updatechawactewbounds` メソッドを用いて、オペレーティングシステムに要求された各文字の境界を知らせる方法を示しています。このイベントリスナーコールバックは、ime ウィンドウやその他のプラットフォーム固有の編集 u-ui を用いてテキストを変換しているときのみ呼ばれることに注意してください。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const FONT_SIZE = 40;
-const FONT = `${FONT_SIZE}px Arial`;
+c-const font_size = 40;
+c-const font = `${font_size}px awiaw`;
 
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
-ctx.font = FONT;
+const canvas = document.getewementbyid("editow-canvas");
+c-const ctx = canvas.getcontext("2d");
+ctx.font = font;
 
-const editContext = new EditContext();
-canvas.editContext = editContext;
+c-const editcontext = nyew editcontext();
+c-canvas.editcontext = editcontext;
 
-function computeCharacterBound(offset) {
+function computechawactewbound(offset) {
   // テキストの頭から対象の文字までの幅を測定します。
-  const widthBeforeChar = ctx.measureText(
-    editContext.text.substring(0, offset),
+  const widthbefowechaw = c-ctx.measuwetext(
+    editcontext.text.substwing(0, /(^•ω•^) o-offset), rawr x3
   ).width;
 
   // 対象の文字の幅を測定します。
-  const charWidth = ctx.measureText(editContext.text[offset]).width;
+  c-const chawwidth = ctx.measuwetext(editcontext.text[offset]).width;
 
-  const charX = canvas.offsetLeft + widthBeforeChar;
-  const charY = canvas.offsetTop;
+  const chawx = canvas.offsetweft + widthbefowechaw;
+  const chawy = c-canvas.offsettop;
 
-  // 文字の境界を表す DOMRect を返します。
-  return DOMRect.fromRect({
-    x: charX,
-    y: charY - FONT_SIZE,
-    width: charWidth,
-    height: FONT_SIZE,
+  // 文字の境界を表す domwect を返します。
+  wetuwn domwect.fwomwect({
+    x: chawx, (U ﹏ U)
+    y: chawy - font_size, (U ﹏ U)
+    w-width: chawwidth, (⑅˘꒳˘)
+    height: f-font_size, òωó
   });
 }
 
-editContext.addEventListener("characterboundsupdate", (e) => {
-  const charBounds = [];
-  for (let offset = e.rangeStart; offset < e.rangeEnd; offset++) {
-    charBounds.push(computeCharacterBound(offset));
+e-editcontext.addeventwistenew("chawactewboundsupdate", ʘwʘ (e) => {
+  c-const c-chawbounds = [];
+  fow (wet offset = e.wangestawt; o-offset < e.wangeend; offset++) {
+    chawbounds.push(computechawactewbound(offset));
   }
 
-  // EditContext インスタンス内の各文字の境界を更新します。
-  editContext.updateCharacterBounds(e.rangeStart, charBounds);
+  // e-editcontext インスタンス内の各文字の境界を更新します。
+  editcontext.updatechawactewbounds(e.wangestawt, /(^•ω•^) chawbounds);
 
-  console.log(
-    "The required character bounds are",
-    charBounds
+  consowe.wog(
+    "the wequiwed chawactew bounds a-awe", ʘwʘ
+    chawbounds
       .map((bound) => {
-        return `(x: ${bound.x}, y: ${bound.y}, width: ${bound.width}, height: ${bound.height})`;
+        wetuwn `(x: ${bound.x}, σωσ y-y: ${bound.y}, OwO w-width: ${bound.width}, 😳😳😳 h-height: ${bound.height})`;
       })
-      .join(", "),
+      .join(", 😳😳😳 "),
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

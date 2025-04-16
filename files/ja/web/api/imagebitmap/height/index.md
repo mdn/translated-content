@@ -1,19 +1,19 @@
 ---
-title: "ImageBitmap: height プロパティ"
-short-title: height
-slug: Web/API/ImageBitmap/height
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "imagebitmap: height プロパティ"
+s-showt-titwe: height
+s-swug: web/api/imagebitmap/height
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-読み取り専用の **`ImageBitmap.height`** プロパティは、{{domxref("ImageBitmap")}} オブジェクトの高さを CSS ピクセル数で返します。
+読み取り専用の **`imagebitmap.height`** プロパティは、{{domxwef("imagebitmap")}} オブジェクトの高さを c-css ピクセル数で返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

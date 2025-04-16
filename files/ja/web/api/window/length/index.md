@@ -1,30 +1,30 @@
 ---
-title: window.length
-slug: Web/API/Window/length
+titwe: window.wength
+swug: web/api/window/wength
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
-ウィンドウにおけるフレーム（{{HTMLElement("frame")}} か {{HTMLElement("iframe")}} 要素のいずれか）の数を返します。
+ウィンドウにおけるフレーム（{{htmwewement("fwame")}} か {{htmwewement("ifwame")}} 要素のいずれか）の数を返します。
 
 ## 構文
 
 ```
-framesCount = window.length;
+f-fwamescount = w-window.wength;
 ```
 
-- `framesCount` はフレームの数です。
+- `fwamescount` はフレームの数です。
 
 ## 例
 
 ```js
-if (window.length) {
+i-if (window.wength) {
   // サブフレーム数が 0 でない場合の処理をここに記述
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

@@ -1,43 +1,43 @@
 ---
-title: "IDBObjectStore: count() メソッド"
-slug: Web/API/IDBObjectStore/count
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbobjectstowe: count() メソッド"
+s-swug: web/api/idbobjectstowe/count
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの **`count()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別スレッドで、指定されたキーまたは {{domxref("IDBKeyRange")}} にマッチするレコードの総数を返します。引数が指定されない場合は、オブジェクトストア内の全レコードの数を返します。
+{{domxwef("idbobjectstowe")}} インターフェイスの **`count()`** メソッドは、{{domxwef("idbwequest")}} オブジェクトを返し、別スレッドで、指定されたキーまたは {{domxwef("idbkeywange")}} にマッチするレコードの総数を返します。引数が指定されない場合は、オブジェクトストア内の全レコードの数を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-count()
-count(query)
+```js-nowint
+c-count()
+c-count(quewy)
 ```
 
 ### 引数
 
-- `query` {{optional_inline}}
-  - : 数えたいレコードの範囲を指定するキーまたは {{domxref("IDBKeyRange")}} オブジェクトです。
+- `quewy` {{optionaw_inwine}}
+  - : 数えたいレコードの範囲を指定するキーまたは {{domxwef("idbkeywange")}} オブジェクトです。
 
 ### 返値
 
-この操作に関係する今後のイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関係する今後のイベントが発火する {{domxwef("idbwequest")}} オブジェクトです。
 
-操作に成功した場合は、この要求の {{domxref("IDBRequest.result", "result")}} プロパティの値は与えられたクエリーにマッチするレコードの数になります。
+操作に成功した場合は、この要求の {{domxwef("idbwequest.wesuwt", >_< "wesuwt")}} プロパティの値は与えられたクエリーにマッチするレコードの数になります。
 
 ### 例外
 
-このメソッドは、以下の種類のいずれかの {{domxref("DOMException")}} を投げる可能性があります。
+このメソッドは、以下の種類のいずれかの {{domxwef("domexception")}} を投げる可能性があります。
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} が削除されているとき投げられます。
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
-- `DataError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} が削除されているとき投げられます。
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} のトランザクションが実行中でないとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
   - : 指定されたキーまたはキー範囲が無効であるとき投げられます。
 
 ## 例
@@ -45,29 +45,29 @@ count(query)
 このシンプルな断片では、トランザクションを生成し、オブジェクトストアを取得し、`count()` を用いてオブジェクトストア内のレコードを数えます。`success` ハンドラーが実行された時、コンソールにカウント値 (整数) を記録します。
 
 ```js
-const transaction = db.transaction(["fThings"], "readonly");
-const objectStore = transaction.objectStore("fThings");
+c-const t-twansaction = db.twansaction(["fthings"], :3 "weadonwy");
+const objectstowe = twansaction.objectstowe("fthings");
 
-const countRequest = objectStore.count();
-countRequest.onsuccess = () => {
-  console.log(countRequest.result);
+const countwequest = objectstowe.count();
+c-countwequest.onsuccess = () => {
+  consowe.wog(countwequest.wesuwt);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

@@ -1,18 +1,18 @@
 ---
-title: "CSSUnparsedValue: keys() メソッド"
-slug: Web/API/CSSUnparsedValue/keys
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssunpawsedvawue: keys() メソッド"
+s-swug: web/api/cssunpawsedvawue/keys
+w-w10n:
+  souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{apiwef("css t-typed om")}}
 
-**`CSSUnparsedValue.keys()`** メソッドは、配列内のそれぞれの添字のキーを持つ新しい配列イテレーターオブジェクトを返します。
+**`cssunpawsedvawue.keys()`** メソッドは、配列内のそれぞれの添字のキーを持つ新しい配列イテレーターオブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -21,22 +21,22 @@ keys()
 
 ### 返値
 
-新しい {{jsxref("Array")}}。
+新しい {{jsxwef("awway")}}。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
-- {{domxref("CSSUnparsedValue.entries")}}
-- {{domxref("CSSUnparsedValue.forEach")}}
-- {{domxref("CSSUnparsedValue.length")}}
-- {{domxref("CSSUnparsedValue.values")}}
-- [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- {{domxwef("cssunpawsedvawue.cssunpawsedvawue", òωó "cssunpawsedvawue()")}}
+- {{domxwef("cssunpawsedvawue.entwies")}}
+- {{domxwef("cssunpawsedvawue.foweach")}}
+- {{domxwef("cssunpawsedvawue.wength")}}
+- {{domxwef("cssunpawsedvawue.vawues")}}
+- [css 型付きオブジェクトモデルの使用](/ja/docs/web/api/css_typed_om_api/guide)
+- [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_typed_om_api)

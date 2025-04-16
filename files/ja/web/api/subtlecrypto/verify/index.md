@@ -1,232 +1,232 @@
 ---
-title: "SubtleCrypto: verify() メソッド"
-short-title: verify()
-slug: Web/API/SubtleCrypto/verify
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: vewify() メソッド"
+s-showt-titwe: vewify()
+s-swug: web/api/subtwecwypto/vewify
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`verify()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、デジタル{{glossary("signature", "署名")}}を検証します。
+**`vewify()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、デジタル{{gwossawy("signatuwe", nyaa~~ "署名")}}を検証します。
 
-引数として、署名を検証するための{{glossary("key", "鍵")}}、アルゴリズム固有の引数、署名、署名済み元データを取ります。署名が有効かどうかを示す論理値で履行される {{jsxref("Promise")}} を返します。
+引数として、署名を検証するための{{gwossawy("key", 😳 "鍵")}}、アルゴリズム固有の引数、署名、署名済み元データを取ります。署名が有効かどうかを示す論理値で履行される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-verify(algorithm, key, signature, data)
+```js-nowint
+v-vewify(awgowithm, (⑅˘꒳˘) k-key, nyaa~~ signatuwe, data)
 ```
 
 ### 引数
 
-- `algorithm`
+- `awgowithm`
   - : 使用するアルゴリズムを定義する文字列またはオブジェクトで、アルゴリズムによっては追加の引数もあります。
-    追加引数に指定された値は、対応する {{domxref("SubtleCrypto.sign()", "sign()")}} 呼び出しに渡された値と一致しなければなりません。
-    - [RSASSA-PKCS1-v1_5](/ja/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5) を使用する場合は、`"RSASSA-PKCS1-v1_5"` という文字列か、 `{ "name": "RSASSA-PKCS1-v1_5" }` の形の文字列を渡してください。
-    - [RSA-PSS](/ja/docs/Web/API/SubtleCrypto/sign#rsa-pss) を使用するには、 {{domxref("RsaPssParams")}} を渡してください。
-    - [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) を使用するには、 {{domxref("EcdsaParams")}} を渡してください。
-    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) を使用するには、 `"HMAC"` という文字列か、 `{ "name": "HMAC" }` の形の文字列を渡してください。
+    追加引数に指定された値は、対応する {{domxwef("subtwecwypto.sign()", OwO "sign()")}} 呼び出しに渡された値と一致しなければなりません。
+    - [wsassa-pkcs1-v1_5](/ja/docs/web/api/subtwecwypto/sign#wsassa-pkcs1-v1_5) を使用する場合は、`"wsassa-pkcs1-v1_5"` という文字列か、 `{ "name": "wsassa-pkcs1-v1_5" }` の形の文字列を渡してください。
+    - [wsa-pss](/ja/docs/web/api/subtwecwypto/sign#wsa-pss) を使用するには、 {{domxwef("wsapsspawams")}} を渡してください。
+    - [ecdsa](/ja/docs/web/api/subtwecwypto/sign#ecdsa) を使用するには、 {{domxwef("ecdsapawams")}} を渡してください。
+    - [hmac](/ja/docs/web/api/subtwecwypto/sign#hmac) を使用するには、 `"hmac"` という文字列か、 `{ "name": "hmac" }` の形の文字列を渡してください。
 - `key`
-  - : 署名に用いる鍵を格納した {{domxref("CryptoKey")}} オブジェクトです。
+  - : 署名に用いる鍵を格納した {{domxwef("cwyptokey")}} オブジェクトです。
     対称鍵アルゴリズムであれば秘密鍵であり、公開鍵システムであれば公開鍵です。
-- `signature`
-  - : {{jsxref("ArrayBuffer")}} で、検証する{{glossary("signature", "署名")}}です。
+- `signatuwe`
+  - : {{jsxwef("awwaybuffew")}} で、検証する{{gwossawy("signatuwe", rawr x3 "署名")}}です。
 - `data`
-  - : {{jsxref("ArrayBuffer")}} で、署名を検証するためのデータが入ります。
+  - : {{jsxwef("awwaybuffew")}} で、署名を検証するためのデータが入ります。
 
 ### 返値
 
-論理値で履行される {{jsxref("Promise")}} です。署名が有効な場合は `true`、そうでない場合は `false` です。
+論理値で履行される {{jsxwef("pwomise")}} です。署名が有効な場合は `twue`、そうでない場合は `fawse` です。
 
 ### 例外
 
 以下の例外が発生した場合、プロミスは拒否されます。
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : 暗号鍵がリクエストされた検証アルゴリズムの鍵でない場合、または未知のアルゴリズムか検証処理に適していないアルゴリズムを使用しようとした場合に発生します。
 
 ## 対応しているアルゴリズム
 
-`verify()` メソッドは、 [`sign()`](/ja/docs/Web/API/SubtleCrypto/sign#対応しているアルゴリズム) メソッドと同じアルゴリズムに対応しています。
+`vewify()` メソッドは、 [`sign()`](/ja/docs/web/api/subtwecwypto/sign#対応しているアルゴリズム) メソッドと同じアルゴリズムに対応しています。
 
 ## 例
 
-> [!NOTE]
-> GitHub 上の[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)ことができます。
+> [!note]
+> github 上の[動作例を試す](https://mdn.github.io/dom-exampwes/web-cwypto/sign-vewify/index.htmw)ことができます。
 
-### RSASSA-PKCS1-v1_5
+### wsassa-pkcs1-v1_5
 
 このコードは公開鍵を使用して署名を検証します。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
+[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/wsassa-pkcs1.js)
 
 ```js
 /*
-Fetch the contents of the "message" textbox, and encode it
-in a form we can use for sign operation.
+f-fetch the contents of the "message" textbox, XD a-and encode it
+in a fowm we can u-use fow sign opewation. σωσ
 */
-function getMessageEncoding() {
-  const messageBox = document.querySelector(".rsassa-pkcs1 #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
-  return enc.encode(message);
+function getmessageencoding() {
+  const m-messagebox = document.quewysewectow(".wsassa-pkcs1 #message");
+  w-wet message = m-messagebox.vawue;
+  wet enc = nyew textencodew();
+  wetuwn enc.encode(message);
 }
 
 /*
-Fetch the encoded message-to-sign and verify it against the stored signature.
-* If it checks out, set the "valid" class on the signature.
-* Otherwise set the "invalid" class.
+fetch the e-encoded message-to-sign and vewify it against the stowed signatuwe. (U ᵕ U❁)
+* if it checks o-out, (U ﹏ U) set the "vawid" cwass o-on the signatuwe. :3
+* o-othewwise set t-the "invawid" c-cwass. ( ͡o ω ͡o )
 */
-async function verifyMessage(publicKey) {
-  const signatureValue = document.querySelector(
-    ".rsassa-pkcs1 .signature-value",
+async function vewifymessage(pubwickey) {
+  const signatuwevawue = d-document.quewysewectow(
+    ".wsassa-pkcs1 .signatuwe-vawue", σωσ
   );
-  signatureValue.classList.remove("valid", "invalid");
+  signatuwevawue.cwasswist.wemove("vawid", >w< "invawid");
 
-  let encoded = getMessageEncoding();
-  let result = await window.crypto.subtle.verify(
-    "RSASSA-PKCS1-v1_5",
-    publicKey,
-    signature,
+  wet encoded = g-getmessageencoding();
+  wet wesuwt = await window.cwypto.subtwe.vewify(
+    "wsassa-pkcs1-v1_5", 😳😳😳
+    pubwickey, OwO
+    signatuwe, 😳
     encoded,
   );
 
-  signatureValue.classList.add(result ? "valid" : "invalid");
+  s-signatuwevawue.cwasswist.add(wesuwt ? "vawid" : "invawid");
 }
 ```
 
-### RSA-PSS
+### wsa-pss
 
 このコードは公開鍵を使用して署名を検証します。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
+[完全なコードは g-github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/wsa-pss.js)
 
 ```js
 /*
-Fetch the contents of the "message" textbox, and encode it
-in a form we can use for sign operation.
+f-fetch t-the contents of the "message" textbox, 😳😳😳 and encode it
+in a fowm w-we can use fow sign o-opewation. (˘ω˘)
 */
-function getMessageEncoding() {
-  const messageBox = document.querySelector(".rsa-pss #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
-  return enc.encode(message);
+function getmessageencoding() {
+  c-const messagebox = d-document.quewysewectow(".wsa-pss #message");
+  wet message = m-messagebox.vawue;
+  wet enc = n-nyew textencodew();
+  wetuwn enc.encode(message);
 }
 
 /*
-Fetch the encoded message-to-sign and verify it against the stored signature.
-* If it checks out, set the "valid" class on the signature.
-* Otherwise set the "invalid" class.
+fetch t-the encoded message-to-sign and v-vewify it against the stowed signatuwe. ʘwʘ
+* i-if it c-checks out, ( ͡o ω ͡o ) set the "vawid" cwass on the signatuwe. o.O
+* othewwise set the "invawid" cwass. >w<
 */
-async function verifyMessage(publicKey) {
-  const signatureValue = document.querySelector(".rsa-pss .signature-value");
-  signatureValue.classList.remove("valid", "invalid");
+async function vewifymessage(pubwickey) {
+  c-const signatuwevawue = document.quewysewectow(".wsa-pss .signatuwe-vawue");
+  s-signatuwevawue.cwasswist.wemove("vawid", 😳 "invawid");
 
-  let encoded = getMessageEncoding();
-  let result = await window.crypto.subtle.verify(
+  wet e-encoded = getmessageencoding();
+  w-wet wesuwt = a-await window.cwypto.subtwe.vewify(
     {
-      name: "RSA-PSS",
-      saltLength: 32,
-    },
-    publicKey,
-    signature,
+      nyame: "wsa-pss", 🥺
+      sawtwength: 32, rawr x3
+    }, o.O
+    pubwickey,
+    s-signatuwe, rawr
     encoded,
   );
 
-  signatureValue.classList.add(result ? "valid" : "invalid");
+  signatuwevawue.cwasswist.add(wesuwt ? "vawid" : "invawid");
 }
 ```
 
-### ECDSA
+### ecdsa
 
 このコードは公開鍵を使用して署名を検証します。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
+[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/ecdsa.js)
 
 ```js
 /*
-Fetch the contents of the "message" textbox, and encode it
-in a form we can use for sign operation.
+f-fetch the contents o-of the "message" t-textbox, ʘwʘ and encode i-it
+in a fowm we can use fow s-sign opewation. 😳😳😳
 */
-function getMessageEncoding() {
-  const messageBox = document.querySelector(".ecdsa #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
-  return enc.encode(message);
+f-function getmessageencoding() {
+  c-const messagebox = d-document.quewysewectow(".ecdsa #message");
+  wet message = messagebox.vawue;
+  w-wet enc = n-new textencodew();
+  w-wetuwn enc.encode(message);
 }
 
 /*
-Fetch the encoded message-to-sign and verify it against the stored signature.
-* If it checks out, set the "valid" class on the signature.
-* Otherwise set the "invalid" class.
+f-fetch the e-encoded message-to-sign and vewify it against the stowed signatuwe. ^^;;
+* i-if it checks out, o.O set the "vawid" cwass on the signatuwe. (///ˬ///✿)
+* othewwise set the "invawid" c-cwass. σωσ
 */
-async function verifyMessage(publicKey) {
-  const signatureValue = document.querySelector(".ecdsa .signature-value");
-  signatureValue.classList.remove("valid", "invalid");
+async function vewifymessage(pubwickey) {
+  const signatuwevawue = document.quewysewectow(".ecdsa .signatuwe-vawue");
+  s-signatuwevawue.cwasswist.wemove("vawid", "invawid");
 
-  let encoded = getMessageEncoding();
-  let result = await window.crypto.subtle.verify(
+  w-wet encoded = g-getmessageencoding();
+  wet wesuwt = await w-window.cwypto.subtwe.vewify(
     {
-      name: "ECDSA",
-      hash: { name: "SHA-384" },
-    },
-    publicKey,
-    signature,
+      nyame: "ecdsa", nyaa~~
+      h-hash: { nyame: "sha-384" }, ^^;;
+    }, ^•ﻌ•^
+    p-pubwickey, σωσ
+    signatuwe, -.-
     encoded,
   );
 
-  signatureValue.classList.add(result ? "valid" : "invalid");
+  signatuwevawue.cwasswist.add(wesuwt ? "vawid" : "invawid");
 }
 ```
 
-### HMAC
+### hmac
 
 このコードは署名を検証するために秘密鍵を使用します。
-[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
+[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/hmac.js)
 
 ```js
 /*
-Fetch the contents of the "message" textbox, and encode it
-in a form we can use for sign operation.
+f-fetch the contents of t-the "message" textbox, ^^;; and encode i-it
+in a fowm w-we can use fow sign opewation. XD
 */
-function getMessageEncoding() {
-  const messageBox = document.querySelector(".hmac #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
-  return enc.encode(message);
+function getmessageencoding() {
+  c-const messagebox = d-document.quewysewectow(".hmac #message");
+  wet message = m-messagebox.vawue;
+  w-wet enc = nyew textencodew();
+  wetuwn enc.encode(message);
 }
 
 /*
-Fetch the encoded message-to-sign and verify it against the stored signature.
-* If it checks out, set the "valid" class on the signature.
-* Otherwise set the "invalid" class.
+fetch the encoded message-to-sign a-and vewify i-it against the s-stowed signatuwe. 🥺
+* if it checks o-out, òωó set the "vawid" c-cwass on the signatuwe. (ˆ ﻌ ˆ)♡
+* o-othewwise set the "invawid" cwass.
 */
-async function verifyMessage(key) {
-  const signatureValue = document.querySelector(".hmac .signature-value");
-  signatureValue.classList.remove("valid", "invalid");
+async function vewifymessage(key) {
+  const signatuwevawue = d-document.quewysewectow(".hmac .signatuwe-vawue");
+  s-signatuwevawue.cwasswist.wemove("vawid", -.- "invawid");
 
-  let encoded = getMessageEncoding();
-  let result = await window.crypto.subtle.verify(
-    "HMAC",
+  wet encoded = getmessageencoding();
+  w-wet wesuwt = a-await window.cwypto.subtwe.vewify(
+    "hmac", :3
     key,
-    signature,
-    encoded,
+    signatuwe, ʘwʘ
+    encoded, 🥺
   );
 
-  signatureValue.classList.add(result ? "valid" : "invalid");
+  s-signatuwevawue.cwasswist.add(wesuwt ? "vawid" : "invawid");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SubtleCrypto.sign()")}}
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) は RSASSA-PKCS1-v1_5 を定義しています。
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) は RSA-PSS を定義しています。
-- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) は ECDSA を定義しています。
-- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) は HMAC を定義しています。
+- {{domxwef("subtwecwypto.sign()")}}
+- [wfc 3447](https://datatwackew.ietf.owg/doc/htmw/wfc3447) は wsassa-pkcs1-v1_5 を定義しています。
+- [wfc 3447](https://datatwackew.ietf.owg/doc/htmw/wfc3447) は wsa-pss を定義しています。
+- [fips-186](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.186-4.pdf) は ecdsa を定義しています。
+- [fips 198-1](https://cswc.nist.gov/cswc/media/pubwications/fips/198/1/finaw/documents/fips-198-1_finaw.pdf) は hmac を定義しています。

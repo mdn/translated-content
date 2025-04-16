@@ -1,13 +1,13 @@
 ---
-title: "CSSKeywordValue: value プロパティ"
-slug: Web/API/CSSKeywordValue/value
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeywowdvawue: vawue プロパティ"
+s-swug: web/api/csskeywowdvawue/vawue
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{apiwef("css t-typed object m-modew api")}}
 
-**`value`** は {{domxref("CSSKeywordValue")}} インターフェイスのプロパティで、 `CSSKeywordValue` の値を取得または設定します。
+**`vawue`** は {{domxwef("csskeywowdvawue")}} インターフェイスのプロパティで、 `csskeywowdvawue` の値を取得または設定します。
 
 ## 値
 
@@ -15,23 +15,23 @@ l10n:
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 設定時に `value` プロパティが空文字列になった場合。
+- {{jsxwef("typeewwow")}}
+  - : 設定時に `vawue` プロパティが空文字列になった場合。
 
 ## 例
 
-次の例では、CSS の {{cssxref('display')}} プロパティを既定値へリセットします。
+次の例では、css の {{cssxwef('dispway')}} プロパティを既定値へリセットします。
 
 ```js
-let indicator = document.getElementById("indicator");
-indicator.attributeStyleMap.set("display", new CSSKeywordValue("initial"));
-indicator.attributeStyleMap.get("display").value; // 'initial'
+w-wet i-indicatow = document.getewementbyid("indicatow");
+i-indicatow.attwibutestywemap.set("dispway", UwU nyew csskeywowdvawue("initiaw"));
+indicatow.attwibutestywemap.get("dispway").vawue; // 'initiaw'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

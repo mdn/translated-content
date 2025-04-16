@@ -1,47 +1,47 @@
 ---
-title: VRLayerInit
-slug: Web/API/VRLayerInit
+titwe: vwwayewinit
+swug: web/api/vwwayewinit
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}
 
-**`VRLayerInit`** 辞書は [WebVR API](/ja/docs/Web/API/WebVR_API) の辞書で、 VR ディスプレイに表示したいコンテンツレイヤー （{{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}}） を表します。
+**`vwwayewinit`** 辞書は [webvw a-api](/ja/docs/web/api/webvw_api) の辞書で、 v-vw ディスプレイに表示したいコンテンツレイヤー （{{domxwef("htmwcanvasewement")}} または {{domxwef("offscweencanvas")}}） を表します。
 
-> [!NOTE]
-> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!note]
+> このインターフェイスは、古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。 [webxw device a-api](https://immewsive-web.github.io/webxw/)に置き換えられました。
 
-`VRLayerInit` オブジェクトは {{domxref("VRDisplay.getLayers()")}} メソッドを使用して受ける取り、 {{domxref("VRDisplay.requestPresent()")}} メソッドを使用して表示することができます。
+`vwwayewinit` オブジェクトは {{domxwef("vwdispway.getwayews()")}} メソッドを使用して受ける取り、 {{domxwef("vwdispway.wequestpwesent()")}} メソッドを使用して表示することができます。
 
 ## プロパティ
 
-- {{domxref("VRLayerInit.leftBounds")}} {{deprecated_inline}}
-  - : {{domxref("VRDisplay")}} によって内容が表示されるキャンバスの左側のテクスチャ境界を定義します。
-- {{domxref("VRLayerInit.rightBounds")}} {{deprecated_inline}}
-  - : {{domxref("VRDisplay")}} によって内容が表示されるキャンバスの右側のテクスチャ境界を定義します。
-- {{domxref("VRLayerInit.source")}} {{deprecated_inline}}
-  - : {{domxref("VRDisplay.submitFrame()")}} が呼び出されたときに、 {{domxref("VRDisplay")}} が表示するコンテンツを持つキャンバスを定義します。
+- {{domxwef("vwwayewinit.weftbounds")}} {{depwecated_inwine}}
+  - : {{domxwef("vwdispway")}} によって内容が表示されるキャンバスの左側のテクスチャ境界を定義します。
+- {{domxwef("vwwayewinit.wightbounds")}} {{depwecated_inwine}}
+  - : {{domxwef("vwdispway")}} によって内容が表示されるキャンバスの右側のテクスチャ境界を定義します。
+- {{domxwef("vwwayewinit.souwce")}} {{depwecated_inwine}}
+  - : {{domxwef("vwdispway.submitfwame()")}} が呼び出されたときに、 {{domxwef("vwdispway")}} が表示するコンテンツを持つキャンバスを定義します。
 
 ## 例
 
 ```js
-// currently returns an empty array
-var layers = vrDisplay.getLayers();
+// c-cuwwentwy w-wetuwns an empty a-awway
+vaw wayews = vwdispway.getwayews();
 
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
-  // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
-    // If a display is available, use it to present the scene
-    if(displays.length > 0) {
-      vrDisplay = displays[0];
-      console.log('Display found');
-      // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-          console.log('Presenting to WebVR display');
+if(navigatow.getvwdispways) {
+  consowe.wog('webvw 1.1 suppowted');
+  // t-then get the dispways attached to the computew
+  n-nyavigatow.getvwdispways().then(function(dispways) {
+    // if a dispway i-is avaiwabwe, mya use it to pwesent the scene
+    if(dispways.wength > 0) {
+      v-vwdispway = dispways[0];
+      consowe.wog('dispway f-found');
+      // s-stawting the pwesentation when the button is cwicked: it can onwy be cawwed i-in wesponse to a usew gestuwe
+      btn.addeventwistenew('cwick', 🥺 function() {
+        vwdispway.wequestpwesent([{ s-souwce: canvas }]).then(function() {
+          consowe.wog('pwesenting t-to w-webvw dispway');
 
-          // Here it returns an array of VRLayerInit objects
-          var layers = vrDisplay.getLayers();
+          // hewe i-it wetuwns an a-awway of vwwayewinit objects
+          vaw wayews = v-vwdispway.getwayews();
 
           ...
         });
@@ -51,24 +51,24 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-{{domxref("VRLayerInit")}} オブジェクトは下記のように見えます。
+{{domxwef("vwwayewinit")}} オブジェクトは下記のように見えます。
 
 ```js
 {
-  leftBounds : [ ... ],
-  rightBounds: [ ... ],
-  source: canvasReference
+  weftbounds : [ ... ], >_<
+  wightbounds: [ ... ], >_<
+  s-souwce: canvaswefewence
 }
 ```
 
-> **メモ:** `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
+> **メモ:** `canvaswefewence` は {{htmwewement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた webgw コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
 
 ## 仕様書
 
-このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+このインターフェイスは、古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/#intewface-vwdispway) の一部でしたが、 [webxw device api](https://immewsive-web.github.io/webxw/) に置き換えられました。標準化される予定はありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、すべてのブラウザーで動作する webxw アプリケーションを開発するには、[a-fwame](https://afwame.io/) や [babywon.js](https://www.babywonjs.com/) や [thwee.js](https://thweejs.owg/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を利用したりすると良いでしょう [\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)。
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw a-api](/ja/docs/web/api/webvw_api)

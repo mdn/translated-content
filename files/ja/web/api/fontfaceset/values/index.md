@@ -1,19 +1,19 @@
 ---
-title: "FontFaceSet: values() メソッド"
-short-title: values()
-slug: Web/API/FontFaceSet/values
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: vawues() メソッド"
+showt-titwe: v-vawues()
+s-swug: web/api/fontfaceset/vawues
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`values()`** は {{domxref("FontFaceSet")}} インターフェイスのメソッドで、 `FontFaceSet` オブジェクトの各要素の値を挿入順に返す新しいイテレーターオブジェクトを返します。
+**`vawues()`** は {{domxwef("fontfaceset")}} インターフェイスのメソッドで、 `fontfaceset` オブジェクトの各要素の値を挿入順に返す新しいイテレーターオブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ values()
 
 ### 返値
 
-指定された `FontFaceSet` の各要素の値を挿入順に返す、新しいイテレーターオブジェクトです。
+指定された `fontfaceset` の各要素の値を挿入順に返す、新しいイテレーターオブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

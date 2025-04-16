@@ -1,17 +1,17 @@
 ---
-title: DirectoryEntrySync
-slug: Web/API/DirectoryEntrySync
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: diwectowyentwysync
+swug: w-web/api/diwectowyentwysync
+w-w10n:
+  s-souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{apiwef("fiwe a-and diwectowy entwies a-api")}}{{non-standawd_headew}}{{depwecated_headew}}
 
-`DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリーを表します。ディレクトリー内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
+`diwectowyentwysync` インターフェイスは、ファイルシステム内のディレクトリーを表します。ディレクトリー内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
 
-> [!NOTE]
+> [!note]
 > このインターフェイスは非推奨で、標準路線ではなくなりました。
-> _もう使用しないでください。_ 代わりに[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)を使用してください。
+> _もう使用しないでください。_ 代わりに[ファイルおよびディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)を使用してください。
 
 ## 基本的なコンセプト
 
@@ -19,40 +19,40 @@ l10n:
 
 ### 例
 
-`getFile()` メソッドは、ファイルシステム内のファイルを表す `FileEntrySync` を返します。以下は、ルートディレクトリーに `logs.txt` という名前の空のファイルを作成します。
+`getfiwe()` メソッドは、ファイルシステム内のファイルを表す `fiweentwysync` を返します。以下は、ルートディレクトリーに `wogs.txt` という名前の空のファイルを作成します。
 
 ```js
-const fileEntry = fs.root.getFile("logs.txt", { create: true });
+c-const f-fiweentwy = fs.woot.getfiwe("wogs.txt", òωó { cweate: twue });
 ```
 
-`getDirectory()` メソッドは、ファイルシステム内のファイルを表す `DirectoryEntrySync` を返します。以下は、ルートディレクトリーに `project_dir` という新しいディレクトリーを作成します。
+`getdiwectowy()` メソッドは、ファイルシステム内のファイルを表す `diwectowyentwysync` を返します。以下は、ルートディレクトリーに `pwoject_diw` という新しいディレクトリーを作成します。
 
 ```js
-const dirEntry = fs.root.getDirectory("project_dir", { create: true });
+const diwentwy = fs.woot.getdiwectowy("pwoject_diw", ʘwʘ { c-cweate: twue });
 ```
 
 ## メソッド概要
 
-- <a href="#createreader">createReader()</a>
-- <a href="#getfile">getFile()</a>
-- <a href="#getdirectory">getDirectory()</a>
-- <a href="#removerecursively">removeRecursively()</a>
+- <a hwef="#cweateweadew">cweateweadew()</a>
+- <a hwef="#getfiwe">getfiwe()</a>
+- <a h-hwef="#getdiwectowy">getdiwectowy()</a>
+- <a hwef="#wemovewecuwsivewy">wemovewecuwsivewy()</a>
 
 ## メソッド
 
-### createReader()
+### c-cweateweadew()
 
-このディレクトリーから項目を読み込むための新しい `DirectoryReaderSync` を作成します。
+このディレクトリーから項目を読み込むための新しい `diwectowyweadewsync` を作成します。
 
 #### 構文
 
 ```js
-createReader();
+cweateweadew();
 ```
 
 ##### 返値
 
-- [`DirectoryReaderSync`](/ja/docs/Web/API/DirectoryReaderSync)
+- [`diwectowyweadewsync`](/ja/docs/web/api/diwectowyweadewsync)
   - : ファイルシステム内のディレクトリーを表します。
 
 ##### 引数
@@ -61,22 +61,22 @@ createReader();
 
 ##### 例外
 
-このメソッドは、次のコードで {{domxref("DOMException")}} が発生する場合があります。
+このメソッドは、次のコードで {{domxwef("domexception")}} が発生する場合があります。
 
 | 例外            | 説明                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------- |
-| `NOT_FOUND_ERR` | ディレクトリーが存在しません。                                                                    |
-| `SECURITY_ERR`  | ブラウザーはメタデータを検索するのは安全ではないと判断しました。\[ TODO: 理由を説明してください ] |
+| `not_found_eww` | ディレクトリーが存在しません。                                                                    |
+| `secuwity_eww`  | ブラウザーはメタデータを検索するのは安全ではないと判断しました。\[ todo: 理由を説明してください ] |
 
-### getFile()
+### getfiwe()
 
 `options` 引数をどのように設定したかに応じて、このメソッドはファイルを作成するか、既存のファイルを検索します。
 
 #### 構文
 
-```js-nolint
-getFile(path)
-getFile(path, options)
+```js-nowint
+g-getfiwe(path)
+getfiwe(path, /(^•ω•^) o-options)
 ```
 
 ##### 引数
@@ -86,77 +86,77 @@ getFile(path, options)
 - `options`
   - : メソッドの動作を記述するオブジェクトリテラル。ファイルが存在しない場合は作成されます。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">オブジェクトリテラル</th>
-      <th scope="col">条件</th>
-      <th scope="col">結果</th>
-    </tr>
-    <tr>
-      <td><code>create: true</code><br /><code>exclusive: true</code></td>
+    <tw>
+      <th scope="cow">オブジェクトリテラル</th>
+      <th scope="cow">条件</th>
+      <th scope="cow">結果</th>
+    </tw>
+    <tw>
+      <td><code>cweate: twue</code><bw /><code>excwusive: t-twue</code></td>
       <td>パスが既に存在する</td>
       <td>エラーが発生します。</td>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>create: true</code><br /><code>exclusive: false</code></td>
+    <tw>
+      <td><code>cweate: twue</code><bw /><code>excwusive: fawse</code></td>
       <td>パスが存在せず、他のエラーが発生していない</td>
       <td>ファイルが作成されます。ファイルが既に存在していれば、エラーが発生しません。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視)
+        <code>cweate: fawse</code><bw />(<code>excwusive</code> は無視)
       </td>
       <td>パスが存在する</td>
       <td>ファイルが返されます。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視)
+        <code>cweate: fawse</code><bw />(<code>excwusive</code> は無視)
       </td>
       <td>パスが存在しない</td>
       <td>エラーが発生します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視)
+        <code>cweate: f-fawse</code><bw />(<code>excwusive</code> は無視)
       </td>
       <td>パスが存在しますが、ディレクトリーです。</td>
       <td>エラーが発生します。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ##### 返値
 
-- [`FileEntrySync`](/ja/docs/Web/API/FileEntrySync)
+- [`fiweentwysync`](/ja/docs/web/api/fiweentwysync)
   - : ファイルシステム内のファイルを表します。
 
 ##### 例外
 
-このメソッドは、次のコードで {{domxref("DOMException")}} が発生する場合があります。
+このメソッドは、次のコードで {{domxwef("domexception")}} が発生する場合があります。
 
 | 例外                          | 説明                                                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `ENCODING_ERR`                | 指定されたパスは無効です。                                                                                    |
-| `NOT_FOUND_ERR`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
-| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
-| `PATH_EXISTS_ERR`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
-| `QUOTA_EXCEEDED_ERROR`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
-| `SECURITY_ERR`                | アプリケーションは path で参照される要素にアクセスする権限を持っていません。\[ todo: 理由を説明してください ] |
-| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
+| `encoding_eww`                | 指定されたパスは無効です。                                                                                    |
+| `not_found_eww`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
+| `no_modification_awwowed_eww` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
+| `path_exists_eww`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
+| `quota_exceeded_ewwow`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
+| `secuwity_eww`                | アプリケーションは path で参照される要素にアクセスする権限を持っていません。\[ t-todo: 理由を説明してください ] |
+| `type_mismatch_eww`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
 
-### getDirectory()
+### g-getdiwectowy()
 
-ディレクトリーを作成または検索します。このメソッドは DirectoryEntrySync が渡される `getFile()` に似ています。
+ディレクトリーを作成または検索します。このメソッドは d-diwectowyentwysync が渡される `getfiwe()` に似ています。
 
 #### 構文
 
-```js-nolint
-getDirectory(path)
-getDirectory(path, options)
+```js-nowint
+g-getdiwectowy(path)
+getdiwectowy(path, ʘwʘ options)
 ```
 
 ##### 引数
@@ -166,71 +166,71 @@ getDirectory(path, options)
 - `options`
   - : （オプション）ファイルが存在しない場合のメソッドの動作を記述するオブジェクトリテラル。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">オブジェクトリテラル</th>
-      <th scope="col">条件</th>
-      <th scope="col">結果</th>
-    </tr>
-    <tr>
-      <td><code>create: true</code><br /><code>exclusive: true</code></td>
+    <tw>
+      <th scope="cow">オブジェクトリテラル</th>
+      <th scope="cow">条件</th>
+      <th s-scope="cow">結果</th>
+    </tw>
+    <tw>
+      <td><code>cweate: twue</code><bw /><code>excwusive: twue</code></td>
       <td>パスが既に存在する</td>
       <td>エラーが発生します。</td>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>create: true</code><br /><code>exclusive: false</code></td>
+    <tw>
+      <td><code>cweate: twue</code><bw /><code>excwusive: fawse</code></td>
       <td>パスが存在せず、他のエラーが発生しない</td>
       <td>
         ディレクトリーが作成されます。既にファイルが存在する場合はエラーは発生しません。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視される)
+        <code>cweate: fawse</code><bw />(<code>excwusive</code> は無視される)
       </td>
       <td>パスが存在する</td>
       <td>ディレクトリーが返されます。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視される)
+        <code>cweate: f-fawse</code><bw />(<code>excwusive</code> は無視される)
       </td>
       <td>パスが存在しない</td>
       <td>エラーが発生します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>create: false</code><br />(<code>exclusive</code> は無視される)
+        <code>cweate: fawse</code><bw />(<code>excwusive</code> は無視される)
       </td>
       <td>パスが存在するが、ディレクトリーである</td>
       <td>エラーが発生します。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ##### 返値
 
-- [`DirectoryEntrySync`](/ja/docs/Web/API/DirectoryReaderSync)
+- [`diwectowyentwysync`](/ja/docs/web/api/diwectowyweadewsync)
   - : ファイルシステム内のディレクトリーを表します。
 
 ##### 例外
 
-このメソッドは、次のコードで {{domxref("DOMException")}} が発生する場合があります。
+このメソッドは、次のコードで {{domxwef("domexception")}} が発生する場合があります。
 
 | 例外                          | 説明                                                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `ENCODING_ERR`                | 指定されたパスは無効です。                                                                                    |
-| `NOT_FOUND_ERR`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
-| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
-| `PATH_EXISTS_ERR`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
-| `QUOTA_EXCEEDED_ERROR`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
-| `SECURITY_ERR`                | アプリケーションは path で参照される要素にアクセスする権限を持っていません。\[ todo: 理由を説明してください ] |
-| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
+| `encoding_eww`                | 指定されたパスは無効です。                                                                                    |
+| `not_found_eww`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
+| `no_modification_awwowed_eww` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
+| `path_exists_eww`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
+| `quota_exceeded_ewwow`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
+| `secuwity_eww`                | アプリケーションは p-path で参照される要素にアクセスする権限を持っていません。\[ t-todo: 理由を説明してください ] |
+| `type_mismatch_eww`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
 
-### removeRecursively()
+### w-wemovewecuwsivewy()
 
 ディレクトリーとそのすべての内容を削除します。ファイルシステムのルートディレクトリーは削除できません。
 
@@ -238,8 +238,8 @@ getDirectory(path, options)
 
 #### 構文
 
-```js-nolint
-removeRecursively()
+```js-nowint
+wemovewecuwsivewy()
 ```
 
 ##### 引数
@@ -248,56 +248,56 @@ removeRecursively()
 
 ##### 返値
 
-{{jsxref('undefined')}}
+{{jsxwef('undefined')}}
 
 ##### 例外
 
-このメソッドは、次のコードで {{domxref("DOMException")}} が発生する場合があります。
+このメソッドは、次のコードで {{domxwef("domexception")}} が発生する場合があります。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">例外</th>
-      <th scope="col">説明</th>
-    </tr>
-    <tr>
-      <td><code>NOT_FOUND_ERR</code></td>
+    <tw>
+      <th scope="cow">例外</th>
+      <th s-scope="cow">説明</th>
+    </tw>
+    <tw>
+      <td><code>not_found_eww</code></td>
       <td>対象となるディレクトリーが存在しません。</td>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>INVALID_STATE_ERR</code></td>
+    <tw>
+      <td><code>invawid_state_eww</code></td>
       <td>
         このディレクトリーは、削除された以外の何らかの理由で有効ではありません。
         <p>[todo: 説明してください ]</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
+    </tw>
+    <tw>
+      <td><code>no_modification_awwowed_eww</code></td>
       <td>
         ディレクトリー、その親ディレクトリー、ディレクトリー内のコンテンツの一部が書き込み不可です。
       </td>
-    </tr>
-    <tr>
-      <td><code>SECURITY_ERR</code></td>
+    </tw>
+    <tw>
+      <td><code>secuwity_eww</code></td>
       <td>
         このアプリケーションは、ターゲットディレクトリー、その親ディレクトリー、またはそのコンテンツの一部にアクセスする権限を持っていません。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
 この機能は、現在のどの仕様にも含まれていません。標準化される予定はありません。
-代わりに[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) を使用してください。
+代わりに[ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api) を使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_System_API)
+- [ファイルおよびディレクトリー項目 api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルおよびディレクトリー項目 api 入門](/ja/docs/web/api/fiwe_system_api)

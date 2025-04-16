@@ -1,34 +1,34 @@
 ---
-title: AnimationEffect
-slug: Web/API/AnimationEffect
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: animationeffect
+swug: w-web/api/animationeffect
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{ APIRef("Web Animations") }}
+{{ apiwef("web a-animations") }}
 
-`AnimationEffect` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のインターフェイスで、アニメーション効果を表すインターフェイスです。
+`animationeffect` は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) のインターフェイスで、アニメーション効果を表すインターフェイスです。
 
-`AnimationEffect` は抽象インターフェイスなので、直接インスタンス化することはできません。しかし、 {{domxref("KeyframeEffect")}} のような具体的なインターフェイスはこれを継承しており、これらのインターフェイスのインスタンスは {{domxref("Animation")}} オブジェクトに渡して再生することができますし、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)や[トランジション](/ja/docs/Web/CSS/CSS_transitions)でも使うことができます。
+`animationeffect` は抽象インターフェイスなので、直接インスタンス化することはできません。しかし、 {{domxwef("keyfwameeffect")}} のような具体的なインターフェイスはこれを継承しており、これらのインターフェイスのインスタンスは {{domxwef("animation")}} オブジェクトに渡して再生することができますし、 [css アニメーション](/ja/docs/web/css/css_animations)や[トランジション](/ja/docs/web/css/css_twansitions)でも使うことができます。
 
 ## インスタンスメソッド
 
-- {{domxref("AnimationEffect.getTiming()")}}
+- {{domxwef("animationeffect.gettiming()")}}
   - : アニメーションのすべてのタイミング値を含む、アニメーションに関連付けられたオブジェクトを返します。
-- {{domxref("AnimationEffect.getComputedTiming()")}}
-  - : この `AnimationEffect` のタイミングプロパティの計算値を返します。
-- {{domxref("AnimationEffect.updateTiming()")}}
-  - : この `AnimationEffect` のタイミングプロパティの指定値を更新します。
+- {{domxwef("animationeffect.getcomputedtiming()")}}
+  - : この `animationeffect` のタイミングプロパティの計算値を返します。
+- {{domxwef("animationeffect.updatetiming()")}}
+  - : この `animationeffect` のタイミングプロパティの指定値を更新します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation.effect")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation.effect")}}

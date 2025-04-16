@@ -1,19 +1,19 @@
 ---
-title: "Headers: entries() メソッド"
-short-title: entries()
-slug: Web/API/Headers/entries
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "headews: entwies() メソッド"
+s-showt-titwe: e-entwies()
+s-swug: web/api/headews/entwies
+w-w10n:
+  souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch API")}} {{AvailableInWorkers}}
+{{apiwef("fetch a-api")}} {{avaiwabweinwowkews}}
 
-**`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
+**`headews.entwies()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxwef("itewation_pwotocows", 'イテレーター', -.- '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxwef("stwing")}} オブジェクトです。
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -22,35 +22,35 @@ entries()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
+{{jsxwef("itewation_pwotocows", (ˆ ﻌ ˆ)♡ 'イテレーター', (⑅˘꒳˘) '', 1)}}を返します。
 
 ## 例
 
 ```js
-// Headers テストオブジェクトを作成
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/xml");
-myHeaders.append("Vary", "Accept-Language");
+// h-headews テストオブジェクトを作成
+c-const myheadews = nyew headews();
+myheadews.append("content-type", (U ᵕ U❁) "text/xmw");
+myheadews.append("vawy", -.- "accept-wanguage");
 
 // キーと値のペアを表示
-for (const pair of myHeaders.entries()) {
-  console.log(`${pair[0]}: ${pair[1]}`);
+fow (const p-paiw of myheadews.entwies()) {
+  consowe.wog(`${paiw[0]}: ${paiw[1]}`);
 }
 ```
 
 結果は次の通りです。
 
-```plain
-content-type: text/xml
-vary: Accept-Language
+```pwain
+content-type: t-text/xmw
+vawy: accept-wanguage
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

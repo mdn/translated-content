@@ -1,59 +1,59 @@
 ---
-title: "USB: connect イベント"
-slug: Web/API/USB/connect_event
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: "usb: connect イベント"
+s-swug: web/api/usb/connect_event
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{DOMxRef("USB")}} インターフェイスの **`connect`** イベントは、ペア設定済みのデバイスが接続された時発火します。
+{{domxwef("usb")}} インターフェイスの **`connect`** イベントは、ペア設定済みのデバイスが接続された時発火します。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("connect", (event) => {});
+a-addeventwistenew("connect", σωσ (event) => {});
 
-onconnect = (event) => {};
+o-onconnect = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("USBConnectionEvent")}} です。{{domxref("Event")}} を継承します。
+{{domxwef("usbconnectionevent")}} です。{{domxwef("event")}} を継承します。
 
-{{InheritanceDiagram("USBConnectionEvent")}}
+{{inhewitancediagwam("usbconnectionevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げるプロパティに加え、親インターフェイス {{domxref("Event")}} のプロパティも利用できます。_
+_以下に挙げるプロパティに加え、親インターフェイス {{domxwef("event")}} のプロパティも利用できます。_
 
-- {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : イベントが発火した対象の {{domxref("USBDevice")}} です。
+- {{domxwef("usbconnectionevent.device", σωσ "device")}} {{weadonwyinwine}}
+  - : イベントが発火した対象の {{domxwef("usbdevice")}} です。
 
 ## 例
 
-USB デバイスが接続された時、UI を更新したいかもしれません。
+u-usb デバイスが接続された時、ui を更新したいかもしれません。
 
 ```js
-navigator.usb.addEventListener("connect", (event) => {
-  // event.device を UI に追加する
+n-nyavigatow.usb.addeventwistenew("connect", >_< (event) => {
+  // event.device を ui に追加する
 });
 ```
 
-別の方法として、`USB.onconnect` イベントハンドラープロパティを使用して `connect` イベント用のハンドラーを設定できます。
+別の方法として、`usb.onconnect` イベントハンドラープロパティを使用して `connect` イベント用のハンドラーを設定できます。
 
 ```js
-navigator.usb.onconnect = (event) => {
-  // event.device を UI に追加する
+nyavigatow.usb.onconnect = (event) => {
+  // event.device を ui に追加する
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

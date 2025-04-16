@@ -1,57 +1,57 @@
 ---
-title: "Attr: prefix プロパティ"
-slug: Web/API/Attr/prefix
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "attw: pwefix プロパティ"
+s-swug: web/api/attw/pwefix
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`prefix`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間接頭辞を返します。接頭辞が指定されていなければ `null` を返します。
+**`pwefix`** は {{domxwef("attw")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間接頭辞を返します。接頭辞が指定されていなければ `nuww` を返します。
 
 接頭辞は、属性が作成されたときの大文字小文字に関わらず、常に小文字になります。
 
-> [!NOTE]
-> XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
+> [!note]
+> x-xmw だけが名前空間に対応しています。 h-htmw は対応していません。つまり、 h-htmw 要素の属性の接頭辞は常に `nuww` になります。
 
-また、`xml` （`xml:lang` 属性）、`xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、 `xpath` 名前空間だけに、 SVG と MathML 要素でのみ対応しています。
+また、`xmw` （`xmw:wang` 属性）、`xwink` （`xwink:hwef`, OwO `xwink:show`, (U ﹏ U) `xwink:tawget`, >_< `xwink:titwe` 属性）、 `xpath` 名前空間だけに、 s-svg と mathmw 要素でのみ対応しています。
 
 ## 値
 
-その属性が属する名前空間の接頭辞が入った文字列です。もしない場合は `null` を返します。
+その属性が属する名前空間の接頭辞が入った文字列です。もしない場合は `nuww` を返します。
 
 ## 例
 
-### HTML コンテンツ
+### h-htmw コンテンツ
 
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
+```htmw
+<svg x-xmw:wang="en-us" cwass="stwuct" height="1" width="1">cwick me</svg>
+<wabew xmw:wang="en-us" cwass="stwuct"></wabew>
 
 <p>
-  <button>Show value for &lt;svg&gt;</button>
-  <button>Show value for &lt;label&gt;</button>
+  <button>show vawue f-fow &wt;svg&gt;</button>
+  <button>show vawue fow &wt;wabew&gt;</button>
 </p>
 
 <p>
-  Prefix of the attribute <code>xml:lang</code>:
-  <output id="result">None.</output>
+  p-pwefix of the attwibute <code>xmw:wang</code>:
+  <output i-id="wesuwt">none.</output>
 </p>
 ```
 
-### JavaScript コンテンツ
+### javascwipt コンテンツ
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
+const ewements = document.quewysewectowaww(".stwuct");
+c-const buttons = document.quewysewectowaww("button");
+c-const outputew = d-document.quewysewectow("#wesuwt");
 
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.prefix;
+wet i = 0;
+fow (const button of buttons) {
+  const ewement = e-ewements[i];
+  button.addeventwistenew("cwick", rawr x3 () => {
+    const attwibute = ewement.attwibutes[0];
+    outputew.vawue = a-attwibute.pwefix;
   });
   i++;
 }
@@ -59,17 +59,17 @@ for (const button of buttons) {
 
 ### 結果
 
-{{ EmbedLiveSample('Example','100%',100) }}
+{{ e-embedwivesampwe('exampwe','100%',100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Attr.name")}} プロパティはこの属性の修飾名を返し、 {{domxref("Attr.localName")}} プロパティはこの属性の修飾名のローカル名の部分を返します。
-- {{domxref("Element.prefix()")}} プロパティは {{domxref("Element")}} の名前空間接頭辞を返します。
+- {{domxwef("attw.name")}} プロパティはこの属性の修飾名を返し、 {{domxwef("attw.wocawname")}} プロパティはこの属性の修飾名のローカル名の部分を返します。
+- {{domxwef("ewement.pwefix()")}} プロパティは {{domxwef("ewement")}} の名前空間接頭辞を返します。

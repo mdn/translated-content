@@ -1,69 +1,69 @@
 ---
-title: getBBox()
-slug: Web/API/SVGGraphicsElement/getBBox
+titwe: getbbox()
+swug: web/api/svggwaphicsewement/getbbox
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`SVGGraphicsElement.getBBox()`** で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の SVG 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。
+**`svggwaphicsewement.getbbox()`** で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の s-svg 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。
 
-メモ: `getBBox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
+メモ: `getbbox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
 
-> **メモ:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
+> **メモ:** `getbbox` は {{domxwef("ewement.getboundingcwientwect()", >_< "getboundingcwientwect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
 
 ## 構文
 
 ```
-let bboxRect = object.getBBox();
+w-wet bboxwect = o-object.getbbox();
 ```
 
 ### 返値
 
-返値は {{domxref("SVGRect")}} オブジェクトで、境界ボックスを定義します。この値はその要素や親要素に適用された変形属性を無視したものです。
+返値は {{domxwef("svgwect")}} オブジェクトで、境界ボックスを定義します。この値はその要素や親要素に適用された変形属性を無視したものです。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <g id="group_text_1">
-    <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
-    <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">
-      Hello World Again!
+```htmw
+<svg v-viewbox="0 0 200 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <g i-id="gwoup_text_1">
+    <text x-x="5" y="16" twansfowm="scawe(2, >_< 2)">hewwo wowwd!</text>
+    <text x="8" y="32" twansfowm="twanswate(0 20) scawe(1.25 1)">
+      hewwo wowwd a-again! (⑅˘꒳˘)
     </text>
   </g>
-  <!-- Shows BBox in green -->
-  <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"></rect>
-  <!-- Shows BoundingClientRect in red -->
-  <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
+  <!-- shows bbox in gween -->
+  <wect i-id="wect_1" stwoke="#00ff00" stwoke-width="3" fiww="none"></wect>
+  <!-- s-shows boundingcwientwect in wed -->
+  <wect id="wect_2" s-stwoke="#ff0000" stwoke-width="3" f-fiww="none"></wect>
 </svg>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var rectBBox = document.querySelector("#rect_1");
-var rectBoundingClientRect = document.querySelector("#rect_2");
-var groupElement = document.querySelector("#group_text_1");
+vaw wectbbox = document.quewysewectow("#wect_1");
+vaw wectboundingcwientwect = d-document.quewysewectow("#wect_2");
+vaw gwoupewement = document.quewysewectow("#gwoup_text_1");
 
-var bboxGroup = groupElement.getBBox();
-rectBBox.setAttribute("x", bboxGroup.x);
-rectBBox.setAttribute("y", bboxGroup.y);
-rectBBox.setAttribute("width", bboxGroup.width);
-rectBBox.setAttribute("height", bboxGroup.height);
+vaw bboxgwoup = g-gwoupewement.getbbox();
+wectbbox.setattwibute("x", /(^•ω•^) b-bboxgwoup.x);
+w-wectbbox.setattwibute("y", rawr x3 b-bboxgwoup.y);
+w-wectbbox.setattwibute("width", (U ﹏ U) bboxgwoup.width);
+wectbbox.setattwibute("height", (U ﹏ U) b-bboxgwoup.height);
 
-var boundingClientRectGroup = groupElement.getBoundingClientRect();
-rectBoundingClientRect.setAttribute("x", boundingClientRectGroup.x);
-rectBoundingClientRect.setAttribute("y", boundingClientRectGroup.y);
-rectBoundingClientRect.setAttribute("width", boundingClientRectGroup.width);
-rectBoundingClientRect.setAttribute("height", boundingClientRectGroup.height);
+vaw boundingcwientwectgwoup = gwoupewement.getboundingcwientwect();
+w-wectboundingcwientwect.setattwibute("x", (⑅˘꒳˘) boundingcwientwectgwoup.x);
+wectboundingcwientwect.setattwibute("y", òωó boundingcwientwectgwoup.y);
+wectboundingcwientwect.setattwibute("width", boundingcwientwectgwoup.width);
+w-wectboundingcwientwect.setattwibute("height", boundingcwientwectgwoup.height);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)
+- [getbbox i-in svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw#getbbox)

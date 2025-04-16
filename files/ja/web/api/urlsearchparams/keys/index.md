@@ -1,19 +1,19 @@
 ---
-title: "URLSearchParams: keys() メソッド"
-short-title: keys()
-slug: Web/API/URLSearchParams/keys
-l10n:
-  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
+titwe: "uwwseawchpawams: keys() メソッド"
+s-showt-titwe: keys()
+s-swug: web/api/uwwseawchpawams/keys
+w-w10n:
+  s-souwcecommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
-{{APIRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`keys()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを反復処理できる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。 キーは文字列です。
+**`keys()`** は {{domxwef("uwwseawchpawams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを反復処理できる{{jsxwef("itewation_pwotocows",'イテレーター')}}を返します。 キーは文字列です。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -22,35 +22,35 @@ keys()
 
 ### 返値
 
-{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター")}}を返します。
 
 ## 例
 
 ```js
-// テスト用の URLSearchParams オブジェクトの作成
-const searchParams = new URLSearchParams("key1=value1&key2=value2");
+// テスト用の u-uwwseawchpawams オブジェクトの作成
+c-const seawchpawams = nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
 // キーの表示
-for (const key of searchParams.keys()) {
-  console.log(key);
+fow (const key of seawchpawams.keys()) {
+  c-consowe.wog(key);
 }
 ```
 
 結果は次のとおりです。
 
-```plain
+```pwain
 key1
 key2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイス
+- {{domxwef("uww")}} インターフェイス

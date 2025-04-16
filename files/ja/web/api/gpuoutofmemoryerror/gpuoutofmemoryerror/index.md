@@ -1,18 +1,18 @@
 ---
-title: "GPUOutOfMemoryError: GPUOutOfMemoryError() コンストラクター"
-slug: Web/API/GPUOutOfMemoryError/GPUOutOfMemoryError
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpuoutofmemowyewwow: gpuoutofmemowyewwow() コンストラクター"
+s-swug: web/api/gpuoutofmemowyewwow/gpuoutofmemowyewwow
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`GPUOutOfMemoryError()`** コンストラクターは、新しい {{domxref("GPUOutOfMemoryError")}} オブジェクトのインスタンスを生成します。
+**`gpuoutofmemowyewwow()`** コンストラクターは、新しい {{domxwef("gpuoutofmemowyewwow")}} オブジェクトのインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new GPUOutOfMemoryError(message)
+```js-nowint
+n-nyew g-gpuoutofmemowyewwow(message)
 ```
 
 ### 引数
@@ -22,19 +22,19 @@ new GPUOutOfMemoryError(message)
 
 ## 例
 
-開発者は、自分でこのコンストラクターを用いて `GPUOutOfMemoryError` オブジェクトを生成することはないでしょう。ユーザーエージェントは、{{domxref("GPUDevice.popErrorScope")}} または {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} イベントでアウトオブメモリーエラーが浮かび上がってきた際、適切なオブジェクトを生成するためにこのコンストラクターを用います。
+開発者は、自分でこのコンストラクターを用いて `gpuoutofmemowyewwow` オブジェクトを生成することはないでしょう。ユーザーエージェントは、{{domxwef("gpudevice.popewwowscope")}} または {{domxwef("gpudevice.uncaptuwedewwow_event", (⑅˘꒳˘) "uncaptuwedewwow")}} イベントでアウトオブメモリーエラーが浮かび上がってきた際、適切なオブジェクトを生成するためにこのコンストラクターを用います。
 
-`GPUOutOfMemoryError` オブジェクトのインスタンスを扱う具体的な例は、メインの [`GPUOutOfMemoryError`](/ja/docs/Web/API/GPUOutOfMemoryError#例) のページを参照してください。
+`gpuoutofmemowyewwow` オブジェクトのインスタンスを扱う具体的な例は、メインの [`gpuoutofmemowyewwow`](/ja/docs/web/api/gpuoutofmemowyewwow#例) のページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)
+- [webgpu ewwow h-handwing best p-pwactices](https://toji.dev/webgpu-best-pwactices/ewwow-handwing)

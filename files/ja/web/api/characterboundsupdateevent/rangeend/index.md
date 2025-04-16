@@ -1,39 +1,39 @@
 ---
-title: "CharacterBoundsUpdateEvent: rangeEnd プロパティ"
-slug: Web/API/CharacterBoundsUpdateEvent/rangeEnd
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "chawactewboundsupdateevent: wangeend プロパティ"
+s-swug: web/api/chawactewboundsupdateevent/wangeend
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`CharacterBoundsUpdateEvent.rangeEnd`** は、編集可能な領域内のテキストのうち、オペレーティングシステムが境界を要求している部分の終点となる文字のオフセットを表します。
+読み取り専用プロパティ **`chawactewboundsupdateevent.wangeend`** は、編集可能な領域内のテキストのうち、オペレーティングシステムが境界を要求している部分の終点となる文字のオフセットを表します。
 
 ## 値
 
-{{jsxref("Number")}} です。
+{{jsxwef("numbew")}} です。
 
 ## 例
 
-### `rangeEnd` の値を読み取る
+### `wangeend` の値を読み取る
 
-この例では、`characterboundsupdate` イベントを用いて `rangeStart` および `rangeEnd` プロパティの値を読み取る方法を示します。
+この例では、`chawactewboundsupdate` イベントを用いて `wangestawt` および `wangeend` プロパティの値を読み取る方法を示します。
 
 ```js
-const editContext = new EditContext();
-editorElement.editContext = editContext;
+c-const editcontext = n-nyew editcontext();
+e-editowewement.editcontext = e-editcontext;
 
-editContext.addEventListener("characterboundsupdate", (e) => {
-  console.log(
-    `The OS needs the bounds of the chars at ${e.rangeStart} - ${e.rangeEnd}.`,
+editcontext.addeventwistenew("chawactewboundsupdate", σωσ (e) => {
+  consowe.wog(
+    `the os nyeeds the bounds o-of the chaws at ${e.wangestawt} - ${e.wangeend}.`, σωσ
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

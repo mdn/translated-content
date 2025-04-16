@@ -1,14 +1,14 @@
 ---
-title: "MediaStream: id プロパティ"
-short-title: id
-slug: Web/API/MediaStream/id
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweam: id プロパティ"
+s-showt-titwe: i-id
+swug: w-web/api/mediastweam/id
+w-w10n:
+  s-souwcecommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`id`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、このオブジェクトの固有識別子 (GUID) である 36 文字で表現される文字列を返します。
+**`id`** は {{domxwef("mediastweam")}} インターフェイスの読み取り専用プロパティで、このオブジェクトの固有識別子 (guid) である 36 文字で表現される文字列を返します。
 
 ## 値
 
@@ -17,24 +17,24 @@ l10n:
 ## 例
 
 ```js
-const promise = navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: true,
+c-const pwomise = nyavigatow.mediadevices.getusewmedia({
+  audio: twue, σωσ
+  video: twue, σωσ
 });
 
-promise.then((stream) => {
-  console.log(stream.id);
+pwomise.then((stweam) => {
+  c-consowe.wog(stweam.id);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティが所属する {{domxref("MediaStream")}} インターフェイス
+- このプロパティが所属する {{domxwef("mediastweam")}} インターフェイス

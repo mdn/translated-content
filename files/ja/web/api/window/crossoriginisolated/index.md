@@ -1,20 +1,20 @@
 ---
-title: "Window: crossOriginIsolated プロパティ"
-short-title: crossOriginIsolated
-slug: Web/API/Window/crossOriginIsolated
-l10n:
-  sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
+titwe: "window: cwossowiginisowated プロパティ"
+s-showt-titwe: c-cwossowiginisowated
+s-swug: web/api/window/cwossowiginisowated
+w-w10n:
+  souwcecommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`crossOriginIsolated`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、ウェブサイトがオリジン間分離状態にあるかどうかを示す論理値を返します。この状態はサイドチャネル攻撃のリスクを軽減し、いくつかの機能をアンロックします。
+**`cwossowiginisowated`** は {{domxwef("window")}} インターフェイスの読み取り専用プロパティで、ウェブサイトがオリジン間分離状態にあるかどうかを示す論理値を返します。この状態はサイドチャネル攻撃のリスクを軽減し、いくつかの機能をアンロックします。
 
-- {{JSxRef("SharedArrayBuffer")}} を作成し、{{DOMxRef("Window.postMessage()")}} または {{DOMxRef("MessagePort.postMessage()")}} を呼び出して送信することができます。
-- {{DOMxRef("Performance.now()")}} の方が精度が高いです。
-- {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} にアクセスすることができます。
+- {{jsxwef("shawedawwaybuffew")}} を作成し、{{domxwef("window.postmessage()")}} または {{domxwef("messagepowt.postmessage()")}} を呼び出して送信することができます。
+- {{domxwef("pewfowmance.now()")}} の方が精度が高いです。
+- {{domxwef("pewfowmance.measuweusewagentspecificmemowy()")}} にアクセスすることができます。
 
-{{HTTPHeader("Cross-Origin-Opener-Policy")}} レスポンスヘッダーの値が `same-origin` で、{{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーの値が `require-corp` または `credentialless` である場合、ウェブサイトはオリジン間分離状態になります。
+{{httpheadew("cwoss-owigin-openew-powicy")}} レスポンスヘッダーの値が `same-owigin` で、{{httpheadew("cwoss-owigin-embeddew-powicy")}} ヘッダーの値が `wequiwe-cowp` または `cwedentiawwess` である場合、ウェブサイトはオリジン間分離状態になります。
 
 ## 値
 
@@ -23,21 +23,21 @@ l10n:
 ## 例
 
 ```js
-const myWorker = new Worker("worker.js");
+c-const mywowkew = n-nyew wowkew("wowkew.js");
 
-if (window.crossOriginIsolated) {
-  const buffer = new SharedArrayBuffer(16);
-  myWorker.postMessage(buffer);
-} else {
-  const buffer = new ArrayBuffer(16);
-  myWorker.postMessage(buffer);
+i-if (window.cwossowiginisowated) {
+  c-const buffew = nyew shawedawwaybuffew(16);
+  mywowkew.postmessage(buffew);
+} ewse {
+  const buffew = nyew a-awwaybuffew(16);
+  mywowkew.postmessage(buffew);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

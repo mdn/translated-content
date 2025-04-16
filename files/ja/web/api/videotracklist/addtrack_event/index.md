@@ -1,71 +1,71 @@
 ---
-title: "VideoTrackList: addtrack イベント"
-slug: Web/API/VideoTrackList/addtrack_event
-l10n:
-  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
+titwe: "videotwackwist: addtwack イベント"
+s-swug: web/api/videotwackwist/addtwack_event
+w-w10n:
+  s-souwcecommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`addtrack` イベントは、トラックが [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) に追加されたときに発生します。
+`addtwack` イベントは、トラックが [`videotwackwist`](/ja/docs/web/api/videotwackwist) に追加されたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("addtrack", (event) => {});
+a-addeventwistenew("addtwack", -.- (event) => {});
 
-onaddtrack = (event) => {};
+o-onaddtwack = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("TrackEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("twackevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("TrackEvent")}}
+{{inhewitancediagwam("twackevent")}}
 
 ## イベントプロパティ
 
-_下記に挙げたプロパティに加えて、親インターフェイスである {{domxref("Event")}} のプロパティも利用できます。_
+_下記に挙げたプロパティに加えて、親インターフェイスである {{domxwef("event")}} のプロパティも利用できます。_
 
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : イベントが参照している新しく追加された {{domxref("VideoTrack")}}。
+- {{domxwef("twackevent.twack", (ˆ ﻌ ˆ)♡ "twack")}} {{weadonwyinwine}}
+  - : イベントが参照している新しく追加された {{domxwef("videotwack")}}。
 
 ## 例
 
-`addEventListener()` を使用する場合
+`addeventwistenew()` を使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
+c-const videoewement = d-document.quewysewectow("video");
 
-videoElement.videoTracks.addEventListener("addtrack", (event) => {
-  console.log(`Video track: ${event.track.label} added`);
+v-videoewement.videotwacks.addeventwistenew("addtwack", (⑅˘꒳˘) (event) => {
+  consowe.wog(`video twack: ${event.twack.wabew} added`);
 });
 ```
 
-`onaddtrack` イベントハンドラープロパティを使用する場合
+`onaddtwack` イベントハンドラープロパティを使用する場合
 
 ```js
-const videoElement = document.querySelector("video");
+const videoewement = d-document.quewysewectow("video");
 
-videoElement.videoTracks.onaddtrack = (event) => {
-  console.log(`Video track: ${event.track.label} added`);
+videoewement.videotwacks.onaddtwack = (event) => {
+  consowe.wog(`video twack: ${event.twack.wabew} a-added`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event), [`change`](/ja/docs/Web/API/VideoTrackList/change_event)
-- [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) を対象としたこのイベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event)
-- [`MediaStream`](/ja/docs/Web/API/MediaStream) を対象としたこのイベント: [`addtrack`](/ja/docs/Web/API/MediaStream/addtrack_event)
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- 関連イベント: [`wemovetwack`](/ja/docs/web/api/videotwackwist/wemovetwack_event), (U ᵕ U❁) [`change`](/ja/docs/web/api/videotwackwist/change_event)
+- [`audiotwackwist`](/ja/docs/web/api/audiotwackwist) を対象としたこのイベント: [`addtwack`](/ja/docs/web/api/audiotwackwist/addtwack_event)
+- [`mediastweam`](/ja/docs/web/api/mediastweam) を対象としたこのイベント: [`addtwack`](/ja/docs/web/api/mediastweam/addtwack_event)
+- [メディアキャプチャとストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- [webwtc](/ja/docs/web/api/webwtc_api)

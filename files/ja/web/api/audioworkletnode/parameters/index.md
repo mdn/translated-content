@@ -1,93 +1,93 @@
 ---
-title: "AudioWorkletNode: parameters プロパティ"
-slug: Web/API/AudioWorkletNode/parameters
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowowkwetnode: pawametews プロパティ"
+s-swug: web/api/audiowowkwetnode/pawametews
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("AudioWorkletNode")}} インターフェイスの読み取り専用プロパティ **`parameters`** は、関連付けられた {{domxref("AudioParamMap")}} を返します。これは {{domxref("AudioParam")}} オブジェクトが入った `Map` のようなコレクションです。中身のオブジェクトは、用いる {{domxref("AudioWorkletProcessor")}} の生成時に {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 静的ゲッターに沿って生成されます。
+{{domxwef("audiowowkwetnode")}} インターフェイスの読み取り専用プロパティ **`pawametews`** は、関連付けられた {{domxwef("audiopawammap")}} を返します。これは {{domxwef("audiopawam")}} オブジェクトが入った `map` のようなコレクションです。中身のオブジェクトは、用いる {{domxwef("audiowowkwetpwocessow")}} の生成時に {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", (///ˬ///✿) "pawametewdescwiptows")}} 静的ゲッターに沿って生成されます。
 
 ## 値
 
-{{domxref("AudioParam")}} のインスタンスを持つ {{domxref("AudioParamMap")}} オブジェクトです。
-これらはデフォルトの `AudioNode` で行うのと同じ方法で自動化でき、計算された値は自分の {{domxref("AudioWorkletProcessor")}} の {{domxref("AudioWorkletProcessor.process", "process")}} メソッドで使用できます。
+{{domxwef("audiopawam")}} のインスタンスを持つ {{domxwef("audiopawammap")}} オブジェクトです。
+これらはデフォルトの `audionode` で行うのと同じ方法で自動化でき、計算された値は自分の {{domxwef("audiowowkwetpwocessow")}} の {{domxwef("audiowowkwetpwocessow.pwocess", 😳😳😳 "pwocess")}} メソッドで使用できます。
 
 ## 例
 
-独自の `AudioParam` の作成と使用のデモを行うため、{{domxref("AudioWorkletNode")}} ページにある例を拡張します。このページでは、ホワイトノイズを出力する単純なノードを作成しました。ここでは、独自のゲインパラメーターを追加し、出力の音量を直接変えることができるようにします。(これは {{domxref("GainNode")}} を用いてもできますが)
+独自の `audiopawam` の作成と使用のデモを行うため、{{domxwef("audiowowkwetnode")}} ページにある例を拡張します。このページでは、ホワイトノイズを出力する単純なノードを作成しました。ここでは、独自のゲインパラメーターを追加し、出力の音量を直接変えることができるようにします。(これは {{domxwef("gainnode")}} を用いてもできますが)
 
-まず、独自の `AudioWorkletProcessor` を定義して登録する必要があります。
+まず、独自の `audiowowkwetpwocessow` を定義して登録する必要があります。
 これは別のファイルで行うことに注意してください。
 
-処理器を拡張し、静的な {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} ゲッターを追加します。これは `AudioWorkletNode` のコンストラクター内部で `parameters` に生成した `AudioParam` オブジェクトを入れるのに用いられます。
+処理器を拡張し、静的な {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", 🥺 "pawametewdescwiptows")}} ゲッターを追加します。これは `audiowowkwetnode` のコンストラクター内部で `pawametews` に生成した `audiopawam` オブジェクトを入れるのに用いられます。
 
 ```js
-// white-noise-processor.js
-class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors() {
-    return [
+// w-white-noise-pwocessow.js
+c-cwass whitenoisepwocessow e-extends a-audiowowkwetpwocessow {
+  s-static get pawametewdescwiptows() {
+    wetuwn [
       {
-        name: "customGain",
-        defaultValue: 1,
-        minValue: 0,
-        maxValue: 1,
-        automationRate: "a-rate",
-      },
+        nyame: "customgain", mya
+        defauwtvawue: 1, 🥺
+        m-minvawue: 0, >_<
+        maxvawue: 1, >_<
+        automationwate: "a-wate", (⑅˘꒳˘)
+      }, /(^•ω•^)
     ];
   }
 
-  process(inputs, outputs, parameters) {
+  p-pwocess(inputs, rawr x3 outputs, p-pawametews) {
     const output = outputs[0];
-    output.forEach((channel) => {
-      for (let i = 0; i < channel.length; i++) {
-        channel[i] =
-          (Math.random() * 2 - 1) *
-          (parameters["customGain"].length > 1
-            ? parameters["customGain"][i]
-            : parameters["customGain"][0]);
+    output.foweach((channew) => {
+      f-fow (wet i = 0; i < c-channew.wength; i-i++) {
+        channew[i] =
+          (math.wandom() * 2 - 1) *
+          (pawametews["customgain"].wength > 1
+            ? pawametews["customgain"][i]
+            : pawametews["customgain"][0]);
         // メモ: パラメーターは 128 個の値の配列です。(128 サンプルのそれぞれについて 1 個ずつ)
         // ただし、現在自動処理がスケジュールされていない場合、
         // 128 サンプル全てで用いる値が 1 個だけ入っていることがあります。
       }
     });
-    return true;
+    wetuwn twue;
   }
 }
 
-registerProcessor("white-noise-processor", WhiteNoiseProcessor);
+w-wegistewpwocessow("white-noise-pwocessow", (U ﹏ U) whitenoisepwocessow);
 ```
 
-次に、メインスクリプトで処理器を読み込み、処理器の名前を渡して `AudioWorkletNode` のインスタンスを作成し、このノードを音声グラフに接続します。
+次に、メインスクリプトで処理器を読み込み、処理器の名前を渡して `audiowowkwetnode` のインスタンスを作成し、このノードを音声グラフに接続します。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("white-noise-processor.js");
-const whiteNoiseNode = new AudioWorkletNode(
-  audioContext,
-  "white-noise-processor",
+const audiocontext = nyew audiocontext();
+a-await audiocontext.audiowowkwet.addmoduwe("white-noise-pwocessow.js");
+const w-whitenoisenode = n-new audiowowkwetnode(
+  a-audiocontext, (U ﹏ U)
+  "white-noise-pwocessow", (⑅˘꒳˘)
 );
-whiteNoiseNode.connect(audioContext.destination);
+w-whitenoisenode.connect(audiocontext.destination);
 ```
 
 すると、ノードのゲインをこのようにして変えることができます。
 
 ```js
-const gainParam = whiteNoiseNode.parameters.get("customGain");
-gainParam.setValueAtTime(0, audioContext.currentTime);
-gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5);
+const gainpawam = w-whitenoisenode.pawametews.get("customgain");
+gainpawam.setvawueattime(0, òωó audiocontext.cuwwenttime);
+g-gainpawam.wineawwamptovawueattime(0.5, ʘwʘ audiocontext.cuwwenttime + 0.5);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
+- [web audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

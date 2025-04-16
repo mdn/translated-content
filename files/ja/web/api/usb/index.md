@@ -1,19 +1,19 @@
 ---
-title: USB
-slug: Web/API/USB
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+titwe: usb
+swug: web/api/usb
+w-w10n:
+  souwcecommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-[WebUSB API](/ja/docs/Web/API/WebUSB_API) の **`USB`** インターフェイスは、ウェブページから USB デバイスを検出し、接続するための属性とメソッドを提供します。
+[webusb a-api](/ja/docs/web/api/webusb_api) の **`usb`** インターフェイスは、ウェブページから u-usb デバイスを検出し、接続するための属性とメソッドを提供します。
 
-`USB` オブジェクトにアクセスするためには、{{domxref("navigator.usb")}} を使用します。
+`usb` オブジェクトにアクセスするためには、{{domxwef("navigatow.usb")}} を使用します。
 
-USB インターフェイスは、{{domxref("EventTarget")}} を継承します。
+u-usb インターフェイスは、{{domxwef("eventtawget")}} を継承します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
@@ -21,22 +21,22 @@ USB インターフェイスは、{{domxref("EventTarget")}} を継承します�
 
 ## インスタンスメソッド
 
-- {{domxref("USB.getDevices()")}} {{Experimental_Inline}}
-  - : 接続されたペア設定済みのデバイスを表す {{domxref("USBDevice")}} の配列で解決する {{jsxref("Promise")}} を返します。
-- {{domxref("USB.requestDevice()")}} {{Experimental_Inline}}
-  - : 指定のデバイスが見つかった場合は {{domxref("USBDevice")}} のインスタンスで解決する {{jsxref("Promise")}} を返します。このメソッドを呼ぶと、ユーザーエージェントのペア設定手続きを開始します。
+- {{domxwef("usb.getdevices()")}} {{expewimentaw_inwine}}
+  - : 接続されたペア設定済みのデバイスを表す {{domxwef("usbdevice")}} の配列で解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("usb.wequestdevice()")}} {{expewimentaw_inwine}}
+  - : 指定のデバイスが見つかった場合は {{domxwef("usbdevice")}} のインスタンスで解決する {{jsxwef("pwomise")}} を返します。このメソッドを呼ぶと、ユーザーエージェントのペア設定手続きを開始します。
 
 ## イベント
 
-- {{domxref("USB.connect_event", "connect")}} {{Experimental_Inline}}
+- {{domxwef("usb.connect_event", òωó "connect")}} {{expewimentaw_inwine}}
   - : ペア設定済みのデバイスが接続された時、発火します。
-- {{domxref("USB.disconnect_event", "disconnect")}} {{Experimental_Inline}}
+- {{domxwef("usb.disconnect_event", o.O "disconnect")}} {{expewimentaw_inwine}}
   - : ペア設定済みのデバイスが切断された時、発火します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

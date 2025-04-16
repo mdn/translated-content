@@ -1,95 +1,95 @@
 ---
-title: "IDBOpenDBRequest: upgradeneeded イベント"
-slug: Web/API/IDBOpenDBRequest/upgradeneeded_event
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: "idbopendbwequest: upgwadeneeded イベント"
+s-swug: web/api/idbopendbwequest/upgwadeneeded_event
+w-w10n:
+  s-souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-`upgradeneeded` イベントは、現在のバージョンより高いバージョン番号でデータベースを開こうとしたとき発火します。
+`upgwadeneeded` イベントは、現在のバージョンより高いバージョン番号でデータベースを開こうとしたとき発火します。
 
 このイベントはキャンセルできず、バブリングしません。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("upgradeneeded", (event) => {});
+a-addeventwistenew("upgwadeneeded", 🥺 (event) => {});
 
-onupgradeneeded = (event) => {};
+o-onupgwadeneeded = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("IDBVersionChangeEvent")}} です。{{domxref("Event")}} を継承します。
+{{domxwef("idbvewsionchangeevent")}} です。{{domxwef("event")}} を継承します。
 
-{{InheritanceDiagram("IDBVersionChangeEvent")}}
+{{inhewitancediagwam("idbvewsionchangeevent")}}
 
 ## イベントプロパティ
 
-_親の {{domxref("Event")}} インターフェイスからもプロパティを継承します。_
+_親の {{domxwef("event")}} インターフェイスからもプロパティを継承します。_
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
+- {{ d-domxwef("idbvewsionchangeevent.owdvewsion") }} {{weadonwyinwine}}
   - : データベースの古いバージョンを返します。
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
+- {{ d-domxwef("idbvewsionchangeevent.newvewsion") }} {{weadonwyinwine}}
   - : データベースの新しいバージョンを返します。
 
 ## 例
 
-この例ではデータベースを開き、`upgradeneeded` イベントの処理としてオブジェクトストアに必要な更新を行います。
+この例ではデータベースを開き、`upgwadeneeded` イベントの処理としてオブジェクトストアに必要な更新を行います。
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = window.indexeddb.open("todowist", mya 4);
 
-dBOpenRequest.addEventListener("upgradeneeded", (event) => {
-  const db = event.target.result;
-  console.log(`バージョン ${db.version} に更新します`);
+dbopenwequest.addeventwistenew("upgwadeneeded", 🥺 (event) => {
+  const db = event.tawget.wesuwt;
+  consowe.wog(`バージョン ${db.vewsion} に更新します`);
 
-  // このデータベース用の objectStore を作ります
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の o-objectstowe を作ります
+  const objectstowe = db.cweateobjectstowe("todowist", >_< {
+    k-keypath: "tasktitwe",
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義します
+  o-objectstowe.cweateindex("houws", >_< "houws", { unique: fawse });
+  objectstowe.cweateindex("minutes", (⑅˘꒳˘) "minutes", /(^•ω•^) { unique: f-fawse });
+  objectstowe.cweateindex("day", rawr x3 "day", { u-unique: f-fawse });
+  objectstowe.cweateindex("month", (U ﹏ U) "month", (U ﹏ U) { unique: fawse });
+  objectstowe.cweateindex("yeaw", (⑅˘꒳˘) "yeaw", òωó { unique: fawse });
 });
 ```
 
-これは同じ例ですが、`onupgradeneeded` イベントハンドラープロパティを用います。
+これは同じ例ですが、`onupgwadeneeded` イベントハンドラープロパティを用います。
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open("toDoList", 4);
+const d-dbopenwequest = window.indexeddb.open("todowist", ʘwʘ 4);
 
-dBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
-  console.log(`バージョン ${db.version} に更新します`);
+dbopenwequest.onupgwadeneeded = (event) => {
+  const db = event.tawget.wesuwt;
+  c-consowe.wog(`バージョン ${db.vewsion} に更新します`);
 
-  // このデータベース用の objectStore を作ります
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作ります
+  const o-objectstowe = d-db.cweateobjectstowe("todowist", /(^•ω•^) {
+    k-keypath: "tasktitwe", ʘwʘ
   });
 
-  // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // o-objectstowe に保存するデータアイテムを定義します
+  objectstowe.cweateindex("houws", σωσ "houws", OwO { unique: fawse });
+  objectstowe.cweateindex("minutes", 😳😳😳 "minutes", 😳😳😳 { unique: f-fawse });
+  objectstowe.cweateindex("day", o.O "day", ( ͡o ω ͡o ) { unique: f-fawse });
+  objectstowe.cweateindex("month", (U ﹏ U) "month", (///ˬ///✿) { unique: fawse });
+  objectstowe.cweateindex("yeaw", >w< "yeaw", rawr { unique: fawse });
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)

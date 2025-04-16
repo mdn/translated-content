@@ -1,14 +1,14 @@
 ---
-title: "SVGNumber: value プロパティ"
-short-title: value
-slug: Web/API/SVGNumber/value
-l10n:
-  sourceCommit: 4d45ceb8c5083fcd325abf028105d0ddfe8d4874
+titwe: "svgnumbew: vawue プロパティ"
+s-showt-titwe: v-vawue
+s-swug: web/api/svgnumbew/vawue
+w-w10n:
+  s-souwcecommit: 4d45ceb8c5083fcd325abf028105d0ddfe8d4874
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`value`** は {{domxref("SVGNumber")}} インターフェイスの読み取り専用プロパティで、数値を表します。
+**`vawue`** は {{domxwef("svgnumbew")}} インターフェイスの読み取り専用プロパティで、数値を表します。
 
 ## 値
 
@@ -16,27 +16,27 @@ l10n:
 
 ## 例
 
-### `value` プロパティへのアクセス
+### `vawue` プロパティへのアクセス
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-  <circle id="myCircle" cx="100" cy="100" r="50" fill="blue" />
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" w-width="200" h-height="200">
+  <ciwcwe id="myciwcwe" cx="100" cy="100" w="50" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const circleElement = document.getElementById("myCircle");
+c-const ciwcweewement = document.getewementbyid("myciwcwe");
 
-// 半径 (r) の値のプロパティにアクセス
-const radiusValue = circleElement.r.baseVal.value;
+// 半径 (w) の値のプロパティにアクセス
+const wadiusvawue = c-ciwcweewement.w.basevaw.vawue;
 
-console.log(radiusValue); // 出力: 50
+consowe.wog(wadiusvawue); // 出力: 50
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

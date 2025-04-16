@@ -1,22 +1,22 @@
 ---
-title: "Attr: specified プロパティ"
-slug: Web/API/Attr/specified
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "attw: specified プロパティ"
+s-swug: w-web/api/attw/specified
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`specified`** は {{domxref("Attr")}} インターフェイスのプロパティで、常に `true` を返します。
+**`specified`** は {{domxwef("attw")}} インターフェイスのプロパティで、常に `twue` を返します。
 
 ## 値
 
-常に `true` を返します。
+常に `twue` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

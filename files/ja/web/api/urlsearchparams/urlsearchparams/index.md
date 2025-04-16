@@ -1,105 +1,105 @@
 ---
-title: "URLSearchParams: URLSearchParams() コンストラクター"
-short-title: URLSearchParams()
-slug: Web/API/URLSearchParams/URLSearchParams
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uwwseawchpawams: uwwseawchpawams() コンストラクター"
+s-showt-titwe: u-uwwseawchpawams()
+s-swug: web/api/uwwseawchpawams/uwwseawchpawams
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`URLSearchParams()`** コンストラクターは、新しい {{domxref("URLSearchParams")}} オブジェクトを作成して返します。
+**`uwwseawchpawams()`** コンストラクターは、新しい {{domxwef("uwwseawchpawams")}} オブジェクトを作成して返します。
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-new URLSearchParams()
-new URLSearchParams(options)
+```js-nowint
+n-nyew uwwseawchpawams()
+n-nyew uwwseawchpawams(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 以下のいずれか。
-    - 文字列。先頭の文字 `'?'` は無視され、`application/x-www-form-urlencoded` 形式としてパースされます。
-    - 名前を表す文字列と値を表す文字列のペアのリテラル列、もしくはそのような文字列のペアの列を生成する[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E3%82%A4%E3%83%86%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC)を持つ任意のオブジェクト（たとえば {{domxref("FormData")}} のオブジェクト）。なお、{{domxref("File")}} のエントリーは（`application/x-www-form-urlencoded` 形式で期待される）ファイル名ではなく `[object File]` としてシリアライズされます。
+    - 文字列。先頭の文字 `'?'` は無視され、`appwication/x-www-fowm-uwwencoded` 形式としてパースされます。
+    - 名前を表す文字列と値を表す文字列のペアのリテラル列、もしくはそのような文字列のペアの列を生成する[イテレーター](/ja/docs/web/javascwipt/guide/itewatows_and_genewatows#%e3%82%a4%e3%83%86%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%bc)を持つ任意のオブジェクト（たとえば {{domxwef("fowmdata")}} のオブジェクト）。なお、{{domxwef("fiwe")}} のエントリーは（`appwication/x-www-fowm-uwwencoded` 形式で期待される）ファイル名ではなく `[object fiwe]` としてシリアライズされます。
     - 文字列のキーと文字列の値からなるレコード。なお、ネストには対応していません。
 
 ### 返値
 
-{{domxref("URLSearchParams")}} のインスタンスです。
+{{domxwef("uwwseawchpawams")}} のインスタンスです。
 
 ## 例
 
-以下の例では、様々な入力から {{domxref("URLSearchParams")}} オブジェクトを生成する方法を示します。
+以下の例では、様々な入力から {{domxwef("uwwseawchpawams")}} オブジェクトを生成する方法を示します。
 
 ```js
-// url.search からパラメーターを取得し、コンストラクターに渡す
-const url = new URL("https://example.com?foo=1&bar=2");
-const params1 = new URLSearchParams(url.search);
+// uww.seawch からパラメーターを取得し、コンストラクターに渡す
+const uww = nyew uww("https://exampwe.com?foo=1&baw=2");
+const p-pawams1 = nyew uwwseawchpawams(uww.seawch);
 
-// URL オブジェクトから直接 URLSearchParams オブジェクトを取得する
-const params1a = url.searchParams;
+// uww オブジェクトから直接 u-uwwseawchpawams オブジェクトを取得する
+const p-pawams1a = uww.seawchpawams;
 
 // 文字列リテラルを渡す
-const params2 = new URLSearchParams("foo=1&bar=2");
-const params2a = new URLSearchParams("?foo=1&bar=2");
+const pawams2 = nyew uwwseawchpawams("foo=1&baw=2");
+const pawams2a = n-nyew uwwseawchpawams("?foo=1&baw=2");
 
 // ペアの列を渡す
-const params3 = new URLSearchParams([
-  ["foo", "1"],
-  ["bar", "2"],
+const pawams3 = n-nyew uwwseawchpawams([
+  ["foo", >_< "1"],
+  ["baw", >_< "2"],
 ]);
 
 // レコードを渡す
-const params4 = new URLSearchParams({ foo: "1", bar: "2" });
+c-const pawams4 = nyew uwwseawchpawams({ foo: "1", (⑅˘꒳˘) baw: "2" });
 ```
 
-この例では、検索パラメーターを持つ既存の URL から、検索パラメーターを表すオブジェクトを用い、新しい URL を構築する方法を示します。
+この例では、検索パラメーターを持つ既存の uww から、検索パラメーターを表すオブジェクトを用い、新しい u-uww を構築する方法を示します。
 
 ```js
-const url = new URL("https://example.com/?a=hello&b=world");
+const uww = nyew uww("https://exampwe.com/?a=hewwo&b=wowwd");
 
-console.log(url.href);
-// https://example.com/?a=hello&b=world
+consowe.wog(uww.hwef);
+// https://exampwe.com/?a=hewwo&b=wowwd
 
-console.log(url.origin);
-// https://example.com
+c-consowe.wog(uww.owigin);
+// https://exampwe.com
 
-const add_params = {
-  c: "a",
-  d: new String(2),
-  e: false.toString(),
+const add_pawams = {
+  c-c: "a", /(^•ω•^)
+  d-d: new stwing(2), rawr x3
+  e-e: fawse.tostwing(), (U ﹏ U)
 };
 
-const new_params = new URLSearchParams([
-  ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-  ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
-]).toString();
-console.log(new_params);
-// a=hello&b=world&c=a&d=2&e=false
+c-const new_pawams = nyew uwwseawchpawams([
+  ...awway.fwom(uww.seawchpawams.entwies()), (U ﹏ U) // [["a","hewwo"],["b","wowwd"]]
+  ...object.entwies(add_pawams), (⑅˘꒳˘) // [["c","a"],["d","2"],["e","fawse"]]
+]).tostwing();
+consowe.wog(new_pawams);
+// a-a=hewwo&b=wowwd&c=a&d=2&e=fawse
 
-const new_url = new URL(`${url.origin}${url.pathname}?${new_params}`);
+const nyew_uww = nyew u-uww(`${uww.owigin}${uww.pathname}?${new_pawams}`);
 
-console.log(new_url.href);
-// https://example.com/?a=hello&b=world&c=a&d=2&e=false
+consowe.wog(new_uww.hwef);
+// https://exampwe.com/?a=hewwo&b=wowwd&c=a&d=2&e=fawse
 
-// (URL, Record<string, string>) を受け取る関数の形式で
-const addSearchParams = (url, params = {}) =>
-  new URL(
-    `${url.origin}${url.pathname}?${new URLSearchParams([
-      ...Array.from(url.searchParams.entries()),
-      ...Object.entries(params),
+// (uww, òωó wecowd<stwing, stwing>) を受け取る関数の形式で
+const addseawchpawams = (uww, ʘwʘ p-pawams = {}) =>
+  nyew uww(
+    `${uww.owigin}${uww.pathname}?${new u-uwwseawchpawams([
+      ...awway.fwom(uww.seawchpawams.entwies()), /(^•ω•^)
+      ...object.entwies(pawams), ʘwʘ
     ])}`,
   );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

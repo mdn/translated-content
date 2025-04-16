@@ -1,45 +1,45 @@
 ---
-title: "Magnetometer: Magnetometer() コンストラクター"
-slug: Web/API/Magnetometer/Magnetometer
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "magnetometew: magnetometew() コンストラクター"
+s-swug: web/api/magnetometew/magnetometew
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{apiwef("sensow api")}}{{seecompattabwe}}
 
-**`Magnetometer()`** コンストラクターは、デバイスのプライマリー磁気センサーで検出される磁場の情報を返す新しい {{domxref("Magnetometer")}} オブジェクトを生成します。
+**`magnetometew()`** コンストラクターは、デバイスのプライマリー磁気センサーで検出される磁場の情報を返す新しい {{domxwef("magnetometew")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new Magnetometer()
-new Magnetometer(options)
+```js-nowint
+n-nyew magnetometew()
+n-nyew magnetometew(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のオプションがあります。
 
-    - `frequency`
-      - : 1 秒間にサンプルを何回取得したいかであり、{{domxref('sensor.reading_event', 'reading')}} イベントが呼ばれる 1 秒あたりの回数になります。整数または小数が使用でき、小数は 1 秒に 1 回未満の頻度を設定するのに用います。実際の取得頻度はデバイスハードウェアに依存するので、要求値より少なくなる可能性があります。
-    - `referenceFrame`
-      - : `'device'` または `'screen'` です。デフォルトは `'device'` です。
+    - `fwequency`
+      - : 1 秒間にサンプルを何回取得したいかであり、{{domxwef('sensow.weading_event', o.O 'weading')}} イベントが呼ばれる 1 秒あたりの回数になります。整数または小数が使用でき、小数は 1 秒に 1 回未満の頻度を設定するのに用います。実際の取得頻度はデバイスハードウェアに依存するので、要求値より少なくなる可能性があります。
+    - `wefewencefwame`
+      - : `'device'` または `'scween'` です。デフォルトは `'device'` です。
 
 ### 例外
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされました。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : この機能の使用が [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) によりブロックされました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('sensor.reading_event', 'reading')}} イベント
+- {{domxwef('sensow.weading_event', (U ᵕ U❁) 'weading')}} イベント

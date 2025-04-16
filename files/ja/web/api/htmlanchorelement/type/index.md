@@ -1,16 +1,16 @@
 ---
-title: "HTMLAnchorElement: type プロパティ"
-short-title: type
-slug: Web/API/HTMLAnchorElement/type
-l10n:
-  sourceCommit: 10346c8cf5dfe6e030bd1cdc32f04461afaa8c64
+titwe: "htmwanchowewement: type プロパティ"
+s-showt-titwe: t-type
+swug: web/api/htmwanchowewement/type
+w-w10n:
+  s-souwcecommit: 10346c8cf5dfe6e030bd1cdc32f04461afaa8c64
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`type`** は {{domxref("HTMLAnchorElement")}} インターフェイスのプロパティで、リンク先のリソースの MIME タイプを示す文字列です。
+**`type`** は {{domxwef("htmwanchowewement")}} インターフェイスのプロパティで、リンク先のリソースの m-mime タイプを示す文字列です。
 
-これは {{HTMLElement("a")}} 要素の `type` プロパティを反映します。
+これは {{htmwewement("a")}} 要素の `type` プロパティを反映します。
 
 ## 値
 
@@ -18,36 +18,36 @@ l10n:
 
 ## 例
 
-```html
-<a id="exampleLink" href="https://example.com" type="text/html">Example Link</a>
-<p class="type"></p>
+```htmw
+<a i-id="exampwewink" h-hwef="https://exampwe.com" type="text/htmw">exampwe wink</a>
+<p cwass="type"></p>
 ```
 
 ```css
-#exampleLink {
-  font-size: 1.5rem;
+#exampwewink {
+  font-size: 1.5wem;
 }
 ```
 
 ```js
-const anchorElement = document.getElementById("exampleLink");
-const pTag = document.querySelector(".type");
-console.log(anchorElement.type); // Output: "text/html"
-pTag.textContent = anchorElement.type;
+c-const anchowewement = document.getewementbyid("exampwewink");
+const ptag = d-document.quewysewectow(".type");
+consowe.wog(anchowewement.type); // o-output: "text/htmw"
+ptag.textcontent = anchowewement.type;
 ```
 
-{{EmbedLiveSample("Example",100,100)}}
+{{embedwivesampwe("exampwe",100,100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLLinkElement.type")}} プロパティ
-- {{domxref("HTMLSourceElement.type")}} プロパティ
-- {{domxref("HTMLEmbedElement.type")}} プロパティ
+- {{domxwef("htmwwinkewement.type")}} プロパティ
+- {{domxwef("htmwsouwceewement.type")}} プロパティ
+- {{domxwef("htmwembedewement.type")}} プロパティ

@@ -1,90 +1,90 @@
 ---
-title: WebGLProgram
-slug: Web/API/WebGLProgram
-l10n:
-  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
+titwe: webgwpwogwam
+swug: web/api/webgwpwogwam
+w-w10n:
+  souwcecommit: 621c7978886787ca66bc5e90e457cf1466e58d35
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLProgram`** は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部で、 は、頂点シェーダーとフラグメントシェーダー（どちらも GLSL で書かれています）の 2 つのコンパイル済み {{domxref("WebGLShader")}} の組み合わせです。
+**`webgwpwogwam`** は [webgw a-api](/ja/docs/web/api/webgw_api) の一部で、 は、頂点シェーダーとフラグメントシェーダー（どちらも g-gwsw で書かれています）の 2 つのコンパイル済み {{domxwef("webgwshadew")}} の組み合わせです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-`WebGLProgram` を作成するには、 GL コンテキストの {{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} 関数を呼び出します。 {{domxref("WebGLRenderingContext.attachShader", "attachShader()")}} を使用してシェーダープログラムを割り当てた後、使用可能なプログラムにリンクします。以下のコードに示します。
+`webgwpwogwam` を作成するには、 g-gw コンテキストの {{domxwef("webgwwendewingcontext.cweatepwogwam", >_< "cweatepwogwam()")}} 関数を呼び出します。 {{domxwef("webgwwendewingcontext.attachshadew", mya "attachshadew()")}} を使用してシェーダープログラムを割り当てた後、使用可能なプログラムにリンクします。以下のコードに示します。
 
 ```js
-const program = gl.createProgram();
+c-const p-pwogwam = gw.cweatepwogwam();
 
 // 既存のシェーダーを取り付ける
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+gw.attachshadew(pwogwam, mya v-vewtexshadew);
+g-gw.attachshadew(pwogwam, fwagmentshadew);
 
-gl.linkProgram(program);
+gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  const info = gl.getProgramInfoLog(program);
-  throw `WebGL プログラムをコンパイルできませんでした。\n\n${info}`;
+if (!gw.getpwogwampawametew(pwogwam, 😳 gw.wink_status)) {
+  c-const info = gw.getpwogwaminfowog(pwogwam);
+  thwow `webgw プログラムをコンパイルできませんでした。\n\n${info}`;
 }
 ```
 
-上の例の `vertexShader` と `fragmentShader` の作成については {{domxref("WebGLShader")}} を参照してください。
+上の例の `vewtexshadew` と `fwagmentshadew` の作成については {{domxwef("webgwshadew")}} を参照してください。
 
 ## 例
 
 ### プログラムの使用
 
-プログラムを使って実際に作業を行うには、 GPU にプログラムを使用するように指示し、適切なデータと設定オプションをバインドし、最後に画面に何かを描画します。
+プログラムを使って実際に作業を行うには、 g-gpu にプログラムを使用するように指示し、適切なデータと設定オプションをバインドし、最後に画面に何かを描画します。
 
 ```js
 // プログラムを使用
-gl.useProgram(program);
+gw.usepwogwam(pwogwam);
 
 // 既存の属性データをバインド
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.enableVertexAttribArray(attributeLocation);
-gl.vertexAttribPointer(attributeLocation, 3, gl.FLOAT, false, 0, 0);
+g-gw.bindbuffew(gw.awway_buffew, XD buffew);
+gw.enabwevewtexattwibawway(attwibutewocation);
+gw.vewtexattwibpointew(attwibutewocation, :3 3, 😳😳😳 gw.fwoat, f-fawse, -.- 0, 0);
 
 // 単一の三角形を描画
-gl.drawArrays(gl.TRIANGLES, 0, 3);
+gw.dwawawways(gw.twiangwes, ( ͡o ω ͡o ) 0, 3);
 ```
 
 ### プログラムの削除
 
-プログラムのリンクにエラーがあった場合、または既存のプログラムを削除したい場合は、 {{domxref("WebGLRenderingContext.deleteProgram()")}} を実行するだけです。これにより、リンクされたプログラムのメモリが解放されます。
+プログラムのリンクにエラーがあった場合、または既存のプログラムを削除したい場合は、 {{domxwef("webgwwendewingcontext.dewetepwogwam()")}} を実行するだけです。これにより、リンクされたプログラムのメモリが解放されます。
 
 ```js
-gl.deleteProgram(program);
+g-gw.dewetepwogwam(pwogwam);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

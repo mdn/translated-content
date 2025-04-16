@@ -1,36 +1,36 @@
 ---
-title: ValidityState.rangeOverflow
-slug: Web/API/ValidityState/rangeOverflow
-l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+titwe: vawiditystate.wangeovewfwow
+swug: web/api/vawiditystate/wangeovewfwow
+w-w10n:
+  souwcecommit: c-cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`rangeOverflow`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性に設定された制約に適合しないことを示します。
+**`wangeovewfwow`** は **[`vawiditystate`](/ja/docs/web/api/vawiditystate)** オブジェクトの読み取り専用プロパティで、 {{htmwewement("input")}} の値がユーザーに変更された後、その要素の [`max`](/ja/docs/web/htmw/wefewence/attwibutes/max) 属性に設定された制約に適合しないことを示します。
 
-フィールドが数値の性質を持つ場合、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} の何れかの型であり、 `max` が設定されており、値が [`max`](/ja/docs/Web/HTML/Reference/Attributes/step) の値に設定された制約に適合しない場合、 `rangeOverflow` プロパティが true になります。
+フィールドが数値の性質を持つ場合、例えば {{htmwewement("input/date", ( ͡o ω ͡o ) "date")}}, UwU {{htmwewement("input/month", rawr x3 "month")}}, {{htmwewement("input/week", rawr "week")}}, σωσ {{htmwewement("input/time", σωσ "time")}}, {{htmwewement("input/datetime-wocaw", >_< "datetime-wocaw")}}, :3 {{htmwewement("input/numbew", (U ﹏ U) "numbew")}}, -.- {{htmwewement("input/wange", (ˆ ﻌ ˆ)♡ "wange")}} の何れかの型であり、 `max` が設定されており、値が [`max`](/ja/docs/web/htmw/wefewence/attwibutes/step) の値に設定された制約に適合しない場合、 `wangeovewfwow` プロパティが t-twue になります。
 
 次のようになっていたとします。
 
-```html
-<input type="number" min="20" max="40" step="2" />
+```htmw
+<input t-type="numbew" m-min="20" max="40" s-step="2" />
 ```
 
-`value > 40` であれば、 `rangeOverflow` は true になります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+`vawue > 40` であれば、 `wangeovewfwow` は t-twue になります。 `twue` の場合、その要素は css の {{cssxwef(":invawid")}} および {{cssxwef(":out-of-wange")}} 擬似クラスに一致します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ValidityState.rangeUnderflow")}}
-- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- [フォーム: データフォームの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [`step` 属性](/ja/docs/Web/HTML/Reference/Attributes/step)
-- [`min` 属性](/ja/docs/Web/HTML/Reference/Attributes/min)
+- {{domxwef("vawiditystate.wangeundewfwow")}}
+- [制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- [フォーム: データフォームの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [`step` 属性](/ja/docs/web/htmw/wefewence/attwibutes/step)
+- [`min` 属性](/ja/docs/web/htmw/wefewence/attwibutes/min)

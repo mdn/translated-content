@@ -1,63 +1,63 @@
 ---
-title: "Touch: clientX プロパティ"
-short-title: clientX
-slug: Web/API/Touch/clientX
-l10n:
-  sourceCommit: 416eb29676deadec38193d55c868651c3f5872eb
+titwe: "touch: cwientx プロパティ"
+s-showt-titwe: c-cwientx
+s-swug: web/api/touch/cwientx
+w-w10n:
+  s-souwcecommit: 416eb29676deadec38193d55c868651c3f5872eb
 ---
 
-{{ APIRef("Touch Events") }}
+{{ a-apiwef("touch e-events") }}
 
-`Touch.clientX` は読み取り専用プロパティで、スクロールオフセットを含まない、ビューポートに対するタッチ点の X 座標を返します。
+`touch.cwientx` は読み取り専用プロパティで、スクロールオフセットを含まない、ビューポートに対するタッチ点の x-x 座標を返します。
 
 ### 値
 
-`double` 型の浮動小数点数で、スクロールオフセットを含まない、ビューポートに対するタッチ点の X 座標を表します。
+`doubwe` 型の浮動小数点数で、スクロールオフセットを含まない、ビューポートに対するタッチ点の x 座標を表します。
 
 ## 例
 
-この例では、 {{domxref("Touch")}} オブジェクトの {{domxref("Touch.clientX")}} および {{domxref("Touch.clientY")}} プロパティを使用しています。 {{domxref("Touch.clientX")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の水平座標で、スクロールオフセットを除いたものです。 {{domxref("Touch.clientY")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の垂直座標で、スクロールオフセットを除いたものです。
+この例では、 {{domxwef("touch")}} オブジェクトの {{domxwef("touch.cwientx")}} および {{domxwef("touch.cwienty")}} プロパティを使用しています。 {{domxwef("touch.cwientx")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の水平座標で、スクロールオフセットを除いたものです。 {{domxwef("touch.cwienty")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の垂直座標で、スクロールオフセットを除いたものです。
 
-この例では、 `source` という id の要素にタッチを開始し、要素内または要素外に移動した後、タッチ面から指を離したと仮定します。 {{domxref("Element/touchend_event", "touchend")}} のイベントハンドラーが呼び出されると、タッチ開始点から終了点までの {{domxref("Touch.clientX")}} 座標と {{domxref("Touch.clientY")}} 座標の変化が計算されます。
+この例では、 `souwce` という id の要素にタッチを開始し、要素内または要素外に移動した後、タッチ面から指を離したと仮定します。 {{domxwef("ewement/touchend_event", "touchend")}} のイベントハンドラーが呼び出されると、タッチ開始点から終了点までの {{domxwef("touch.cwientx")}} 座標と {{domxwef("touch.cwienty")}} 座標の変化が計算されます。
 
 ```js
-// 要素 'source' に touchstart リスナーと touchend リスナーを登録
-const src = document.getElementById("source");
-let clientX;
-let clientY;
+// 要素 'souwce' に touchstawt リスナーと touchend リスナーを登録
+c-const swc = document.getewementbyid("souwce");
+wet cwientx;
+w-wet cwienty;
 
-src.addEventListener(
-  "touchstart",
+swc.addeventwistenew(
+  "touchstawt", /(^•ω•^)
   (e) => {
-    // クライアント X/Y 座標をキャッシュ
-    clientX = e.touches[0].clientX;
-    clientY = e.touches[0].clientY;
-  },
-  false,
+    // クライアント x-x/y 座標をキャッシュ
+    cwientx = e.touches[0].cwientx;
+    cwienty = e.touches[0].cwienty;
+  }, rawr
+  f-fawse, OwO
 );
 
-src.addEventListener(
-  "touchend",
+swc.addeventwistenew(
+  "touchend", (U ﹏ U)
   (e) => {
-    let deltaX;
-    let deltaY;
+    w-wet dewtax;
+    w-wet dewtay;
 
-    // X 座標と Y 座標の変化を計算
-    // changedTouches リストの最初のタッチ点は、
+    // x 座標と y 座標の変化を計算
+    // changedtouches リストの最初のタッチ点は、
     // 面から除去されたタッチ点です。
-    deltaX = e.changedTouches[0].clientX - clientX;
-    deltaY = e.changedTouches[0].clientY - clientY;
+    dewtax = e-e.changedtouches[0].cwientx - cwientx;
+    dewtay = e.changedtouches[0].cwienty - cwienty;
 
     // データを処理…
-  },
-  false,
+  }, >_<
+  f-fawse, rawr x3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

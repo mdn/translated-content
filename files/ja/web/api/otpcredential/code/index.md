@@ -1,13 +1,13 @@
 ---
-title: OTPCredential.code
-slug: Web/API/OTPCredential/code
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: otpcwedentiaw.code
+swug: w-web/api/otpcwedentiaw/code
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{SecureContext_Header}}{{APIRef("WebOTP API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webotp a-api")}}{{seecompattabwe}}
 
-{{domxref("OTPCredential")}} インターフェイスの **`code`** プロパティは、ワンタイムパスワードを返します。
+{{domxwef("otpcwedentiaw")}} インターフェイスの **`code`** プロパティは、ワンタイムパスワードを返します。
 
 ## 値
 
@@ -15,27 +15,27 @@ l10n:
 
 ## 例
 
-以下のコードは、`code` の値で入力フォームの要素を埋めます。[シンプルなデモの一部としてこのコードを見る](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8)
+以下のコードは、`code` の値で入力フォームの要素を埋めます。[シンプルなデモの一部としてこのコードを見る](https://gwitch.com/edit/#!/web-otp?path=views%2findex.htmw%3a55%3a8)
 
 ```js
-navigator.credentials
+navigatow.cwedentiaws
   .get({
-    otp: { transport: ["sms"] },
-    signal: ac.signal,
+    o-otp: { twanspowt: ["sms"] }, UwU
+    s-signaw: ac.signaw, rawr x3
   })
   .then((otp) => {
-    input.value = otp.code;
-    if (form) form.submit();
+    i-input.vawue = o-otp.code;
+    if (fowm) fowm.submit();
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((eww) => {
+    consowe.ewwow(eww);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

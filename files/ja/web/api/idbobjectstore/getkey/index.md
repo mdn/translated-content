@@ -1,22 +1,22 @@
 ---
-title: "IDBObjectStore: getKey() メソッド"
-slug: Web/API/IDBObjectStore/getKey
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbobjectstowe: getkey() メソッド"
+s-swug: web/api/idbobjectstowe/getkey
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの **`getKey()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別スレッドで指定のクエリーで選択されたキーを返します。これはオブジェクトストアから指定のレコードを取得する用です。
+{{domxwef("idbobjectstowe")}} インターフェイスの **`getkey()`** メソッドは、{{domxwef("idbwequest")}} オブジェクトを返し、別スレッドで指定のクエリーで選択されたキーを返します。これはオブジェクトストアから指定のレコードを取得する用です。
 
-キーが正常に見つかった場合は、その構造化複製を作成し、要求オブジェクトの `result` に設定します。
+キーが正常に見つかった場合は、その構造化複製を作成し、要求オブジェクトの `wesuwt` に設定します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-getKey(key)
+```js-nowint
+g-getkey(key)
 ```
 
 ### 引数
@@ -26,54 +26,54 @@ getKey(key)
 
 ### 返値
 
-この操作に関係する今後のイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関係する今後のイベントが発火する {{domxwef("idbwequest")}} オブジェクトです。
 
-操作に成功した場合は、この要求の {{domxref("IDBRequest.result", "result")}} プロパティの値は与えられたキーまたはキー範囲にマッチする最初のレコードのキーになります。
+操作に成功した場合は、この要求の {{domxwef("idbwequest.wesuwt", ^^;; "wesuwt")}} プロパティの値は与えられたキーまたはキー範囲にマッチする最初のレコードのキーになります。
 
 ### 例外
 
-このメソッドは、以下の種類のいずれかの {{domxref("DOMException")}} を投げる可能性があります。
+このメソッドは、以下の種類のいずれかの {{domxwef("domexception")}} を投げる可能性があります。
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} が削除されたか取り除かれたとき投げられます。
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
-- `DataError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} が削除されたか取り除かれたとき投げられます。
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} のトランザクションが実行中でないとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
   - : 与えられたキーまたはキー範囲が無効なキーを含むとき投げられます。
 
 ## 例
 
 ```js
-let openRequest = indexedDB.open("telemetry");
-openRequest.onsuccess = (event) => {
-  let db = event.target.result;
-  let store = db.transaction("netlogs").objectStore("netlogs");
+w-wet openwequest = i-indexeddb.open("tewemetwy");
+o-openwequest.onsuccess = (event) => {
+  wet db = event.tawget.wesuwt;
+  wet stowe = db.twansaction("netwogs").objectstowe("netwogs");
 
-  let today = new Date();
-  let yesterday = new Date(today);
-  yesterday.setDate(today.getDate() - 1);
-  let request = store.getKey(IDBKeyRange(yesterday, today));
-  request.onsuccess = (event) => {
-    let when = event.target.result;
-    alert(`直近 24 時間で最初のアクティビティは ${when} に発生しました。`);
+  wet today = nyew date();
+  wet y-yestewday = nyew date(today);
+  yestewday.setdate(today.getdate() - 1);
+  w-wet wequest = stowe.getkey(idbkeywange(yestewday, t-today));
+  wequest.onsuccess = (event) => {
+    wet when = event.tawget.wesuwt;
+    a-awewt(`直近 24 時間で最初のアクティビティは ${when} に発生しました。`);
   };
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

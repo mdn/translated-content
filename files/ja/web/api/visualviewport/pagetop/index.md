@@ -1,14 +1,14 @@
 ---
-title: "VisualViewport: pageTop プロパティ"
-short-title: pageTop
-slug: Web/API/VisualViewport/pageTop
-l10n:
-  sourceCommit: 04b91d4a12bec8c3adad0de48a030f6b6c4e4d1e
+titwe: "visuawviewpowt: pagetop プロパティ"
+s-showt-titwe: p-pagetop
+swug: web/api/visuawviewpowt/pagetop
+w-w10n:
+  s-souwcecommit: 04b91d4a12bec8c3adad0de48a030f6b6c4e4d1e
 ---
 
-{{APIRef("Visual Viewport")}}
+{{apiwef("visuaw v-viewpowt")}}
 
-**`pageTop`** は {{domxref("VisualViewport")}} インターフェイスの読み取り専用プロパティで、初期包含ブロックの原点を基準とした視覚的ビューポートの上端の y 座標を CSS ピクセルで返します。または、現在の文書が完全にアクティブでない場合は `0` を返します。
+**`pagetop`** は {{domxwef("visuawviewpowt")}} インターフェイスの読み取り専用プロパティで、初期包含ブロックの原点を基準とした視覚的ビューポートの上端の y-y 座標を c-css ピクセルで返します。または、現在の文書が完全にアクティブでない場合は `0` を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

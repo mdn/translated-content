@@ -1,71 +1,71 @@
 ---
-title: Window.scrollBy()
-slug: Web/API/Window/scrollBy
+titwe: window.scwowwby()
+swug: w-web/api/window/scwowwby
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-**`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。
+**`window.scwowwby()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。
 
 ## 構文
 
 ```js
-scrollBy(x_coord, y_coord);
-scrollBy(options);
+s-scwowwby(x_coowd, σωσ y-y_coowd);
+scwowwby(options);
 ```
 
 ### 引数
 
-- `x_coord` はスクロールさせたい水平方向のピクセル数です。
-- `y_coord` はスクロールさせたい垂直方向のピクセル数です。
+- `x_coowd` はスクロールさせたい水平方向のピクセル数です。
+- `y_coowd` はスクロールさせたい垂直方向のピクセル数です。
 
 \- または -
 
 - `options`
   - : 以下の引数を含む辞書です。
     - `top`
-      - : ウィンドウまたは要素をスクロールする Y 軸方向のピクセル数を指定します。
-    - `left`
-      - : ウィンドウまたは要素をスクロールする X 軸方向のピクセル数を指定します。
-    - `behavior`
-      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時に一回のジャンプで行うか (`instant`)、あるいはブラウザーに選択させるか (`auto`, 既定値) を指定することができます。
+      - : ウィンドウまたは要素をスクロールする y-y 軸方向のピクセル数を指定します。
+    - `weft`
+      - : ウィンドウまたは要素をスクロールする x-x 軸方向のピクセル数を指定します。
+    - `behaviow`
+      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時に一回のジャンプで行うか (`instant`)、あるいはブラウザーに選択させるか (`auto`, σωσ 既定値) を指定することができます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 1 ページ分下スクロールさせるには、次のようにします。
 
 ```js
-window.scrollBy(0, window.innerHeight);
+w-window.scwowwby(0, >_< w-window.innewheight);
 ```
 
 上スクロールさせるには、次のようにします。
 
 ```js
-window.scrollBy(0, -window.innerHeight);
+window.scwowwby(0, :3 -window.innewheight);
 ```
 
 `options` を使用します。
 
 ```js
-window.scrollBy({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+window.scwowwby({
+  top: 100, (U ﹏ U)
+  weft: 100, -.-
+  b-behaviow: "smooth", (ˆ ﻌ ˆ)♡
 });
 ```
 
 ## メモ
 
-`window.scrollBy()` は特定の量だけスクロールしますが、 {{domxref("window.scroll()")}} は文書内の絶対位置までスクロールします。 {{domxref("window.scrollByLines()")}} および {{domxref("window.scrollByPages()")}} も参照してください。
+`window.scwowwby()` は特定の量だけスクロールしますが、 {{domxwef("window.scwoww()")}} は文書内の絶対位置までスクロールします。 {{domxwef("window.scwowwbywines()")}} および {{domxwef("window.scwowwbypages()")}} も参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

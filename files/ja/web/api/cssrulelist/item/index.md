@@ -1,16 +1,16 @@
 ---
-title: CSSRuleList.item()
-slug: Web/API/CSSRuleList/item
+titwe: csswuwewist.item()
+swug: w-web/api/csswuwewist/item
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`item()`** は {{domxref("CSSRuleList")}} インターフェイスのメソッドで、 `index` で指定された {{domxref("CSSRule")}} オブジェクトを返します。指定された `index` が存在しなければ `null` を返します。
+**`item()`** は {{domxwef("csswuwewist")}} インターフェイスのメソッドで、 `index` で指定された {{domxwef("csswuwe")}} オブジェクトを返します。指定された `index` が存在しなければ `nuww` を返します。
 
 ## 構文
 
 ```js
-CSSRuleList.item(index);
+c-csswuwewist.item(index);
 ```
 
 ### 引数
@@ -20,21 +20,21 @@ CSSRuleList.item(index);
 
 ### 返値
 
-{{domxref("CSSRule")}} です。
+{{domxwef("csswuwe")}} です。
 
 ## 例
 
-以下の例では、 `myRules` という名前の {{domxref("CSSRuleList")}} の最初のアイテムをコンソールに出力します。
+以下の例では、 `mywuwes` という名前の {{domxwef("csswuwewist")}} の最初のアイテムをコンソールに出力します。
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]);
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0]);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

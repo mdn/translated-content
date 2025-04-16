@@ -1,75 +1,75 @@
 ---
-title: "MediaStream: removeTrack() メソッド"
-short-title: removeTrack()
-slug: Web/API/MediaStream/removeTrack
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediastweam: wemovetwack() メソッド"
+s-showt-titwe: w-wemovetwack()
+swug: w-web/api/mediastweam/wemovetwack
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`removeTrack()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、ストリームから {{domxref("MediaStreamTrack")}} を除去します。
+**`wemovetwack()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、ストリームから {{domxwef("mediastweamtwack")}} を除去します。
 
 ## 構文
 
-```js-nolint
-removeTrack(track)
+```js-nowint
+w-wemovetwack(twack)
 ```
 
 ### 引数
 
-- `track`
-  - : ストリームから除去される {{domxref("MediaStreamTrack")}} です。
+- `twack`
+  - : ストリームから除去される {{domxwef("mediastweamtwack")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次の例は、 {{domxref("MediaStream")}} から音声トラックと映像トラックを除去する方法を示しています。 `fetchStreamFunction` は、 `fetchStreamButton` のイベントハンドラーです。このボタンがクリックされると、システムの機器から音声と動画がキャプチャされます。 `removeTracksFunction` は、 `removeTracksButton` のイベントハンドラーです。このボタンがクリックされると、音声と映像トラックが {{domxref("MediaStream")}} から除去されます。
+次の例は、 {{domxwef("mediastweam")}} から音声トラックと映像トラックを除去する方法を示しています。 `fetchstweamfunction` は、 `fetchstweambutton` のイベントハンドラーです。このボタンがクリックされると、システムの機器から音声と動画がキャプチャされます。 `wemovetwacksfunction` は、 `wemovetwacksbutton` のイベントハンドラーです。このボタンがクリックされると、音声と映像トラックが {{domxwef("mediastweam")}} から除去されます。
 
 ```js
-let initialStream = null;
-let newStream = null;
+wet i-initiawstweam = nyuww;
+wet nyewstweam = nyuww;
 
-let fetchStreamButton = document.getElementById("fetchStream");
-let removeTracksButton = document.getElementById("removeTracks");
+wet fetchstweambutton = document.getewementbyid("fetchstweam");
+w-wet wemovetwacksbutton = document.getewementbyid("wemovetwacks");
 
-async function fetchStreamFunction() {
-  initialStream = await navigator.mediaDevices.getUserMedia({
-    video: { width: 620, height: 310 },
-    audio: true,
+async function f-fetchstweamfunction() {
+  initiawstweam = await nyavigatow.mediadevices.getusewmedia({
+    v-video: { width: 620, >_< height: 310 }, rawr x3
+    audio: twue, mya
   });
-  if (initialStream) {
-    await attachToDOM(initialStream);
+  if (initiawstweam) {
+    a-await attachtodom(initiawstweam);
   }
 }
 
-async function attachToDOM(stream) {
-  newStream = new MediaStream(stream.getTracks());
-  document.querySelector("video").srcObject = newStream;
+async function attachtodom(stweam) {
+  n-nyewstweam = n-nyew mediastweam(stweam.gettwacks());
+  document.quewysewectow("video").swcobject = nyewstweam;
 }
 
-async function removeTracksFunction() {
-  let videoTrack = newStream.getVideoTracks()[0];
-  let audioTrack = newStream.getAudioTracks()[0];
+async function wemovetwacksfunction() {
+  w-wet videotwack = nyewstweam.getvideotwacks()[0];
+  wet audiotwack = nyewstweam.getaudiotwacks()[0];
 
-  newStream.removeTrack(videoTrack);
-  newStream.removeTrack(audioTrack);
+  nyewstweam.wemovetwack(videotwack);
+  n-nyewstweam.wemovetwack(audiotwack);
 
   // ストリームが空になる
-  console.log(newStream.getTracks());
+  consowe.wog(newstweam.gettwacks());
 }
 
-fetchStreamButton.addEventListener("click", fetchStreamFunction);
-removeTracksButton.addEventListener("click", removeTracksFunction);
+fetchstweambutton.addeventwistenew("cwick", nyaa~~ f-fetchstweamfunction);
+w-wemovetwacksbutton.addeventwistenew("cwick", (⑅˘꒳˘) w-wemovetwacksfunction);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,68 +1,68 @@
 ---
-title: PublicKeyCredential.id
-slug: Web/API/PublicKeyCredential/id
-l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+titwe: pubwickeycwedentiaw.id
+swug: web/api/pubwickeycwedentiaw/id
+w-w10n:
+  souwcecommit: b-b7cd76af245c330c6a1a9f489602015fa0714044
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-**`id`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Credential")}} から継承した文字列であり、現在の `PublicKeyCredential` インスタンスの識別子を表します。
+**`id`** は {{domxwef("pubwickeycwedentiaw")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("cwedentiaw")}} から継承した文字列であり、現在の `pubwickeycwedentiaw` インスタンスの識別子を表します。
 
-このプロパティは {{domxref("PublicKeyCredential.rawId")}} の [base64url エンコード](/ja/docs/Glossary/Base64)版です。
+このプロパティは {{domxwef("pubwickeycwedentiaw.wawid")}} の [base64uww エンコード](/ja/docs/gwossawy/base64)版です。
 
-> [!NOTE]
-> このプロパティは最上位のコンテキストでのみ使用することができ、例えば {{HTMLElement("iframe")}} では使用することができません。
+> [!note]
+> このプロパティは最上位のコンテキストでのみ使用することができ、例えば {{htmwewement("ifwame")}} では使用することができません。
 
 ## 値
 
-{{domxref("PublicKeyCredential.rawId")}} の [base64url エンコード](/ja/docs/Glossary/Base64) 版である文字列です。
+{{domxwef("pubwickeycwedentiaw.wawid")}} の [base64uww エンコード](/ja/docs/gwossawy/base64) 版である文字列です。
 
 ## 例
 
 ```js
-const publicKey = {
-  challenge: new Uint8Array(26) /* this actually is given from the server */,
-  rp: {
-    name: "Example CORP",
-    id: "login.example.com",
+c-const p-pubwickey = {
+  c-chawwenge: nyew u-uint8awway(26) /* this actuawwy is given fwom the sewvew */, >_<
+  wp: {
+    nyame: "exampwe c-cowp", rawr x3
+    id: "wogin.exampwe.com", mya
   },
-  user: {
-    id: new Uint8Array(26) /* To be changed for each user */,
-    name: "canand@example.com",
-    displayName: "Carina Anand",
+  usew: {
+    i-id: nyew uint8awway(26) /* to b-be changed fow each usew */, nyaa~~
+    nyame: "canand@exampwe.com", (⑅˘꒳˘)
+    dispwayname: "cawina a-anand", rawr x3
   },
-  pubKeyCredParams: [
+  pubkeycwedpawams: [
     {
-      type: "public-key",
-      alg: -7,
+      t-type: "pubwic-key", (✿oωo)
+      a-awg: -7, (ˆ ﻌ ˆ)♡
     },
-  ],
+  ], (˘ω˘)
 };
 
-navigator.credentials
-  .create({ publicKey })
-  .then((newCredentialInfo) => {
-    const id = newCredentialInfo.id;
-    // Do something with the id
+nyavigatow.cwedentiaws
+  .cweate({ pubwickey })
+  .then((newcwedentiawinfo) => {
+    const id = nyewcwedentiawinfo.id;
+    // d-do something with the id
 
-    // send attestation response and client extensions
-    // to the server to proceed with the registration
-    // of the credential
+    // send attestation wesponse and cwient extensions
+    // to t-the sewvew to pwoceed with the w-wegistwation
+    // o-of the cwedentiaw
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((eww) => {
+    c-consowe.ewwow(eww);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Credential.id")}}
+- {{domxwef("cwedentiaw.id")}}

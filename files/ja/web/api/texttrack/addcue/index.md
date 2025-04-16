@@ -1,26 +1,26 @@
 ---
-title: TextTrack.addCue()
-slug: Web/API/TextTrack/addCue
-l10n:
-  sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
+titwe: texttwack.addcue()
+swug: w-web/api/texttwack/addcue
+w-w10n:
+  s-souwcecommit: b-b9bcca1e96839aa9cddea3263196e0cf4656d387
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`addCue()`** は {{domxref("TextTrack")}} インターフェイスのメソッドで、新しいキューをキューのリストへ追加します。
+**`addcue()`** は {{domxwef("texttwack")}} インターフェイスのメソッドで、新しいキューをキューのリストへ追加します。
 
 ## 構文
 
-```js-nolint
-addCue(cue)
+```js-nowint
+a-addcue(cue)
 ```
 
 ### 引数
 
 - `cue`
-  - : {{domxref("TextTrackCue")}} です。
+  - : {{domxwef("texttwackcue")}} です。
 
-> **メモ:** {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `TextTrackCue` を継承したキュー型のいずれかを使用することになります。
+> **メモ:** {{domxwef("texttwackcue")}} インターフェイスは、 {{domxwef("vttcue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `texttwackcue` を継承したキュー型のいずれかを使用することになります。
 
 ### 返値
 
@@ -28,25 +28,25 @@ addCue(cue)
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : この {{domxref("TextTrackList")}} のルールが、入力される {{domxref("TextTrackCue")}} に適切なルールと一致しない場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("texttwackwist")}} のルールが、入力される {{domxwef("texttwackcue")}} に適切なルールと一致しない場合に発生します。
 
 ## 例
 
-以下の例では、 `addCue()` を使用して、動画のテキストトラックに 2 つのキューを追加しています。
+以下の例では、 `addcue()` を使用して、動画のテキストトラックに 2 つのキューを追加しています。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, "Hildy!"));
-track.addCue(new VTTCue(1, 1.4, "How are you?"));
+w-wet video = d-document.quewysewectow("video");
+w-wet twack = video.addtexttwack("captions", σωσ "captions", >_< "en");
+twack.mode = "showing";
+twack.addcue(new vttcue(0, :3 0.9, "hiwdy!"));
+twack.addcue(new v-vttcue(1, (U ﹏ U) 1.4, "how awe you?"));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

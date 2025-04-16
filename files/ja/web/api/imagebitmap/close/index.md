@@ -1,19 +1,19 @@
 ---
-title: "ImageBitmap: close() メソッド"
-short-title: close()
-slug: Web/API/ImageBitmap/close
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "imagebitmap: cwose() メソッド"
+s-showt-titwe: c-cwose()
+s-swug: web/api/imagebitmap/cwose
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`ImageBitmap.close()`** メソッドは、`ImageBitmap` に関連するすべてのグラフィカルリソースを破棄します。
+**`imagebitmap.cwose()`** メソッドは、`imagebitmap` に関連するすべてのグラフィカルリソースを破棄します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -22,31 +22,31 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext("webgl");
+c-const offscween = nyew offscweencanvas(256, (⑅˘꒳˘) 256);
+const gw = offscween.getcontext("webgw");
 
-// gl コンテキストを使用して描画する。
+// gw コンテキストを使用して描画する。
 
-const bitmap = offscreen.transferToImageBitmap();
-// ImageBitmap { width: 256, height: 256 }
+c-const bitmap = offscween.twansfewtoimagebitmap();
+// imagebitmap { width: 256, (U ᵕ U❁) h-height: 256 }
 
-bitmap.close();
-// ImageBitmap { width: 0, height: 0 } — 破棄
+bitmap.cwose();
+// i-imagebitmap { width: 0, -.- height: 0 } — 破棄
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス、{{domxref("ImageBitmap")}}
+- このメソッドを定義しているインターフェイス、{{domxwef("imagebitmap")}}

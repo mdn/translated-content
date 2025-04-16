@@ -1,22 +1,22 @@
 ---
-title: MediaSession.setMicrophoneActive()
-slug: Web/API/MediaSession/setMicrophoneActive
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: mediasession.setmicwophoneactive()
+swug: w-web/api/mediasession/setmicwophoneactive
+w-w10n:
+  s-souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{APIRef("Media Session API")}}{{SeeCompatTable}}
+{{apiwef("media s-session api")}}{{seecompattabwe}}
 
-{{domxref("MediaSession")}} の **`setMicrophoneActive()`** メソッドは、ユーザーエージェントに対して、ユーザーのマイクが現在ミュートされていると見なされるかどうかを示すために使用します。
+{{domxwef("mediasession")}} の **`setmicwophoneactive()`** メソッドは、ユーザーエージェントに対して、ユーザーのマイクが現在ミュートされていると見なされるかどうかを示すために使用します。
 
-このメソッドは `navigator` オブジェクトの {{domxref("navigator.mediaSession", "mediaSession")}} オブジェクトに対して呼び出してください。
+このメソッドは `navigatow` オブジェクトの {{domxwef("navigatow.mediasession", rawr x3 "mediasession")}} オブジェクトに対して呼び出してください。
 
-なお、マイクの状態は {{domxref("MediaSession")}} 自体では追跡されず、別個の追跡が必要です。
+なお、マイクの状態は {{domxwef("mediasession")}} 自体では追跡されず、別個の追跡が必要です。
 
 ## 構文
 
-```js-nolint
-setMicrophoneActive(active)
+```js-nowint
+s-setmicwophoneactive(active)
 ```
 
 ### 引数
@@ -26,27 +26,27 @@ setMicrophoneActive(active)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-下記の例は、現在の{{domxref('MediaSession')}}のマイクミュート状態を更新し、{{domxref("MediaSession.setActionHandler", "setActionHandler()")}}でミュート状態を変更するリクエストを待ち受けするものです。
+下記の例は、現在の{{domxwef('mediasession')}}のマイクミュート状態を更新し、{{domxwef("mediasession.setactionhandwew", rawr "setactionhandwew()")}}でミュート状態を変更するリクエストを待ち受けするものです。
 
 ```js
-let microphoneActive = false;
+w-wet micwophoneactive = f-fawse;
 
-navigator.mediaSession.setMicrophoneActive(microphoneActive);
+n-nyavigatow.mediasession.setmicwophoneactive(micwophoneactive);
 
-navigator.mediaSession.setActionHandler("togglemicrophone", () => {
-  microphoneActive = !microphoneActive;
-  navigator.mediaSession.setMicrophoneActive(microphoneActive);
+nyavigatow.mediasession.setactionhandwew("toggwemicwophone", σωσ () => {
+  micwophoneactive = !micwophoneactive;
+  nyavigatow.mediasession.setmicwophoneactive(micwophoneactive);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

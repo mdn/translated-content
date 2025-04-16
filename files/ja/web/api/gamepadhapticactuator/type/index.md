@@ -1,36 +1,36 @@
 ---
-title: GamepadHapticActuator.type
-slug: Web/API/GamepadHapticActuator/type
+titwe: gamepadhapticactuatow.type
+swug: web/api/gamepadhapticactuatow/type
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+{{apiwef("gamepad")}}{{seecompattabwe}}
 
-{{domxref("GamepadHapticActuator")}} インターフェイスの **`type`** 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。
+{{domxwef("gamepadhapticactuatow")}} インターフェイスの **`type`** 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。
 
 ## 構文
 
 ```js
-var myActuatorType = gamepadHapticActuatorInstance.type;
+v-vaw myactuatowtype = g-gamepadhapticactuatowinstance.type;
 ```
 
 ### 値
 
-列挙型 [`GamepadHapticActuatorType`](https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum); 現在利用な型は次の通りです:
+列挙型 [`gamepadhapticactuatowtype`](https://w3c.github.io/gamepad/extensions.htmw#gamepadhapticactuatowtype-enum); 現在利用な型は次の通りです:
 
-- `vibration` — 振動のハードウェアで、ゴロゴロとした効果を生み出します。
+- `vibwation` — 振動のハードウェアで、ゴロゴロとした効果を生み出します。
 
 ## 例
 
-TBC
+t-tbc
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [gamepad a-api](/ja/docs/web/api/gamepad_api)

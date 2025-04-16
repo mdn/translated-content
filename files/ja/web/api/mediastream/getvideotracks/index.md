@@ -1,19 +1,19 @@
 ---
-title: "MediaStream: getVideoTracks() メソッド"
-short-title: getVideoTracks()
-slug: Web/API/MediaStream/getVideoTracks
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediastweam: getvideotwacks() メソッド"
+s-showt-titwe: g-getvideotwacks()
+s-swug: web/api/mediastweam/getvideotwacks
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`getVideoTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。
+**`getvideotwacks()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、このストリームに含まれる動画トラックを表す {{domxwef("mediastweamtwack")}} オブジェクトの配列を返します。
 
 ## 構文
 
-```js-nolint
-getVideoTracks()
+```js-nowint
+g-getvideotwacks()
 ```
 
 ### 引数
@@ -22,33 +22,33 @@ getVideoTracks()
 
 ### 返値
 
-{{domxref("MediaStreamTrack")}} オブジェクトの配列で、それぞれがメディアストリームに含まれるそれぞれの動画トラックを表します。動画トラックは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `video` であるトラックです。ストリームに動画トラックが含まれていない場合、配列は空となります。
+{{domxwef("mediastweamtwack")}} オブジェクトの配列で、それぞれがメディアストリームに含まれるそれぞれの動画トラックを表します。動画トラックは {{domxwef("mediastweamtwack.kind", (U ᵕ U❁) "kind")}} プロパティが `video` であるトラックです。ストリームに動画トラックが含まれていない場合、配列は空となります。
 
-> [!NOTE]
-> トラックの順序は仕様で定義されておらず、 `getVideoTracks()` の呼び出しごとに同じ順序になるとは限りません。
+> [!note]
+> トラックの順序は仕様で定義されておらず、 `getvideotwacks()` の呼び出しごとに同じ順序になるとは限りません。
 
 ## 例
 
-次の例は、 [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
+次の例は、 [chwome's
+i-image captuwe / photo wesowution sampwe](https://googwechwome.github.io/sampwes/image-captuwe/photo-wesowution.htmw) (英語)から抜粋したものであり、 `getvideotwacks()` を用いて取得したトラックを {{domxwef("imagecaptuwe.imagecaptuwe", -.- "imagecaptuwe()")}} コンストラクターへ渡しています。
 
 ```js
-let imageCapture;
+wet imagecaptuwe;
 
-navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
-  document.querySelector("video").srcObject = mediaStream;
+nyavigatow.mediadevices.getusewmedia({ v-video: twue }).then((mediastweam) => {
+  document.quewysewectow("video").swcobject = m-mediastweam;
 
-  const track = mediaStream.getVideoTracks()[0];
-  imageCapture = new ImageCapture(track);
+  const twack = mediastweam.getvideotwacks()[0];
+  i-imagecaptuwe = new imagecaptuwe(twack);
 
-  return imageCapture.getPhotoCapabilities();
+  wetuwn imagecaptuwe.getphotocapabiwities();
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

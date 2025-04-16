@@ -1,20 +1,20 @@
 ---
-title: "Attr: localName プロパティ"
-slug: Web/API/Attr/localName
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "attw: wocawname プロパティ"
+s-swug: w-web/api/attw/wocawname
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`localName`** は {{domxref("Attr")}} インターフェイスのプロパティで、属性の*修飾名*の*ローカル部分*、すなわち属性の名前からその前の名前空間を外したものを返します。例えば、修飾名が `xml:lang` であった場合、要素が名前空間に対応していればローカル名は `lang` となります。
+**`wocawname`** は {{domxwef("attw")}} インターフェイスのプロパティで、属性の*修飾名*の*ローカル部分*、すなわち属性の名前からその前の名前空間を外したものを返します。例えば、修飾名が `xmw:wang` であった場合、要素が名前空間に対応していればローカル名は `wang` となります。
 
 ローカル名は、属性の作成時に大文字であっても小文字であっても、常に小文字になります。
 
-> [!NOTE]
-> HTML は SVG と MathML の要素に対して、固定された一連の名前空間のみに対応しています。これらは `xml` （`xml:lang` 属性）、 `xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、`xpath` です。
+> [!note]
+> h-htmw は svg と m-mathmw の要素に対して、固定された一連の名前空間のみに対応しています。これらは `xmw` （`xmw:wang` 属性）、 `xwink` （`xwink:hwef`, >_< `xwink:show`, rawr x3 `xwink:tawget`, mya `xwink:titwe` 属性）、`xpath` です。
 >
-> つまり、 HTML 要素の属性のローカル名は常にその修飾名と等しくなります。コロンは通常の文字として扱われます。 XML では、 SVG や MathML のように、コロンは接頭辞の終わりを表し、それ以前は名前空間となります。ローカル名は、修飾名と異なる場合があります。
+> つまり、 h-htmw 要素の属性のローカル名は常にその修飾名と等しくなります。コロンは通常の文字として扱われます。 x-xmw では、 svg や mathmw のように、コロンは接頭辞の終わりを表し、それ以前は名前空間となります。ローカル名は、修飾名と異なる場合があります。
 
 ## 値
 
@@ -22,56 +22,56 @@ l10n:
 
 ## 例
 
-次の例では、適切なボタンをクリックすると、 2 つの最初の要素の最初の属性のローカル名が表示されます。 {{SVGElement("svg")}} 要素は XML であり、名前空間に対応しているので、ローカル名 (`lang`) は修飾名 `xml:lang` と異なるものになります。 {{HTMLElement("label")}} 要素は HTML であり、名前空間に対応していないため、ローカル名と修飾名が共に `xml:lang` となります。
+次の例では、適切なボタンをクリックすると、 2 つの最初の要素の最初の属性のローカル名が表示されます。 {{svgewement("svg")}} 要素は xmw であり、名前空間に対応しているので、ローカル名 (`wang`) は修飾名 `xmw:wang` と異なるものになります。 {{htmwewement("wabew")}} 要素は htmw であり、名前空間に対応していないため、ローカル名と修飾名が共に `xmw:wang` となります。
 
-### HTML コンテンツ
+### htmw コンテンツ
 
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
+```htmw
+<svg x-xmw:wang="en-us" cwass="stwuct" height="1" w-width="1">cwick me</svg>
+<wabew x-xmw:wang="en-us" cwass="stwuct"></wabew>
 
 <p>
-  <button>&lt;svg&gt; の場合の値を表示</button>
-  <button>&lt;label&gt; の場合の値を表示</button>
+  <button>&wt;svg&gt; の場合の値を表示</button>
+  <button>&wt;wabew&gt; の場合の値を表示</button>
 </p>
 
 <p>
-  <code>xml:lang</code> 属性のローカル部分:
-  <output id="result">なし。</output>
+  <code>xmw:wang</code> 属性のローカル部分:
+  <output id="wesuwt">なし。</output>
 </p>
 ```
 
-### JavaScript コンテンツ
+### javascwipt コンテンツ
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
+c-const ewements = document.quewysewectowaww(".stwuct");
+c-const buttons = d-document.quewysewectowaww("button");
+const outputew = document.quewysewectow("#wesuwt");
 
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.localName;
+wet i = 0;
+fow (const b-button of buttons) {
+  const ewement = ewements[i];
+  button.addeventwistenew("cwick", nyaa~~ () => {
+    const attwibute = e-ewement.attwibutes[0];
+    outputew.vawue = a-attwibute.wocawname;
   });
-  i++;
+  i-i++;
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example','100%',100) }}
+{{ e-embedwivesampwe('exampwe','100%',100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Attr.name")}} プロパティはこの属性の修飾名を返し、 {{domxref("Attr.prefix")}} は名前空間接頭辞を返します。
-- {{domxref("Element.localName()")}} プロパティは {{domxref("Element")}} のローカル名を返します。
+- {{domxwef("attw.name")}} プロパティはこの属性の修飾名を返し、 {{domxwef("attw.pwefix")}} は名前空間接頭辞を返します。
+- {{domxwef("ewement.wocawname()")}} プロパティは {{domxwef("ewement")}} のローカル名を返します。

@@ -1,38 +1,38 @@
 ---
-title: "HTMLStyleElement: sheet プロパティ"
-short-title: sheet
-slug: Web/API/HTMLStyleElement/sheet
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwstyweewement: sheet プロパティ"
+s-showt-titwe: s-sheet
+swug: web/api/htmwstyweewement/sheet
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`sheet`** は {{domxref("HTMLStyleElement")}} インターフェイスの読み取り専用プロパティで、この要素に関連付けられたスタイルシートを保持します。
+**`sheet`** は {{domxwef("htmwstyweewement")}} インターフェイスの読み取り専用プロパティで、この要素に関連付けられたスタイルシートを保持します。
 
-{{DOMxref("StyleSheet")}} は `type` 属性が `text/css` 出ない限り、常に {{domxref("HTMLStyleElement")}} と関連付けられます。
+{{domxwef("stywesheet")}} は `type` 属性が `text/css` 出ない限り、常に {{domxwef("htmwstyweewement")}} と関連付けられます。
 
 ## 値
 
-{{DOMxRef("StyleSheet")}} オブジェクト、またはこの要素に関連付けられているものがなければ `null` です。
+{{domxwef("stywesheet")}} オブジェクト、またはこの要素に関連付けられているものがなければ `nuww` です。
 
 ## 例
 
-```html
-<html>
-  <header>
-    <style media="print" />
+```htmw
+<htmw>
+  <headew>
+    <stywe m-media="pwint" />
     …
-  </header>
-</html>
+  </headew>
+</htmw>
 ```
 
-関連付けられた `HTMLStyleElement` オブジェクトの `sheet` プロパティは、そこに記述された {{domxref("StyleSheet")}} オブジェクトを返します。
+関連付けられた `htmwstyweewement` オブジェクトの `sheet` プロパティは、そこに記述された {{domxwef("stywesheet")}} オブジェクトを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

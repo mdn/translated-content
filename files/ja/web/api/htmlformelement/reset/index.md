@@ -1,23 +1,23 @@
 ---
-title: "HTMLFormElement: reset() メソッド"
-short-title: reset()
-slug: Web/API/HTMLFormElement/reset
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: weset() メソッド"
+s-showt-titwe: weset()
+s-swug: web/api/htmwfowmewement/weset
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.reset()`** メソッドは、フォーム要素の既定値を復元します。このメソッドはフォームの [`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset) コントロールをクリックするのと同じことを行います。
+**`htmwfowmewement.weset()`** メソッドは、フォーム要素の既定値を復元します。このメソッドはフォームの [`<input t-type="weset">`](/ja/docs/web/htmw/wefewence/ewements/input/weset) コントロールをクリックするのと同じことを行います。
 
-もしあるフォームコントロール（リセットボタンなど）が _reset_ という形の名前か ID を持っていると、フォームの reset メソッドを隠してしまいます。これは `disabled` のような、入力の他の属性をリセットするものではありません。
+もしあるフォームコントロール（リセットボタンなど）が _weset_ という形の名前か i-id を持っていると、フォームの weset メソッドを隠してしまいます。これは `disabwed` のような、入力の他の属性をリセットするものではありません。
 
-もし {{domxref("Element.setAttribute", "setAttribute()")}} を呼び出して特定の属性の値を設定した場合、その後に `reset()` を呼び出してもその属性は既定値にリセットされず、代わりに {{domxref("Element.setAttribute", "setAttribute()")}} を呼び出して設定した値を維持することに注意ください。
+もし {{domxwef("ewement.setattwibute", rawr x3 "setattwibute()")}} を呼び出して特定の属性の値を設定した場合、その後に `weset()` を呼び出してもその属性は既定値にリセットされず、代わりに {{domxwef("ewement.setattwibute", rawr "setattwibute()")}} を呼び出して設定した値を維持することに注意ください。
 
 ## 構文
 
-```js-nolint
-reset()
+```js-nowint
+weset()
 ```
 
 ### 引数
@@ -26,18 +26,18 @@ reset()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-document.getElementById("myform").reset();
+document.getewementbyid("myfowm").weset();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

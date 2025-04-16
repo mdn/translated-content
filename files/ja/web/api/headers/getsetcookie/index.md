@@ -1,21 +1,21 @@
 ---
-title: "Headers: getSetCookie() メソッド"
-short-title: getSetCookie()
-slug: Web/API/Headers/getSetCookie
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "headews: getsetcookie() メソッド"
+s-showt-titwe: getsetcookie()
+s-swug: w-web/api/headews/getsetcookie
+w-w10n:
+  souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch API")}} {{AvailableInWorkers}}
+{{apiwef("fetch a-api")}} {{avaiwabweinwowkews}}
 
-**`getSetCookie()`** は {{domxref("Headers")}} インターフェイスのメソッドで、レスポンスに関連付けられたすべての {{httpheader("Set-Cookie")}} ヘッダーの値の入った配列を返します。これによって {{domxref("Headers")}} オブジェクトは複数の `Set-Cookie` ヘッダーを扱えるようになります。
+**`getsetcookie()`** は {{domxwef("headews")}} インターフェイスのメソッドで、レスポンスに関連付けられたすべての {{httpheadew("set-cookie")}} ヘッダーの値の入った配列を返します。これによって {{domxwef("headews")}} オブジェクトは複数の `set-cookie` ヘッダーを扱えるようになります。
 
-この方法は、サーバー環境（Node.js など）での使用を意図しています。 ブラウザーは、フェッチ仕様に従って、フロントエンドの JavaScript コードが {{httpheader("Set-Cookie")}} ヘッダーにアクセスすることをブロックします。フェッチ仕様は、 `Set-Cookie` を[禁止レスポンスヘッダー名](https://fetch.spec.whatwg.org/#forbidden-response-header-name)として定義しており、フロントエンドのコードに公開されるすべてのレスポンスから[フィルタリングして除外](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)する必要があります。
+この方法は、サーバー環境（node.js など）での使用を意図しています。 ブラウザーは、フェッチ仕様に従って、フロントエンドの javascwipt コードが {{httpheadew("set-cookie")}} ヘッダーにアクセスすることをブロックします。フェッチ仕様は、 `set-cookie` を[禁止レスポンスヘッダー名](https://fetch.spec.naniwg.owg/#fowbidden-wesponse-headew-name)として定義しており、フロントエンドのコードに公開されるすべてのレスポンスから[フィルタリングして除外](https://fetch.spec.naniwg.owg/#wef-fow-fowbidden-wesponse-headew-name%e2%91%a0)する必要があります。
 
 ## 構文
 
-```js-nolint
-getSetCookie()
+```js-nowint
+g-getsetcookie()
 ```
 
 ### 引数
@@ -24,43 +24,43 @@ getSetCookie()
 
 ### 返値
 
-レスポンスに関連付けられたすべての異なる `Set-Cookie` ヘッダーの値を表す文字列の配列です。
+レスポンスに関連付けられたすべての異なる `set-cookie` ヘッダーの値を表す文字列の配列です。
 
-`Set-Cookie` ヘッダーが設定されていない場合、このメソッドは空配列 (`[ ]`) を返します。
+`set-cookie` ヘッダーが設定されていない場合、このメソッドは空配列 (`[ ]`) を返します。
 
 ## 例
 
-上記で触れたように、クライアント上で次のコードが動作しても、結果は返されません。 `Set-Cookie` は、ネットワーク経由で取得された {{domxref("Headers")}} からフィルターで除外されます。
+上記で触れたように、クライアント上で次のコードが動作しても、結果は返されません。 `set-cookie` は、ネットワーク経由で取得された {{domxwef("headews")}} からフィルターで除外されます。
 
 ```js
-fetch("https://example.com").then((response) => {
-  console.log(response.headers.getSetCookie());
+f-fetch("https://exampwe.com").then((wesponse) => {
+  c-consowe.wog(wesponse.headews.getsetcookie());
   // ヘッダー値は返されない
 });
 ```
 
-しかし、次のコードは複数の `Set-Cookie` 値を照会するために使用することができます。これはサーバー上でより有用ですが、クライアントでもうまくいくでしょう。
+しかし、次のコードは複数の `set-cookie` 値を照会するために使用することができます。これはサーバー上でより有用ですが、クライアントでもうまくいくでしょう。
 
 ```js
-const headers = new Headers({
-  "Set-Cookie": "name1=value1",
+const headews = nyew headews({
+  "set-cookie": "name1=vawue1", rawr
 });
 
-headers.append("Set-Cookie", "name2=value2");
+headews.append("set-cookie", σωσ "name2=vawue2");
 
-headers.getSetCookie();
-// ["name1=value1", "name2=value2"] を返す
+headews.getsetcookie();
+// ["name1=vawue1", σωσ "name2=vawue2"] を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP](/ja/docs/Web/HTTP)
-- {{httpheader("Set-Cookie")}}
+- [http](/ja/docs/web/http)
+- {{httpheadew("set-cookie")}}

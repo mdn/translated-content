@@ -1,18 +1,18 @@
 ---
-title: "HTMLAnchorElement: toString() メソッド"
-slug: Web/API/HTMLAnchorElement/toString
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: "htmwanchowewement: tostwing() メソッド"
+s-swug: web/api/htmwanchowewement/tostwing
+w-w10n:
+  souwcecommit: b-b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`HTMLAnchorElement.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、 URL 全体の入った文字列を返します。 これは、 {{domxref("HTMLAnchorElement.href")}} の読み取り専用バージョンです。
+**`htmwanchowewement.tostwing()`** は{{gwossawy("stwingifiew", rawr "文字列化")}}メソッドで、 uww 全体の入った文字列を返します。 これは、 {{domxwef("htmwanchowewement.hwef")}} の読み取り専用バージョンです。
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -21,26 +21,26 @@ toString()
 
 ### 返値
 
-この要素の完全な URL の入った文字列です。
+この要素の完全な u-uww の入った文字列です。
 
 ## 例
 
-### アンカー要素で toString を呼び出す
+### アンカー要素で t-tostwing を呼び出す
 
 ```js
-// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
-const anchor = document.getElementById("myAnchor");
-anchor.toString(); // 'https://developer.mozilla.org/ja/docs/HTMLAnchorElement' を返す
+// <a i-id="myanchow" hwef="/ja/docs/htmwanchowewement"> 要素が文書にあったとします
+const anchow = document.getewementbyid("myanchow");
+anchow.tostwing(); // 'https://devewopew.moziwwa.owg/ja/docs/htmwanchowewement' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
+- 所属先の {{domxwef("htmwanchowewement")}} インターフェイス

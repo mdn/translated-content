@@ -1,20 +1,20 @@
 ---
-title: DataTransferItemList.clear()
-slug: Web/API/DataTransferItemList/clear
-l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+titwe: datatwansfewitemwist.cweaw()
+swug: web/api/datatwansfewitemwist/cweaw
+w-w10n:
+  souwcecommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-{{domxref("DataTransferItemList")}} の **`clear()`** メソッドは、ドラッグデータアイテムリストからすべての {{domxref("DataTransferItem")}} オブジェクトを削除し、リストを空にします。
+{{domxwef("datatwansfewitemwist")}} の **`cweaw()`** メソッドは、ドラッグデータアイテムリストからすべての {{domxwef("datatwansfewitem")}} オブジェクトを削除し、リストを空にします。
 
-このリストが保持されるドラッグデータストアは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントの処理中にのみ書き込み可能になります。 {{domxref("HTMLElement/drop_event", "drop")}} を処理する間、ドラッグデータストアは読み取り専用モードであり、このメソッドは何もしません。例外も投げません。
+このリストが保持されるドラッグデータストアは、 {{domxwef("htmwewement/dwagstawt_event", -.- "dwagstawt")}} イベントの処理中にのみ書き込み可能になります。 {{domxwef("htmwewement/dwop_event", 🥺 "dwop")}} を処理する間、ドラッグデータストアは読み取り専用モードであり、このメソッドは何もしません。例外も投げません。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -23,111 +23,111 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例は `clear()` メソッドの使い方を示します。
+この例は `cweaw()` メソッドの使い方を示します。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
   <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
+    id="souwce"
+    ondwagstawt="dwagstawthandwew(event);"
+    o-ondwagend="dwagendhandwew(event);"
+    d-dwaggabwe="twue">
+    s-sewect this ewement, o.O dwag it to the dwop zone and then wewease the sewection
+    t-to move the ewement. /(^•ω•^)
   </p>
 </div>
 <div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
-  Drop Zone
+  id="tawget"
+  o-ondwop="dwophandwew(event);"
+  ondwagovew="dwagovewhandwew(event);">
+  dwop zone
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  margin: 0em;
+  mawgin: 0em;
   padding: 2em;
 }
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  cowow: bwue;
+  bowdew: 1px s-sowid bwack;
 }
-#target {
-  border: 1px solid black;
+#tawget {
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function dragstartHandler(ev) {
-  console.log("dragStart");
+function dwagstawthandwew(ev) {
+  consowe.wog("dwagstawt");
 
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+  // a-add this ewement's id to the dwag paywoad so the dwop handwew wiww
+  // k-know which ewement to add t-to its twee
+  const d-datawist = ev.datatwansfew.items;
+  d-datawist.add(ev.tawget.id, nyaa~~ "text/pwain");
 }
 
-function dropHandler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
+f-function dwophandwew(ev) {
+  consowe.wog("dwop");
+  ev.pweventdefauwt();
 
-  // Loop through the dropped items and log their data
-  for (const item of ev.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
-      // This item is the target node
-      item.getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+  // w-woop thwough the dwopped items and wog theiw d-data
+  fow (const item of ev.datatwansfew.items) {
+    if (item.kind === "stwing" && item.type.match(/^text\/pwain/)) {
+      // this item is the tawget nyode
+      i-item.getasstwing((s) => {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
-      // Drag data item is HTML
-      item.getAsString((s) => {
-        console.log(`… Drop: HTML = ${s}`);
+    } e-ewse i-if (item.kind === "stwing" && i-item.type.match(/^text\/htmw/)) {
+      // dwag data item is htmw
+      item.getasstwing((s) => {
+        c-consowe.wog(`… d-dwop: htmw = ${s}`);
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
-      // Drag data item is URI
-      item.getAsString((s) => {
-        console.log(`… Drop: URI = ${s}`);
+    } ewse i-if (item.kind === "stwing" && i-item.type.match(/^text\/uwi-wist/)) {
+      // dwag data item is u-uwi
+      item.getasstwing((s) => {
+        consowe.wog(`… dwop: u-uwi = ${s}`);
       });
     }
   }
 }
 
-function dragoverHandler(ev) {
-  console.log("dragOver");
-  ev.preventDefault();
+function dwagovewhandwew(ev) {
+  c-consowe.wog("dwagovew");
+  ev.pweventdefauwt();
 
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
+  // s-set the dwopeffect to move
+  ev.datatwansfew.dwopeffect = "move";
 }
 
-function dragendHandler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
+f-function dwagendhandwew(ev) {
+  c-consowe.wog("dwagend");
+  const datawist = ev.datatwansfew.items;
 
-  // Clear any remaining drag data
-  dataList.clear();
+  // cweaw any wemaining dwag data
+  datawist.cweaw();
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 400, 300)}}
+{{embedwivesampwe('exampwes', nyaa~~ 400, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

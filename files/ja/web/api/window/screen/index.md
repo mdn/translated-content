@@ -1,32 +1,32 @@
 ---
-title: Window.screen
-slug: Web/API/Window/screen
+titwe: window.scween
+swug: web/api/window/scween
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{DOMxRef("Window")}} の **`screen`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `screen` オブジェクトは {{DOMxRef("Screen")}} インターフェイスを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。
+{{domxwef("window")}} の **`scween`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `scween` オブジェクトは {{domxwef("scween")}} インターフェイスを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。
 
 ## 構文
 
 ```
-let screenObj = window.screen;
+w-wet s-scweenobj = window.scween;
 ```
 
 ## 例
 
 ```js
-if (screen.pixelDepth < 8) {
-  // use low-color version of page
-} else {
-  // use regular, colorful page
+i-if (scween.pixewdepth < 8) {
+  // u-use wow-cowow v-vewsion of page
+} e-ewse {
+  // use w-weguwaw, (⑅˘꒳˘) cowowfuw p-page
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,53 +1,53 @@
 ---
-title: RTCPeerConnectionIceEvent
-slug: Web/API/RTCPeerConnectionIceEvent
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: wtcpeewconnectioniceevent
+swug: web/api/wtcpeewconnectioniceevent
+w-w10n:
+  s-souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCPeerConnectionIceEvent`** インターフェイスは、通常 {{domxref("RTCPeerConnection")}}の ICE 候補に関連して発生するイベントを表現します。
+**`wtcpeewconnectioniceevent`** インターフェイスは、通常 {{domxwef("wtcpeewconnection")}}の ice 候補に関連して発生するイベントを表現します。
 
-この型のイベントは、 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} の 1 つだけです。
+この型のイベントは、 {{domxwef("wtcpeewconnection.icecandidate_event", (U ᵕ U❁) "icecandidate")}} の 1 つだけです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} の一種であり、このイベントはそのプロパティも実装しています。_
+_{{domxwef("wtcpeewconnectioniceevent")}} は {{domxwef("event")}} の一種であり、このイベントはそのプロパティも実装しています。_
 
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : イベントに関連付けられた候補を含む {{domxref("RTCIceCandidate")}} を格納し、このイベントがこれ以上来る候補がないことを示す場合は `null` を格納します。
+- {{domxwef("wtcpeewconnectioniceevent.candidate")}} {{weadonwyinwine}}
+  - : イベントに関連付けられた候補を含む {{domxwef("wtcicecandidate")}} を格納し、このイベントがこれ以上来る候補がないことを示す場合は `nuww` を格納します。
 
 ## コンストラクター
 
-- {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
-  - : 新しい `RTCPeerConnectionIceEvent` を返します。このコンストラクターは 2 つの引数を持ち、最初の引数はイベントの種類を表す文字列であり、 2 つ目は {{domxref("RTCIceCandidate")}} を含む辞書です。
+- {{domxwef("wtcpeewconnectioniceevent.wtcpeewconnectioniceevent()", (⑅˘꒳˘) "wtcpeewconnectioniceevent()")}}
+  - : 新しい `wtcpeewconnectioniceevent` を返します。このコンストラクターは 2 つの引数を持ち、最初の引数はイベントの種類を表す文字列であり、 2 つ目は {{domxwef("wtcicecandidate")}} を含む辞書です。
 
 ## インスタンスメソッド
 
-_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} の一種であり、このイベントはそのプロパティも実装しています。 {{domxref("RTCDataChannelEvent")}} に固有のメソッドはありません。_
+_{{domxwef("wtcpeewconnectioniceevent")}} は {{domxwef("event")}} の一種であり、このイベントはそのプロパティも実装しています。 {{domxwef("wtcdatachannewevent")}} に固有のメソッドはありません。_
 
 ## 例
 
 ```js
-pc.onicecandidate = (ev) => {
-  console.log(
-    `The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`,
+p-pc.onicecandidate = (ev) => {
+  c-consowe.wog(
+    `the ice c-candidate (twsp a-addw: '${ev.candidate.candidate}') a-added to connection.`, ( ͡o ω ͡o )
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}
+- [webwtc](/ja/docs/web/api/webwtc_api)
+- このイベントの通常ターゲット: {{domxwef("wtcpeewconnection")}}

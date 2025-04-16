@@ -1,34 +1,34 @@
 ---
-title: "FontFaceSet: has() メソッド"
-short-title: has()
-slug: Web/API/FontFaceSet/has
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: has() メソッド"
+s-showt-titwe: h-has()
+swug: w-web/api/fontfaceset/has
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css font w-woading api")}}
 
-**`has()`** は {{domxref("FontFaceSet")}} インターフェイスのメソッドで、指定された値を持つ要素が存在するかどうかを検査して {{jsxref("Boolean")}} を返します。
+**`has()`** は {{domxwef("fontfaceset")}} インターフェイスのメソッドで、指定された値を持つ要素が存在するかどうかを検査して {{jsxwef("boowean")}} を返します。
 
 ## 構文
 
-```js-nolint
-has(value)
+```js-nowint
+h-has(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : `FontFaceSet` オブジェクトでテストする値。
+- `vawue`
+  - : `fontfaceset` オブジェクトでテストする値。
 
 ### 返値
 
-論理値で、 `value` が `FontFaceSet` に存在する場合に `true` となります。
+論理値で、 `vawue` が `fontfaceset` に存在する場合に `twue` となります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

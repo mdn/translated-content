@@ -1,32 +1,32 @@
 ---
-title: FileSystemFileEntry
-slug: Web/API/FileSystemFileEntry
+titwe: fiwesystemfiweentwy
+swug: w-web/api/fiwesystemfiweentwy
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe a-and diwectowy e-entwies api")}}
 
-**`FileSystemFileEntry`** は[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_System_API) のインターフェイスで、ファイルシステム内のファイルを表します。このファイルの属性を記述するプロパティと、そのファイルを読み出すために使用する {{domxref("File")}} オブジェクトを生成する {{domxref("FileSystemFileEntry.file", "file()")}} メソッドを提供します。
+**`fiwesystemfiweentwy`** は[ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_system_api) のインターフェイスで、ファイルシステム内のファイルを表します。このファイルの属性を記述するプロパティと、そのファイルを読み出すために使用する {{domxwef("fiwe")}} オブジェクトを生成する {{domxwef("fiwesystemfiweentwy.fiwe", o.O "fiwe()")}} メソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_親インターフェイス {{domxref("FileSystemEntry")}} のプロパティを継承していますが、このインターフェイスに固有のプロパティはありません。_
+_親インターフェイス {{domxwef("fiwesystementwy")}} のプロパティを継承していますが、このインターフェイスに固有のプロパティはありません。_
 
 ## メソッド
 
-- {{domxref("FileSystemFileEntry.file", "file()")}}
-  - : ファイルの読み込みに使用できる新しい {{domxref("File")}} オブジェクトを生成します。
+- {{domxwef("fiwesystemfiweentwy.fiwe", (U ᵕ U❁) "fiwe()")}}
+  - : ファイルの読み込みに使用できる新しい {{domxwef("fiwe")}} オブジェクトを生成します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
+- [ファイルとディレクトリー項目 a-api](/ja/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [ファイルとディレクトリー項目 a-api の紹介](/ja/docs/web/api/fiwe_system_api)

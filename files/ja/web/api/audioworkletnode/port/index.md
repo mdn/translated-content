@@ -1,70 +1,70 @@
 ---
-title: "AudioWorkletNode: port プロパティ"
-slug: Web/API/AudioWorkletNode/port
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowowkwetnode: powt プロパティ"
+s-swug: web/api/audiowowkwetnode/powt
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("AudioWorkletNode")}} インターフェイスの読み取り専用プロパティ **`port`** は、関連付けられた {{domxref("MessagePort")}} を返します。これにより、ノードと対応する {{domxref("AudioWorkletProcessor")}} の間で双方向通信ができます。
+{{domxwef("audiowowkwetnode")}} インターフェイスの読み取り専用プロパティ **`powt`** は、関連付けられた {{domxwef("messagepowt")}} を返します。これにより、ノードと対応する {{domxwef("audiowowkwetpwocessow")}} の間で双方向通信ができます。
 
-> [!NOTE]
-> チャネルのもう一方の端にあるポートは、処理器の {{domxref("AudioWorkletProcessor.port", "port")}} プロパティから参照できます。
+> [!note]
+> チャネルのもう一方の端にあるポートは、処理器の {{domxwef("audiowowkwetpwocessow.powt", rawr x3 "powt")}} プロパティから参照できます。
 
 ## 値
 
-この `AudioWorkletNode` と対応する `AudioWorkletProcessor` を繋ぐ {{domxref("MessagePort")}} オブジェクトです。
+この `audiowowkwetnode` と対応する `audiowowkwetpwocessow` を繋ぐ {{domxwef("messagepowt")}} オブジェクトです。
 
 ## 例
 
-双方向通信でできることのデモのため、無音を出力し、`AudioWorkletNode` からの ping 要求に応える `AudioWorkletProcessor` を作成します。
+双方向通信でできることのデモのため、無音を出力し、`audiowowkwetnode` からの p-ping 要求に応える `audiowowkwetpwocessow` を作成します。
 
-まず、独自の `AudioWorkletProcessor` を定義し、登録します。
+まず、独自の `audiowowkwetpwocessow` を定義し、登録します。
 これは別のファイルで行うことに注意してください。
 
 ```js
-// ping-pong-processor.js
-class PingPongProcessor extends AudioWorkletProcessor {
-  constructor(...args) {
-    super(...args);
-    this.port.onmessage = (e) => {
-      console.log(e.data);
-      this.port.postMessage("pong");
+// p-ping-pong-pwocessow.js
+cwass p-pingpongpwocessow e-extends audiowowkwetpwocessow {
+  c-constwuctow(...awgs) {
+    supew(...awgs);
+    this.powt.onmessage = (e) => {
+      consowe.wog(e.data);
+      this.powt.postmessage("pong");
     };
   }
-  process(inputs, outputs, parameters) {
-    return true;
+  p-pwocess(inputs, nyaa~~ outputs, pawametews) {
+    wetuwn twue;
   }
 }
 
-registerProcessor("ping-pong-processor", PingPongProcessor);
+w-wegistewpwocessow("ping-pong-pwocessow", pingpongpwocessow);
 ```
 
-そして、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して `AudioWorkletNode` のインスタンスを作成し、このノードを音声グラフに接続します。
+そして、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して `audiowowkwetnode` のインスタンスを作成し、このノードを音声グラフに接続します。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("ping-pong-processor.js");
-const pingPongNode = new AudioWorkletNode(audioContext, "ping-pong-processor");
-// 毎秒、AudioWorkletNode から
-// 文字列 'ping' が入ったメッセージを AudioWorkletProcessor に送る
-setInterval(() => pingPongNode.port.postMessage("ping"), 1000);
-pingPongNode.port.onmessage = (e) => console.log(e.data);
-pingPongNode.connect(audioContext.destination);
+c-const audiocontext = nyew audiocontext();
+await audiocontext.audiowowkwet.addmoduwe("ping-pong-pwocessow.js");
+c-const pingpongnode = nyew a-audiowowkwetnode(audiocontext, /(^•ω•^) "ping-pong-pwocessow");
+// 毎秒、audiowowkwetnode から
+// 文字列 'ping' が入ったメッセージを a-audiowowkwetpwocessow に送る
+setintewvaw(() => pingpongnode.powt.postmessage("ping"), rawr 1000);
+pingpongnode.powt.onmessage = (e) => consowe.wog(e.data);
+p-pingpongnode.connect(audiocontext.destination);
 ```
 
 このプログラムは、コンソールに毎秒文字列 `"ping"` と `"pong"` を出力します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
+- [web audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

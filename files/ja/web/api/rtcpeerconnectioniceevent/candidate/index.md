@@ -1,37 +1,37 @@
 ---
-title: RTCPeerConnectionIceEvent.candidate
-slug: Web/API/RTCPeerConnectionIceEvent/candidate
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: wtcpeewconnectioniceevent.candidate
+swug: w-web/api/wtcpeewconnectioniceevent/candidate
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`candidate`** は {{domxref("RTCPeerConnectionIceEvent")}} インターフェイスの読み取り専用のプロパティで、そのイベントに関連付けられた {{domxref("RTCIceCandidate")}} を返します。
+**`candidate`** は {{domxwef("wtcpeewconnectioniceevent")}} インターフェイスの読み取り専用のプロパティで、そのイベントに関連付けられた {{domxwef("wtcicecandidate")}} を返します。
 
 ## 値
 
-受信した ICE の候補を表す {{domxref("RTCIceCandidate")}} オブジェクト、 またはこのネゴシエーションセッションの候補がないことを表す `null` です。
+受信した ice の候補を表す {{domxwef("wtcicecandidate")}} オブジェクト、 またはこのネゴシエーションセッションの候補がないことを表す `nuww` です。
 
 ## 例
 
 ```js
-pc.onicecandidate = (ev) => {
-  alert(
-    `The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`,
+p-pc.onicecandidate = (ev) => {
+  a-awewt(
+    `the i-ice candidate (twanspowt a-addwess: '${ev.candidate.candidate}') h-has been added to this connection.`, ( ͡o ω ͡o )
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
-- {{domxref("RTCPeerConnection")}}
+- {{domxwef("wtcpeewconnection.icecandidate_event", UwU "icecandidate")}}
+- {{domxwef("wtcpeewconnection")}}

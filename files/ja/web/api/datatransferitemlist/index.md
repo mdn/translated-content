@@ -1,143 +1,143 @@
 ---
-title: DataTransferItemList
-slug: Web/API/DataTransferItemList
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: datatwansfewitemwist
+swug: web/api/datatwansfewitemwist
+w-w10n:
+  souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-**`DataTransferItemList`** オブジェクトは {{domxref("DataTransferItem")}} オブジェクトのリストで、ドラッグされているアイテムを表します。 _ドラッグ操作_ の間、それぞれの {{domxref("DragEvent")}} は {{domxref("DragEvent.dataTransfer", "dataTransfer")}} プロパティを持ち、そのプロパティが `DataTransferItemList` となります。
+**`datatwansfewitemwist`** オブジェクトは {{domxwef("datatwansfewitem")}} オブジェクトのリストで、ドラッグされているアイテムを表します。 _ドラッグ操作_ の間、それぞれの {{domxwef("dwagevent")}} は {{domxwef("dwagevent.datatwansfew", "datatwansfew")}} プロパティを持ち、そのプロパティが `datatwansfewitemwist` となります。
 
-それぞれのアイテムは、[配列演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]` を使用してアクセスできます。
+それぞれのアイテムは、[配列演算子](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#accessing_awway_ewements) `[]` を使用してアクセスできます。
 
 このインターフェイスにはコンストラクターがありません。
 
 ## インスタンスプロパティ
 
-- {{domxref("DataTransferItemList.length")}} {{ReadOnlyInline}}
-  - : `unsigned long` で、リスト内のドラッグアイテムの数を表します。
+- {{domxwef("datatwansfewitemwist.wength")}} {{weadonwyinwine}}
+  - : `unsigned w-wong` で、リスト内のドラッグアイテムの数を表します。
 
 ## インスタンスメソッド
 
-- {{domxref("DataTransferItemList.add()")}}
-  - : ドラッグアイテムのリストにアイテム（{{domxref("File")}} オブジェクトまたは文字列）を追加し、新しいアイテムの {{domxref("DataTransferItem")}} オブジェクトを返します。
-- {{domxref("DataTransferItemList.remove()")}}
+- {{domxwef("datatwansfewitemwist.add()")}}
+  - : ドラッグアイテムのリストにアイテム（{{domxwef("fiwe")}} オブジェクトまたは文字列）を追加し、新しいアイテムの {{domxwef("datatwansfewitem")}} オブジェクトを返します。
+- {{domxwef("datatwansfewitemwist.wemove()")}}
   - : 指定された位置のリストからドラッグアイテムを削除します。
-- {{domxref("DataTransferItemList.clear()")}}
+- {{domxwef("datatwansfewitemwist.cweaw()")}}
   - : リストからすべてのドラッグ項目を削除します。
-- **`DataTransferItemList.DataTransferItem()`**
-  - : 指定された位置の {{domxref("DataTransferItem")}} を返すゲッターです。
+- **`datatwansfewitemwist.datatwansfewitem()`**
+  - : 指定された位置の {{domxwef("datatwansfewitem")}} を返すゲッターです。
 
 ## 例
 
 この例は、ドラッグ & ドロップの使い方を表します。
 
-### JavaScript
+### javascwipt
 
 ```js
-function dragstartHandler(ev) {
-  console.log("dragStart");
+f-function dwagstawthandwew(ev) {
+  c-consowe.wog("dwagstawt");
 
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+  // a-add this ewement's i-id to the dwag paywoad so the dwop handwew wiww
+  // know which ewement to a-add to its twee
+  const datawist = ev.datatwansfew.items;
+  d-datawist.add(ev.tawget.id, :3 "text/pwain");
 
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+  // add s-some othew items to the dwag paywoad
+  datawist.add("<p>pawagwaph…</p>", -.- "text/htmw");
+  datawist.add("http://www.exampwe.owg", 😳 "text/uwi-wist");
 }
 
-function dropHandler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
+f-function dwophandwew(ev) {
+  c-consowe.wog("dwop");
+  e-ev.pweventdefauwt();
 
-  // Loop through the dropped items and log their data
-  for (const item of ev.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
-      // This item is the target node
-      item.getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+  // woop thwough the dwopped items and wog theiw data
+  fow (const i-item of ev.datatwansfew.items) {
+    if (item.kind === "stwing" && item.type.match(/^text\/pwain/)) {
+      // this item is the tawget nyode
+      i-item.getasstwing((s) => {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
-      // Drag data item is HTML
-      item.getAsString((s) => {
-        console.log(`… Drop: HTML = ${s}`);
+    } e-ewse i-if (item.kind === "stwing" && i-item.type.match(/^text\/htmw/)) {
+      // d-dwag data item is htmw
+      item.getasstwing((s) => {
+        c-consowe.wog(`… dwop: htmw = ${s}`);
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
-      // Drag data item is URI
-      item.getAsString((s) => {
-        console.log(`… Drop: URI = ${s}`);
+    } e-ewse if (item.kind === "stwing" && item.type.match(/^text\/uwi-wist/)) {
+      // dwag data item is uwi
+      item.getasstwing((s) => {
+        consowe.wog(`… dwop: uwi = ${s}`);
       });
     }
   }
 }
 
-function dragoverHandler(ev) {
-  console.log("dragOver");
-  ev.preventDefault();
+f-function dwagovewhandwew(ev) {
+  c-consowe.wog("dwagovew");
+  e-ev.pweventdefauwt();
 
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
+  // s-set the dwopeffect to move
+  ev.datatwansfew.dwopeffect = "move";
 }
 
-function dragendHandler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
+function d-dwagendhandwew(ev) {
+  c-consowe.wog("dwagend");
+  const datawist = e-ev.datatwansfew.items;
 
-  // Clear any remaining drag data
-  dataList.clear();
+  // c-cweaw any wemaining dwag data
+  d-datawist.cweaw();
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
   <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
+    i-id="souwce"
+    ondwagstawt="dwagstawthandwew(event);"
+    ondwagend="dwagendhandwew(event);"
+    d-dwaggabwe="twue">
+    sewect this ewement, mya d-dwag it to the dwop zone a-and then wewease t-the sewection
+    to move the ewement. (˘ω˘)
   </p>
 </div>
 <div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
-  Drop Zone
+  id="tawget"
+  ondwop="dwophandwew(event);"
+  ondwagovew="dwagovewhandwew(event);">
+  dwop zone
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  margin: 0em;
-  padding: 2em;
+d-div {
+  mawgin: 0em;
+  p-padding: 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  c-cowow: b-bwue;
+  bowdew: 1px sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  bowdew: 1px sowid bwack;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example', '35%', '250px')}}
+{{embedwivesampwe('exampwe', >_< '35%', -.- '250px')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

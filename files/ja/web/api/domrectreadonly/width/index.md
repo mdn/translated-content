@@ -1,14 +1,14 @@
 ---
-title: "DOMRectReadOnly: width プロパティ"
-short-title: width
-slug: Web/API/DOMRectReadOnly/width
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domwectweadonwy: width プロパティ"
+s-showt-titwe: w-width
+swug: web/api/domwectweadonwy/width
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`width`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の幅を表します。
+**`width`** は **`domwectweadonwy`** インターフェイスの読み取り専用プロパティで、この `domwect` の幅を表します。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

@@ -1,82 +1,82 @@
 ---
-title: "BroadcastChannel: messageerror イベント"
-slug: Web/API/BroadcastChannel/messageerror_event
-l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+titwe: "bwoadcastchannew: messageewwow イベント"
+s-swug: web/api/bwoadcastchannew/messageewwow_event
+w-w10n:
+  s-souwcecommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`messageerror` イベントは、シリアル化を解釈できないメッセージがチャンネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクト上で発生します。
+`messageewwow` イベントは、シリアル化を解釈できないメッセージがチャンネルに到着したときに {{domxwef('bwoadcastchannew')}} オブジェクト上で発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener("messageerror", (event) => { })
-onmessageerror = (event) => { }
+```js-nowint
+a-addeventwistenew("messageewwow", (U ᵕ U❁) (event) => { })
+o-onmessageewwow = (event) => { }
 ```
 
 ## イベント型
 
-{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("messageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : メッセージ送信元によって送信されたデータです。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 文字列で、メッセージ送信元のオリジンを表します。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの一意の ID を表します。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : メッセージイベントソース、すなわち {{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトで、メッセージの送信元を表します。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 文字列で、このイベントの一意の i-id を表します。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : メッセージイベントソース、すなわち {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}}、{{domxwef("sewvicewowkew")}} の何れかのオブジェクトで、メッセージの送信元を表します。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : {{domxwef("messagepowt")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-このコードは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) を使用してメッセージとエラーを待ち受けします。
+このコードは [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) を使用してメッセージとエラーを待ち受けします。
 
 ```js
-const channel = new BroadcastChannel("example-channel");
+c-const c-channew = nyew bwoadcastchannew("exampwe-channew");
 
-channel.addEventListener("message", (event) => {
-  received.textContent = event.data;
+channew.addeventwistenew("message", -.- (event) => {
+  weceived.textcontent = event.data;
 });
 
-channel.addEventListener("messageerror", (event) => {
-  console.error(event);
+channew.addeventwistenew("messageewwow", ^^;; (event) => {
+  consowe.ewwow(event);
 });
 ```
 
-上と同じですが、 `onmessage` と `onmessageerror` のイベントハンドラープロパティを使用します。
+上と同じですが、 `onmessage` と `onmessageewwow` のイベントハンドラープロパティを使用します。
 
 ```js
-const channel = new BroadcastChannel("example-channel");
+c-const channew = nyew bwoadcastchannew("exampwe-channew");
 
-channel.onmessage = (event) => {
-  received.textContent = event.data;
+c-channew.onmessage = (event) => {
+  weceived.textcontent = e-event.data;
 };
 
-channel.onmessageerror = (event) => {
-  console.log(event);
+channew.onmessageewwow = (event) => {
+  consowe.wog(event);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`message`](/ja/docs/Web/API/BroadcastChannel/message_event)
+- 関連イベント: [`message`](/ja/docs/web/api/bwoadcastchannew/message_event)

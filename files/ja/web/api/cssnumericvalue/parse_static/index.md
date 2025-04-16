@@ -1,44 +1,44 @@
 ---
-title: CSSNumericValue.parse()
-slug: Web/API/CSSNumericValue/parse_static
+titwe: cssnumewicvawue.pawse()
+swug: web/api/cssnumewicvawue/pawse_static
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`parse()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、値の文字列をメンバーが値と単位となっているオブジェクトに変換します。
+**`pawse()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、値の文字列をメンバーが値と単位となっているオブジェクトに変換します。
 
 ## 構文
 
 ```js
-parse(cssText);
+p-pawse(csstext);
 ```
 
 ### 引数
 
-- `cssText`
+- `csstext`
   - : 数値と単位の部分を持つ文字列です。
 
 ### 返値
 
-{{domxref('CSSNumericValue')}} です。
+{{domxwef('cssnumewicvawue')}} です。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : TBD
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : t-tbd
 
 ## 例
 
-以下は、`unit` プロパティが `"px"` で、`value` プロパティが `42` である {{domxref('CSSUnitValue')}} オブジェクトを返すものです。
+以下は、`unit` プロパティが `"px"` で、`vawue` プロパティが `42` である {{domxwef('cssunitvawue')}} オブジェクトを返すものです。
 
 ```js
-let numValue = CSSNumericValue.parse("42.0px");
+w-wet numvawue = c-cssnumewicvawue.pawse("42.0px");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

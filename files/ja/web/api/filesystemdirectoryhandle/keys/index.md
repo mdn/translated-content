@@ -1,18 +1,18 @@
 ---
-title: FileSystemDirectoryHandle.keys()
-slug: Web/API/FileSystemDirectoryHandle/keys
-l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+titwe: fiwesystemdiwectowyhandwe.keys()
+swug: w-web/api/fiwesystemdiwectowyhandwe/keys
+w-w10n:
+  s-souwcecommit: c88a329069328522a5c20c054f9dbced9967dbd4
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref("FileSystemDirectoryHandle")}} インターフェイスの **`keys()`** メソッドは、`FileSystemDirectoryHandle` 内の各アイテムのキーを含む新しい _配列イテレーター_ を返します。
+{{domxwef("fiwesystemdiwectowyhandwe")}} インターフェイスの **`keys()`** メソッドは、`fiwesystemdiwectowyhandwe` 内の各アイテムのキーを含む新しい _配列イテレーター_ を返します。
 
 ## 構文
 
-```js-nolint
-FileSystemDirectoryHandle.keys()
+```js-nowint
+f-fiwesystemdiwectowyhandwe.keys()
 ```
 
 ### 引数
@@ -21,7 +21,7 @@ FileSystemDirectoryHandle.keys()
 
 ### 返値
 
-新しい {{jsxref('Array')}} を返します。
+新しい {{jsxwef('awway')}} を返します。
 
 ## 例
 
@@ -29,13 +29,13 @@ FileSystemDirectoryHandle.keys()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system access api](/ja/docs/web/api/fiwe_system_api)
+- [the f-fiwe system access api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

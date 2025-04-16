@@ -1,22 +1,22 @@
 ---
-title: "SensorErrorEvent: error プロパティ"
-slug: Web/API/SensorErrorEvent/error
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "sensowewwowevent: ewwow プロパティ"
+s-swug: web/api/sensowewwowevent/ewwow
+w-w10n:
+  s-souwcecommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-{{domxref("SensorErrorEvent")}} インターフェイスの読み取り専用プロパティ **`error`** は、イベントのコンストラクターに渡された {{domxref('DOMException')}} オブジェクトを返します。
+{{domxwef("sensowewwowevent")}} インターフェイスの読み取り専用プロパティ **`ewwow`** は、イベントのコンストラクターに渡された {{domxwef('domexception')}} オブジェクトを返します。
 
 ## 値
 
-{{domxref('DOMException')}} です。
+{{domxwef('domexception')}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

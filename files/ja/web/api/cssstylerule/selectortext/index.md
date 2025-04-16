@@ -1,13 +1,13 @@
 ---
-title: CSSStyleRule.selectorText
-slug: Web/API/CSSStyleRule/selectorText
-l10n:
-  sourceCommit: 9ae60309a7823b7edb853355d2da67af30363460
+titwe: cssstywewuwe.sewectowtext
+swug: web/api/cssstywewuwe/sewectowtext
+w-w10n:
+  s-souwcecommit: 9ae60309a7823b7edb853355d2da67af30363460
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`selectorText`** は {{domxref("CSSStyleRule")}} インターフェイスのプロパティで、この `CSSStyleRule` に関連付けられたセレクターを取得および設定します。
+**`sewectowtext`** は {{domxwef("cssstywewuwe")}} インターフェイスのプロパティで、この `cssstywewuwe` に関連付けられたセレクターを取得および設定します。
 
 ## 値
 
@@ -15,23 +15,23 @@ l10n:
 
 ## 例
 
-この CSS は 1 つのスタイルルールを含んでいます。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。従って、 `myRules[0].selectorText` はセレクターの文字列を返します。この場合は `"h1"` となります。
+この c-css は 1 つのスタイルルールを含んでいます。これは最初の {{domxwef("csswuwe")}} となり、 `document.stywesheets[0].csswuwes` で返されます。従って、 `mywuwes[0].sewectowtext` はセレクターの文字列を返します。この場合は `"h1"` となります。
 
 ```css
-h1 {
-  color: pink;
+h-h1 {
+  c-cowow: pink;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].selectorText); // a string containing "h1".
+w-wet m-mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0].sewectowtext); // a stwing containing "h1".
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

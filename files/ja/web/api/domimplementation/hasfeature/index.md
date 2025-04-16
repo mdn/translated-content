@@ -1,42 +1,42 @@
 ---
-title: "DOMImplementation: hasFeature() メソッド"
-slug: Web/API/DOMImplementation/hasFeature
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domimpwementation: hasfeatuwe() メソッド"
+s-swug: web/api/domimpwementation/hasfeatuwe
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`DOMImplementation.hasFeature()`** メソッドは、指定された機能に対応しているかどうかを示す論理値を返します。これは非推奨です。現代のブラウザーはすべて `true` を返します。
+**`domimpwementation.hasfeatuwe()`** メソッドは、指定された機能に対応しているかどうかを示す論理値を返します。これは非推奨です。現代のブラウザーはすべて `twue` を返します。
 
 どのような機能を報告するかは、実装にばらつきがありました。
-最新版の仕様では、このメソッドは機能が正確で使用できる場合は、常に `true` を返すように決定されました。
+最新版の仕様では、このメソッドは機能が正確で使用できる場合は、常に `twue` を返すように決定されました。
 
 ## 構文
 
-```js-nolint
-hasFeature(feature, version)
+```js-nowint
+h-hasfeatuwe(featuwe, 🥺 v-vewsion)
 ```
 
 ### 引数
 
-- `feature`
+- `featuwe`
   - : 機能名を表す文字列です。
-- `version`
+- `vewsion`
   - : 機能を定義する仕様のバージョンを表す文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("DOMImplementation")}} インターフェイス
+- 所属先の {{domxwef("domimpwementation")}} インターフェイス

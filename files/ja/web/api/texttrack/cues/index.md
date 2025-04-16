@@ -1,35 +1,35 @@
 ---
-title: TextTrack.cues
-slug: Web/API/TextTrack/cues
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwack.cues
+swug: web/api/texttwack/cues
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`cues`** は {{domxref("TextTrack")}} インターフェイスの読み取り専用プロパティで、トラックのこのすべてのキューが入った {{domxref("TextTrackCueList")}} オブジェクトを返します。
+**`cues`** は {{domxwef("texttwack")}} インターフェイスの読み取り専用プロパティで、トラックのこのすべてのキューが入った {{domxwef("texttwackcuewist")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("TextTrackCueList")}} オブジェクトです。
+{{domxwef("texttwackcuewist")}} オブジェクトです。
 
 ## 例
 
-以下の例では、 `addCue()` を使用して、動画のテキストトラックに 2 つのキューを追加しています。 `cues` の値はコンソールに表示されます。返された {{domxref("TextTrackCueList")}} オブジェクトには、 2 つのキューが格納されます。
+以下の例では、 `addcue()` を使用して、動画のテキストトラックに 2 つのキューを追加しています。 `cues` の値はコンソールに表示されます。返された {{domxwef("texttwackcuewist")}} オブジェクトには、 2 つのキューが格納されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, "Hildy!"));
-track.addCue(new VTTCue(1, 1.4, "How are you?"));
-console.log(track.cues);
+w-wet video = d-document.quewysewectow("video");
+w-wet twack = v-video.addtexttwack("captions", σωσ "captions", σωσ "en");
+t-twack.mode = "showing";
+t-twack.addcue(new vttcue(0, >_< 0.9, "hiwdy!"));
+twack.addcue(new vttcue(1, :3 1.4, "how awe y-you?"));
+consowe.wog(twack.cues);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

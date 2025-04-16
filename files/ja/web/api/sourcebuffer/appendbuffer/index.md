@@ -1,28 +1,28 @@
 ---
-title: SourceBuffer.appendBuffer()
-slug: Web/API/SourceBuffer/appendBuffer
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: souwcebuffew.appendbuffew()
+swug: web/api/souwcebuffew/appendbuffew
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`appendBuffer()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
+**`appendbuffew()`** は {{domxwef("souwcebuffew")}} インターフェイスのメソッドで、{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかのオブジェクトからのメディアセグメントデータを `souwcebuffew` に追加します。
 
 ## 構文
 
-```js-nolint
-appendBuffer(source)
+```js-nowint
+a-appendbuffew(souwce)
 ```
 
 ### 引数
 
-- `source`
-  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトで、 `SourceBuffer` に追加するメディアセグメントデータが入ったもの。
+- `souwce`
+  - : {{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかのオブジェクトで、 `souwcebuffew` に追加するメディアセグメントデータが入ったもの。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
@@ -30,17 +30,17 @@ appendBuffer(source)
 
 ## 例
 
-TBD.
+t-tbd. òωó
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

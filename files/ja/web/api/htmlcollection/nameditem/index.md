@@ -1,21 +1,21 @@
 ---
-title: "HTMLCollection: namedItem() メソッド"
-short-title: namedItem()
-slug: Web/API/HTMLCollection/namedItem
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwcowwection: nyameditem() メソッド"
+s-showt-titwe: n-nyameditem()
+s-swug: web/api/htmwcowwection/nameditem
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`namedItem()`** は {{domxref("HTMLCollection")}} インターフェイスのメソッドで、この集合の中で `id` または `name` 属性が指定された名前に一致する {{domxref("Element")}} の先頭のものを返します。一致する要素がなければ `null` を返します。
+**`nameditem()`** は {{domxwef("htmwcowwection")}} インターフェイスのメソッドで、この集合の中で `id` または `name` 属性が指定された名前に一致する {{domxwef("ewement")}} の先頭のものを返します。一致する要素がなければ `nuww` を返します。
 
-JavaScript では、配列のブラケット記法を{{jsxref("String", "文字列")}}で `collection["value"]` のように使用すると、`collection.namedItem("value")` と同等になります。
+j-javascwipt では、配列のブラケット記法を{{jsxwef("stwing", /(^•ω•^) "文字列")}}で `cowwection["vawue"]` のように使用すると、`cowwection.nameditem("vawue")` と同等になります。
 
 ## 構文
 
-```js-nolint
-namedItem(key)
+```js-nowint
+n-nyameditem(key)
 ```
 
 ### 引数
@@ -24,50 +24,50 @@ namedItem(key)
 
 ### 返値
 
-- `item` は {{domxref("HTMLCollection")}} の中で _key_ に一致する最初の {{domxref("Element")}} です。または、存在しない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
+- `item` は {{domxwef("htmwcowwection")}} の中で _key_ に一致する最初の {{domxwef("ewement")}} です。または、存在しない場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) です。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div id="personal">
-  <span name="title">Dr.</span>
-  <span name="firstname">Carina</span>
-  <span name="lastname">Anand</span>
-  <span id="degree">(MD)</span>
+```htmw
+<div id="pewsonaw">
+  <span nyame="titwe">dw.</span>
+  <span nyame="fiwstname">cawina</span>
+  <span nyame="wastname">anand</span>
+  <span id="degwee">(md)</span>
 </div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const container = document.getElementById("personal");
+const containew = document.getewementbyid("pewsonaw");
 
-// "title" という名前の HTMLSpanElement を返す。そのような要素が存在しない場合は null を返す。
-const titleSpan = container.children.namedItem("title");
+// "titwe" という名前の h-htmwspanewement を返す。そのような要素が存在しない場合は nyuww を返す。
+c-const titwespan = containew.chiwdwen.nameditem("titwe");
 
-// 以下の変化形は、name や id が一致する要素がない場合、null ではなく undefined を返す
-const firstnameSpan = container.children["firstname"];
-const lastnameSpan = container.children.lastname;
+// 以下の変化形は、name や id が一致する要素がない場合、nuww ではなく u-undefined を返す
+const f-fiwstnamespan = c-containew.chiwdwen["fiwstname"];
+const wastnamespan = containew.chiwdwen.wastname;
 
-// id が "degree" である span 要素を返す
-const degreeSpan = container.children.namedItem("degree");
+// id が "degwee" である span 要素を返す
+c-const degweespan = containew.chiwdwen.nameditem("degwee");
 
-const output = document.createElement("div");
-output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
+const output = document.cweateewement("div");
+output.textcontent = `wesuwt: ${titwespan.textcontent} ${fiwstnamespan.textcontent} ${wastnamespan.textcontent} ${degweespan.textcontent}`;
 
-container.insertAdjacentElement("afterend", output);
+containew.insewtadjacentewement("aftewend", rawr o-output);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

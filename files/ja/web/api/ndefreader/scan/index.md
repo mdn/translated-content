@@ -1,77 +1,77 @@
 ---
-title: "NDEFReader: scan() メソッド"
-short-title: scan()
-slug: Web/API/NDEFReader/scan
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ndefweadew: scan() メソッド"
+s-showt-titwe: s-scan()
+s-swug: web/api/ndefweadew/scan
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("web n-nyfc api")}}
 
-`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取り操作がスケジュールされたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+`scan()` は {{domxwef("ndefweadew")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxwef("pwomise")}} を返します。このプロミスは n-nyfc タグの読み取り操作がスケジュールされたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 scan(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `signal`
-      - : {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
+    - `signaw`
+      - : {{domxwef("abowtsignaw")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
 
 ### 返値
 
-{{JSxRef("Promise")}} で、 NFC アダプターで読み取り操作のスケジューリングが終わると直ちに解決します。
+{{jsxwef("pwomise")}} で、 nyfc アダプターで読み取り操作のスケジューリングが終わると直ちに解決します。
 
 ## 例外
 
-このメソッドからは例外は発生しません。代わりに返されるプロミスが拒否され、 {{domxref("DOMException")}} が `name` を何れかの一つとして渡されます。
+このメソッドからは例外は発生しません。代わりに返されるプロミスが拒否され、 {{domxwef("domexception")}} が `name` を何れかの一つとして渡されます。
 
-- `AbortError`
-  - : `options` 引数で渡された {{DOMxRef("AbortSignal")}} によってスキャン操作が中止された場合に返されます。
-- `InvalidStateError` {{domxref("DOMException")}}
+- `abowtewwow`
+  - : `options` 引数で渡された {{domxwef("abowtsignaw")}} によってスキャン操作が中止された場合に返されます。
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 既に進行中のスキャンがある場合に返されます。
-- `NotAllowedError`
+- `notawwowedewwow`
   - : この操作の権限が拒否された場合に返されます。
-- `NotSupportedError`
-  - : ウェブ NFC と互換性のある NFC アダプターがない、または接続が確立できなかった場合に返されます。
+- `notsuppowtedewwow`
+  - : ウェブ nyfc と互換性のある nyfc アダプターがない、または接続が確立できなかった場合に返されます。
 
 ## 例
 
 ### スキャン中のエラーの取り扱い
 
-この例では、スキャンのプロミスが拒否され、 `readingerror` が発生したときの様子を示しています。
+この例では、スキャンのプロミスが拒否され、 `weadingewwow` が発生したときの様子を示しています。
 
 ```js
-const ndef = new NDEFReader();
-ndef
+c-const nydef = nyew nydefweadew();
+nydef
   .scan()
   .then(() => {
-    console.log("Scan started successfully.");
-    ndef.onreadingerror = (event) => {
-      console.log(
-        "Error! Cannot read data from the NFC tag. Try a different one?",
+    c-consowe.wog("scan stawted successfuwwy.");
+    nydef.onweadingewwow = (event) => {
+      c-consowe.wog(
+        "ewwow! :3 cannot wead data fwom the nyfc tag. twy a d-diffewent one?", 😳😳😳
       );
     };
-    ndef.onreading = (event) => {
-      console.log("NDEF message read.");
+    nydef.onweading = (event) => {
+      c-consowe.wog("ndef m-message wead.");
     };
   })
-  .catch((error) => {
-    console.log(`Error! Scan failed to start: ${error}.`);
+  .catch((ewwow) => {
+    consowe.wog(`ewwow! -.- scan faiwed to stawt: ${ewwow}.`);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

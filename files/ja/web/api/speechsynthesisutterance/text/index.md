@@ -1,17 +1,17 @@
 ---
-title: "SpeechSynthesisUtterance: text プロパティ"
-short-title: text
-slug: Web/API/SpeechSynthesisUtterance/text
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "speechsynthesisuttewance: text プロパティ"
+s-showt-titwe: t-text
+swug: w-web/api/speechsynthesisuttewance/text
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`text`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話時に合成されるテキストを取得および設定します。
+**`text`** は {{domxwef("speechsynthesisuttewance")}} インターフェイスのプロパティで、発話時に合成されるテキストを取得および設定します。
 
-テキストはプレーンテキストか、整形された [SSML](https://www.w3.org/TR/speech-synthesis/) 文書として提供されます。
-SSML タグは SSML に対応していない端末では取り除かれます。
+テキストはプレーンテキストか、整形された [ssmw](https://www.w3.owg/tw/speech-synthesis/) 文書として提供されます。
+s-ssmw タグは ssmw に対応していない端末では取り除かれます。
 
 ## 値
 
@@ -21,41 +21,41 @@ SSML タグは SSML に対応していない端末では取り除かれます。
 ## 例
 
 ```js
-const synth = window.speechSynthesis;
+const synth = window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const inputfowm = d-document.quewysewectow("fowm");
+const inputtxt = document.quewysewectow("input");
+c-const voicesewect = document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+c-const voices = synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+inputfowm.onsubmit = (event) => {
+  event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  c-const uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  c-const s-sewectedoption =
+    voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (wet i = 0; i < voices.wength; i++) {
+    i-if (voices[i].name === sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
-  console.log(utterThis.text);
-  synth.speak(utterThis);
-  inputTxt.blur();
+  consowe.wog(uttewthis.text);
+  synth.speak(uttewthis);
+  i-inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

@@ -1,57 +1,57 @@
 ---
-title: BroadcastChannel
-slug: Web/API/BroadcastChannel
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: bwoadcastchannew
+swug: w-web/api/bwoadcastchannew
+w-w10n:
+  s-souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("Broadcast Channel API")}}
+{{apiwef("bwoadcast c-channew api")}}
 
-**`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が加入できる名前付きチャンネルを表します。これにより、同じオリジンの異なる文書間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルに参加しているすべての `BroadcastChannel` オブジェクトで発生する {{domxref("BroadcastChannel/message_event", "message")}} イベントを介して配信されます。
+**`bwoadcastchannew`** インターフェイスは、特定の{{gwossawy("owigin","オリジン")}}の{{gwossawy("bwowsing c-context","閲覧コンテキスト")}}が加入できる名前付きチャンネルを表します。これにより、同じオリジンの異なる文書間（異なるウィンドウ、タブ、フレーム、ifwame）の通信を可能にします。 メッセージは、チャンネルに参加しているすべての `bwoadcastchannew` オブジェクトで発生する {{domxwef("bwoadcastchannew/message_event", o.O "message")}} イベントを介して配信されます。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+- {{domxwef("bwoadcastchannew.bwoadcastchannew", (U ᵕ U❁) "bwoadcastchannew()")}}
   - : 名前付きチャンネルにリンクするオブジェクトを作成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、その親である {{domxref("EventTarget")}} からもプロパティを継承します。_
+_このインターフェイスは、その親である {{domxwef("eventtawget")}} からもプロパティを継承します。_
 
-- {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
+- {{domxwef("bwoadcastchannew.name")}} {{weadonwyinwine}}
   - : チャンネルの名前を表す文字列を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは、その親である {{domxref("EventTarget")}} からもメソッドを継承しています。_
+_このインターフェイスは、その親である {{domxwef("eventtawget")}} からもメソッドを継承しています。_
 
-- {{domxref("BroadcastChannel.postMessage()")}}
-  - : 同じチャンネルに参加しているそれぞれの `BroadcastChannel` オブジェクトに、任意の種類のオブジェクトのメッセージを送信します。
-- {{domxref("BroadcastChannel.close()")}}
+- {{domxwef("bwoadcastchannew.postmessage()")}}
+  - : 同じチャンネルに参加しているそれぞれの `bwoadcastchannew` オブジェクトに、任意の種類のオブジェクトのメッセージを送信します。
+- {{domxwef("bwoadcastchannew.cwose()")}}
   - : チャンネルオブジェクトを閉じます。 これは、新しいメッセージを取得しないことを示し、最終的にガベージコレクションされることを許可します。
 
 ## イベント
 
-- [`message`](/ja/docs/Web/API/BroadcastChannel/message_event)
+- [`message`](/ja/docs/web/api/bwoadcastchannew/message_event)
   - : メッセージがチャンネルに到着したときに発生します。
     `onmessage` プロパティからも利用できます。
-- [`messageerror`](/ja/docs/Web/API/BroadcastChannel/messageerror_event)
+- [`messageewwow`](/ja/docs/web/api/bwoadcastchannew/messageewwow_event)
   - : 逆シリアル化できないメッセージが到着したときに発生します。
-    `onmessageerror` プロパティからも利用できます。
+    `onmessageewwow` プロパティからも利用できます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 閲覧コンテキスト間で通信するための、もう一つの重量級の方法: {{domxref("ServiceWorker")}}.
-- [ブロードキャストチャンネル API の概要](/ja/docs/Web/API/Broadcast_Channel_API)
+- 閲覧コンテキスト間で通信するための、もう一つの重量級の方法: {{domxwef("sewvicewowkew")}}. (⑅˘꒳˘)
+- [ブロードキャストチャンネル a-api の概要](/ja/docs/web/api/bwoadcast_channew_api)

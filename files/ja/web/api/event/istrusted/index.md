@@ -1,14 +1,14 @@
 ---
-title: "Event: isTrusted プロパティ"
-short-title: isTrusted
-slug: Web/API/Event/isTrusted
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "event: istwusted プロパティ"
+s-showt-titwe: i-istwusted
+s-swug: web/api/event/istwusted
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`isTrusted`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントがユーザー操作によって生成された場合は `true`、このイベントがスクリプトで作成または変更されたり、 {{domxref("EventTarget.dispatchEvent()")}} で配信されたりした場合は `false` となる論理値を返します。
+**`istwusted`** は {{domxwef("event")}} インターフェイスの読み取り専用プロパティで、このイベントがユーザー操作によって生成された場合は `twue`、このイベントがスクリプトで作成または変更されたり、 {{domxwef("eventtawget.dispatchevent()")}} で配信されたりした場合は `fawse` となる論理値を返します。
 
 ## 値
 
@@ -17,17 +17,17 @@ l10n:
 ## 例
 
 ```js
-if (e.isTrusted) {
+i-if (e.istwusted) {
   /* このイベントは信頼されている */
-} else {
+} e-ewse {
   /* このイベントは信頼されていない */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

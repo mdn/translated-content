@@ -1,36 +1,36 @@
 ---
-title: TextTrackCue.id
-slug: Web/API/TextTrackCue/id
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwackcue.id
+swug: w-web/api/texttwackcue/id
+w-w10n:
+  s-souwcecommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`id`** は {{domxref("TextTrackCue")}} インターフェイスのプロパティで、このキューの識別子を返したり設定したりします。
+**`id`** は {{domxwef("texttwackcue")}} インターフェイスのプロパティで、このキューの識別子を返したり設定したりします。
 
 ## 値
 
-このキューの ID を持つ文字列です。
+このキューの i-id を持つ文字列です。
 
 ## 例
 
-以下の例では、新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承したもの）が作成されます。そして、キューを追加する前に、 `id` プロパティを "first" に設定しています。
+以下の例では、新しい {{domxwef("vttcue")}} （`texttwackcue` を継承したもの）が作成されます。そして、キューを追加する前に、 `id` プロパティを "fiwst" に設定しています。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet v-video = document.quewysewectow("video");
+w-wet twack = v-video.addtexttwack("captions", σωσ "captions", σωσ "en");
+twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.id = "first";
-track.addCue(cue1);
+wet cue1 = nyew vttcue(0, >_< 0.9, "hiwdy!");
+cue1.id = "fiwst";
+t-twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

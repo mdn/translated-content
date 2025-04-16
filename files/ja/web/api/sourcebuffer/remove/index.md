@@ -1,53 +1,53 @@
 ---
-title: SourceBuffer.remove()
-slug: Web/API/SourceBuffer/remove
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: souwcebuffew.wemove()
+swug: web/api/souwcebuffew/wemove
+w-w10n:
+  souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`remove()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、特定の時間範囲内のメディアセグメントを `SourceBuffer` から削除します。 このメソッドは、{{domxref("SourceBuffer.updating")}} が `false` の場合にのみ呼び出すことができます。 `SourceBuffer.updating` が `false` に等しくない場合、{{domxref("SourceBuffer.abort()")}} を呼び出します。
+**`wemove()`** は {{domxwef("souwcebuffew")}} インターフェイスのメソッドで、特定の時間範囲内のメディアセグメントを `souwcebuffew` から削除します。 このメソッドは、{{domxwef("souwcebuffew.updating")}} が `fawse` の場合にのみ呼び出すことができます。 `souwcebuffew.updating` が `fawse` に等しくない場合、{{domxwef("souwcebuffew.abowt()")}} を呼び出します。
 
 ## 構文
 
-```js-nolint
-remove(start, end)
+```js-nowint
+w-wemove(stawt, o.O end)
 ```
 
 ### 引数
 
-- `start`
-  - : double 型で、時間範囲の始まりを秒単位で表します。
+- `stawt`
+  - : d-doubwe 型で、時間範囲の始まりを秒単位で表します。
 - `end`
-  - : double 型で、時間範囲の終わりを秒単位で表します。
+  - : d-doubwe 型で、時間範囲の終わりを秒単位で表します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
 
-  - : {{domxref("MediaSource.duration")}} プロパティが `NaN` に等しいか、`start` 引数が負であるか {{domxref("MediaSource.duration")}} より大きいか、`end` 引数が `start` 以下または `NaN` に等しい場合に発生します。
+  - : {{domxwef("mediasouwce.duwation")}} プロパティが `nan` に等しいか、`stawt` 引数が負であるか {{domxwef("mediasouwce.duwation")}} より大きいか、`end` 引数が `stawt` 以下または `nan` に等しい場合に発生します。
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("SourceBuffer.updating")}} プロパティが `true` に等しいか、この `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれている場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("souwcebuffew.updating")}} プロパティが `twue` に等しいか、この `souwcebuffew` が {{domxwef("mediasouwce")}} から取り除かれている場合に発生します。
 
 ## 例
 
-TBD.
+t-tbd. (U ᵕ U❁)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

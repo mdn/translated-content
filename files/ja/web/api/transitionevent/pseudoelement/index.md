@@ -1,14 +1,14 @@
 ---
-title: "TransitionEvent: pseudoElement プロパティ"
-short-title: pseudoElement
-slug: Web/API/TransitionEvent/pseudoElement
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "twansitionevent: pseudoewement プロパティ"
+s-showt-titwe: p-pseudoewement
+s-swug: web/api/twansitionevent/pseudoewement
+w-w10n:
+  souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{ apiref("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`TransitionEvent.pseudoElement`** は読み取り専用プロパティで、アニメーションが実行されている `'::'` で始まる[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入っている文字列です。トランジションが擬似要素で実行されない場合は、要素は空文字列 (`''`) です。
+**`twansitionevent.pseudoewement`** は読み取り専用プロパティで、アニメーションが実行されている `'::'` で始まる[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前が入っている文字列です。トランジションが擬似要素で実行されない場合は、要素は空文字列 (`''`) です。
 
 ## 値
 
@@ -16,13 +16,13 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- {{cssxwef("twansition")}}, òωó {{cssxwef("twansition-deway")}}, o.O {{cssxwef("twansition-duwation")}}, (U ᵕ U❁) {{cssxwef("twansition-pwopewty")}}, {{cssxwef("twansition-timing-function")}}

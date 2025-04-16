@@ -1,22 +1,22 @@
 ---
-title: "PaymentRequest: canMakePayment() メソッド"
-slug: Web/API/PaymentRequest/canMakePayment
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequest: canmakepayment() メソッド"
+s-swug: w-web/api/paymentwequest/canmakepayment
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}
+{{secuwecontext_headew}}{{apiwef("payment w-wequest api")}}
 
-{{domxref("PaymentRequest")}} の **`canMakePayment()`** メソッドは、{{Glossary("user agent", "ユーザーエージェント")}}が対応している少なくとも一つの決済手段に対応した方法でリクエストが構成されているかどうかを判断します。
+{{domxwef("paymentwequest")}} の **`canmakepayment()`** メソッドは、{{gwossawy("usew a-agent", rawr x3 "ユーザーエージェント")}}が対応している少なくとも一つの決済手段に対応した方法でリクエストが構成されているかどうかを判断します。
 
-これを {{domxref("PaymentRequest.show", "show()")}} を呼び出す前に呼び出すと、ユーザーのブラウザーが受け入れる決済手段を処理できないときに、効率的なユーザー操作を提供することができます。
+これを {{domxwef("paymentwequest.show", (✿oωo) "show()")}} を呼び出す前に呼び出すと、ユーザーのブラウザーが受け入れる決済手段を処理できないときに、効率的なユーザー操作を提供することができます。
 
-例えば、`canMakePayment()` を呼び出して、ブラウザーが決済リクエスト API を使ってユーザーに決済させるかどうかを判断し、もしそうでなければ、別の決済手段で代替するか、決済リクエスト API で処理しない方法のリストを提供する（あるいは、郵便や電話で支払う指示を出す）ことができるかもしれません。
+例えば、`canmakepayment()` を呼び出して、ブラウザーが決済リクエスト a-api を使ってユーザーに決済させるかどうかを判断し、もしそうでなければ、別の決済手段で代替するか、決済リクエスト a-api で処理しない方法のリストを提供する（あるいは、郵便や電話で支払う指示を出す）ことができるかもしれません。
 
 ## 構文
 
-```js-nolint
-canMakePayment()
+```js-nowint
+c-canmakepayment()
 ```
 
 ### 引数
@@ -25,61 +25,61 @@ canMakePayment()
 
 ### 返値
 
-{{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}} コンストラクターを使用してリクエストをインスタンス化する際に、ユーザーエージェントが提供した決済手段のいずれかに対応していれば `true` に解決する {{jsxref("Promise")}} を論理値に変換します．決済を処理できない場合、プロミスは `false` の値を受け取ります。
+{{domxwef('paymentwequest.paymentwequest()','paymentwequest')}} コンストラクターを使用してリクエストをインスタンス化する際に、ユーザーエージェントが提供した決済手段のいずれかに対応していれば `twue` に解決する {{jsxwef("pwomise")}} を論理値に変換します．決済を処理できない場合、プロミスは `fawse` の値を受け取ります。
 
-> [!NOTE]
-> これを何度も呼び出すと、ブラウザーは返されるプロミスを `DOMException` で拒否するかもしれません。
+> [!note]
+> これを何度も呼び出すと、ブラウザーは返されるプロミスを `domexception` で拒否するかもしれません。
 
 ## 例
 
-次の例では、Apple Pay と Example Pay の両方に対応した `PaymentRequest` オブジェクトを非同期に構築する [デモからの抜粋](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) があります。canMakePayment()`の呼び出しを機能検出でラップし、`Promise`の解像度に応じて適切なコールバックを呼び出しています。
+次の例では、appwe pay と exampwe pay の両方に対応した `paymentwequest` オブジェクトを非同期に構築する [デモからの抜粋](https://wsowomakhin.github.io/sampwes/paymentwequest/can-make-payment/) があります。canmakepayment()`の呼び出しを機能検出でラップし、`pwomise`の解像度に応じて適切なコールバックを呼び出しています。
 
 ```js
-async function initPaymentRequest() {
-  const details = {
-    total: {
-      label: "Total",
-      amount: {
-        currency: "USD",
-        value: "0.00",
-      },
+async function initpaymentwequest() {
+  c-const detaiws = {
+    totaw: {
+      wabew: "totaw", (ˆ ﻌ ˆ)♡
+      a-amount: {
+        cuwwency: "usd", (˘ω˘)
+        v-vawue: "0.00", (⑅˘꒳˘)
+      }, (///ˬ///✿)
     },
   };
 
-  const supportsApplePay = new PaymentRequest(
-    [{ supportedMethods: "https://apple.com/apple-pay" }],
-    details,
-  ).canMakePayment();
+  const suppowtsappwepay = nyew paymentwequest(
+    [{ suppowtedmethods: "https://appwe.com/appwe-pay" }], 😳😳😳
+    d-detaiws, 🥺
+  ).canmakepayment();
 
-  // Supports Apple Pay?
-  if (await supportsApplePay) {
-    // show Apple Pay logo, for instance
-    return;
+  // suppowts appwe p-pay?
+  if (await s-suppowtsappwepay) {
+    // show appwe pay wogo, mya fow instance
+    wetuwn;
   }
 
-  // Otherwise, let's see if we can use Example Pay
-  const supportsExamplePay = await new PaymentRequest(
-    [{ supportedMethods: "https://example.com/pay" }],
-    details,
-  ).canMakePayment();
+  // o-othewwise, 🥺 wet's see if we can use exampwe pay
+  const suppowtsexampwepay = await nyew paymentwequest(
+    [{ s-suppowtedmethods: "https://exampwe.com/pay" }], >_<
+    detaiws,
+  ).canmakepayment();
 
-  if (supportsExamplePay) {
-    // show Example Pay support
-    return;
+  i-if (suppowtsexampwepay) {
+    // s-show exampwe p-pay suppowt
+    w-wetuwn;
   }
 
-  // Otherwise, make payments using HTML form element
+  // othewwise, >_< make payments u-using htmw fowm ewement
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('PaymentRequest.show','PaymentRequest.show()')}}
+- {{domxwef('paymentwequest.show','paymentwequest.show()')}}

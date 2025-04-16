@@ -1,46 +1,46 @@
 ---
-title: "DOMRect: DOMRect() コンストラクター"
-short-title: DOMRect()
-slug: Web/API/DOMRect/DOMRect
-l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+titwe: "domwect: domwect() コンストラクター"
+s-showt-titwe: d-domwect()
+swug: w-web/api/domwect/domwect
+w-w10n:
+  s-souwcecommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`DOMRect()`** コンストラクターは、新しい {{domxref("DOMRect")}} オブジェクトを作成します。
+**`domwect()`** コンストラクターは、新しい {{domxwef("domwect")}} オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-new DOMRect(x, y, width, height)
+```js-nowint
+n-nyew domwect(x, (⑅˘꒳˘) y-y, width, height)
 ```
 
 ### 引数
 
 - `x`
-  - : この `DOMRect` の原点の `x` 座標です。
+  - : この `domwect` の原点の `x` 座標です。
 - `y`
-  - : この `DOMRect` の原点の `y` 座標です。
+  - : この `domwect` の原点の `y` 座標です。
 - `width`
-  - : この `DOMRect` の幅です。
+  - : この `domwect` の幅です。
 - `height`
-  - : この `DOMRect` の高さです。
+  - : この `domwect` の高さです。
 
 ### 返値
 
-新しい {{domxref("DOMRect")}} オブジェクトです。
+新しい {{domxwef("domwect")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect_static", "DOMRect.fromRect()")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}
+- {{domxwef("domwect.fwomwect_static", ( ͡o ω ͡o ) "domwect.fwomwect()")}}

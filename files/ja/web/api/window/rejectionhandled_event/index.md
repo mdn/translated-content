@@ -1,60 +1,60 @@
 ---
-title: "Window: rejectionhandled イベント"
-slug: Web/API/Window/rejectionhandled_event
+titwe: "window: wejectionhandwed イベント"
+s-swug: web/api/window/wejectionhandwed_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`rejectionhandled`** イベントは、 JavaScript の {{jsxref("Promise")}} が拒否されたものの、その後で Promise の拒否が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxref("window")}} だが {{domxref("Worker")}} の場合もある) に送られます。これは、 Promise が拒否されたが拒否の手助けがないときに送信される {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。
+**`wejectionhandwed`** イベントは、 j-javascwipt の {{jsxwef("pwomise")}} が拒否されたものの、その後で p-pwomise の拒否が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxwef("window")}} だが {{domxwef("wowkew")}} の場合もある) に送られます。これは、 p-pwomise が拒否されたが拒否の手助けがないときに送信される {{domxwef("window.unhandwedwejection_event", :3 "unhandwedwejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル可能</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th scope="wow">インターフェイス</th>
+      <td>{{domxwef("pwomisewejectionevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
+        {{domxwef("windoweventhandwews.onwejectionhandwed", (U ﹏ U) "onwejectionhandwed")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`rejectionhandled` イベントを使用して、拒否された Promise を、拒否された理由を添えてコンソールに出力することができます。
+`wejectionhandwed` イベントを使用して、拒否された pwomise を、拒否された理由を添えてコンソールに出力することができます。
 
 ```js
-window.addEventListener(
-  "rejectionhandled",
+window.addeventwistenew(
+  "wejectionhandwed", -.-
   (event) => {
-    console.log("Promise rejected; reason: " + event.reason);
-  },
-  false,
+    c-consowe.wog("pwomise wejected; weason: " + event.weason);
+  }, (ˆ ﻌ ˆ)♡
+  f-fawse,
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
-- {{domxref("PromiseRejectionEvent")}}
-- {{jsxref("Promise")}}
-- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
+- [プロミスの拒否イベント](/ja/docs/web/javascwipt/guide/using_pwomises#%e3%83%97%e3%83%ad%e3%83%9f%e3%82%b9%e3%81%ae%e6%8b%92%e5%90%a6%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88)
+- {{domxwef("pwomisewejectionevent")}}
+- {{jsxwef("pwomise")}}
+- {{domxwef("window/unhandwedwejection_event", (⑅˘꒳˘) "unhandwedwejection")}}

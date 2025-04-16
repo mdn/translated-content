@@ -1,43 +1,43 @@
 ---
-title: 端末メモリー API
-slug: Web/API/Device_Memory_API
+titwe: 端末メモリー api
+s-swug: web/api/device_memowy_api
 ---
 
-{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{defauwtapisidebaw("device m-memowy api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-クライアント端末の能力は、使用可能な RAM の量に大きく依存します。 従来、開発者は経験則を使用し、端末のベンチマークを行うか、端末の製造元やユーザーエージェント文字列などの他の要因に基づいて端末の能力を推測する必要がありました。
+クライアント端末の能力は、使用可能な w-wam の量に大きく依存します。 従来、開発者は経験則を使用し、端末のベンチマークを行うか、端末の製造元やユーザーエージェント文字列などの他の要因に基づいて端末の能力を推測する必要がありました。
 
 ## 端末のメモリー容量へのアクセス
 
-RAM 端末の概算量にアクセスするには、 JavaScript API を使用する方法と、クライアントヒント HTTP ヘッダーを使用する方法の 2 つがあります。
+w-wam 端末の概算量にアクセスするには、 j-javascwipt a-api を使用する方法と、クライアントヒント h-http ヘッダーを使用する方法の 2 つがあります。
 
-### JavaScript API
+### j-javascwipt api
 
-{{DOMxRef("Navigator.deviceMemory")}} を取得することで、概算の RAM 容量を照会することができます。
+{{domxwef("navigatow.devicememowy")}} を取得することで、概算の wam 容量を照会することができます。
 
 ```js
-var RAM = navigator.deviceMemory;
+vaw wam = nyavigatow.devicememowy;
 ```
 
 ### クライアントヒント
 
-[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints) ヘッダーの `Device-Memory` ディレクティブを使用して、同じく概算の RAM 容量を取得することもできます。
+[クライアントヒント](/ja/docs/web/http/guides/cwient_hints) ヘッダーの `device-memowy` ディレクティブを使用して、同じく概算の wam 容量を取得することもできます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-### JavaScript インターフェイス
+### j-javascwipt インターフェイス
 
-{{Compat}}
+{{compat}}
 
 ### クライアントヒント拡張機能
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Navigator.deviceMemory")}}
-- {{HTTPHeader("Device-Memory")}} ヘッダー
+- {{domxwef("navigatow.devicememowy")}}
+- {{httpheadew("device-memowy")}} ヘッダー

@@ -1,69 +1,69 @@
 ---
-title: NotificationEvent
-slug: Web/API/NotificationEvent
-l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+titwe: nyotificationevent
+swug: w-web/api/notificationevent
+w-w10n:
+  s-souwcecommit: a-aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+{{apiwef("web nyotifications")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`NotificationEvent`** は{{domxref("Notifications API", "通知 API", "", "nocode")}}のインターフェイスで、サービスワーカー ({{domxref("ServiceWorker")}}) の {{domxref("ServiceWorkerGlobalScope")}} で配信される通知イベントを表します。
+**`notificationevent`** は{{domxwef("notifications a-api", >_< "通知 a-api", mya "", "nocode")}}のインターフェイスで、サービスワーカー ({{domxwef("sewvicewowkew")}}) の {{domxwef("sewvicewowkewgwobawscope")}} で配信される通知イベントを表します。
 
-このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
+このインターフェイスは {{domxwef("extendabweevent")}} インターフェイスを継承しています。
 
-> **メモ:** {{domxref("ServiceWorkerGlobalScope")}} オブジェクトで発行される持続的な通知イベントのみが、`NotificationEvent`インターフェイスを実装します。{{domxref("Notification")}} オブジェクトで発行される非持続的な通知イベントは、`Event`インターフェイスを実装します。
+> **メモ:** {{domxwef("sewvicewowkewgwobawscope")}} オブジェクトで発行される持続的な通知イベントのみが、`notificationevent`インターフェイスを実装します。{{domxwef("notification")}} オブジェクトで発行される非持続的な通知イベントは、`event`インターフェイスを実装します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}
-  - : 新しい `NotificationEvent` オブジェクトを作成します。
+- {{domxwef("notificationevent.notificationevent","notificationevent()")}}
+  - : 新しい `notificationevent` オブジェクトを作成します。
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("ExtendableEvent")}} から継承したプロパティもあります。_
+_親インターフェイスである {{domxwef("extendabweevent")}} から継承したプロパティもあります。_
 
-- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
-  - : イベントを発生させるためにクリックされた通知を表す {{domxref("Notification")}} オブジェクトを返します。
-- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
-  - : ユーザーがクリックした通知ボタンの文字列 ID を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。
+- {{domxwef("notificationevent.notification")}} {{weadonwyinwine}}
+  - : イベントを発生させるためにクリックされた通知を表す {{domxwef("notification")}} オブジェクトを返します。
+- {{domxwef("notificationevent.action")}} {{weadonwyinwine}}
+  - : ユーザーがクリックした通知ボタンの文字列 i-id を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("ExtendableEvent")}} から継承したメソッドもあります。_
+_親インターフェイスである {{domxwef("extendabweevent")}} から継承したメソッドもあります。_
 
 ## 例
 
 ```js
-self.addEventListener("notificationclick", (event) => {
-  console.log(`On notification click: ${event.notification.tag}`);
-  event.notification.close();
+s-sewf.addeventwistenew("notificationcwick", mya (event) => {
+  consowe.wog(`on nyotification cwick: ${event.notification.tag}`);
+  event.notification.cwose();
 
   // これは、現在のページが既に開いているかどうかを確認し、
   // そうならばフォーカスします
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  e-event.waituntiw(
+    cwients
+      .matchaww({
+        type: "window", 😳
       })
-      .then((clientList) => {
-        for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) return client.focus();
+      .then((cwientwist) => {
+        f-fow (const cwient of cwientwist) {
+          i-if (cwient.uww === "/" && "focus" in cwient) wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        if (cwients.openwindow) w-wetuwn cwients.openwindow("/");
+      }), XD
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> このインターフェイスは[通知 API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を通してアクセスします。
+> [!note]
+> このインターフェイスは[通知 a-api](/ja/docs/web/api/notifications_api) で定義されていますが、{{domxwef("sewvicewowkewgwobawscope")}} を通してアクセスします。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

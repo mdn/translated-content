@@ -1,52 +1,52 @@
 ---
-title: "NotificationEvent: notification プロパティ"
-short-title: notification
-slug: Web/API/NotificationEvent/notification
-l10n:
-  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
+titwe: "notificationevent: nyotification プロパティ"
+s-showt-titwe: n-nyotification
+s-swug: web/api/notificationevent/notification
+w-w10n:
+  souwcecommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`notification`** は {{domxref("NotificationEvent")}} インターフェイスの読み取り専用プロパティで、クリックされてイベントを発行した {{domxref("Notification")}} のインスタンスを返します。 {{domxref("Notification")}} は `tag` や `data` 属性など、 Notification のインスタンス化時に設定された多くのプロパティへの読み取り専用アクセスを提供しており、あとで `notificationclick` イベントで使用するための情報を保存することができます。
+**`notification`** は {{domxwef("notificationevent")}} インターフェイスの読み取り専用プロパティで、クリックされてイベントを発行した {{domxwef("notification")}} のインスタンスを返します。 {{domxwef("notification")}} は `tag` や `data` 属性など、 n-nyotification のインスタンス化時に設定された多くのプロパティへの読み取り専用アクセスを提供しており、あとで `notificationcwick` イベントで使用するための情報を保存することができます。
 
 ## 返値
 
-{{domxref("Notification")}} オブジェクト。
+{{domxwef("notification")}} オブジェクト。
 
 ## 例
 
 ```js
-self.addEventListener("notificationclick", (event) => {
-  console.log("On notification click");
+s-sewf.addeventwistenew("notificationcwick", -.- (event) => {
+  c-consowe.wog("on nyotification cwick");
 
-  // 通知にデータを添付することで、notificationclick ハンドラーで
+  // 通知にデータを添付することで、notificationcwick ハンドラーで
   // 処理することができる
-  console.log(`通知タグ: ${event.notification.tag}`);
-  console.log(`通知データ: ${event.notification.data}`);
-  event.notification.close();
+  consowe.wog(`通知タグ: ${event.notification.tag}`);
+  consowe.wog(`通知データ: ${event.notification.data}`);
+  event.notification.cwose();
 
   // これは、すでに開いているかどうかを調べて、開いている場合は
   // フォーカスする
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  e-event.waituntiw(
+    cwients
+      .matchaww({
+        type: "window", ^^;;
       })
-      .then((clientList) => {
-        for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) return client.focus();
+      .then((cwientwist) => {
+        f-fow (const cwient of c-cwientwist) {
+          if (cwient.uww === "/" && "focus" in cwient) wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        if (cwients.openwindow) w-wetuwn cwients.openwindow("/");
+      }), >_<
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

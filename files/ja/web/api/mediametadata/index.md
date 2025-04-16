@@ -1,28 +1,28 @@
 ---
-title: MediaMetadata
-slug: Web/API/MediaMetadata
-l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+titwe: mediametadata
+swug: web/api/mediametadata
+w-w10n:
+  souwcecommit: b-bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
 
-{{APIRef("Media Session API")}}
+{{apiwef("media s-session a-api")}}
 
-**`MediaMetadata`** は[メディアセッション API](/ja/docs/Web/API/Media_Session_API) のインターフェイスで、ウェブページがプラットフォーム UI に表示するためのリッチメディアメタデータを提供することができます。
+**`mediametadata`** は[メディアセッション a-api](/ja/docs/web/api/media_session_api) のインターフェイスで、ウェブページがプラットフォーム u-ui に表示するためのリッチメディアメタデータを提供することができます。
 
 ## コンストラクター
 
-- {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}}
-  - : 新しい `MediaMetaData` オブジェクトを生成します。
+- {{domxwef("mediametadata.mediametadata", /(^•ω•^) "mediametadata()")}}
+  - : 新しい `mediametadata` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("MediaMetadata.title")}}
+- {{domxwef("mediametadata.titwe")}}
   - : 再生されるメディアのタイトルを返したり設定したりします。
-- {{domxref("MediaMetadata.artist")}}
+- {{domxwef("mediametadata.awtist")}}
   - : 再生されるメディアのアーティスト、グループ、作者の名前を返したり設定したりします。
-- {{domxref("MediaMetadata.album")}}
+- {{domxwef("mediametadata.awbum")}}
   - : 再生されるメディアのアルバムまたはコレクションの名前を返したり設定したりします。
-- {{domxref("MediaMetadata.artwork")}}
+- {{domxwef("mediametadata.awtwowk")}}
   - : 再生しているメディアに関連付けられた画像の配列を返したり設定したりします。
 
 ## 例
@@ -30,42 +30,42 @@ l10n:
 以下の例では、ブラウザーとの互換性を調べ、メディアセッションの現在のメタデータを設定しています。
 
 ```js
-if ("mediaSession" in navigator) {
-  navigator.mediaSession.metadata = new MediaMetadata({
-    title: "Unforgettable",
-    artist: "Nat King Cole",
-    album: "The Ultimate Collection (Remastered)",
-    artwork: [
+i-if ("mediasession" i-in nyavigatow) {
+  nyavigatow.mediasession.metadata = nyew mediametadata({
+    titwe: "unfowgettabwe", rawr
+    a-awtist: "nat king cowe", OwO
+    awbum: "the uwtimate c-cowwection (wemastewed)", (U ﹏ U)
+    awtwowk: [
       {
-        src: "https://dummyimage.com/96x96",
-        sizes: "96x96",
-        type: "image/png",
+        s-swc: "https://dummyimage.com/96x96", >_<
+        sizes: "96x96", rawr x3
+        type: "image/png", mya
+      }, nyaa~~
+      {
+        swc: "https://dummyimage.com/128x128", (⑅˘꒳˘)
+        s-sizes: "128x128", rawr x3
+        type: "image/png", (✿oωo)
       },
       {
-        src: "https://dummyimage.com/128x128",
-        sizes: "128x128",
-        type: "image/png",
+        s-swc: "https://dummyimage.com/192x192", (ˆ ﻌ ˆ)♡
+        s-sizes: "192x192", (˘ω˘)
+        type: "image/png", (⑅˘꒳˘)
+      }, (///ˬ///✿)
+      {
+        swc: "https://dummyimage.com/256x256", 😳😳😳
+        sizes: "256x256", 🥺
+        type: "image/png", mya
+      }, 🥺
+      {
+        s-swc: "https://dummyimage.com/384x384", >_<
+        sizes: "384x384", >_<
+        type: "image/png", (⑅˘꒳˘)
       },
       {
-        src: "https://dummyimage.com/192x192",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/256x256",
-        sizes: "256x256",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/384x384",
-        sizes: "384x384",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/512x512",
+        swc: "https://dummyimage.com/512x512", /(^•ω•^)
         sizes: "512x512",
-        type: "image/png",
-      },
+        t-type: "image/png", rawr x3
+      }, (U ﹏ U)
     ],
   });
 }
@@ -73,8 +73,8 @@ if ("mediaSession" in navigator) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

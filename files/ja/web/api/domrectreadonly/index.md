@@ -1,51 +1,51 @@
 ---
-title: DOMRectReadOnly
-slug: Web/API/DOMRectReadOnly
-l10n:
-  sourceCommit: a631fd40bdc682a82be57be9932c9853a86ac1b5
+titwe: domwectweadonwy
+swug: w-web/api/domwectweadonwy
+w-w10n:
+  s-souwcecommit: a631fd40bdc682a82be57be9932c9853a86ac1b5
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy intewfaces")}}
 
-**`DOMRectReadOnly`** インターフェイスは（{{domxref("DOMRect")}} でも使用される）標準プロパティを設定し、すべてのプロパティが変更不可の矩形を定義します。
+**`domwectweadonwy`** インターフェイスは（{{domxwef("domwect")}} でも使用される）標準プロパティを設定し、すべてのプロパティが変更不可の矩形を定義します。
 
 ## コンストラクター
 
-- {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : 新しい `DOMRectReadOnly` オブジェクトを生成するために定義されています。
+- {{domxwef("domwectweadonwy.domwectweadonwy","domwectweadonwy()")}}
+  - : 新しい `domwectweadonwy` オブジェクトを生成するために定義されています。
 
 ## インスタンスプロパティ
 
-- {{domxref("DOMRectReadOnly.x")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の原点の X 座標を返します。
-- {{domxref("DOMRectReadOnly.y")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の原点の Y 座標を返します。
-- {{domxref("DOMRectReadOnly.width")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の幅を返します。
-- {{domxref("DOMRectReadOnly.height")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の高さを返します。
-- {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の上端の座標値を返します（ふつうは `y` と同じです）。
-- {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の右端の座標値を返します（ふつうは `x + width` と同じです）。
-- {{domxref("DOMRectReadOnly.bottom")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の下端の座標値を返します（ふつうは `y + height` と同じです）。
-- {{domxref("DOMRectReadOnly.left")}} {{ReadOnlyInline}}
-  - : この `DOMRectReadOnly` の左端の座標値を返します（ふつうは `x` と同じです）。
+- {{domxwef("domwectweadonwy.x")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の原点の x-x 座標を返します。
+- {{domxwef("domwectweadonwy.y")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の原点の y-y 座標を返します。
+- {{domxwef("domwectweadonwy.width")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の幅を返します。
+- {{domxwef("domwectweadonwy.height")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の高さを返します。
+- {{domxwef("domwectweadonwy.top")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の上端の座標値を返します（ふつうは `y` と同じです）。
+- {{domxwef("domwectweadonwy.wight")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の右端の座標値を返します（ふつうは `x + w-width` と同じです）。
+- {{domxwef("domwectweadonwy.bottom")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の下端の座標値を返します（ふつうは `y + h-height` と同じです）。
+- {{domxwef("domwectweadonwy.weft")}} {{weadonwyinwine}}
+  - : この `domwectweadonwy` の左端の座標値を返します（ふつうは `x` と同じです）。
 
 ## 静的メソッド
 
-- {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
-  - : 指定された位置と大きさで、新しい `DOMRectReadOnly` オブジェクトを生成します。
+- {{domxwef("domwectweadonwy/fwomwect_static", (U ᵕ U❁) "domwectweadonwy.fwomwect()")}}
+  - : 指定された位置と大きさで、新しい `domwectweadonwy` オブジェクトを生成します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

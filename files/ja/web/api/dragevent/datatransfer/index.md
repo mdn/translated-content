@@ -1,44 +1,44 @@
 ---
-title: "DragEvent: dataTransfer プロパティ"
-short-title: dataTransfer
-slug: Web/API/DragEvent/dataTransfer
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "dwagevent: datatwansfew プロパティ"
+s-showt-titwe: d-datatwansfew
+swug: w-web/api/dwagevent/datatwansfew
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-**`DragEvent.dataTransfer`** プロパティは、ドラッグ操作のデータを（{{domxref("DataTransfer")}} オブジェクトとして）保持します。
+**`dwagevent.datatwansfew`** プロパティは、ドラッグ操作のデータを（{{domxwef("datatwansfew")}} オブジェクトとして）保持します。
 
-このプロパティは {{ReadOnlyInline}} です。
+このプロパティは {{weadonwyinwine}} です。
 
 ## 値
 
-{{domxref("DataTransfer")}} オブジェクトで、{{domxref("DragEvent","ドラッグイベントのデータ", "", 1)}}が入ります。
+{{domxwef("datatwansfew")}} オブジェクトで、{{domxwef("dwagevent","ドラッグイベントのデータ", "", σωσ 1)}}が入ります。
 
 ## 例
 
-この例では、 {{domxref("HTMLElement/dragend_event", "dragend")}} イベントハンドラーの中でドラッグ＆ドロップデータへアクセスする方法を説明します。
+この例では、 {{domxwef("htmwewement/dwagend_event", >_< "dwagend")}} イベントハンドラーの中でドラッグ＆ドロップデータへアクセスする方法を説明します。
 
 ```js
-function processData(d) {
+f-function pwocessdata(d) {
   // データを処理...
 }
 
-dragTarget.addEventListener(
-  "dragend",
+dwagtawget.addeventwistenew(
+  "dwagend", :3
   (ev) => {
     // ドラッグ＆ドロップのデータ処理を呼び出す
-    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
-  },
-  false,
+    if (ev.datatwansfew !== nyuww) p-pwocessdata(ev.datatwansfew);
+  }, (U ﹏ U)
+  fawse,
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

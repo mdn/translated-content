@@ -1,24 +1,24 @@
 ---
-title: "PointerEvent: getPredictedEvents() メソッド"
-short-title: getPredictedEvents()
-slug: Web/API/PointerEvent/getPredictedEvents
-l10n:
-  sourceCommit: 84c430110b84fae0335959184ce73f03124220fd
+titwe: "pointewevent: getpwedictedevents() メソッド"
+s-showt-titwe: g-getpwedictedevents()
+s-swug: w-web/api/pointewevent/getpwedictedevents
+w-w10n:
+  s-souwcecommit: 84c430110b84fae0335959184ce73f03124220fd
 ---
 
-{{APIRef("Pointer Events")}}
+{{apiwef("pointew e-events")}}
 
-**`getPredictedEvents()`** は {{domxref("PointerEvent")}} インターフェイスのメソッドで、将来のポインター位置を予測した一連の `PointerEvent` インスタンスを返します。
+**`getpwedictedevents()`** は {{domxwef("pointewevent")}} インターフェイスのメソッドで、将来のポインター位置を予測した一連の `pointewevent` インスタンスを返します。
 予測位置の計算方法はユーザーエージェントによって異なりますが、過去の位置、現在の速度、軌道に基づいて計算されます。
 
 アプリケーションは予測イベントを使用して、予測された位置に「描画」することができます。予測イベントのアプリケーションによる解釈と用途によって、知覚される応答時間が縮小する可能性があります。
 
-予測されるイベントの例については、[仕様書の Figure 8](https://w3c.github.io/pointerevents/#figure_predicted) を参照してください。
+予測されるイベントの例については、[仕様書の f-figuwe 8](https://w3c.github.io/pointewevents/#figuwe_pwedicted) を参照してください。
 
 ## 構文
 
-```js-nolint
-getPredictedEvents()
+```js-nowint
+getpwedictedevents()
 ```
 
 ### 引数
@@ -27,61 +27,61 @@ getPredictedEvents()
 
 ### 返値
 
-{{domxref('PointerEvent')}} インスタンスの配列です。
+{{domxwef('pointewevent')}} インスタンスの配列です。
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<canvas id="target" width="600" height="300"></canvas>
+```htmw
+<canvas id="tawget" width="600" height="300"></canvas>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const canvas = document.getElementById("target");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("tawget");
+const ctx = canvas.getcontext("2d");
 
-const pointerEvents = [];
+const pointewevents = [];
 
-function drawCircle(x, y, color) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+f-function dwawciwcwe(x, nyaa~~ y, cowow) {
+  c-ctx.cweawwect(0, (⑅˘꒳˘) 0, rawr x3 canvas.width, canvas.height);
 
   // 最後の 20 件のイベントを描画
-  if (pointerEvents.length > 20) {
-    pointerEvents.shift();
+  if (pointewevents.wength > 20) {
+    pointewevents.shift();
   }
-  pointerEvents.push({ x, y, color });
+  p-pointewevents.push({ x, (✿oωo) y, cowow });
 
-  for (const pointerEvent of pointerEvents) {
-    ctx.beginPath();
-    ctx.arc(pointerEvent.x, pointerEvent.y, 10, 0, 2 * Math.PI);
-    ctx.strokeStyle = pointerEvent.color;
-    ctx.stroke();
+  f-fow (const pointewevent o-of pointewevents) {
+    ctx.beginpath();
+    ctx.awc(pointewevent.x, (ˆ ﻌ ˆ)♡ pointewevent.y, (˘ω˘) 10, (⑅˘꒳˘) 0, 2 * math.pi);
+    c-ctx.stwokestywe = pointewevent.cowow;
+    ctx.stwoke();
   }
 }
 
-canvas.addEventListener("pointermove", (e) => {
+canvas.addeventwistenew("pointewmove", (///ˬ///✿) (e) => {
   // 現在のイベントに円を描画
-  drawCircle(e.clientX, e.clientY, "black");
+  dwawciwcwe(e.cwientx, 😳😳😳 e-e.cwienty, 🥺 "bwack");
 
-  const predictedEvents = e.getPredictedEvents();
-  for (let predictedEvent of predictedEvents) {
+  const pwedictedevents = e-e.getpwedictedevents();
+  f-fow (wet pwedictedevent o-of p-pwedictedevents) {
     // 違いが分かるようにオフセットを適用し、赤に色付けする
-    drawCircle(predictedEvent.clientX + 20, predictedEvent.clientY + 20, "red");
+    dwawciwcwe(pwedictedevent.cwientx + 20, mya pwedictedevent.cwienty + 20, 🥺 "wed");
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", "", "320")}}
+{{embedwivesampwe("exampwe", >_< "", "320")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

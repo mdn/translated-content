@@ -1,73 +1,73 @@
 ---
-title: CSSRuleList
-slug: Web/API/CSSRuleList
+titwe: csswuwewist
+swug: web/api/csswuwewist
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-`CSSRuleList` は読み取り専用の {{domxref("CSSRule")}} オブジェクトの順序付きコレクションを表します。
+`csswuwewist` は読み取り専用の {{domxwef("csswuwe")}} オブジェクトの順序付きコレクションを表します。
 
-`CSSRuleList` オブジェクトは読み取り専用であり、直接変更することはできませんが、内容が変化していくことがあるので `live` オブジェクトと見なされます。
+`csswuwewist` オブジェクトは読み取り専用であり、直接変更することはできませんが、内容が変化していくことがあるので `wive` オブジェクトと見なされます。
 
-`CSSRule` オブジェクトが返す基本ルールを編集するには、 {{domxref("CSSStyleSheet")}} のメソッドである {{domxref("CSSStyleSheet.insertRule()")}} と {{domxref("CSSStyleSheet.deleteRule()")}} を使用します。
+`csswuwe` オブジェクトが返す基本ルールを編集するには、 {{domxwef("cssstywesheet")}} のメソッドである {{domxwef("cssstywesheet.insewtwuwe()")}} と {{domxwef("cssstywesheet.dewetewuwe()")}} を使用します。
 
-このインターフェイスにはコンストラクターがありません。 `CSSRuleList` のインスタンスは {{domxref("CSSStyleSheet.cssRules")}} と {{domxref("CSSKeyframesRule.cssRules")}} から返却されます。
+このインターフェイスにはコンストラクターがありません。 `csswuwewist` のインスタンスは {{domxwef("cssstywesheet.csswuwes")}} と {{domxwef("csskeyfwameswuwe.csswuwes")}} から返却されます。
 
 ## プロパティ
 
-- {{domxref("CSSRuleList.length")}}{{ReadOnlyInline}}
-  - : このコレクション内の {{domxref("CSSRule")}} オブジェクトの数を表す整数を返します。
+- {{domxwef("csswuwewist.wength")}}{{weadonwyinwine}}
+  - : このコレクション内の {{domxwef("csswuwe")}} オブジェクトの数を表す整数を返します。
 
 ## メソッド
 
-- {{domxref("CSSRuleList.item()")}}
-  - : 単一の {{domxref("CSSRule")}} を取得します。
+- {{domxwef("csswuwewist.item()")}}
+  - : 単一の {{domxwef("csswuwe")}} を取得します。
 
 ## 例
 
-以下の例には、 3 つのルールがあるスタイルシートがあります。 {{domxref("CSSStyleSheet.cssRules")}} を使用すると `CSSRuleList` を返し、それがコンソールに出力されます。
+以下の例には、 3 つのルールがあるスタイルシートがあります。 {{domxwef("cssstywesheet.csswuwes")}} を使用すると `csswuwewist` を返し、それがコンソールに出力されます。
 
-リスト内のルールの数は、 {{domxref("CSSRuleList.length")}} を使用してコンソールに出力されます。最初の {{domxref("CSSRule")}} は `0` を {{domxref("CSSRuleList.item")}} の引数に指定することで返されます。この例では `body` セレクターのルールセットが返されます。
+リスト内のルールの数は、 {{domxwef("csswuwewist.wength")}} を使用してコンソールに出力されます。最初の {{domxwef("csswuwe")}} は `0` を {{domxwef("csswuwewist.item")}} の引数に指定することで返されます。この例では `body` セレクターのルールセットが返されます。
 
-### CSS
+### c-css
 
 ```css
-body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  margin: 2em;
+b-body {
+  f-font-famiwy:
+    s-system-ui, :3
+    -appwe-system, (U ﹏ U)
+    s-sans-sewif;
+  m-mawgin: 2em;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+.containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(auto-fiww, -.- 200px);
 }
 
-.container > * {
-  background-color: #3740ff;
-  color: #fff;
+.containew > * {
+  backgwound-cowow: #3740ff;
+  cowow: #fff;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules);
-console.log(myRules.length);
-console.log(myRules[0]);
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes);
+consowe.wog(mywuwes.wength);
+c-consowe.wog(mywuwes[0]);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`CSSRule`](/ja/docs/Web/API/CSSRule)
+- [`csswuwe`](/ja/docs/web/api/csswuwe)

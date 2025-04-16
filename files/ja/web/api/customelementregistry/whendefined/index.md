@@ -1,86 +1,86 @@
 ---
-title: CustomElementRegistry.whenDefined()
-slug: Web/API/CustomElementRegistry/whenDefined
+titwe: customewementwegistwy.whendefined()
+swug: w-web/api/customewementwegistwy/whendefined
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-**`whenDefined()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxref("Promise")}}) を返します。</span>
+**`whendefined()`** は {{domxwef("customewementwegistwy")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxwef("pwomise")}}) を返します。</span>
 
 ## 構文
 
 ```js
-customElements.whenDefined(name): Promise<CustomElementConstructor>;
+c-customewements.whendefined(name): p-pwomise<customewementconstwuctow>;
 ```
 
 ### 引数
 
-- name
+- n-nyame
   - : カスタム要素の名前。
 
 ### 返値
 
-指定された名前の[カスタム要素](/ja/docs/Web/API/Window/customElements)が定義された時に、[カスタム要素](/ja/docs/Web/API/Window/customElements)のコンストラクターで履行されるプロミス ({{jsxref("Promise")}}) です。（そのような[カスタム要素](/ja/docs/Web/API/Window/customElements)が既に定義されている場合、返されるプロミスは直ちに履行されます。）
+指定された名前の[カスタム要素](/ja/docs/web/api/window/customewements)が定義された時に、[カスタム要素](/ja/docs/web/api/window/customewements)のコンストラクターで履行されるプロミス ({{jsxwef("pwomise")}}) です。（そのような[カスタム要素](/ja/docs/web/api/window/customewements)が既に定義されている場合、返されるプロミスは直ちに履行されます。）
 
 ## 例外
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">例外</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">例外</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>SyntaxError</code></td>
+    <tw>
+      <td><code>syntaxewwow</code></td>
       <td>
-        指定された名前が<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有効なカスタム要素名</a>でなかった場合、プロミスは <code>SyntaxError</code> で拒否されます。
+        指定された名前が<a h-hwef="https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name">有効なカスタム要素名</a>でなかった場合、プロミスは <code>syntaxewwow</code> で拒否されます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-以下の例では、 `whenDefined()` を用いてメニューを生成するカスタム要素が定義されたタイミングを検出しています。実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。
+以下の例では、 `whendefined()` を用いてメニューを生成するカスタム要素が定義されたタイミングを検出しています。実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。
 
-```html
-<nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+```htmw
+<nav id="menu-containew">
+  <div cwass="menu-pwacehowdew">woading...</div>
   <nav-menu>
-    <menu-item>Item 1</menu-item>
-    <menu-item>Item 2</menu-item>
+    <menu-item>item 1</menu-item>
+    <menu-item>item 2</menu-item>
     ...
-    <menu-item>Item N</menu-item>
+    <menu-item>item ny</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById("menu-container");
-const placeholder = container.querySelector(".menu-placeholder");
+const containew = document.getewementbyid("menu-containew");
+c-const pwacehowdew = containew.quewysewectow(".menu-pwacehowdew");
 // まだ定義されていないメニューの子を取得する
-const undefinedElements = container.querySelectorAll(":not(:defined)");
+c-const undefinedewements = containew.quewysewectowaww(":not(:defined)");
 
-async function removePlaceholder() {
-  const promises = [...undefinedElements].map((button) =>
-    customElements.whenDefined(button.localName),
+a-async function wemovepwacehowdew() {
+  const pwomises = [...undefinedewements].map((button) =>
+    customewements.whendefined(button.wocawname), ^^;;
   );
 
   // すべての子がアップグレードされるまで待つ
-  await Promise.all(promises);
+  await pwomise.aww(pwomises);
   // それからプレースホルダーを削除
-  container.removeChild(placeholder);
+  c-containew.wemovechiwd(pwacehowdew);
 }
 
-removePlaceholder();
+wemovepwacehowdew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

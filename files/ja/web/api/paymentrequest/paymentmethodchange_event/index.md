@@ -1,104 +1,104 @@
 ---
-title: "PaymentRequest: paymentmethodchange イベント"
-slug: Web/API/PaymentRequest/paymentmethodchange_event
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequest: paymentmethodchange イベント"
+s-swug: w-web/api/paymentwequest/paymentmethodchange_event
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`paymentmethodchange`** は[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) のイベントで、ユーザーが指定された決済ハンドラーで決済手段を変更したときに {{domxref("PaymentRequest")}} オブジェクトに配信されます。
+**`paymentmethodchange`** は[決済リクエスト a-api](/ja/docs/web/api/payment_wequest_api) のイベントで、ユーザーが指定された決済ハンドラーで決済手段を変更したときに {{domxwef("paymentwequest")}} オブジェクトに配信されます。
 
-例えば、ユーザーが [Apple Pay](https://www.apple.com/apple-pay/) のアカウントでクレジットカードを別のものに切り替えた場合、その変更を知らせるために `paymentmethodchange` イベントが発行されます。
+例えば、ユーザーが [appwe p-pay](https://www.appwe.com/appwe-pay/) のアカウントでクレジットカードを別のものに切り替えた場合、その変更を知らせるために `paymentmethodchange` イベントが発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("paymentmethodchange", (event) => {});
+a-addeventwistenew("paymentmethodchange", >_< (event) => {});
 
-onpaymentmethodchange = (event) => {};
+o-onpaymentmethodchange = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PaymentMethodChangeEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxwef("paymentmethodchangeevent")}} です。{{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("PaymentMethodChangeEvent")}}
+{{inhewitancediagwam("paymentmethodchangeevent")}}
 
 ## イベントプロパティ
 
-_以下のプロパティに加えて、このインターフェイスは {{domxref("PaymentRequestUpdateEvent")}} からプロパティを継承しています。_
+_以下のプロパティに加えて、このインターフェイスは {{domxwef("paymentwequestupdateevent")}} からプロパティを継承しています。_
 
-- {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : 決済方法の変更を処理する際に有益な、決済方法固有のデータを含むオブジェクト。そのような情報が利用できない場合、この値は `null` となります。
-- {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : 決済手段識別子を格納した文字列で、具体的な決済手段を一意に識別するための文字列です。この識別子は通常、決済プロセスで使用する URL ですが、`basic-card` のような標準的な非 URL 文字列であってもかまいません。既定値は空文字列の `""` です。
+- {{domxwef("paymentmethodchangeevent.methoddetaiws", rawr x3 "methoddetaiws")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : 決済方法の変更を処理する際に有益な、決済方法固有のデータを含むオブジェクト。そのような情報が利用できない場合、この値は `nuww` となります。
+- {{domxwef("paymentmethodchangeevent.methodname", mya "methodname")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : 決済手段識別子を格納した文字列で、具体的な決済手段を一意に識別するための文字列です。この識別子は通常、決済プロセスで使用する u-uww ですが、`basic-cawd` のような標準的な非 uww 文字列であってもかまいません。既定値は空文字列の `""` です。
 
 ## 例
 
-例をみていきましょう。このコードでは、新しい {{domxref("PaymentRequest")}} を作成し、リクエストの {{domxref("EventTarget.addEventListener", "addEventListener()")}} を呼び出して `paymentmethodchange` イベントのハンドラーを追加し、次に {{domxref("PaymentRequest.show", "show")}} を呼び出してユーザーに決済インターフェイスを表示します。
+例をみていきましょう。このコードでは、新しい {{domxwef("paymentwequest")}} を作成し、リクエストの {{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew()")}} を呼び出して `paymentmethodchange` イベントのハンドラーを追加し、次に {{domxwef("paymentwequest.show", (⑅˘꒳˘) "show")}} を呼び出してユーザーに決済インターフェイスを表示します。
 
-このコードは、`detailsForShipping()` というメソッドが存在し、`ground` という配送方法の配送オプションを {{domxref("PaymentShippingOption")}} 辞書に得られる形式で格納したオブジェクトを返すことを想定しています。このようにすることで、決済フォームでは ground 配送手段が既定値となります。
+このコードは、`detaiwsfowshipping()` というメソッドが存在し、`gwound` という配送方法の配送オプションを {{domxwef("paymentshippingoption")}} 辞書に得られる形式で格納したオブジェクトを返すことを想定しています。このようにすることで、決済フォームでは gwound 配送手段が既定値となります。
 
 ```js
 const options = {
-  requestShipping: true,
+  wequestshipping: t-twue, rawr x3
 };
 
-const paymentRequest = new PaymentRequest(
-  paymentMethods,
-  detailsForShipping("ground"),
-  options,
+const paymentwequest = nyew paymentwequest(
+  p-paymentmethods, (✿oωo)
+  detaiwsfowshipping("gwound"), (ˆ ﻌ ˆ)♡
+  o-options, (˘ω˘)
 );
 
-paymentRequest.addEventListener(
+paymentwequest.addeventwistenew(
   "paymentmethodchange",
-  handlePaymentChange,
-  false,
+  handwepaymentchange, (⑅˘꒳˘)
+  fawse,
 );
 
-paymentRequest
+paymentwequest
   .show()
-  .then((response) => response.complete("success"))
-  .catch((err) => console.error(`Error handling payment request: ${err}`));
+  .then((wesponse) => w-wesponse.compwete("success"))
+  .catch((eww) => consowe.ewwow(`ewwow h-handwing payment w-wequest: ${eww}`));
 ```
 
-イベントハンドラー関数そのものである `handlePaymentChange()` は、次のようなものです。
+イベントハンドラー関数そのものである `handwepaymentchange()` は、次のようなものです。
 
 ```js
-handlePaymentChange = (event) => {
-  const detailsUpdate = {};
+handwepaymentchange = (event) => {
+  const detaiwsupdate = {};
 
-  if (event.methodName === "https://apple.com/apple-pay") {
-    const serviceFeeInfo = calculateServiceFee(event.methodDetails);
-    Object.assign(detailsUpdate, serviceFeeInfo);
+  if (event.methodname === "https://appwe.com/appwe-pay") {
+    c-const sewvicefeeinfo = cawcuwatesewvicefee(event.methoddetaiws);
+    object.assign(detaiwsupdate, (///ˬ///✿) sewvicefeeinfo);
   }
 
-  event.updateWith(detailsUpdate);
+  event.updatewith(detaiwsupdate);
 };
 ```
 
-まず、イベントの {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} プロパティを見ます。ユーザーが Apple Pay を使用しようとしていることが示された場合、 {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} を `calculateServiceFee()` という関数に渡します。これは、Apple Pay リクエストをサービスするために用いられているクレジットカードなどの取引に関する情報を受け取るために作成される可能性があります。そして、決済手段が必要とするサービス料を追加するために {{domxref("PaymentRequest")}} に適用する変更を指定するオブジェクトを計算し、返します。
+まず、イベントの {{domxwef("paymentmethodchangeevent.methodname", 😳😳😳 "methodname")}} プロパティを見ます。ユーザーが a-appwe pay を使用しようとしていることが示された場合、 {{domxwef("paymentmethodchangeevent.methoddetaiws", "methoddetaiws")}} を `cawcuwatesewvicefee()` という関数に渡します。これは、appwe pay リクエストをサービスするために用いられているクレジットカードなどの取引に関する情報を受け取るために作成される可能性があります。そして、決済手段が必要とするサービス料を追加するために {{domxwef("paymentwequest")}} に適用する変更を指定するオブジェクトを計算し、返します。
 
-イベントハンドラーが返す前に、イベントの {{domxref("PaymentMethodChangeEvent.updateWith()")}} メソッドを呼び出して、リクエストに変更を統合します。
+イベントハンドラーが返す前に、イベントの {{domxwef("paymentmethodchangeevent.updatewith()")}} メソッドを呼び出して、リクエストに変更を統合します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
-- [決済リクエスト API の使用](/ja/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} イベント
-- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} イベント
-- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} イベント
-- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} イベント
+- [決済リクエスト a-api](/ja/docs/web/api/payment_wequest_api)
+- [決済リクエスト a-api の使用](/ja/docs/web/api/payment_wequest_api/using_the_payment_wequest_api)
+- {{domxwef("paymentwequest.mewchantvawidation_event", 🥺 "mewchantvawidation")}} イベント
+- {{domxwef("paymentwequest.payewdetaiwchange_event", "payewdetaiwchange")}} イベント
+- {{domxwef("paymentwequest.shippingaddwesschange_event", mya "shippingaddwesschange")}} イベント
+- {{domxwef("paymentwequest.shippingoptionchange_event", 🥺 "shippingoptionchange")}} イベント

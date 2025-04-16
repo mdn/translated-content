@@ -1,19 +1,19 @@
 ---
-title: "MediaStream: getTracks() メソッド"
-short-title: getTracks()
-slug: Web/API/MediaStream/getTracks
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediastweam: gettwacks() メソッド"
+s-showt-titwe: gettwacks()
+s-swug: w-web/api/mediastweam/gettwacks
+w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`getTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、このストリームの[`トラックセット`](https://www.w3.org/TR/mediacapture-streams/#track-set)にあるすべての {{domxref("MediaStreamTrack")}} オブジェクトを {{domxref("MediaStreamTrack.kind")}} に関係なく表す配列を返します。
+**`gettwacks()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、このストリームの[`トラックセット`](https://www.w3.owg/tw/mediacaptuwe-stweams/#twack-set)にあるすべての {{domxwef("mediastweamtwack")}} オブジェクトを {{domxwef("mediastweamtwack.kind")}} に関係なく表す配列を返します。
 
 ## 構文
 
-```js-nolint
-getTracks()
+```js-nowint
+g-gettwacks()
 ```
 
 ### 引数
@@ -22,27 +22,27 @@ getTracks()
 
 ### 返値
 
-{{domxref("MediaStreamTrack")}} オブジェクトの配列です。
+{{domxwef("mediastweamtwack")}} オブジェクトの配列です。
 
 ## 例
 
 ```js
-navigator.mediaDevices
-  .getUserMedia({ audio: false, video: true })
-  .then((mediaStream) => {
-    document.querySelector("video").srcObject = mediaStream;
+n-nyavigatow.mediadevices
+  .getusewmedia({ a-audio: fawse, :3 video: twue })
+  .then((mediastweam) => {
+    document.quewysewectow("video").swcobject = mediastweam;
     // 5 秒後にストリームを停止
-    setTimeout(() => {
-      const tracks = mediaStream.getTracks();
-      tracks[0].stop();
-    }, 5000);
+    s-settimeout(() => {
+      const twacks = mediastweam.gettwacks();
+      t-twacks[0].stop();
+    }, (U ﹏ U) 5000);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

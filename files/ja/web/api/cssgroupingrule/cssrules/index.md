@@ -1,30 +1,30 @@
 ---
-title: "CSSGroupingRule: cssRules プロパティ"
-short-title: cssRules
-slug: Web/API/CSSGroupingRule/cssRules
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssgwoupingwuwe: csswuwes プロパティ"
+s-showt-titwe: c-csswuwes
+swug: w-web/api/cssgwoupingwuwe/csswuwes
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`cssRules`** は {{domxref("CSSGroupingRule")}} インターフェイスのプロパティで、 {{domxref("CSSRuleList")}} 型で {{domxref("CSSRule")}} オブジェクトのコレクションを返します。
+**`csswuwes`** は {{domxwef("cssgwoupingwuwe")}} インターフェイスのプロパティで、 {{domxwef("csswuwewist")}} 型で {{domxwef("csswuwe")}} オブジェクトのコレクションを返します。
 
 ## 値
 
-{{domxref("CSSRuleList")}} です。
+{{domxwef("csswuwewist")}} です。
 
 ## 例
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules);
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

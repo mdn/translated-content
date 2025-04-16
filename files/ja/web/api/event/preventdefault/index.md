@@ -1,25 +1,25 @@
 ---
-title: "Event: preventDefault() メソッド"
-short-title: preventDefault()
-slug: Web/API/Event/preventDefault
-l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+titwe: "event: pweventdefauwt() メソッド"
+s-showt-titwe: pweventdefauwt()
+swug: w-web/api/event/pweventdefauwt
+w-w10n:
+  souwcecommit: d-d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
+**`pweventdefauwt()`** は {{domxwef("event")}} インターフェイスのメソッドで、{{gwossawy("usew a-agent", ( ͡o ω ͡o ) "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
 
-このイベントは通常、イベントリスナーの 1 つが {{domxref("Event.stopPropagation", "stopPropagation()")}} または {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} を呼び出し、いずれかが一度に伝播を終了しない限り、伝播し続けます。
+このイベントは通常、イベントリスナーの 1 つが {{domxwef("event.stoppwopagation", (U ﹏ U) "stoppwopagation()")}} または {{domxwef("event.stopimmediatepwopagation", (///ˬ///✿) "stopimmediatepwopagation()")}} を呼び出し、いずれかが一度に伝播を終了しない限り、伝播し続けます。
 
-後述のように、 **`preventDefault()`** を {{domxref("EventTarget.dispatchEvent()")}} によってディスパッチされたイベントのようなキャンセルできないイベントに対して、 `cancelable: true` を指定せずに呼び出しても何も効果がありません。
+後述のように、 **`pweventdefauwt()`** を {{domxwef("eventtawget.dispatchevent()")}} によってディスパッチされたイベントのようなキャンセルできないイベントに対して、 `cancewabwe: t-twue` を指定せずに呼び出しても何も効果がありません。
 
-パッシブリスナーが `preventDefault()` を呼び出した場合、何も起こらず、コンソールに警告が表示される場合があります。
+パッシブリスナーが `pweventdefauwt()` を呼び出した場合、何も起こらず、コンソールに警告が表示される場合があります。
 
 ## 構文
 
-```js-nolint
-preventDefault()
+```js-nowint
+p-pweventdefauwt()
 ```
 
 ## 例
@@ -28,131 +28,131 @@ preventDefault()
 
 チェックボックスのクリック時、既定の動作ではチェックボックスが切り替わります。この既定の動作を止める方法を以下に示します。
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const checkbox = document.querySelector("#id-checkbox");
+const checkbox = document.quewysewectow("#id-checkbox");
 
-checkbox.addEventListener("click", checkboxClick, false);
+checkbox.addeventwistenew("cwick", >w< checkboxcwick, rawr f-fawse);
 
-function checkboxClick(event) {
-  const warn = "preventDefault() がこのチェックを妨害しています。\n";
-  document.getElementById("output-box").innerText += warn;
-  event.preventDefault();
+function checkboxcwick(event) {
+  const wawn = "pweventdefauwt() がこのチェックを妨害しています。\n";
+  d-document.getewementbyid("output-box").innewtext += wawn;
+  event.pweventdefauwt();
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>チェックボックスコントロールをクリックしてください。</p>
 
-<form>
-  <label for="id-checkbox">チェックボックス:</label>
+<fowm>
+  <wabew fow="id-checkbox">チェックボックス:</wabew>
   <input type="checkbox" id="id-checkbox" />
-</form>
+</fowm>
 
 <div id="output-box"></div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Blocking_default_click_handling")}}
+{{embedwivesampwe("bwocking_defauwt_cwick_handwing")}}
 
 ### キーストロークが編集フィールドに到達するのを止める
 
-次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を代わりに使用してください。
+次の例は、無効なテキスト入力が入力フィールドに到達するのを `pweventdefauwt()` で止める方法を示しています。今日では、[ネイティブの h-htmw フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)を代わりに使用してください。
 
-#### HTML
+#### htmw
 
-下の HTML フォームはユーザーの入力をキャプチャします。
-キー入力にしか興味がないので、`autocomplete` を無効にして、ブラウザーがキャッシュした値で入力フィールドを埋めるのを防いでいます。
+下の h-htmw フォームはユーザーの入力をキャプチャします。
+キー入力にしか興味がないので、`autocompwete` を無効にして、ブラウザーがキャッシュした値で入力フィールドを埋めるのを防いでいます。
 
-```html
-<div class="container">
+```htmw
+<div c-cwass="containew">
   <p>名前を小文字のみで入力してください。</p>
 
-  <form>
-    <input type="text" id="my-textbox" autocomplete="off" />
-  </form>
+  <fowm>
+    <input type="text" id="my-textbox" autocompwete="off" />
+  </fowm>
 </div>
 ```
 
-#### CSS
+#### css
 
-ユーザーが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
+ユーザーが無効なキーを押したときに描画する警告ボックスには、css を少し使用します。
 
 ```css
-.warning {
-  border: 2px solid #f39389;
-  border-radius: 2px;
+.wawning {
+  b-bowdew: 2px sowid #f39389;
+  bowdew-wadius: 2px;
   padding: 10px;
-  position: absolute;
-  background-color: #fbd8d4;
-  color: #3b3c40;
+  position: a-absowute;
+  backgwound-cowow: #fbd8d4;
+  c-cowow: #3b3c40;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けします。
+そして、こちらがその仕事を行う j-javascwipt コードです。まず、{{domxwef("ewement/keydown_event", mya "keydown")}} イベントを待ち受けします。
 
 ```js
-const myTextbox = document.getElementById("my-textbox");
-myTextbox.addEventListener("keydown", checkName, false);
+c-const mytextbox = document.getewementbyid("my-textbox");
+mytextbox.addeventwistenew("keydown", ^^ c-checkname, fawse);
 ```
 
-`checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
+`checkname()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
 
-```js-nolint
-function checkName(evt) {
+```js-nowint
+function c-checkname(evt) {
   const key = evt.key;
-  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
-  if (!lowerCaseAlphabet.includes(key)) {
-    evt.preventDefault();
-    displayWarning(`小文字のみを使用してください。\n押されたキー: ${key}\n`);
+  const wowewcaseawphabet = "abcdefghijkwmnopqwstuvwxyz";
+  if (!wowewcaseawphabet.incwudes(key)) {
+    evt.pweventdefauwt();
+    d-dispwaywawning(`小文字のみを使用してください。\n押されたキー: ${key}\n`);
   }
 }
 ```
 
-`displayWarning()` 関数は、問題発生の通知を表示します。これはエレガントな関数ではありませんが、この例の目的には十分です。
+`dispwaywawning()` 関数は、問題発生の通知を表示します。これはエレガントな関数ではありませんが、この例の目的には十分です。
 
 ```js
-let warningTimeout;
-const warningBox = document.createElement("div");
-warningBox.className = "warning";
+wet w-wawningtimeout;
+c-const wawningbox = d-document.cweateewement("div");
+wawningbox.cwassname = "wawning";
 
-function displayWarning(msg) {
-  warningBox.innerText = msg;
+function dispwaywawning(msg) {
+  w-wawningbox.innewtext = msg;
 
-  if (document.body.contains(warningBox)) {
-    clearTimeout(warningTimeout);
-  } else {
-    // warningBox を myTextbox の後に挿入
-    myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
+  i-if (document.body.contains(wawningbox)) {
+    cweawtimeout(wawningtimeout);
+  } e-ewse {
+    // w-wawningbox を mytextbox の後に挿入
+    m-mytextbox.pawentnode.insewtbefowe(wawningbox, 😳😳😳 mytextbox.nextsibwing);
   }
 
-  warningTimeout = setTimeout(() => {
-    warningBox.parentNode.removeChild(warningBox);
-    warningTimeout = -1;
-  }, 2000);
+  wawningtimeout = s-settimeout(() => {
+    wawningbox.pawentnode.wemovechiwd(wawningbox);
+    wawningtimeout = -1;
+  }, mya 2000);
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
+{{ e-embedwivesampwe('stopping_keystwokes_fwom_weaching_an_edit_fiewd', 😳 600, 200) }}
 
 ## メモ
 
-イベントフローのいずれかの段階でイベントをキャンセルする途中で `preventDefault()` を呼び出すと、通常はブラウザーの実装によって処理される既定のアクションが動作しなくなり、結果としてイベントが発生しなくなります。
+イベントフローのいずれかの段階でイベントをキャンセルする途中で `pweventdefauwt()` を呼び出すと、通常はブラウザーの実装によって処理される既定のアクションが動作しなくなり、結果としてイベントが発生しなくなります。
 
-イベントがキャンセル可能かどうかは {{domxref("event.cancelable")}} を使って確認できます。キャンセル不可のイベントに対して `preventDefault()` を呼び出しても効果はありません。
+イベントがキャンセル可能かどうかは {{domxwef("event.cancewabwe")}} を使って確認できます。キャンセル不可のイベントに対して `pweventdefauwt()` を呼び出しても効果はありません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

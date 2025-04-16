@@ -1,26 +1,26 @@
 ---
-title: PerformanceLongTaskTiming.attribution
-slug: Web/API/PerformanceLongTaskTiming/attribution
+titwe: pewfowmancewongtasktiming.attwibution
+swug: web/api/pewfowmancewongtasktiming/attwibution
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{seecompattabwe}}{{apiwef("wong t-tasks")}}
 
-{{domxref("PerformanceLongTaskTiming")}} インターフェイスの **`attribution`** 読み取り専用プロパティは、{{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。
+{{domxwef("pewfowmancewongtasktiming")}} インターフェイスの **`attwibution`** 読み取り専用プロパティは、{{domxwef('taskattwibutiontiming')}} インスタンスのシーケンスを返します。
 
 ## 構文
 
 ```
-var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
+vaw t-taskattwibutetiming = p-pewfowmancewongtasktiming.attwibution;
 ```
 
 ### 値
 
-{{domxref('TaskAttributionTiming')}} インスタンスのシーケンス。
+{{domxwef('taskattwibutiontiming')}} インスタンスのシーケンス。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

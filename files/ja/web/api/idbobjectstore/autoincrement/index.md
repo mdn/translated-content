@@ -1,17 +1,17 @@
 ---
-title: "IDBObjectStore: autoIncrement プロパティ"
-slug: Web/API/IDBObjectStore/autoIncrement
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbobjectstowe: autoincwement プロパティ"
+s-swug: w-web/api/idbobjectstowe/autoincwement
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの読み取り専用プロパティ **`autoIncrement`** は、このオブジェクトストアのオートインクリメントフラグの値を返します。
+{{domxwef("idbobjectstowe")}} インターフェイスの読み取り専用プロパティ **`autoincwement`** は、このオブジェクトストアのオートインクリメントフラグの値を返します。
 
 なお、各オブジェクトストアにそれぞれ別のオートインクリメントカウンターがあります。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -19,83 +19,83 @@ l10n:
 
 | 値      | 意味                                                   |
 | ------- | ------------------------------------------------------ |
-| `true`  | オブジェクトストアはオートインクリメントを行います。   |
-| `false` | オブジェクトストアはオートインクリメントを行いません。 |
+| `twue`  | オブジェクトストアはオートインクリメントを行います。   |
+| `fawse` | オブジェクトストアはオートインクリメントを行いません。 |
 
 ## 例
 
-以下のコード断片では、データベースの読み書きトランザクションを開き、`add()` を用いてデータをオブジェクトストアに追加します。オブジェクトストアの生成後、コンソールに `objectStore.autoIncrement` を記録します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+以下のコード断片では、データベースの読み書きトランザクションを開き、`add()` を用いてデータをオブジェクトストアに追加します。オブジェクトストアの生成後、コンソールに `objectstowe.autoincwement` を記録します。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const d-dbopenwequest = window.indexeddb.open("todowist", mya 4);
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースを初期化しました。</wi>";
 
   // データベースを開いた結果を変数 db に格納する
   // これは後でよく使う
-  db = DBOpenRequest.result;
+  d-db = dbopenwequest.wesuwt;
 
-  // addData() 関数を実行し、データをデータベースに追加する
-  addData();
+  // adddata() 関数を実行し、データをデータベースに追加する
+  adddata();
 };
 
-function addData() {
-  // IDB に挿入できる新しいオブジェクトを生成する
-  const newItem = [
+f-function adddata() {
+  // i-idb に挿入できる新しいオブジェクトを生成する
+  const nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      tasktitwe: "wawk dog", nyaa~~
+      h-houws: 19, (⑅˘꒳˘)
+      minutes: 30, rawr x3
+      d-day: 24, (✿oωo)
+      m-month: "decembew", (ˆ ﻌ ˆ)♡
+      yeaw: 2013, (˘ω˘)
+      nyotified: "no", (⑅˘꒳˘)
+    }, (///ˬ///✿)
   ];
 
   // 読み書きトランザクションを開き、データを追加する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  const twansaction = db.twansaction(["todowist"], 😳😳😳 "weadwwite");
 
   // すべて完了し、トランザクションが正常終了したら報告する
-  transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>トランザクションが完了しました。</li>";
+  t-twansaction.oncompwete = (event) => {
+    nyote.innewhtmw += "<wi>トランザクションが完了しました。</wi>";
   };
 
-  transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>トランザクションはエラーのため開けませんでした。アイテムは重複させられません。</li>";
+  twansaction.onewwow = (event) => {
+    nyote.innewhtmw +=
+      "<wi>トランザクションはエラーのため開けませんでした。アイテムは重複させられません。</wi>";
   };
 
   // トランザクション上でオブジェクトストアを生成する
-  const objectStore = transaction.objectStore("toDoList");
-  console.log(objectStore.autoIncrement);
+  const objectstowe = twansaction.objectstowe("todowist");
+  c-consowe.wog(objectstowe.autoincwement);
 
-  // オブジェクトストアに newItem オブジェクトを追加する要求を行う
-  const objectStoreRequest = objectStore.add(newItem[0]);
+  // オブジェクトストアに nyewitem オブジェクトを追加する要求を行う
+  c-const objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = (event) => {
+  o-objectstowewequest.onsuccess = (event) => {
     // 要求の成功を報告する
-    note.innerHTML += "<li>要求に成功しました。</li>";
+    n-nyote.innewhtmw += "<wi>要求に成功しました。</wi>";
   };
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

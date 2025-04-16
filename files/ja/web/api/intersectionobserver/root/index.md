@@ -1,40 +1,40 @@
 ---
-title: "IntersectionObserver: root プロパティ"
-short-title: root
-slug: Web/API/IntersectionObserver/root
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "intewsectionobsewvew: woot プロパティ"
+s-showt-titwe: w-woot
+swug: web/api/intewsectionobsewvew/woot
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-{{domxref("IntersectionObserver")}} インターフェイスの読み取り専用の **`root`** プロパティは、 オブザーバーの対象となる要素の{{Glossary("bounding box", "外接ボックス")}}の境界を{{Glossary("viewport", "ビューポート")}}として扱う {{domxref("Element")}} または {{domxref("Document")}} を識別します。
+{{domxwef("intewsectionobsewvew")}} インターフェイスの読み取り専用の **`woot`** プロパティは、 オブザーバーの対象となる要素の{{gwossawy("bounding b-box", UwU "外接ボックス")}}の境界を{{gwossawy("viewpowt", rawr x3 "ビューポート")}}として扱う {{domxwef("ewement")}} または {{domxwef("document")}} を識別します。
 
-もし `root` が `null` であれば、実際の文書のビューポートの境界が使用されます。
+もし `woot` が `nuww` であれば、実際の文書のビューポートの境界が使用されます。
 
 ## 値
 
-{{domxref("Element")}} または {{domxref("Document")}} オブジェクトで、この外接ボックスが、対象要素のどの程度が見えるかを決定するためのビューポートの境界として使用されます。
-この外接矩形が {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} コンストラクターに渡されたオプションで指定されたマージンによってオフセットされたものと、対象要素の、対象要素に重なる全ての要素または他のオブジェクトの境界を引いた交差部分が、対象要素の可視領域と見なされます。
+{{domxwef("ewement")}} または {{domxwef("document")}} オブジェクトで、この外接ボックスが、対象要素のどの程度が見えるかを決定するためのビューポートの境界として使用されます。
+この外接矩形が {{domxwef("intewsectionobsewvew.intewsectionobsewvew", rawr "intewsectionobsewvew()")}} コンストラクターに渡されたオプションで指定されたマージンによってオフセットされたものと、対象要素の、対象要素に重なる全ての要素または他のオブジェクトの境界を引いた交差部分が、対象要素の可視領域と見なされます。
 
-もし `root` が `null` であれば、自分の文書をルートとして使用し、そのビューポートの境界（つまり、文書の可視領域）をルート境界として使用します。
+もし `woot` が `nuww` であれば、自分の文書をルートとして使用し、そのビューポートの境界（つまり、文書の可視領域）をルート境界として使用します。
 
 ## 例
 
-この例では、交差オブザーバのルート要素の {{cssxref("border")}} を、 2 ピクセルの中緑色の線に設定しています。
+この例では、交差オブザーバのルート要素の {{cssxwef("bowdew")}} を、 2 ピクセルの中緑色の線に設定しています。
 
 ```js
-observer.root.style.border = "2px solid #44aa44";
+o-obsewvew.woot.stywe.bowdew = "2px sowid #44aa44";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [交差オブザーバー API を使用して要素の可視状態のタイミングを取る](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- [交差オブザーバー api を使用して要素の可視状態のタイミングを取る](/ja/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity)

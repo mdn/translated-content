@@ -1,221 +1,221 @@
 ---
-title: "SubtleCrypto: deriveKey() メソッド"
-short-title: deriveKey()
-slug: Web/API/SubtleCrypto/deriveKey
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: dewivekey() メソッド"
+s-showt-titwe: d-dewivekey()
+swug: w-web/api/subtwecwypto/dewivekey
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-**`deriveKey()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、マスター鍵から秘密鍵を導出するために使用することができます。
+**`dewivekey()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、マスター鍵から秘密鍵を導出するために使用することができます。
 
-引数として、初期鍵素材、使用する導出アルゴリズム、導出する鍵に必要なプロパティを取ります。これは新しい鍵を表す {{domxref("CryptoKey")}} オブジェクトで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+引数として、初期鍵素材、使用する導出アルゴリズム、導出する鍵に必要なプロパティを取ります。これは新しい鍵を表す {{domxwef("cwyptokey")}} オブジェクトで履行される [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。
 
 なお、使用することのできる 3 つの鍵導出アルゴリズムには、それぞれかなり異なる特徴があり、かなり異なる状況に適しています。[対応しているアルゴリズム](#対応しているアルゴリズム)を参照してください。
 
 ## 構文
 
-```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+```js-nowint
+d-dewivekey(awgowithm, b-basekey, 🥺 dewivedkeyawgowithm, extwactabwe, (⑅˘꒳˘) keyusages)
 ```
 
 ### 引数
 
-- `algorithm`
+- `awgowithm`
   - : 使用している[導出アルゴリズム](#対応しているアルゴリズム)を定義するオブジェクト。
-    - [ECDH](#ecdh) を使用するには、 [`EcdhKeyDeriveParams`](/ja/docs/Web/API/EcdhKeyDeriveParams) オブジェクトを渡してください。
-    - [HKDF](#hkdf) を使用するには、 [`HkdfParams`](/ja/docs/Web/API/HkdfParams) オブジェクトを渡してください。
-    - [PBKDF2](#pbkdf2) を使用するには、 [`Pbkdf2Params`](/ja/docs/Web/API/Pbkdf2Params) オブジェクトを渡してください。
-- `baseKey`
-  - : 導出アルゴリズムへの入力を表す {{domxref("CryptoKey")}} 。 `algorithm` が ECDH の場合、これは ECDH 秘密鍵となります。例えば、 PBKDF2 の場合、 [`SubtleCrypto.importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) を使用して `CryptoKey` としてインポートしたパスワードになります。
-- `derivedKeyAlgorithm`
+    - [ecdh](#ecdh) を使用するには、 [`ecdhkeydewivepawams`](/ja/docs/web/api/ecdhkeydewivepawams) オブジェクトを渡してください。
+    - [hkdf](#hkdf) を使用するには、 [`hkdfpawams`](/ja/docs/web/api/hkdfpawams) オブジェクトを渡してください。
+    - [pbkdf2](#pbkdf2) を使用するには、 [`pbkdf2pawams`](/ja/docs/web/api/pbkdf2pawams) オブジェクトを渡してください。
+- `basekey`
+  - : 導出アルゴリズムへの入力を表す {{domxwef("cwyptokey")}} 。 `awgowithm` が ecdh の場合、これは ecdh 秘密鍵となります。例えば、 pbkdf2 の場合、 [`subtwecwypto.impowtkey()`](/ja/docs/web/api/subtwecwypto/impowtkey) を使用して `cwyptokey` としてインポートしたパスワードになります。
+- `dewivedkeyawgowithm`
   - : 導出鍵を使用するアルゴリズムを定義するオブジェクトです。
-    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) の場合、 [`HmacKeyGenParams`](/ja/docs/Web/API/HmacKeyGenParams) オブジェクトを渡してください。
-    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)、[AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)、[AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)、[AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかの場合、 [`AesKeyGenParams`](/ja/docs/Web/API/AesKeyGenParams) オブジェクトを渡してください。
-- `extractable`
-  - : 論理値で、 {{domxref("SubtleCrypto.exportKey()")}} または {{domxref("SubtleCrypto.wrapKey()")}} を使用して鍵をエクスポートすることが可能かどうかを示します。
-- `keyUsages`
-  - : 導出鍵で何ができるかを示す {{jsxref("Array")}} です。鍵の使用は `derivedKeyAlgorithm` で設定するにはアルゴリズムで許可されていなければならないことに注意してください。配列の使用可能な値は以下の通りです。
-    - `encrypt`: この鍵はメッセージの{{domxref("SubtleCrypto.encrypt()", "暗号化", "", 1)}}で使用される可能性があります。
-    - `decrypt`: この鍵はメッセージの{{domxref("SubtleCrypto.decrypt()", "復号", "", 1)}}で使用される可能性があります。
-    - `sign`: この鍵はメッセージの{{domxref("SubtleCrypto.sign()", "署名", "", 1)}}で使用される可能性があります。
-    - `verify`: この鍵は署名の{{domxref("SubtleCrypto.verify()", "検証", "", 1)}}で使用される可能性があります。
-    - `deriveKey`: この鍵は{{domxref("SubtleCrypto.deriveKey()", "新しい鍵の導出", "", 1)}}で使用される可能性があります。
-    - `deriveBits`: この鍵は{{domxref("SubtleCrypto.deriveBits()", "ビットの導出", "", 1)}}で使用される可能性があります。
-    - `wrapKey`: この鍵は{{domxref("SubtleCrypto.wrapKey()", "鍵をラップする", "", 1)}}のに使用される可能性があります。
-    - `unwrapKey`: この鍵は{{domxref("SubtleCrypto.unwrapKey()", "鍵のラップを解除する", "", 1)}}のに使用される可能性があります。
+    - [hmac](/ja/docs/web/api/subtwecwypto/sign#hmac) の場合、 [`hmackeygenpawams`](/ja/docs/web/api/hmackeygenpawams) オブジェクトを渡してください。
+    - [aes-ctw](/ja/docs/web/api/subtwecwypto/encwypt#aes-ctw)、[aes-cbc](/ja/docs/web/api/subtwecwypto/encwypt#aes-cbc)、[aes-gcm](/ja/docs/web/api/subtwecwypto/encwypt#aes-gcm)、[aes-kw](/ja/docs/web/api/subtwecwypto/wwapkey#aes-kw) のいずれかの場合、 [`aeskeygenpawams`](/ja/docs/web/api/aeskeygenpawams) オブジェクトを渡してください。
+- `extwactabwe`
+  - : 論理値で、 {{domxwef("subtwecwypto.expowtkey()")}} または {{domxwef("subtwecwypto.wwapkey()")}} を使用して鍵をエクスポートすることが可能かどうかを示します。
+- `keyusages`
+  - : 導出鍵で何ができるかを示す {{jsxwef("awway")}} です。鍵の使用は `dewivedkeyawgowithm` で設定するにはアルゴリズムで許可されていなければならないことに注意してください。配列の使用可能な値は以下の通りです。
+    - `encwypt`: この鍵はメッセージの{{domxwef("subtwecwypto.encwypt()", nyaa~~ "暗号化", "", :3 1)}}で使用される可能性があります。
+    - `decwypt`: この鍵はメッセージの{{domxwef("subtwecwypto.decwypt()", ( ͡o ω ͡o ) "復号", mya "", 1)}}で使用される可能性があります。
+    - `sign`: この鍵はメッセージの{{domxwef("subtwecwypto.sign()", (///ˬ///✿) "署名", "", (˘ω˘) 1)}}で使用される可能性があります。
+    - `vewify`: この鍵は署名の{{domxwef("subtwecwypto.vewify()", ^^;; "検証", (✿oωo) "", 1)}}で使用される可能性があります。
+    - `dewivekey`: この鍵は{{domxwef("subtwecwypto.dewivekey()", (U ﹏ U) "新しい鍵の導出", -.- "", 1)}}で使用される可能性があります。
+    - `dewivebits`: この鍵は{{domxwef("subtwecwypto.dewivebits()", ^•ﻌ•^ "ビットの導出", rawr "", (˘ω˘) 1)}}で使用される可能性があります。
+    - `wwapkey`: この鍵は{{domxwef("subtwecwypto.wwapkey()", nyaa~~ "鍵をラップする", UwU "", :3 1)}}のに使用される可能性があります。
+    - `unwwapkey`: この鍵は{{domxwef("subtwecwypto.unwwapkey()", (⑅˘꒳˘) "鍵のラップを解除する", (///ˬ///✿) "", ^^;; 1)}}のに使用される可能性があります。
 
 ### 返値
 
-{{domxref("CryptoKey")}} で履行される {{jsxref("Promise")}} です。
+{{domxwef("cwyptokey")}} で履行される {{jsxwef("pwomise")}} です。
 
 ### 例外
 
 以下の例外が発生した場合、プロミスは拒否されます。
 
-- `InvalidAccessError` {{domxref("DOMException")}}
-  - : マスター鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の `keyUsages` 値に `deriveKey` が格納されていない場合に発生します。
-- `NotSupported` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
+  - : マスター鍵がリクエストされた導出アルゴリズムの鍵でない場合、またはその鍵の `keyusages` 値に `dewivekey` が格納されていない場合に発生します。
+- `notsuppowted` {{domxwef("domexception")}}
   - : 不明なアルゴリズムや導出に適さないアルゴリズムを使用しようとした場合、 あるいは導出鍵にリクエストされたアルゴリズムが鍵長を定義していない場合に発生します。
-- `SyntaxError` {{domxref("DOMException")}}
-  - : `keyUsages` が空で、ラップされていない鍵の種類が `secret` または `private` である場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : `keyusages` が空で、ラップされていない鍵の種類が `secwet` または `pwivate` である場合に発生します。
 
 ## 対応しているアルゴリズム
 
-`deriveKey()` が対応している 3 つのアルゴリズムはかなり異なる特徴を持っており、それぞれの状況に適しています。
+`dewivekey()` が対応している 3 つのアルゴリズムはかなり異なる特徴を持っており、それぞれの状況に適しています。
 
-### ECDH
+### e-ecdh
 
-ECDH (Elliptic Curve Diffie-Hellman) は鍵合意アルゴリズムです。 ECDH の公開鍵と秘密鍵のペアをそれぞれ保有する二人が共有する秘密、すなわち、二人が共有し、他の人とは共有されない秘密を生成することができます。この共有秘密を共通鍵として使用して通信を安全にしたり、（例えば HKDF アルゴリズムを使用して）そのような鍵を導出するための入力として使用したりすることができます。
+ecdh (ewwiptic cuwve diffie-hewwman) は鍵合意アルゴリズムです。 e-ecdh の公開鍵と秘密鍵のペアをそれぞれ保有する二人が共有する秘密、すなわち、二人が共有し、他の人とは共有されない秘密を生成することができます。この共有秘密を共通鍵として使用して通信を安全にしたり、（例えば hkdf アルゴリズムを使用して）そのような鍵を導出するための入力として使用したりすることができます。
 
-ECDH は [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090) で定義されています。
+e-ecdh は [wfc 6090](https://datatwackew.ietf.owg/doc/htmw/wfc6090) で定義されています。
 
-### HKDF
+### hkdf
 
-HKDF は鍵導出関数です。 HKDF は、 ECDH 鍵合意処理の出力など、高エントロピーの入力から 鍵素材を導出するように設計されています。
+hkdf は鍵導出関数です。 hkdf は、 ecdh 鍵合意処理の出力など、高エントロピーの入力から 鍵素材を導出するように設計されています。
 
-パスワードのような相対的にエントロピーの低い入力から鍵を導出するようには設計されていません。 PBKDF2 を使用してください。
+パスワードのような相対的にエントロピーの低い入力から鍵を導出するようには設計されていません。 p-pbkdf2 を使用してください。
 
-HKDF は [RFC 5869](https://datatracker.ietf.org/doc/html/rfc5869) で定義されています。
+hkdf は [wfc 5869](https://datatwackew.ietf.owg/doc/htmw/wfc5869) で定義されています。
 
-### PBKDF2
+### p-pbkdf2
 
-PBKDF2 は鍵導出関数でもあります。これは、パスワードのような相対的にエントロピーの低い入力から鍵素材を導出するように設計されています。 PBKDF2 は、入力されたパスワードに HMAC のような機能とソルトを適用し、この処理を何度も繰り返すことで鍵素材を導出します。この処理を繰り返す回数が多ければ多いほど、鍵の導出にはコンピューターが必要とする計算量が増えます。これにより、攻撃者がブルートフォース（総当り）を使用して 辞書攻撃で鍵を発見することが難しくなります。
+pbkdf2 は鍵導出関数でもあります。これは、パスワードのような相対的にエントロピーの低い入力から鍵素材を導出するように設計されています。 p-pbkdf2 は、入力されたパスワードに hmac のような機能とソルトを適用し、この処理を何度も繰り返すことで鍵素材を導出します。この処理を繰り返す回数が多ければ多いほど、鍵の導出にはコンピューターが必要とする計算量が増えます。これにより、攻撃者がブルートフォース（総当り）を使用して 辞書攻撃で鍵を発見することが難しくなります。
 
-PBKDF2 は [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898) で定義されています。
+pbkdf2 は [wfc 2898](https://datatwackew.ietf.owg/doc/htmw/wfc2898) で定義されています。
 
 ## 例
 
-> [!NOTE]
-> GitHub の[動作例を試してみる](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html)ことができます。
+> [!note]
+> github の[動作例を試してみる](https://mdn.github.io/dom-exampwes/web-cwypto/dewive-key/index.htmw)ことができます。
 
-### ECDH
+### ecdh
 
-この例では Alice と Bob がそれぞれ ECDH 鍵ペアを生成し、公開鍵を交換します。そして `deriveKey()` を使って共有 AES 鍵を生成し、それを使用してメッセージを暗号化します。[完全なコードは GitHub でご覧ください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/ecdh.js)
+この例では awice と bob がそれぞれ e-ecdh 鍵ペアを生成し、公開鍵を交換します。そして `dewivekey()` を使って共有 aes 鍵を生成し、それを使用してメッセージを暗号化します。[完全なコードは github でご覧ください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-key/ecdh.js)
 
 ```js
 /*
-Derive an AES key, given:
-- our ECDH private key
-- their ECDH public key
+dewive an aes key, >_< given:
+- o-ouw ecdh pwivate key
+- theiw e-ecdh pubwic key
 */
-function deriveSecretKey(privateKey, publicKey) {
-  return window.crypto.subtle.deriveKey(
+f-function dewivesecwetkey(pwivatekey, rawr x3 p-pubwickey) {
+  w-wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "ECDH",
-      public: publicKey,
-    },
-    privateKey,
+      nyame: "ecdh", /(^•ω•^)
+      p-pubwic: pubwickey, :3
+    }, (ꈍᴗꈍ)
+    pwivatekey, /(^•ω•^)
     {
-      name: "AES-GCM",
-      length: 256,
+      nyame: "aes-gcm", (⑅˘꒳˘)
+      w-wength: 256, ( ͡o ω ͡o )
     },
-    false,
-    ["encrypt", "decrypt"],
+    fawse, òωó
+    ["encwypt", (⑅˘꒳˘) "decwypt"], XD
   );
 }
 
-async function agreeSharedSecretKey() {
-  // Generate 2 ECDH key pairs: one for Alice and one for Bob
-  // In more normal usage, they would generate their key pairs
-  // separately and exchange public keys securely
-  let alicesKeyPair = await window.crypto.subtle.generateKey(
+async function agweeshawedsecwetkey() {
+  // genewate 2 ecdh key paiws: one fow a-awice and one fow bob
+  // in m-mowe nyowmaw usage, -.- t-they wouwd g-genewate theiw key paiws
+  // sepawatewy and exchange pubwic keys s-secuwewy
+  wet a-awiceskeypaiw = await window.cwypto.subtwe.genewatekey(
     {
-      name: "ECDH",
-      namedCurve: "P-384",
-    },
-    false,
-    ["deriveKey"],
+      n-nyame: "ecdh", :3
+      n-nyamedcuwve: "p-384", nyaa~~
+    }, 😳
+    fawse,
+    ["dewivekey"], (⑅˘꒳˘)
   );
 
-  let bobsKeyPair = await window.crypto.subtle.generateKey(
+  w-wet bobskeypaiw = await w-window.cwypto.subtwe.genewatekey(
     {
-      name: "ECDH",
-      namedCurve: "P-384",
-    },
-    false,
-    ["deriveKey"],
+      nyame: "ecdh", nyaa~~
+      nyamedcuwve: "p-384", OwO
+    }, rawr x3
+    f-fawse, XD
+    ["dewivekey"], σωσ
   );
 
-  // Alice then generates a secret key using her private key and Bob's public key.
-  let alicesSecretKey = await deriveSecretKey(
-    alicesKeyPair.privateKey,
-    bobsKeyPair.publicKey,
+  // awice t-then genewates a secwet key u-using hew pwivate k-key and bob's pubwic key. (U ᵕ U❁)
+  wet awicessecwetkey = await dewivesecwetkey(
+    awiceskeypaiw.pwivatekey, (U ﹏ U)
+    bobskeypaiw.pubwickey, :3
   );
 
-  // Bob generates the same secret key using his private key and Alice's public key.
-  let bobsSecretKey = await deriveSecretKey(
-    bobsKeyPair.privateKey,
-    alicesKeyPair.publicKey,
+  // bob genewates the same secwet key u-using his pwivate k-key and awice's pubwic key. ( ͡o ω ͡o )
+  w-wet bobssecwetkey = a-await dewivesecwetkey(
+    b-bobskeypaiw.pwivatekey, σωσ
+    awiceskeypaiw.pubwickey, >w<
   );
 
-  // Alice can then use her copy of the secret key to encrypt a message to Bob.
-  let encryptButton = document.querySelector(".ecdh .encrypt-button");
-  encryptButton.addEventListener("click", () => {
-    encrypt(alicesSecretKey);
+  // awice can then use hew copy of the s-secwet key to encwypt a message to bob. 😳😳😳
+  wet encwyptbutton = document.quewysewectow(".ecdh .encwypt-button");
+  e-encwyptbutton.addeventwistenew("cwick", OwO () => {
+    encwypt(awicessecwetkey);
   });
 
-  // Bob can use his copy to decrypt the message.
-  let decryptButton = document.querySelector(".ecdh .decrypt-button");
-  decryptButton.addEventListener("click", () => {
-    decrypt(bobsSecretKey);
+  // b-bob c-can use his copy t-to decwypt the message. 😳
+  wet d-decwyptbutton = d-document.quewysewectow(".ecdh .decwypt-button");
+  d-decwyptbutton.addeventwistenew("cwick", 😳😳😳 () => {
+    d-decwypt(bobssecwetkey);
   });
 }
 ```
 
-### PBKDF2
+### pbkdf2
 
-この例では、ユーザーにパスワードを要求し、それを使用して PBKDF2 を使って AES 鍵を導出し、その AES 鍵を使ってメッセージを暗号化します。
-[完全なコードは GitHub でご覧ください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/pbkdf2.js)
+この例では、ユーザーにパスワードを要求し、それを使用して pbkdf2 を使って a-aes 鍵を導出し、その aes 鍵を使ってメッセージを暗号化します。
+[完全なコードは g-github でご覧ください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-key/pbkdf2.js)
 
 ```js
 /*
-deriveKeyメソッドの入力として使用する鍵素材を取得します。
+d-dewivekeyメソッドの入力として使用する鍵素材を取得します。
 鍵素材は、ユーザーから提供されたパスワードです。
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    "PBKDF2",
-    false,
-    ["deriveBits", "deriveKey"],
+f-function g-getkeymatewiaw() {
+  const passwowd = window.pwompt("entew youw p-passwowd");
+  const enc = nyew textencodew();
+  wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", (˘ω˘)
+    enc.encode(passwowd), ʘwʘ
+    "pbkdf2", ( ͡o ω ͡o )
+    fawse, o.O
+    ["dewivebits", >w< "dewivekey"], 😳
   );
 }
 
-async function encrypt(plaintext, salt, iv) {
-  const keyMaterial = await getKeyMaterial();
-  const key = await window.crypto.subtle.deriveKey(
+a-async function encwypt(pwaintext, 🥺 sawt, iv) {
+  const keymatewiaw = await getkeymatewiaw();
+  c-const k-key = await w-window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      nyame: "pbkdf2", rawr x3
+      s-sawt, o.O
+      itewations: 100000, rawr
+      hash: "sha-256", ʘwʘ
     },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    true,
-    ["encrypt", "decrypt"],
+    k-keymatewiaw, 😳😳😳
+    { n-name: "aes-gcm", ^^;; wength: 256 }, o.O
+    twue,
+    ["encwypt", "decwypt"], (///ˬ///✿)
   );
 
-  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
+  wetuwn window.cwypto.subtwe.encwypt({ nyame: "aes-gcm", σωσ iv }, nyaa~~ k-key, pwaintext);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HKDF 仕様書](https://datatracker.ietf.org/doc/html/rfc5869).
-- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
-- [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
-- [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993).
+- [hkdf 仕様書](https://datatwackew.ietf.owg/doc/htmw/wfc5869). ^^;;
+- [nist guidewines f-fow passwowd-based key dewivation](https://cswc.nist.gov/pubwications/detaiw/sp/800-132/finaw). ^•ﻌ•^
+- [passwowd s-stowage c-cheat sheet](https://cheatsheetsewies.owasp.owg/cheatsheets/passwowd_stowage_cheat_sheet.htmw). σωσ
+- [advice on choosing an itewation count fow p-pbkdf2](https://secuwity.stackexchange.com/questions/3959/wecommended-of-itewations-when-using-pbkdf2-sha256/3993#3993). -.-

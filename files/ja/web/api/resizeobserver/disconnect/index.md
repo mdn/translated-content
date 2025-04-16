@@ -1,19 +1,19 @@
 ---
-title: "ResizeObserver: disconnect() メソッド"
-short-title: disconnect()
-slug: Web/API/ResizeObserver/disconnect
-l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+titwe: "wesizeobsewvew: disconnect() メソッド"
+s-showt-titwe: d-disconnect()
+s-swug: web/api/wesizeobsewvew/disconnect
+w-w10n:
+  s-souwcecommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew a-api")}}
 
-**`disconnect()`** は {{domxref("ResizeObserver")}} インターフェイスのメソッドで、すべての監視されている {{domxref('Element')}} または {{domxref('SVGElement')}} をターゲットとした監視を解除します。
+**`disconnect()`** は {{domxwef("wesizeobsewvew")}} インターフェイスのメソッドで、すべての監視されている {{domxwef('ewement')}} または {{domxwef('svgewement')}} をターゲットとした監視を解除します。
 
 ## 構文
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 引数
@@ -22,7 +22,7 @@ disconnect()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
@@ -31,15 +31,15 @@ disconnect()
 ## 例
 
 ```js
-btn.addEventListener("click", () => {
-  resizeObserver.disconnect();
+btn.addeventwistenew("cwick", UwU () => {
+  wesizeobsewvew.disconnect();
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

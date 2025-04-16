@@ -1,19 +1,19 @@
 ---
-title: "IntersectionObserver: disconnect() メソッド"
-short-title: disconnect()
-slug: Web/API/IntersectionObserver/disconnect
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "intewsectionobsewvew: disconnect() メソッド"
+s-showt-titwe: d-disconnect()
+s-swug: web/api/intewsectionobsewvew/disconnect
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection obsewvew a-api")}}
 
-{{domxref("IntersectionObserver")}} の **`disconnect()`** メソッドは、すべての対象要素について、表示状態の変化の監視を停止します。
+{{domxwef("intewsectionobsewvew")}} の **`disconnect()`** メソッドは、すべての対象要素について、表示状態の変化の監視を停止します。
 
 ## 構文
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 引数
@@ -22,17 +22,17 @@ disconnect()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("IntersectionObserver.observe", "observe()")}}
-- {{domxref("IntersectionObserver.unobserve", "unobserve()")}}
+- {{domxwef("intewsectionobsewvew.obsewve", (U ᵕ U❁) "obsewve()")}}
+- {{domxwef("intewsectionobsewvew.unobsewve", (⑅˘꒳˘) "unobsewve()")}}

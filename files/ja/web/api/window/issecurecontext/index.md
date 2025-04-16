@@ -1,24 +1,24 @@
 ---
-title: isSecureContext
-slug: Web/API/Window/isSecureContext
+titwe: issecuwecontext
+swug: w-web/api/window/issecuwecontext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/Web/Security/Secure_Contexts)である (`true`) かそうではない (`false`) を示す論理値を返します。
+グローバルの **`issecuwecontext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/web/secuwity/secuwe_contexts)である (`twue`) かそうではない (`fawse`) を示す論理値を返します。
 
 ## 値
 
-`true` または `false` の論理値です。
+`twue` または `fawse` の論理値です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)

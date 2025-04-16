@@ -1,34 +1,34 @@
 ---
-title: "HTMLTemplateElement: content プロパティ"
-short-title: content
-slug: Web/API/HTMLTemplateElement/content
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtempwateewement: content プロパティ"
+s-showt-titwe: c-content
+swug: w-web/api/htmwtempwateewement/content
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`HTMLTemplateElement.content`** プロパティは、`<template>` 要素のテンプレートの内容 ({{domxref("DocumentFragment")}}) を返します。
+**`htmwtempwateewement.content`** プロパティは、`<tempwate>` 要素のテンプレートの内容 ({{domxwef("documentfwagment")}}) を返します。
 
 ## 値
 
-{{domxref("DocumentFragment")}} です。
+{{domxwef("documentfwagment")}} です。
 
 ## 例
 
 ```js
-const templateElement = document.querySelector("#foo");
-const documentFragment = templateElement.content.cloneNode(true);
+c-const t-tempwateewement = document.quewysewectow("#foo");
+const documentfwagment = tempwateewement.content.cwonenode(twue);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLTemplateElement")}}
+- {{domxwef("htmwtempwateewement")}}

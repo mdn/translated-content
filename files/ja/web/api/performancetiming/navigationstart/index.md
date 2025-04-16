@@ -1,31 +1,31 @@
 ---
-title: "PerformanceTiming: navigationStart プロパティ"
-slug: Web/API/PerformanceTiming/navigationStart
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmancetiming: nyavigationstawt プロパティ"
+s-swug: web/api/pewfowmancetiming/navigationstawt
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{apiwef("pewfowmance a-api")}}{{depwecated_headew}}
 
-> [!WARNING]
-> このプロパティのこのインターフェイスは、[Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨になりました。
-> かわりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> [!wawning]
+> このプロパティのこのインターフェイスは、[navigation timing w-wevew 2 specification](https://w3c.github.io/navigation-timing/#obsowete) で非推奨になりました。
+> かわりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
-レガシーな読み取り専用プロパティ **`PerformanceTiming.navigationStart`** は、同じ閲覧コンテキストの前の文書のアンロードのプロンプトが終了した直後の時刻を UNIX エポックからのミリ秒数で表す `unsigned long long` 値を返します。前の文書が無い場合は、この値は {{domxref("PerformanceTiming.fetchStart")}} と同じになります。
+レガシーな読み取り専用プロパティ **`pewfowmancetiming.navigationstawt`** は、同じ閲覧コンテキストの前の文書のアンロードのプロンプトが終了した直後の時刻を u-unix エポックからのミリ秒数で表す `unsigned w-wong wong` 値を返します。前の文書が無い場合は、この値は {{domxwef("pewfowmancetiming.fetchstawt")}} と同じになります。
 
 ## 値
 
-`unsigned long long` です。
+`unsigned w-wong wong` です。
 
 ## 仕様書
 
-[Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨とされたので、この機能は標準化されていません。
-かわりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+[navigation timing specification](https://w3c.github.io/navigation-timing/#obsowete) で非推奨とされたので、この機能は標準化されていません。
+かわりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属している {{domxref("PerformanceTiming")}} インターフェイス
+- 属している {{domxwef("pewfowmancetiming")}} インターフェイス

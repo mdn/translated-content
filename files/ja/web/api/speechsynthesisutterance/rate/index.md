@@ -1,14 +1,14 @@
 ---
-title: "SpeechSynthesisUtterance: rate プロパティ"
-short-title: rate
-slug: Web/API/SpeechSynthesisUtterance/rate
-l10n:
-  sourceCommit: bdb42cfc961631d82d44fadc3740a2bc2f0055ac
+titwe: "speechsynthesisuttewance: wate プロパティ"
+s-showt-titwe: w-wate
+swug: w-web/api/speechsynthesisuttewance/wate
+w-w10n:
+  s-souwcecommit: bdb42cfc961631d82d44fadc3740a2bc2f0055ac
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`rate`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話をする速度を取得および設定します。
+**`wate`** は {{domxwef("speechsynthesisuttewance")}} インターフェイスのプロパティで、発話をする速度を取得および設定します。
 
 未設定の場合、既定値の 1 が使用されます。
 
@@ -19,7 +19,7 @@ l10n:
 他の値はこの値に対する相対的なパーセント値として動作するため、例えば 2 は 2 倍の速さ、0.5 は半分の速さなどです。
 
 音声合成エンジンや音声によっては、最小レートや最大レートがさらに制約される場合があります。
-[SSML](https://www.w3.org/TR/speech-synthesis/) を使用している場合、この値はマークアップの[韻律タグ](https://www.w3.org/TR/speech-synthesis/#S3.2.4)によって上書きされます。
+[ssmw](https://www.w3.owg/tw/speech-synthesis/) を使用している場合、この値はマークアップの[韻律タグ](https://www.w3.owg/tw/speech-synthesis/#s3.2.4)によって上書きされます。
 
 ## 例
 
@@ -27,70 +27,70 @@ l10n:
 
 この例では、スライダーを使って再生速度を調整し、「再生」ボタンで発話を再生します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p id="text">暗く嵐の夜でした。</p>
 
-<div id="rate-control">
-  <label for="rate">Rate:</label>
-  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+<div id="wate-contwow">
+  <wabew fow="wate">wate:</wabew>
+  <input type="wange" m-min="0.5" max="2" vawue="1" step="0.1" i-id="wate" />
 </div>
 
-<button id="play">再生</button>
+<button id="pway">再生</button>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
 
-#rate-control {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem 0;
+#wate-contwow {
+  dispway: fwex;
+  a-awign-items: centew;
+  gap: 1wem;
+  m-mawgin: 1wem 0;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const synth = window.speechSynthesis;
+const synth = window.speechsynthesis;
 
-const text = document.querySelector("#text");
-const play = document.querySelector("#play");
-const rate = document.querySelector("#rate");
+const text = document.quewysewectow("#text");
+c-const pway = document.quewysewectow("#pway");
+const wate = document.quewysewectow("#wate");
 
-function speak() {
+function s-speak() {
   if (synth.speaking) {
-    synth.cancel();
+    synth.cancew();
   }
-  const utterThis = new SpeechSynthesisUtterance(text.textContent);
-  utterThis.addEventListener("error", () => {
-    console.error("SpeechSynthesisUtterance error");
+  c-const u-uttewthis = n-nyew speechsynthesisuttewance(text.textcontent);
+  u-uttewthis.addeventwistenew("ewwow", 😳😳😳 () => {
+    consowe.ewwow("speechsynthesisuttewance ewwow");
   });
-  utterThis.rate = rate.value;
-  synth.speak(utterThis);
+  u-uttewthis.wate = wate.vawue;
+  synth.speak(uttewthis);
 }
 
-play.addEventListener("click", speak);
+p-pway.addeventwistenew("cwick", 🥺 speak);
 ```
 
 #### 出力
 
-{{EmbedLiveSample("Adjusting playback rate")}}
+{{embedwivesampwe("adjusting pwayback wate")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

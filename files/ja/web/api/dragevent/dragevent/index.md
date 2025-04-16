@@ -1,44 +1,44 @@
 ---
-title: "DragEvent: DragEvent() コンストラクター"
-short-title: DragEvent()
-slug: Web/API/DragEvent/DragEvent
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "dwagevent: dwagevent() コンストラクター"
+s-showt-titwe: d-dwagevent()
+s-swug: web/api/dwagevent/dwagevent
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-このコンストラクターは、合成した {{domxref("DragEvent")}} オブジェクトを作成するために使用します。
+このコンストラクターは、合成した {{domxwef("dwagevent")}} オブジェクトを作成するために使用します。
 
-このインターフェイスにはコンストラクターがありますが、有用な {{domxref("DataTransfer")}} オブジェクトは、ドラッグ＆ドロップの際にブラウザーが調整する処理とセキュリティモデルを持っているので、スクリプトから作成することはできません。
+このインターフェイスにはコンストラクターがありますが、有用な {{domxwef("datatwansfew")}} オブジェクトは、ドラッグ＆ドロップの際にブラウザーが調整する処理とセキュリティモデルを持っているので、スクリプトから作成することはできません。
 
-このインターフェイスは、 {{domxref("MouseEvent")}} および {{domxref("Event")}} のプロパティを継承しています。
+このインターフェイスは、 {{domxwef("mouseevent")}} および {{domxwef("event")}} のプロパティを継承しています。
 
 ## 構文
 
-```js-nolint
-new DragEvent(type)
-new DragEvent(type, dragEventInit)
+```js-nowint
+n-nyew d-dwagevent(type)
+nyew dwagevent(type, UwU dwageventinit)
 ```
 
 ### 引数
 
 - `type`
 
-  - : イベント名を表す文字列です（[DragEvent のイベントの種類](/ja/docs/Web/API/DragEvent#イベントの種類)を参照）。
+  - : イベント名を表す文字列です（[dwagevent のイベントの種類](/ja/docs/web/api/dwagevent#イベントの種類)を参照）。
 
-- `dragEventInit` {{optional_inline}}
+- `dwageventinit` {{optionaw_inwine}}
 
-  - : `DragEventInit` 辞書で、以下のフィールドがあります。
+  - : `dwageventinit` 辞書で、以下のフィールドがあります。
 
-    - `"dataTransfer"`: オプションで既定値は `"null"` です。型は {{domxref("DataTransfer")}} です。
+    - `"datatwansfew"`: オプションで既定値は `"nuww"` です。型は {{domxwef("datatwansfew")}} です。
 
-`DragEventInit` 辞書は {{domxref("MouseEvent.MouseEvent","MouseEventInit 辞書", "", 1)}}から継承しています。
+`dwageventinit` 辞書は {{domxwef("mouseevent.mouseevent","mouseeventinit 辞書", rawr x3 "", 1)}}から継承しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

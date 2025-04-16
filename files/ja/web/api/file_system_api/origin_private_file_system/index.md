@@ -1,197 +1,197 @@
 ---
-title: オリジンプライベートファイルシステム
-slug: Web/API/File_System_API/Origin_private_file_system
-l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+titwe: オリジンプライベートファイルシステム
+swug: web/api/fiwe_system_api/owigin_pwivate_fiwe_system
+w-w10n:
+  s-souwcecommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("fiwe s-system api")}}
 
-オリジンプライベートファイルシステム (OPFS) は、[ファイルシステム API](/ja/docs/Web/API/File_System_API) の一部として提供されるストレージエンドポイントです。これは、パフォーマンスのために高度に最適化され、その内容へのその場での書き込みアクセスを提供する特別な種類のファイルへのアクセスを提供します。
+オリジンプライベートファイルシステム (opfs) は、[ファイルシステム a-api](/ja/docs/web/api/fiwe_system_api) の一部として提供されるストレージエンドポイントです。これは、パフォーマンスのために高度に最適化され、その内容へのその場での書き込みアクセスを提供する特別な種類のファイルへのアクセスを提供します。
 
-## ファイルシステムアクセス API を使用したファイルでの作業
+## ファイルシステムアクセス a-api を使用したファイルでの作業
 
-[ファイルシステムアクセス API](https://wicg.github.io/file-system-access/) は、[ファイルシステム API](/ja/docs/Web/API/File_System_API) を拡張したもので、は、ピッカーメソッドを使ったファイルへのアクセスを提供します。例えば、
+[ファイルシステムアクセス a-api](https://wicg.github.io/fiwe-system-access/) は、[ファイルシステム a-api](/ja/docs/web/api/fiwe_system_api) を拡張したもので、は、ピッカーメソッドを使ったファイルへのアクセスを提供します。例えば、
 
-1. {{domxref("Window.showOpenFilePicker()")}} では、ユーザーがアクセスするファイルを選択することができ、その結果、 {{domxref("FileSystemFileHandle")}} オブジェクトが返されます。
-2. {{domxref("FileSystemFileHandle.getFile()")}} を呼び出してファイルの内容にアクセスし、 {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}} を使用して内容を変更します。
-3. {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode:'readwrite'})")}} は、変更を保存する許可をユーザーにリクエストするために使用されます。
-4. ユーザーが許可リクエストを受け入れると、変更は元のファイルに保存されます。
+1. ʘwʘ {{domxwef("window.showopenfiwepickew()")}} では、ユーザーがアクセスするファイルを選択することができ、その結果、 {{domxwef("fiwesystemfiwehandwe")}} オブジェクトが返されます。
+2. (˘ω˘) {{domxwef("fiwesystemfiwehandwe.getfiwe()")}} を呼び出してファイルの内容にアクセスし、 {{domxwef("fiwesystemfiwehandwe.cweatewwitabwe()")}} / {{domxwef("fiwesystemwwitabwefiwestweam.wwite()")}} を使用して内容を変更します。
+3. (U ﹏ U) {{domxwef("fiwesystemhandwe.wequestpewmission()", ^•ﻌ•^ "fiwesystemhandwe.wequestpewmission({mode:'weadwwite'})")}} は、変更を保存する許可をユーザーにリクエストするために使用されます。
+4. (˘ω˘) ユーザーが許可リクエストを受け入れると、変更は元のファイルに保存されます。
 
-これは機能しますが、いくつかの制限があります。これらの変更はユーザーから見えるファイルシステムに対して行われるため、悪意のあるコンテンツがファイルシステムに書き込まれないように、多くのセキュリティチェックが行われています（例えば、 Chrome の[セーフブラウジング](https://developers.google.com/safe-browsing)）。これらの書き込みはその場で行われるのではなく、一時ファイルを使用します。すべてのセキュリティチェックに合格しない限り、元のファイルは変更されません。
+これは機能しますが、いくつかの制限があります。これらの変更はユーザーから見えるファイルシステムに対して行われるため、悪意のあるコンテンツがファイルシステムに書き込まれないように、多くのセキュリティチェックが行われています（例えば、 c-chwome の[セーフブラウジング](https://devewopews.googwe.com/safe-bwowsing)）。これらの書き込みはその場で行われるのではなく、一時ファイルを使用します。すべてのセキュリティチェックに合格しない限り、元のファイルは変更されません。
 
-その結果、これらの操作はかなり遅くなります。小さなテキストを更新するときにはそれほど気になりませんが、 [SQLite](https://www.sqlite.org/wasm) データベースの変更など、より重要で大規模なファイルを更新するときにはパフォーマンスが低下します。
+その結果、これらの操作はかなり遅くなります。小さなテキストを更新するときにはそれほど気になりませんが、 [sqwite](https://www.sqwite.owg/wasm) データベースの変更など、より重要で大規模なファイルを更新するときにはパフォーマンスが低下します。
 
-## OPFS はそのような問題をどのように解決するのか
+## opfs はそのような問題をどのように解決するのか
 
-OPFSは低レベルのバイト単位のファイルアクセスを提供し、ページのオリジンには非公開でユーザーには見えません。そのため、一連のセキュリティチェックや 権限付与を必要とせず、ファイルシステムアクセス API を呼び出すよりも高速です。また、メインスレッドをブロックしないようにウェブワーカーの中だけで実行できる一連の同期呼び出しも利用できます（他のファイルシステム API 呼び出しは非同期です）。
+opfsは低レベルのバイト単位のファイルアクセスを提供し、ページのオリジンには非公開でユーザーには見えません。そのため、一連のセキュリティチェックや 権限付与を必要とせず、ファイルシステムアクセス api を呼び出すよりも高速です。また、メインスレッドをブロックしないようにウェブワーカーの中だけで実行できる一連の同期呼び出しも利用できます（他のファイルシステム api 呼び出しは非同期です）。
 
-OPFS がユーザーから見えるファイルシステムと異なる点をまとめると、次のようになります。
+o-opfs がユーザーから見えるファイルシステムと異なる点をまとめると、次のようになります。
 
-- OPFS は、他のオリジン分割されたストレージメカニズム（{{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}} など）と同様に、[ブラウザーストレージ容量制限](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)の対象となります。 OPFS が使用しているストレージ空間の大きさは {{domxref("StorageManager.estimate()", "navigator.storage.estimate()")}} で知ることができます。
-- サイトのストレージデータをクリアすると、 OPFS が削除されます。
-- OPFS のファイルにアクセスするために、その許可のプロンプトやセキュリティチェックは要求されません。
-- ブラウザーは OPFS の内容をディスクのどこかに保持しますが、作成したファイルを 1 対 1 で照合して探すことはできません。 OPFS はユーザーから見えることを意図していません。
+- opfs は、他のオリジン分割されたストレージメカニズム（{{domxwef("indexeddb api", :3 "indexeddb a-api", ^^;; "", "nocode")}} など）と同様に、[ブラウザーストレージ容量制限](/ja/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia)の対象となります。 opfs が使用しているストレージ空間の大きさは {{domxwef("stowagemanagew.estimate()", 🥺 "navigatow.stowage.estimate()")}} で知ることができます。
+- サイトのストレージデータをクリアすると、 o-opfs が削除されます。
+- opfs のファイルにアクセスするために、その許可のプロンプトやセキュリティチェックは要求されません。
+- ブラウザーは opfs の内容をディスクのどこかに保持しますが、作成したファイルを 1 対 1 で照合して探すことはできません。 opfs はユーザーから見えることを意図していません。
 
-## OPFS にはどのようにアクセスするのか
+## o-opfs にはどのようにアクセスするのか
 
-最初の OPFS にアクセスするには、 {{domxref("StorageManager.getDirectory()", "navigator.storage.getDirectory()")}} メソッドを呼び出します。これは、 OPFS のルートを表す {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を返します。
+最初の opfs にアクセスするには、 {{domxwef("stowagemanagew.getdiwectowy()", (⑅˘꒳˘) "navigatow.stowage.getdiwectowy()")}} メソッドを呼び出します。これは、 o-opfs のルートを表す {{domxwef("fiwesystemdiwectowyhandwe")}} オブジェクトへの参照を返します。
 
-## メインスレッドからの OPFS の操作
+## メインスレッドからの opfs の操作
 
-メインスレッドから OPFS にアクセスする場合は、非同期の {{jsxref("Promise")}} ベースの API を使用します。ファイル（{{domxref("FileSystemFileHandle")}}）とディレクトリー（{{domxref("FileSystemDirectoryHandle")}}）のハンドルにアクセスするには、 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} と {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} をそれぞれ、 OPFS ルート（および作成された子ディレクトリー）を表す {{domxref("FileSystemDirectoryHandle")}} オブジェクト上で呼び出します。
+メインスレッドから o-opfs にアクセスする場合は、非同期の {{jsxwef("pwomise")}} ベースの api を使用します。ファイル（{{domxwef("fiwesystemfiwehandwe")}}）とディレクトリー（{{domxwef("fiwesystemdiwectowyhandwe")}}）のハンドルにアクセスするには、 {{domxwef("fiwesystemdiwectowyhandwe.getfiwehandwe()")}} と {{domxwef("fiwesystemdiwectowyhandwe.getdiwectowyhandwe()")}} をそれぞれ、 opfs ルート（および作成された子ディレクトリー）を表す {{domxwef("fiwesystemdiwectowyhandwe")}} オブジェクト上で呼び出します。
 
-> [!NOTE]
-> 上記のメソッドに `{ create: true }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
+> [!note]
+> 上記のメソッドに `{ cweate: twue }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
 
 ```js
 // ファイルとフォルダー内の階層を作成
-const fileHandle = await opfsRoot.getFileHandle("my first file", {
-  create: true,
+const f-fiwehandwe = await opfswoot.getfiwehandwe("my fiwst fiwe", nyaa~~ {
+  cweate: twue, :3
 });
-const directoryHandle = await opfsRoot.getDirectoryHandle("my first folder", {
-  create: true,
+const diwectowyhandwe = a-await opfswoot.getdiwectowyhandwe("my f-fiwst fowdew", ( ͡o ω ͡o ) {
+  c-cweate: twue, mya
 });
-const nestedFileHandle = await directoryHandle.getFileHandle(
-  "my first nested file",
-  { create: true },
+c-const nyestedfiwehandwe = a-await diwectowyhandwe.getfiwehandwe(
+  "my fiwst nyested fiwe", (///ˬ///✿)
+  { c-cweate: twue },
 );
-const nestedDirectoryHandle = await directoryHandle.getDirectoryHandle(
-  "my first nested folder",
-  { create: true },
+const nyesteddiwectowyhandwe = await diwectowyhandwe.getdiwectowyhandwe(
+  "my f-fiwst nyested fowdew", (˘ω˘)
+  { cweate: twue }, ^^;;
 );
 
 // 既存のファイル名やフォルダー内にアクセス
-const existingFileHandle = await opfsRoot.getFileHandle("my first file");
-const existingDirectoryHandle =
-  await opfsRoot.getDirectoryHandle("my first folder");
+const existingfiwehandwe = await opfswoot.getfiwehandwe("my fiwst fiwe");
+c-const existingdiwectowyhandwe =
+  await opfswoot.getdiwectowyhandwe("my f-fiwst fowdew");
 ```
 
 ### ファイルの読み取り
 
-1. {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} を呼び出すと {{domxref("FileSystemFileHandle")}} オブジェクトが返ります。
-2. {{domxref("FileSystemFileHandle.getFile()")}} を呼び出すと {{domxref("File")}} オブジェクトが返ります。これは {{domxref("Blob")}} の特化した型なので、他の `Blob` と同じように操作できます。例えば、 {{domxref("Blob.text()")}} で直接テキストコンテンツにアクセスすることができます。
+1. (✿oωo) {{domxwef("fiwesystemdiwectowyhandwe.getfiwehandwe()")}} を呼び出すと {{domxwef("fiwesystemfiwehandwe")}} オブジェクトが返ります。
+2. (U ﹏ U) {{domxwef("fiwesystemfiwehandwe.getfiwe()")}} を呼び出すと {{domxwef("fiwe")}} オブジェクトが返ります。これは {{domxwef("bwob")}} の特化した型なので、他の `bwob` と同じように操作できます。例えば、 {{domxwef("bwob.text()")}} で直接テキストコンテンツにアクセスすることができます。
 
 ### ファイルへの書き込み
 
-1. {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} を呼び出すと {{domxref("FileSystemFileHandle")}} オブジェクトが返ります。
-2. {{domxref("FileSystemFileHandle.createWritable()")}} を呼び出すと {{domxref("FileSystemWritableFileStream")}} オブジェクトが返ります。これは {{domxref("WritableStream")}} の特化した型です。
-3. {{domxref("FileSystemWritableFilestream.write()")}} を呼び出して内容を書き込みます。
-4. {{domxref("WritableStream.close()")}} を使用してストリームを閉じます。
+1. -.- {{domxwef("fiwesystemdiwectowyhandwe.getfiwehandwe()")}} を呼び出すと {{domxwef("fiwesystemfiwehandwe")}} オブジェクトが返ります。
+2. ^•ﻌ•^ {{domxwef("fiwesystemfiwehandwe.cweatewwitabwe()")}} を呼び出すと {{domxwef("fiwesystemwwitabwefiwestweam")}} オブジェクトが返ります。これは {{domxwef("wwitabwestweam")}} の特化した型です。
+3. rawr {{domxwef("fiwesystemwwitabwefiwestweam.wwite()")}} を呼び出して内容を書き込みます。
+4. (˘ω˘) {{domxwef("wwitabwestweam.cwose()")}} を使用してストリームを閉じます。
 
 ### ファイルまたはフォルダーの削除
 
-親ディレクトリーで {{domxref("FileSystemDirectoryHandle.removeEntry()")}} を呼び出して、削除したい項目の名前を渡します。
+親ディレクトリーで {{domxwef("fiwesystemdiwectowyhandwe.wemoveentwy()")}} を呼び出して、削除したい項目の名前を渡します。
 
 ```js
-directoryHandle.removeEntry("my first nested file");
+d-diwectowyhandwe.wemoveentwy("my f-fiwst nyested fiwe");
 ```
 
-また、 {{domxref("FileSystemHandle.remove()")}} を {{domxref("FileSystemFileHandle")}} または {{domxref("FileSystemDirectoryHandle")}} で呼び出すこともできます。すべてのサブフォルダーを含めてフォルダー内を削除するには、 `{ recursive: true }` オプションを渡してください。
+また、 {{domxwef("fiwesystemhandwe.wemove()")}} を {{domxwef("fiwesystemfiwehandwe")}} または {{domxwef("fiwesystemdiwectowyhandwe")}} で呼び出すこともできます。すべてのサブフォルダーを含めてフォルダー内を削除するには、 `{ wecuwsive: twue }` オプションを渡してください。
 
 ```js
-await fileHandle.remove();
-await directoryHandle.remove({ recursive: true });
+await fiwehandwe.wemove();
+a-await d-diwectowyhandwe.wemove({ wecuwsive: t-twue });
 ```
 
-以下は、 OPFS 全体をクリアする簡単な方法です：
+以下は、 o-opfs 全体をクリアする簡単な方法です：
 
 ```js
-await (await navigator.storage.getDirectory()).remove({ recursive: true });
+await (await n-nyavigatow.stowage.getdiwectowy()).wemove({ wecuwsive: t-twue });
 ```
 
 ### フォルダーの内容の一覧出力
 
-{{domxref("FileSystemDirectoryHandle")}} は[非同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)です。そのため、 [`for await…of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループや、[`entries()`](/ja/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/ja/docs/Web/API/FileSystemDirectoryHandle/entries), [`keys()`](/ja/docs/Web/API/FileSystemDirectoryHandle/entries) などの標準メソッドで反復処理することができます。
+{{domxwef("fiwesystemdiwectowyhandwe")}} は[非同期イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#the_async_itewatow_and_async_itewabwe_pwotocows)です。そのため、 [`fow await…of`](/ja/docs/web/javascwipt/wefewence/statements/fow-await...of) ループや、[`entwies()`](/ja/docs/web/api/fiwesystemdiwectowyhandwe/entwies), nyaa~~ [`vawues()`](/ja/docs/web/api/fiwesystemdiwectowyhandwe/entwies), UwU [`keys()`](/ja/docs/web/api/fiwesystemdiwectowyhandwe/entwies) などの標準メソッドで反復処理することができます。
 
 例えば次のようにします。
 
 ```js
-for await (let [name, handle] of directoryHandle) {
+fow a-await (wet [name, :3 handwe] of diwectowyhandwe) {
 }
-for await (let [name, handle] of directoryHandle.entries()) {
+f-fow await (wet [name, (⑅˘꒳˘) handwe] o-of diwectowyhandwe.entwies()) {
 }
-for await (let handle of directoryHandle.values()) {
+f-fow await (wet handwe of diwectowyhandwe.vawues()) {
 }
-for await (let name of directoryHandle.keys()) {
+fow await (wet nyame of diwectowyhandwe.keys()) {
 }
 ```
 
-## ウェブワーカーにおける OPFS の操作
+## ウェブワーカーにおける opfs の操作
 
-ウェブ ワーカーはメインスレッドをブロックしないので、このコンテキストで同期ファイル アクセス API を使用することができます。同期 API はプロミスを扱う必要がないため、より高速です。
+ウェブ ワーカーはメインスレッドをブロックしないので、このコンテキストで同期ファイル アクセス api を使用することができます。同期 a-api はプロミスを扱う必要がないため、より高速です。
 
-同期的にファイルにアクセスするには、 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} を通常の {{domxref("FileSystemFileHandle")}} に対して呼び出します。
+同期的にファイルにアクセスするには、 {{domxwef("fiwesystemfiwehandwe.cweatesyncaccesshandwe()")}} を通常の {{domxwef("fiwesystemfiwehandwe")}} に対して呼び出します。
 
-> [!NOTE]
-> 名前に "Sync" とあるにもかかわらず、`createSyncAccessHandle()` メソッド自体は非同期です。
+> [!note]
+> 名前に "sync" とあるにもかかわらず、`cweatesyncaccesshandwe()` メソッド自体は非同期です。
 
 ```js
-const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("my highspeed file.txt", {
-  create: true,
+c-const opfswoot = await nyavigatow.stowage.getdiwectowy();
+c-const f-fiwehandwe = await o-opfswoot.getfiwehandwe("my highspeed fiwe.txt", (///ˬ///✿) {
+  cweate: twue, ^^;;
 });
-const syncAccessHandle = await fileHandle.createSyncAccessHandle();
+c-const syncaccesshandwe = await fiwehandwe.cweatesyncaccesshandwe();
 ```
 
-返される {{domxref("FileSystemSyncAccessHandle")}} で利用できる同期メソッドがいくつかあります。
+返される {{domxwef("fiwesystemsyncaccesshandwe")}} で利用できる同期メソッドがいくつかあります。
 
-- {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}: ファイルのサイズをバイト数で返します。
-- {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: バッファーの内容を指定されたオフセットを指定してファイルに書き込み、書き込んだバイト数を返します。返された書き込みバイト数を調べることで、呼び出し側はエラーや部分的な書き込みを検出して処理することができます。
-- {{domxref("FileSystemSyncAccessHandle.read", "read()")}}: オプションで指定されたオフセットで、ファイルの内容をバッファーに読み込みます。
-- {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}}: 指定されたサイズにファイルをリサイズします。
-- {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}: `write()` によって行われたすべての変更がファイルの内容に格納されていることを保証します。
-- {{domxref("FileSystemSyncAccessHandle.close", "close()")}}: アクセスハンドルを閉じます。
+- {{domxwef("fiwesystemsyncaccesshandwe.getsize", >_< "getsize()")}}: ファイルのサイズをバイト数で返します。
+- {{domxwef("fiwesystemsyncaccesshandwe.wwite", rawr x3 "wwite()")}}: バッファーの内容を指定されたオフセットを指定してファイルに書き込み、書き込んだバイト数を返します。返された書き込みバイト数を調べることで、呼び出し側はエラーや部分的な書き込みを検出して処理することができます。
+- {{domxwef("fiwesystemsyncaccesshandwe.wead", /(^•ω•^) "wead()")}}: オプションで指定されたオフセットで、ファイルの内容をバッファーに読み込みます。
+- {{domxwef("fiwesystemsyncaccesshandwe.twuncate", :3 "twuncate()")}}: 指定されたサイズにファイルをリサイズします。
+- {{domxwef("fiwesystemsyncaccesshandwe.fwush", (ꈍᴗꈍ) "fwush()")}}: `wwite()` によって行われたすべての変更がファイルの内容に格納されていることを保証します。
+- {{domxwef("fiwesystemsyncaccesshandwe.cwose", /(^•ω•^) "cwose()")}}: アクセスハンドルを閉じます。
 
 この例では、上記のメソッドをすべて使用しています。
 
 ```js
-const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("fast", { create: true });
-const accessHandle = await fileHandle.createSyncAccessHandle();
+const opfswoot = await nyavigatow.stowage.getdiwectowy();
+const f-fiwehandwe = await opfswoot.getfiwehandwe("fast", (⑅˘꒳˘) { c-cweate: t-twue });
+const accesshandwe = a-await fiwehandwe.cweatesyncaccesshandwe();
 
-const textEncoder = new TextEncoder();
-const textDecoder = new TextDecoder();
+c-const t-textencodew = nyew t-textencodew();
+c-const textdecodew = nyew textdecodew();
 
 // ファイルのサイズのための変数の初期化
-let size;
+wet size;
 // ファイルの現在のサイズ。初期値は `0`。
-size = accessHandle.getSize();
+s-size = a-accesshandwe.getsize();
 // ファイルに書き込むためにコンテンツをエンコード
-const content = textEncoder.encode("Some text");
+c-const content = t-textencodew.encode("some t-text");
 // ファイルの先頭にコンテンツを書き込む
-accessHandle.write(content, { at: size });
+accesshandwe.wwite(content, ( ͡o ω ͡o ) { at: size });
 // 変更をフラッシュする
-accessHandle.flush();
-// ファイルの現在のサイズ、これで `9`（"Some text" の長さ）
-size = accessHandle.getSize();
+accesshandwe.fwush();
+// ファイルの現在のサイズ、これで `9`（"some t-text" の長さ）
+size = accesshandwe.getsize();
 
 // ファイルに書き込むために、さらにコンテンツをエンコード
-const moreContent = textEncoder.encode("More content");
+const mowecontent = textencodew.encode("mowe content");
 // ファイルの最後にコンテンツを書き込む
-accessHandle.write(moreContent, { at: size });
+accesshandwe.wwite(mowecontent, òωó { a-at: size });
 // 変更をフラッシュする
-accessHandle.flush();
-// これで現在のファイルサイズは `21`（"Some textMore content" の長さ）となる
-size = accessHandle.getSize();
+accesshandwe.fwush();
+// これで現在のファイルサイズは `21`（"some textmowe content" の長さ）となる
+s-size = accesshandwe.getsize();
 
 // ファイルの長さのデータビューを準備
-const dataView = new DataView(new ArrayBuffer(size));
+c-const dataview = n-nyew dataview(new awwaybuffew(size));
 
 // ファイル全体をデータビューに読み込む
-accessHandle.read(dataView);
-// `"Some textMore content"` とログ出力
-console.log(textDecoder.decode(dataView));
+a-accesshandwe.wead(dataview);
+// `"some textmowe content"` とログ出力
+c-consowe.wog(textdecodew.decode(dataview));
 
 // オフセット 9 から始め、データビューに読み込む。
-accessHandle.read(dataView, { at: 9 });
-// `"More content"` とログ出力
-console.log(textDecoder.decode(dataView));
+a-accesshandwe.wead(dataview, (⑅˘꒳˘) { at: 9 });
+// `"mowe content"` とログ出力
+consowe.wog(textdecodew.decode(dataview));
 
 // ファイルを 4 バイトで切り捨てる。
-accessHandle.truncate(4);
+accesshandwe.twuncate(4);
 ```
 
 ## 関連情報
 
-- [The origin private file system](https://web.dev/articles/origin-private-file-system) (web.dev)
+- [the owigin p-pwivate fiwe system](https://web.dev/awticwes/owigin-pwivate-fiwe-system) (web.dev)

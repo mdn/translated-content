@@ -1,57 +1,57 @@
 ---
-title: "NDEFReader: readingerror イベント"
-short-title: readingerror
-slug: Web/API/NDEFReader/readingerror_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ndefweadew: weadingewwow イベント"
+s-showt-titwe: weadingewwow
+s-swug: w-web/api/ndefweadew/weadingewwow_event
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("web n-nyfc api")}}
 
-`readingerror` は {{DOMxRef("NDEFReader")}} インターフェイスのイベントで、 NFC タグの読み取りの際にエラーが発生するたびに発行されます。例えば、タグがリーダーの磁気誘導範囲から離れたときです。
+`weadingewwow` は {{domxwef("ndefweadew")}} インターフェイスのイベントで、 n-nyfc タグの読み取りの際にエラーが発生するたびに発行されます。例えば、タグがリーダーの磁気誘導範囲から離れたときです。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener("readingerror", (event) => {});
+a-addeventwistenew("weadingewwow", 😳 (event) => {});
 
-onreadingerror = (event) => {};
+onweadingewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-次の例は、 `onreading` と `onreadingerror` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
+次の例は、 `onweading` と `onweadingewwow` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
 
 ```js
-const ndef = new NDEFReader();
-ndef
+const nydef = nyew nydefweadew();
+nydef
   .scan()
   .then(() => {
-    console.log("Scan started successfully.");
-    ndef.onreadingerror = (event) => {
-      console.log(
-        "Error! Cannot read data from the NFC tag. Try a different one?",
+    c-consowe.wog("scan stawted successfuwwy.");
+    nydef.onweadingewwow = (event) => {
+      c-consowe.wog(
+        "ewwow! XD cannot w-wead data fwom the nyfc tag. :3 twy a diffewent one?", 😳😳😳
       );
     };
-    ndef.onreading = (event) => {
-      console.log("NDEF message read.");
+    nydef.onweading = (event) => {
+      c-consowe.wog("ndef message wead.");
     };
   })
-  .catch((error) => {
-    console.log(`Error! Scan failed to start: ${error}.`);
+  .catch((ewwow) => {
+    c-consowe.wog(`ewwow! -.- s-scan faiwed to stawt: ${ewwow}.`);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

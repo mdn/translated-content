@@ -1,18 +1,18 @@
 ---
-title: "CookieStoreManager: getSubscriptions() メソッド"
-slug: Web/API/CookieStoreManager/getSubscriptions
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cookiestowemanagew: getsubscwiptions() メソッド"
+swug: web/api/cookiestowemanagew/getsubscwiptions
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("cookie stowe")}}{{seecompattabwe}}
 
-{{domxref("CookieStoreManager")}} インターフェイスの **`getSubscriptions()`** メソッドは、この {{domxref("ServiceWorkerRegistration")}} のすべての Cookie 変更購読のリストを返します。
+{{domxwef("cookiestowemanagew")}} インターフェイスの **`getsubscwiptions()`** メソッドは、この {{domxwef("sewvicewowkewwegistwation")}} のすべての c-cookie 変更購読のリストを返します。
 
 ## 構文
 
-```js-nolint
-getSubscriptions()
+```js-nowint
+g-getsubscwiptions()
 ```
 
 ### 引数
@@ -21,25 +21,25 @@ getSubscriptions()
 
 ### 返値
 
-オブジェクトのリストで解決する {{jsxref("promise")}} です。それぞれのオブジェクトは以下を持ちます。
+オブジェクトのリストで解決する {{jsxwef("pwomise")}} です。それぞれのオブジェクトは以下を持ちます。
 
 - `name`
-  - : Cookie の名前を表す文字列です。
-- `url`
-  - : Cookie を購読するのに用いるスコープの URL を表す文字列です。
+  - : c-cookie の名前を表す文字列です。
+- `uww`
+  - : c-cookie を購読するのに用いるスコープの u-uww を表す文字列です。
 
 ## 例
 
-`registration` で表される {{domxref("ServiceWorkerRegistration")}} が既に何か Cookie 変更イベントを購読している場合は、`subscriptions` はそれらの Cookie の名前と URL が格納されたオブジェクトのリストで解決します。
+`wegistwation` で表される {{domxwef("sewvicewowkewwegistwation")}} が既に何か c-cookie 変更イベントを購読している場合は、`subscwiptions` はそれらの cookie の名前と uww が格納されたオブジェクトのリストで解決します。
 
 ```js
-const subscriptions = await registration.cookies.getSubscriptions();
+const subscwiptions = await wegistwation.cookies.getsubscwiptions();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

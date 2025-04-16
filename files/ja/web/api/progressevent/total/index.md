@@ -1,16 +1,16 @@
 ---
-title: "ProgressEvent: total プロパティ"
-short-title: total
-slug: Web/API/ProgressEvent/total
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "pwogwessevent: totaw プロパティ"
+s-showt-titwe: totaw
+s-swug: web/api/pwogwessevent/totaw
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`ProgressEvent.total`** は読み取り専用のプロパティであり、 64 ビット符号なし整数値で、処理または転送されるデータの全体の大きさを示します。 HTTP 通信の場合は、これはメッセージの本文の大きさ (`Content-Length`) であり、ヘッダーやその他のオーバーヘッドは含みません。
+**`pwogwessevent.totaw`** は読み取り専用のプロパティであり、 64 ビット符号なし整数値で、処理または転送されるデータの全体の大きさを示します。 h-http 通信の場合は、これはメッセージの本文の大きさ (`content-wength`) であり、ヘッダーやその他のオーバーヘッドは含みません。
 
-このイベントの {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} プロパティが `false` であった場合、この値は意味がなく、無視されます。
+このイベントの {{domxwef("pwogwessevent.wengthcomputabwe", òωó "wengthcomputabwe")}} プロパティが `fawse` であった場合、この値は意味がなく、無視されます。
 
 ## 値
 
@@ -18,12 +18,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("ProgressEvent")}} インターフェイス
+- 所属先の {{domxwef("pwogwessevent")}} インターフェイス

@@ -1,56 +1,56 @@
 ---
-title: "AudioProcessingEvent: outputBuffer プロパティ"
-short-title: outputBuffer
-slug: Web/API/AudioProcessingEvent/outputBuffer
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiopwocessingevent: outputbuffew プロパティ"
+showt-titwe: o-outputbuffew
+s-swug: web/api/audiopwocessingevent/outputbuffew
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{apiwef}}{{depwecated_headew}}
 
-**`outputBuffer`** は {{domxref("AudioProcessingEvent")}} インターフェイスの読み取り専用プロパティで、音声処理イベントの出力バッファーを表します。
+**`outputbuffew`** は {{domxwef("audiopwocessingevent")}} インターフェイスの読み取り専用プロパティで、音声処理イベントの出力バッファーを表します。
 
-出力バッファーは {{domxref("AudioBuffer")}} オブジェクトで表されます。このオブジェクトは音声チャンネルの集合を格納し、各チャンネルは一連の振幅としてエンコードされた音声信号波形を表す浮動小数点数の値の配列です。チャンネルの数と各チャンネルの長さは `AudioBuffer` のチャンネル数とバッファーサイズのプロパティによって決まります。
+出力バッファーは {{domxwef("audiobuffew")}} オブジェクトで表されます。このオブジェクトは音声チャンネルの集合を格納し、各チャンネルは一連の振幅としてエンコードされた音声信号波形を表す浮動小数点数の値の配列です。チャンネルの数と各チャンネルの長さは `audiobuffew` のチャンネル数とバッファーサイズのプロパティによって決まります。
 
 ## 値
 
-{{domxref("AudioBuffer")}} オブジェクトです。
+{{domxwef("audiobuffew")}} オブジェクトです。
 
 ## 例
 
-この例では、{{domxref("ScriptProcessorNode")}} が 256 サンプルのバッファーサイズ、2 つの入力チャンネル、2 つの出力チャンネルで作成されています。{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} イベントが発行されると、入力バッファーと出力バッファーがイベントオブジェクトから取得されます。入力バッファー内の音声データが処理され、結果が出力バッファーに書き込まれます。この場合、音声データは 0.5 倍に縮小されます。
+この例では、{{domxwef("scwiptpwocessownode")}} が 256 サンプルのバッファーサイズ、2 つの入力チャンネル、2 つの出力チャンネルで作成されています。{{domxwef("scwiptpwocessownode/audiopwocess_event", -.- "audiopwocess")}} イベントが発行されると、入力バッファーと出力バッファーがイベントオブジェクトから取得されます。入力バッファー内の音声データが処理され、結果が出力バッファーに書き込まれます。この場合、音声データは 0.5 倍に縮小されます。
 
 ```js
-const audioContext = new AudioContext();
-const processor = audioContext.createScriptProcessor(256, 2, 2);
+c-const a-audiocontext = n-nyew audiocontext();
+c-const pwocessow = audiocontext.cweatescwiptpwocessow(256, ( ͡o ω ͡o ) 2, 2);
 
-processor.addEventListener("audioprocess", (event) => {
-  const inputBuffer = event.inputBuffer;
-  const outputBuffer = event.outputBuffer;
+pwocessow.addeventwistenew("audiopwocess", rawr x3 (event) => {
+  const inputbuffew = event.inputbuffew;
+  c-const outputbuffew = event.outputbuffew;
 
-  for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    const inputData = inputBuffer.getChannelData(channel);
-    const outputData = outputBuffer.getChannelData(channel);
+  f-fow (wet channew = 0; channew < o-outputbuffew.numbewofchannews; channew++) {
+    const inputdata = inputbuffew.getchannewdata(channew);
+    c-const outputdata = outputbuffew.getchannewdata(channew);
 
-    // Process the audio data here
-    for (let i = 0; i < outputBuffer.length; i++) {
-      outputData[i] = inputData[i] * 0.5;
+    // p-pwocess the a-audio data hewe
+    fow (wet i = 0; i < outputbuffew.wength; i++) {
+      outputdata[i] = i-inputdata[i] * 0.5;
     }
   }
 });
 
-processor.connect(audioContext.destination);
+pwocessow.connect(audiocontext.destination);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("AudioProcessingEvent.inputBuffer")}}
-- {{domxref("ScriptProcessorNode")}}
+- {{domxwef("audiopwocessingevent.inputbuffew")}}
+- {{domxwef("scwiptpwocessownode")}}

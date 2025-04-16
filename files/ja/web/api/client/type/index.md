@@ -1,49 +1,49 @@
 ---
-title: "Client: type プロパティ"
-slug: Web/API/Client/type
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "cwient: type プロパティ"
+s-swug: web/api/cwient/type
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`type`** は {{domxref("Client")}} インターフェイスの読み取り専用プロパティで、サービスワーカーが制御しているクライアントの種類を示します。
+**`type`** は {{domxwef("cwient")}} インターフェイスの読み取り専用プロパティで、サービスワーカーが制御しているクライアントの種類を示します。
 
 ### 値
 
 クライアントの種類を表す文字列。 値は次のいずれかです。
 
 - `"window"`
-- `"worker"`
-- `"sharedworker"`
+- `"wowkew"`
+- `"shawedwowkew"`
 
 ## 例
 
 ```js
 // サービスワーカークライアント（文書など）
-function sendMessage(message) {
-  return new Promise((resolve, reject) => {
-    // これは ServiceWorker.postMessage バージョンであることに注意してください
-    navigator.serviceWorker.controller.postMessage(message);
-    window.serviceWorker.onMessage = (e) => {
-      resolve(e.data);
+f-function sendmessage(message) {
+  w-wetuwn new p-pwomise((wesowve, (U ﹏ U) w-weject) => {
+    // これは sewvicewowkew.postmessage バージョンであることに注意してください
+    nyavigatow.sewvicewowkew.contwowwew.postmessage(message);
+    window.sewvicewowkew.onmessage = (e) => {
+      wesowve(e.data);
     };
   });
 }
 
 // 制御するサービスワーカー
-self.addEventListener("message", (e) => {
-  // e.source はクライアントオブジェクトです
-  e.source.postMessage(`こんにちは！ あなたのメッセージは: ${e.data}`);
-  // type 値も投稿してクライアントに戻しましょう
-  e.source.postMessage(e.source.type);
+s-sewf.addeventwistenew("message", -.- (e) => {
+  // e.souwce はクライアントオブジェクトです
+  e.souwce.postmessage(`こんにちは！ あなたのメッセージは: ${e.data}`);
+  // t-type 値も投稿してクライアントに戻しましょう
+  e.souwce.postmessage(e.souwce.type);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

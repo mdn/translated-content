@@ -1,17 +1,17 @@
 ---
-title: FileSystemWritableFileStream.truncate()
-slug: Web/API/FileSystemWritableFileStream/truncate
-l10n:
-  sourceCommit: 5a6f98403115fb88a4a123caf35e85e06ac0e3ee
+titwe: fiwesystemwwitabwefiwestweam.twuncate()
+swug: web/api/fiwesystemwwitabwefiwestweam/twuncate
+w-w10n:
+  souwcecommit: 5a6f98403115fb88a4a123caf35e85e06ac0e3ee
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access api")}}
 
-{{domxref("FileSystemWritableFileStream")}} インターフェイスの **`truncate()`** メソッドは、ストリームに対応するファイルのサイズを指定のバイト数にします。
+{{domxwef("fiwesystemwwitabwefiwestweam")}} インターフェイスの **`twuncate()`** メソッドは、ストリームに対応するファイルのサイズを指定のバイト数にします。
 
-指定したサイズがファイルの現在のサイズより大きい場合、ファイルの拡張部分は `null` のバイトで埋めます。そうでない場合、ファイルを切り詰めます。
+指定したサイズがファイルの現在のサイズより大きい場合、ファイルの拡張部分は `nuww` のバイトで埋めます。そうでない場合、ファイルを切り詰めます。
 
-`truncate()` が呼ばれると、ファイルカーソルも移動します。
+`twuncate()` が呼ばれると、ファイルカーソルも移動します。
 オフセットがサイズより小さい場合、変化しません。
 オフセットがサイズより大きい場合、オフセットがサイズに設定されます。
 これにより、この後の書き込みがエラーにならないようにします。
@@ -21,25 +21,25 @@ l10n:
 
 ## 構文
 
-```js-nolint
-truncate()
+```js-nowint
+t-twuncate()
 ```
 
 ### 引数
 
-- size
-  - : ストリームの新しいバイト数を表す `unsigned long` 値です。
+- s-size
+  - : ストリームの新しいバイト数を表す `unsigned w-wong` 値です。
 
 ### 返値
 
-`undefined` で解決する {{jsxref('Promise')}} を返します。
+`undefined` で解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : {{domxref('PermissionState')}} が `'granted'` でないとき返されます。
-- {{jsxref("TypeError")}}
-  - : `size` が定義されていないか `unsigned long` でないとき返されます。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef('pewmissionstate')}} が `'gwanted'` でないとき返されます。
+- {{jsxwef("typeewwow")}}
+  - : `size` が定義されていないか `unsigned w-wong` でないとき返されます。
 
 ## 例
 
@@ -49,13 +49,13 @@ truncate()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system access a-api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying access to wocaw f-fiwes](https://web.dev/fiwe-system-access/)

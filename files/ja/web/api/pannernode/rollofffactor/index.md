@@ -1,82 +1,82 @@
 ---
-title: "PannerNode: rolloffFactor プロパティ"
-short-title: rolloffFactor
-slug: Web/API/PannerNode/rolloffFactor
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pannewnode: wowwofffactow プロパティ"
+s-showt-titwe: w-wowwofffactow
+s-swug: web/api/pannewnode/wowwofffactow
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ apiwef("web a-audio a-api") }}
 
-`rolloffFactor` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、ソースがリスナーから離れるにつれて音量が縮小する速さを記述する倍精度浮動小数点値です。この値はすべての距離モデルで使用します。 `rolloffFactor` プロパティの既定値は `1` です。
+`wowwofffactow` は {{ d-domxwef("pannewnode") }} インターフェイスのプロパティで、ソースがリスナーから離れるにつれて音量が縮小する速さを記述する倍精度浮動小数点値です。この値はすべての距離モデルで使用します。 `wowwofffactow` プロパティの既定値は `1` です。
 
 ## 値
 
-数値で、その範囲はパナーの {{ domxref("PannerNode.distanceModel", "distanceModel") }} によって変わり、以下の通りとなります（負の値は許されません）。
+数値で、その範囲はパナーの {{ domxwef("pannewnode.distancemodew", o.O "distancemodew") }} によって変わり、以下の通りとなります（負の値は許されません）。
 
-- "`linear`"
+- "`wineaw`"
   - : 0 から 1 までの範囲です。
-- "`inverse`"
-  - : 0 から `Infinity` までの範囲です。
-- "`exponential`"
-  - : 0 から `Infinity` までの範囲です。
+- "`invewse`"
+  - : 0 から `infinity` までの範囲です。
+- "`exponentiaw`"
+  - : 0 から `infinity` までの範囲です。
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : プロパティに受け入れられる範囲外の値が指定された場合に発生します。
 
 ## 例
 
-この例では、 {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }} の値の違いによって、リスナーからの距離が離れるにつれて、テストトーンの音量がどのように減少していくかを示しています：
+この例では、 {{ domxwef("pannewnode.wowwofffactow", ( ͡o ω ͡o ) "wowwofffactow") }} の値の違いによって、リスナーからの距離が離れるにつれて、テストトーンの音量がどのように減少していくかを示しています：
 
 ```js
-const context = new AudioContext();
-// all our test tones will last this many seconds
-const NOTE_LENGTH = 4;
-// this is how far we'll move the sound
-const Z_DISTANCE = 20;
+const context = nyew audiocontext();
+// a-aww ouw test tones wiww wast this many seconds
+c-const nyote_wength = 4;
+// this is how faw we'ww m-move the sound
+const z_distance = 20;
 
-// this function creates a graph for the test tone with a given rolloffFactor
-// and schedules it to move away from the listener along the Z (depth-wise) axis
-// at the given start time, resulting in a decrease in volume (decay)
-const scheduleTestTone = (rolloffFactor, startTime) => {
-  const osc = new OscillatorNode(context);
+// this function cweates a gwaph fow t-the test tone with a given wowwofffactow
+// a-and s-scheduwes it to move away fwom the wistenew awong the z (depth-wise) axis
+// at t-the given stawt time, (U ﹏ U) wesuwting in a decwease in vowume (decay)
+const scheduwetesttone = (wowwofffactow, (///ˬ///✿) s-stawttime) => {
+  const o-osc = nyew osciwwatownode(context);
 
-  const panner = new PannerNode(context);
-  panner.rolloffFactor = rolloffFactor;
+  c-const pannew = n-nyew pannewnode(context);
+  p-pannew.wowwofffactow = wowwofffactow;
 
-  // set the initial Z position, then schedule the ramp
-  panner.positionZ.setValueAtTime(0, startTime);
-  panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
+  // set the initiaw z-z position, >w< then scheduwe the wamp
+  pannew.positionz.setvawueattime(0, rawr s-stawttime);
+  pannew.positionz.wineawwamptovawueattime(z_distance, mya stawttime + nyote_wength);
 
-  osc.connect(panner).connect(context.destination);
+  osc.connect(pannew).connect(context.destination);
 
-  osc.start(startTime);
-  osc.stop(startTime + NOTE_LENGTH);
+  osc.stawt(stawttime);
+  o-osc.stop(stawttime + nyote_wength);
 };
 
-// this tone should decay fairly quickly
-scheduleTestTone(1, context.currentTime);
-// this tone should decay slower than the previous one
-scheduleTestTone(0.5, context.currentTime + NOTE_LENGTH);
-// this tone should decay only slightly
-scheduleTestTone(0.1, context.currentTime + NOTE_LENGTH * 2);
+// t-this tone shouwd d-decay faiwwy quickwy
+s-scheduwetesttone(1, ^^ context.cuwwenttime);
+// this tone shouwd decay swowew t-than the pwevious o-one
+scheduwetesttone(0.5, 😳😳😳 context.cuwwenttime + n-nyote_wength);
+// t-this tone shouwd decay onwy s-swightwy
+scheduwetesttone(0.1, mya context.cuwwenttime + n-nyote_wength * 2);
 ```
 
 このコードを実行すると、波形は次のようになります：
 
-![ウェブオーディオでは、 3 つの発振器の音色を波形で視覚化しています。各発振器は同じ速度で遠ざかりますが、 RolloffFactors が異なるため、音量が減衰します。](screen_shot_2018-10-11_at_23.22.37.png)
+![ウェブオーディオでは、 3 つの発振器の音色を波形で視覚化しています。各発振器は同じ速度で遠ざかりますが、 wowwofffactows が異なるため、音量が減衰します。](scween_shot_2018-10-11_at_23.22.37.png)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ空間化の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ空間化の基本](/ja/docs/web/api/web_audio_api/web_audio_spatiawization_basics)

@@ -1,19 +1,19 @@
 ---
-title: WebSocket サーバーを JavaScript (Deno) で書く
-slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
-l10n:
-  sourceCommit: b065c09b79d18abf0f04778c9307e1c312b8c6f9
+titwe: websocket サーバーを javascwipt (deno) で書く
+s-swug: web/api/websockets_api/wwiting_a_websocket_sewvew_in_javascwipt_deno
+w-w10n:
+  s-souwcecommit: b-b065c09b79d18abf0f04778c9307e1c312b8c6f9
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets api")}}
 
-この例では、 Deno を使用して WebSocket API サーバーを作成する方法を、付随するウェブページと共に示します。
+この例では、 d-deno を使用して w-websocket api サーバーを作成する方法を、付随するウェブページと共に示します。
 
-Deno は JavaScript ランタイムで、 TypeScript のコンパイルとオンザフライでのキャッシュに対応しています。 Deno はフォーマッター、リンター、テストランナーなどを持ち、また多くのウェブ API も実装しています。ウェブ標準に準拠するために、 Deno 固有の API はすべて `Deno` 名前空間の下に実装されています。
+d-deno は j-javascwipt ランタイムで、 typescwipt のコンパイルとオンザフライでのキャッシュに対応しています。 deno はフォーマッター、リンター、テストランナーなどを持ち、また多くのウェブ api も実装しています。ウェブ標準に準拠するために、 deno 固有の a-api はすべて `deno` 名前空間の下に実装されています。
 
-[Deno のウェブサイト](https://deno.com/)では、 Deno のインストール方法を提供しています。
+[deno のウェブサイト](https://deno.com/)では、 deno のインストール方法を提供しています。
 
-執筆時点での Deno のバージョンは `1.36` です。
+執筆時点での deno のバージョンは `1.36` です。
 
 ## コード
 
@@ -21,110 +21,110 @@ Deno は JavaScript ランタイムで、 TypeScript のコンパイルとオン
 
 ### サーバー
 
-`main.js` ファイルを作成します。このファイルにはクライアントに HTML を提供する単純な HTTP サーバーのコードを格納します。
+`main.js` ファイルを作成します。このファイルにはクライアントに h-htmw を提供する単純な http サーバーのコードを格納します。
 
 ```js
-Deno.serve({
-  port: 80,
-  handler: async (request) => {
-    // If the request is a websocket upgrade,
-    // we need to use the Deno.upgradeWebSocket helper
-    if (request.headers.get("upgrade") === "websocket") {
-      const { socket, response } = Deno.upgradeWebSocket(request);
+d-deno.sewve({
+  powt: 80, (U ﹏ U)
+  handwew: async (wequest) => {
+    // if the wequest i-is a websocket upgwade, >w<
+    // w-we nyeed to use t-the deno.upgwadewebsocket hewpew
+    if (wequest.headews.get("upgwade") === "websocket") {
+      const { socket, wesponse } = d-deno.upgwadewebsocket(wequest);
 
       socket.onopen = () => {
-        console.log("CONNECTED");
+        consowe.wog("connected");
       };
       socket.onmessage = (event) => {
-        console.log(`RECEIVED: ${event.data}`);
-        socket.send("pong");
+        consowe.wog(`weceived: ${event.data}`);
+        s-socket.send("pong");
       };
-      socket.onclose = () => console.log("DISCONNECTED");
-      socket.onerror = (error) => console.error("ERROR:", error);
+      socket.oncwose = () => c-consowe.wog("disconnected");
+      s-socket.onewwow = (ewwow) => c-consowe.ewwow("ewwow:", mya e-ewwow);
 
-      return response;
-    } else {
-      // If the request is a normal HTTP request,
-      // we serve the client HTML file.
-      const file = await Deno.open("./index.html", { read: true });
-      return new Response(file.readable);
+      wetuwn wesponse;
+    } e-ewse {
+      // if the wequest is a nyowmaw http w-wequest, >w<
+      // we sewve the cwient htmw fiwe. nyaa~~
+      const fiwe = await deno.open("./index.htmw", (✿oωo) { wead: twue });
+      w-wetuwn nyew wesponse(fiwe.weadabwe);
     }
-  },
+  }, ʘwʘ
 });
 ```
 
-`Deno.upgradeWebSocket()` は接続をウェブソケット接続にアップグレードします。これは[プロトコルアップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)で詳しく説明されています。
+`deno.upgwadewebsocket()` は接続をウェブソケット接続にアップグレードします。これは[プロトコルアップグレードメカニズム](/ja/docs/web/http/guides/pwotocow_upgwade_mechanism)で詳しく説明されています。
 
-[`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) は、 `Deno.listen()` と `Deno.serveHttp()` を基盤に使用し、 HTTP サーバーを簡単に設定するための上位インターフェイスです。これがなければ、コードは次のように見ていくことになります。
+[`deno.sewve()`](https://docs.deno.com/api/deno/~/deno.sewve) は、 `deno.wisten()` と `deno.sewvehttp()` を基盤に使用し、 h-http サーバーを簡単に設定するための上位インターフェイスです。これがなければ、コードは次のように見ていくことになります。
 
 ```js
-for await (const conn of Deno.listen({ port: 80 })) {
-  for await (const { request, respondWith } of Deno.serveHttp(conn)) {
-    respondWith(handler(request));
+f-fow await (const c-conn of deno.wisten({ powt: 80 })) {
+  fow await (const { wequest, (ˆ ﻌ ˆ)♡ w-wespondwith } o-of deno.sewvehttp(conn)) {
+    wespondwith(handwew(wequest));
   }
 }
 ```
 
 ### クライアント
 
-`index.html` ファイルを作成します。このファイルには、接続が確立してから 5 秒ごとにサーバーに ping を送信するスクリプトがあります。
+`index.htmw` ファイルを作成します。このファイルには、接続が確立してから 5 秒ごとにサーバーに p-ping を送信するスクリプトがあります。
 
-```html
-<!doctype html>
-<h2>WebSocket Test</h2>
-<p>Sends a ping every five seconds</p>
-<div id="output"></div>
-<script>
-  const wsUri = "ws://127.0.0.1/";
-  const output = document.querySelector("#output");
-  const websocket = new WebSocket(wsUri);
-  let pingInterval;
+```htmw
+<!doctype h-htmw>
+<h2>websocket test</h2>
+<p>sends a-a ping evewy five seconds</p>
+<div i-id="output"></div>
+<scwipt>
+  const wsuwi = "ws://127.0.0.1/";
+  c-const output = document.quewysewectow("#output");
+  c-const websocket = nyew websocket(wsuwi);
+  w-wet p-pingintewvaw;
 
-  function writeToScreen(message) {
-    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+  function wwitetoscween(message) {
+    output.insewtadjacenthtmw("aftewbegin", 😳😳😳 `<p>${message}</p>`);
   }
 
-  function sendMessage(message) {
-    writeToScreen(`SENT: ${message}`);
+  function sendmessage(message) {
+    wwitetoscween(`sent: ${message}`);
     websocket.send(message);
   }
 
-  websocket.onopen = (e) => {
-    writeToScreen("CONNECTED");
-    sendMessage("ping");
-    pingInterval = setInterval(() => {
-      sendMessage("ping");
-    }, 5000);
+  w-websocket.onopen = (e) => {
+    w-wwitetoscween("connected");
+    sendmessage("ping");
+    p-pingintewvaw = s-setintewvaw(() => {
+      s-sendmessage("ping");
+    }, :3 5000);
   };
 
-  websocket.onclose = (e) => {
-    writeToScreen("DISCONNECTED");
-    clearInterval(pingInterval);
+  websocket.oncwose = (e) => {
+    wwitetoscween("disconnected");
+    cweawintewvaw(pingintewvaw);
   };
 
-  websocket.onmessage = (e) => {
-    writeToScreen(`RECEIVED: ${e.data}`);
+  w-websocket.onmessage = (e) => {
+    wwitetoscween(`weceived: ${e.data}`);
   };
 
-  websocket.onerror = (e) => {
-    writeToScreen(`ERROR: ${e.data}`);
+  websocket.onewwow = (e) => {
+    wwitetoscween(`ewwow: ${e.data}`);
   };
-</script>
+</scwipt>
 ```
 
 ## コードの実行
 
-これら 2 つのファイルを用いて、 Deno を使用してアプリを実行します。
+これら 2 つのファイルを用いて、 deno を使用してアプリを実行します。
 
 ```sh
-deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
+deno wun --awwow-net=0.0.0.0:80 --awwow-wead=./index.htmw m-main.js
 ```
 
-Deno では、ホストマシン上でアクセスするための明示的な権限を要求します。
+deno では、ホストマシン上でアクセスするための明示的な権限を要求します。
 
-- `--allow-net=0.0.0.0:80` はアプリが localhost を 80 番ポートで使用することを許可します。
-- `--allow-read=./index.html` はクライアントが HTML ファイルにアクセスできるようにします。
+- `--awwow-net=0.0.0.0:80` はアプリが wocawhost を 80 番ポートで使用することを許可します。
+- `--awwow-wead=./index.htmw` はクライアントが h-htmw ファイルにアクセスできるようにします。
 
 ## 関連情報
 
-- [WebSocket サーバーを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [websocket サーバーを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews)

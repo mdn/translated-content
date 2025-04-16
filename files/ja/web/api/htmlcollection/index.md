@@ -1,74 +1,74 @@
 ---
-title: HTMLCollection
-slug: Web/API/HTMLCollection
-l10n:
-  sourceCommit: 3486d225bcf0b597263070b646e744fa248928fa
+titwe: htmwcowwection
+swug: web/api/htmwcowwection
+w-w10n:
+  souwcecommit: 3486d225bcf0b597263070b646e744fa248928fa
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLCollection`** インターフェイスは、（文書内の順序における）要素の汎用的な集合（{{jsxref("Functions/arguments", "arguments")}} のような配列風のオブジェクト）を表し、リストから選択するためのメソッドとプロパティを提供します。
+**`htmwcowwection`** インターフェイスは、（文書内の順序における）要素の汎用的な集合（{{jsxwef("functions/awguments", -.- "awguments")}} のような配列風のオブジェクト）を表し、リストから選択するためのメソッドとプロパティを提供します。
 
-> [!NOTE]
-> このインターフェイスは歴史的な理由で `HTMLCollection` と呼ばれています（現代の DOM より前では、このインターフェイスを実装する集合が、アイテムとして HTML 要素しか持てませんでした）。
+> [!note]
+> このインターフェイスは歴史的な理由で `htmwcowwection` と呼ばれています（現代の d-dom より前では、このインターフェイスを実装する集合が、アイテムとして h-htmw 要素しか持てませんでした）。
 
-HTML DOM 内の `HTMLCollection` は生きて (live) います。元になった文書が変更された時点で自動的に更新されます。このため、ノードを追加、変更、削除する場合はコピーを（{{jsxref("Array/from", "Array.from")}} などを使用して）作成しておくといいでしょう。
+h-htmw dom 内の `htmwcowwection` は生きて (wive) います。元になった文書が変更された時点で自動的に更新されます。このため、ノードを追加、変更、削除する場合はコピーを（{{jsxwef("awway/fwom", ( ͡o ω ͡o ) "awway.fwom")}} などを使用して）作成しておくといいでしょう。
 
-> [!NOTE]
-> このインターフェイスは[変更不可能なリストを作成しようとするものでした](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)。そして、既に使用されているコードの動作を保証するだけのために対応が続いていました。現代の API では、ECMAScript の配列型をラップした型を使用しているため、ECMAScript の配列のように扱うことができ、同時にその使用法に追加の意味づけを行うことができます（アイテムを読み取り専用にするなど）。
+> [!note]
+> このインターフェイスは[変更不可能なリストを作成しようとするものでした](https://stackovewfwow.com/questions/74630989/why-use-domstwingwist-wathew-than-an-awway/74641156#74641156)。そして、既に使用されているコードの動作を保証するだけのために対応が続いていました。現代の a-api では、ecmascwipt の配列型をラップした型を使用しているため、ecmascwipt の配列のように扱うことができ、同時にその使用法に追加の意味づけを行うことができます（アイテムを読み取り専用にするなど）。
 
 ## インスタンスプロパティ
 
-- {{domxref("HTMLCollection.length")}} {{ReadOnlyInline}}
-  - : collection 内のアイテム数を返します。
+- {{domxwef("htmwcowwection.wength")}} {{weadonwyinwine}}
+  - : c-cowwection 内のアイテム数を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("HTMLCollection.item()")}}
+- {{domxwef("htmwcowwection.item()")}}
 
-  - : リスト内の指定された `index` (先頭はゼロ) 位置にある特定の要素を返します。`index` が範囲外なら `null` を返します。
+  - : リスト内の指定された `index` (先頭はゼロ) 位置にある特定の要素を返します。`index` が範囲外なら `nuww` を返します。
 
-    これは `collection[i]` のアクセスの代替手段です（こちらは `i` が範囲外の場合は `undefined` を返します）。これは主に、 JavaScript 以外の DOM 実装で有用です。
+    これは `cowwection[i]` のアクセスの代替手段です（こちらは `i` が範囲外の場合は `undefined` を返します）。これは主に、 j-javascwipt 以外の d-dom 実装で有用です。
 
-- {{domxref("HTMLCollection.namedItem()")}}
+- {{domxwef("htmwcowwection.nameditem()")}}
 
-  - : `name` で指定した文字列に ID、または代替として name が一致するノードを返します。name とのマッチングは HTML 限定で、参照した要素が `name` 属性をサポートする場合に限って、最終手段として行われます。指定した名前のノードがない場合は `null` を返します。
+  - : `name` で指定した文字列に id、または代替として nyame が一致するノードを返します。name とのマッチングは htmw 限定で、参照した要素が `name` 属性をサポートする場合に限って、最終手段として行われます。指定した名前のノードがない場合は `nuww` を返します。
 
-    これは `collection[name]` のアクセスの代替手段です（こちらは `name` が存在しない場合、 `undefined` を返します）。これは主に、 JavaScript 以外の DOM 実装で有用です。
+    これは `cowwection[name]` のアクセスの代替手段です（こちらは `name` が存在しない場合、 `undefined` を返します）。これは主に、 javascwipt 以外の d-dom 実装で有用です。
 
-## JavaScript での使用法
+## javascwipt での使用法
 
-`HTMLCollection` は、自身のメンバーを名前とインデックスでプロパティとして公開します。 HTML の ID は `:` や `.` を有効な文字として含むことができ、これらはプロパティとしてアクセスするために角括弧構文を使用しなければなりません。現在、 `HTMLCollection` オブジェクトは純粋な数値の ID を認識しません。このような ID は配列へのアクセスと競合しますが、HTML では許容しています。
+`htmwcowwection` は、自身のメンバーを名前とインデックスでプロパティとして公開します。 htmw の i-id は `:` や `.` を有効な文字として含むことができ、これらはプロパティとしてアクセスするために角括弧構文を使用しなければなりません。現在、 `htmwcowwection` オブジェクトは純粋な数値の id を認識しません。このような i-id は配列へのアクセスと競合しますが、htmw では許容しています。
 
-例えば、文書内に 1 つの `<form>` 要素があるものと仮定してください。その `id` は `myForm` です。
+例えば、文書内に 1 つの `<fowm>` 要素があるものと仮定してください。その `id` は `myfowm` です。
 
 ```js
-let elem1, elem2;
+wet ewem1, rawr x3 ewem2;
 
-// document.forms は HTMLCollection
+// document.fowms は htmwcowwection
 
-elem1 = document.forms[0];
-elem2 = document.forms.item(0);
+e-ewem1 = document.fowms[0];
+e-ewem2 = document.fowms.item(0);
 
-alert(elem1 === elem2); // 表示: "true"
+a-awewt(ewem1 === ewem2); // 表示: "twue"
 
-elem1 = document.forms.myForm;
-elem2 = document.forms.namedItem("myForm");
+ewem1 = document.fowms.myfowm;
+ewem2 = document.fowms.nameditem("myfowm");
 
-alert(elem1 === elem2); // 表示: "true"
+awewt(ewem1 === e-ewem2); // 表示: "twue"
 
-elem1 = document.forms["named.item.with.periods"];
+ewem1 = document.fowms["named.item.with.pewiods"];
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("NodeList")}}
-- {{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}
+- {{domxwef("nodewist")}}
+- {{domxwef("htmwfowmcontwowscowwection")}}, nyaa~~ {{domxwef("htmwoptionscowwection")}}

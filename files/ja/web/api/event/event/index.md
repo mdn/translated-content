@@ -1,61 +1,61 @@
 ---
-title: "Event: Event() コンストラクター"
-short-title: Event()
-slug: Web/API/Event/Event
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "event: event() コンストラクター"
+s-showt-titwe: e-event()
+swug: web/api/event/event
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/Events/Creating_and_triggering_events)することができます。
+**`event()`** コンストラクターは、新しい {{domxwef("event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/web/events/cweating_and_twiggewing_events)することができます。
 
 ## 構文
 
-```js-nolint
-new Event(type)
-new Event(type, options)
+```js-nowint
+n-nyew e-event(type)
+nyew e-event(type, σωσ options)
 ```
 
 ### 値
 
 - `type`
   - : 文字列で、イベントの名前を表します。
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 以下のプロパティを持ったオブジェクトです。
-    - `bubbles`
-      - : 論理値で、イベントがバブリングするかどうかを示します。既定値は `false` です。
-    - `cancelable`
-      - : 論理値で、イベントがキャンセル可能かどうかを示します。既定値は `false` です。
+    - `bubbwes`
+      - : 論理値で、イベントがバブリングするかどうかを示します。既定値は `fawse` です。
+    - `cancewabwe`
+      - : 論理値で、イベントがキャンセル可能かどうかを示します。既定値は `fawse` です。
     - `composed`
-      - : 論理値で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します（詳しくは {{domxref("Event.composed")}} を参照してください）。既定値は `false` です。
+      - : 論理値で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します（詳しくは {{domxwef("event.composed")}} を参照してください）。既定値は `fawse` です。
 
 ### 返値
 
-新しい {{domxref("Event")}} オブジェクトです。
+新しい {{domxwef("event")}} オブジェクトです。
 
 ## 例
 
 ```js
-// バブルアップし、キャンセルできない look イベントを作成
+// バブルアップし、キャンセルできない wook イベントを作成
 
-const evt = new Event("look", { bubbles: true, cancelable: false });
-document.dispatchEvent(evt);
+c-const e-evt = nyew event("wook", σωσ { bubbwes: twue, >_< cancewabwe: fawse });
+document.dispatchevent(evt);
 
 // イベントは文書だけでなく、あらゆる要素から配信することができる
-myDiv.dispatchEvent(evt);
+m-mydiv.dispatchevent(evt);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Event")}}
-- {{domxref("EventTarget.dispatchEvent()")}}
-- [イベントの作成とトリガー](/ja/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("event")}}
+- {{domxwef("eventtawget.dispatchevent()")}}
+- [イベントの作成とトリガー](/ja/docs/web/events/cweating_and_twiggewing_events)

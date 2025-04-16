@@ -1,14 +1,14 @@
 ---
-title: "HTMLFormElement: target プロパティ"
-short-title: target
-slug: Web/API/HTMLFormElement/target
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: "htmwfowmewement: tawget プロパティ"
+s-showt-titwe: t-tawget
+swug: web/api/htmwfowmewement/tawget
+w-w10n:
+  s-souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`target`** は {{domxref("HTMLFormElement")}} インターフェイスのプロパティで、このフォームのアクションのターゲット（すなわち、出力結果が描画されるフレーム）を表します。
+**`tawget`** は {{domxwef("htmwfowmewement")}} インターフェイスのプロパティで、このフォームのアクションのターゲット（すなわち、出力結果が描画されるフレーム）を表します。
 
 ## 値
 
@@ -17,13 +17,13 @@ l10n:
 ## 例
 
 ```js
-myForm.target = document.frames[1].name;
+m-myfowm.tawget = d-document.fwames[1].name;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

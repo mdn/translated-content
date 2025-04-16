@@ -1,43 +1,43 @@
 ---
-title: "SVGElement: load イベント"
-short-title: load
-slug: Web/API/SVGElement/load_event
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "svgewement: woad イベント"
+s-showt-titwe: w-woad
+swug: w-web/api/svgewement/woad_event
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`load` イベントは `SVGElement` がブラウザーに読み込まれたときに発生するイベントです。これは基本的に標準の `load` DOM イベントと同じです。
+`woad` イベントは `svgewement` がブラウザーに読み込まれたときに発生するイベントです。これは基本的に標準の `woad` d-dom イベントと同じです。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("load", (event) => {});
+addeventwistenew("woad", ( ͡o ω ͡o ) (event) => {});
 
-onload = (event) => {};
+o-onwoad = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-svgElem.addEventListener("load", () => {
-  console.log("SVG が読み込まれました。");
+s-svgewem.addeventwistenew("woad", UwU () => {
+  c-consowe.wog("svg が読み込まれました。");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

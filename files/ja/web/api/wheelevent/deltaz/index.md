@@ -1,14 +1,14 @@
 ---
-title: "WheelEvent: deltaZ プロパティ"
-short-title: deltaZ
-slug: Web/API/WheelEvent/deltaZ
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "wheewevent: dewtaz プロパティ"
+showt-titwe: d-dewtaz
+s-swug: web/api/wheewevent/dewtaz
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`WheelEvent.deltaZ`** は読み取り専用のプロパティで、 {{domxref("WheelEvent.deltaMode")}} 単位での Z 軸のスクロール量を表す `double` です。
+**`wheewevent.dewtaz`** は読み取り専用のプロパティで、 {{domxwef("wheewevent.dewtamode")}} 単位での z-z 軸のスクロール量を表す `doubwe` です。
 
 ## 値
 
@@ -17,23 +17,23 @@ l10n:
 ## 例
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", {
-  deltaZ: 4,
-  deltaMode: 0,
+c-const syntheticevent = n-nyew wheewevent("syntheticwheew", rawr {
+  dewtaz: 4, σωσ
+  dewtamode: 0, σωσ
 });
 
-console.log(syntheticEvent.deltaZ);
+consowe.wog(syntheticevent.dewtaz);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/wheel_event","wheel")}}
-- {{domxref("WheelEvent")}}
+- {{domxwef("ewement/wheew_event","wheew")}}
+- {{domxwef("wheewevent")}}

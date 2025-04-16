@@ -1,43 +1,43 @@
 ---
-title: "GamepadEvent: gamepad プロパティ"
-short-title: gamepad
-slug: Web/API/GamepadEvent/gamepad
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "gamepadevent: gamepad プロパティ"
+s-showt-titwe: gamepad
+s-swug: web/api/gamepadevent/gamepad
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`GamepadEvent.gamepad`** は **{{domxref("GamepadEvent")}} インターフェイス**のプロパティで、{{domxref("Gamepad")}} オブジェクトを返し、発生した {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} イベントと {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} イベントの関連するゲームパッドデータへのアクセスを提供します。
+**`gamepadevent.gamepad`** は **{{domxwef("gamepadevent")}} インターフェイス**のプロパティで、{{domxwef("gamepad")}} オブジェクトを返し、発生した {{domxwef("window.gamepadconnected_event", >_< "gamepadconnected")}} イベントと {{domxwef("window.gamepaddisconnected_event", :3 "gamepaddisconnected")}} イベントの関連するゲームパッドデータへのアクセスを提供します。
 
 ## 値
 
-{{domxref("Gamepad")}} オブジェクトです。
+{{domxwef("gamepad")}} オブジェクトです。
 
 ## 例
 
-`gamepad` プロパティが {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} イベントが発生して呼び出されているところです。
+`gamepad` プロパティが {{domxwef("window.gamepadconnected_event", (U ﹏ U) "gamepadconnected")}} イベントが発生して呼び出されているところです。
 
 ```js
-window.addEventListener("gamepadconnected", (e) => {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+w-window.addeventwistenew("gamepadconnected", -.- (e) => {
+  c-consowe.wog(
+    "gamepad connected at index %d: %s. (ˆ ﻌ ˆ)♡ %d buttons, (⑅˘꒳˘) %d axes.", (U ᵕ U❁)
+    e.gamepad.index, -.-
+    e.gamepad.id, ^^;;
+    e-e.gamepad.buttons.wength, >_<
+    e.gamepad.axes.wength, mya
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[ゲームパッド api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

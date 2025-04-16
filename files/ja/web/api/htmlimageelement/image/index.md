@@ -1,55 +1,55 @@
 ---
-title: "HTMLImageElement: Image() コンストラクター"
-short-title: Image()
-slug: Web/API/HTMLImageElement/Image
-l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+titwe: "htmwimageewement: image() コンストラクター"
+showt-titwe: i-image()
+s-swug: web/api/htmwimageewement/image
+w-w10n:
+  s-souwcecommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。
+**`image()`** コンストラクターは、新しい {{domxwef("htmwimageewement")}} インスタンスを作成します。機能的には {{domxwef("document.cweateewement()", (ˆ ﻌ ˆ)♡ "document.cweateewement('img')")}} と同等です。
 
-> [!NOTE]
-> この関数を CSS の [`image()`](/ja/docs/Web/CSS/image/image) 関数と混同しないでください。
+> [!note]
+> この関数を c-css の [`image()`](/ja/docs/web/css/image/image) 関数と混同しないでください。
 
 ## 構文
 
-```js-nolint
-new Image()
-new Image(width)
-new Image(width, height)
+```js-nowint
+n-nyew image()
+nyew i-image(width)
+nyew image(width, (⑅˘꒳˘) height)
 ```
 
 ### 引数
 
-- `width` {{optional_inline}}
-  - : 画像の幅（つまり [`width`](/ja/docs/Web/HTML/Reference/Elements/img#width) 属性に対応する値）です。
-- `height` {{optional_inline}}
-  - : 画像の高さ（つまり [`height`](/ja/docs/Web/HTML/Reference/Elements/img#height) 属性に対応する値）です。
+- `width` {{optionaw_inwine}}
+  - : 画像の幅（つまり [`width`](/ja/docs/web/htmw/wefewence/ewements/img#width) 属性に対応する値）です。
+- `height` {{optionaw_inwine}}
+  - : 画像の高さ（つまり [`height`](/ja/docs/web/htmw/wefewence/ewements/img#height) 属性に対応する値）です。
 
 ## 使用上の注意
 
-ビットマップ全体は、コンストラクターで指定されたサイズに関係なく読み込まれます。コンストラクターで指定されたサイズは、結果のインスタンスのプロパティ {{DOMxRef("HTMLImageElement.width")}} と {{DOMxRef("HTMLImageElement.height")}} を通して反映されます。画像の本来の幅と高さは CSS ピクセルで表され、プロパティ {{DOMxRef("HTMLImageElement.naturalWidth")}} と {{DOMxRef("HTMLImageElement.naturalHeight")}} を通して反映されます。コンストラクターでサイズが指定されていない場合、両プロパティのペアは同じ値を持ちます。
+ビットマップ全体は、コンストラクターで指定されたサイズに関係なく読み込まれます。コンストラクターで指定されたサイズは、結果のインスタンスのプロパティ {{domxwef("htmwimageewement.width")}} と {{domxwef("htmwimageewement.height")}} を通して反映されます。画像の本来の幅と高さは css ピクセルで表され、プロパティ {{domxwef("htmwimageewement.natuwawwidth")}} と {{domxwef("htmwimageewement.natuwawheight")}} を通して反映されます。コンストラクターでサイズが指定されていない場合、両プロパティのペアは同じ値を持ちます。
 
 ## 例
 
 ```js
-const myImage = new Image(100, 200);
-myImage.src = "picture.jpg";
-document.body.appendChild(myImage);
+const myimage = n-nyew image(100, (U ᵕ U❁) 200);
+myimage.swc = "pictuwe.jpg";
+document.body.appendchiwd(myimage);
 ```
 
-これは、 {{HTMLElement("body")}} の中で次のような HTML タグを定義するのと同じです。
+これは、 {{htmwewement("body")}} の中で次のような h-htmw タグを定義するのと同じです。
 
-```html
-<img width="100" height="200" src="picture.jpg" />
+```htmw
+<img width="100" h-height="200" swc="pictuwe.jpg" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

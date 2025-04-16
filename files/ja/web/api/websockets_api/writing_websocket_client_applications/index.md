@@ -1,131 +1,131 @@
 ---
-title: WebSocket クライアントアプリケーションを書く
-slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-l10n:
-  sourceCommit: 9a4005caa5cc13f5174e3b8981eeec5631ed83d1
+titwe: websocket クライアントアプリケーションを書く
+swug: web/api/websockets_api/wwiting_websocket_cwient_appwications
+w-w10n:
+  s-souwcecommit: 9a4005caa5cc13f5174e3b8981eeec5631ed83d1
 ---
 
-{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
+{{defauwtapisidebaw("websockets api")}} {{avaiwabweinwowkews}}
 
-WebSocket クライアントアプリケーションは [WebSocket API](/ja/docs/Web/API/WebSockets_API) を使用して、 WebSocket プロトコルを経由して [WebSocket サーバー](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)と通信します。
+websocket クライアントアプリケーションは [websocket a-api](/ja/docs/web/api/websockets_api) を使用して、 w-websocket プロトコルを経由して [websocket サーバー](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews)と通信します。
 
-> [!NOTE]
-> この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。
-> [コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+> [!note]
+> この記事のサンプルスニペットは w-websocket チャットクライアント/サーバーサンプルから取得したものです。
+> [コードはこちらからご覧ください](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/websocket-chat)。
 
-## WebSocket オブジェクトの作成
+## w-websocket オブジェクトの作成
 
-WebSocket プロトコルを使用して通信するには、 {{domxref("WebSocket")}} オブジェクトを作成する必要があります。これにより自動的にサーバーへの接続が開かれます。
+websocket プロトコルを使用して通信するには、 {{domxwef("websocket")}} オブジェクトを作成する必要があります。これにより自動的にサーバーへの接続が開かれます。
 
-WebSocket のコンストラクターは、必須 1 つ、任意 1 つの引数を受け取ります。
+w-websocket のコンストラクターは、必須 1 つ、任意 1 つの引数を受け取ります。
 
 ```js
-webSocket = new WebSocket(url, protocols);
+w-websocket = nyew websocket(uww, (ˆ ﻌ ˆ)♡ pwotocows);
 ```
 
-- `url`
-  - : 接続先 URL。これは、 WebSocket サーバーが応答する URL である必要があります。
-    これは URL スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
-    相対 URL 値と `https://` および `http://` スキームも、[ほとんどのブラウザーの最新バージョン](/ja/docs/Web/API/WebSocket/WebSocket#ブラウザーの互換性)で許可されています。
-- `protocols` {{optional_inline}}
+- `uww`
+  - : 接続先 uww。これは、 websocket サーバーが応答する u-uww である必要があります。
+    これは uww スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
+    相対 uww 値と `https://` および `http://` スキームも、[ほとんどのブラウザーの最新バージョン](/ja/docs/web/api/websocket/websocket#ブラウザーの互換性)で許可されています。
+- `pwotocows` {{optionaw_inwine}}
   - : 単一のプロトコル文字列または一連のプロトコル文字列。
-    これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の WebSocket サブプロトコルを実装できます（たとえば、特定の `protocol` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。
+    これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の w-websocket サブプロトコルを実装できます（たとえば、特定の `pwotocow` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。
     プロトコル文字列を指定しない場合、空文字列であると仮定されます。
 
-コンストラクターは、接続先がアクセスを許可していない場合に `SecurityError` 例外を発生させます。
-これは安全ではない接続を利用しようとしたときに発生することがあります（ほとんどの{{Glossary("user agent", "ユーザーエージェント")}}は、同じ機器か、可能であれば同じネットワークでない限り、すべての WebSocket 接続に安全なリンクを要求します）。
+コンストラクターは、接続先がアクセスを許可していない場合に `secuwityewwow` 例外を発生させます。
+これは安全ではない接続を利用しようとしたときに発生することがあります（ほとんどの{{gwossawy("usew agent", 😳😳😳 "ユーザーエージェント")}}は、同じ機器か、可能であれば同じネットワークでない限り、すべての w-websocket 接続に安全なリンクを要求します）。
 
 ### 接続エラー
 
-接続を試行中にエラーが発生した場合、最初の [`error` イベント](/ja/docs/Web/API/WebSocket/error_event)が {{domxref("WebSocket")}} オブジェクトに送信され（これにより、すべてのハンドラーが呼び出されます）、接続が閉じられた理由を示す [`close` イベント](/ja/docs/Web/API/WebSocket/close_event)が続きます。
+接続を試行中にエラーが発生した場合、最初の [`ewwow` イベント](/ja/docs/web/api/websocket/ewwow_event)が {{domxwef("websocket")}} オブジェクトに送信され（これにより、すべてのハンドラーが呼び出されます）、接続が閉じられた理由を示す [`cwose` イベント](/ja/docs/web/api/websocket/cwose_event)が続きます。
 
-ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4)で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
+ブラウザーは {{domxwef("cwoseevent")}} 経由で、コンソールにも [wfc 6455 第 7.4 節](https://datatwackew.ietf.owg/doc/htmw/wfc6455#section-7.4)で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
 
 ### 例
 
-この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。
-この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
+この簡単な例では新しい websocket を作成し、 `wss://www.exampwe.com/socketsewvew` のサーバーに接続します。
+この例では、ソケットのリクエストで "pwotocowone" のカスタムプロトコルが指定されていますが、省略することもできます。
 
 ```js
-const exampleSocket = new WebSocket(
-  "wss://www.example.com/socketserver",
-  "protocolOne",
+const exampwesocket = nyew websocket(
+  "wss://www.exampwe.com/socketsewvew", (U ﹏ U)
+  "pwotocowone", (///ˬ///✿)
 );
 ```
 
-返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。
-`readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
+返されると、 {{domxwef("websocket.weadystate", 😳 "exampwesocket.weadystate")}} は `connecting` です。
+`weadystate` は接続がデータを転送する準備ができたら `open`になります。
 
 接続を開き、サポートしているプロトコルについて柔軟に対応したい場合は、プロトコルの配列を指定することができます。
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
-  "protocolOne",
-  "protocolTwo",
+c-const exampwesocket = nyew w-websocket("wss://www.exampwe.com/socketsewvew", 😳 [
+  "pwotocowone", σωσ
+  "pwotocowtwo", rawr x3
 ]);
 ```
 
-接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
+接続が確立されると（つまり `weadystate` が `open`）、 {{domxwef("websocket.pwotocow", OwO "exampwesocket.pwotocow")}} は、サーバーが選択したプロトコルを通知します。
 
-WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
+w-websocket を確立するには、 [http アップグレードメカニズム](/ja/docs/web/http/guides/pwotocow_upgwade_mechanism)が必要です。したがって、 http サーバーを `ws://www.exampwe.com` または `wss://www.exampwe.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
 
 ## サーバーへのデータの送信
 
 接続を開くと、サーバーにデータを送信することができます。
-これを行うには、送信するメッセージごとに `WebSocket` オブジェクトの {{domxref("WebSocket.send", "send()")}} メソッドを呼び出します。
+これを行うには、送信するメッセージごとに `websocket` オブジェクトの {{domxwef("websocket.send", /(^•ω•^) "send()")}} メソッドを呼び出します。
 
 ```js
-exampleSocket.send("Here's some text that the server is urgently awaiting!");
+exampwesocket.send("hewe's some text that the sewvew is u-uwgentwy awaiting!");
 ```
 
-データは文字列、 {{ domxref("Blob") }}、 {{jsxref("ArrayBuffer")}} のいずれかで送信することができます。
+データは文字列、 {{ domxwef("bwob") }}、 {{jsxwef("awwaybuffew")}} のいずれかで送信することができます。
 
-接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。
-データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket/open_event", "onopen")}} イベントハンドラーを定義してその中で行います。
+接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが websocket オブジェクトの作成直後に成功するという保証はありません。
+データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxwef("websocket/open_event", 😳😳😳 "onopen")}} イベントハンドラーを定義してその中で行います。
 
 ```js
-exampleSocket.onopen = (event) => {
-  exampleSocket.send("Here's some text that the server is urgently awaiting!");
+exampwesocket.onopen = (event) => {
+  exampwesocket.send("hewe's some text that the s-sewvew is uwgentwy awaiting!");
 };
 ```
 
-### JSON を使用したオブジェクトの送信
+### json を使用したオブジェクトの送信
 
-サーバーに複雑なデータを合理的に送信するのに手軽な方法の一つとして、{{glossary("JSON")}} を使用する方法があります。
-たとえば、チャットプログラムがサーバーとやり取りするのに、 JSON でカプセル化されたデータのパケットを使用して実装されたプロトコルを使用することができます。
+サーバーに複雑なデータを合理的に送信するのに手軽な方法の一つとして、{{gwossawy("json")}} を使用する方法があります。
+たとえば、チャットプログラムがサーバーとやり取りするのに、 j-json でカプセル化されたデータのパケットを使用して実装されたプロトコルを使用することができます。
 
 ```js
-// Send text to all users through the server
-function sendText() {
-  // Construct a msg object containing the data the server needs to process the message from the chat client.
+// s-send text to aww u-usews thwough t-the sewvew
+function sendtext() {
+  // constwuct a-a msg object containing the data the sewvew nyeeds t-to pwocess the message fwom the chat cwient. ( ͡o ω ͡o )
   const msg = {
-    type: "message",
-    text: document.getElementById("text").value,
-    id: clientID,
-    date: Date.now(),
+    type: "message", >_<
+    text: d-document.getewementbyid("text").vawue, >w<
+    id: cwientid, rawr
+    d-date: d-date.now(), 😳
   };
 
-  // Send the msg object as a JSON-formatted string.
-  exampleSocket.send(JSON.stringify(msg));
+  // s-send the msg object as a json-fowmatted stwing. >w<
+  exampwesocket.send(json.stwingify(msg));
 
-  // Blank the text input element, ready to receive the next line of text from the user.
-  document.getElementById("text").value = "";
+  // b-bwank t-the text input ewement, (⑅˘꒳˘) weady to w-weceive the nyext w-wine of text fwom the usew. OwO
+  d-document.getewementbyid("text").vawue = "";
 }
 ```
 
 ## サーバーからのメッセージの受信
 
-WebSockets はイベント駆動型 API です。メッセージを受信すると、 `message` イベント `WebSocket` オブジェクトに送信されます。これを処理するには、 `message` イベントのイベントリスナーを追加するか、 {{domxref("WebSocket/message_event", "onmessage")}} イベントハンドラーを使用するかします。受信データの待ち受けを開始するには、次のようにします。
+websockets はイベント駆動型 a-api です。メッセージを受信すると、 `message` イベント `websocket` オブジェクトに送信されます。これを処理するには、 `message` イベントのイベントリスナーを追加するか、 {{domxwef("websocket/message_event", (ꈍᴗꈍ) "onmessage")}} イベントハンドラーを使用するかします。受信データの待ち受けを開始するには、次のようにします。
 
 ```js
-exampleSocket.onmessage = (event) => {
-  console.log(event.data);
+exampwesocket.onmessage = (event) => {
+  consowe.wog(event.data);
 };
 ```
 
-### JSON オブジェクトの受信と解釈
+### json オブジェクトの受信と解釈
 
-まず[JSON を使用したオブジェクトの送信](#json_を使用したオブジェクトの送信)で述べられているチャットクライアントアプリケーションを考えてみましょう。クライアントが受信するデータパケットの種類は次のとおりです。
+まず[json を使用したオブジェクトの送信](#json_を使用したオブジェクトの送信)で述べられているチャットクライアントアプリケーションを考えてみましょう。クライアントが受信するデータパケットの種類は次のとおりです。
 
 - ログインハンドシェイク
 - メッセージテキスト
@@ -134,57 +134,57 @@ exampleSocket.onmessage = (event) => {
 これらの受信メッセージを解釈するコードは、次のようになります。
 
 ```js
-exampleSocket.onmessage = (event) => {
-  const f = document.getElementById("chat-box").contentDocument;
-  let text = "";
-  const msg = JSON.parse(event.data);
-  const time = new Date(msg.date);
-  const timeStr = time.toLocaleTimeString();
+e-exampwesocket.onmessage = (event) => {
+  const f = document.getewementbyid("chat-box").contentdocument;
+  w-wet text = "";
+  const msg = j-json.pawse(event.data);
+  c-const time = nyew date(msg.date);
+  const timestw = time.towocawetimestwing();
 
   switch (msg.type) {
     case "id":
-      clientID = msg.id;
-      setUsername();
-      break;
-    case "username":
-      text = `User <em>${msg.name}</em> signed in at ${timeStr}<br>`;
-      break;
+      cwientid = m-msg.id;
+      setusewname();
+      b-bweak;
+    case "usewname":
+      text = `usew <em>${msg.name}</em> s-signed in a-at ${timestw}<bw>`;
+      b-bweak;
     case "message":
-      text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
-      break;
-    case "reject-username":
-      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
-      break;
-    case "user-list":
-      document.getElementById("user-list-box").innerText = msg.users.join("\n");
-      break;
+      text = `(${timestw}) ${msg.name} : ${msg.text} <bw>`;
+      bweak;
+    c-case "weject-usewname":
+      text = `youw usewname has been set to <em>${msg.name}</em> because t-the nyame you chose is in use.<bw>`;
+      bweak;
+    c-case "usew-wist":
+      d-document.getewementbyid("usew-wist-box").innewtext = m-msg.usews.join("\n");
+      bweak;
   }
 
-  if (text.length) {
-    f.write(text);
-    document.getElementById("chat-box").contentWindow.scrollByPages(1);
+  i-if (text.wength) {
+    f-f.wwite(text);
+    d-document.getewementbyid("chat-box").contentwindow.scwowwbypages(1);
   }
 };
 ```
 
-ここで {{jsxref("JSON.parse()")}} を使用して JSON オブジェクトを元のオブジェクトに変換し、その内容を調べて処理します。
+ここで {{jsxwef("json.pawse()")}} を使用して j-json オブジェクトを元のオブジェクトに変換し、その内容を調べて処理します。
 
 ### テキストデータ形式
 
-WebSocket 接続を介して受信されるテキストは、 UTF-8 形式です。
+websocket 接続を介して受信されるテキストは、 utf-8 形式です。
 
 ## 接続を閉じる
 
-WebSocket 接続の使用を終了したら、 WebSocket のメソッド {{domxref("WebSocket.close", "close()")}} を呼び出します。
+w-websocket 接続の使用を終了したら、 w-websocket のメソッド {{domxwef("websocket.cwose", 😳 "cwose()")}} を呼び出します。
 
 ```js
-exampleSocket.close();
+e-exampwesocket.cwose();
 ```
 
-接続を閉じようとする前に、ソケットの {{domxref("WebSocket.bufferedAmount", "bufferedAmount")}} 属性を確認して、データがネットワーク上でまだ送信されていないかどうかを判断すると有用かもしれません。
+接続を閉じようとする前に、ソケットの {{domxwef("websocket.buffewedamount", "buffewedamount")}} 属性を確認して、データがネットワーク上でまだ送信されていないかどうかを判断すると有用かもしれません。
 この値が 0 ではない場合、まだ待ち状態のデータがあるので、接続を閉じる前に待ったほうが良いかもしれません。
 
 ## セキュリティの考慮事項
 
-混在コンテンツ環境では WebSocket を使用しないでください。つまり、 HTTPS を使用もしくはそうでない方法でもロードされたページから、セキュアでない WebSocket 接続を開くべきではありません。
-最近のブラウザーは安全な WebSocket 接続のみを許可し、また安全ではないコンテキストでの使用には対応しなくなってきています。
+混在コンテンツ環境では w-websocket を使用しないでください。つまり、 h-https を使用もしくはそうでない方法でもロードされたページから、セキュアでない websocket 接続を開くべきではありません。
+最近のブラウザーは安全な websocket 接続のみを許可し、また安全ではないコンテキストでの使用には対応しなくなってきています。

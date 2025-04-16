@@ -1,94 +1,94 @@
 ---
-title: "Window: unhandledrejection イベント"
-slug: Web/API/Window/unhandledrejection_event
+titwe: "window: unhandwedwejection イベント"
+s-swug: web/api/window/unhandwedwejection_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`unhandledrejection`** イベントは、 JavaScript の拒否ハンドラーを持たない {{jsxref("Promise")}} が拒否されたときにスクリプトのグローバルスコープに送られます。 通常、これは {{domxref("window")}} ですが、 {{domxref("Worker")}} であることもあります。 これはデバッグや、予期しない場面でのエラーハンドリングのエラーの代替手段を提供するために利用することができます。
+**`unhandwedwejection`** イベントは、 j-javascwipt の拒否ハンドラーを持たない {{jsxwef("pwomise")}} が拒否されたときにスクリプトのグローバルスコープに送られます。 通常、これは {{domxwef("window")}} ですが、 {{domxwef("wowkew")}} であることもあります。 これはデバッグや、予期しない場面でのエラーハンドリングのエラーの代替手段を提供するために利用することができます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("pwomisewejectionevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}}
+        {{domxwef("windoweventhandwews.onunhandwedwejection", 😳😳😳 "onunhandwedwejection")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 使用上のメモ
 
-`unhandledrejection` イベントにバブリングを許すと、結局はコンソールにエラーメッセージを出力することになります。 これは {{domxref("PromiseRejectionEvent")}} の {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出すことで防ぐことができます。 例は以下の [Preventing default handling](#preventing_default_handling) を参照してください。
+`unhandwedwejection` イベントにバブリングを許すと、結局はコンソールにエラーメッセージを出力することになります。 これは {{domxwef("pwomisewejectionevent")}} の {{domxwef("event.pweventdefauwt", -.- "pweventdefauwt()")}} を呼び出すことで防ぐことができます。 例は以下の [pweventing defauwt handwing](#pweventing_defauwt_handwing) を参照してください。
 
 ## 例
 
-ここで `unhandledrejection` イベントの使い方が分かる例をいくつか見てみましょう。 イベントには 2 つの有用な情報があります。
+ここで `unhandwedwejection` イベントの使い方が分かる例をいくつか見てみましょう。 イベントには 2 つの有用な情報があります。
 
-- `promise`
-  - : 拒否を扱うために利用できるハンドラーがなく拒否された実際の {{jsxref("Promise")}} です。
-- `reason`
-  - : 拒否ハンドラーに渡されるはずだった理由です。 詳しくは {{jsxref("Promise.catch", "catch()")}} を参照してください。
+- `pwomise`
+  - : 拒否を扱うために利用できるハンドラーがなく拒否された実際の {{jsxwef("pwomise")}} です。
+- `weason`
+  - : 拒否ハンドラーに渡されるはずだった理由です。 詳しくは {{jsxwef("pwomise.catch", ( ͡o ω ͡o ) "catch()")}} を参照してください。
 
 ### 基本的なエラーのログ
 
-この例では、処理されなかった Promise の拒否についての情報を単純にコンソールにログ出力します。
+この例では、処理されなかった pwomise の拒否についての情報を単純にコンソールにログ出力します。
 
 ```js
-window.addEventListener("unhandledrejection", (event) => {
-  console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
+window.addeventwistenew("unhandwedwejection", rawr x3 (event) => {
+  c-consowe.wawn(`unhandwed pwomise wejection: ${event.weason}`);
 });
 ```
 
 イベントハンドラープロパティを使用して、イベントリスナーを設定することもできます。
 
 ```js
-window.onunhandledrejection = (event) => {
-  console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
+w-window.onunhandwedwejection = (event) => {
+  consowe.wawn(`unhandwed p-pwomise wejection: ${event.weason}`);
 };
 ```
 
 ### 既定のハンドリングの防止
 
-({{Glossary("Node.js")}} など) 多くの環境では、既定では処理されなかった Promise の拒否はコンソールに報告されます。 `unhandledrejection` イベントのハンドラー — と、さらに実行したいその他のタスク — を追加して、 {{domxref("Event.preventDefault()", "preventDefault()")}} を呼び出すことでイベントをキャンセルし、実行時のログ出力コードが扱われるまでバブリングすることを防ぐことができます。 これは `unhandledrejection` がキャンセル可能であるためです。
+({{gwossawy("node.js")}} など) 多くの環境では、既定では処理されなかった pwomise の拒否はコンソールに報告されます。 `unhandwedwejection` イベントのハンドラー — と、さらに実行したいその他のタスク — を追加して、 {{domxwef("event.pweventdefauwt()", nyaa~~ "pweventdefauwt()")}} を呼び出すことでイベントをキャンセルし、実行時のログ出力コードが扱われるまでバブリングすることを防ぐことができます。 これは `unhandwedwejection` がキャンセル可能であるためです。
 
 ```js
-window.addEventListener("unhandledrejection", function (event) {
-  // ...your code here to handle the unhandled rejection...
+window.addeventwistenew("unhandwedwejection", /(^•ω•^) function (event) {
+  // ...youw c-code hewe to handwe the unhandwed w-wejection...
 
-  // Prevent the default handling (such as outputting the
-  // error to the console
+  // p-pwevent the defauwt handwing (such as outputting the
+  // ewwow to the c-consowe
 
-  event.preventDefault();
+  event.pweventdefauwt();
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
-- {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} イベントハンドラープロパティ[1](#seealso-footnote-1)
-- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} イベント
-- {{jsxref("Promise")}}
+- [プロミスの拒否イベント](/ja/docs/web/javascwipt/guide/using_pwomises#%e3%83%97%e3%83%ad%e3%83%9f%e3%82%b9%e3%81%ae%e6%8b%92%e5%90%a6%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88)
+- {{domxwef("windoweventhandwews.onunhandwedwejection", rawr "onunhandwedwejection")}} イベントハンドラープロパティ[1](#seeawso-footnote-1)
+- {{domxwef("window/wejectionhandwed_event", OwO "wejectionhandwed")}} イベント
+- {{jsxwef("pwomise")}}
 
-\[1] 対応するイベントハンドラープロパティは、{{domxref("WindowEventHandlers")}} ミックスインで定義されています。 これは、{{domxref("Window")}} インターフェイスとすべての種類の {{domxref("Worker")}} インターフェイスの両方で使用できます。
+\[1] 対応するイベントハンドラープロパティは、{{domxwef("windoweventhandwews")}} ミックスインで定義されています。 これは、{{domxwef("window")}} インターフェイスとすべての種類の {{domxwef("wowkew")}} インターフェイスの両方で使用できます。

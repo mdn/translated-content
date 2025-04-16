@@ -1,26 +1,26 @@
 ---
-title: CSSTransformComponent.is2D
-slug: Web/API/CSSTransformComponent/is2D
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csstwansfowmcomponent.is2d
+swug: web/api/csstwansfowmcomponent/is2d
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`is2D`** は {{domxref("CSSTransformComponent")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2D と 3D のどちらかであるかを示します。
+**`is2d`** は {{domxwef("csstwansfowmcomponent")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2d と 3d のどちらかであるかを示します。
 
 ## 値
 
-論理値です。true はこの座標変換が 2D 変換であることを示し、false は 3D 変換であることを示します。
+論理値です。twue はこの座標変換が 2d 変換であることを示し、fawse は 3d 変換であることを示します。
 
 ## 例
 
-To Do
+to d-do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

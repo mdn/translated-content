@@ -1,74 +1,74 @@
 ---
-title: "PaymentRequest: shippingaddresschange イベント"
-slug: Web/API/PaymentRequest/shippingaddresschange_event
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequest: shippingaddwesschange イベント"
+swug: w-web/api/paymentwequest/shippingaddwesschange_event
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("payment w-wequest a-api")}}{{secuwecontext_headew}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`shippingaddresschange`** イベントは、ユーザーが配送先を選択したとき、または配送先の詳細を変更したときに {{domxref("PaymentRequest")}} オブジェクトに送られます。
+**`shippingaddwesschange`** イベントは、ユーザーが配送先を選択したとき、または配送先の詳細を変更したときに {{domxwef("paymentwequest")}} オブジェクトに送られます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("shippingaddresschange", (event) => {});
+a-addeventwistenew("shippingaddwesschange", 😳 (event) => {});
 
-onshippingaddresschange = (event) => {};
+o-onshippingaddwesschange = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PaymentRequestUpdateEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxwef("paymentwequestupdateevent")}} です。{{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+{{inhewitancediagwam("paymentwequestupdateevent")}}
 
 ## イベントプロパティ
 
-_{{domxref("Event")}} から継承したプロパティのみを提供しています。_
+_{{domxwef("event")}} から継承したプロパティのみを提供しています。_
 
 ## 使用上の注意
 
-ブラウザーによっては、プライバシー保護のため、配送先情報が編集される場合があります。つまり、配送先住所を含む {{domxref("PaymentAddress")}} は、ユーザーの同意なしにユーザーを特定できないようにするために、そのコンテンツの一部が変更、不明瞭化、または完全に削除されることがあります（ユーザーが商品を発送することを選んだ場合は、その住所が必要になるため）。
+ブラウザーによっては、プライバシー保護のため、配送先情報が編集される場合があります。つまり、配送先住所を含む {{domxwef("paymentaddwess")}} は、ユーザーの同意なしにユーザーを特定できないようにするために、そのコンテンツの一部が変更、不明瞭化、または完全に削除されることがあります（ユーザーが商品を発送することを選んだ場合は、その住所が必要になるため）。
 
 ## 例
 
-この例では、`shippingaddresschange` イベントのハンドラーを設定して、住所がウェブアプリケーションが設定した要件を満たしているかどうかを検証しています。
+この例では、`shippingaddwesschange` イベントのハンドラーを設定して、住所がウェブアプリケーションが設定した要件を満たしているかどうかを検証しています。
 
 ```js
-const paymentRequest = new PaymentRequest(methodData, details, options);
+c-const paymentwequest = nyew paymentwequest(methoddata, detaiws, XD options);
 
-paymentRequest.addEventListener(
-  "shippingaddresschange",
+paymentwequest.addeventwistenew(
+  "shippingaddwesschange",
   (event) => {
-    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-    event.updateWith(detailsUpdate);
-  },
-  false,
+    wet detaiwsupdate = c-checkaddwess(paymentwequest.shippingaddwess);
+    event.updatewith(detaiwsupdate);
+  }, :3
+  fawse,
 );
 
-const checkAddress = (theAddress) => {
-  let detailsUpdate = {};
+const c-checkaddwess = (theaddwess) => {
+  wet detaiwsupdate = {};
 
-  // Check the address, return an object with any changes or errors.
+  // c-check the addwess, 😳😳😳 wetuwn an object with any changes ow ewwows. -.-
 
-  return detailsUpdate;
+  w-wetuwn detaiwsupdate;
 };
 ```
 
-`shippingaddresschange` のハンドラーは、`onshippingaddresschange` イベントハンドラープロパティを用いて確立することもできます。
+`shippingaddwesschange` のハンドラーは、`onshippingaddwesschange` イベントハンドラープロパティを用いて確立することもできます。
 
 ```js
-paymentRequest.onshippingaddresschange = (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-  event.updateWith(detailsUpdate);
+paymentwequest.onshippingaddwesschange = (event) => {
+  w-wet detaiwsupdate = c-checkaddwess(paymentwequest.shippingaddwess);
+  event.updatewith(detaiwsupdate);
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

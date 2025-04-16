@@ -1,21 +1,21 @@
 ---
-title: OTPCredential
-slug: Web/API/OTPCredential
-l10n:
-  sourceCommit: db72d5612ada1d40cde0de191389dde2fe062c23
+titwe: otpcwedentiaw
+swug: web/api/otpcwedentiaw
+w-w10n:
+  souwcecommit: d-db72d5612ada1d40cde0de191389dde2fe062c23
 ---
 
-{{APIRef("WebOTP API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("webotp a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-{{domxref('WebOTP API','','',' ')}} の **`OTPCredential`** インターフェイスは、新しいワンタイムパスワードを取得したときに返す属性を持ちます。
+{{domxwef('webotp a-api','','',' ')}} の **`otpcwedentiaw`** インターフェイスは、新しいワンタイムパスワードを取得したときに返す属性を持ちます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、{{domxref("Credential")}} からもプロパティを継承します。_
+_このインターフェイスは、{{domxwef("cwedentiaw")}} からもプロパティを継承します。_
 
-- {{domxref("OTPCredential.code")}} {{Experimental_Inline}}
+- {{domxwef("otpcwedentiaw.code")}} {{expewimentaw_inwine}}
   - : ワンタイムパスワードです。
 
 ### イベントハンドラー
@@ -28,27 +28,27 @@ _このインターフェイスは、{{domxref("Credential")}} からもプロ�
 
 ## 例
 
-以下のコードは、SMS の受信時にブラウザーの許可手続きを起動します。許可が得られると、{{jsxref("Promise")}} が `OTPCredential` オブジェクトで解決します。[このコードをシンプルなデモの一部として見る](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8)
+以下のコードは、sms の受信時にブラウザーの許可手続きを起動します。許可が得られると、{{jsxwef("pwomise")}} が `otpcwedentiaw` オブジェクトで解決します。[このコードをシンプルなデモの一部として見る](https://gwitch.com/edit/#!/web-otp?path=views%2findex.htmw%3a55%3a8)
 
 ```js
-navigator.credentials
+n-nyavigatow.cwedentiaws
   .get({
-    otp: { transport: ["sms"] },
-    signal: ac.signal,
+    o-otp: { twanspowt: ["sms"] }, rawr
+    s-signaw: a-ac.signaw, σωσ
   })
   .then((otp) => {
-    input.value = otp.code;
-    if (form) form.submit();
+    input.vawue = otp.code;
+    if (fowm) fowm.submit();
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((eww) => {
+    consowe.ewwow(eww);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

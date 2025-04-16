@@ -1,55 +1,55 @@
 ---
-title: "ExtendableCookieChangeEvent: deleted プロパティ"
-slug: Web/API/ExtendableCookieChangeEvent/deleted
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "extendabwecookiechangeevent: deweted プロパティ"
+s-swug: web/api/extendabwecookiechangeevent/deweted
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{secuwecontext_headew}}{{apiwef("cookie s-stowe api")}}
 
-{{domxref("ExtendableCookieChangeEvent")}} インターフェイスの読み取り専用プロパティ **`deleted`** は、与えられた `ExtendableCookieChangeEvent` のインスタンスで削除されたすべての Cookie を返します。
+{{domxwef("extendabwecookiechangeevent")}} インターフェイスの読み取り専用プロパティ **`deweted`** は、与えられた `extendabwecookiechangeevent` のインスタンスで削除されたすべての c-cookie を返します。
 
 ## 値
 
-オブジェクトの配列で、削除された Cookie が格納されています。それぞれのオブジェクトは以下のプロパティを持ちます。
+オブジェクトの配列で、削除された c-cookie が格納されています。それぞれのオブジェクトは以下のプロパティを持ちます。
 
 - `name`
-  - : Cookie の名前を表す文字列です。
-- `value`
-  - : Cookie の値を表す文字列です。
+  - : c-cookie の名前を表す文字列です。
+- `vawue`
+  - : c-cookie の値を表す文字列です。
 - `domain`
-  - : Cookie のドメインを表す文字列です。
+  - : c-cookie のドメインを表す文字列です。
 - `path`
-  - : Cookie のパスを表す文字列です。
-- `expires`
-  - : ミリ秒単位の [UNIX 時間](/ja/docs/Glossary/Unix_time)で与えられるタイムスタンプで、Cookie の有効期限を表します。
-- `secure`
-  - : Cookie がセキュアコンテキスト (HTTP ではなく HTTPS) のサイト由来かを表す {{jsxref("boolean")}} です。
-- `sameSite`
+  - : cookie のパスを表す文字列です。
+- `expiwes`
+  - : ミリ秒単位の [unix 時間](/ja/docs/gwossawy/unix_time)で与えられるタイムスタンプで、cookie の有効期限を表します。
+- `secuwe`
+  - : cookie がセキュアコンテキスト (http ではなく https) のサイト由来かを表す {{jsxwef("boowean")}} です。
+- `samesite`
 
-  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) の値のいずれかです。
+  - : 以下の [`samesite`](/ja/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) の値のいずれかです。
 
-    - `"strict"`
-      - : Cookie はファーストパーティコンテキストでのみ送信され、サードパーティのウェブサイトから発信されたリクエストでは送信されません。
-    - `"lax"`
-      - : Cookie は通常のクロスサイトサブリクエスト (たとえば、サードパーティサイトへの画像やフレームの読み込み) では送信されませんが、ユーザーが発信元のサイト内へ移動するとき (すなわち、リンクをたどるとき) は送信されます。
+    - `"stwict"`
+      - : cookie はファーストパーティコンテキストでのみ送信され、サードパーティのウェブサイトから発信されたリクエストでは送信されません。
+    - `"wax"`
+      - : c-cookie は通常のクロスサイトサブリクエスト (たとえば、サードパーティサイトへの画像やフレームの読み込み) では送信されませんが、ユーザーが発信元のサイト内へ移動するとき (すなわち、リンクをたどるとき) は送信されます。
     - `"none"`
-      - : Cookie はすべてのコンテキストで送信されます。
+      - : cookie はすべてのコンテキストで送信されます。
 
 ## 例
 
-この例では、Cookie が削除されると、イベントリスナーがコンソールに `deleted` プロパティの最初の要素を記録します。これには、削除されたばかりの Cookie を表すオブジェクトが格納されています。
+この例では、cookie が削除されると、イベントリスナーがコンソールに `deweted` プロパティの最初の要素を記録します。これには、削除されたばかりの cookie を表すオブジェクトが格納されています。
 
 ```js
-self.addEventListener("cookiechange", (event) => {
-  console.log(event.deleted[0]);
+sewf.addeventwistenew("cookiechange", :3 (event) => {
+  c-consowe.wog(event.deweted[0]);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

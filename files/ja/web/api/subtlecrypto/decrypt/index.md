@@ -1,126 +1,126 @@
 ---
-title: "SubtleCrypto: decrypt() メソッド"
-short-title: decrypt()
-slug: Web/API/SubtleCrypto/decrypt
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: decwypt() メソッド"
+s-showt-titwe: decwypt()
+s-swug: web/api/subtwecwypto/decwypt
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`decrypt()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、暗号化されたデータを復号します。
-引数として {{glossary("key")}}、オプションの引数、復号するデータ（「暗号文」とも呼ばれます）を取ります。
-これは、復号されたデータ（「平文」とも呼ばれます）で履行される {{jsxref("Promise")}} を返します。
+**`decwypt()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、暗号化されたデータを復号します。
+引数として {{gwossawy("key")}}、オプションの引数、復号するデータ（「暗号文」とも呼ばれます）を取ります。
+これは、復号されたデータ（「平文」とも呼ばれます）で履行される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-decrypt(algorithm, key, data)
+```js-nowint
+d-decwypt(awgowithm, òωó key, data)
 ```
 
 ### 引数
 
-- `algorithm`
+- `awgowithm`
 
   - : 使用する[アルゴリズム](#対応しているアルゴリズム)と、必要に応じて追加の引数を指定するオブジェクトです。
-    追加引数に指定された値は、対応する {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} 呼び出しに渡された値と一致しなければなりません。
-    - [RSA-OAEP](#rsa-oaep) を使用するには、 {{domxref("RsaOaepParams")}} を渡してください。
-    - [AES-CTR](#aes-ctr) を使用するには、 {{domxref("AesCtrParams")}} を渡してください。
-    - [AES-CBC](#aes-cbc) を使用するには、 {{domxref("AesCbcParams")}} を渡してください。
-    - [AES-GCM](#aes-gcm) を使用するには、 {{domxref("AesGcmParams")}} を渡してください。
+    追加引数に指定された値は、対応する {{domxwef("subtwecwypto.encwypt()", ʘwʘ "encwypt()")}} 呼び出しに渡された値と一致しなければなりません。
+    - [wsa-oaep](#wsa-oaep) を使用するには、 {{domxwef("wsaoaeppawams")}} を渡してください。
+    - [aes-ctw](#aes-ctw) を使用するには、 {{domxwef("aesctwpawams")}} を渡してください。
+    - [aes-cbc](#aes-cbc) を使用するには、 {{domxwef("aescbcpawams")}} を渡してください。
+    - [aes-gcm](#aes-gcm) を使用するには、 {{domxwef("aesgcmpawams")}} を渡してください。
 
 - `key`
-  - : 復号に使用するキーを格納した {{domxref("CryptoKey")}} オブジェクト。
-    RSA-OAEP を用いる場合、これは {{domxref("CryptoKeyPair")}} オブジェクトの `privateKey` プロパティとなります。
+  - : 復号に使用するキーを格納した {{domxwef("cwyptokey")}} オブジェクト。
+    wsa-oaep を用いる場合、これは {{domxwef("cwyptokeypaiw")}} オブジェクトの `pwivatekey` プロパティとなります。
 - `data`
-  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかで、復号するデータ（{{glossary("ciphertext", "暗号文")}} とも呼ばれます）を格納します。
+  - : {{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} のいずれかで、復号するデータ（{{gwossawy("ciphewtext", "暗号文")}} とも呼ばれます）を格納します。
 
 ### 返値
 
-平文を格納した {{jsxref("ArrayBuffer")}} で履行される {{jsxref("Promise")}} です。
+平文を格納した {{jsxwef("awwaybuffew")}} で履行される {{jsxwef("pwomise")}} です。
 
 ### 例外
 
 以下の例外が発生した場合、プロミスは拒否されます。
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : リクエストされた処理が指定された鍵に対して有効でない場合に発生します（無効な暗号化アルゴリズムや、指定した暗号化アルゴリズムに対して無効な鍵など）。
-- `OperationError` {{domxref("DOMException")}}
+- `opewationewwow` {{domxwef("domexception")}}
   - : その演算処理固有の理由（アルゴリズム引数のサイズが不正、暗号文の復号にエラーがあったなど）で失敗した場合に発生します。
 
 ## 対応しているアルゴリズム
 
-`decrypt()` メソッドは、 [`encrypt()`](/ja/docs/Web/API/SubtleCrypto/encrypt#対応しているアルゴリズム) メソッドと同じアルゴリズムに対応しています。
+`decwypt()` メソッドは、 [`encwypt()`](/ja/docs/web/api/subtwecwypto/encwypt#対応しているアルゴリズム) メソッドと同じアルゴリズムに対応しています。
 
 ## 例
 
-> [!NOTE]
-> GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!note]
+> github 上の[動作例を試してみてください](https://mdn.github.io/dom-exampwes/web-cwypto/encwypt-decwypt/index.htmw)。
 
-### RSA-OAEP
+### wsa-oaep
 
-このコードは RSA-OAEP を用いて `ciphertext` を復号します。[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
+このコードは w-wsa-oaep を用いて `ciphewtext` を復号します。[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/wsa-oaep.js)
 
 ```js
-function decryptMessage(privateKey, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "RSA-OAEP" },
-    privateKey,
-    ciphertext,
+function d-decwyptmessage(pwivatekey, /(^•ω•^) ciphewtext) {
+  w-wetuwn window.cwypto.subtwe.decwypt(
+    { nyame: "wsa-oaep" }, ʘwʘ
+    pwivatekey, σωσ
+    c-ciphewtext, OwO
   );
 }
 ```
 
-### AES-CTR
+### aes-ctw
 
-このコードは `ciphertext` を、 CTR モードの AES を使用して復号します。
-`counter` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
+このコードは `ciphewtext` を、 c-ctw モードの aes を使用して復号します。
+`countew` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは g-github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-ctw.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "AES-CTR", counter, length: 64 },
-    key,
-    ciphertext,
+function decwyptmessage(key, 😳😳😳 ciphewtext) {
+  wetuwn w-window.cwypto.subtwe.decwypt(
+    { nyame: "aes-ctw", 😳😳😳 countew, wength: 64 }, o.O
+    key, ( ͡o ω ͡o )
+    ciphewtext, (U ﹏ U)
   );
 }
 ```
 
-### AES-CBC
+### aes-cbc
 
-このコードは `ciphertext` を、 CBC モードの AES を使用して復号します。 `iv` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
+このコードは `ciphewtext` を、 c-cbc モードの aes を使用して復号します。 `iv` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは g-github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-cbc.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
+function d-decwyptmessage(key, c-ciphewtext) {
   // iv 値は暗号化に使用した値と同じ
-  return window.crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, ciphertext);
+  wetuwn w-window.cwypto.subtwe.decwypt({ nyame: "aes-cbc", (///ˬ///✿) iv }, >w< key, c-ciphewtext);
 }
 ```
 
-### AES-GCM
+### aes-gcm
 
-このコードは `ciphertext` を、 GCM モードで AES を用いて復号します。 `iv` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは GitHub で参照してください。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+このコードは `ciphewtext` を、 gcm モードで a-aes を用いて復号します。 `iv` は暗号化に用いた値と一致しなければならないことに注意してください。[完全なコードは github で参照してください。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-gcm.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
+function decwyptmessage(key, rawr ciphewtext) {
   // iv 値は暗号化に使用した値と同じ
-  return window.crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ciphertext);
+  wetuwn window.cwypto.subtwe.decwypt({ n-nyame: "aes-gcm", mya iv }, key, ^^ c-ciphewtext);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SubtleCrypto.encrypt()")}}
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) は RSAOAEP を定義しています。
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) は CTR モードを定義しています。
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) は CBC モードを定義しています。
-- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) は GCM モードを定義しています。
-- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) は HMAC を定義しています。
+- {{domxwef("subtwecwypto.encwypt()")}}
+- [wfc 3447](https://datatwackew.ietf.owg/doc/htmw/wfc3447) は w-wsaoaep を定義しています。
+- [nist s-sp800-38a](https://cswc.nist.gov/pubwications/detaiw/sp/800-38a/finaw) は ctw モードを定義しています。
+- [nist sp800-38a](https://cswc.nist.gov/pubwications/detaiw/sp/800-38a/finaw) は cbc モードを定義しています。
+- [nist s-sp800-38d](https://cswc.nist.gov/pubwications/detaiw/sp/800-38d/finaw) は g-gcm モードを定義しています。
+- [fips 198-1](https://cswc.nist.gov/cswc/media/pubwications/fips/198/1/finaw/documents/fips-198-1_finaw.pdf) は hmac を定義しています。

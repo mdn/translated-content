@@ -1,32 +1,32 @@
 ---
-title: "TransformStream: readable プロパティ"
-short-title: readable
-slug: Web/API/TransformStream/readable
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "twansfowmstweam: weadabwe プロパティ"
+s-showt-titwe: w-weadabwe
+swug: w-web/api/twansfowmstweam/weadabwe
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`readable`** は {{domxref("TransformStream")}} インターフェイスの読み取り専用プロパティで、この `TransformStream` が制御する {{domxref("ReadableStream")}} インスタンスを返します。
+**`weadabwe`** は {{domxwef("twansfowmstweam")}} インターフェイスの読み取り専用プロパティで、この `twansfowmstweam` が制御する {{domxwef("weadabwestweam")}} インスタンスを返します。
 
 ## 値
 
-{{domxref("ReadableStream")}} です。
+{{domxwef("weadabwestweam")}} です。
 
 ## 例
 
-次の例は、新しい {{domxref("TransformStream")}} を `textEncoderStream` として作成し、 `readable` の値をコンソールに出力します。
+次の例は、新しい {{domxwef("twansfowmstweam")}} を `textencodewstweam` として作成し、 `weadabwe` の値をコンソールに出力します。
 
 ```js
-const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable); // a ReadableStream
+c-const t-textencodewstweam = n-nyew twansfowmstweam();
+c-consowe.wog(textencodewstweam.weadabwe); // a weadabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

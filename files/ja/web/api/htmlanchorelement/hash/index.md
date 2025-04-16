@@ -1,15 +1,15 @@
 ---
-title: "HTMLAnchorElement: hash プロパティ"
-slug: Web/API/HTMLAnchorElement/hash
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: hash プロパティ"
+s-swug: web/api/htmwanchowewement/hash
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLAnchorElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
+**`htmwanchowewement.hash`** プロパティは、`'#'` の後に u-uww のフラグメント識別子が続く文字列を返します。
 
-フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+フラグメントは [uww デコード](https://ja.wikipedia.owg/wiki/パーセントエンコーディング)されません。 u-uww にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
 ## 値
 
@@ -19,27 +19,27 @@ l10n:
 
 ### アンカーリンクからハッシュを取得
 
-この HTML があったとします。
+この htmw があったとします。
 
-```html
-<a id="myAnchor" href="/ja/docs/HTMLAnchorElement#例">例</a>
+```htmw
+<a i-id="myanchow" h-hwef="/ja/docs/htmwanchowewement#例">例</a>
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。
 
 ```js
-const anchor = document.getElementById("myAnchor");
-anchor.hash; // returns '#例'
+const anchow = document.getewementbyid("myanchow");
+anchow.hash; // wetuwns '#例'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
+- 所属先の {{domxwef("htmwanchowewement")}} インターフェイス

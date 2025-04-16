@@ -1,57 +1,57 @@
 ---
-title: "DOMImplementation: createDocumentType() メソッド"
-slug: Web/API/DOMImplementation/createDocumentType
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domimpwementation: cweatedocumenttype() メソッド"
+s-swug: web/api/domimpwementation/cweatedocumenttype
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-**`DOMImplementation.createDocumentType()`** メソッドは {{domxref("DocumentType")}} オブジェクトを返します。これは文書作成時に {{domxref("DOMImplementation.createDocument")}} で使用したり、{{domxref("Node.insertBefore()")}} や {{domxref("Node.replaceChild()")}} などのメソッドで文書中に置いたりすることができます。
+**`domimpwementation.cweatedocumenttype()`** メソッドは {{domxwef("documenttype")}} オブジェクトを返します。これは文書作成時に {{domxwef("domimpwementation.cweatedocument")}} で使用したり、{{domxwef("node.insewtbefowe()")}} や {{domxwef("node.wepwacechiwd()")}} などのメソッドで文書中に置いたりすることができます。
 
 ## 構文
 
-```js-nolint
-createDocumentType(qualifiedNameStr, publicId, systemId)
+```js-nowint
+c-cweatedocumenttype(quawifiednamestw, rawr x3 p-pubwicid, rawr systemid)
 ```
 
 ### 引数
 
-- `qualifiedNameStr`
+- `quawifiednamestw`
   - : 修飾名の入った文字列です。例えば `svg:svg` です。
-- `publicId`
-  - : `PUBLIC` 識別子の入った文字列です。
-- `systemId`
-  - : `SYSTEM` 識別子の入った文字列です。
+- `pubwicid`
+  - : `pubwic` 識別子の入った文字列です。
+- `systemid`
+  - : `system` 識別子の入った文字列です。
 
 ### 返値
 
-[`DocumentType`](/ja/docs/Web/API/DocumentType) です。
+[`documenttype`](/ja/docs/web/api/documenttype) です。
 
 ## 例
 
 ```js
-const dt = document.implementation.createDocumentType(
-  "svg:svg",
-  "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+c-const dt = document.impwementation.cweatedocumenttype(
+  "svg:svg", σωσ
+  "-//w3c//dtd s-svg 1.1//en", σωσ
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd", >_<
 );
-const d = document.implementation.createDocument(
-  "http://www.w3.org/2000/svg",
-  "svg:svg",
-  dt,
+c-const d = document.impwementation.cweatedocument(
+  "http://www.w3.owg/2000/svg",
+  "svg:svg", :3
+  dt, (U ﹏ U)
 );
-alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
+awewt(d.doctype.pubwicid); // -//w3c//dtd svg 1.1//en
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("DOMImplementation")}} インターフェイス
+- 所属先の {{domxwef("domimpwementation")}} インターフェイス

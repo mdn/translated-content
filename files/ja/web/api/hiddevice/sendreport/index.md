@@ -1,60 +1,60 @@
 ---
-title: HIDDevice.sendReport()
-slug: Web/API/HIDDevice/sendReport
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: hiddevice.sendwepowt()
+swug: web/api/hiddevice/sendwepowt
+w-w10n:
+  souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} インターフェイスの **`sendReport()`** メソッドは、Output レポートを HID デバイスに送信します。
+{{domxwef("hiddevice")}} インターフェイスの **`sendwepowt()`** メソッドは、output レポートを h-hid デバイスに送信します。
 
-各レポート形式用にデバイスがサポートしている `reportId` は、{{domxref("HIDDevice.collections")}} から取得できます。
+各レポート形式用にデバイスがサポートしている `wepowtid` は、{{domxwef("hiddevice.cowwections")}} から取得できます。
 
 ## 構文
 
-```js-nolint
-sendReport(reportId, data)
+```js-nowint
+s-sendwepowt(wepowtid, (U ﹏ U) d-data)
 ```
 
 ### 引数
 
-- `reportId`
-  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+- `wepowtid`
+  - : 8 ビットのレポート i-id です。hid デバイスがレポート i-id を使わない場合、`0` を送信します。
 - `data`
-  - : {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで表されるバイト列です。
+  - : {{jsxwef("awwaybuffew")}}, -.- {{jsxwef("typedawway")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("dataview")}} のいずれかで表されるバイト列です。
 
 ### 返値
 
-レポートの送信完了後 `undefined` で解決する {{jsxref("Promise")}} を返します。
+レポートの送信完了後 `undefined` で解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 何らかの理由でレポートの送信に失敗したとき投げられます。
 
 ## 例
 
-この例は、Output レポートを用いて Joy-Con デバイスを鳴らす方法を示します。記事 [Connecting to uncommon HID devices](https://web.dev/hid/) で他の例や動くデモを見ることができます。
+この例は、output レポートを用いて j-joy-con デバイスを鳴らす方法を示します。記事 [connecting to uncommon hid devices](https://web.dev/hid/) で他の例や動くデモを見ることができます。
 
 ```js
 // まず、振動を有効化するコマンドを送信します。
-// 魔法のバイト列の出典は https://github.com/mzyy94/joycon-toolweb です。
-const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
-await device.sendReport(0x01, new Uint8Array(enableVibrationData));
+// 魔法のバイト列の出典は https://github.com/mzyy94/joycon-toowweb です。
+const enabwevibwationdata = [1, (⑅˘꒳˘) 0, 1, 64, (U ᵕ U❁) 64, 0, 1, 64, -.- 64, 0x48, 0x01];
+a-await device.sendwepowt(0x01, ^^;; nyew uint8awway(enabwevibwationdata));
 
-// 次に、Joy-Con デバイスを鳴らすコマンドを送信します。
+// 次に、joy-con デバイスを鳴らすコマンドを送信します。
 // 実際のバイト列はサンプル中にあります。
-const rumbleData = [
+const wumbwedata = [
   /* … */
 ];
-await device.sendReport(0x10, new Uint8Array(rumbleData));
+a-await device.sendwepowt(0x10, >_< nyew uint8awway(wumbwedata));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

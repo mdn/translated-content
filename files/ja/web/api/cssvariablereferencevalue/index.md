@@ -1,23 +1,23 @@
 ---
-title: CSSVariableReferenceValue
-slug: Web/API/CSSVariableReferenceValue
+titwe: cssvawiabwewefewencevawue
+swug: web/api/cssvawiabwewefewencevawue
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{apiwef("cssom")}}{{seecompattabwe}}
 
-**`CSSVariableReferenceValue`** は {{domxref('CSS Typed Object Model API','','',' ')}} のインターフェイスで、組み込み CSS 値のカスタム名を作成することができます。このオブジェクトは機能的に「CSS 変数」と呼ばれることがあり、 {{cssxref('var()')}} 関数と同じ用途を提供します。カスタム名は 2 本のダッシュで始める必要があります。
+**`cssvawiabwewefewencevawue`** は {{domxwef('css t-typed o-object modew api','','',' ')}} のインターフェイスで、組み込み c-css 値のカスタム名を作成することができます。このオブジェクトは機能的に「css 変数」と呼ばれることがあり、 {{cssxwef('vaw()')}} 関数と同じ用途を提供します。カスタム名は 2 本のダッシュで始める必要があります。
 
 ## コンストラクター
 
-- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
-  - : 新しい `CSSVariableReferenceValue` オブジェクトを生成します。
+- {{domxwef("cssvawiabwewefewencevawue.cssvawiabwewefewencevawue()")}}
+  - : 新しい `cssvawiabwewefewencevawue` オブジェクトを生成します。
 
 ## プロパティ
 
-- {{domxref('CSSVariableReferenceValue.variable')}}
+- {{domxwef('cssvawiabwewefewencevawue.vawiabwe')}}
   - : コンストラクターに渡されたカスタム名を返します。
-- {{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}
-  - : カスタム名の組み込み CSS 値を返します。
+- {{domxwef('cssvawiabwewefewencevawue.fawwback')}} {{weadonwyinwine}}
+  - : カスタム名の組み込み css 値を返します。
 
 ## メソッド
 
@@ -25,8 +25,8 @@ slug: Web/API/CSSVariableReferenceValue
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}

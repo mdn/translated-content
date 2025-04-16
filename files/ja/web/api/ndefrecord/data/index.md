@@ -1,40 +1,40 @@
 ---
-title: "NDEFRecord: data プロパティ"
-short-title: data
-slug: Web/API/NDEFRecord/data
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "ndefwecowd: data プロパティ"
+s-showt-titwe: d-data
+swug: w-web/api/ndefwecowd/data
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("web n-nyfc api")}}
 
-**`data`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
+**`data`** は {{domxwef("ndefwecowd")}} インターフェイスのプロパティで、このレコードのペイロードの生のバイト列が入った {{jsxwef("dataview")}} を返します。
 
 ## 構文
 
-```js-nolint
-NDEFRecord.data
+```js-nowint
+n-nydefwecowd.data
 ```
 
 ### 値
 
-エンコードしたこのレコードのペイロードをの入った {{jsxref("DataView")}} を返します。
+エンコードしたこのレコードのペイロードをの入った {{jsxwef("dataview")}} を返します。
 
 ## 例
 
-次の例は {{domxref("NDEFReadingEvent.message")}} から取得した {{domxref("NDEFMessage")}} オブジェクト内のレコードを反復処理します。 {{domxref("NDEFRecord.mediaType",
-"mediaType")}} に基づいてレコードを選択すると、次に `data` プロパティに格納されているものをデコードします。
+次の例は {{domxwef("ndefweadingevent.message")}} から取得した {{domxwef("ndefmessage")}} オブジェクト内のレコードを反復処理します。 {{domxwef("ndefwecowd.mediatype", ^^;;
+"mediatype")}} に基づいてレコードを選択すると、次に `data` プロパティに格納されているものをデコードします。
 
 ```js
-const ndef = new NDEFReader();
-await ndef.scan();
-ndef.onreading = (event) => {
-  const decoder = new TextDecoder();
-  for (const record of event.message.records) {
-    if (record.mediaType === "application/json") {
-      const json = JSON.parse(decoder.decode(record.data));
-      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
-      console.log(`${json.name} is ${article} ${json.title}`);
+const nydef = nyew nydefweadew();
+await nydef.scan();
+nydef.onweading = (event) => {
+  c-const decodew = nyew textdecodew();
+  f-fow (const wecowd of event.message.wecowds) {
+    i-if (wecowd.mediatype === "appwication/json") {
+      const json = json.pawse(decodew.decode(wecowd.data));
+      const awticwe = /^[aeio]/i.test(json.titwe) ? "an" : "a";
+      c-consowe.wog(`${json.name} is ${awticwe} ${json.titwe}`);
     }
   }
 };
@@ -42,8 +42,8 @@ ndef.onreading = (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

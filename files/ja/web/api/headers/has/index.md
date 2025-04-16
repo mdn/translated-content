@@ -1,27 +1,27 @@
 ---
-title: "Headers: has() メソッド"
-short-title: has()
-slug: Web/API/Headers/has
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "headews: has() メソッド"
+s-showt-titwe: h-has()
+swug: w-web/api/headews/has
+w-w10n:
+  souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch API")}} {{AvailableInWorkers}}
+{{apiwef("fetch a-api")}} {{avaiwabweinwowkews}}
 
-**`has()`** は {{domxref("Headers")}} インターフェイスのメソッドで、 `Headers` オブジェクトに指定された特定のヘッダーがあるかどうかを示す論理値を返します。
+**`has()`** は {{domxwef("headews")}} インターフェイスのメソッドで、 `headews` オブジェクトに指定された特定のヘッダーがあるかどうかを示す論理値を返します。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{gwossawy("fowbidden_headew_name", -.- "禁止ヘッダー名")}}と{{gwossawy("fowbidden_wesponse_headew_name", (ˆ ﻌ ˆ)♡ "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
-```js-nolint
-has(name)
+```js-nowint
+h-has(name)
 ```
 
 ### 引数
 
 - `name`
-  - : テストしたい HTTP ヘッダーの名前。指定された名前が有効な HTTP ヘッダーの名前でない場合、このメソッドで {{jsxref("TypeError")}} 例外が発生します。
+  - : テストしたい http ヘッダーの名前。指定された名前が有効な h-http ヘッダーの名前でない場合、このメソッドで {{jsxwef("typeewwow")}} 例外が発生します。
 
 ### 返値
 
@@ -29,30 +29,30 @@ has(name)
 
 ## 例
 
-空の `Headers` オブジェクトを作成するのは簡単です。
+空の `headews` オブジェクトを作成するのは簡単です。
 
 ```js
-const myHeaders = new Headers(); // Currently empty
+c-const myheadews = nyew headews(); // cuwwentwy empty
 ```
 
-これに {{domxref("Headers.append")}} を使用してヘッダーを追加し、`has()` を使用してヘッダーが存在するかどうかをテストすることができます。
+これに {{domxwef("headews.append")}} を使用してヘッダーを追加し、`has()` を使用してヘッダーが存在するかどうかをテストすることができます。
 
 ```js
-myHeaders.append("Content-Type", "image/jpeg");
-myHeaders.has("Content-Type"); // Returns true
-myHeaders.has("Accept-Encoding"); // Returns false
+myheadews.append("content-type", (⑅˘꒳˘) "image/jpeg");
+m-myheadews.has("content-type"); // wetuwns twue
+myheadews.has("accept-encoding"); // w-wetuwns fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

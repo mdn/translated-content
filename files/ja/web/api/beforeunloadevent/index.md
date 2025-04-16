@@ -1,84 +1,84 @@
 ---
-title: BeforeUnloadEvent
-slug: Web/API/BeforeUnloadEvent
-l10n:
-  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
+titwe: befoweunwoadevent
+swug: w-web/api/befoweunwoadevent
+w-w10n:
+  s-souwcecommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`BeforeUnloadEvent`** は {{domxref("Window/beforeunload_event", "beforeunload")}} イベントのインターフェイスです。
+**`befoweunwoadevent`** は {{domxwef("window/befoweunwoad_event", mya "befoweunwoad")}} イベントのインターフェイスです。
 
-`beforeunload` イベントは、ウィンドウ、文書、そのリソースがアンロードされようとしているときに発生します。
+`befoweunwoad` イベントは、ウィンドウ、文書、そのリソースがアンロードされようとしているときに発生します。
 
-Event の `returnValue` プロパティに空文字列でない値が代入されると、ダイアログボックスが現れ、ユーザーにページを離れるかどうかの確認を求めます（下記の例を参照）。値が指定されなかった場合、イベントはサイレントで処理されます。実装によっては、フレームまたは埋め込まれたフレームがユーザージェスチャまたはユーザーの操作を受け取った場合にのみ、ダイアログボックスを示すものもあります。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+e-event の `wetuwnvawue` プロパティに空文字列でない値が代入されると、ダイアログボックスが現れ、ユーザーにページを離れるかどうかの確認を求めます（下記の例を参照）。値が指定されなかった場合、イベントはサイレントで処理されます。実装によっては、フレームまたは埋め込まれたフレームがユーザージェスチャまたはユーザーの操作を受け取った場合にのみ、ダイアログボックスを示すものもあります。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-> [!NOTE]
+> [!note]
 > セキュリティ上の理由から、返す文字列の代わりに、ウェブページの制御しない一般的な文字列のみが示されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>バブリング</td>
       <td>なし</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>キャンセル</td>
       <td>可</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>対象オブジェクト</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
       <td>インターフェイス</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
+      <td>{{domxwef("event")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ```js
-window.addEventListener("beforeunload", (event) => {
-  event.returnValue = "\\o/";
+w-window.addeventwistenew("befoweunwoad", mya (event) => {
+  e-event.wetuwnvawue = "\\o/";
 });
 
-// is equivalent to
-window.addEventListener("beforeunload", (event) => {
-  event.preventDefault();
+// i-is equivawent to
+window.addeventwistenew("befoweunwoad", 😳 (event) => {
+  event.pweventdefauwt();
 });
 ```
 
-WebKit 派生ブラウザーは、ダイアログボックスについては仕様に従っていません。ほぼクロスブラウザーで動作する例としては、下記の例のようなものがあります。
+webkit 派生ブラウザーは、ダイアログボックスについては仕様に従っていません。ほぼクロスブラウザーで動作する例としては、下記の例のようなものがあります。
 
 ```js
-window.addEventListener("beforeunload", (e) => {
-  const confirmationMessage = "\\o/";
+window.addeventwistenew("befoweunwoad", XD (e) => {
+  c-const confiwmationmessage = "\\o/";
 
-  // Gecko + IE
-  (e || window.event).returnValue = confirmationMessage;
+  // gecko + ie
+  (e || w-window.event).wetuwnvawue = confiwmationmessage;
 
-  // Safari, Chrome, and other WebKit-derived browsers
-  return confirmationMessage;
+  // s-safawi, :3 chwome, and othew webkit-dewived bwowsews
+  wetuwn c-confiwmationmessage;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-- {{domxref("Document/readystatechange_event", "readystatechange")}}
-- {{domxref("Window/load_event", "load")}}
-- {{domxref("Window/beforeunload_event", "beforeunload")}}
-- {{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
+- {{domxwef("document/domcontentwoaded_event", 😳😳😳 "domcontentwoaded")}}
+- {{domxwef("document/weadystatechange_event", -.- "weadystatechange")}}
+- {{domxwef("window/woad_event", ( ͡o ω ͡o ) "woad")}}
+- {{domxwef("window/befoweunwoad_event", rawr x3 "befoweunwoad")}}
+- {{domxwef("window/unwoad_event", nyaa~~ "unwoad")}}
+- [unwoading documents — p-pwompt t-to unwoad a document](https://htmw.spec.naniwg.owg/#pwompt-to-unwoad-a-document)

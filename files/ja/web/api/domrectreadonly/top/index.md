@@ -1,14 +1,14 @@
 ---
-title: "DOMRectReadOnly: top プロパティ"
-short-title: top
-slug: Web/API/DOMRectReadOnly/top
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domwectweadonwy: top プロパティ"
+s-showt-titwe: top
+s-swug: web/api/domwectweadonwy/top
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`top`** は **`DOMRectReadOnly`** の読み取り専用インターフェイスで、 `DOMRect` の上端の座標値を返します。（`y` と同じ、または `height` が負の数の場合は `y + height` と同じです。）
+**`top`** は **`domwectweadonwy`** の読み取り専用インターフェイスで、 `domwect` の上端の座標値を返します。（`y` と同じ、または `height` が負の数の場合は `y + h-height` と同じです。）
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

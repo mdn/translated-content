@@ -1,37 +1,37 @@
 ---
-title: "Accelerometer: x プロパティ"
-slug: Web/API/Accelerometer/x
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "accewewometew: x プロパティ"
+s-swug: w-web/api/accewewometew/x
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{apiwef("sensow a-api")}}{{seecompattabwe}}
 
-{{domxref("Accelerometer")}} インターフェイスの読み取り専用プロパティ **`x`** は、デバイスの x 軸方向の加速度を表す数値を返します。
+{{domxwef("accewewometew")}} インターフェイスの読み取り専用プロパティ **`x`** は、デバイスの x-x 軸方向の加速度を表す数値を返します。
 
 ## 値
 
-{{jsxref('Number')}} です。
+{{jsxwef('numbew')}} です。
 
 ## 例
 
-通常、加速度は {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで取得します。以下の例では、これを 1 秒あたり 60 回行います。
+通常、加速度は {{domxwef('sensow.weading_event', σωσ 'weading')}} イベントコールバックで取得します。以下の例では、これを 1 秒あたり 60 回行います。
 
 ```js
-const accelerometer = new Accelerometer({ frequency: 60 });
+c-const accewewometew = n-nyew accewewometew({ fwequency: 60 });
 
-accelerometer.addEventListener("reading", (e) => {
-  console.log(`X 軸方向の加速度 ${accelerometer.x}`);
-  console.log(`Y 軸方向の加速度 ${accelerometer.y}`);
-  console.log(`Z 軸方向の加速度 ${accelerometer.z}`);
+accewewometew.addeventwistenew("weading", >_< (e) => {
+  consowe.wog(`x 軸方向の加速度 ${accewewometew.x}`);
+  consowe.wog(`y 軸方向の加速度 ${accewewometew.y}`);
+  c-consowe.wog(`z 軸方向の加速度 ${accewewometew.z}`);
 });
-accelerometer.start();
+accewewometew.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "MediaMetadata: album プロパティ"
-short-title: album
-slug: Web/API/MediaMetadata/album
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediametadata: awbum プロパティ"
+s-showt-titwe: awbum
+s-swug: web/api/mediametadata/awbum
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Session API")}}
+{{apiwef("media s-session a-api")}}
 
-**`album`** は {{domxref("MediaMetaData")}} インターフェイスのプロパティで、再生するメディアを含むアルバムまたはコレクションの名前を返したり設定したりします。
+**`awbum`** は {{domxwef("mediametadata")}} インターフェイスのプロパティで、再生するメディアを含むアルバムまたはコレクションの名前を返したり設定したりします。
 
 ## 値
 
@@ -19,42 +19,42 @@ l10n:
 以下の例では、ブラウザーとの互換性を調べ、メディアセッションの現在のメタデータを設定しています。
 
 ```js
-if ("mediaSession" in navigator) {
-  navigator.mediaSession.metadata = new MediaMetadata({
-    title: "Unforgettable",
-    artist: "Nat King Cole",
-    album: "The Ultimate Collection (Remastered)",
-    artwork: [
+i-if ("mediasession" i-in nyavigatow) {
+  n-nyavigatow.mediasession.metadata = new mediametadata({
+    titwe: "unfowgettabwe", -.-
+    awtist: "nat king cowe", ( ͡o ω ͡o )
+    a-awbum: "the uwtimate cowwection (wemastewed)", rawr x3
+    awtwowk: [
       {
-        src: "https://dummyimage.com/96x96",
-        sizes: "96x96",
-        type: "image/png",
+        s-swc: "https://dummyimage.com/96x96", nyaa~~
+        sizes: "96x96", /(^•ω•^)
+        t-type: "image/png", rawr
+      }, OwO
+      {
+        swc: "https://dummyimage.com/128x128", (U ﹏ U)
+        sizes: "128x128", >_<
+        type: "image/png", rawr x3
       },
       {
-        src: "https://dummyimage.com/128x128",
-        sizes: "128x128",
-        type: "image/png",
+        s-swc: "https://dummyimage.com/192x192", mya
+        sizes: "192x192", nyaa~~
+        type: "image/png", (⑅˘꒳˘)
+      }, rawr x3
+      {
+        s-swc: "https://dummyimage.com/256x256", (✿oωo)
+        s-sizes: "256x256", (ˆ ﻌ ˆ)♡
+        type: "image/png", (˘ω˘)
       },
       {
-        src: "https://dummyimage.com/192x192",
-        sizes: "192x192",
-        type: "image/png",
-      },
+        swc: "https://dummyimage.com/384x384", (⑅˘꒳˘)
+        sizes: "384x384", (///ˬ///✿)
+        type: "image/png", 😳😳😳
+      }, 🥺
       {
-        src: "https://dummyimage.com/256x256",
-        sizes: "256x256",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/384x384",
-        sizes: "384x384",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/512x512",
-        sizes: "512x512",
-        type: "image/png",
-      },
+        swc: "https://dummyimage.com/512x512", mya
+        s-sizes: "512x512", 🥺
+        type: "image/png", >_<
+      }, >_<
     ],
   });
 }
@@ -62,8 +62,8 @@ if ("mediaSession" in navigator) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,160 +1,160 @@
 ---
-title: Blob
-slug: Web/API/Blob
-l10n:
-  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
+titwe: bwob
+swug: web/api/bwob
+w-w10n:
+  souwcecommit: d-de2ef1e9950eebbacdd55f072dfe03014d113bbd
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-**`Blob`** インターフェイスは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{DOMxRef("ReadableStream")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。
+**`bwob`** インターフェイスは b-bwob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{domxwef("weadabwestweam")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。
 
-Blob が表現することができるデータは必ずしも JavaScript ネイティブ形式である必要はありません。{{DOMxRef("File")}} インターフェイスは Blob をベースにしており、 Blob の機能を継承してユーザーのシステム上のファイルをサポートするように拡張しています。
+b-bwob が表現することができるデータは必ずしも j-javascwipt ネイティブ形式である必要はありません。{{domxwef("fiwe")}} インターフェイスは b-bwob をベースにしており、 b-bwob の機能を継承してユーザーのシステム上のファイルをサポートするように拡張しています。
 
-## Blob の使用
+## bwob の使用
 
-他の Blob 以外のオブジェクトやデータから `Blob` を作成するには、{{DOMxRef("Blob.Blob", "Blob()")}} コンストラクターを使用します。他の Blob のデータのサブセットを含む Blob を作成するには、 {{DOMxRef("Blob.slice()", "slice()")}} メソッドを使用します。ユーザーのファイルシステム上のファイルの `Blob` オブジェクトを取得するには、 {{DOMxRef("File")}} のドキュメントを参照してください。
+他の bwob 以外のオブジェクトやデータから `bwob` を作成するには、{{domxwef("bwob.bwob", -.- "bwob()")}} コンストラクターを使用します。他の bwob のデータのサブセットを含む bwob を作成するには、 {{domxwef("bwob.swice()", 🥺 "swice()")}} メソッドを使用します。ユーザーのファイルシステム上のファイルの `bwob` オブジェクトを取得するには、 {{domxwef("fiwe")}} のドキュメントを参照してください。
 
-`Blob` オブジェクトを受け入れる API も、 {{DOMxRef("File")}} のドキュメントに掲載しています。
+`bwob` オブジェクトを受け入れる api も、 {{domxwef("fiwe")}} のドキュメントに掲載しています。
 
 ## コンストラクター
 
-- {{DOMxRef("Blob.Blob", "Blob()")}}
-  - : コンストラクターに渡された配列内のすべてのデータを連結したものを含む、新しく作成された `Blob` オブジェクトを返します。
+- {{domxwef("bwob.bwob", o.O "bwob()")}}
+  - : コンストラクターに渡された配列内のすべてのデータを連結したものを含む、新しく作成された `bwob` オブジェクトを返します。
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
-  - : `Blob` オブジェクトに含まれるデータのサイズ（バイト単位）。
-- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
-  - : `Blob` に含まれるデータの MIME タイプを示す文字列。タイプが不明な場合、この文字列は空です。
+- {{domxwef("bwob.size")}} {{weadonwyinwine}}
+  - : `bwob` オブジェクトに含まれるデータのサイズ（バイト単位）。
+- {{domxwef("bwob.type")}} {{weadonwyinwine}}
+  - : `bwob` に含まれるデータの mime タイプを示す文字列。タイプが不明な場合、この文字列は空です。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("Blob.arrayBuffer()")}}
-  - : `Blob` の全内容をバイナリーデータとして含む {{jsxref("ArrayBuffer")}} で解決するプロミスを返します。
-- {{DOMxRef("Blob.bytes()")}}
-  - : この `Blob` の内容を含む {{jsxref("Uint8Array")}} を返すプロミスを返します。
-- {{DOMxRef("Blob.slice()")}}
-  - : 呼び出された Blob の指定されたバイト数範囲のデータを含む新しい `Blob` オブジェクトを返します。
-- {{DOMxRef("Blob.stream()")}}
-  - : `Blob` の内容を読み込むために使用できる {{DOMxRef("ReadableStream")}} を返します。
-- {{DOMxRef("Blob.text()")}}
-  - : UTF-8 テキストとして解釈された Blob の内容全体を含む文字列で解決するプロミスを返します。
+- {{domxwef("bwob.awwaybuffew()")}}
+  - : `bwob` の全内容をバイナリーデータとして含む {{jsxwef("awwaybuffew")}} で解決するプロミスを返します。
+- {{domxwef("bwob.bytes()")}}
+  - : この `bwob` の内容を含む {{jsxwef("uint8awway")}} を返すプロミスを返します。
+- {{domxwef("bwob.swice()")}}
+  - : 呼び出された b-bwob の指定されたバイト数範囲のデータを含む新しい `bwob` オブジェクトを返します。
+- {{domxwef("bwob.stweam()")}}
+  - : `bwob` の内容を読み込むために使用できる {{domxwef("weadabwestweam")}} を返します。
+- {{domxwef("bwob.text()")}}
+  - : utf-8 テキストとして解釈された bwob の内容全体を含む文字列で解決するプロミスを返します。
 
 ## 例
 
-## Blob の作成
+## b-bwob の作成
 
-{{DOMxRef("Blob.Blob", "Blob()")}} コンストラクターは、他のオブジェクトから Blob を作成することができます。たとえば、JSON 文字列から Blob を作成するには、次のようにします。
+{{domxwef("bwob.bwob", /(^•ω•^) "bwob()")}} コンストラクターは、他のオブジェクトから bwob を作成することができます。たとえば、json 文字列から b-bwob を作成するには、次のようにします。
 
 ```js
-const obj = { hello: "world" };
-const blob = new Blob([JSON.stringify(obj, null, 2)], {
-  type: "application/json",
+const obj = { hewwo: "wowwd" };
+const bwob = n-nyew bwob([json.stwingify(obj, nyaa~~ nyuww, nyaa~~ 2)], {
+  t-type: "appwication/json", :3
 });
 ```
 
-### 型付き配列の内容を表す URL の作成
+### 型付き配列の内容を表す u-uww の作成
 
-次のコードは、 JavaScript の[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を作成し、型付き配列のデータを含む新しい `Blob` を作成します。次に、{{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} を呼び出して、Blob を {{glossary("URL")}} に変換します。
+次のコードは、 javascwipt の[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)を作成し、型付き配列のデータを含む新しい `bwob` を作成します。次に、{{domxwef("uww/cweateobjectuww_static", 😳😳😳 "uww.cweateobjectuww()")}} を呼び出して、bwob を {{gwossawy("uww")}} に変換します。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  この例では、スペース文字から文字 Z までの ASCII
-  コードを含む型付けされた配列を作成し、それをオブジェクト URL
-  に変換します。そのオブジェクト URL
+  この例では、スペース文字から文字 z までの ascii
+  コードを含む型付けされた配列を作成し、それをオブジェクト uww
+  に変換します。そのオブジェクト u-uww
   を開くためのリンクが作成されます。リンクをクリックすると、デコードされたオブジェクト
-  URL が表示されます。
+  uww が表示されます。
 </p>
 ```
 
-#### JavaScript
+#### javascwipt
 
-このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、{{HTMLElement("img")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
+このコードの例の主要な部分は `typedawwaytouww()` 関数で、与えられた型付き配列から `bwob` を作成し、それに対するオブジェクト uww を返します。データをオブジェクト uww に変換した後は、{{htmwewement("img")}} 要素の [`swc`](/ja/docs/web/htmw/wefewence/ewements/img#swc) 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
 
 ```js
-function showViewLiveResultButton() {
-  if (window.self !== window.top) {
+function showviewwivewesuwtbutton() {
+  i-if (window.sewf !== window.top) {
     // この文書がフレーム内にある場合、最初にユーザーに独自のタブ
     // またはウィンドウで開くよう指示します。そうでなければ、
     // この例はうまく動作しません。
-    const p = document.querySelector("p");
-    p.textContent = "";
-    const button = document.createElement("button");
-    button.textContent = "上記のコード例の結果をライブで見る";
-    p.append(button);
-    button.addEventListener("click", () => window.open(location.href));
-    return true;
+    c-const p = d-document.quewysewectow("p");
+    p-p.textcontent = "";
+    c-const button = document.cweateewement("button");
+    button.textcontent = "上記のコード例の結果をライブで見る";
+    p-p.append(button);
+    button.addeventwistenew("cwick", (˘ω˘) () => window.open(wocation.hwef));
+    wetuwn t-twue;
   }
-  return false;
+  wetuwn fawse;
 }
 
-if (!showViewLiveResultButton()) {
-  function typedArrayToURL(typedArray, mimeType) {
-    return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType }),
+if (!showviewwivewesuwtbutton()) {
+  function typedawwaytouww(typedawway, ^^ mimetype) {
+    w-wetuwn uww.cweateobjectuww(
+      nyew b-bwob([typedawway.buffew], :3 { t-type: mimetype }), -.-
     );
   }
-  const bytes = new Uint8Array(59);
+  c-const bytes = nyew uint8awway(59);
 
-  for (let i = 0; i < 59; i++) {
-    bytes[i] = 32 + i;
+  fow (wet i = 0; i < 59; i++) {
+    b-bytes[i] = 32 + i-i;
   }
 
-  const url = typedArrayToURL(bytes, "text/plain");
+  const uww = typedawwaytouww(bytes, 😳 "text/pwain");
 
-  const link = document.createElement("a");
-  link.href = url;
-  link.innerText = "Open the array URL";
+  c-const wink = d-document.cweateewement("a");
+  wink.hwef = u-uww;
+  wink.innewtext = "open the a-awway uww";
 
-  document.body.appendChild(link);
+  document.body.appendchiwd(wink);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}
+{{embedwivesampwe("cweating_a_uww_wepwesenting_the_contents_of_a_typed_awway", mya 600, 200)}}
 
-### Blob からデータを抽出する
+### bwob からデータを抽出する
 
-`Blob` から内容を読み込む方法の 1 つは、{{DOMxRef("FileReader")}} を使用することです。次のコードは、`Blob` の内容を型付き配列として読み込みます。
+`bwob` から内容を読み込む方法の 1 つは、{{domxwef("fiweweadew")}} を使用することです。次のコードは、`bwob` の内容を型付き配列として読み込みます。
 
 ```js
-const reader = new FileReader();
-reader.addEventListener("loadend", () => {
-  // reader.result には blob の内容が型付き配列として格納されます。
+c-const weadew = nyew fiweweadew();
+w-weadew.addeventwistenew("woadend", () => {
+  // weadew.wesuwt には b-bwob の内容が型付き配列として格納されます。
 });
-reader.readAsArrayBuffer(blob);
+w-weadew.weadasawwaybuffew(bwob);
 ```
 
-`Blob` から内容を読み込む別の方法としては、 {{domxref("Response")}} を使用する方法があります。次のコードは、`Blob` の内容をテキストとして読み取るものです。
+`bwob` から内容を読み込む別の方法としては、 {{domxwef("wesponse")}} を使用する方法があります。次のコードは、`bwob` の内容をテキストとして読み取るものです。
 
 ```js
-const text = await new Response(blob).text();
+const text = await nyew wesponse(bwob).text();
 ```
 
-または、{{DOMxRef("Blob.text()")}} を使用します。
+または、{{domxwef("bwob.text()")}} を使用します。
 
 ```js
-const text = await blob.text();
+const text = await bwob.text();
 ```
 
-`FileReader` の他のメソッドを使用することで、Blob の内容を文字列またはデータ URL として読み込むことができます。
+`fiweweadew` の他のメソッドを使用することで、bwob の内容を文字列またはデータ uww として読み込むことができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("FileReader")}}
-- {{DOMxRef("File")}}
-- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxwef("fiweweadew")}}
+- {{domxwef("fiwe")}}
+- {{domxwef("uww/cweateobjectuww_static", "uww.cweateobjectuww()")}}
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

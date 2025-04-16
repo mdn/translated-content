@@ -1,74 +1,74 @@
 ---
-title: "SpeechSynthesisUtterance: boundary イベント"
-short-title: boundary
-slug: Web/API/SpeechSynthesisUtterance/boundary_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "speechsynthesisuttewance: boundawy イベント"
+s-showt-titwe: b-boundawy
+s-swug: web/api/speechsynthesisuttewance/boundawy_event
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`boundary`** は [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、発話が胡屋分の境界に達したときに発生します。
+**`boundawy`** は [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のイベントで、発話が胡屋分の境界に達したときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("boundary", (event) => {});
+addeventwistenew("boundawy", (U ᵕ U❁) (event) => {});
 
-onboundary = (event) => {};
+onboundawy = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SpeechSynthesisEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("speechsynthesisevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("SpeechSynthesisEvent")}}
+{{inhewitancediagwam("speechsynthesisevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティが利用可能です。_
+_以下に挙げたプロパティに加え、親インターフェイスである {{domxwef("event")}} のプロパティが利用可能です。_
 
-- {{domxref("SpeechSynthesisEvent.charIndex", "charIndex")}} {{ReadOnlyInline}}
-  - : イベントが発生したときに発話されていた {{domxref("SpeechSynthesisUtterance.text")}} 内の文字のインデックス位置を返します。
-- {{domxref("SpeechSynthesisEvent.elapsedTime", "elapsedTime")}} {{ReadOnlyInline}}
-  - : イベントが発生した時点の {{domxref("SpeechSynthesisUtterance.text")}} が話し始めてからの経過時間（秒）を返します。
-- {{domxref("SpeechSynthesisEvent.name", "name")}} {{ReadOnlyInline}}
-  - : {{domxref("SpeechSynthesisUtterance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} イベントの場合は到達した [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) マーカーの名前、 {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} イベントの場合は到達した境界の種類です。
-- {{domxref("SpeechSynthesisEvent.utterance", "utterance")}} {{ReadOnlyInline}}
-  - : イベントが発生した {{domxref("SpeechSynthesisUtterance")}} インスタンスを返します。
+- {{domxwef("speechsynthesisevent.chawindex", -.- "chawindex")}} {{weadonwyinwine}}
+  - : イベントが発生したときに発話されていた {{domxwef("speechsynthesisuttewance.text")}} 内の文字のインデックス位置を返します。
+- {{domxwef("speechsynthesisevent.ewapsedtime", ^^;; "ewapsedtime")}} {{weadonwyinwine}}
+  - : イベントが発生した時点の {{domxwef("speechsynthesisuttewance.text")}} が話し始めてからの経過時間（秒）を返します。
+- {{domxwef("speechsynthesisevent.name", >_< "name")}} {{weadonwyinwine}}
+  - : {{domxwef("speechsynthesisuttewance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxwef("speechsynthesisuttewance.mawk_event", mya "mawk")}} イベントの場合は到達した [ssmw](https://www.w3.owg/tw/speech-synthesis/#s3.3.2) マーカーの名前、 {{domxwef("speechsynthesisuttewance.boundawy_event", mya "boundawy")}} イベントの場合は到達した境界の種類です。
+- {{domxwef("speechsynthesisevent.uttewance", 😳 "uttewance")}} {{weadonwyinwine}}
+  - : イベントが発生した {{domxwef("speechsynthesisuttewance")}} インスタンスを返します。
 
 ## 例
 
-`boundary` イベントを [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`boundawy` イベントを [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-utterThis.addEventListener("boundary", (event) => {
-  console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+uttewthis.addeventwistenew("boundawy", (event) => {
+  consowe.wog(
+    `${event.name} boundawy weached a-aftew ${event.ewapsedtime} seconds.`, XD
   );
 });
 ```
 
-または `onboundary` イベントハンドラープロパティで使用することができます。
+または `onboundawy` イベントハンドラープロパティで使用することができます。
 
 ```js
-utterThis.onboundary = (event) => {
-  console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+uttewthis.onboundawy = (event) => {
+  c-consowe.wog(
+    `${event.name} boundawy w-weached aftew ${event.ewapsedtime} seconds.`, :3
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

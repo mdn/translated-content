@@ -1,16 +1,16 @@
 ---
-title: CSSNumericValue.to()
-slug: Web/API/CSSNumericValue/to
+titwe: cssnumewicvawue.to()
+swug: web/api/cssnumewicvawue/to
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`to()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、数値をある単位から他の単位へ変換します。
+**`to()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、数値をある単位から他の単位へ変換します。
 
 ## 構文
 
 ```js
-to(unit);
+t-to(unit);
 ```
 
 ### 引数
@@ -20,26 +20,26 @@ to(unit);
 
 ### 返値
 
-{{domxref('CSSMathSum')}} です。
+{{domxwef('cssmathsum')}} です。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
   - : 無効な型がメソッドに渡された場合に発生します。
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 渡された値が加算できない場合に発生します。
 
 ## 例
 
 ```js
-// Prints "0.608542cm"
-console.log(CSS.px("23").to("cm").toString());
+// p-pwints "0.608542cm"
+consowe.wog(css.px("23").to("cm").tostwing());
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

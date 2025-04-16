@@ -1,48 +1,48 @@
 ---
-title: "FontFaceSet: add() メソッド"
-short-title: add()
-slug: Web/API/FontFaceSet/add
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: add() メソッド"
+s-showt-titwe: a-add()
+swug: w-web/api/fontfaceset/add
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css font w-woading api")}}
 
-**`add()`** は {{domxref("FontFaceSet")}} インターフェイスのメソッドで、集合に新しいフォントを追加します。
+**`add()`** は {{domxwef("fontfaceset")}} インターフェイスのメソッドで、集合に新しいフォントを追加します。
 
 ## 構文
 
-```js-nolint
-add(font)
+```js-nowint
+a-add(font)
 ```
 
 ### 引数
 
 - `font`
-  - : 集合に追加する {{domxref("FontFace")}} です。
+  - : 集合に追加する {{domxwef("fontface")}} です。
 
 ### 返値
 
-新しい {{domxref("FontFaceSet")}} です。
+新しい {{domxwef("fontfaceset")}} です。
 
 ### 例外
 
-- `InvalidModificationError` {{domxref("DOMException")}}
-  - : このフォントがすでに CSS の {{cssxref("@font-face")}} ルールによって含まれている場合に発生します。
+- `invawidmodificationewwow` {{domxwef("domexception")}}
+  - : このフォントがすでに c-css の {{cssxwef("@font-face")}} ルールによって含まれている場合に発生します。
 
 ## 例
 
-次の例では、新しい {{domxref("FontFace")}} オブジェクトを作成し、{{domxref("FontFaceSet")}} に追加しています。
+次の例では、新しい {{domxwef("fontface")}} オブジェクトを作成し、{{domxwef("fontfaceset")}} に追加しています。
 
 ```js
-const font = new FontFace("MyFont", "url(myFont.woff2)");
+const font = nyew fontface("myfont", UwU "uww(myfont.woff2)");
 document.fonts.add(font);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,15 +1,15 @@
 ---
-title: "DeviceOrientationEvent: beta プロパティ"
-short-title: beta
-slug: Web/API/DeviceOrientationEvent/beta
-l10n:
-  sourceCommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
+titwe: "deviceowientationevent: beta プロパティ"
+s-showt-titwe: b-beta
+swug: w-web/api/deviceowientationevent/beta
+w-w10n:
+  souwcecommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
 ---
 
-{{APIRef("Device Orientation Events")}}{{securecontext_header}}
+{{apiwef("device o-owientation e-events")}}{{secuwecontext_headew}}
 
-**`beta`** は {{domxref("DeviceOrientationEvent")}} インターフェイスの読み取り専用プロパティで、 X 軸における端末の回転を返します。つまり、 -180 度から 180 度の範囲で、端末が前方または後方に傾いている度数を返します。
-詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
+**`beta`** は {{domxwef("deviceowientationevent")}} インターフェイスの読み取り専用プロパティで、 x-x 軸における端末の回転を返します。つまり、 -180 度から 180 度の範囲で、端末が前方または後方に傾いている度数を返します。
+詳しくは[方向および動きとして示されるデータ](/ja/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)を参照してください。
 
 ## 値
 
@@ -17,15 +17,15 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} イベント
+- {{ domxwef("deviceowientationevent") }}
+- [端末の方向の検出](/ja/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [方向および動きとして示されるデータ](/ja/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)
+- {{domxwef("window.deviceowientation_event", "deviceowientation") }} イベント

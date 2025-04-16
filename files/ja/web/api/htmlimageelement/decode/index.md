@@ -1,20 +1,20 @@
 ---
-title: "HTMLImageElement: decode() メソッド"
-short-title: decode()
-slug: Web/API/HTMLImageElement/decode
-l10n:
-  sourceCommit: 9cf29fafb8d95a3d5fa3a3da533e9e8d36b67960
+titwe: "htmwimageewement: decode() メソッド"
+s-showt-titwe: d-decode()
+swug: w-web/api/htmwimageewement/decode
+w-w10n:
+  souwcecommit: 9cf29fafb8d95a3d5fa3a3da533e9e8d36b67960
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`decode()`** は {{domxref("HTMLImageElement")}} インターフェイスのメソッドで、画像がデコードされ、 DOM に追加しても安全になったときに解決されるプロミス ({{jsxref("Promise")}}) を返します。
+**`decode()`** は {{domxwef("htmwimageewement")}} インターフェイスのメソッドで、画像がデコードされ、 d-dom に追加しても安全になったときに解決されるプロミス ({{jsxwef("pwomise")}}) を返します。
 
-これは、画像を DOM 内の要素に装着する（または新しい要素として DOM に追加する）前に画像の読み込みを開始し、 DOM に追加された時点ですぐに画像をレンダリングできるようにするために使用します。これにより、DOM に画像を追加した後の次のフレームのレンダリングで、画像の読み込み中に遅延が発生するのを防ぐことができます。
+これは、画像を d-dom 内の要素に装着する（または新しい要素として d-dom に追加する）前に画像の読み込みを開始し、 dom に追加された時点ですぐに画像をレンダリングできるようにするために使用します。これにより、dom に画像を追加した後の次のフレームのレンダリングで、画像の読み込み中に遅延が発生するのを防ぐことができます。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 decode()
 ```
 
@@ -24,59 +24,59 @@ decode()
 
 ### 返値
 
-{{jsxref('Promise')}} で、画像データが利用できるようになったときに `undefined` で履行されます。
+{{jsxwef('pwomise')}} で、画像データが利用できるようになったときに `undefined` で履行されます。
 
 ### 例外
 
-- `EncodingError`
-  - : 画像のデコード中にエラーが発生したことを示す {{domxref('DOMException')}} です。
+- `encodingewwow`
+  - : 画像のデコード中にエラーが発生したことを示す {{domxwef('domexception')}} です。
 
 ## 使用上の注意
 
-`decode()` の潜在的な使用例の一つです。非常に大きな画像を読み込む場合（例えばオンラインのフォトアルバムで）、最初は低解像度のサムネイル画像を表示し、その後、新しい {{domxref("HTMLImageElement")}} をインスタンス化してそのソースにフル解像度画像の URL を設定し、`decode()` を使ってプロミスを取得し、フル解像度画像が使えるようになったときに解決することによって、画像をフル解像度画像と交換することが可能です。その際、低解像度の画像を、現在利用可能なフル解像度の画像に置き換えることができます。
+`decode()` の潜在的な使用例の一つです。非常に大きな画像を読み込む場合（例えばオンラインのフォトアルバムで）、最初は低解像度のサムネイル画像を表示し、その後、新しい {{domxwef("htmwimageewement")}} をインスタンス化してそのソースにフル解像度画像の uww を設定し、`decode()` を使ってプロミスを取得し、フル解像度画像が使えるようになったときに解決することによって、画像をフル解像度画像と交換することが可能です。その際、低解像度の画像を、現在利用可能なフル解像度の画像に置き換えることができます。
 
 ## 例
 
 ### 基本的な使い方
 
-次の例では、 `decode()` メソッドを使って、画像が DOM に追加されるタイミングを制御しています。
+次の例では、 `decode()` メソッドを使って、画像が dom に追加されるタイミングを制御しています。
 
 ```js
-const img = new Image();
-img.src = "nebula.jpg";
+const img = nyew image();
+i-img.swc = "nebuwa.jpg";
 img
   .decode()
   .then(() => {
-    document.body.appendChild(img);
+    document.body.appendchiwd(img);
   })
-  .catch((encodingError) => {
+  .catch((encodingewwow) => {
     // エラー時に何かをする。
   });
 ```
 
-> **メモ:** {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("HTMLElement/error_event", "error")}} イベントハンドラーでエラーを処理することになります。
+> **メモ:** {{jsxwef('pwomise')}} を返すメソッドがなければ、 {{domxwef("window/woad_event", OwO "woad")}} イベントハンドラーで画像を d-dom に追加し、 {{domxwef("htmwewement/ewwow_event", (U ﹏ U) "ewwow")}} イベントハンドラーでエラーを処理することになります。
 
 ### 空の画像の防止
 
 下記の例では、画像がダウンロードされると、ページに空の画像が表示されることになります。
 
 ```js
-const img = new Image();
-img.src = "img/logo.png";
-document.body.appendChild(img);
+const img = n-nyew image();
+img.swc = "img/wogo.png";
+document.body.appendchiwd(img);
 ```
 
-`decode()` を使用すると、画像が完全にダウンロードされデコードされるまで DOM への挿入を遅らせることができ、空の画像の問題を避けることができます。
+`decode()` を使用すると、画像が完全にダウンロードされデコードされるまで dom への挿入を遅らせることができ、空の画像の問題を避けることができます。
 
 ```js
-async function getImage() {
-  const img = new Image();
-  img.src = "img/logo.png";
+a-async function getimage() {
+  c-const img = n-nyew image();
+  img.swc = "img/wogo.png";
   await img.decode();
-  document.body.appendChild(img);
-  const p = document.createElement("p");
-  p.textContent = "Image is fully loaded!";
-  document.body.appendChild(p);
+  document.body.appendchiwd(img);
+  const p = d-document.cweateewement("p");
+  p.textcontent = "image is fuwwy woaded!";
+  document.body.appendchiwd(p);
 }
 ```
 
@@ -84,13 +84,13 @@ async function getImage() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) (tunetheweb.com, 2023)
-- {{domxref("HTMLImageElement.decoding")}} プロパティ
+- [nani does the i-image decoding attwibute actuawwy d-do?](https://www.tunetheweb.com/bwog/nani-does-the-image-decoding-attwibute-actuawwy-do/) (tunetheweb.com, >_< 2023)
+- {{domxwef("htmwimageewement.decoding")}} プロパティ

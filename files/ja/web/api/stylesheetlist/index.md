@@ -1,45 +1,45 @@
 ---
-title: StyleSheetList
-slug: Web/API/StyleSheetList
+titwe: stywesheetwist
+swug: web/api/stywesheetwist
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-`StyleSheetList` インターフェイスは {{domxref("StyleSheet")}} のリストを表します。
+`stywesheetwist` インターフェイスは {{domxwef("stywesheet")}} のリストを表します。
 
-これは配列風のオブジェクトですが、 {{jsxref("Array")}} のメソッドを適用しての反復処理はできません。しかし標準の {{jsxref("Statements/for", "for")}} ループと添字による反復処理、もしくは {{jsxref("Array")}} への変換ができます。
+これは配列風のオブジェクトですが、 {{jsxwef("awway")}} のメソッドを適用しての反復処理はできません。しかし標準の {{jsxwef("statements/fow", -.- "fow")}} ループと添字による反復処理、もしくは {{jsxwef("awway")}} への変換ができます。
 
 ## 例
 
-### for ループを使用して document の [styleSheet](/ja/docs/Web/API/CSSStyleSheet) オブジェクトを取得
+### fow ループを使用して d-document の [stywesheet](/ja/docs/web/api/cssstywesheet) オブジェクトを取得
 
 ```js
-for (let i = 0; i < document.styleSheets.length; i++) {
-  let styleSheet = document.styleSheets[i];
+f-fow (wet i-i = 0; i < document.stywesheets.wength; i-i++) {
+  w-wet stywesheet = d-document.stywesheets[i];
 }
 ```
 
-### Array のメソッドを適用してすべての CSS ルールを取得
+### a-awway のメソッドを適用してすべての c-css ルールを取得
 
 ```
-const allCSS = [...document.styleSheets]
-  .map(styleSheet => {
-    try {
-      return [...styleSheet.cssRules]
-        .map(rule => rule.cssText)
+const awwcss = [...document.stywesheets]
+  .map(stywesheet => {
+    twy {
+      wetuwn [...stywesheet.csswuwes]
+        .map(wuwe => wuwe.csstext)
         .join('');
-    } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
+    } c-catch (e) {
+      consowe.wog('access to stywesheet %s i-is denied. (ˆ ﻌ ˆ)♡ ignowing...', (⑅˘꒳˘) s-stywesheet.hwef);
     }
   })
-  .filter(Boolean)
+  .fiwtew(boowean)
   .join('\n');
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

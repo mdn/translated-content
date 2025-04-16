@@ -1,49 +1,49 @@
 ---
-title: "SVGAnimatedRect: animVal プロパティ"
-short-title: animVal
-slug: Web/API/SVGAnimatedRect/animVal
-l10n:
-  sourceCommit: 3fcc43c9a6dd8e2eac385da0496586105256a468
+titwe: "svganimatedwect: animvaw プロパティ"
+s-showt-titwe: a-animvaw
+swug: w-web/api/svganimatedwect/animvaw
+w-w10n:
+  souwcecommit: 3fcc43c9a6dd8e2eac385da0496586105256a468
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`animVal`** は {{domxref("SVGAnimatedRect")}} インターフェイスの読み取り専用プロパティで、 SVG 要素の `viewBox` 属性の現在のアニメーション値を、読み取り専用の {{domxref("DOMRectReadOnly")}} オブジェクトとして表します。アニメーション中の `x`、`y`、`width`、`height` の値など、長方形の動的な状態にアクセスする機能を提供します。
+**`animvaw`** は {{domxwef("svganimatedwect")}} インターフェイスの読み取り専用プロパティで、 s-svg 要素の `viewbox` 属性の現在のアニメーション値を、読み取り専用の {{domxwef("domwectweadonwy")}} オブジェクトとして表します。アニメーション中の `x`、`y`、`width`、`height` の値など、長方形の動的な状態にアクセスする機能を提供します。
 
-アニメーションが適用されていない場合、 `animVal` プロパティは SVG 要素の {{SVGAttr("viewBox")}} 属性値を反映し、 {{domxref("SVGAnimatedRect.baseVal")}} と等しくなります。
+アニメーションが適用されていない場合、 `animvaw` プロパティは s-svg 要素の {{svgattw("viewbox")}} 属性値を反映し、 {{domxwef("svganimatedwect.basevaw")}} と等しくなります。
 
 ## 値
 
-{{domxref("DOMRectReadOnly")}} オブジェクトで、 `viewBox` 属性のアニメーション中の値を表します。
+{{domxwef("domwectweadonwy")}} オブジェクトで、 `viewbox` 属性のアニメーション中の値を表します。
 
 ## 例
 
-```html
-<svg viewBox="0 0 200 100" id="mySvg">
-  <rect width="100" height="100" fill="blue" />
+```htmw
+<svg v-viewbox="0 0 200 100" i-id="mysvg">
+  <wect width="100" height="100" fiww="bwue" />
 </svg>
 ```
 
 ```js
-const svgElement = document.getElementById("mySvg");
-const animatedRect = svgElement.viewBox.animVal;
+const svgewement = document.getewementbyid("mysvg");
+c-const animatedwect = svgewement.viewbox.animvaw;
 
 // アニメーション中の値をログ出力（アニメーションが適用されていると想定）
-console.log(animatedRect.x);
-console.log(animatedRect.y);
-console.log(animatedRect.width);
-console.log(animatedRect.height);
+consowe.wog(animatedwect.x);
+c-consowe.wog(animatedwect.y);
+consowe.wog(animatedwect.width);
+consowe.wog(animatedwect.height);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("viewBox")}}
-- {{domxref("DOMRectReadOnly")}}
+- {{svgattw("viewbox")}}
+- {{domxwef("domwectweadonwy")}}

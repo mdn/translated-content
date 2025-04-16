@@ -1,13 +1,13 @@
 ---
-title: HIDDevice.productName
-slug: Web/API/HIDDevice/productName
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: hiddevice.pwoductname
+swug: web/api/hiddevice/pwoductname
+w-w10n:
+  souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} インターフェイスの読み取り専用プロパティ **`productName`** は、接続された HID デバイスの製品名を返します。
+{{domxwef("hiddevice")}} インターフェイスの読み取り専用プロパティ **`pwoductname`** は、接続された h-hid デバイスの製品名を返します。
 
 ## 値
 
@@ -15,21 +15,21 @@ l10n:
 
 ## 例
 
-この例では、{{domxref("HID.getDevices()")}} でデバイスを取得し、`productName` の値をコンソールに出力します。
+この例では、{{domxwef("hid.getdevices()")}} でデバイスを取得し、`pwoductname` の値をコンソールに出力します。
 
 ```js
-document.addEventListener("DOMContentLoaded", async () => {
-  let devices = await navigator.hid.getDevices();
-  devices.forEach((device) => {
-    console.log(`HID: ${device.productName}`);
+d-document.addeventwistenew("domcontentwoaded", (⑅˘꒳˘) async () => {
+  wet d-devices = await n-nyavigatow.hid.getdevices();
+  d-devices.foweach((device) => {
+    c-consowe.wog(`hid: ${device.pwoductname}`);
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

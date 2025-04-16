@@ -1,18 +1,18 @@
 ---
-title: FileSystemSyncAccessHandle.getSize()
-slug: Web/API/FileSystemSyncAccessHandle/getSize
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemsyncaccesshandwe.getsize()
+swug: web/api/fiwesystemsyncaccesshandwe/getsize
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system a-access api")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} インターフェイスの **`getSize()`** メソッドは、ハンドルに対応するファイルのサイズをバイト単位で返します。
+{{domxwef("fiwesystemsyncaccesshandwe")}} インターフェイスの **`getsize()`** メソッドは、ハンドルに対応するファイルのサイズをバイト単位で返します。
 
 ## 構文
 
-```js-nolint
-getSize()
+```js-nowint
+g-getsize()
 ```
 
 ### 引数
@@ -21,65 +21,65 @@ getSize()
 
 ### 返値
 
-ファイルのバイト数を表す数値で解決する {{jsxref('Promise')}} を返します。
+ファイルのバイト数を表す数値で解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 対応するアクセスハンドルが既に閉じられているとき投げられます。
 
 ## 例
 
-以下の非同期のイベントハンドラー関数は、Web Worker の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
+以下の非同期のイベントハンドラー関数は、web w-wowkew の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
 
 - 同期式ファイルアクセスハンドルを作成します。
-- ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
+- ファイルのサイズを取得し、格納用の {{jsxwef("awwaybuffew")}} を作成します。
 - ファイルの内容をバッファーに読み込みます。
 - メッセージをエンコードし、ファイルの終端に書き込みます、
 - 変更をディスクに書き込み、アクセスハンドルを閉じます。
 
 ```js
-onmessage = async (e) => {
+o-onmessage = a-async (e) => {
   // メインスクリプトからの処理対象のメッセージを取得する
-  const message = e.data;
+  c-const message = e.data;
 
-  // draft ファイルのハンドルを取得する
-  const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
+  // dwaft ファイルのハンドルを取得する
+  const woot = await nyavigatow.stowage.getdiwectowy();
+  c-const dwafthandwe = await woot.getfiwehandwe("dwaft.txt", (⑅˘꒳˘) { cweate: t-twue });
   // 同期式アクセスハンドルを取得する
-  const accessHandle = await draftHandle.createSyncAccessHandle();
+  const accesshandwe = a-await dwafthandwe.cweatesyncaccesshandwe();
 
   // ファイルのサイズを取得する
-  const fileSize = accessHandle.getSize();
+  const fiwesize = accesshandwe.getsize();
   // ファイルの内容をバッファーに読み込む
-  const buffer = new DataView(new ArrayBuffer(fileSize));
-  const readBuffer = accessHandle.read(buffer, { at: 0 });
+  c-const buffew = nyew d-dataview(new awwaybuffew(fiwesize));
+  c-const weadbuffew = accesshandwe.wead(buffew, rawr x3 { at: 0 });
 
   // メッセージをファイルの終端に書き込む
-  const encoder = new TextEncoder();
-  const encodedMessage = encoder.encode(message);
-  const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
+  const encodew = nyew textencodew();
+  c-const encodedmessage = encodew.encode(message);
+  const wwitebuffew = accesshandwe.wwite(encodedmessage, (✿oωo) { at: weadbuffew });
 
   // 変更をディスクに書き込む
-  accessHandle.flush();
+  a-accesshandwe.fwush();
 
-  // 完了したら、常に FileSystemSyncAccessHandle を閉じる
-  accessHandle.close();
+  // 完了したら、常に fiwesystemsyncaccesshandwe を閉じる
+  a-accesshandwe.cwose();
 };
 ```
 
-> [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・`getSize()`・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在は[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!note]
+> 仕様書の以前のバージョンでは、{{domxwef("fiwesystemsyncaccesshandwe.cwose()", (ˆ ﻌ ˆ)♡ "cwose()")}}・{{domxwef("fiwesystemsyncaccesshandwe.fwush()", (˘ω˘) "fwush()")}}・`getsize()`・{{domxwef("fiwesystemsyncaccesshandwe.twuncate()", (⑅˘꒳˘) "twuncate()")}} は誤って非同期メソッドとされていました。これは現在は[変更されています](https://github.com/naniwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system a-access api](/ja/docs/web/api/fiwe_system_api)
+- [the f-fiwe system access api: simpwifying access t-to wocaw fiwes](https://web.dev/fiwe-system-access/)

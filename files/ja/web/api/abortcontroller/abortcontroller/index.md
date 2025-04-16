@@ -1,19 +1,19 @@
 ---
-title: "AbortController: AbortController() コンストラクター"
-short-title: AbortController()
-slug: Web/API/AbortController/AbortController
-l10n:
-  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
+titwe: "abowtcontwowwew: abowtcontwowwew() コンストラクター"
+s-showt-titwe: a-abowtcontwowwew()
+s-swug: web/api/abowtcontwowwew/abowtcontwowwew
+w-w10n:
+  souwcecommit: c-c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`AbortController()`** は、新しい {{domxref("AbortController")}} オブジェクトインスタンスを生成します。
+**`abowtcontwowwew()`** は、新しい {{domxwef("abowtcontwowwew")}} オブジェクトインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new AbortController()
+```js-nowint
+n-nyew a-abowtcontwowwew()
 ```
 
 ### 引数
@@ -22,50 +22,50 @@ new AbortController()
 
 ## 例
 
-次のコードでは、動画のダウンロードを[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して行おうとします。
+次のコードでは、動画のダウンロードを[フェッチ a-api](/ja/docs/web/api/fetch_api) を使用して行おうとします。
 
-最初に {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
+最初に {{domxwef("abowtcontwowwew.abowtcontwowwew","abowtcontwowwew()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxwef("abowtsignaw")}} オブジェクトへの参照を {{domxwef("abowtcontwowwew.signaw")}} プロパティを使用して取り込みます。
 
-[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{ signal }`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
+[フェッチリクエスト](/ja/docs/web/api/window/fetch)が開始されると、 `abowtsignaw` をリクエストのオプションオブジェクト（下記の `{ signaw }`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxwef("abowtcontwowwew.abowt()")}} を呼び出すことでフェッチを中断できるようになります。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+const contwowwew = nyew abowtcontwowwew();
+const signaw = contwowwew.signaw;
 
-const url = "video.mp4";
-const downloadBtn = document.querySelector(".download");
-const abortBtn = document.querySelector(".abort");
+c-const uww = "video.mp4";
+const downwoadbtn = document.quewysewectow(".downwoad");
+c-const abowtbtn = document.quewysewectow(".abowt");
 
-downloadBtn.addEventListener("click", fetchVideo);
+d-downwoadbtn.addeventwistenew("cwick", 😳😳😳 fetchvideo);
 
-abortBtn.addEventListener("click", () => {
-  controller.abort();
-  console.log("Download aborted");
+abowtbtn.addeventwistenew("cwick", -.- () => {
+  contwowwew.abowt();
+  consowe.wog("downwoad a-abowted");
 });
 
-function fetchVideo() {
-  fetch(url, { signal })
-    .then((response) => {
-      console.log("Download complete", response);
+function fetchvideo() {
+  fetch(uww, ( ͡o ω ͡o ) { s-signaw })
+    .then((wesponse) => {
+      c-consowe.wog("downwoad compwete", rawr x3 wesponse);
     })
-    .catch((err) => {
-      console.error(`Download error: ${err.message}`);
+    .catch((eww) => {
+      consowe.ewwow(`downwoad ewwow: ${eww.message}`);
     });
 }
 ```
 
-> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` で拒否されます。
+> **メモ:** `abowt()` が呼び出されると、`fetch()` のプロミスは `abowtewwow` で拒否されます。
 
-[GitHub に完全に動作する例](https://github.com/mdn/dom-examples/tree/main/abort-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-examples/abort-api/)も確認してください。
+[github に完全に動作する例](https://github.com/mdn/dom-exampwes/twee/main/abowt-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-exampwes/abowt-api/)も確認してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- [フェッチ a-api](/ja/docs/web/api/fetch_api)

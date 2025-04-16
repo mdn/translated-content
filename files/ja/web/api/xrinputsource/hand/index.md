@@ -1,32 +1,32 @@
 ---
-title: "XRInputSource: hand プロパティ"
-short-title: hand
-slug: Web/API/XRInputSource/hand
-l10n:
-  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
+titwe: "xwinputsouwce: hand プロパティ"
+s-showt-titwe: hand
+s-swug: web/api/xwinputsouwce/hand
+w-w10n:
+  souwcecommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
-{{APIRef("WebXR Device API")}}
+{{apiwef("webxw d-device api")}}
 
-**`hand`** は {{domxref("XRInputSource")}} インターフェイスの読み取り専用プロパティで、ハンドトラッキング機器へのあくせすを提供する {{domxref("XRHand")}} オブジェクトです。
+**`hand`** は {{domxwef("xwinputsouwce")}} インターフェイスの読み取り専用プロパティで、ハンドトラッキング機器へのあくせすを提供する {{domxwef("xwhand")}} オブジェクトです。
 
 ## 値
 
-{{domxref("XRHand")}} オブジェクト、または {{domxref("XRSession")}} が `hand-tracking` 機能記述子で[リクエスト](/ja/docs/Web/API/XRSystem/requestSession)されていない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
+{{domxwef("xwhand")}} オブジェクト、または {{domxwef("xwsession")}} が `hand-twacking` 機能記述子で[リクエスト](/ja/docs/web/api/xwsystem/wequestsession)されていない場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) です。
 
 ## 例
 
 ```js
-navigator.xr
-  .requestSession({ optionalFeatures: ["hand-tracking"] })
+n-nyavigatow.xw
+  .wequestsession({ o-optionawfeatuwes: ["hand-twacking"] })
   .then(/* … */);
 
-function renderFrame(session, frame) {
+f-function wendewfwame(session, >_< f-fwame) {
   // …
 
-  for (const inputSource of session.inputSources) {
-    if (inputSource.hand) {
-      // render a hand model, perform gesture detection, etc.
+  fow (const inputsouwce of session.inputsouwces) {
+    if (inputsouwce.hand) {
+      // wendew a-a hand modew, :3 pewfowm gestuwe detection, (U ﹏ U) etc. -.-
     }
   }
 }
@@ -34,12 +34,12 @@ function renderFrame(session, frame) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XRHand")}}
+- {{domxwef("xwhand")}}

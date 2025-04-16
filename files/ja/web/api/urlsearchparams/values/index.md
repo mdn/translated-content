@@ -1,21 +1,21 @@
 ---
-title: "URLSearchParams: values() メソッド"
-short-title: values()
-slug: Web/API/URLSearchParams/values
-l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+titwe: "uwwseawchpawams: vawues() メソッド"
+s-showt-titwe: v-vawues()
+swug: web/api/uwwseawchpawams/vawues
+w-w10n:
+  s-souwcecommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`values()`** は {{domxref("URLsearchParams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべての値を反復処理できる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。 値は文字列です。
+**`vawues()`** は {{domxwef("uwwseawchpawams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべての値を反復処理できる{{jsxwef("itewation_pwotocows",'イテレーター')}}を返します。 値は文字列です。
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 引数
@@ -24,49 +24,49 @@ values()
 
 ### 返値
 
-{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター")}}を返します。
 
 ## 例
 
-次の例では、`URLSearchParams` コンストラクターに URL 検索文字列を渡し、`values()` が返すイテレーターを使って値をコンソールに表示します。
+次の例では、`uwwseawchpawams` コンストラクターに u-uww 検索文字列を渡し、`vawues()` が返すイテレーターを使って値をコンソールに表示します。
 
 ```js
-const searchParams = new URLSearchParams("key1=value1&key2=value2");
+const s-seawchpawams = nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
-for (const value of searchParams.values()) {
-  console.log(value);
+fow (const vawue of seawchpawams.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 結果は次のとおりです。
 
-```plain
-value1
-value2
+```pwain
+v-vawue1
+vawue2
 ```
 
 この例も上記とほぼ同じですが、先にイテレーターを配列にキャストしています。
 
 ```js
-const searchParams = new URLSearchParams("key1=value1&key2=value2");
+const seawchpawams = n-nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
-console.log(Array.from(searchParams.values()));
+c-consowe.wog(awway.fwom(seawchpawams.vawues()));
 ```
 
 結果は次の通りです。
 
-```plain
-['value1', 'value2']
+```pwain
+['vawue1', -.- 'vawue2']
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイス
+- {{domxwef("uww")}} インターフェイス

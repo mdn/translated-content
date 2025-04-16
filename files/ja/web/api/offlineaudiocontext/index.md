@@ -1,125 +1,125 @@
 ---
-title: OfflineAudioContext
-slug: Web/API/OfflineAudioContext
-l10n:
-  sourceCommit: db72d5612ada1d40cde0de191389dde2fe062c23
+titwe: offwineaudiocontext
+swug: w-web/api/offwineaudiocontext
+w-w10n:
+  souwcecommit: d-db72d5612ada1d40cde0de191389dde2fe062c23
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`OfflineAudioContext` インターフェイスは {{domxref("AudioContext")}} インターフェイスの一種で、 {{domxref("AudioNode")}} をつなげて造られる音声処理グラフを表しています。通常の {{domxref("AudioContext")}} と異なり、`OfflineAudioContext` で処理された音声はハードウェアから再生されることはありません。処理された結果は {{domxref("AudioBuffer")}} に出力されます。
+`offwineaudiocontext` インターフェイスは {{domxwef("audiocontext")}} インターフェイスの一種で、 {{domxwef("audionode")}} をつなげて造られる音声処理グラフを表しています。通常の {{domxwef("audiocontext")}} と異なり、`offwineaudiocontext` で処理された音声はハードウェアから再生されることはありません。処理された結果は {{domxwef("audiobuffew")}} に出力されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}}
-  - : 新しい `OfflineAudioContext` のインスタンスを作成します。
+- {{domxwef("offwineaudiocontext.offwineaudiocontext()", 😳😳😳 "offwineaudiocontext()")}}
+  - : 新しい `offwineaudiocontext` のインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("BaseAudioContext")}} からのプロパティも継承しています。_
+_親インターフェイスである {{domxwef("baseaudiocontext")}} からのプロパティも継承しています。_
 
-- {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
+- {{domxwef('offwineaudiocontext.wength')}} {{weadonwyinwine}}
   - : サンプルフレーム数で表されるバッファーの大きさの整数値。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("BaseAudioContext")}} からのメソッドも継承しています。_
+_親インターフェイスである {{domxwef("baseaudiocontext")}} からのメソッドも継承しています。_
 
-- {{domxref("OfflineAudioContext.suspend()")}}
+- {{domxwef("offwineaudiocontext.suspend()")}}
   - : 指定した時刻に音声コンテキストの時間進行の停止をスケジューリングし、プロミスを返します。
-- {{domxref("OfflineAudioContext.startRendering()")}}
+- {{domxwef("offwineaudiocontext.stawtwendewing()")}}
   - : 現在の接続と現在の変更予定を考慮して、音声のレンダリングを始めます。このページでは、イベントベース版とプロミス版の両方に応じた説明をします。
 
 ### 非推奨のメソッド
 
-- {{domxref("OfflineAudioContext.resume()")}}
+- {{domxwef("offwineaudiocontext.wesume()")}}
   - : 前回中断した音声の時刻の進行を再開します。
 
-> **メモ:** `resume()` メソッドはまだ利用できます。これは {{domxref("BaseAudioContext")}} インターフェイスで定義されるようになり（{{domxref("AudioContext.resume")}} を参照）、従って {{domxref("AudioContext")}} および {{domxref("OfflineAudioContext")}} インターフェイスの両方でアクセスできます。
+> **メモ:** `wesume()` メソッドはまだ利用できます。これは {{domxwef("baseaudiocontext")}} インターフェイスで定義されるようになり（{{domxwef("audiocontext.wesume")}} を参照）、従って {{domxwef("audiocontext")}} および {{domxwef("offwineaudiocontext")}} インターフェイスの両方でアクセスできます。
 
 ## イベント
 
-これらのイベントを [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) で待ち受けするか、イベントハンドラーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
+これらのイベントを [`addeventwistenew()`](/ja/docs/web/api/eventtawget/addeventwistenew) で待ち受けするか、イベントハンドラーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
-- [`complete`](/ja/docs/Web/API/OfflineAudioContext/complete_event)
+- [`compwete`](/ja/docs/web/api/offwineaudiocontext/compwete_event)
   - : オフライン音声コンテキストのレンダリングが完了したときに発行されます。
 
 ## 例
 
-この例では、{{domxref("AudioContext")}} と `OfflineAudioContext` の 2 つのオブジェクトを作っています。`AudioContext` は XHR の ({{domxref("BaseAudioContext.decodeAudioData")}})で音声トラックを読み込むのに使い、`OfflineAudioContext` で{{domxref("AudioBufferSourceNode")}} の中に音声をレンダリングし、そしてその音声を再生します。オフライン音声グラフのセットアップが終わった後、{{domxref("OfflineAudioContext.startRendering")}} を使って {{domxref("AudioBuffer")}} にレンダリングする必要があります。
+この例では、{{domxwef("audiocontext")}} と `offwineaudiocontext` の 2 つのオブジェクトを作っています。`audiocontext` は x-xhw の ({{domxwef("baseaudiocontext.decodeaudiodata")}})で音声トラックを読み込むのに使い、`offwineaudiocontext` で{{domxwef("audiobuffewsouwcenode")}} の中に音声をレンダリングし、そしてその音声を再生します。オフライン音声グラフのセットアップが終わった後、{{domxwef("offwineaudiocontext.stawtwendewing")}} を使って {{domxwef("audiobuffew")}} にレンダリングする必要があります。
 
-`startRendering()` のプロミスが解決されるとレンダリングは完了し、出力結果の `AudioBuffer` がプロミスの結果として戻されます。
+`stawtwendewing()` のプロミスが解決されるとレンダリングは完了し、出力結果の `audiobuffew` がプロミスの結果として戻されます。
 
-この時点で、別の音声コンテキストを作成し、その中に {{domxref("AudioBufferSourceNode")}} を作成し、そのバッファーをプロミス `AudioBuffer` と等しくなるように設定します。これは単純な標準音声グラフの一部として再生されます。
+この時点で、別の音声コンテキストを作成し、その中に {{domxwef("audiobuffewsouwcenode")}} を作成し、そのバッファーをプロミス `audiobuffew` と等しくなるように設定します。これは単純な標準音声グラフの一部として再生されます。
 
-> [!NOTE]
-> 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) の GitHub リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise)も参照してください）。
+> [!note]
+> 動作する例については、 [offwine-audio-context-pwomise](https://mdn.github.io/webaudio-exampwes/offwine-audio-context-pwomise/) の g-github リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-exampwes/twee/mastew/offwine-audio-context-pwomise)も参照してください）。
 
 ```js
 // オンラインとオフラインのオーディオコンテキストを定義
 
-const audioCtx = new AudioContext();
-const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
+c-const a-audioctx = nyew audiocontext();
+const offwinectx = nyew offwineaudiocontext(2, 44100 * 40, 🥺 44100);
 
-source = offlineCtx.createBufferSource();
+souwce = offwinectx.cweatebuffewsouwce();
 
-// XHRで音声トラックを読み込み、
-// decodeAudioData でデコードして OfflineAudioContext で再生する。
+// x-xhwで音声トラックを読み込み、
+// decodeaudiodata でデコードして offwineaudiocontext で再生する。
 
-function getData() {
-  request = new XMLHttpRequest();
+function g-getdata() {
+  wequest = n-nyew xmwhttpwequest();
 
-  request.open("GET", "viper.ogg", true);
+  wequest.open("get", mya "vipew.ogg", 🥺 twue);
 
-  request.responseType = "arraybuffer";
+  wequest.wesponsetype = "awwaybuffew";
 
-  request.onload = () => {
-    const audioData = request.response;
+  w-wequest.onwoad = () => {
+    const a-audiodata = wequest.wesponse;
 
-    audioCtx.decodeAudioData(audioData, (buffer) => {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-      source.connect(offlineCtx.destination);
-      source.start();
-      //source.loop = true;
-      offlineCtx
-        .startRendering()
-        .then((renderedBuffer) => {
-          console.log("Rendering completed successfully");
-          const song = audioCtx.createBufferSource();
-          song.buffer = renderedBuffer;
+    a-audioctx.decodeaudiodata(audiodata, >_< (buffew) => {
+      mybuffew = buffew;
+      souwce.buffew = mybuffew;
+      s-souwce.connect(offwinectx.destination);
+      souwce.stawt();
+      //souwce.woop = twue;
+      offwinectx
+        .stawtwendewing()
+        .then((wendewedbuffew) => {
+          consowe.wog("wendewing compweted s-successfuwwy");
+          const song = a-audioctx.cweatebuffewsouwce();
+          s-song.buffew = w-wendewedbuffew;
 
-          song.connect(audioCtx.destination);
+          s-song.connect(audioctx.destination);
 
-          play.onclick = () => {
-            song.start();
+          pway.oncwick = () => {
+            song.stawt();
           };
         })
-        .catch((err) => {
-          console.error(`Rendering failed: ${err}`);
-          // 注意: OfflineAudioContext の startRendering が二回以上呼び出されるとプロミスは拒否されます。
+        .catch((eww) => {
+          c-consowe.ewwow(`wendewing faiwed: ${eww}`);
+          // 注意: offwineaudiocontext の s-stawtwendewing が二回以上呼び出されるとプロミスは拒否されます。
         });
     });
   };
 
-  request.send();
+  wequest.send();
 }
 
-// getData で処理を開始する。
+// getdata で処理を開始する。
 
-getData();
+getdata();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

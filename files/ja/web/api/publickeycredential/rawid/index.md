@@ -1,60 +1,60 @@
 ---
-title: PublicKeyCredential.rawId
-slug: Web/API/PublicKeyCredential/rawId
-l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+titwe: pubwickeycwedentiaw.wawid
+swug: web/api/pubwickeycwedentiaw/wawid
+w-w10n:
+  s-souwcecommit: b-b7cd76af245c330c6a1a9f489602015fa0714044
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-**`rawId`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、資格情報の識別子が入った {{jsxref("ArrayBuffer")}} オブジェクトです。
+**`wawid`** は {{domxwef("pubwickeycwedentiaw")}} インターフェイスの読み取り専用プロパティで、資格情報の識別子が入った {{jsxwef("awwaybuffew")}} オブジェクトです。
 
-{{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Glossary/Base64)されたものです。
+{{domxwef("pubwickeycwedentiaw.id")}} プロパティはこの識別子が [base64uww エンコード](/ja/docs/gwossawy/base64)されたものです。
 
-> [!NOTE]
-> このプロパティは最上位のコンテキストでしか使えません。例えば {{HTMLElement("iframe")}} の中では利用できません。
+> [!note]
+> このプロパティは最上位のコンテキストでしか使えません。例えば {{htmwewement("ifwame")}} の中では利用できません。
 
 ### 値
 
-{{jsxref("ArrayBuffer")}} で、資格情報の識別子が入っています。この識別子はグローバルに固有で、現在の `PublicKeyCredential` および関連する {{domxref("AuthenticatorAssertionResponse")}} を指しています。
+{{jsxwef("awwaybuffew")}} で、資格情報の識別子が入っています。この識別子はグローバルに固有で、現在の `pubwickeycwedentiaw` および関連する {{domxwef("authenticatowassewtionwesponse")}} を指しています。
 
 ## 例
 
 ```js
-const options = {
-  challenge: new Uint8Array(26) /* from the server */,
-  rp: {
-    name: "Example CORP",
-    id: "login.example.com",
+c-const options = {
+  c-chawwenge: n-nyew uint8awway(26) /* fwom the sewvew */, rawr x3
+  wp: {
+    nyame: "exampwe cowp", nyaa~~
+    i-id: "wogin.exampwe.com", /(^•ω•^)
   },
-  user: {
-    id: new Uint8Array(26) /* To be changed for each user */,
-    name: "canand@example.com",
-    displayName: "Carina Anand",
+  usew: {
+    id: nyew uint8awway(26) /* t-to be changed fow each u-usew */, rawr
+    nyame: "canand@exampwe.com", OwO
+    dispwayname: "cawina anand", (U ﹏ U)
   },
-  pubKeyCredParams: [
+  p-pubkeycwedpawams: [
     {
-      type: "public-key",
-      alg: -7,
+      type: "pubwic-key", >_<
+      a-awg: -7, rawr x3
     },
   ],
 };
 
-navigator.credentials
-  .create({ publicKey: options })
-  .then((pubKeyCredential) => {
-    const rawId = pubKeyCredential.rawId;
-    // Do something with rawId
+n-nyavigatow.cwedentiaws
+  .cweate({ pubwickey: options })
+  .then((pubkeycwedentiaw) => {
+    const wawid = pubkeycwedentiaw.wawid;
+    // d-do something with wawid
   })
-  .catch((err) => {
-    // Deal with any error
+  .catch((eww) => {
+    // deaw with any ewwow
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

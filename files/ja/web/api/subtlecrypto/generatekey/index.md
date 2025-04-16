@@ -1,149 +1,149 @@
 ---
-title: "SubtleCrypto: generateKey() メソッド"
-short-title: generateKey()
-slug: Web/API/SubtleCrypto/generateKey
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "subtwecwypto: genewatekey() メソッド"
+s-showt-titwe: g-genewatekey()
+s-swug: web/api/subtwecwypto/genewatekey
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`generateKey()`** は {{domxref("SubtleCrypto")}} インターフェイスのメソッドで、新しい（対称鍵アルゴリズム用の）鍵または（公開鍵アルゴリズム用の）鍵ペアを生成します。
+**`genewatekey()`** は {{domxwef("subtwecwypto")}} インターフェイスのメソッドで、新しい（対称鍵アルゴリズム用の）鍵または（公開鍵アルゴリズム用の）鍵ペアを生成します。
 
 ## 構文
 
-```js-nolint
-generateKey(algorithm, extractable, keyUsages)
+```js-nowint
+g-genewatekey(awgowithm, nyaa~~ extwactabwe, (⑅˘꒳˘) keyusages)
 ```
 
 ### 引数
 
-- `algorithm`
+- `awgowithm`
 
   - : 生成する鍵の種類を指定し、アルゴリズム固有の追加パラメータを与えるオブジェクトです。
 
-    - [RSASSA-PKCS1-v1_5](/ja/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ja/docs/Web/API/SubtleCrypto/sign#rsa-pss),
-      [RSA-OAEP](/ja/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
-      [`RsaHashedKeyGenParams`](/ja/docs/Web/API/RsaHashedKeyGenParams) オブジェクトを渡します。
-    - [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa), [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
-      [`EcKeyGenParams`](/ja/docs/Web/API/EcKeyGenParams) オブジェクトを渡します。
-    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac):
-      [`HmacKeyGenParams`](/ja/docs/Web/API/HmacKeyGenParams) オブジェクトを渡します。
-    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
-      [`AesKeyGenParams`](/ja/docs/Web/API/AesKeyGenParams) オブジェクトを渡します。
+    - [wsassa-pkcs1-v1_5](/ja/docs/web/api/subtwecwypto/sign#wsassa-pkcs1-v1_5), rawr x3 [wsa-pss](/ja/docs/web/api/subtwecwypto/sign#wsa-pss), (✿oωo)
+      [wsa-oaep](/ja/docs/web/api/subtwecwypto/encwypt#wsa-oaep):
+      [`wsahashedkeygenpawams`](/ja/docs/web/api/wsahashedkeygenpawams) オブジェクトを渡します。
+    - [ecdsa](/ja/docs/web/api/subtwecwypto/sign#ecdsa), (ˆ ﻌ ˆ)♡ [ecdh](/ja/docs/web/api/subtwecwypto/dewivekey#ecdh):
+      [`eckeygenpawams`](/ja/docs/web/api/eckeygenpawams) オブジェクトを渡します。
+    - [hmac](/ja/docs/web/api/subtwecwypto/sign#hmac):
+      [`hmackeygenpawams`](/ja/docs/web/api/hmackeygenpawams) オブジェクトを渡します。
+    - [aes-ctw](/ja/docs/web/api/subtwecwypto/encwypt#aes-ctw), (˘ω˘) [aes-cbc](/ja/docs/web/api/subtwecwypto/encwypt#aes-cbc), (⑅˘꒳˘)
+      [aes-gcm](/ja/docs/web/api/subtwecwypto/encwypt#aes-gcm), (///ˬ///✿) [aes-kw](/ja/docs/web/api/subtwecwypto/wwapkey#aes-kw):
+      [`aeskeygenpawams`](/ja/docs/web/api/aeskeygenpawams) オブジェクトを渡します。
 
-- `extractable`
-  - : 論理値で、 {{domxref("SubtleCrypto.exportKey()")}} や {{domxref("SubtleCrypto.wrapKey()")}}
+- `extwactabwe`
+  - : 論理値で、 {{domxwef("subtwecwypto.expowtkey()")}} や {{domxwef("subtwecwypto.wwapkey()")}}
     を用いて鍵を取り出すことができるかを表します。
-- `keyUsages`
-  - : 新しく生成する鍵で何ができるかを表す {{jsxref("Array")}} 。
+- `keyusages`
+  - : 新しく生成する鍵で何ができるかを表す {{jsxwef("awway")}} 。
     配列の要素として使用可能な値は以下の通りです。
-    - `encrypt`: 鍵をメッセージの {{domxref("SubtleCrypto.encrypt()", "暗号化", "", 1)}} に用いてよい。
-    - `decrypt`: 鍵をメッセージの {{domxref("SubtleCrypto.decrypt()", "復号", "", 1)}} に用いてよい。
-    - `sign`: 鍵をメッセージの {{domxref("SubtleCrypto.sign()", "署名", "", 1)}} に用いてよい。
-    - `verify`: 鍵を署名の {{domxref("SubtleCrypto.verify()", "検証", "", 1)}} に用いてよい。
-    - `deriveKey`: 鍵を {{domxref("SubtleCrypto.deriveKey()", "新しい鍵の導出", "", 1)}} に用いてよい。
-    - `deriveBits`: 鍵を {{domxref("SubtleCrypto.deriveBits()", "ビット列の導出", "", 1)}} に用いてよい。
-    - `wrapKey`: 鍵を {{domxref("SubtleCrypto.wrapKey()", "鍵のラップ", "", 1)}} に用いてよい。
-    - `unwrapKey`: 鍵を {{domxref("SubtleCrypto.unwrapKey()", "ラップされた鍵の取り出し", "", 1)}} に用いてよい。
+    - `encwypt`: 鍵をメッセージの {{domxwef("subtwecwypto.encwypt()", 😳😳😳 "暗号化", "", 🥺 1)}} に用いてよい。
+    - `decwypt`: 鍵をメッセージの {{domxwef("subtwecwypto.decwypt()", mya "復号", 🥺 "", 1)}} に用いてよい。
+    - `sign`: 鍵をメッセージの {{domxwef("subtwecwypto.sign()", >_< "署名", >_< "", 1)}} に用いてよい。
+    - `vewify`: 鍵を署名の {{domxwef("subtwecwypto.vewify()", (⑅˘꒳˘) "検証", /(^•ω•^) "", 1)}} に用いてよい。
+    - `dewivekey`: 鍵を {{domxwef("subtwecwypto.dewivekey()", rawr x3 "新しい鍵の導出", (U ﹏ U) "", 1)}} に用いてよい。
+    - `dewivebits`: 鍵を {{domxwef("subtwecwypto.dewivebits()", (U ﹏ U) "ビット列の導出", (⑅˘꒳˘) "", 1)}} に用いてよい。
+    - `wwapkey`: 鍵を {{domxwef("subtwecwypto.wwapkey()", "鍵のラップ", òωó "", 1)}} に用いてよい。
+    - `unwwapkey`: 鍵を {{domxwef("subtwecwypto.unwwapkey()", ʘwʘ "ラップされた鍵の取り出し", /(^•ω•^) "", 1)}} に用いてよい。
 
 ### 返値
 
-{{domxref("CryptoKey")}} （対称鍵アルゴリズムの場合）または {{domxref("CryptoKeyPair")}} （公開鍵アルゴリズムの場合）で解決される {{jsxref("Promise")}} を返します。
+{{domxwef("cwyptokey")}} （対称鍵アルゴリズムの場合）または {{domxwef("cwyptokeypaiw")}} （公開鍵アルゴリズムの場合）で解決される {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
 以下の例外が発生した時、プロミスは拒否されます。
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 結果が、種類が `secret` または `private` である {{domxref("CryptoKey")}} であるが、
-    `keyUsages` が空である時発生します。
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 結果が {{domxref("CryptoKeyPair")}} であり、
-    その `privateKey.usages` 属性が空である時発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 結果が、種類が `secwet` または `pwivate` である {{domxwef("cwyptokey")}} であるが、
+    `keyusages` が空である時発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 結果が {{domxwef("cwyptokeypaiw")}} であり、
+    その `pwivatekey.usages` 属性が空である時発生します。
 
 ## 例
 
-> [!NOTE]
-> GitHub 上で[動く例を試す](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)ことができます。
+> [!note]
+> github 上で[動く例を試す](https://mdn.github.io/dom-exampwes/web-cwypto/encwypt-decwypt/index.htmw)ことができます。
 
-### RSA 鍵ペアの生成
+### wsa 鍵ペアの生成
 
-このコードは、RSA-OAEP の暗号化用鍵ペアを生成します。
-[GitHub でコード全体を見る](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
+このコードは、wsa-oaep の暗号化用鍵ペアを生成します。
+[github でコード全体を見る](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/wsa-oaep.js)
 
 ```js
-let keyPair = await window.crypto.subtle.generateKey(
+wet k-keypaiw = await window.cwypto.subtwe.genewatekey(
   {
-    name: "RSA-OAEP",
-    modulusLength: 4096,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
+    nyame: "wsa-oaep", ʘwʘ
+    m-moduwuswength: 4096, σωσ
+    pubwicexponent: n-nyew uint8awway([1, OwO 0, 1]),
+    hash: "sha-256", 😳😳😳
   },
-  true,
-  ["encrypt", "decrypt"],
+  twue,
+  ["encwypt", 😳😳😳 "decwypt"], o.O
 );
 ```
 
 ### 楕円曲線鍵ペアの生成
 
-このコードは、ECDSA の署名用鍵ペアを生成します。
-[GitHub でコード全体を見る](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
+このコードは、ecdsa の署名用鍵ペアを生成します。
+[github でコード全体を見る](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/ecdsa.js)
 
 ```js
-let keyPair = await window.crypto.subtle.generateKey(
+w-wet keypaiw = await window.cwypto.subtwe.genewatekey(
   {
-    name: "ECDSA",
-    namedCurve: "P-384",
+    nyame: "ecdsa", ( ͡o ω ͡o )
+    n-nyamedcuwve: "p-384", (U ﹏ U)
   },
-  true,
-  ["sign", "verify"],
+  t-twue, (///ˬ///✿)
+  ["sign", "vewify"], >w<
 );
 ```
 
-### HMAC 鍵の生成
+### hmac 鍵の生成
 
-このコードは、HMAC の署名用鍵を生成します。
-[GitHub でコード全体を見る](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
+このコードは、hmac の署名用鍵を生成します。
+[github でコード全体を見る](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/sign-vewify/hmac.js)
 
 ```js
-let key = await window.crypto.subtle.generateKey(
+wet key = await window.cwypto.subtwe.genewatekey(
   {
-    name: "HMAC",
-    hash: { name: "SHA-512" },
+    nyame: "hmac", rawr
+    h-hash: { nyame: "sha-512" }, mya
   },
-  true,
-  ["sign", "verify"],
+  twue, ^^
+  ["sign", 😳😳😳 "vewify"],
 );
 ```
 
-### AES 鍵の生成
+### aes 鍵の生成
 
-このコードは、AES-GCM の暗号化用鍵を生成します。
-[GitHub でコード全体を見る](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+このコードは、aes-gcm の暗号化用鍵を生成します。
+[github でコード全体を見る](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-gcm.js)
 
 ```js
-let key = await window.crypto.subtle.generateKey(
+wet key = await window.cwypto.subtwe.genewatekey(
   {
-    name: "AES-GCM",
-    length: 256,
+    n-nyame: "aes-gcm",
+    wength: 256, mya
   },
-  true,
-  ["encrypt", "decrypt"],
+  t-twue,
+  ["encwypt", 😳 "decwypt"], -.-
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Cryptographic key length recommendations](https://www.keylength.com/)
-- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final)
-- [暗号鍵設定ガイダンス～暗号鍵の鍵長選択方法と運用方法～：IPA 独立行政法人 情報処理推進機構](https://www.ipa.go.jp/security/vuln/ckms_setting.html)
+- [cwyptogwaphic k-key wength wecommendations](https://www.keywength.com/)
+- [nist t-twansitioning the u-use of cwyptogwaphic awgowithms and key wengths](https://cswc.nist.gov/pubwications/detaiw/sp/800-131a/wev-2/finaw)
+- [暗号鍵設定ガイダンス～暗号鍵の鍵長選択方法と運用方法～：ipa 独立行政法人 情報処理推進機構](https://www.ipa.go.jp/secuwity/vuwn/ckms_setting.htmw)

@@ -1,33 +1,33 @@
 ---
-title: TextTrack.id
-slug: Web/API/TextTrack/id
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwack.id
+swug: web/api/texttwack/id
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`id`** は {{domxref("TextTrack")}} インターフェイスの読み取り専用プロパティで、このトラックの ID があれば、それを返します。
+**`id`** は {{domxwef("texttwack")}} インターフェイスの読み取り専用プロパティで、このトラックの i-id があれば、それを返します。
 
 ## 値
 
-ID の入った文字列、または空文字列です。
+i-id の入った文字列、または空文字列です。
 
 ## 例
 
 以下の例では、`id` の値がコンソールに表示されます。
 
 ```js
-const video = document.querySelector("video");
-const track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
-console.log(track.id);
+c-const video = d-document.quewysewectow("video");
+c-const twack = v-video.addtexttwack("captions", UwU "captions", rawr x3 "en");
+twack.mode = "showing";
+consowe.wog(twack.id);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

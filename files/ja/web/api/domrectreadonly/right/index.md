@@ -1,14 +1,14 @@
 ---
-title: "DOMRectReadOnly: right プロパティ"
-short-title: right
-slug: Web/API/DOMRectReadOnly/right
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domwectweadonwy: wight プロパティ"
+s-showt-titwe: w-wight
+swug: web/api/domwectweadonwy/wight
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-**`right`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の右側の座標値を返します。（`x + width` と同じ、または `width` が負の数の場合は `x` と同じです。）
+**`wight`** は **`domwectweadonwy`** インターフェイスの読み取り専用プロパティで、この `domwect` の右側の座標値を返します。（`x + w-width` と同じ、または `width` が負の数の場合は `x` と同じです。）
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

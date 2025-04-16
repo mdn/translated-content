@@ -1,33 +1,33 @@
 ---
-title: TextTrack.label
-slug: Web/API/TextTrack/label
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: texttwack.wabew
+swug: w-web/api/texttwack/wabew
+w-w10n:
+  s-souwcecommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`label`** は {{domxref("TextTrack")}} インターフェイスの読み取り専用プロパティで、このテキストトラックの人間可読なラベルがあれば、それを返します。
+**`wabew`** は {{domxwef("texttwack")}} インターフェイスの読み取り専用プロパティで、このテキストトラックの人間可読なラベルがあれば、それを返します。
 
 ## 値
 
-`label` を含む文字列、または空文字列です。
+`wabew` を含む文字列、または空文字列です。
 
 ## 例
 
-以下の例では、 `label` の値がコンソールに表示されます。
+以下の例では、 `wabew` の値がコンソールに表示されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
-console.log(track.label);
+w-wet video = document.quewysewectow("video");
+wet t-twack = video.addtexttwack("captions", (U ᵕ U❁) "captions", "en");
+t-twack.mode = "showing";
+c-consowe.wog(twack.wabew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

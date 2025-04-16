@@ -1,109 +1,109 @@
 ---
-title: IDBOpenDBRequest
-slug: Web/API/IDBOpenDBRequest
-l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+titwe: idbopendbwequest
+swug: w-web/api/idbopendbwequest
+w-w10n:
+  s-souwcecommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-IndexedDB API の **`IDBOpenDBRequest`** インターフェイスは、固有のイベントハンドラー属性を用い、({{domxref("IDBFactory.open")}} や {{domxref("IDBFactory.deleteDatabase")}} により行われた) データベースのオープンや削除の要求の結果へのアクセスを提供します。
+i-indexeddb a-api の **`idbopendbwequest`** インターフェイスは、固有のイベントハンドラー属性を用い、({{domxwef("idbfactowy.open")}} や {{domxwef("idbfactowy.dewetedatabase")}} により行われた) データベースのオープンや削除の要求の結果へのアクセスを提供します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親の {{domxref("IDBRequest")}} および {{domxref("EventTarget")}} からプロパティを継承しています。_
+_親の {{domxwef("idbwequest")}} および {{domxwef("eventtawget")}} からプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_メソッドはありませんが、親の {{domxref("IDBRequest")}} および {{domxref("EventTarget")}} からメソッドを継承しています。_
+_メソッドはありませんが、親の {{domxwef("idbwequest")}} および {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## イベント
 
-_親インターフェイスの {{DOMxRef("IDBRequest")}} および {{DOMxRef("EventTarget")}} で定義されているイベントも `IDBOpenDBRequest` オブジェクトで発生させることができます。_
+_親インターフェイスの {{domxwef("idbwequest")}} および {{domxwef("eventtawget")}} で定義されているイベントも `idbopendbwequest` オブジェクトで発生させることができます。_
 
-`addEventListener()` を用いるか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入することで、一般のイベントおよび固有のイベントを監視できます。
+`addeventwistenew()` を用いるか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入することで、一般のイベントおよび固有のイベントを監視できます。
 
 このインターフェイスに固有のイベントは、以下です。
 
-- [`blocked`](/ja/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - : データベースへのオープン中の接続が、同じデータベースの `versionchange` トランザクションをブロックしているとき発火します。[`onblocked`](/ja/docs/Web/API/IDBOpenDBRequest/blocked_event) プロパティを用いても利用可能です。
-- [`upgradeneeded`](/ja/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
-  - : 現在のバージョンよりも高いバージョン番号でデータベースをオープンしようとしたとき発火します。[`onupgradeneeded`](/ja/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) プロパティを用いても利用可能です。
+- [`bwocked`](/ja/docs/web/api/idbopendbwequest/bwocked_event)
+  - : データベースへのオープン中の接続が、同じデータベースの `vewsionchange` トランザクションをブロックしているとき発火します。[`onbwocked`](/ja/docs/web/api/idbopendbwequest/bwocked_event) プロパティを用いても利用可能です。
+- [`upgwadeneeded`](/ja/docs/web/api/idbopendbwequest/upgwadeneeded_event)
+  - : 現在のバージョンよりも高いバージョン番号でデータベースをオープンしようとしたとき発火します。[`onupgwadeneeded`](/ja/docs/web/api/idbopendbwequest/upgwadeneeded_event) プロパティを用いても利用可能です。
 
 ## 例
 
-この例では、高いバージョン番号のデータベースをを読み込もうとした場合に、`onupgradeneeded` ハンドラーによりデータベースの構造を更新します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを見てください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+この例では、高いバージョン番号のデータベースをを読み込もうとした場合に、`onupgwadeneeded` ハンドラーによりデータベースの構造を更新します。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを見てください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
-let db;
+wet d-db;
 
 // 我々のデータベースを開きましょう
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
 // これらのイベントハンドラーは、開かれているデータベースを扱います
-DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>データベースの読み込み中にエラーが発生しました。</li>";
+dbopenwequest.onewwow = (event) => {
+  nyote.innewhtmw += "<wi>データベースの読み込み中にエラーが発生しました。</wi>";
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースの初期化が完了しました。</li>";
+d-dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースの初期化が完了しました。</wi>";
 
   // データベースを開いた結果を変数 db に格納します。
   // これは後でたくさん使います。
-  db = DBOpenRequest.result;
+  d-db = dbopenwequest.wesuwt;
 
-  // IDB に既に入っている TO-DO リストのデータ全てを
-  // タスクリストに入れるため、displayData() 関数を実行します。
-  displayData();
+  // idb に既に入っている t-to-do リストのデータ全てを
+  // タスクリストに入れるため、dispwaydata() 関数を実行します。
+  dispwaydata();
 };
 
 // このイベントは、データベースがまだ作成されていないか、
-// 上の window.indexedDB.open の行で新しいバージョン番号が
+// 上の window.indexeddb.open の行で新しいバージョン番号が
 // 指定されたかで、新しいバージョンのデータベースを
 // 作成する必要がある場合を扱います。
 // これは最近のブラウザーでしか実装されていません。
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  c-const db = event.tawget.wesuwt;
 
-  db.onerror = (event) => {
-    note.innerHTML +=
-      "<li>データベースの読み込み中にエラーが発生しました｡</li>";
+  d-db.onewwow = (event) => {
+    n-nyote.innewhtmw +=
+      "<wi>データベースの読み込み中にエラーが発生しました｡</wi>";
   };
 
-  // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成します
+  const objectstowe = db.cweateobjectstowe("todowist", rawr x3 {
+    keypath: "tasktitwe", (✿oωo)
   });
 
-  // objectStore にどのようなアイテムを保存するかを定義します
+  // objectstowe にどのようなアイテムを保存するかを定義します
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  o-objectstowe.cweateindex("houws", (ˆ ﻌ ˆ)♡ "houws", { unique: fawse });
+  objectstowe.cweateindex("minutes", (˘ω˘) "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", (⑅˘꒳˘) "day", { unique: f-fawse });
+  objectstowe.cweateindex("month", (///ˬ///✿) "month", { unique: f-fawse });
+  o-objectstowe.cweateindex("yeaw", 😳😳😳 "yeaw", { u-unique: f-fawse });
+  objectstowe.cweateindex("notified", 🥺 "notified", mya { unique: fawse });
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始s: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始s: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

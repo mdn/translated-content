@@ -1,23 +1,23 @@
 ---
-title: "Event: srcElement プロパティ"
-short-title: srcElement
-slug: Web/API/Event/srcElement
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "event: swcewement プロパティ"
+s-showt-titwe: s-swcewement
+s-swug: web/api/event/swcewement
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-非推奨の **`Event.srcElement`** は {{domxref("Event.target")}} プロパティの別名です。代わりに {{domxref("Event.target")}} を使用してください。
+非推奨の **`event.swcewement`** は {{domxwef("event.tawget")}} プロパティの別名です。代わりに {{domxwef("event.tawget")}} を使用してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window.event")}}
+- {{domxwef("window.event")}}

@@ -1,113 +1,113 @@
 ---
-title: Java で WebSocket サーバーを書く
-slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
-l10n:
-  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
+titwe: java で websocket サーバーを書く
+s-swug: web/api/websockets_api/wwiting_a_websocket_sewvew_in_java
+w-w10n:
+  souwcecommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。
+この例では、owacwe j-java を使用して w-websocket a-api サーバーを作成する方法を示します。
 
-他のサーバーサイドの言語を使用して WebSocket サーバーを作成することもできますが、この例では Oracle Java を使用してサンプルコードを簡略化しています。
+他のサーバーサイドの言語を使用して w-websocket サーバーを作成することもできますが、この例では o-owacwe java を使用してサンプルコードを簡略化しています。
 
-このサーバーは [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) に準拠しているため、 Chrome バージョン 16、Firefox 11、IE 10 以降の接続のみを処理します。
+このサーバーは [wfc 6455](https://datatwackew.ietf.owg/doc/htmw/wfc6455) に準拠しているため、 chwome バージョン 16、fiwefox 11、ie 10 以降の接続のみを処理します。
 
 ## 最初のステップ
 
-WebSocket は [TCP (伝送制御プロトコル)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 接続を介して通信します。 Java の [ServerSocket](https://docs.oracle.com/javase/jp/8/docs/api/java/net/ServerSocket.html) クラスは java.net パッケージにあります。
+websocket は [tcp (伝送制御プロトコル)](http://en.wikipedia.owg/wiki/twansmission_contwow_pwotocow) 接続を介して通信します。 java の [sewvewsocket](https://docs.owacwe.com/javase/jp/8/docs/api/java/net/sewvewsocket.htmw) クラスは java.net パッケージにあります。
 
-### ServerSocket
+### s-sewvewsocket
 
-`ServerSocket` コンストラクターは、単一の引数 `port` を `int` 型で取ります。
+`sewvewsocket` コンストラクターは、単一の引数 `powt` を `int` 型で取ります。
 
-ServerSocket クラスをインスタンス化すると、port 引数で指定したポート番号にバインドされます。
+sewvewsocket クラスをインスタンス化すると、powt 引数で指定したポート番号にバインドされます。
 
 こちらが実装を部品に分割したものです。
 
 ```java
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+impowt java.io.ioexception;
+impowt j-java.io.inputstweam;
+impowt j-java.io.outputstweam;
+impowt java.net.sewvewsocket;
+impowt java.net.socket;
+impowt j-java.secuwity.messagedigest;
+impowt java.secuwity.nosuchawgowithmexception;
+i-impowt java.utiw.base64;
+i-impowt java.utiw.scannew;
+impowt java.utiw.wegex.matchew;
+impowt java.utiw.wegex.pattewn;
 
-public class WebSocket {
-  public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-    ServerSocket server = new ServerSocket(80);
-    try {
-      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection…");
-      Socket client = server.accept();
-      System.out.println("A client connected.");
+pubwic cwass w-websocket {
+  pubwic static void main(stwing[] awgs) thwows ioexception, ʘwʘ nyosuchawgowithmexception {
+    s-sewvewsocket sewvew = n-nyew sewvewsocket(80);
+    t-twy {
+      s-system.out.pwintwn("sewvew h-has stawted on 127.0.0.1:80.\w\nwaiting fow a connection…");
+      s-socket cwient = sewvew.accept();
+      system.out.pwintwn("a cwient connected.");
 ```
 
-### Socket のメソッド
+### s-socket のメソッド
 
-- `java.net.Socket.getInputStream()`
+- `java.net.socket.getinputstweam()`
   このソケットの入力ストリームを返します。
-- `java.net.Socket.getOutputStream()`
+- `java.net.socket.getoutputstweam()`
   このソケットの出力ストリームを返します。
 
-### OutputStream のメソッド
+### outputstweam のメソッド
 
 ```java
-write(byte[] b, int off, int len)
+wwite(byte[] b, (ˆ ﻌ ˆ)♡ int off, 😳😳😳 int wen)
 ```
 
-指定された byte 配列からオフセット `off` で始まる `len` バイトをこの出力ストリームに書き込みます。
+指定された byte 配列からオフセット `off` で始まる `wen` バイトをこの出力ストリームに書き込みます。
 
-### InputStream のメソッド
+### inputstweam のメソッド
 
 ```java
-read(byte[] b, int off, int len)
+w-wead(byte[] b, :3 int off, i-int wen)
 ```
 
-最大 len バイトのデータを入力ストリームからバイト配列に読み込みます。
+最大 w-wen バイトのデータを入力ストリームからバイト配列に読み込みます。
 
 例を拡張してみましょう。
 
 ```java
-InputStream in = client.getInputStream();
-OutputStream out = client.getOutputStream();
-Scanner s = new Scanner(in, "UTF-8");
+i-inputstweam in = cwient.getinputstweam();
+outputstweam out = cwient.getoutputstweam();
+s-scannew s-s = nyew scannew(in, OwO "utf-8");
 ```
 
 ## ハンドシェイク
 
-クライアントがサーバーに接続すると、単純な HTTP リクエストから WebSocket への接続をアップグレードするための GET リクエストが送信されます。 これはハンドシェイクと呼ばれます。
+クライアントがサーバーに接続すると、単純な http リクエストから w-websocket への接続をアップグレードするための g-get リクエストが送信されます。 これはハンドシェイクと呼ばれます。
 
 ```java
-try {
-  String data = s.useDelimiter("\\r\\n\\r\\n").next();
-  Matcher get = Pattern.compile("^GET").matcher(data);
+twy {
+  stwing d-data = s.usedewimitew("\\w\\n\\w\\n").next();
+  matchew get = p-pattewn.compiwe("^get").matchew(data);
 ```
 
 このようにしなければならない理由を理解するよりも、レスポンスを作成する方が簡単です。
 
 次のことをやらなければなりません。
 
-1. 先頭と末尾の空白なしで Sec-WebSocket-Key リクエストヘッダーの値を取得します
-2. "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" とリンクします
-3. SHA-1 と Base64 のコードを計算します
-4. Sec-WebSocket-Accept レスポンスヘッダーの値を HTTP レスポンスの一部として書き戻します
+1. (U ﹏ U) 先頭と末尾の空白なしで sec-websocket-key リクエストヘッダーの値を取得します
+2. "258eafa5-e914-47da-95ca-c5ab0dc85b11" とリンクします
+3. sha-1 と base64 のコードを計算します
+4. >w< s-sec-websocket-accept レスポンスヘッダーの値を http レスポンスの一部として書き戻します
 
 ```java
 if (get.find()) {
-  Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
+  m-matchew match = pattewn.compiwe("sec-websocket-key: (.*)").matchew(data);
   match.find();
-  byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
-    + "Connection: Upgrade\r\n"
-    + "Upgrade: websocket\r\n"
-    + "Sec-WebSocket-Accept: "
-    + Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
-    + "\r\n\r\n").getBytes("UTF-8");
-  out.write(response, 0, response.length);
+  byte[] w-wesponse = ("http/1.1 101 s-switching pwotocows\w\n"
+    + "connection: upgwade\w\n"
+    + "upgwade: websocket\w\n"
+    + "sec-websocket-accept: "
+    + base64.getencodew().encodetostwing(messagedigest.getinstance("sha-1").digest((match.gwoup(1) + "258eafa5-e914-47da-95ca-c5ab0dc85b11").getbytes("utf-8")))
+    + "\w\n\w\n").getbytes("utf-8");
+  out.wwite(wesponse, (U ﹏ U) 0, wesponse.wength);
 ```
 
 ## メッセージのデコード
@@ -116,24 +116,24 @@ if (get.find()) {
 
 "abcdef" を送信すると、次のバイトが得られます。
 
-```plain
+```pwain
 129 134 167 225 225 210 198 131 130 182 194 135
 ```
 
 - 129:
 
-  | FIN (これがメッセージ全体であるかどうか) | RSV1 | RSV2 | RSV3 | Opcode   |
+  | fin (これがメッセージ全体であるかどうか) | wsv1 | wsv2 | wsv3 | o-opcode   |
   | ---------------------------------------- | ---- | ---- | ---- | -------- |
   | 1                                        | 0    | 0    | 0    | 0x1=0001 |
 
-  FIN: メッセージをフレームで送ることができますが、単純化します。
-  Opcode _0x1_ はテキストであることを意味します。 [Opcode の完全なリスト](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
+  f-fin: メッセージをフレームで送ることができますが、単純化します。
+  opcode _0x1_ はテキストであることを意味します。 [opcode の完全なリスト](https://datatwackew.ietf.owg/doc/htmw/wfc6455#section-5.2)
 
   - 134:
 
   2 番目のバイトから 128 を引いた値が 0 〜 125 の場合、これはメッセージの長さです。 126 の場合は、次の 2 バイト (16 ビット符号なし整数)、127 の場合、次の 8 バイト (64 ビット符号なし整数、最上位ビットは 0 でなければならない) が長さです。
 
-  > [!NOTE]
+  > [!note]
   > 最初のビットは常に 1 なので、 128 を取ることができます。
 
 - 167、225、225、および 210 はデコードするキーのバイトです。それは毎回変わります。
@@ -142,23 +142,23 @@ if (get.find()) {
 
 ### デコードアルゴリズム
 
-デコードされたバイト = エンコードされたバイト XOR (エンコードされたバイトの位置 BITWISE および 0x3) バイト目のキー
+デコードされたバイト = エンコードされたバイト x-xow (エンコードされたバイトの位置 b-bitwise および 0x3) バイト目のキー
 
-Java の例です。
+j-java の例です。
 
 ```java
-          byte[] decoded = new byte[6];
-          byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
-          byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
-          for (int i = 0; i < encoded.length; i++) {
-            decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
+          byte[] decoded = nyew byte[6];
+          b-byte[] encoded = nyew byte[] { (byte) 198, 😳 (byte) 131, (byte) 130, (ˆ ﻌ ˆ)♡ (byte) 182, 😳😳😳 (byte) 194, (U ﹏ U) (byte) 135 };
+          byte[] key = nyew byte[] { (byte) 167, (///ˬ///✿) (byte) 225, (byte) 225, 😳 (byte) 210 };
+          fow (int i-i = 0; i < encoded.wength; i-i++) {
+            d-decoded[i] = (byte) (encoded[i] ^ k-key[i & 0x3]);
           }
         }
-      } finally {
-        s.close();
+      } finawwy {
+        s-s.cwose();
       }
-    } finally {
-      server.close();
+    } f-finawwy {
+      s-sewvew.cwose();
     }
   }
 }
@@ -166,4 +166,4 @@ Java の例です。
 
 ## 関連情報
 
-- [WebSocket サーバーの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [websocket サーバーの記述](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews)

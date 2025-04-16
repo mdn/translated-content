@@ -1,54 +1,54 @@
 ---
-title: "WritableStreamDefaultWriter: closed プロパティ"
-short-title: closed
-slug: Web/API/WritableStreamDefaultWriter/closed
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wwitabwestweamdefauwtwwitew: cwosed プロパティ"
+s-showt-titwe: cwosed
+s-swug: web/api/wwitabwestweamdefauwtwwitew/cwosed
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`closed`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスの読み取り専用プロパティで、ストリームが閉じられた場合、またはライターのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する {{jsxref("Promise")}} を返します。
+**`cwosed`** は {{domxwef("wwitabwestweamdefauwtwwitew")}} インターフェイスの読み取り専用プロパティで、ストリームが閉じられた場合、またはライターのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する {{jsxwef("pwomise")}} を返します。
 
 ## 値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream(
+c-const wwitabwestweam = n-nyew w-wwitabwestweam(
   {
-    start(controller) {},
-    write(chunk, controller) {
+    s-stawt(contwowwew) {}, -.-
+    wwite(chunk, contwowwew) {
       // ...
-    },
-    close(controller) {
+    }, (ˆ ﻌ ˆ)♡
+    cwose(contwowwew) {
       // ...
-    },
-    abort(err) {
+    }, (⑅˘꒳˘)
+    abowt(eww) {
       // ...
-    },
+    }, (U ᵕ U❁)
   },
-  queuingStrategy,
+  q-queuingstwategy, -.-
 );
 
 // ...
 
-const writer = writableStream.getWriter();
+const wwitew = wwitabwestweam.getwwitew();
 
 // ..
 
 // ストリームが閉じているかどうかを確認します
-writer.closed.then(() => {
-  console.log("writer closed");
+w-wwitew.cwosed.then(() => {
+  consowe.wog("wwitew c-cwosed");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

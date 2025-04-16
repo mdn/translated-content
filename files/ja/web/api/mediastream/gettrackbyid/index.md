@@ -1,19 +1,19 @@
 ---
-title: "MediaStream: getTrackById() メソッド"
-short-title: getTrackById()
-slug: Web/API/MediaStream/getTrackById
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweam: gettwackbyid() メソッド"
+s-showt-titwe: g-gettwackbyid()
+s-swug: web/api/mediastweam/gettwackbyid
+w-w10n:
+  s-souwcecommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`getTrackById()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、指定された ID 文字列を持つトラックを表現する {{domxref("MediaStreamTrack")}} オブジェクトを返します。指定した ID を持つトラックが存在しない場合は、 `null` を返します。
+**`gettwackbyid()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、指定された i-id 文字列を持つトラックを表現する {{domxwef("mediastweamtwack")}} オブジェクトを返します。指定した id を持つトラックが存在しない場合は、 `nuww` を返します。
 
 ## 構文
 
-```js-nolint
-getTrackById(id)
+```js-nowint
+gettwackbyid(id)
 ```
 
 ### 引数
@@ -23,26 +23,26 @@ getTrackById(id)
 
 ### 返値
 
-引数で指定した `id` の文字列と同じ {{domxref("MediaStreamTrack.id")}} を持つトラックが見つかった場合は、その {{domxref("MediaStreamTrack")}} オブジェクトを返します。それ以外の場合は、 `null` を返します。
+引数で指定した `id` の文字列と同じ {{domxwef("mediastweamtwack.id")}} を持つトラックが見つかった場合は、その {{domxwef("mediastweamtwack")}} オブジェクトを返します。それ以外の場合は、 `nuww` を返します。
 
 ## 例
 
 この例では、動画に含まれるコメンタリートラックを有効にしています。メインのオーディオトラックの音量を 50% にしてから、コメンタリートラックを有効にしています。
 
 ```js
-stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
-stream.getTrackById("commentary-track").enabled = true;
+stweam.gettwackbyid("pwimawy-audio-twack").appwyconstwaints({ vowume: 0.5 });
+s-stweam.gettwackbyid("commentawy-twack").enabwed = twue;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaStream")}}
-- {{domxref("MediaStreamTrack.id")}}
+- {{domxwef("mediastweam")}}
+- {{domxwef("mediastweamtwack.id")}}

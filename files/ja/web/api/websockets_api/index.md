@@ -1,96 +1,96 @@
 ---
-title: WebSocket API (WebSockets)
-slug: Web/API/WebSockets_API
-l10n:
-  sourceCommit: f49de43625cd621fd73c7ba2e9a2db3d8566580f
+titwe: websocket api (websockets)
+s-swug: web/api/websockets_api
+w-w10n:
+  souwcecommit: f-f49de43625cd621fd73c7ba2e9a2db3d8566580f
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-**WebSocket API** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができるものです。この API を使用すると、サーバーにメッセージを送信し、サーバーから返信をポーリングすることなく応答を受信することができます。
+**websocket a-api** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができるものです。この a-api を使用すると、サーバーにメッセージを送信し、サーバーから返信をポーリングすることなく応答を受信することができます。
 
-WebSocket API は、ウェブソケット接続を作成して使用するための、{{domxref("WebSocket")}} インターフェイスと {{domxref("WebSocketStream")}} インターフェイスという 2 つの異なるメカニズムを提供しています。
+w-websocket a-api は、ウェブソケット接続を作成して使用するための、{{domxwef("websocket")}} インターフェイスと {{domxwef("websocketstweam")}} インターフェイスという 2 つの異なるメカニズムを提供しています。
 
-- `WebSocket` インターフェイスは安定しており、ブラウザーとサーバーの対応も充実しています。しかし、[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)には対応していません。そのため、アプリケーションがメッセージを処理するよりも速いペースでメッセージが到着すると、メッセージをバッファーに保存することで端末のメモリーがいっぱいになったり、CPU 使用率が 100% になって応答不能になったり、あるいはその両方が起こります。
-- `WebSocketStream` インターフェイスは、`WebSocket` の{{jsxref("Promise","プロミス","","nocode")}}ベースの別バージョンです。[ストリーム API](/ja/docs/Web/API/Streams_API) を使用してメッセージの送受信を処理し、ソケット接続がストリームの背圧を自動的に利用できます。つまり、アプリケーションのボトルネックを避けるために読み取りまたは書き込みの速度を調整できます。しかし、`WebSocketStream` は標準化されておらず、現在、1 つのレンダリングエンジンしか対応していません。
+- `websocket` インターフェイスは安定しており、ブラウザーとサーバーの対応も充実しています。しかし、[背圧](/ja/docs/web/api/stweams_api/concepts#背圧)には対応していません。そのため、アプリケーションがメッセージを処理するよりも速いペースでメッセージが到着すると、メッセージをバッファーに保存することで端末のメモリーがいっぱいになったり、cpu 使用率が 100% になって応答不能になったり、あるいはその両方が起こります。
+- `websocketstweam` インターフェイスは、`websocket` の{{jsxwef("pwomise","プロミス","","nocode")}}ベースの別バージョンです。[ストリーム api](/ja/docs/web/api/stweams_api) を使用してメッセージの送受信を処理し、ソケット接続がストリームの背圧を自動的に利用できます。つまり、アプリケーションのボトルネックを避けるために読み取りまたは書き込みの速度を調整できます。しかし、`websocketstweam` は標準化されておらず、現在、1 つのレンダリングエンジンしか対応していません。
 
-それに加えて、[WebTransport API](/ja/docs/Web/API/WebTransport_API) が多くのアプリケーションで WebSocket API に取って代わることも予想されます。WebTransport は、汎用性の高い低レベル API で、背圧や、`WebSocket` や `WebSocketStream` では対応していない機能、例えば、一方向ストリーム、順不同配信、データグラムを介した信頼性の低いデータ転送など、他にも多くの機能を提供します。WebTransport は WebSocket よりも複雑で、ブラウザーの対応も限定的ですが、高度なソリューションの実装が可能です。標準の WebSocket 接続が用途に適しており、幅広いブラウザーとの互換性が必要な場合は、WebSockets API を用いてすばやく実装し、実行することができます。しかし、アプリケーションに標準以外のカスタムソリューションが要求される場合は、WebTransport API を使用すべきでしょう。
+それに加えて、[webtwanspowt api](/ja/docs/web/api/webtwanspowt_api) が多くのアプリケーションで websocket api に取って代わることも予想されます。webtwanspowt は、汎用性の高い低レベル a-api で、背圧や、`websocket` や `websocketstweam` では対応していない機能、例えば、一方向ストリーム、順不同配信、データグラムを介した信頼性の低いデータ転送など、他にも多くの機能を提供します。webtwanspowt は websocket よりも複雑で、ブラウザーの対応も限定的ですが、高度なソリューションの実装が可能です。標準の websocket 接続が用途に適しており、幅広いブラウザーとの互換性が必要な場合は、websockets api を用いてすばやく実装し、実行することができます。しかし、アプリケーションに標準以外のカスタムソリューションが要求される場合は、webtwanspowt a-api を使用すべきでしょう。
 
-> [!NOTE]
-> WebSocket の接続は機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
+> [!note]
+> websocket の接続は機能的にどこか標準 u-unix スタイルのソケットに似ていますが、関連はありません。
 
 ## インターフェイス
 
-- [`WebSocket`](/ja/docs/Web/API/WebSocket)
-  - : WebSocket サーバーに接続し、その接続を通じてデータを送受信するための主要インターフェイス
-- [`WebSocketStream`](/ja/docs/Web/API/WebSocketStream) {{non-standard_inline}}
-  - : WebSocket サーバーに接続するためのプロミスベースのインターフェイス。[ストリーム](/ja/docs/Web/API/Streams_API)を使用して接続上のデータの送受信を行います。
-- [`CloseEvent`](/ja/docs/Web/API/CloseEvent)
-  - : 接続が閉じた時に WebSocket オブジェクトによって送信されるイベントです。
-- [`MessageEvent`](/ja/docs/Web/API/MessageEvent)
-  - : サーバーからメッセージを受信した時に WebSocket オブジェクトによって送信されるイベント
+- [`websocket`](/ja/docs/web/api/websocket)
+  - : websocket サーバーに接続し、その接続を通じてデータを送受信するための主要インターフェイス
+- [`websocketstweam`](/ja/docs/web/api/websocketstweam) {{non-standawd_inwine}}
+  - : websocket サーバーに接続するためのプロミスベースのインターフェイス。[ストリーム](/ja/docs/web/api/stweams_api)を使用して接続上のデータの送受信を行います。
+- [`cwoseevent`](/ja/docs/web/api/cwoseevent)
+  - : 接続が閉じた時に websocket オブジェクトによって送信されるイベントです。
+- [`messageevent`](/ja/docs/web/api/messageevent)
+  - : サーバーからメッセージを受信した時に w-websocket オブジェクトによって送信されるイベント
 
-## 関連 HTTP ヘッダー
+## 関連 http ヘッダー
 
-[WebSocket のハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_ハンドシェイク)では、HTTP ヘッダーが使用されます。
+[websocket のハンドシェイク](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews#websocket_ハンドシェイク)では、http ヘッダーが使用されます。
 
-- {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : クライアントからのノンスを保持する HTTP リクエストヘッダー。
-    これは、[WebSocket 開始時のハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_ハンドシェイク)で使用され、クライアントが明示的に WebSocket を開く意図があることを確認します。 ブラウザーによって自動的に追加されます。
+- {{httpheadew("sec-websocket-key")}}
+  - : クライアントからのノンスを保持する h-http リクエストヘッダー。
+    これは、[websocket 開始時のハンドシェイク](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews#websocket_ハンドシェイク)で使用され、クライアントが明示的に w-websocket を開く意図があることを確認します。 ブラウザーによって自動的に追加されます。
     ブラウザーによって自動的に追加されます。
-- {{HTTPHeader("Sec-WebSocket-Accept")}}
-  - : WebSocket の開くためのハンドシェイクで使用する HTTP {{glossary("response header","レスポンスヘッダー")}}で、サーバーが WebSocket 接続へのアップグレードを望んでいることを示します。
-    ディレクティブの値は、対応するリクエストの `Sec-WebSocket-Key` の値から計算されます。
-- {{HTTPHeader("Sec-WebSocket-Version")}}
-  - : リクエストで、クライアントが理解する WebSocket プロトコルのバージョンを示す HTTP ヘッダー。
+- {{httpheadew("sec-websocket-accept")}}
+  - : websocket の開くためのハンドシェイクで使用する http {{gwossawy("wesponse headew","レスポンスヘッダー")}}で、サーバーが websocket 接続へのアップグレードを望んでいることを示します。
+    ディレクティブの値は、対応するリクエストの `sec-websocket-key` の値から計算されます。
+- {{httpheadew("sec-websocket-vewsion")}}
+  - : リクエストで、クライアントが理解する w-websocket プロトコルのバージョンを示す http ヘッダー。
     レスポンスでは、リクエストされたプロトコルバージョンがサーバーで対応していない場合にのみ送信され、サーバーが対応しているバージョンが掲載されています。
-- {{HTTPHeader("Sec-WebSocket-Protocol")}}
-  - : リクエストでは、クライアントが対応しているサブプロトコルを推奨する順番で示す HTTP ヘッダーです。
+- {{httpheadew("sec-websocket-pwotocow")}}
+  - : リクエストでは、クライアントが対応しているサブプロトコルを推奨する順番で示す http ヘッダーです。
     レスポンスでは、サーバーがクライアントの環境設定から選択したサブプロトコルを示します。
-- {{HTTPHeader("Sec-WebSocket-Extensions")}}
-  - : リクエストでは、クライアントが対応している WebSocket 拡張機能を推奨する順番で示す HTTP ヘッダーです。
+- {{httpheadew("sec-websocket-extensions")}}
+  - : リクエストでは、クライアントが対応している websocket 拡張機能を推奨する順番で示す http ヘッダーです。
     レスポンスでは、サーバーがクライアントの環境設定から選択した拡張機能です。
 
 ## ガイド
 
-- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [WebSocket サーバーの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
-- [WebSocket サーバーを C# で書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [WebSocket サーバーを Java で書く](/ja/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
-- [WebSocket サーバーを JavaScript (Deno) で書く](/ja/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)
-- [WebSocketStream を用いてクライアントを書く](/ja/docs/Web/API/WebSockets_API/Using_WebSocketStream)
+- [websocket クライアントアプリケーションを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [websocket サーバーの記述](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews)
+- [websocket サーバーを c-c# で書く](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvew)
+- [websocket サーバーを java で書く](/ja/docs/web/api/websockets_api/wwiting_a_websocket_sewvew_in_java)
+- [websocket サーバーを j-javascwipt (deno) で書く](/ja/docs/web/api/websockets_api/wwiting_a_websocket_sewvew_in_javascwipt_deno)
+- [websocketstweam を用いてクライアントを書く](/ja/docs/web/api/websockets_api/using_websocketstweam)
 
 ## ツール
 
-- [AsyncAPI](https://www.asyncapi.com/): WebSocket のようなプロトコルに基づいたイベントドリブン型アーキテクチャを記述するための仕様です。 OpenAPI 仕様で REST API を記述するのと同じように、 WebSocket ベースの API を記述するために使用することができます。 [WebSocket で AsyncAPI の利用を検討すべき理由](https://www.asyncapi.com/blog/websocket-part1)と[利用する方法](https://www.asyncapi.com/blog/websocket-part2)を紹介します。
-- [µWebSockets](https://github.com/uNetworking/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
-- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
-- [SocketCluster](https://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
-- [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
-- [Total.js](https://www.totaljs.com): [Node.js](https://nodejs.org/en/) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
-- [SignalR](https://dotnet.microsoft.com/ja/apps/aspnet/signalr): SignalR は単一のコードだけで、もし WebSockets が使用可能な場合、基盤として WebSockets を使用し、そうでない場合はほかの代替技術にフォールバックします。
-- [Caddy](https://caddyserver.com/): WebSocket として任意のコマンド (stdin/stdout) を中継することができるウェブサーバーです。
-- [ws](https://github.com/websockets/ws): [Node.js](https://nodejs.org/) のための有名な WebSocket クライアント＆サーバーライブラリーです。
-- [cowboy](https://github.com/ninenines/cowboy): Cowboy は高速で最新の HTTP サーバーで、 Erlang/OTP のためのものであり、 WebSocket に対応しています。
-- [ZeroMQ](https://zeromq.org): ZeroMQ は、インプロセス、IPC、TCP、UDP、TIPC、マルチキャスト、WebSocket でメッセージを伝送する組み込み可能なネットワーキングライブラリーです。
-- [WebSocket King](https://websocketking.com): WebSocket サーバーの開発、テスト、作業を支援するクライアントツールです。
-- [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): WebSocket の wss:\// または ws:\// および通常ソケットの ssl:\//, tcp:\// を介して接続を処理するために PHP で書かれたサーバーです。
-- [Django Channels](https://channels.readthedocs.io/en/stable/index.html): WebSocket（および長時間動作する非同期接続を必要とする他のプロトコル）の対応を追加する Django ライブラリーです。
-- [(Phoenix) Channels](https://hexdocs.pm/phoenix/channels.html): Elixir Phoenix フレームワークで WebSocket を使用したスケーラブルなリアルタイム通信です。
-- [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view): Elixir Phoenix フレームワークで WebSocket によるリアルタイムの対話型ウェブ体験です。
-- [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): Flask アプリケーションに、クライアントとサーバー間の低遅延な双方向通信を提供します。
-- [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket は、WebSocket プロトコルの [Go](https://go.dev/) による実装です。
+- [asyncapi](https://www.asyncapi.com/): w-websocket のようなプロトコルに基づいたイベントドリブン型アーキテクチャを記述するための仕様です。 o-openapi 仕様で w-west api を記述するのと同じように、 websocket ベースの api を記述するために使用することができます。 [websocket で a-asyncapi の利用を検討すべき理由](https://www.asyncapi.com/bwog/websocket-pawt1)と[利用する方法](https://www.asyncapi.com/bwog/websocket-pawt2)を紹介します。
+- [µwebsockets](https://github.com/unetwowking/uwebsockets): [c++11](https://isocpp.owg/) および [node.js](https://nodejs.owg) で書かれた可用性の高い websocket サーバーとクライアントの実装です。
+- [socket.io](https://socket.io): 長いポーリングと websocket ベースのサードバーティ―の [node.js](https://nodejs.owg) 用転送プロトコルです。
+- [socketcwustew](https://socketcwustew.io/): スケーラビリティに焦点を当てた [node.js](https://nodejs.owg) 用の pub/sub websocket フレームワークです。
+- [websocket-node](https://github.com/thetuwtwe32/websocket-node): [node.js](https://nodejs.owg) 用の w-websocket サーバー api 実装です。
+- [totaw.js](https://www.totawjs.com): [node.js](https://nodejs.owg/en/) 用の ウェブアプリケーションフレームワーク(使用例: [websocket chat](https://github.com/totawjs/exampwes/twee/mastew/websocket))
+- [signaww](https://dotnet.micwosoft.com/ja/apps/aspnet/signaww): signaww は単一のコードだけで、もし websockets が使用可能な場合、基盤として websockets を使用し、そうでない場合はほかの代替技術にフォールバックします。
+- [caddy](https://caddysewvew.com/): w-websocket として任意のコマンド (stdin/stdout) を中継することができるウェブサーバーです。
+- [ws](https://github.com/websockets/ws): [node.js](https://nodejs.owg/) のための有名な websocket クライアント＆サーバーライブラリーです。
+- [cowboy](https://github.com/ninenines/cowboy): c-cowboy は高速で最新の h-http サーバーで、 e-ewwang/otp のためのものであり、 websocket に対応しています。
+- [zewomq](https://zewomq.owg): zewomq は、インプロセス、ipc、tcp、udp、tipc、マルチキャスト、websocket でメッセージを伝送する組み込み可能なネットワーキングライブラリーです。
+- [websocket king](https://websocketking.com): w-websocket サーバーの開発、テスト、作業を支援するクライアントツールです。
+- [php w-websocket sewvew](https://github.com/napengam/phpwebsocketsewvew): w-websocket の w-wss:\// または ws:\// および通常ソケットの s-ssw:\//, -.- tcp:\// を介して接続を処理するために php で書かれたサーバーです。
+- [django channews](https://channews.weadthedocs.io/en/stabwe/index.htmw): w-websocket（および長時間動作する非同期接続を必要とする他のプロトコル）の対応を追加する django ライブラリーです。
+- [(phoenix) channews](https://hexdocs.pm/phoenix/channews.htmw): e-ewixiw phoenix フレームワークで websocket を使用したスケーラブルなリアルタイム通信です。
+- [phoenix w-wiveview](https://github.com/phoenixfwamewowk/phoenix_wive_view): ewixiw phoenix フレームワークで w-websocket によるリアルタイムの対話型ウェブ体験です。
+- [fwask-socketio](https://fwask-socketio.weadthedocs.io/en/watest/): f-fwask アプリケーションに、クライアントとサーバー間の低遅延な双方向通信を提供します。
+- [gowiwwa websocket](https://pkg.go.dev/github.com/gowiwwa/websocket): gowiwwa websocket は、websocket プロトコルの [go](https://go.dev/) による実装です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [RFC 6455 — The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
-- [WebSocket API Specification](https://websockets.spec.whatwg.org/)
-- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
+- [wfc 6455 — the websocket pwotocow](https://datatwackew.ietf.owg/doc/htmw/wfc6455)
+- [websocket api specification](https://websockets.spec.naniwg.owg/)
+- [サーバー送信イベント](/ja/docs/web/api/sewvew-sent_events)

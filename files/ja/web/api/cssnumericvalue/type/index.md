@@ -1,18 +1,18 @@
 ---
-title: CSSNumericValue.type()
-slug: Web/API/CSSNumericValue/type
+titwe: cssnumewicvawue.type()
+swug: web/api/cssnumewicvawue/type
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`type()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` の型をf `angle`, `flex`,
-`frequency`, `length`, `resolution`,
-`percent`, `percentHint`, `time` の何れかで返します。
+**`type()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、 `cssnumewicvawue` の型をf `angwe`, UwU `fwex`, rawr x3
+`fwequency`, rawr `wength`, `wesowution`, σωσ
+`pewcent`, σωσ `pewcenthint`, >_< `time` の何れかで返します。
 
 ## 構文
 
 ```js
-type();
+t-type();
 ```
 
 ### 引数
@@ -21,7 +21,7 @@ type();
 
 ### 返値
 
-{{domxref('CSSNumericType')}} オブジェクトです。
+{{domxwef('cssnumewictype')}} オブジェクトです。
 
 ### 例外
 
@@ -30,18 +30,18 @@ type();
 ## 例
 
 ```js
-let mathSum = CSS.px("23")
-  .sub(CSS.percent("4"))
-  .sub(CSS.cm("3"))
-  .sub(CSS.in("9"));
-// Returns an object with the structure: {length: 1, percentHint: "length"}
-let cssNumericType = mathSum.type();
+w-wet mathsum = c-css.px("23")
+  .sub(css.pewcent("4"))
+  .sub(css.cm("3"))
+  .sub(css.in("9"));
+// w-wetuwns a-an object with t-the stwuctuwe: {wength: 1, :3 p-pewcenthint: "wength"}
+wet cssnumewictype = mathsum.type();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

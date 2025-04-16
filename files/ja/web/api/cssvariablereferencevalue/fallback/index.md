@@ -1,26 +1,26 @@
 ---
-title: CSSVariableReferenceValue.fallback
-slug: Web/API/CSSVariableReferenceValue/fallback
+titwe: cssvawiabwewefewencevawue.fawwback
+swug: w-web/api/cssvawiabwewefewencevawue/fawwback
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{apiwef("cssom")}}{{seecompattabwe}}
 
-**`fallback`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、組み込み CSS 値のカスタム名を返します。
+**`fawwback`** は {{domxwef("cssvawiabwewefewencevawue")}} インターフェイスの読み取り専用プロパティで、組み込み c-css 値のカスタム名を返します。
 
 ## 構文
 
 ```
-var variable = CSSVariableReferenceValue.variable;
+v-vaw vawiabwe = c-cssvawiabwewefewencevawue.vawiabwe;
 ```
 
 ### 値
 
-{{domxref('CSSUnparsedValue')}} です。
+{{domxwef('cssunpawsedvawue')}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}

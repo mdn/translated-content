@@ -1,46 +1,46 @@
 ---
-title: MouseScrollEvent
-slug: Web/API/MouseScrollEvent
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: mousescwowwevent
+swug: w-web/api/mousescwowwevent
+w-w10n:
+  s-souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{APIRef("UI Events")}}{{ Non-standard_Header }}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{ n-nyon-standawd_headew }}{{depwecated_headew}}
 
-**`MouseScrollEvent`** インターフェイスは、ユーザーがマウスホイールや同様の入力デバイスを動かすことによって発生するイベントを表します。
+**`mousescwowwevent`** インターフェイスは、ユーザーがマウスホイールや同様の入力デバイスを動かすことによって発生するイベントを表します。
 
-> [!WARNING]
-> wheel イベントにはこのインターフェイスを使用しないでください。
+> [!wawning]
+> w-wheew イベントにはこのインターフェイスを使用しないでください。
 >
-> `MouseWheelEvent` と同様、このインターフェイスは非標準であり、非推奨です。 Gecko ベースのブラウザーでのみ使用されていました。代わりに、標準の _{{domxref("WheelEvent")}}_ を使用してください。
+> `mousewheewevent` と同様、このインターフェイスは非標準であり、非推奨です。 g-gecko ベースのブラウザーでのみ使用されていました。代わりに、標準の _{{domxwef("wheewevent")}}_ を使用してください。
 
 ## メソッド概要
 
-```webidl
-void initMouseScrollEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in nsIDOMAbstractView viewArg,
-  in long detailArg,
-  in long screenXArg,
-  in long screenYArg,
-  in long clientXArg,
-  in long clientYArg,
-  in boolean ctrlKeyArg,
-  in boolean altKeyArg,
-  in boolean shiftKeyArg,
-  in boolean metaKeyArg,
-  in unsigned short buttonArg,
-  in nsIDOMEventTarget relatedTargetArg,
-  in long axis);
+```webidw
+v-void initmousescwowwevent(
+  in domstwing typeawg, nyaa~~
+  in boowean canbubbweawg, /(^•ω•^)
+  in boowean c-cancewabweawg, rawr
+  in nysidomabstwactview viewawg, OwO
+  i-in wong detaiwawg, (U ﹏ U)
+  in w-wong scweenxawg, >_<
+  in wong scweenyawg, rawr x3
+  in wong cwientxawg, mya
+  in w-wong cwientyawg, nyaa~~
+  in boowean c-ctwwkeyawg, (⑅˘꒳˘)
+  in b-boowean awtkeyawg,
+  in boowean shiftkeyawg, rawr x3
+  in boowean metakeyawg, (✿oωo)
+  in unsigned s-showt buttonawg, (ˆ ﻌ ˆ)♡
+  in nysidomeventtawget wewatedtawgetawg, (˘ω˘)
+  in wong axis);
 ```
 
 ## 属性
 
 | 属性                      | 型     | 説明                       |
 | ------------------------- | ------ | -------------------------- |
-| `axis` {{ReadOnlyInline}} | `long` | スクロール方向を示します。 |
+| `axis` {{weadonwyinwine}} | `wong` | スクロール方向を示します。 |
 
 ## 定数
 
@@ -48,20 +48,20 @@ void initMouseScrollEvent(
 
 | 定数              | 値     | 説明                                               |
 | ----------------- | ------ | -------------------------------------------------- |
-| `HORIZONTAL_AXIS` | `0x01` | このイベントは、水平ホイール操作によって発生した。 |
-| `VERTICAL_AXIS`   | `0x02` | このイベントは、垂直ホイール操作によって発生した。 |
+| `howizontaw_axis` | `0x01` | このイベントは、水平ホイール操作によって発生した。 |
+| `vewticaw_axis`   | `0x02` | このイベントは、垂直ホイール操作によって発生した。 |
 
 ## インスタンスメソッド
 
-- `initMouseScrollEvent()`
-  - : `nsIDOMMouseScrollEvent::initMouseScrollEvent()` を参照。
+- `initmousescwowwevent()`
+  - : `nsidommousescwowwevent::initmousescwowwevent()` を参照。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `DOMMouseScroll`
-- `MozMousePixelScroll`
-- 標準化されたマウスホイールイベントオブジェクト: {{ domxref("WheelEvent") }}
+- `dommousescwoww`
+- `mozmousepixewscwoww`
+- 標準化されたマウスホイールイベントオブジェクト: {{ domxwef("wheewevent") }}

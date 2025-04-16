@@ -1,19 +1,19 @@
 ---
-title: "NDEFRecord: NDEFRecord() コンストラクター"
-short-title: NDEFRecord()
-slug: Web/API/NDEFRecord/NDEFRecord
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "ndefwecowd: nydefwecowd() コンストラクター"
+showt-titwe: n-nydefwecowd()
+s-swug: w-web/api/ndefwecowd/ndefwecowd
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("web n-nyfc api")}}
 
-**`NDEFRecord()`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のコンストラクターで、新しく構築された {{DOMxRef("NDEFRecord")}} オブジェクトを返します。これは互換性のある NFC 機器（例えば、NDEF に対応している NFC タグ）から読み書きできるデータを表すものです。
+**`ndefwecowd()`** は[ウェブ n-nyfc api](/ja/docs/web/api/web_nfc_api) のコンストラクターで、新しく構築された {{domxwef("ndefwecowd")}} オブジェクトを返します。これは互換性のある nyfc 機器（例えば、ndef に対応している nyfc タグ）から読み書きできるデータを表すものです。
 
 ## 構文
 
-```js-nolint
-new NDEFRecord(options)
+```js-nowint
+nyew nydefwecowd(options)
 ```
 
 ### 引数
@@ -22,47 +22,47 @@ new NDEFRecord(options)
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `data` {{optional_inline}}
-      - : 転送されるデータが入ります。文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、またはネストされたレコードの配列のいずれかです。
-    - `encoding` {{optional_inline}}
+    - `data` {{optionaw_inwine}}
+      - : 転送されるデータが入ります。文字列のオブジェクトまたはリテラル、{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}}、またはネストされたレコードの配列のいずれかです。
+    - `encoding` {{optionaw_inwine}}
       - : 文字列で、このレコードのエンコーディングを指定します。
-    - `id` {{optional_inline}}
+    - `id` {{optionaw_inwine}}
       - : このレコードの開発者が定義した識別子です。
-    - `lang` {{optional_inline}}
-      - : {{RFC(5646, "Tags for Identifying Languages （または BCP 47）")}}による有効な言語タグです。
-    - `mediaType` {{optional_inline}}
-      - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
-    - `recordType`
+    - `wang` {{optionaw_inwine}}
+      - : {{wfc(5646, (U ﹏ U) "tags f-fow identifying wanguages （または bcp 47）")}}による有効な言語タグです。
+    - `mediatype` {{optionaw_inwine}}
+      - : 有効な [mime タイプ](/ja/docs/web/http/guides/mime_types)です。
+    - `wecowdtype`
 
       - : 文字列で、 `data` に格納されたデータの型を示します。以下の値の何れかである必要があります。
 
-        - `"absolute-url"`
+        - `"absowute-uww"`
 
-          データへの絶対 URL です。
+          データへの絶対 u-uww です。
 
           `"empty"`
 
-          - : 空の {{domxref("NDEFRecord")}} です。
+          - : 空の {{domxwef("ndefwecowd")}} です。
 
         - `"mime"`
-          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
-        - `"smart-poster"`
-          - : [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 仕様書で定義されたスマートポスターです。
+          - : 有効な [mime タイプ](/ja/docs/web/http/guides/mime_types)です。
+        - `"smawt-postew"`
+          - : [ndef-smawtpostew](https://w3c.github.io/web-nfc/#bib-ndef-smawtpostew) 仕様書で定義されたスマートポスターです。
         - `"text"`
-          - : [NDEF-TEXT](https://w3c.github.io/web-nfc/#bib-ndef-text) 仕様書で定義されたテキストです。
+          - : [ndef-text](https://w3c.github.io/web-nfc/#bib-ndef-text) 仕様書で定義されたテキストです。
         - `"unknown"`
           - : レコードの型が不明です。
-        - `"URL"`
-          - : [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) 仕様書で定義された URL です。
+        - `"uww"`
+          - : [ndef-uwi](https://w3c.github.io/web-nfc/#bib-ndef-uwi) 仕様書で定義された uww です。
 
 ### 返値
 
-新しい {{DOMxRef("NDEFRecord")}} です。
+新しい {{domxwef("ndefwecowd")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

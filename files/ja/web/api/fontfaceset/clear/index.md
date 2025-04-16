@@ -1,19 +1,19 @@
 ---
-title: "FontFaceSet: clear() メソッド"
-short-title: clear()
-slug: Web/API/FontFaceSet/clear
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: cweaw() メソッド"
+s-showt-titwe: c-cweaw()
+s-swug: web/api/fontfaceset/cweaw
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading a-api")}}
 
-**`clear()`** は {{domxref("FontFaceSet")}} インターフェイスのメソッドで、このインターフェイスを介して追加されたすべてのフォントを除去します。 {{cssxref("@font-face")}} ルールで追加されたフォントは除去されません。
+**`cweaw()`** は {{domxwef("fontfaceset")}} インターフェイスのメソッドで、このインターフェイスを介して追加されたすべてのフォントを除去します。 {{cssxwef("@font-face")}} ルールで追加されたフォントは除去されません。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

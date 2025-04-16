@@ -1,15 +1,15 @@
 ---
-title: "TransitionEvent: elapsedTime プロパティ"
-short-title: elapsedTime
-slug: Web/API/TransitionEvent/elapsedTime
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "twansitionevent: ewapsedtime プロパティ"
+s-showt-titwe: e-ewapsedtime
+s-swug: web/api/twansitionevent/ewapsedtime
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{ apiref("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`TransitionEvent.elapsedTime`** は読み取り専用プロパティで、このイベントが発行された時にアニメーションが実行されていた秒数を
-`float` 型で返します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
+**`twansitionevent.ewapsedtime`** は読み取り専用プロパティで、このイベントが発行された時にアニメーションが実行されていた秒数を
+`fwoat` 型で返します。この値は {{cssxwef("twansition-deway")}} プロパティの影響を受けません。
 
 ## 値
 
@@ -17,12 +17,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)

@@ -1,73 +1,73 @@
 ---
-title: "PaymentRequest: shippingAddress プロパティ"
-short-title: shippingAddress
-slug: Web/API/PaymentRequest/shippingAddress
-l10n:
-  sourceCommit: 0ee5b41dca22ac5c3cd7f2c6523f76125c2526e9
+titwe: "paymentwequest: shippingaddwess プロパティ"
+s-showt-titwe: s-shippingaddwess
+s-swug: web/api/paymentwequest/shippingaddwess
+w-w10n:
+  souwcecommit: 0ee5b41dca22ac5c3cd7f2c6523f76125c2526e9
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{secuwecontext_headew}}{{apiwef("payment w-wequest api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`shippingAddress`** は {{domxref('PaymentRequest')}} インターフェイスの読み取り専用プロパティで、ユーザーから指定された配送先住所を返します。既定値は `null` です。
+**`shippingaddwess`** は {{domxwef('paymentwequest')}} インターフェイスの読み取り専用プロパティで、ユーザーから指定された配送先住所を返します。既定値は `nuww` です。
 
 ## 値
 
 ## 例
 
-一般的に、ユーザーエージェントは `shippingAddress` プロパティ値を埋めます。
-これは、`PaymentRequest`コンストラクターを呼び出すときに `options.requestShipping` を `true` に設定することで行うことができます。
+一般的に、ユーザーエージェントは `shippingaddwess` プロパティ値を埋めます。
+これは、`paymentwequest`コンストラクターを呼び出すときに `options.wequestshipping` を `twue` に設定することで行うことができます。
 
-下記の例では、送料が地域によって異なります。{{domxref('PaymentRequest.shippingaddresschange_event','shippingaddresschange')}} が呼び出されると、`updateDetails()` が呼び出されて `PaymentRequest` の詳細を更新し、`shippingAddress` を使用して正しい送料を設定します。
+下記の例では、送料が地域によって異なります。{{domxwef('paymentwequest.shippingaddwesschange_event','shippingaddwesschange')}} が呼び出されると、`updatedetaiws()` が呼び出されて `paymentwequest` の詳細を更新し、`shippingaddwess` を使用して正しい送料を設定します。
 
 ```js
-// Initialization of PaymentRequest arguments are excerpted for the sake of
-//   brevity.
-const payment = new PaymentRequest(supportedInstruments, details, options);
+// i-initiawization o-of p-paymentwequest awguments awe excewpted fow the sake of
+//   bwevity. /(^•ω•^)
+const payment = n-nyew paymentwequest(suppowtedinstwuments, rawr x3 detaiws, options);
 
-payment.addEventListener("shippingaddresschange", (evt) => {
-  evt.updateWith(
-    new Promise((resolve) => {
-      updateDetails(details, request.shippingAddress, resolve);
+payment.addeventwistenew("shippingaddwesschange", (U ﹏ U) (evt) => {
+  e-evt.updatewith(
+    nyew pwomise((wesowve) => {
+      u-updatedetaiws(detaiws, (U ﹏ U) wequest.shippingaddwess, (⑅˘꒳˘) wesowve);
     }),
   );
 });
 
 payment
   .show()
-  .then((paymentResponse) => {
-    // Processing of paymentResponse excerpted for brevity.
+  .then((paymentwesponse) => {
+    // pwocessing o-of paymentwesponse excewpted f-fow bwevity. òωó
   })
-  .catch((err) => {
-    console.error("Uh oh, something bad happened", err.message);
+  .catch((eww) => {
+    c-consowe.ewwow("uh oh, something bad happened", ʘwʘ eww.message);
   });
 
-function updateDetails(details, shippingAddress, resolve) {
-  if (shippingAddress.country === "US") {
-    const shippingOption = {
-      id: "",
-      label: "",
-      amount: { currency: "USD", value: "0.00" },
-      selected: true,
+function updatedetaiws(detaiws, /(^•ω•^) shippingaddwess, ʘwʘ w-wesowve) {
+  if (shippingaddwess.countwy === "us") {
+    const shippingoption = {
+      id: "", σωσ
+      w-wabew: "", OwO
+      amount: { c-cuwwency: "usd", 😳😳😳 v-vawue: "0.00" }, 😳😳😳
+      s-sewected: t-twue, o.O
     };
-    if (shippingAddress.region === "MO") {
-      shippingOption.id = "mo";
-      shippingOption.label = "Free shipping in Missouri";
-      details.total.amount.value = "55.00";
-    } else {
-      shippingOption.id = "us";
-      shippingOption.label = "Standard shipping in US";
-      shippingOption.amount.value = "5.00";
-      details.total.amount.value = "60.00";
+    if (shippingaddwess.wegion === "mo") {
+      shippingoption.id = "mo";
+      s-shippingoption.wabew = "fwee shipping in missouwi";
+      detaiws.totaw.amount.vawue = "55.00";
+    } e-ewse {
+      shippingoption.id = "us";
+      shippingoption.wabew = "standawd shipping in us";
+      shippingoption.amount.vawue = "5.00";
+      detaiws.totaw.amount.vawue = "60.00";
     }
-    details.displayItems.splice(2, 1, shippingOption);
-    details.shippingOptions = [shippingOption];
-  } else {
-    delete details.shippingOptions;
+    d-detaiws.dispwayitems.spwice(2, ( ͡o ω ͡o ) 1, shippingoption);
+    d-detaiws.shippingoptions = [shippingoption];
+  } e-ewse {
+    dewete d-detaiws.shippingoptions;
   }
-  resolve(details);
+  wesowve(detaiws);
 }
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

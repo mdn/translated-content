@@ -1,64 +1,64 @@
 ---
-title: BackgroundFetchUpdateUIEvent
-slug: Web/API/BackgroundFetchUpdateUIEvent
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: backgwoundfetchupdateuievent
+swug: web/api/backgwoundfetchupdateuievent
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchUpdateUIEvent`** インターフェイスは、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためのイベント型で、バックグラウンドでのフェッチの成否をユーザーに伝えるために、アプリのタイトルやアイコンを更新するメソッドを有しています。
+{{domxwef('backgwound f-fetch api','','',' ')}} の **`backgwoundfetchupdateuievent`** インターフェイスは、 {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchsuccess_event", mya "backgwoundfetchsuccess")}} 、および、 {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchfaiw_event", mya "backgwoundfetchfaiw")}} イベントのためのイベント型で、バックグラウンドでのフェッチの成否をユーザーに伝えるために、アプリのタイトルやアイコンを更新するメソッドを有しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
-  - : 新規に `BackgroundFetchUIEvent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトは {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためにブラウザーによって自動で生成されるからです。
+- {{domxwef("backgwoundfetchupdateuievent.backgwoundfetchupdateuievent()", 😳 "backgwoundfetchupdateuievent()")}} {{expewimentaw_inwine}}
+  - : 新規に `backgwoundfetchuievent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトは {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchsuccess_event", XD "backgwoundfetchsuccess")}} 、および、 {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchfaiw_event", :3 "backgwoundfetchfaiw")}} イベントのためにブラウザーによって自動で生成されるからです。
 
 ## プロパティ
 
-_このインスタンスは特にプロパティを持っていませんが、 {{domxref("Event")}} 、および、 {{domxref("BackgroundFetchEvent")}} のプロパティを継承します。_
+_このインスタンスは特にプロパティを持っていませんが、 {{domxwef("event")}} 、および、 {{domxwef("backgwoundfetchevent")}} のプロパティを継承します。_
 
 ## メソッド
 
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
-  - : バックグラウンドのフェッチの状況を知らせるために、 UI 上のタイトルとアイコンを更新します。 {{jsxref("Promise")}} によって解決されます。
+- {{domxwef("backgwoundfetchupdateuievent.updateui()")}} {{expewimentaw_inwine}}
+  - : バックグラウンドのフェッチの状況を知らせるために、 u-ui 上のタイトルとアイコンを更新します。 {{jsxwef("pwomise")}} によって解決されます。
 
 ## 例
 
-以下の例では、 `backgroundfetchsuccess` イベントの発生が待ち受けられおり、イベントの発生はフェッチが完遂されたことを意味します。イベント発生時、ユーザーにエピソードのダウンロードが完了したことを伝えるメッセージと共に、 {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} メソッドが呼ばれています。
+以下の例では、 `backgwoundfetchsuccess` イベントの発生が待ち受けられおり、イベントの発生はフェッチが完遂されたことを意味します。イベント発生時、ユーザーにエピソードのダウンロードが完了したことを伝えるメッセージと共に、 {{domxwef("backgwoundfetchupdateuievent.updateui()", "updateui()")}} メソッドが呼ばれています。
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
-  const bgFetch = event.registration;
+a-addeventwistenew("backgwoundfetchsuccess", 😳😳😳 (event) => {
+  const b-bgfetch = event.wegistwation;
 
-  event.waitUntil(
+  e-event.waituntiw(
     (async () => {
       // キャッシュを作成
-      const cache = await caches.open("downloads");
-      // すべての BackgroundFetchRecord オブジェクトを取得
-      const records = await bgFetch.matchAll();
+      const cache = await caches.open("downwoads");
+      // すべての backgwoundfetchwecowd オブジェクトを取得
+      const w-wecowds = await bgfetch.matchaww();
       // 各リクエスト/レスポンスの組をコピー
-      const promises = records.map(async (record) => {
-        const response = await record.responseReady;
-        await cache.put(record.request, response);
+      const p-pwomises = wecowds.map(async (wecowd) => {
+        const wesponse = a-await wecowd.wesponseweady;
+        await cache.put(wecowd.wequest, wesponse);
       });
 
       // コピーの完了を待つ
-      await Promise.all(promises);
+      a-await pwomise.aww(pwomises);
 
       // 進捗表示を更新
-      event.updateUI({ title: "Episode 5 ready to listen!" });
-    })(),
+      e-event.updateui({ titwe: "episode 5 w-weady to wisten!" });
+    })(), -.-
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

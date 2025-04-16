@@ -1,18 +1,18 @@
 ---
-title: OfflineAudioContext.resume()
-slug: Web/API/OfflineAudioContext/resume
-l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+titwe: offwineaudiocontext.wesume()
+swug: web/api/offwineaudiocontext/wesume
+w-w10n:
+  souwcecommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`resume()`** は {{domxref("OfflineAudioContext")}} インターフェイスのメソッドで、 一時停止していた音声コンテキストの時刻の進行を再開します。 `OfflineAudioContext` は音声ハードウェアを必要としないので、プロミスはすぐに解決されます。
+**`wesume()`** は {{domxwef("offwineaudiocontext")}} インターフェイスのメソッドで、 一時停止していた音声コンテキストの時刻の進行を再開します。 `offwineaudiocontext` は音声ハードウェアを必要としないので、プロミスはすぐに解決されます。
 
 ## 構文
 
-```js-nolint
-resume()
+```js-nowint
+w-wesume()
 ```
 
 ### 引数
@@ -21,19 +21,19 @@ resume()
 
 ### 返値
 
-{{jsxref("Promise")}} で、 {{jsxref('undefined')}} に解決します。
+{{jsxwef("pwomise")}} で、 {{jsxwef('undefined')}} に解決します。
 
 ### 例外
 
 例外が発生した場合、プロミスが拒否されます。
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : コンテキストが現在中断されていないか、レンダリングが始まっていない場合に返されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

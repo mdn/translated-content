@@ -1,51 +1,51 @@
 ---
-title: VRDisplayEvent
-slug: Web/API/VRDisplayEvent
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+titwe: vwdispwayevent
+swug: web/api/vwdispwayevent
+w-w10n:
+  souwcecommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`VRDisplayEvent`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、 WebVR 関連イベントのイベントオブジェクトを表します（[WebVR ウインドウ拡張機能のリスト](/ja/docs/Web/API/WebVR_API#window)を参照）。
+**`vwdispwayevent`** は [webvw api](/ja/docs/web/api/webvw_api) のインターフェイスで、 w-webvw 関連イベントのイベントオブジェクトを表します（[webvw ウインドウ拡張機能のリスト](/ja/docs/web/api/webvw_api#window)を参照）。
 
-> [!NOTE]
-> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!note]
+> このインターフェイスは古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。これは [webxw 機器 a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。
 
 ## コンストラクター
 
-- {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : `VRDisplayEvent` オブジェクトのインスタンスを生成します。
+- {{domxwef("vwdispwayevent.vwdispwayevent", σωσ "vwdispwayevent()")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : `vwdispwayevent` オブジェクトのインスタンスを生成します。
 
 ## インスタンスプロパティ
 
-_`VRDisplayEvent` は、親オブジェクトである {{domxref("Event")}} からプロパティを継承しています。_
+_`vwdispwayevent` は、親オブジェクトである {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : このイベントに関連付けられた {{domxref("VRDisplay")}} 。
-- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vwdispwayevent.dispway")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : このイベントに関連付けられた {{domxwef("vwdispway")}} 。
+- {{domxwef("vwdispwayevent.weason")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : イベントが発生した人間が読める理由。
 
 ## 例
 
 ```js
-window.addEventListener("vrdisplaypresentchange", (e) => {
-  console.log(
-    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+w-window.addeventwistenew("vwdispwaypwesentchange", >_< (e) => {
+  c-consowe.wog(
+    `dispway ${e.dispway.dispwayid} pwesentation h-has changed. :3 weason given: ${e.weason}.`, (U ﹏ U)
   );
 });
 ```
 
 ## 仕様書
 
-このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
+このインターフェイスは古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部であり、これは [webxw 機器 api](https://immewsive-web.github.io/webxw/) で置き枯れられました。標準規格になる見込みはありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+すべてのブラウザーが新しい [webxw a-api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、 [a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/)、[thwee.js](https://thweejs.owg/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を使用することが、すべてのブラウザーで動作する webxw アプリを開発する上で推奨されます。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

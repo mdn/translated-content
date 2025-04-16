@@ -1,42 +1,42 @@
 ---
-title: BroadcastChannel.close()
-slug: Web/API/BroadcastChannel/close
-l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+titwe: bwoadcastchannew.cwose()
+swug: web/api/bwoadcastchannew/cwose
+w-w10n:
+  s-souwcecommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-**`BroadcastChannel.close()`** は、基礎となるチャンネルへの接続を終了し、オブジェクトをガベージコレクションできるようにします。 このチャンネルがもう必要ないことをブラウザーが知る他の方法はないので、これは実行するのに必要なステップです。
+**`bwoadcastchannew.cwose()`** は、基礎となるチャンネルへの接続を終了し、オブジェクトをガベージコレクションできるようにします。 このチャンネルがもう必要ないことをブラウザーが知る他の方法はないので、これは実行するのに必要なステップです。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-channel.close()
+```js-nowint
+c-channew.cwose()
 ```
 
 ## 例
 
 ```js
 // チャンネルに接続
-const bc = new BroadcastChannel("test_channel");
+c-const bc = nyew b-bwoadcastchannew("test_channew");
 
-// その他の操作（postMessage など）
+// その他の操作（postmessage など）
 
 // 終了したら、チャンネルから切断します
-bc.close();
+bc.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("BroadcastChannel")}}: 所属するインターフェイス。
+- {{domxwef("bwoadcastchannew")}}: 所属するインターフェイス。

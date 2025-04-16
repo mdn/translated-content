@@ -1,61 +1,61 @@
 ---
-title: CSSKeyframeRule
-slug: Web/API/CSSKeyframeRule
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csskeyfwamewuwe
+swug: w-web/api/csskeyfwamewuwe
+w-w10n:
+  s-souwcecommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。
+**`csskeyfwamewuwe`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/web/css/css_syntax/at-wuwe) の {{cssxwef("@keyfwames")}} の 1 つのキーフレームに対応しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
-- {{domxref("CSSKeyframeRule.keyText")}}
-  - : `'10%'` や `'75%'` のように、キーフレームのキーを表します。`from` キーワードは `'0%'` に対応付けられ、`to` キーワードは `'100%'` に対応づけられます。
-- {{domxref("CSSKeyframeRule.style")}} {{ReadOnlyInline}}
-  - : キーフレームに関連した CSS スタイルの {{domxref("CSSStyleDeclaration")}} を返します。
+- {{domxwef("csskeyfwamewuwe.keytext")}}
+  - : `'10%'` や `'75%'` のように、キーフレームのキーを表します。`fwom` キーワードは `'0%'` に対応付けられ、`to` キーワードは `'100%'` に対応づけられます。
+- {{domxwef("csskeyfwamewuwe.stywe")}} {{weadonwyinwine}}
+  - : キーフレームに関連した c-css スタイルの {{domxwef("cssstywedecwawation")}} を返します。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+_固有のメソッドはありません。祖先である {{domxwef("csswuwe")}} からメソッドを継承しています。_
 
 ## 例
 
-この CSS には、 keyframes アットルールが含まれています。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームのための個別の `CSSKeyFrame` オブジェクトが格納されます。
+この c-css には、 keyfwames アットルールが含まれています。これは最初の {{domxwef("csswuwe")}} となり、 `document.stywesheets[0].csswuwes` で返されます。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返し、その中に各キーフレームのための個別の `csskeyfwame` オブジェクトが格納されます。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  f-fwom {
+    twansfowm: t-twanswatex(0%);
   }
 
   to {
-    transform: translateX(100%);
+    twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0]); // a CSSKeyframeRule representing an individual keyframe.
+wet mywuwes = document.stywesheets[0].csswuwes;
+w-wet keyfwames = mywuwes[0]; // a csskeyfwameswuwe
+c-consowe.wog(keyfwames[0]); // a csskeyfwamewuwe w-wepwesenting an individuaw keyfwame. (⑅˘꒳˘)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@keyframes")}}
-- {{domxref("CSSKeyFramesRule")}}
+- {{cssxwef("@keyfwames")}}
+- {{domxwef("csskeyfwameswuwe")}}

@@ -1,63 +1,63 @@
 ---
-title: "Attr: namespaceURI プロパティ"
-slug: Web/API/Attr/namespaceURI
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "attw: nyamespaceuwi プロパティ"
+s-swug: web/api/attw/namespaceuwi
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`namespaceURI`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間 URI を返し、この要素が名前空間にない場合は `null` を返します。
+**`namespaceuwi`** は {{domxwef("attw")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間 u-uwi を返し、この要素が名前空間にない場合は `nuww` を返します。
 
-名前空間 URI は {{domxref("Attr")}} の作成時に設定され、変更することができません。
-名前空間付きの属性は、 {{domxref("Element.setAttributeNS()")}} で作成することができます。
+名前空間 u-uwi は {{domxwef("attw")}} の作成時に設定され、変更することができません。
+名前空間付きの属性は、 {{domxwef("ewement.setattwibutens()")}} で作成することができます。
 
-> [!NOTE]
+> [!note]
 > 属性は、装着されている要素から名前空間を継承しません。
 > 属性に明示的に名前空間が与えられなかった場合は、名前空間なしになります。
 
-ブラウザーは名前空間の検証そのものは行いませんし、強制もしません。必要な検証を行うのは JavaScript アプリケーションに任されています。また、名前空間接頭辞は一度特定の属性ノードに関連づけられると、変更することができないので注意してください。
+ブラウザーは名前空間の検証そのものは行いませんし、強制もしません。必要な検証を行うのは j-javascwipt アプリケーションに任されています。また、名前空間接頭辞は一度特定の属性ノードに関連づけられると、変更することができないので注意してください。
 
 ## 値
 
-文字列で、この属性の名前空間 URI が入ります。この要素が名前空間にない場合は `null` を返します。
+文字列で、この属性の名前空間 u-uwi が入ります。この要素が名前空間にない場合は `nuww` を返します。
 
 ## 例
 
-次の例は、HTML 要素と SVG 要素の場合で、接頭辞つきの属性の結果を示しています。
-HTML は名前空間を扱わないので、この場合、常に `null` を返します。
-SVG 要素の場合は、 XML の名前空間 URI である `http://www.w3.org/XML/1998/namespace` を返します。
+次の例は、htmw 要素と s-svg 要素の場合で、接頭辞つきの属性の結果を示しています。
+h-htmw は名前空間を扱わないので、この場合、常に `nuww` を返します。
+svg 要素の場合は、 xmw の名前空間 uwi である `http://www.w3.owg/xmw/1998/namespace` を返します。
 
-### HTML コンテンツ
+### htmw コンテンツ
 
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
+```htmw
+<svg xmw:wang="en-us" cwass="stwuct" height="1" w-width="1">cwick me</svg>
+<wabew xmw:wang="en-us" c-cwass="stwuct"></wabew>
 
 <p>
-  <button>&lt;svg&gt; の値を表示</button>
-  <button>&lt;label&gt; の値を表示</button>
+  <button>&wt;svg&gt; の値を表示</button>
+  <button>&wt;wabew&gt; の値を表示</button>
 </p>
 
 <p>
-  <code>xml:lang</code> 属性の名前空間 URI:
-  <output id="result">なし。</output>
+  <code>xmw:wang</code> 属性の名前空間 uwi:
+  <output id="wesuwt">なし。</output>
 </p>
 ```
 
-### JavaScript コンテンツ
+### j-javascwipt コンテンツ
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
+const ewements = document.quewysewectowaww(".stwuct");
+const buttons = d-document.quewysewectowaww("button");
+const o-outputew = document.quewysewectow("#wesuwt");
 
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.namespaceURI;
+wet i-i = 0;
+fow (const button of buttons) {
+  const ewement = ewements[i];
+  button.addeventwistenew("cwick", /(^•ω•^) () => {
+    c-const attwibute = ewement.attwibutes[0];
+    outputew.vawue = attwibute.namespaceuwi;
   });
   i++;
 }
@@ -65,18 +65,18 @@ for (const button of buttons) {
 
 ### 結果
 
-{{ EmbedLiveSample('Example','100%',100) }}
+{{ e-embedwivesampwe('exampwe','100%',100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Attr.name")}} プロパティはこの属性の修飾名を返し、 {{domxref("Attr.localName")}} プロパティはこの属性の修飾名のローカル名の部分を返し、 {{domxref("Attr.prefix")}} は名前空間接頭辞を返します。
-- {{domxref("Element.namespaceURI")}} プロパティは {{domxref("Element")}} について同等のものです。
-- {{domxref("Element.setAttributeNS()")}} メソッドは、指定された属性を指定された名前空間で作成します。
+- {{domxwef("attw.name")}} プロパティはこの属性の修飾名を返し、 {{domxwef("attw.wocawname")}} プロパティはこの属性の修飾名のローカル名の部分を返し、 {{domxwef("attw.pwefix")}} は名前空間接頭辞を返します。
+- {{domxwef("ewement.namespaceuwi")}} プロパティは {{domxwef("ewement")}} について同等のものです。
+- {{domxwef("ewement.setattwibutens()")}} メソッドは、指定された属性を指定された名前空間で作成します。

@@ -1,59 +1,59 @@
 ---
-title: Magnetometer
-slug: Web/API/Magnetometer
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: magnetometew
+swug: web/api/magnetometew
+w-w10n:
+  souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{apiwef("sensow a-api")}}{{seecompattabwe}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`Magnetometer`** インターフェイスは、デバイスのプライマリー磁気センサーで検出される磁場の情報を提供します。
+[sensow a-apis](/ja/docs/web/api/sensow_apis) の **`magnetometew`** インターフェイスは、デバイスのプライマリー磁気センサーで検出される磁場の情報を提供します。
 
-このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 a-api](/ja/docs/web/api/pewmissions_api) により `'magnetometew'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) でブロックされる可能性があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}} {{Experimental_Inline}}
-  - : 新しい `Magnetometer` オブジェクトを生成します。
+- {{domxwef("magnetometew.magnetometew", σωσ "magnetometew()")}} {{expewimentaw_inwine}}
+  - : 新しい `magnetometew` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : デバイスの x 軸方向の磁場を表す `double` 値を返します。
-- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : デバイスの y 軸方向の磁場を表す `double` 値を返します。
-- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : デバイスの z 軸方向の磁場を表す `double` 値を返します。
+- {{domxwef('magnetometew.x')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : デバイスの x-x 軸方向の磁場を表す `doubwe` 値を返します。
+- {{domxwef('magnetometew.y')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : デバイスの y-y 軸方向の磁場を表す `doubwe` 値を返します。
+- {{domxwef('magnetometew.z')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : デバイスの z-z 軸方向の磁場を表す `doubwe` 値を返します。
 
 ## インスタンスメソッド
 
-_`Magnetometer` には独自のメソッドはありません。しかし、親インターフェイスの {{domxref("Sensor")}} および {{domxref("EventTarget")}} からメソッドを継承しています。_
+_`magnetometew` には独自のメソッドはありません。しかし、親インターフェイスの {{domxwef("sensow")}} および {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## イベント
 
-_`Magnetometer` には独自のイベントはありません。しかし、親インターフェイスの {{domxref('Sensor')}} からイベントを継承しています。_
+_`magnetometew` には独自のイベントはありません。しかし、親インターフェイスの {{domxwef('sensow')}} からイベントを継承しています。_
 
 ## 例
 
-磁場は通常 {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで取得します。以下の例では、これを 1 秒に 60 回行います。
+磁場は通常 {{domxwef('sensow.weading_event', >_< 'weading')}} イベントコールバックで取得します。以下の例では、これを 1 秒に 60 回行います。
 
 ```js
-let magSensor = new Magnetometer({ frequency: 60 });
+w-wet magsensow = nyew magnetometew({ fwequency: 60 });
 
-magSensor.addEventListener("reading", (e) => {
-  console.log(`X 軸方向の磁場 ${magSensor.x}`);
-  console.log(`Y 軸方向の磁場 ${magSensor.y}`);
-  console.log(`Z 軸方向の磁場 ${magSensor.z}`);
+magsensow.addeventwistenew("weading", :3 (e) => {
+  consowe.wog(`x 軸方向の磁場 ${magsensow.x}`);
+  consowe.wog(`y 軸方向の磁場 ${magsensow.y}`);
+  c-consowe.wog(`z 軸方向の磁場 ${magsensow.z}`);
 });
-magSensor.start();
+magsensow.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

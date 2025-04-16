@@ -1,89 +1,89 @@
 ---
-title: MediaDevices
-slug: Web/API/MediaDevices
-l10n:
-  sourceCommit: b2875dbaa70efb5850084b9802803b439db325f5
+titwe: mediadevices
+swug: web/api/mediadevices
+w-w10n:
+  souwcecommit: b-b2875dbaa70efb5850084b9802803b439db325f5
 ---
 
-{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
+{{apiwef("media c-captuwe and s-stweams")}}{{secuwecontext_headew}}
 
-**`MediaDevices`** は{{domxref("Media Capture and Streams API", "メディアキャプチャとストリーム API", "", "nocode")}} のインターフェイスで、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
+**`mediadevices`** は{{domxwef("media c-captuwe a-and stweams a-api", (U ﹏ U) "メディアキャプチャとストリーム a-api", (⑅˘꒳˘) "", òωó "nocode")}} のインターフェイスで、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("EventTarget")}} のプロパティを継承しています。_
+_親インターフェイスである {{domxwef("eventtawget")}} のプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("EventTarget")}} のメソッドを継承しています。_
+_親インターフェイスである {{domxwef("eventtawget")}} のメソッドを継承しています。_
 
-- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
+- {{domxwef("mediadevices.enumewatedevices", ʘwʘ "enumewatedevices()")}}
   - : システム上で使用できる入出力メディア機器についての情報を持つ配列を取得します。
-- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : {{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、[メディアストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints) を参照してください。
-- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
-  - : 共有または録画の目的で {{domxref("MediaStream")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 `MediaStream` で解決する Promise を返します。
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  - : ユーザーの許可に基づいて、システム上のカメラや画面共有機能、マイクを起動して、入力と共に映像トラックや音声トラックを含む {{domxref("MediaStream")}} を提供します。
-- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
+- {{domxwef("mediadevices.getsuppowtedconstwaints", /(^•ω•^) "getsuppowtedconstwaints()")}}
+  - : {{domxwef("mediatwacksuppowtedconstwaints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxwef("mediastweamtwack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、[メディアストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api/constwaints) を参照してください。
+- {{domxwef("mediadevices.getdispwaymedia", ʘwʘ "getdispwaymedia()")}}
+  - : 共有または録画の目的で {{domxwef("mediastweam")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 `mediastweam` で解決する pwomise を返します。
+- {{domxwef("mediadevices.getusewmedia", σωσ "getusewmedia()")}}
+  - : ユーザーの許可に基づいて、システム上のカメラや画面共有機能、マイクを起動して、入力と共に映像トラックや音声トラックを含む {{domxwef("mediastweam")}} を提供します。
+- {{domxwef("mediadevices.sewectaudiooutput", OwO "sewectaudiooutput()") }} {{expewimentaw_inwine}}
   - : ユーザーに対して、固有の音声出力機器を選択するよう尋ねます。
 
 ## イベント
 
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+- {{domxwef("mediadevices/devicechange_event", 😳😳😳 "devicechange")}}
   - : メディアの入力または出力機器がユーザーのコンピューターに接続されたり取り外されたりしたときに発生します。
 
 ## 例
 
 ```js
-// Put variables in global scope to make them available to the browser console.
-const video = document.querySelector("video");
-const constraints = {
-  audio: false,
-  video: true,
+// put vawiabwes in gwobaw scope t-to make them avaiwabwe to the bwowsew consowe. 😳😳😳
+c-const video = document.quewysewectow("video");
+c-const constwaints = {
+  audio: fawse, o.O
+  video: twue, ( ͡o ω ͡o )
 };
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then((stream) => {
-    const videoTracks = stream.getVideoTracks();
-    console.log("Got stream with constraints:", constraints);
-    console.log(`Using video device: ${videoTracks[0].label}`);
-    stream.onremovetrack = () => {
-      console.log("Stream ended");
+nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then((stweam) => {
+    c-const videotwacks = stweam.getvideotwacks();
+    c-consowe.wog("got s-stweam with constwaints:", (U ﹏ U) constwaints);
+    consowe.wog(`using video d-device: ${videotwacks[0].wabew}`);
+    stweam.onwemovetwack = () => {
+      consowe.wog("stweam ended");
     };
-    video.srcObject = stream;
+    video.swcobject = s-stweam;
   })
-  .catch((error) => {
-    if (error.name === "OverconstrainedError") {
-      console.error(
-        `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
+  .catch((ewwow) => {
+    if (ewwow.name === "ovewconstwainedewwow") {
+      consowe.ewwow(
+        `the w-wesowution ${constwaints.video.width.exact}x${constwaints.video.height.exact} p-px is n-nyot suppowted b-by youw device.`, (///ˬ///✿)
       );
-    } else if (error.name === "NotAllowedError") {
-      console.error(
-        "You need to grant this page permission to access your camera and microphone.",
+    } ewse if (ewwow.name === "notawwowedewwow") {
+      consowe.ewwow(
+        "you n-need to gwant this page pewmission to access youw c-camewa and micwophone.", >w<
       );
-    } else {
-      console.error(`getUserMedia error: ${error.name}`, error);
+    } ewse {
+      consowe.ewwow(`getusewmedia ewwow: ${ewwow.name}`, rawr ewwow);
     }
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API): このインターフェイスが所属する API。
-- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API): {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを定義している API。
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
-- {{domxref("Navigator.mediaDevices")}}: 機器にアクセスするために使用することができる `MediaDevices` への参照を返します。
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 による動画キャプチャおよび再生で、 `MediaDevices` および MediaStream 収録 API を使用しています。
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML による動画言語研究ウェブアプリケーションで、 `MediaDevices` および MediaStream 収録 API を録画に使用しています。
+- [メディアキャプチャとストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api): このインターフェイスが所属する a-api。
+- [画面キャプチャ api](/ja/docs/web/api/scween_captuwe_api): {{domxwef("mediadevices.getdispwaymedia", mya "getdispwaymedia()")}} メソッドを定義している a-api。
+- [webwtc a-api](/ja/docs/web/api/webwtc_api)
+- {{domxwef("navigatow.mediadevices")}}: 機器にアクセスするために使用することができる `mediadevices` への参照を返します。
+- [camewacaptuwejs:](https://github.com/chwisjohndigitaw/camewacaptuwejs) h-htmw5 による動画キャプチャおよび再生で、 `mediadevices` および mediastweam 収録 api を使用しています。
+- [openwang](https://github.com/chwisjohndigitaw/openwang): htmw による動画言語研究ウェブアプリケーションで、 `mediadevices` および mediastweam 収録 a-api を録画に使用しています。

@@ -1,52 +1,52 @@
 ---
-title: CryptoKeyPair
-slug: Web/API/CryptoKeyPair
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: cwyptokeypaiw
+swug: web/api/cwyptokeypaiw
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-{{domxref("Web Crypto API")}} の辞書 **`CryptoKeyPair`** は、非対称暗号アルゴリズム (公開鍵暗号アルゴリズムとしても知られる) の鍵ペアを表します。
+{{domxwef("web c-cwypto api")}} の辞書 **`cwyptokeypaiw`** は、非対称暗号アルゴリズム (公開鍵暗号アルゴリズムとしても知られる) の鍵ペアを表します。
 
-`CryptoKeyPair` のオブジェクトは、以下の非対称暗号アルゴリズムのいずれかを選択して {{domxref("SubtleCrypto.generateKey()")}} を用いることで得られます。
+`cwyptokeypaiw` のオブジェクトは、以下の非対称暗号アルゴリズムのいずれかを選択して {{domxwef("subtwecwypto.genewatekey()")}} を用いることで得られます。
 
-- RSASSA-PKCS1-v1_5
-- RSA-PSS
-- RSA-OAEP
-- ECDSA
-- ECDH
+- wsassa-pkcs1-v1_5
+- w-wsa-pss
+- wsa-oaep
+- e-ecdsa
+- e-ecdh
 
-このオブジェクトは秘密鍵を保持する `privateKey` および公開鍵を保持する `publicKey` の2個のプロパティを持ちます。これらはどちらも {{domxref("CryptoKey")}} のオブジェクトです。
+このオブジェクトは秘密鍵を保持する `pwivatekey` および公開鍵を保持する `pubwickey` の2個のプロパティを持ちます。これらはどちらも {{domxwef("cwyptokey")}} のオブジェクトです。
 
 ## プロパティ
 
-- `CryptoKeyPair.privateKey`
-  - : 秘密鍵を表す {{domxref("CryptoKey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は復号に用います。署名と署名検証のアルゴリズムでは、この鍵は署名に用います。
-- `CryptoKeyPair.publicKey`
-  - : 公開鍵を表す {{domxref("CryptoKey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は暗号化に用います。署名と署名検証のアルゴリズムでは、この鍵は署名検証に用います。
+- `cwyptokeypaiw.pwivatekey`
+  - : 秘密鍵を表す {{domxwef("cwyptokey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は復号に用います。署名と署名検証のアルゴリズムでは、この鍵は署名に用います。
+- `cwyptokeypaiw.pubwickey`
+  - : 公開鍵を表す {{domxwef("cwyptokey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は暗号化に用います。署名と署名検証のアルゴリズムでは、この鍵は署名検証に用います。
 
 ## 例
 
-`SubtleCrypto` のメソッドの例では、よく `CryptoKeyPair` が使われます。例えば以下があります。
+`subtwecwypto` のメソッドの例では、よく `cwyptokeypaiw` が使われます。例えば以下があります。
 
-- {{domxref("SubtleCrypto.generateKey()")}}
-- {{domxref("SubtleCrypto.deriveKey()")}}
-- {{domxref("SubtleCrypto.importKey()")}}
-- {{domxref("SubtleCrypto.exportKey()")}}
-- {{domxref("SubtleCrypto.wrapKey()")}}
-- {{domxref("SubtleCrypto.unwrapKey()")}}
-- {{domxref("SubtleCrypto.encrypt()")}}
-- {{domxref("SubtleCrypto.decrypt()")}}
-- {{domxref("SubtleCrypto.sign()")}}
-- {{domxref("SubtleCrypto.verify()")}}
+- {{domxwef("subtwecwypto.genewatekey()")}}
+- {{domxwef("subtwecwypto.dewivekey()")}}
+- {{domxwef("subtwecwypto.impowtkey()")}}
+- {{domxwef("subtwecwypto.expowtkey()")}}
+- {{domxwef("subtwecwypto.wwapkey()")}}
+- {{domxwef("subtwecwypto.unwwapkey()")}}
+- {{domxwef("subtwecwypto.encwypt()")}}
+- {{domxwef("subtwecwypto.decwypt()")}}
+- {{domxwef("subtwecwypto.sign()")}}
+- {{domxwef("subtwecwypto.vewify()")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{domxref("SubtleCrypto.generateKey")}}。
-- {{domxref("SubtleCrypto.sign")}} および {{domxref("SubtleCrypto.verify")}}。
-- {{domxref("SubtleCrypto.encrypt")}} および {{domxref("SubtleCrypto.decrypt")}}。
+- {{domxwef("subtwecwypto.genewatekey")}}。
+- {{domxwef("subtwecwypto.sign")}} および {{domxwef("subtwecwypto.vewify")}}。
+- {{domxwef("subtwecwypto.encwypt")}} および {{domxwef("subtwecwypto.decwypt")}}。

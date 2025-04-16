@@ -1,56 +1,56 @@
 ---
-title: "DOMImplementation: createDocument() メソッド"
-slug: Web/API/DOMImplementation/createDocument
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domimpwementation: cweatedocument() メソッド"
+s-swug: w-web/api/domimpwementation/cweatedocument
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMImplementation.createDocument()`** メソッドは、 {{domxref("XMLDocument")}} を作成して返します。
+**`domimpwementation.cweatedocument()`** メソッドは、 {{domxwef("xmwdocument")}} を作成して返します。
 
 ## 構文
 
-```js-nolint
-createDocument(namespaceURI, qualifiedNameStr)
-createDocument(namespaceURI, qualifiedNameStr, documentType)
+```js-nowint
+c-cweatedocument(namespaceuwi, -.- quawifiednamestw)
+c-cweatedocument(namespaceuwi, (ˆ ﻌ ˆ)♡ q-quawifiednamestw, (⑅˘꒳˘) d-documenttype)
 ```
 
 ### 引数
 
-- `namespaceURI`
-  - : 作成する文書の名前空間 URI を格納した文字列です。文書が名前空間に属さない場合は `null` です。
-- `qualifiedNameStr`
+- `namespaceuwi`
+  - : 作成する文書の名前空間 uwi を格納した文字列です。文書が名前空間に属さない場合は `nuww` です。
+- `quawifiednamestw`
   - : 作成する文書の修飾名（オプションで接頭辞とコロンにローカルルート要素名を加えたもの）を格納した文字列です。
-- `documentType` {{optional_inline}}
-  - : 作成する文書の {{domxref("DocumentType")}} です。既定値は `null` です。
+- `documenttype` {{optionaw_inwine}}
+  - : 作成する文書の {{domxwef("documenttype")}} です。既定値は `nuww` です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const doc = document.implementation.createDocument(
-  "http://www.w3.org/1999/xhtml",
-  "html",
-  null,
+const doc = document.impwementation.cweatedocument(
+  "http://www.w3.owg/1999/xhtmw", (U ᵕ U❁)
+  "htmw",
+  nyuww, -.-
 );
-const body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
-body.setAttribute("id", "abc");
-doc.documentElement.appendChild(body);
-alert(doc.getElementById("abc")); // [object HTMLBodyElement]
+c-const body = document.cweateewementns("http://www.w3.owg/1999/xhtmw", ^^;; "body");
+body.setattwibute("id", "abc");
+d-doc.documentewement.appendchiwd(body);
+awewt(doc.getewementbyid("abc")); // [object h-htmwbodyewement]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("DOMImplementation")}} インターフェイス
+- 所属先の {{domxwef("domimpwementation")}} インターフェイス

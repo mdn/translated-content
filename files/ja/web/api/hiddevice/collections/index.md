@@ -1,93 +1,93 @@
 ---
-title: HIDDevice.collections
-slug: Web/API/HIDDevice/collections
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+titwe: hiddevice.cowwections
+swug: web/api/hiddevice/cowwections
+w-w10n:
+  souwcecommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} インターフェイスの読み取り専用プロパティ **`collections`** は、レポート形式の配列を返します。
+{{domxwef("hiddevice")}} インターフェイスの読み取り専用プロパティ **`cowwections`** は、レポート形式の配列を返します。
 
 ## 値
 
 レポート形式の配列です。各エントリーは以下を含みます。
 
-- `usagePage`
+- `usagepage`
 
-  - : このコレクションに紐づいた HID 使用法の Usage Page 部分を表す整数です。トップレベルのコレクションの使用法は、デバイスの種類を特定するために使用されます。
+  - : このコレクションに紐づいた h-hid 使用法の u-usage page 部分を表す整数です。トップレベルのコレクションの使用法は、デバイスの種類を特定するために使用されます。
 
-    標準の HID 使用法の値は、[HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) に載っています。
+    標準の h-hid 使用法の値は、[hid u-usage tabwes](https://usb.owg/document-wibwawy/hid-usage-tabwes-13) に載っています。
 
 - `usage`
-  - : このコレクションに紐づいた HID 使用法の Usage ID 部分を表す整数です。
+  - : このコレクションに紐づいた h-hid 使用法の u-usage id 部分を表す整数です。
 - `type`
 
   - : コレクションの種類を表す 8 ビットの値です。グループ化されたアイテムの関係を表します。以下のいずれかです。
 
     - `0x00`
-      - : Physical (軸のグループ)
+      - : physicaw (軸のグループ)
     - `0x01`
-      - : Application (マウス、キーボード)
+      - : appwication (マウス、キーボード)
     - `0x02`
-      - : Logical (関連するデータ)
+      - : wogicaw (関連するデータ)
     - `0x03`
-      - : Report
+      - : w-wepowt
     - `0x04`
-      - : Named array
+      - : nyamed awway
     - `0x05`
-      - : Usage switch
+      - : usage switch
     - `0x06`
-      - : Usage modified
-    - `0x07 to 0x7F`
+      - : u-usage modified
+    - `0x07 t-to 0x7f`
       - : 将来のために予約
-    - `0x80 to 0xFF`
+    - `0x80 to 0xff`
       - : ベンダー定義
 
-    これらの種類についての追加情報は、[Device Class Definition](https://www.usb.org/document-library/device-class-definition-hid-111) に載っています。
+    これらの種類についての追加情報は、[device cwass definition](https://www.usb.owg/document-wibwawy/device-cwass-definition-hid-111) に載っています。
 
-- `children`
+- `chiwdwen`
   - : トップレベルコレクションと同じ形式の、サブコレクションの配列です。
-- `inputReports`
-  - : このコレクションで記述されているそれぞれの Input レポートを表す `inputReport` の配列です。
-- `outputReports`
-  - : このコレクションで記述されているそれぞれの Output レポートを表す `outputReport` の配列です。
-- `featureReports`
-  - : このコレクションで記述されているそれぞれの Feature レポートを表す `featureReport` の配列です。
+- `inputwepowts`
+  - : このコレクションで記述されているそれぞれの input レポートを表す `inputwepowt` の配列です。
+- `outputwepowts`
+  - : このコレクションで記述されているそれぞれの o-output レポートを表す `outputwepowt` の配列です。
+- `featuwewepowts`
+  - : このコレクションで記述されているそれぞれの featuwe レポートを表す `featuwewepowt` の配列です。
 
 ## 例
 
-この例は、`collections` プロパティが返された後、様々な要素にアクセスする方法を示しています。他の例や動くデモを記事 [Connecting to uncommon HID devices](https://web.dev/hid/) で見ることができます。
+この例は、`cowwections` プロパティが返された後、様々な要素にアクセスする方法を示しています。他の例や動くデモを記事 [connecting t-to uncommon h-hid devices](https://web.dev/hid/) で見ることができます。
 
 ```js
-for (const collection of device.collections) {
-  // HID コレクションには、使用法、Usage Page、レポート、サブコレクションが含まれます。
-  console.log(`Usage: ${collection.usage}`);
-  console.log(`Usage page: ${collection.usagePage}`);
+fow (const cowwection of device.cowwections) {
+  // hid コレクションには、使用法、usage page、レポート、サブコレクションが含まれます。
+  consowe.wog(`usage: ${cowwection.usage}`);
+  c-consowe.wog(`usage page: ${cowwection.usagepage}`);
 
-  for (const inputReport of collection.inputReports) {
-    console.log(`Input report: ${inputReport.reportId}`);
-    // inputReport.items をループで走査します
+  fow (const inputwepowt of cowwection.inputwepowts) {
+    consowe.wog(`input wepowt: ${inputwepowt.wepowtid}`);
+    // inputwepowt.items をループで走査します
   }
 
-  for (const outputReport of collection.outputReports) {
-    console.log(`Output report: ${outputReport.reportId}`);
-    //  outputReport.items をループで走査します
+  f-fow (const outputwepowt of cowwection.outputwepowts) {
+    c-consowe.wog(`output w-wepowt: ${outputwepowt.wepowtid}`);
+    //  o-outputwepowt.items をループで走査します
   }
 
-  for (const featureReport of collection.featureReports) {
-    console.log(`Feature report: ${featureReport.reportId}`);
-    // featureReport.items をループで走査します
+  f-fow (const featuwewepowt of cowwection.featuwewepowts) {
+    c-consowe.wog(`featuwe wepowt: ${featuwewepowt.wepowtid}`);
+    // featuwewepowt.items をループで走査します
   }
 
-  // collection.children を用いてサブコレクションをループで走査します
+  // c-cowwection.chiwdwen を用いてサブコレクションをループで走査します
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

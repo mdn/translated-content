@@ -1,13 +1,13 @@
 ---
-title: "USBConfiguration: configurationName プロパティ"
-slug: Web/API/USBConfiguration/configurationName
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbconfiguwation: configuwationname プロパティ"
+s-swug: web/api/usbconfiguwation/configuwationname
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBConfiguration")}} インターフェイスの読み取り専用プロパティ **`configurationName`** は、デバイスによって提供されたこのコンフィギュレーションを説明する名前を返します。これはこのコンフィギュレーションを定義しているコンフィギュレーションディスクリプターの [`iConfiguration`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) フィールドで提供されるインデックスのストリングディスクリプターの値と一致します。
+{{domxwef("usbconfiguwation")}} インターフェイスの読み取り専用プロパティ **`configuwationname`** は、デバイスによって提供されたこのコンフィギュレーションを説明する名前を返します。これはこのコンフィギュレーションを定義しているコンフィギュレーションディスクリプターの [`iconfiguwation`](https://www.beyondwogic.owg/usbnutsheww/usb5.shtmw#configuwationdescwiptows) フィールドで提供されるインデックスのストリングディスクリプターの値と一致します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

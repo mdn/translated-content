@@ -1,88 +1,88 @@
 ---
-title: SVGAnimatedRect
-slug: Web/API/SVGAnimatedRect
-l10n:
-  sourceCommit: c6f8bee9aeb156e7d2a415007f7353487b0ccef4
+titwe: svganimatedwect
+swug: w-web/api/svganimatedwect
+w-w10n:
+  s-souwcecommit: c6f8bee9aeb156e7d2a415007f7353487b0ccef4
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`SVGAnimatedRect` インターフェイスは基本的な {{ domxref("SVGRect") }} 型のアニメーションする属性に使用されます。
+`svganimatedwect` インターフェイスは基本的な {{ d-domxwef("svgwect") }} 型のアニメーションする属性に使用されます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>
-            読み取り専用の {{ domxref("SVGRect") }} <code>baseVal</code>
-          </li>
-          <li>
-            読み取り専用の {{ domxref("SVGRect") }} <code>animVal</code>
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            読み取り専用の {{ domxwef("svgwect") }} <code>basevaw</code>
+          </wi>
+          <wi>
+            読み取り専用の {{ domxwef("svgwect") }} <code>animvaw</code>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedRect"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/types.htmw#intewfacesvganimatedwect"
+          >svg 1.1 (2nd e-edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedRect.baseVal")}}</code></td>
-      <td>{{ domxref("SVGRect") }}</td>
+    <tw>
+      <td><code>{{domxwef("svganimatedwect.basevaw")}}</code></td>
+      <td>{{ domxwef("svgwect") }}</td>
       <td>
         アニメーションを適用する前の指定された属性の基底値を表します。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedRect.animVal")}}</code></td>
-      <td>{{ domxref("SVGRect") }}</td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatedwect.animvaw")}}</code></td>
+      <td>{{ domxwef("svgwect") }}</td>
       <td>
-        読み取り専用の {{ domxref("SVGRect") }} で、その属性の現在のアニメーション値を表します。
-        その属性が現在アニメーションしていない場合、 {{ domxref("SVGRect") }} で <code>baseVal</code> と同じ値になります。 <code>animVal</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>baseVal</code> が参照するオブジェクトとは常に異なります。
+        読み取り専用の {{ d-domxwef("svgwect") }} で、その属性の現在のアニメーション値を表します。
+        その属性が現在アニメーションしていない場合、 {{ domxwef("svgwect") }} で <code>basevaw</code> と同じ値になります。 <code>animvaw</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>basevaw</code> が参照するオブジェクトとは常に異なります。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-_`SVGAnimatedRect` インターフェイスは固有のメソッドを提供していません。_
+_`svganimatedwect` インターフェイスは固有のメソッドを提供していません。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

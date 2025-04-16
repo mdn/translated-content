@@ -1,101 +1,101 @@
 ---
-title: "DOMImplementation: createHTMLDocument() メソッド"
-slug: Web/API/DOMImplementation/createHTMLDocument
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "domimpwementation: cweatehtmwdocument() メソッド"
+s-swug: web/api/domimpwementation/cweatehtmwdocument
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMImplementation.createHTMLDocument()`** メソッドは、新しい HTML 文書 ({{ domxref("Document") }}) を作成します。
+**`domimpwementation.cweatehtmwdocument()`** メソッドは、新しい h-htmw 文書 ({{ d-domxwef("document") }}) を作成します。
 
 ## 構文
 
-```js-nolint
-createHTMLDocument()
-createHTMLDocument(title)
+```js-nowint
+c-cweatehtmwdocument()
+c-cweatehtmwdocument(titwe)
 ```
 
 ### 引数
 
-- `title` {{optional_inline}}
-  - : 新しい HTML 文書に与えるタイトルを含む文字列です。
+- `titwe` {{optionaw_inwine}}
+  - : 新しい h-htmw 文書に与えるタイトルを含む文字列です。
 
 ### 返値
 
-新しい HTML の {{domxref("Document")}} オブジェクトです。
+新しい htmw の {{domxwef("document")}} オブジェクトです。
 
 ## 例
 
-この例では、新しい HTML 文書を作成し、現在の文書内の {{ HTMLElement("iframe") }} に挿入しています。
+この例では、新しい h-htmw 文書を作成し、現在の文書内の {{ htmwewement("ifwame") }} に挿入しています。
 
-この例の HTML は次の通りです。
+この例の htmw は次の通りです。
 
-```html
+```htmw
 <body>
   <p>
-    Click <a href="javascript:makeDocument()">here</a> to create a new document
-    and insert it below.
+    cwick <a hwef="javascwipt:makedocument()">hewe</a> to cweate a nyew d-document
+    and insewt it bewow. 🥺
   </p>
-  <iframe id="theFrame" src="about:blank" />
+  <ifwame id="thefwame" s-swc="about:bwank" />
 </body>
 ```
 
-JavaScript による `makeDocument()` は次の通りです。
+javascwipt による `makedocument()` は次の通りです。
 
 ```js
-function makeDocument() {
-  let frame = document.getElementById("theFrame");
+f-function makedocument() {
+  wet fwame = document.getewementbyid("thefwame");
 
-  let doc = document.implementation.createHTMLDocument("New Document");
-  let p = doc.createElement("p");
-  p.textContent = "This is a new paragraph.";
+  w-wet doc = document.impwementation.cweatehtmwdocument("new d-document");
+  w-wet p = doc.cweateewement("p");
+  p.textcontent = "this is a nyew pawagwaph.";
 
-  try {
-    doc.body.appendChild(p);
+  twy {
+    d-doc.body.appendchiwd(p);
   } catch (e) {
-    console.log(e);
+    consowe.wog(e);
   }
 
-  // Copy the new HTML document into the frame
+  // copy the nyew htmw document i-into the fwame
 
-  let destDocument = frame.contentDocument;
-  let srcNode = doc.documentElement;
-  let newNode = destDocument.importNode(srcNode, true);
+  wet destdocument = f-fwame.contentdocument;
+  w-wet swcnode = doc.documentewement;
+  w-wet nyewnode = d-destdocument.impowtnode(swcnode, mya twue);
 
-  destDocument.replaceChild(newNode, destDocument.documentElement);
+  destdocument.wepwacechiwd(newnode, 🥺 d-destdocument.documentewement);
 }
 ```
 
-4～12 行目のコードは、新しい HTML 文書を作成し、その文書へのコンテンツの挿入を処理するものです。4 行目で `createHTMLDocument()` を用いて、{{ HTMLElement("title") }} が `"New Document"` である新しい HTML 文書を作成しています。5 行目と 6 行目で単純なコンテンツを持つ新しい段落要素を作成し、8～12 行目で新しい段落を新しい文書に挿入する処理をしています。
+4～12 行目のコードは、新しい htmw 文書を作成し、その文書へのコンテンツの挿入を処理するものです。4 行目で `cweatehtmwdocument()` を用いて、{{ htmwewement("titwe") }} が `"new d-document"` である新しい htmw 文書を作成しています。5 行目と 6 行目で単純なコンテンツを持つ新しい段落要素を作成し、8～12 行目で新しい段落を新しい文書に挿入する処理をしています。
 
-16 行目はフレームの `contentDocument` を取り出しています。これは新しいコンテンツを注入する文書内のものです。次の 2 行は、新しい文書のコンテンツを新しい文書のコンテキストにインポートする処理です。最後に、20 行目で実際にフレームのコンテンツを新しい文書のコンテンツに置き換えます。
+16 行目はフレームの `contentdocument` を取り出しています。これは新しいコンテンツを注入する文書内のものです。次の 2 行は、新しい文書のコンテンツを新しい文書のコンテキストにインポートする処理です。最後に、20 行目で実際にフレームのコンテンツを新しい文書のコンテンツに置き換えます。
 
-[ライブサンプルを見る](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
+[ライブサンプルを見る](https://mdn.dev/awchives/media/sampwes/domwef/cweatehtmwdocument.htmw)
 
-返される文書は、以下の HTML であらかじめ構成されたものになります。
+返される文書は、以下の htmw であらかじめ構成されたものになります。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
+    <meta chawset="utf-8" />
+    <titwe>titwe</titwe>
   </head>
   <body>
     …
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("DOMImplementation")}} インターフェイス
+- 所属先の {{domxwef("domimpwementation")}} インターフェイス

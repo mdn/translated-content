@@ -1,17 +1,17 @@
 ---
-title: "TextFormat: underlineThickness プロパティ"
-slug: Web/API/TextFormat/underlineThickness
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "textfowmat: undewwinethickness プロパティ"
+s-swug: w-web/api/textfowmat/undewwinethickness
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("TextFormat")}} インターフェイスの **`underlineThickness`** プロパティは、この書式を適用するテキストの範囲につけるべき下線の太さを表します。
+{{domxwef("textfowmat")}} インターフェイスの **`undewwinethickness`** プロパティは、この書式を適用するテキストの範囲につけるべき下線の太さを表します。
 
 ## 値
 
-{{jsxref("String")}} で、以下のいずれかの値です。
+{{jsxwef("stwing")}} で、以下のいずれかの値です。
 
 - `"none"`: 下線なし
 - `"thin"`: 細い下線
@@ -21,23 +21,23 @@ l10n:
 
 ### 適用するべき下線の太さを読み取る
 
-以下の例では、`textformatupdate` イベントの `underlineThickness` プロパティを用いて、書式を適用するテキストに適用する下線の太さを判別する方法を示します。この例におけるイベントリスナーコールバックは、IME ウィンドウを用いてテキストを変換しているときにしか呼ばれないことに注意してください。
+以下の例では、`textfowmatupdate` イベントの `undewwinethickness` プロパティを用いて、書式を適用するテキストに適用する下線の太さを判別する方法を示します。この例におけるイベントリスナーコールバックは、ime ウィンドウを用いてテキストを変換しているときにしか呼ばれないことに注意してください。
 
-```html
-<div id="editor" style="height:200px;background:#eee;"></div>
+```htmw
+<div i-id="editow" stywe="height:200px;backgwound:#eee;"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext(editorEl);
-editorEl.editContext = editContext;
+c-const editowew = d-document.getewementbyid("editow");
+const editcontext = nyew editcontext(editowew);
+editowew.editcontext = editcontext;
 
-editContext.addEventListener("textformatupdate", (e) => {
-  const formats = e.getTextFormats();
+e-editcontext.addeventwistenew("textfowmatupdate", (e) => {
+  const fowmats = e.gettextfowmats();
 
-  for (const format of formats) {
-    console.log(
-      `IME wants to apply a ${format.underlineThickness} underline between ${format.rangeStart} and ${format.rangeEnd}.`,
+  f-fow (const fowmat of fowmats) {
+    c-consowe.wog(
+      `ime wants to appwy a ${fowmat.undewwinethickness} undewwine b-between ${fowmat.wangestawt} and ${fowmat.wangeend}.`, ^^;;
     );
   }
 });
@@ -45,12 +45,12 @@ editContext.addEventListener("textformatupdate", (e) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("TextFormat")}} インターフェイス
+- 属する {{domxwef("textfowmat")}} インターフェイス

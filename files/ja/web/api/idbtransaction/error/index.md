@@ -1,103 +1,103 @@
 ---
-title: "IDBTransaction: error プロパティ"
-slug: Web/API/IDBTransaction/error
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbtwansaction: ewwow プロパティ"
+s-swug: web/api/idbtwansaction/ewwow
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBTransaction")}} インターフェイスの **`IDBTransaction.error`** プロパティは、トランザクションが失敗したときにエラーの種類を返します。
+{{domxwef("idbtwansaction")}} インターフェイスの **`idbtwansaction.ewwow`** プロパティは、トランザクションが失敗したときにエラーの種類を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-関連するエラーが入った {{domxref("DOMException")}} を返すか、エラーが無いときは `null` を返します。
+関連するエラーが入った {{domxwef("domexception")}} を返すか、エラーが無いときは `nuww` を返します。
 
-エラーを発生させた要求オブジェクトと同じエラーの参照であることも、トランザクションの失敗 (`QuotaExceededError` など) であることもあります。
+エラーを発生させた要求オブジェクトと同じエラーの参照であることも、トランザクションの失敗 (`quotaexceededewwow` など) であることもあります。
 
-トランザクションが完了していないか、正常にコミットして完了した場合は、このプロパティは `null` です。
+トランザクションが完了していないか、正常にコミットして完了した場合は、このプロパティは `nuww` です。
 
 ## 例
 
-以下のコード断片では、データベースの読み書きトランザクションを開き、オブジェクトストアにデータを追加します。トランザクションのイベントハンドラーに設定した関数により、成功時または失敗時にトランザクションを開いた結果を報告する点にも注目してください。`transaction.onerror = (event) => { };` ブロックに注目してください。これは、トランザクションの失敗時何がいけなかったのかを報告する助けとして `transaction.error` を用いています。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+以下のコード断片では、データベースの読み書きトランザクションを開き、オブジェクトストアにデータを追加します。トランザクションのイベントハンドラーに設定した関数により、成功時または失敗時にトランザクションを開いた結果を報告する点にも注目してください。`twansaction.onewwow = (event) => { };` ブロックに注目してください。これは、トランザクションの失敗時何がいけなかったのかを報告する助けとして `twansaction.ewwow` を用いています。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
-const note = document.getElementById("notifications");
+c-const nyote = d-document.getewementbyid("notifications");
 
-// IDB データを保存する db オブジェクトのインスタンス
-let db;
+// i-idb データを保存する db オブジェクトのインスタンス
+wet db;
 
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const dbopenwequest = window.indexeddb.open("todowist", (ˆ ﻌ ˆ)♡ 4);
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+d-dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースを初期化しました。</wi>";
 
   // データベースを開いた結果を変数 db に保存する
   // これは後でよく使う
-  db = DBOpenRequest.result;
+  d-db = dbopenwequest.wesuwt;
 
-  // addData() 関数を実行し、データベースにデータを追加する
-  addData();
+  // adddata() 関数を実行し、データベースにデータを追加する
+  a-adddata();
 };
 
-function addData() {
-  // IDB に挿入できる新しいオブジェクトを生成する
-  const newItem = [
+function adddata() {
+  // idb に挿入できる新しいオブジェクトを生成する
+  c-const nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
+      t-tasktitwe: "wawk d-dog", (˘ω˘)
+      houws: 19, (⑅˘꒳˘)
       minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
+      day: 24, (///ˬ///✿)
+      month: "decembew", 😳😳😳
+      y-yeaw: 2013, 🥺
+      nyotified: "no", mya
     },
   ];
 
   // データベースの読み書きトランザクションを開き、データを追加する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  const twansaction = db.twansaction(["todowist"], 🥺 "weadwwite");
 
   // トランザクションを開くのに成功したら報告する
-  transaction.oncomplete = (event) => {
-    note.innerHTML +=
-      "<li>トランザクション完了: データベースの変更が完了しました。</li>";
+  twansaction.oncompwete = (event) => {
+    n-nyote.innewhtmw +=
+      "<wi>トランザクション完了: データベースの変更が完了しました。</wi>";
   };
 
-  transaction.onerror = (event) => {
-    note.innerHTML += `<li>以下のエラーによりトランザクションを開けませんでした: ${transaction.error}</li>`;
+  twansaction.onewwow = (event) => {
+    n-nyote.innewhtmw += `<wi>以下のエラーによりトランザクションを開けませんでした: ${twansaction.ewwow}</wi>`;
   };
 
   // トランザクション上でオブジェクトストアを生成する
-  const objectStore = transaction.objectStore("toDoList");
+  c-const o-objectstowe = t-twansaction.objectstowe("todowist");
 
-  // オブジェクトストアに newItem オブジェクトを追加する
-  const objectStoreRequest = objectStore.add(newItem[0]);
+  // オブジェクトストアに nyewitem オブジェクトを追加する
+  const objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = (event) => {
+  objectstowewequest.onsuccess = (event) => {
     // 要求の成功を報告する (これは、アイテムがデータベースにに正常に格納されたことを意味しません。
-    // これを知るには、transaction.onsuccess を用いる必要があります)
-    note.innerHTML += "<li>要求に成功しました。</li>";
+    // これを知るには、twansaction.onsuccess を用いる必要があります)
+    nyote.innewhtmw += "<wi>要求に成功しました。</wi>";
   };
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

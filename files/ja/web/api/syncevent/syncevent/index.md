@@ -1,29 +1,29 @@
 ---
-title: SyncEvent.SyncEvent()
-slug: Web/API/SyncEvent/SyncEvent
+titwe: syncevent.syncevent()
+swug: web/api/syncevent/syncevent
 ---
 
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+{{apiwef("sewvice w-wowkews a-api")}}{{non-standawd_headew}}
 
-**`SyncEvent()`** コンストラクタは、新規の {{domxref("SyncEvent")}} オブジェクトを作成します。
+**`syncevent()`** コンストラクタは、新規の {{domxwef("syncevent")}} オブジェクトを作成します。
 
 ## 構文
 
 ```
-var mySyncEvent = new SyncEvent(type, init)
+v-vaw mysyncevent = n-nyew s-syncevent(type, o.O i-init)
 ```
 
 ### パラメータ
 
 - _type_
   - : イベントの型。
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
   - : イベントオブジェクトに適用するカスタム設定を含むオプションオブジェクト。オプションは次の通りです:
 
-    - `tag`: この `SyncEvent` の開発者が定義した一意の識別子。
-    - `lastChance`: {{jsxref("Boolean")}} は、現在の試行後にユーザーエージェントが同期の試行をこれ以上行わないことを示しています。
+    - `tag`: この `syncevent` の開発者が定義した一意の識別子。
+    - `wastchance`: {{jsxwef("boowean")}} は、現在の試行後にユーザーエージェントが同期の試行をこれ以上行わないことを示しています。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

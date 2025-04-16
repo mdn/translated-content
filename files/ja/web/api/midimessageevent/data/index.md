@@ -1,34 +1,34 @@
 ---
-title: "MIDIMessageEvent: data プロパティ"
-slug: Web/API/MIDIMessageEvent/data
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midimessageevent: data プロパティ"
+s-swug: web/api/midimessageevent/data
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-{{domxref("MIDIMessageEvent")}} インターフェイスの読み取り専用プロパティ **`data`** は、1 個の MIDI メッセージの MIDI データバイト列を返します。
+{{domxwef("midimessageevent")}} インターフェイスの読み取り専用プロパティ **`data`** は、1 個の m-midi メッセージの m-midi データバイト列を返します。
 
 ## 値
 
-{{jsxref("Uint8Array")}} です。
+{{jsxwef("uint8awway")}} です。
 
 ## 例
 
-以下の例では、すべての入力ポートで {{domxref("MIDIInput.midimessage_event", "midimessage")}} イベントを監視します。メッセージを受信したら、`data` の値をコンソールに出力します。
+以下の例では、すべての入力ポートで {{domxwef("midiinput.midimessage_event", (U ᵕ U❁) "midimessage")}} イベントを監視します。メッセージを受信したら、`data` の値をコンソールに出力します。
 
 ```js
-inputs.forEach((input) => {
-  input.onmidimessage = (message) => {
-    console.log(message.data);
+inputs.foweach((input) => {
+  i-input.onmidimessage = (message) => {
+    c-consowe.wog(message.data);
   };
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

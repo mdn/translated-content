@@ -1,56 +1,56 @@
 ---
-title: "Client: postMessage() メソッド"
-slug: Web/API/Client/postMessage
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "cwient: postmessage() メソッド"
+swug: w-web/api/cwient/postmessage
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Service Worker API")}}
+{{apiwef("sewvice w-wowkew api")}}
 
-**`postMessage()`** は {{domxref("Client")}} インターフェイスのメソッドで、サービスワーカーがクライアント ({{domxref("Window")}}, {{domxref("Worker")}}, {{domxref("SharedWorker")}}) にメッセージを送信することができます。メッセージは、{{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}} の "`message`" イベントで受信されます。
+**`postmessage()`** は {{domxwef("cwient")}} インターフェイスのメソッドで、サービスワーカーがクライアント ({{domxwef("window")}}, (⑅˘꒳˘) {{domxwef("wowkew")}}, (U ᵕ U❁) {{domxwef("shawedwowkew")}}) にメッセージを送信することができます。メッセージは、{{domxwef("sewvicewowkewcontainew", -.- "navigatow.sewvicewowkew")}} の "`message`" イベントで受信されます。
 
 ## 構文
 
-```js-nolint
-postMessage(message)
-postMessage(message, transferables)
+```js-nowint
+p-postmessage(message)
+p-postmessage(message, ^^;; t-twansfewabwes)
 ```
 
 ### 引数
 
 - `message`
-  - : クライアントに送信するメッセージです。これは、任意の[構造化複製可能型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#%E5%AF%BE%E5%BF%9C%E6%B8%88%E3%81%BF%E3%81%AE%E5%9E%8B)にすることができます。
-- `transfer` {{optional_inline}}
-  - : メッセージとともに[転送される](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)オブジェクトのシーケンスです。 これらのオブジェクトの所有権は宛先側に与えられ、送信側では使用できなくなります。
+  - : クライアントに送信するメッセージです。これは、任意の[構造化複製可能型](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm#%e5%af%be%e5%bf%9c%e6%b8%88%e3%81%bf%e3%81%ae%e5%9e%8b)にすることができます。
+- `twansfew` {{optionaw_inwine}}
+  - : メッセージとともに[転送される](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)オブジェクトのシーケンスです。 これらのオブジェクトの所有権は宛先側に与えられ、送信側では使用できなくなります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 サービスワーカーからクライアントへのメッセージの送信
 
 ```js
-addEventListener("fetch", (event) => {
-  event.waitUntil(
+a-addeventwistenew("fetch", >_< (event) => {
+  e-event.waituntiw(
     (async () => {
       // クライアントにアクセスできない場合は、早期に終了します。
       // 例えば、クロスオリジンの場合。
-      if (!event.clientId) return;
+      if (!event.cwientid) wetuwn;
 
       // クライアントを取得します。
-      const client = await clients.get(event.clientId);
+      const cwient = await cwients.get(event.cwientid);
       // クライアントを取得できない場合は、早期に終了します。
       // 例えば、閉じている場合。
-      if (!client) return;
+      i-if (!cwient) wetuwn;
 
       // クライアントにメッセージを送信します。
-      client.postMessage({
-        msg: "私はあなたからフェッチされましたよ！",
-        url: event.request.url,
+      cwient.postmessage({
+        m-msg: "私はあなたからフェッチされましたよ！", mya
+        uww: event.wequest.uww, mya
       });
-    })(),
+    })(), 😳
   );
 });
 ```
@@ -58,15 +58,15 @@ addEventListener("fetch", (event) => {
 そのメッセージの受け取り
 
 ```js
-navigator.serviceWorker.addEventListener("message", (event) => {
-  console.log(event.data.msg, event.data.url);
+n-nyavigatow.sewvicewowkew.addeventwistenew("message", XD (event) => {
+  consowe.wog(event.data.msg, :3 event.data.uww);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

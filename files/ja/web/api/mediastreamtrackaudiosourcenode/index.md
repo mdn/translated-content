@@ -1,67 +1,67 @@
 ---
-title: MediaStreamTrackAudioSourceNode
-slug: Web/API/MediaStreamTrackAudioSourceNode
-l10n:
-  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
+titwe: mediastweamtwackaudiosouwcenode
+swug: w-web/api/mediastweamtwackaudiosouwcenode
+w-w10n:
+  s-souwcecommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-**`MediaStreamTrackAudioSourceNode`** インターフェイスは {{domxref("AudioNode")}} の一種で、[WebRTC](/ja/docs/Web/API/WebRTC_API) や[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API) API から得られた特定の {{domxref("MediaStreamTrack")}} からデータを取得する音源を表します。
+**`mediastweamtwackaudiosouwcenode`** インターフェイスは {{domxwef("audionode")}} の一種で、[webwtc](/ja/docs/web/api/webwtc_api) や[メディアキャプチャとストリーム](/ja/docs/web/api/media_captuwe_and_stweams_api) a-api から得られた特定の {{domxwef("mediastweamtwack")}} からデータを取得する音源を表します。
 
-音声自体は、マイクやその他の音声サンプリングデバイスからの入力かもしれないし、{{domxref("RTCPeerConnection")}} から受信したものかもしれないし、その他かもしれません。
+音声自体は、マイクやその他の音声サンプリングデバイスからの入力かもしれないし、{{domxwef("wtcpeewconnection")}} から受信したものかもしれないし、その他かもしれません。
 
-`MediaStreamTrackAudioSourceNode` は入力を持たず、ちょうど 1 個の出力を持ち、{{domxref("AudioContext.createMediaStreamTrackSource()")}} メソッドにより生成されます。このインターフェイスは、ストリームの最初の音声トラックで決め打ちするのではなく使用するトラックを明示できるという点以外、{{domxref("MediaStreamAudioSourceNode")}} に似ています。
+`mediastweamtwackaudiosouwcenode` は入力を持たず、ちょうど 1 個の出力を持ち、{{domxwef("audiocontext.cweatemediastweamtwacksouwce()")}} メソッドにより生成されます。このインターフェイスは、ストリームの最初の音声トラックで決め打ちするのではなく使用するトラックを明示できるという点以外、{{domxwef("mediastweamaudiosouwcenode")}} に似ています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">入力数</th>
+    <tw>
+      <th s-scope="wow">入力数</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">出力数</th>
+    </tw>
+    <tw>
+      <th scope="wow">出力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネル数</th>
+    </tw>
+    <tw>
+      <th scope="wow">チャンネル数</th>
       <td>
-        生成時に {{domxref("AudioContext.createMediaStreamTrackSource()")}} メソッドに渡された最初の音声 {{domxref("MediaStreamTrack")}} により定義されます。
+        生成時に {{domxwef("audiocontext.cweatemediastweamtwacksouwce()")}} メソッドに渡された最初の音声 {{domxwef("mediastweamtwack")}} により定義されます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## コンストラクター
 
-- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}
-  - : オプションを指定して新しい `MediaStreamTrackAudioSourceNode` オブジェクトを生成します。
+- {{domxwef("mediastweamtwackaudiosouwcenode.mediastweamtwackaudiosouwcenode", σωσ "new mediastweamtwackaudiosouwcenode()")}}
+  - : オプションを指定して新しい `mediastweamtwackaudiosouwcenode` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_`MediaStreamTrackAudioSourceNode` インターフェイスは自身のプロパティを持ちません。しかし、親の {{domxref("AudioNode")}} のプロパティを継承します。_
+_`mediastweamtwackaudiosouwcenode` インターフェイスは自身のプロパティを持ちません。しかし、親の {{domxwef("audionode")}} のプロパティを継承します。_
 
 ## インスタンスメソッド
 
-_親の {{domxref("AudioNode")}} からメソッドを継承します。_
+_親の {{domxwef("audionode")}} からメソッドを継承します。_
 
 ## 例
 
-[`AudioContext.createMediaStreamSource()`](/ja/docs/Web/API/AudioContext/createMediaStreamSource#例) に、このオブジェクトを用いるサンプルコードがあります。
+[`audiocontext.cweatemediastweamsouwce()`](/ja/docs/web/api/audiocontext/cweatemediastweamsouwce#例) に、このオブジェクトを用いるサンプルコードがあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
-- [メディアキャプチャとストリーム API (メディアストリーム)](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaStreamAudioSourceNode")}}
+- [web audio api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [webwtc a-api](/ja/docs/web/api/webwtc_api)
+- [メディアキャプチャとストリーム api (メディアストリーム)](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- {{domxwef("mediastweamaudiosouwcenode")}}

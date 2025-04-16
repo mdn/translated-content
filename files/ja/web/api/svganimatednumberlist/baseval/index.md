@@ -1,47 +1,47 @@
 ---
-title: "SVGAnimatedNumberList: baseVal プロパティ"
-short-title: baseVal
-slug: Web/API/SVGAnimatedNumberList/baseVal
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: "svganimatednumbewwist: basevaw プロパティ"
+s-showt-titwe: b-basevaw
+s-swug: web/api/svganimatednumbewwist/basevaw
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedNumberList")}} インターフェイスの読み取り専用プロパティで、[`<number>`](/ja/docs/Web/SVG/Guides/Content_type#number)の値のリストを受け入れるアニメーション可能な属性の（アニメーション前の）基底値を表します。
+**`basevaw`** は {{domxwef("svganimatednumbewwist")}} インターフェイスの読み取り専用プロパティで、[`<numbew>`](/ja/docs/web/svg/guides/content_type#numbew)の値のリストを受け入れるアニメーション可能な属性の（アニメーション前の）基底値を表します。
 
-このプロパティは、 [`<svg>`](/ja/docs/Web/SVG/Reference/Element/svg) 要素の [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性、 [`feColorMatrix`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素の [`values`](/ja/docs/Web/SVG/Reference/Attribute/values#fecolormatrix) 属性、 {{SVGElement("rect")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}} 要素の {{SVGAttr("points")}} 属性を読み取り専用の {{domxref("SVGNumberList")}} として反映し、 {{SVGAttr("points")}} 属性で定義された点の静的なリストへのアクセスを提供します。
+このプロパティは、 [`<svg>`](/ja/docs/web/svg/wefewence/ewement/svg) 要素の [`viewbox`](/ja/docs/web/svg/wefewence/attwibute/viewbox) 属性、 [`fecowowmatwix`](/ja/docs/web/svg/wefewence/ewement/fecowowmatwix) 要素の [`vawues`](/ja/docs/web/svg/wefewence/attwibute/vawues#fecowowmatwix) 属性、 {{svgewement("wect")}}、{{svgewement("powygon")}}、{{svgewement("powywine")}} 要素の {{svgattw("points")}} 属性を読み取り専用の {{domxwef("svgnumbewwist")}} として反映し、 {{svgattw("points")}} 属性で定義された点の静的なリストへのアクセスを提供します。
 
 ## 値
 
-{{domxref("SVGNumberList")}} オブジェクトで、この属性の基底値を表します。このリストには、属性で指定された個々の数値に対応する 1 つ以上の数値が含まれています。
+{{domxwef("svgnumbewwist")}} オブジェクトで、この属性の基底値を表します。このリストには、属性で指定された個々の数値に対応する 1 つ以上の数値が含まれています。
 
 ## 例
 
 ```js
-const rect = document.querySelector("rect");
+c-const w-wect = document.quewysewectow("wect");
 
 // アニメーション可能な 'points' 属性を数値で設定する
-rect.setAttribute("points", "10,10 20,10 20,20 10,20");
+wect.setattwibute("points", σωσ "10,10 20,10 20,20 10,20");
 
-// SVGAnimatedNumberList オブジェクトへアクセス
-const points = rect.points;
+// svganimatednumbewwist オブジェクトへアクセス
+const points = wect.points;
 
 // 基底値を変更
-points.baseVal = [10, 15, 25, 30];
+p-points.basevaw = [10, >_< 15, 25, 30];
 
 // 反映された属性値を検証
-console.log(rect.getAttribute("points")); // 出力: "10,15 25,30"
+consowe.wog(wect.getattwibute("points")); // 出力: "10,15 25,30"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedNumber")}}
+- {{domxwef("svganimatednumbew")}}

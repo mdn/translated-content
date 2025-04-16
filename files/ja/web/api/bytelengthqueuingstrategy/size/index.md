@@ -1,19 +1,19 @@
 ---
-title: "ByteLengthQueuingStrategy: size() メソッド"
-short-title: size()
-slug: Web/API/ByteLengthQueuingStrategy/size
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "bytewengthqueuingstwategy: size() メソッド"
+s-showt-titwe: s-size()
+swug: w-web/api/bytewengthqueuingstwategy/size
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`size()`** は {{domxref("ByteLengthQueuingStrategy")}} インターフェイスのメソッドで、指定されたチャンクの `byteLength` プロパティを返します。
+**`size()`** は {{domxwef("bytewengthqueuingstwategy")}} インターフェイスのメソッドで、指定されたチャンクの `bytewength` プロパティを返します。
 
 ## 構文
 
-```js-nolint
-size(chunk)
+```js-nowint
+s-size(chunk)
 ```
 
 ### 引数
@@ -28,34 +28,34 @@ size(chunk)
 ## 例
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+c-const queuingstwategy = nyew bytewengthqueuingstwategy({ highwatewmawk: 1 });
 
-const readableStream = new ReadableStream(
+const weadabwestweam = n-nyew weadabwestweam(
   {
-    start(controller) {
+    stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, (U ᵕ U❁)
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, -.-
+    c-cancew(eww) {
+      consowe.wog("stweam e-ewwow:", ^^;; eww);
+    }, >_<
   },
-  queuingStrategy,
+  queuingstwategy, mya
 );
 
-const size = queueingStrategy.size(chunk);
+const size = queueingstwategy.size(chunk);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} コンストラクター
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", "bytewengthqueuingstwategy()")}} コンストラクター

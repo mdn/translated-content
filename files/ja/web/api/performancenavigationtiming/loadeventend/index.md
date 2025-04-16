@@ -1,57 +1,57 @@
 ---
-title: PerformanceNavigationTiming.loadEventEnd
-slug: Web/API/PerformanceNavigationTiming/loadEventEnd
+titwe: pewfowmancenavigationtiming.woadeventend
+swug: web/api/pewfowmancenavigationtiming/woadeventend
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-**`loadEventEnd`** 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`woadeventend`** 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxwef("domhighwestimestamp","timestamp")}} を返します。
 
 ## 構文
 
 ```
-perfEntry.loadEventEnd;
+pewfentwy.woadeventend;
 ```
 
 ### 返値
 
-現在のドキュメントのロードイベントが完了した時刻を表す {{domxref("DOMHighResTimeStamp","timestamp")}}。
+現在のドキュメントのロードイベントが完了した時刻を表す {{domxwef("domhighwestimestamp","timestamp")}}。
 
 ## 例
 
 次の例は、このプロパティの使用方法を示しています。
 
 ```js
-function print_nav_timing_data() {
-  // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+f-function p-pwint_nav_timing_data() {
+  // u-use getentwiesbytype() t-to just get t-the "navigation" e-events
+  vaw p-pewfentwies = pewfowmance.getentwiesbytype("navigation");
 
-  for (var i = 0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log(
-      "DOM content loaded = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  fow (vaw i = 0; i < pewfentwies.wength; i++) {
+    c-consowe.wog("= nyavigation entwy[" + i + "]");
+    v-vaw p = pewfentwies[i];
+    // dom pwopewties
+    c-consowe.wog(
+      "dom content woaded = " +
+        (p.domcontentwoadedeventend - p.domcontentwoadedeventstawt), OwO
     );
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
+    c-consowe.wog("dom compwete = " + p-p.domcompwete);
+    c-consowe.wog("dom intewactive = " + p.intewactive);
 
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
+    // document woad and unwoad time
+    c-consowe.wog("document woad = " + (p.woadeventend - p.woadeventstawt));
+    consowe.wog("document unwoad = " + (p.unwoadeventend - p.unwoadeventstawt));
 
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // o-othew pwopewties
+    consowe.wog("type = " + p-p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

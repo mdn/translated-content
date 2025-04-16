@@ -1,16 +1,16 @@
 ---
-title: CSSRuleList.length
-slug: Web/API/CSSRuleList/length
+titwe: csswuwewist.wength
+swug: w-web/api/csswuwewist/wength
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`length`** は {{domxref("CSSRuleList")}} インターフェイスのプロパティで、リスト内の {{domxref("CSSRule")}} オブジェクトの数を返します。
+**`wength`** は {{domxwef("csswuwewist")}} インターフェイスのプロパティで、リスト内の {{domxwef("csswuwe")}} オブジェクトの数を返します。
 
 ## 構文
 
 ```js
-let length = CSSRuleList.length;
+w-wet wength = c-csswuwewist.wength;
 ```
 
 ### 値
@@ -19,17 +19,17 @@ let length = CSSRuleList.length;
 
 ## 例
 
-以下の例では、 `myRules` という名前の {{domxref("CSSRuleList")}} にあるアイテムの数をコンソールに出力します。
+以下の例では、 `mywuwes` という名前の {{domxwef("csswuwewist")}} にあるアイテムの数をコンソールに出力します。
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.length);
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes.wength);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

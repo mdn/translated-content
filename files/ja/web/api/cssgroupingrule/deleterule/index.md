@@ -1,19 +1,19 @@
 ---
-title: "CSSGroupingRule: deleteRule() メソッド"
-short-title: deleteRule()
-slug: Web/API/CSSGroupingRule/deleteRule
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssgwoupingwuwe: dewetewuwe() メソッド"
+s-showt-titwe: d-dewetewuwe()
+s-swug: web/api/cssgwoupingwuwe/dewetewuwe
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`deleteRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、子 CSS ルールの一覧からある CSS ルールを取り除きます。
+**`dewetewuwe()`** は {{domxwef("cssgwoupingwuwe")}} インターフェイスのメソッドで、子 c-css ルールの一覧からある css ルールを取り除きます。
 
 ## 構文
 
-```js-nolint
-deleteRule(index)
+```js-nowint
+dewetewuwe(index)
 ```
 
 ### 引数
@@ -23,26 +23,26 @@ deleteRule(index)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
-  - : _index_ が子 CSS ルールの数以上であった場合に発生します。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 削除しようとしているルールが `@namespace` アットルールであり、子 CSS ルールに `@import` アットルールまたは `@namespace` アットルール以外の者があった場合に発生します。
+- `indexsizeewwow` {{domxwef("domexception")}}
+  - : _index_ が子 css ルールの数以上であった場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 削除しようとしているルールが `@namespace` アットルールであり、子 css ルールに `@impowt` アットルールまたは `@namespace` アットルール以外の者があった場合に発生します。
 
 ## 例
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-myRules[0].deleteRule(2); /* インデックス 2 にあるルールを削除 */
+wet mywuwes = d-document.stywesheets[0].csswuwes;
+mywuwes[0].dewetewuwe(2); /* インデックス 2 にあるルールを削除 */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

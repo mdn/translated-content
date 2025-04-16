@@ -1,47 +1,47 @@
 ---
-title: "Touch: pageX プロパティ"
-short-title: pageX
-slug: Web/API/Touch/pageX
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "touch: pagex プロパティ"
+s-showt-titwe: p-pagex
+swug: w-web/api/touch/pagex
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Touch Events") }}
+{{ a-apiwef("touch e-events") }}
 
-**`Touch.pageX`** は読み取り専用プロパティで、スクロールオフセットを加味した、ビューポートに対するタッチ点の X 座標を返します。
+**`touch.pagex`** は読み取り専用プロパティで、スクロールオフセットを加味した、ビューポートに対するタッチ点の x-x 座標を返します。
 
 ### 値
 
-`double` 型の浮動小数点数で、スクロールオフセットを加味した、ビューポートに対するタッチ点の X 座標を表します。
+`doubwe` 型の浮動小数点数で、スクロールオフセットを加味した、ビューポートに対するタッチ点の x 座標を表します。
 
 ## 例
 
-この例では、 {{domxref("Touch")}} オブジェクトの {{domxref("Touch.pageX")}} および {{domxref("Touch.pageY")}} プロパティへのアクセス方法を示しています。 {{domxref("Touch.pageX")}} プロパティは、ビューポートを基準としたタッチ点の水平座標（CSS ピクセル単位）で、スクロールオフセットを加味したものです。 {{domxref("Touch.pageY")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の垂直座標（CSS ピクセル単位）で、スクロールオフセットを加味したものです。
+この例では、 {{domxwef("touch")}} オブジェクトの {{domxwef("touch.pagex")}} および {{domxwef("touch.pagey")}} プロパティへのアクセス方法を示しています。 {{domxwef("touch.pagex")}} プロパティは、ビューポートを基準としたタッチ点の水平座標（css ピクセル単位）で、スクロールオフセットを加味したものです。 {{domxwef("touch.pagey")}} プロパティは、ブラウザーのビューポートを基準としたタッチ点の垂直座標（css ピクセル単位）で、スクロールオフセットを加味したものです。
 
-以下の単純なコードスニペットでは、ユーザーが `source` 要素に 1 つ以上のタッチ接触を開始し、タッチ点を移動させた後、表面との接触をすべて解除することを想定しています。 {{domxref("Element/touchmove_event", "touchmove")}} イベントハンドラーが呼び出されると、各タッチ点の {{domxref("Touch.pageX")}} と {{domxref("Touch.pageY")}} の各座標がイベントの {{domxref("TouchEvent.changedTouches")}} リスト経由でアクセスされます。
+以下の単純なコードスニペットでは、ユーザーが `souwce` 要素に 1 つ以上のタッチ接触を開始し、タッチ点を移動させた後、表面との接触をすべて解除することを想定しています。 {{domxwef("ewement/touchmove_event", -.- "touchmove")}} イベントハンドラーが呼び出されると、各タッチ点の {{domxwef("touch.pagex")}} と {{domxwef("touch.pagey")}} の各座標がイベントの {{domxwef("touchevent.changedtouches")}} リスト経由でアクセスされます。
 
 ```js
-// 'source' 要素に touchmove リスナーを登録する
-const src = document.getElementById("source");
+// 'souwce' 要素に touchmove リスナーを登録する
+const swc = document.getewementbyid("souwce");
 
-src.addEventListener(
-  "touchmove",
+swc.addeventwistenew(
+  "touchmove", (ˆ ﻌ ˆ)♡
   (e) => {
-    // 移動されたタッチ点を反復処理し、各 pageX/Y 座標をログ出力する。
-    // 各座標は CSS ピクセル単位。
-    for (let i = 0; i < e.changedTouches.length; i++) {
-      console.log(`touchpoint[${i}].pageX = ${e.changedTouches[i].pageX}`);
-      console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
+    // 移動されたタッチ点を反復処理し、各 pagex/y 座標をログ出力する。
+    // 各座標は c-css ピクセル単位。
+    fow (wet i = 0; i < e.changedtouches.wength; i-i++) {
+      consowe.wog(`touchpoint[${i}].pagex = ${e.changedtouches[i].pagex}`);
+      consowe.wog(`touchpoint[${i}].pagey = ${e.changedtouches[i].pagey}`);
     }
-  },
-  false,
+  }, (⑅˘꒳˘)
+  f-fawse, (U ᵕ U❁)
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

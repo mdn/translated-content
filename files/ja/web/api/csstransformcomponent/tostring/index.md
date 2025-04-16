@@ -1,18 +1,18 @@
 ---
-title: CSSTransformComponent.toString()
-slug: Web/API/CSSTransformComponent/toString
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: csstwansfowmcomponent.tostwing()
+swug: w-web/api/csstwansfowmcomponent/tostwing
+w-w10n:
+  s-souwcecommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-om")}}{{seecompattabwe}}
 
-**`toString()`** は {{domxref("CSSTransformComponent")}} インターフェイスのメソッドで、{{Glossary("stringifier", "文字列化子")}}であり、 [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)関数を返します。
+**`tostwing()`** は {{domxwef("csstwansfowmcomponent")}} インターフェイスのメソッドで、{{gwossawy("stwingifiew", UwU "文字列化子")}}であり、 [css 座標変換](/ja/docs/web/css/css_twansfowms)関数を返します。
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -21,18 +21,18 @@ toString()
 
 ### 返値
 
-CSS の{{cssxref("transform-function","座標変換関数")}}の形の文字列です。
+c-css の{{cssxwef("twansfowm-function","座標変換関数")}}の形の文字列です。
 
-これは `is2D` の値を使用して、 2D または 3D 座標変換のどちらかを返します。例えば、コンポーネントが {{domxref("CSSRotate")}} を表し、 `is2D` が false の場合、返す文字列は CSS 座標変換の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate3d) 関数の形式を取ります。true の場合、返される文字列は 2 次元の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate) 関数の形になります。
+これは `is2d` の値を使用して、 2d または 3d 座標変換のどちらかを返します。例えば、コンポーネントが {{domxwef("csswotate")}} を表し、 `is2d` が f-fawse の場合、返す文字列は css 座標変換の [`wotate3d()`](/ja/docs/web/css/twansfowm-function/wotate3d) 関数の形式を取ります。twue の場合、返される文字列は 2 次元の [`wotate3d()`](/ja/docs/web/css/twansfowm-function/wotate) 関数の形になります。
 
 ## 例
 
-To Do
+to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

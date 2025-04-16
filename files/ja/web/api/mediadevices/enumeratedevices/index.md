@@ -1,23 +1,23 @@
 ---
-title: "MediaDevices: enumerateDevices() メソッド"
-short-title: enumerateDevices()
-slug: Web/API/MediaDevices/enumerateDevices
-l10n:
-  sourceCommit: b2875dbaa70efb5850084b9802803b439db325f5
+titwe: "mediadevices: enumewatedevices() メソッド"
+s-showt-titwe: e-enumewatedevices()
+s-swug: w-web/api/mediadevices/enumewatedevices
+w-w10n:
+  souwcecommit: b-b2875dbaa70efb5850084b9802803b439db325f5
 ---
 
-{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
+{{apiwef("media c-captuwe a-and stweams")}}{{secuwecontext_headew}}
 
-**`enumerateDevices()`** は {{domxref("MediaDevices")}} インターフェイスのメソッドで、マイクやカメラ、ヘッドセットなど、現在利用可能なメディア入出力機器の一覧を要求します。
-返されたプロミス ({{jsxref("Promise")}}) は、機器を記述した {{domxref("MediaDeviceInfo")}} の配列で解決されます。
+**`enumewatedevices()`** は {{domxwef("mediadevices")}} インターフェイスのメソッドで、マイクやカメラ、ヘッドセットなど、現在利用可能なメディア入出力機器の一覧を要求します。
+返されたプロミス ({{jsxwef("pwomise")}}) は、機器を記述した {{domxwef("mediadeviceinfo")}} の配列で解決されます。
 
-特定の機器へのアクセスは、[権限ポリシー](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy)によって制限されます。返される機器の一覧では、対応する権限が付与されていない機器は省略されます。[`microphone`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/microphone), [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera), [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) （出力機器の場合）などです。
-また、[権限 API](/ja/docs/Web/API/Permissions_API) によって、特定の既定ではない機器へのアクセスも制限され、ユーザーが明示的な許可を与えていない端末はリストから省略されます。
+特定の機器へのアクセスは、[権限ポリシー](/ja/docs/web/http/wefewence/headews/pewmissions-powicy)によって制限されます。返される機器の一覧では、対応する権限が付与されていない機器は省略されます。[`micwophone`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/micwophone), (U ﹏ U) [`camewa`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/camewa), >_< [`speakew-sewection`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/speakew-sewection) （出力機器の場合）などです。
+また、[権限 api](/ja/docs/web/api/pewmissions_api) によって、特定の既定ではない機器へのアクセスも制限され、ユーザーが明示的な許可を与えていない端末はリストから省略されます。
 
 ## 構文
 
-```js-nolint
-enumerateDevices()
+```js-nowint
+enumewatedevices()
 ```
 
 ### 引数
@@ -26,72 +26,72 @@ enumerateDevices()
 
 ### 返値
 
-{{jsxref("Promise")}} で、{{domxref("MediaDeviceInfo")}} オブジェクトの配列で履行されます。
+{{jsxwef("pwomise")}} で、{{domxwef("mediadeviceinfo")}} オブジェクトの配列で履行されます。
 配列内の各オブジェクトは、利用可能なメディア入出力機器の 1 つを記述します。
 順番は重要で、既定のキャプチャ機器が最初にリストアップされます。
 
-既定以外の危機は、権限が付与された機器のみが "available" となります。
+既定以外の危機は、権限が付与された機器のみが "avaiwabwe" となります。
 
-メディア機器が入力機器である場合、代わりに {{domxref("InputDeviceInfo")}} オブジェクトが返されます。
+メディア機器が入力機器である場合、代わりに {{domxwef("inputdeviceinfo")}} オブジェクトが返されます。
 
 列挙に失敗した場合、プロミスは拒否されます。
 
 ## セキュリティ要件
 
-API へのアクセスは、以下の制約を受けます。
+api へのアクセスは、以下の制約を受けます。
 
-- このメソッドは、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
+- このメソッドは、[保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)で呼び出す必要があります。
 - 文書は完全にアクティブで、その可視性が「可視」である必要があります。
 
 ## 例
 
-これは `enumerateDevices()` の使用例です。[機器 ID](/ja/docs/Web/API/MediaDeviceInfo/deviceId) の一覧と、もしあればそのラベルが出力されます。
+これは `enumewatedevices()` の使用例です。[機器 id](/ja/docs/web/api/mediadeviceinfo/deviceid) の一覧と、もしあればそのラベルが出力されます。
 
 ```js
-if (!navigator.mediaDevices?.enumerateDevices) {
-  console.log("enumerateDevices() not supported.");
-} else {
+if (!navigatow.mediadevices?.enumewatedevices) {
+  consowe.wog("enumewatedevices() n-nyot suppowted.");
+} ewse {
   // カメラとマイクを列挙
-  navigator.mediaDevices
-    .enumerateDevices()
+  nyavigatow.mediadevices
+    .enumewatedevices()
     .then((devices) => {
-      devices.forEach((device) => {
-        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+      d-devices.foweach((device) => {
+        consowe.wog(`${device.kind}: ${device.wabew} i-id = ${device.deviceid}`);
       });
     })
-    .catch((err) => {
-      console.error(`${err.name}: ${err.message}`);
+    .catch((eww) => {
+      consowe.ewwow(`${eww.name}: ${eww.message}`);
     });
 }
 ```
 
 出力例です。
 
-```plain
-videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```pwain
+videoinput: id = cso9c0ypaf274oucpua53cne0yhwiw2yxci+sqfbzz8=
+a-audioinput: id = wkxxbyjnabbadgqnnzqwvwdmxws0yketycibg+xxnvm=
+a-audioinput: i-id = w2/xw1xupiyzunfv1wgwkoma5wtovckwfz368xcndm0=
 ```
 
-または 1 つ以上の {{domxref("MediaStream")}} がアクティブな場合、または永続的な権限が付与されている場合は次のようになります。
+または 1 つ以上の {{domxwef("mediastweam")}} がアクティブな場合、または永続的な権限が付与されている場合は次のようになります。
 
-```plain
-videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```pwain
+videoinput: facetime hd camewa (buiwt-in) id=cso9c0ypaf274oucpua53cne0yhwiw2yxci+sqfbzz8=
+audioinput: d-defauwt (buiwt-in micwophone) id=wkxxbyjnabbadgqnnzqwvwdmxws0yketycibg+xxnvm=
+audioinput: buiwt-in micwophone i-id=w2/xw1xupiyzunfv1wgwkoma5wtovckwfz368xcndm0=
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaDevices.getUserMedia")}}
-- [WebRTC](/ja/docs/Web/API/WebRTC_API) - API の入門ページ
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API) - メディアストリームオブジェクトの API
-- [ウェブカムでの写真撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) は、動画ではなく写真を撮るために `getUserMedia()` を使用するチュートリアルです。
+- {{domxwef("mediadevices.getusewmedia")}}
+- [webwtc](/ja/docs/web/api/webwtc_api) - api の入門ページ
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api) - メディアストリームオブジェクトの a-api
+- [ウェブカムでの写真撮影](/ja/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) は、動画ではなく写真を撮るために `getusewmedia()` を使用するチュートリアルです。

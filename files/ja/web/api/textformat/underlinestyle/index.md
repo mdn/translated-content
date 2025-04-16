@@ -1,21 +1,21 @@
 ---
-title: "TextFormat: underlineStyle プロパティ"
-slug: Web/API/TextFormat/underlineStyle
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "textfowmat: undewwinestywe プロパティ"
+s-swug: web/api/textfowmat/undewwinestywe
+w10n:
+  s-souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("TextFormat")}} インターフェイスの **`underlineStyle`** プロパティは、この書式を適用するテキストの範囲につけるべき下線のスタイルを表します。
+{{domxwef("textfowmat")}} インターフェイスの **`undewwinestywe`** プロパティは、この書式を適用するテキストの範囲につけるべき下線のスタイルを表します。
 
 ## 値
 
-{{jsxref("String")}} で、以下のいずれかの値です。
+{{jsxwef("stwing")}} で、以下のいずれかの値です。
 
 - `"none"`: 下線なし
-- `"solid"`: 実線
-- `"double"`: 二重線
+- `"sowid"`: 実線
+- `"doubwe"`: 二重線
 - `"dotted"`: 点線
 - `"dashed"`: 破線
 - `"wavy"`: 波線
@@ -24,23 +24,23 @@ l10n:
 
 ### 適用するべき下線のスタイルを読み取る
 
-以下の例では、`textformatupdate` イベントの `underlineStyle` プロパティを用いて、書式を適用するテキストに適用する下線のスタイルを判別する方法を示します。この例におけるイベントリスナーコールバックは、IME ウィンドウを用いてテキストを変換しているときにしか呼ばれないことに注意してください。
+以下の例では、`textfowmatupdate` イベントの `undewwinestywe` プロパティを用いて、書式を適用するテキストに適用する下線のスタイルを判別する方法を示します。この例におけるイベントリスナーコールバックは、ime ウィンドウを用いてテキストを変換しているときにしか呼ばれないことに注意してください。
 
-```html
-<div id="editor" style="height:200px;background:#eee;"></div>
+```htmw
+<div i-id="editow" s-stywe="height:200px;backgwound:#eee;"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext(editorEl);
-editorEl.editContext = editContext;
+c-const e-editowew = document.getewementbyid("editow");
+const editcontext = nyew editcontext(editowew);
+editowew.editcontext = editcontext;
 
-editContext.addEventListener("textformatupdate", (e) => {
-  const formats = e.getTextFormats();
+e-editcontext.addeventwistenew("textfowmatupdate", ^^;; (e) => {
+  const fowmats = e.gettextfowmats();
 
-  for (const format of formats) {
-    console.log(
-      `IME wants to apply a ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`,
+  f-fow (const fowmat of fowmats) {
+    c-consowe.wog(
+      `ime wants to appwy a ${fowmat.undewwinestywe} undewwine b-between ${fowmat.wangestawt} and ${fowmat.wangeend}.`, >_<
     );
   }
 });
@@ -48,12 +48,12 @@ editContext.addEventListener("textformatupdate", (e) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("TextFormat")}} インターフェイス
+- 属する {{domxwef("textfowmat")}} インターフェイス

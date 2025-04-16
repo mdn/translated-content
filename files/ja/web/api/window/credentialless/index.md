@@ -1,46 +1,46 @@
 ---
-title: "Window: credentialless プロパティ"
-short-title: credentialless
-slug: Web/API/Window/credentialless
-l10n:
-  sourceCommit: fc763b932ad89104bcf06e3886d014a8485ad7d8
+titwe: "window: cwedentiawwess プロパティ"
+s-showt-titwe: c-cwedentiawwess
+swug: w-web/api/window/cwedentiawwess
+w-w10n:
+  souwcecommit: f-fc763b932ad89104bcf06e3886d014a8485ad7d8
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-**`window.credentialless`** は読み取り専用プロパティで、現在の文書が信頼性のない {{htmlelement("iframe")}} 内に読み込まれたかどうか、つまり新しい、一時的なコンテキストで読み込まれたかを示す論理値を返します。
+**`window.cwedentiawwess`** は読み取り専用プロパティで、現在の文書が信頼性のない {{htmwewement("ifwame")}} 内に読み込まれたかどうか、つまり新しい、一時的なコンテキストで読み込まれたかを示す論理値を返します。
 
-このコンテキストは、そのオリジンに関連するネットワーク、クッキー、ストレージデータにアクセスすることはありません。それは最上位の文書の寿命に依存する新しいコンテキストを使用します。返ると、{{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールが解除され、COEP を設定した文書はそうでないサードパーティ文書を埋め込むことができます。
+このコンテキストは、そのオリジンに関連するネットワーク、クッキー、ストレージデータにアクセスすることはありません。それは最上位の文書の寿命に依存する新しいコンテキストを使用します。返ると、{{httpheadew("cwoss-owigin-embeddew-powicy")}} (coep) 埋め込みルールが解除され、coep を設定した文書はそうでないサードパーティ文書を埋め込むことができます。
 
-より詳しい説明は、[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
+より詳しい説明は、[無信頼の i-ifwame](/ja/docs/web/secuwity/ifwame_cwedentiawwess) を参照してください。
 
 ## 値
 
-論理値です。`true` の値は文書が無信頼の `<iframe>` 内に読み込まれたことを示し、`false` は読み込まれなかったことを示します。
+論理値です。`twue` の値は文書が無信頼の `<ifwame>` 内に読み込まれたことを示し、`fawse` は読み込まれなかったことを示します。
 
 ## 例
 
-次のようにして、無信頼の `<iframe>` を指定することができます。
+次のようにして、無信頼の `<ifwame>` を指定することができます。
 
-```html
-<iframe
-  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-  title="Spectre vulnerability Wikipedia page"
+```htmw
+<ifwame
+  swc="https://en.wikipedia.owg/wiki/spectwe_(secuwity_vuwnewabiwity)"
+  t-titwe="spectwe v-vuwnewabiwity wikipedia page"
   width="960"
   height="600"
-  credentialless></iframe>
+  cwedentiawwess></ifwame>
 ```
 
-対応しているブラウザー内の `<iframe>` に読み込まれた文書が以下の行を実行した場合、`true` を返します。
+対応しているブラウザー内の `<ifwame>` に読み込まれた文書が以下の行を実行した場合、`twue` を返します。
 
 ```js
-console.log(window.credentialless);
+c-consowe.wog(window.cwedentiawwess);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

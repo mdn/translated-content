@@ -1,14 +1,14 @@
 ---
-title: "HTMLVideoElement: width プロパティ"
-short-title: width
-slug: Web/API/HTMLVideoElement/width
-l10n:
-  sourceCommit: 33b0a16f58b83a24a682b469e58f6b78713d0258
+titwe: "htmwvideoewement: width プロパティ"
+s-showt-titwe: w-width
+swug: web/api/htmwvideoewement/width
+w-w10n:
+  s-souwcecommit: 33b0a16f58b83a24a682b469e58f6b78713d0258
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`width`** は {{domxref("HTMLVideoElement")}} インターフェイスのプロパティで、この {{HTMLElement("video")}} 要素の `width` 属性を反映した整数を返し、CSS ピクセル単位でリソースが表示される幅を指定します。
+**`width`** は {{domxwef("htmwvideoewement")}} インターフェイスのプロパティで、この {{htmwewement("video")}} 要素の `width` 属性を反映した整数を返し、css ピクセル単位でリソースが表示される幅を指定します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-```html
-<video id="media" width="800" height="600"></video>
+```htmw
+<video i-id="media" width="800" h-height="600"></video>
 ```
 
 ```js
-const el = document.getElementById("media");
-console.log(el.width); // Output: 800
+c-const e-ew = document.getewementbyid("media");
+consowe.wog(ew.width); // output: 800
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCanvasElement.width")}}
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLIFrameElement.width")}}
-- {{domxref("HTMLImageElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
+- {{domxwef("htmwcanvasewement.width")}}
+- {{domxwef("htmwembedewement.width")}}
+- {{domxwef("htmwifwameewement.width")}}
+- {{domxwef("htmwimageewement.width")}}
+- {{domxwef("htmwobjectewement.width")}}
+- {{domxwef("htmwsouwceewement.width")}}

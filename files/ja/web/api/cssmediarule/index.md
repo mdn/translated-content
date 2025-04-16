@@ -1,47 +1,47 @@
 ---
-title: CSSMediaRule
-slug: Web/API/CSSMediaRule
+titwe: cssmediawuwe
+swug: web/api/cssmediawuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSMediaRule`** は、単一の CSS の {{cssxref("@media")}} ルールを表すインターフェイスです。
+**`cssmediawuwe`** は、単一の c-css の {{cssxwef("@media")}} ルールを表すインターフェイスです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_祖先である {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}}、{{domxref("CSSRule")}} から継承したプロパティもあります。_
+_祖先である {{domxwef("cssconditionwuwe")}}、{{domxwef("cssgwoupingwuwe")}}、{{domxwef("csswuwe")}} から継承したプロパティもあります。_
 
-- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
-  - : スタイル情報の出力先メディアを表す {{domxref("MediaList")}} を返します。
+- {{domxwef("cssmediawuwe.media")}} {{weadonwyinwine}}
+  - : スタイル情報の出力先メディアを表す {{domxwef("mediawist")}} を返します。
 
 ## メソッド
 
-_固有のメソッドはありません。祖先である {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}}、{{domxref("CSSRule")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。祖先である {{domxwef("cssconditionwuwe")}}、{{domxwef("cssgwoupingwuwe")}}、{{domxwef("csswuwe")}} から継承したメソッドがあります。_
 
 ## 例
 
-この CSS には、単一のスタイルルールを持つメディアクエリーが含まれています。これは `document.styleSheets[0].cssRules` が返す最初の CSSRule になります。
-したがって、 `myRules[0]` は {{domxref("CSSMediaRule")}} オブジェクトを返します。
+この c-css には、単一のスタイルルールを持つメディアクエリーが含まれています。これは `document.stywesheets[0].csswuwes` が返す最初の c-csswuwe になります。
+したがって、 `mywuwes[0]` は {{domxwef("cssmediawuwe")}} オブジェクトを返します。
 
 ```css
 @media (min-width: 500px) {
-  body {
-    color: blue;
+  b-body {
+    cowow: b-bwue;
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // a CSSMediaRule representing the media query.
+w-wet m-mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0]); // a cssmediawuwe wepwesenting the media quewy. rawr
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

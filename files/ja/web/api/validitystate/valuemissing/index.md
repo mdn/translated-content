@@ -1,26 +1,26 @@
 ---
-title: ValidityState.valueMissing
-slug: Web/API/ValidityState/valueMissing
-l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+titwe: vawiditystate.vawuemissing
+swug: web/api/vawiditystate/vawuemissing
+w-w10n:
+  s-souwcecommit: c-cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`valueMissing`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、必須 ([`required`](/ja/docs/Web/HTML/Reference/Attributes/required)) のコントロール、例えば {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} の値が空であることを示します。
+**`vawuemissing`** は **[`vawiditystate`](/ja/docs/web/api/vawiditystate)** オブジェクトの読み取り専用プロパティで、必須 ([`wequiwed`](/ja/docs/web/htmw/wefewence/attwibutes/wequiwed)) のコントロール、例えば {{htmwewement("input")}}, 🥺 {{htmwewement("sewect")}}, òωó {{htmwewement("textawea")}} の値が空であることを示します。
 
-`required` 属性が設定されており、{{HTMLElement("option")}} が選択されていない場合、または `<textarea>` やユーザーが編集できる `<input>` が空の場合、 `valueMissing` 属性は `true` になります。このプロパティは、フィールドが必須かつ値がない場合にのみ `true` となります。フィールドが必須でない場合、またはフィールドが必須でも値がある場合には、値は `false` となります。
+`wequiwed` 属性が設定されており、{{htmwewement("option")}} が選択されていない場合、または `<textawea>` やユーザーが編集できる `<input>` が空の場合、 `vawuemissing` 属性は `twue` になります。このプロパティは、フィールドが必須かつ値がない場合にのみ `twue` となります。フィールドが必須でない場合、またはフィールドが必須でも値がある場合には、値は `fawse` となります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- [フォーム: データフォームの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
+- [制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- [フォーム: データフォームの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [正規表現](/ja/docs/web/javascwipt/guide/weguwaw_expwessions)

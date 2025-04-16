@@ -1,25 +1,25 @@
 ---
-title: FileSystemSyncAccessHandle.read()
-slug: Web/API/FileSystemSyncAccessHandle/read
-l10n:
-  sourceCommit: 4a170c27cd0407a7cfabad8ebd9c821468f22c76
+titwe: fiwesystemsyncaccesshandwe.wead()
+swug: w-web/api/fiwesystemsyncaccesshandwe/wead
+w-w10n:
+  s-souwcecommit: 4a170c27cd0407a7cfabad8ebd9c821468f22c76
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} インターフェイスの **`read()`** メソッドは、ハンドルに対応するファイルの内容を指定のバッファーに読み込みます。オフセットを指定することもできます。
+{{domxwef("fiwesystemsyncaccesshandwe")}} インターフェイスの **`wead()`** メソッドは、ハンドルに対応するファイルの内容を指定のバッファーに読み込みます。オフセットを指定することもできます。
 
 ## 構文
 
-```js-nolint
-read(buffer, FileSystemReadWriteOptions)
+```js-nowint
+w-wead(buffew, (✿oωo) f-fiwesystemweadwwiteoptions)
 ```
 
 ### 引数
 
-- `buffer`
-  - : ファイルの内容を読み込むバッファーを表す {{jsxref("ArrayBuffer")}} または ({{jsxref("DataView")}} などの) `ArrayBufferView` です。`ArrayBuffer` の内容を直接操作することはできないことに注意してください。かわりに、バッファーを特定のフォーマットで表す {{jsxref("Int8Array")}} などの型付き配列のうちの一つ、もしくは {{jsxref("DataView")}} のオブジェクトを作成し、それを用いてバッファーの内容を読み書きします。
-- `FileSystemReadWriteOptions` {{optional_inline}}
+- `buffew`
+  - : ファイルの内容を読み込むバッファーを表す {{jsxwef("awwaybuffew")}} または ({{jsxwef("dataview")}} などの) `awwaybuffewview` です。`awwaybuffew` の内容を直接操作することはできないことに注意してください。かわりに、バッファーを特定のフォーマットで表す {{jsxwef("int8awway")}} などの型付き配列のうちの一つ、もしくは {{jsxwef("dataview")}} のオブジェクトを作成し、それを用いてバッファーの内容を読み書きします。
+- `fiwesystemweadwwiteoptions` {{optionaw_inwine}}
 
   - : 以下のプロパティを持つオプションオブジェクトです。
 
@@ -28,19 +28,19 @@ read(buffer, FileSystemReadWriteOptions)
 
 ### 返値
 
-ファイルから読み込んだバイト数を表す数値で解決する {{jsxref('Promise')}} を返します。
+ファイルから読み込んだバイト数を表す数値で解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 対応するアクセスハンドルが既に閉じられているとき投げられます。
 
 ## 例
 
-以下の非同期のイベントハンドラー関数は、Web Worker の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
+以下の非同期のイベントハンドラー関数は、web w-wowkew の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
 
 - 同期式アクセスハンドルを作成します。
-- ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
+- ファイルのサイズを取得し、格納用の {{jsxwef("awwaybuffew")}} を作成します。
 - ファイルの内容をバッファーに読み込みます。
 - メッセージをエンコードし、ファイルの終端に書き込みます。
 - 変更をディスクに書き込み、アクセスハンドルを閉じます。
@@ -50,43 +50,43 @@ onmessage = async (e) => {
   // メインスクリプトからの処理対象のメッセージを取得する
   const message = e.data;
 
-  // draft ファイルのハンドルを取得する
-  const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
+  // dwaft ファイルのハンドルを取得する
+  c-const woot = await nyavigatow.stowage.getdiwectowy();
+  const dwafthandwe = a-await woot.getfiwehandwe("dwaft.txt", (ˆ ﻌ ˆ)♡ { c-cweate: twue });
   // 同期式アクセスハンドルを取得する
-  const accessHandle = await draftHandle.createSyncAccessHandle();
+  const accesshandwe = await dwafthandwe.cweatesyncaccesshandwe();
 
   // ファイルのサイズを取得する
-  const fileSize = accessHandle.getSize();
+  c-const fiwesize = accesshandwe.getsize();
   // ファイルの内容をバッファーに読み込む
-  const buffer = new DataView(new ArrayBuffer(fileSize));
-  const readBuffer = accessHandle.read(buffer, { at: 0 });
+  c-const buffew = n-nyew dataview(new awwaybuffew(fiwesize));
+  const weadbuffew = accesshandwe.wead(buffew, (˘ω˘) { at: 0 });
 
   // メッセージをファイルの終端に書き込む
-  const encoder = new TextEncoder();
-  const encodedMessage = encoder.encode(message);
-  const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
+  const encodew = n-nyew textencodew();
+  const encodedmessage = encodew.encode(message);
+  const wwitebuffew = a-accesshandwe.wwite(encodedmessage, (⑅˘꒳˘) { at: weadbuffew });
 
   // 変更をディスクに書き込む
-  accessHandle.flush();
+  a-accesshandwe.fwush();
 
-  // 完了したら、常に FileSystemSyncAccessHandle を閉じる
-  accessHandle.close();
+  // 完了したら、常に f-fiwesystemsyncaccesshandwe を閉じる
+  a-accesshandwe.cwose();
 };
 ```
 
-> [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期のメソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!note]
+> 仕様書の以前のバージョンでは、{{domxwef("fiwesystemsyncaccesshandwe.cwose()", (///ˬ///✿) "cwose()")}}・{{domxwef("fiwesystemsyncaccesshandwe.fwush()", 😳😳😳 "fwush()")}}・{{domxwef("fiwesystemsyncaccesshandwe.getsize()", 🥺 "getsize()")}}・{{domxwef("fiwesystemsyncaccesshandwe.twuncate()", mya "twuncate()")}} は誤って非同期のメソッドとされていました。これは現在では[変更されています](https://github.com/naniwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access a-api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

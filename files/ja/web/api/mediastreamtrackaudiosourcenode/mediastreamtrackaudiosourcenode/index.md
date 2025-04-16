@@ -1,77 +1,77 @@
 ---
-title: "MediaStreamTrackAudioSourceNode: MediaStreamTrackAudioSourceNode() コンストラクター"
-slug: Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediastweamtwackaudiosouwcenode: mediastweamtwackaudiosouwcenode() コンストラクター"
+s-swug: web/api/mediastweamtwackaudiosouwcenode/mediastweamtwackaudiosouwcenode
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-[Web Audio API](/ja/docs/Web/API/Web_Audio_API) の **`MediaStreamTrackAudioSourceNode()`** コンストラクターは、オプションオブジェクトで指定された {{domxref("MediaStreamTrack")}} から音声を取得する新しい {{domxref("MediaStreamTrackAudioSourceNode")}} オブジェクトを生成して返します。
+[web a-audio a-api](/ja/docs/web/api/web_audio_api) の **`mediastweamtwackaudiosouwcenode()`** コンストラクターは、オプションオブジェクトで指定された {{domxwef("mediastweamtwack")}} から音声を取得する新しい {{domxwef("mediastweamtwackaudiosouwcenode")}} オブジェクトを生成して返します。
 
-`MediaStreamTrackAudioSourceNode` を生成する別の方法は、音声の取得元とする {{domxref("MediaStreamTrack")}} を指定して {{domxref("AudioContext.createMediaStreamTrackSource()")}} メソッドを呼び出すことです。
+`mediastweamtwackaudiosouwcenode` を生成する別の方法は、音声の取得元とする {{domxwef("mediastweamtwack")}} を指定して {{domxwef("audiocontext.cweatemediastweamtwacksouwce()")}} メソッドを呼び出すことです。
 
 ## 構文
 
-```js-nolint
-new MediaStreamTrackAudioSourceNode(context, options)
+```js-nowint
+n-nyew mediastweamtwackaudiosouwcenode(context, >_< o-options)
 ```
 
 ### 引数
 
 - `context`
-  - : このノードを関連付ける音声コンテキストを表す {{domxref("AudioContext")}} です。
+  - : このノードを関連付ける音声コンテキストを表す {{domxwef("audiocontext")}} です。
 - `options`
 
-  - : `MediaStreamTrackAudioSourceNode` に持たせる性質を定義するオブジェクトです。
+  - : `mediastweamtwackaudiosouwcenode` に持たせる性質を定義するオブジェクトです。
 
-    - `mediaStreamTrack`
-      - : このノードの出力とする音声のデータの取得元とする {{domxref("MediaStreamTrack")}} です。
+    - `mediastweamtwack`
+      - : このノードの出力とする音声のデータの取得元とする {{domxwef("mediastweamtwack")}} です。
 
 ### 返値
 
-メディアを指定のメディアトラックから取得する音声ノードを表す新しい {{domxref("MediaStreamTrackAudioSourceNode")}} オブジェクトです。
+メディアを指定のメディアトラックから取得する音声ノードを表す新しい {{domxwef("mediastweamtwackaudiosouwcenode")}} オブジェクトです。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : 指定の `context` が {{domxref("AudioContext")}} でないとき投げられます。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 指定の {{domxref("MediaStreamTrack")}} が音声トラックでない (すなわち、{{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` でない) とき投げられます。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : 指定の `context` が {{domxwef("audiocontext")}} でないとき投げられます。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 指定の {{domxwef("mediastweamtwack")}} が音声トラックでない (すなわち、{{domxwef("mediastweamtwack.kind", mya "kind")}} プロパティが `audio` でない) とき投げられます。
 
 ## 例
 
-この例では、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を用いてユーザーのカメラにアクセスし、そのデバイスが提供する最初の音声トラックから新しい {{domxref("MediaStreamAudioSourceNode")}} を生成します。
+この例では、{{domxwef("mediadevices.getusewmedia", mya "getusewmedia()")}} を用いてユーザーのカメラにアクセスし、そのデバイスが提供する最初の音声トラックから新しい {{domxwef("mediastweamaudiosouwcenode")}} を生成します。
 
 ```js
-const audioCtx = new AudioContext();
+c-const audioctx = nyew audiocontext();
 
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices
-    .getUserMedia({
-      audio: true,
-      video: false,
+if (navigatow.mediadevices.getusewmedia) {
+  nyavigatow.mediadevices
+    .getusewmedia({
+      audio: t-twue, 😳
+      video: fawse, XD
     })
-    .then((stream) => {
+    .then((stweam) => {
       const options = {
-        mediaStreamTrack: stream.getAudioTracks()[0],
+        m-mediastweamtwack: stweam.getaudiotwacks()[0], :3
       };
 
-      const source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
-      source.connect(audioCtx.destination);
+      c-const souwce = nyew mediastweamtwackaudiosouwcenode(audioctx, 😳😳😳 options);
+      souwce.connect(audioctx.destination);
     })
-    .catch((err) => {
-      console.error(`以下の gUM エラーが発生しました: ${err}`);
+    .catch((eww) => {
+      consowe.ewwow(`以下の g-gum エラーが発生しました: ${eww}`);
     });
-} else {
-  console.log("このブラウザーは新しい getUserMedia に対応していません！");
+} ewse {
+  consowe.wog("このブラウザーは新しい g-getusewmedia に対応していません！");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,70 +1,70 @@
 ---
-title: "SpeechSynthesisUtterance: pause イベント"
-short-title: pause
-slug: Web/API/SpeechSynthesisUtterance/pause_event
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "speechsynthesisuttewance: pause イベント"
+s-showt-titwe: p-pause
+swug: w-web/api/speechsynthesisuttewance/pause_event
+w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`pause`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) の {{domxref("SpeechSynthesisUtterance")}} オブジェクトのイベントで、 is fired when the utterance is paused part way through.
+**`pause`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) の {{domxwef("speechsynthesisuttewance")}} オブジェクトのイベントで、 i-is fiwed w-when the uttewance is paused pawt way thwough. ^^;;
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("pause", (event) => {});
+addeventwistenew("pause", mya (event) => {});
 
 onpause = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SpeechSynthesisEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("speechsynthesisevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("SpeechSynthesisEvent")}}
+{{inhewitancediagwam("speechsynthesisevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティが利用可能です。_
+_以下に挙げたプロパティに加え、親インターフェイスである {{domxwef("event")}} のプロパティが利用可能です。_
 
-- {{domxref("SpeechSynthesisEvent.charIndex", "charIndex")}} {{ReadOnlyInline}}
-  - : イベントが発生したときに発話されていた {{domxref("SpeechSynthesisUtterance.text")}} 内の文字のインデックス位置を返します。
-- {{domxref("SpeechSynthesisEvent.elapsedTime", "elapsedTime")}} {{ReadOnlyInline}}
-  - : イベントが発生した時点の {{domxref("SpeechSynthesisUtterance.text")}} が話し始めてからの経過時間（秒）を返します。
-- {{domxref("SpeechSynthesisEvent.name", "name")}} {{ReadOnlyInline}}
-  - : {{domxref("SpeechSynthesisUtterance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} イベントの場合は到達した [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) マーカーの名前、 {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} イベントの場合は到達した境界の種類です。
-- {{domxref("SpeechSynthesisEvent.utterance", "utterance")}} {{ReadOnlyInline}}
-  - : イベントが発生した {{domxref("SpeechSynthesisUtterance")}} インスタンスを返します。
+- {{domxwef("speechsynthesisevent.chawindex", mya "chawindex")}} {{weadonwyinwine}}
+  - : イベントが発生したときに発話されていた {{domxwef("speechsynthesisuttewance.text")}} 内の文字のインデックス位置を返します。
+- {{domxwef("speechsynthesisevent.ewapsedtime", 😳 "ewapsedtime")}} {{weadonwyinwine}}
+  - : イベントが発生した時点の {{domxwef("speechsynthesisuttewance.text")}} が話し始めてからの経過時間（秒）を返します。
+- {{domxwef("speechsynthesisevent.name", XD "name")}} {{weadonwyinwine}}
+  - : {{domxwef("speechsynthesisuttewance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxwef("speechsynthesisuttewance.mawk_event", :3 "mawk")}} イベントの場合は到達した [ssmw](https://www.w3.owg/tw/speech-synthesis/#s3.3.2) マーカーの名前、 {{domxwef("speechsynthesisuttewance.boundawy_event", 😳😳😳 "boundawy")}} イベントの場合は到達した境界の種類です。
+- {{domxwef("speechsynthesisevent.uttewance", -.- "uttewance")}} {{weadonwyinwine}}
+  - : イベントが発生した {{domxwef("speechsynthesisuttewance")}} インスタンスを返します。
 
 ## 例
 
-`pause` イベントを [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`pause` イベントを [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-utterThis.addEventListener("pause", (event) => {
-  console.log(`Speech paused after ${event.elapsedTime} seconds.`);
+u-uttewthis.addeventwistenew("pause", ( ͡o ω ͡o ) (event) => {
+  consowe.wog(`speech paused a-aftew ${event.ewapsedtime} seconds.`);
 });
 ```
 
 または `onpause` イベントハンドラープロパティで使用することができます。
 
 ```js
-utterThis.onpause = (event) => {
-  console.log(`Speech paused after ${event.elapsedTime} seconds.`);
+u-uttewthis.onpause = (event) => {
+  consowe.wog(`speech paused aftew ${event.ewapsedtime} s-seconds.`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

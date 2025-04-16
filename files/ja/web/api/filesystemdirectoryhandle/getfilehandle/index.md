@@ -1,68 +1,68 @@
 ---
-title: FileSystemDirectoryHandle.getFileHandle()
-slug: Web/API/FileSystemDirectoryHandle/getFileHandle
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemdiwectowyhandwe.getfiwehandwe()
+swug: web/api/fiwesystemdiwectowyhandwe/getfiwehandwe
+w-w10n:
+  s-souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref("FileSystemDirectoryHandle")}} インターフェイスの **`getFileHandle()`** メソッドは、メソッドが呼ばれたディレクトリー内の指定した名前のファイルを表す {{domxref('FileSystemFileHandle')}} を返します。
+{{domxwef("fiwesystemdiwectowyhandwe")}} インターフェイスの **`getfiwehandwe()`** メソッドは、メソッドが呼ばれたディレクトリー内の指定した名前のファイルを表す {{domxwef('fiwesystemfiwehandwe')}} を返します。
 
 ## 構文
 
-```js-nolint
-getFileHandle(name)
-getFileHandle(name, options)
+```js-nowint
+g-getfiwehandwe(name)
+g-getfiwehandwe(name, -.- o-options)
 ```
 
 ### 引数
 
 - `name`
-  - : 取得したいファイルの {{domxref('FileSystemHandle.name')}} を表す文字列です。
-- `options` {{optional_inline}}
+  - : 取得したいファイルの {{domxwef('fiwesystemhandwe.name')}} を表す文字列です。
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `create`
-      - : {{jsxref('Boolean')}} です。デフォルトは `false` です。
-        `true` に設定すると、ファイルが見つからない場合、指定した名前のファイルが作成されて返されます。
+    - `cweate`
+      - : {{jsxwef('boowean')}} です。デフォルトは `fawse` です。
+        `twue` に設定すると、ファイルが見つからない場合、指定した名前のファイルが作成されて返されます。
 
 ### 返値
 
-{{domxref('FileSystemFileHandle')}} で解決する {{jsxref('Promise')}} を返します。
+{{domxwef('fiwesystemfiwehandwe')}} で解決する {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : {{domxref('PermissionStatus')}} が `'granted'` でないとき投げられます。
-- {{jsxref("TypeError")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef('pewmissionstatus')}} が `'gwanted'` でないとき投げられます。
+- {{jsxwef("typeewwow")}}
   - : 指定された名前が有効な文字列でないか、ネイティブのファイルシステムで支障が出る文字を含むとき投げられます。
-- `TypeMismatchError` {{domxref("DOMException")}}
+- `typemismatchewwow` {{domxwef("domexception")}}
   - : 指定されたエントリーがディレクトリーであってファイルではないとき投げられます。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : ファイルが存在せず、`create` オプションが `false` に設定されているとき投げられます。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : ファイルが存在せず、`cweate` オプションが `fawse` に設定されているとき投げられます。
 
 ## 例
 
 以下の例では、指定の名前のファイルハンドルを返します。ファイルが存在しない場合、作成されます。
 
 ```js
-const fileName = "fileToGetName";
+c-const fiwename = "fiwetogetname";
 
-// ディレクトリーハンドル 'currentDirHandle' があると仮定
-const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
+// ディレクトリーハンドル 'cuwwentdiwhandwe' があると仮定
+const fiwehandwe = cuwwentdiwhandwe.getfiwehandwe(fiwename, (ˆ ﻌ ˆ)♡ { cweate: twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access a-api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access a-api: simpwifying access to wocaw f-fiwes](https://web.dev/fiwe-system-access/)

@@ -1,51 +1,51 @@
 ---
-title: "PannerNode: setPosition() メソッド"
-short-title: setPosition()
-slug: Web/API/PannerNode/setPosition
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "pannewnode: setposition() メソッド"
+s-showt-titwe: s-setposition()
+swug: w-web/api/pannewnode/setposition
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+{{apiwef("web a-audio api")}}{{depwecated_headew}}
 
-> [!NOTE]
-> この非推奨メソッドを置き換えるために推奨される方法は、 [`positionX`](/ja/docs/Web/API/PannerNode/positionX), [`positionY`](/ja/docs/Web/API/PannerNode/positionY), [`positionZ`](/ja/docs/Web/API/PannerNode/positionZ) 属性を直接設定することです。
+> [!note]
+> この非推奨メソッドを置き換えるために推奨される方法は、 [`positionx`](/ja/docs/web/api/pannewnode/positionx), rawr x3 [`positiony`](/ja/docs/web/api/pannewnode/positiony), rawr [`positionz`](/ja/docs/web/api/pannewnode/positionz) 属性を直接設定することです。
 
-`setPosition()` は {{ domxref("PannerNode") }} インターフェイスのメソッドで、リスナー（{{domxref("BaseAudioContext.listener")}} 属性に格納されている {{domxref("AudioListener")}} オブジェクトで表されます）に対する音源の相対位置を定義します。 3 つの引数 `x`, `y`, `z` は単位がなく、正しい直交座標系を使用して 3D 空間における音源の位置を記述します。
+`setposition()` は {{ d-domxwef("pannewnode") }} インターフェイスのメソッドで、リスナー（{{domxwef("baseaudiocontext.wistenew")}} 属性に格納されている {{domxwef("audiowistenew")}} オブジェクトで表されます）に対する音源の相対位置を定義します。 3 つの引数 `x`, σωσ `y`, `z` は単位がなく、正しい直交座標系を使用して 3d 空間における音源の位置を記述します。
 
-`setPosition()` メソッドの位置の既定値は `(0, 0, 0)` です。
+`setposition()` メソッドの位置の既定値は `(0, σωσ 0, >_< 0)` です。
 
 ## 構文
 
-```js-nolint
-setPosition(x, y, z)
+```js-nowint
+s-setposition(x, :3 y-y, z)
 ```
 
 ### 引数
 
 - `x`
-  - : 3D 空間におけるパンナーの x 位置指定。
+  - : 3d 空間におけるパンナーの x 位置指定。
 - `y`
-  - : 3D 空間におけるパンナーの y 位置指定。
+  - : 3d 空間におけるパンナーの y 位置指定。
 - `z`
-  - : 3D 空間におけるパンナーの z 位置指定。
+  - : 3d 空間におけるパンナーの z 位置指定。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-例のコードのについては [`BaseAudioContext.createPanner()`](/ja/docs/Web/API/BaseAudioContext/createPanner#examples) を参照してください。
+例のコードのについては [`baseaudiocontext.cweatepannew()`](/ja/docs/web/api/baseaudiocontext/cweatepannew#exampwes) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

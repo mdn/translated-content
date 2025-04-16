@@ -1,18 +1,18 @@
 ---
-title: RTCPeerConnectionIceEvent()
-slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: wtcpeewconnectioniceevent()
+swug: web/api/wtcpeewconnectioniceevent/wtcpeewconnectioniceevent
+w-w10n:
+  s-souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCPeerConnectionIceEvent()`** コンストラクターは、新しい {{domxref("RTCPeerConnectionIceEvent")}} オブジェクトを作成します。
+**`wtcpeewconnectioniceevent()`** コンストラクターは、新しい {{domxwef("wtcpeewconnectioniceevent")}} オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-new RTCPeerConnectionIceEvent(type, options)
+```js-nowint
+n-nyew wtcpeewconnectioniceevent(type, (⑅˘꒳˘) o-options)
 ```
 
 ### 引数
@@ -20,28 +20,28 @@ new RTCPeerConnectionIceEvent(type, options)
 - `type`
   - : 文字列で、このイベントの名前です。
     大文字小文字を区別し、ブラウザーは常に `icecandidate` に設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、_{{domxwef("event/event", ( ͡o ω ͡o ) "event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
     - `candidate`
-      - : {{domxref("RTCIceCandidate")}} で、そのイベントが関係する ICE の候補を表します。
-        もし `null` ならば、そのイベントは候補の収集の終わりを示します。
-    - `url`
-      - : 文字列で、候補を収集するために使用された STUN または TURN サーバーの URL を保持します。
-        もし候補が {{Glossary("STUN")}} または {{Glossary("TURN")}} サーバーによって収集されていない場合、この値は `null` でなければならず、またこれは既定値です。
+      - : {{domxwef("wtcicecandidate")}} で、そのイベントが関係する i-ice の候補を表します。
+        もし `nuww` ならば、そのイベントは候補の収集の終わりを示します。
+    - `uww`
+      - : 文字列で、候補を収集するために使用された s-stun または t-tuwn サーバーの u-uww を保持します。
+        もし候補が {{gwossawy("stun")}} または {{gwossawy("tuwn")}} サーバーによって収集されていない場合、この値は `nuww` でなければならず、またこれは既定値です。
 
 ### 返値
 
-提供されたオプションを指定して構成された、新しい {{domxref("RTCPeerConnectionIceEvent")}} オブジェクト。
+提供されたオプションを指定して構成された、新しい {{domxwef("wtcpeewconnectioniceevent")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}
+- [webwtc](/ja/docs/web/api/webwtc_api)
+- このイベントの通常ターゲット: {{domxwef("wtcpeewconnection")}}

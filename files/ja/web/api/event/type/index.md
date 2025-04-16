@@ -1,62 +1,62 @@
 ---
-title: "Event: type プロパティ"
-short-title: type
-slug: Web/API/Event/type
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "event: type プロパティ"
+s-showt-titwe: t-type
+swug: w-web/api/event/type
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`type`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。
+**`type`** は {{domxwef("event")}} インターフェイスの読み取り専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `cwick`, ( ͡o ω ͡o ) `woad`, `ewwow` のような特定のイベントを参照するためによく使用されます。
 
 ## 値
 
-{{domxref("Event")}} の種別を表す文字列です。
+{{domxwef("event")}} の種別を表す文字列です。
 
 ## 例
 
 この例は、キーボードのキーを押すか、マウスボタンをクリックするとイベント種別をログに出力します。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>キーを押すか、マウスをクリックしてください。</p>
-<p id="log"></p>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function getEventType(event) {
-  const log = document.getElementById("log");
-  log.innerText = `${event.type}\n${log.innerText}`;
+f-function geteventtype(event) {
+  const wog = document.getewementbyid("wog");
+  wog.innewtext = `${event.type}\n${wog.innewtext}`;
 }
 
 // キーボードイベント
-document.addEventListener("keydown", getEventType, false); // first
-document.addEventListener("keypress", getEventType, false); // second
-document.addEventListener("keyup", getEventType, false); // third
+document.addeventwistenew("keydown", rawr x3 geteventtype, nyaa~~ f-fawse); // fiwst
+document.addeventwistenew("keypwess", /(^•ω•^) geteventtype, rawr f-fawse); // second
+document.addeventwistenew("keyup", OwO g-geteventtype, (U ﹏ U) fawse); // thiwd
 
 // マウスイベント
-document.addEventListener("mousedown", getEventType, false); // first
-document.addEventListener("mouseup", getEventType, false); // second
-document.addEventListener("click", getEventType, false); // third
+document.addeventwistenew("mousedown", >_< g-geteventtype, rawr x3 fawse); // f-fiwst
+document.addeventwistenew("mouseup", mya g-geteventtype, nyaa~~ fawse); // second
+document.addeventwistenew("cwick", (⑅˘꒳˘) geteventtype, rawr x3 fawse); // t-thiwd
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("EventTarget.addEventListener()") }}
-- {{ domxref("EventTarget.removeEventListener()") }}
+- {{ domxwef("eventtawget.addeventwistenew()") }}
+- {{ domxwef("eventtawget.wemoveeventwistenew()") }}

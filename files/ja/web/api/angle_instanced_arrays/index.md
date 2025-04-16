@@ -1,108 +1,108 @@
 ---
-title: ANGLE_instanced_arrays
-slug: Web/API/ANGLE_instanced_arrays
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: angwe_instanced_awways
+swug: web/api/angwe_instanced_awways
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`ANGLE_instanced_arrays`** 拡張機能は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部であり、同じ頂点データ、プリミティブカウント、およびタイプを共有している同じオブジェクトまたは同様のオブジェクトのグループを複数回描画することができます。
+**`angwe_instanced_awways`** 拡張機能は [webgw a-api](/ja/docs/web/api/webgw_api) の一部であり、同じ頂点データ、プリミティブカウント、およびタイプを共有している同じオブジェクトまたは同様のオブジェクトのグループを複数回描画することができます。
 
-WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用することで利用できるようになります。詳しくは、 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial) の [拡張機能の使用](/ja/docs/Web/API/WebGL_API/Using_Extensions)も参照してください。
+w-webgw 拡張機能は {{domxwef("webgwwendewingcontext.getextension()")}} メソッドを使用することで利用できるようになります。詳しくは、 [webgw チュートリアル](/ja/docs/web/api/webgw_api/tutowiaw) の [拡張機能の使用](/ja/docs/web/api/webgw_api/using_extensions)も参照してください。
 
-> [!NOTE]
-> この拡張機能は {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} のコンテキストでのみ利用可能です。 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} のコンテキストでは、この機能は既定で使用することができ、定数やメソッドは "`ANGLE`" 接尾辞なしで使用することができます。
+> [!note]
+> この拡張機能は {{domxwef("webgwwendewingcontext", rawr x3 "webgw1", "", mya 1)}} のコンテキストでのみ利用可能です。 {{domxwef("webgw2wendewingcontext", nyaa~~ "webgw2", (⑅˘꒳˘) "", 1)}} のコンテキストでは、この機能は既定で使用することができ、定数やメソッドは "`angwe`" 接尾辞なしで使用することができます。
 >
-> "ANGLE" という名前ですが、この拡張機能は ANGLE ライブラリーを使用していれば、 Windows でなくてもハードウェアが対応していればあらゆる端末で動作します。 "ANGLE" は単に、この拡張機能が ANGLE ライブラリーの作者によって書かれたことを示しているだけです。
+> "angwe" という名前ですが、この拡張機能は a-angwe ライブラリーを使用していれば、 w-windows でなくてもハードウェアが対応していればあらゆる端末で動作します。 "angwe" は単に、この拡張機能が a-angwe ライブラリーの作者によって書かれたことを示しているだけです。
 
 ## 定数
 
-この拡張機能は新しい定数を公開します。これは {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} メソッドで使用することができます。
+この拡張機能は新しい定数を公開します。これは {{domxwef("webgwwendewingcontext.getvewtexattwib()", rawr x3 "gw.getvewtexattwib()")}} メソッドで使用することができます。
 
-- `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
-  - : {{domxref("WebGL_API/Types", "GLint")}} で、 {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} で `pname` 引数として使用されたときにインスタンス化されたレンダリングに用いられる序数を記述したものを返します。
+- `ext.vewtex_attwib_awway_divisow_angwe`
+  - : {{domxwef("webgw_api/types", (✿oωo) "gwint")}} で、 {{domxwef("webgwwendewingcontext.getvewtexattwib()", (ˆ ﻌ ˆ)♡ "gw.getvewtexattwib()")}} で `pname` 引数として使用されたときにインスタンス化されたレンダリングに用いられる序数を記述したものを返します。
 
 ## インスタンスメソッド
 
 この拡張機能は 3 つの新しいメソッドを公開します。
 
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
-  - : {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} と同様に動作しますが、要素の範囲の複数のインスタンスが実行され、反復ごとにインスタンスが進む点が異なります。
-- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
-  - : {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} と同様に動作しますが、要素のセットの複数のインスタンスが実行され、各セット間でインスタンスが進む点が異なります。
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
-  - : プリミティブの複数のインスタンスを {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} および {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}} で描画する際に一般頂点属性が進む速度を変更します。
+- {{domxwef("angwe_instanced_awways.dwawawwaysinstancedangwe()", (˘ω˘) "ext.dwawawwaysinstancedangwe()")}}
+  - : {{domxwef("webgwwendewingcontext.dwawawways()", (⑅˘꒳˘) "gw.dwawawways()")}} と同様に動作しますが、要素の範囲の複数のインスタンスが実行され、反復ごとにインスタンスが進む点が異なります。
+- {{domxwef("angwe_instanced_awways.dwawewementsinstancedangwe()", (///ˬ///✿) "ext.dwawewementsinstancedangwe()")}}
+  - : {{domxwef("webgwwendewingcontext.dwawawways()", 😳😳😳 "gw.dwawawways()")}} と同様に動作しますが、要素のセットの複数のインスタンスが実行され、各セット間でインスタンスが進む点が異なります。
+- {{domxwef("angwe_instanced_awways.vewtexattwibdivisowangwe()", 🥺 "ext.vewtexattwibdivisowangwe()")}}
+  - : プリミティブの複数のインスタンスを {{domxwef("angwe_instanced_awways.dwawawwaysinstancedangwe()", mya "ext.dwawawwaysinstancedangwe()")}} および {{domxwef("angwe_instanced_awways.dwawewementsinstancedangwe()", 🥺 "ext.dwawewementsinstancedangwe()")}} で描画する際に一般頂点属性が進む速度を変更します。
 
 ## 例
 
-次の例は、与えられた図形を 1 回の draw 呼び出しで複数回描画する方法です。
+次の例は、与えられた図形を 1 回の d-dwaw 呼び出しで複数回描画する方法です。
 
-> [!WARNING]
+> [!wawning]
 > 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファーを構築することは、一般的に避けるべきです。
 
 ```js
 // 拡張機能を有効化
-const ext = gl.getExtension("ANGLE_instanced_arrays");
+const ext = gw.getextension("angwe_instanced_awways");
 
 // 通常通りに図形バッファーを関連付ける
-gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
-gl.enableVertexAttribArray(vertexPositionAttributeLocation);
-gl.vertexAttribPointer(
-  vertexPositionAttributeLocation,
+gw.bindbuffew(gw.awway_buffew, >_< geometwyvewtexbuffew);
+g-gw.enabwevewtexattwibawway(vewtexpositionattwibutewocation);
+gw.vewtexattwibpointew(
+  vewtexpositionattwibutewocation, >_<
   3,
-  gl.FLOAT,
-  false,
+  g-gw.fwoat, (⑅˘꒳˘)
+  fawse, /(^•ω•^)
   0,
   0,
 );
 
 // 位置バッファーを構築
-const instancePositions = [];
-for (const instance of instances) {
-  instancePositions.push(
-    instance.position.x,
-    instance.position.y,
-    instance.position.z,
+c-const instancepositions = [];
+fow (const instance of instances) {
+  i-instancepositions.push(
+    instance.position.x, rawr x3
+    i-instance.position.y, (U ﹏ U)
+    i-instance.position.z, (U ﹏ U)
   );
 }
-const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
+const instancepositionbuffew = cweatewebgwbuffewfwomdata(instancepositions);
 
 // 他の属性と同様に、このインスタンスと位置バッファーを関連付け
-gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
-gl.enableVertexAttribArray(instancePositionAttributeLocation);
-gl.vertexAttribPointer(
-  instancePositionAttributeLocation,
-  3,
-  gl.FLOAT,
-  false,
+gw.bindbuffew(gw.awway_buffew, (⑅˘꒳˘) i-instancepositionbuffew);
+gw.enabwevewtexattwibawway(instancepositionattwibutewocation);
+gw.vewtexattwibpointew(
+  instancepositionattwibutewocation, òωó
+  3, ʘwʘ
+  gw.fwoat,
+  f-fawse, /(^•ω•^)
   0,
-  0,
+  0, ʘwʘ
 );
 
 // 属性をインスタンスとしてマークし、すべての頂点ではなく、それぞれ（1 つ）のインスタンスを進めます。
-ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
+ext.vewtexattwibdivisowangwe(instancepositionattwibutewocation, σωσ 1);
 
 // それぞれのインスタンスについて、図形を描画します。
-ext.drawArraysInstancedANGLE(
-  gl.TRIANGLES,
+e-ext.dwawawwaysinstancedangwe(
+  g-gw.twiangwes, OwO
   0,
-  numGeometryVertices,
-  instances.length,
+  n-nyumgeometwyvewtices, 😳😳😳
+  i-instances.wength, 😳😳😳
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.getExtension()")}}
-- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
+- {{domxwef("webgwwendewingcontext.getextension()")}}
+- {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.vewtexattwibdivisow()")}}

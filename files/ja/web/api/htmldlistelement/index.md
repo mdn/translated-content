@@ -1,35 +1,35 @@
 ---
-title: HTMLDListElement
-slug: Web/API/HTMLDListElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwdwistewement
+swug: w-web/api/htmwdwistewement
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLDListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものの他に）定義リスト要素 ({{HtmlElement("dl")}}) を操作するための特別なプロパティを提供します。
+**`htmwdwistewement`** インターフェイスは、（継承によって使用できる通常の {{domxwef("htmwewement")}} インターフェイスのものの他に）定義リスト要素 ({{htmwewement("dw")}}) を操作するための特別なプロパティを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}
+- {{domxwef("htmwdwistewement.compact")}} {{depwecated_inwine}}
   - : 論理値で、リスト項目間の間隔を縮小することを示します。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dl") }}
+- このインターフェイスを実装している h-htmw 要素: {{ h-htmwewement("dw") }}

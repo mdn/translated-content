@@ -1,21 +1,21 @@
 ---
-title: "location: origin プロパティ"
-slug: Web/API/Location/origin
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "wocation: owigin プロパティ"
+s-swug: w-web/api/wocation/owigin
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Location")}}
+{{apiwef("wocation")}}
 
-**`origin`** は {{domxref("Location")}} インターフェイスの読み取り専用プロパティで、指定された URL のオリジンの Unicode シリアライズが入った文字列です。
+**`owigin`** は {{domxwef("wocation")}} インターフェイスの読み取り専用プロパティで、指定された u-uww のオリジンの u-unicode シリアライズが入った文字列です。
 
 すなわち、下記のようになります。
 
-- `http` または `https` を使用する URL の場合、スキームの後に `'://'` を、その後にドメインを、その後に `':'` を、その後にポート（明示的に指定されなかった場合は、それぞれ既定の `80` および `443` のポート）を指定することができます。
-- `file:` スキームを使用した URL では、値はブラウザー依存になります。
-- `blob:` スキームを使用した URL では、その URL のオリジンが `blob:` に続きます。例えば、 `"blob:https://mozilla.org"` は `"https://mozilla.org"` がついています。
+- `http` または `https` を使用する u-uww の場合、スキームの後に `'://'` を、その後にドメインを、その後に `':'` を、その後にポート（明示的に指定されなかった場合は、それぞれ既定の `80` および `443` のポート）を指定することができます。
+- `fiwe:` スキームを使用した uww では、値はブラウザー依存になります。
+- `bwob:` スキームを使用した uww では、その uww のオリジンが `bwob:` に続きます。例えば、 `"bwob:https://moziwwa.owg"` は `"https://moziwwa.owg"` がついています。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -25,13 +25,13 @@ l10n:
 
 ```js
 // このページ上の、オリジンを返します。
-const result = window.location.origin; // 返値:'https://developer.mozilla.org'
+const w-wesuwt = window.wocation.owigin; // 返値:'https://devewopew.moziwwa.owg'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

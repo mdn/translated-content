@@ -1,16 +1,16 @@
 ---
-title: "Touch: screenY プロパティ"
-short-title: screenY
-slug: Web/API/Touch/screenY
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "touch: scweeny プロパティ"
+s-showt-titwe: s-scweeny
+s-swug: web/api/touch/scweeny
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ APIRef("Touch Events") }}
+{{ a-apiwef("touch e-events") }}
 
 ## 概要
 
-画面を基準としたタッチ点の Y 座標を返します。スクロールオフセットは含まれません。
+画面を基準としたタッチ点の y-y 座標を返します。スクロールオフセットは含まれません。
 
 ## 値
 
@@ -18,12 +18,12 @@ l10n:
 
 ## 例
 
-[Touch.screenX の例](/ja/docs/Web/API/Touch/screenX#例)には、このプロパティの使用例が含まれています。
+[touch.scweenx の例](/ja/docs/web/api/touch/scweenx#例)には、このプロパティの使用例が含まれています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

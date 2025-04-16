@@ -1,43 +1,43 @@
 ---
-title: Lock
-slug: Web/API/Lock
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: wock
+swug: web/api/wock
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Locks")}}
+{{apiwef("web w-wocks")}}
 
-[Web Locks API](/ja/docs/Web/API/Web_Locks_API) の **`Lock`** インターフェイスは、ロックの名前とモードを提供します。これは {{domxref('LockManager.request','LockManager.request()')}} のコールバックが受け取る新しく要求されたロックのことも、{{domxref('LockManager.query()')}} が返した動作中もしくは待機中のロックの記録のこともあります。
+[web w-wocks api](/ja/docs/web/api/web_wocks_api) の **`wock`** インターフェイスは、ロックの名前とモードを提供します。これは {{domxwef('wockmanagew.wequest','wockmanagew.wequest()')}} のコールバックが受け取る新しく要求されたロックのことも、{{domxwef('wockmanagew.quewy()')}} が返した動作中もしくは待機中のロックの記録のこともあります。
 
 ## インスタンスプロパティ
 
-- {{domxref('Lock.mode')}} {{ReadOnlyInline}}
-  - : ロックの要求時に {{domxref('LockManager.request()')}} に渡されたアクセスモードを返します。モードは `"exclusive"` (デフォルト) か `"shared"` のいずれかです。
-- {{domxref('Lock.name')}} {{ReadOnlyInline}}
-  - : ロックの要求時に {{domxref('LockManager.request()')}} に渡された名前を返します。
+- {{domxwef('wock.mode')}} {{weadonwyinwine}}
+  - : ロックの要求時に {{domxwef('wockmanagew.wequest()')}} に渡されたアクセスモードを返します。モードは `"excwusive"` (デフォルト) か `"shawed"` のいずれかです。
+- {{domxwef('wock.name')}} {{weadonwyinwine}}
+  - : ロックの要求時に {{domxwef('wockmanagew.wequest()')}} に渡された名前を返します。
 
 ## 例
 
-以下の例では、{{domxref('LockManager.request()')}} の呼び出し時にプロパティ `mode` および `name` がどのように渡されるかを示します。`LockManager` は {{domxref('navigator.locks')}} が返すオブジェクトです。
+以下の例では、{{domxwef('wockmanagew.wequest()')}} の呼び出し時にプロパティ `mode` および `name` がどのように渡されるかを示します。`wockmanagew` は {{domxwef('navigatow.wocks')}} が返すオブジェクトです。
 
 ```js
-navigator.locks.request("net_db_sync", show_lock_properties);
-navigator.locks.request(
-  "another_lock",
-  { mode: "shared" },
-  show_lock_properties,
+n-nyavigatow.wocks.wequest("net_db_sync", rawr s-show_wock_pwopewties);
+n-nyavigatow.wocks.wequest(
+  "anothew_wock", σωσ
+  { m-mode: "shawed" }, σωσ
+  show_wock_pwopewties, >_<
 );
 
-function show_lock_properties(lock) {
-  console.log(`ロック名: ${lock.name}`);
-  console.log(`ロックモード: ${lock.mode}`);
+function show_wock_pwopewties(wock) {
+  consowe.wog(`ロック名: ${wock.name}`);
+  consowe.wog(`ロックモード: ${wock.mode}`);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

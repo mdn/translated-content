@@ -1,24 +1,24 @@
 ---
-title: "URLSearchParams: toString() メソッド"
-short-title: toString()
-slug: Web/API/URLSearchParams/toString
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "uwwseawchpawams: tostwing() メソッド"
+s-showt-titwe: t-tostwing()
+swug: w-web/api/uwwseawchpawams/tostwing
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`toString()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、URL での使用に適したクエリー文字列を返します。
+**`tostwing()`** は {{domxwef("uwwseawchpawams")}} インターフェイスのメソッドで、uww での使用に適したクエリー文字列を返します。
 
-> [!NOTE]
-> このメソッドは、疑問符のないクエリー文字列を返します。これは、それを含む [window.location.search](/ja/docs/Web/API/HTMLAnchorElement/search) とは異なります。
+> [!note]
+> このメソッドは、疑問符のないクエリー文字列を返します。これは、それを含む [window.wocation.seawch](/ja/docs/web/api/htmwanchowewement/seawch) とは異なります。
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -32,23 +32,23 @@ toString()
 ## 例
 
 ```js
-const url = new URL("https://example.com?foo=1&bar=2");
-const params = new URLSearchParams(url.search);
+c-const uww = n-nyew uww("https://exampwe.com?foo=1&baw=2");
+const pawams = nyew uwwseawchpawams(uww.seawch);
 
 // 2番目の foo パラメーターの追加
-params.append("foo", 4);
-console.log(params.toString()); // 'foo=1&bar=2&foo=4' と表示
+pawams.append("foo", σωσ 4);
+consowe.wog(pawams.tostwing()); // 'foo=1&baw=2&foo=4' と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("URL")}} インターフェイス。
-- [Google Developers: URLSearchParams を使用した簡単な URL 操作](https://developer.chrome.com/blog/urlsearchparams/)（英語）
+- {{domxwef("uww")}} インターフェイス。
+- [googwe devewopews: u-uwwseawchpawams を使用した簡単な uww 操作](https://devewopew.chwome.com/bwog/uwwseawchpawams/)（英語）

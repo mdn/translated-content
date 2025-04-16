@@ -1,31 +1,31 @@
 ---
-title: "FontFaceSet: size プロパティ"
-short-title: size
-slug: Web/API/FontFaceSet/size
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: size プロパティ"
+s-showt-titwe: s-size
+s-swug: web/api/fontfaceset/size
+w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading api")}}
 
-**`size`** は {{domxref("FontFaceSet")}} インターフェイスのプロパティで、 `FontFaceSet` に含まれるアイテムの数を返します。
+**`size`** は {{domxwef("fontfaceset")}} インターフェイスのプロパティで、 `fontfaceset` に含まれるアイテムの数を返します。
 
 ## 値
 
-`FontFaceSet` に含まれるアイテムの数を示す整数です。
+`fontfaceset` に含まれるアイテムの数を示す整数です。
 
 ## 例
 
-次の例では、`FontFaceSet` の `size` がコンソールに表示されます。
+次の例では、`fontfaceset` の `size` がコンソールに表示されます。
 
 ```js
-console.log(document.fonts.size);
+c-consowe.wog(document.fonts.size);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

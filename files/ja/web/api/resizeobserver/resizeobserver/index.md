@@ -1,37 +1,37 @@
 ---
-title: "ResizeObserver: ResizeObserver() コンストラクター"
-short-title: ResizeObserver()
-slug: Web/API/ResizeObserver/ResizeObserver
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wesizeobsewvew: wesizeobsewvew() コンストラクター"
+s-showt-titwe: w-wesizeobsewvew()
+s-swug: web/api/wesizeobsewvew/wesizeobsewvew
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew api")}}
 
-**`ResizeObserver`** コンストラクターは新しい {{domxref("ResizeObserver")}} オブジェクトを作成し、これを {{domxref('Element')}} のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスに対する変更を報告するために使用することができます。
+**`wesizeobsewvew`** コンストラクターは新しい {{domxwef("wesizeobsewvew")}} オブジェクトを作成し、これを {{domxwef('ewement')}} のコンテンツまたは境界ボックス、または {{domxwef('svgewement')}} のバウンディングボックスに対する変更を報告するために使用することができます。
 
 ## 構文
 
-```js-nolint
-new ResizeObserver(callback)
+```js-nowint
+n-nyew wesizeobsewvew(cawwback)
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : 監視中のものに寸法の変更が発生するたびに呼び出される関数です。この関数は 2 つの引数で呼び出されます。
 
-    - `entries`
-      - : {{domxref('ResizeObserverEntry')}} オブジェクトの配列で、それぞれの変更の後で要素の新しい寸法にアクセスするために使用することができます。
-    - `observer`
-      - : `ResizeObserver` 自身への参照で、必要に応じてコールバック内から確実にアクセスできます。これは、たとえば特定の条件に達したときにオブザーバーを自動的に監視解除するために使用できますが、必要ない場合は省略することができます。
+    - `entwies`
+      - : {{domxwef('wesizeobsewvewentwy')}} オブジェクトの配列で、それぞれの変更の後で要素の新しい寸法にアクセスするために使用することができます。
+    - `obsewvew`
+      - : `wesizeobsewvew` 自身への参照で、必要に応じてコールバック内から確実にアクセスできます。これは、たとえば特定の条件に達したときにオブザーバーを自動的に監視解除するために使用できますが、必要ない場合は省略することができます。
 
     コールバックは一般に、次のパターンに従います。
 
     ```js
-    function callback(entries, observer) {
-      for (const entry of entries) {
+    f-function cawwback(entwies, nyaa~~ obsewvew) {
+      fow (const entwy of entwies) {
         // 各項目に何かをする
         // 場合によってはオブザーバー自体に何かをする
       }
@@ -40,50 +40,50 @@ new ResizeObserver(callback)
 
 ## 例
 
-次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) の例から取ったものです。
+次のスニペットは [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw) ([ソースを表示](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)) の例から取ったものです。
 
 ```js
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize[0].inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize[0].inlineSize / 600,
-        )}rem`;
-      } else {
-        // legacy path
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize.inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize.inlineSize / 600,
-        )}rem`;
+c-const wesizeobsewvew = nyew wesizeobsewvew((entwies) => {
+  fow (const entwy o-of entwies) {
+    if (entwy.contentboxsize) {
+      i-if (entwy.contentboxsize[0]) {
+        h1ewem.stywe.fontsize = `${math.max(
+          1.5, /(^•ω•^)
+          entwy.contentboxsize[0].inwinesize / 200, rawr
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, OwO
+          e-entwy.contentboxsize[0].inwinesize / 600, (U ﹏ U)
+        )}wem`;
+      } ewse {
+        // wegacy p-path
+        h-h1ewem.stywe.fontsize = `${math.max(
+          1.5, >_<
+          entwy.contentboxsize.inwinesize / 200, rawr x3
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, mya
+          entwy.contentboxsize.inwinesize / 600, nyaa~~
+        )}wem`;
       }
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    } ewse {
+      h1ewem.stywe.fontsize = `${math.max(
+        1.5, (⑅˘꒳˘)
+        e-entwy.contentwect.width / 200, rawr x3
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(1, (✿oωo) entwy.contentwect.width / 600)}wem`;
     }
   }
-  console.log("サイズが変更されました");
+  consowe.wog("サイズが変更されました");
 });
 
-resizeObserver.observe(divElem);
+wesizeobsewvew.obsewve(divewem);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

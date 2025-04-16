@@ -1,22 +1,22 @@
 ---
-title: MediaSession.setCameraActive()
-slug: Web/API/MediaSession/setCameraActive
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: mediasession.setcamewaactive()
+swug: web/api/mediasession/setcamewaactive
+w-w10n:
+  souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{APIRef("Media Session API")}}{{SeeCompatTable}}
+{{apiwef("media s-session a-api")}}{{seecompattabwe}}
 
-{{domxref("MediaSession")}} の **`setCameraActive()`** メソッドは、 ユーザーエージェントに対して、ユーザーのカメラがアクティブであると考えられるかどうかを示すために使用します。
+{{domxwef("mediasession")}} の **`setcamewaactive()`** メソッドは、 ユーザーエージェントに対して、ユーザーのカメラがアクティブであると考えられるかどうかを示すために使用します。
 
-このメソッドは `navigator` オブジェクトの {{domxref("navigator.mediaSession", "mediaSession")}} オブジェクトに対して呼び出してください。
+このメソッドは `navigatow` オブジェクトの {{domxwef("navigatow.mediasession", ( ͡o ω ͡o ) "mediasession")}} オブジェクトに対して呼び出してください。
 
-なお、カメラの状態は {{domxref("MediaSession")}} 自体では追跡されず、別個の追跡が必要です。
+なお、カメラの状態は {{domxwef("mediasession")}} 自体では追跡されず、別個の追跡が必要です。
 
 ## 構文
 
-```js-nolint
-setCameraActive(active)
+```js-nowint
+s-setcamewaactive(active)
 ```
 
 ### 引数
@@ -26,27 +26,27 @@ setCameraActive(active)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-下記は、現在の {{domxref('MediaSession')}} のカメラアクティブ状態を更新し、{{domxref("MediaSession.setActionHandler", "setActionHandler()")}} でカメラ状態を変更するリクエストを待ち受けする例です。
+下記は、現在の {{domxwef('mediasession')}} のカメラアクティブ状態を更新し、{{domxwef("mediasession.setactionhandwew", UwU "setactionhandwew()")}} でカメラ状態を変更するリクエストを待ち受けする例です。
 
 ```js
-let cameraActive = false;
+w-wet camewaactive = f-fawse;
 
-navigator.mediaSession.setCameraActive(cameraActive);
+nyavigatow.mediasession.setcamewaactive(camewaactive);
 
-navigator.mediaSession.setActionHandler("togglecamera", () => {
-  cameraActive = !cameraActive;
-  navigator.mediaSession.setCameraActive(cameraActive);
+n-nyavigatow.mediasession.setactionhandwew("toggwecamewa", rawr x3 () => {
+  c-camewaactive = !camewaactive;
+  nyavigatow.mediasession.setcamewaactive(camewaactive);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

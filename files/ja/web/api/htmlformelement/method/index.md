@@ -1,14 +1,14 @@
 ---
-title: "HTMLFormElement: method プロパティ"
-short-title: method
-slug: Web/API/HTMLFormElement/method
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: method プロパティ"
+s-showt-titwe: m-method
+swug: web/api/htmwfowmewement/method
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.method`** プロパティは、{{HtmlElement("form")}} を送信するために使用される {{Glossary("HTTP")}} メソッドを表します。
+**`htmwfowmewement.method`** プロパティは、{{htmwewement("fowm")}} を送信するために使用される {{gwossawy("http")}} メソッドを表します。
 
 明示的に指定されなかった場合、既定のメソッドは 'get' です。
 
@@ -19,17 +19,17 @@ l10n:
 ## 例
 
 ```js
-document.forms["myform"].method = "post";
+d-document.fowms["myfowm"].method = "post";
 
-const formElement = document.createElement("form"); // フォームを生成
-document.body.appendChild(formElement);
-console.log(formElement.method); // 'get'
+c-const fowmewement = document.cweateewement("fowm"); // フォームを生成
+document.body.appendchiwd(fowmewement);
+consowe.wog(fowmewement.method); // 'get'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

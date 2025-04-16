@@ -1,56 +1,56 @@
 ---
-title: TransitionEvent
-slug: Web/API/TransitionEvent
-l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+titwe: twansitionevent
+swug: w-web/api/twansitionevent
+w-w10n:
+  s-souwcecommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)に関する情報を提供するイベントを表します。
+**`twansitionevent`** インターフェイスは、[トランジション](/ja/docs/web/css/css_twansitions/using_css_twansitions)に関する情報を提供するイベントを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}
-  - : 指定された引数で `TransitionEvent` イベントを作成します。
+- {{domxwef("twansitionevent.twansitionevent", òωó "twansitionevent()")}}
+  - : 指定された引数で `twansitionevent` イベントを作成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
-  - : 文字列で、このトランジションに関連付けられた CSS プロパティの名前が入ります。
-- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : `float` で、このイベントが発生した時点でトランジションが実行している時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
-- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 文字列で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
+- {{domxwef("twansitionevent.pwopewtyname")}} {{weadonwyinwine}}
+  - : 文字列で、このトランジションに関連付けられた c-css プロパティの名前が入ります。
+- {{domxwef("twansitionevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : `fwoat` で、このイベントが発生した時点でトランジションが実行している時間を秒単位で表します。この値は {{cssxwef("twansition-deway")}} プロパティの影響を受けません。
+- {{domxwef("twansitionevent.pseudoewement")}} {{weadonwyinwine}}
+  - : 文字列で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
 
-## `TransitionEvent` の種類
+## `twansitionevent` の種類
 
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が中断されたときに発生します。
-- {{domxref("Element/transitionend_event", "transitionend")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の実行が終了したときに発生します。
-- {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
-- {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の推移が開始したときに発生します。
+- {{domxwef("ewement/twansitioncancew_event", o.O "twansitioncancew")}}
+  - : {{domxwef("event")}} で、 [css トランジション](/ja/docs/web/css/css_twansitions)が中断されたときに発生します。
+- {{domxwef("ewement/twansitionend_event", (U ᵕ U❁) "twansitionend")}}
+  - : {{domxwef("event")}} で、 [css トランジション](/ja/docs/web/css/css_twansitions)の実行が終了したときに発生します。
+- {{domxwef("ewement/twansitionwun_event", (⑅˘꒳˘) "twansitionwun")}}
+  - : {{domxwef("event")}} で、 [css トランジション](/ja/docs/web/css/css_twansitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
+- {{domxwef("ewement/twansitionstawt_event", ( ͡o ω ͡o ) "twansitionstawt")}}
+  - : {{domxwef("event")}} で、 [css トランジション](/ja/docs/web/css/css_twansitions)の推移が開始したときに発生します。
 
 ## インスタンスメソッド
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- c-css プロパティ: {{cssxwef("twansition")}}, UwU {{cssxwef("twansition-deway")}}, rawr x3 {{cssxwef("twansition-duwation")}}, rawr {{cssxwef("twansition-pwopewty")}}, σωσ {{cssxwef("twansition-timing-function")}}

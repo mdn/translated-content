@@ -1,91 +1,91 @@
 ---
-title: 画面キャプチャ API
-slug: Web/API/Screen_Capture_API
-l10n:
-  sourceCommit: 6e78306f9674a5e6329e07eca5f2791ce3138f0c
+titwe: 画面キャプチャ api
+swug: web/api/scween_captuwe_api
+w-w10n:
+  souwcecommit: 6e78306f9674a5e6329e07eca5f2791ce3138f0c
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{defauwtapisidebaw("scween c-captuwe api")}}
 
-画面キャプチャ API (Screen Capture API) は、既存のメディアキャプチャおよびストリーム API に追加して、ユーザーが画面または画面の一部（ウィンドウなど）を選択してメディアストリームとしてキャプチャできるようにしたものです。このストリームは、ネットワーク上で録画したり、他の人と共有したりすることができます。
+画面キャプチャ a-api (scween c-captuwe a-api) は、既存のメディアキャプチャおよびストリーム a-api に追加して、ユーザーが画面または画面の一部（ウィンドウなど）を選択してメディアストリームとしてキャプチャできるようにしたものです。このストリームは、ネットワーク上で録画したり、他の人と共有したりすることができます。
 
-## 画面キャプチャ API の概念と使用方法
+## 画面キャプチャ a-api の概念と使用方法
 
-画面キャプチャ API は比較的簡単に使用することができます。唯一のメソッドは {{domxref("MediaDevices.getDisplayMedia()")}} で、その仕事はユーザーにキャプチャする画面または画面の一部を選択するよう促し、 {{domxref("MediaStream")}} 形式でキャプチャすることです。
+画面キャプチャ a-api は比較的簡単に使用することができます。唯一のメソッドは {{domxwef("mediadevices.getdispwaymedia()")}} で、その仕事はユーザーにキャプチャする画面または画面の一部を選択するよう促し、 {{domxwef("mediastweam")}} 形式でキャプチャすることです。
 
-画面から動画をキャプチャするには、 `getDisplayMedia()` を `navigator.mediaDevices` 上で呼び出してください。
+画面から動画をキャプチャするには、 `getdispwaymedia()` を `navigatow.mediadevices` 上で呼び出してください。
 
 ```js
-captureStream =
-  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captuwestweam =
+  await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
 ```
 
-{{jsxref("Promise")}} が `getDisplayMedia()` から返され、これはキャプチャされたメディアをストリーミングする {{domxref("MediaStream")}} で解決します。
+{{jsxwef("pwomise")}} が `getdispwaymedia()` から返され、これはキャプチャされたメディアをストリーミングする {{domxwef("mediastweam")}} で解決します。
 
-画面キャプチャ API を使用する方法については、[画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)の記事を参照してください。
+画面キャプチャ api を使用する方法については、[画面キャプチャ api の使用](/ja/docs/web/api/scween_captuwe_api/using_scween_captuwe)の記事を参照してください。
 
 ## インターフェイス
 
-- {{domxref("CaptureController")}}
-  - : {{domxref("MediaDevices.getDisplayMedia()")}} による開始とは別に、キャプチャセッションをさらに操作するために使用できるメソッドを提供します。`CaptureController` オブジェクトは、{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} 呼び出しに options オブジェクトの `controller` プロパティの値として渡すことで、キャプチャセッションに関連付けられます。
+- {{domxwef("captuwecontwowwew")}}
+  - : {{domxwef("mediadevices.getdispwaymedia()")}} による開始とは別に、キャプチャセッションをさらに操作するために使用できるメソッドを提供します。`captuwecontwowwew` オブジェクトは、{{domxwef("mediadevices.getdispwaymedia", -.- "getdispwaymedia()")}} 呼び出しに o-options オブジェクトの `contwowwew` プロパティの値として渡すことで、キャプチャセッションに関連付けられます。
 
-### MediaDevices インターフェイスへの追加
+### mediadevices インターフェイスへの追加
 
-- {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : `getDisplayMedia()` メソッドが `MediaDevices` インターフェイスに追加されています。 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} と同様、このメソッドは、ユーザーが選択した表示領域を、指定されたオプションに一致する形式で含む {{domxref("MediaStream")}} で解決するプロミスを作成します。
+- {{domxwef("mediadevices.getdispwaymedia()")}}
+  - : `getdispwaymedia()` メソッドが `mediadevices` インターフェイスに追加されています。 {{domxwef("mediadevices.getusewmedia", ^^;; "getusewmedia()")}} と同様、このメソッドは、ユーザーが選択した表示領域を、指定されたオプションに一致する形式で含む {{domxwef("mediastweam")}} で解決するプロミスを作成します。
 
 ## 既存の辞書への追加
 
-画面キャプチャ API は、他の仕様書で定義された以下の辞書にプロパティを追加します。
+画面キャプチャ api は、他の仕様書で定義された以下の辞書にプロパティを追加します。
 
-### MediaTrackConstraints
+### m-mediatwackconstwaints
 
-- {{domxref("MediaTrackConstraints.displaySurface")}}
-  - : [`ConstrainDOMString`](/ja/docs/Web/API/MediaTrackConstraints#constraindomstring) で、キャプチャする表示面の種類を指定します。値は `application`、`browser`、`monitor`、`window` のいずれかです。
-- {{domxref("MediaTrackConstraints.logicalSurface")}}
-  - : ストリームの映像が、論理的な表示面（つまり、画面上に完全に表示されていない、あるいは完全に画面外にある可能性のあるもの）を表しているかどうかを示します。値が `true` の場合、論理的な表示面をキャプチャすることを示します。
-- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}
-  - : タブがキャプチャされた際に、タブ内で再生中の音声をユーザーのローカルスピーカーから引き続き再生するか、または停止するかを制御します。値が `true` の場合、停止することを示します。
+- {{domxwef("mediatwackconstwaints.dispwaysuwface")}}
+  - : [`constwaindomstwing`](/ja/docs/web/api/mediatwackconstwaints#constwaindomstwing) で、キャプチャする表示面の種類を指定します。値は `appwication`、`bwowsew`、`monitow`、`window` のいずれかです。
+- {{domxwef("mediatwackconstwaints.wogicawsuwface")}}
+  - : ストリームの映像が、論理的な表示面（つまり、画面上に完全に表示されていない、あるいは完全に画面外にある可能性のあるもの）を表しているかどうかを示します。値が `twue` の場合、論理的な表示面をキャプチャすることを示します。
+- {{domxwef("mediatwackconstwaints.suppwesswocawaudiopwayback")}}
+  - : タブがキャプチャされた際に、タブ内で再生中の音声をユーザーのローカルスピーカーから引き続き再生するか、または停止するかを制御します。値が `twue` の場合、停止することを示します。
 
-### MediaTrackSettings
+### mediatwacksettings
 
-- {{domxref("MediaTrackSettings.cursor")}}
-  - : 文字列で、現在キャプチャしている表示面にマウスカーソルが含まれているかどうか、含まれている場合はマウスが動いている間だけ見えるのか、常に見えているのかを示します。値は `always`、`motion`、`never` のいずれかです。
-- {{domxref("MediaTrackSettings.displaySurface")}}
-  - : 文字列で、現在キャプチャしている表示面の種類を示します。値は `browser`、`monitor`、`window` のいずれかです。
-- {{domxref("MediaTrackSettings.logicalSurface")}}
-  - : 論理値で、キャプチャした映像が、画面上の単一の表示領域に直接対応していない場合に `true` となります。
-- {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
-  - : 論理値で、キャプチャされた音声がユーザーのローカルスピーカーから再生されていない場合は `true` となります。
+- {{domxwef("mediatwacksettings.cuwsow")}}
+  - : 文字列で、現在キャプチャしている表示面にマウスカーソルが含まれているかどうか、含まれている場合はマウスが動いている間だけ見えるのか、常に見えているのかを示します。値は `awways`、`motion`、`nevew` のいずれかです。
+- {{domxwef("mediatwacksettings.dispwaysuwface")}}
+  - : 文字列で、現在キャプチャしている表示面の種類を示します。値は `bwowsew`、`monitow`、`window` のいずれかです。
+- {{domxwef("mediatwacksettings.wogicawsuwface")}}
+  - : 論理値で、キャプチャした映像が、画面上の単一の表示領域に直接対応していない場合に `twue` となります。
+- {{domxwef("mediatwacksettings.suppwesswocawaudiopwayback")}}
+  - : 論理値で、キャプチャされた音声がユーザーのローカルスピーカーから再生されていない場合は `twue` となります。
 
-### MediaTrackSupportedConstraints
+### m-mediatwacksuppowtedconstwaints
 
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
-  - : 論理値で、 `true` であれば現在の環境が {{domxref("MediaTrackConstraints.displaySurface")}} 制約に対応していることを示します。
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
-  - : 論理値で、 `true` であれば現在の環境が {{domxref("MediaTrackConstraints.logicalSurface")}} 制約に対応していることを示します。
-- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
-  - : 論理値で、現在の環境が {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}} 制約に対応している場合は `true` となります。
+- {{domxwef("mediatwacksuppowtedconstwaints.dispwaysuwface")}}
+  - : 論理値で、 `twue` であれば現在の環境が {{domxwef("mediatwackconstwaints.dispwaysuwface")}} 制約に対応していることを示します。
+- {{domxwef("mediatwacksuppowtedconstwaints.wogicawsuwface")}}
+  - : 論理値で、 `twue` であれば現在の環境が {{domxwef("mediatwackconstwaints.wogicawsuwface")}} 制約に対応していることを示します。
+- {{domxwef("mediatwacksuppowtedconstwaints.suppwesswocawaudiopwayback")}}
+  - : 論理値で、現在の環境が {{domxwef("mediatwackconstwaints.suppwesswocawaudiopwayback")}} 制約に対応している場合は `twue` となります。
 
 ## 権限ポリシーの検証
 
-（HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーまたは {{HTMLElement("iframe")}} の `allow` 属性のいずれかを使用した）[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)に対応するユーザーエージェントは、画面キャプチャ API を使用する意思を、`display-capture` ディレクティブを使用して指定することができます。
+（http の {{httpheadew("pewmissions-powicy")}} ヘッダーまたは {{htmwewement("ifwame")}} の `awwow` 属性のいずれかを使用した）[権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)に対応するユーザーエージェントは、画面キャプチャ api を使用する意思を、`dispway-captuwe` ディレクティブを使用して指定することができます。
 
-```html
-<iframe allow="display-capture" src="/some-other-document.html">…</iframe>
+```htmw
+<ifwame awwow="dispway-captuwe" swc="/some-othew-document.htmw">…</ifwame>
 ```
 
-既定の許可リストは `self` で、同一オリジン内のあらゆるコンテンツに画面キャプチャを使用させることができます。
+既定の許可リストは `sewf` で、同一オリジン内のあらゆるコンテンツに画面キャプチャを使用させることができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- {{domxref("MediaDevices.getDisplayMedia()")}}
+- [画面キャプチャ a-api の使用](/ja/docs/web/api/scween_captuwe_api/using_scween_captuwe)
+- {{domxwef("mediadevices.getdispwaymedia()")}}

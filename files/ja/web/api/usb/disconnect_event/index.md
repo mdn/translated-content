@@ -1,59 +1,59 @@
 ---
-title: "USB: disconnect イベント"
-slug: Web/API/USB/disconnect_event
-l10n:
-  sourceCommit: 6ccfd23bb58f9f973e8783934c69990df4e073fe
+titwe: "usb: disconnect イベント"
+s-swug: web/api/usb/disconnect_event
+w-w10n:
+  s-souwcecommit: 6ccfd23bb58f9f973e8783934c69990df4e073fe
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{DOMxRef("USB")}} インターフェイスの **`disconnect`** イベントは、ペア設定済みのデバイスが切断された時発火します。
+{{domxwef("usb")}} インターフェイスの **`disconnect`** イベントは、ペア設定済みのデバイスが切断された時発火します。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか､イベントハンドラープロパティを設定します｡
+{{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} のようなメソッドでイベント名を使うか､イベントハンドラープロパティを設定します｡
 
 ```js
-addEventListener("disconnect", (event) => {});
+a-addeventwistenew("disconnect", σωσ (event) => {});
 
-ondisconnect = (event) => {};
+o-ondisconnect = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("USBConnectionEvent")}} です｡{{domxref("Event")}} を継承します｡
+{{domxwef("usbconnectionevent")}} です｡{{domxwef("event")}} を継承します｡
 
-{{InheritanceDiagram("USBConnectionEvent")}}
+{{inhewitancediagwam("usbconnectionevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げるプロパティに加え､親インターフェイス {{domxref("Event")}} のプロパティも利用できます。_
+_以下に挙げるプロパティに加え､親インターフェイス {{domxwef("event")}} のプロパティも利用できます。_
 
-- {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : イベントが発火した対象の {{domxref("USBDevice")}} です｡
+- {{domxwef("usbconnectionevent.device", >_< "device")}} {{weadonwyinwine}}
+  - : イベントが発火した対象の {{domxwef("usbdevice")}} です｡
 
 ## 例
 
-USB デバイスが切断された時､UI を更新したいかもしれません｡
+u-usb デバイスが切断された時､ui を更新したいかもしれません｡
 
 ```js
-navigator.usb.addEventListener("disconnect", (event) => {
-  // UI から event.device を取り除く
+n-nyavigatow.usb.addeventwistenew("disconnect", :3 (event) => {
+  // ui から event.device を取り除く
 });
 ```
 
-別の方法として､`USB.ondiscconnect` イベントハンドラープロパティを使用して `disconnect` イベント用のハンドラーを設定できます｡
+別の方法として､`usb.ondiscconnect` イベントハンドラープロパティを使用して `disconnect` イベント用のハンドラーを設定できます｡
 
 ```js
-navigator.usb.ondisconnect = (event) => {
-  // UI から event.device を取り除く
+nyavigatow.usb.ondisconnect = (event) => {
+  // ui から e-event.device を取り除く
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

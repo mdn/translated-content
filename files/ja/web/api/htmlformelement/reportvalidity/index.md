@@ -1,43 +1,43 @@
 ---
-title: "HTMLFormElement: reportValidity() メソッド"
-short-title: reportValidity()
-slug: Web/API/HTMLFormElement/reportValidity
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: wepowtvawidity() メソッド"
+s-showt-titwe: w-wepowtvawidity()
+s-swug: web/api/htmwfowmewement/wepowtvawidity
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.reportValidity()`** メソッドは、この要素の子コントロールが制約検証を満たしていれば `true` を返します。
-`false` が返された場合、キャンセル可能な
-[`invalid`](/ja/docs/Web/API/HTMLInputElement/invalid_event) イベントが無効な子要素それぞれについて発行され、ユーザーに検証の問題を報告します。
+**`htmwfowmewement.wepowtvawidity()`** メソッドは、この要素の子コントロールが制約検証を満たしていれば `twue` を返します。
+`fawse` が返された場合、キャンセル可能な
+[`invawid`](/ja/docs/web/api/htmwinputewement/invawid_event) イベントが無効な子要素それぞれについて発行され、ユーザーに検証の問題を報告します。
 
 ## 構文
 
-```js-nolint
-reportValidity()
+```js-nowint
+w-wepowtvawidity()
 ```
 
 ### 返値
 
-`true` または `false`
+`twue` または `fawse`
 
 ## 例
 
 ```js
-document.forms["myform"].addEventListener(
-  "submit",
+d-document.fowms["myfowm"].addeventwistenew(
+  "submit", UwU
   () => {
-    document.forms["myform"].reportValidity();
-  },
-  false,
+    document.fowms["myfowm"].wepowtvawidity();
+  }, rawr x3
+  fawse, rawr
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

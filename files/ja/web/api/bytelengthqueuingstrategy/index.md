@@ -1,62 +1,62 @@
 ---
-title: ByteLengthQueuingStrategy
-slug: Web/API/ByteLengthQueuingStrategy
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: bytewengthqueuingstwategy
+swug: web/api/bytewengthqueuingstwategy
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ByteLengthQueuingStrategy`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。
+**`bytewengthqueuingstwategy`** は[ストリーム a-api](/ja/docs/web/api/stweams_api) のインターフェイスで、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。
 
 ## コンストラクター
 
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
-  - : 新しい `ByteLengthQueuingStrategy` オブジェクトのインスタンスを作成します。
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", (U ᵕ U❁) "bytewengthqueuingstwategy()")}}
+  - : 新しい `bytewengthqueuingstwategy` オブジェクトのインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("ByteLengthQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
-  - : [背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が適用される前に内部キューに格納することができるバイト数の合計。
+- {{domxwef("bytewengthqueuingstwategy.highwatewmawk")}} {{weadonwyinwine}}
+  - : [背圧](/ja/docs/web/api/stweams_api/concepts#背圧)が適用される前に内部キューに格納することができるバイト数の合計。
 
 ## インスタンスメソッド
 
-- {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : 指定されたチャンクの `byteLength` プロパティを返します。
+- {{domxwef("bytewengthqueuingstwategy.size()")}}
+  - : 指定されたチャンクの `bytewength` プロパティを返します。
 
 ## 例
 
 ```js
-const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 });
+c-const queueingstwategy = n-nyew b-bytewengthqueuingstwategy({ h-highwatewmawk: 1024 });
 
-const readableStream = new ReadableStream(
+const weadabwestweam = nyew weadabwestweam(
   {
-    start(controller) {
+    stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, -.-
+    p-puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, ^^;;
+    cancew(eww) {
+      consowe.wog("stweam e-ewwow:", >_< eww);
+    }, mya
   },
-  queueingStrategy,
+  q-queueingstwategy, mya
 );
 
-const size = queueingStrategy.size(chunk);
+const size = queueingstwategy.size(chunk);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Streams API", "ストリーム API", "", "nocode")}}
-- [内部キューとキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#内部キューとキューイング戦略)
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} コンストラクター
+- {{domxwef("stweams api", 😳 "ストリーム api", XD "", "nocode")}}
+- [内部キューとキューイング戦略](/ja/docs/web/api/stweams_api/concepts#内部キューとキューイング戦略)
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", :3 "bytewengthqueuingstwategy()")}} コンストラクター

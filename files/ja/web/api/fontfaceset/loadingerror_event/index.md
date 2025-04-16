@@ -1,43 +1,43 @@
 ---
-title: "FontFaceSet: loadingerror イベント"
-short-title: loadingerror
-slug: Web/API/FontFaceSet/loadingerror_event
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfaceset: woadingewwow イベント"
+s-showt-titwe: w-woadingewwow
+swug: w-web/api/fontfaceset/woadingewwow_event
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font w-woading api")}}
 
-`loadingerror` イベントは、フォントの読み込みが完了したが、一部またはすべてのフォントの読み込みに失敗した場合に発生します。
+`woadingewwow` イベントは、フォントの読み込みが完了したが、一部またはすべてのフォントの読み込みに失敗した場合に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("loadingerror", (event) => {});
+a-addeventwistenew("woadingewwow", (U ﹏ U) (event) => {});
 
-onloadingerror = (event) => {};
+onwoadingewwow = (event) => {};
 ```
 
 ## 例
 
-次の例では、フォント `Ephesis` が読み込めなかった場合、"Font loading error" とコンソールに出力されます。
+次の例では、フォント `ephesis` が読み込めなかった場合、"font woading ewwow" とコンソールに出力されます。
 
 ```js
-document.fonts.onloadingerror = () => {
-  console.log("Font loading error");
+document.fonts.onwoadingewwow = () => {
+  consowe.wog("font w-woading ewwow");
 };
 
 (async () => {
-  await document.fonts.load("16px Ephesis");
+  await document.fonts.woad("16px e-ephesis");
 })();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

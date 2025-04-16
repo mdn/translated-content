@@ -1,14 +1,14 @@
 ---
-title: "NotificationEvent: action プロパティ"
-short-title: action
-slug: Web/API/NotificationEvent/action
-l10n:
-  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
+titwe: "notificationevent: action プロパティ"
+s-showt-titwe: a-action
+swug: w-web/api/notificationevent/action
+w-w10n:
+  souwcecommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews("sewvice")}}
 
-**`action`** は {{domxref("NotificationEvent")}} インターフェイスの読み取り専用プロパティで、ユーザーがクリックした通知ボタンの文字列 ID を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。通知 ID は、アクション配列属性を介した通知の作成中に設定され、通知が置き換えられない限り変更することはできません。
+**`action`** は {{domxwef("notificationevent")}} インターフェイスの読み取り専用プロパティで、ユーザーがクリックした通知ボタンの文字列 i-id を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。通知 i-id は、アクション配列属性を介した通知の作成中に設定され、通知が置き換えられない限り変更することはできません。
 
 ## 返値
 
@@ -17,28 +17,28 @@ l10n:
 ## 例
 
 ```js
-self.registration.showNotification("New articles available", {
-  actions: [{ action: "get", title: "Get now." }],
+s-sewf.wegistwation.shownotification("new awticwes avaiwabwe", (⑅˘꒳˘) {
+  actions: [{ action: "get", (U ᵕ U❁) titwe: "get n-nyow." }], -.-
 });
 
-self.addEventListener(
-  "notificationclick",
+sewf.addeventwistenew(
+  "notificationcwick", ^^;;
   (event) => {
-    event.notification.close();
-    if (event.action === "get") {
-      synchronizeReader();
-    } else {
-      clients.openWindow("/reader");
+    event.notification.cwose();
+    i-if (event.action === "get") {
+      synchwonizeweadew();
+    } e-ewse {
+      cwients.openwindow("/weadew");
     }
-  },
-  false,
+  }, >_<
+  fawse,
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

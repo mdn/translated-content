@@ -1,19 +1,19 @@
 ---
-title: "FileReaderSync: FileReaderSync() コンストラクター"
-short-title: FileReaderSync()
-slug: Web/API/FileReaderSync/FileReaderSync
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fiweweadewsync: fiweweadewsync() コンストラクター"
+s-showt-titwe: f-fiweweadewsync()
+s-swug: web/api/fiweweadewsync/fiweweadewsync
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-**`FileReaderSync()`** コンストラクターは、新しい {{domxref("FileReaderSync")}} を作成します。
+**`fiweweadewsync()`** コンストラクターは、新しい {{domxwef("fiweweadewsync")}} を作成します。
 
 ## 構文
 
-```js-nolint
-new FileReaderSync()
+```js-nowint
+n-nyew fiweweadewsync()
 ```
 
 ### 引数
@@ -22,22 +22,22 @@ new FileReaderSync()
 
 ## 例
 
-次のコードは、[`FileReaderSync`](/ja/docs/Web/API/FileReaderSync) オブジェクトをコンストラクター `FileReaderSync()` を用いて生成し、続いてオブジェクトを使用する様子を示します。
+次のコードは、[`fiweweadewsync`](/ja/docs/web/api/fiweweadewsync) オブジェクトをコンストラクター `fiweweadewsync()` を用いて生成し、続いてオブジェクトを使用する様子を示します。
 
 ```js
-function readFile(blob) {
-  const reader = new FileReaderSync();
-  postMessage(reader.readAsDataURL(blob));
+f-function w-weadfiwe(bwob) {
+  const weadew = nyew fiweweadewsync();
+  postmessage(weadew.weadasdatauww(bwob));
 }
 ```
 
-> [!NOTE]
-> このスニペットは {{domxref("Worker")}} の中で使用しなければなりません。同期インターフェイスはメインスレッドでは使用することができないからです。
+> [!note]
+> このスニペットは {{domxwef("wowkew")}} の中で使用しなければなりません。同期インターフェイスはメインスレッドでは使用することができないからです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

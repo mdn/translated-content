@@ -1,42 +1,42 @@
 ---
-title: "TextFormat: TextFormat() コンストラクター"
-slug: Web/API/TextFormat/TextFormat
-l10n:
-  sourceCommit: 3dda2abfd568a9eab92223f8d52832f7b27ec567
+titwe: "textfowmat: textfowmat() コンストラクター"
+s-swug: w-web/api/textfowmat/textfowmat
+w-w10n:
+  souwcecommit: 3dda2abfd568a9eab92223f8d52832f7b27ec567
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`TextFormat()`** コンストラクターは、新しい {{DOMxRef("TextFormat")}} オブジェクトを返します。
+**`textfowmat()`** コンストラクターは、新しい {{domxwef("textfowmat")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new TextFormat()
-new TextFormat(options)
+```js-nowint
+n-nyew textfowmat()
+n-nyew t-textfowmat(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 省略可能なオブジェクトで、以下のプロパティを持ちます。
-    - `rangeStart`
+    - `wangestawt`
       - : 書式を適用するべきテキストの範囲の始点を表す数値です。
-    - `rangeEnd`
+    - `wangeend`
       - : 書式を適用するべきテキストの範囲の終点を表す数値です。
-    - `underlineStyle`
+    - `undewwinestywe`
       - : 書式を適用するべきテキストの範囲の下線のスタイルを表す文字列です。
-    - `underlineThickness`
+    - `undewwinethickness`
       - : 書式を適用するべきテキストの範囲の下線の太さを表す文字列です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("TextFormat")}} インターフェイス
+- 属する {{domxwef("textfowmat")}} インターフェイス

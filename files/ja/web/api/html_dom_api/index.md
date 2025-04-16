@@ -1,375 +1,375 @@
 ---
-title: HTML DOM API
-slug: Web/API/HTML_DOM_API
-l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+titwe: htmw dom api
+swug: web/api/htmw_dom_api
+w-w10n:
+  souwcecommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{DefaultAPISidebar("HTML DOM")}}
+{{defauwtapisidebaw("htmw d-dom")}}
 
-**HTML DOM API** は、{{Glossary("HTML")}} の各{{Glossary("element", "要素")}}の機能を定義するインターフェイスと、それらが依存する補助的な型やインターフェイスから構成されています。
+**htmw d-dom api** は、{{gwossawy("htmw")}} の各{{gwossawy("ewement", -.- "要素")}}の機能を定義するインターフェイスと、それらが依存する補助的な型やインターフェイスから構成されています。
 
-HTML DOM API に含まれる機能領域には、以下のようなものがあります。
+h-htmw dom a-api に含まれる機能領域には、以下のようなものがあります。
 
-- {{Glossary("DOM")}} を介した HTML 要素へのアクセスと制御。
+- {{gwossawy("dom")}} を介した h-htmw 要素へのアクセスと制御。
 - フォームデータへのアクセスと操作。
-- 二次元画像の内容と HTML の {{HTMLElement("canvas")}} のコンテキストとの相互作用、例えば、それらの上に描画すること。
-- HTML のメディア要素 ({{HTMLElement("audio")}} と {{HTMLElement("video")}}) に接続されたメディアの管理。
+- 二次元画像の内容と h-htmw の {{htmwewement("canvas")}} のコンテキストとの相互作用、例えば、それらの上に描画すること。
+- h-htmw のメディア要素 ({{htmwewement("audio")}} と {{htmwewement("video")}}) に接続されたメディアの管理。
 - ウェブページ上のコンテンツのドラッグ＆ドロップ。
 - ブラウザーのナビゲーション履歴へのアクセス。
-- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}、{{DOMxRef("Web_Workers_API", "ウェブワーカー", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Server-sent_events", "サーバー側イベント", "", "1")}} などの他の API のサポートおよび接続インターフェイス。
+- [ウェブコンポーネント](/ja/docs/web/api/web_components)、{{domxwef("web_stowage_api", 🥺 "ウェブストレージ", (U ﹏ U) "", "1")}}、{{domxwef("web_wowkews_api", >w< "ウェブワーカー", mya "", "1")}}、{{domxwef("websockets_api", >w< "ウェブソケット", nyaa~~ "", "1")}}、{{domxwef("sewvew-sent_events", (✿oωo) "サーバー側イベント", ʘwʘ "", "1")}} などの他の api のサポートおよび接続インターフェイス。
 
-## HTML DOM の概念と利用方法
+## htmw dom の概念と利用方法
 
-この記事では、HTML DOM の中で HTML 要素に関係する部分に焦点を当てます。{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグアンドドロップ", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}などの他の分野についての議論は、それらの API のドキュメントを参照してください。
+この記事では、htmw dom の中で htmw 要素に関係する部分に焦点を当てます。{{domxwef("htmw_dwag_and_dwop_api", (ˆ ﻌ ˆ)♡ "ドラッグアンドドロップ", 😳😳😳 "", "1")}}、{{domxwef("websockets_api", :3 "ウェブソケット", OwO "", "1")}}、{{domxwef("web_stowage_api", (U ﹏ U) "ウェブストレージ", >w< "", "1")}}などの他の分野についての議論は、それらの api のドキュメントを参照してください。
 
-### HTML 文書の構造
+### h-htmw 文書の構造
 
-ドキュメントオブジェクトモデル ({{Glossary("DOM")}}) は、文書 ({{domxref("document")}}) の構造を記述する構造で、それぞれの文書は {{domxref("Document")}} インターフェイスのインスタンスで表現されます。文書は**ノード**の階層ツリーで構成され、ノードは文書内の単一のオブジェクト（要素やテキストノードなど）を表す基本的なレコードです。
+ドキュメントオブジェクトモデル ({{gwossawy("dom")}}) は、文書 ({{domxwef("document")}}) の構造を記述する構造で、それぞれの文書は {{domxwef("document")}} インターフェイスのインスタンスで表現されます。文書は**ノード**の階層ツリーで構成され、ノードは文書内の単一のオブジェクト（要素やテキストノードなど）を表す基本的なレコードです。
 
-ノードは厳密に組織化することができ、他のノードをグループ化する手段を提供したり、階層構造を構築するためのポイントを提供したりします。各ノードは、そのノードに関する情報を取得するためのプロパティと、DOM 内でノードを作成、削除、整理するためのメソッドを提供する {{domxref("Node")}} インターフェイスに基づいています。
+ノードは厳密に組織化することができ、他のノードをグループ化する手段を提供したり、階層構造を構築するためのポイントを提供したりします。各ノードは、そのノードに関する情報を取得するためのプロパティと、dom 内でノードを作成、削除、整理するためのメソッドを提供する {{domxwef("node")}} インターフェイスに基づいています。
 
-ノードには、実際に文書に表示されるコンテンツを含むという概念はありません。これは空っぽの器です。視覚的な内容を表現できるノードの基本的な概念は {{domxref("Element")}} インターフェイスで紹介されています。 `Element` オブジェクトのインスタンスは、 HTML または {{glossary("XML")}} の語彙（{{glossary("SVG")}} など）を用いて作成された文書内の 1 つの要素を表します。
+ノードには、実際に文書に表示されるコンテンツを含むという概念はありません。これは空っぽの器です。視覚的な内容を表現できるノードの基本的な概念は {{domxwef("ewement")}} インターフェイスで紹介されています。 `ewement` オブジェクトのインスタンスは、 htmw または {{gwossawy("xmw")}} の語彙（{{gwossawy("svg")}} など）を用いて作成された文書内の 1 つの要素を表します。
 
 例えば、 2 つの要素を持つ文書があり、そのうちの 1 つの要素の中にさらに 2 つの要素がネストされている場合を考えてみましょう。
 
-![ウィンドウ内の文書に要素を持たせた構造](dom-structure.svg)
+![ウィンドウ内の文書に要素を持たせた構造](dom-stwuctuwe.svg)
 
-{{domxref("Document")}} インターフェイスは {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 仕様の一部として定義されていますが、 HTML 仕様ではこれを大幅に拡張してウェブブラウザーのコンテキストで DOM を使うための固有の情報と HTML 文書を表すための固有の情報が追加されています。
+{{domxwef("document")}} インターフェイスは {{domxwef("document_object_modew", (U ﹏ U) "dom", "", 😳 "1")}} 仕様の一部として定義されていますが、 htmw 仕様ではこれを大幅に拡張してウェブブラウザーのコンテキストで d-dom を使うための固有の情報と htmw 文書を表すための固有の情報が追加されています。
 
-HTML 標準によって `Document` に追加されたものには、次のようなものがあります。
+h-htmw 標準によって `document` に追加されたものには、次のようなものがあります。
 
-- ページを読み込む際に、 {{Glossary("HTTP")}} ヘッダーが提供する様々な情報へのアクセスに対応すること。例えば {{DOMxRef("Document/location", "location", "", "1")}} から文書を読み込んだ場所、{{DOMxRef("Document/cookie", "Cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "最終更新日時", "", "1")}}、{{DOMxRef("Document/referrer", "リファラーサイト", "", "1")}}などです。
-- 文書の {{HTMLElement("head")}} ブロックや{{DOMxRef("Document/body", "本文", "", "1")}}に含まれている要素リストへのアクセス、また文書に含まれている{{DOMxRef("Document/images", "画像", "", "1")}}や{{DOMxRef("Document/links", "リンク", "", "1")}}のリストへのアクセス。
-- [編集可能なコンテンツ](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)の {{DOMxRef("Document/hasFocus", "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
-- HTML 標準で定義されている文書のイベントハンドラーで、{{DOMxRef("MouseEvent", "マウス", "", "1")}}や{{DOMxRef("KeyboardEvent", "キーボード", "", "1")}}イベント、{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグ＆ドロップ", "", "1")}}や{{DOMxRef("HTMLMediaElement", "メディア制御", "", "1")}}などのイベントにアクセスできるようにすること。
-- 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{DOMxRef("HTMLElement/copy_event", "コピー", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "切り取り", "", "1")}}、{{DOMxRef("HTMLElement/paste_event", "貼り付け", "", "1")}}操作のみが含まれています。
+- ページを読み込む際に、 {{gwossawy("http")}} ヘッダーが提供する様々な情報へのアクセスに対応すること。例えば {{domxwef("document/wocation", (ˆ ﻌ ˆ)♡ "wocation", 😳😳😳 "", "1")}} から文書を読み込んだ場所、{{domxwef("document/cookie", (U ﹏ U) "cookie", "", (///ˬ///✿) "1")}}、{{domxwef("document/wastmodified", "最終更新日時", 😳 "", "1")}}、{{domxwef("document/wefewwew", 😳 "リファラーサイト", σωσ "", rawr x3 "1")}}などです。
+- 文書の {{htmwewement("head")}} ブロックや{{domxwef("document/body", OwO "本文", "", /(^•ω•^) "1")}}に含まれている要素リストへのアクセス、また文書に含まれている{{domxwef("document/images", 😳😳😳 "画像", "", "1")}}や{{domxwef("document/winks", ( ͡o ω ͡o ) "リンク", >_< "", "1")}}のリストへのアクセス。
+- [編集可能なコンテンツ](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe)の {{domxwef("document/hasfocus", >w< "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
+- htmw 標準で定義されている文書のイベントハンドラーで、{{domxwef("mouseevent", rawr "マウス", 😳 "", "1")}}や{{domxwef("keyboawdevent", "キーボード", >w< "", "1")}}イベント、{{domxwef("htmw_dwag_and_dwop_api", "ドラッグ＆ドロップ", (⑅˘꒳˘) "", OwO "1")}}や{{domxwef("htmwmediaewement", (ꈍᴗꈍ) "メディア制御", "", 😳 "1")}}などのイベントにアクセスできるようにすること。
+- 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{domxwef("htmwewement/copy_event", 😳😳😳 "コピー", "", mya "1")}}、{{domxwef("htmwewement/cut_event", mya "切り取り", (⑅˘꒳˘) "", (U ﹏ U) "1")}}、{{domxwef("htmwewement/paste_event", mya "貼り付け", ʘwʘ "", "1")}}操作のみが含まれています。
 
-### HTML 要素インターフェイス
+### htmw 要素インターフェイス
 
-`Element` インターフェイスは、さらに HTML 要素の具体的な表現に適応するため、さらに {{domxref("HTMLElement")}} インターフェイスが導入されており、これがもっと具体的な HTML 要素のクラスすべてから継承されています。これにより `Element` クラスが拡張され、要素ノードに HTML 固有の全般的な機能が追加できるようになりました。 `HTMLElement` によって追加されているプロパティには、例えば {{domxref("HTMLElement.hidden", "hidden")}} や {{domxref("HTMLElement.innerText", "innerText")}} があります。
+`ewement` インターフェイスは、さらに htmw 要素の具体的な表現に適応するため、さらに {{domxwef("htmwewement")}} インターフェイスが導入されており、これがもっと具体的な h-htmw 要素のクラスすべてから継承されています。これにより `ewement` クラスが拡張され、要素ノードに htmw 固有の全般的な機能が追加できるようになりました。 `htmwewement` によって追加されているプロパティには、例えば {{domxwef("htmwewement.hidden", (˘ω˘) "hidden")}} や {{domxwef("htmwewement.innewtext", (U ﹏ U) "innewtext")}} があります。
 
-{{Glossary("HTML")}} 文書は DOM ツリーで、その中の各ノードは HTML 要素であり、 {{domxref("HTMLElement")}} インターフェイスで表されています。 `HTMLElement` クラスは `Node` を実装しているので、すべての要素はノードでもあります（逆は成立しません）。すなわち、 {{domxref("Node")}} インターフェイスが実装している構造的な機能は HTML 要素でも利用可能で、要素間を入れ子にしたり、生成と削除、移動などを行ったりすることができます。
+{{gwossawy("htmw")}} 文書は d-dom ツリーで、その中の各ノードは h-htmw 要素であり、 {{domxwef("htmwewement")}} インターフェイスで表されています。 `htmwewement` クラスは `node` を実装しているので、すべての要素はノードでもあります（逆は成立しません）。すなわち、 {{domxwef("node")}} インターフェイスが実装している構造的な機能は htmw 要素でも利用可能で、要素間を入れ子にしたり、生成と削除、移動などを行ったりすることができます。
 
-しかし、 `HTMLElement` インターフェイスは汎用的であり、要素の ID、座標、要素を構成する HTML、スクロール位置に関する情報など、すべての HTML 要素に共通する機能のみを提供します。
+しかし、 `htmwewement` インターフェイスは汎用的であり、要素の id、座標、要素を構成する htmw、スクロール位置に関する情報など、すべての htmw 要素に共通する機能のみを提供します。
 
-コアの `HTMLElement` インターフェイスの機能を拡張して、具体的な要素に必要な機能を提供するよう拡張するために、 `HTMLElement` クラスはサブクラス化されて必要なプロパティやメソッドが追加されています。例えば、 {{HTMLElement("canvas")}} 要素は {{domxref("HTMLCanvasElement")}} 型のオブジェクトで表現されます。 `HTMLCanvasElement` は `HTMLElement` 型に {{domxref("HTMLCanvasElement.height", "height")}} などのプロパティと {{domxref("HTMLCanvasElement.getContext", "getContext()")}} などのメソッドを追加して拡張し、キャンバス固有の機能を提供しています。
+コアの `htmwewement` インターフェイスの機能を拡張して、具体的な要素に必要な機能を提供するよう拡張するために、 `htmwewement` クラスはサブクラス化されて必要なプロパティやメソッドが追加されています。例えば、 {{htmwewement("canvas")}} 要素は {{domxwef("htmwcanvasewement")}} 型のオブジェクトで表現されます。 `htmwcanvasewement` は `htmwewement` 型に {{domxwef("htmwcanvasewement.height", ^•ﻌ•^ "height")}} などのプロパティと {{domxwef("htmwcanvasewement.getcontext", (˘ω˘) "getcontext()")}} などのメソッドを追加して拡張し、キャンバス固有の機能を提供しています。
 
-HTML の要素クラスの全体的な継承は次のようになります。
+h-htmw の要素クラスの全体的な継承は次のようになります。
 
-![HTML要素のインターフェイスの階層](html-dom-hierarchy.svg)
+![htmw要素のインターフェイスの階層](htmw-dom-hiewawchy.svg)
 
-このように、要素はそのすべての祖先のプロパティとメソッドを継承します。例えば、 {{HTMLElement("a")}} 要素が DOM 内で {{domxref("HTMLAnchorElement")}} という型のオブジェクトで表現されているとします。この要素は、そのクラスのドキュメントで説明されているアンカー固有のプロパティとメソッドを含んでいますが、 {{domxref("HTMLElement")}} と {{domxref("Element")}} で定義されているもの、さらに {{domxref("Node")}} や、さらには {{domxref("EventTarget")}} からのものも含まれています。
+このように、要素はそのすべての祖先のプロパティとメソッドを継承します。例えば、 {{htmwewement("a")}} 要素が dom 内で {{domxwef("htmwanchowewement")}} という型のオブジェクトで表現されているとします。この要素は、そのクラスのドキュメントで説明されているアンカー固有のプロパティとメソッドを含んでいますが、 {{domxwef("htmwewement")}} と {{domxwef("ewement")}} で定義されているもの、さらに {{domxwef("node")}} や、さらには {{domxwef("eventtawget")}} からのものも含まれています。
 
-それぞれのレベルは、要素の実用性に関する重要な側面を定義します。 `Node` からは、その要素が他の要素に含まれたり、他の要素を含んだりすることができる機能に関する概念を継承しています。特に重要なのは、 `EventTarget` を継承することで得られるものであり、マウスのクリックや再生・一時停止イベントなどのイベントを受信して処理することができるようになります。
+それぞれのレベルは、要素の実用性に関する重要な側面を定義します。 `node` からは、その要素が他の要素に含まれたり、他の要素を含んだりすることができる機能に関する概念を継承しています。特に重要なのは、 `eventtawget` を継承することで得られるものであり、マウスのクリックや再生・一時停止イベントなどのイベントを受信して処理することができるようになります。
 
-共通点を持つ要素があり、そのために追加の中間型を持つことがあります。例えば、 {{HTMLElement("audio")}} と {{HTMLElement("video")}} 要素は共にオーディオビジュアルメディアを提示します。対応する型である {{domxref("HTMLAudioElement")}} と {{domxref("HTMLVideoElement")}} は共に共通の型 {{domxref("HTMLMediaElement")}} に基づいており、それが {{domxref("HTMLElement")}} などに基づいています。 `HTMLMediaElement` は、 audio 要素と video 要素の間で共通に保持されるメソッドとプロパティを定義しています。
+共通点を持つ要素があり、そのために追加の中間型を持つことがあります。例えば、 {{htmwewement("audio")}} と {{htmwewement("video")}} 要素は共にオーディオビジュアルメディアを提示します。対応する型である {{domxwef("htmwaudioewement")}} と {{domxwef("htmwvideoewement")}} は共に共通の型 {{domxwef("htmwmediaewement")}} に基づいており、それが {{domxwef("htmwewement")}} などに基づいています。 `htmwmediaewement` は、 audio 要素と video 要素の間で共通に保持されるメソッドとプロパティを定義しています。
 
-これらの要素固有のインターフェイスは HTML DOM API の大部分を構成しており、この記事の焦点となっています。 {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} の実際の構造については {{DOMxRef("Document_Object_Model/Introduction", "DOM の紹介", "", "1")}}を参照してください。
+これらの要素固有のインターフェイスは htmw d-dom api の大部分を構成しており、この記事の焦点となっています。 {{domxwef("document_object_modew", :3 "dom", ^^;; "", "1")}} の実際の構造については {{domxwef("document_object_modew/intwoduction", 🥺 "dom の紹介", (⑅˘꒳˘) "", "1")}}を参照してください。
 
-## HTML DOM の対象読者
+## htmw dom の対象読者
 
-HTML DOM が公開する機能は、ウェブ開発者のツールキットの中で最もよく使われる API の一つです。最も単純なウェブアプリケーションを除いて、すべて HTML DOM のいくつかの機能を使用します。
+h-htmw d-dom が公開する機能は、ウェブ開発者のツールキットの中で最もよく使われる a-api の一つです。最も単純なウェブアプリケーションを除いて、すべて h-htmw dom のいくつかの機能を使用します。
 
-## HTML DOM API インターフェイス
+## htmw dom api インターフェイス
 
-HTML DOM API を構成するインターフェイスの大部分は、個々の HTML 要素、または類似の機能を持つ小さな要素群にほぼ一対一で対応します。さらに、 HTML DOM API には、 HTML 要素のインターフェイスを対応するためのいくつかのインターフェイスと型が含まれています。
+htmw dom a-api を構成するインターフェイスの大部分は、個々の htmw 要素、または類似の機能を持つ小さな要素群にほぼ一対一で対応します。さらに、 htmw d-dom api には、 htmw 要素のインターフェイスを対応するためのいくつかのインターフェイスと型が含まれています。
 
-### HTML 要素インターフェイス
+### htmw 要素インターフェイス
 
-これらのインターフェイスは、特定の HTML 要素（または、同じプロパティとメソッドを関連付けた関連要素のセット）を表します。
+これらのインターフェイスは、特定の htmw 要素（または、同じプロパティとメソッドを関連付けた関連要素のセット）を表します。
 
-- {{DOMxRef("HTMLAnchorElement")}}
-- {{DOMxRef("HTMLAreaElement")}}
-- {{DOMxRef("HTMLAudioElement")}}
-- {{DOMxRef("HTMLBaseElement")}}
-- {{DOMxRef("HTMLBodyElement")}}
-- {{DOMxRef("HTMLBRElement")}}
-- {{DOMxRef("HTMLButtonElement")}}
-- {{DOMxRef("HTMLCanvasElement")}}
-- {{DOMxRef("HTMLDataElement")}}
-- {{DOMxRef("HTMLDataListElement")}}
-- {{DOMxRef("HTMLDetailsElement")}}
-- {{DOMxRef("HTMLDialogElement")}}
-- {{DOMxRef("HTMLDirectoryElement")}}
-- {{DOMxRef("HTMLDivElement")}}
-- {{DOMxRef("HTMLDListElement")}}
-- {{DOMxRef("HTMLElement")}}
-- {{DOMxRef("HTMLEmbedElement")}}
-- {{DOMxRef("HTMLFieldSetElement")}}
-- {{DOMxRef("HTMLFormElement")}}
-- {{DOMxRef("HTMLHRElement")}}
-- {{DOMxRef("HTMLHeadElement")}}
-- {{DOMxRef("HTMLHeadingElement")}}
-- {{DOMxRef("HTMLHtmlElement")}}
-- {{DOMxRef("HTMLIFrameElement")}}
-- {{DOMxRef("HTMLImageElement")}}
-- {{DOMxRef("HTMLInputElement")}}
-- {{DOMxRef("HTMLLabelElement")}}
-- {{DOMxRef("HTMLLegendElement")}}
-- {{DOMxRef("HTMLLIElement")}}
-- {{DOMxRef("HTMLLinkElement")}}
-- {{DOMxRef("HTMLMapElement")}}
-- {{DOMxRef("HTMLMediaElement")}}
-- {{DOMxRef("HTMLMenuElement")}}
-- {{DOMxRef("HTMLMetaElement")}}
-- {{DOMxRef("HTMLMeterElement")}}
-- {{DOMxRef("HTMLModElement")}}
-- {{DOMxRef("HTMLObjectElement")}}
-- {{DOMxRef("HTMLOListElement")}}
-- {{DOMxRef("HTMLOptGroupElement")}}
-- {{DOMxRef("HTMLOptionElement")}}
-- {{DOMxRef("HTMLOutputElement")}}
-- {{DOMxRef("HTMLParagraphElement")}}
-- {{DOMxRef("HTMLPictureElement")}}
-- {{DOMxRef("HTMLPreElement")}}
-- {{DOMxRef("HTMLProgressElement")}}
-- {{DOMxRef("HTMLQuoteElement")}}
-- {{DOMxRef("HTMLScriptElement")}}
-- {{DOMxRef("HTMLSelectElement")}}
-- {{DOMxRef("HTMLSlotElement")}}
-- {{DOMxRef("HTMLSourceElement")}}
-- {{DOMxRef("HTMLSpanElement")}}
-- {{DOMxRef("HTMLStyleElement")}}
-- {{DOMxRef("HTMLTableCaptionElement")}}
-- {{DOMxRef("HTMLTableCellElement")}}
-- {{DOMxRef("HTMLTableColElement")}}
-- {{DOMxRef("HTMLTableElement")}}
-- {{DOMxRef("HTMLTableRowElement")}}
-- {{DOMxRef("HTMLTableSectionElement")}}
-- {{DOMxRef("HTMLTemplateElement")}}
-- {{DOMxRef("HTMLTextAreaElement")}}
-- {{DOMxRef("HTMLTimeElement")}}
-- {{DOMxRef("HTMLTitleElement")}}
-- {{DOMxRef("HTMLTrackElement")}}
-- {{DOMxRef("HTMLUListElement")}}
-- {{DOMxRef("HTMLUnknownElement")}}
-- {{DOMxRef("HTMLVideoElement")}}
+- {{domxwef("htmwanchowewement")}}
+- {{domxwef("htmwaweaewement")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwbaseewement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwbwewement")}}
+- {{domxwef("htmwbuttonewement")}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("htmwdataewement")}}
+- {{domxwef("htmwdatawistewement")}}
+- {{domxwef("htmwdetaiwsewement")}}
+- {{domxwef("htmwdiawogewement")}}
+- {{domxwef("htmwdiwectowyewement")}}
+- {{domxwef("htmwdivewement")}}
+- {{domxwef("htmwdwistewement")}}
+- {{domxwef("htmwewement")}}
+- {{domxwef("htmwembedewement")}}
+- {{domxwef("htmwfiewdsetewement")}}
+- {{domxwef("htmwfowmewement")}}
+- {{domxwef("htmwhwewement")}}
+- {{domxwef("htmwheadewement")}}
+- {{domxwef("htmwheadingewement")}}
+- {{domxwef("htmwhtmwewement")}}
+- {{domxwef("htmwifwameewement")}}
+- {{domxwef("htmwimageewement")}}
+- {{domxwef("htmwinputewement")}}
+- {{domxwef("htmwwabewewement")}}
+- {{domxwef("htmwwegendewement")}}
+- {{domxwef("htmwwiewement")}}
+- {{domxwef("htmwwinkewement")}}
+- {{domxwef("htmwmapewement")}}
+- {{domxwef("htmwmediaewement")}}
+- {{domxwef("htmwmenuewement")}}
+- {{domxwef("htmwmetaewement")}}
+- {{domxwef("htmwmetewewement")}}
+- {{domxwef("htmwmodewement")}}
+- {{domxwef("htmwobjectewement")}}
+- {{domxwef("htmwowistewement")}}
+- {{domxwef("htmwoptgwoupewement")}}
+- {{domxwef("htmwoptionewement")}}
+- {{domxwef("htmwoutputewement")}}
+- {{domxwef("htmwpawagwaphewement")}}
+- {{domxwef("htmwpictuweewement")}}
+- {{domxwef("htmwpweewement")}}
+- {{domxwef("htmwpwogwessewement")}}
+- {{domxwef("htmwquoteewement")}}
+- {{domxwef("htmwscwiptewement")}}
+- {{domxwef("htmwsewectewement")}}
+- {{domxwef("htmwswotewement")}}
+- {{domxwef("htmwsouwceewement")}}
+- {{domxwef("htmwspanewement")}}
+- {{domxwef("htmwstyweewement")}}
+- {{domxwef("htmwtabwecaptionewement")}}
+- {{domxwef("htmwtabwecewwewement")}}
+- {{domxwef("htmwtabwecowewement")}}
+- {{domxwef("htmwtabweewement")}}
+- {{domxwef("htmwtabwewowewement")}}
+- {{domxwef("htmwtabwesectionewement")}}
+- {{domxwef("htmwtempwateewement")}}
+- {{domxwef("htmwtextaweaewement")}}
+- {{domxwef("htmwtimeewement")}}
+- {{domxwef("htmwtitweewement")}}
+- {{domxwef("htmwtwackewement")}}
+- {{domxwef("htmwuwistewement")}}
+- {{domxwef("htmwunknownewement")}}
+- {{domxwef("htmwvideoewement")}}
 
-#### 非推奨の HTML Element インターフェイス
+#### 非推奨の htmw ewement インターフェイス
 
-- {{DOMxRef("HTMLMarqueeElement")}} {{deprecated_inline}}
+- {{domxwef("htmwmawqueeewement")}} {{depwecated_inwine}}
 
-#### 廃止された HTML Element インターフェイス
+#### 廃止された htmw ewement インターフェイス
 
-- {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
+- {{domxwef("htmwfontewement")}} {{depwecated_inwine}}
+- {{domxwef("htmwfwameewement")}} {{depwecated_inwine}}
+- {{domxwef("htmwfwamesetewement")}} {{depwecated_inwine}}
+- {{domxwef("htmwisindexewement")}} {{depwecated_inwine}}
+- {{domxwef("htmwmenuitemewement")}} {{depwecated_inwine}}
 
 ### ウェブアプリやブラウザーとの連携インターフェイス
 
-これらのインターフェイスは、 HTML を含むブラウザーウィンドウや文書へのアクセス、ブラウザーの状態、利用可能なプラグイン（ある場合）、さまざまな設定オプションへのアクセスを提供します。
+これらのインターフェイスは、 h-htmw を含むブラウザーウィンドウや文書へのアクセス、ブラウザーの状態、利用可能なプラグイン（ある場合）、さまざまな設定オプションへのアクセスを提供します。
 
-- {{DOMxRef("BarProp")}}
-- {{DOMxRef("Navigator")}}
-- {{DOMxRef("Window")}}
+- {{domxwef("bawpwop")}}
+- {{domxwef("navigatow")}}
+- {{domxwef("window")}}
 
 #### 非推奨のウェブアプリやブラウザーとの連携インターフェイス
 
-- {{DOMxRef("External")}} {{deprecated_inline}}
+- {{domxwef("extewnaw")}} {{depwecated_inwine}}
 
 #### 廃止されたウェブアプリやブラウザーとの連携インターフェイス
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
-- {{DOMxRef("Plugin")}} {{deprecated_inline}}
-- {{DOMxRef("PluginArray")}} {{deprecated_inline}}
+- {{domxwef("appwicationcache")}} {{depwecated_inwine}}
+- {{domxwef("pwugin")}} {{depwecated_inwine}}
+- {{domxwef("pwuginawway")}} {{depwecated_inwine}}
 
 ### フォームサポートインターフェイス
 
-これらのインターフェイスは、 {{HTMLElement("form")}} や {{HTMLElement("input")}} 要素など、フォームを作成・管理するための要素に必要な構造と機能を提供するものです。
+これらのインターフェイスは、 {{htmwewement("fowm")}} や {{htmwewement("input")}} 要素など、フォームを作成・管理するための要素に必要な構造と機能を提供するものです。
 
-- {{DOMxRef("FormDataEvent")}}
-- {{DOMxRef("HTMLFormControlsCollection")}}
-- {{DOMxRef("HTMLOptionsCollection")}}
-- {{DOMxRef("RadioNodeList")}}
-- {{DOMxRef("ValidityState")}}
+- {{domxwef("fowmdataevent")}}
+- {{domxwef("htmwfowmcontwowscowwection")}}
+- {{domxwef("htmwoptionscowwection")}}
+- {{domxwef("wadionodewist")}}
+- {{domxwef("vawiditystate")}}
 
 ### キャンバスと画像インターフェイス
 
-これらのインターフェイスは、キャンバス API で使用されるオブジェクトや、 {{HTMLElement("img")}} 要素、{{HTMLElement("picture")}} 要素を表します。
+これらのインターフェイスは、キャンバス api で使用されるオブジェクトや、 {{htmwewement("img")}} 要素、{{htmwewement("pictuwe")}} 要素を表します。
 
-- {{DOMxRef("CanvasGradient")}}
-- {{DOMxRef("CanvasPattern")}}
-- {{DOMxRef("CanvasRenderingContext2D")}}
-- {{DOMxRef("ImageBitmap")}}
-- {{DOMxRef("ImageBitmapRenderingContext")}}
-- {{DOMxRef("ImageData")}}
-- {{DOMxRef("OffscreenCanvas")}}
-- {{DOMxRef("OffscreenCanvasRenderingContext2D")}}
-- {{DOMxRef("Path2D")}}
-- {{DOMxRef("TextMetrics")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("imagebitmap")}}
+- {{domxwef("imagebitmapwendewingcontext")}}
+- {{domxwef("imagedata")}}
+- {{domxwef("offscweencanvas")}}
+- {{domxwef("offscweencanvaswendewingcontext2d")}}
+- {{domxwef("path2d")}}
+- {{domxwef("textmetwics")}}
 
 ### メディアインターフェイス
 
-メディアインターフェイスは、メディア要素 {{HTMLElement("audio")}} および {{HTMLElement("video")}} のコンテンツに
+メディアインターフェイスは、メディア要素 {{htmwewement("audio")}} および {{htmwewement("video")}} のコンテンツに
 
-- {{DOMxRef("AudioTrack")}}
-- {{DOMxRef("AudioTrackList")}}
-- {{DOMxRef("MediaError")}}
-- {{DOMxRef("TextTrack")}}
-- {{DOMxRef("TextTrackCue")}}
-- {{DOMxRef("TextTrackCueList")}}
-- {{DOMxRef("TextTrackList")}}
-- {{DOMxRef("TimeRanges")}}
-- {{DOMxRef("TrackEvent")}}
-- {{DOMxRef("VideoTrack")}}
-- {{DOMxRef("VideoTrackList")}}
+- {{domxwef("audiotwack")}}
+- {{domxwef("audiotwackwist")}}
+- {{domxwef("mediaewwow")}}
+- {{domxwef("texttwack")}}
+- {{domxwef("texttwackcue")}}
+- {{domxwef("texttwackcuewist")}}
+- {{domxwef("texttwackwist")}}
+- {{domxwef("timewanges")}}
+- {{domxwef("twackevent")}}
+- {{domxwef("videotwack")}}
+- {{domxwef("videotwackwist")}}
 
 ### ドラッグ & ドロップインターフェイス
 
-これらのインターフェイスは [HTML ドラッグ & ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) によって、ドラッグできる（またはドラッグした）個々のアイテム、ドラッグまたはドラッグできるアイテムのグループ、およびドラッグ＆ドロップ処理を表すために使用されています。
+これらのインターフェイスは [htmw ドラッグ & ドロップ a-api](/ja/docs/web/api/htmw_dwag_and_dwop_api) によって、ドラッグできる（またはドラッグした）個々のアイテム、ドラッグまたはドラッグできるアイテムのグループ、およびドラッグ＆ドロップ処理を表すために使用されています。
 
-- {{DOMxRef("DataTransfer")}}
-- {{DOMxRef("DataTransferItem")}}
-- {{DOMxRef("DataTransferItemList")}}
-- {{DOMxRef("DragEvent")}}
+- {{domxwef("datatwansfew")}}
+- {{domxwef("datatwansfewitem")}}
+- {{domxwef("datatwansfewitemwist")}}
+- {{domxwef("dwagevent")}}
 
 ### ページ履歴インターフェイス
 
-履歴 API では、ブラウザーの履歴に関する情報にアクセスしたり、現在のタブの履歴を前後に移動させたりすることができます。
+履歴 a-api では、ブラウザーの履歴に関する情報にアクセスしたり、現在のタブの履歴を前後に移動させたりすることができます。
 
-- {{DOMxRef("BeforeUnloadEvent")}}
-- {{DOMxRef("HashChangeEvent")}}
-- {{DOMxRef("History")}}
-- {{DOMxRef("Location")}}
-- {{DOMxRef("PageRevealEvent")}}
-- {{DOMxRef("PageSwapEvent")}}
-- {{DOMxRef("PageTransitionEvent")}}
-- {{DOMxRef("PopStateEvent")}}
+- {{domxwef("befoweunwoadevent")}}
+- {{domxwef("hashchangeevent")}}
+- {{domxwef("histowy")}}
+- {{domxwef("wocation")}}
+- {{domxwef("pageweveawevent")}}
+- {{domxwef("pageswapevent")}}
+- {{domxwef("pagetwansitionevent")}}
+- {{domxwef("popstateevent")}}
 
 ### ウェブコンポーネントインターフェイス
 
-これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/API/Web_components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成・管理します。
+これらのインターフェイスは[ウェブコンポーネント a-api](/ja/docs/web/api/web_components) で使用され、利用可能な[カスタム要素](/ja/docs/web/api/web_components/using_custom_ewements)を作成・管理します。
 
-- {{DOMxRef("CustomElementRegistry")}}
+- {{domxwef("customewementwegistwy")}}
 
 ### その他、および補助的インターフェイス
 
-これらの補助的なオブジェクト型は、 HTML DOM API の中で様々な形で利用されています。また、{{domxref("PromiseRejectionEvent")}} は {{Glossary("JavaScript")}} のプロミス ({{jsxref("Promise")}}) が拒否されたときに配信されるイベントを表します。
+これらの補助的なオブジェクト型は、 htmw dom api の中で様々な形で利用されています。また、{{domxwef("pwomisewejectionevent")}} は {{gwossawy("javascwipt")}} のプロミス ({{jsxwef("pwomise")}}) が拒否されたときに配信されるイベントを表します。
 
-- {{DOMxRef("DOMStringList")}}
-- {{DOMxRef("DOMStringMap")}}
-- {{DOMxRef("ErrorEvent")}}
-- {{DOMxRef("HTMLAllCollection")}}
-- {{DOMxRef("MimeType")}}
-- {{DOMxRef("MimeTypeArray")}}
-- {{DOMxRef("PromiseRejectionEvent")}}
+- {{domxwef("domstwingwist")}}
+- {{domxwef("domstwingmap")}}
+- {{domxwef("ewwowevent")}}
+- {{domxwef("htmwawwcowwection")}}
+- {{domxwef("mimetype")}}
+- {{domxwef("mimetypeawway")}}
+- {{domxwef("pwomisewejectionevent")}}
 
-### 他の API に所属するインターフェイス
+### 他の api に所属するインターフェイス
 
-一部のインターフェイスは、技術的には HTML 仕様書で定義されていますが、実際には他の API の一部となっています。
+一部のインターフェイスは、技術的には h-htmw 仕様書で定義されていますが、実際には他の a-api の一部となっています。
 
 #### ウェブストレージインターフェイス
 
-{{DOMxRef("Web_Storage_API", "ウェブストレージ API", "", "1")}} は、ウェブサイトがユーザーの端末に一時的または恒久的にデータを保存し、後で再利用できるようにする機能を提供します。
+{{domxwef("web_stowage_api", nyaa~~ "ウェブストレージ api", :3 "", "1")}} は、ウェブサイトがユーザーの端末に一時的または恒久的にデータを保存し、後で再利用できるようにする機能を提供します。
 
-- {{DOMxRef("Storage")}}
-- {{DOMxRef("StorageEvent")}}
+- {{domxwef("stowage")}}
+- {{domxwef("stowageevent")}}
 
 #### ウェブワーカーインターフェイス
 
-これらのインターフェイスは{{DOMxRef("Web_Workers_API", "ウェブワーカー API", "", "1")}} によって、ワーカーがアプリやそのコンテンツと対話する機能を確立し、さらにウィンドウまたはアプリ間のメッセージングをサポートするためにも使用されます。
+これらのインターフェイスは{{domxwef("web_wowkews_api", ( ͡o ω ͡o ) "ウェブワーカー a-api", mya "", (///ˬ///✿) "1")}} によって、ワーカーがアプリやそのコンテンツと対話する機能を確立し、さらにウィンドウまたはアプリ間のメッセージングをサポートするためにも使用されます。
 
-- {{DOMxRef("BroadcastChannel")}}
-- {{DOMxRef("DedicatedWorkerGlobalScope")}}
-- {{DOMxRef("MessageChannel")}}
-- {{DOMxRef("MessageEvent")}}
-- {{DOMxRef("MessagePort")}}
-- {{DOMxRef("SharedWorker")}}
-- {{DOMxRef("SharedWorkerGlobalScope")}}
-- {{DOMxRef("Worker")}}
-- {{DOMxRef("WorkerGlobalScope")}}
-- {{DOMxRef("WorkerLocation")}}
-- {{DOMxRef("WorkerNavigator")}}
+- {{domxwef("bwoadcastchannew")}}
+- {{domxwef("dedicatedwowkewgwobawscope")}}
+- {{domxwef("messagechannew")}}
+- {{domxwef("messageevent")}}
+- {{domxwef("messagepowt")}}
+- {{domxwef("shawedwowkew")}}
+- {{domxwef("shawedwowkewgwobawscope")}}
+- {{domxwef("wowkew")}}
+- {{domxwef("wowkewgwobawscope")}}
+- {{domxwef("wowkewwocation")}}
+- {{domxwef("wowkewnavigatow")}}
 
 #### ウェブソケットインターフェイス
 
-これらのインターフェイスは、 HTML 仕様書で定義されており、{{DOMxRef("WebSockets_API", "ウェブソケット API", "", "1")}} で使用されます。
+これらのインターフェイスは、 h-htmw 仕様書で定義されており、{{domxwef("websockets_api", (˘ω˘) "ウェブソケット api", ^^;; "", "1")}} で使用されます。
 
-- {{DOMxRef("CloseEvent")}}
-- {{DOMxRef("WebSocket")}}
+- {{domxwef("cwoseevent")}}
+- {{domxwef("websocket")}}
 
 #### サーバー送信イベントインターフェイス
 
-{{domxref("EventSource")}} インターフェイスは、{{DOMxRef("Server-sent_events", "サーバー送信イベント", "", "1")}}を送信した、または送信しようとしているソースを表します。
+{{domxwef("eventsouwce")}} インターフェイスは、{{domxwef("sewvew-sent_events", (✿oωo) "サーバー送信イベント", (U ﹏ U) "", -.- "1")}}を送信した、または送信しようとしているソースを表します。
 
-- {{DOMxRef("EventSource")}}
+- {{domxwef("eventsouwce")}}
 
 ## 例
 
-この例では、 {{HTMLElement("input")}} 要素の {{domxref("Element/input_event", "input")}} イベントを監視し、与えられたフィールドに現在値があるかどうかによって、フォームの「送信」ボタンの状態を更新しています。
+この例では、 {{htmwewement("input")}} 要素の {{domxwef("ewement/input_event", ^•ﻌ•^ "input")}} イベントを監視し、与えられたフィールドに現在値があるかどうかによって、フォームの「送信」ボタンの状態を更新しています。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton");
+const nyamefiewd = d-document.getewementbyid("usewname");
+const sendbutton = document.getewementbyid("sendbutton");
 
-sendButton.disabled = true;
+s-sendbutton.disabwed = twue;
 // [注：このサンプルにフォーカスし、スクロールして表示した状態でこの記事を常に読み込むことになるため、無効にしています。]
-//nameField.focus();
+//namefiewd.focus();
 
-nameField.addEventListener("input", (event) => {
-  const elem = event.target;
-  const valid = elem.value.length !== 0;
+n-nyamefiewd.addeventwistenew("input", rawr (event) => {
+  const ewem = event.tawget;
+  c-const v-vawid = ewem.vawue.wength !== 0;
 
-  if (valid && sendButton.disabled) {
-    sendButton.disabled = false;
-  } else if (!valid && !sendButton.disabled) {
-    sendButton.disabled = true;
+  if (vawid && sendbutton.disabwed) {
+    sendbutton.disabwed = fawse;
+  } ewse if (!vawid && !sendbutton.disabwed) {
+    sendbutton.disabwed = twue;
   }
 });
 ```
 
-このコードは {{domxref("Document")}} インターフェイスの {{domxref("Document.getElementById", "getElementById()")}} メソッドを用いて、 ID が `userName` と `sendButton` である {{HTMLElement("input")}} 要素を表す DOM オブジェクトを取得するものです。これらを使用して、これらの要素に関する情報を提供したり、これらの要素に対する制御を許可するプロパティやメソッドにアクセスすることができます。
+このコードは {{domxwef("document")}} インターフェイスの {{domxwef("document.getewementbyid", (˘ω˘) "getewementbyid()")}} メソッドを用いて、 id が `usewname` と `sendbutton` である {{htmwewement("input")}} 要素を表す d-dom オブジェクトを取得するものです。これらを使用して、これらの要素に関する情報を提供したり、これらの要素に対する制御を許可するプロパティやメソッドにアクセスすることができます。
 
-「送信」ボタンの {{domxref("HTMLInputElement")}} オブジェクトの {{domxref("HTMLInputElement.disabled", "disabled")}} 属性は `true` に設定されており、「送信」ボタンがクリックできないように無効化されています。さらに、 {{domxref("HTMLElement/focus", "focus()")}} から継承したメソッドを呼び出して、ユーザー名入力フィールドをアクティブフォーカスに設定しています。
+「送信」ボタンの {{domxwef("htmwinputewement")}} オブジェクトの {{domxwef("htmwinputewement.disabwed", nyaa~~ "disabwed")}} 属性は `twue` に設定されており、「送信」ボタンがクリックできないように無効化されています。さらに、 {{domxwef("htmwewement/focus", UwU "focus()")}} から継承したメソッドを呼び出して、ユーザー名入力フィールドをアクティブフォーカスに設定しています。
 
-次に {{domxref("EventTarget.addEventListener", "addEventListener()")}} が呼び出されて `input` イベント用のハンドラーがユーザー名の入力に追加されます。このコードでは、入力の現在値の長さを調べます。もしそれがゼロであれば、「送信」ボタンがまだ無効になっていない場合は、無効になります。それ以外の場合は、ボタンが有効であることを確認するコードです。
+次に {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} が呼び出されて `input` イベント用のハンドラーがユーザー名の入力に追加されます。このコードでは、入力の現在値の長さを調べます。もしそれがゼロであれば、「送信」ボタンがまだ無効になっていない場合は、無効になります。それ以外の場合は、ボタンが有効であることを確認するコードです。
 
 このコードにより、ユーザー名の入力フィールドに値があるときは常に「送信」ボタンが有効になり、空のときは無効になります。
 
-### HTML
+### h-htmw
 
-このフォームの HTML は次のようになります。
+このフォームの htmw は次のようになります。
 
-```html
+```htmw
 <p>以下の情報を教えてください。 * の付いた項目は必須です。</p>
-<form action="" method="get">
+<fowm a-action="" m-method="get">
   <p>
-    <label for="userName" required>あなたの名前:</label>
-    <input type="text" id="userName" /> (*)
+    <wabew f-fow="usewname" wequiwed>あなたの名前:</wabew>
+    <input type="text" id="usewname" /> (*)
   </p>
   <p>
-    <label for="userEmail">メールアドレス:</label>
-    <input type="email" id="userEmail" />
+    <wabew fow="usewemaiw">メールアドレス:</wabew>
+    <input t-type="emaiw" id="usewemaiw" />
   </p>
-  <input type="submit" value="送信" id="sendButton" />
-</form>
+  <input type="submit" vawue="送信" id="sendbutton" />
+</fowm>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 640, 300)}}
+{{embedwivesampwe("exampwes", 640, (⑅˘꒳˘) 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 ### リファレンス
 
-- [HTML 要素リファレンス](/ja/docs/Web/HTML/Reference/Elements)
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
-- {{DOMxRef("Document_Object_Model", "ドキュメントオブジェクトモデル (DOM)", "", "1")}} リファレンス
+- [htmw 要素リファレンス](/ja/docs/web/htmw/wefewence/ewements)
+- [htmw 属性リファレンス](/ja/docs/web/htmw/wefewence/attwibutes)
+- {{domxwef("document_object_modew", (///ˬ///✿) "ドキュメントオブジェクトモデル (dom)", ^^;; "", "1")}} リファレンス
 
 ### ガイド
 
-- [文書の操作](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting): DOM を操作するための初心者向けガイド。
+- [文書の操作](/ja/docs/weawn_web_devewopment/cowe/scwipting/dom_scwipting): d-dom を操作するための初心者向けガイド。

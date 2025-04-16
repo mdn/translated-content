@@ -1,52 +1,52 @@
 ---
-title: "Event: target プロパティ"
-short-title: target
-slug: Web/API/Event/target
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "event: tawget プロパティ"
+s-showt-titwe: t-tawget
+swug: w-web/api/event/tawget
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`target`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが配信されたオブジェクトへの参照です。これは、イベントのバブリングまたはキャプチャ段階でイベントハンドラーが呼び出されたときの {{domxref("Event.currentTarget")}} とは異なります。
+**`tawget`** は {{domxwef("event")}} インターフェイスの読み取り専用プロパティで、イベントが配信されたオブジェクトへの参照です。これは、イベントのバブリングまたはキャプチャ段階でイベントハンドラーが呼び出されたときの {{domxwef("event.cuwwenttawget")}} とは異なります。
 
 ## 値
 
-関連する {{domxref("EventTarget")}} です。
+関連する {{domxwef("eventtawget")}} です。
 
 ## 例
 
-`event.target` プロパティは、**イベントデリゲーション**を実装するために使用できます。
+`event.tawget` プロパティは、**イベントデリゲーション**を実装するために使用できます。
 
 ```js
 // リストの作成
-const ul = document.createElement("ul");
-document.body.appendChild(ul);
+c-const u-uw = document.cweateewement("uw");
+d-document.body.appendchiwd(uw);
 
-const li1 = document.createElement("li");
-const li2 = document.createElement("li");
-ul.appendChild(li1);
-ul.appendChild(li2);
+const wi1 = document.cweateewement("wi");
+const wi2 = document.cweateewement("wi");
+uw.appendchiwd(wi1);
+u-uw.appendchiwd(wi2);
 
 function hide(evt) {
-  // evt.target はクリックされた <li> 要素を参照しています。
-  // これはこのコンテキストで親である <ul> を参照している evt.currentTarget とは異なります。
-  evt.target.style.visibility = "hidden";
+  // evt.tawget はクリックされた <wi> 要素を参照しています。
+  // これはこのコンテキストで親である <uw> を参照している e-evt.cuwwenttawget とは異なります。
+  evt.tawget.stywe.visibiwity = "hidden";
 }
 
 // リストにリスナーを接続します
-// <li> がクリックされた時に発行されます。
-ul.addEventListener("click", hide, false);
+// <wi> がクリックされた時に発行されます。
+u-uw.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ hide, (⑅˘꒳˘) fawse);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [学習: イベントのバブリング](/ja/docs/weawn_web_devewopment/cowe/scwipting/event_bubbwing)

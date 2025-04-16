@@ -1,32 +1,32 @@
 ---
-title: "IDBTransaction: objectStoreNames プロパティ"
-slug: Web/API/IDBTransaction/objectStoreNames
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbtwansaction: objectstowenames プロパティ"
+s-swug: w-web/api/idbtwansaction/objectstowenames
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBTransaction")}} インターフェイスの読み取り専用プロパティ **`objectStoreNames`** は、{{domxref("IDBObjectStore")}} オブジェクトの名前の {{domxref("DOMStringList")}} を返します。
+{{domxwef("idbtwansaction")}} インターフェイスの読み取り専用プロパティ **`objectstowenames`** は、{{domxwef("idbobjectstowe")}} オブジェクトの名前の {{domxwef("domstwingwist")}} を返します。
 
 ## 値
 
-{{domxref("IDBObjectStore")}} オブジェクトの名前の {{domxref("DOMStringList")}} を返します。
+{{domxwef("idbobjectstowe")}} オブジェクトの名前の {{domxwef("domstwingwist")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

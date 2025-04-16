@@ -1,13 +1,13 @@
 ---
-title: OfflineAudioContext.length
-slug: Web/API/OfflineAudioContext/length
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: offwineaudiocontext.wength
+swug: web/api/offwineaudiocontext/wength
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`length`** は {{domxref("OfflineAudioContext")}} インターフェイスのプロパティで、バッファーのサイズをサンプルフレーム単位で表した整数を返します。
+**`wength`** は {{domxwef("offwineaudiocontext")}} インターフェイスのプロパティで、バッファーのサイズをサンプルフレーム単位で表した整数を返します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

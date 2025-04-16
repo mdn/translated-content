@@ -1,21 +1,21 @@
 ---
-title: CustomElementRegistry.get()
-slug: Web/API/CustomElementRegistry/get
+titwe: customewementwegistwy.get()
+swug: web/api/customewementwegistwy/get
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-**`get()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、以前定義したカスタム要素のコンストラクターを返します。
+**`get()`** は {{domxwef("customewementwegistwy")}} インターフェイスのメソッドで、以前定義したカスタム要素のコンストラクターを返します。
 
 ## 構文
 
 ```js
-constructor = customElements.get(name);
+c-constwuctow = c-customewements.get(name);
 ```
 
 ### 引数
 
-- name
+- n-nyame
   - : コンストラクターの参照を返したいカスタム要素の名前です。
 
 ### 返値
@@ -25,26 +25,26 @@ constructor = customElements.get(name);
 ## 例
 
 ```js
-customElements.define(
-  "my-paragraph",
-  class extends HTMLElement {
-    constructor() {
-      let templateContent = document.getElementById("my-paragraph").content;
-      super() // このスコープの要素を返す
-        .attachShadow({ mode: "open" }) // this.shadowRoot を設定して返す
-        .append(templateContent.cloneNode(true));
+c-customewements.define(
+  "my-pawagwaph", σωσ
+  c-cwass extends h-htmwewement {
+    c-constwuctow() {
+      w-wet tempwatecontent = document.getewementbyid("my-pawagwaph").content;
+      supew() // このスコープの要素を返す
+        .attachshadow({ mode: "open" }) // this.shadowwoot を設定して返す
+        .append(tempwatecontent.cwonenode(twue));
     }
-  },
+  }, >_<
 );
 
-// my-paragraph のコンストラクターの参照を返す
-let ctor = customElements.get("my-paragraph");
+// my-pawagwaph のコンストラクターの参照を返す
+w-wet ctow = customewements.get("my-pawagwaph");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

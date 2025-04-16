@@ -1,13 +1,13 @@
 ---
-title: "Attr: value プロパティ"
-slug: Web/API/Attr/value
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "attw: vawue プロパティ"
+s-swug: web/api/attw/vawue
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`value`** は {{domxref("Attr")}} インターフェイスのプロパティで、この属性の値が入ります。
+**`vawue`** は {{domxwef("attw")}} インターフェイスのプロパティで、この属性の値が入ります。
 
 ## 値
 
@@ -17,43 +17,43 @@ l10n:
 
 次の例では、属性 `test` の現在の値を表示しています。ボタンをクリックすると別の値に変更され、再度読み込むと表示値が更新されます。
 
-### HTML コンテンツ
+### h-htmw コンテンツ
 
-```html
-<label test="初期値"></label>
+```htmw
+<wabew t-test="初期値"></wabew>
 
 <button>クリックすると、test に <code>"新しい値"</code> を設定します。…</button>
 
 <p>
   現在の <code>test</code> 属性の値:
-  <output id="result">なし。</output>
+  <output i-id="wesuwt">なし。</output>
 </p>
 ```
 
-### JavaScript コンテンツ
+### j-javascwipt コンテンツ
 
 ```js
-const element = document.querySelector("label");
-const button = document.querySelector("button");
-const result = document.querySelector("#result");
+c-const e-ewement = document.quewysewectow("wabew");
+const button = document.quewysewectow("button");
+const wesuwt = document.quewysewectow("#wesuwt");
 
-const attribute = element.attributes[0];
-result.value = attribute.value;
+const a-attwibute = ewement.attwibutes[0];
+wesuwt.vawue = a-attwibute.vawue;
 
-button.addEventListener("click", () => {
-  attribute.value = "新しい値";
-  result.value = attribute.value;
+button.addeventwistenew("cwick", (U ᵕ U❁) () => {
+  a-attwibute.vawue = "新しい値";
+  wesuwt.vawue = attwibute.vawue;
 });
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example','100%',100) }}
+{{ embedwivesampwe('exampwe','100%',100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

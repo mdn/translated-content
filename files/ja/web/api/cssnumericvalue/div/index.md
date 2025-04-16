@@ -1,44 +1,44 @@
 ---
-title: CSSNumericValue.div()
-slug: Web/API/CSSNumericValue/div
+titwe: cssnumewicvawue.div()
+swug: web/api/cssnumewicvawue/div
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`div()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` を指定された値で除算します。
+**`div()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、 `cssnumewicvawue` を指定された値で除算します。
 
 ## 構文
 
 ```js
-div(number);
+d-div(numbew);
 ```
 
 ### 引数
 
-- `number`
-  - : 数値または {{domxref('CSSNumericValue')}} です。
+- `numbew`
+  - : 数値または {{domxwef('cssnumewicvawue')}} です。
 
 ### 返値
 
-{{domxref('CSSMathProduct')}} です。
+{{domxwef('cssmathpwoduct')}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 無効な型がメソッドに渡された場合に発生します。
 
 ## 例
 
 ```js
-let mathProduct = CSS.px("24").div(CSS.percent("4"));
-// Prints "calc(24px / 4%)"
-mathProduct.toString();
+w-wet mathpwoduct = c-css.px("24").div(css.pewcent("4"));
+// p-pwints "cawc(24px / 4%)"
+m-mathpwoduct.tostwing();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

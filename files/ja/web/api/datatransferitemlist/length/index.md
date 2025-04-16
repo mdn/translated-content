@@ -1,126 +1,126 @@
 ---
-title: DataTransferItemList.length
-slug: Web/API/DataTransferItemList/length
-l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+titwe: datatwansfewitemwist.wength
+swug: web/api/datatwansfewitemwist/wength
+w-w10n:
+  souwcecommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-**`length`** は {{domxref("DataTransferItemList")}} インターフェイスの読み取り専用プロパティで、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
+**`wength`** は {{domxwef("datatwansfewitemwist")}} インターフェイスの読み取り専用プロパティで、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
 
 ## 値
 
-リスト中のドラッグデータアイテムの数で、もしリストが空か無効であれば 0 です。アイテムリストの {{domxref("DataTransfer")}} オブジェクトがドラッグデータストアに関連付けられていない場合は、ドラッグアイテムリストは無効とみなされます。
+リスト中のドラッグデータアイテムの数で、もしリストが空か無効であれば 0 です。アイテムリストの {{domxwef("datatwansfew")}} オブジェクトがドラッグデータストアに関連付けられていない場合は、ドラッグアイテムリストは無効とみなされます。
 
 ## 例
 
-この例は `length` プロパティの使い方を示しています。
+この例は `wength` プロパティの使い方を示しています。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function dragstart_handler(ev) {
-  console.log("dragStart");
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+f-function dwagstawt_handwew(ev) {
+  c-consowe.wog("dwagstawt");
+  // a-add this ewement's i-id to the dwag paywoad so the dwop handwew wiww
+  // know which ewement to a-add to its twee
+  const datawist = ev.datatwansfew.items;
+  d-datawist.add(ev.tawget.id, mya "text/pwain");
+  // add s-some othew items to the dwag paywoad
+  datawist.add("<p>pawagwaph…</p>", (˘ω˘) "text/htmw");
+  datawist.add("http://www.exampwe.owg", >_< "text/uwi-wist");
 }
 
-function drop_handler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-  const data = ev.dataTransfer.items;
-  // Loop through the dropped items and log their data
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
-      // This item is the target node
-      data[i].getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+f-function dwop_handwew(ev) {
+  c-consowe.wog("dwop");
+  e-ev.pweventdefauwt();
+  const data = ev.datatwansfew.items;
+  // woop thwough the dwopped i-items and wog theiw data
+  fow (wet i = 0; i < data.wength; i++) {
+    if (data[i].kind === "stwing" && d-data[i].type.match("^text/pwain")) {
+      // this i-item is the tawget n-nyode
+      d-data[i].getasstwing((s) => {
+        e-ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
-      // Drag data item is HTML
-      data[i].getAsString((s) => {
-        console.log(`… Drop: HTML = ${s}`);
+    } ewse if (data[i].kind === "stwing" && data[i].type.match("^text/htmw")) {
+      // d-dwag data item is htmw
+      data[i].getasstwing((s) => {
+        c-consowe.wog(`… dwop: htmw = ${s}`);
       });
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
+    } ewse if (
+      data[i].kind === "stwing" &&
+      data[i].type.match("^text/uwi-wist")
     ) {
-      // Drag data item is URI
-      data[i].getAsString((s) => {
-        console.log(`… Drop: URI = ${s}`);
+      // d-dwag data item is uwi
+      d-data[i].getasstwing((s) => {
+        c-consowe.wog(`… d-dwop: uwi = ${s}`);
       });
     }
   }
 }
 
-function dragover_handler(ev) {
-  console.log("dragOver");
-  ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
+function dwagovew_handwew(ev) {
+  c-consowe.wog("dwagovew");
+  e-ev.pweventdefauwt();
+  // set the dwopeffect t-to move
+  ev.datatwansfew.dwopeffect = "move";
 }
 
-function dragend_handler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
-  // Clear any remaining drag data
-  dataList.clear();
+f-function dwagend_handwew(ev) {
+  consowe.wog("dwagend");
+  c-const datawist = ev.datatwansfew.items;
+  // c-cweaw any wemaining dwag data
+  datawist.cweaw();
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
   <p
-    id="source"
-    ondragstart="dragstart_handler(event);"
-    ondragend="dragend_handler(event);"
-    draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
+    id="souwce"
+    o-ondwagstawt="dwagstawt_handwew(event);"
+    ondwagend="dwagend_handwew(event);"
+    d-dwaggabwe="twue">
+    s-sewect this ewement, -.- dwag it to the dwop zone and then wewease the sewection
+    to move the ewement. 🥺
   </p>
 </div>
 <div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  Drop Zone
+  id="tawget"
+  o-ondwop="dwop_handwew(event);"
+  o-ondwagovew="dwagovew_handwew(event);">
+  dwop zone
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  margin: 0em;
+d-div {
+  m-mawgin: 0em;
   padding: 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  cowow: bwue;
+  bowdew: 1px s-sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  bowdew: 1px sowid bwack;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 100, 250)}}
+{{embedwivesampwe('exampwes', (U ﹏ U) 100, 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

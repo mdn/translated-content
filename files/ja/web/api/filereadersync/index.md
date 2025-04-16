@@ -1,23 +1,23 @@
 ---
-title: FileReaderSync
-slug: Web/API/FileReaderSync
-l10n:
-  sourceCommit: 5749ddb42f8087c44163dc909ef19ef7451dcac9
+titwe: fiweweadewsync
+swug: web/api/fiweweadewsync
+w-w10n:
+  souwcecommit: 5749ddb42f8087c44163dc909ef19ef7451dcac9
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`FileReaderSync` インターフェイスにより、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に読み込むことができます。
+`fiweweadewsync` インターフェイスにより、{{domxwef("fiwe")}} または {{domxwef("bwob")}} オブジェクトを同期的に読み込むことができます。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!WARNING]
-> このインターフェイスは、ブロックが発生する可能性がある同期 I/O を使用するため、[ワーカー](/ja/docs/Web/API/Worker)**でのみ**利用できます。
+> [!wawning]
+> このインターフェイスは、ブロックが発生する可能性がある同期 i/o を使用するため、[ワーカー](/ja/docs/web/api/wowkew)**でのみ**利用できます。
 
 ## コンストラクター
 
-- {{domxref("FileReaderSync.FileReaderSync", "FileReaderSync()")}}
-  - : 新しい `FileReaderSync` オブジェクトを返します。
+- {{domxwef("fiweweadewsync.fiweweadewsync", 🥺 "fiweweadewsync()")}}
+  - : 新しい `fiweweadewsync` オブジェクトを返します。
 
 ## インスタンスプロパティ
 
@@ -25,25 +25,25 @@ l10n:
 
 ## インスタンスメソッド
 
-- {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
-  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリー文字列として表す {{jsxref("ArrayBuffer")}} に変換します。
-- {{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline}}
-  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリー文字列として表す文字列に変換します。このメソッドは非推奨であり、代わりに `readAsArrayBuffer()` を使用することを検討してください。
-- {{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}
-  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをテキスト文字列として表す文字列に変換します。オプションの **`encoding`** 引数は、使用するエンコーディングを示します（iso-8859-1 や UTF-8 など）。これがない場合、このメソッドはエンコーディングの検出アルゴリズムを適用します。
-- {{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}
-  - : 指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをデータ URL として表す文字列に変換します。
+- {{domxwef("fiweweadewsync.weadasawwaybuffew","fiweweadewsync.weadasawwaybuffew()")}}
+  - : このメソッドは、指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} を、入力データをバイナリー文字列として表す {{jsxwef("awwaybuffew")}} に変換します。
+- {{domxwef("fiweweadewsync.weadasbinawystwing","fiweweadewsync.weadasbinawystwing()")}} {{depwecated_inwine}}
+  - : このメソッドは、指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} を、入力データをバイナリー文字列として表す文字列に変換します。このメソッドは非推奨であり、代わりに `weadasawwaybuffew()` を使用することを検討してください。
+- {{domxwef("fiweweadewsync.weadastext","fiweweadewsync.weadastext()")}}
+  - : このメソッドは、指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} を、入力データをテキスト文字列として表す文字列に変換します。オプションの **`encoding`** 引数は、使用するエンコーディングを示します（iso-8859-1 や u-utf-8 など）。これがない場合、このメソッドはエンコーディングの検出アルゴリズムを適用します。
+- {{domxwef("fiweweadewsync.weadasdatauww","fiweweadewsync.weadasdatauww()")}}
+  - : 指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} を、入力データをデータ u-uww として表す文字列に変換します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("FileReader")}}
-- {{DOMxRef("Blob")}}
-- {{DOMxRef("File")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("bwob")}}
+- {{domxwef("fiwe")}}

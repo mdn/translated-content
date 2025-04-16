@@ -1,76 +1,76 @@
 ---
-title: BackgroundFetchUpdateUIEvent.updateUI()
-slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
-l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+titwe: backgwoundfetchupdateuievent.updateui()
+swug: web/api/backgwoundfetchupdateuievent/updateui
+w-w10n:
+  souwcecommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound fetch a-api")}}{{seecompattabwe}}
 
-{{domxref("BackgroundFetchUpdateUIEvent")}} インターフェイスの **`updateUI()`** メソッドは、 UI 上のタイトルとアイコンを更新し、バックグラウンドのフェッチの成否を表示します。
+{{domxwef("backgwoundfetchupdateuievent")}} インターフェイスの **`updateui()`** メソッドは、 u-ui 上のタイトルとアイコンを更新し、バックグラウンドのフェッチの成否を表示します。
 
 このメソッドは一度だけ実行され、フェッチの成否をユーザーに通知することができます。
 
 ## 構文
 
-```js-nolint
-updateUI(options)
+```js-nowint
+u-updateui(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 下記のいずれかを含むオブジェクト。
 
-    - `icons` {{optional_inline}}
+    - `icons` {{optionaw_inwine}}
 
-      - : UI で用いるアイコンを含む、 1 枚以上の画像リソースのリストです。画像リソースは下記の情報を持つオブジェクトです。
+      - : u-ui で用いるアイコンを含む、 1 枚以上の画像リソースのリストです。画像リソースは下記の情報を持つオブジェクトです。
 
-        - `src`
-          - : 画像のURL文字列。
-        - `sizes` {{optional_inline}}
-          - : {{htmlelement("link")}} `sizes` 属性と同じ意味を持つ文字列。
-        - `type` {{optional_inline}}
-          - : 画像の MIME タイプを含む文字列。
-        - `label` {{optional_inline}}
+        - `swc`
+          - : 画像のuww文字列。
+        - `sizes` {{optionaw_inwine}}
+          - : {{htmwewement("wink")}} `sizes` 属性と同じ意味を持つ文字列。
+        - `type` {{optionaw_inwine}}
+          - : 画像の m-mime タイプを含む文字列。
+        - `wabew` {{optionaw_inwine}}
           - : 画像の名前を指定する文字列。
 
-    - `title` {{optional_inline}}
-      - : UI の新しいタイトルを指定する文字列。
+    - `titwe` {{optionaw_inwine}}
+      - : u-ui の新しいタイトルを指定する文字列。
 
 ### 返値
 
-{{jsxref("Promise")}} 。
+{{jsxwef("pwomise")}} 。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 以下のいずれかに当てはまるとき、発生します。
-    - {{domxref("Event.isTrusted","isTrusted")}} プロパティが `false` のとき。
-    - {{domxref("BackgroundFetchUpdateUIEvent")}} UI 更新のフラグがすでにセットされている、すなわち、すでに `updateUI()` メソッドが呼ばれたあとであるとき。
-    - {{domxref("BackgroundFetchUpdateUIEvent")}} がアクティブではないとき。
+    - {{domxwef("event.istwusted","istwusted")}} プロパティが `fawse` のとき。
+    - {{domxwef("backgwoundfetchupdateuievent")}} u-ui 更新のフラグがすでにセットされている、すなわち、すでに `updateui()` メソッドが呼ばれたあとであるとき。
+    - {{domxwef("backgwoundfetchupdateuievent")}} がアクティブではないとき。
 
 ## 例
 
-以下の例では、フェッチ成功時に UI のタイトルとアイコン画像を更新しています。
+以下の例では、フェッチ成功時に ui のタイトルとアイコン画像を更新しています。
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
-  event.updateUI({
-    title: "Episode 5 ready to listen!",
+addeventwistenew("backgwoundfetchsuccess", :3 (event) => {
+  event.updateui({
+    titwe: "episode 5 w-weady to wisten!", (U ﹏ U)
     icon: {
-      src: "path/to/success.ico",
-      sizes: "16x16 32x32 64x64",
-    },
+      swc: "path/to/success.ico", -.-
+      s-sizes: "16x16 32x32 64x64", (ˆ ﻌ ˆ)♡
+    }, (⑅˘꒳˘)
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

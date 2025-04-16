@@ -1,32 +1,32 @@
 ---
-title: "HTMLTemplateElement: shadowRootMode プロパティ"
-short-title: shadowRootMode
-slug: Web/API/HTMLTemplateElement/shadowRootMode
-l10n:
-  sourceCommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
+titwe: "htmwtempwateewement: shadowwootmode プロパティ"
+s-showt-titwe: shadowwootmode
+s-swug: w-web/api/htmwtempwateewement/shadowwootmode
+w-w10n:
+  s-souwcecommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web components")}}
 
-**`shadowRootMode`** は {{domxref("HTMLTemplateElement")}} インターフェイスのプロパティで、関連付けられた [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性の値を反映します。
+**`shadowwootmode`** は {{domxwef("htmwtempwateewement")}} インターフェイスのプロパティで、関連付けられた [`<tempwate>`](/ja/docs/web/htmw/wefewence/ewements/tempwate) 要素の [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode) 属性の値を反映します。
 
 このプロパティは開発者にとって有用ではないことに注意してください。
-`<template>` 要素を使用して宣言的に [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) を作成する場合は、このオブジェクトおよびプロパティは存在しません。
-それ以外の場合、`HTMLTemplateElement` が作成された場合は、オブジェクトがシャドウルートではないため、このプロパティの値は無関係であり、シャドウルートに変更することはできません。
+`<tempwate>` 要素を使用して宣言的に [`shadowwoot`](/ja/docs/web/api/shadowwoot) を作成する場合は、このオブジェクトおよびプロパティは存在しません。
+それ以外の場合、`htmwtempwateewement` が作成された場合は、オブジェクトがシャドウルートではないため、このプロパティの値は無関係であり、シャドウルートに変更することはできません。
 
 ## 値
 
-関連付けられた [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性の値を反映します。
+関連付けられた [`<tempwate>`](/ja/docs/web/htmw/wefewence/ewements/tempwate) 要素の [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode) 属性の値を反映します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode)（`<template>` 要素の属性）
-- [`ShadowRoot.mode`](/ja/docs/Web/API/ShadowRoot/mode)
+- [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode)（`<tempwate>` 要素の属性）
+- [`shadowwoot.mode`](/ja/docs/web/api/shadowwoot/mode)

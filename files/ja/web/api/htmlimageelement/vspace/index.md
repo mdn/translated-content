@@ -1,14 +1,14 @@
 ---
-title: "HTMLImageElement: vspace プロパティ"
-short-title: vspace
-slug: Web/API/HTMLImageElement/vspace
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwimageewement: vspace プロパティ"
+s-showt-titwe: v-vspace
+swug: web/api/htmwimageewement/vspace
+w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-**`vspace`** は {{domxref("HTMLImageElement")}} インターフェイスの廃止されたプロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の上下に空ける空間のピクセル数を指定します。
+**`vspace`** は {{domxwef("htmwimageewement")}} インターフェイスの廃止されたプロパティで、ページをレイアウトする際に {{htmwewement("img")}} 要素の上下に空ける空間のピクセル数を指定します。
 
 ## 値
 
@@ -16,15 +16,15 @@ l10n:
 
 ## 使用上の注意
 
-`vspace` に指定された値は {{cssxref("margin-top")}} と {{cssxref("margin-bottom")}} プロパティに対応付けられ、それらのマージンの高さをピクセル単位で指定します。
+`vspace` に指定された値は {{cssxwef("mawgin-top")}} と {{cssxwef("mawgin-bottom")}} プロパティに対応付けられ、それらのマージンの高さをピクセル単位で指定します。
 
-> [!WARNING]
-> このプロパティは廃止されています。代わりに、 CSS の {{cssxref("margin")}} プロパティとその個別指定形を使用して、`<img>` の周囲にマージンを設定してください。
+> [!wawning]
+> このプロパティは廃止されています。代わりに、 c-css の {{cssxwef("mawgin")}} プロパティとその個別指定形を使用して、`<img>` の周囲にマージンを設定してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,37 +1,37 @@
 ---
-title: "VisualViewport: resize イベント"
-short-title: resize
-slug: Web/API/VisualViewport/resize_event
-l10n:
-  sourceCommit: 4b5b3e16c8260a429db07dd54420ae40794b96c2
+titwe: "visuawviewpowt: wesize イベント"
+s-showt-titwe: wesize
+s-swug: web/api/visuawviewpowt/wesize_event
+w-w10n:
+  s-souwcecommit: 4b5b3e16c8260a429db07dd54420ae40794b96c2
 ---
 
-{{APIRef("Visual Viewport")}}
+{{apiwef("visuaw v-viewpowt")}}
 
-**`resize`** は {{domxref("VisualViewport")}} インターフェイスのイベントで、視覚的ビューポートがリサイズされた際に発行されます。これによって、通常はレイアウトビューポートに固定されている要素を、視覚的ビューポートがズームされた際に相対的に位置指定することができます。
+**`wesize`** は {{domxwef("visuawviewpowt")}} インターフェイスのイベントで、視覚的ビューポートがリサイズされた際に発行されます。これによって、通常はレイアウトビューポートに固定されている要素を、視覚的ビューポートがズームされた際に相対的に位置指定することができます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("resize", (event) => {});
+a-addeventwistenew("wesize", ( ͡o ω ͡o ) (event) => {});
 
-onresize = (event) => {};
+o-onwesize = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-使用例のデモについては、[視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API#例) のランディングページをご覧ください。
+使用例のデモについては、[視覚的ビューポート a-api](/ja/docs/web/api/visuaw_viewpowt_api#例) のランディングページをご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

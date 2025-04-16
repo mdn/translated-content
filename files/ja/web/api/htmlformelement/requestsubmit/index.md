@@ -1,77 +1,77 @@
 ---
-title: "HTMLFormElement: requestSubmit() メソッド"
-short-title: requestSubmit()
-slug: Web/API/HTMLFormElement/requestSubmit
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwfowmewement: wequestsubmit() メソッド"
+s-showt-titwe: w-wequestsubmit()
+s-swug: web/api/htmwfowmewement/wequestsubmit
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLFormElement")}} の **`requestSubmit()`** メソッドは、特定の送信ボタンでフォームを送信することをリクエストします。
+{{domxwef("htmwfowmewement")}} の **`wequestsubmit()`** メソッドは、特定の送信ボタンでフォームを送信することをリクエストします。
 
 ## 構文
 
-```js-nolint
-requestSubmit()
-requestSubmit(submitter)
+```js-nowint
+w-wequestsubmit()
+w-wequestsubmit(submittew)
 ```
 
 ### 引数
 
-- `submitter` {{optional_inline}}
+- `submittew` {{optionaw_inwine}}
 
-  - : このフォームのメンバーである{{Glossary("submit button", "送信ボタン")}}です。
+  - : このフォームのメンバーである{{gwossawy("submit button", (U ᵕ U❁) "送信ボタン")}}です。
 
-    `submitter` が `form*` 属性を指定している場合、このフォームの送信動作を[上書きします](/ja/docs/Glossary/Submit_button#フォームの動作の上書き)（`formmethod="POST"` など）。
+    `submittew` が `fowm*` 属性を指定している場合、このフォームの送信動作を[上書きします](/ja/docs/gwossawy/submit_button#フォームの動作の上書き)（`fowmmethod="post"` など）。
 
-    `submitter` に `name` 属性があるか`{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}` であった場合、フォームの送信時にそのデータが[含まれます](/ja/docs/Glossary/Submit_button#フォームデータ項目)（`btnName=btnValue` など）。
+    `submittew` に `name` 属性があるか`{{htmwewement('input/image', -.- '&wt;input type="image"&gt;')}}` であった場合、フォームの送信時にそのデータが[含まれます](/ja/docs/gwossawy/submit_button#フォームデータ項目)（`btnname=btnvawue` など）。
 
-    `submitter` 引数を省略した場合、このフォーム要素自身が送信者として使用されます。
+    `submittew` 引数を省略した場合、このフォーム要素自身が送信者として使用されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 指定された `submitter` が{{Glossary("submit button", "送信ボタン")}}でなかった場合に発生します。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性を持たなければなりません。
+- {{jsxwef("typeewwow")}}
+  - : 指定された `submittew` が{{gwossawy("submit button", ^^;; "送信ボタン")}}でなかった場合に発生します。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 指定された `submittew` が、 `wequestsubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submittew は fowm 要素の子孫であるか、フォームを参照する [`fowm`](/ja/docs/web/htmw/wefewence/ewements/input#fowm) 属性を持たなければなりません。
 
 ## 使用上の注意
 
 明らかな疑問は、なぜこのメソッドが存在するのかということです。
-{{domxref("HTMLFormElement.submit", "submit()")}} メソッドがあったのに、なぜこのメソッドが存在するのでしょうか？
+{{domxwef("htmwfowmewement.submit", >_< "submit()")}} メソッドがあったのに、なぜこのメソッドが存在するのでしょうか？
 
-答えは簡単です。`submit()` はフォームを送信しますが、それだけです。一方、`requestSubmit()` は、あたかも送信ボタンがクリックされたかのように動作します。フォームのコンテンツが検証され、検証が成功した場合にのみフォームが送信されます。フォームが送信されると、{{domxref("HTMLFormElement.submit_event", "submit")}} イベントがフォームオブジェクトに返送されます。
+答えは簡単です。`submit()` はフォームを送信しますが、それだけです。一方、`wequestsubmit()` は、あたかも送信ボタンがクリックされたかのように動作します。フォームのコンテンツが検証され、検証が成功した場合にのみフォームが送信されます。フォームが送信されると、{{domxwef("htmwfowmewement.submit_event", mya "submit")}} イベントがフォームオブジェクトに返送されます。
 
 ## 例
 
-以下の例では、`requestSubmit()` が利用できる場合はそれを使用してリクエストの送信を試みることで、フォームを送信しています。 `main-submit` という ID の送信ボタンが得られた場合は、そのボタンを使用してフォームを送信します。そうでない場合は、 `submitter` 引数を指定せずに、フォーム自身から直接送信されます。
+以下の例では、`wequestsubmit()` が利用できる場合はそれを使用してリクエストの送信を試みることで、フォームを送信しています。 `main-submit` という i-id の送信ボタンが得られた場合は、そのボタンを使用してフォームを送信します。そうでない場合は、 `submittew` 引数を指定せずに、フォーム自身から直接送信されます。
 
-一方で、 `requestSubmit()` が利用できない場合、このコードは代わりにフォームの {{domxref("HTMLFormElement.submit", "submit()")}} メソッドを呼び出すことで送信を行います。
+一方で、 `wequestsubmit()` が利用できない場合、このコードは代わりにフォームの {{domxwef("htmwfowmewement.submit", mya "submit()")}} メソッドを呼び出すことで送信を行います。
 
 ```js
-let myForm = document.querySelector("form");
-let submitButton = myForm.querySelector("#main-submit");
+wet myfowm = document.quewysewectow("fowm");
+wet submitbutton = m-myfowm.quewysewectow("#main-submit");
 
-if (myForm.requestSubmit) {
-  if (submitButton) {
-    myForm.requestSubmit(submitButton);
-  } else {
-    myForm.requestSubmit();
+if (myfowm.wequestsubmit) {
+  i-if (submitbutton) {
+    myfowm.wequestsubmit(submitbutton);
+  } ewse {
+    myfowm.wequestsubmit();
   }
-} else {
-  myForm.submit();
+} ewse {
+  myfowm.submit();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

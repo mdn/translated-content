@@ -1,133 +1,133 @@
 ---
-title: "IDBTransaction: abort イベント"
-slug: Web/API/IDBTransaction/abort_event
-l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+titwe: "idbtwansaction: abowt イベント"
+swug: w-web/api/idbtwansaction/abowt_event
+w-w10n:
+  s-souwcecommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-`abort` イベントは `IndexedDB` のトランザクションがアボートされたとき発火します。
+`abowt` イベントは `indexeddb` のトランザクションがアボートされたとき発火します。
 
 これは、以下のいずれかの理由により起こります。
 
 - 悪い要求 (たとえば、同じキーを 2 回挿入しようとする、キーに一意性制約があるときに同じインデックスキーを挿入するなど)
-- 明示的な {{DOMxRef("IDBTransaction.abort", "abort()")}} の呼び出し
+- 明示的な {{domxwef("idbtwansaction.abowt", σωσ "abowt()")}} の呼び出し
 - 要求の成功ハンドラーやエラーハンドラーにおける補足されなかった例外
-- I/O エラー (ディスクが取り外されたり、OS やハードウェアのその他の故障など、実際にディスクに書き込むのに失敗した)
+- i-i/o エラー (ディスクが取り外されたり、os やハードウェアのその他の故障など、実際にディスクに書き込むのに失敗した)
 - 制限の超過
 
-これはキャンセル不可のイベントで、対応する {{domxref("IDBDatabase")}} オブジェクトに[バブリング](/ja/docs/Learn_web_development/Core/Scripting/Events#イベントのバブリングとキャプチャリング)します。
+これはキャンセル不可のイベントで、対応する {{domxwef("idbdatabase")}} オブジェクトに[バブリング](/ja/docs/weawn_web_devewopment/cowe/scwipting/events#イベントのバブリングとキャプチャリング)します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで用いるか、イベントハンドラープロパティを設定します。
+イベント名を {{domxwef("eventtawget.addeventwistenew", OwO "addeventwistenew()")}} のようなメソッドで用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("abort", (event) => {});
-onabort = (event) => {};
+a-addeventwistenew("abowt", 😳😳😳 (event) => {});
+o-onabowt = (event) => {};
 ```
 
 ## イベント型
 
-汎用の {{domxref("Event")}} です。
+汎用の {{domxwef("event")}} です。
 
 ## バブリング
 
-このイベントは {{domxref("IDBDatabase")}} にバブリングします。`event.target` プロパティは、バブリング元の {{domxref('IDBTransaction')}} オブジェクトへの参照です。
+このイベントは {{domxwef("idbdatabase")}} にバブリングします。`event.tawget` プロパティは、バブリング元の {{domxwef('idbtwansaction')}} オブジェクトへの参照です。
 
-詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn_web_development/Core/Scripting/Events#イベントのバブリングとキャプチャリング)を参照してください。
+詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/weawn_web_devewopment/cowe/scwipting/events#イベントのバブリングとキャプチャリング)を参照してください。
 
 ## 例
 
-この例ではデータベースを開き (存在しない場合はデータベースを作成し)、トランザクションを開き、`abort` イベントのリスナーを追加し、トランザクションをアボートすることによりイベントを発火させます。
+この例ではデータベースを開き (存在しない場合はデータベースを作成し)、トランザクションを開き、`abowt` イベントのリスナーを追加し、トランザクションをアボートすることによりイベントを発火させます。
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = w-window.indexeddb.open("todowist", 😳😳😳 4);
 
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  const db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベース作成エラー");
+  db.onewwow = () => {
+    consowe.wog("データベース作成エラー");
   };
 
-  // このデータベース用の objectStore を作成する
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成する
+  c-const objectstowe = db.cweateobjectstowe("todowist", {
+    keypath: "tasktitwe", o.O
   });
 
-  // objectStore に保存するデータアイテムを定義する
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // o-objectstowe に保存するデータアイテムを定義する
+  objectstowe.cweateindex("houws", ( ͡o ω ͡o ) "houws", (U ﹏ U) { u-unique: fawse });
+  objectstowe.cweateindex("minutes", (///ˬ///✿) "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", >w< "day", { u-unique: fawse });
+  objectstowe.cweateindex("month", rawr "month", { u-unique: fawse });
+  o-objectstowe.cweateindex("yeaw", mya "yeaw", { unique: fawse });
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  const db = DBOpenRequest.result;
+dbopenwequest.onsuccess = (event) => {
+  const db = dbopenwequest.wesuwt;
 
   // データベースの読み書きトランザクションを開き、データを追加する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  const twansaction = d-db.twansaction(["todowist"], ^^ "weadwwite");
 
-  // `abort` のリスナーを追加する
-  transaction.addEventListener("abort", () => {
-    console.log("トランザクションがアボートされました");
+  // `abowt` のリスナーを追加する
+  twansaction.addeventwistenew("abowt", 😳😳😳 () => {
+    consowe.wog("トランザクションがアボートされました");
   });
 
   // トランザクションをアボートする
-  transaction.abort();
+  twansaction.abowt();
 };
 ```
 
-同じ例ですが、イベントハンドラーを {{DOMxRef("IDBTransaction.abort_event", "onabort")}} プロパティに代入しています。
+同じ例ですが、イベントハンドラーを {{domxwef("idbtwansaction.abowt_event", mya "onabowt")}} プロパティに代入しています。
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const dbopenwequest = w-window.indexeddb.open("todowist", 😳 4);
 
-DBOpenRequest.onupgradeneeded = (event) => {
-  const db = event.target.result;
+dbopenwequest.onupgwadeneeded = (event) => {
+  c-const d-db = event.tawget.wesuwt;
 
-  db.onerror = () => {
-    console.log("データベース作成エラー");
+  d-db.onewwow = () => {
+    c-consowe.wog("データベース作成エラー");
   };
 
-  // このデータベース用の objectStore を作成する
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
+  // このデータベース用の objectstowe を作成する
+  const objectstowe = d-db.cweateobjectstowe("todowist", -.- {
+    keypath: "tasktitwe", 🥺
   });
 
-  // objectStore に保存するデータアイテムを定義する
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  // objectstowe に保存するデータアイテムを定義する
+  o-objectstowe.cweateindex("houws", o.O "houws", /(^•ω•^) { unique: fawse });
+  objectstowe.cweateindex("minutes", nyaa~~ "minutes", { unique: fawse });
+  objectstowe.cweateindex("day", nyaa~~ "day", { u-unique: fawse });
+  o-objectstowe.cweateindex("month", :3 "month", { u-unique: f-fawse });
+  objectstowe.cweateindex("yeaw", 😳😳😳 "yeaw", { unique: fawse });
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  const db = DBOpenRequest.result;
+d-dbopenwequest.onsuccess = (event) => {
+  c-const db = dbopenwequest.wesuwt;
 
   // データベースの読み書きトランザクションを開き、データを追加する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  c-const twansaction = d-db.twansaction(["todowist"], (˘ω˘) "weadwwite");
 
-  // `abort` のリスナーを追加する
-  transaction.onabort = (event) => {
-    console.log("トランザクションがアボートされました");
+  // `abowt` のリスナーを追加する
+  twansaction.onabowt = (event) => {
+    consowe.wog("トランザクションがアボートされました");
   };
 
   // トランザクションをアボートする
-  transaction.abort();
+  t-twansaction.abowt();
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)

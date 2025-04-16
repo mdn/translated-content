@@ -1,54 +1,54 @@
 ---
-title: "Window: pagehide イベント"
-slug: Web/API/Window/pagehide_event
+titwe: "window: pagehide イベント"
+s-swug: w-web/api/window/pagehide_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`pagehide`** イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxref("Window")}} へ送られます。例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に `pagehide` イベントを受け取ります。
+**`pagehide`** イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxwef("window")}} へ送られます。例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に `pagehide` イベントを受け取ります。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("Window.onpagehide", "onpagehide")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("pagetwansitionevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
+      <td>{{domxwef("window.onpagehide", σωσ "onpagehide")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 この例では、イベントハンドラーが `pagehide` イベントを監視するために確立され、ページが再利用できるように保存されようとするときに特殊な扱いを行います。
 
 ```js
-window.addEventListener(
+window.addeventwistenew(
   "pagehide",
   (event) => {
-    if (event.persisted) {
+    if (event.pewsisted) {
       /* このページは破棄されないので、後で再利用することができます */
     }
-  },
-  false,
+  }, σωσ
+  fawse, >_<
 );
 ```
 
-これは {{domxref("Window.onpagehide", "onpagehide")}} イベントハンドラープロパティを {{domxref("Window")}} 上で利用することで書くこともできます。
+これは {{domxwef("window.onpagehide", :3 "onpagehide")}} イベントハンドラープロパティを {{domxwef("window")}} 上で利用することで書くこともできます。
 
 ```js
 window.onpagehide = (event) => {
-  if (event.persisted) {
+  i-if (event.pewsisted) {
     /* このページは破棄されないので、後で再利用することができます */
   }
 };
@@ -56,13 +56,13 @@ window.onpagehide = (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window.onpageshow", "onpageshow")}} イベントハンドラープロパティ
-- {{domxref("Window.pageshow_event", "pageshow")}} イベント
+- {{domxwef("window.onpageshow", (U ﹏ U) "onpageshow")}} イベントハンドラープロパティ
+- {{domxwef("window.pageshow_event", -.- "pageshow")}} イベント

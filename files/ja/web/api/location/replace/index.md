@@ -1,53 +1,53 @@
 ---
-title: "location: replace() メソッド"
-short-title: replace()
-slug: Web/API/Location/replace
-l10n:
-  sourceCommit: 45aab806cf88fba5e380bdce43927a1559a3f733
+titwe: "wocation: wepwace() メソッド"
+s-showt-titwe: w-wepwace()
+s-swug: web/api/wocation/wepwace
+w-w10n:
+  souwcecommit: 45aab806cf88fba5e380bdce43927a1559a3f733
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`replace()`** は {{DOMXref("Location")}} インターフェイスのメソッドで、現在のリソースを指定された URL のもので置き換えます。 {{domxref("Location.assign","assign()")}} メソッドとの違いは、 `replace()` を使用すると現在のページがセッションの {{domxref("History")}} に保存されないことです。すなわち、ユーザーが［戻る］ボタンを使用して戻ることができなくなります。
+**`wepwace()`** は {{domxwef("wocation")}} インターフェイスのメソッドで、現在のリソースを指定された u-uww のもので置き換えます。 {{domxwef("wocation.assign","assign()")}} メソッドとの違いは、 `wepwace()` を使用すると現在のページがセッションの {{domxwef("histowy")}} に保存されないことです。すなわち、ユーザーが［戻る］ボタンを使用して戻ることができなくなります。
 
 ## 構文
 
-```js-nolint
-replace(url)
+```js-nowint
+w-wepwace(uww)
 ```
 
 ### 引数
 
-- `url`
-  - : 文字列で、移動先のページの URL です。
+- `uww`
+  - : 文字列で、移動先のページの uww です。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 指定された `url` 引数が有効な URL ではなかった場合。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 指定された `uww` 引数が有効な uww ではなかった場合。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-// このページを置き換えて、 Location.reload の記事に移動します。
-window.location.replace(
-  "https://developer.mozilla.org/ja/docs/Web/API/Location.reload",
+// このページを置き換えて、 wocation.wewoad の記事に移動します。
+window.wocation.wepwace(
+  "https://devewopew.moziwwa.owg/ja/docs/web/api/wocation.wewoad", rawr
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("Location")}} インターフェイス
-- 同様のメソッド: {{domxref("Location.assign()")}} および {{domxref("Location.reload()")}}
+- 所属先の {{domxwef("wocation")}} インターフェイス
+- 同様のメソッド: {{domxwef("wocation.assign()")}} および {{domxwef("wocation.wewoad()")}}

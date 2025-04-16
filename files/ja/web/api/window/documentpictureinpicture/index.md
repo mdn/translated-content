@@ -1,30 +1,30 @@
 ---
-title: "Window: documentPictureInPicture プロパティ"
-short-title: documentPictureInPicture
-slug: Web/API/Window/documentPictureInPicture
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "window: documentpictuweinpictuwe プロパティ"
+s-showt-titwe: d-documentpictuweinpictuwe
+s-swug: web/api/window/documentpictuweinpictuwe
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef}}{{seecompattable}}{{SecureContext_Header}}
+{{apiwef}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`documentPictureInPicture`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、現在の文書コンテキストの {{domxref("DocumentPictureInPicture")}} オブジェクトへの参照を返します。
+**`documentpictuweinpictuwe`** は {{domxwef("window")}} インターフェイスの読み取り専用プロパティで、現在の文書コンテキストの {{domxwef("documentpictuweinpictuwe")}} オブジェクトへの参照を返します。
 
 ## 値
 
-{{domxref("DocumentPictureInPicture")}} オブジェクトインスタンスです。
+{{domxwef("documentpictuweinpictuwe")}} オブジェクトインスタンスです。
 
 ## 例
 
 ```js
-const videoPlayer = document.getElementById("player");
+c-const videopwayew = d-document.getewementbyid("pwayew");
 
 // ...
 
-// Open a Picture-in-Picture window.
-await window.documentPictureInPicture.requestWindow({
-  width: videoPlayer.clientWidth,
-  height: videoPlayer.clientHeight,
+// o-open a pictuwe-in-pictuwe window. σωσ
+a-await window.documentpictuweinpictuwe.wequestwindow({
+  width: videopwayew.cwientwidth, >_<
+  height: videopwayew.cwientheight, :3
 });
 
 // ...
@@ -32,13 +32,13 @@ await window.documentPictureInPicture.requestWindow({
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document Picture-in-Picture API", "文書ピクチャインピクチャ API", "", "nocode")}}
-- [文書ピクチャインピクチャ API の使用](/ja/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- {{domxwef("document pictuwe-in-pictuwe api", (U ﹏ U) "文書ピクチャインピクチャ a-api", "", -.- "nocode")}}
+- [文書ピクチャインピクチャ api の使用](/ja/docs/web/api/document_pictuwe-in-pictuwe_api/using)

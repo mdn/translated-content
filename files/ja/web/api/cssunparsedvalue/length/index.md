@@ -1,13 +1,13 @@
 ---
-title: "CSSUnparsedValue: length プロパティ"
-slug: Web/API/CSSUnparsedValue/length
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "cssunpawsedvawue: wength プロパティ"
+s-swug: web/api/cssunpawsedvawue/wength
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{apiwef("css t-typed o-om")}}
 
-**`length`** は {{domxref("CSSUnparsedValue")}} インターフェイスの読み取り専用プロパティで、オブジェクト内の項目数を返します。
+**`wength`** は {{domxwef("cssunpawsedvawue")}} インターフェイスの読み取り専用プロパティで、オブジェクト内の項目数を返します。
 
 ## 値
 
@@ -15,28 +15,28 @@ l10n:
 
 ## 例
 
-この例では、{{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} コンストラクターを使用したあと、長さを照会しています。
+この例では、{{domxwef("cssunpawsedvawue.cssunpawsedvawue", ( ͡o ω ͡o ) "cssunpawsedvawue()")}} コンストラクターを使用したあと、長さを照会しています。
 
 ```js
-const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
+c-const vawues = n-nyew cssunpawsedvawue(["1em", UwU "#445566", "-45px"]);
 
-console.log(values.length); // 3
+c-consowe.wog(vawues.wength); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
-- {{domxref("CSSUnparsedValue.entries")}}
-- {{domxref("CSSUnparsedValue.forEach")}}
-- {{domxref("CSSUnparsedValue.keys")}}
-- {{domxref("CSSUnparsedValue.values")}}
-- [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- {{domxwef("cssunpawsedvawue.cssunpawsedvawue", "cssunpawsedvawue()")}}
+- {{domxwef("cssunpawsedvawue.entwies")}}
+- {{domxwef("cssunpawsedvawue.foweach")}}
+- {{domxwef("cssunpawsedvawue.keys")}}
+- {{domxwef("cssunpawsedvawue.vawues")}}
+- [css 型付きオブジェクトモデルの使用](/ja/docs/web/api/css_typed_om_api/guide)
+- [css 型付きオブジェクトモデル api](/ja/docs/web/api/css_typed_om_api)

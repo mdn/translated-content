@@ -1,31 +1,31 @@
 ---
-title: SourceBuffer.videoTracks
-slug: Web/API/SourceBuffer/videoTracks
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: souwcebuffew.videotwacks
+swug: web/api/souwcebuffew/videotwacks
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce e-extensions")}}
 
-**`videoTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、現在 `SourceBuffer` 内に含まれている動画トラックのリストを返します。
+**`videotwacks`** は {{domxwef("souwcebuffew")}} インターフェイスの読み取り専用プロパティで、現在 `souwcebuffew` 内に含まれている動画トラックのリストを返します。
 
 ## 値
 
-{{domxref("VideoTrackList")}} オブジェクトです。
+{{domxwef("videotwackwist")}} オブジェクトです。
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

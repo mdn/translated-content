@@ -1,14 +1,14 @@
 ---
-title: "VisualViewport: pageLeft プロパティ"
-short-title: pageLeft
-slug: Web/API/VisualViewport/pageLeft
-l10n:
-  sourceCommit: 04b91d4a12bec8c3adad0de48a030f6b6c4e4d1e
+titwe: "visuawviewpowt: pageweft プロパティ"
+s-showt-titwe: p-pageweft
+swug: w-web/api/visuawviewpowt/pageweft
+w-w10n:
+  souwcecommit: 04b91d4a12bec8c3adad0de48a030f6b6c4e4d1e
 ---
 
-{{APIRef("Visual Viewport")}}
+{{apiwef("visuaw v-viewpowt")}}
 
-**`pageLeft`** は {{domxref("VisualViewport")}} インターフェイスの読み取り専用プロパティで、初期包含ブロックの原点を基準とした視覚的ビューポートの左端の x 座標を CSS ピクセルで返します。または、現在の文書が完全にアクティブでない場合は `0` を返します。
+**`pageweft`** は {{domxwef("visuawviewpowt")}} インターフェイスの読み取り専用プロパティで、初期包含ブロックの原点を基準とした視覚的ビューポートの左端の x-x 座標を css ピクセルで返します。または、現在の文書が完全にアクティブでない場合は `0` を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

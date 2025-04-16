@@ -1,36 +1,36 @@
 ---
-title: SyncEvent
-slug: Web/API/SyncEvent
+titwe: syncevent
+swug: web/api/syncevent
 ---
 
-{{APIRef("Service Workers API")}} {{Non-standard_header}}
+{{apiwef("sewvice w-wowkews api")}} {{non-standawd_headew}}
 
-**`SyncEvent`** インターフェイスは、 ServiceWorker の {{domxref("ServiceWorkerGlobalScope")}} でディスパッチされる同期アクションを表します。
+**`syncevent`** インターフェイスは、 s-sewvicewowkew の {{domxwef("sewvicewowkewgwobawscope")}} でディスパッチされる同期アクションを表します。
 
-このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
+このインターフェイスは {{domxwef("extendabweevent")}} インターフェイスを継承しています。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{inhewitancediagwam(700, 60, ^•ﻌ•^ 20)}}
 
 ## コンストラクタ
 
-- {{domxref("SyncEvent.SyncEvent()")}}
-  - : 新規の `SyncEvent` オブジェクトを作成します。
+- {{domxwef("syncevent.syncevent()")}}
+  - : 新規の `syncevent` オブジェクトを作成します。
 
 ## プロパティ
 
-_祖先である {{domxref("Event")}}_. からプロパティを継承します。
+_祖先である {{domxwef("event")}}_. OwO からプロパティを継承します。
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
-  - : この `SyncEvent` の開発者定義の識別子を返します。
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
-  - : ユーザーエージェントが現在の試行の後に同期の試行をこれ以上行わない場合に `true` を返します。
+- {{domxwef("syncevent.tag")}} {{weadonwyinwine}}
+  - : この `syncevent` の開発者定義の識別子を返します。
+- {{domxwef("syncevent.wastchance")}} {{weadonwyinwine}}
+  - : ユーザーエージェントが現在の試行の後に同期の試行をこれ以上行わない場合に `twue` を返します。
 
 ## 関数
 
-_親である_ _{{domxref("ExtendableEvent")}}_ から関数を継承します。
+_親である_ _{{domxwef("extendabweevent")}}_ から関数を継承します。
 
 無し。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

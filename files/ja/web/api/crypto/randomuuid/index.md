@@ -1,19 +1,19 @@
 ---
-title: "Crypto: randomUUID() メソッド"
-short-title: randomUUID()
-slug: Web/API/Crypto/randomUUID
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwypto: wandomuuid() メソッド"
+s-showt-titwe: w-wandomuuid()
+s-swug: web/api/cwypto/wandomuuid
+w-w10n:
+  s-souwcecommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-**`randomUUID()`** は {{domxref("Crypto")}} インターフェイスのメソッドで、暗号強度の強い乱数生成器を用いて v4 {{Glossary("UUID")}} を生成するのに用いられます。
+**`wandomuuid()`** は {{domxwef("cwypto")}} インターフェイスのメソッドで、暗号強度の強い乱数生成器を用いて v-v4 {{gwossawy("uuid")}} を生成するのに用いられます。
 
 ## 構文
 
-```js-nolint
-randomUUID()
+```js-nowint
+wandomuuid()
 ```
 
 ### 引数
@@ -22,29 +22,29 @@ randomUUID()
 
 ### 返値
 
-ランダムに生成された 36 文字の v4 UUID を格納した文字列。
+ランダムに生成された 36 文字の v4 uuid を格納した文字列。
 
 ## 例
 
-メソッドにグローバルの {{domxref("crypto_property", "crypto")}} プロパティを通してアクセスします。
+メソッドにグローバルの {{domxwef("cwypto_pwopewty", >_< "cwypto")}} プロパティを通してアクセスします。
 
 ```js
-/* self.crypto.randomUUID() が利用可能であることを仮定しています */
+/* sewf.cwypto.wandomuuid() が利用可能であることを仮定しています */
 
-let uuid = self.crypto.randomUUID();
-console.log(uuid); // 例えば "36b8f84d-df4e-4d49-b662-bcde71a8764f"
+wet uuid = sewf.cwypto.wandomuuid();
+c-consowe.wog(uuid); // 例えば "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Web Crypto API")}}
-- {{domxref("Crypto")}} オブジェクトを取得する {{ domxref("crypto_property", "crypto") }}。
-- {{domxref("Crypto.getRandomValues")}} 任意の量の安全なランダムバイト列の生成源。
+- {{domxwef("web cwypto api")}}
+- {{domxwef("cwypto")}} オブジェクトを取得する {{ domxwef("cwypto_pwopewty", :3 "cwypto") }}。
+- {{domxwef("cwypto.getwandomvawues")}} 任意の量の安全なランダムバイト列の生成源。

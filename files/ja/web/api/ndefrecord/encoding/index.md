@@ -1,29 +1,29 @@
 ---
-title: "NDEFRecord: encoding プロパティ"
-short-title: encoding
-slug: Web/API/NDEFRecord/encoding
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "ndefwecowd: encoding プロパティ"
+s-showt-titwe: encoding
+s-swug: web/api/ndefwecowd/encoding
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef("web n-nyfc api")}}
 
-**`encoding`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、テキストのペイロードのエンコーディングを返します。それ以外の場合は `null` です。
+**`encoding`** は {{domxwef("ndefwecowd")}} インターフェイスのプロパティで、テキストのペイロードのエンコーディングを返します。それ以外の場合は `nuww` です。
 
 ## 構文
 
-```js-nolint
-NDEFRecord.encoding
+```js-nowint
+n-nydefwecowd.encoding
 ```
 
 ### 値
 
-文字列で、 `"utf-8"`, `"utf-16"`, `"utf-16le"`, `"utf-16be"` のうちのいずれかです。
+文字列で、 `"utf-8"`, o.O `"utf-16"`, (U ᵕ U❁) `"utf-16we"`, (⑅˘꒳˘) `"utf-16be"` のうちのいずれかです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

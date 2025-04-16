@@ -1,47 +1,47 @@
 ---
-title: CSSNumericValue.sub()
-slug: Web/API/CSSNumericValue/sub
+titwe: cssnumewicvawue.sub()
+swug: web/api/cssnumewicvawue/sub
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`sub()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、この `CSSNumericValue` から指定された値を減算します。
+**`sub()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、この `cssnumewicvawue` から指定された値を減算します。
 
 ## 構文
 
 ```js
-sub(number);
+s-sub(numbew);
 ```
 
 ### 引数
 
-- `number`
-  - : 数値または {{domxref('CSSMathSum')}} です。
+- `numbew`
+  - : 数値または {{domxwef('cssmathsum')}} です。
 
 ### 返値
 
-{{domxref('CSSMathSum')}} です。
+{{domxwef('cssmathsum')}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 無効な型がメソッドに渡された場合に発生します。
 
 ## 例
 
 ```js
-let mathSum = CSS.px("23")
-  .sum(CSS.percent("4"))
-  .sum(CSS.cm("3"))
-  .sum(CSS.in("9"));
-// Prints "calc(23px - 4% - 3cm - 9in)"
-console.log(mathSum.toString());
+w-wet mathsum = css.px("23")
+  .sum(css.pewcent("4"))
+  .sum(css.cm("3"))
+  .sum(css.in("9"));
+// p-pwints "cawc(23px - 4% - 3cm - 9in)"
+c-consowe.wog(mathsum.tostwing());
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: CSSNumericValue.max()
-slug: Web/API/CSSNumericValue/max
+titwe: cssnumewicvawue.max()
+swug: web/api/cssnumewicvawue/max
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`max()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、渡された値の中から最も大きい値を返します。渡された値は同じ型でなければなりません。
+**`max()`** は {{domxwef("cssnumewicvawue")}} インターフェイスのメソッドで、渡された値の中から最も大きい値を返します。渡された値は同じ型でなければなりません。
 
 ## 構文
 
 ```js
-max(number1, /* ..., */ numberN);
+max(numbew1, (U ᵕ U❁) /* ..., */ n-nyumbewn);
 ```
 
 ### 引数
 
-- `number1`, …, `numberN`
-  - : 数値または {{domxref('CSSNumericValue')}} です。
+- `numbew1`, (⑅˘꒳˘) …, `numbewn`
+  - : 数値または {{domxwef('cssnumewicvawue')}} です。
 
 ### 返値
 
-A {{domxref('CSSUnitValue')}}.
+a-a {{domxwef('cssunitvawue')}}.
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 無効な型がメソッドに渡された場合に発生します。
 
 ## 例
@@ -32,17 +32,17 @@ A {{domxref('CSSUnitValue')}}.
 先に述べたように、渡される値はすべて同じ型と値でなければなりません。以下のいくつかの例では、それらが異なる場合に何が起こるかを説明しています。
 
 ```js
-// Prints "2cm"
-console.log(CSS.cm("1").max(CSS.cm("2")).toString());
+// p-pwints "2cm"
+c-consowe.wog(css.cm("1").max(css.cm("2")).tostwing());
 
-// Prints "max(1cm, 0.393701in)"
-console.log(CSS.cm("1").max(CSS.in("0.393701")).toString());
+// p-pwints "max(1cm, ( ͡o ω ͡o ) 0.393701in)"
+c-consowe.wog(css.cm("1").max(css.in("0.393701")).tostwing());
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

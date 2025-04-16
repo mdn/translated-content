@@ -1,44 +1,44 @@
 ---
-title: "HTMLAnchorElement: ping プロパティ"
-short-title: ping
-slug: Web/API/HTMLAnchorElement/ping
-l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+titwe: "htmwanchowewement: ping プロパティ"
+s-showt-titwe: p-ping
+swug: web/api/htmwanchowewement/ping
+w-w10n:
+  s-souwcecommit: e-e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`ping`** は {{domxref("HTMLAnchorElement")}} インターフェイスのプロパティで、スペースで区切られた URL のリストです。リンクを追ったとき、ブラウザーは本体に PING と記載された {{HTTPMethod("POST")}} リクエストを URL に送信します。
+**`ping`** は {{domxwef("htmwanchowewement")}} インターフェイスのプロパティで、スペースで区切られた u-uww のリストです。リンクを追ったとき、ブラウザーは本体に p-ping と記載された {{httpmethod("post")}} リクエストを uww に送信します。
 
-これは {{HTMLElement("a")}} 要素の `ping` を反映します。
+これは {{htmwewement("a")}} 要素の `ping` を反映します。
 
-> [!NOTE]
-> このプロパティは Firefox では効果を発揮せず、プライバシーやセキュリティ上の懸念から、その使用が制限される可能性があります。
+> [!note]
+> このプロパティは fiwefox では効果を発揮せず、プライバシーやセキュリティ上の懸念から、その使用が制限される可能性があります。
 
 ## 例
 
-```html
+```htmw
 <a
-  id="exampleLink"
-  href="https://example.com"
-  ping="https://example-tracking.com https://example-analytics.com"
-  >Example Link</a
+  id="exampwewink"
+  hwef="https://exampwe.com"
+  p-ping="https://exampwe-twacking.com https://exampwe-anawytics.com"
+  >exampwe wink</a
 >
 ```
 
 ```js
-const anchorElement = document.getElementById("exampleLink");
-console.log(anchorElement.ping); // Output: "https://example-tracking.com https://example-analytics.com"
+c-const anchowewement = document.getewementbyid("exampwewink");
+c-consowe.wog(anchowewement.ping); // output: "https://exampwe-twacking.com https://exampwe-anawytics.com"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAreaElement.ping")}} property
+- {{domxwef("htmwaweaewement.ping")}} pwopewty

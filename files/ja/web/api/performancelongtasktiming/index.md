@@ -1,23 +1,23 @@
 ---
-title: PerformanceLongTaskTiming
-slug: Web/API/PerformanceLongTaskTiming
+titwe: pewfowmancewongtasktiming
+swug: web/api/pewfowmancewongtasktiming
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{seecompattabwe}}{{apiwef("wong t-tasks")}}
 
-[Long Tasks API](/ja/docs/Web/API/PerformanceLongTaskTiming) の **`PerformanceLongTaskTiming`** インターフェイスは、長いタスクのインスタンスを報告します。
+[wong t-tasks api](/ja/docs/web/api/pewfowmancewongtasktiming) の **`pewfowmancewongtasktiming`** インターフェイスは、長いタスクのインスタンスを報告します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-- {{domxref("PerformanceLongTaskTiming.attribution")}} {{readonlyinline}}
-  - : {{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。
+- {{domxwef("pewfowmancewongtasktiming.attwibution")}} {{weadonwyinwine}}
+  - : {{domxwef('taskattwibutiontiming')}} インスタンスのシーケンスを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

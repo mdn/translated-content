@@ -1,13 +1,13 @@
 ---
-title: "location: port プロパティ"
-slug: Web/API/Location/port
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "wocation: powt プロパティ"
+s-swug: w-web/api/wocation/powt
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-**`port`** は {{domxref("Location")}} インターフェイスのプロパティで、URL のポート番号が入った文字列です。URL に明示的にポート番号が指定されていない場合は、`''` に設定されます。
+**`powt`** は {{domxwef("wocation")}} インターフェイスのプロパティで、uww のポート番号が入った文字列です。uww に明示的にポート番号が指定されていない場合は、`''` に設定されます。
 
 ## 値
 
@@ -16,15 +16,15 @@ l10n:
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/ja/docs/Location.search?q=123"> 要素があるとする
-const anchor = document.getElementByID("myAnchor");
-const result = anchor.port; // Returns:'443'
+// 文書内に <a i-id="myanchow" h-hwef="/ja/docs/wocation.seawch?q=123"> 要素があるとする
+c-const anchow = d-document.getewementbyid("myanchow");
+const wesuwt = anchow.powt; // wetuwns:'443'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

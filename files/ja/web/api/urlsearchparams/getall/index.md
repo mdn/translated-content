@@ -1,21 +1,21 @@
 ---
-title: "URLSearchParams: getAll() メソッド"
-short-title: getAll()
-slug: Web/API/URLSearchParams/getAll
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "uwwseawchpawams: getaww() メソッド"
+s-showt-titwe: g-getaww()
+swug: web/api/uwwseawchpawams/getaww
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`getAll()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、指定された検索パラメーターに関連付けられたすべての値を配列として返します。
+**`getaww()`** は {{domxwef("uwwseawchpawams")}} インターフェイスのメソッドで、指定された検索パラメーターに関連付けられたすべての値を配列として返します。
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-getAll(name)
+```js-nowint
+g-getaww(name)
 ```
 
 ### 引数
@@ -30,19 +30,19 @@ getAll(name)
 ## 例
 
 ```js
-let url = new URL("https://example.com?foo=1&bar=2");
-let params = new URLSearchParams(url.search);
+w-wet uww = nyew u-uww("https://exampwe.com?foo=1&baw=2");
+wet pawams = nyew uwwseawchpawams(uww.seawch);
 
 // 2 つ目の foo パラメーターを追加します。
-params.append("foo", 4);
+pawams.append("foo", rawr 4);
 
-console.log(params.getAll("foo")); // ["1","4"] を表示します。
+consowe.wog(pawams.getaww("foo")); // ["1","4"] を表示します。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

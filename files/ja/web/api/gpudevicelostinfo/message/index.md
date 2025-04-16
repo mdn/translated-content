@@ -1,13 +1,13 @@
 ---
-title: "GPUDeviceLostInfo: message プロパティ"
-slug: Web/API/GPUDeviceLostInfo/message
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpudevicewostinfo: message プロパティ"
+s-swug: web/api/gpudevicewostinfo/message
+w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("GPUDeviceLostInfo")}} インターフェイスの読み取り専用プロパティ **`message`** は、なぜデバイスがロストしたのかを説明する人間向けのメッセージを提供します。
+{{domxwef("gpudevicewostinfo")}} インターフェイスの読み取り専用プロパティ **`message`** は、なぜデバイスがロストしたのかを説明する人間向けのメッセージを提供します。
 
 ## 値
 
@@ -15,16 +15,16 @@ l10n:
 
 ## 例
 
-例は、メインの [`GPUDevice.lost` のページ](/ja/docs/Web/API/GPUDevice/lost#例)を参照してください。
+例は、メインの [`gpudevice.wost` のページ](/ja/docs/web/api/gpudevice/wost#例)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)

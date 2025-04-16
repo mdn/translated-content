@@ -1,59 +1,59 @@
 ---
-title: "SpeechSynthesisUtterance: lang プロパティ"
-short-title: lang
-slug: Web/API/SpeechSynthesisUtterance/lang
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "speechsynthesisuttewance: wang プロパティ"
+s-showt-titwe: w-wang
+swug: w-web/api/speechsynthesisuttewance/wang
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`lang`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話の言語を取得および設定します。
+**`wang`** は {{domxwef("speechsynthesisuttewance")}} インターフェイスのプロパティで、発話の言語を取得および設定します。
 
-設定されていない場合、アプリ（すなわち {{htmlelement("html")}} の [`lang`](/ja/docs/Web/HTML/Reference/Elements/html#lang) 値）の言語が使用されるか、こちらも未設定であればユーザーエージェントの既定の言語が使用されます。
+設定されていない場合、アプリ（すなわち {{htmwewement("htmw")}} の [`wang`](/ja/docs/web/htmw/wefewence/ewements/htmw#wang) 値）の言語が使用されるか、こちらも未設定であればユーザーエージェントの既定の言語が使用されます。
 
 ## 値
 
-BCP 47 言語タグを表す文字列です。
+b-bcp 47 言語タグを表す文字列です。
 
 ## 例
 
 ```js
-const synth = window.speechSynthesis;
+const synth = window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const inputfowm = document.quewysewectow("fowm");
+c-const inputtxt = document.quewysewectow("input");
+const voicesewect = d-document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+const voices = synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+i-inputfowm.onsubmit = (event) => {
+  event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  c-const sewectedoption =
+    v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  f-fow (wet i = 0; i < voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      u-uttewthis.voice = voices[i];
     }
   }
-  utterThis.lang = "en-US";
-  synth.speak(utterThis);
-  inputTxt.blur();
+  uttewthis.wang = "en-us";
+  synth.speak(uttewthis);
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

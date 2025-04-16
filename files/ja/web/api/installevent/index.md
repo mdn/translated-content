@@ -1,88 +1,88 @@
 ---
-title: InstallEvent
-slug: Web/API/InstallEvent
-l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+titwe: instawwevent
+swug: web/api/instawwevent
+w-w10n:
+  souwcecommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("sewvice w-wowkews a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-{{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} ハンドラーに引数として渡される `InstallEvent` インターフェイスは、{{domxref("ServiceWorkerGlobalScope")}} の {{domxref("ServiceWorker")}} で配信されるインストールアクションを表します。{{domxref("ExtendableEvent")}} の子として、{{domxref("FetchEvent")}} のような機能イベントがインストール中に配信されないようにします。
+{{domxwef("sewvicewowkewgwobawscope.instaww_event", mya "oninstaww")}} ハンドラーに引数として渡される `instawwevent` インターフェイスは、{{domxwef("sewvicewowkewgwobawscope")}} の {{domxwef("sewvicewowkew")}} で配信されるインストールアクションを表します。{{domxwef("extendabweevent")}} の子として、{{domxwef("fetchevent")}} のような機能イベントがインストール中に配信されないようにします。
 
-このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
+このインターフェイスは {{domxwef("extendabweevent")}} インターフェイスを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 新しい `InstallEvent` オブジェクトを生成します。
+- {{domxwef("instawwevent.instawwevent", 😳 "instawwevent()")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 新しい `instawwevent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("Event")}} からプロパティを継承しています_。
+_祖先である {{domxwef("event")}} からプロパティを継承しています_。
 
-- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 現在ページを制御している {{domxref("ServiceWorker")}} を返します。
+- {{domxwef("instawwevent.activewowkew")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 現在ページを制御している {{domxwef("sewvicewowkew")}} を返します。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("Event")}} からメソッドを継承しています_。
+_祖先である {{domxwef("event")}} からメソッドを継承しています_。
 
 ## 例
 
-このコードスニペットは、[サービスワーカーの先読みサンプル](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)のものです（[先読みのライブ実行](https://googlechrome.github.io/samples/service-worker/prefetch/)を参照してください）。このコードは {{domxref("ServiceWorkerGlobalScope.install_event", "ServiceWorkerGlobalScope.oninstall") }} で {{domxref("ServiceWorkerRegistration.installing") }} ワーカーをインストールしたとみなすことを、渡されたプロミスが正常に解決するまで遅らせています。プロミスは、すべてのリソースのフェッチとキャッシュが完了したとき、または何らかの例外が発生したときに解決します。
+このコードスニペットは、[サービスワーカーの先読みサンプル](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js)のものです（[先読みのライブ実行](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/)を参照してください）。このコードは {{domxwef("sewvicewowkewgwobawscope.instaww_event", XD "sewvicewowkewgwobawscope.oninstaww") }} で {{domxwef("sewvicewowkewwegistwation.instawwing") }} ワーカーをインストールしたとみなすことを、渡されたプロミスが正常に解決するまで遅らせています。プロミスは、すべてのリソースのフェッチとキャッシュが完了したとき、または何らかの例外が発生したときに解決します。
 
 このコードスニペットでは、サービスワーカーが使用するキャッシュをバージョン管理するためのベストプラクティスも示しています。この例ではキャッシュを 1 つしか保有していませんが、この手法を複数のキャッシュに使用することができます。このコードでは、キャッシュの一括指定と、バージョン管理された固有のキャッシュ名とを割り当てています。
 
-> [!NOTE]
-> Google Chromeでは、chrome://serviceworker-internals 経由でアクセスした関連サービスワーカーの "Inspect" インターフェイスでログ出力します。
+> [!note]
+> g-googwe chwomeでは、chwome://sewvicewowkew-intewnaws 経由でアクセスした関連サービスワーカーの "inspect" インターフェイスでログ出力します。
 
 ```js
-const CACHE_VERSION = 1;
-const CURRENT_CACHES = {
-  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
+c-const cache_vewsion = 1;
+c-const cuwwent_caches = {
+  p-pwefetch: `pwefetch-cache-v${cache_vewsion}`, :3
 };
 
-self.addEventListener("install", (event) => {
-  const urlsToPrefetch = [
-    "./static/pre_fetched.txt",
-    "./static/pre_fetched.html",
-    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
+sewf.addeventwistenew("instaww", 😳😳😳 (event) => {
+  const u-uwwstopwefetch = [
+    "./static/pwe_fetched.txt", -.-
+    "./static/pwe_fetched.htmw", ( ͡o ω ͡o )
+    "https://www.chwomium.owg/_/wswc/1302286216006/config/customwogo.gif", rawr x3
   ];
 
-  console.log(
-    "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch,
+  consowe.wog(
+    "handwing instaww event. nyaa~~ wesouwces to pwe-fetch:",
+    u-uwwstopwefetch, /(^•ω•^)
   );
 
-  event.waitUntil(
+  event.waituntiw(
     caches
-      .open(CURRENT_CACHES["prefetch"])
+      .open(cuwwent_caches["pwefetch"])
       .then((cache) => {
-        return cache
-          .addAll(
-            urlsToPrefetch.map((urlToPrefetch) => {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            }),
+        w-wetuwn cache
+          .addaww(
+            uwwstopwefetch.map((uwwtopwefetch) => {
+              w-wetuwn nyew wequest(uwwtopwefetch, rawr { mode: "no-cows" });
+            }), OwO
           )
           .then(() => {
-            console.log("All resources have been fetched and cached.");
+            consowe.wog("aww wesouwces h-have been fetched and cached.");
           });
       })
-      .catch((error) => {
-        console.error("Pre-fetching failed:", error);
-      }),
+      .catch((ewwow) => {
+        c-consowe.ewwow("pwe-fetching f-faiwed:", (U ﹏ U) ewwow);
+      }), >_<
   );
 });
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("NotificationEvent")}}
-- {{jsxref("Promise")}}
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- {{domxwef("notificationevent")}}
+- {{jsxwef("pwomise")}}
+- [フェッチ api](/ja/docs/web/api/fetch_api)

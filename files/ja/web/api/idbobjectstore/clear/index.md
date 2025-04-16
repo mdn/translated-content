@@ -1,22 +1,22 @@
 ---
-title: "IDBObjectStore: clear() メソッド"
-slug: Web/API/IDBObjectStore/clear
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "idbobjectstowe: cweaw() メソッド"
+s-swug: web/api/idbobjectstowe/cweaw
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}} インターフェイスの **`clear()`** メソッドは、{{domxref("IDBRequest")}} を生成してすぐに返します。そして、別スレッドでオブジェクトストアをクリアします。これは、オブジェクトストア内のデータをすべて削除する操作です。
+{{domxwef("idbobjectstowe")}} インターフェイスの **`cweaw()`** メソッドは、{{domxwef("idbwequest")}} を生成してすぐに返します。そして、別スレッドでオブジェクトストアをクリアします。これは、オブジェクトストア内のデータをすべて削除する操作です。
 
-オブジェクトストアのクリアは、オブジェクトストアからレコードをすべて削除し、このオブジェクトストアを参照するインデックスの全レコードを削除する操作です。オブジェクトストア内の一部のレコードのみを削除するには、{{domxref("IDBObjectStore.delete")}} にキーまたは {{domxref("IDBKeyRange")}} を渡してください。
+オブジェクトストアのクリアは、オブジェクトストアからレコードをすべて削除し、このオブジェクトストアを参照するインデックスの全レコードを削除する操作です。オブジェクトストア内の一部のレコードのみを削除するには、{{domxwef("idbobjectstowe.dewete")}} にキーまたは {{domxwef("idbkeywange")}} を渡してください。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -25,76 +25,76 @@ clear()
 
 ### 返値
 
-この操作に関係する今後のイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関係する今後のイベントが発火する {{domxwef("idbwequest")}} オブジェクトです。
 
-操作に成功した場合は、この要求の {{domxref("IDBRequest.result", "result")}} プロパティの値は `undefined` になります。
+操作に成功した場合は、この要求の {{domxwef("idbwequest.wesuwt", 😳 "wesuwt")}} プロパティの値は `undefined` になります。
 
 ### 例外
 
-- `ReadOnlyError` {{domxref("DOMException")}}
-  - : この操作に対応するトランザクションが読み取り専用[モード](/ja/docs/Web/API/IDBTransaction/mode)のとき投げられます。
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBObjectStore")}} のトランザクションが実行中でないとき投げられます。
+- `weadonwyewwow` {{domxwef("domexception")}}
+  - : この操作に対応するトランザクションが読み取り専用[モード](/ja/docs/web/api/idbtwansaction/mode)のとき投げられます。
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbobjectstowe")}} のトランザクションが実行中でないとき投げられます。
 
 ## 例
 
-以下のコード断片では、データベースの読み書きトランザクションを開き、`clear()` を用いてオブジェクトストア内の全データを消去します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+以下のコード断片では、データベースの読み書きトランザクションを開き、`cweaw()` を用いてオブジェクトストア内の全データを消去します。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) アプリケーションを参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = window.indexeddb.open("todowist", XD 4);
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+d-dbopenwequest.onsuccess = (event) => {
+  nyote.innewhtmw += "<wi>データベースを初期化しました。</wi>";
 
   // データベースを開いた結果を変数 db に格納する
   // これは後でよく使う
-  db = DBOpenRequest.result;
+  db = dbopenwequest.wesuwt;
 
   // オブジェクトストアから全データを消去する
-  clearData();
+  cweawdata();
 };
 
-function clearData() {
+function c-cweawdata() {
   // 読み書きトランザクションを開き、データを消去する準備をする
-  const transaction = db.transaction(["toDoList"], "readwrite");
+  const twansaction = d-db.twansaction(["todowist"], :3 "weadwwite");
 
   // すべて完了したとき、トランザクションの正常終了を報告する
-  transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>トランザクションが完了しました。</li>";
+  twansaction.oncompwete = (event) => {
+    n-nyote.innewhtmw += "<wi>トランザクションが完了しました。</wi>";
   };
 
-  transaction.onerror = (event) => {
-    note.innerHTML += `<li>トランザクションはエラーのため開けませんでした: ${transaction.error}</li>`;
+  twansaction.onewwow = (event) => {
+    note.innewhtmw += `<wi>トランザクションはエラーのため開けませんでした: ${twansaction.ewwow}</wi>`;
   };
 
   // トランザクションでオブジェクトストアを生成する
-  const objectStore = transaction.objectStore("toDoList");
+  const objectstowe = t-twansaction.objectstowe("todowist");
 
   // オブジェクトストアから全データを消去する要求をする
-  const objectStoreRequest = objectStore.clear();
+  const o-objectstowewequest = o-objectstowe.cweaw();
 
-  objectStoreRequest.onsuccess = (event) => {
+  objectstowewequest.onsuccess = (event) => {
     // 要求の成功を報告する
-    note.innerHTML += "<li>要求に成功しました。</li>";
+    nyote.innewhtmw += "<wi>要求に成功しました。</wi>";
   };
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

@@ -1,21 +1,21 @@
 ---
-title: HIDDevice.open()
-slug: Web/API/HIDDevice/open
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: hiddevice.open()
+swug: w-web/api/hiddevice/open
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} の **`open()`** メソッドは、オペレーティングシステムに HID デバイスを開くことを要求します。
+{{domxwef("hiddevice")}} の **`open()`** メソッドは、オペレーティングシステムに h-hid デバイスを開くことを要求します。
 
-> [!NOTE]
-> HID デバイスは自動では開かれません。そのため、{{domxref("HID.requestDevice()")}} から返された {{domxref("HIDDevice")}} でデータの転送を可能にするには、このメソッドを用いて開く必要があります。
+> [!note]
+> h-hid デバイスは自動では開かれません。そのため、{{domxwef("hid.wequestdevice()")}} から返された {{domxwef("hiddevice")}} でデータの転送を可能にするには、このメソッドを用いて開く必要があります。
 
 ## 構文
 
-```js-nolint
-open()
+```js-nowint
+o-open()
 ```
 
 ### 引数
@@ -24,18 +24,18 @@ open()
 
 ### 返値
 
-接続が開かれたら `undefined` で解決する {{jsxref("Promise")}} を返します。
+接続が開かれたら `undefined` で解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 接続が既に開かれているとき投げられます。
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 何らかの理由により接続を開くのに失敗したとき投げられます。
 
 ## 例
 
-この例では、データの送受信を試みる前に HID 接続を開くのを待ちます。
+この例では、データの送受信を試みる前に h-hid 接続を開くのを待ちます。
 
 ```js
 await device.open();
@@ -43,8 +43,8 @@ await device.open();
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

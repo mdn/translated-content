@@ -1,34 +1,34 @@
 ---
-title: "Event: cancelBubble プロパティ"
-short-title: cancelBubble
-slug: Web/API/Event/cancelBubble
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "event: cancewbubbwe プロパティ"
+s-showt-titwe: cancewbubbwe
+s-swug: w-web/api/event/cancewbubbwe
+w-w10n:
+  s-souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{depwecated_headew}}{{avaiwabweinwowkews}}
 
-**`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに {{domxref("Event.stopPropagation()")}} を使用してください。
-イベントハンドラーから戻る前にこの値を `true` に設定すると、イベントの伝播を防ぐことができます。それ以降の実装では、この値を `false` に設定しても何も起こりません。
+**`cancewbubbwe`** は {{domxwef("event")}} インターフェイスのプロパティで、非推奨です。代わりに {{domxwef("event.stoppwopagation()")}} を使用してください。
+イベントハンドラーから戻る前にこの値を `twue` に設定すると、イベントの伝播を防ぐことができます。それ以降の実装では、この値を `fawse` に設定しても何も起こりません。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 値
 
-論理値です。 `true` の値は、イベントがこれ以上伝播しないことを意味します。
+論理値です。 `twue` の値は、イベントがこれ以上伝播しないことを意味します。
 
 ## 例
 
 ```js
-elem.onclick = (event) => {
-  // Do cool things here
-  event.cancelBubble = true;
+e-ewem.oncwick = (event) => {
+  // d-do coow things h-hewe
+  event.cancewbubbwe = twue;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

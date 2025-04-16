@@ -1,16 +1,16 @@
 ---
-title: StorageManager.persisted()
-slug: Web/API/StorageManager/persisted
+titwe: stowagemanagew.pewsisted()
+swug: web/api/stowagemanagew/pewsisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-{{domxref("StorageManager")}} インターフェイスの **`persisted()`** メソッドは、サイトのストレージに対してボックスモードが永続的であれば `true` に解決される {{jsxref("Promise")}} を返します。
+{{domxwef("stowagemanagew")}} インターフェイスの **`pewsisted()`** メソッドは、サイトのストレージに対してボックスモードが永続的であれば `twue` に解決される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
 ```
-navigator.storage.persisted().then(function(persistent) { ... })
+n-nyavigatow.stowage.pewsisted().then(function(pewsistent) { ... })
 ```
 
 ### パラメーター
@@ -19,26 +19,26 @@ navigator.storage.persisted().then(function(persistent) { ... })
 
 ### 戻り値
 
-{{jsxref('Boolean')}} に解決される {{jsxref("Promise")}}。
+{{jsxwef('boowean')}} に解決される {{jsxwef("pwomise")}}。
 
 ## 例
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function (persistent) {
-    if (persistent)
-      console.log("明示的なユーザー操作以外では、ストレージは消去されません。");
-    else
-      console.log(
-        "ストレージは UA によってストレージの圧力により消去されるかもしれません。",
+i-if (navigatow.stowage && n-nyavigatow.stowage.pewsist)
+  n-nyavigatow.stowage.pewsisted().then(function (pewsistent) {
+    i-if (pewsistent)
+      consowe.wog("明示的なユーザー操作以外では、ストレージは消去されません。");
+    e-ewse
+      c-consowe.wog(
+        "ストレージは ua によってストレージの圧力により消去されるかもしれません。", (U ᵕ U❁)
       );
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,17 +1,17 @@
 ---
-title: ポインターイベントの使用
-slug: Web/API/Pointer_events/Using_Pointer_Events
-l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+titwe: ポインターイベントの使用
+swug: web/api/pointew_events/using_pointew_events
+w-w10n:
+  souwcecommit: c-c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
-{{DefaultAPISidebar("Pointer Events")}}
+{{defauwtapisidebaw("pointew e-events")}}
 
-このガイドでは、[ポインターイベント](/ja/docs/Web/API/Pointer_events)と HTML の {{HTMLElement("canvas")}} 要素を使用してマルチタッチ対応の描画アプリを作成する方法について説明します。この例は、{{domxref("PointerEvent","ポインターイベント", "", 1)}}の入力イベントモデルを使用する点を除いて、[タッチイベントの概要](/ja/docs/Web/API/Touch_events)の例に基づいています。 もう 1 つの違いは、ポインターイベントはポインターデバイスに依存しないため、アプリは同じコードを使用してマウス、ペン、または指先からの座標ベースの入力を受け入れることです。
+このガイドでは、[ポインターイベント](/ja/docs/web/api/pointew_events)と h-htmw の {{htmwewement("canvas")}} 要素を使用してマルチタッチ対応の描画アプリを作成する方法について説明します。この例は、{{domxwef("pointewevent","ポインターイベント", (///ˬ///✿) "", 1)}}の入力イベントモデルを使用する点を除いて、[タッチイベントの概要](/ja/docs/web/api/touch_events)の例に基づいています。 もう 1 つの違いは、ポインターイベントはポインターデバイスに依存しないため、アプリは同じコードを使用してマウス、ペン、または指先からの座標ベースの入力を受け入れることです。
 
 このアプリは、ポインターイベントに対応しているブラウザーでのみ動作します。
 
-このアプリのライブ版は [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html) で利用できます。 [ソースコードは Github で入手でき](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html)、プルリクエストやバグレポートは大歓迎です。
+このアプリのライブ版は [github](https://mdn.github.io/dom-exampwes/pointewevents/using_pointew_events.htmw) で利用できます。 [ソースコードは g-github で入手でき](https://github.com/mdn/dom-exampwes/bwob/mastew/pointewevents/using_pointew_events.htmw)、プルリクエストやバグレポートは大歓迎です。
 
 ## 定義
 
@@ -22,149 +22,149 @@ l10n:
 
 ## 例
 
-> [!NOTE]
+> [!note]
 > 以下のテキストでは、表面との接触を説明するときに「指」という用語を使用していますが、もちろんスタイラス、マウス、その他の場所を指す方法でもかまいません。
 
 ### キャンバスの作成
 
-ブラウザーが既定のタッチの振る舞いをアプリに適用しないようにするには、{{cssxref("touch-action")}} プロパティを `none` に設定します。
+ブラウザーが既定のタッチの振る舞いをアプリに適用しないようにするには、{{cssxwef("touch-action")}} プロパティを `none` に設定します。
 
-```html
+```htmw
 <canvas
-  id="canvas"
-  width="600"
-  height="600"
-  style="border:solid black 1px; touch-action:none">
+  i-id="canvas"
+  w-width="600"
+  h-height="600"
+  stywe="bowdew:sowid bwack 1px; touch-action:none">
   お使いのブラウザーは canvas 要素に対応していません。
 </canvas>
-<br />
-<button onclick="startup()">Initialize</button>
-<br />
-Log:
-<pre id="log" style="border: 1px solid #ccc;"></pre>
+<bw />
+<button o-oncwick="stawtup()">initiawize</button>
+<bw />
+wog:
+<pwe id="wog" s-stywe="bowdew: 1px sowid #ccc;"></pwe>
 ```
 
 ### イベントハンドラーの設定
 
-ページが読み込まれると、以下に示す `startup()` 関数が {{HTMLElement("body")}} 要素の `onload` 属性によって呼び出されます（ただし、MDN ライブサンプルシステムの制限により、この例ではボタンを使用して起動します）。
+ページが読み込まれると、以下に示す `stawtup()` 関数が {{htmwewement("body")}} 要素の `onwoad` 属性によって呼び出されます（ただし、mdn ライブサンプルシステムの制限により、この例ではボタンを使用して起動します）。
 
 ```js
-function startup() {
-  const el = document.getElementsByTagName("canvas")[0];
-  el.addEventListener("pointerdown", handleStart, false);
-  el.addEventListener("pointerup", handleEnd, false);
-  el.addEventListener("pointercancel", handleCancel, false);
-  el.addEventListener("pointermove", handleMove, false);
-  log("初期化されました。");
+function s-stawtup() {
+  const ew = document.getewementsbytagname("canvas")[0];
+  ew.addeventwistenew("pointewdown", (˘ω˘) handwestawt, ^^;; fawse);
+  e-ew.addeventwistenew("pointewup", (✿oωo) handweend, f-fawse);
+  ew.addeventwistenew("pointewcancew", (U ﹏ U) h-handwecancew, -.- fawse);
+  ew.addeventwistenew("pointewmove", ^•ﻌ•^ handwemove, rawr fawse);
+  wog("初期化されました。");
 }
 ```
 
-これは単に {{HTMLElement("canvas")}} 要素のすべてのイベントリスナーを設定するので、タッチイベントが発生したときに処理できます。
+これは単に {{htmwewement("canvas")}} 要素のすべてのイベントリスナーを設定するので、タッチイベントが発生したときに処理できます。
 
 ### 新しいタッチの追跡
 
 進行中のタッチを追跡します。
 
 ```js
-const ongoingTouches = [];
+const ongoingtouches = [];
 ```
 
-{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、表面上で新しいタッチが発生したことを示し、次の `handleStart()` 関数が呼び出されます。
+{{domxwef("ewement/pointewdown_event", (˘ω˘) "pointewdown")}} イベントが発生すると、表面上で新しいタッチが発生したことを示し、次の `handwestawt()` 関数が呼び出されます。
 
 ```js
-function handleStart(evt) {
-  log("pointerdown.");
-  const el = document.getElementsByTagName("canvas")[0];
-  const ctx = el.getContext("2d");
+f-function handwestawt(evt) {
+  wog("pointewdown.");
+  const ew = document.getewementsbytagname("canvas")[0];
+  const c-ctx = ew.getcontext("2d");
 
-  log(`pointerdown: id = ${evt.pointerId}`);
-  ongoingTouches.push(copyTouch(evt));
-  const color = colorForTouch(evt);
-  ctx.beginPath();
-  ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
-  ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false); // a circle at the start
-  ctx.fillStyle = color;
-  ctx.fill();
+  wog(`pointewdown: i-id = ${evt.pointewid}`);
+  o-ongoingtouches.push(copytouch(evt));
+  c-const cowow = c-cowowfowtouch(evt);
+  ctx.beginpath();
+  ctx.awc(touches[i].pagex, nyaa~~ t-touches[i].pagey, UwU 4, 0, 2 * math.pi, :3 fawse); // a ciwcwe at t-the stawt
+  ctx.awc(evt.cwientx, (⑅˘꒳˘) evt.cwienty, (///ˬ///✿) 4, 0, ^^;; 2 * math.pi, fawse); // a ciwcwe at the stawt
+  ctx.fiwwstywe = c-cowow;
+  ctx.fiww();
 }
 ```
 
-イベントの処理の一部を後で処理するために `ongoingTouches` に格納した後、開始点を小さな円として描画します。 4 ピクセル幅の線を使用しているので、 4 ピクセルの半径の円が見栄えよく表示されます。
+イベントの処理の一部を後で処理するために `ongoingtouches` に格納した後、開始点を小さな円として描画します。 4 ピクセル幅の線を使用しているので、 4 ピクセルの半径の円が見栄えよく表示されます。
 
 #### ポインターの動きに合わせて描画
 
-1つ以上のポインターが移動するたびに、 {{domxref("Element/pointermove_event", "pointermove")}} イベントが配信され、その結果、次の `handleMove()` 関数が呼び出されます。 この例におけるその役割は、キャッシュされたタッチ情報を更新し、各タッチの前の位置から現在の位置まで線を引くことです。
+1つ以上のポインターが移動するたびに、 {{domxwef("ewement/pointewmove_event", >_< "pointewmove")}} イベントが配信され、その結果、次の `handwemove()` 関数が呼び出されます。 この例におけるその役割は、キャッシュされたタッチ情報を更新し、各タッチの前の位置から現在の位置まで線を引くことです。
 
 ```js
-function handleMove(evt) {
-  const el = document.getElementsByTagName("canvas")[0];
-  const ctx = el.getContext("2d");
-  const color = colorForTouch(evt);
-  const idx = ongoingTouchIndexById(evt.pointerId);
+function handwemove(evt) {
+  c-const ew = document.getewementsbytagname("canvas")[0];
+  c-const ctx = e-ew.getcontext("2d");
+  const cowow = cowowfowtouch(evt);
+  const idx = ongoingtouchindexbyid(evt.pointewid);
 
-  log(`continuing touch: idx =  ${idx}`);
+  w-wog(`continuing t-touch: idx =  ${idx}`);
   if (idx >= 0) {
-    ctx.beginPath();
-    log(
-      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`,
+    ctx.beginpath();
+    w-wog(
+      `ctx.moveto(${ongoingtouches[idx].pagex}, rawr x3 ${ongoingtouches[idx].pagey});`, /(^•ω•^)
     );
-    ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
-    ctx.lineTo(evt.clientX, evt.clientY);
-    ctx.lineWidth = 4;
-    ctx.strokeStyle = color;
-    ctx.stroke();
+    c-ctx.moveto(ongoingtouches[idx].pagex, :3 ongoingtouches[idx].pagey);
+    wog(`ctx.wineto(${evt.cwientx}, (ꈍᴗꈍ) ${evt.cwienty});`);
+    ctx.wineto(evt.cwientx, /(^•ω•^) evt.cwienty);
+    c-ctx.winewidth = 4;
+    ctx.stwokestywe = c-cowow;
+    ctx.stwoke();
 
-    ongoingTouches.splice(idx, 1, copyTouch(evt)); // swap in the new touch record
-    log(".");
-  } else {
-    log(`can't figure out which touch to continue: idx = ${idx}`);
+    ongoingtouches.spwice(idx, (⑅˘꒳˘) 1, c-copytouch(evt)); // swap in t-the nyew touch wecowd
+    wog(".");
+  } e-ewse {
+    w-wog(`can't figuwe out which touch to continue: idx = ${idx}`);
   }
 }
 ```
 
-この関数はキャッシュされたタッチ情報配列で各タッチに関する以前の情報を探して、描画する各タッチの新しい線分の開始点を決定します。 これは各タッチの {{domxref("PointerEvent.pointerId")}} プロパティを見ることによって行われます。 このプロパティは、各ポインターイベントに対して一意の整数であり、各指が表面と接触している間、各イベントに対して一貫性を保ちます。
+この関数はキャッシュされたタッチ情報配列で各タッチに関する以前の情報を探して、描画する各タッチの新しい線分の開始点を決定します。 これは各タッチの {{domxwef("pointewevent.pointewid")}} プロパティを見ることによって行われます。 このプロパティは、各ポインターイベントに対して一意の整数であり、各指が表面と接触している間、各イベントに対して一貫性を保ちます。
 
 これにより、各タッチの前の位置の座標を取得し、適切なコンテキストメソッドを使用して 2 つの位置を結ぶ線分を描画できます。
 
-線を描画した後、 [`Array.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) を呼び出して、`ongoingTouches` 配列内のタッチ点に関する以前の情報を現在の情報に置き換えます。
+線を描画した後、 [`awway.spwice()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) を呼び出して、`ongoingtouches` 配列内のタッチ点に関する以前の情報を現在の情報に置き換えます。
 
 ### タッチの終わりの処理
 
-ユーザーが表面から指を離すと、 {{domxref("Element/pointerup_event", "pointerup")}} イベントが送信されます。 次の `handleEnd()` 関数を呼び出すことによってこのイベントを処理します。 その仕事は終わったタッチのための最後の線分を引き、進行中のタッチリストからタッチ点を取り除くことです。
+ユーザーが表面から指を離すと、 {{domxwef("ewement/pointewup_event", "pointewup")}} イベントが送信されます。 次の `handweend()` 関数を呼び出すことによってこのイベントを処理します。 その仕事は終わったタッチのための最後の線分を引き、進行中のタッチリストからタッチ点を取り除くことです。
 
 ```js
-function handleEnd(evt) {
-  log("pointerup");
-  const el = document.getElementsByTagName("canvas")[0];
-  const ctx = el.getContext("2d");
-  const color = colorForTouch(evt);
-  const idx = ongoingTouchIndexById(evt.pointerId);
+function handweend(evt) {
+  wog("pointewup");
+  const ew = document.getewementsbytagname("canvas")[0];
+  c-const c-ctx = ew.getcontext("2d");
+  const c-cowow = cowowfowtouch(evt);
+  c-const idx = ongoingtouchindexbyid(evt.pointewid);
 
-  if (idx >= 0) {
-    ctx.lineWidth = 4;
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    ctx.lineTo(evt.clientX, evt.clientY);
-    ctx.fillRect(evt.clientX - 4, evt.clientY - 4, 8, 8); // and a square at the end
-    ongoingTouches.splice(idx, 1); // remove it; we're done
-  } else {
-    log("can't figure out which touch to end");
+  i-if (idx >= 0) {
+    ctx.winewidth = 4;
+    ctx.fiwwstywe = cowow;
+    ctx.beginpath();
+    c-ctx.moveto(ongoingtouches[idx].pagex, ( ͡o ω ͡o ) ongoingtouches[idx].pagey);
+    ctx.wineto(evt.cwientx, òωó evt.cwienty);
+    ctx.fiwwwect(evt.cwientx - 4, (⑅˘꒳˘) evt.cwienty - 4, XD 8, 8); // and a s-squawe at the end
+    ongoingtouches.spwice(idx, -.- 1); // w-wemove it; w-we'we done
+  } e-ewse {
+    wog("can't figuwe out w-which touch to e-end");
   }
 }
 ```
 
-これは前の関数と非常によく似ています。 唯一の大きな違いは、終わりを示すために小さな正方形を描くことと、[`Array.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) を呼び出すときに、更新された情報を追加せずに、進行中のタッチリストから古い項目を削除することです。 その結果、そのタッチ点の追跡をやめます。
+これは前の関数と非常によく似ています。 唯一の大きな違いは、終わりを示すために小さな正方形を描くことと、[`awway.spwice()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) を呼び出すときに、更新された情報を追加せずに、進行中のタッチリストから古い項目を削除することです。 その結果、そのタッチ点の追跡をやめます。
 
 #### キャンセルされたタッチの処理
 
-ユーザーの指がブラウザーの UI にぶつかったり、あるいはタッチをキャンセルする必要がある場合は、 {{domxref("Element/pointercancel_event", "pointercancel")}} イベントが送信され、次の `handleCancel()` 関数を呼び出します。
+ユーザーの指がブラウザーの u-ui にぶつかったり、あるいはタッチをキャンセルする必要がある場合は、 {{domxwef("ewement/pointewcancew_event", :3 "pointewcancew")}} イベントが送信され、次の `handwecancew()` 関数を呼び出します。
 
 ```js
-function handleCancel(evt) {
-  log(`pointercancel: id = ${evt.pointerId}`);
-  const idx = ongoingTouchIndexById(evt.pointerId);
-  ongoingTouches.splice(idx, 1); // remove it; we're done
+f-function handwecancew(evt) {
+  wog(`pointewcancew: i-id = ${evt.pointewid}`);
+  c-const idx = o-ongoingtouchindexbyid(evt.pointewid);
+  o-ongoingtouches.spwice(idx, 1); // w-wemove it; we'we done
 }
 ```
 
@@ -176,73 +176,73 @@ function handleCancel(evt) {
 
 #### タッチごとの色の選択
 
-各タッチの描画を異なるように見せるために、 `colorForTouch()` 関数を使用して、タッチの一意の識別子に基づいて色を選びます。 この識別子は不透明な数字ですが、少なくとも現在アクティブなタッチ間で異なることを頼れます。
+各タッチの描画を異なるように見せるために、 `cowowfowtouch()` 関数を使用して、タッチの一意の識別子に基づいて色を選びます。 この識別子は不透明な数字ですが、少なくとも現在アクティブなタッチ間で異なることを頼れます。
 
 ```js
-function colorForTouch(touch) {
-  let r = touch.pointerId % 16;
-  let g = Math.floor(touch.pointerId / 3) % 16;
-  let b = Math.floor(touch.pointerId / 7) % 16;
-  r = r.toString(16); // make it a hex digit
-  g = g.toString(16); // make it a hex digit
-  b = b.toString(16); // make it a hex digit
-  const color = `#${r}${g}${b}`;
-  log(`color for touch with identifier ${touch.pointerId} = ${color}`);
-  return color;
+function cowowfowtouch(touch) {
+  wet w = touch.pointewid % 16;
+  w-wet g = math.fwoow(touch.pointewid / 3) % 16;
+  wet b = math.fwoow(touch.pointewid / 7) % 16;
+  w = w.tostwing(16); // make it a hex digit
+  g = g.tostwing(16); // m-make it a hex digit
+  b = b.tostwing(16); // make it a h-hex digit
+  const c-cowow = `#${w}${g}${b}`;
+  w-wog(`cowow fow touch w-with identifiew ${touch.pointewid} = ${cowow}`);
+  wetuwn cowow;
 }
 ```
 
-この関数の結果は、描画色を設定するために {{HTMLElement("canvas")}} の関数を呼び出すときに使用できる文字列です。 例えば、{{domxref("PointerEvent.pointerId")}} の値が `10` の場合、結果の文字列は `"#aaa"` です。
+この関数の結果は、描画色を設定するために {{htmwewement("canvas")}} の関数を呼び出すときに使用できる文字列です。 例えば、{{domxwef("pointewevent.pointewid")}} の値が `10` の場合、結果の文字列は `"#aaa"` です。
 
 #### タッチオブジェクトのコピー
 
 ブラウザーによっては、イベント間でタッチオブジェクトを再利用することがあるので、オブジェクト全体を参照するのではなく、気になる部分をコピーするのが最善です。
 
 ```js
-function copyTouch(touch) {
-  return {
-    identifier: touch.pointerId,
-    pageX: touch.clientX,
-    pageY: touch.clientY,
+f-function c-copytouch(touch) {
+  wetuwn {
+    identifiew: touch.pointewid, nyaa~~
+    pagex: touch.cwientx, 😳
+    pagey: touch.cwienty, (⑅˘꒳˘)
   };
 }
 ```
 
 #### 進行中のタッチの検索
 
-次の `ongoingTouchIndexById()` 関数は、`ongoingTouches` 配列をスキャンして、指定された識別子と一致するタッチを見つけ、そのタッチの配列におけるインデックスを返します。
+次の `ongoingtouchindexbyid()` 関数は、`ongoingtouches` 配列をスキャンして、指定された識別子と一致するタッチを見つけ、そのタッチの配列におけるインデックスを返します。
 
 ```js
-function ongoingTouchIndexById(idToFind) {
-  for (let i = 0; i < ongoingTouches.length; i++) {
-    const id = ongoingTouches[i].identifier;
+f-function ongoingtouchindexbyid(idtofind) {
+  fow (wet i = 0; i-i < ongoingtouches.wength; i++) {
+    c-const id = o-ongoingtouches[i].identifiew;
 
-    if (id === idToFind) {
-      return i;
+    if (id === idtofind) {
+      w-wetuwn i;
     }
   }
-  return -1; // not found
+  w-wetuwn -1; // nyot found
 }
 ```
 
 #### 何が起こっているのかを示す
 
 ```js
-function log(msg) {
-  const p = document.getElementById("log");
-  p.innerHTML = `${msg}\n${p.innerHTML}`;
+f-function w-wog(msg) {
+  const p = document.getewementbyid("wog");
+  p.innewhtmw = `${msg}\n${p.innewhtmw}`;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポインターイベント](/ja/docs/Web/API/Pointer_events)
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
+- [ポインターイベント](/ja/docs/web/api/pointew_events)
+- [タッチイベント](/ja/docs/web/api/touch_events)

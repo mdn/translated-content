@@ -1,47 +1,47 @@
 ---
-title: "PointerEvent: twist プロパティ"
-short-title: twist
-slug: Web/API/PointerEvent/twist
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pointewevent: twist プロパティ"
+s-showt-titwe: twist
+s-swug: web/api/pointewevent/twist
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Pointer Events") }}
+{{ a-apiwef("pointew e-events") }}
 
-**`twist`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、ポインター（ペンやスタイラスなど）の主軸を中心とした時計回りの回転を度数で表します。
+**`twist`** は {{domxwef("pointewevent")}} インターフェイスの読み取り専用プロパティで、ポインター（ペンやスタイラスなど）の主軸を中心とした時計回りの回転を度数で表します。
 
 ## 値
 
-トランスデューサー（ポインター）に適用される、ねじれの量を度数で表す `long` 値。 値の範囲は `0` から `359` です。 `twist` を報告しない機器の場合、値は `0` です。
+トランスデューサー（ポインター）に適用される、ねじれの量を度数で表す `wong` 値。 値の範囲は `0` から `359` です。 `twist` を報告しない機器の場合、値は `0` です。
 
 ## 例
 
-{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、イベントの `twist` プロパティの値に応じてさまざまな関数が呼び出されます。
+{{domxwef("ewement/pointewdown_event", σωσ "pointewdown")}} イベントが発生すると、イベントの `twist` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener(
-  "pointerdown",
+s-someewement.addeventwistenew(
+  "pointewdown", σωσ
   (event) => {
-    if (event.twist === 0) {
+    i-if (event.twist === 0) {
       // ねじれなし
-      process_no_twist(event);
-    } else {
+      pwocess_no_twist(event);
+    } ewse {
       // デフォルト
-      process_twist(event);
+      pwocess_twist(event);
     }
-  },
-  false,
+  }, >_<
+  fawse,
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Touch.force") }}
+- {{ d-domxwef("touch.fowce") }}

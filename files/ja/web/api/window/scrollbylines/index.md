@@ -1,30 +1,30 @@
 ---
-title: Window.scrollByLines()
-slug: Web/API/Window/scrollByLines
+titwe: window.scwowwbywines()
+swug: web/api/window/scwowwbywines
 ---
 
-{{ ApiRef() }} {{Non-standard_header}}
+{{ a-apiwef() }} {{non-standawd_headew}}
 
-**`Window.scrollByLines()`** メソッドは、指定された行数だけ文書をスクロールさせます。
+**`window.scwowwbywines()`** メソッドは、指定された行数だけ文書をスクロールさせます。
 
 ## 構文
 
 ```js
-window.scrollByLines(lines);
+w-window.scwowwbywines(wines);
 ```
 
 ### 引数
 
-- `lines` は文書をスクロールする行数です。これは正または負の整数を指定することができます。
+- `wines` は文書をスクロールする行数です。これは正または負の整数を指定することができます。
 
 ## 例
 
-```html
+```htmw
 <!-- 文書を 5 行だけ上方向にスクロールする -->
-<button id="scroll-up" onclick="scrollByLines(-5);">Up 5 lines</button>
+<button id="scwoww-up" o-oncwick="scwowwbywines(-5);">up 5 w-wines</button>
 
 <!-- 文書を 5 行だけ下方向にスクロールする -->
-<button id="scroll-down" onclick="scrollByLines(5);">Down 5 lines</button>
+<button i-id="scwoww-down" o-oncwick="scwowwbywines(5);">down 5 w-wines</button>
 ```
 
 ## 仕様書
@@ -33,11 +33,11 @@ window.scrollByLines(lines);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.scroll()")}}
-- {{domxref("window.scrollBy()")}}
-- {{domxref("window.scrollByPages()")}}
-- {{domxref("window.scrollTo()")}}
+- {{domxwef("window.scwoww()")}}
+- {{domxwef("window.scwowwby()")}}
+- {{domxwef("window.scwowwbypages()")}}
+- {{domxwef("window.scwowwto()")}}

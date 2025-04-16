@@ -1,48 +1,48 @@
 ---
-title: HIDDevice.receiveFeatureReport()
-slug: Web/API/HIDDevice/receiveFeatureReport
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+titwe: hiddevice.weceivefeatuwewepowt()
+swug: w-web/api/hiddevice/weceivefeatuwewepowt
+w-w10n:
+  s-souwcecommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-{{domxref("HIDDevice")}} インターフェイスの **`receiveFeatureReport()`** メソッドは、HID レポートから Feature レポートを受信します。Feature レポートは、HID デバイスとアプリケーションが標準化されていない HID データを交換するための方法です。
+{{domxwef("hiddevice")}} インターフェイスの **`weceivefeatuwewepowt()`** メソッドは、hid レポートから f-featuwe レポートを受信します。featuwe レポートは、hid デバイスとアプリケーションが標準化されていない h-hid データを交換するための方法です。
 
-各レポート形式用にデバイスがサポートしている `reportId` は、{{domxref("HIDDevice.collections")}} から取得できます。
+各レポート形式用にデバイスがサポートしている `wepowtid` は、{{domxwef("hiddevice.cowwections")}} から取得できます。
 
 ## 構文
 
-```js-nolint
-receiveFeatureReport(reportId)
+```js-nowint
+w-weceivefeatuwewepowt(wepowtid)
 ```
 
 ### 引数
 
-- `reportId`
-  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+- `wepowtid`
+  - : 8 ビットのレポート i-id です。hid デバイスがレポート id を使わない場合、`0` を送信します。
 
 ### 返値
 
-Feature レポートが入った {{jsxref("DataView")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+featuwe レポートが入った {{jsxwef("dataview")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 何らかの理由でレポートの受信に失敗したとき投げられます。
 
 ## 例
 
-この例では、`reportId` の値 `1` を用いてデバイスからレポートを受信します。
+この例では、`wepowtid` の値 `1` を用いてデバイスからレポートを受信します。
 
 ```js
-const dataView = await device.receiveFeatureReport(1);
+const dataview = await d-device.weceivefeatuwewepowt(1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

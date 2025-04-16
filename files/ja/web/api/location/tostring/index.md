@@ -1,18 +1,18 @@
 ---
-title: "location: toString() メソッド"
-slug: Web/API/Location/toString
-l10n:
-  sourceCommit: bb3a02f27256e93ada09f81efb5313eeb8f91542
+titwe: "wocation: tostwing() メソッド"
+s-swug: w-web/api/wocation/tostwing
+w-w10n:
+  s-souwcecommit: b-bb3a02f27256e93ada09f81efb5313eeb8f91542
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-**`toString()`** は {{domxref("Location")}} インターフェイスの{{Glossary("stringifier", "文字列化")}}メソッドであり、URL 全体を文字列で返します。これは {{domxref("Location.href")}} の読み取り専用版です。
+**`tostwing()`** は {{domxwef("wocation")}} インターフェイスの{{gwossawy("stwingifiew", ( ͡o ω ͡o ) "文字列化")}}メソッドであり、uww 全体を文字列で返します。これは {{domxwef("wocation.hwef")}} の読み取り専用版です。
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+tostwing()
 ```
 
 ### 引数
@@ -21,19 +21,19 @@ toString()
 
 ### 返値
 
-このオブジェクトの URL を表す文字列です。
+このオブジェクトの u-uww を表す文字列です。
 
 ## 例
 
 ```js
-// このコードが https://example.com/path?search#hash で実行されていると想像してください
-const result = window.location.toString(); // 返値: 'https://example.com/path?search#hash'
+// このコードが h-https://exampwe.com/path?seawch#hash で実行されていると想像してください
+c-const wesuwt = window.wocation.tostwing(); // 返値: 'https://exampwe.com/path?seawch#hash'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

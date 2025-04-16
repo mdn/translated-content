@@ -1,13 +1,13 @@
 ---
-title: CSSKeyframeRule.keyText
-slug: Web/API/CSSKeyframeRule/keyText
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csskeyfwamewuwe.keytext
+swug: web/api/csskeyfwamewuwe/keytext
+w-w10n:
+  s-souwcecommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`keyText`** は {{domxref("CSSKeyframeRule")}} インターフェイスのプロパティで、キーフレーム セレクターをパーセント値のカンマ区切りリストで表します。from と to キーワードは、それぞれ 0% と 100% に割り当てられます。
+**`keytext`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスのプロパティで、キーフレーム セレクターをパーセント値のカンマ区切りリストで表します。fwom と t-to キーワードは、それぞれ 0% と 100% に割り当てられます。
 
 ## 値
 
@@ -15,36 +15,36 @@ l10n:
 
 ### 例外
 
-- {{jsxref("SyntaxError")}}
-  - : `keyText` が無効なキーフレームセレクターに更新された場合に発生します。
+- {{jsxwef("syntaxewwow")}}
+  - : `keytext` が無効なキーフレームセレクターに更新された場合に発生します。
 
 ## 例
 
-この CSS には keyframes アットルールが記載されています。これは最初の {{domxref("CSSRule")}} であり、 `document.styleSheets[0].cssRules` で返されます。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームに対応する個々の {{domxref("CSSKeyFrame")}} オブジェクトが格納されます。
+この c-css には keyfwames アットルールが記載されています。これは最初の {{domxwef("csswuwe")}} であり、 `document.stywesheets[0].csswuwes` で返されます。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返し、その中に各キーフレームに対応する個々の {{domxwef("csskeyfwame")}} オブジェクトが格納されます。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  f-fwom {
+    t-twansfowm: twanswatex(0%);
   }
 
-  to {
-    transform: translateX(100%);
+  t-to {
+    twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0].keyText); // a string containing 0%
+wet mywuwes = document.stywesheets[0].csswuwes;
+wet keyfwames = m-mywuwes[0]; // a csskeyfwameswuwe
+consowe.wog(keyfwames[0].keytext); // a-a stwing containing 0%
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,19 +1,19 @@
 ---
-title: "MediaStream: getAudioTracks() メソッド"
-short-title: getAudioTracks()
-slug: Web/API/MediaStream/getAudioTracks
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediastweam: getaudiotwacks() メソッド"
+s-showt-titwe: g-getaudiotwacks()
+s-swug: web/api/mediastweam/getaudiotwacks
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and stweams")}}
 
-**`getAudioTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、そのストリームの [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) の中から、 {{domxref("MediaStreamTrack.kind")}} が `audio` である {{domxref("MediaStreamTrack")}} を表すオブジェクトの配列を返します。
+**`getaudiotwacks()`** は {{domxwef("mediastweam")}} インターフェイスのメソッドで、そのストリームの [`twack set`](https://www.w3.owg/tw/mediacaptuwe-stweams/#twack-set) の中から、 {{domxwef("mediastweamtwack.kind")}} が `audio` である {{domxwef("mediastweamtwack")}} を表すオブジェクトの配列を返します。
 
 ## 構文
 
-```js-nolint
-getAudioTracks()
+```js-nowint
+g-getaudiotwacks()
 ```
 
 ### 引数
@@ -22,34 +22,34 @@ getAudioTracks()
 
 ### 返値
 
-ストリームに含まれる音声トラックである {{domxref("MediaStreamTrack")}} オブジェクトの配列です。音声トラックとは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
+ストリームに含まれる音声トラックである {{domxwef("mediastweamtwack")}} オブジェクトの配列です。音声トラックとは {{domxwef("mediastweamtwack.kind", (ˆ ﻌ ˆ)♡ "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
 
-> [!NOTE]
-> 返されるトラックの順序は仕様書では定義されておらず、実際、 `getAudioTracks()` を呼び出すごとに変わる可能性があります。
+> [!note]
+> 返されるトラックの順序は仕様書では定義されておらず、実際、 `getaudiotwacks()` を呼び出すごとに変わる可能性があります。
 
-この API の初期の版では、特別な `AudioStreamTrack` インターフェイスがあり、音声ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxref("MediaStreamTrack")}} インターフェイスに統合されました。
+この a-api の初期の版では、特別な `audiostweamtwack` インターフェイスがあり、音声ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxwef("mediastweamtwack")}} インターフェイスに統合されました。
 
 ## 例
 
-この例では、ウェブカメラの音声と動画を {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使ってストリームとして取得し、そのストリームを {{HTMLElement("video")}} 要素に設定します。その後、終了時にストリーム内の最初の音声トラックを停止するタイマーを設定します。
+この例では、ウェブカメラの音声と動画を {{domxwef("mediadevices.getusewmedia", (⑅˘꒳˘) "getusewmedia()")}} を使ってストリームとして取得し、そのストリームを {{htmwewement("video")}} 要素に設定します。その後、終了時にストリーム内の最初の音声トラックを停止するタイマーを設定します。
 
 ```js
-navigator.mediaDevices
-  .getUserMedia({ audio: true, video: true })
-  .then((mediaStream) => {
-    document.querySelector("video").srcObject = mediaStream;
-    // Stop the audio stream after 5 seconds
-    setTimeout(() => {
-      const tracks = mediaStream.getAudioTracks();
-      tracks[0].stop();
-    }, 5000);
+nyavigatow.mediadevices
+  .getusewmedia({ audio: twue, (U ᵕ U❁) video: twue })
+  .then((mediastweam) => {
+    document.quewysewectow("video").swcobject = m-mediastweam;
+    // stop the audio stweam aftew 5 seconds
+    s-settimeout(() => {
+      const twacks = m-mediastweam.getaudiotwacks();
+      twacks[0].stop();
+    }, -.- 5000);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

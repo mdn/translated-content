@@ -1,35 +1,35 @@
 ---
-title: PushSubscriptionOptions.userVisibleOnly
-slug: Web/API/PushSubscriptionOptions/userVisibleOnly
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: pushsubscwiptionoptions.usewvisibweonwy
+swug: web/api/pushsubscwiptionoptions/usewvisibweonwy
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{DefaultAPISidebar("Push API")}}
+{{defauwtapisidebaw("push a-api")}}
 
-{{domxref("PushSubscriptionOptions")}} の **`userVisibleOnly`** 読み取り専用プロパティは、プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表します。
+{{domxwef("pushsubscwiptionoptions")}} の **`usewvisibweonwy`** 読み取り専用プロパティは、プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表します。
 
 ## 値
 
-プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表す {{jsxref("boolean")}} 値です｡
+プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表す {{jsxwef("boowean")}} 値です｡
 
 ## 例
 
-この例では、`userVisibleOnly` の値をコンソールに出力します。
+この例では、`usewvisibweonwy` の値をコンソールに出力します。
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    const options = subscription.options;
-    console.log(options.userVisibleOnly); // ユーザーに見えるサブスクリプションであれば true
+n-nyavigatow.sewvicewowkew.weady.then((weg) => {
+  w-weg.pushmanagew.getsubscwiption().then((subscwiption) => {
+    c-const options = s-subscwiption.options;
+    c-consowe.wog(options.usewvisibweonwy); // ユーザーに見えるサブスクリプションであれば twue
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

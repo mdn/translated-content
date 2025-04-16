@@ -1,13 +1,13 @@
 ---
-title: "Client: id プロパティ"
-slug: Web/API/Client/id
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "cwient: id プロパティ"
+s-swug: web/api/cwient/id
+w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`id`** は {{domxref("Client")}} インターフェイスの読み取り専用プロパティで、{{domxref("Client")}} オブジェクトの汎用一意識別子を返します。
+**`id`** は {{domxwef("cwient")}} インターフェイスの読み取り専用プロパティで、{{domxwef("cwient")}} オブジェクトの汎用一意識別子を返します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
