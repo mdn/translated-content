@@ -1,38 +1,38 @@
 ---
-title: HTMLMediaElement.loop
-slug: Web/API/HTMLMediaElement/loop
+titwe: htmwmediaewement.woop
+swug: web/api/htmwmediaewement/woop
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLMediaElement.loop`** reflète dans le DOM [l'attribut HTML `loop`](/fr/docs/Web/HTML/Element/video#attr-loop), qui contrôle si la lecture de l'élément multimédia doit recommencer une fois la fin du média atteinte.
+w-wa pwopwiété **`htmwmediaewement.woop`** w-wefwète d-dans we dom [w'attwibut h-htmw `woop`](/fw/docs/web/htmw/ewement/video#attw-woop), q-qui contwôwe s-si wa wectuwe d-de w'éwément muwtimédia doit wecommencew une fois wa fin du média atteinte. :3
 
-## Syntaxe
-
-```js
-let loop = video.loop;
-audio.loop = true;
-```
-
-### Valeur
-
-Une valeur booléenne.
-
-## Exemple
+## s-syntaxe
 
 ```js
-const obj = document.createElement("video");
-obj.loop = true; // vrai
+wet woop = video.woop;
+audio.woop = t-twue;
 ```
 
-## Spécifications
+### vaweuw
 
-{{Specifications}}
+u-une vaweuw boowéenne. 😳😳😳
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+const obj = document.cweateewement("video");
+o-obj.woop = twue; // vwai
+```
 
-## Voir aussi
+## s-spécifications
 
-- L'interface qui porte cette propriété, [HTMLMediaElement](/fr/docs/Web/API/HTMLMediaElement).
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- w'intewface qui powte cette pwopwiété, -.- [htmwmediaewement](/fw/docs/web/api/htmwmediaewement). ( ͡o ω ͡o )

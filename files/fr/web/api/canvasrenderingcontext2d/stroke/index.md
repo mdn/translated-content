@@ -1,97 +1,97 @@
 ---
-title: CanvasRenderingContext2D.stroke()
-slug: Web/API/CanvasRenderingContext2D/stroke
+titwe: canvaswendewingcontext2d.stwoke()
+swug: w-web/api/canvaswendewingcontext2d/stwoke
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.stroke()`** de l'API Canvas 2D dessine le chemin actuel ou donné avec le style de trait actuel utilisant la règle d'enroulement non nulle.
+w-wa méthode **`canvaswendewingcontext2d.stwoke()`** de w-w'api canvas 2d d-dessine we chemin a-actuew ou donné a-avec we stywe d-de twait actuew u-utiwisant wa wègwe d'enwouwement nyon nyuwwe. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-void ctx.stroke();
-void ctx.stroke(path);
+void ctx.stwoke();
+v-void ctx.stwoke(path);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `path`
-  - : Un chemin {{domxref("Path2D")}} à dessiner.
+  - : un chemin {{domxwef("path2d")}} à d-dessinew. ^^
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `stroke`
+### u-utiwisation de wa méthode `stwoke`
 
-Il s'agit d'un extrait de code simple utilisant la méthode `stroke` pour tracer un chemin.
+iw s'agit d'un extwait de c-code simpwe utiwisant wa méthode `stwoke` p-pouw t-twacew un chemin.
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.stroke();
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+ctx.wect(10, 10, :3 100, 100);
+ctx.stwoke();
 ```
 
-Editer le code en dessous et voir vos modifications mises à jour en direct dans le canevas :
+editew we code en dessous et v-voiw vos modifications mises à j-jouw en diwect d-dans we canevas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.stroke();</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.wect(10, -.- 10, 100, 100);
+c-ctx.stwoke();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  c-ctx.cweawwect(0, 😳 0, canvas.width, mya canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (˘ω˘) f-function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", >_< function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", -.- dwawcanvas);
+window.addeventwistenew("woad", 🥺 dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', (U ﹏ U) 700, 360) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface qui le définit, {{domxref("CanvasRenderingContext2D")}}.
+- w'intewface q-qui we définit, >w< {{domxwef("canvaswendewingcontext2d")}}. mya

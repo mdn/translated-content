@@ -1,37 +1,37 @@
 ---
-title: SharedWorker.port
-slug: Web/API/SharedWorker/port
-l10n:
-  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
+titwe: shawedwowkew.powt
+swug: w-web/api/shawedwowkew/powt
+w-w10n:
+  s-souwcecommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-La propriété **`port`** de l'interface [`SharedWorker`](/fr/docs/Web/API/SharedWorker) retourne un objet [`MessagePort`](/fr/docs/Web/API/MessagePort) utilisé pour contrôler et communiquer avec le <i lang="en">worker</i> partagé.
+wa p-pwopwiété **`powt`** d-de w'intewface [`shawedwowkew`](/fw/docs/web/api/shawedwowkew) w-wetouwne un objet [`messagepowt`](/fw/docs/web/api/messagepowt) utiwisé pouw contwôwew et communiquew a-avec we <i wang="en">wowkew</i> pawtagé. (✿oωo)
 
-### Valeur
+### vaweuw
 
-Un objet [`MessagePort`](/fr/docs/Web/API/MessagePort).
+un objet [`messagepowt`](/fw/docs/web/api/messagepowt). (ˆ ﻌ ˆ)♡
 
-## Exemple
+## e-exempwe
 
-L'exemple de code suivant montre la création d'un objet `SharedWorker` à l'aide du constructeur [`SharedWorker()`](/fr/docs/Web/API/SharedWorker/SharedWorker). Plusieurs scripts peuvent accéder au <i lang="en">worker</i> avec l'objet [`MessagePort`](/fr/docs/Web/API/MessagePort) accessible grâce à la propriété `SharedWorker.port`. Le port est ouvert avec la méthode `start()`.
+w'exempwe de code suivant m-montwe wa cwéation d'un objet `shawedwowkew` à w'aide du constwucteuw [`shawedwowkew()`](/fw/docs/web/api/shawedwowkew/shawedwowkew). (˘ω˘) p-pwusieuws scwipts p-peuvent accédew a-au <i wang="en">wowkew</i> avec w'objet [`messagepowt`](/fw/docs/web/api/messagepowt) accessibwe gwâce à wa pwopwiété `shawedwowkew.powt`. (⑅˘꒳˘) w-we powt est ouvewt avec wa méthode `stawt()`. (///ˬ///✿)
 
 ```js
-const myWorker = new SharedWorker("worker.js");
-myWorker.port.start();
+const mywowkew = nyew shawedwowkew("wowkew.js");
+mywowkew.powt.stawt();
 ```
 
-Pour un exemple complet, voir [un exemple simple de <i lang="en">worker</i> partagé](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([exécuter le <i lang="en">worker</i> correspondant](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).
+p-pouw un exempwe compwet, 😳😳😳 voiw [un e-exempwe simpwe d-de <i wang="en">wowkew</i> pawtagé](https://github.com/mdn/dom-exampwes/twee/mastew/web-wowkews/simpwe-shawed-wowkew) ([exékawaii~w w-we <i w-wang="en">wowkew</i> cowwespondant](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-shawed-wowkew/)). 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`SharedWorker`](/fr/docs/Web/API/SharedWorker)
+- [`shawedwowkew`](/fw/docs/web/api/shawedwowkew)

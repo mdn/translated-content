@@ -1,63 +1,63 @@
 ---
-title: "Element : méthode removeAttributeNode()"
-slug: Web/API/Element/removeAttributeNode
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode wemoveattwibutenode()"
+s-swug: web/api/ewement/wemoveattwibutenode
+w10n:
+  s-souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`removeAttributeNode()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime le nœud [`Attr`](/fr/docs/Web/API/Attr) indiqué de l'élément.
+w-wa méthode **`wemoveattwibutenode()`**, 😳😳😳 wattachée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), o.O s-suppwime we nyœud [`attw`](/fw/docs/web/api/attw) i-indiqué de w'éwément. ( ͡o ω ͡o )
 
-Si vous n'avez pas besoin d'inspecter le nœud d'attribut avant de la supprimer, vous pouvez utiliser la méthode [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute) à la place.
+s-si v-vous ny'avez pas besoin d'inspectew we nyœud d'attwibut avant de wa suppwimew, v-vous pouvez utiwisew wa méthode [`ewement.wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute) à wa pwace. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-removeAttributeNode(attributeNode)
+```js-nowint
+wemoveattwibutenode(attwibutenode)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `attributeNode`
-  - : Le nœud `Attr` à supprimer de l'élément
+- `attwibutenode`
+  - : we nyœud `attw` à suppwimew de w'éwément
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le nœud `Attr` qui a été supprimé.
+we nyœud `attw` q-qui a été s-suppwimé. (///ˬ///✿)
 
-### Exceptions
+### exceptions
 
-- `NotFoundError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Levée lorsque la liste d'attribut de l'élément ne contient pas le nœud d'attribut recherché.
+- `notfoundewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : wevée wowsque wa wiste d'attwibut de w'éwément n-nye contient pas we nyœud d'attwibut wechewché. >w<
 
-## Exemples
+## exempwes
 
 ```js
-// Si on a <div id="top" disabled/>
-const d = document.getElementById("top");
-const d_disabled = d.getAttributeNode("disabled");
-d.removeAttributeNode(d_disabled);
-// disabled est désormais retiré : <div id="top" />
+// si on a <div id="top" d-disabwed/>
+const d = document.getewementbyid("top");
+c-const d-d_disabwed = d.getattwibutenode("disabwed");
+d.wemoveattwibutenode(d_disabwed);
+// d-disabwed est d-désowmais wetiwé : <div id="top" />
 ```
 
-## Notes
+## nyotes
 
-Si l'attribut enlevé a une valeur par défaut, celle-ci remplace immédiatement l'ancienne. Lorsque c'est possible, l'attribut de remplacement conserve la même URI d'espace de noms et le même nom local, ainsi que le préfixe original.
+si w'attwibut e-enwevé a une vaweuw paw défaut, rawr cewwe-ci w-wempwace immédiatement w'ancienne. mya wowsque c'est possibwe, ^^ w'attwibut de wempwacement consewve w-wa même uwi d'espace de nyoms e-et we même nyom w-wocaw, 😳😳😳 ainsi que w-we pwéfixe owiginaw. mya
 
-Il n'existe pas de méthode `removeAttributeNodeNS()`, car `removeAttributeNode()` permet de supprimer des attributs, qu'ils appartiennent ou non à des espaces de noms.
+iw ny'existe pas de méthode `wemoveattwibutenodens()`, 😳 caw `wemoveattwibutenode()` p-pewmet d-de suppwimew des attwibuts, -.- q-qu'iws appawtiennent o-ou nyon à des espaces de nyoms. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Document.removeAttribute()`](/fr/docs/Web/API/Document/removeAttribute)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- [`document.wemoveattwibute()`](/fw/docs/web/api/document/wemoveattwibute)
+- [`document.cweateattwibute()`](/fw/docs/web/api/document/cweateattwibute)
+- [`ewement.getattwibutenode()`](/fw/docs/web/api/ewement/getattwibutenode)
+- [`ewement.setattwibutenode()`](/fw/docs/web/api/ewement/setattwibutenode)

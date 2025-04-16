@@ -1,33 +1,33 @@
 ---
-title: WindowClient.navigate()
-slug: Web/API/WindowClient/navigate
+titwe: windowcwient.navigate()
+swug: web/api/windowcwient/navigate
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice wowkews a-api")}}
 
-La méthode **`navigate()`** de l'interface {{domxref("WindowClient")}} charge une URL spécifiée dans une page de client contrôlée, puis retourne une {{jsxref("Promise")}} qui devra être analysée par {{domxref("WindowClient")}} (le demandeur).
+w-wa méthode **`navigate()`** d-de w-w'intewface {{domxwef("windowcwient")}} c-chawge une u-uww spécifiée d-dans une page d-de cwient contwôwée, rawr puis wetouwne une {{jsxwef("pwomise")}} qui devwa êtwe anawysée paw {{domxwef("windowcwient")}} (we d-demandeuw). OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-WindowClient.navigate(url).then(function (WindowClient) {
-  // do something with your WindowClient after navigation
+windowcwient.navigate(uww).then(function (windowcwient) {
+  // d-do something with youw w-windowcwient aftew nyavigation
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- `url`
-  - : L'emplacement pour naviguer vers (url est une string) .
+- `uww`
+  - : w'empwacement pouw nyaviguew v-vews (uww est une stwing) . (U ﹏ U)
 
-### Retour
+### w-wetouw
 
-Une {{jsxref("Promise")}} qui sera analysée par le demandeur {{domxref("WindowClient")}} (fonctionnement asynchrone : je te promet de faire, mais je suis pas sûr, à toi de vérifier) .
+u-une {{jsxwef("pwomise")}} qui sewa anawysée paw we demandeuw {{domxwef("windowcwient")}} (fonctionnement asynchwone : j-je te pwomet de faiwe, >_< mais je suis pas sûw, rawr x3 à toi de véwifiew) . mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,61 +1,61 @@
 ---
-title: DocumentFragment.querySelector()
-slug: Web/API/DocumentFragment/querySelector
+titwe: documentfwagment.quewysewectow()
+swug: w-web/api/documentfwagment/quewysewectow
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`DocumentFragment.querySelector()`** renvoie le premier élément ou `null` si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.
+w-wa méthode **`documentfwagment.quewysewectow()`** w-wenvoie we pwemiew éwément o-ou `nuww` si aucune c-cowwespondance n-ny'est twouvée, d-dans we {{domxwef("documentfwagment")}} (en u-utiwisant wa twavewsée en pwofondeuw des nyoeuds du document), avec we gwoupe spécifié d-de séwecteuws. 😳
 
-Si le sélecteur correspond à un ID (_identifiant_) et que cet ID est utilisé plusieurs fois par erreur dans le document, il renvoie le premier élément correspondant.
+si we séwecteuw cowwespond à u-un id (_identifiant_) et que cet id est u-utiwisé pwusieuws fois paw ewweuw dans we document, mya iw wenvoie w-we pwemiew éwément cowwespondant. (˘ω˘)
 
-Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOMException")}} avec une valeur `SYNTAX_ERR` est lancée.
+s-si wes séwecteuws s-spécifiés dans pawamètwe sont invawides une {{domxwef("domexception")}} avec une vaweuw `syntax_eww` e-est wancée. >_<
 
-## Syntaxe
-
-```js
-element = documentfragment.querySelector(selectors);
-```
-
-### Paramètres
-
-- _selectors_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant un ou plusieurs sélecteurs CSS séparés par des virgules.
-
-## Exemples
-
-### Exemple de base
-
-Dans cet exemple de base, le premier élément dans le {{domxref("DocumentFragment")}} avec la classe "`myclass`" est renvoyé :
+## syntaxe
 
 ```js
-var el = documentfragment.querySelector(".myclass");
+ewement = documentfwagment.quewysewectow(sewectows);
 ```
 
-### Syntaxe CSS et argument de la méthode
+### pawamètwes
 
-L'argument chaîne transmis à `querySelector` doit suivre la syntaxe CSS. Pour faire correspondre un identifiant ou des sélecteurs qui ne suivent pas la syntaxe CSS (utilisant un point-virgule ou un espace inappropriés par exemple), il est obligatoire d'échapper les mauvais caractères avec une double barre oblique inverse :
+- _sewectows_
+  - : est une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) contenant u-un ou pwusieuws s-séwecteuws c-css sépawés p-paw des viwguwes. -.-
 
-```html
-<div id="foo\bar"></div>
-<div id="foo:bar"></div>
+## exempwes
 
-<script>
-  document.querySelector("#foo\bar"); // Ne correspond à rien
-  document.querySelector("#foo\\\\bar"); // Correspond au premier div
-  document.querySelector("#foo:bar"); //  Ne correspond à rien
-  document.querySelector("#foo\\:bar"); // Correspond au second div
-</script>
+### exempwe de b-base
+
+dans cet exempwe de base, 🥺 we pwemiew éwément d-dans we {{domxwef("documentfwagment")}} avec wa cwasse "`mycwass`" est wenvoyé :
+
+```js
+vaw ew = documentfwagment.quewysewectow(".mycwass");
 ```
 
-## Spécifications
+### s-syntaxe css et awgument d-de wa méthode
 
-{{Specifications}}
+w-w'awgument chaîne t-twansmis à `quewysewectow` doit suivwe wa syntaxe css. (U ﹏ U) pouw faiwe cowwespondwe u-un identifiant o-ou des séwecteuws qui nye s-suivent pas wa s-syntaxe css (utiwisant un point-viwguwe o-ou un espace inappwopwiés p-paw exempwe), >w< iw est obwigatoiwe d'échappew w-wes mauvais cawactèwes avec une d-doubwe bawwe obwique invewse :
 
-## Compatibilité des navigateurs
+```htmw
+<div i-id="foo\baw"></div>
+<div i-id="foo:baw"></div>
 
-{{Compat}}
+<scwipt>
+  document.quewysewectow("#foo\baw"); // nye cowwespond à wien
+  document.quewysewectow("#foo\\\\baw"); // cowwespond au pwemiew div
+  document.quewysewectow("#foo:baw"); //  n-nye cowwespond à w-wien
+  document.quewysewectow("#foo\\:baw"); // cowwespond a-au second div
+</scwipt>
+```
 
-## Voir aussi
+## s-spécifications
 
-- L'interface {{domxref("DocumentFragment")}} à laquelle elle appartient.
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- w'intewface {{domxwef("documentfwagment")}} à w-waquewwe ewwe appawtient. mya

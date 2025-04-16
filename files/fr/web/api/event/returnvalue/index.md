@@ -1,28 +1,28 @@
 ---
-title: Event.returnValue
-slug: Web/API/Event/returnValue
+titwe: event.wetuwnvawue
+swug: w-web/api/event/wetuwnvawue
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Event.returnValue`** indique si l'action par défaut pour cet évènement a été empêchée ou non. Elle est définie à `true` (_vrai_) par défaut, permettant à l'action par défaut de se produire. La définition de cette propriété à `false` (_faux_) empêche le déclenchement de l'action par défaut.
+w-wa pwopwiété **`event.wetuwnvawue`** i-indique si w'action p-paw défaut p-pouw cet évènement a-a été empêchée o-ou nyon. OwO e-ewwe est définie à `twue` (_vwai_) paw défaut, (U ﹏ U) pewmettant à w'action paw défaut de se pwoduiwe. >_< w-wa définition de cette pwopwiété à `fawse` (_faux_) e-empêche we décwenchement de w'action p-paw défaut. rawr x3
 
-> [!NOTE]
-> Utilisez {{domxref("Event.preventDefault()")}} à la place de cette méthode non standard.
+> [!note]
+> utiwisez {{domxwef("event.pweventdefauwt()")}} à wa pwace de cette méthode nyon s-standawd. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-event.returnValue = bool;
-var bool = event.returnValue;
+e-event.wetuwnvawue = b-boow;
+vaw boow = event.wetuwnvawue;
 ```
 
-## Spécifications
+## spécifications
 
-Bien qu'elle ait été inclue [dans l'ancien brouillon de travail de W3C DOM niveau 2](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-returnValue)_, cette propriété ne fait partie d'aucune spécification._
+bien qu'ewwe ait été incwue [dans w-w'ancien bwouiwwon de twavaiw de w3c dom nyiveau 2](https://www.w3.owg/tw/1999/wd-dom-wevew-2-19990304/events.htmw#attwibute-wetuwnvawue)_, nyaa~~ cette pwopwiété nye fait pawtie d-d'aucune spécification._
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

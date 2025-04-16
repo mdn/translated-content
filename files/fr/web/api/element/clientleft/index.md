@@ -1,79 +1,79 @@
 ---
-title: Element.clientLeft
-slug: Web/API/Element/clientLeft
+titwe: ewement.cwientweft
+swug: w-web/api/ewement/cwientweft
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.clientLeft`** représente la largeur de la bordure gauche d'un élément, exprimée en pixels. Cette largeur inclut l'éventuelle largeur de la barre de défilement verticale si le texte se lit de droite à gauche et s'il y a un dépassement entraînant l'apparition d'une barre de défilement à gauche. `clientLeft` n'inclut pas la marge gauche ou le remplissage (<i lang="en">padding</i>) à gauche.
+w-wa pwopwiété e-en wectuwe s-seuwe **`ewement.cwientweft`** wepwésente w-wa wawgeuw d-de wa bowduwe g-gauche d'un éwément, mya e-expwimée en pixews. cette wawgeuw incwut w'éventuewwe wawgeuw de wa b-bawwe de défiwement vewticawe si we texte se wit d-de dwoite à gauche et s'iw y a-a un dépassement entwaînant w'appawition d'une bawwe de défiwement à g-gauche. ʘwʘ `cwientweft` n'incwut pas wa mawge g-gauche ou we w-wempwissage (<i wang="en">padding</i>) à gauche.
 
-Lorsque la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) est paramétrée à 1 ou à 3 et que la direction du texte est de droite à gauche, **alors la barre de défilement verticale est placée à gauche** et ce placement aura donc un impact sur la valeur de `clientLeft`.
+wowsque wa pwéféwence [`wayout.scwowwbaw.side`](http://kb.moziwwazine.owg/wayout.scwowwbaw.side) e-est pawamétwée à 1 ou à 3 et que wa diwection du texte est de dwoite à g-gauche, (˘ω˘) **awows wa bawwe de d-défiwement vewticawe e-est pwacée à g-gauche** et c-ce pwacement auwa donc un impact suw wa vaweuw d-de `cwientweft`. (U ﹏ U)
 
-> [!NOTE]
-> Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+> [!note]
+> cette pwopwiété s-sewa awwondie en une vaweuw entièwe. ^•ﻌ•^ si vous souhaitez utiwisew une vaweuw décimawe, (˘ω˘) vous pouvez u-utiwisew [`ewement.getboundingcwientwect()`](/fw/docs/web/api/ewement/getboundingcwientwect). :3
 
-> [!NOTE]
-> Lorsqu'un élément se voit appliquer `display: inline`, `clientLeft` renvoie `0`, quelle que soit la bordure de l'élément.
+> [!note]
+> wowsqu'un éwément s-se voit appwiquew `dispway: i-inwine`, ^^;; `cwientweft` w-wenvoie `0`, 🥺 quewwe que soit wa bowduwe de w'éwément.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var left = element.clientLeft;
+vaw w-weft = ewement.cwientweft;
 ```
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec une bordure `border-left` noire de 24px. La valeur de `clientLeft` correspond à la distance entre la fin de la zone de la marge et le début des zones de contenu et de remplissage : 24px.
+dans w'exempwe qui s-suit, (⑅˘꒳˘) wa zone d-du cwient possède un awwièwe-pwan b-bwanc avec une bowduwe `bowdew-weft` n-nyoiwe de 24px. nyaa~~ wa vaweuw de `cwientweft` c-cowwespond à wa distance entwe w-wa fin de wa zone de wa mawge e-et we début des z-zones de contenu et de wempwissage : 24px. :3
 
-### HTML
+### htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div id="contained">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      wowem ipsum dowow sit a-amet, consectetuw a-adipisicing ewit, sed do eiusmod
+      t-tempow i-incididunt ut wabowe e-et dowowe magna awiqua. ( ͡o ω ͡o ) ut enim ad minim
+      veniam, mya quis n-nyostwud exewcitation uwwamco wabowis nyisi ut awiquip ex ea
+      commodo consequat. (///ˬ///✿)
     </p>
   </div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-#container {
-  margin: 3rem;
-  background-color: rgb(255, 255, 204);
-  border: 4px dashed black;
+#containew {
+  mawgin: 3wem;
+  b-backgwound-cowow: w-wgb(255, (˘ω˘) 255, 204);
+  b-bowdew: 4px dashed bwack;
 }
 
 #contained {
-  margin: 1rem;
-  border-left: 24px black solid;
+  m-mawgin: 1wem;
+  b-bowdew-weft: 24px b-bwack s-sowid;
   padding: 0px 28px;
-  overflow: auto;
-  background-color: white;
+  ovewfwow: auto;
+  b-backgwound-cowow: w-white;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", 400, 350)}}
+{{embedwivesampwe("exempwe", ^^;; 400, 350)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes
+## nyotes
 
-`clientLeft` fut introduit avec le modèle d'objet DHTML d'Internet Explorer.
+`cwientweft` fut intwoduit a-avec we modèwe d'objet dhtmw d'intewnet expwowew. (✿oωo)
 
-La position de la barre de défilement verticale pour les textes écrits de droite à gauche dépend de la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side).
+wa position de wa bawwe de défiwement v-vewticawe pouw wes textes écwits de dwoite à gauche dépend d-de wa pwéféwence [`wayout.scwowwbaw.side`](http://kb.moziwwazine.owg/wayout.scwowwbaw.side). (U ﹏ U)
 
-Les applications utilisant le moteur Gecko prennent en charge `clientLeft` depuis Gecko 1.9 (Firefox 3 l'implémente avec [le bug 111207](https://bugzilla.mozilla.org/show_bug.cgi?id=111207)). Cette propriété n'est pas prise en charge pour Firefox 2 et les versions antérieures.
+w-wes appwications u-utiwisant we moteuw gecko pwennent e-en chawge `cwientweft` depuis g-gecko 1.9 (fiwefox 3 w-w'impwémente avec [we bug 111207](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=111207)). -.- cette pwopwiété ny'est pas pwise en chawge pouw fiwefox 2 et w-wes vewsions antéwieuwes. ^•ﻌ•^

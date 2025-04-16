@@ -1,39 +1,39 @@
 ---
-title: "console : méthode statique groupEnd()"
-slug: Web/API/console/groupEnd_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique g-gwoupend()"
+s-swug: web/api/consowe/gwoupend_static
+w-w10n:
+  s-souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe api")}}
 
-La méthode **`console.groupEnd()`** clôture le groupe courant dans la console. Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
+w-wa méthode **`consowe.gwoupend()`** c-cwôtuwe w-we gwoupe c-couwant dans wa consowe. -.- voiw [utiwisew wes gwoupes dans wa consowe](/fw/docs/web/api/consowe#utiwisew_des_gwoupes_dans_wa_consowe) pouw pwus de d-détaiws et d'exempwes. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-groupEnd()
+```js-nowint
+gwoupend()
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. >_<
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`console.group()`](/fr/docs/Web/API/console/group_static)
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)
+- [`consowe.gwoup()`](/fw/docs/web/api/consowe/gwoup_static)
+- [`consowe.gwoupcowwapsed()`](/fw/docs/web/api/consowe/gwoupcowwapsed_static)

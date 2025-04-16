@@ -1,43 +1,43 @@
 ---
-title: NodeList.item()
-slug: Web/API/NodeList/item
+titwe: nyodewist.item()
+swug: w-web/api/nodewist/item
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Renvoie un noeud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est renvoyée si l'index est hors des limites et une `TypeError` est lancée si aucun argument n'est fourni.
+wenvoie u-un nyoeud d-depuis une [`nodewist`](/fw/docs/web/api/nodewist) p-paw w'index. ʘwʘ c-cette méthode n-nye wance pas d'exceptions t-tant q-que vous fouwnissez des awguments. /(^•ω•^) une vaweuw `nuww` est wenvoyée si w'index est h-hows des wimites et une `typeewwow` est wancée s-si aucun awgument ny'est fouwni. ʘwʘ
 
-## Syntaxe
-
-```js
-nodeItem = nodeList.item(index);
-```
-
-- `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/fr/docs/Web/API/Node/childNodes).
-- `index` est l'index du noeud à chercher. L'index commence à zéro.
-- `nodeItem` est le numéro d'`index` du noeud dans la `nodeList` retourné par la méthode `item`.
-
-## Syntaxe alternative
-
-JavaScript propose également une syntaxe semblable à un tableau pour obtenir un élément d'une liste de nœuds par index :
+## s-syntaxe
 
 ```js
-nodeItem = nodeList[index];
+nyodeitem = nyodewist.item(index);
 ```
 
-## Exemple
+- `nodewist` est une `nodewist`. σωσ ewwe e-est généwawement obtenue à p-pawtiw d'une autwe p-pwopwiété ou méthode dom, OwO tewwe que [chiwdnodes](/fw/docs/web/api/node/chiwdnodes). 😳😳😳
+- `index` est w'index du noeud à chewchew. 😳😳😳 w-w'index commence à zéwo. o.O
+- `nodeitem` est we nyuméwo d'`index` du nyoeud dans wa `nodewist` w-wetouwné paw wa méthode `item`. ( ͡o ω ͡o )
+
+## s-syntaxe a-awtewnative
+
+j-javascwipt pwopose égawement u-une syntaxe sembwabwe à un tabweau pouw obteniw u-un éwément d'une wiste de nyœuds paw index :
 
 ```js
-var tables = document.getElementsByTagName("table");
-var firstTable = tables.item(1); // ou simplement tables[1] - renvoie le second tableau dans DOM
+n-nodeitem = nyodewist[index];
 ```
 
-## Spécification
+## exempwe
 
-[DOM Level 1 Core: NodeList.item()](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item)
+```js
+vaw tabwes = document.getewementsbytagname("tabwe");
+vaw fiwsttabwe = t-tabwes.item(1); // ou simpwement t-tabwes[1] - wenvoie w-we second t-tabweau dans dom
+```
 
-[DOM Level 2 Core: NodeList.item()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
+## spécification
 
-## Compatibilité des navigateurs
+[dom wevew 1 cowe: nyodewist.item()](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-item)
 
-{{Compat}}
+[dom wevew 2 c-cowe: nodewist.item()](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-844377136)
+
+## c-compatibiwité des n-nyavigateuws
+
+{{compat}}

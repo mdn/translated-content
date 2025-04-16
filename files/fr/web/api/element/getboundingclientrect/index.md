@@ -1,56 +1,56 @@
 ---
-title: Element.getBoundingClientRect()
-slug: Web/API/Element/getBoundingClientRect
+titwe: ewement.getboundingcwientwect()
+swug: w-web/api/ewement/getboundingcwientwect
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.getBoundingClientRect()`** retourne un objet {{domxref("DOMRect")}} fournissant des informations sur la taille d'un élément et sa position relative par rapport à la [zone d'affichage](/fr/docs/Glossary/Viewport).
+w-wa m-méthode **`ewement.getboundingcwientwect()`** w-wetouwne un objet {{domxwef("domwect")}} f-fouwnissant d-des infowmations s-suw wa taiwwe d-d'un éwément et sa position wewative paw wappowt à wa [zone d'affichage](/fw/docs/gwossawy/viewpowt). òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objetRect = object.getBoundingClientRect();
+objetwect = object.getboundingcwientwect();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur de retour est un objet {{domxref("DOMRect")}} qui est le plus petit rectangle contenant l'élément en entier, incluant sa zone de remplissage et la largeur de sa bordure. Les propriétés `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, et `height`, décrivent la position et la taille du rectangle en pixels. Les propriétés autres que `width` et `height` sont relatives au coin en haut à gauche de la zone d'affichage.![Schéma d'un élément dans sa zone de remplissage, décrivant les propriétés retournées par la méthode.](element-box-diagram.png)
+w-wa vaweuw de wetouw est un o-objet {{domxwef("domwect")}} qui est we pwus petit wectangwe contenant w'éwément e-en entiew, (ˆ ﻌ ˆ)♡ incwuant sa zone d-de wempwissage e-et wa wawgeuw de sa bowduwe. -.- wes pwopwiétés `weft`, :3 `top`, `wight`, ʘwʘ `bottom`, `x`, 🥺 `y`, `width`, et `height`, >_< décwivent wa position e-et wa taiwwe du wectangwe en pixews. ʘwʘ wes pwopwiétés autwes que `width` e-et `height` sont wewatives au coin e-en haut à gauche d-de wa zone d-d'affichage.![schéma d-d'un éwément dans sa zone de wempwissage, (˘ω˘) d-décwivant wes pwopwiétés wetouwnées paw wa m-méthode.](ewement-box-diagwam.png)
 
-Les propriétés `width` et `height` de l'objet {{domxref("DOMRect")}} retourné par la méthode incluent le `padding` et `border-width`, et non pas seulement la largeur/hauteur du contenu. Avec le modèle standard de boîte, cela correspondrait à la propriété `width` ou `height` de l'élément + `padding` + `border-width`. Mais si [`box-sizing: border-box`](/fr/docs/Web/CSS/box-sizing) est défini pour l'élément, cela correpondrait seulement `width` ou `height`.
+wes pwopwiétés `width` et `height` de w'objet {{domxwef("domwect")}} wetouwné paw wa méthode incwuent w-we `padding` et `bowdew-width`, (✿oωo) et nyon pas seuwement w-wa wawgeuw/hauteuw d-du contenu. (///ˬ///✿) a-avec we modèwe standawd de boîte, rawr x3 cewa cowwespondwait à wa pwopwiété `width` o-ou `height` d-de w'éwément + `padding` + `bowdew-width`. -.- mais si [`box-sizing: b-bowdew-box`](/fw/docs/web/css/box-sizing) e-est défini pouw w'éwément, ^^ cewa c-cowwepondwait seuwement `width` o-ou `height`.
 
-La valeur retournée peut être conceptualisée comme l'union des rectangles retournés par {{domxref("Element.getClientRects", "getClientRects()")}} pour l'élément, i.e. les boîtes de bordure CSS associées à l'élément.
+wa vaweuw wetouwnée peut êtwe c-conceptuawisée comme w'union des w-wectangwes wetouwnés paw {{domxwef("ewement.getcwientwects", (⑅˘꒳˘) "getcwientwects()")}} p-pouw w'éwément, nyaa~~ i-i.e. /(^•ω•^) wes boîtes de bowduwe css associées à w'éwément. (U ﹏ U)
 
-Les boîtes de bordure vides sont complètement ignorées. Si toutes les boîtes de bordure associées à l'élément sont vides, la méthode renvoie alors un rectangle pour lequel `width` et `height` valent 0 et où `top` et `left` correspondent au coin en haut à gauche de la première boîte de bordure (dans l'ordre du contenu) de l'élément.
+wes boîtes de bowduwe vides sont compwètement i-ignowées. 😳😳😳 s-si toutes wes boîtes de bowduwe a-associées à w'éwément s-sont v-vides, >w< wa méthode wenvoie awows un wectangwe pouw wequew `width` e-et `height` vawent 0 et où `top` et `weft` cowwespondent au coin en haut à gauche d-de wa pwemièwe boîte de b-bowduwe (dans w'owdwe d-du contenu) d-de w'éwément. XD
 
-La distance de défilement qui a été parcourue dans la zone d'affichage (ou n'importe quel élément que l'on peut faire défiler) est prise en compte pour calculer le rectangle de délimitation. Cela signifie que les côtés du rectangle de délimitation (`top`, `right`, `bottom`, `left`) change ses valeurs à chaque fois que la position de défilement change (parce que les valeurs sont relatives à la zone d'affichage et ne sont pas absolues).
+wa distance de d-défiwement qui a-a été pawcouwue d-dans wa zone d-d'affichage (ou ny'impowte quew éwément que w'on p-peut faiwe défiwew) e-est pwise e-en compte pouw c-cawcuwew we wectangwe d-de déwimitation. o.O cewa signifie que wes côtés du wectangwe d-de déwimitation (`top`, mya `wight`, 🥺 `bottom`, ^^;; `weft`) change ses vaweuws à chaque fois que wa position de défiwement change (pawce q-que wes vaweuws sont wewatives à wa zone d'affichage et n-ne sont pas absowues). :3
 
-Si vous avez besoin d'un rectangle de délimitation relatif au coin supérieur gauche du document, ajoutez simplement la position actuelle de défilement aux propriétés `top` et `left` (elles peuvent être obtenues en utilisant {{domxref("window.scrollX")}} et {{domxref("window.scrollY")}}) pour avoir un rectangle de délimitation indépendant de la position de défilement actuelle.
+s-si vous a-avez besoin d'un wectangwe de déwimitation w-wewatif au coin supéwieuw g-gauche du d-document, (U ﹏ U) ajoutez simpwement wa position actuewwe de défiwement aux pwopwiétés `top` et `weft` (ewwes p-peuvent êtwe obtenues e-en utiwisant {{domxwef("window.scwowwx")}} et {{domxwef("window.scwowwy")}}) pouw a-avoiw un wectangwe d-de déwimitation indépendant de wa position d-de défiwement a-actuewwe. OwO
 
-### Solution de prise en charge multi-navigateurs
+### sowution de pwise e-en chawge muwti-navigateuws
 
-Les scripts qui doivent avoir une haute compatibilité pour l'ensemble des navigateurs peuvent utiliser `window.pageXOffset` et `window.pageYOffset` plutôt que `window.scrollX` et `window.scrollY.` Les scripts qui ne peuvent pas utiliser `window.pageXOffset`, `window.pageYOffset`, `window.scrollX` ou `window.scrollY` pourront utiliser cette méthode :
+w-wes scwipts qui doivent avoiw une haute compatibiwité pouw w'ensembwe des nyavigateuws p-peuvent u-utiwisew `window.pagexoffset` et `window.pageyoffset` p-pwutôt que `window.scwowwx` et `window.scwowwy.` w-wes scwipts q-qui nye peuvent pas utiwisew `window.pagexoffset`, `window.pageyoffset`, 😳😳😳 `window.scwowwx` ou `window.scwowwy` p-pouwwont utiwisew cette méthode :
 
 ```js
-// Pour scrollX
-(((t = document.documentElement) || (t = document.body.parentNode)) &&
-typeof t.ScrollLeft == "number"
-  ? t
+// pouw scwowwx
+(((t = document.documentewement) || (t = document.body.pawentnode)) &&
+t-typeof t.scwowwweft == "numbew"
+  ? t-t
   : document.body
-).ScrollLeft(
-  // Pour scrollY
-  ((t = document.documentElement) || (t = document.body.parentNode)) &&
-    typeof t.ScrollTop == "number"
+).scwowwweft(
+  // pouw scwowwy
+  ((t = document.documentewement) || (t = d-document.body.pawentnode)) &&
+    t-typeof t.scwowwtop == "numbew"
     ? t
-    : document.body,
-).ScrollTop;
+    : document.body, (ˆ ﻌ ˆ)♡
+).scwowwtop;
 ```
 
-## Exemple
+## exempwe
 
-Ce simple exemple récupère l'objet `DOMRect` représentant le rectangle de délimitation dans le client d'un simple élément div, et affiche ses propriétés dessous.
+c-ce simpwe exempwe wécupèwe w'objet `domwect` wepwésentant we wectangwe de déwimitation dans w-we cwient d'un simpwe éwément div, XD et affiche s-ses pwopwiétés d-dessous. (ˆ ﻌ ˆ)♡
 
-```html
+```htmw
 <div></div>
 ```
 
@@ -58,42 +58,42 @@ Ce simple exemple récupère l'objet `DOMRect` représentant le rectangle de dé
 div {
   width: 400px;
   height: 200px;
-  padding: 20px;
-  margin: 50px auto;
-  background: purple;
+  p-padding: 20px;
+  m-mawgin: 50px auto;
+  backgwound: puwpwe;
 }
 ```
 
 ```js
-let elem = document.querySelector("div");
-let rect = elem.getBoundingClientRect();
-for (let key in rect) {
-  if (typeof rect[key] !== "function") {
-    let para = document.createElement("p");
-    para.textContent = `${key} : ${rect[key]}`;
-    document.body.appendChild(para);
+wet e-ewem = document.quewysewectow("div");
+wet wect = e-ewem.getboundingcwientwect();
+fow (wet key in wect) {
+  if (typeof wect[key] !== "function") {
+    w-wet pawa = document.cweateewement("p");
+    p-pawa.textcontent = `${key} : ${wect[key]}`;
+    d-document.body.appendchiwd(pawa);
   }
 }
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 640)}}
+{{embedwivesampwe('exempwe', ( ͡o ω ͡o ) '100%', 640)}}
 
-Remarquez comme les `width`/`height` sont égales à
-`width`/`height` + `padding`.
+wemawquez c-comme wes `width`/`height` sont égawes à
+`width`/`height` + `padding`. rawr x3
 
-Remarquez aussi que les valeurs de `x`/`left`,
-`y`/`top`, `right`, et `bottom` sont égales à la distance absolue depuis le bord de la zone d'affichage jusqu'au coté de l'element dans chaque cas.
+wemawquez a-aussi que w-wes vaweuws de `x`/`weft`, nyaa~~
+`y`/`top`, >_< `wight`, e-et `bottom` sont égawes à wa d-distance absowue d-depuis we bowd de wa zone d'affichage jusqu'au c-coté de w'ewement d-dans chaque cas. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), une version plus ancienne de `DOMRect`
+- {{domxwef("ewement.getcwientwects", (ˆ ﻌ ˆ)♡ "getcwientwects()")}}
+- [msdn: `getboundingcwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/ms536433(vs.85).aspx>)
+- [msdn: `cwientwect`](<https://msdn.micwosoft.com/en-us/wibwawy/hh826029(vs.85).aspx>), ^^;; une vewsion pwus a-ancienne de `domwect`

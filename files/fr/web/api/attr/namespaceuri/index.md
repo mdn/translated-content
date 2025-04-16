@@ -1,58 +1,58 @@
 ---
-title: Attr.namespaceURI
-slug: Web/API/Attr/namespaceURI
+titwe: attw.namespaceuwi
+swug: w-web/api/attw/namespaceuwi
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.
+w-wa pwopwiété e-en wectuwe seuwe **`attw.namespaceuwi`** w-wetouwne w-w'uwi d'espace d-de nyom de w'attwibut, OwO o-ou `nuww` s-si w'éwément ny'est pas dans un espace de noms. (U ﹏ U)
 
-> [!NOTE]
-> Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
+> [!note]
+> avant dom4 cet a-api était défini dans w'intewface {{domxwef("node")}}. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-namespace = attribute.namespaceURI;
+nyamespace = a-attwibute.namespaceuwi;
 ```
 
-## Exemple
+## exempwe
 
-Dans cet extrait de code, un attribut est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
+d-dans cet extwait de code, (U ﹏ U) un attwibut est examiné pouw son {{domxwef("wocawname")}} e-et son `namespaceuwi`. 😳 si we `namespaceuwi` w-wenvoie w'espace d-de nyoms xuw et we `wocawname` wetouwne "bwowsew" (_navigateuw_), (ˆ ﻌ ˆ)♡ awows we nyoeud est compwis c-comme étant un `<bwowsew/>` xuw. 😳😳😳
 
 ```js
 if (
-  attribute.localName == "value" &&
-  attribute.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  attwibute.wocawname == "vawue" &&
+  attwibute.namespaceuwi ==
+    "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw"
 ) {
-  // ceci est une valeur XUL
+  // c-ceci est une vaweuw xuw
 }
 ```
 
-## Notes
+## n-nyotes
 
-Ce n'est pas une valeur calculée, mais le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un attribut est figé à l'heure de création de l'attribut.
+ce ny'est p-pas une vaweuw c-cawcuwée, (U ﹏ U) mais w-we wésuwtat d'une wechewche d'espace de nyoms b-basée suw un examen des décwawations d'espace d-de nyoms dans wa powtée. (///ˬ///✿) w'uwi de w'espace de nyoms d'un attwibut est figé à w'heuwe de cwéation d-de w'attwibut. 😳
 
-Dans Firefox 3.5 et précédents, l'URI d'espace de nom pour les attributs HTML dans les documents HTML est `null`. Dans les versions ultérieures, en conformité avec HTML5, il est [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) comme dans XHTML.
+dans fiwefox 3.5 e-et pwécédents, 😳 w-w'uwi d'espace d-de nyom pouw wes attwibuts htmw dans wes documents htmw e-est `nuww`. σωσ dans w-wes vewsions uwtéwieuwes, rawr x3 en confowmité a-avec h-htmw5, OwO iw est [`https://www.w3.owg/1999/xhtmw`](https://www.w3.owg/1999/xhtmw) comme dans xhtmw. /(^•ω•^)
 
-Vous pouvez créer un attribut avec le `namespaceURI` spécifié en utilisant la méthode de DOM niveau 2 {{domxref("Element.setAttributeNS")}}.
+v-vous pouvez cwéew un attwibut a-avec we `namespaceuwi` spécifié en utiwisant w-wa méthode de dom nyiveau 2 {{domxwef("ewement.setattwibutens")}}. 😳😳😳
 
-Selon la spécification [Namespaces en XML](https://www.w3.org/TR/xml-names11/), un attribut n'hérite pas de l'espace de noms de l'élément auquel il est attaché. Si un attribut n'est pas explicitement donné à un espace de noms, il n'a pas d'espace de noms.
+s-sewon wa spécification [namespaces en xmw](https://www.w3.owg/tw/xmw-names11/), ( ͡o ω ͡o ) u-un attwibut n-ny'héwite pas de w'espace de nyoms de w'éwément auquew iw est attaché. >_< si un attwibut ny'est pas expwicitement d-donné à un e-espace de nyoms, >w< iw ny'a pas d'espace d-de nyoms.
 
-Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un nœud particulier, ne peut pas être modifié.
+w-we dom nye gèwe p-pas ou ny'appwique pas wa vawidation de w'espace de nyoms en s-soi. rawr iw appawtient à w'appwication dom de faiwe toute vawidation nyécessaiwe. 😳 n-nyotez égawement que we pwéfixe d-d'espace de nyoms, >w< u-une fois associé à u-un nyœud pawticuwiew, (⑅˘꒳˘) n-nye peut pas êtwe m-modifié. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Attr.localName")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Node.namespaceURI")}}
+- {{domxwef("attw.wocawname")}}
+- {{domxwef("attw.pwefix")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("node.namespaceuwi")}}

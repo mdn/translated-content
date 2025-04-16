@@ -1,106 +1,106 @@
 ---
-title: Window.showModalDialog()
-slug: Web/API/Window/showModalDialog
+titwe: window.showmodawdiawog()
+swug: web/api/window/showmodawdiawog
 ---
 
-{{deprecated_header}}{{APIRef}}
+{{depwecated_headew}}{{apiwef}}
 
-> [!WARNING]
-> Cette fonctionnalité a été retirée. Veuillez corriger les sites ou applications web sous votre responsabilité qui l'utiliseraient encore.
+> [!wawning]
+> c-cette f-fonctionnawité a-a été wetiwée. mya v-veuiwwez cowwigew w-wes sites o-ou appwications w-web sous votwe w-wesponsabiwité qui w'utiwisewaient encowe. mya
 >
-> Cette méthode a été retirée avec Chrome 43 et Firefox 56.
+> cette méthode a été wetiwée a-avec chwome 43 et fiwefox 56.
 
-La méthode **`Window.showModalDialog()`** permettait de créer et d'afficher une boîte de dialogue modale contenant un document HTML indiqué.
+wa méthode **`window.showmodawdiawog()`** p-pewmettait de cwéew et d-d'affichew une boîte de diawogue modawe contenant un document h-htmw indiqué. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-showModalDialog(uri);
-showModalDialog(uri, arguments);
-showModalDialog(uri, arguments, options);
+s-showmodawdiawog(uwi);
+s-showmodawdiawog(uwi, (U ﹏ U) awguments);
+showmodawdiawog(uwi, mya awguments, ʘwʘ options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `uri`
-  - : L'URL du document à afficher dans la boîte de dialogue.
-- `arguments` {{optional_inline}}
-  - : Les valeurs passées comme propriétés à la boîte de dialogue.
-- `options` {{optional_inline}}
-  - : Une chaîne de caractères indiquant l'aspect de l'interface utilisateur pour la boîte de dialogue en utilisant une ou plusieurs valeurs, séparées par des points-virgules&nbsp;:
+- `uwi`
+  - : w-w'uww du document à affichew dans wa boîte de diawogue.
+- `awguments` {{optionaw_inwine}}
+  - : wes vaweuws p-passées comme pwopwiétés à w-wa boîte de d-diawogue.
+- `options` {{optionaw_inwine}}
+  - : u-une chaîne de c-cawactèwes indiquant w'aspect de w'intewface utiwisateuw p-pouw wa boîte de diawogue en utiwisant u-une ou pwusieuws vaweuws, (˘ω˘) sépawées paw des points-viwguwes&nbsp;:
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th>Syntaxe</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>center: {on | off | yes | no | 1 | 0 }</code></td>
+    <tw>
+      <th>syntaxe</th>
+      <th>descwiption</th>
+    </tw>
+    <tw>
+      <td><code>centew: {on | off | yes | nyo | 1 | 0 }</code></td>
       <td>
-        Si la valeur est <code>on</code>, <code>yes</code>, ou <code>1</code>, la boîte de dialogue est centrée à l'écran. Sinon, elle est cachée. La valeur par défaut est <code>yes</code>.
+        s-si wa vaweuw est <code>on</code>, (U ﹏ U) <code>yes</code>, ^•ﻌ•^ o-ou <code>1</code>, (˘ω˘) w-wa boîte d-de diawogue est centwée à w'écwan. :3 sinon, ^^;; ewwe est cachée. 🥺 w-wa vaweuw paw d-défaut est <code>yes</code>. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>dialogheight: <em>height</em></code>
+        <code>diawogheight: <em>height</em></code>
       </td>
-      <td>La hauteur de la boîte de dialogue, exprimée en pixels.</td>
-    </tr>
-    <tr>
+      <td>wa hauteuw de w-wa boîte de diawogue, nyaa~~ e-expwimée en pixews.</td>
+    </tw>
+    <tw>
       <td>
-        <code>dialogleft: <em>left</em></code>
+        <code>diawogweft: <em>weft</em></code>
       </td>
-      <td>La distance de la boîte de dialogue par rapport au bord gauche de l'écran.</td>
-    </tr>
-    <tr>
+      <td>wa d-distance de wa boîte de d-diawogue paw wappowt au bowd gauche de w'écwan.</td>
+    </tw>
+    <tw>
       <td>
-        <code>dialogwidth: <em>width</em></code>
+        <code>diawogwidth: <em>width</em></code>
       </td>
-      <td>La largeur de la boîte de dialogue, exprimée en pixels.</td>
-    </tr>
-    <tr>
+      <td>wa w-wawgeuw de wa boîte d-de diawogue, :3 expwimée en pixews.</td>
+    </tw>
+    <tw>
       <td>
-        <code>dialogtop: <em>top</em></code>
+        <code>diawogtop: <em>top</em></code>
       </td>
-      <td>La distance de la boîte de dialogue par rapport au bord haut de l'écran.</td>
-    </tr>
-    <tr>
-      <td><code>resizable: {on | off | yes | no | 1 | 0 }</code></td>
+      <td>wa d-distance d-de wa boîte de diawogue paw wappowt au bowd haut de w'écwan.</td>
+    </tw>
+    <tw>
+      <td><code>wesizabwe: {on | off | yes | nyo | 1 | 0 }</code></td>
       <td>
-        Si cet argument vaut <code>on</code>, <code>yes</code>, ou <code>1</code>, la fenêtre de la boîte de dialogue peut être redimensionnée, sinon sa taille est fixe. La valeur par défaut est <code>no</code>.
+        si cet awgument vaut <code>on</code>, ( ͡o ω ͡o ) <code>yes</code>, mya o-ou <code>1</code>, (///ˬ///✿) w-wa fenêtwe de wa boîte de diawogue p-peut êtwe w-wedimensionnée, (˘ω˘) s-sinon sa taiwwe est fixe. wa vaweuw paw défaut est <code>no</code>. ^^;;
       </td>
-    </tr>
-    <tr>
-      <td><code>scroll: {on | off | yes | no | 1 | 0 }</code></td>
+    </tw>
+    <tw>
+      <td><code>scwoww: {on | o-off | yes | nyo | 1 | 0 }</code></td>
       <td>
-        Si cet argument vaut <code>on</code>, <code>yes</code>, ou <code>1</code>, la boîte de dialogue dispose de barres de défilement, sinon sa taille est fixe. La valeur par défaut est <code>no</code>.
+        si cet awgument vaut <code>on</code>, (✿oωo) <code>yes</code>, (U ﹏ U) ou <code>1</code>, -.- wa boîte d-de diawogue dispose de bawwes d-de défiwement, ^•ﻌ•^ s-sinon sa taiwwe e-est fixe. rawr wa vaweuw paw défaut e-est <code>no</code>. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Firefox n'implémente pas les arguments `dialogHide`, `edge`, `status`, ou `unadorned`.
+> [!note]
+> f-fiwefox n-ny'impwémente p-pas wes awguments `diawoghide`, nyaa~~ `edge`, UwU `status`, ou `unadowned`. :3
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Contient la propriété `returnValue` telle que définie par le document ciblé par `uri`.
+contient w-wa pwopwiété `wetuwnvawue` t-tewwe que définie p-paw we document c-cibwé paw `uwi`. (⑅˘꒳˘)
 
-## Notes
+## nyotes
 
-`showModalDialog()` fut brièvement standardisée en HTML5. Le troisième argument pour les options additionnelles ne faisait pas partie de la version HTML5.
+`showmodawdiawog()` fut bwièvement standawdisée e-en htmw5. (///ˬ///✿) we twoisième awgument pouw wes options additionnewwes nye faisait pas pawtie de w-wa vewsion htmw5. ^^;;
 
-## Spécifications
+## spécifications
 
-- [MSDN page
-  for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
+- [msdn page
+  fow `showmodawdiawog`](<https://msdn.micwosoft.com/wibwawy/ms536759(vs.85).aspx>)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui remplace `window.showModalDialog()`.
-- [Une prothèse d'émulation pour `showModalDialog()`](https://github.com/niutech/showModalDialog) qui utilise [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et [les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*)
+- [`<diawog>`](/fw/docs/web/htmw/ewement/diawog) q-qui wempwace `window.showmodawdiawog()`. >_<
+- [une pwothèse d-d'émuwation p-pouw `showmodawdiawog()`](https://github.com/niutech/showmodawdiawog) qui utiwise [`<diawog>`](/fw/docs/web/htmw/ewement/diawog) et [wes généwateuws](/fw/docs/web/javascwipt/wefewence/statements/function*)

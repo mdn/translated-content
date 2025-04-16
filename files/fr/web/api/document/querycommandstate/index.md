@@ -1,31 +1,31 @@
 ---
-title: Document.queryCommandState()
-slug: Web/API/Document/queryCommandState
+titwe: document.quewycommandstate()
+swug: web/api/document/quewycommandstate
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-queryCommandState(String command)
+q-quewycommandstate(stwing c-command)
 ```
 
-## Exemple
+## e-exempwe
 
-TBD
+tbd
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("HTMLElement.contentEditable")}}
-- {{domxref("document.designMode")}}
-- [Rich-Text Editing in Mozilla](/fr/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
-- Les bogues du navigateur liés à `queryCommandState()`: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)
+- {{domxwef("htmwewement.contenteditabwe")}}
+- {{domxwef("document.designmode")}}
+- [wich-text editing in moziwwa](/fw/docs/web/guide/htmw/editabwe_content/wich-text_editing_in_moziwwa)
+- w-wes bogues du nyavigateuw wiés à `quewycommandstate()`: [scwibe's "bwowsew inconsistencies" d-documentation](https://github.com/guawdian/scwibe/bwob/mastew/bwowsewinconsistencies.md#documentquewycommandstate)

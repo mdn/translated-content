@@ -1,36 +1,36 @@
 ---
-title: abort
-slug: Web/API/IDBTransaction/abort_event
+titwe: abowt
+swug: web/api/idbtwansaction/abowt_event
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompue.
+w-we gestionnaiwe d-d'awwêt e-est exécuté wowsqu'une t-twansaction a-a été intewwompue. nyaa~~
 
-## Informations générales
+## i-infowmations g-généwawes
 
-- Spécification
-  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
-- Interface
-  - : Event
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : IDBTransaction
-- Action par défaut
-  - : Aucune
+- s-spécification
+  - : [indexeddb](https://www.w3.owg/tw/indexeddb/#wequest-api)
+- intewface
+  - : event
+- pwopagation
+  - : oui
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : idbtwansaction
+- action paw défaut
+  - : a-aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| p-pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event t-tawget (the topmost tawget in the d-dom twee). /(^•ω•^) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | t-the type of event. rawr                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event nyowmawwy bubbwes ow not. OwO             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe ow nyot. (U ﹏ U)               |
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [utiwisation d'indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)

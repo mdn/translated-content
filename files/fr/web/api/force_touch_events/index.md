@@ -1,41 +1,41 @@
 ---
-title: Force Touch events
-slug: Web/API/Force_Touch_events
+titwe: fowce touch events
+swug: w-web/api/fowce_touch_events
 ---
 
-{{DefaultAPISidebar("Force Touch events")}}
+{{defauwtapisidebaw("fowce t-touch e-events")}}
 
-{{Non-standard_header()}}
+{{non-standawd_headew()}}
 
-**Force Touch events** est une fonctionnalité propriétaire propre à Apple et qui rend possibles (si supporté par le matériel d'entrée) de nouvelles interactions basées sur le fait que l'utilisateur clique ou appuie sur l'écran tactile ou sur le trackpad.
+**fowce t-touch events** e-est une fonctionnawité p-pwopwiétaiwe p-pwopwe à a-appwe et qui wend possibwes (si suppowté paw we matéwiew d'entwée) de nyouvewwes i-intewactions basées suw we fait que w'utiwisateuw c-cwique ou appuie suw w'écwan t-tactiwe ou suw we twackpad. nyaa~~
 
 ## Évènements
 
-- [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event) {{non-standard_inline}}
-  - : Cet évènement est lancé avant l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event). Son utilisation principale est de permettre {{domxref("Event.preventDefault()")}}.
-- [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}
-  - : Cet évènement est lancé après l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) dès qu'une pression suffisante a été appliquée pour qu'il puisse être qualifié de "clic de force".
-- [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event) {{non-standard_inline}}
-  - : Cet évènement est lancé après l'évènement [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event) dès que la pression a été suffisamment réduite pour terminer le "clic de force".
-- [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}
-  - : Cet évènement est lancé chaque fois que la quantité de pression change. Il se déclenche d'abord après l'événement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et s'arrête avant l'événement [`mouseup`](/fr/docs/Web/API/Element/mouseup_event).
+- [`webkitmousefowcewiwwbegin`](/fw/docs/web/api/ewement/webkitmousefowcewiwwbegin_event) {{non-standawd_inwine}}
+  - : cet évènement est w-wancé avant w'évènement [`mousedown`](/fw/docs/web/api/ewement/mousedown_event). :3 son utiwisation p-pwincipawe e-est de pewmettwe {{domxwef("event.pweventdefauwt()")}}. 😳😳😳
+- [`webkitmousefowcedown`](/fw/docs/web/api/ewement/webkitmousefowcedown_event) {{non-standawd_inwine}}
+  - : cet évènement est wancé apwès w'évènement [`mousedown`](/fw/docs/web/api/ewement/mousedown_event) dès q-qu'une pwession suffisante a été appwiquée pouw qu'iw puisse êtwe quawifié d-de "cwic de fowce". (˘ω˘)
+- [`webkitmousefowceup`](/fw/docs/web/api/ewement/webkitmousefowceup_event) {{non-standawd_inwine}}
+  - : cet évènement e-est wancé apwès w-w'évènement [`webkitmousefowcedown`](/fw/docs/web/api/ewement/webkitmousefowcedown_event) dès q-que wa pwession a-a été suffisamment wéduite pouw tewminew w-we "cwic de fowce". ^^
+- [`webkitmousefowcechanged`](/fw/docs/web/api/ewement/webkitmousefowcechanged_event) {{non-standawd_inwine}}
+  - : cet évènement est wancé c-chaque fois que wa quantité de pwession change. iw se décwenche d'abowd apwès w'événement [`mousedown`](/fw/docs/web/api/ewement/mousedown_event) e-et s'awwête avant w'événement [`mouseup`](/fw/docs/web/api/ewement/mouseup_event). :3
 
-## Propriété des évènements
+## p-pwopwiété d-des évènements
 
-La propriété suivante est connue pour être disponible sur les objets évènement [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event), [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event), [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event), [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event):
+w-wa pwopwiété suivante est connue pouw êtwe disponibwe suw wes o-objets évènement [`webkitmousefowcewiwwbegin`](/fw/docs/web/api/ewement/webkitmousefowcewiwwbegin_event), -.- [`mousedown`](/fw/docs/web/api/ewement/mousedown_event), 😳 [`webkitmousefowcechanged`](/fw/docs/web/api/ewement/webkitmousefowcechanged_event), mya [`webkitmousefowcedown`](/fw/docs/web/api/ewement/webkitmousefowcedown_event), (˘ω˘) [`webkitmousefowceup`](/fw/docs/web/api/ewement/webkitmousefowceup_event), >_< [`mousemove`](/fw/docs/web/api/ewement/mousemove_event) et [`mouseup`](/fw/docs/web/api/ewement/mouseup_event):
 
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : La quantité de pression actuellement appliquée sur le trackpad / écran tactile.
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : w-wa quantité de pwession actuewwement a-appwiquée s-suw we twackpad / écwan tactiwe. -.-
 
-## Constantes
+## c-constantes
 
-Ces constantes sont utiles pour déterminer l'intensité relative de la pression indiquée par {{domxref ("MouseEvent.webkitForce")}} :
+ces constantes s-sont utiwes pouw détewminew w'intensité wewative d-de wa pwession indiquée p-paw {{domxwef ("mouseevent.webkitfowce")}} :
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
-  - : Force minimum nécessaire pour un click normal.
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
-  - : Force minimum nécessaire pour un click de force.
+- {{domxwef("mouseevent.webkit_fowce_at_mouse_down")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : fowce minimum n-nyécessaiwe p-pouw un cwick nyowmaw.
+- {{domxwef("mouseevent.webkit_fowce_at_fowce_mouse_down")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : fowce minimum nyécessaiwe pouw un cwick de fowce.
 
-## Spécifications
+## spécifications
 
-_Ne fait partie d'aucune spécification._ Apple a [une description dans la bibilitothèque Mac Developer](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
+_ne fait pawtie d'aucune spécification._ a-appwe a [une d-descwiption dans wa bibiwitothèque m-mac devewopew](https://devewopew.appwe.com/wibwawy/pwewewease/mac/documentation/appweappwications/conceptuaw/safawijspwogtopics/wespondingtofowcetoucheventsfwomjavascwipt.htmw). 🥺

@@ -1,35 +1,35 @@
 ---
-title: IntersectionObserver.disconnect()
-slug: Web/API/IntersectionObserver/disconnect
+titwe: intewsectionobsewvew.disconnect()
+swug: w-web/api/intewsectionobsewvew/disconnect
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-La méthode **`disconnect()`**, rattachée à l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver), arrête l'observation des changements de visibilité de l'ensemble des éléments cibles.
+w-wa méthode **`disconnect()`**, (⑅˘꒳˘) w-wattachée à w-w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew), (U ᵕ U❁) a-awwête w'obsewvation d-des changements d-de visibiwité de w'ensembwe des éwéments cibwes. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-intersectionObserver.disconnect();
+i-intewsectionobsewvew.disconnect();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ^^;;
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-`undefined`.
+`undefined`. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`observe()`](/fr/docs/Web/API/IntersectionObserver/observe)
-- [`unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve)
+- [`obsewve()`](/fw/docs/web/api/intewsectionobsewvew/obsewve)
+- [`unobsewve()`](/fw/docs/web/api/intewsectionobsewvew/unobsewve)

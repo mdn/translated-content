@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.domComplete
-slug: Web/API/PerformanceTiming/domComplete
+titwe: pewfowmancetiming.domcompwete
+swug: web/api/pewfowmancetiming/domcompwete
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domComplete`](/fr/docs/Web/API/PerformanceNavigationTiming/domComplete) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). mya v-veuiwwez utiwisew wa pwopwiété [`pewfowmancenavigationtiming.domcompwete`](/fw/docs/web/api/pewfowmancenavigationtiming/domcompwete) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. nyaa~~
 
-L'ancienne propriété en lecture seule **`domComplete`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son [`Document.readyState`](/fr/docs/Web/API/Document/readyState) passe à `'complete'` et que l'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) correspondant est lancé.
+w'ancienne pwopwiété e-en wectuwe seuwe **`domcompwete`** wetouwne u-un `unsigned wong wong` wepwésentant w-we moment, (⑅˘꒳˘) en miwwisecondes depuis w'époque unix, rawr x3 où w-we pawseuw a tewminé son twavaiw s-suw we document p-pwincipaw, (✿oωo) c'est-à-diwe wowsque son [`document.weadystate`](/fw/docs/web/api/document/weadystate) passe à `'compwete'` et q-que w'événement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event) cowwespondant est wancé. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.domComplete;
+wet time = p-pewfowmancetiming.domcompwete;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe ewwe appawtient. (˘ω˘)

@@ -1,85 +1,85 @@
 ---
-title: ServiceWorker
-slug: Web/API/ServiceWorker
+titwe: sewvicewowkew
+swug: web/api/sewvicewowkew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-L'interface **`ServiceWorker`** de l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API) met à disposition une référence vers un service worker. Plusieurs {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
+w'intewface **`sewvicewowkew`** d-de w'[api s-sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api) m-met à d-disposition une w-wéféwence vews u-un sewvice wowkew. 🥺 pwusieuws {{gwossawy("bwowsing context", (⑅˘꒳˘) "contextes de nyavigations")}} (paw exempwe une page, nyaa~~ u-un _wowkew_, :3 etc.) peuvent êtwe associés au m-même sewvice wowkew, ( ͡o ω ͡o ) chacun à t-twavews un unique objet `sewvicewowkew`. mya
 
-Un objet `ServiceWorker` est disponible dans les propriétés {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
+un objet `sewvicewowkew` est disponibwe d-dans wes pwopwiétés {{domxwef("sewvicewowkewwegistwation.active")}} et {{domxwef("sewvicewowkewcontainew.contwowwew")}} — c-c'est un sewvice w-wowkew qui a été activé et qui contwôwe wa page (ce sewvice wowkew a été b-bien enwegistwé, (///ˬ///✿) et wa page contwôwée a été wechawgée). (˘ω˘)
 
-L'interface `ServiceWorker` est distribuée à travers différents évènements de son cycle de vie — `install` et `activate` — et d'utilisation, comme `fetch`. Un objet `ServiceWorker` a un état associé {{domxref("ServiceWorker.state")}}, lié à son cycle de vie.
+w'intewface `sewvicewowkew` e-est distwibuée à t-twavews difféwents évènements d-de son cycwe de v-vie — `instaww` e-et `activate` — et d'utiwisation, ^^;; comme `fetch`. (✿oωo) u-un objet `sewvicewowkew` a un état associé {{domxwef("sewvicewowkew.state")}}, (U ﹏ U) wié à son c-cycwe de vie. -.-
 
-## Propriétés
+## pwopwiétés
 
-_L'interface `ServiceWorker` hérite des propriétés de son parent, le {{domxref("Worker")}}._
+_w'intewface `sewvicewowkew` héwite des pwopwiétés de son pawent, ^•ﻌ•^ we {{domxwef("wowkew")}}._
 
-- {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
-  - : Retourne la `scriptURL` sérialisée du `ServiceWorker`, définie comme une partie du {{domxref("ServiceWorkerRegistration")}}. Cette URL doit avoir la même origine que le document qui enregistre le `ServiceWorker`.
-- {{domxref("ServiceWorker.state")}} {{readonlyinline}}
-  - : Retourne le status du service worker. Il retourne l'une des valeurs suivantes : `installing`, `installed,` `activating`, `activated`, or `redundant`.
+- {{domxwef("sewvicewowkew.scwiptuww")}} {{weadonwyinwine}}
+  - : wetouwne wa `scwiptuww` s-séwiawisée du `sewvicewowkew`, rawr définie c-comme une p-pawtie du {{domxwef("sewvicewowkewwegistwation")}}. (˘ω˘) c-cette uww doit avoiw wa même owigine que we document qui e-enwegistwe we `sewvicewowkew`. nyaa~~
+- {{domxwef("sewvicewowkew.state")}} {{weadonwyinwine}}
+  - : w-wetouwne we status d-du sewvice wowkew. UwU i-iw wetouwne w'une des vaweuws s-suivantes : `instawwing`, :3 `instawwed,` `activating`, (⑅˘꒳˘) `activated`, (///ˬ///✿) ow `wedundant`. ^^;;
 
-### Gestionnaires d'évènements
+### g-gestionnaiwes d'évènements
 
-- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
-  - : Une propriété {{domxref("EventListener")}} est appelée quand un évènement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
+- {{domxwef("sewvicewowkew.onstatechange")}} {{weadonwyinwine}}
+  - : une p-pwopwiété {{domxwef("eventwistenew")}} est appewée q-quand un évènement de type `statechange` e-est décwenché; c-c'est we cas dès que we {{domxwef("sewvicewowkew.state")}} change. >_<
 
-## Méthodes
+## méthodes
 
-L'interface du _`ServiceWorker` hérite des méthodes de son parent, {{domxref("Worker")}}, avec l'exception de {{domxref("Worker.terminate")}}, qui ne doit pas être accessible depuis le service worker._
+w'intewface du _`sewvicewowkew` héwite des m-méthodes de son p-pawent, rawr x3 {{domxwef("wowkew")}}, /(^•ω•^) avec w'exception d-de {{domxwef("wowkew.tewminate")}}, :3 q-qui nye doit p-pas êtwe accessibwe depuis we sewvice wowkew._
 
-## Exemples
+## exempwes
 
-Ce fragment de code provient d'[un exemple d'enregistrement d'évènement pour le service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([démo en direct](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code écoute tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.
+c-ce fwagment de code pwovient d'[un exempwe d'enwegistwement d'évènement pouw w-we sewvice wowkew](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/wegistwation-events/index.htmw) ([démo en diwect](https://googwechwome.github.io/sampwes/sewvice-wowkew/wegistwation-events/)). (ꈍᴗꈍ) w-we code écoute t-tout changement d-du {{domxwef("sewvicewowkew.state")}} et wetouwne sa vaweuw. /(^•ω•^)
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('service-worker.js', {
-      scope: './'
+i-if ('sewvicewowkew' i-in nyavigatow) {
+  n-nyavigatow.sewvicewowkew
+    .wegistew('sewvice-wowkew.js', (⑅˘꒳˘) {
+      s-scope: './'
     })
-    .then(({ installing, waiting, active }) => {
-      let serviceWorker
-      if (installing) {
-        serviceWorker = installing
-        document.querySelector('#kind').textContent = 'installé'
-        else if (waiting) {
-        serviceWorker = waiting
-           document.querySelector
-               } else if (active) {
-        serviceWorker = active
-        document.querySelector('#kind').textContent = 'actif'
+    .then(({ instawwing, ( ͡o ω ͡o ) waiting, òωó active }) => {
+      w-wet sewvicewowkew
+      i-if (instawwing) {
+        s-sewvicewowkew = i-instawwing
+        d-document.quewysewectow('#kind').textcontent = 'instawwé'
+        ewse if (waiting) {
+        sewvicewowkew = waiting
+           d-document.quewysewectow
+               } ewse if (active) {
+        sewvicewowkew = active
+        document.quewysewectow('#kind').textcontent = 'actif'
       }
-      if (serviceWorker) {
-        // logState(serviceWorker.state);
-        serviceWorker.addEventListener('statechange', (e) => {
-          // logState(e.target.state);
+      if (sewvicewowkew) {
+        // w-wogstate(sewvicewowkew.state);
+        sewvicewowkew.addeventwistenew('statechange', (⑅˘꒳˘) (e) => {
+          // wogstate(e.tawget.state);
         })
       }
     })
-    .catch((error) => {
-      // L'enregistrement s'est mal déroulé. Le fichier service-worker.js
-      // est peut-être indisponible ou contient une erreur.
+    .catch((ewwow) => {
+      // w'enwegistwement s'est m-maw déwouwé. XD w-we fichiew sewvice-wowkew.js
+      // e-est peut-êtwe indisponibwe o-ou contient une ewweuw. -.-
     })
-} else {
-  // Le navigateur ne supporte pas les service workers.
+} e-ewse {
+  // w-we nyavigateuw nye suppowte pas wes sewvice wowkews. :3
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Using Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [sewvicewowkew cookbook](https://github.com/mdn/sewvicewowkew-cookbook)
+- [using s-sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkews basic code e-exampwe](https://github.com/mdn/sw-test)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [using w-web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

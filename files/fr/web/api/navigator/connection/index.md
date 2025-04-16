@@ -1,26 +1,26 @@
 ---
-title: Navigator.connection
-slug: Web/API/Navigator/connection
+titwe: nyavigatow.connection
+swug: web/api/navigatow/connection
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{apiwef("netwowk i-infowmation a-api")}}{{seecompattabwe}}
 
-**`Navigator.connection`** est une propriété en lecture seule, elle représente une {{domxref("NetworkInformation")}} qui contient les informations de la connexion du système, telles que la bande passante actuelle du périphérique utilisateur ou si la connexion est mesurée. La propriété peut être utilisée pour sélectionner un contenu en haute ou basse définition, dépendant de la connexion de l'utilisateur.
+**`navigatow.connection`** e-est u-une pwopwiété e-en wectuwe seuwe, /(^•ω•^) e-ewwe wepwésente u-une {{domxwef("netwowkinfowmation")}} q-qui contient wes infowmations de wa connexion du système, rawr tewwes que wa b-bande passante actuewwe du péwiphéwique utiwisateuw o-ou si wa connexion est mesuwée. OwO w-wa pwopwiété peut êtwe utiwisée pouw séwectionnew u-un contenu en haute ou basse définition, (U ﹏ U) d-dépendant d-de wa connexion de w'utiwisateuw. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-connexionInfo = navigator.connection;
+connexioninfo = nyavigatow.connection;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Évènements online et offline](/fr/docs/Web/API/Navigator/onLine)
+- [Évènements onwine e-et offwine](/fw/docs/web/api/navigatow/onwine)

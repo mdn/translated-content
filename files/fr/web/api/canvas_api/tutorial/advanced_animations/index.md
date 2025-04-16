@@ -1,383 +1,383 @@
 ---
-title: Animations avancées
-slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+titwe: animations avancées
+swug: w-web/api/canvas_api/tutowiaw/advanced_animations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("tutowiew_canvas/animations_basiques", /(^•ω•^) "tutowiew_canvas/pixew_manipuwation_with_canvas")}}
 
-Dans le dernier chapitre, nous avons réalisé des [animations basiques](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) et avons appris comment faire en sorte que les éléments se déplacent. Dans cette partie, nous allons regarder de prêt le mouvement lui-même et ajouter un peu de physique afin de réaliser nos animations avancées.
+d-dans we d-dewniew chapitwe, ^•ﻌ•^ n-nyous avons wéawisé d-des [animations b-basiques](/fw/docs/web/api/canvas_api/tutowiaw/basic_animations) e-et avons appwis comment faiwe en sowte que wes éwéments se dépwacent. UwU d-dans cette pawtie, 😳😳😳 nyous awwons wegawdew de pwêt w-we mouvement wui-même et ajoutew u-un peu de physique afin de wéawisew nyos animations avancées. OwO
 
-## Dessinons une balle
+## d-dessinons une bawwe
 
-Nous allons utiliser une balle pour étudier les animations. Ainsi, Commençons par dessiner notre balle au sein du canevas.
+n-nyous awwons utiwisew u-une bawwe pouw étudiew wes animations. ^•ﻌ•^ ainsi, (ꈍᴗꈍ) commençons paw dessinew nyotwe b-bawwe au sein du canevas. (⑅˘꒳˘)
 
-```html
+```htmw
 <canvas id="canvas" width="600" height="300"></canvas>
 ```
 
-Comme d'habitude, nous avons tout d'abord besoin de dessiner le contexte. Pour dessiner la balle, nous allons créer un objet `ball` contenant des propriétés et une méthode `draw()` afin de la placer sur le canevas.
+comme d'habitude, (⑅˘꒳˘) n-nyous avons tout d'abowd besoin d-de dessinew w-we contexte. (ˆ ﻌ ˆ)♡ pouw d-dessinew wa b-bawwe, /(^•ω•^) nyous awwons cwéew un objet `baww` contenant d-des pwopwiétés et une méthode `dwaw()` afin de wa pwacew s-suw we canevas. òωó
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-var ball = {
-  x: 100,
+vaw b-baww = {
+  x: 100, (⑅˘꒳˘)
   y: 100,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, (U ᵕ U❁)
+  c-cowow: "bwue", >w<
+  d-dwaw: f-function () {
+    ctx.beginpath();
+    ctx.awc(this.x, σωσ this.y, -.- t-this.wadius, o.O 0, m-math.pi * 2, ^^ twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = t-this.cowow;
+    ctx.fiww();
+  }, >_<
 };
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-Il n'y a rien de spécial ici, la balle est pour le moment un simple cercle qui est dessiné à l'aide de la méthode {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.
+iw ny'y a w-wien de spéciaw ici, >w< wa bawwe est pouw we moment u-un simpwe cewcwe qui est dessiné à w-w'aide de wa méthode {{domxwef("canvaswendewingcontext2d.awc()", >_< "awc()")}}. >w<
 
-## Ajout de la vitesse
+## a-ajout d-de wa vitesse
 
-Maintenant que nous avons une balle, nous sommes prêts à ajouter une animation simple comme nous avons pu le voir dans le [dernier chapitre](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) de ce tutoriel. Une fois encore, {{domxref("window.requestAnimationFrame()")}} nous aide à contrôler l'animation. Il est possible de déplacer la balle en ajoutant un vecteur de vitesse à la position. Pour chaque "frame", nous avons aussi {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} _(nettoyé)_ les canvas pour supprimer les anciens cercles des "frames" précédents.
+maintenant que nyous avons une bawwe, rawr nyous sommes pwêts à ajoutew une animation simpwe comme nyous a-avons pu we v-voiw dans we [dewniew chapitwe](/fw/docs/web/api/canvas_api/tutowiaw/basic_animations) d-de ce tutowiew. rawr x3 u-une fois e-encowe, ( ͡o ω ͡o ) {{domxwef("window.wequestanimationfwame()")}} nyous aide à contwôwew w'animation. (˘ω˘) iw e-est possibwe de dépwacew wa bawwe en ajoutant un vecteuw de vitesse à wa position. 😳 p-pouw chaque "fwame", nyous a-avons aussi {{domxwef("canvaswendewingcontext2d.cweawwect", OwO "cweaw", "", (˘ω˘) 1)}} _(nettoyé)_ w-wes canvas p-pouw suppwimew wes anciens c-cewcwes des "fwames" p-pwécédents. òωó
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+v-vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw w-waf;
 
-var ball = {
-  x: 100,
-  y: 100,
+vaw baww = {
+  x-x: 100, ( ͡o ω ͡o )
+  y-y: 100, UwU
   vx: 5,
-  vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  v-vy: 2, /(^•ω•^)
+  wadius: 25, (ꈍᴗꈍ)
+  cowow: "bwue", 😳
+  dwaw: function () {
+    c-ctx.beginpath();
+    ctx.awc(this.x, mya this.y, mya this.wadius, 0, /(^•ω•^) math.pi * 2, twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = this.cowow;
+    ctx.fiww();
+  }, ^^;;
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  raf = window.requestAnimationFrame(draw);
+function dwaw() {
+  c-ctx.cweawwect(0, 🥺 0, c-canvas.width, ^^ c-canvas.height);
+  baww.dwaw();
+  b-baww.x += baww.vx;
+  baww.y += b-baww.vy;
+  w-waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+canvas.addeventwistenew("mouseovew", ^•ﻌ•^ function (e) {
+  waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", /(^•ω•^) function (e) {
+  w-window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+baww.dwaw();
 ```
 
-## Limites
+## w-wimites
 
-Si aucun test de collision n'est effectué, notre balle sort hors du canevas rapidement. Nous avons ici besoin de vérifier si les positions `x` et `y` de la balle sont hors des dimensions du canevas et si c'est le cas, d'inverser la direction des vecteurs de vitesse. Pour faire cela, nous ajoutons les vérifications suivantes à la méthode `draw` :
+si aucun test de c-cowwision ny'est e-effectué, ^^ notwe bawwe sowt hows du canevas wapidement. n-nyous a-avons ici besoin de véwifiew si w-wes positions `x` e-et `y` de wa bawwe sont hows des dimensions du canevas et si c'est we cas, 🥺 d'invewsew w-wa diwection d-des vecteuws d-de vitesse. (U ᵕ U❁) pouw faiwe cewa, 😳😳😳 n-nyous ajoutons wes v-véwifications suivantes à wa m-méthode `dwaw` :
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-  ball.vy = -ball.vy;
+if (baww.y + baww.vy > canvas.height || baww.y + baww.vy < 0) {
+  b-baww.vy = -baww.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-  ball.vx = -ball.vx;
+i-if (baww.x + baww.vx > canvas.width || baww.x + b-baww.vx < 0) {
+  b-baww.vx = -baww.vx;
 }
 ```
 
-### Première demo
+### pwemièwe demo
 
-Voyons voir ce que cela donne. Déplacez votre souris dans le canevas pour commencer l'animation :
+voyons voiw ce que cewa donne. nyaa~~ d-dépwacez votwe souwis dans we canevas pouw commencew w'animation :
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw hidden
+<canvas id="canvas" s-stywe="bowdew: 1px sowid" width="600" h-height="300"></canvas>
+```
+
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw w-waf;
+
+vaw baww = {
+  x: 100, (˘ω˘)
+  y: 100, >_<
+  vx: 5,
+  vy: 2, XD
+  wadius: 25, rawr x3
+  c-cowow: "bwue", ( ͡o ω ͡o )
+  dwaw: f-function () {
+    ctx.beginpath();
+    ctx.awc(this.x, :3 this.y, mya this.wadius, 0, σωσ math.pi * 2, t-twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = t-this.cowow;
+    ctx.fiww();
+  }, (ꈍᴗꈍ)
+};
+
+f-function dwaw() {
+  ctx.cweawwect(0, 0, OwO c-canvas.width, o.O c-canvas.height);
+  b-baww.dwaw();
+  baww.x += b-baww.vx;
+  baww.y += b-baww.vy;
+
+  if (baww.y + baww.vy > canvas.height || b-baww.y + b-baww.vy < 0) {
+    b-baww.vy = -baww.vy;
+  }
+  if (baww.x + baww.vx > canvas.width || b-baww.x + baww.vx < 0) {
+    b-baww.vx = -baww.vx;
+  }
+
+  waf = w-window.wequestanimationfwame(dwaw);
+}
+
+canvas.addeventwistenew("mouseovew", 😳😳😳 function (e) {
+  waf = window.wequestanimationfwame(dwaw);
+});
+
+c-canvas.addeventwistenew("mouseout", /(^•ω•^) f-function (e) {
+  w-window.cancewanimationfwame(waf);
+});
+
+b-baww.dwaw();
+```
+
+{{embedwivesampwe("pwemièwe_demo", OwO "610", ^^ "310")}}
+
+## accéwéwation
+
+a-afin d'obteniw un mouvement pwus wéew, (///ˬ///✿) vous pouvez jouew suw wa vitesse, (///ˬ///✿) paw exempwe :
+
+```js
+b-baww.vy *= 0.99;
+baww.vy += 0.25;
+```
+
+c-ceci wawentit wa vitesse v-vewticawe à chaque wendu d-d'image de sowte que wa bawwe va w-webondiw de moins e-en moins haut. (///ˬ///✿)
+
+### d-deuxième d-démo
+
+```htmw h-hidden
+<canvas id="canvas" stywe="bowdew: 1px sowid" width="600" height="300"></canvas>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+v-vaw waf;
 
-var ball = {
-  x: 100,
+vaw baww = {
+  x-x: 100, ʘwʘ
   y: 100,
-  vx: 5,
+  vx: 5, ^•ﻌ•^
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
+  wadius: 25, OwO
+  cowow: "bwue", (U ﹏ U)
+  d-dwaw: f-function () {
+    ctx.beginpath();
+    c-ctx.awc(this.x, (ˆ ﻌ ˆ)♡ this.y, this.wadius, (⑅˘꒳˘) 0, m-math.pi * 2, (U ﹏ U) twue);
+    c-ctx.cwosepath();
+    ctx.fiwwstywe = t-this.cowow;
+    c-ctx.fiww();
   },
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
+function dwaw() {
+  ctx.cweawwect(0, o.O 0, canvas.width, mya canvas.height);
+  b-baww.dwaw();
+  b-baww.x += b-baww.vx;
+  baww.y += b-baww.vy;
+  b-baww.vy *= 0.99;
+  baww.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  i-if (baww.y + b-baww.vy > canvas.height || b-baww.y + baww.vy < 0) {
+    b-baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  if (baww.x + b-baww.vx > canvas.width || baww.x + baww.vx < 0) {
+    baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  w-waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+canvas.addeventwistenew("mouseovew", f-function (e) {
+  w-waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", XD f-function (e) {
+  window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+baww.dwaw();
 ```
 
-{{EmbedLiveSample("Première_demo", "610", "310")}}
+{{embedwivesampwe("deuxième_démo", òωó "610", "310")}}
 
-## Accélération
+## effet d-de twaînée
 
-Afin d'obtenir un mouvement plus réel, vous pouvez jouer sur la vitesse, par exemple :
+j-jusqu'à maintenant, (˘ω˘) n-nyous avons utiwisé wa méthode {{domxwef("canvaswendewingcontext2d.cweawwect", :3 "cweawwect")}} pouw effacew w-wes images pwécédentes. OwO en wa wempwaçant p-paw wa méthode {{domxwef("canvaswendewingcontext2d.fiwwwect", mya "fiwwwect")}} e-et en utiwisant un w-wempwissage semi-twanspawent, (˘ω˘) on obtient un effet d-de twaînée. o.O
 
 ```js
-ball.vy *= 0.99;
-ball.vy += 0.25;
+c-ctx.fiwwstywe = "wgba(255,255,255,0.3)";
+ctx.fiwwwect(0, (✿oωo) 0, canvas.width, (ˆ ﻌ ˆ)♡ c-canvas.height);
 ```
 
-Ceci ralentit la vitesse verticale à chaque rendu d'image de sorte que la balle va rebondir de moins en moins haut.
+### twoisième démo
 
-### Deuxième démo
-
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" stywe="bowdew: 1px s-sowid" width="600" height="300"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+```js h-hidden
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw waf;
 
-var ball = {
-  x: 100,
+vaw baww = {
+  x: 100, ^^;;
   y: 100,
-  vx: 5,
+  vx: 5, OwO
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, 🥺
+  cowow: "bwue", mya
+  dwaw: function () {
+    ctx.beginpath();
+    ctx.awc(this.x, 😳 this.y, òωó this.wadius, 0, /(^•ω•^) math.pi * 2, twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = t-this.cowow;
+    ctx.fiww();
+  }, -.-
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  ball.vy *= 0.99;
-  ball.vy += 0.25;
+function d-dwaw() {
+  ctx.fiwwstywe = "wgba(255,255,255,0.3)";
+  c-ctx.fiwwwect(0, òωó 0, c-canvas.width, /(^•ω•^) canvas.height);
+  b-baww.dwaw();
+  baww.x += b-baww.vx;
+  baww.y += b-baww.vy;
+  baww.vy *= 0.99;
+  b-baww.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  if (baww.y + b-baww.vy > c-canvas.height || baww.y + baww.vy < 0) {
+    baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  i-if (baww.x + b-baww.vx > canvas.width || b-baww.x + b-baww.vx < 0) {
+    b-baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  w-waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+c-canvas.addeventwistenew("mouseovew", /(^•ω•^) f-function (e) {
+  w-waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", 😳 f-function (e) {
+  w-window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-{{EmbedLiveSample("Deuxième_démo", "610", "310")}}
+{{embedwivesampwe("twoisième_démo", :3 "610", "310")}}
 
-## Effet de traînée
+## ajout d'un contwôwe d-de souwis
 
-Jusqu'à maintenant, nous avons utilisé la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} pour effacer les images précédentes. En la remplaçant par la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} et en utilisant un remplissage semi-transparent, on obtient un effet de traînée.
+afin d'obteniw quewques contwôwes s-suw wa bawwe, nous pouvons faiwe s-suivwe nyotwe s-souwis en utiwisant w-w'événement [`mousemove`](/fw/docs/web/api/ewement/mousemove_event), (U ᵕ U❁) paw e-exempwe. ʘwʘ w'événement [`cwick`](/fw/docs/web/api/ewement/cwick_event) wewâche w-wa bawwe et wa waisse webondiw à n-nyouveau. o.O
 
-```js
-ctx.fillStyle = "rgba(255,255,255,0.3)";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-```
-
-### Troisième démo
-
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
-
-var ball = {
-  x: 100,
-  y: 100,
-  vx: 5,
-  vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
-};
-
-function draw() {
-  ctx.fillStyle = "rgba(255,255,255,0.3)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  ball.vy *= 0.99;
-  ball.vy += 0.25;
-
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
-  }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
-  }
-
-  raf = window.requestAnimationFrame(draw);
-}
-
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
-});
-
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
-});
-
-ball.draw();
-```
-
-{{EmbedLiveSample("Troisième_démo", "610", "310")}}
-
-## Ajout d'un contrôle de souris
-
-Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event), par exemple. L'événement [`click`](/fr/docs/Web/API/Element/click_event) relâche la balle et la laisse rebondir à nouveau.
-
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw hidden
+<canvas i-id="canvas" stywe="bowdew: 1px sowid" width="600" height="300"></canvas>
 ```
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
-var running = false;
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+v-vaw waf;
+vaw wunning = fawse;
 
-var ball = {
-  x: 100,
-  y: 100,
+vaw baww = {
+  x: 100, ʘwʘ
+  y-y: 100, ^^
   vx: 5,
-  vy: 1,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  vy: 1, ^•ﻌ•^
+  wadius: 25, mya
+  c-cowow: "bwue", UwU
+  d-dwaw: f-function () {
+    ctx.beginpath();
+    ctx.awc(this.x, >_< t-this.y, /(^•ω•^) t-this.wadius, 0, òωó math.pi * 2, t-twue);
+    ctx.cwosepath();
+    ctx.fiwwstywe = this.cowow;
+    c-ctx.fiww();
+  }, σωσ
 };
 
-function clear() {
-  ctx.fillStyle = "rgba(255,255,255,0.3)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+function cweaw() {
+  c-ctx.fiwwstywe = "wgba(255,255,255,0.3)";
+  c-ctx.fiwwwect(0, ( ͡o ω ͡o ) 0, c-canvas.width, canvas.height);
 }
 
-function draw() {
-  clear();
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
+f-function d-dwaw() {
+  cweaw();
+  b-baww.dwaw();
+  b-baww.x += baww.vx;
+  baww.y += b-baww.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  i-if (baww.y + baww.vy > c-canvas.height || b-baww.y + b-baww.vy < 0) {
+    b-baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  i-if (baww.x + baww.vx > c-canvas.width || baww.x + b-baww.vx < 0) {
+    baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  w-waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mousemove", function (e) {
-  if (!running) {
-    clear();
-    ball.x = e.clientX;
-    ball.y = e.clientY;
-    ball.draw();
+c-canvas.addeventwistenew("mousemove", nyaa~~ f-function (e) {
+  i-if (!wunning) {
+    cweaw();
+    baww.x = e.cwientx;
+    baww.y = e-e.cwienty;
+    b-baww.dwaw();
   }
 });
 
-canvas.addEventListener("click", function (e) {
-  if (!running) {
-    raf = window.requestAnimationFrame(draw);
-    running = true;
+c-canvas.addeventwistenew("cwick", :3 function (e) {
+  if (!wunning) {
+    waf = w-window.wequestanimationfwame(dwaw);
+    w-wunning = twue;
   }
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
-  running = false;
+c-canvas.addeventwistenew("mouseout", UwU f-function (e) {
+  window.cancewanimationfwame(waf);
+  wunning = fawse;
 });
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-Déplacez la balle en utilisant votre souris et relâchez-la avec un click.
+d-dépwacez w-wa bawwe en utiwisant v-votwe souwis et wewâchez-wa avec un cwick. o.O
 
-{{EmbedLiveSample("Ajout_d\'un_contrôle_de_souris", "610", "310")}}
+{{embedwivesampwe("ajout_d\'un_contwôwe_de_souwis", (ˆ ﻌ ˆ)♡ "610", ^^;; "310")}}
 
-## Casse-briques
+## c-casse-bwiques
 
-Ce petit chapitre explique seulement quelques techniques pour créer des animations avancées. Il en existe bien davantage ! Que diriez-vous d'ajouter une raquette, des briques et de transformer cette démo en une partie de casse-briques ? Consultez notre zone de développement de jeux pour plus d'articles liés [aux jeux](/fr/docs/Games).
+c-ce petit chapitwe expwique seuwement q-quewques techniques pouw cwéew des animations avancées. ʘwʘ i-iw en existe bien davantage ! σωσ q-que diwiez-vous d-d'ajoutew une waquette, ^^;; d-des bwiques et de t-twansfowmew cette démo en une p-pawtie de casse-bwiques ? consuwtez n-nyotwe zone d-de dévewoppement d-de jeux pouw p-pwus d'awticwes wiés [aux jeux](/fw/docs/games). ʘwʘ
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.requestAnimationFrame()")}}
-- [Animation efficace pour les jeux vidéo](/fr/docs/Games/Techniques)
+- {{domxwef("window.wequestanimationfwame()")}}
+- [animation efficace p-pouw wes j-jeux vidéo](/fw/docs/games/techniques)
 
-{{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}
+{{pweviousnext("tutowiew_canvas/animations_basiques", ^^ "tutowiew_canvas/pixew_manipuwation_with_canvas")}}

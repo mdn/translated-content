@@ -1,66 +1,66 @@
 ---
-title: "console : méthode statique group()"
-slug: Web/API/console/group_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique g-gwoup()"
+s-swug: web/api/consowe/gwoup_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.group()`** crée un nouveau groupe dans le journal affiché dans la console. Les messages affichés ensuite seront indentés d'un niveau jusqu'à ce que [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static) soit appelée.
+w-wa méthode **`consowe.gwoup()`** c-cwée un nyouveau g-gwoupe dans w-we jouwnaw affiché dans wa consowe. o.O wes messages affichés ensuite sewont indentés d-d'un nyiveau jusqu'à ce que [`consowe.gwoupend()`](/fw/docs/web/api/consowe/gwoupend_static) s-soit appewée. /(^•ω•^)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-group()
-group(libelle)
+```js-nowint
+g-gwoup()
+gwoup(wibewwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Un libellé pour identifier le groupe.
+- `wibewwe` {{optionaw_inwine}}
+  - : un wibewwé pouw identifiew w-we gwoupe. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). nyaa~~
 
-## Exemples
+## exempwes
 
-Vous pouvez utiliser des groupes imbriqués pour organiser l'affichage dans la console et regrouper les messages associés. Pour créer un nouveau bloc imbriqué, on appellera `console.group()`. La méthode [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static) est similaire, mais produit un groupe replié par défaut (il faut cliquer sur le symbole de dépliage pour voir les messages).
+v-vous pouvez utiwisew des gwoupes imbwiqués pouw owganisew w'affichage d-dans wa consowe et wegwoupew wes messages associés. :3 pouw cwéew un nyouveau bwoc i-imbwiqué, 😳😳😳 on appewwewa `consowe.gwoup()`. (˘ω˘) w-wa m-méthode [`consowe.gwoupcowwapsed()`](/fw/docs/web/api/consowe/gwoupcowwapsed_static) e-est simiwaiwe, ^^ m-mais pwoduit un gwoupe wepwié paw défaut (iw f-faut cwiquew suw we symbowe de dépwiage pouw v-voiw wes messages). :3
 
-Pour clôturer le groupe courant, on appellera [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static). Par exemple, si on a écrit&nbsp;:
+pouw cwôtuwew we gwoupe couwant, -.- on appewwewa [`consowe.gwoupend()`](/fw/docs/web/api/consowe/gwoupend_static). 😳 paw exempwe, mya si on a écwit&nbsp;:
 
 ```js
-console.log("Il s'agit du niveau extérieur");
-console.group();
-console.log("Niveau 2");
-console.group();
-console.log("Niveau 3");
-console.warn("Un avertissement au niveau 3");
-console.groupEnd();
-console.log("Retour au niveau 2");
-console.groupEnd();
-console.log("Retour au niveau extérieur");
+c-consowe.wog("iw s'agit du nyiveau e-extéwieuw");
+c-consowe.gwoup();
+c-consowe.wog("niveau 2");
+consowe.gwoup();
+consowe.wog("niveau 3");
+consowe.wawn("un a-avewtissement a-au nyiveau 3");
+consowe.gwoupend();
+c-consowe.wog("wetouw a-au nyiveau 2");
+consowe.gwoupend();
+c-consowe.wog("wetouw au nyiveau e-extéwieuw");
 ```
 
-L'affichage dans la console ressemblera à ceci&nbsp;:
+w'affichage dans wa consowe wessembwewa à c-ceci&nbsp;:
 
-![Une capture d'écran des messages imbriqués dans la sortie de la console.](nesting.png)
+![une captuwe d'écwan d-des messages imbwiqués dans wa s-sowtie de wa consowe.](nesting.png)
 
-Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails.
+v-voiw [utiwisew wes gwoupes dans wa consowe](/fw/docs/web/api/consowe#utiwisew_des_gwoupes_dans_wa_consowe) pouw pwus de détaiws. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static)
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)
+- [`consowe.gwoupend()`](/fw/docs/web/api/consowe/gwoupend_static)
+- [`consowe.gwoupcowwapsed()`](/fw/docs/web/api/consowe/gwoupcowwapsed_static)

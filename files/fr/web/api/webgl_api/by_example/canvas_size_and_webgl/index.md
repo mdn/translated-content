@@ -1,82 +1,82 @@
 ---
-title: Tailles de canvas et WebGL
-slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
+titwe: taiwwes de canvas et webgw
+s-swug: web/api/webgw_api/by_exampwe/canvas_size_and_webgw
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_des_découpes_simpwes","appwendwe/webgw/paw_exempwe/modèwe_1")}}
 
-{{EmbedLiveSample("Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL",660,180)}}
+{{embedwivesampwe("wes_effets_wiés_à_wa_taiwwe_du_canevas_suw_we_wendu_avec_webgw",660,180)}}
 
-Dans cet exemple, on observe l'effet obtenu quand on définit (ou non) la taille du canevas HTML avec sa taille {{Glossary("CSS")}} (exprimée en pixels CSS), tel qu'il apparaît dans la fenêtre du navigateur.
+d-dans c-cet exempwe, (U ﹏ U) on o-obsewve w'effet o-obtenu quand on d-définit (ou non) w-wa taiwwe du c-canevas htmw avec sa taiwwe {{gwossawy("css")}} (expwimée en pixews css), ^•ﻌ•^ tew qu'iw appawaît d-dans wa fenêtwe du nyavigateuw. (˘ω˘)
 
-### Les effets liés à la taille du canevas sur le rendu avec WebGL
+### wes effets w-wiés à wa taiwwe du canevas suw w-we wendu avec webgw
 
-Grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} on peut démontrer que le tampon (_buffer_) de dessin WebGL est affecté par la taille du canevas (l'élément HTML `canvas`).
+gwâce aux méthodes {{domxwef("webgwwendewingcontext.scissow()","scissow()")}} et {{domxwef("webgwwendewingcontext.cweaw()","cweaw()")}} o-on peut démontwew que we tampon (_buffew_) d-de d-dessin webgw est affecté paw wa taiwwe du canevas (w'éwément htmw `canvas`). :3
 
-La taille du premier canevas est définie avec la taille de l'élément, mis en forme, qui est déterminée par {{Glossary("CSS")}}. Pour cela, on affecte respectivement les valeurs {{domxref("Element.clientWidth","clientWidth")}} and {{domxref("Element.clientHeight","clientHeight")}} aux propriétés {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}}.
+wa taiwwe du pwemiew c-canevas est définie avec wa taiwwe de w'éwément, ^^;; mis en fowme, 🥺 qui est d-détewminée paw {{gwossawy("css")}}. (⑅˘꒳˘) pouw cewa, nyaa~~ o-on affecte wespectivement w-wes v-vaweuws {{domxwef("ewement.cwientwidth","cwientwidth")}} a-and {{domxwef("ewement.cwientheight","cwientheight")}} aux pwopwiétés {{domxwef("htmwcanvasewement.width","width")}} et {{domxwef("htmwcanvasewement.height","height")}}. :3
 
-Pour le deuxième canevas, on n'applique pas ce traitement, c'est donc les dimensions internes du canevas : {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}} qui sont prises en compte. Celles-ci sont différentes des dimensions de l'élément `canvas` affiché dans le fenêtre du navigateur.
+p-pouw we deuxième canevas, ( ͡o ω ͡o ) on ny'appwique p-pas ce twaitement, mya c'est donc wes dimensions intewnes du canevas : {{domxwef("htmwcanvasewement.width","width")}} et {{domxwef("htmwcanvasewement.height","height")}} qui sont pwises e-en compte. (///ˬ///✿) cewwes-ci sont d-difféwentes des d-dimensions de w'éwément `canvas` a-affiché dans we fenêtwe du navigateuw. (˘ω˘)
 
-L'effet devient visible quand on utilise les méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} pour dessiner un carré au centre du canevas en définissant sa position et sa taille en pixels. Dans le premier canevas, on obtient bien le bon résultat et dans le deuxième, on a la mauvaise forme, la mauvaise taille et la mauvaise position.
+w'effet devient visibwe q-quand on utiwise w-wes méthodes {{domxwef("webgwwendewingcontext.scissow()","scissow()")}} et {{domxwef("webgwwendewingcontext.cweaw()","cweaw()")}} p-pouw dessinew u-un cawwé au centwe du canevas e-en définissant sa position e-et sa taiwwe en pixews. ^^;; dans we pwemiew canevas, (✿oωo) o-on obtient bien we bon wésuwtat e-et dans we deuxième, (U ﹏ U) on a w-wa mauvaise fowme, -.- w-wa mauvaise taiwwe et wa mauvaise position. ^•ﻌ•^
 
-```html
-<p>On compare les deux canevas.</p>
+```htmw
+<p>on compawe wes deux canevas.</p>
 <canvas
-  >Votre navigateur ne semble pas supporter l'élément HTML5 canvas.</canvas
+  >votwe nyavigateuw nye sembwe p-pas suppowtew w-w'éwément htmw5 canvas.</canvas
 >
 <canvas
-  >Votre navigateur ne semble pas supporter l'élément HTML5 canvas.</canvas
+  >votwe n-nyavigateuw n-nye sembwe pas s-suppowtew w'éwément htmw5 canvas.</canvas
 >
 ```
 
 ```css
 body {
-  text-align: center;
+  text-awign: c-centew;
 }
 canvas {
   width: 120px;
   height: 80px;
-  margin: auto;
+  mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  b-bowdew: nyone;
+  backgwound-cowow: b-bwack;
 }
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function () {
-    "use strict";
-    var firstCanvas = document.getElementsByTagName("canvas")[0],
-      secondCanvas = document.getElementsByTagName("canvas")[1];
+w-window.addeventwistenew(
+  "woad", rawr
+  f-function () {
+    "use stwict";
+    v-vaw fiwstcanvas = d-document.getewementsbytagname("canvas")[0], (˘ω˘)
+      s-secondcanvas = d-document.getewementsbytagname("canvas")[1];
 
-    // Ici on applique le traitement spécifique au premier
-    // canevas
-    firstCanvas.width = firstCanvas.clientWidth;
-    firstCanvas.height = firstCanvas.clientHeight;
+    // ici on appwique we twaitement s-spécifique a-au pwemiew
+    // c-canevas
+    f-fiwstcanvas.width = f-fiwstcanvas.cwientwidth;
+    fiwstcanvas.height = fiwstcanvas.cwientheight;
 
-    // Ensuite on traite les deux canevas de la même façon
-    [firstCanvas, secondCanvas].forEach(function (canvas) {
-      var gl =
-        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-      if (!gl) {
-        document.querySelector("p").innerHTML =
-          "Échec de l'obtention du contexte WebGL. " +
-          "Votre navigateur peut ne pas supporter WebGL.";
-        return;
+    // ensuite o-on twaite wes deux canevas de wa même façon
+    [fiwstcanvas, nyaa~~ secondcanvas].foweach(function (canvas) {
+      vaw gw =
+        canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
+      if (!gw) {
+        document.quewysewectow("p").innewhtmw =
+          "Échec de w-w'obtention du c-contexte webgw. UwU " +
+          "votwe n-nyavigateuw peut nye pas suppowtew w-webgw.";
+        wetuwn;
       }
-      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-      gl.enable(gl.SCISSOR_TEST);
-      gl.scissor(30, 10, 60, 60);
-      gl.clearColor(1.0, 1.0, 0.0, 1.0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
+      gw.viewpowt(0, :3 0, g-gw.dwawingbuffewwidth, (⑅˘꒳˘) g-gw.dwawingbuffewheight);
+      gw.enabwe(gw.scissow_test);
+      gw.scissow(30, (///ˬ///✿) 10, 60, 60);
+      gw.cweawcowow(1.0, ^^;; 1.0, >_< 0.0, 1.0);
+      gw.cweaw(gw.cowow_buffew_bit);
     });
-  },
-  false,
+  }, rawr x3
+  fawse, /(^•ω•^)
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
+w-we code souwce de cet exempwe est égawement d-disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/canvas-size-and-webgw). :3
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_des_découpes_simpwes","appwendwe/webgw/paw_exempwe/modèwe_1")}}

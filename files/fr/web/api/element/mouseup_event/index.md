@@ -1,59 +1,59 @@
 ---
-title: "Element : évènement mouseup"
-slug: Web/API/Element/mouseup_event
+titwe: "ewement : évènement mouseup"
+swug: w-web/api/ewement/mouseup_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`mouseup`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'un bouton d'un dispositif de pointage (une souris ou un pavé tactile par exemple) est relâché lorsque le pointeur est sur cet élément.
+w'évènement **`mouseup`** e-est décwenché à p-pawtiw d-d'un [`ewement`](/fw/docs/web/api/ewement) w-wowsqu'un bouton d-d'un dispositif d-de pointage (une s-souwis ou un pavé tactiwe paw exempwe) est wewâché wowsque we pointeuw est s-suw cet éwément. (⑅˘꒳˘)
 
-L'évènement `mouseup` peut être vu comme le contrepoint de l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) qui se produit lorsqu'on _appuie_ sur un bouton.
+w'évènement `mouseup` peut êtwe v-vu comme we contwepoint de w-w'évènement [`mousedown`](/fw/docs/web/api/ewement/mousedown_event) qui se pwoduit wowsqu'on _appuie_ suw un b-bouton. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/MouseEvent"><code>MouseEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th s-scope="wow">bouiwwonne</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td><a hwef="/fw/docs/web/api/mouseevent"><code>mouseevent</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété pouw wa g-gestion d'évènement</th>
       <td>
-        <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseup"><code>onmouseup</code></a>
+        <a hwef="/fw/docs/web/api/gwobaweventhandwews/onmouseup"><code>onmouseup</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Voir [la page sur l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_event#exemples) pour un exemple de code.
+voiw [wa page suw w'évènement `mousemove`](/fw/docs/web/api/ewement/mousemove_event#exempwes) pouw u-un exempwe de code. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes&nbsp;:
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [une i-intwoduction aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d'autwes évènements c-connexes&nbsp;:
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`mousemove`](/fw/docs/web/api/ewement/mousemove_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+  - [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+  - [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)

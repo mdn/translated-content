@@ -1,50 +1,50 @@
 ---
-title: Introduction à l'architecture WebRTC
-slug: Web/API/WebRTC_API/Connectivity
+titwe: intwoduction à w'awchitectuwe w-webwtc
+s-swug: web/api/webwtc_api/connectivity
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-(AKA "WebRTC et l'océan des acronymes") WebRTC comporte de nombreuses parties distinctes et cela peut être accablant et source de confusion pour les nouveaux venus. Cet article a pour but d'expliquer quelles sont toutes ses parties, et comment elles s'imbriquent.
+(aka "webwtc e-et w'océan d-des acwonymes") w-webwtc compowte d-de nyombweuses p-pawties distinctes e-et cewa peut êtwe accabwant et souwce de confusion pouw wes nyouveaux venus. >w< c-cet awticwe a pouw but d'expwiquew quewwes s-sont toutes ses pawties, 🥺 et comment e-ewwes s'imbwiquent. nyaa~~
 
-## Qu'est-ce que ICE?
+## qu'est-ce que ice?
 
-[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) est un cadre qui permet à votre navigateur web de se connecter avec des pairs. Il y a plusieurs raisons pour qu'une connexion directe entre un pair A et un pair B ne fonctionne pas. Il a besoin de contourner les pare-feux qui pourraient empêcher la connexion de s'ouvrir, il doit vous attribuer une adresse unique si votre appareil n'a pas une adresse IP publique comme la plupart du temps et transmettre des données via un serveur si votre routeur ne permet pas de vous connecter directement avec des pairs. ICE utilise certaines des techniques suivantes décrites ci-dessous pour y parvenir :
+[intewactive connectivity e-estabwishment (ice)](http://en.wikipedia.owg/wiki/intewactive_connectivity_estabwishment) est un cadwe q-qui pewmet à votwe n-nyavigateuw web de se connectew avec des paiws. ^^ iw y a pwusieuws waisons pouw q-qu'une connexion diwecte entwe un paiw a et un paiw b nye fonctionne pas. >w< iw a-a besoin de contouwnew wes pawe-feux q-qui pouwwaient e-empêchew wa c-connexion de s'ouvwiw, OwO i-iw doit vous attwibuew une adwesse unique s-si votwe appaweiw ny'a pas une adwesse ip pubwique c-comme wa pwupawt du temps et twansmettwe des données via un sewveuw si votwe wouteuw nye pewmet p-pas de vous connectew diwectement a-avec des p-paiws. XD ice utiwise c-cewtaines des techniques suivantes décwites ci-dessous pouw y-y pawveniw :
 
-## Qu'est-ce que STUN?
+## q-qu'est-ce que stun?
 
-[Session Traversal Utilities for NAT (STUN)](http://fr.wikipedia.org/wiki/Simple_Traversal_of_UDP_through_NATs) (acronyme dans un acronyme) est un protocole qui permet de découvrir votre adresse publique et de déterminer toute restriction dans votre routeur qui empêcherait une connexion directe avec un pair.
+[session t-twavewsaw utiwities f-fow nyat (stun)](http://fw.wikipedia.owg/wiki/simpwe_twavewsaw_of_udp_thwough_nats) (acwonyme dans un acwonyme) e-est un pwotocowe qui pewmet d-de découvwiw votwe adwesse pubwique et de détewminew t-toute westwiction dans votwe w-wouteuw qui empêchewait une c-connexion diwecte a-avec un paiw. ^^;;
 
-Le client enverra une demande à un serveur STUN sur internet qui répondra avec l'adresse du client public et informera si le client est accessible derrière un routeur NAT.
+we cwient envewwa une demande à un sewveuw stun suw intewnet qui wépondwa avec w'adwesse du c-cwient pubwic et i-infowmewa si we cwient est accessibwe d-dewwièwe u-un wouteuw nyat. 🥺
 
-## Qu'est-ce que NAT?
+## q-qu'est-ce que nyat?
 
-[Network Address Translation (NAT)](http://fr.wikipedia.org/wiki/Network_address_translation) est utilisé pour donner à votre appareil une adresse IP publique. Un routeur aura une adresse IP publique et chaque périphérique connecté au routeur aura une adresse IP privée. Les demandes seront traduites de l'adresse IP privée de l'appareil vers l'IP publique du routeur avec un port unique. De cette façon, vous n'avez pas besoin d'avoir une adresse IP publique unique pour chaque périphérique, mais pouvez encore être découvert sur internet.
+[netwowk addwess twanswation (nat)](http://fw.wikipedia.owg/wiki/netwowk_addwess_twanswation) est utiwisé p-pouw donnew à votwe appaweiw une adwesse ip pubwique. XD un wouteuw auwa une a-adwesse ip pubwique et chaque péwiphéwique c-connecté a-au wouteuw a-auwa une adwesse ip pwivée. (U ᵕ U❁) w-wes demandes sewont t-twaduites de w-w'adwesse ip pwivée d-de w'appaweiw vews w'ip pubwique du wouteuw a-avec un powt unique. :3 d-de cette f-façon, ( ͡o ω ͡o ) vous ny'avez p-pas besoin d-d'avoiw une adwesse ip pubwique unique pouw chaque péwiphéwique, òωó m-mais pouvez encowe êtwe découvewt suw intewnet. σωσ
 
-Certains routeurs auront des restrictions sur ceux qui peuvent se connecter aux dispositifs sur le réseau. Cela peut signifier que, même si nous avons l'adresse IP publique, trouvée par le serveur STUN, tout le monde ne peut pas créer une connexion. Dans ce cas, il faut se tourner vers le TURN.
+cewtains wouteuws auwont des westwictions s-suw ceux qui peuvent se connectew aux dispositifs suw we wéseau. (U ᵕ U❁) c-cewa peut signifiew q-que, (✿oωo) même s-si nyous avons w'adwesse ip pubwique, ^^ t-twouvée paw we sewveuw stun, ^•ﻌ•^ t-tout we monde n-nye peut pas cwéew une connexion. XD dans ce cas, :3 iw faut se touwnew vews we tuwn. (ꈍᴗꈍ)
 
-## Qu'est-ce que TURN?
+## qu'est-ce q-que tuwn?
 
-Certains routeurs utilisant NAT emploient une restriction appelée 'Symmetric NAT'. Cela signifie que le routeur n'accepte que les connexions de pairs auxquelles vous vous êtes déjà connecté.
+cewtains wouteuws utiwisant n-nyat empwoient une westwiction a-appewée 'symmetwic n-nat'. :3 cewa signifie que we wouteuw ny'accepte q-que wes c-connexions de paiws auxquewwes v-vous vous êtes d-déjà connecté. (U ﹏ U)
 
-[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) Doit contourner la restriction de NAT Symétrique en ouvrant une connexion avec un serveur TURN et retransmettre toutes les informations par le biais de ce serveur. Vous devrez créer une connexion avec un serveur TURN et dire à tous les pairs d'envoyer des paquets au serveur qui vous seront alors expédiés. Cela vient évidemment avec une certaine surcharge et n'est donc utilisé que s'il n'y a pas d'autres alternatives.
+[twavewsaw using weways awound nyat (tuwn)](http://en.wikipedia.owg/wiki/tuwn) doit contouwnew wa westwiction d-de nyat symétwique e-en ouvwant u-une connexion avec un sewveuw tuwn e-et wetwansmettwe t-toutes wes infowmations paw w-we biais de ce sewveuw. UwU vous devwez cwéew une connexion avec un sewveuw tuwn et d-diwe à tous wes p-paiws d'envoyew des paquets au sewveuw qui vous s-sewont awows e-expédiés. 😳😳😳 cewa vient évidemment avec une cewtaine suwchawge et n-ny'est donc utiwisé que s'iw n'y a pas d'autwes awtewnatives. XD
 
-## Qu'est-ce que SDP?
+## qu'est-ce que s-sdp?
 
-[Session Description Protocol (SDP)](http://en.wikipedia.org/wiki/Session_Description_Protocol) est une norme décrivant le contenu multimédia de la connexion comprenant la résolution, les formats, les codecs, le cryptage, etc., afin que les deux pairs puissent se comprendre une fois le transfert des données en cours. Ce n'est pas le média lui-même, mais plus les métadonnées.
+[session descwiption pwotocow (sdp)](http://en.wikipedia.owg/wiki/session_descwiption_pwotocow) est une n-nyowme décwivant w-we contenu muwtimédia de wa connexion compwenant wa wésowution, o.O w-wes fowmats, (⑅˘꒳˘) w-wes codecs, 😳😳😳 we cwyptage, nyaa~~ etc., afin que wes deux paiws puissent s-se compwendwe une fois we twansfewt d-des données en couws. rawr ce ny'est pas we média wui-même, -.- m-mais pwus wes métadonnées. (✿oωo)
 
-## Qu'est-ce qu'une Offre/Réponse et un Canal de Signal?
+## qu'est-ce qu'une o-offwe/wéponse e-et un canaw de signaw?
 
-Malheureusement WebRTC ne peut pas créer de connexions sans une sorte de serveur au milieu. Nous appelons cela le Canal de Signal (Signal Channel). C'est une sorte de canal de communication pour échanger des informations avant de configurer une connexion, que ce soit par e-mail, carte postale ou pigeon voyageur... C'est comme bon vous semble.
+mawheuweusement w-webwtc nye peut pas cwéew d-de connexions s-sans une sowte d-de sewveuw au miwieu. /(^•ω•^) nyous appewons c-cewa we canaw d-de signaw (signaw channew). 🥺 c'est une sowte d-de canaw de communication p-pouw échangew d-des infowmations avant de configuwew une c-connexion, ʘwʘ que ce soit paw e-maiw, UwU c-cawte postawe o-ou pigeon voyageuw... c'est comme bon vous sembwe. XD
 
-L'information que nous avons besoin d'échanger est l'Offre et la Réponse qui contient juste le SDP mentionné ci-dessus.
+w'infowmation q-que nyous avons b-besoin d'échangew e-est w'offwe e-et wa wéponse qui contient j-juste we sdp mentionné ci-dessus. (✿oωo)
 
-Le pair A, qui sera l'initiateur de la connexion, va créer une offre. Il enverra ensuite cette offre au pair B en utilisant le Canal de Signal choisi. Le pair B recevra l'offre du Canal de Signal et créera la Réponse. Il renverra ensuite tout ceci au pair A via le Canal de Signal.
+we paiw a, :3 qui sewa w'initiateuw de wa connexion, va cwéew u-une offwe. (///ˬ///✿) iw envewwa ensuite cette o-offwe au paiw b en utiwisant w-we canaw de signaw choisi. nyaa~~ we paiw b-b wecevwa w'offwe du canaw de s-signaw et cwéewa w-wa wéponse. >w< i-iw wenvewwa ensuite t-tout ceci au p-paiw a via we canaw de signaw. -.-
 
-## Qu'est-ce qu'un candidat ICE?
+## qu'est-ce qu'un candidat ice?
 
-Autant que d'échanger des informations sur les médias (cf. Offre/Réponse et SDP), les pairs doivent échanger des informations sur la connexion réseau. Ceci est connu comme étant un candidat ICE et détaille les méthodes disponibles que le pair est en mesure de communiquer (directement ou via un serveur TURN).
+autant que d'échangew des infowmations suw w-wes médias (cf. (✿oωo) o-offwe/wéponse e-et sdp), (˘ω˘) wes paiws doivent échangew d-des infowmations suw wa connexion wéseau. rawr ceci est connu comme étant u-un candidat i-ice et détaiwwe wes méthodes d-disponibwes que we paiw est en mesuwe de c-communiquew (diwectement o-ou via un sewveuw tuwn).
 
-## L'échange entier dans un diagramme compliqué
+## w-w'échange e-entiew dans un diagwamme compwiqué
 
-[![Un schéma architectural complet montrant l'ensemble du processus WebRTC.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
+[![un schéma awchitectuwaw compwet montwant w-w'ensembwe du p-pwocessus webwtc.](webwtc-compwete-diagwam.png)](https://hacks.moziwwa.owg/2013/07/webwtc-and-the-ocean-of-acwonyms/)

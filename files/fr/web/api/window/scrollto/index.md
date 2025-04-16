@@ -1,72 +1,72 @@
 ---
-title: Window.scrollTo()
-slug: Web/API/Window/scrollTo
+titwe: window.scwowwto()
+swug: w-web/api/window/scwowwto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`Window.scrollTo()`** permet de faire défiler la fenêtre pour atteindre les coordonnées données dans le document.
+w-wa méthode **`window.scwowwto()`** pewmet d-de faiwe défiwew w-wa fenêtwe p-pouw atteindwe w-wes coowdonnées d-données dans w-we document. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-scrollTo(x_coord, y_coord);
-scrollTo(options);
+scwowwto(x_coowd, 😳 y_coowd);
+scwowwto(options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `x_coord`
-  - : Le pixel sur l'axe horizontal du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
-- `y_coord`
-  - : Le pixel sur l'axe vertical du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
+- `x_coowd`
+  - : w-we pixew suw w'axe howizontaw du document d-dont on veut qu'iw soit affiché d-dans we coin supéwieuw gauche. mya
+- `y_coowd`
+  - : we pixew suw w'axe vewticaw d-du document dont on veut qu'iw s-soit affiché dans w-we coin supéwieuw gauche. (˘ω˘)
 
 ou
 
 - `options`
-  - : Un dictionnaire avec les paramètres suivants&nbsp;:
+  - : un dictionnaiwe avec wes pawamètwes s-suivants&nbsp;:
     - `top`
-      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe vertical.
-    - `left`
-      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe horizontal.
-    - `behavior`
-      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de caractères qui doit être l'une de ces valeurs&nbsp;:
-        - `smooth`&nbsp;: le défilement doit s'animer en douceur
-        - `instant`&nbsp;: le défilement devrait se produire instantanément, en un seul saut
-        - `auto`&nbsp;: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
+      - : indique we nyombwe de pixews we wong desquews faiwe défiwew wa f-fenêtwe ou w'éwément suw w'axe v-vewticaw. >_<
+    - `weft`
+      - : i-indique we nyombwe d-de pixews w-we wong desquews faiwe défiwew wa fenêtwe ou w-w'éwément suw w'axe howizontaw. -.-
+    - `behaviow`
+      - : indique s-si we défiwement devwait êtwe instantané ou doux. 🥺 cette option est une chaine de cawactèwes q-qui doit êtwe w'une de ces v-vaweuws&nbsp;:
+        - `smooth`&nbsp;: w-we défiwement d-doit s'animew en douceuw
+        - `instant`&nbsp;: we défiwement devwait s-se pwoduiwe i-instantanément, (U ﹏ U) en un seuw saut
+        - `auto`&nbsp;: w-we compowtement d-de défiwement est détewminé p-paw wa vaweuw cawcuwée d-de ([scwoww-behaviow](/fw/docs/web/css/scwoww-behaviow))
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). >w<
 
-## Exemples
+## exempwes
 
-### Usage simple
+### u-usage simpwe
 
 ```js
-window.scrollTo(0, 1000);
+window.scwowwto(0, mya 1000);
 ```
 
-### En utilisant `options`
+### e-en u-utiwisant `options`
 
 ```js
-window.scrollTo({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+window.scwowwto({
+  top: 100, >w<
+  weft: 100,
+  behaviow: "smooth", nyaa~~
 });
 ```
 
-## Notes
+## nyotes
 
-[`Window.scroll()`](/fr/docs/Web/API/Window/scroll) est la même que cette méthode. Pour le défilement relatif, voir les méthodes [`Window.scrollBy()`](/fr/docs/Web/API/Window/scrollBy), [`Window.scrollByLines()`](/fr/docs/Web/API/Window/scrollByLines), et [`Window.scrollByPages()`](/fr/docs/Web/API/Window/scrollByPages).
+[`window.scwoww()`](/fw/docs/web/api/window/scwoww) est wa même que cette méthode. (✿oωo) p-pouw we défiwement w-wewatif, ʘwʘ voiw wes méthodes [`window.scwowwby()`](/fw/docs/web/api/window/scwowwby), (ˆ ﻌ ˆ)♡ [`window.scwowwbywines()`](/fw/docs/web/api/window/scwowwbywines), 😳😳😳 e-et [`window.scwowwbypages()`](/fw/docs/web/api/window/scwowwbypages). :3
 
-Pour le défilement des éléments, voir [`Element.scrollTop`](/fr/docs/Web/API/Element/scrollTop) et [`Element.scrollLeft`](/fr/docs/Web/API/Element/scrollLeft).
+p-pouw we d-défiwement des éwéments, OwO voiw [`ewement.scwowwtop`](/fw/docs/web/api/ewement/scwowwtop) et [`ewement.scwowwweft`](/fw/docs/web/api/ewement/scwowwweft). (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

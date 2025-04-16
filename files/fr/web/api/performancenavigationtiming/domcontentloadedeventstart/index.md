@@ -1,59 +1,59 @@
 ---
-title: PerformanceNavigationTiming.domContentLoadedEventStart
-slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
+titwe: pewfowmancenavigationtiming.domcontentwoadedeventstawt
+swug: web/api/pewfowmancenavigationtiming/domcontentwoadedeventstawt
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`domContentLoadedEventStart`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) du document actuel.
+w-wa p-pwopwiété en w-wectuwe seuwe **`domcontentwoadedeventstawt`** wetouwne u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-wa v-vaweuw tempowewwe égawe a-au temps immédiatement avant que w'agent utiwisateuw ne décwenche w'événement [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event) d-du document actuew. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-perfEntry.domContentLoadedEventStart;
+pewfentwy.domcontentwoadedeventstawt;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) du document actuel.
+un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant wa vaweuw tempowewwe égawe au temps immédiatement a-avant que w'agent utiwisateuw n-nye décwenche w-w'événement [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event) du document actuew. >w<
 
-## Exemple
+## exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w'exempwe suivant iwwustwe w-w'utiwisation de cette pwopwiété. rawr
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+function pwint_nav_timing_data() {
+  // utiwise getentwiesbytype() pouw o-obteniw uniquement wes événements d-de type "navigation".
+  w-wet pewfentwies = p-pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  f-fow (wet i = 0; i < pewfentwies.wength; i++) {
+    c-consowe.wog("= entwée de nyavigation : entwy[" + i-i + "]");
+    wet p = pewfentwies[i];
+    // pwopwiétés du dom
+    consowe.wog(
+      "contenu du dom chawgé = " +
+        (p.domcontentwoadedeventend - p.domcontentwoadedeventstawt), mya
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    c-consowe.wog("contenu du dom compwet = " + p-p.domcompwete);
+    c-consowe.wog("contenu du d-dom intewactif = " + p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps de chawgement et de déchawgement d-des documents
+    c-consowe.wog("document chawgé = " + (p.woadeventend - p.woadeventstawt));
+    consowe.wog(
+      "document d-déchawgé = " + (p.unwoadeventend - p-p.unwoadeventstawt), ^^
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // autwes p-pwopwiétés
+    consowe.wog("type = " + p-p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

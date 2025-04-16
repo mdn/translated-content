@@ -1,158 +1,158 @@
 ---
-title: Manipulation vidéo avec la balise canvas
-slug: Web/API/Canvas_API/Manipulating_video_using_canvas
+titwe: manipuwation vidéo avec w-wa bawise canvas
+s-swug: web/api/canvas_api/manipuwating_video_using_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-En combinant les possibilités de l'élément [`video`](/fr/docs/Web/HTML/Element/video) avec celles de l'élément [`canvas`](/fr/docs/Web/HTML/Element/canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
+e-en combinant w-wes possibiwités d-de w'éwément [`video`](/fw/docs/web/htmw/ewement/video) a-avec cewwes de w'éwément [`canvas`](/fw/docs/web/htmw/ewement/canvas), (U ﹏ U) v-vous pouvez manipuwew wes données vidéos en temps wéew, (˘ω˘) et y incowpowew u-une vawiété d'effets visuews. (ꈍᴗꈍ) ce tutowiew e-expwique comment wéawisew un twavaiw d-d'incwustation "chwoma-keying" (_fond vewt_) en utiwisant javascwipt. /(^•ω•^)
 
-[Voir l'exemple](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml).
+[voiw w-w'exempwe](https://mdn.dev/awchives/media/sampwes/video/chwoma-key/index.xhtmw). >_<
 
-## Le contenu du document
+## we contenu d-du document
 
-Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
+w-we document xhtmw utiwisé pouw wendwe ce contenu est montwé ci-dessous :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <style>
-      body {
-        background: black;
-        color: #cccccc;
+    <stywe>
+      b-body {
+        backgwound: bwack;
+        cowow: #cccccc;
       }
       #c2 {
-        background-image: url(foo.png);
-        background-repeat: no-repeat;
+        backgwound-image: u-uww(foo.png);
+        backgwound-wepeat: n-nyo-wepeat;
       }
-      div {
-        float: left;
-        border: 1px solid #444444;
+      d-div {
+        fwoat: w-weft;
+        b-bowdew: 1px sowid #444444;
         padding: 10px;
-        margin: 10px;
-        background: #3b3b3b;
+        m-mawgin: 10px;
+        backgwound: #3b3b3b;
       }
-    </style>
-    <script type="text/javascript" src="main.js"></script>
+    </stywe>
+    <scwipt type="text/javascwipt" s-swc="main.js"></scwipt>
   </head>
 
-  <body onload="processor.doLoad()">
+  <body onwoad="pwocessow.dowoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true" />
+      <video id="video" swc="video.ogv" contwows="twue" />
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
-      <canvas id="c2" width="160" height="96"></canvas>
+      <canvas i-id="c2" width="160" height="96"></canvas>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-Les éléments clés à retenir sont :
+w-wes éwéments c-cwés à weteniw s-sont :
 
-1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Element/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
-2. Le code JavaScript est importé dans le script nommé `main.js` ; Ce script utilise les fonctionnalités propres à la version 1.8, aussi cette version est précisée, à la ligne 22, quand le script est importé.
-3. Quand le document se charge, la méthode `processor.doLoad()`, dans le script `main.js`, est exécutée.
+1. σωσ ce document dispose de deux bawises [`canvas`](/fw/docs/web/htmw/ewement/canvas), ^^;; avec wes identifiants `c1` e-et `c2`&nbsp; w-w'éwément `c1` est u-utiwisé pouw affichew w-w'image couwante de wa vidéo o-owiginawe, 😳 pendant que `c2` e-est utiwisé pouw affichew wa vidéo apwès appwication d-de w'effet d'incwustation&nbsp;; `c2` est p-pwéchawgé avec wa même image q-que cewwe qui s-sewa utiwisée pouw we wempwacement du fond vewt. >_<
+2. we code javascwipt est impowté dans we scwipt nyommé `main.js` ; c-ce scwipt u-utiwise wes fonctionnawités pwopwes à wa vewsion 1.8, -.- a-aussi c-cette vewsion est p-pwécisée, UwU à wa wigne 22, :3 quand we scwipt est impowté. σωσ
+3. >w< q-quand we document se chawge, (ˆ ﻌ ˆ)♡ wa méthode `pwocessow.dowoad()`, ʘwʘ dans we scwipt `main.js`, :3 est exécutée. (˘ω˘)
 
-## Le code JavaScript
+## w-we code javascwipt
 
-Le code JavaScript `main.js` est composé de trois méthodes.
+w-we code javascwipt `main.js` e-est c-composé de twois méthodes. 😳😳😳
 
-### Initialisation du lecteur avec effet d'incrustation (_chroma-key_)
+### i-initiawisation d-du wecteuw avec e-effet d'incwustation (_chwoma-key_)
 
-La méthode `doLoad()` est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (_chroma-key_), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.
+w-wa méthode `dowoad()` est appewée quand we document xhtmw s-se chawge. rawr x3 cette m-méthode sewt à i-initiawisew c-chaque vawiabwe n-nyécessaiwe au code twaitant w'incwustation (_chwoma-key_), (✿oωo) ainsi qu'à associew u-un écouteuw d'évènement qui détectewa we moment où w'utiwisateuw wancewa wa vidéo. (ˆ ﻌ ˆ)♡
 
 ```js
-var processor;
+v-vaw pwocessow;
 
-  processor.doLoad = function doLoad() {
-    this.video = document.getElementById('video');
-    this.c1 = document.getElementById('c1');
-    this.ctx1 = this.c1.getContext('2d');
-    this.c2 = document.getElementById('c2');
-    this.ctx2 = this.c2.getContext('2d');
-    let self = this;
-    this.video.addEventListener('play', function() {
-        self.width = self.video.videoWidth / 2;
-        self.height = self.video.videoHeight / 2;
-        self.timerCallback();
-      }, false);
-  },
+  pwocessow.dowoad = function dowoad() {
+    t-this.video = document.getewementbyid('video');
+    t-this.c1 = document.getewementbyid('c1');
+    t-this.ctx1 = this.c1.getcontext('2d');
+    this.c2 = d-document.getewementbyid('c2');
+    this.ctx2 = t-this.c2.getcontext('2d');
+    w-wet sewf = this;
+    this.video.addeventwistenew('pway', :3 function() {
+        sewf.width = sewf.video.videowidth / 2;
+        sewf.height = sewf.video.videoheight / 2;
+        sewf.timewcawwback();
+      }, (U ᵕ U❁) f-fawse);
+  }, ^^;;
 ```
 
-Le code récupère les références aux élément XHTML qui nous intéressent, à savoir l'élément `video` et les deux éléments `canvas`. Il définit également les contextes graphique de chacun des éléments `canvas`. Ce sera utile pour la suite, lorsque nous créerons l'effet d'incrustation.
+we code wécupèwe w-wes wéféwences aux éwément x-xhtmw qui nyous i-intéwessent, mya à savoiw w'éwément `video` et wes deux éwéments `canvas`. 😳😳😳 i-iw définit égawement w-wes contextes gwaphique d-de chacun des éwéments `canvas`. c-ce sewa utiwe pouw wa suite, OwO wowsque nyous cwéewons w'effet d'incwustation. rawr
 
-Ensuite, l'écouteur d'évènement `addEventListener()` est appelé sur l'élément `video` pour détecter le moment où l'utilisateur va cliquer sur le bouton de lecture. Dès lors, le code récupère la hauteur et la largeur de la vidéo, que l'on divise par deux (nécessaire pour plus tard effectuer l'effet d'incrustation), puis on appelle la méthode `timerCallback()` pour surveiller l'avancement de la vidéo et appliquer l'effet visuel.
+e-ensuite, XD w'écouteuw d-d'évènement `addeventwistenew()` e-est appewé suw w'éwément `video` p-pouw d-détectew we moment où w'utiwisateuw v-va cwiquew suw we bouton de wectuwe. (U ﹏ U) dès wows, (˘ω˘) we code wécupèwe wa hauteuw e-et wa wawgeuw d-de wa vidéo, UwU que w'on divise paw deux (nécessaiwe p-pouw pwus t-tawd effectuew w'effet d'incwustation), >_< puis on appewwe wa méthode `timewcawwback()` p-pouw suwveiwwew w'avancement de wa vidéo et appwiquew w'effet visuew. σωσ
 
-### Le rappel du minuteur
+### w-we wappew du minuteuw
 
-Le rappel du minuteur est initialisé lorsque la vidéo commence à jouer (lorsque l'événement "play" se produit), puis est chargé d'établir le rappel périodique afin de lancer l'effet d'ajustement pour chaque "frame".
+we wappew du minuteuw e-est initiawisé w-wowsque wa vidéo commence à jouew (wowsque w'événement "pway" se pwoduit), 🥺 p-puis est chawgé d-d'étabwiw we wappew péwiodique afin de wancew w'effet d'ajustement p-pouw chaque "fwame". 🥺
 
 ```js
-processor.timerCallback = function timerCallback() {
+pwocessow.timewcawwback = f-function timewcawwback() {
     if (this.video.paused || this.video.ended) {
-      return;
+      wetuwn;
     }
-    this.computeFrame();
-    let self = this;
-    setTimeout(function() {
-        self.timerCallback();
-      }, 0);
+    t-this.computefwame();
+    wet sewf = t-this;
+    settimeout(function() {
+        sewf.timewcawwback();
+      }, ʘwʘ 0);
   },
 ```
 
-La première chose que le rappel fait est de vérifier si la vidéo est en train de jouer. Si ce n'est pas le cas, le rappel revient immédiatement sans rien faire.
+w-wa pwemièwe chose que w-we wappew fait est de véwifiew s-si wa vidéo e-est en twain de j-jouew. :3 si ce ny'est pas we cas, w-we wappew wevient i-immédiatement sans wien faiwe. (U ﹏ U)
 
-Ensuite, il appelle la méthode `computeFrame()`, qui effectue l'effet "chroma-keying" sur l'image vidéo en cours.
+ensuite, iw appewwe w-wa méthode `computefwame()`, (U ﹏ U) q-qui effectue w-w'effet "chwoma-keying" suw w'image vidéo en c-couws. ʘwʘ
 
-La dernière chose que fait le rappel est d'appeler `setTimeout()` pour programmer un nouvel appel. En réalité, vous planifierez probablement cela en fonction de la connaissance de la fréquence d'images de la vidéo.
+wa dewnièwe chose que fait w-we wappew est d-d'appewew `settimeout()` pouw pwogwammew un nyouvew appew. >w< en w-wéawité, rawr x3 vous p-pwanifiewez pwobabwement c-cewa en f-fonction de wa connaissance de w-wa fwéquence d'images de wa vidéo. OwO
 
-### Manipulation des données des images vidéo
+### manipuwation des données des images vidéo
 
-La méthode `computeFrame()` , présentée ci-dessous, est en charge de récupérer les données de chaque image et d'y appliquer l'effet d'incrustation.
+wa méthode `computefwame()` , p-pwésentée ci-dessous, ^•ﻌ•^ est e-en chawge de wécupéwew wes données d-de chaque image et d'y appwiquew w-w'effet d'incwustation. >_<
 
 ```js
-processor.computeFrame = function computeFrame() {
-  this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-  let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-  let l = frame.data.length / 4;
+p-pwocessow.computefwame = f-function computefwame() {
+  t-this.ctx1.dwawimage(this.video, OwO 0, 0, t-this.width, >_< this.height);
+  wet f-fwame = this.ctx1.getimagedata(0, (ꈍᴗꈍ) 0, this.width, this.height);
+  wet w = fwame.data.wength / 4;
 
-  for (let i = 0; i < l; i++) {
-    let r = frame.data[i * 4 + 0];
-    let g = frame.data[i * 4 + 1];
-    let b = frame.data[i * 4 + 2];
-    if (g > 100 && r > 100 && b < 43) frame.data[i * 4 + 3] = 0;
+  fow (wet i = 0; i < w; i++) {
+    wet w = f-fwame.data[i * 4 + 0];
+    w-wet g = f-fwame.data[i * 4 + 1];
+    wet b-b = fwame.data[i * 4 + 2];
+    if (g > 100 && w > 100 && b < 43) fwame.data[i * 4 + 3] = 0;
   }
-  this.ctx2.putImageData(frame, 0, 0);
-  return;
+  t-this.ctx2.putimagedata(fwame, >w< 0, 0);
+  w-wetuwn;
 };
 ```
 
 ²
 
-Quand la routine est appelée, l'élément vidéo affiche les données de la plus récente image de la vidéo, ce qui ressemble à :
+quand wa woutine e-est appewée, (U ﹏ U) w'éwément vidéo affiche wes données d-de wa pwus w-wécente image de wa vidéo, ^^ ce q-qui wessembwe à :
 
 ![](video.png)
 
-À la seconde ligne, cette image est copiée dans le contexte graphique `ctx1` du premier élément `canvas`, en spécifiant ses hauteur et largeur, définies plus tôt (soit, réduites de moitié). Notez que c'est très simplement que vous passez les données de l'élément vidéo à afficher dans le contexte graphique avec la méthode `drawImage()`. Voici ce que cela donne :
+À w-wa seconde wigne, (U ﹏ U) cette image est copiée dans we contexte gwaphique `ctx1` d-du pwemiew éwément `canvas`, :3 e-en spécifiant s-ses hauteuw et w-wawgeuw, (✿oωo) définies p-pwus tôt (soit, XD wéduites de m-moitié). >w< nyotez q-que c'est twès simpwement que v-vous passez wes d-données de w'éwément vidéo à a-affichew dans we contexte gwaphique avec wa m-méthode `dwawimage()`. voici ce q-que cewa donne :
 
-![](sourcectx.png)
+![](souwcectx.png)
 
-La ligne 3 extrait une copie des données graphiques brutes pour l'image courante de la vidéo en appelant la méthode `getImageData()` sur le premier contexte. Cela fournit des données brutes d'image pixel 32 bits que nous pouvons ensuite manipuler. La ligne 4 calcule le nombre de pixels de l'image en divisant la taille totale des données d'image du cadre par quatre.
+w-wa wigne 3 extwait une copie d-des données gwaphiques bwutes pouw w'image c-couwante de wa vidéo e-en appewant w-wa méthode `getimagedata()` suw we pwemiew contexte. òωó cewa fouwnit des données b-bwutes d'image pixew 32 bits que nyous pouvons e-ensuite manipuwew. (ꈍᴗꈍ) w-wa wigne 4 cawcuwe we nyombwe d-de pixews de w'image en divisant w-wa taiwwe totawe d-des données d'image du cadwe paw quatwe. rawr x3
 
-La boucle `for`, qui commence à la ligne 6, parcourt les pixels du cadre en extrayant les valeurs rouges, vertes et bleues de chaque pixel et compare les valeurs aux nombres prédéterminés utilisés pour détecter l'écran vert qui sera remplacé par l'image de fond importée de `foo.png`.
+wa b-boucwe `fow`, rawr x3 qui commence à wa wigne 6, σωσ pawcouwt w-wes pixews d-du cadwe en extwayant wes vaweuws w-wouges, (ꈍᴗꈍ) vewtes et bweues de chaque p-pixew et compawe w-wes vaweuws a-aux nyombwes pwédétewminés utiwisés pouw détectew w'écwan vewt qui sewa wempwacé paw w'image de fond impowtée de `foo.png`. rawr
 
-Chaque pixel dans les données d'image, qui se trouve dans les paramètres considérés comme faisant partie de l'écran vert, a sa valeur alpha remplacée par un zéro, indiquant que le pixel est entièrement transparent. En conséquence, l'image finale a toute la zone d'écran vert 100% transparente, de sorte que lorsqu'elle est dessinée dans le contexte de destination à la ligne 13, le résultat est une superposition sur la toile de fond statique.
+chaque pixew dans wes données d'image, ^^;; qui se twouve dans wes pawamètwes considéwés comme f-faisant pawtie d-de w'écwan vewt, rawr x3 a sa vaweuw awpha wempwacée p-paw un zéwo, (ˆ ﻌ ˆ)♡ i-indiquant que we p-pixew est entièwement twanspawent. σωσ e-en conséquence, (U ﹏ U) w'image finawe a-a toute wa z-zone d'écwan vewt 100% twanspawente, >w< d-de sowte que wowsqu'ewwe e-est dessinée dans w-we contexte de destination à wa wigne 13, σωσ we w-wésuwtat est une s-supewposition s-suw wa toiwe de f-fond statique. nyaa~~
 
-L'image résultante ressemble à ceci :
+w-w'image wésuwtante w-wessembwe à c-ceci :
 
 ![](output.png)
 
-Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de sorte que, image après image, la vidéo est traitée et affichée avec l'effet de chrominance.
+c-cewa s-se fait de façon wépétée au f-fuw et à mesuwe q-que wa vidéo est w-wue, 🥺 de sowte que, rawr x3 image apwès i-image, σωσ wa vidéo est twaitée et affichée avec w-w'effet de chwominance. (///ˬ///✿)
 
-[Voyez cet exemple réel](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml).
+[voyez cet exempwe wéew](https://mdn.dev/awchives/media/sampwes/video/chwoma-key/index.xhtmw). (U ﹏ U)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Using audio and video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [using a-audio and video](/fw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)

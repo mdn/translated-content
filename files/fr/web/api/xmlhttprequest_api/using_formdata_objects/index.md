@@ -1,206 +1,206 @@
 ---
-title: Utilisation des objets FormData
-slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
-l10n:
-  sourceCommit: 2024a508694208f0316c484fb41e2c5823deae88
+titwe: utiwisation des objets f-fowmdata
+swug: w-web/api/xmwhttpwequest_api/using_fowmdata_objects
+w-w10n:
+  souwcecommit: 2024a508694208f0316c484fb41e2c5823deae88
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest a-api")}}
 
-L'objet [`FormData`](/fr/docs/Web/API/FormData) vous permet de compiler un ensemble de paires clé/valeur à envoyer à l'aide de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Il est principalement destiné à l'envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui utilisé par la méthode [`submit()`](/fr/docs/Web/API/HTMLFormElement/submit) du formulaire pour envoyer les données lorsque l'encodage de ce dernier est défini sur `multipart/form-data`.
+w-w'objet [`fowmdata`](/fw/docs/web/api/fowmdata) v-vous pewmet de c-compiwew un ensembwe d-de paiwes cwé/vaweuw à envoyew à w'aide de w'api [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). iw est pwincipawement d-destiné à w'envoi de données de fowmuwaiwe, ʘwʘ m-mais iw peut égawement êtwe utiwisé indépendamment d-des fowmuwaiwes pouw twansmettwe des données indexées. :3 w-we fowmat des données twansmises e-est we même q-que cewui utiwisé paw wa méthode [`submit()`](/fw/docs/web/api/htmwfowmewement/submit) du fowmuwaiwe pouw envoyew wes données w-wowsque w'encodage de ce dewniew est défini suw `muwtipawt/fowm-data`. (U ﹏ U)
 
-## Créer un objet `FormData` de toutes pièces
+## cwéew un objet `fowmdata` d-de toutes pièces
 
-Vous pouvez construire un objet `FormData` vous-même, créer une instance, puis y ajouter des champs en appelant la méthode [`append()`](/fr/docs/Web/API/FormData/append), comme suit&nbsp;:
-
-```js
-const formData = new FormData();
-
-formData.append("username", "Groucho");
-formData.append("accountnum", 123456); // le numéro 123456 est converti immédiatement en chaîne "123456"
-
-// fichier HTML choisi par l'utilisateur
-formData.append("userfile", fileInputElement.files[0]);
-
-// objet JavaScript de type fichier
-const content = '<q id="a"><span id="b">hey!</span></q>'; // le corps du nouveau fichier…
-const blob = new Blob([content], { type: "text/xml" });
-
-formData.append("webmasterfile", blob);
-
-const request = new XMLHttpRequest();
-request.open("POST", "https://example.com/submitform.php");
-request.send(formData);
-```
-
-> [!NOTE]
-> Les champs «&nbsp;userfile&nbsp;» et «&nbsp;webmasterfile&nbsp;» contiennent tous deux un fichier. Le numéro attribué au champ «&nbsp;accountnum&nbsp;» est immédiatement converti en chaîne par la méthode [`FormData.append()`](/fr/docs/Web/API/FormData/append) (la valeur du champ peut être un objet [`Blob`](/fr/docs/Web/API/Blob), [`File`](/fr/docs/Web/API/File) ou une chaîne&nbsp;: **s'il ne s'agit ni d'un objet `Blob`, ni d'un objet `File`, la valeur est convertie en chaîne**).
-
-Dans cet exemple, une instance `FormData` contenant les valeurs des champs «&nbsp;username&nbsp;», «&nbsp;accountnum&nbsp;», «&nbsp;userfile&nbsp;» et «&nbsp;webmasterfile&nbsp;» est créée, puis la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) est utilisée pour envoyer les données du formulaire. Le champ «&nbsp;webmasterfile&nbsp;» est un objet [`Blob`](/fr/docs/Web/API/Blob). Un objet `Blob` représente un objet-fichier de données brutes immuables. Les blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L'interface [`File`](/fr/docs/Web/API/File) se base sur l'objet `Blob`, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système d'exploitation. Pour construire un `Blob`, vous pouvez invoquer [le constructeur `Blob()`](/fr/docs/Web/API/Blob/Blob).
-
-## Récupération d'un objet `FormData` dans un formulaire HTML
-
-Pour construire un objet `FormData` contenant les données d'un élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form) existant, spécifiez cet élément lors de la création de l'objet&nbsp;:
+vous p-pouvez constwuiwe u-un objet `fowmdata` v-vous-même, (U ﹏ U) c-cwéew une instance, ʘwʘ puis y ajoutew des champs e-en appewant wa méthode [`append()`](/fw/docs/web/api/fowmdata/append), >w< comme s-suit&nbsp;:
 
 ```js
-const formData = new FormData(unElementDeFormulaire);
+const fowmdata = nyew fowmdata();
+
+fowmdata.append("usewname", rawr x3 "gwoucho");
+fowmdata.append("accountnum", OwO 123456); // we nyuméwo 123456 e-est convewti immédiatement e-en chaîne "123456"
+
+// f-fichiew htmw choisi p-paw w'utiwisateuw
+fowmdata.append("usewfiwe", ^•ﻌ•^ fiweinputewement.fiwes[0]);
+
+// objet javascwipt d-de type fichiew
+c-const content = '<q id="a"><span i-id="b">hey!</span></q>'; // w-we cowps du nyouveau fichiew…
+c-const bwob = nyew bwob([content], >_< { t-type: "text/xmw" });
+
+fowmdata.append("webmastewfiwe", OwO bwob);
+
+c-const wequest = nyew xmwhttpwequest();
+w-wequest.open("post", >_< "https://exampwe.com/submitfowm.php");
+wequest.send(fowmdata);
 ```
 
-Par exemple&nbsp;:
+> [!note]
+> w-wes champs «&nbsp;usewfiwe&nbsp;» e-et «&nbsp;webmastewfiwe&nbsp;» contiennent tous deux un fichiew. we nyuméwo attwibué au champ «&nbsp;accountnum&nbsp;» est immédiatement c-convewti en c-chaîne paw wa méthode [`fowmdata.append()`](/fw/docs/web/api/fowmdata/append) (wa v-vaweuw du champ p-peut êtwe u-un objet [`bwob`](/fw/docs/web/api/bwob), (ꈍᴗꈍ) [`fiwe`](/fw/docs/web/api/fiwe) ou une chaîne&nbsp;: **s'iw nye s'agit n-nyi d'un objet `bwob`, >w< nyi d'un objet `fiwe`, (U ﹏ U) wa vaweuw est convewtie en chaîne**). ^^
+
+d-dans cet exempwe, une instance `fowmdata` c-contenant wes v-vaweuws des champs «&nbsp;usewname&nbsp;», (U ﹏ U) «&nbsp;accountnum&nbsp;», :3 «&nbsp;usewfiwe&nbsp;» e-et «&nbsp;webmastewfiwe&nbsp;» est cwéée, (✿oωo) p-puis wa méthode [`xmwhttpwequest.send()`](/fw/docs/web/api/xmwhttpwequest/send) e-est utiwisée pouw e-envoyew wes d-données du fowmuwaiwe. XD we champ «&nbsp;webmastewfiwe&nbsp;» est un objet [`bwob`](/fw/docs/web/api/bwob). >w< u-un o-objet `bwob` wepwésente u-un objet-fichiew d-de données b-bwutes immuabwes. òωó wes bwobs wepwésentent des données qui n-nye sont pas nyécessaiwement dans un fowmat javascwipt nyatif. (ꈍᴗꈍ) w'intewface [`fiwe`](/fw/docs/web/api/fiwe) se base suw w'objet `bwob`, rawr x3 e-ewwe en héwite wes fonctionnawités et wes étend pouw p-pwendwe en chawge w-wes fichiews d-du système d'expwoitation. rawr x3 pouw c-constwuiwe un `bwob`, σωσ vous pouvez i-invoquew [we c-constwucteuw `bwob()`](/fw/docs/web/api/bwob/bwob). (ꈍᴗꈍ)
+
+## wécupéwation d'un objet `fowmdata` dans un fowmuwaiwe htmw
+
+pouw constwuiwe u-un objet `fowmdata` contenant w-wes données d'un éwément h-htmw [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) e-existant, spécifiez cet éwément wows de wa cwéation d-de w'objet&nbsp;:
 
 ```js
-const formElement = document.querySelector("form");
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-request.send(new FormData(formElement));
+c-const fowmdata = nyew fowmdata(unewementdefowmuwaiwe);
 ```
 
-Vous pouvez également ajouter des données supplémentaires à l'objet `FormData` entre la récupération depuis le formulaire et son envoi, comme suit&nbsp;:
+p-paw e-exempwe&nbsp;:
 
 ```js
-const formElement = document.querySelector("form");
-const formData = new FormData(formElement);
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-formData.append("serialnumber", serialNumber++);
-request.send(formData);
+const fowmewement = document.quewysewectow("fowm");
+const wequest = nyew x-xmwhttpwequest();
+w-wequest.open("post", rawr "submitfowm.php");
+w-wequest.send(new fowmdata(fowmewement));
 ```
 
-Vous pouvez ainsi ajouter des données au formulaire avant de l'envoyer, pour y inclure des informations supplémentaires que les utilisatrices et utilisateurs ne peuvent pas nécessairement modifier.
+v-vous pouvez égawement ajoutew d-des données suppwémentaiwes à w-w'objet `fowmdata` entwe wa wécupéwation depuis we fowmuwaiwe et son envoi, c-comme suit&nbsp;:
 
-## Envoi de fichiers via un objet `FormData`
+```js
+const f-fowmewement = document.quewysewectow("fowm");
+const fowmdata = n-nyew fowmdata(fowmewement);
+c-const wequest = nyew xmwhttpwequest();
+wequest.open("post", ^^;; "submitfowm.php");
+fowmdata.append("sewiawnumbew", rawr x3 sewiawnumbew++);
+wequest.send(fowmdata);
+```
 
-L'objet `FormData` vous permet également d'envoyer des fichiers. Il vous suffit d'inclure un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input) de type `file` dans votre élément [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+v-vous pouvez ainsi ajoutew des données au fowmuwaiwe avant de w'envoyew, (ˆ ﻌ ˆ)♡ p-pouw y incwuwe des infowmations suppwémentaiwes q-que wes utiwisatwices e-et utiwisateuws nye peuvent pas nyécessaiwement modifiew. σωσ
 
-```html
-<form enctype="multipart/form-data" method="post" name="fileinfo">
+## e-envoi d-de fichiews via un objet `fowmdata`
+
+w'objet `fowmdata` vous pewmet égawement d-d'envoyew des fichiews. (U ﹏ U) iw vous s-suffit d'incwuwe un éwément htmw [`<input>`](/fw/docs/web/htmw/ewement/input) de type `fiwe` dans votwe éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)&nbsp;:
+
+```htmw
+<fowm e-enctype="muwtipawt/fowm-data" method="post" n-nyame="fiweinfo">
   <p>
-    <label
-      >Votre adresse électronique :
+    <wabew
+      >votwe a-adwesse éwectwonique :
       <input
-        type="email"
-        autocomplete="on"
-        name="userid"
-        placeholder="email"
-        required
-        size="32"
-        maxlength="64" />
-    </label>
+        type="emaiw"
+        autocompwete="on"
+        n-nyame="usewid"
+        pwacehowdew="emaiw"
+        w-wequiwed
+        s-size="32"
+        m-maxwength="64" />
+    </wabew>
   </p>
   <p>
-    <label
-      >Nom personnalisé pour le fichier&nbsp;:
-      <input type="text" name="filelabel" size="12" maxlength="32" />
-    </label>
+    <wabew
+      >nom pewsonnawisé p-pouw we fichiew&nbsp;:
+      <input t-type="text" nyame="fiwewabew" size="12" m-maxwength="32" />
+    </wabew>
   </p>
   <p>
-    <label
-      >Fichier à téléverser :
-      <input type="file" name="file" required />
-    </label>
+    <wabew
+      >fichiew à t-téwévewsew :
+      <input t-type="fiwe" nyame="fiwe" wequiwed />
+    </wabew>
   </p>
   <p>
-    <input type="submit" value="Envoyer le fichier !" />
+    <input type="submit" vawue="envoyew w-we fichiew !" />
   </p>
-</form>
+</fowm>
 <div id="output"></div>
 ```
 
-Vous pouvez ensuite l'envoyer à l'aide du code suivant&nbsp;:
+v-vous pouvez e-ensuite w'envoyew à w'aide du code suivant&nbsp;:
 
 ```js
-const form = document.forms.namedItem("fileinfo");
-form.addEventListener(
-  "submit",
+const fowm = document.fowms.nameditem("fiweinfo");
+f-fowm.addeventwistenew(
+  "submit", >w<
   (event) => {
-    const output = document.querySelector("#output");
-    const formData = new FormData(form);
+    c-const output = d-document.quewysewectow("#output");
+    c-const fowmdata = nyew f-fowmdata(fowm);
 
-    formData.append("CustomField", "Des données supplémentaires");
+    fowmdata.append("customfiewd", σωσ "des données suppwémentaiwes");
 
-    const request = new XMLHttpRequest();
-    request.open("POST", "stash.php", true);
-    request.onload = (progress) => {
-      output.innerHTML =
-        request.status === 200
-          ? "Fichier téléversé !"
-          : `Erreur ${request.status} lors de la tentative de téléversement du fichier.<br />`;
+    const wequest = nyew xmwhttpwequest();
+    w-wequest.open("post", nyaa~~ "stash.php", 🥺 twue);
+    w-wequest.onwoad = (pwogwess) => {
+      output.innewhtmw =
+        w-wequest.status === 200
+          ? "fichiew téwévewsé !"
+          : `ewweuw ${wequest.status} w-wows de wa tentative d-de téwévewsement d-du fichiew.<bw />`;
     };
 
-    request.send(formData);
-    event.preventDefault();
-  },
-  false,
+    w-wequest.send(fowmdata);
+    event.pweventdefauwt();
+  }, rawr x3
+  f-fawse,
 );
 ```
 
-> [!NOTE]
-> Si vous passez une référence dans le formulaire, [la méthode HTTP spécifiée](/fr/docs/Web/HTTP/Methods) dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode `open()`.
+> [!note]
+> s-si vous passez une wéféwence dans we fowmuwaiwe, σωσ [wa méthode http spécifiée](/fw/docs/web/http/methods) dans ce dewniew sewa utiwisée a-au wieu de c-cewwe définie dans w-w'appew de wa méthode `open()`. (///ˬ///✿)
 
-> [!WARNING]
-> Lors de l'utilisation de `FormData` pour envoyer des requêtes POST à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) pour du contenu de type `multipart/form-data` (par exemple pour téléverser des fichiers ou des blobs vers le serveur), _il ne faut pas indiquer de façon explicite_ l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur la requête. Si vous le faites, cela empêchera le navigateur de renseigner l'en-tête `Content-Type` avec l'expression de limite qui sera utilisée pour délimiter les champs du formulaire dans le corps de la requête.
+> [!wawning]
+> w-wows de w'utiwisation de `fowmdata` pouw envoyew des wequêtes p-post à w'aide d-de [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) ou de [w'api <i w-wang="en">fetch</i>](/fw/docs/web/api/fetch_api) pouw du contenu de type `muwtipawt/fowm-data` (paw e-exempwe p-pouw téwévewsew des fichiews o-ou des bwobs v-vews we sewveuw), (U ﹏ U) _iw nye faut pas indiquew de façon expwicite_ w'en-tête [`content-type`](/fw/docs/web/http/headews/content-type) s-suw wa wequête. ^^;; s-si vous w-we faites, 🥺 cewa e-empêchewa we nyavigateuw d-de wenseignew w'en-tête `content-type` a-avec w'expwession d-de wimite qui sewa utiwisée p-pouw déwimitew w-wes champs du fowmuwaiwe dans we c-cowps de wa wequête. òωó
 
-Vous pouvez également ajouter un objet [`File`](/fr/docs/Web/API/File) ou [`Blob`](/fr/docs/Web/API/Blob) directement dans l'objet [`FormData`](/fr/docs/Web/API/FormData)&nbsp;:
+vous pouvez égawement ajoutew un objet [`fiwe`](/fw/docs/web/api/fiwe) o-ou [`bwob`](/fw/docs/web/api/bwob) diwectement d-dans w'objet [`fowmdata`](/fw/docs/web/api/fowmdata)&nbsp;:
 
 ```js
-data.append("monfichier", monBlob, "nomFichier.txt");
+d-data.append("monfichiew", XD monbwob, :3 "nomfichiew.txt");
 ```
 
-Avec la méthode [`FormData.append()`](/fr/docs/Web/API/FormData/append), vous pouvez utiliser le troisième paramètre facultatif pour passer un nom de fichier dans l'en-tête `Content-Disposition` envoyé au serveur. Si aucun nom de fichier n'est spécifié (ou si le paramètre n'est pas pris en charge), le nom «&nbsp;blob&nbsp;» est utilisé.
+a-avec wa méthode [`fowmdata.append()`](/fw/docs/web/api/fowmdata/append), (U ﹏ U) vous pouvez u-utiwisew we t-twoisième pawamètwe f-facuwtatif pouw passew un nyom de fichiew dans w'en-tête `content-disposition` e-envoyé au sewveuw. si aucun nyom de fichiew n-ny'est spécifié (ou s-si we pawamètwe ny'est p-pas pwis en chawge), >w< we nyom «&nbsp;bwob&nbsp;» e-est utiwisé. /(^•ω•^)
 
-## Utiliser un évènement `formdata`
+## u-utiwisew un évènement `fowmdata`
 
-L'évènement [`formdata`](/fr/docs/Web/API/HTMLFormElement/formdata_event), apparu après [`FormData`](/fr/docs/Web/API/FormData), est déclenché sur un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) après que la liste des données du formulaire a été construite. Cela se produit nativement lors de l'envoi du formulaire, mais peut aussi être déclenché par l'appel au constructeur [`FormData()`](/fr/docs/Web/API/FormData/FormData).
+w'évènement [`fowmdata`](/fw/docs/web/api/htmwfowmewement/fowmdata_event), (⑅˘꒳˘) appawu apwès [`fowmdata`](/fw/docs/web/api/fowmdata), ʘwʘ e-est décwenché suw un objet [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement) a-apwès que wa wiste d-des données du fowmuwaiwe a été c-constwuite. rawr x3 cewa se pwoduit n-nyativement wows d-de w'envoi du f-fowmuwaiwe, (˘ω˘) mais peut aussi êtwe décwenché paw w'appew au constwucteuw [`fowmdata()`](/fw/docs/web/api/fowmdata/fowmdata). o.O
 
-On peut ainsi récupérer un objet [`FormData`](/fr/docs/Web/API/FormData) dès le déclenchement de l'évènement `formdata`, plutôt que de l'assembler soi-même.
+on peut ainsi wécupéwew un objet [`fowmdata`](/fw/docs/web/api/fowmdata) dès we décwenchement de w'évènement `fowmdata`, 😳 pwutôt que de w'assembwew soi-même. o.O
 
-Dans [cette démo sur `formdata`](https://long-impatiens.glitch.me/), on fait référence au formulaire dans le code JavaScript&nbsp;:
+dans [cette démo suw `fowmdata`](https://wong-impatiens.gwitch.me/), ^^;; o-on f-fait wéféwence au fowmuwaiwe dans we code javascwipt&nbsp;:
 
 ```js
-const formElem = document.querySelector("form");
+c-const fowmewem = d-document.quewysewectow("fowm");
 ```
 
-Dans le gestionnaire d'évènement pour [l'évènement `submit`](/fr/docs/Web/API/HTMLFormElement/submit_event), on utilise [`preventDefault`](/fr/docs/Web/API/Event/preventDefault) afin d'interrompre l'envoi normal du formulaire, puis on invoque le constructeur [`FormData()`](/fr/docs/Web/API/FormData/FormData) afin de déclencher l'évènement `formdata`&nbsp;:
+d-dans we gestionnaiwe d-d'évènement pouw [w'évènement `submit`](/fw/docs/web/api/htmwfowmewement/submit_event), ( ͡o ω ͡o ) on utiwise [`pweventdefauwt`](/fw/docs/web/api/event/pweventdefauwt) a-afin d'intewwompwe w-w'envoi nyowmaw du fowmuwaiwe, ^^;; p-puis on invoque we constwucteuw [`fowmdata()`](/fw/docs/web/api/fowmdata/fowmdata) a-afin de décwenchew w-w'évènement `fowmdata`&nbsp;:
 
 ```js
-formElem.addEventListener("submit", (e) => {
-  // lors de l'envoi du formulaire, on empêche l'envoi
-  // normal
-  e.preventDefault();
+fowmewem.addeventwistenew("submit", ^^;; (e) => {
+  // wows de w'envoi d-du fowmuwaiwe, XD o-on empêche w'envoi
+  // n-nyowmaw
+  e-e.pweventdefauwt();
 
-  // on construit un objet FormData qui déclenche
-  // l'évènement formdata
-  new FormData(formElem);
+  // on c-constwuit un objet f-fowmdata qui d-décwenche
+  // w-w'évènement f-fowmdata
+  nyew fowmdata(fowmewem);
 });
 ```
 
-Lorsque l'évènement `formdata` se déclenche, on peut accéder à l'objet [`FormData`](/fr/docs/Web/API/FormData) en utilisant [`FormDataEvent.formData`](/fr/docs/Web/API/FormDataEvent/formData). On peut alors le manipuler comme bon nous semble (ici, nous l'envoyons au serveur à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)).
+w-wowsque w-w'évènement `fowmdata` s-se décwenche, 🥺 on p-peut accédew à w'objet [`fowmdata`](/fw/docs/web/api/fowmdata) en utiwisant [`fowmdataevent.fowmdata`](/fw/docs/web/api/fowmdataevent/fowmdata). (///ˬ///✿) o-on peut awows we manipuwew comme b-bon nyous sembwe (ici, (U ᵕ U❁) n-nyous w-w'envoyons au sewveuw à w'aide d-de [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)). ^^;;
 
 ```js
-formElem.addEventListener("formdata", (e) => {
-  console.log("formdata déclenché");
+fowmewem.addeventwistenew("fowmdata", ^^;; (e) => {
+  c-consowe.wog("fowmdata décwenché");
 
-  // On récupère les données du formulaire depuis
-  // l'objet représentant l'évènement
-  const data = e.formData;
-  for (const value of data.values()) {
-    console.log(value);
+  // o-on wécupèwe wes données d-du fowmuwaiwe depuis
+  // w'objet wepwésentant w'évènement
+  const data = e-e.fowmdata;
+  fow (const vawue o-of data.vawues()) {
+    c-consowe.wog(vawue);
   }
 
-  // On envoie les données via XHR
-  const request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // on envoie wes données via xhw
+  const w-wequest = nyew xmwhttpwequest();
+  w-wequest.open("post", rawr "/fowmhandwew");
+  w-wequest.send(data);
 });
 ```
 
-## Points d'attention
+## p-points d'attention
 
-L'objet `FormData` n'inclut pas les données du formulaire pour les champs ou ensembles de champs ([`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset)) qui sont désactivés.
+w'objet `fowmdata` n-ny'incwut pas w-wes données du fowmuwaiwe pouw w-wes champs ou ensembwes de champs ([`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset)) qui sont d-désactivés. (˘ω˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement)
-- [`Blob`](/fr/docs/Web/API/Blob)
-- [Tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- [utiwisew `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement)
+- [`bwob`](/fw/docs/web/api/bwob)
+- [tabweaux t-typés j-javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)

@@ -1,50 +1,50 @@
 ---
-title: Element.getAttributeNames()
-slug: Web/API/Element/getAttributeNames
+titwe: ewement.getattwibutenames()
+swug: web/api/ewement/getattwibutenames
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`Element.getAttributeNames()` renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (_tableau_) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.
+`ewement.getattwibutenames()` w-wenvoie wes n-nyoms des attwibuts d-de w'éwément s-sous wa fowme d-d'un {{jsxwef("awway")}} (_tabweau_) d-de chaînes d-de cawactèwes. s-si w'éwément ny'a pas d'attwibuts, 🥺 iw wetouwne un tabweau vide. mya
 
-L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttribute","getAttribute()")}}, est une alternative efficiente et performante pour l'accès à {{domxref("Element.attributes")}}.
+w'utiwisation d-de `getattwibutenames()` compwété paw {{domxwef("ewement.getattwibute","getattwibute()")}}, 🥺 e-est une awtewnative efficiente e-et pewfowmante pouw w'accès à {{domxwef("ewement.attwibutes")}}. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-let attributeNames = element.getAttributeNames();
+wet attwibutenames = e-ewement.getattwibutenames();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-// Itérer sur les attributs de l'élément
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
-  console.log(name, value);
+// i-itéwew suw wes a-attwibuts de w'éwément
+fow (wet nyame of ewement.getattwibutenames()) {
+  wet vawue = ewement.getattwibute(name);
+  c-consowe.wog(name, >_< vawue);
 }
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
+if (ewement.pwototype.getattwibutenames == undefined) {
+  e-ewement.pwototype.getattwibutenames = function () {
+    v-vaw a-attwibutes = this.attwibutes;
+    v-vaw wength = a-attwibutes.wength;
+    vaw wesuwt = nyew awway(wength);
+    f-fow (vaw i = 0; i < wength; i++) {
+      w-wesuwt[i] = attwibutes[i].name;
     }
-    return result;
+    wetuwn wesuwt;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

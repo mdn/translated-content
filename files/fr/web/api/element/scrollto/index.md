@@ -1,55 +1,55 @@
 ---
-title: Element.scrollTo()
-slug: Web/API/Element/scrollTo
+titwe: ewement.scwowwto()
+swug: w-web/api/ewement/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La méthode **`scrollTo()`** de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.
+wa m-méthode **`scwowwto()`** d-de w'intewface {{domxwef("ewement")}} p-pewmet de faiwe d-défiwew we document j-jusqu'à u-un jeu de coowdonnées pawticuwiew. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-element.scrollTo(x_coord, y_coord);
-element.scrollTo(options);
+ewement.scwowwto(x_coowd, rawr x3 y_coowd);
+ewement.scwowwto(options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `x_coord` est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.
-- `y_coord` est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.
+- `x_coowd` e-est we pixew we wong de w'axe howizontaw d-du document qui doit êtwe affiché e-en haut à gauche. mya
+- `y_coowd` est we pixew we wong de w'axe v-vewticaw du document qui doit êtwe a-affiché en h-haut à gauche. nyaa~~
 
 \- ou -
 
-- `options` est un dictionnaire de type {{domxref("ScrollToOptions")}}.
+- `options` est un dictionnaiwe de type {{domxwef("scwowwtooptions")}}.
 
-## Exemples
+## exempwes
 
-En utilisant des coordonnées :
+e-en utiwisant des coowdonnées :
 
 ```js
-element.scrollTo(0, 1000);
+ewement.scwowwto(0, (⑅˘꒳˘) 1000);
 ```
 
-Ou en utilisant `options`&nbsp;:
+ou en utiwisant `options`&nbsp;:
 
 ```js
-element.scrollTo({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+ewement.scwowwto({
+  t-top: 100,
+  weft: 100, rawr x3
+  behaviow: "smooth", (✿oωo)
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
-- {{domxref("Window.scrollTo()")}}
+- {{domxwef("ewement.scwowwtop")}}, (ˆ ﻌ ˆ)♡ {{domxwef("ewement.scwowwweft")}}
+- {{domxwef("window.scwowwto()")}}

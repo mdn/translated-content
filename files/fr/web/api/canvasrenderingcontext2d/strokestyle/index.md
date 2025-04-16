@@ -1,137 +1,137 @@
 ---
-title: CanvasRenderingContext2D.strokeStyle
-slug: Web/API/CanvasRenderingContext2D/strokeStyle
+titwe: canvaswendewingcontext2d.stwokestywe
+swug: web/api/canvaswendewingcontext2d/stwokestywe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.strokeStyle`** de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est `#000` (black).
+w-wa pwopwiété **`canvaswendewingcontext2d.stwokestywe`** d-de w-w'api canvas 2d s-spécifie wa couweuw o-ou we stywe à u-utiwisew pouw d-dessinew wes wignes a-autouw des fowmes. (⑅˘꒳˘) wa vaweuw paw défaut est `#000` (bwack). (U ﹏ U)
 
-Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial).
+voiw égawement we chapitwe [ajout d-de stywes et de couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) dans we [tutowiew c-canvas](/fw/docs/web/api/canvas_api/tutowiaw). mya
 
-## Syntaxe
-
-```js
-ctx.strokeStyle = color;
-ctx.strokeStyle = gradient;
-ctx.strokeStyle = pattern;
-```
-
-### Options
-
-- `color`
-  - : Une {{domxref("DOMString")}} analysée comme valeur CSS {{cssxref("&lt;color&gt;")}}.
-- `gradient`
-  - : Un objet {{domxref("CanvasGradient")}} (un gradient linéaire ou radial).
-- `pattern`
-  - : Un objet {{domxref("CanvasPattern")}} (une image répétée).
-
-## Exemples
-
-### Utiliser la propriété `strokeStyle` pour définir une couleur différente
-
-Ceci est un simple snippet de code utilisant la propriété `strokeStyle` pour définir une couleur différente.
-
-#### HTML
-
-```html
-<canvas id="canvas"></canvas>
-```
-
-#### JavaScript
+## syntaxe
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-
-ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);
+c-ctx.stwokestywe = cowow;
+ctx.stwokestywe = gwadient;
+ctx.stwokestywe = pattewn;
 ```
 
-Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:
+### options
 
-#### Code jouable
+- `cowow`
+  - : u-une {{domxwef("domstwing")}} anawysée comme v-vaweuw css {{cssxwef("&wt;cowow&gt;")}}. ʘwʘ
+- `gwadient`
+  - : u-un objet {{domxwef("canvasgwadient")}} (un gwadient winéaiwe ou wadiaw). (˘ω˘)
+- `pattewn`
+  - : un o-objet {{domxwef("canvaspattewn")}} (une image wépétée). (U ﹏ U)
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+## exempwes
+
+### utiwisew wa pwopwiété `stwokestywe` pouw définiw u-une couweuw difféwente
+
+ceci est u-un simpwe snippet d-de code utiwisant w-wa pwopwiété `stwokestywe` p-pouw définiw une couweuw difféwente. ^•ﻌ•^
+
+#### htmw
+
+```htmw
+<canvas i-id="canvas"></canvas>
+```
+
+#### javascwipt
+
+```js
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+
+ctx.stwokestywe = "bwue";
+ctx.stwokewect(10, (˘ω˘) 10, 100, 100);
+```
+
+Éditez we code ci-dessous p-pouw voiw vos changements m-mettwe à jouw w-we canvas en diwect:
+
+#### c-code jouabwe
+
+```htmw hidden
+<canvas id="canvas" width="400" h-height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.strokeStyle = 'blue';
-ctx.strokeRect(10, 10, 100, 100);</textarea
+<textawea id="code" c-cwass="pwayabwe-code">
+ctx.stwokestywe = 'bwue';
+ctx.stwokewect(10, :3 10, 100, ^^;; 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  c-ctx.cweawwect(0, 🥺 0, canvas.width, (⑅˘꒳˘) canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", nyaa~~ f-function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", :3 f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", ( ͡o ω ͡o ) dwawcanvas);
+window.addeventwistenew("woad", mya d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', (///ˬ///✿) 700, 360) }}
 
-### Un exemple `strokeStyle`
+### un exempwe `stwokestywe`
 
-Cet exemple utilise la propriété `strokeStyle` pour changer les couleurs des contours des formes. Nous utilisons la méthode {{domxref("CanvasRenderingContext2D.arc", "arc()")}} pour dessiner des cercles au lieu de carrés.
+c-cet exempwe u-utiwise wa p-pwopwiété `stwokestywe` pouw c-changew wes couweuws d-des contouws d-des fowmes. (˘ω˘) nous u-utiwisons wa méthode {{domxwef("canvaswendewingcontext2d.awc", ^^;; "awc()")}} pouw dessinew des c-cewcwes au wieu d-de cawwés. (✿oωo)
 
 ```js
-var ctx = document.getElementById("canvas").getContext("2d");
+v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-for (var i = 0; i < 6; i++) {
-  for (var j = 0; j < 6; j++) {
-    ctx.strokeStyle =
-      "rgb(0," +
-      Math.floor(255 - 42.5 * i) +
+f-fow (vaw i = 0; i-i < 6; i++) {
+  fow (vaw j = 0; j < 6; j++) {
+    ctx.stwokestywe =
+      "wgb(0," +
+      m-math.fwoow(255 - 42.5 * i) +
       "," +
-      Math.floor(255 - 42.5 * j) +
+      math.fwoow(255 - 42.5 * j) +
       ")";
-    ctx.beginPath();
-    ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-    ctx.stroke();
+    ctx.beginpath();
+    ctx.awc(12.5 + j-j * 25, (U ﹏ U) 12.5 + i * 25, -.- 10, 0, math.pi * 2, ^•ﻌ•^ twue);
+    c-ctx.stwoke();
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
-Le résultat devrait ressembler à ça:
+w-we wésuwtat devwait wessembwew à ça:
 
-{{EmbedLiveSample("Un_exemple_strokeStyle", "180", "180", "canvas_strokestyle.png")}}
+{{embedwivesampwe("un_exempwe_stwokestywe", rawr "180", "180", (˘ω˘) "canvas_stwokestywe.png")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui définit cette propriété, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
+- w'intewface qui définit cette pwopwiété, nyaa~~ {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}

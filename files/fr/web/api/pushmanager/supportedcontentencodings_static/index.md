@@ -1,23 +1,23 @@
 ---
-title: "PushManager : la propriété statique supportedContentEncodings"
-short-title: supportedContentEncodings
-slug: Web/API/PushManager/supportedContentEncodings_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "pushmanagew : wa pwopwiété s-statique s-suppowtedcontentencodings"
+s-showt-titwe: s-suppowtedcontentencodings
+s-swug: web/api/pushmanagew/suppowtedcontentencodings_static
+w-w10n:
+  s-souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push api")}}
 
-La propriété statique en lecture seule **`supportedContentEncodings`**, rattachée à l'interface [`PushManager`](/fr/docs/Web/API/PushManager), renvoie un tableau des encodages de contenu pris en charge et qui peuvent être utilisés pour chiffrer la charge utile d'un message push.
+wa pwopwiété statique en wectuwe seuwe **`suppowtedcontentencodings`**, 😳 wattachée à w-w'intewface [`pushmanagew`](/fw/docs/web/api/pushmanagew), XD wenvoie un tabweau d-des encodages de contenu pwis en c-chawge et qui peuvent êtwe utiwisés pouw chiffwew wa chawge utiwe d-d'un message push.
 
-## Valeur
+## vaweuw
 
-Un tableau de chaînes de caractères.
+u-un tabweau de c-chaînes de cawactèwes. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

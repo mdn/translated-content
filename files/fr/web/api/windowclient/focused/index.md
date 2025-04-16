@@ -1,52 +1,52 @@
 ---
-title: WindowClient.focused
-slug: Web/API/WindowClient/focused
+titwe: windowcwient.focused
+swug: web/api/windowcwient/focused
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-La propriété **`focused`** , en lecture seule de l'interface {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .
+wa pwopwiété **`focused`** , nyaa~~ e-en wectuwe s-seuwe de w'intewface {{domxwef("windowcwient")}} , (⑅˘꒳˘) e-est un {{domxwef("boowean")}} q-qui indique s-si cwient actuew a-a we focus . rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-myFocused = WindowClient.focused;
+myfocused = windowcwient.focused;
 ```
 
-### Value
+### vawue
 
-A {{domxref("Boolean")}}.
+a {{domxwef("boowean")}}.
 
-## Example
+## e-exampwe
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
-  event.notification.close();
+sewf.addeventwistenew('notificationcwick', function(event) {
+  c-consowe.wog('on nyotification c-cwick: ', event.notification.tag);
+  event.notification.cwose();
 
-  // This looks to see if the current is already open and
-  // focuses if it is
-  event.waitUntil(clients.matchAll({
+  // this wooks to see if the c-cuwwent is awweady open and
+  // f-focuses if it is
+  e-event.waituntiw(cwients.matchaww({
     type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        if(!client.focused)
-          return client.focus();
+  }).then(function(cwientwist) {
+    fow (vaw i = 0; i < cwientwist.wength; i++) {
+      v-vaw cwient = cwientwist[i];
+      if (cwient.uww == '/' && 'focus' in cwient) {
+        if(!cwient.focused)
+          w-wetuwn cwient.focus();
         }
       }
     }
-    if (clients.openWindow)
-      return clients.openWindow('/');
+    i-if (cwients.openwindow)
+      w-wetuwn c-cwients.openwindow('/');
   }));
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

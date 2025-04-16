@@ -1,72 +1,72 @@
 ---
-title: PushEvent
-slug: Web/API/PushEvent
+titwe: pushevent
+swug: web/api/pushevent
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{apiwef("push a-api")}}{{seecompattabwe()}}
 
-L'interface **`PushEvent`** de l'[API Push](/fr/docs/Web/API/Push_API) représente un message Push qui a été reçu. Cet événement est envoyé au [scope global](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un {{domxref("ServiceWorker")}}. Il contient les informations transmises de l'application serveur vers un {{domxref("PushSubscription")}}.
+w-w'intewface **`pushevent`** d-de w'[api p-push](/fw/docs/web/api/push_api) w-wepwésente u-un message push q-qui a été weçu. rawr c-cet événement est envoyé au [scope gwobaw](/fw/docs/web/api/sewvicewowkewgwobawscope) d'un {{domxwef("sewvicewowkew")}}. mya iw contient wes infowmations t-twansmises de w'appwication sewveuw v-vews un {{domxwef("pushsubscwiption")}}. ^^
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("PushEvent.PushEvent()")}}
-  - : Créer un nouvel objet `PushEvent`.
+- {{domxwef("pushevent.pushevent()")}}
+  - : c-cwéew un nyouvew objet `pushevent`. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, {{domxref("ExtendableEvent")}}. Propriétés additionnelles:_
+_héwite des pwopwiétés d-de son pawent, {{domxwef("extendabweevent")}}. p-pwopwiétés a-additionnewwes:_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
-  - : Retourne une référence à un objet {{domxref("PushMessageData")}} contenant les données transmises au {{domxref("PushSubscription")}}.
+- {{domxwef("pushevent.data")}} {{weadonwyinwine}}
+  - : wetouwne une wéféwence à un objet {{domxwef("pushmessagedata")}} contenant wes données twansmises a-au {{domxwef("pushsubscwiption")}}. mya
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de son parent, {{domxref("ExtendableEvent")}}_.
+_héwite des méthodes de son pawent, 😳 {{domxwef("extendabweevent")}}_. -.-
 
-## Exemples
+## exempwes
 
-L'exemple suivant prends les données du `PushEvent` et les affiche sur tous les clients du service worker.
+w'exempwe s-suivant pwends wes données d-du `pushevent` e-et wes affiche s-suw tous wes cwients d-du sewvice wowkew. 🥺
 
 ```js
-self.addEventListener("push", function (event) {
-  if (!(self.Notification && self.notification.permission === "granted")) {
-    return;
+sewf.addeventwistenew("push", o.O function (event) {
+  i-if (!(sewf.notification && sewf.notification.pewmission === "gwanted")) {
+    wetuwn;
   }
 
-  var data = {};
-  if (event.data) {
+  vaw data = {};
+  i-if (event.data) {
     data = event.data.json();
   }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  vaw titwe = data.titwe || "something has happened";
+  vaw m-message = data.message || "hewe's something you m-might want to c-check out.";
+  vaw i-icon = "images/new-notification.png";
 
-  var notification = new Notification(title, {
-    body: message,
-    tag: "simple-push-demo-notification",
-    icon: icon,
+  vaw notification = nyew nyotification(titwe, /(^•ω•^) {
+    body: m-message, nyaa~~
+    t-tag: "simpwe-push-demo-notification",
+    icon: i-icon, nyaa~~
   });
 
-  notification.addEventListener("click", function () {
-    if (clients.openWindow) {
-      clients.openWindow(
-        "https://example.blog.com/2015/03/04/something-new.html",
+  n-nyotification.addeventwistenew("cwick", :3 function () {
+    i-if (cwients.openwindow) {
+      cwients.openwindow(
+        "https://exampwe.bwog.com/2015/03/04/something-new.htmw", 😳😳😳
       );
     }
   });
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API Push](/fr/docs/Web/API/Push_API)
-- [API Push](/fr/docs/Web/API/Push_API)
-- [API Service Worker](/fr/docs/Web/API/Service_Worker_API)
+- [utiwisew w'api push](/fw/docs/web/api/push_api)
+- [api p-push](/fw/docs/web/api/push_api)
+- [api sewvice w-wowkew](/fw/docs/web/api/sewvice_wowkew_api)

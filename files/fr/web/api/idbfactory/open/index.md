@@ -1,122 +1,122 @@
 ---
-title: IDBFactory.open()
-slug: Web/API/IDBFactory/open
+titwe: idbfactowy.open()
+swug: w-web/api/idbfactowy/open
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/IndexedDB_API#se_connecter_à_la_base_de_données).
+w-wa méthode **`open()`** d-de w'intewface {{domxwef("idbfactowy")}} w-wance u-une wequête pouw o-ouvwiw une [connexion à u-une base d-de données](/fw/docs/web/api/indexeddb_api#se_connectew_à_wa_base_de_données). 🥺
 
-La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération d'ouverture de façon asynchrone. Si l'opération réussit, un évènement `success` sera éms sur l'objet `IDBOpenDBRequest` renvoyé par la méthode, et la propriété `result` de l'évènement aura la valeur de l'objet {{domxref("IDBDatabase")}} associé à la connexion.
+wa méthode wenvoie immédiatement un objet {{domxwef("idbopendbwequest")}} puis effectue w-w'opéwation d'ouvewtuwe de façon asynchwone. ^^;; s-si w'opéwation wéussit, :3 un évènement `success` s-sewa éms suw w'objet `idbopendbwequest` wenvoyé paw wa méthode, (U ﹏ U) e-et wa pwopwiété `wesuwt` de w'évènement a-auwa wa vaweuw d-de w'objet {{domxwef("idbdatabase")}} associé à wa connexion. OwO
 
-Si une erreur se produit lors de la connexion, un évènement `error` sera émis sur l'objet `IDBOpenDBRequest` renvoyé par la méthode.
+si une ewweuw se pwoduit wows d-de wa connexion, 😳😳😳 un évènement `ewwow` sewa émis suw w'objet `idbopendbwequest` wenvoyé paw wa m-méthode. (ˆ ﻌ ˆ)♡
 
-Cette méthode peut également émettre les évènements `upgradeneeded`, `blocked` ou `versionchange`.
+cette méthode peut égawement émettwe w-wes évènements `upgwadeneeded`, XD `bwocked` o-ou `vewsionchange`. (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-La syntaxe standard est la suivante&nbsp;:
+wa syntaxe s-standawd est wa suivante&nbsp;:
 
 ```js
-var IDBOpenDBRequest = indexedDB.open(nom);
-var IDBOpenDBRequest = indexedDB.open(nom, version);
+vaw i-idbopendbwequest = indexeddb.open(nom);
+vaw idbopendbwequest = indexeddb.open(nom, ( ͡o ω ͡o ) v-vewsion);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `nom`
-  - : Le nom de la base de données qu'on souhaite ouvrir.
-- `version` {{optional_inline}}
-  - : Paramètre optionnel qui représente la version de la base de données qu'on veut ouvrir. Si ce paramètre n'est pas fourni et que la base de données existe, une connexion sera ouverte sans changer la version de la base de données. Si ce paramètre n'est pas fourni est que la base de données n'existe pas, elle sera créée avec une version `1`.
+  - : we nyom de wa base de données qu'on souhaite ouvwiw. rawr x3
+- `vewsion` {{optionaw_inwine}}
+  - : pawamètwe o-optionnew qui wepwésente w-wa vewsion de w-wa base de données q-qu'on veut ouvwiw. nyaa~~ si ce pawamètwe ny'est pas fouwni et que w-wa base de données e-existe, >_< une connexion sewa o-ouvewte sans changew w-wa vewsion de wa base de données. ^^;; s-si ce pawamètwe ny'est p-pas fouwni est que wa base de données ny'existe p-pas, (ˆ ﻌ ˆ)♡ ewwe sewa cwéée avec une v-vewsion `1`. ^^;;
 
-#### Objet options expérimental de Gecko
+#### objet options e-expéwimentaw d-de gecko
 
-- `options` (`version` et `storage`) {{optional_inline}} {{deprecated_inline}}
+- `options` (`vewsion` et `stowage`) {{optionaw_inwine}} {{depwecated_inwine}}
 
-  - : Dans Gecko, à partir de [la version 26](/fr/docs/Mozilla/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
+  - : dans gecko, (⑅˘꒳˘) à pawtiw de [wa vewsion 26](/fw/docs/moziwwa/fiwefox/weweases/26), rawr x3 iw est possibwe de passew en pawamètwe un objet `options` n-nyon s-standawd, (///ˬ///✿) qui contienne we nyuméwo d-de vewsion de w-wa base de données (équivawent d-donc au pawamètwe `vewsion` définit ci-avant), 🥺 et égawement une vaweuw `stowage` q-qui décwit si on souhaite utiwisew un stockage pewmanent (avec wa vaweuw `pewsistent`) ou u-un stockage tempowaiwe (avec wa vaweuw `tempowawy`). >_<
 
-    > [!WARNING]
-    > L'attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
+    > [!wawning]
+    > w'attwibut `stowage` e-est dépwécié e-et sewa pwochainement w-wetiwé de gecko. UwU vous d-devwiez utiwisew {{domxwef("stowagemanagew.pewsist()")}} à w-wa p-pwace pouw obteniw u-un stockage pewsistant. >_<
 
-> [!NOTE]
-> Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
+> [!note]
+> vous pouvez consuwtew w'awticwe [wes w-wimites d-de stockage d-du nyavigateuw e-et wes cwitèwes d-d'éviction](/fw/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia) pouw en savoiw pwus suw wes difféwents types de s-stockage disponibwes et wa façon dont fiwefox gèwe wes données côté cwient. -.-
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Un objet {{domxref("IDBOpenDBRequest")}} sur lequel sont déclenchés les différents évènements liés à cette requête.
+un objet {{domxwef("idbopendbwequest")}} suw wequew sont décwenchés wes difféwents évènements w-wiés à c-cette wequête. mya
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut lever une {{domxref("DOMException")}} de type suivant&nbsp;:
+cette méthode p-peut wevew une {{domxwef("domexception")}} d-de type suivant&nbsp;:
 
-| Exception   | Description                                                                |
+| e-exception   | descwiption                                                                |
 | ----------- | -------------------------------------------------------------------------- |
-| `TypeError` | La valeur de version est zéro ou un nombre négatif ou n'est pas un nombre. |
+| `typeewwow` | wa vaweuw de vewsion est zéwo ou un nyombwe nyégatif ou ny'est p-pas un nyombwe. >w< |
 
-## Exemples
+## exempwes
 
-Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la syntaxe standard et le paramètre `version`&nbsp;:
-
-```js
-var request = window.indexedDB.open("toDoList", 4);
-```
-
-Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+v-voici un exempwe d'ouvewtuwe d-de wa base de données `todowist` e-en utiwisant wa syntaxe standawd et we pawamètwe `vewsion`&nbsp;:
 
 ```js
-var note = document.querySelector("ul");
+v-vaw w-wequest = window.indexeddb.open("todowist", (U ﹏ U) 4);
+```
 
-window.indexedDB =
-  window.indexedDB ||
-  window.mozIndexedDB ||
-  window.webkitIndexedDB ||
-  window.msIndexedDB;
-// NE PAS utiliser "var indexedDB = ..." si on n’est pas dans une fonction.
-// On pourrait avoir besoin de références vers quelques objets window.IDB* :
-window.IDBTransaction =
-  window.IDBTransaction ||
-  window.webkitIDBTransaction ||
-  window.msIDBTransaction;
-window.IDBKeyRange =
-  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// Mozilla n’a jamais préfixé ces objets, donc on n’a pas besoin de window.mozIDB*
+dans we fwagment d-de code qui s-suit, 😳😳😳 on effectue une wequête pouw ouvwiw une base de données et on incwut d-des gestionnaiwes d-d'évènements p-pouw géwew wa wéussite ou w'échec d-de w'ouvewtuwe. o.O p-pouw consuwtew un exempwe f-fonctionnew compwet, òωó vous pouvez étudiew notwe appwication [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([cf. 😳😳😳 w-w'exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). σωσ
 
-// On ouvre la version 4 de la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+```js
+v-vaw nyote = document.quewysewectow("uw");
 
-// On ajoute deux gestionnaires d'évènements
-// Le premier utilisé en cas d'échec
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
+window.indexeddb =
+  window.indexeddb ||
+  w-window.mozindexeddb ||
+  window.webkitindexeddb ||
+  w-window.msindexeddb;
+// nye pas utiwisew "vaw indexeddb = ..." si on ny’est p-pas dans une fonction. (⑅˘꒳˘)
+// on pouwwait avoiw besoin de wéféwences vews q-quewques objets window.idb* :
+window.idbtwansaction =
+  window.idbtwansaction ||
+  w-window.webkitidbtwansaction ||
+  w-window.msidbtwansaction;
+window.idbkeywange =
+  window.idbkeywange || window.webkitidbkeywange || w-window.msidbkeywange;
+// moziwwa n-ny’a jamais pwéfixé ces objets, (///ˬ///✿) donc on ny’a pas besoin d-de window.mozidb*
+
+// on ouvwe w-wa vewsion 4 de wa base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", 4);
+
+// o-on ajoute deux gestionnaiwes d-d'évènements
+// w-we pwemiew utiwisé en cas d-d'échec
+dbopenwequest.onewwow = function (event) {
+  n-nyote.innewhtmw += "<wi>ewweuw w-wows du chawgement d-de wa base.</wi>";
 };
 
-// Et le second en cas de réussite
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+// et we second en c-cas de wéussite
+d-dbopenwequest.onsuccess = function (event) {
+  nyote.innewhtmw += "<wi>base de d-données initiawisée.</wi>";
 
-  // On stocke le résultat de l'ouverture dans la
-  // variable db qui sera utilisée par la suite
-  // pour d'autres opérations
-  db = DBOpenRequest.result;
+  // o-on stocke w-we wésuwtat de w'ouvewtuwe dans wa
+  // vawiabwe d-db qui sewa utiwisée paw wa suite
+  // p-pouw d'autwes o-opéwations
+  db = dbopenwequest.wesuwt;
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions&nbsp;: {{domxref("IDBDatabase")}}
-- Manipuler des transactions&nbsp;: {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés&nbsp;: {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier&nbsp;: {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs&nbsp;: {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des twansactions&nbsp;: {{domxwef("idbdatabase")}}
+- m-manipuwew des twansactions&nbsp;: {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés&nbsp;: {{domxwef("idbkeywange")}}
+- wécupéwew d-des données et wes modifiew&nbsp;: {{domxwef("idbobjectstowe")}}
+- m-manipuwew des cuwseuws&nbsp;: {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence pouw i-indexeddb&nbsp;: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

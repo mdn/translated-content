@@ -1,32 +1,32 @@
 ---
-title: Event.explicitOriginalTarget
-slug: Web/API/Event/explicitOriginalTarget
-l10n:
-  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
+titwe: event.expwicitowiginawtawget
+swug: web/api/event/expwicitowiginawtawget
+w-w10n:
+  souwcecommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-La propriété en lecture seule **`explicitOriginalTarget`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), renvoie la cible originale, non-anonyme, de l'évènement.
+w-wa pwopwiété en w-wectuwe seuwe **`expwicitowiginawtawget`**, òωó w-wattachée à w-w'intewface [`event`](/fw/docs/web/api/event), ʘwʘ w-wenvoie w-wa cibwe owiginawe, /(^•ω•^) n-nyon-anonyme, ʘwʘ de w'évènement. σωσ
 
-Si l'évènement a été reciblé pour une autre raison que le franchissement de limites anonyme, cette propriété sera définie avec la cible avant le reciblage.
+si w'évènement a été wecibwé pouw une a-autwe waison que we fwanchissement de wimites a-anonyme, OwO cette pwopwiété sewa d-définie avec wa cibwe avant we wecibwage. 😳😳😳
 
-Par exemple, les évènements de souris sont reciblés sur les nœuds parent lorsqu'ils se produisent sur des nœuds texte (voir [le bug 185889](https://bugzilla.mozilla.org/show_bug.cgi?id=185889)), et, dans ce cas, [`currentTarget`](/fr/docs/Web/API/Event/currentTarget) affichera le parent tandis que cette propriété affichera le nœud texte.
+paw exempwe, wes évènements d-de souwis sont wecibwés s-suw wes nyœuds p-pawent wowsqu'iws se pwoduisent suw des nyœuds texte (voiw [we bug 185889](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=185889)), 😳😳😳 e-et, dans ce cas, o.O [`cuwwenttawget`](/fw/docs/web/api/event/cuwwenttawget) affichewa we pawent tandis que cette pwopwiété a-affichewa we nyœud texte. ( ͡o ω ͡o )
 
-Cette propriété diffère également de [`originalTarget`](/fr/docs/Web/API/Event/originalTarget), car elle ne contiendra jamais de contenu anonyme.
+cette p-pwopwiété diffèwe égawement d-de [`owiginawtawget`](/fw/docs/web/api/event/owiginawtawget), (U ﹏ U) c-caw ewwe nye contiendwa j-jamais de contenu anonyme. (///ˬ///✿)
 
-## Valeur
+## vaweuw
 
-Renvoie l'objet [`EventTarget`](/fr/docs/Web/API/EventTarget) ou `null` s'il n'y en a pas.
+w-wenvoie w'objet [`eventtawget`](/fw/docs/web/api/eventtawget) ou `nuww` s'iw ny'y e-en a pas. >w<
 
-## Spécifications
+## spécifications
 
-Il s'agit d'une propriété spécifique à Mozilla qui ne fait partie d'aucune spécification actuelle et qui n'est pas en voie de standardisation.
+iw s'agit d'une pwopwiété spécifique à moziwwa qui nye fait p-pawtie d'aucune spécification a-actuewwe et qui n-ny'est pas en voie d-de standawdisation. rawr
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [compawaison d-des cibwes d'évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

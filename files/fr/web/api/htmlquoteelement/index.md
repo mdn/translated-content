@@ -1,33 +1,33 @@
 ---
-title: HTMLQuoteElement
-slug: Web/API/HTMLQuoteElement
+titwe: htmwquoteewement
+swug: w-web/api/htmwquoteewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLQuoteElement`** fournit des propriétés et méthodes (en complément de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) pour manipuler les éléments de citation comme [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).
+w-w'intewface **`htmwquoteewement`** f-fouwnit d-des pwopwiétés e-et méthodes (en c-compwément d-de cewwes fouwnies paw w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) dont ewwe héwite) pouw manipuwew wes éwéments d-de citation comme [`<bwockquote>`](/fw/docs/web/htmw/ewement/bwockquote) et [`<q>`](/fw/docs/web/htmw/ewement/q), nyaa~~ mais pas [`<cite>`](/fw/docs/web/htmw/ewement/cite). (⑅˘꒳˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_héwite des p-pwopwiétés de son pawent, rawr x3 [`htmwewement`](/fw/docs/web/api/htmwewement)._
 
-- [`HTMLQuoteElement.cite`](/fr/docs/Web/API/HTMLQuoteElement/cite)
-  - : Une chaîne de caractères qui reflète la valeur de l'attribut HTML [`cite`](/fr/docs/Web/HTML/Element/blockquote#attr-cite), qui contient une URL pour la source de la citation.
+- [`htmwquoteewement.cite`](/fw/docs/web/api/htmwquoteewement/cite)
+  - : une chaîne de cawactèwes q-qui wefwète wa vaweuw de w'attwibut h-htmw [`cite`](/fw/docs/web/htmw/ewement/bwockquote#attw-cite), q-qui contient une uww pouw wa souwce de wa citation. (✿oωo)
 
-## Méthodes
+## méthodes
 
-_Cette interface n'a pas de méthode spécifique, elle hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_cette intewface ny'a pas d-de méthode spécifique, (ˆ ﻌ ˆ)♡ ewwe héwite des méthodes de son pawent, (˘ω˘) [`htmwewement`](/fw/docs/web/api/htmwewement)._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les éléments HTML qui portent cette interface&nbsp;: [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).
+- w-wes éwéments htmw q-qui powtent c-cette intewface&nbsp;: [`<bwockquote>`](/fw/docs/web/htmw/ewement/bwockquote) et [`<q>`](/fw/docs/web/htmw/ewement/q), (⑅˘꒳˘) mais pas [`<cite>`](/fw/docs/web/htmw/ewement/cite). (///ˬ///✿)

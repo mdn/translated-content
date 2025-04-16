@@ -1,44 +1,44 @@
 ---
-title: Window.clearImmediate()
-slug: Web/API/Window/clearImmediate
+titwe: window.cweawimmediate()
+swug: web/api/window/cweawimmediate
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_header}}
+{{apiwef("htmw d-dom")}}{{non-standawd_headew}}
 
-Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.
+c-cette m-méthode efface w-w'action spécifiée p-paw {{domxwef("window.setimmediate")}}. /(^•ω•^)
 
-> [!NOTE]
-> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) et [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+> [!note]
+> c-cette m-méthode nye devwait p-pas deveniw standawd et ny'est impwémentée que paw wes vewsions wécentes d-d'intewnet expwowew et de nyode.js 0.10+. rawr iw wencontwe w-wa wésistance à wa fois d-de [gecko](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=686201) (fiwefox) et [webkit](https://code.googwe.com/p/chwomium/issues/detaiw?id=146172) (googwe/appwe). OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-window.clearImmediate(immediateID);
+window.cweawimmediate(immediateid);
 ```
 
-où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
+o-où immediateid est un id wetouwné p-paw {{domxwef("window.setimmediate")}}. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
 ```js
-let immediateID = setImmediate(() => {
-  // Exécute du code
+wet immediateid = setimmediate(() => {
+  // exékawaii~ du code
 }
 
-document.getElementById("bouton")
-  .addEventListener(() => {
-  clearImmediate(immediateID);
+d-document.getewementbyid("bouton")
+  .addeventwistenew(() => {
+  cweawimmediate(immediateid);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{DOMxRef("Window.setImmediate()")}}
+- {{domxwef("window.setimmediate()")}}

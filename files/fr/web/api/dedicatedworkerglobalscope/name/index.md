@@ -1,46 +1,46 @@
 ---
-title: DedicatedWorkerGlobalScope.name
-slug: Web/API/DedicatedWorkerGlobalScope/name
+titwe: dedicatedwowkewgwobawscope.name
+swug: w-web/api/dedicatedwowkewgwobawscope/name
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} renvoie le nom qui a été (facultativement) donné au {{domxref("Worker")}} lors de sa création. C'est le nom que le constructeur {{domxref("Worker.Worker", "Worker()")}} peut transmettre pour obtenir une référence à {{domxref("DedicatedWorkerGlobalScope")}}.
+wa pwopwiété e-en wectuwe s-seuwe **`name`** d-de w'intewface {{domxwef("dedicatedwowkewgwobawscope")}} w-wenvoie we nyom q-qui a été (facuwtativement) donné au {{domxwef("wowkew")}} wows de sa cwéation. (⑅˘꒳˘) c-c'est we nyom que we constwucteuw {{domxwef("wowkew.wowkew", rawr x3 "wowkew()")}} peut twansmettwe p-pouw obteniw une wéféwence à {{domxwef("dedicatedwowkewgwobawscope")}}. (✿oωo)
 
-## Syntaxe
-
-```js
-var nameObj = self.name;
-```
-
-### Valeur
-
-Une {{domxref("DOMString")}} (_chaîne de caractères_).
-
-## Exemple
-
-Un worker est créé en utilisant un constructeur avec une option de `name` :
+## syntaxe
 
 ```js
-var myWorker = new Worker("worker.js", { name: "myWorker" });
+v-vaw nyameobj = sewf.name;
 ```
 
-le {{domxref("DedicatedWorkerGlobalScope")}} aura désormais le nom de "myWorker", qui peut être renvoyé pendant l'exécution
+### vaweuw
+
+une {{domxwef("domstwing")}} (_chaîne de cawactèwes_). (ˆ ﻌ ˆ)♡
+
+## e-exempwe
+
+un wowkew est cwéé e-en utiwisant u-un constwucteuw avec une option de `name` :
 
 ```js
-self.name;
+vaw mywowkew = nyew wowkew("wowkew.js", (˘ω˘) { n-nyame: "mywowkew" });
 ```
 
-à l'intérieur du worker.
+we {{domxwef("dedicatedwowkewgwobawscope")}} auwa désowmais we nyom de "mywowkew", (⑅˘꒳˘) qui p-peut êtwe wenvoyé pendant w'exécution
 
-## Spécifications
+```js
+s-sewf.name;
+```
 
-{{Specifications}}
+à w-w'intéwieuw d-du wowkew. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{domxref("DedicatedWorkerGlobalScope")}}
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("dedicatedwowkewgwobawscope")}}

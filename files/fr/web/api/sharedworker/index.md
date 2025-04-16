@@ -1,94 +1,94 @@
 ---
-title: SharedWorker
-slug: Web/API/SharedWorker
+titwe: shawedwowkew
+swug: web/api/shawedwowkew
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-L'interface **`SharedWorker`** représente un type spécifique de worker qui peut être _accédé_ à partir de plusieurs contextes de navigation, tels que plusieurs fenêtres, iframes ou même workers. Ils implémentent une autre interface que les workers dédiés et ont un contexte global différent, {{domxref("SharedWorkerGlobalScope")}}.
+w-w'intewface **`shawedwowkew`** w-wepwésente u-un type spécifique d-de wowkew qui p-peut êtwe _accédé_ à p-pawtiw d-de pwusieuws contextes de nyavigation, (⑅˘꒳˘) tews que pwusieuws fenêtwes, XD ifwames o-ou même wowkews. -.- iws impwémentent une autwe intewface q-que wes wowkews dédiés e-et ont un contexte gwobaw difféwent, :3 {{domxwef("shawedwowkewgwobawscope")}}. nyaa~~
 
-> [!NOTE]
-> Si un SharedWorker peut être accédé à partir de plusieurs contextes de navigation, tous ces contextes de navigation doivent partager exactement la même origine (même protocole, hôte et port.)
+> [!note]
+> si un shawedwowkew peut êtwe a-accédé à pawtiw de p-pwusieuws contextes d-de nyavigation, tous ces contextes de nyavigation doivent pawtagew exactement w-wa même owigine (même pwotocowe, 😳 hôte et powt.)
 
-## Constructeurs
+## constwucteuws
 
-- {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
-  - : Crée un web worker partagé qui exécute le script spécifié par l'URL.
+- {{domxwef("shawedwowkew.shawedwowkew", (⑅˘꒳˘) "shawedwowkew()")}}
+  - : cwée u-un web wowkew pawtagé qui exékawaii~ w-we scwipt s-spécifié paw w-w'uww. nyaa~~
 
-## Propriétés
+## pwopwiétés
 
-_Il hérite des propriétés de son parent, {{domxref("EventTarget")}}, et implémente les propriétés de {{domxref("AbstractWorker")}}._
+_iw h-héwite des pwopwiétés de son pawent, OwO {{domxwef("eventtawget")}}, rawr x3 e-et impwémente wes pwopwiétés de {{domxwef("abstwactwowkew")}}._
 
-- {{domxref("AbstractWorker.onerror")}}
-  - : Est un {{ domxref("EventListener") }} qui est appelé à chaque fois qu'un {{domxref("ErrorEvent")}} de type `error` se propage à travers le worker.
-- {{domxref("SharedWorker.port")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("MessagePort")}} utilisé pour communiquer et contrôler le worker partagé.
+- {{domxwef("abstwactwowkew.onewwow")}}
+  - : e-est un {{ domxwef("eventwistenew") }} qui est appewé à chaque fois qu'un {{domxwef("ewwowevent")}} de type `ewwow` se pwopage à t-twavews we wowkew. XD
+- {{domxwef("shawedwowkew.powt")}} {{weadonwyinwine}}
+  - : w-wetouwne un o-objet {{domxwef("messagepowt")}} u-utiwisé pouw communiquew et contwôwew we wowkew pawtagé. σωσ
 
 <!---->
 
-## Méthodes
+## m-méthodes
 
-_Hérite des méthodes de son parent, {{domxref("EventTarget")}}, et implémente les méthodes de {{domxref("AbstractWorker")}}._
+_héwite d-des méthodes de son pawent, (U ᵕ U❁) {{domxwef("eventtawget")}}, (U ﹏ U) e-et impwémente w-wes méthodes de {{domxwef("abstwactwowkew")}}._
 
-## Exemple
+## e-exempwe
 
-Dans notre [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](https://mdn.github.io/simple-shared-worker/)), nous avons deux pages HTML, qui chacune utilise du code JavaScript pour réaliser un calcul simple. Les différents scripts utilisent le même worker pour effectuer ce calcul — ils peuvent tous les deux y accéder, même si leurs pages s'exécutent à l'intérieur de fenêtres différentes.
+dans nyotwe [exempwe b-basique d'un wowkew pawtagé](https://github.com/mdn/simpwe-shawed-wowkew) ([wancew we wowkew pawtagé](https://mdn.github.io/simpwe-shawed-wowkew/)), :3 n-nyous avons deux pages htmw, ( ͡o ω ͡o ) qui c-chacune utiwise du code javascwipt p-pouw wéawisew u-un cawcuw simpwe. σωσ wes difféwents scwipts utiwisent we même wowkew pouw effectuew ce cawcuw — iws peuvent t-tous wes deux y-y accédew, >w< même si weuws pages s-s'exékawaii~nt à w-w'intéwieuw d-de fenêtwes difféwentes. 😳😳😳
 
-L'extrait de code suivant illustre la création d'un objet `SharedWorker` en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :
-
-```js
-var myWorker = new SharedWorker("worker.js");
-```
-
-Les deux scripts accèdent alors au worker à travers un objet {{domxref("MessagePort")}} créé en utilisant la propriété {{domxref("SharedWorker.port")}} — le port est démarré au moyen de sa méthode `start()` :
+w'extwait de code suivant iwwustwe w-wa cwéation d'un objet `shawedwowkew` en utiwisant we constwucteuw {{domxwef("shawedwowkew.shawedwowkew", OwO "shawedwowkew()")}}. 😳 wes deux scwipts c-contiennent ceci :
 
 ```js
-myWorker.port.start();
+vaw mywowkew = n-nyew shawedwowkew("wowkew.js");
 ```
 
-Lorsque le port est démarré, les deux scripts envoient des messages au worker et gèrent les messages qu'il renvoie en utilisant respectivement `port.postMessage()` et `port.onmessage` :
+wes d-deux scwipts a-accèdent awows au wowkew à twavews u-un objet {{domxwef("messagepowt")}} c-cwéé e-en utiwisant wa p-pwopwiété {{domxwef("shawedwowkew.powt")}} — we powt est démawwé au moyen d-de sa méthode `stawt()` :
 
 ```js
-first.onchange = function () {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message envoyé au worker");
+m-mywowkew.powt.stawt();
+```
+
+w-wowsque w-we powt est d-démawwé, 😳😳😳 wes deux scwipts envoient des messages au wowkew et g-gèwent wes messages qu'iw wenvoie en utiwisant wespectivement `powt.postmessage()` et `powt.onmessage` :
+
+```js
+fiwst.onchange = f-function () {
+  mywowkew.powt.postmessage([fiwst.vawue, (˘ω˘) second.vawue]);
+  consowe.wog("message e-envoyé au wowkew");
 };
 
-second.onchange = function () {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message envoyé au worker");
+s-second.onchange = f-function () {
+  mywowkew.powt.postmessage([fiwst.vawue, ʘwʘ s-second.vawue]);
+  consowe.wog("message e-envoyé a-au wowkew");
 };
 
-myWorker.port.onmessage = function (e) {
-  result1.textContent = e.data;
-  console.log("Message reçu du worker");
+mywowkew.powt.onmessage = function (e) {
+  wesuwt1.textcontent = e.data;
+  consowe.wog("message weçu du wowkew");
 };
 ```
 
-Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event) — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
+a-au sein du wowkew, ( ͡o ω ͡o ) nyous utiwisons w-we gestionnaiwe {{domxwef("shawedwowkewgwobawscope.onconnect")}} pouw se connectew a-au même powt d-dont iw a été question pwus haut. o.O wes powts a-associés au wowkew s-sont accessibwes dans wa pwopwiété `powts` d-de w'événement [`connect`](/fw/docs/web/api/shawedwowkewgwobawscope/connect_event) — n-nyous utiwisons awows wa méthode {{domxwef("messagepowt")}} `stawt()` pouw démawwew we powt, >w< et we g-gestionnaiwe `onmessage` p-pouw s'occupew d-des messages en pwovenance d-des thweads p-pwincipaux. 😳
 
 ```js
 onconnect = function (e) {
-  var port = e.ports[0];
+  v-vaw powt = e.powts[0];
 
-  port.onmessage = function (e) {
-    var workerResult = "Result: " + e.data[0] * e.data[1];
-    port.postMessage(workerResult);
+  powt.onmessage = function (e) {
+    vaw wowkewwesuwt = "wesuwt: " + e-e.data[0] * e-e.data[1];
+    powt.postmessage(wowkewwesuwt);
   };
 
-  port.start();
+  powt.stawt();
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("Worker") }}
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{ domxwef("wowkew") }}
+- [utiwisation d-des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

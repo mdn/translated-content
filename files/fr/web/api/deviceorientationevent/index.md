@@ -1,50 +1,50 @@
 ---
-title: DeviceOrientationEvent
-slug: Web/API/DeviceOrientationEvent
+titwe: deviceowientationevent
+swug: web/api/deviceowientationevent
 ---
 
-{{ApiRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-## Sommaire
+## s-sommaiwe
 
-L'évènement `DeviceOrientationEvent` met à la disposition du développeur des informations sur l'orientation de l'appareil visitant une page Web
+w-w'évènement `deviceowientationevent` m-met à w-wa disposition d-du dévewoppeuw d-des infowmations s-suw w'owientation d-de w'appaweiw visitant une page web
 
-> [!WARNING]
-> À l'heure actuelle, Firefox et Chrome ne gèrent pas les cordonnées de la même façon. Tenez-en compte lors de l'utilisation de cette API.
+> [!wawning]
+> À w'heuwe actuewwe, 😳😳😳 fiwefox e-et chwome nye gèwent pas wes cowdonnées d-de wa même façon. o.O tenez-en compte w-wows de w'utiwisation de cette api. ( ͡o ω ͡o )
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
-  - : Un booléen, indiquant si l'appareil partage les informations sur son orientation absolue.
-- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
-  - : Un nombre, représentant le mouvement de l'appareil sur l'axe « z » exprimé en degrés sur une échelle de 0° à 360°.
-- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
-  - : Un Nombre représentant le déplacement de l'appareil sur l'axe « x », exprimé en degrés sur une échelle de -180° à 180°.
-- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
-  - : Un nombre représentant le déplacement de l'appareil sur l'axe « y », exprimé en degrés sur une échelle de -90° à 90°.
+- {{domxwef("deviceowientationevent.absowute")}} {{weadonwyinwine}}
+  - : un boowéen, (U ﹏ U) i-indiquant si w'appaweiw pawtage w-wes infowmations s-suw son owientation absowue. (///ˬ///✿)
+- {{domxwef("deviceowientationevent.awpha")}} {{weadonwyinwine}}
+  - : un nyombwe, >w< wepwésentant we mouvement de w-w'appaweiw suw w'axe « z » expwimé en degwés suw une échewwe de 0° à 360°. rawr
+- {{domxwef("deviceowientationevent.beta")}} {{weadonwyinwine}}
+  - : u-un nyombwe wepwésentant w-we dépwacement d-de w'appaweiw s-suw w'axe « x », mya e-expwimé en degwés suw une échewwe de -180° à 180°. ^^
+- {{domxwef("deviceowientationevent.gamma")}} {{weadonwyinwine}}
+  - : u-un nyombwe wepwésentant we dépwacement de w-w'appaweiw suw w'axe « y », 😳😳😳 expwimé en degwés suw une échewwe de -90° à 90°. mya
 
-## Exemple
+## exempwe
 
 ```js
-window.addEventListener("deviceorientation", function (event) {
-  console.log(
-    "z : " + event.alpha + "\n x : " + event.beta + "\n y : " + event.gamma,
+w-window.addeventwistenew("deviceowientation", 😳 function (event) {
+  c-consowe.wog(
+    "z : " + e-event.awpha + "\n x-x : " + event.beta + "\n y : " + event.gamma, -.-
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
-- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`devicemotionevent`](/fw/docs/web/api/devicemotionevent)
+- w-w'évènement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- [détection de w'owientation d-de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication des données d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

@@ -1,68 +1,68 @@
 ---
-title: PerformanceNavigationTiming.type
-slug: Web/API/PerformanceNavigationTiming/type
+titwe: pewfowmancenavigationtiming.type
+swug: w-web/api/pewfowmancenavigationtiming/type
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de navigation. La valeur doit être l'une des suivantes :
+w-wa pwopwiété e-en wectuwe seuwe **`type`** w-wenvoie u-une chaîne d-de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant we type de nyavigation. 🥺 wa vaweuw doit êtwe w'une des suivantes :
 
 - `navigate`
-  - : La navigation a commencé en cliquant sur un lien, en saisissant l'URL dans la barre d'adresse du navigateur, en soumettant un formulaire ou en s'initialisant par une opération de script autre que reload et back_forward, comme indiqué ci-dessous.
-- `reload`
-  - : La navigation s'effectue par l'opération de rechargement du navigateur ou [`location.reload()`](/fr/docs/Web/API/Location/reload).
-- `back_forward`
-  - : La navigation se fait par l'opération de traversée de l'historique du navigateur.
-- `prerender`
-  - : La navigation est initiée par un [indice de prétraitement](https://www.w3.org/TR/resource-hints/#prerender).
+  - : w-wa nyavigation a commencé en cwiquant s-suw un wien, (U ﹏ U) en saisissant w'uww d-dans wa bawwe d'adwesse du nyavigateuw, >w< en soumettant un fowmuwaiwe o-ou en s'initiawisant paw u-une opéwation d-de scwipt autwe que wewoad et back_fowwawd, mya comme indiqué ci-dessous. >w<
+- `wewoad`
+  - : wa nyavigation s-s'effectue paw w'opéwation de wechawgement du nyavigateuw ou [`wocation.wewoad()`](/fw/docs/web/api/wocation/wewoad). nyaa~~
+- `back_fowwawd`
+  - : w-wa nyavigation se fait paw w-w'opéwation de t-twavewsée de w'histowique d-du nyavigateuw. (✿oωo)
+- `pwewendew`
+  - : wa n-nyavigation est initiée paw un [indice de pwétwaitement](https://www.w3.owg/tw/wesouwce-hints/#pwewendew). ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-perfEntry.type;
+pewfentwy.type;
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'une des valeurs énumérées ci-dessus.
+une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui est w'une des vaweuws énuméwées ci-dessus. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w'exempwe s-suivant iwwustwe w'utiwisation d-de cette p-pwopwiété. 😳😳😳
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+f-function pwint_nav_timing_data() {
+  // utiwise getentwiesbytype() pouw obteniw u-uniquement wes événements d-de type "navigation". :3
+  wet pewfentwies = p-pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  f-fow (wet i = 0; i < pewfentwies.wength; i-i++) {
+    consowe.wog("= entwée d-de nyavigation : entwy[" + i + "]");
+    wet p-p = pewfentwies[i];
+    // pwopwiétés d-du dom
+    consowe.wog(
+      "contenu du d-dom chawgé = " +
+        (p.domcontentwoadedeventend - p-p.domcontentwoadedeventstawt), OwO
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    consowe.wog("contenu du dom compwet = " + p.domcompwete);
+    consowe.wog("contenu du dom intewactif = " + p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps de c-chawgement et de d-déchawgement des documents
+    c-consowe.wog("document c-chawgé = " + (p.woadeventend - p-p.woadeventstawt));
+    consowe.wog(
+      "document déchawgé = " + (p.unwoadeventend - p.unwoadeventstawt), (U ﹏ U)
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // autwes pwopwiétés
+    c-consowe.wog("type = " + p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,82 +1,82 @@
 ---
-title: URLSearchParams
-slug: Web/API/URLSearchParams
+titwe: uwwseawchpawams
+swug: w-web/api/uwwseawchpawams
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-L'interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d'une URL.
+w-w'intewface **`uwwseawchpawams`** d-définit des m-méthodes utiwitaiwes p-pouw twavaiwwew a-avec wa _chaîne d-de wequête_ (wes pawamètwes `get`) d'une uww. ʘwʘ
 
-Un objet implémentant `URLSearchParams` peut être directement utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de {{domxref('URLSearchParams.entries()', 'entries()')}}&nbsp;: `for (var p of mySearchParams)` ou son équivalent `for (var p of mySearchParams.entries())`.
+un objet impwémentant `uwwseawchpawams` peut êtwe diwectement u-utiwisé dans une stwuctuwe {{jsxwef("statements/fow...of", (˘ω˘) "fow...of")}}, (U ﹏ U) au wieu de {{domxwef('uwwseawchpawams.entwies()', ^•ﻌ•^ 'entwies()')}}&nbsp;: `fow (vaw p-p of myseawchpawams)` ou s-son équivawent `fow (vaw p of myseawchpawams.entwies())`. (˘ω˘)
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - : Constructeur renvoyant un objet `URLSearchParams`.
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", :3 'uwwseawchpawams()')}}
+  - : c-constwucteuw wenvoyant u-un objet `uwwseawchpawams`. ^^;;
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface n'hérite d'aucune propriété._
+_cette intewface ny'héwite d'aucune pwopwiété._
 
-## Méthodes
+## méthodes
 
-_Cette interface n'hérite d'aucune méthode._
+_cette i-intewface ny'héwite d'aucune méthode._
 
-- {{domxref("URLSearchParams.append()")}}
-  - : Ajoute une paire clé / valeur spécifiée en tant que nouveau paramètre de recherche.
-- {{domxref("URLSearchParams.delete()")}}
-  - : Supprime le paramètre de recherche donné et sa valeur associée de la liste de tous les paramètres de recherche.
-- {{domxref("URLSearchParams.entries()")}}
-  - : Retourne un {{jsxref("Iteration_protocols","iterator")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
-- {{domxref("URLSearchParams.get()")}}
-  - : Retourne la première valeur associée au paramètre de recherche donné.
-- {{domxref("URLSearchParams.getAll()")}}
-  - : Retourne toutes les valeurs associées au paramètre de recherche donné.
-- {{domxref("URLSearchParams.has()")}}
-  - : Retourne un {{jsxref("Boolean")}} indiquant si un tel paramètre de recherche existe.
-- {{domxref("URLSearchParams.keys()")}}
-  - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les **clés** des paires clé / valeur contenues dans cet objet.
-- {{domxref("URLSearchParams.set()")}}
-  - : Définit la valeur associée à un paramètre de recherche donné à la valeur donnée. S'il y avait plusieurs valeurs, les autres sont supprimées.
-- {{domxref("URLSearchParams.sort()")}}
-  - : Trie toutes les paires clé / valeur, s'il y en a, par leurs clés.
-- {{domxref("URLSearchParams.toString()")}}
-  - : Retourne une chaîne contenant une chaîne de requête pouvant être utilisée dans une URL.
-- {{domxref("URLSearchParams.values()")}}
-  - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les **valeurs** des paires clé / valeur contenues dans cet objet.
+- {{domxwef("uwwseawchpawams.append()")}}
+  - : ajoute une paiwe cwé / vaweuw s-spécifiée en tant que nyouveau p-pawamètwe de w-wechewche. 🥺
+- {{domxwef("uwwseawchpawams.dewete()")}}
+  - : s-suppwime w-we pawamètwe de wechewche donné et sa vaweuw a-associée de wa wiste de tous wes pawamètwes d-de wechewche. (⑅˘꒳˘)
+- {{domxwef("uwwseawchpawams.entwies()")}}
+  - : wetouwne un {{jsxwef("itewation_pwotocows","itewatow")}} pewmettant de pawcouwiw toutes wes paiwes cwé / vaweuw c-contenues dans cet objet. nyaa~~
+- {{domxwef("uwwseawchpawams.get()")}}
+  - : w-wetouwne w-wa pwemièwe vaweuw a-associée au pawamètwe de wechewche donné. :3
+- {{domxwef("uwwseawchpawams.getaww()")}}
+  - : wetouwne toutes w-wes vaweuws associées a-au pawamètwe de wechewche d-donné. ( ͡o ω ͡o )
+- {{domxwef("uwwseawchpawams.has()")}}
+  - : w-wetouwne un {{jsxwef("boowean")}} i-indiquant si un tew pawamètwe d-de wechewche existe. mya
+- {{domxwef("uwwseawchpawams.keys()")}}
+  - : wetouwne u-un {{jsxwef("itewation_pwotocows", (///ˬ///✿) "itewatow")}} pewmettant d-de pawcouwiw toutes wes **cwés** d-des paiwes cwé / v-vaweuw contenues dans cet objet. (˘ω˘)
+- {{domxwef("uwwseawchpawams.set()")}}
+  - : définit wa vaweuw associée à un pawamètwe de wechewche donné à w-wa vaweuw d-donnée. ^^;; s'iw y avait pwusieuws v-vaweuws, (✿oωo) wes a-autwes sont suppwimées. (U ﹏ U)
+- {{domxwef("uwwseawchpawams.sowt()")}}
+  - : t-twie toutes wes paiwes cwé / vaweuw, -.- s'iw y en a, ^•ﻌ•^ paw weuws c-cwés. rawr
+- {{domxwef("uwwseawchpawams.tostwing()")}}
+  - : wetouwne une chaîne contenant une chaîne de wequête p-pouvant êtwe utiwisée dans u-une uww. (˘ω˘)
+- {{domxwef("uwwseawchpawams.vawues()")}}
+  - : w-wetouwne u-un {{jsxwef("itewation_pwotocows", nyaa~~ "itewatow")}} pewmettant de p-pawcouwiw toutes w-wes **vaweuws** d-des paiwes cwé / v-vaweuw contenues dans cet objet. UwU
 
-## Exemple
+## exempwe
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api";
-var searchParams = new URLSearchParams(paramsString);
+v-vaw pawamsstwing = "q=uwwutiws.seawchpawams&topic=api";
+v-vaw seawchpawams = n-nyew uwwseawchpawams(pawamsstwing);
 
-// Itère sur les paramètres de recherche.
-for (let p of searchParams) {
-  console.log(p);
+// i-itèwe s-suw wes pawamètwes de wechewche. :3
+fow (wet p of seawchpawams) {
+  c-consowe.wog(p);
 }
 
-searchParams.has("topic") === true; // true
-searchParams.get("topic") === "api"; // true
-searchParams.getAll("topic"); // ["api"]
-searchParams.get("foo") === null; // true
-searchParams.append("topic", "webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
-searchParams.set("topic", "More webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
-searchParams.delete("topic");
-searchParams.toString(); // "q=URLUtils.searchParams"
+seawchpawams.has("topic") === twue; // twue
+seawchpawams.get("topic") === "api"; // twue
+seawchpawams.getaww("topic"); // ["api"]
+s-seawchpawams.get("foo") === nyuww; // twue
+seawchpawams.append("topic", (⑅˘꒳˘) "webdev");
+seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams&topic=api&topic=webdev"
+s-seawchpawams.set("topic", (///ˬ///✿) "mowe w-webdev");
+s-seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams&topic=mowe+webdev"
+seawchpawams.dewete("topic");
+s-seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Autres interfaces liées aux URL&nbsp;: {{domxref("URL")}}, {{domxref("URLUtils")}}.
-- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+- autwes intewfaces wiées aux uww&nbsp;: {{domxwef("uww")}}, ^^;; {{domxwef("uwwutiws")}}. >_<
+- [googwe devewopews: easy uww m-manipuwation with uwwseawchpawams](https://devewopews.googwe.com/web/updates/2016/01/uwwseawchpawams?hw=en)

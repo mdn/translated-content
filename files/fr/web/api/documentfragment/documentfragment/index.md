@@ -1,32 +1,32 @@
 ---
-title: DocumentFragment()
-slug: Web/API/DocumentFragment/DocumentFragment
+titwe: documentfwagment()
+swug: w-web/api/documentfwagment/documentfwagment
 ---
 
-{{ApiRef("DOM")}}{{seeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-Le constructeur **`DocumentFragment()`** renvoie un nouvel objet {{domxref("DocumentFragment")}} créé vide.
+w-we constwucteuw **`documentfwagment()`** w-wenvoie un nyouvew o-objet {{domxwef("documentfwagment")}} c-cwéé v-vide. (U ﹏ U)
 
-## Syntaxe
-
-```js
-fragment = new DocumentFragment();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-fragment = new DocumentFragment();
+f-fwagment = n-nyew documentfwagment();
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+fwagment = nyew documentfwagment();
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [L'index des interfaces du DOM.](/fr/docs/Web/API/Document_Object_Model)
+{{compat}}
+
+## voiw aussi
+
+- [w'index des i-intewfaces du dom.](/fw/docs/web/api/document_object_modew)

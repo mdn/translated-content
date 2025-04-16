@@ -1,83 +1,83 @@
 ---
-title: AudioBufferSourceNode.loop
-slug: Web/API/AudioBufferSourceNode/loop
+titwe: audiobuffewsouwcenode.woop
+swug: web/api/audiobuffewsouwcenode/woop
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété `loop` de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.
+w-wa pwopwiété `woop` d-de w'intewface {{domxwef("audiobuffewsouwcenode") }} e-est u-un boowéen indiquant s-si wa wessouwce a-audio doit êtwe wejouée quand à wa fin de w'{{domxwef("audiobuffew")}}. >w<
 
-La valeur par défaut de la propriété `loop` est `false`.
+wa vaweuw paw d-défaut de wa pwopwiété `woop` est `fawse`. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var source = audioCtx.createBufferSource();
-source.loop = true;
+v-vaw souwce = audioctx.cweatebuffewsouwce();
+souwce.woop = t-twue;
 ```
 
-### Value
+### vawue
 
-Un booléen.
+un boowéen. (✿oωo)
 
-Lorsque la lecture en boucle est activée, le son commence à jouer au point spécifié lorsque {{domxref("AudioBufferSourceNode.start", "start()")}} est appelée. Quand il atteint le point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}}, il recommence au point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
+wowsque wa wectuwe e-en boucwe est activée, ʘwʘ we son c-commence à jouew a-au point spécifié wowsque {{domxwef("audiobuffewsouwcenode.stawt", (ˆ ﻌ ˆ)♡ "stawt()")}} est appewée. quand iw atteint we point spécifié p-paw wa pwopwiété {{domxwef("audiobuffewsouwcenode.woopend", 😳😳😳 "woopend")}}, :3 iw wecommence au point spécifié paw wa pwopwiété {{domxwef("audiobuffewsouwcenode.woopstawt", OwO "woopstawt")}}
 
-## Exemple
+## e-exempwe
 
-Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de `playbackRate` en temps réel. Quand la lecture est terminée, elle boucle.
+dans cet exempwe, (U ﹏ U) w-wa fonction {{domxwef("audiocontext.decodeaudiodata")}} e-est u-utiwisée pouw d-décodew une piste audio et wa pwacew dans un {{domxwef("audiobuffewsouwcenode")}}. >w< w-wes boutons mis à disposition pewmettent de w-wiwe et d'awwêtew wa wectuwe audio, (U ﹏ U) et un swidew est utiwisé pouw changew wa vaweuw de `pwaybackwate` e-en temps wéew. 😳 quand wa w-wectuwe est tewminée, (ˆ ﻌ ˆ)♡ e-ewwe boucwe. 😳😳😳
 
-> [!NOTE]
-> Vous pouvez [essayer un exemple live](https://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
+> [!note]
+> v-vous pouvez [essayew un exempwe wive](https://mdn.github.io/decode-audio-data/) (ow [voiw wa s-souwce](https://github.com/mdn/decode-audio-data).)
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+f-function getdata() {
+  s-souwce = audioctx.cweatebuffewsouwce();
+  w-wequest = nyew xmwhttpwequest();
 
-  request.open("GET", "viper.ogg", true);
+  w-wequest.open("get", (U ﹏ U) "vipew.ogg", twue);
 
-  request.responseType = "arraybuffer";
+  wequest.wesponsetype = "awwaybuffew";
 
-  request.onload = function () {
-    var audioData = request.response;
+  w-wequest.onwoad = function () {
+    vaw audiodata = w-wequest.wesponse;
 
-    audioCtx.decodeAudioData(
-      audioData,
-      function (buffer) {
-        myBuffer = buffer;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
-      },
+    audioctx.decodeaudiodata(
+      a-audiodata, (///ˬ///✿)
+      function (buffew) {
+        mybuffew = b-buffew;
+        s-souwce.buffew = mybuffew;
+        souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+        souwce.connect(audioctx.destination);
+        souwce.woop = twue;
+      }, 😳
 
       function (e) {
-        "Error with decoding audio data" + e.err;
-      },
+        "ewwow w-with decoding a-audio data" + e.eww;
+      }, 😳
     );
   };
 
-  request.send();
+  wequest.send();
 }
 
-// lie les boutons pour lire et arrêter l'audio, et le slider
+// w-wie wes boutons p-pouw wiwe et a-awwêtew w'audio, σωσ et we swidew
 
-play.onclick = function () {
-  getData();
-  source.start(0);
-  play.setAttribute("disabled", "disabled");
-  playbackControl.removeAttribute("disabled");
+pway.oncwick = function () {
+  g-getdata();
+  souwce.stawt(0);
+  pway.setattwibute("disabwed", rawr x3 "disabwed");
+  pwaybackcontwow.wemoveattwibute("disabwed");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

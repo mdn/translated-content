@@ -1,156 +1,156 @@
 ---
-title: Event.eventPhase
-slug: Web/API/Event/eventPhase
+titwe: event.eventphase
+swug: w-web/api/event/eventphase
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`eventPhase`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), indique la phase du flux d'évènement en cours d'évaluation.
+w-wa pwopwiété e-en wectuwe seuwe **`eventphase`**, ( ͡o ω ͡o ) w-wattachée à w-w'intewface [`event`](/fw/docs/web/api/event), σωσ i-indique wa phase d-du fwux d'évènement e-en couws d'évawuation.
 
-## Valeur
+## vaweuw
 
-Cette propriété renvoie un entier qui indique la phase actuelle d'évaluation du flux d'évènement. Les valeurs possibles sont&nbsp;:
+cette pwopwiété wenvoie un entiew q-qui indique wa phase actuewwe d'évawuation du fwux d-d'évènement. >w< wes vaweuws possibwes s-sont&nbsp;:
 
-- `Event.NONE (0)`
-  - : L'évènement n'est pas en cours de traitement à ce moment.
-- `Event.CAPTURING_PHASE (1)`
-  - : L'évènement est en train d'être propagé sur les ancêtres de la cible. Le processus démarre avec [`Window`](/fr/docs/Web/API/Window), suivi de [`Document`](/fr/docs/Web/API/Document), suivi de [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement), et ainsi de suite jusqu'à ce que le parent de la cible soit atteint. [Les gestionnaires d'évènements](/fr/docs/Web/API/EventTarget/addEventListener) enregistrés en mode de capture lorsque [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) a été appelé seront déclenchés lors de cette phase.
-- `Event.AT_TARGET (2)`
-  - : L'évènement est arrivé jusqu'à [la cible de l'évènement](/fr/docs/Web/API/EventTarget). Les gestionnaires d'évènements enregistrés pour cette phase sont appelés à ce moment. Si [`Event.bubbles`](/fr/docs/Web/API/Event/bubbles) vaut `false`, le traitement de l'évènement est terminé après la fin de cette phase.
-- `Event.BUBBLING_PHASE (3)`
-  - : L'évènement est propagé en remontant parmi les ancêtres de la cible dans l'ordre inverse, en commençant par le parent direct, jusqu'à finalement atteindre l'objet [`Window`](/fr/docs/Web/API/Window) contenant. C'est _le bouillonnement_ (<i lang="en">bubbling</i> en anglais). Il se produit uniquement si [`Event.bubbles`](/fr/docs/Web/API/Event/bubbles) vaut `true`. [Les gestionnaires d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) enregistrés pour cette phase sont déclenchés lors de ce processus.
+- `event.none (0)`
+  - : w'évènement ny'est pas en couws de twaitement à c-ce moment. 😳😳😳
+- `event.captuwing_phase (1)`
+  - : w'évènement est e-en twain d'êtwe p-pwopagé suw wes ancêtwes de wa cibwe. OwO we pwocessus démawwe avec [`window`](/fw/docs/web/api/window), 😳 s-suivi de [`document`](/fw/docs/web/api/document), 😳😳😳 suivi de [`htmwhtmwewement`](/fw/docs/web/api/htmwhtmwewement), (˘ω˘) et a-ainsi de suite jusqu'à ce que w-we pawent de wa c-cibwe soit atteint. ʘwʘ [wes g-gestionnaiwes d-d'évènements](/fw/docs/web/api/eventtawget/addeventwistenew) enwegistwés en mode de captuwe w-wowsque [`eventtawget.addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) a été appewé sewont décwenchés w-wows de cette phase. ( ͡o ω ͡o )
+- `event.at_tawget (2)`
+  - : w'évènement est awwivé jusqu'à [wa cibwe de w'évènement](/fw/docs/web/api/eventtawget). o.O w-wes gestionnaiwes d'évènements e-enwegistwés p-pouw cette phase s-sont appewés à ce moment. >w< si [`event.bubbwes`](/fw/docs/web/api/event/bubbwes) vaut `fawse`, 😳 w-we twaitement d-de w'évènement est tewminé apwès w-wa fin de c-cette phase. 🥺
+- `event.bubbwing_phase (3)`
+  - : w'évènement est p-pwopagé en wemontant pawmi wes a-ancêtwes de wa cibwe dans w'owdwe invewse, rawr x3 en c-commençant paw we pawent diwect, o.O j-jusqu'à finawement atteindwe w-w'objet [`window`](/fw/docs/web/api/window) c-contenant. c'est _we bouiwwonnement_ (<i wang="en">bubbwing</i> en angwais). rawr iw se pwoduit uniquement s-si [`event.bubbwes`](/fw/docs/web/api/event/bubbwes) v-vaut `twue`. ʘwʘ [wes gestionnaiwes d-d'évènement](/fw/docs/web/api/eventtawget/addeventwistenew) e-enwegistwés p-pouw cette phase sont décwenchés wows de ce pwocessus. 😳😳😳
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
-<h4>Chaîne de propagation d'un évènement</h4>
-<ul>
-  <li>Cliquez sur 'd1'</li>
-  <li>Analysez la chaîne de propagation de l'évènement</li>
-  <li>Cliquez sur le div suivant et répétez l'expérience</li>
-  <li>Changez le mode de capture</li>
-  <li>Répétez l'expérience</li>
-</ul>
-<input type="checkbox" id="chCapture" />
-<label for="chCapture">Utiliser la capture</label>
+```htmw
+<h4>chaîne de pwopagation d'un évènement</h4>
+<uw>
+  <wi>cwiquez suw 'd1'</wi>
+  <wi>anawysez wa chaîne de pwopagation d-de w'évènement</wi>
+  <wi>cwiquez suw we d-div suivant et w-wépétez w'expéwience</wi>
+  <wi>changez w-we mode de captuwe</wi>
+  <wi>wépétez w-w'expéwience</wi>
+</uw>
+<input t-type="checkbox" i-id="chcaptuwe" />
+<wabew f-fow="chcaptuwe">utiwisew wa captuwe</wabew>
 <div id="d1">
-  d1
-  <div id="d2">
+  d-d1
+  <div i-id="d2">
     d2
-    <div id="d3">
-      d3
-      <div id="d4">d4</div>
+    <div i-id="d3">
+      d-d3
+      <div i-id="d4">d4</div>
     </div>
   </div>
 </div>
-<div id="divInfo"></div>
+<div id="divinfo"></div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  margin: 20px;
-  padding: 4px;
-  border: thin black solid;
+  mawgin: 20px;
+  p-padding: 4px;
+  bowdew: thin bwack sowid;
 }
 
-#divInfo {
-  margin: 18px;
+#divinfo {
+  mawgin: 18px;
   padding: 8px;
-  background-color: white;
+  backgwound-cowow: w-white;
   font-size: 80%;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let clear = false,
-  divInfo = null,
-  divs = null,
-  chCapture = null;
+wet cweaw = fawse, ^^;;
+  d-divinfo = nyuww, o.O
+  d-divs = nyuww, (///ˬ///✿)
+  c-chcaptuwe = nyuww;
 
-window.onload = function () {
-  divInfo = document.getElementById("divInfo");
-  divs = document.getElementsByTagName("div");
-  chCapture = document.getElementById("chCapture");
-  chCapture.onclick = function () {
-    removeListeners();
-    addListeners();
-    clearDivs();
+window.onwoad = f-function () {
+  divinfo = d-document.getewementbyid("divinfo");
+  d-divs = document.getewementsbytagname("div");
+  chcaptuwe = document.getewementbyid("chcaptuwe");
+  chcaptuwe.oncwick = function () {
+    wemovewistenews();
+    addwistenews();
+    c-cweawdivs();
   };
-  clearDivs();
-  addListeners();
+  cweawdivs();
+  addwistenews();
 };
 
-function removeListeners() {
-  for (const div of divs) {
-    if (div.id != "divInfo") {
-      div.removeEventListener("click", onDivClick, true);
-      div.removeEventListener("click", onDivClick, false);
+f-function wemovewistenews() {
+  fow (const div o-of divs) {
+    i-if (div.id != "divinfo") {
+      div.wemoveeventwistenew("cwick", σωσ ondivcwick, nyaa~~ twue);
+      d-div.wemoveeventwistenew("cwick", ^^;; o-ondivcwick, ^•ﻌ•^ fawse);
     }
   }
 }
 
-function addListeners() {
-  for (const div of divs) {
-    if (div.id != "divInfo") {
-      if (chCapture.checked) {
-        div.addEventListener("click", onDivClick, true);
-      } else {
-        div.addEventListener("click", onDivClick, false);
-        div.onmousemove = function () {
-          clear = true;
+f-function a-addwistenews() {
+  fow (const div of divs) {
+    if (div.id != "divinfo") {
+      if (chcaptuwe.checked) {
+        d-div.addeventwistenew("cwick", σωσ o-ondivcwick, -.- t-twue);
+      } ewse {
+        d-div.addeventwistenew("cwick", ^^;; ondivcwick, XD f-fawse);
+        div.onmousemove = f-function () {
+          cweaw = twue;
         };
       }
     }
   }
 }
 
-function onDivClick(e) {
-  if (clear) {
-    clearDivs();
-    clear = false;
+function ondivcwick(e) {
+  if (cweaw) {
+    cweawdivs();
+    cweaw = fawse;
   }
-  if (e.eventPhase == 2) {
-    e.currentTarget.style.backgroundColor = "red";
+  i-if (e.eventphase == 2) {
+    e-e.cuwwenttawget.stywe.backgwoundcowow = "wed";
   }
-  const level =
-    e.eventPhase == 0
+  const wevew =
+    e.eventphase == 0
       ? "none"
-      : e.eventPhase == 1
-        ? "capturing"
-        : e.eventPhase == 2
-          ? "target"
-          : e.eventPhase == 3
-            ? "bubbling"
-            : "error";
-  const para = document.createElement("p");
-  para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
-  divInfo.appendChild(para);
+      : e-e.eventphase == 1
+        ? "captuwing"
+        : e-e.eventphase == 2
+          ? "tawget"
+          : e.eventphase == 3
+            ? "bubbwing"
+            : "ewwow";
+  const pawa = document.cweateewement("p");
+  p-pawa.textcontent = `${e.cuwwenttawget.id}; eventphase: ${wevew}`;
+  divinfo.appendchiwd(pawa);
 }
 
-function clearDivs() {
-  for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id != "divInfo") {
-      divs[i].style.backgroundColor = i & 1 ? "#f6eedb" : "#cceeff";
+function cweawdivs() {
+  f-fow (wet i = 0; i < divs.wength; i++) {
+    if (divs[i].id != "divinfo") {
+      d-divs[i].stywe.backgwoundcowow = i-i & 1 ? "#f6eedb" : "#cceeff";
     }
   }
-  divInfo.textContent = "";
+  divinfo.textcontent = "";
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", '', '700')}}
+{{embedwivesampwe("", 🥺 '', òωó '700')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

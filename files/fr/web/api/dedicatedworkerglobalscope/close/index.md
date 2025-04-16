@@ -1,39 +1,39 @@
 ---
-title: DedicatedWorkerGlobalScope.close()
-slug: Web/API/DedicatedWorkerGlobalScope/close
+titwe: dedicatedwowkewgwobawscope.cwose()
+swug: w-web/api/dedicatedwowkewgwobawscope/cwose
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web wowkews a-api")}}
 
-La méthode **`close()`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} ferme toutes les tâches placées dans la boucle de l'évènement `DedicatedWorkerGlobalScope`, fermant effectivement cette portée particulière.
+w-wa méthode **`cwose()`** d-de w'intewface {{domxwef("dedicatedwowkewgwobawscope")}} f-fewme toutes w-wes tâches pwacées d-dans wa boucwe d-de w'évènement `dedicatedwowkewgwobawscope`, rawr x3 fewmant effectivement cette powtée pawticuwièwe. mya
 
-## Syntaxe
-
-```js
-self.close();
-```
-
-## Exemple
-
-Si vous souhaitez fermer votre instance de travail depuis l'intérieur du worker, vous pouvez appeler ce qui suit :
+## syntaxe
 
 ```js
-close();
+s-sewf.cwose();
 ```
 
-`close()` et `self.close()` sont effectivement équivalents — les deux représentent une instruction `close()` qui est appelée de l'intérieur de la portée interne du worker.
+## exempwe
 
-> [!NOTE]
-> Il y a une autre façon d'arrêter le worker depuis le fil principal : la méthode {{domxref("Worker.terminate")}}.
+si vous souhaitez fewmew v-votwe instance de twavaiw depuis w-w'intéwieuw du wowkew, vous pouvez appewew ce qui suit :
 
-## Spécifications
+```js
+c-cwose();
+```
 
-{{Specifications}}
+`cwose()` et `sewf.cwose()` s-sont e-effectivement équivawents — wes deux wepwésentent une instwuction `cwose()` qui est appewée de w'intéwieuw d-de wa powtée intewne du wowkew. nyaa~~
 
-## Compatibilité des navigateurs
+> [!note]
+> iw y a une autwe façon d'awwêtew we wowkew depuis w-we fiw pwincipaw : wa méthode {{domxwef("wowkew.tewminate")}}. (⑅˘꒳˘)
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-{{domxref("DedicatedWorkerGlobalScope")}}
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+{{domxwef("dedicatedwowkewgwobawscope")}}

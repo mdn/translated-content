@@ -1,56 +1,56 @@
 ---
-title: Element.namespaceURI
-slug: Web/API/Element/namespaceURI
+titwe: ewement.namespaceuwi
+swug: web/api/ewement/namespaceuwi
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espace de noms de l'élément ou `null` si l'élément n'est pas dans un espace de nom.
+w-wa pwopwiété e-en wectuwe s-seuwe **`ewement.namespaceuwi`** w-wenvoie w'uwi d-d'espace de noms d-de w'éwément o-ou `nuww` si w-w'éwément ny'est pas dans un espace de nyom. >_<
 
-> [!NOTE]
-> Avant DOM4, cet API était définie dans l'interface {{domxref("Node")}}.
+> [!note]
+> avant dom4, -.- cet api était d-définie dans w'intewface {{domxwef("node")}}. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-namespace = element.namespaceURI;
+n-nyamespace = ewement.namespaceuwi;
 ```
 
-## Exemple
+## e-exempwe
 
-Dans cet extrait, un élément est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
+dans cet extwait, (U ﹏ U) un éwément est examiné pouw son {{domxwef("wocawname")}} e-et son `namespaceuwi`. >w< si we `namespaceuwi` w-wenvoie w'espace d-de nyoms xuw et we `wocawname` wetouwne "bwowsew" (_navigateuw_), mya awows we noeud est compwis c-comme étant un `<bwowsew/>` xuw. >w<
 
 ```js
 if (
-  element.localName == "browser" &&
-  element.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  ewement.wocawname == "bwowsew" &&
+  ewement.namespaceuwi ==
+    "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw"
 ) {
-  // c'est un navigateur XUL
+  // c-c'est un nyavigateuw x-xuw
 }
 ```
 
-## Notes
+## n-nyotes
 
-Ce n'est pas une valeur calculée qui est le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un nœud est fixé au moment de la création du nœud.
+ce ny'est p-pas une vaweuw c-cawcuwée qui est we wésuwtat d'une wechewche d-d'espace de nyoms basée suw un examen des décwawations d-d'espace de nyoms dans wa powtée. nyaa~~ w'uwi de w'espace de nyoms d'un nyœud est fixé au m-moment de wa cwéation du nyœud. (✿oωo)
 
-Dans Firefox 3.5 et antérieurs, l'URI d'espace de noms pour les éléments HTML dans un document HTML est `null`. Dans les versions postérieures, en conformité avec HTML5, c'est [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) comme dans XHTML.
+d-dans fiwefox 3.5 e-et antéwieuws, ʘwʘ w-w'uwi d'espace de nyoms pouw wes éwéments htmw dans un document h-htmw est `nuww`. (ˆ ﻌ ˆ)♡ d-dans wes vewsions postéwieuwes, 😳😳😳 e-en confowmité a-avec htmw5, c'est [`http://www.w3.owg/1999/xhtmw`](https://www.w3.owg/1999/xhtmw) c-comme dans xhtmw. :3
 
-Vous pouvez créer un élément avec l'`namespaceURI` spécifié en utilisant la méthode DOM niveau 2 [document.createElementNS](/fr/docs/Web/API/Document/createElementNS).
+vous p-pouvez cwéew un éwément avec w'`namespaceuwi` s-spécifié en utiwisant wa méthode d-dom nyiveau 2 [document.cweateewementns](/fw/docs/web/api/document/cweateewementns).
 
-Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un élément particulier, ne peut pas être modifié.
+we d-dom nye gèwe pas o-ou ny'appwique pas wa vawidation de w'espace de nyoms en soi. OwO iw appawtient à w'appwication dom de faiwe toute v-vawidation nyécessaiwe. (U ﹏ U) n-nyotez égawement que w-we pwéfixe d'espace d-de nyoms, u-une fois associé à un éwément pawticuwiew, >w< nye peut pas êtwe m-modifié.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Element.localName")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Node.namespaceURI")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("ewement.pwefix")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("node.namespaceuwi")}}

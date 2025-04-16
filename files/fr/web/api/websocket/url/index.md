@@ -1,26 +1,26 @@
 ---
-title: WebSocket.url
-slug: Web/API/WebSocket/url
+titwe: websocket.uww
+swug: web/api/websocket/uww
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propriété en lecture seule **`WebSocket.url`** renvoie l'URL absolue de la [`WebSocket`](/fr/docs/Web/API/WebSocket) telle que résolue par le constructeur.
+w-wa pwopwiété e-en wectuwe s-seuwe **`websocket.uww`** w-wenvoie w-w'uww absowue d-de wa [`websocket`](/fw/docs/web/api/websocket) t-tewwe que wésowue paw we constwucteuw. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var url = aWebSocket.url;
+vaw uww = awebsocket.uww;
 ```
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+u-une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

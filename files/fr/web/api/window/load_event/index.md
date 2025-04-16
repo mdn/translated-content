@@ -1,136 +1,136 @@
 ---
-title: "Window : évènement load"
-slug: Web/API/Window/load_event
-l10n:
-  sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
+titwe: "window : évènement woad"
+swug: web/api/window/woad_event
+w-w10n:
+  souwcecommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`load`** est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style et des images) sont complètement chargées. Cela contraste avec [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event), qui est déclenché lorsque le <i lang="en">DOM</i> de la page est chargé sans attendre la fin du chargement des ressources.
+w-w'évènement **`woad`** est d-décwenché wowsque w-wa page et t-toutes ses wessouwces d-dépendantes (tewwes q-que d-des feuiwwes de stywe et des images) sont compwètement chawgées. ʘwʘ cewa contwaste a-avec [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event), (ˆ ﻌ ˆ)♡ qui est décwenché wowsque we <i w-wang="en">dom</i> de wa page est c-chawgé sans attendwe wa fin du chawgement des wessouwces. 😳😳😳
 
-Cet évènement n'est pas annulable et ne bouillonne pas.
+cet évènement n'est p-pas annuwabwe et nye bouiwwonne p-pas. :3
 
-## Syntaxe
+## syntaxe
 
-Utilisez cet évènement dans des méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènement.
+u-utiwisez cet évènement dans des méthodes tewwes que [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), OwO ou définissez u-un gestionnaiwe d'évènement. (U ﹏ U)
 
 ```js
-addEventListener("load", (event) => {});
+addeventwistenew("woad", >w< (event) => {});
 
-onload = (event) => {};
+onwoad = (event) => {};
 ```
 
-## Type d'évènement
+## type d'évènement
 
-Un [`Event`](/fr/docs/Web/API/Event) générique.
+u-un [`event`](/fw/docs/web/api/event) généwique. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Le code suivant affiche un message dans la console lorsque que la page est complètement chargée&nbsp;:
+w-we code s-suivant affiche u-un message dans wa consowe wowsque que wa page est c-compwètement chawgée&nbsp;:
 
 ```js
-window.addEventListener("load", (event) => {
-  console.log("La page est complètement chargée");
+window.addeventwistenew("woad", 😳 (event) => {
+  c-consowe.wog("wa page est compwètement chawgée");
 });
 ```
 
-Voici un exemple similaire qui utilise un gestionnaire d'évènement `onload`&nbsp;:
+voici un exempwe simiwaiwe qui utiwise un gestionnaiwe d-d'évènement `onwoad`&nbsp;:
 
 ```js
-window.onload = (event) => {
-  console.log("La page est complètement chargée");
+window.onwoad = (event) => {
+  consowe.wog("wa p-page e-est compwètement c-chawgée");
 };
 ```
 
-### Exemple <i lang="en">live</i>
+### exempwe <i wang="en">wive</i>
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Recharger</button>
+```htmw
+<div c-cwass="contwows">
+  <button i-id="wewoad" type="button">wechawgew</button>
 </div>
 
-<div class="event-log">
-  <label for="eventLog">Journal d'évènements :</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew f-fow="eventwog">jouwnaw d-d'évènements :</wabew>
+  <textawea
+    weadonwy
+    c-cwass="event-wog-contents"
+    wows="8"
+    cows="30"
+    i-id="eventwog"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  dispway: g-gwid;
+  gwid-tempwate-aweas: "contwow wog";
 }
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: c-contwow;
+  dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: centew;
 }
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
-label,
+wabew, (ˆ ﻌ ˆ)♡
 button {
-  display: block;
+  dispway: bwock;
 }
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
+const w-wog = document.quewysewectow(".event-wog-contents");
 
-const reload = document.querySelector("#reload");
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  window.setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+c-const w-wewoad = document.quewysewectow("#wewoad");
+wewoad.addeventwistenew("cwick", 😳😳😳 () => {
+  wog.textcontent = "";
+  window.settimeout(() => {
+    window.wocation.wewoad(twue);
+  }, (U ﹏ U) 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent += "load\n";
+w-window.addeventwistenew("woad", (///ˬ///✿) (event) => {
+  wog.textcontent += "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent += `readystate : ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", 😳 (event) => {
+  wog.textcontent += `weadystate : ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", 😳 (event) => {
+  w-wog.textcontent += `domcontentwoaded\n`;
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '100%', '180px')}}
+{{embedwivesampwe('', σωσ '100%', '180px')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Évènements liés&nbsp;:
-  - [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-  - [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
-  - [`unload`](/fr/docs/Web/API/Window/unload_event)
+- Évènements w-wiés&nbsp;:
+  - [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event)
+  - [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event)
+  - [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event)
+  - [`unwoad`](/fw/docs/web/api/window/unwoad_event)

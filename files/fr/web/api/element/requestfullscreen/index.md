@@ -1,45 +1,45 @@
 ---
-title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullscreen
+titwe: ewement.wequestfuwwscween()
+swug: web/api/ewement/wequestfuwwscween
 ---
 
-{{APIRef("Fullscreen API")}}
+{{apiwef("fuwwscween a-api")}}
 
-La méthode **`Element.requestFullscreen()`** envoie une requête asynchrone pour que l'élément soit affiché en plein écran.
+w-wa méthode **`ewement.wequestfuwwscween()`** envoie u-une wequête a-asynchwone pouw q-que w'éwément s-soit affiché e-en pwein écwan.
 
-Il n'y a aucune garantie que l'élément passera effectivement en mode plein écran. Si la permission d'entrer en plein écran est acquise, le document recevra un événement [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) pour l'informer qu'il est désormais en mode plein écran. Si la permission est refusée, le document recevra un événement [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event) à la place.
+i-iw ny'y a aucune gawantie que w'éwément passewa effectivement en mode pwein écwan. ^^ s-si wa pewmission d'entwew en pwein écwan e-est acquise, :3 we document wecevwa u-un événement [`fuwwscweenchange`](/fw/docs/web/api/ewement/fuwwscweenchange_event) pouw w'infowmew qu'iw est désowmais en m-mode pwein écwan. -.- si wa pewmission e-est wefusée, 😳 w-we document wecevwa un événement [`fuwwscweenewwow`](/fw/docs/web/api/ewement/fuwwscweenewwow_event) à wa pwace. mya
 
-Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un changement d'orientation du périphérique, sinon elle échouera.
+cette méthode doit êtwe i-invoquée paw w'intewaction d'un utiwisateuw ou un changement d'owientation du p-péwiphéwique, (˘ω˘) sinon ewwe échouewa. >_<
 
-> [!NOTE]
-> Seuls les éléments présents dans l'espace de noms (namespace) HTML (c'est à dire, les éléments qui font partie du standard HTML), ainsi que les éléments {{HTMLElement("svg")}} et {{HTMLElement("math")}}, qui se trouvent dans le plus haut niveau du document ou dans une {{HTMLElement('iframe')}} avec l'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen) peuvent être affichés en plein écran. Cela signifie que les éléments se trouvant dans une {{HTMLElement('frame')}} ou un {{HTMLElement('object')}} ne le peuvent pas.
+> [!note]
+> s-seuws wes éwéments p-pwésents d-dans w'espace d-de nyoms (namespace) htmw (c'est à diwe, -.- wes éwéments q-qui font pawtie du standawd htmw), 🥺 ainsi q-que wes éwéments {{htmwewement("svg")}} et {{htmwewement("math")}}, (U ﹏ U) qui se twouvent dans we pwus haut nyiveau du document ou d-dans une {{htmwewement('ifwame')}} avec w'attwibut [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween) p-peuvent êtwe a-affichés e-en pwein écwan. >w< cewa signifie que wes éwéments se twouvant d-dans une {{htmwewement('fwame')}} o-ou un {{htmwewement('object')}} nye we peuvent p-pas. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-Element.requestFullscreen();
+e-ewement.wequestfuwwscween();
 ```
 
-## Exemple
+## exempwe
 
-Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) et [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event), pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
+avant d'appewew `wequestfuwwscween()`, >w< mettez e-en pwace des gestionnaiwes (handwews) p-pouw wes évenements [`fuwwscweenchange`](/fw/docs/web/api/ewement/fuwwscweenchange_event) et [`fuwwscweenewwow`](/fw/docs/web/api/ewement/fuwwscweenewwow_event), nyaa~~ pouw s-savoiw wowsque vous avez wéussi à p-passew en mode pwein écwan (ou w-wowsque w-wa pewmission de we faiwe a été wefusée). (✿oωo)
 
 tbd
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Full-screen API](/fr/docs/Web/API/Fullscreen_API)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}
-- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [fuww-scween api](/fw/docs/web/api/fuwwscween_api)
+- {{ d-domxwef("ewement.wequestfuwwscween()") }}
+- {{ d-domxwef("document.exitfuwwscween()") }}
+- {{ d-domxwef("document.fuwwscween") }}
+- {{ domxwef("document.fuwwscweenewement") }}
+- {{ cssxwef(":fuwwscween") }}
+- [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

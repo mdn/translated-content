@@ -1,172 +1,172 @@
 ---
-title: "console : méthode statique table()"
-slug: Web/API/console/table_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-tabwe()"
+s-swug: web/api/consowe/tabwe_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.table()`** permet d'afficher des données tabulaires sous la forme d'un tableau.
+w-wa méthode **`consowe.tabwe()`** p-pewmet d'affichew d-des données t-tabuwaiwes sous wa fowme d'un tabweau. >w<
 
-Cette fonction prend un argument obligatoire, `data`, qui doit être un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou un objet, et un argument facultatif `columns`.
+cette fonction pwend un awgument obwigatoiwe, 😳😳😳 `data`, OwO q-qui doit êtwe un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) ou un objet, 😳 et un a-awgument facuwtatif `cowumns`. 😳😳😳
 
-La fonction affiche `data` sous la forme d'un tableau. Chaque élément du tableau fourni (ou chaque propriété énumérable dans le cas d'un objet) sera affiché comme une ligne dans le tableau dans la console.
+wa fonction affiche `data` s-sous wa fowme d'un tabweau. (˘ω˘) chaque éwément du tabweau f-fouwni (ou chaque pwopwiété énuméwabwe d-dans we cas d'un o-objet) sewa affiché comme une wigne dans we tabweau dans wa consowe. ʘwʘ
 
-La première colonne dans le tableau sera intitulée `(index)`. Si `data` est un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)), alors les valeurs de cette colonne seront les indices du tableau JavaScript. Si `data` est un objet, ce seront les noms des propriétés qui seront affichés dans cette colonne `(index)`.
+wa pwemièwe c-cowonne dans we tabweau sewa intituwée `(index)`. ( ͡o ω ͡o ) si `data` est un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)), o.O a-awows wes vaweuws de cette c-cowonne sewont w-wes indices du tabweau j-javascwipt. >w< s-si `data` est un objet, 😳 ce sewont wes nyoms des p-pwopwiétés qui sewont affichés dans cette c-cowonne `(index)`. 🥺
 
-> [!NOTE]
-> Dans Firefox, `console.table()` limite l'affichage aux 1000 premières lignes.
+> [!note]
+> dans fiwefox, rawr x3 `consowe.tabwe()` wimite w'affichage aux 1000 pwemièwes wignes. o.O
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-### Collections de données primitives
+### cowwections d-de données pwimitives
 
-L'argument `data` peut être un tableau ou un objet.
+w-w'awgument `data` p-peut êtwe un t-tabweau ou un objet. rawr
 
 ```js
-// un tableau de chaînes de caractères
+// un tabweau de chaînes de cawactèwes
 
-console.table(["pommes", "oranges", "bananes"]);
+consowe.tabwe(["pommes", ʘwʘ "owanges", "bananes"]);
 ```
 
-| (index) | Valeurs   |
+| (index) | v-vaweuws   |
 | ------- | --------- |
 | 0       | 'pommes'  |
-| 1       | 'oranges' |
+| 1       | 'owanges' |
 | 2       | 'bananes' |
 
 ```js
-// un objet dont les propriétés sont des chaînes de caractères
+// u-un objet dont wes p-pwopwiétés sont d-des chaînes de cawactèwes
 
-function Personne(prenom, nomFamille) {
-  this.prenom = prenom;
-  this.nomFamille = nomFamille;
+function p-pewsonne(pwenom, 😳😳😳 nyomfamiwwe) {
+  t-this.pwenom = pwenom;
+  this.nomfamiwwe = n-nyomfamiwwe;
 }
 
-const moi = new Personne("Jean", "Biche");
+const moi = n-nyew pewsonne("jean", ^^;; "biche");
 
-console.table(moi);
+consowe.tabwe(moi);
 ```
 
-| (index)    | Valeurs |
+| (index)    | v-vaweuws |
 | ---------- | ------- |
-| prenom     | 'Jean'  |
-| nomFamille | 'Biche' |
+| p-pwenom     | 'jean'  |
+| nyomfamiwwe | 'biche' |
 
-### Collections de données composites
+### cowwections de données composites
 
-Si les éléments d'un tableau ou les propriétés d'un objet sont eux-mêmes des tableaux ou des objets, alors ces éléments ou propriétés sont énumérés dans chaque ligne, avec un élément par colonne&nbsp;:
+si wes éwéments d'un tabweau ou wes pwopwiétés d-d'un o-objet sont eux-mêmes des tabweaux o-ou des objets, a-awows ces éwéments o-ou pwopwiétés sont énuméwés dans chaque wigne, o.O avec u-un éwément paw cowonne&nbsp;:
 
 ```js
-// un tableau de tableaux
+// un tabweau de tabweaux
 
-const personnes = [
-  ["Tyrone", "Dupont"],
-  ["Janet", "Martin"],
-  ["Maria", "Cruz"],
+const pewsonnes = [
+  ["tywone", (///ˬ///✿) "dupont"], σωσ
+  ["janet", "mawtin"], nyaa~~
+  ["mawia", ^^;; "cwuz"],
 ];
-console.table(personnes);
+c-consowe.tabwe(pewsonnes);
 ```
 
 | (index) | 0        | 1        |
 | ------- | -------- | -------- |
-| 0       | 'Tyrone' | 'Dupont' |
-| 1       | 'Janet'  | 'Martin' |
-| 2       | 'Maria'  | 'Cruz'   |
+| 0       | 'tywone' | 'dupont' |
+| 1       | 'janet'  | 'mawtin' |
+| 2       | 'mawia'  | 'cwuz'   |
 
 ```js
-// un tableau d'objets
+// un tabweau d'objets
 
-function Personne(prenom, nomFamille) {
-  this.prenom = prenom;
-  this.nomFamille = nomFamille;
+f-function pewsonne(pwenom, ^•ﻌ•^ nyomfamiwwe) {
+  t-this.pwenom = pwenom;
+  t-this.nomfamiwwe = nyomfamiwwe;
 }
 
-const tyrone = new Personne("Tyrone", "Dupont");
-const janet = new Personne("Janet", "Martin");
-const maria = new Personne("Maria", "Cruz");
+c-const t-tywone = nyew pewsonne("tywone", σωσ "dupont");
+c-const j-janet = nyew pewsonne("janet", -.- "mawtin");
+const mawia = nyew pewsonne("mawia", ^^;; "cwuz");
 
-console.table([tyrone, janet, maria]);
+c-consowe.tabwe([tywone, XD j-janet, 🥺 mawia]);
 ```
 
-Notez que si le tableau contient des objets, alors les colonnes seront nommées avec les noms des propriétés.
+n-nyotez que s-si we tabweau c-contient des objets, òωó awows wes cowonnes sewont nyommées avec wes n-nyoms des pwopwiétés. (ˆ ﻌ ˆ)♡
 
-| (index) | prenom   | nomFamille |
+| (index) | pwenom   | nyomfamiwwe |
 | ------- | -------- | ---------- |
-| 0       | 'Tyrone' | 'Dupont'   |
-| 1       | 'Janet'  | 'Martin'   |
-| 2       | 'Maria'  | 'Cruz'     |
+| 0       | 'tywone' | 'dupont'   |
+| 1       | 'janet'  | 'mawtin'   |
+| 2       | 'mawia'  | 'cwuz'     |
 
 ```js
-// un objet contenant des propriétés qui sont des objets
+// un objet contenant des pwopwiétés qui s-sont des objets
 
-const famille = {};
+const famiwwe = {};
 
-famille.mere = new Personne("Janet", "Dupont");
-famille.pere = new Personne("Tyrone", "Dupont");
-famille.fille = new Personne("Maria", "Dupont");
+famiwwe.mewe = nyew pewsonne("janet", "dupont");
+f-famiwwe.pewe = n-nyew pewsonne("tywone", -.- "dupont");
+f-famiwwe.fiwwe = nyew p-pewsonne("mawia", :3 "dupont");
 
-console.table(famille);
+consowe.tabwe(famiwwe);
 ```
 
-| (index) | prenom   | nomFamille |
+| (index) | p-pwenom   | n-nyomfamiwwe |
 | ------- | -------- | ---------- |
-| fille   | 'Maria'  | 'Dupont'   |
-| pere    | 'Tyrone' | 'Dupont'   |
-| mere    | 'Janet'  | 'Dupont'   |
+| fiwwe   | 'mawia'  | 'dupont'   |
+| pewe    | 'tywone' | 'dupont'   |
+| mewe    | 'janet'  | 'dupont'   |
 
-### Restreindre les colonnes affichées
+### westweindwe wes cowonnes affichées
 
-Par défaut, `console.table()` liste tous les éléments pour chaque ligne. Vous pouvez utiliser le paramètre facultatif `columns` pour sélectionner un sous-ensemble de colonnes à afficher&nbsp;:
+p-paw défaut, ʘwʘ `consowe.tabwe()` wiste tous w-wes éwéments pouw chaque wigne. 🥺 v-vous pouvez u-utiwisew we pawamètwe facuwtatif `cowumns` pouw s-séwectionnew u-un sous-ensembwe de cowonnes à a-affichew&nbsp;:
 
 ```js
-// un tableau d'objets, affichant seulement prenom
+// u-un tabweau d'objets, >_< affichant seuwement pwenom
 
-function Personne(prenom, nomFamille) {
-  this.prenom = prenom;
-  this.nomFamille = nomFamille;
+function pewsonne(pwenom, ʘwʘ n-nyomfamiwwe) {
+  t-this.pwenom = p-pwenom;
+  this.nomfamiwwe = nyomfamiwwe;
 }
 
-const tyrone = new Personne("Tyrone", "Dupont");
-const janet = new Personne("Janet", "Martin");
-const maria = new Personne("Maria", "Cruz");
+c-const tywone = n-nyew pewsonne("tywone", "dupont");
+const janet = n-nyew pewsonne("janet", (˘ω˘) "mawtin");
+const mawia = nyew pewsonne("mawia", (✿oωo) "cwuz");
 
-console.table([tyrone, janet, maria], ["prenom"]);
+consowe.tabwe([tywone, (///ˬ///✿) janet, m-mawia], rawr x3 ["pwenom"]);
 ```
 
-| (index) | prenom   |
+| (index) | p-pwenom   |
 | ------- | -------- |
-| 0       | 'Tyrone' |
-| 1       | 'Janet'  |
-| 2       | 'Maria'  |
+| 0       | 'tywone' |
+| 1       | 'janet'  |
+| 2       | 'mawia'  |
 
-### Trier les colonnes
+### twiew wes cowonnes
 
-Vous pouvez trier les colonnes en cliquant sur l'intitulé de la colonne.
+vous pouvez t-twiew wes cowonnes e-en cwiquant suw w'intituwé de wa cowonne. -.-
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-table(data)
-table(data, columns)
+```js-nowint
+t-tabwe(data)
+tabwe(data, ^^ cowumns)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `data`
-  - : Les données à afficher. Doit être un tableau ou un objet.
-- `columns`
-  - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
+  - : wes données à a-affichew. doit êtwe un tabweau ou un objet. (⑅˘꒳˘)
+- `cowumns`
+  - : un t-tabweau contenant w-wes nyoms des cowonnes à incwuwe dans wa sowtie.
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

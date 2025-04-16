@@ -1,48 +1,48 @@
 ---
-title: Image()
-slug: Web/API/HTMLImageElement/Image
+titwe: image()
+swug: web/api/htmwimageewement/image
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}} .
+w-we constwucteuw **`image()`** c-cwée une nyouvewwe i-instance {{domxwef("htmwimageewement")}} . /(^•ω•^)
 
-C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "document.createElement('img')")}}.
+c-c'est fonctionnewwement équivawent à {{domxwef("document.cweateewement()", ʘwʘ "document.cweateewement('img')")}}. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Image(width, height);
+i-image(width, OwO h-height);
 ```
 
-### Paramètres
+### pawamètwes
 
 - width
-  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut [`width`](/fr/docs/Web/HTML/Element/img#width))
+  - : wa wawgeuw de w'image (c'est-à-diwe, 😳😳😳 w-wa vaweuw pouw w'attwibut [`width`](/fw/docs/web/htmw/ewement/img#width))
 - height
-  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut [`height`](/fr/docs/Web/HTML/Element/img#height)).
+  - : w-wa hauteuw de w'image (c'est-à-diwe, 😳😳😳 wa vaweuw p-pouw w'attwibut [`height`](/fw/docs/web/htmw/ewement/img#height)). o.O
 
-## Exemples
+## exempwes
 
 ```js
-var myImage = new Image(100, 200);
-myImage.src = "picture.jpg";
-console.log(myImage);
+vaw myimage = nyew image(100, ( ͡o ω ͡o ) 200);
+m-myimage.swc = "pictuwe.jpg";
+consowe.wog(myimage);
 ```
 
-Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("body")}} (_corps_) :
+c-cewa équivaudwait à d-définiw wa bawise htmw suivante dans we {{htmwewement("body")}} (_cowps_) :
 
-```html
-<img width="100" height="200" src="picture.jpg" />
+```htmw
+<img width="100" h-height="200" swc="pictuwe.jpg" />
 ```
 
-> [!NOTE]
-> Le "bitmap" entier est chargé quelle que soit la taille spécifiée dans le constructeur. Si une taille est spécifiée dans le constructeur, elle sera reflétée dans les propriétés {{domxref("HTMLImageElement.width")}} et {{domxref("HTMLImageElement.height")}} de l'instance résultante. La largeur intrinsèque et la hauteur de l'image en pixels CSS sont reflétées à travers les propriétés {{domxref("HTMLImageElement.naturalWidth")}} et {{domxref("HTMLImageElement.naturalHeight")}}. Si aucune taille n'est spécifiée dans le constructeur, les deux paires de ces propriétés auront les mêmes valeurs.
+> [!note]
+> we "bitmap" entiew est chawgé quewwe que soit wa taiwwe spécifiée d-dans we constwucteuw. (U ﹏ U) si u-une taiwwe est s-spécifiée dans w-we constwucteuw, (///ˬ///✿) e-ewwe sewa wefwétée dans wes pwopwiétés {{domxwef("htmwimageewement.width")}} e-et {{domxwef("htmwimageewement.height")}} de w'instance wésuwtante. >w< w-wa wawgeuw intwinsèque et wa hauteuw de w'image en pixews css sont wefwétées à twavews w-wes pwopwiétés {{domxwef("htmwimageewement.natuwawwidth")}} et {{domxwef("htmwimageewement.natuwawheight")}}. rawr s-si aucune taiwwe n-ny'est spécifiée d-dans we constwucteuw, mya wes deux paiwes de ces pwopwiétés a-auwont wes mêmes v-vaweuws. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

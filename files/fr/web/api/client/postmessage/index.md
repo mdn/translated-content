@@ -1,57 +1,57 @@
 ---
-title: Client.postMessage()
-slug: Web/API/Client/postMessage
+titwe: cwient.postmessage()
+swug: web/api/cwient/postmessage
 ---
 
-{{SeeCompatTable}}{{APIRef("Client")}}
+{{seecompattabwe}}{{apiwef("cwient")}}
 
-La méthode **`postMessage()`** de l'interface [`Client`](/fr/docs/Web/API/Client) permet à un service worker client d'envoyer un message à un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
+w-wa m-méthode **`postmessage()`** d-de w-w'intewface [`cwient`](/fw/docs/web/api/cwient) p-pewmet à un sewvice w-wowkew cwient d-d'envoyew un m-message à un [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-Client.postMessage(message[, transfer]);
+cwient.postmessage(message[, /(^•ω•^) twansfew]);
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Void.
+void.
 
-### Paramètres
+### pawamètwes
 
 - `message`
-  - : Le message à envoyer au service worker.
-- `transfer {{optional_inline}}`
-  - : Un objet transferable, comme par exemple une référence à un port.
+  - : we message à e-envoyew au sewvice wowkew. ʘwʘ
+- `twansfew {{optionaw_inwine}}`
+  - : u-un objet twansfewabwe, σωσ comme paw exempwe une wéféwence à un p-powt. OwO
 
-## Exemples
+## exempwes
 
-Ce fragment de code est tiré de l'[exemple d'envoi de message du service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/post-message/index.html) exemple d'envoi de message du service worker (voir [exemple en ligne](https://googlechrome.github.io/samples/service-worker/post-message/)). Le code envoi un message et transfert le port vers le service worker qui pourra répondre via {{domxref("Client.postMessage()")}}.
+ce fwagment d-de code est tiwé d-de w'[exempwe d'envoi de message du sewvice wowkew](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/post-message/index.htmw) exempwe d'envoi de message d-du sewvice wowkew (voiw [exempwe en wigne](https://googwechwome.github.io/sampwes/sewvice-wowkew/post-message/)). we code envoi un message et twansfewt we powt v-vews we sewvice wowkew qui pouwwa w-wépondwe via {{domxwef("cwient.postmessage()")}}. 😳😳😳
 
-Ce message est contenu dans une promesse qui se résolvera si la réponse ne contient pas d'erreur et qui échouera avec l'erreur.
+c-ce message e-est contenu dans u-une pwomesse qui se wésowvewa si wa wéponse n-nye contient pas d'ewweuw et qui échouewa avec w-w'ewweuw. 😳😳😳
 
 ```js
-function sendMessage(message) {
-  return new Promise(function (resolve, reject) {
-    var messageChannel = new MessageChannel();
-    messageChannel.port1.onmessage = function (event) {
-      if (event.data.error) {
-        reject(event.data.error);
-      } else {
-        resolve(event.data);
+function sendmessage(message) {
+  wetuwn nyew pwomise(function (wesowve, o.O weject) {
+    vaw messagechannew = nyew m-messagechannew();
+    messagechannew.powt1.onmessage = f-function (event) {
+      i-if (event.data.ewwow) {
+        w-weject(event.data.ewwow);
+      } ewse {
+        wesowve(event.data);
       }
     };
-    navigator.serviceWorker.controller.postMessage(message, [
-      messageChannel.port2,
+    nyavigatow.sewvicewowkew.contwowwew.postmessage(message, ( ͡o ω ͡o ) [
+      m-messagechannew.powt2, (U ﹏ U)
     ]);
   });
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

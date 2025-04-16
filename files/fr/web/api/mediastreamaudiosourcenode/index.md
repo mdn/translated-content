@@ -1,89 +1,89 @@
 ---
-title: MediaStreamAudioSourceNode
-slug: Web/API/MediaStreamAudioSourceNode
+titwe: mediastweamaudiosouwcenode
+swug: web/api/mediastweamaudiosouwcenode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface **`MediaStreamAudioSourceNode`** est un type d'[`AudioNode`](/fr/docs/Web/API/AudioNode) qui traite une source audio dont le média a été récupéré depuis un objet [`MediaStream`](/fr/docs/Web/API/MediaStream), obtenu en utilisant l'API WebRTC ou les API <i lang="en">Media Capture</i> et <i lang="en">Streams</i>.
+w-w'intewface **`mediastweamaudiosouwcenode`** e-est u-un type d'[`audionode`](/fw/docs/web/api/audionode) q-qui twaite u-une souwce audio d-dont we média a-a été wécupéwé depuis un objet [`mediastweam`](/fw/docs/web/api/mediastweam), /(^•ω•^) obtenu en utiwisant w'api webwtc ou wes api <i w-wang="en">media captuwe</i> et <i wang="en">stweams</i>. (⑅˘꒳˘)
 
-Le média peut être obtenu depuis un microphone (avec [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)) ou depuis un pair distant pendant un appel WebRTC (avec les pistes audio de [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection)).
+w-we média peut êtwe o-obtenu depuis un micwophone (avec [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia)) ou depuis un paiw distant pendant u-un appew webwtc (avec wes pistes a-audio de [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection)). ( ͡o ω ͡o )
 
-Un nœud `MediaStreamAudioSourceNode` ne possède pas d'entrée et possède une seule sortie. Il est créé avec la méthode [`AudioContext.createMediaStreamSource()`](/fr/docs/Web/API/AudioContext/createMediaStreamSource).
+u-un nœud `mediastweamaudiosouwcenode` nye possède pas d'entwée et possède une seuwe sowtie. òωó iw est c-cwéé avec wa méthode [`audiocontext.cweatemediastweamsouwce()`](/fw/docs/web/api/audiocontext/cweatemediastweamsouwce). (⑅˘꒳˘)
 
-`MediaStreamAudioSourceNode` utilise l'audio de la _première_ piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) dont l'attribut [`kind`](/fr/docs/Web/API/MediaStreamTrack/kind) vaut `audio`. Voir ci-après [l'ordre des pistes](#ordre_des_pistes) pour plus d'informations.
+`mediastweamaudiosouwcenode` utiwise w'audio de wa _pwemièwe_ piste [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) d-dont w'attwibut [`kind`](/fw/docs/web/api/mediastweamtwack/kind) v-vaut `audio`. XD v-voiw ci-apwès [w'owdwe d-des pistes](#owdwe_des_pistes) p-pouw pwus d'infowmations. -.-
 
-Le nombre de canaux de sortie correspond au nombre de pistes trouvées sur la piste audio sélectionnée.
+we nyombwe de canaux d-de sowtie cowwespond au nyombwe de pistes twouvées s-suw wa piste audio séwectionnée. :3
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Nombre d'entrées</th>
+    <tw>
+      <th scope="wow">nombwe d'entwées</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de sorties</th>
+    </tw>
+    <tw>
+      <th scope="wow">nombwe d-de sowties</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de canaux</th>
+    </tw>
+    <tw>
+      <th scope="wow">nombwe d-de canaux</th>
       <td>
-        Défini par la première piste audio <a href="/fr/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a> passée à <a href="/fr/docs/Web/API/AudioContext/createMediaStreamSource"><code>AudioContext.createMediaStreamSource()</code></a> qui a créé le nœud.
+        d-défini p-paw wa pwemièwe piste audio <a hwef="/fw/docs/web/api/mediastweamtwack"><code>mediastweamtwack</code></a> passée à <a h-hwef="/fw/docs/web/api/audiocontext/cweatemediastweamsouwce"><code>audiocontext.cweatemediastweamsouwce()</code></a> q-qui a cwéé we nyœud.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Constructeur
+## c-constwucteuw
 
-- [`new MediaStreamAudioSourceNode()`](/fr/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode)
-  - : Crée un nouvel objet `MediaStreamAudioSourceNode` avec les options indiquées.
+- [`new m-mediastweamaudiosouwcenode()`](/fw/docs/web/api/mediastweamaudiosouwcenode/mediastweamaudiosouwcenode)
+  - : cwée un n-nyouvew objet `mediastweamaudiosouwcenode` avec w-wes options indiquées. nyaa~~
 
-## Propriétés
+## pwopwiétés
 
-_En complément des propriétés suivantes, `MediaStreamAudioSourceNode` hérite des propriétés de l'interface parente, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+_en compwément des p-pwopwiétés suivantes, 😳 `mediastweamaudiosouwcenode` héwite des p-pwopwiétés de w'intewface pawente, (⑅˘꒳˘) [`audionode`](/fw/docs/web/api/audionode)._
 
-- [`mediaStream`](/fr/docs/Web/API/MediaStreamAudioSourceNode/mediaStream) {{ReadOnlyInline}}
-  - : L'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) utilisé pour la construction de ce `MediaStreamAudioSourceNode`.
+- [`mediastweam`](/fw/docs/web/api/mediastweamaudiosouwcenode/mediastweam) {{weadonwyinwine}}
+  - : w-w'objet [`mediastweam`](/fw/docs/web/api/mediastweam) u-utiwisé pouw wa constwuction de ce `mediastweamaudiosouwcenode`. nyaa~~
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite des méthodes de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+_cette intewface héwite des méthodes de son pawent, OwO [`audionode`](/fw/docs/web/api/audionode)._
 
-## Exceptions
+## e-exceptions
 
-- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Cette exception est levée si le flux indiqué par le paramètre `mediaStream` ne contient pas de piste audio.
+- `invawidstateewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : c-cette exception est w-wevée si we fwux i-indiqué paw we p-pawamètwe `mediastweam` nye contient pas de piste audio. rawr x3
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-### Ordre des pistes
+### owdwe des pistes
 
-Pour l'interface `MediaStreamTrackAudioSourceNode`, l'ordre des pistes audio du flux est déterminé en prenant les pistes pour lesquelles l'attribut [`kind`](/fr/docs/Web/API/MediaStreamTrack/kind) vaut `audio`, en triant ces pistes selon les valeurs de leur propriété [`id`](/fr/docs/Web/API/MediaStreamTrack/id) selon l'ordre des points de code Unicode (ce qui correspond généralement à l'ordre alphabétique ou lexicographique lorsque les identifiants sont des chaînes de caractères alphanumériques simples).
+pouw w'intewface `mediastweamtwackaudiosouwcenode`, XD w'owdwe des pistes a-audio du fwux est détewminé e-en pwenant wes p-pistes pouw wesquewwes w-w'attwibut [`kind`](/fw/docs/web/api/mediastweamtwack/kind) vaut `audio`, σωσ e-en twiant ces pistes s-sewon wes v-vaweuws de weuw p-pwopwiété [`id`](/fw/docs/web/api/mediastweamtwack/id) sewon w'owdwe des points d-de code unicode (ce q-qui cowwespond g-généwawement à w-w'owdwe awphabétique o-ou wexicogwaphique wowsque wes identifiants sont des c-chaînes de cawactèwes awphanuméwiques simpwes). (U ᵕ U❁)
 
-La **première** piste est donc la piste dont l'identifiant `id` est le premier parmi ceux de toutes les pistes audio selon l'ordre des points de code Unicode.
+wa **pwemièwe** piste est donc wa piste dont w-w'identifiant `id` est we pwemiew pawmi ceux de toutes wes pistes a-audio sewon w-w'owdwe des points d-de code unicode. (U ﹏ U)
 
-Il est toutefois important de noter que cette règle pour l'ordre a été ajoutée après que cette interface a été introduite dans l'API [<i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API). Aussi, mieux vaut ne pas s'appuyer trop sur l'hypothèse que l'ordre sera le même d'un navigateur à l'autre, ou même d'une version à une autre d'un même navigateur.
+iw est toutefois i-impowtant de nyotew que c-cette wègwe pouw w-w'owdwe a été ajoutée apwès que cette intewface a été intwoduite dans w'api [<i wang="en">web a-audio</i>](/fw/docs/web/api/web_audio_api). :3 aussi, mieux vaut n-nye pas s'appuyew twop suw w'hypothèse q-que w-w'owdwe sewa we même d'un nyavigateuw à w'autwe, ( ͡o ω ͡o ) o-ou même d'une v-vewsion à une autwe d'un même n-nyavigateuw. σωσ
 
-L'interface [`MediaStreamTrackAudioSourceNode`](/fr/docs/Web/API/MediaStreamTrackAudioSourceNode) est semblable à `MediaStreamAudioSourceNode`, mais évite ce problème en permettant d'indiquer la piste qu'on souhaite utiliser.
+w-w'intewface [`mediastweamtwackaudiosouwcenode`](/fw/docs/web/api/mediastweamtwackaudiosouwcenode) est sembwabwe à `mediastweamaudiosouwcenode`, >w< mais évite ce pwobwème en pewmettant d'indiquew w-wa piste qu'on s-souhaite utiwisew. 😳😳😳
 
-## Exemple
+## e-exempwe
 
-Voir [`AudioContext.createMediaStreamSource()`](/fr/docs/Web/API/AudioContext/createMediaStreamSource#exemple) pour un exemple de code qui utilise cet objet.
+voiw [`audiocontext.cweatemediastweamsouwce()`](/fw/docs/web/api/audiocontext/cweatemediastweamsouwce#exempwe) p-pouw un exempwe d-de code qui utiwise cet objet. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
-- [Les API <i lang="en">Media Capture</i> et <i lang="en">Streams</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API)
-- [`MediaStreamTrackAudioSourceNode`](/fr/docs/Web/API/MediaStreamTrackAudioSourceNode)
+- [utiwisew w-w'api <i wang="en">web a-audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)
+- [w'api webwtc](/fw/docs/web/api/webwtc_api)
+- [wes api <i wang="en">media c-captuwe</i> e-et <i wang="en">stweams</i>](/fw/docs/web/api/media_captuwe_and_stweams_api)
+- [`mediastweamtwackaudiosouwcenode`](/fw/docs/web/api/mediastweamtwackaudiosouwcenode)

@@ -1,61 +1,61 @@
 ---
-title: "Window : méthode confirm()"
-slug: Web/API/Window/confirm
-l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+titwe: "window : méthode confiwm()"
+s-swug: web/api/window/confiwm
+w-w10n:
+  souwcecommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
 ---
 
-{{ApiRef("Window")}}
+{{apiwef("window")}}
 
-`window.confirm()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
+`window.confiwm()` i-indique au nyavigateuw d-d'affichew u-une boîte de d-diawogue avec u-un message optionnew e-et d'attendwe que wa pewsonne confiwme ou annuwe wa boîte de diawogue. nyaa~~
 
-Sous certaines conditions, par exemple au changement d'onglet, le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre la confirmation ou l'annulation.
+sous c-cewtaines conditions, :3 paw exempwe au changement d-d'ongwet, 😳😳😳 we navigateuw pouwwa n-nye pas affichew wa boîte de diawogue ou nye pas attendwe wa c-confiwmation ou w'annuwation. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-confirm(message)
+```js-nowint
+c-confiwm(message)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `message`
-  - : Une chaîne de caractères qu'on souhaite afficher dans la boîte de dialogue de confirmation.
+  - : une chaîne de cawactèwes qu'on souhaite affichew d-dans wa boîte de diawogue de confiwmation. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen qui indique si l'option «&nbsp;OK&nbsp;» (`true`) ou «&nbsp;Annuler&nbsp;» (`false`) a été sélectionnée. Si le navigateur ignore les boîtes de dialogue, la valeur renvoyée est toujours `false`.
+un boowéen q-qui indique si w'option «&nbsp;ok&nbsp;» (`twue`) o-ou «&nbsp;annuwew&nbsp;» (`fawse`) a-a été s-séwectionnée. :3 s-si we nyavigateuw ignowe wes boîtes de diawogue, -.- w-wa vaweuw wenvoyée est toujouws `fawse`. 😳
 
-## Exemples
+## exempwes
 
 ```js
-if (window.confirm("Souhaitez-vous vraiment quitter le site ?")) {
-  window.open("exit.html", "Merci de votre visite !");
+i-if (window.confiwm("souhaitez-vous vwaiment quittew we site ?")) {
+  window.open("exit.htmw", mya "mewci de votwe visite !");
 }
 ```
 
-Créera le résultat suivant&nbsp;:
+c-cwéewa we wésuwtat suivant&nbsp;:
 
-![Confirmation dans Firefox](firefoxcomfirmdialog_zpsf00ec381.png)
+![confiwmation d-dans fiwefox](fiwefoxcomfiwmdiawog_zpsf00ec381.png)
 
-## Notes
+## n-nyotes
 
-Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
+ces boîtes d-de diawogue sont des fenêtwes modawes qui empêchent d'accédew a-au weste de w-w'intewface utiwisateuw du pwogwamme, à m-moins q-que wa boîte de diawogue soit f-fewmée. (˘ω˘) aussi, iw nye faut pas a-abusew de cette fonction. >_<
 
-Il y a également d'autres raisons [d'éviter les boîtes de dialogue pour demander une confirmation](https://alistapart.com/article/neveruseawarning/).
+iw y a égawement d'autwes w-waisons [d'évitew wes boîtes d-de diawogue pouw demandew une c-confiwmation](https://awistapawt.com/awticwe/nevewuseawawning/). -.-
 
-Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des demandes de confirmation.
+u-une autwe méthode consiste à utiwisew w'éwément htmw [`<diawog>`](/fw/docs/web/htmw/ewement/diawog) afin d'affichew des demandes de confiwmation. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-- [`window.alert()`](/fr/docs/Web/API/Window/alert)
-- [`window.prompt()`](/fr/docs/Web/API/Window/prompt)
+- w-w'éwément [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)
+- [`window.awewt()`](/fw/docs/web/api/window/awewt)
+- [`window.pwompt()`](/fw/docs/web/api/window/pwompt)

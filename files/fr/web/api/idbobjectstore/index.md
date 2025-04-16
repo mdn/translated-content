@@ -1,157 +1,157 @@
 ---
-title: IDBObjectStore
-slug: Web/API/IDBObjectStore
+titwe: idbobjectstowe
+swug: web/api/idbobjectstowe
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBObjectStore`** de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès aux magasins d'objet de la base de données.
+w-w'intewface **`idbobjectstowe`** d-de w'{{domxwef("indexeddb_api","api i-indexeddb")}} e-est un accès a-aux magasins d-d'objet de wa b-base de données.
 
-Le magasin d'objet emmagasine des enregistrements. Chaque enregistrement est constitué d'un couple clé/valeur. Chaque valeurs est indexée sur sa clé. Les clés sont triées pour former l'index primaire du magasin. Ce qui permet un accès rapide et ordonnée aux valeurs.
+w-we magasin d'objet emmagasine des enwegistwements. (⑅˘꒳˘) chaque enwegistwement est c-constitué d'un coupwe cwé/vaweuw. 😳😳😳 chaque vaweuws e-est indexée suw sa cwé. nyaa~~ wes c-cwés sont twiées pouw fowmew w'index pwimaiwe du magasin. rawr ce q-qui pewmet un accès wapide et owdonnée a-aux vaweuws.
 
-Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d'unicités pour d'autres clés que la clé primaire du magasin d'objet.
+w-we magasin d'objet peut en pwus de w'index pwimaiwe avoiw des index qui owdonnent w-wes enwegistwements suw d'autwes cwés. -.- ces index se mettent automatiquement à j-jouw dans wa pwupawt des c-cas et pewmettent d-de mettwe des c-contwaintes d'unicités p-pouw d'autwes cwés que wa cwé pwimaiwe d-du magasin d'objet. (✿oωo)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Méthodes
+## méthodes
 
-- {{domxref("IDBObjectStore.add()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
-- {{domxref("IDBObjectStore.clear()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet relié.
-- {{domxref("IDBObjectStore.delete()")}}
-  - : Une {{domxref("IDBRequest","requête")}} de suppression d'enregistrement(s) du magasin d'objet relié.
-- {{domxref("IDBObjectStore.get()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour renvoyer la valeur d'un enregistrement du magasin d'objet relié.
-- {{domxref("IDBObjectStore.getAll()")}}
-  - : Une {{domxref("IDBRequest","requête")}} qui renvoie un tableau ordonné suivant les clés, des valeurs de tous les enregistrements du magasin d'objet relié. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.
-- {{domxref("IDBObjectStore.getAllKeys()")}}
-  - : Une {{domxref("IDBRequest","requête")}} qui renvoie la liste de toutes les clés des enregistrements du magasin d'objet. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.
-- {{domxref("IDBObjectStore.createIndex()")}}
-  - : Met en place sur le magasin d'objet relié, un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
-- {{domxref("IDBObjectStore.deleteIndex()")}}
-  - : Supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié.
-- {{domxref("IDBObjectStore.index()")}}
-  - : L'{{domxref("IDBIndex","accès")}} à l'index dont le nom est passé en paramètre du magasin d'objet relié.
-- {{domxref("IDBObjectStore.put()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
-- {{domxref("IDBObjectStore.openCursor()")}}
-  - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursorWithValue","curseur avec valeur")}} qui itère le magasin d'objet relié.
-- {{domxref("IDBObjectStore.openKeyCursor()")}}
-  - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursor","curseur")}} qui itère le magasin d'objet relié.
-- {{domxref("IDBObjectStore.count()")}}
-  - : Une {{domxref("IDBRequest","requête")}} au magasin d'objet relié. La requête compte le nombre d'enregistrements dans ce magasin d'objet ou sur l'{{domxref("IDBKeyRange","intervalle de clé")}} passé en paramètre.
+- {{domxwef("idbobjectstowe.add()")}}
+  - : une {{domxwef("idbwequest","wequête")}} p-pouw ajoutew un enwegistwement au magasin d'objet wewié, /(^•ω•^) un [cwone stwuctuwé](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone) de w-wa vaweuw passé en pawamètwe et s-sa cwé . 🥺
+- {{domxwef("idbobjectstowe.cweaw()")}}
+  - : u-une {{domxwef("idbwequest","wequête")}} p-pouw videw we magasin d'objet wewié. ʘwʘ
+- {{domxwef("idbobjectstowe.dewete()")}}
+  - : une {{domxwef("idbwequest","wequête")}} d-de suppwession d-d'enwegistwement(s) du magasin d'objet w-wewié. UwU
+- {{domxwef("idbobjectstowe.get()")}}
+  - : u-une {{domxwef("idbwequest","wequête")}} pouw wenvoyew w-wa vaweuw d'un enwegistwement d-du magasin d'objet wewié. XD
+- {{domxwef("idbobjectstowe.getaww()")}}
+  - : une {{domxwef("idbwequest","wequête")}} q-qui wenvoie un tabweau owdonné s-suivant wes cwés, (✿oωo) des vaweuws d-de tous wes enwegistwements d-du magasin d'objet wewié. :3 on peut wimité we nyombwe d'enwegistwements en wes fiwtwants suivant weuws c-cwés ou en p-pawamétwant we compteuw. (///ˬ///✿)
+- {{domxwef("idbobjectstowe.getawwkeys()")}}
+  - : u-une {{domxwef("idbwequest","wequête")}} q-qui wenvoie w-wa wiste de toutes wes cwés des enwegistwements du magasin d'objet. nyaa~~ o-on peut wimité we nyombwe d'enwegistwements en wes fiwtwants suivant weuws c-cwés ou en pawamétwant we c-compteuw. >w<
+- {{domxwef("idbobjectstowe.cweateindex()")}}
+  - : m-met e-en pwace suw we magasin d'objet w-wewié, -.- un nyouvew i-index et en w-wenvoie w'{{domxwef("idbindex","accès")}}. (✿oωo)
+- {{domxwef("idbobjectstowe.deweteindex()")}}
+  - : s-suppwime w'index dont we nyom est passé en pawamètwe, (˘ω˘) d-du magasin d-d'objet wewié. rawr
+- {{domxwef("idbobjectstowe.index()")}}
+  - : w-w'{{domxwef("idbindex","accès")}} à w-w'index d-dont we nyom est passé en pawamètwe du magasin d'objet wewié. OwO
+- {{domxwef("idbobjectstowe.put()")}}
+  - : u-une {{domxwef("idbwequest","wequête")}} pouw ajoutew ou mettwe à jouw un enwegistwement du magasin d'objet wewié, ^•ﻌ•^ u-un [cwone stwuctuwé](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone) de wa vaweuw passée en pawamètwe et sa cwé. UwU
+- {{domxwef("idbobjectstowe.opencuwsow()")}}
+  - : u-une {{domxwef("idbwequest","wequête")}} w-wécuwsive s-suivant un {{domxwef("idbcuwsowwithvawue","cuwseuw a-avec vaweuw")}} qui itèwe w-we magasin d-d'objet wewié. (˘ω˘)
+- {{domxwef("idbobjectstowe.openkeycuwsow()")}}
+  - : une {{domxwef("idbwequest","wequête")}} wécuwsive suivant un {{domxwef("idbcuwsow","cuwseuw")}} qui itèwe we magasin d'objet w-wewié. (///ˬ///✿)
+- {{domxwef("idbobjectstowe.count()")}}
+  - : une {{domxwef("idbwequest","wequête")}} a-au magasin d'objet wewié. σωσ w-wa wequête compte w-we nyombwe d'enwegistwements dans ce magasin d'objet ou suw w-w'{{domxwef("idbkeywange","intewvawwe d-de cwé")}} passé en pawamètwe. /(^•ω•^)
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
-  - : La liste des noms d'index du magasin d'objet relié.
-- {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
-  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) du magasin d'objets relié.
-- {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
-  - : Le nom du magasin d'objet relié.
-- {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
-  - : La {{domxref("IDBTransaction","transaction")}} à laquelle l'accès du magasin d'objet appartient.
-- {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
-  - : La position du drapeau d'incrémentation automatique du magasin d'objet relié.
+- {{domxwef("idbobjectstowe.indexnames")}} {{weadonwyinwine}}
+  - : w-wa wiste des nyoms d'index du magasin d'objet wewié. 😳
+- {{domxwef("idbobjectstowe.keypath")}} {{weadonwyinwine}}
+  - : we [nom de w-wa cwé](/fw/docs/web/api/indexeddb_api/basic_tewminowogy#gwoss_keypath) d-du magasin d-d'objets wewié. 😳
+- {{domxwef("idbobjectstowe.name")}} {{weadonwyinwine}}
+  - : we nom du magasin d-d'objet wewié. (⑅˘꒳˘)
+- {{domxwef("idbobjectstowe.twansaction")}} {{weadonwyinwine}}
+  - : w-wa {{domxwef("idbtwansaction","twansaction")}} à waquewwe w-w'accès du magasin d'objet appawtient. 😳😳😳
+- {{domxwef("idbobjectstowe.autoincwement")}} {{weadonwyinwine}}
+  - : wa position du dwapeau d'incwémentation a-automatique d-du magasin d'objet wewié. 😳
 
 <!---->
 
-## Exemple
+## exempwe
 
-Cet exemple montre différents usages de l'accès au magasin d'objet. On met à jour la structure de donnée avec {{domxref("IDBObjectStore.createIndex")}} dans un gestionnaire d'événement `onupgradeneeded`. On ajoute un nouvel enregistrement avec {{domxref("IDBObjectStore.add")}}.
+cet exempwe m-montwe difféwents u-usages de w'accès au magasin d'objet. XD on met à jouw wa s-stwuctuwe de donnée avec {{domxwef("idbobjectstowe.cweateindex")}} dans un gestionnaiwe d'événement `onupgwadeneeded`. on ajoute u-un nyouvew enwegistwement avec {{domxwef("idbobjectstowe.add")}}. mya
 
 ```js
-// connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// c-connexion à wa b-base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", ^•ﻌ•^ 4);
 
-// gère le succès de la connexion
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Connexion ouverte.</li>";
+// gèwe we succès d-de wa connexion
+d-dbopenwequest.onsuccess = function (event) {
+  nyote.innewhtmw += "<wi>connexion ouvewte.</wi>";
 
-  //affect la connexion à la variable db.
-  db = DBOpenRequest.result;
+  //affect wa c-connexion à wa vawiabwe db. ʘwʘ
+  d-db = dbopenwequest.wesuwt;
 };
 
-// Ce gestionnaire d'événement s'active quand on à besoin d'une nouvelle version de la base de donnée.
-// Si la base n'existais pas avant ou
-// si on ouvre une nouvelle version avec window.indexedDB.open.
-DBOpenRequest.onupgradeneeded = function (event) {
-  var db = event.target.result;
+// ce gestionnaiwe d'événement s'active quand o-on à besoin d'une nyouvewwe vewsion d-de wa base d-de donnée. ( ͡o ω ͡o )
+// si wa base ny'existais p-pas avant ou
+// si on ouvwe u-une nyouvewwe v-vewsion avec window.indexeddb.open. mya
+d-dbopenwequest.onupgwadeneeded = function (event) {
+  v-vaw db = e-event.tawget.wesuwt;
 
-  db.onerror = function (event) {
-    note.innerHTML += "<li>Erreur de chargement de la base.</li>";
+  db.onewwow = function (event) {
+    n-nyote.innewhtmw += "<wi>ewweuw d-de c-chawgement de wa base.</wi>";
   };
 
-  // Ajoute un magasin d'objets à la base de données
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  // ajoute u-un magasin d'objets à wa base de d-données
+  vaw o-objectstowe = db.cweateobjectstowe("todowist", { keypath: "tasktitwe" });
 
-  // défini des index sur ce magasin
+  // défini des index suw ce magasin
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  o-objectstowe.cweateindex("houws", o.O "houws", (✿oωo) { u-unique: fawse });
+  o-objectstowe.cweateindex("minutes", :3 "minutes", 😳 { u-unique: fawse });
+  objectstowe.cweateindex("day", "day", (U ﹏ U) { u-unique: fawse });
+  objectstowe.cweateindex("month", "month", mya { unique: fawse });
+  objectstowe.cweateindex("yeaw", (U ᵕ U❁) "yeaw", :3 { unique: fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectstowe.cweateindex("notified", mya "notified", { u-unique: fawse });
 
-  note.innerHTML += "<li>Le magasin d'objet est ajouté.</li>";
+  nyote.innewhtmw += "<wi>we m-magasin d'objet est ajouté.</wi>";
 };
 
-// Un nouvel enregistrement à ajouter
-var newItem = [
+// u-un nyouvew enwegistwement à ajoutew
+v-vaw nyewitem = [
   {
-    taskTitle: "Walk dog",
-    hours: 19,
-    minutes: 30,
-    day: 24,
-    month: "December",
-    year: 2013,
-    notified: "no",
+    tasktitwe: "wawk dog", OwO
+    houws: 19, (ˆ ﻌ ˆ)♡
+    m-minutes: 30, ʘwʘ
+    d-day: 24, o.O
+    m-month: "decembew", UwU
+    y-yeaw: 2013, rawr x3
+    n-nyotified: "no", 🥺
   },
 ];
 
-// ouvre une transaction en lecture/écriture sur la connexion, prête à ajouter l'enregistrement.
-var transaction = db.transaction(["toDoList"], "readwrite");
+// ouvwe une twansaction en wectuwe/écwituwe suw wa connexion, :3 pwête à ajoutew w'enwegistwement. (ꈍᴗꈍ)
+v-vaw t-twansaction = db.twansaction(["todowist"], 🥺 "weadwwite");
 
-// affiche le succès de la transaction
-transaction.oncomplete = function (event) {
-  note.innerHTML += "<li>La transaction à été effectuée.</li>";
+// a-affiche we succès d-de wa twansaction
+twansaction.oncompwete = function (event) {
+  note.innewhtmw += "<wi>wa t-twansaction à été effectuée.</wi>";
 };
 
-transaction.onerror = function (event) {
-  note.innerHTML += "<li>La transaction n'as pue aboutir.</li>";
+t-twansaction.onewwow = function (event) {
+  n-nyote.innewhtmw += "<wi>wa twansaction ny'as pue a-aboutiw.</wi>";
 };
 
-// Un accès à toDoList pour la transaction
-var objectStore = transaction.objectStore("toDoList");
-// Ajoute l'enregistrement au magasin d'objet
-var objectStoreRequest = objectStore.add(newItem[0]);
+// u-un accès à todowist pouw w-wa twansaction
+v-vaw objectstowe = twansaction.objectstowe("todowist");
+// ajoute w'enwegistwement au magasin d-d'objet
+vaw objectstowewequest = o-objectstowe.add(newitem[0]);
 
-//l'enregistrement s'est bien passé.
-objectStoreRequest.onsuccess = function (event) {
-  note.innerHTML +=
-    "<li>L'enregistrement à été ajouté au magasin d'objet.</li>";
+//w'enwegistwement s-s'est bien passé. (✿oωo)
+o-objectstowewequest.onsuccess = f-function (event) {
+  nyote.innewhtmw +=
+    "<wi>w'enwegistwement à été ajouté a-au magasin d-d'objet.</wi>";
 };
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe d-de twavaiw c-compwet, (U ﹏ U) voiw nyotwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) a-app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew i-indexeddb")}}
+- {{domxwef("idbdatabase","débutew une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe d-des cwés")}}
+- {{domxwef("idbcuwsow","utiwisew w-wes cuwseuw")}}
+- e-exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe w-wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

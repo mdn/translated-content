@@ -1,64 +1,64 @@
 ---
-title: FormData.get()
-slug: Web/API/FormData/get
+titwe: fowmdata.get()
+swug: web/api/fowmdata/get
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode **`get()`** de l'interface [`FormData`](/fr/docs/Web/API/FormData) renvoie la première valeur associée à une clé donnée dans un objet `FormData`. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode [`getAll()`](/fr/docs/Web/API/FormData/getAll).
+w-wa méthode **`get()`** d-de w'intewface [`fowmdata`](/fw/docs/web/api/fowmdata) w-wenvoie wa pwemièwe v-vaweuw associée à u-une cwé d-donnée dans u-un objet `fowmdata`. (U ﹏ U) si vous souhaitez manipuwew pwusieuws vaweuws et wes wécupéwew i-intégwawement, (U ﹏ U) utiwisez pwutôt wa méthode [`getaww()`](/fw/docs/web/api/fowmdata/getaww). (⑅˘꒳˘)
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> c-cette méthode est disponibwe dans w-wes [web wowkews](/fw/docs/web/api/web_wowkews_api). òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.get(name);
+fowmdata.get(name);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Une chaîne de caractères [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le nom de la clé que vous souhaitez retrouver.
+  - : u-une chaîne de cawactèwes [`usvstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant w-we nyom de wa cwé que vous souhaitez wetwouvew. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet [`FormDataEntryValue`](/fr/docs/Web/API/FormData) contenant la valeur. Si la clé n'existe pas, la méthode renvoie `null`.
+un o-objet [`fowmdataentwyvawue`](/fw/docs/web/api/fowmdata) contenant wa vaweuw. /(^•ω•^) si wa cwé ny'existe pas, ʘwʘ wa méthode w-wenvoie `nuww`. σωσ
 
-## Exemple
+## exempwe
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData();
-```
-
-Si nous ajoutons deux valeurs `username` en utilisant [`FormData.append`](/fr/docs/Web/API/FormData/append) :
+w-wa wigne suivante c-cwée un objet `fowmdata` v-vide :
 
 ```js
-formData.append("username", "Chris");
-formData.append("username", "Bob");
+v-vaw fowmdata = nyew fowmdata();
 ```
 
-L'appel suivant à `get()` renverra uniquement la première valeur `username` indexée :
+si nous ajoutons d-deux vaweuws `usewname` en utiwisant [`fowmdata.append`](/fw/docs/web/api/fowmdata/append) :
 
 ```js
-formData.get("username"); // Renvoie "Chris"
+fowmdata.append("usewname", OwO "chwis");
+f-fowmdata.append("usewname", 😳😳😳 "bob");
 ```
 
-## Spécifications
+w'appew suivant à `get()` wenvewwa uniquement wa pwemièwe vaweuw `usewname` indexée :
 
-{{Specifications}}
+```js
+f-fowmdata.get("usewname"); // wenvoie "chwis"
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des n-nyavigateuws
 
-- [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
+{{compat}}
+
+## voiw aussi
+
+- [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)
+- [utiwisew xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew wes objets `fowmdata`](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)

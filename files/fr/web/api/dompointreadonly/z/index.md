@@ -1,32 +1,32 @@
 ---
-title: DOMPoint.z
-slug: Web/API/DOMPointReadOnly/z
+titwe: dompoint.z
+swug: web/api/dompointweadonwy/z
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`z`** de l'interface **`DOMPointReadOnly`** représente la coordonnée z d'un point.
+w-wa pwopwiété e-en wectuwe seuwe **`z`** d-de w'intewface **`dompointweadonwy`** w-wepwésente wa c-coowdonnée z d'un p-point. mya
 
-En général, z positif signifie vers l'extérieur de l'écran (autrement dit, opposée à la direction de l'utilisateur) et négatif vers l'intérieur de l'écran (dans la même direction que l'utilisateur).
+en généwaw, mya z-z positif s-signifie vews w'extéwieuw de w'écwan (autwement dit, 😳 opposée à wa diwection d-de w'utiwisateuw) et nyégatif vews w'intéwieuw d-de w'écwan (dans wa même d-diwection que w'utiwisateuw). XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-var zPos = DOMPoint.z;
+vaw zpos = dompoint.z;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+un doubwe. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

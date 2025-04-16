@@ -1,44 +1,44 @@
 ---
-title: "PushManager : la méthode permissionState()"
-short-title: permissionState()
-slug: Web/API/PushManager/permissionState
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmanagew : wa méthode p-pewmissionstate()"
+s-showt-titwe: p-pewmissionstate()
+s-swug: web/api/pushmanagew/pewmissionstate
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("Push API")}}
+{{apiwef("push a-api")}}
 
-La méthode **`permissionState()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en une chaîne de caractères indiquant l'état de la permission du gestionnaire de push. Les valeurs possibles sont `'prompt'`, `'denied'`, ou `'granted'`.
+wa m-méthode **`pewmissionstate()`** de w'intewface [`pushmanagew`](/fw/docs/web/api/pushmanagew) wenvoie une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui se w-wésout en une chaîne de cawactèwes indiquant w-w'état de wa pewmission du gestionnaiwe d-de push. 🥺 wes vaweuws possibwes sont `'pwompt'`, o.O `'denied'`, ou `'gwanted'`. /(^•ω•^)
 
-> [!NOTE]
-> Depuis Firefox 44, les autorisations pour [Notifications](/fr/docs/Web/API/Notifications_API) et [Push](/fr/docs/Web/API/Push_API) ont été fusionnées. Si l'autorisation est accordée pour les notifications, le push sera également activé.
+> [!note]
+> d-depuis fiwefox 44, nyaa~~ wes autowisations p-pouw [notifications](/fw/docs/web/api/notifications_api) e-et [push](/fw/docs/web/api/push_api) ont été fusionnées. nyaa~~ si w'autowisation est accowdée pouw w-wes nyotifications, :3 we push sewa égawement activé. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-permissionState()
-permissionState(options)
+```js-nowint
+pewmissionstate()
+pewmissionstate(options)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet contenant des paramètres de configuration optionnels. Il peut avoir les propriétés suivantes&nbsp;:
+  - : un objet c-contenant des p-pawamètwes de c-configuwation optionnews. i-iw peut avoiw wes pwopwiétés suivantes&nbsp;:
 
-    - `userVisibleOnly`
-      - : Un booléen indiquant que l'abonnement push renvoyé ne sera utilisé que pour les messages dont l'effet est visible pour l'utilisatrice ou l'utilisateur.
-    - `applicationServerKey`
-      - : Clé publique que votre serveur push utilisera pour envoyer des messages aux applications clientes via un serveur push. Cette valeur fait partie d'une paire de clés de signature générée par votre serveur d'application et utilisable avec la signature numérique à courbe elliptique (ECDSA) sur la courbe P-256.
+    - `usewvisibweonwy`
+      - : u-un boowéen indiquant que w'abonnement p-push wenvoyé nye sewa utiwisé que pouw wes messages dont w'effet est visibwe pouw w'utiwisatwice o-ou w'utiwisateuw. (˘ω˘)
+    - `appwicationsewvewkey`
+      - : cwé pubwique que v-votwe sewveuw p-push utiwisewa pouw e-envoyew des messages aux appwications cwientes via un sewveuw p-push. ^^ cette vaweuw f-fait pawtie d'une paiwe de c-cwés de signatuwe g-généwée paw votwe sewveuw d-d'appwication et utiwisabwe avec w-wa signatuwe nyuméwique à couwbe ewwiptique (ecdsa) s-suw wa couwbe p-256. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en une chaîne de caractères ayant pour valeur `'prompt'`, `'denied'`, ou `'granted'`.
+une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui se wésout e-en une chaîne de cawactèwes ayant pouw vaweuw `'pwompt'`, -.- `'denied'`, 😳 ou `'gwanted'`. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

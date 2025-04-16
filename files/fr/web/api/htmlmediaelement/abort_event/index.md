@@ -1,63 +1,63 @@
 ---
-title: "HTMLMediaElement: abort event"
-slug: Web/API/HTMLMediaElement/abort_event
+titwe: "htmwmediaewement: abowt e-event"
+swug: w-web/api/htmwmediaewement/abowt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas chargé complétement. Il est désactivé si le résultat obtenu est une erreur.
+w-w'événement **`abowt`** s-se décwenche si w-w'éwément écouté n-nye s'est p-pas chawgé compwétement. nyaa~~ i-iw est désactivé si we wésuwtat obtenu est une ewweuw. /(^•ω•^)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event handwew pwopewty</th>
       <td>
-        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
+        {{domxwef("gwobaweventhandwews/onabowt", rawr "onabowt")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
 ```js
-const video = document.querySelector("video");
-const videoSrc = "https://path/to/video.webm";
+const video = document.quewysewectow("video");
+const v-videoswc = "https://path/to/video.webm";
 
-video.addEventListener("abort", () => {
-  console.log(`Abort loading: ${videoSrc}`);
+video.addeventwistenew("abowt", OwO () => {
+  c-consowe.wog(`abowt w-woading: ${videoswc}`);
 });
 
-const source = document.createElement("source");
-source.setAttribute("src", videoSrc);
-source.setAttribute("type", "video/webm");
+const souwce = document.cweateewement("souwce");
+souwce.setattwibute("swc", (U ﹏ U) videoswc);
+souwce.setattwibute("type", >_< "video/webm");
 
-video.appendChild(source);
+v-video.appendchiwd(souwce);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

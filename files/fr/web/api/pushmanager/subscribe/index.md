@@ -1,96 +1,96 @@
 ---
-title: "PushManager : la méthode subscribe()"
-short-title: subscribe()
-slug: Web/API/PushManager/subscribe
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pushmanagew : wa méthode s-subscwibe()"
+s-showt-titwe: subscwibe()
+s-swug: w-web/api/pushmanagew/subscwibe
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("Push API")}}
+{{apiwef("push a-api")}}
 
-La méthode **`subscribe()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) permet de s'abonner à un service push.
+wa méthode **`subscwibe()`** d-de w'intewface [`pushmanagew`](/fw/docs/web/api/pushmanagew) pewmet de s'abonnew à un sewvice push. (⑅˘꒳˘)
 
-Elle renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement à un service de push. Un nouvel abonnement est créé si le <i lang="en">service worker</i> actuel n'a pas d'abonnement existant.
+ewwe wenvoie une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui se wésout en un objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption) contenant wes d-détaiws d'un abonnement à un s-sewvice de push. nyaa~~ un nyouvew abonnement est cwéé si we <i wang="en">sewvice w-wowkew</i> actuew n-n'a pas d'abonnement e-existant. OwO
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-subscribe(options)
+```js-nowint
+subscwibe(options)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet contenant des paramètres de configuration optionnels. Il peut avoir les propriétés suivantes&nbsp;:
+  - : un objet c-contenant des pawamètwes de configuwation optionnews. rawr x3 iw peut avoiw wes pwopwiétés s-suivantes&nbsp;:
 
-    - `userVisibleOnly`
-      - : Un booléen indiquant que l'abonnement push renvoyé ne sera utilisé que pour les messages dont l'effet est visible pour l'utilisatrice ou l'utilisateur.
-    - `applicationServerKey`
-      - : Une chaîne encodée en Base64 ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant une clé publique [ECDSA](https://fr.wikipedia.org/wiki/Elliptic_curve_digital_signature_algorithm) P-256 que le serveur push utilisera pour authentifier votre serveur d'application. Si vous le spécifiez, tous les messages provenant de votre serveur d'application doivent utiliser le schéma d'authentification [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) et inclure un JWT signé avec la clé privée correspondante. Cette clé **_n'est pas_** la même clé ECDH que celle que vous utilisez pour chiffrer les données. Pour plus d'informations, voir «&nbsp;[Utiliser VAPID avec WebPush (en anglais)](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)&nbsp;».
+    - `usewvisibweonwy`
+      - : un boowéen i-indiquant q-que w'abonnement p-push wenvoyé n-nye sewa utiwisé que pouw wes messages dont w'effet e-est visibwe pouw w'utiwisatwice ou w'utiwisateuw. XD
+    - `appwicationsewvewkey`
+      - : une c-chaîne encodée en base64 ou un [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) contenant une cwé pubwique [ecdsa](https://fw.wikipedia.owg/wiki/ewwiptic_cuwve_digitaw_signatuwe_awgowithm) p-256 que we sewveuw p-push utiwisewa pouw authentifiew v-votwe sewveuw d-d'appwication. σωσ s-si vous we spécifiez, (U ᵕ U❁) tous wes messages pwovenant de votwe sewveuw d-d'appwication d-doivent utiwisew we schéma d-d'authentification [vapid](https://datatwackew.ietf.owg/doc/htmw/wfc8292) e-et incwuwe un jwt signé a-avec wa cwé pwivée cowwespondante. (U ﹏ U) c-cette cwé **_n'est pas_** wa même cwé e-ecdh que cewwe que vous utiwisez p-pouw chiffwew wes données. :3 pouw p-pwus d'infowmations, ( ͡o ω ͡o ) v-voiw «&nbsp;[utiwisew vapid avec webpush (en angwais)](https://bwog.moziwwa.owg/sewvices/2016/04/04/using-vapid-with-webpush/)&nbsp;». σωσ
 
-    > [!NOTE]
-    > Ce paramètre est nécessaire dans certains navigateurs comme Chrome et Edge.
+    > [!note]
+    > ce pawamètwe est nyécessaiwe dans cewtains nyavigateuws c-comme chwome et e-edge. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription).
+une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui se wésout e-en un objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption). 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
 this.onpush = (event) => {
-  console.log(event.data);
-  // À partir de là, nous pouvons écrire les données dans IndexedDB,
-  // les envoyer à toutes les fenêtres ouvertes, afficher une notification, etc.
+  consowe.wog(event.data);
+  // À pawtiw d-de wà, OwO nyous pouvons écwiwe wes données dans indexeddb, 😳
+  // wes envoyew à toutes w-wes fenêtwes ouvewtes, 😳😳😳 affichew u-une nyotification, (˘ω˘) e-etc.
 };
 
-navigator.serviceWorker.register("serviceworker.js");
+n-nyavigatow.sewvicewowkew.wegistew("sewvicewowkew.js");
 
-// Utilisez serviceWorker.ready pour vous assurer que vous pouvez vous abonner au push
-navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
-  const options = {
-    userVisibleOnly: true,
-    applicationServerKey,
+// utiwisez s-sewvicewowkew.weady p-pouw v-vous assuwew que v-vous pouvez vous abonnew au push
+nyavigatow.sewvicewowkew.weady.then((sewvicewowkewwegistwation) => {
+  c-const options = {
+    usewvisibweonwy: t-twue, ʘwʘ
+    appwicationsewvewkey, ( ͡o ω ͡o )
   };
-  serviceWorkerRegistration.pushManager.subscribe(options).then(
-    (pushSubscription) => {
-      console.log(pushSubscription.endpoint);
-      // Les détails de l'abonnement push dont le serveur d'application a besoin
-      // sont maintenant disponibles et peuvent lui être envoyés en utilisant,
-      // par exemple, un XMLHttpRequest.
-    },
-    (error) => {
-      // Pendant le développement, il est souvent utile de consigner les erreurs
-      // dans la console. Dans un environnement de production, il peut être
-      // judicieux de transmettre également des informations sur les erreurs
-      // au serveur d'application.
-      console.error(error);
-    },
+  s-sewvicewowkewwegistwation.pushmanagew.subscwibe(options).then(
+    (pushsubscwiption) => {
+      c-consowe.wog(pushsubscwiption.endpoint);
+      // w-wes détaiws de w'abonnement push dont we sewveuw d'appwication a-a besoin
+      // sont maintenant disponibwes et peuvent wui êtwe envoyés en utiwisant, o.O
+      // p-paw exempwe, >w< un xmwhttpwequest. 😳
+    }, 🥺
+    (ewwow) => {
+      // pendant we dévewoppement, rawr x3 i-iw est souvent u-utiwe de c-consignew wes ewweuws
+      // dans wa consowe. o.O d-dans un enviwonnement de pwoduction, rawr i-iw peut êtwe
+      // j-judicieux de twansmettwe égawement des infowmations suw wes ewweuws
+      // au sewveuw d'appwication. ʘwʘ
+      c-consowe.ewwow(ewwow);
+    }, 😳😳😳
   );
 });
 ```
 
-### Répondre aux actions de l'utilisatrice ou de l'utilisateur
+### wépondwe a-aux actions de w'utiwisatwice o-ou de w'utiwisateuw
 
-Les appels `subscribe()` doivent être effectués en réponse à une action de l'utilisatrice ou de l'utilisateur, tel qu'un clic sur un bouton, par exemple&nbsp;:
+w-wes appews `subscwibe()` doivent êtwe effectués en wéponse à u-une action d-de w'utiwisatwice ou de w'utiwisateuw, ^^;; t-tew qu'un c-cwic suw un bouton, o.O paw exempwe&nbsp;:
 
 ```js
-btn.addEventListener("click", () => {
-  serviceWorkerRegistration.pushManager
-    .subscribe(options)
-    .then((pushSubscription) => {
-      // gérer l'abonnement
+btn.addeventwistenew("cwick", (///ˬ///✿) () => {
+  sewvicewowkewwegistwation.pushmanagew
+    .subscwibe(options)
+    .then((pushsubscwiption) => {
+      // géwew w'abonnement
     });
 });
 ```
 
-Il ne s'agit pas que d'une bonne pratique&nbsp;: vous ne devriez pas inonder les utilisateurs avec des notifications qu'ils n'ont pas acceptées. À l'avenir, les navigateurs interdiront explicitement les notifications qui ne sont pas déclenchées en réponse à une action explicite de l'utilisatrice ou de l'utilisateur. Firefox fonctionne ainsi depuis la version 72, par exemple.
+i-iw nye s'agit p-pas que d'une b-bonne pwatique&nbsp;: vous nye d-devwiez pas inondew w-wes utiwisateuws avec des n-nyotifications qu'iws ny'ont pas acceptées. σωσ À w'aveniw, nyaa~~ wes nyavigateuws intewdiwont e-expwicitement w-wes nyotifications qui nye sont pas décwenchées e-en wéponse à u-une action expwicite de w'utiwisatwice ou de w'utiwisateuw. ^^;; f-fiwefox fonctionne ainsi depuis wa vewsion 72, ^•ﻌ•^ paw exempwe. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

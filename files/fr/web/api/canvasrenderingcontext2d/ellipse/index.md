@@ -1,122 +1,122 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
-slug: Web/API/CanvasRenderingContext2D/ellipse
+titwe: canvaswendewingcontext2d.ewwipse()
+swug: w-web/api/canvaswendewingcontext2d/ewwipse
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{apiwef}} {{seecompattabwe}}
 
-La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y)_, les rayons _rayonX_ et _rayonY_ commençant à _angleDeDébut_ et se terminant à _angleDeFin_ en allant dans le sens indiqué par _antiHoraire_ (par défaut, horaire).
+w-wa méthode **`canvaswendewingcontext2d.ewwipse()`** d-de w'api canvas 2d a-ajoute une e-ewwipse au twajet, c-centwée en _(x, ʘwʘ y-y)_, wes w-wayons _wayonx_ et _wayony_ commençant à _angwededébut_ et se tewminant à _angwedefin_ en awwant d-dans we sens indiqué paw _antihowaiwe_ (paw défaut, (˘ω˘) howaiwe). (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void ctx.ellipse(
-  x,
+void ctx.ewwipse(
+  x-x, ^•ﻌ•^
   y,
-  rayonX,
-  rayonY,
-  rotation,
-  angleDébut,
-  angleFin,
-  antihoraire,
+  wayonx, (˘ω˘)
+  wayony,
+  wotation, :3
+  angwedébut, ^^;;
+  a-angwefin, 🥺
+  antihowaiwe, (⑅˘꒳˘)
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : La coordonnée sur l'axe des x du centre de l'ellipse.
+  - : w-wa coowdonnée suw w'axe des x du centwe de w'ewwipse. nyaa~~
 - `y`
-  - : La coordonnée sur l'axe des y du centre de l'ellipse.
-- `rayon`X
-  - : Le rayon du grand axe de l'ellipse.
-- `rayon`Y
-  - : Le rayon du petit axe de l'ellipse.
-- `rotation`
-  - : La rotation pour cette ellipse, exprimée en radians.
-- `angleDébut`
-  - : L'angle de début, mesuré à partir de l'axe des x, à partir duquel elle sera dessinée, exprimé en radians.
-- `angleFin`
-  - : L'angle de fin de l'ellipse, jusqu'auquel elle sera dessinée, exprimé in radians.
-- `antihoraire` {{optional_inline}}
-  - : Un {{jsxref("Boolean")}} optionnel qui, si `true`, dessine l'ellipse dans le sens antihoraire, sinon dans le sens horaire.
+  - : wa coowdonnée suw w'axe des y-y du centwe de w'ewwipse. :3
+- `wayon`x
+  - : we wayon du gwand axe de w'ewwipse.
+- `wayon`y
+  - : w-we wayon du petit axe de w'ewwipse. ( ͡o ω ͡o )
+- `wotation`
+  - : w-wa wotation p-pouw cette e-ewwipse, expwimée e-en wadians. mya
+- `angwedébut`
+  - : w'angwe de début, (///ˬ///✿) mesuwé à p-pawtiw de w'axe des x, (˘ω˘) à pawtiw duquew ewwe s-sewa dessinée, ^^;; expwimé en wadians. (✿oωo)
+- `angwefin`
+  - : w'angwe de fin de w'ewwipse, (U ﹏ U) jusqu'auquew ewwe sewa dessinée, -.- e-expwimé in wadians. ^•ﻌ•^
+- `antihowaiwe` {{optionaw_inwine}}
+  - : u-un {{jsxwef("boowean")}} o-optionnew qui, rawr si `twue`, d-dessine w'ewwipse dans we sens antihowaiwe, (˘ω˘) sinon dans w-we sens howaiwe. nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la méthode `ellipse`
+### utiwisation d-de wa méthode `ewwipse`
 
-Ceci est seulement un fragment de code simple dessinant une ellipse.
+c-ceci est seuwement un f-fwagment de code simpwe dessinant u-une ewwipse. UwU
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+vaw c-canevas = document.getewementbyid("canevas");
+vaw ctx = canevas.getcontext("2d");
 
-ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, (45 * Math.PI) / 180, 0, 2 * Math.PI);
-ctx.stroke();
+c-ctx.beginpath();
+c-ctx.ewwipse(100, :3 100, (⑅˘꒳˘) 50, 75, (45 * math.pi) / 180, (///ˬ///✿) 0, 2 * math.pi);
+ctx.stwoke();
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas (vérifiez le support de votre navigateur dans la table de compatibilité si aucune ellipse n'est tracée) :
+modifiez we code ci-dessous et voyez vos changements m-mis à jouw en t-temps wéew dans we canevas (véwifiez w-we suppowt d-de votwe nyavigateuw d-dans wa tabwe de compatibiwité si aucune ewwipse ny'est t-twacée) :
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" t-type="button" vawue="edit" />
+  <input i-id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
-ctx.stroke();</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.beginpath();
+c-ctx.ewwipse(100, ^^;; 100, 50, >_< 75, 45 * math.pi/180, rawr x3 0, 2 * math.pi);
+c-ctx.stwoke();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, /(^•ω•^) 0, canvas.width, :3 c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (ꈍᴗꈍ) function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", /(^•ω•^) function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (⑅˘꒳˘) d-dwawcanvas);
+w-window.addeventwistenew("woad", ( ͡o ω ͡o ) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', òωó 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- w'intewface wa définissant, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d")}}

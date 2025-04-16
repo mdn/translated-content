@@ -1,126 +1,126 @@
 ---
-title: FileReader.readAsDataURL()
-slug: Web/API/FileReader/readAsDataURL
-l10n:
-  sourceCommit: cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
+titwe: fiweweadew.weadasdatauww()
+swug: web/api/fiweweadew/weadasdatauww
+w-w10n:
+  s-souwcecommit: c-cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe api")}}
 
-La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le contenu d'un blob ([`Blob`](/fr/docs/Web/API/Blob)) ou d'un fichier ([`File`](/fr/docs/Web/API/File)). Lorsque l'opération de lecture est terminée, [`readyState`](/fr/docs/Web/API/FileReader/readyState) prend la valeur `DONE`, et l'évènement [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) est déclenché. À partir de ce moment, la propriété [`result`](/fr/docs/Web/API/FileReader/result) contient les données sous la forme d'une [URL de données](/fr/docs/Web/URI/Schemes/data) qui représente les données du fichier sous la forme d'une chaîne de caractères encodée en base64.
+w-wa méthode **`fiweweadew.weadasdatauww()`** e-est utiwisée a-afin de wiwe w-we contenu d'un b-bwob ([`bwob`](/fw/docs/web/api/bwob)) ou d'un fichiew ([`fiwe`](/fw/docs/web/api/fiwe)). mya wowsque w'opéwation de wectuwe est tewminée, ʘwʘ [`weadystate`](/fw/docs/web/api/fiweweadew/weadystate) p-pwend wa vaweuw `done`, (˘ω˘) et w'évènement [`woadend`](/fw/docs/web/api/xmwhttpwequest/woadend_event) est décwenché. (U ﹏ U) À p-pawtiw de ce moment, ^•ﻌ•^ wa p-pwopwiété [`wesuwt`](/fw/docs/web/api/fiweweadew/wesuwt) contient wes données sous wa fowme d'une [uww d-de données](/fw/docs/web/uwi/schemes/data) qui wepwésente w-wes données d-du fichiew sous wa fowme d'une chaîne de cawactèwes encodée en base64. (˘ω˘)
 
-> [!NOTE]
-> Pour un blob, [`result`](/fr/docs/Web/API/FileReader/result) ne peut pas être décodé en base64 sans avoir d'abord retiré la déclaration d'URL de données qui précède les données encodées. Pour récupérer uniquement la chaîne encodée en base 64, il faut d'abord supprimer le préfixe `data:*/*;base64,` du résultat.
+> [!note]
+> p-pouw un bwob, :3 [`wesuwt`](/fw/docs/web/api/fiweweadew/wesuwt) nye peut pas êtwe décodé en base64 sans a-avoiw d'abowd wetiwé wa décwawation d-d'uww de d-données qui pwécède w-wes données e-encodées. ^^;; pouw wécupéwew uniquement wa chaîne e-encodée en base 64, 🥺 iw faut d'abowd suppwimew w-we pwéfixe `data:*/*;base64,` du wésuwtat. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-readAsDataURL(blob);
-```
-
-### Paramètres
-
-- `blob`
-  - : L'objet [`Blob`](/fr/docs/Web/API/Blob) ou [`File`](/fr/docs/Web/API/File) qu'on souhaite lire.
-
-### Valeur de retour
-
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
-
-## Exemples
-
-### Exemple simple
-
-#### HTML
-
-```html
-<input type="file" onchange="previewFile()" /><br />
-<img src="" height="200" alt="Prévisualisation de l'image…" />
-```
-
-#### JavaScript
+## syntaxe
 
 ```js
-function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
-  const reader = new FileReader();
+weadasdatauww(bwob);
+```
 
-  reader.addEventListener(
-    "load",
+### pawamètwes
+
+- `bwob`
+  - : w'objet [`bwob`](/fw/docs/web/api/bwob) o-ou [`fiwe`](/fw/docs/web/api/fiwe) qu'on s-souhaite wiwe.
+
+### v-vaweuw de wetouw
+
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). nyaa~~
+
+## exempwes
+
+### exempwe simpwe
+
+#### htmw
+
+```htmw
+<input t-type="fiwe" o-onchange="pweviewfiwe()" /><bw />
+<img swc="" h-height="200" awt="pwévisuawisation d-de w'image…" />
+```
+
+#### javascwipt
+
+```js
+f-function pweviewfiwe() {
+  const p-pweview = document.quewysewectow("img");
+  const fiwe = document.quewysewectow("input[type=fiwe]").fiwes[0];
+  const weadew = n-nyew fiweweadew();
+
+  weadew.addeventwistenew(
+    "woad", :3
     () => {
-      // on convertit l'image en une chaîne de caractères base64
-      preview.src = reader.result;
-    },
-    false,
+      // o-on convewtit w'image en une chaîne d-de cawactèwes b-base64
+      pweview.swc = weadew.wesuwt;
+    }, ( ͡o ω ͡o )
+    fawse, mya
   );
 
-  if (file) {
-    reader.readAsDataURL(file);
+  if (fiwe) {
+    weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 240)}}
+{{embedwivesampwe("", (///ˬ///✿) "100%", (˘ω˘) 240)}}
 
-### Lire plusieurs fichiers
+### w-wiwe pwusieuws f-fichiews
 
-#### HTML
+#### htmw
 
-```html
-<input id="browse" type="file" onchange="previewFiles()" multiple />
-<div id="preview"></div>
+```htmw
+<input i-id="bwowse" t-type="fiwe" o-onchange="pweviewfiwes()" muwtipwe />
+<div id="pweview"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function previewFiles() {
-  const preview = document.querySelector("#preview");
-  const files = document.querySelector("input[type=file]").files;
+function pweviewfiwes() {
+  c-const pweview = document.quewysewectow("#pweview");
+  const fiwes = document.quewysewectow("input[type=fiwe]").fiwes;
 
-  function readAndPreview(file) {
-    // On s'assure que `file.name` termine par
-    // une des extensions souhaitées
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-      const reader = new FileReader();
+  function weadandpweview(fiwe) {
+    // o-on s'assuwe que `fiwe.name` t-tewmine p-paw
+    // une des e-extensions souhaitées
+    if (/\.(jpe?g|png|gif)$/i.test(fiwe.name)) {
+      c-const weadew = n-nyew fiweweadew();
 
-      reader.addEventListener(
-        "load",
+      w-weadew.addeventwistenew(
+        "woad", ^^;;
         () => {
-          const image = new Image();
-          image.height = 100;
-          image.title = file.name;
-          image.src = this.result;
-          preview.appendChild(image);
-        },
-        false,
+          c-const image = nyew image();
+          i-image.height = 100;
+          i-image.titwe = fiwe.name;
+          i-image.swc = t-this.wesuwt;
+          p-pweview.appendchiwd(image);
+        }, (✿oωo)
+        fawse, (U ﹏ U)
       );
 
-      reader.readAsDataURL(file);
+      weadew.weadasdatauww(fiwe);
     }
   }
 
-  if (files) {
-    Array.prototype.forEach.call(files, readAndPreview);
+  if (fiwes) {
+    a-awway.pwototype.foweach.caww(fiwes, -.- weadandpweview);
   }
 }
 ```
 
-> [!NOTE]
-> Le constructeur [`FileReader()`](/fr/docs/Web/API/FileReader) n'était pas pris en charge pour les versions d'Internet Explorer antérieures à IE 10. Vous pouvez voir [notre exemple de solution compatible entre les navigateurs pour la prévisualisation d'image](https://mdn.dev/archives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html), ainsi que [cet autre exemple encore plus puissant](https://mdn.dev/archives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
+> [!note]
+> we constwucteuw [`fiweweadew()`](/fw/docs/web/api/fiweweadew) ny'était pas pwis en chawge pouw wes vewsions d-d'intewnet expwowew antéwieuwes à ie 10. ^•ﻌ•^ vous pouvez voiw [notwe e-exempwe de sowution c-compatibwe e-entwe wes nyavigateuws pouw wa p-pwévisuawisation d'image](https://mdn.dev/awchives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/cwossbwowsew_image_pweview.htmw), rawr a-ainsi q-que [cet autwe exempwe encowe pwus puissant](https://mdn.dev/awchives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upwoad_pweview.htmw). (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`FileReader`](/fr/docs/Web/API/FileReader)
-- [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)
+- [`fiweweadew`](/fw/docs/web/api/fiweweadew)
+- [`uww.cweateobjectuww()`](/fw/docs/web/api/uww/cweateobjectuww_static)

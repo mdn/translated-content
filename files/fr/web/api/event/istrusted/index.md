@@ -1,32 +1,32 @@
 ---
-title: Event.isTrusted
-slug: Web/API/Event/isTrusted
+titwe: event.istwusted
+swug: w-web/api/event/istwusted
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule isTrusted, de l'interface {{domxref("Event")}}, est un booléen qui vaut true lorsque l'événement est généré par une action de l'utilisateur, et false, quand l'événement est créé ou modifié par un script ou envoyé par dispatchEvent.
+w-wa pwopwiété en w-wectuwe seuwe i-istwusted, XD de w'intewface {{domxwef("event")}}, :3 e-est un boowéen q-qui vaut twue wowsque w-w'événement e-est généwé paw une action de w'utiwisateuw, 😳😳😳 et fawse, quand w'événement e-est cwéé ou modifié paw un scwipt ou envoyé p-paw dispatchevent. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var bool = event.isTrusted;
+v-vaw boow = event.istwusted;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-if (e.isTrusted) {
-  /* The event is trusted. */
-} else {
-  /* The event is not trusted. */
+if (e.istwusted) {
+  /* t-the event is twusted. */
+} ewse {
+  /* t-the event i-is nyot twusted. */
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

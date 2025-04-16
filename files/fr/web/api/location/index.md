@@ -1,185 +1,185 @@
 ---
-title: Location
-slug: Web/API/Location
+titwe: wocation
+swug: web/api/wocation
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`Location`** représente l'emplacement de l'objet auquel elle est liée. Les changements effectués dessus sont reflétés sur l'objet lié. Les deux interfaces {{domxref("Document")}} et {{domxref("Window")}} sont liées à une `Location`, accessible via {{domxref("Document.location")}} et {{domxref("Window.location")}} respectivement.
+w-w'intewface **`wocation`** w-wepwésente w'empwacement d-de w'objet a-auquew ewwe e-est wiée. nyaa~~ wes c-changements effectués d-dessus sont wefwétés suw w'objet wié. >_< wes deux intewfaces {{domxwef("document")}} et {{domxwef("window")}} s-sont wiées à une `wocation`, ^^;; accessibwe v-via {{domxwef("document.wocation")}} et {{domxwef("window.wocation")}} w-wespectivement. (ˆ ﻌ ˆ)♡
 
-## Anatomie d'une Location
+## anatomie d'une wocation
 
-### HTML
+### htmw
 
-```html
-<span id="href" title="href"
-  ><span id="protocol" title="protocol">http:</span>//<span
+```htmw
+<span i-id="hwef" titwe="hwef"
+  ><span i-id="pwotocow" t-titwe="pwotocow">http:</span>//<span
     id="host"
-    title="host"
-    ><span id="hostname" title="hostname">example.org</span>:<span
-      id="port"
-      title="port"
+    titwe="host"
+    ><span id="hostname" titwe="hostname">exampwe.owg</span>:<span
+      i-id="powt"
+      titwe="powt"
       >8888</span
     ></span
-  ><span id="pathname" title="pathname">/foo/bar</span
-  ><span id="search" title="search">?q=baz</span
-  ><span id="hash" title="hash">#bang</span></span
+  ><span id="pathname" titwe="pathname">/foo/baw</span
+  ><span id="seawch" titwe="seawch">?q=baz</span
+  ><span i-id="hash" titwe="hash">#bang</span></span
 >
 ```
 
-### CSS
+### css
 
 ```css
-html,
+h-htmw, ^^;;
 body {
-  height: 100%;
+  h-height: 100%;
 }
-html {
-  display: table;
+h-htmw {
+  dispway: t-tabwe;
   width: 100%;
 }
 body {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  font-family: georgia;
+  dispway: t-tabwe-ceww;
+  text-awign: centew;
+  vewticaw-awign: m-middwe;
+  font-famiwy: geowgia;
   font-size: 230%;
-  line-height: 1em;
-  white-space: nowrap;
+  wine-height: 1em;
+  white-space: nyowwap;
 }
 
-[title] {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box; /*border-bottom:.5em solid;*/
-  line-height: 2em;
-  cursor: pointer;
+[titwe] {
+  p-position: wewative;
+  dispway: i-inwine-bwock;
+  b-box-sizing: bowdew-box; /*bowdew-bottom:.5em s-sowid;*/
+  wine-height: 2em;
+  cuwsow: pointew;
 }
 
-[title]:before {
-  content: attr(title);
-  font-family: monospace;
-  position: absolute;
+[titwe]:befowe {
+  c-content: attw(titwe);
+  f-font-famiwy: monospace;
+  p-position: a-absowute;
   top: 100%;
   width: 100%;
-  left: 50%;
-  margin-left: -50%;
-  font-size: 40%;
-  line-height: 1.5;
-  background: black;
+  w-weft: 50%;
+  mawgin-weft: -50%;
+  f-font-size: 40%;
+  wine-height: 1.5;
+  backgwound: bwack;
 }
-[title]:hover:before,
-:target:before {
-  background: black;
-  color: yellow;
-}
-
-[title] [title]:before {
-  margin-top: 1.5em;
-}
-[title] [title] [title]:before {
-  margin-top: 3em;
+[titwe]:hovew:befowe, (⑅˘꒳˘)
+:tawget:befowe {
+  b-backgwound: bwack;
+  c-cowow: yewwow;
 }
 
-[title]:hover,
-:target {
-  position: relative;
+[titwe] [titwe]:befowe {
+  mawgin-top: 1.5em;
+}
+[titwe] [titwe] [titwe]:befowe {
+  m-mawgin-top: 3em;
+}
+
+[titwe]:hovew, rawr x3
+:tawget {
+  p-position: wewative;
   z-index: 1;
-  outline: 50em solid rgba(255, 255, 255, 0.8);
+  outwine: 50em sowid wgba(255, (///ˬ///✿) 255, 255, 0.8);
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-[].forEach.call(document.querySelectorAll("[title][id]"), function (node) {
-  node.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.location.hash = "#" + $(this).attr("id");
+[].foweach.caww(document.quewysewectowaww("[titwe][id]"), 🥺 function (node) {
+  nyode.addeventwistenew("cwick", >_< f-function (e) {
+    e-e.pweventdefauwt();
+    e.stoppwopagation();
+    window.wocation.hash = "#" + $(this).attw("id");
   });
 });
-[].forEach.call(document.querySelectorAll("[title]"), function (node) {
-  node.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.location.hash = "";
+[].foweach.caww(document.quewysewectowaww("[titwe]"), UwU f-function (node) {
+  n-nyode.addeventwistenew("cwick", >_< f-function (e) {
+    e.pweventdefauwt();
+    e.stoppwopagation();
+    window.wocation.hash = "";
   });
 });
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Anatomie_d\'une_Location')}}
+{{embedwivesampwe('anatomie_d\'une_wocation')}}
 
-## Propriétés
+## p-pwopwiétés
 
-_L'interface `Location` n'hérite d'aucune propriété, mais implémente celles de {{domxref("URLUtils")}}._
+_w'intewface `wocation` ny'héwite d'aucune pwopwiété, -.- mais impwémente cewwes de {{domxwef("uwwutiws")}}._
 
-- {{domxref("Location.href")}}
-  - : Une {{domxref("DOMString")}} contenant l'URL entière.
-- {{domxref("Location.protocol")}}
-  - : Une {{domxref("DOMString")}} contenant le schéma de protocole de l'URL, incluant le `':'` final.
-- {{domxref("Location.host")}}
-  - : Une {{domxref("DOMString")}} contenant l'hôte, c'est-à-dire le _domaine_, un `':'`, et le _numéro de port_ de l'URL.
-- {{domxref("Location.hostname")}}
-  - : Une {{domxref("DOMString")}} contenant le domaine de l'URL.
-- {{domxref("Location.port")}}
-  - : Une {{domxref("DOMString")}} contenant le numéro de port de l'URL.
-- {{domxref("Location.pathname")}}
-  - : Une {{domxref("DOMString")}} contenant un `'/'` initial suivi du chemin de l'URL.
-- {{domxref("Location.search")}}
-  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/fr/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/fr/docs/Web/API/URL/searchParams#example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
-- {{domxref("Location.hash")}}
-  - : Une {{domxref("DOMString")}} contenant un `'#'` suivi de _l'identifiant de fragment_ de l'URL.
-- {{domxref("Location.username")}} {{deprecated_inline}}
-  - : Une {{domxref("DOMString")}} contenant le nom d'utilisateur spécifié avant le nom de domaine.
-- {{domxref("Location.password")}} {{deprecated_inline}}
-  - : Une {{domxref("DOMString")}} contenant le mot de passe spécifié avant le nom de domaine.
-- {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} contenant la forme canonique de l'origine de la location.
+- {{domxwef("wocation.hwef")}}
+  - : u-une {{domxwef("domstwing")}} contenant w-w'uww entièwe. mya
+- {{domxwef("wocation.pwotocow")}}
+  - : u-une {{domxwef("domstwing")}} c-contenant we schéma de p-pwotocowe de w'uww, >w< i-incwuant we `':'` f-finaw. (U ﹏ U)
+- {{domxwef("wocation.host")}}
+  - : u-une {{domxwef("domstwing")}} contenant w'hôte, 😳😳😳 c'est-à-diwe w-we _domaine_, o.O u-un `':'`, òωó et we _numéwo d-de powt_ d-de w'uww. 😳😳😳
+- {{domxwef("wocation.hostname")}}
+  - : u-une {{domxwef("domstwing")}} contenant we domaine de w'uww. σωσ
+- {{domxwef("wocation.powt")}}
+  - : une {{domxwef("domstwing")}} c-contenant we nyuméwo de powt de w'uww. (⑅˘꒳˘)
+- {{domxwef("wocation.pathname")}}
+  - : une {{domxwef("domstwing")}} contenant un `'/'` initiaw suivi d-du chemin de w'uww. (///ˬ///✿)
+- {{domxwef("wocation.seawch")}}
+  - : une {{domxwef("domstwing")}} contenant un `'?'` suivi d-des pawamètwes d-de w'uww. 🥺 wes n-nyavigateuws modewne fouwnissent [uwwseawchpawams](/fw/docs/web/api/uwwseawchpawams/get#exampwe) e-et [uww.seawchpawams](/fw/docs/web/api/uww/seawchpawams#exampwe) pouw faciwitew w-w'anawyse des p-pawamètwes de wa chaîne de wequête (quewystwing). OwO
+- {{domxwef("wocation.hash")}}
+  - : une {{domxwef("domstwing")}} contenant un `'#'` suivi de _w'identifiant d-de fwagment_ de w'uww. >w<
+- {{domxwef("wocation.usewname")}} {{depwecated_inwine}}
+  - : u-une {{domxwef("domstwing")}} contenant we n-nyom d'utiwisateuw s-spécifié avant we nyom de domaine.
+- {{domxwef("wocation.passwowd")}} {{depwecated_inwine}}
+  - : u-une {{domxwef("domstwing")}} c-contenant we mot de passe s-spécifié avant w-we nyom de domaine. 🥺
+- {{domxwef("wocation.owigin")}} {{weadonwyinwine}}
+  - : wetouwne une {{domxwef("domstwing")}} contenant wa fowme canonique de w'owigine de w-wa wocation. nyaa~~
 
-## Méthodes
+## m-méthodes
 
-_L'interface `Location` n'hérite d'aucune méthode, mais implémente celles de {{domxref("URLUtils")}}._
+_w'intewface `wocation` n-ny'héwite d'aucune méthode, ^^ m-mais impwémente c-cewwes de {{domxwef("uwwutiws")}}._
 
-- {{domxref("Location.assign()")}}
-  - : Charge la ressource située à l'URL passée en paramètre.
-- {{domxref("Location.reload()")}}
-  - : Recharge la ressource depuis l'URL actuelle. Son unique paramètre facultatif est un [Boolean](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean), qui, s'il est `true`, implique que la page est toujours rechargée depuis le serveur. Si ce paramètre est `false` ou non spécifié, le navigateur peut éventuellement recharger la page depuis son cache.
-- {{domxref("Location.replace()")}}
-  - : Remplace la ressource actuelle par celle à l'URL passée en paramètre. la différence avec la méthode `assign()` est que, après avoir utilisé `replace()`, la page actuelle ne sera pas enregistrée dans l'historique de session {{domxref("History")}}, ce qui signifie que l'utilisateur ne pourra pas utiliser le bouton _précédent_ pour y revenir.
-- {{domxref("Location.toString()")}}
-  - : Retourne une {{domxref("DOMString")}} contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, sauf que `toString()` ne peut être utilisée pour modifier la valeur.
+- {{domxwef("wocation.assign()")}}
+  - : chawge wa wessouwce s-située à w'uww passée en pawamètwe. >w<
+- {{domxwef("wocation.wewoad()")}}
+  - : wechawge wa wessouwce depuis w-w'uww actuewwe. OwO s-son unique pawamètwe facuwtatif est un [boowean](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean), q-qui, XD s'iw est `twue`, ^^;; i-impwique que wa page est toujouws wechawgée depuis we sewveuw. 🥺 s-si ce pawamètwe est `fawse` ou nyon spécifié, XD we nyavigateuw peut éventuewwement w-wechawgew wa page depuis son cache. (U ᵕ U❁)
+- {{domxwef("wocation.wepwace()")}}
+  - : w-wempwace w-wa wessouwce actuewwe paw cewwe à w'uww passée en pawamètwe. :3 w-wa difféwence a-avec wa méthode `assign()` est que, ( ͡o ω ͡o ) apwès avoiw utiwisé `wepwace()`, òωó wa page a-actuewwe nye sewa pas enwegistwée d-dans w'histowique de session {{domxwef("histowy")}}, σωσ ce qui signifie que w'utiwisateuw n-nye pouwwa pas utiwisew w-we bouton _pwécédent_ p-pouw y weveniw. (U ᵕ U❁)
+- {{domxwef("wocation.tostwing()")}}
+  - : w-wetouwne une {{domxwef("domstwing")}} c-contenant w-w'uww entièwe. (✿oωo) c-c'est un synonyme de {{domxwef("uwwutiws.hwef")}}, ^^ s-sauf q-que `tostwing()` nye peut êtwe utiwisée pouw modifiew w-wa vaweuw. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
 ```js
-// Crée un élèment ancre et utilise la propriété href dans le but de cet exemple
-// Une alternative plus correcte est de naviguer vers l'URL et d'utiliser document.location ou window.location
-var url = document.createElement("a");
-url.href =
-  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
-console.log(url.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol); // https:
-console.log(url.host); // developer.mozilla.org:8080
-console.log(url.hostname); // developer.mozilla.org
-console.log(url.port); // 8080
-console.log(url.pathname); // /en-US/search
-console.log(url.search); // ?q=URL
-console.log(url.hash); // #search-results-close-container
-console.log(url.origin); // https://developer.mozilla.org:8080
+// c-cwée un éwèment ancwe et utiwise wa p-pwopwiété hwef dans we but de c-cet exempwe
+// u-une awtewnative pwus cowwecte est de nyaviguew vews w'uww et d'utiwisew d-document.wocation o-ou window.wocation
+v-vaw u-uww = document.cweateewement("a");
+uww.hwef =
+  "https://devewopew.moziwwa.owg:8080/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew";
+c-consowe.wog(uww.hwef); // https://devewopew.moziwwa.owg:8080/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew
+consowe.wog(uww.pwotocow); // https:
+consowe.wog(uww.host); // devewopew.moziwwa.owg:8080
+consowe.wog(uww.hostname); // d-devewopew.moziwwa.owg
+consowe.wog(uww.powt); // 8080
+c-consowe.wog(uww.pathname); // /en-us/seawch
+consowe.wog(uww.seawch); // ?q=uww
+c-consowe.wog(uww.hash); // #seawch-wesuwts-cwose-containew
+consowe.wog(uww.owigin); // h-https://devewopew.moziwwa.owg:8080
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Deux méthodes qui créent un objet `location` : {{domxref("Window.location")}} et {{domxref("Document.location")}}.
-- Interfaces liées aux URL: {{domxref("URL")}}, {{domxref("URLSearchParams")}} et {{domxref("HTMLHyperlinkElementUtils")}}.
+- deux méthodes qui cwéent un objet `wocation` : {{domxwef("window.wocation")}} et {{domxwef("document.wocation")}}. XD
+- intewfaces wiées aux uww: {{domxwef("uww")}}, :3 {{domxwef("uwwseawchpawams")}} et {{domxwef("htmwhypewwinkewementutiws")}}. (ꈍᴗꈍ)

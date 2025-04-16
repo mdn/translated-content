@@ -1,97 +1,97 @@
 ---
-title: Headers
-slug: Web/API/Headers
+titwe: headews
+swug: web/api/headews
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l'ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).) Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
+w-w'intewface `headews` d-de w'api f-fetch vous p-pewmet d'effectuew d-divewses actions s-suw wes en-têtes d-de wequête et de wéponse http. (ˆ ﻌ ˆ)♡ ces actions incwuent wa wécupéwation, ( ͡o ω ͡o ) wa configuwation, rawr x3 w-w'ajout et wa suppwession. nyaa~~ un objet `headews` a une wiste `headews` a-associée qui est vide wows d-de w'initiawisation et qui est constituée de zéwo ou pwusieuws p-paiwes de nyoms et de vaweuws. >_< v-vous pouvez en a-ajoutew via wes méthodes comme{{domxwef("headews.append","append()")}} (voiw wa section [exempwes](#exempwes).) dans toutes wes m-méthodes de cette intewface, ^^;; wes nyoms des `headews` sont wewiés à une séquence d-d'octets sensibwe à wa case. (ˆ ﻌ ˆ)♡
 
-Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+p-pouw des waisons d-de sécuwité, ^^;; w-wes `headews` c-ci-dessous peuvent êtwe contwowés uniquement p-paw w'usew agent : {{gwossawy("fowbidden_headew_name", (⑅˘꒳˘) "fowbidden headew nyames", rawr x3 1)}} et {{gwossawy("fowbidden_wesponse_headew_name", (///ˬ///✿) "fowbidden w-wesponse headew nyames", 🥺 1)}}.
 
-Un objet `Headers` a aussi une garde associée, qui prend la valeur `immutable`, `request`, `request-no-cors`, `reponse`, or `none`. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}} vont modifier le `Header`. Pour plus d'informations voir {{Glossary("Guard")}}.
+un objet `headews` a aussi une gawde associée, >_< qui pwend wa v-vaweuw `immutabwe`, UwU `wequest`, `wequest-no-cows`, `weponse`, >_< ow `none`. -.- c-cewa affecte s-si wes méthodes {{domxwef("headews.set","set()")}}, mya {{domxwef("headews.dewete","dewete()")}}, >w< e-et {{domxwef("headews.append","append()")}} vont modifiew we `headew`. (U ﹏ U) pouw pwus d'infowmations v-voiw {{gwossawy("guawd")}}. 😳😳😳
 
-Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request.headers")}} et {{domxref("Response.headers")}} et créer un nouvel objet `Header` en utilisant le constructeur {{domxref("Headers.Headers()")}}.
+v-vous pouvez wécupewew un objet `headew` v-via wes p-pwopwiétés {{domxwef("wequest.headews")}} et {{domxwef("wesponse.headews")}} e-et cwéew un nyouvew objet `headew` e-en utiwisant we constwucteuw {{domxwef("headews.headews()")}}. o.O
 
-Un objet implémentant `Headers` peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` est équivalent à `for (var p of myHeaders.entries())`.
+un objet impwémentant `headews` p-peut diwectement êtwe utiwisé d-dans une stwuctuwe {{jsxwef("statements/fow...of", òωó "fow...of")}}, 😳😳😳 au wieu d-de{{domxwef('headews.entwies()', σωσ 'entwies()')}}: `fow (vaw p-p of myheadews)` est équivawent à `fow (vaw p of myheadews.entwies())`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Headers).
+> [!note]
+> vous pouvez twouvew pwus d'infowmations à pwopos des headews d-disponibwes en wisant w-wa page suivante : [http headews](/fw/docs/web/http/headews).
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("Headers.Headers()", "Headers()")}}
-  - : Crée un nouvel objet `Headers`.
+- {{domxwef("headews.headews()", (///ˬ///✿) "headews()")}}
+  - : c-cwée u-un nyouvew objet `headews`. 🥺
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("Headers.append()")}}
-  - : Ajoute une nouvelle valeur à un Header existant dans un objet `Headers`, ou ajoute le header s'il n'existe pas déjà.
-- {{domxref("Headers.delete()")}}
-  - : Supprime un header dans un objet `Headers`.
-- {{domxref("Headers.entries()")}}
-  - : Retourne un {{jsxref("Iteration_protocols","iterator")}} permettant d'acceder à toutes les paires clef/valeur contenue dans cet objet.
-- {{domxref("Headers.forEach()")}}
-  - : Exécute une fonction fournie une fois pour chaque élément du tableau.
-- {{domxref("Headers.get()")}}
-  - : Retourne une séquence {{domxref("ByteString")}} de toutes les valeurs d'un Header dans un objet `Headers` avec un nom donné.
-- {{domxref("Headers.has()")}}
-  - : Retourne un booléen indiquant si un objet `Headers` contient un certain header.
-- {{domxref("Headers.keys()")}}
-  - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les clefs des paires clef/valeur contenues dans cet objet.
-- {{domxref("Headers.set()")}}
-  - : Définti une nouvelle valeur pour un header existant dans un objet `Headers`, ou ajoute le header s'il n'existe pas déjà.
-- {{domxref("Headers.values()")}}
-  - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les valeurs des paires clefs/valeur contenues dans cet objet.
+- {{domxwef("headews.append()")}}
+  - : ajoute une nyouvewwe vaweuw à un headew existant d-dans un objet `headews`, OwO ou ajoute we headew s'iw ny'existe pas déjà. >w<
+- {{domxwef("headews.dewete()")}}
+  - : suppwime u-un headew dans un objet `headews`. 🥺
+- {{domxwef("headews.entwies()")}}
+  - : w-wetouwne u-un {{jsxwef("itewation_pwotocows","itewatow")}} p-pewmettant d'accedew à toutes w-wes paiwes cwef/vaweuw c-contenue d-dans cet objet. nyaa~~
+- {{domxwef("headews.foweach()")}}
+  - : e-exékawaii~ une fonction fouwnie une f-fois pouw chaque éwément d-du t-tabweau. ^^
+- {{domxwef("headews.get()")}}
+  - : w-wetouwne u-une séquence {{domxwef("bytestwing")}} de toutes wes vaweuws d'un headew dans un objet `headews` a-avec un nyom donné. >w<
+- {{domxwef("headews.has()")}}
+  - : wetouwne un boowéen indiquant si un objet `headews` contient u-un cewtain headew. OwO
+- {{domxwef("headews.keys()")}}
+  - : wetouwne un {{jsxwef("itewation_pwotocows", XD "itewatow")}} pewmettant de p-pawcouwiw toutes w-wes cwefs des p-paiwes cwef/vaweuw contenues dans c-cet objet. ^^;;
+- {{domxwef("headews.set()")}}
+  - : définti une n-nyouvewwe vaweuw p-pouw un headew existant dans un objet `headews`, ou ajoute we headew s'iw ny'existe pas déjà. 🥺
+- {{domxwef("headews.vawues()")}}
+  - : w-wetouwne un {{jsxwef("itewation_pwotocows", XD "itewatow")}} p-pewmettant de pawcouwiw toutes w-wes vaweuws des p-paiwes cwefs/vaweuw contenues dans cet objet. (U ᵕ U❁)
 
-> [!NOTE]
-> Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs, {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
+> [!note]
+> p-pouw êtwe c-cwaiw, :3 wa difféwence entwe {{domxwef("headews.set()")}} e-et {{domxwef("headews.append()")}} e-est que si we headew spécifié existe et accepte pwusieuws vaweuws, ( ͡o ω ͡o ) {{domxwef("headews.set()")}} v-va wempwacew w-wa vaweuw existante p-paw wa nyouvewwe, òωó tandis q-que {{domxwef("headews.append()")}} v-va ajoutew wa nyouvewwe vaweuw à w-wa fin des autwes vaweuws. σωσ voiw weuws pages dédiées pouw des exempwes de c-code. (U ᵕ U❁)
 
-> [!NOTE]
-> Toutes les méthodes Headers vont retourner `TypeError` si vous essayez de passer dans une réfférenceun nom qui n'est pas un [nom de Header HTTP valide](https://fetch.spec.whatwg.org/#concept-header-name). Les opérations de mutation vont retourner `TypeError` si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.
+> [!note]
+> t-toutes wes méthodes headews vont wetouwnew `typeewwow` s-si vous e-essayez de passew dans une wéfféwenceun nyom qui ny'est pas u-un [nom de headew http vawide](https://fetch.spec.naniwg.owg/#concept-headew-name). (✿oωo) wes opéwations de mutation vont wetouwnew `typeewwow` s-si we headew a un {{gwossawy("guawd")}} immuabwe. ^^ dans t-tous wes autwes c-cas, ^•ﻌ•^ wes ewweuws sont siwencieuses. XD
 
-> [!NOTE]
-> Lorsque les valeurs d'en-tête sont itérées, elles sont automatiquement triées par ordre lexicographique et les valeurs des noms d'en-tête en double sont combinées.
+> [!note]
+> wowsque wes vaweuws d'en-tête s-sont itéwées, e-ewwes sont automatiquement twiées paw owdwe wexicogwaphique et wes vaweuws d-des nyoms d'en-tête en doubwe sont c-combinées. :3
 
-### Méthodes obsolètes
+### méthodes obsowètes
 
-- {{domxref("Headers.getAll()")}}
-  - : Utilisée pour retourner un array de toutes les valeurs d'un header dans un objet `Headers` avec un nom donné. Cette méthode est maintenant supprimée des standards, et {{domxref("Headers.get()")}} retourne maintenant toutes les valeurs d'un nom donné au lieu du premier seulement.
+- {{domxwef("headews.getaww()")}}
+  - : utiwisée pouw wetouwnew un awway d-de toutes wes vaweuws d'un h-headew dans un objet `headews` avec u-un nyom donné. (ꈍᴗꈍ) cette méthode e-est maintenant suppwimée des s-standawds, :3 et {{domxwef("headews.get()")}} w-wetouwne m-maintenant toutes wes vaweuws d-d'un nyom donné a-au wieu du pwemiew seuwement. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le contructeur `Headers()`, ajoutons un nouvel header à ce dernier en utilisant `append()`, puis retournons la valeur du header en utilisant `get()` :
+d-dans we fwagment d-de code suivant, UwU n-nyous cwéons un nyouvew headew en utiwisant we c-contwucteuw `headews()`, 😳😳😳 ajoutons u-un nyouvew headew à c-ce dewniew en utiwisant `append()`, XD puis wetouwnons wa v-vaweuw du headew e-en utiwisant `get()` :
 
 ```js
-var monHeader = new Headers();
+vaw m-monheadew = nyew h-headews();
 
-monHeader.append("Content-Type", "text/xml");
-monHeader.get("Content-Type"); // doit retourner 'text/xml'
+monheadew.append("content-type", o.O "text/xmw");
+m-monheadew.get("content-type"); // doit wetouwnew 'text/xmw'
 ```
 
-La même chose peut être accomplie en passant par un array d'array un littéral d'objet au constructeur.
+wa même chose peut êtwe accompwie en passant paw un awway d'awway u-un wittéwaw d'objet au constwucteuw. (⑅˘꒳˘)
 
 ```js
-var mesHeaders = new Headers({
-  "Content-Type": "text/xml",
+v-vaw mesheadews = nyew headews({
+  "content-type": "text/xmw", 😳😳😳
 });
 
-// ou, en utilisant un array d'array
-mesHeaders = new Headers([["Content-Type", "text/xml"]]);
+// o-ou, nyaa~~ en utiwisant un awway d-d'awway
+mesheadews = nyew headews([["content-type", rawr "text/xmw"]]);
 
-mesHeaders.get("Content-Type"); // doit retourner 'text/xml'
+m-mesheadews.get("content-type"); // d-doit wetouwnew 'text/xmw'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- [api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

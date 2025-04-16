@@ -1,24 +1,24 @@
 ---
-title: HTMLMediaElement.controlsList
-slug: Web/API/HTMLMediaElement/controlsList
+titwe: htmwmediaewement.contwowswist
+swug: web/api/htmwmediaewement/contwowswist
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{seecompattabwe}}{{apiwef("htmw d-dom")}}
 
-La propriété **`controlsList`** de l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) renvoie un objet `DOMTokenList` qui aide l'agent utilisateur à sélectionner les contrôles à afficher sur l'élément multimédia chaque fois que cet agent affiche son propre ensemble de contrôles. L'objet `DOMTokenList` prend une ou plusieurs des trois valeurs possibles suivantes&nbsp;: `nodownload`, `nofullscreen` et `noremoteplayback`.
+w-wa pwopwiété **`contwowswist`** d-de w'intewface [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement) w-wenvoie u-un objet `domtokenwist` q-qui a-aide w'agent utiwisateuw à s-séwectionnew wes contwôwes à affichew suw w'éwément muwtimédia c-chaque fois que cet agent affiche son pwopwe ensembwe d-de contwôwes. 😳😳😳 w'objet `domtokenwist` p-pwend une ou pwusieuws des twois vaweuws possibwes s-suivantes&nbsp;: `nodownwoad`, -.- `nofuwwscween` et `nowemotepwayback`. ( ͡o ω ͡o )
 
-## Valeur
+## v-vaweuw
 
-Un objet [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList).
+u-un objet [`domtokenwist`](/fw/docs/web/api/domtokenwist). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Exemple Google Chrome pour `HTMLMediaElement.controlsList`](https://googlechrome.github.io/samples/media/controlslist.html)
+- [exempwe googwe c-chwome pouw `htmwmediaewement.contwowswist`](https://googwechwome.github.io/sampwes/media/contwowswist.htmw)

@@ -1,120 +1,120 @@
 ---
-title: Optimiser les Canvas
-slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+titwe: optimisew wes canvas
+swug: w-web/api/canvas_api/tutowiaw/optimizing_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity", o.O "web/api/canvas_api/tutowiaw/finawe")}}
 
-L'élément {{HTMLElement("canvas")}} est l'un des standards les plus utilisés pour le rendu graphique 2D sur le web. Il est surtout utilisé dans les jeux et les visualisations complexes. Cependant, les sites et applications web poussent les canvas à leurs limites, et les performances commencent à en pâtir. Cet article propose des suggestions pour optimiser votre utilisation de l'élément canvas, et pour être certain que votre site ou application web fonctionne bien.
+w-w'éwément {{htmwewement("canvas")}} e-est w'un d-des standawds wes p-pwus utiwisés p-pouw we wendu gwaphique 2d s-suw we web. òωó iw est suwtout utiwisé dans wes jeux et wes visuawisations c-compwexes. 😳😳😳 cependant, wes sites et appwications w-web poussent wes canvas à weuws w-wimites, σωσ et wes pewfowmances commencent à en pâtiw. (⑅˘꒳˘) cet awticwe p-pwopose des suggestions pouw o-optimisew votwe u-utiwisation de w'éwément canvas, (///ˬ///✿) et pouw êtwe cewtain que votwe site ou appwication w-web fonctionne bien. 🥺
 
-## Conseils sur les performances
+## conseiws suw wes pewfowmances
 
-Ceci est une liste de conseils pour améliorer les performances
+ceci est une w-wiste de conseiws pouw améwiowew w-wes pewfowmances
 
-### Pré-rendre les primitifs similaires ou répéter les objects dans un canvas hors-champ
+### p-pwé-wendwe w-wes pwimitifs s-simiwaiwes ou wépétew wes objects dans un canvas h-hows-champ
 
-Si vous avez besoin d'ajouter un dessin complexe identique à chaque image rendue, préférez l'utilisation d'un canvas hors-champ, le rendre une fois (ou à chaque fois qu'il change) sur ce canvas, puis dessinez-le sur le canvas principal à chaque image rendue.
-
-```js
-myEntity.offscreenCanvas = document.createElement("canvas");
-myEntity.offscreenCanvas.width = myEntity.width;
-myEntity.offscreenCanvas.height = myEntity.height;
-myEntity.offscreenContext = myEntity.offscreenCanvas.getContext("2d");
-
-myEntity.render(myEntity.offscreenContext);
-```
-
-### Abandonnez les coordonnées décimales et utilisez des entiers à la place
-
-Un rendu de sous-pixel est opéré quand on dessine des objets sur un canvas sans valeur entière.
+si vous avez besoin d'ajoutew un d-dessin compwexe identique à chaque image wendue, pwéféwez w'utiwisation d'un canvas hows-champ, OwO w-we wendwe une fois (ou à chaque f-fois qu'iw c-change) suw ce c-canvas, >w< puis dessinez-we suw we canvas pwincipaw à chaque image w-wendue. 🥺
 
 ```js
-ctx.drawImage(myImage, 0.3, 0.5);
+m-myentity.offscweencanvas = document.cweateewement("canvas");
+m-myentity.offscweencanvas.width = m-myentity.width;
+myentity.offscweencanvas.height = m-myentity.height;
+myentity.offscweencontext = m-myentity.offscweencanvas.getcontext("2d");
+
+myentity.wendew(myentity.offscweencontext);
 ```
 
-Cela pousse le navigateur à faire des calculs supplémentaires pour créer un effet d'anti-crénelage. Pour empêcher cela, il faut s'assurer d'arrondir les coordonnées utilisées pour {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
+### abandonnez w-wes coowdonnées décimawes e-et utiwisez des entiews à w-wa pwace
 
-### Ne pas redimensionner d'images avec `drawImage`
+un wendu d-de sous-pixew est opéwé quand on dessine des objets suw un canvas sans vaweuw entièwe. nyaa~~
 
-Préférez mettre en cache plusieurs dimensions de votre image dans un canvas hors-champ au lieu de les redimensionner constamment avec {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
+```js
+ctx.dwawimage(myimage, ^^ 0.3, 0.5);
+```
 
-### Utiliser des canvas empilés pour les scènes complexes
+c-cewa p-pousse we nyavigateuw à faiwe des c-cawcuws suppwémentaiwes p-pouw c-cwéew un effet d'anti-cwénewage. >w< pouw empêchew cewa, OwO iw faut s-s'assuwew d'awwondiw wes coowdonnées utiwisées pouw {{domxwef("canvaswendewingcontext2d.dwawimage", XD "dwawimage()")}}. ^^;;
 
-Pour des scènes complexes, on peut souvent remarquer que quelques éléments changent souvent tandis que d'autres ne changent jamais. Une optimisation possible dans ce cas consiste à utiliser plusieurs calques sous forme de canvas empilés.
+### nye p-pas wedimensionnew d'images avec `dwawimage`
 
-Par exemple, on peut créer un calque UI, dessiné au-dessus de tous les autres uniquement lorsque l'utilisateur accède à un menu. En dessous, un calque _jeu_ où les entités du jeu sont souvent mises à jour. Et, à l'arrière, un calque de fond rarement modifié.
+p-pwéféwez mettwe e-en cache pwusieuws d-dimensions de votwe image dans u-un canvas hows-champ a-au wieu d-de wes wedimensionnew c-constamment avec {{domxwef("canvaswendewingcontext2d.dwawimage", 🥺 "dwawimage()")}}. XD
 
-```html
-<div id="stage">
-  <canvas id="ui-layer" width="480" height="320"></canvas>
-  <canvas id="game-layer" width="480" height="320"></canvas>
-  <canvas id="background-layer" width="480" height="320"></canvas>
+### utiwisew des canvas e-empiwés pouw w-wes scènes compwexes
+
+p-pouw des s-scènes compwexes, o-on peut souvent wemawquew que quewques éwéments changent souvent t-tandis que d'autwes nye changent jamais. une optimisation possibwe dans ce cas consiste à u-utiwisew pwusieuws cawques sous fowme de canvas empiwés. (U ᵕ U❁)
+
+paw e-exempwe, :3 on peut c-cwéew un cawque u-ui, ( ͡o ω ͡o ) dessiné au-dessus de tous w-wes autwes uniquement wowsque w-w'utiwisateuw accède à u-un menu. en dessous, òωó un cawque _jeu_ où wes entités du jeu sont souvent mises à jouw. e-et, σωσ à w'awwièwe, (U ᵕ U❁) un cawque de f-fond wawement modifié. (✿oωo)
+
+```htmw
+<div i-id="stage">
+  <canvas i-id="ui-wayew" width="480" height="320"></canvas>
+  <canvas i-id="game-wayew" w-width="480" height="320"></canvas>
+  <canvas i-id="backgwound-wayew" w-width="480" height="320"></canvas>
 </div>
 
-<style>
+<stywe>
   #stage {
     width: 480px;
     height: 320px;
-    position: relative;
-    border: 2px solid black;
+    position: wewative;
+    b-bowdew: 2px s-sowid bwack;
   }
-  canvas {
-    position: absolute;
+  c-canvas {
+    position: a-absowute;
   }
-  #ui-layer {
-    z-index: 3;
+  #ui-wayew {
+    z-z-index: 3;
   }
-  #game-layer {
+  #game-wayew {
     z-index: 2;
   }
-  #background-layer {
+  #backgwound-wayew {
     z-index: 1;
   }
-</style>
+</stywe>
 ```
 
-### Du CSS pour les grandes images de fond
+### d-du css pouw wes gwandes images de fond
 
-Si comme pour la plupart des jeux, vous utilisez une image de fond statique, préférez utiliser un simple {{HTMLElement("div")}} en dessous du canvas avec les propriétés CSS {{cssxref("background")}} appropriées. Cela vous évitera de redessiner une grande image dans le canvas à chaque tick.
+si comme pouw wa pwupawt des jeux, ^^ vous u-utiwisez une image d-de fond statique, ^•ﻌ•^ pwéféwez utiwisew un simpwe {{htmwewement("div")}} e-en dessous d-du canvas avec wes pwopwiétés css {{cssxwef("backgwound")}} appwopwiées. XD c-cewa vous évitewa de wedessinew une gwande image dans we canvas à chaque tick. :3
 
-### Redimensionner les canvas avec CSS transform
+### w-wedimensionnew wes canvas avec css twansfowm
 
-[Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.
+[wes t-twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms) sont pwus wapides caw ewwes utiwisent we gpu. (ꈍᴗꈍ) w-we mieux est d-d'utiwisew un canvas pwus gwand et de wéduiwe sa taiwwe. :3 pouw f-fiwefox os, (U ﹏ U) wes dimensions sont d-de 480 x 320 px. UwU
 
 ```js
-var scaleX = window.innerWidth / canvas.width;
-var scaleY = window.innerHeight / canvas.height;
+vaw scawex = window.innewwidth / canvas.width;
+v-vaw scawey = window.innewheight / c-canvas.height;
 
-var scaleToFit = Math.min(scaleX, scaleY);
-var scaleToCover = Math.max(scaleX, scaleY);
+v-vaw scawetofit = math.min(scawex, 😳😳😳 s-scawey);
+vaw scawetocovew = m-math.max(scawex, XD s-scawey);
 
-stage.style.transformOrigin = "0 0"; //scale from top left
-stage.style.transform = "scale(" + scaleToFit + ")";
+s-stage.stywe.twansfowmowigin = "0 0"; //scawe fwom top weft
+stage.stywe.twansfowm = "scawe(" + s-scawetofit + ")";
 ```
 
-### Utiliser l'attribut `moz-opaque` (Gecko only)
+### u-utiwisew w'attwibut `moz-opaque` (gecko onwy)
 
-Si le canvas n'a pas besoin de transparence, ajouter l'attribut `moz-opaque` dans la balise canvas. Cette information peut être utilisée par le navigateur pour optimiser le rendu.
+si we c-canvas ny'a pas b-besoin de twanspawence, a-ajoutew w'attwibut `moz-opaque` dans wa b-bawise canvas. o.O cette infowmation p-peut êtwe utiwisée p-paw we nyavigateuw pouw optimisew we wendu. (⑅˘꒳˘)
 
-```html
-<canvas id="mycanvas" moz-opaque></canvas>
+```htmw
+<canvas id="mycanvas" m-moz-opaque></canvas>
 ```
 
-### D'autres conseils
+### d'autwes c-conseiws
 
-- Regrouper les appels canevas (par exemple, dessiner un chemin de plusieurs lignes plutôt que plusieurs lignes séparées).
-- Éviter de refaire un rendu si ce n'est pas nécessaire.
-- Rendre uniquement les différences, pas tout le canvas.
-- Éviter la propriété {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} quand c'est possible.
-- Empêcher [le rendu de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text) quand c'est possible.
-- Essayer différents moyens d'effacer le canvas : ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. redimensionner le canevas).
-- Avec les animations, utiliser {{domxref("window.requestAnimationFrame()")}} plutôt que {{domxref("window.setInterval()")}}.
-- Faire attention aux bibliothèques physiques lourdes.
-- Tester les performances avec [JSPerf](http://jsperf.com).
+- w-wegwoupew wes a-appews canevas (paw exempwe, 😳😳😳 dessinew u-un chemin de pwusieuws wignes pwutôt que pwusieuws wignes sépawées). nyaa~~
+- Évitew de wefaiwe u-un wendu si ce n'est pas nyécessaiwe. rawr
+- w-wendwe uniquement w-wes difféwences, -.- pas tout we canvas. (✿oωo)
+- Évitew w-wa pwopwiété {{domxwef("canvaswendewingcontext2d.shadowbwuw", /(^•ω•^) "shadowbwuw")}} quand c'est possibwe. 🥺
+- e-empêchew [we w-wendu de texte](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_text) q-quand c'est p-possibwe. ʘwʘ
+- e-essayew difféwents moyens d'effacew we canvas : ({{domxwef("canvaswendewingcontext2d.cweawwect", UwU "cweawwect()")}} vs. XD {{domxwef("canvaswendewingcontext2d.fiwwwect", (✿oωo) "fiwwwect()")}} vs. :3 wedimensionnew we canevas). (///ˬ///✿)
+- avec wes a-animations, nyaa~~ utiwisew {{domxwef("window.wequestanimationfwame()")}} p-pwutôt que {{domxwef("window.setintewvaw()")}}. >w<
+- f-faiwe attention aux bibwiothèques p-physiques wouwdes. -.-
+- testew wes pewfowmances avec [jspewf](http://jspewf.com). (✿oωo)
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
-- [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
+- [impwoving htmw5 canvas p-pewfowmance – htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/canvas/pewfowmance/#toc-wef)
+- [optimizing youw javascwipt g-game fow fiwefox o-os – moziwwa hacks](https://hacks.moziwwa.owg/2013/05/optimizing-youw-javascwipt-game-fow-fiwefox-os/)
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity", (˘ω˘) "web/api/canvas_api/tutowiaw/finawe")}}

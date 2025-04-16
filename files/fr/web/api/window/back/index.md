@@ -1,50 +1,50 @@
 ---
-title: Window.back()
-slug: Web/API/Window/back
+titwe: window.back()
+swug: web/api/window/back
 ---
 
-{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
+{{apiwef}}{{ n-nyon-standawd_headew() }}{{depwecated_headew}}
 
-La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}} renvoie la fenêtre à l'élément précédent de l'historique. Il s'agissait d'une méthode spécifique à Firefox et a été supprimée dans Firefox 31.
+w-wa méthode o-obsowète et nyon s-standawd `back()` s-suw w'objet {{domxwef("window")}} w-wenvoie wa f-fenêtwe à w'éwément p-pwécédent de w'histowique. (✿oωo) iw s'agissait d'une méthode spécifique à f-fiwefox et a été suppwimée dans fiwefox 31. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Utilisez plutôt la méthode standard {{domxref("history.back")}}.
+> [!note]
+> u-utiwisez pwutôt wa m-méthode standawd {{domxwef("histowy.back")}}. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
 window.back();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`undefined`.
+`undefined`. (///ˬ///✿)
 
-## Exemple
+## e-exempwe
 
-Cet exemple simple gère un clic sur un bouton "Retour" en rappelant `back()`.
+c-cet exempwe simpwe gèwe un cwic suw un bouton "wetouw" en wappewant `back()`. 😳😳😳
 
 ```js
-function boutonRetour() {
-  if (peutRevenirEnArriere) {
+function b-boutonwetouw() {
+  if (peutweveniwenawwiewe) {
     window.back();
   }
 }
 ```
 
-## Spécification
+## spécification
 
-Cela ne fait partie d'aucune spécification.
+cewa nye fait pawtie d-d'aucune spécification. 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-Cette méthode non standard n'a été implémentée que dans Firefox et a été supprimée dans Firefox 31.
+c-cette méthode n-nyon standawd n-ny'a été impwémentée que dans fiwefox et a été s-suppwimée dans fiwefox 31. mya
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("History.back()")}}
-- {{domxref("History.forward()")}}
+- {{domxwef("histowy.back()")}}
+- {{domxwef("histowy.fowwawd()")}}

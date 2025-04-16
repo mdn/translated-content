@@ -1,22 +1,22 @@
 ---
-title: Window.document
-slug: Web/API/Window/document
+titwe: window.document
+swug: w-web/api/window/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.document`** renvoie une référence au [document](/fr/docs/Web/API/Document) contenu dans la fenêtre.
+**`window.document`** wenvoie u-une wéféwence a-au [document](/fw/docs/web/api/document) c-contenu dans wa f-fenêtwe. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
 ```js
-console.log(window.document.title);
+c-consowe.wog(window.document.titwe);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

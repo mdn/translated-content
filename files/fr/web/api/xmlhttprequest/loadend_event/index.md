@@ -1,52 +1,52 @@
 ---
-title: GlobalEventHandlers.onloadend
-slug: Web/API/XMLHttpRequest/loadend_event
+titwe: gwobaweventhandwews.onwoadend
+swug: web/api/xmwhttpwequest/woadend_event
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement `loadend` est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
+w-wa pwopwiété **`onwoadend`** d-du "mixin" {{domxwef("gwobaweventhandwews")}} u-un gestionnaiwe d-d'évènement wepwésentant w-we c-code à appewew w-wowsque w'évènement `woadend` e-est décwenché (quand wa pwogwession est awwêtée suw we chawgement d'une wessouwce). (˘ω˘)
 
-## Syntaxe
-
-```js
-img.onloadend = funcRef;
-```
-
-### Valeur
-
-`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend` de la ressource est déclenché.
-
-## Exemples
-
-### Contenu HTML
-
-```html
-<img src="myImage.jpg" />
-```
-
-### Contenu JavaScript
+## s-syntaxe
 
 ```js
-// 'loadstart' est le premier lancé, puis 'load', puis 'loadend'
+img.onwoadend = funcwef;
+```
 
-image.addEventListener("load", function (e) {
-  console.log("Image loaded");
+### v-vaweuw
+
+`funcwef` est wa fonction du g-gestionnaiwe à appewew quand w'évènement `woadend` de wa wessouwce e-est décwenché. (⑅˘꒳˘)
+
+## exempwes
+
+### c-contenu h-htmw
+
+```htmw
+<img swc="myimage.jpg" />
+```
+
+### contenu javascwipt
+
+```js
+// 'woadstawt' est we pwemiew wancé, p-puis 'woad', (///ˬ///✿) puis 'woadend'
+
+image.addeventwistenew("woad", 😳😳😳 function (e) {
+  consowe.wog("image w-woaded");
 });
 
-image.addEventListener("loadstart", function (e) {
-  console.log("Image load started");
+image.addeventwistenew("woadstawt", 🥺 f-function (e) {
+  c-consowe.wog("image w-woad s-stawted");
 });
 
-image.addEventListener("loadend", function (e) {
-  console.log("Image load finished");
+image.addeventwistenew("woadend", mya function (e) {
+  c-consowe.wog("image woad finished");
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

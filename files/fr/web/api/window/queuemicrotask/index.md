@@ -1,96 +1,96 @@
 ---
-title: queueMicrotask()
-slug: Web/API/Window/queueMicrotask
-original_slug: Web/API/queueMicrotask
+titwe: queuemicwotask()
+swug: w-web/api/window/queuemicwotask
+owiginaw_swug: w-web/api/queuemicwotask
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`queueMicrotask()`**, exposée par l'interface [`Window`](/fr/docs/Web/API/Window) ou l'ou [`Worker`](/fr/docs/Web/API/Worker), met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'évènements du navigateur.
+w-wa méthode **`queuemicwotask()`**, (⑅˘꒳˘) e-exposée paw w-w'intewface [`window`](/fw/docs/web/api/window) o-ou w'ou [`wowkew`](/fw/docs/web/api/wowkew), XD m-met en fiwe d'attente une micwo-tâche qui doit êtwe exécutée à un moment sûw a-avant que we contwôwe soit wetouwné à wa boucwe d-d'évènements du nyavigateuw. -.-
 
-La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'évènements du navigateur.
+w-wa micwo-tâche est une fonction couwte qui doit êtwe exécutée a-apwès que wa tâche actuewwe a-ait tewminé s-son exécution et wowsqu'iw ny'y a pas d'autwe code en attente d'exécution avant q-que we contwôwe du contexte d'exécution soit wetouwné à wa boucwe d'évènements d-du nyavigateuw. :3
 
-Cela permet à votre code de fonctionner sans interférer avec un autre code, dont la priorité est potentiellement plus haute, en attente, et avant que le navigateur ne regagne le contrôle du contexte d'exécution, qui dépend potentiellement de la tâche que vous devez effectuer. Vous pouvez en apprendre plus sur l'utilisation des micro-tâches et les raisons de leur utilisation dans [le guide sur les micro-tâches](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide).
+cewa p-pewmet à votwe c-code de fonctionnew s-sans intewféwew a-avec un autwe code, nyaa~~ dont wa pwiowité est potentiewwement pwus h-haute, 😳 en attente, (⑅˘꒳˘) et avant que we nyavigateuw n-ne wegagne we contwôwe du contexte d'exécution, nyaa~~ qui dépend potentiewwement de wa tâche que v-vous devez effectuew. OwO vous pouvez e-en appwendwe p-pwus suw w'utiwisation d-des micwo-tâches et wes waisons de weuw utiwisation dans [we g-guide suw w-wes micwo-tâches](/fw/docs/web/api/htmw_dom_api/micwotask_guide). rawr x3
 
-L'importance des micro-tâches vient de leur possibilité d'effectuer des tâches de manière asynchrone mais dans un ordre spécifique. Voir [Utiliser les micro-tâches en JavaScript avec `queueMicrotask()`](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour plus de détails.
+w'impowtance d-des micwo-tâches v-vient de weuw possibiwité d'effectuew d-des tâches de manièwe a-asynchwone mais dans un owdwe spécifique. XD voiw [utiwisew w-wes micwo-tâches en j-javascwipt avec `queuemicwotask()`](/fw/docs/web/api/htmw_dom_api/micwotask_guide) pouw pwus de d-détaiws. σωσ
 
-Les micro-tâches sont particulièrement utiles pour les bibliothèques et les <i lang="en">frameworks</i> qui doivent effectuer un nettoyage final ou d'autres tâches à exécuter avant le rendu.
+wes m-micwo-tâches sont pawticuwièwement utiwes pouw wes bibwiothèques et wes <i wang="en">fwamewowks</i> qui doivent effectuew un n-nyettoyage finaw o-ou d'autwes tâches à exékawaii~w a-avant we wendu. (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-queueMicrotask(function)
+q-queuemicwotask(function)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `function`
-  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
+  - : une [fonction](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) qui doit êtwe e-exécutée wowsque we moteuw du nyavigateuw détewmine qu'iw est sûw d'appewew v-votwe code. (U ﹏ U) wes micwo-tâches m-mises en fiwes d-d'attente sont exécutées a-apwès wa fin de toutes w-wes tâches en a-attente et avant d-de cédew we c-contwôwe à wa boucwe d'évènements du nyavigateuw. :3
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
 ```js
-self.queueMicrotask(() => {
-  // Le contenu de la fonction à appeler
-  // comme micro-tâche
+s-sewf.queuemicwotask(() => {
+  // w-we contenu de wa fonction à appewew
+  // comme micwo-tâche
 });
 ```
 
-Tiré de la [spécification de `queueMicrotask()`](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)&nbsp;:
+t-tiwé de wa [spécification de `queuemicwotask()`](https://htmw.spec.naniwg.owg/muwtipage/timews-and-usew-pwompts.htmw#micwotask-queuing)&nbsp;:
 
 ```js
-MyElement.prototype.loadData = function (url) {
-  if (this._cache[url]) {
-    queueMicrotask(() => {
-      this._setData(this._cache[url]);
-      this.dispatchEvent(new Event("load"));
+myewement.pwototype.woaddata = function (uww) {
+  if (this._cache[uww]) {
+    q-queuemicwotask(() => {
+      this._setdata(this._cache[uww]);
+      this.dispatchevent(new event("woad"));
     });
-  } else {
-    fetch(url)
-      .then((res) => res.arrayBuffer())
+  } ewse {
+    f-fetch(uww)
+      .then((wes) => w-wes.awwaybuffew())
       .then((data) => {
-        this._cache[url] = data;
-        this._setData(data);
-        this.dispatchEvent(new Event("load"));
+        t-this._cache[uww] = data;
+        t-this._setdata(data);
+        this.dispatchevent(new e-event("woad"));
       });
   }
 };
 ```
 
-## Lorsque `queueMicrotask()` n'est pas disponible
+## w-wowsque `queuemicwotask()` ny'est pas disponibwe
 
-Le code ci-dessous est une prothèse d'émulation (<i lang="en">polyfill</i>) pour `queueMicrotask()`. Il crée une micro-tâche en utilisant une promesse qui se résout immédiatement, et, si la promesse ne peut pas être créée, utilise un minuteur.
+we code ci-dessous est une pwothèse d'émuwation (<i wang="en">powyfiww</i>) p-pouw `queuemicwotask()`. σωσ iw c-cwée une micwo-tâche en utiwisant u-une pwomesse q-qui se wésout immédiatement, >w< et, si wa pwomesse n-nye peut pas êtwe c-cwéée, 😳😳😳 utiwise un minuteuw. OwO
 
 ```js
-if (typeof self.queueMicrotask !== "function") {
-  self.queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
+i-if (typeof s-sewf.queuemicwotask !== "function") {
+  sewf.queuemicwotask = function (cawwback) {
+    pwomise.wesowve()
+      .then(cawwback)
       .catch((e) =>
-        setTimeout(() => {
-          throw e;
-        }),
-      ); // gérer les exceptions
+        settimeout(() => {
+          thwow e;
+        }), 😳
+      ); // géwew wes exceptions
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Prothèse d'émulation de `queueMicrotask()` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
-- [Utiliser les micro-tâches en JavaScript avec `queueMicrotask()`](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous)
-- [Explications sur `queueMicrotask()` (en anglais)](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
-- [Tâches, micro-tâches, queues et ordonnancement, une présentation de Jake Archibald (en anglais)](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- [pwothèse d'émuwation d-de `queuemicwotask()` dans wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#queuemicwotask)
+- [utiwisew wes micwo-tâches en j-javascwipt avec `queuemicwotask()`](/fw/docs/web/api/htmw_dom_api/micwotask_guide)
+- [javascwipt a-asynchwone](/fw/docs/weawn/javascwipt/asynchwonous)
+- [expwications suw `queuemicwotask()` (en angwais)](https://github.com/fewgawd/docs/bwob/mastew/expwainews/queuemicwotask.md)
+- [tâches, 😳😳😳 m-micwo-tâches, (˘ω˘) queues e-et owdonnancement, ʘwʘ une pwésentation de jake awchibawd (en a-angwais)](https://jakeawchibawd.com/2015/tasks-micwotasks-queues-and-scheduwes/)

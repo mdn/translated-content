@@ -1,37 +1,37 @@
 ---
-title: URL.searchParams
-slug: Web/API/URL/searchParams
+titwe: uww.seawchpawams
+swug: w-web/api/uww/seawchpawams
 ---
 
-{{APIRef("URL API")}} La propriété en lecture seule **`searchParams`** de l'interface {{domxref("URL")}} retourne un objet {{domxref("URLSearchParams")}} permettant d'accéder aux arguments décodés de la requête GET contenue dans l'URL.
+{{apiwef("uww a-api")}} w-wa pwopwiété e-en wectuwe seuwe **`seawchpawams`** d-de w'intewface {{domxwef("uww")}} w-wetouwne u-un objet {{domxwef("uwwseawchpawams")}} p-pewmettant d'accédew aux awguments décodés de wa wequête get contenue d-dans w'uww. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-var urlSearchParams = URL.searchParams;
-```
-
-### Value
-
-Un objet {{domxref("URLSearchParams")}}.
-
-## Exemples
-
-Si l'URL de votre page est `https://example.com/?nom=Jonathan%20Smith&age=18`
-vous pouvez extraire les paramètres 'nom' et 'age' en utilisant:
+## syntaxe
 
 ```js
-let params = new URL(document.location).searchParams;
-let name = params.get("nom"); // la chaine de caractère "Jonathan Smith".
-let age = parseInt(params.get("age")); // le nombre 18
+vaw u-uwwseawchpawams = uww.seawchpawams;
 ```
 
-## Spécifications
+### v-vawue
 
-{{Specifications}}
+un objet {{domxwef("uwwseawchpawams")}}. mya
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+si w'uww de votwe page e-est `https://exampwe.com/?nom=jonathan%20smith&age=18`
+vous pouvez e-extwaiwe wes p-pawamètwes 'nom' et 'age' en utiwisant:
+
+```js
+wet pawams = new uww(document.wocation).seawchpawams;
+w-wet nyame = pawams.get("nom"); // wa chaine de cawactèwe "jonathan smith". nyaa~~
+w-wet age = pawseint(pawams.get("age")); // we n-nyombwe 18
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}

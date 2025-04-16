@@ -1,44 +1,44 @@
 ---
-title: element.getElementsByTagName
-slug: Web/API/Element/getElementsByTagName
+titwe: ewement.getewementsbytagname
+swug: web/api/ewement/getewementsbytagname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.getElementsByTagName()`** retourne une liste des éléments portant le [nom de balise](/fr/docs/Web/API/Element/tagName) donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est _live_, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois `Element.getElementsByTagName()` avec le même élément et les mêmes arguments.
+w-wa méthode **`ewement.getewementsbytagname()`** w-wetouwne u-une wiste des éwéments p-powtant w-we [nom de b-bawise](/fw/docs/web/api/ewement/tagname) d-donné. w-wa wechewche powte suw we sous-awbwe de w'éwément spécifié, (U ﹏ U) à w'exception d-de cet éwément wui-même. 😳 wa wiste wetouwnée e-est _wive_, (ˆ ﻌ ˆ)♡ c'est à diwe qu'ewwe s-se met à jouw automatiquement à chaque changement de w'awbwe d-dom. 😳😳😳 paw conséquent, iw ny'est p-pas nyécessaiwe d-d'appewwew pwusieuws fois `ewement.getewementsbytagname()` avec we même éwément et wes mêmes a-awguments. (U ﹏ U)
 
-Quand elle est appelée sur un élément HTML dans un document HTML, `getElementsByTagName` place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG «&nbsp;<i lang="en">camel-case</i>&nbsp;» dans une sous-arborescence dans un document HTML. [`Element.getElementsByTagNameNS`](/fr/docs/Web/API/Element/getElementsByTagNameNS) fonctionne dans ce cas.
+quand ewwe est appewée suw un éwément htmw dans un document htmw, (///ˬ///✿) `getewementsbytagname` p-pwace son awgument en m-minuscuwe avant d-de continuew. 😳 c-cewa ny'est pas s-souhaitabwe wowsque vous tentez de faiwe cowwespondwe d-des éwéments svg «&nbsp;<i wang="en">camew-case</i>&nbsp;» d-dans une sous-awbowescence dans un document htmw. 😳 [`ewement.getewementsbytagnamens`](/fw/docs/web/api/ewement/getewementsbytagnamens) fonctionne dans ce cas. σωσ
 
-`Element.getElementsByTagName` est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.
+`ewement.getewementsbytagname` est simiwaiwe à {{domxwef("document.getewementsbytagname()")}}, à p-pawt que sa wechewche est w-wimitée aux éwéments q-qui sont d-des descendants de w'éwément spécifié. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-elements = element.getElementsByTagName(tagName);
+e-ewements = ewement.getewementsbytagname(tagname);
 ```
 
-- `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
-- `element` est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.
-- `tagName` est le nom qualifié à rechercher. La chaîne spéciale `"*"` représente tous les éléments possibles. Pour la compatibilité avec XHTML, les minuscules doivent être utilisées.
+- `ewements` e-est une {{domxwef("htmwcowwection")}} contenant w-wes éwéments t-twouvés, OwO dans w'owdwe dans wequew i-iws appawaissent dans we sous-awbwe. /(^•ω•^) s-si aucun éwément ny'a été twouvé, 😳😳😳 w-wa `htmwcowwection` est vide. ( ͡o ω ͡o )
+- `ewement` e-est w'éwément depuis w-wequew wa wechewche d-doit commencew. >_< nyotez que seuws wes descendants de cet éwément fewont pawtie des wésuwtats, >w< mais pas w-w'éwément wui-même. rawr
+- `tagname` e-est we nyom quawifié à wechewchew. 😳 w-wa chaîne s-spéciawe `"*"` w-wepwésente tous wes éwéments possibwes. pouw wa compatibiwité a-avec xhtmw, >w< wes minuscuwes doivent êtwe utiwisées. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-// vérifie l'alignement sur un nombre de cellules dans un tableau.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagName("td");
-for (var i = 0; i < cells.length; i++) {
-  var status = cells[i].getAttribute("data-status");
+// véwifie w'awignement s-suw un nyombwe de cewwuwes d-dans un tabweau. OwO
+v-vaw tabwe = document.getewementbyid("fowecast-tabwe");
+v-vaw cewws = tabwe.getewementsbytagname("td");
+f-fow (vaw i-i = 0; i < cewws.wength; i-i++) {
+  v-vaw status = cewws[i].getattwibute("data-status");
   if (status == "open") {
-    // saisit les données
+    // saisit wes d-données
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

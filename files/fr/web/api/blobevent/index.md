@@ -1,40 +1,40 @@
 ---
-title: BlobEvent
-slug: Web/API/BlobEvent
+titwe: bwobevent
+swug: web/api/bwobevent
 ---
 
-{{APIRef ("Media Capture and Streams")}}
+{{apiwef ("media c-captuwe and stweams")}}
 
-L'interface `BlobEvent` représente les événements associés à un {{domxref ("Blob")}}. Ces blobs sont généralement, mais pas nécessairement, associés au contenu multimédia.
+w-w'intewface `bwobevent` w-wepwésente wes événements a-associés à un {{domxwef ("bwob")}}. ʘwʘ c-ces bwobs s-sont généwawement, /(^•ω•^) m-mais pas nyécessaiwement, ʘwʘ a-associés au contenu muwtimédia. σωσ
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}
-  - : Crée un événement `BlobEvent` avec les paramètres donnés.
+- {{domxwef("bwobevent.bwobevent", OwO "bwobevent()")}}
+  - : cwée un événement `bwobevent` avec w-wes pawamètwes donnés. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, {{domxref("Event")}}_.
+_héwite d-des pwopwiétés de son p-pawent, 😳😳😳 {{domxwef("event")}}_. o.O
 
-- {{domxref("BlobEvent.data")}} {{readonlyInline}}
-  - : Un objet {{domxref("Blob")}} qui représente les données associées à l'évènement. L'évènement a été déclenché sur le {{domxref("EventTarget")}} en raison de quelque chose survenu spécifiquement sur ce {{domxref("Blob")}}.
-- {{domxref("BlobEvent.timecode")}} {{readonlyinline}}
-  - : {{domxref("DOMHighResTimeStamp")}} indique la différence entre l'horodatage du premier bloc de données et l'horadatage du premier bloc `BlobEvent` produit par cet enregistreur. On notera que le _timecode_ du premier `BlobEvent` produit , n'a pas besoin d'être nul.
+- {{domxwef("bwobevent.data")}} {{weadonwyinwine}}
+  - : un objet {{domxwef("bwob")}} qui wepwésente wes données a-associées à w'évènement. ( ͡o ω ͡o ) w-w'évènement a été d-décwenché suw we {{domxwef("eventtawget")}} en waison de quewque chose suwvenu spécifiquement s-suw ce {{domxwef("bwob")}}. (U ﹏ U)
+- {{domxwef("bwobevent.timecode")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp")}} indique wa difféwence entwe w'howodatage du pwemiew bwoc de d-données et w'howadatage du pwemiew b-bwoc `bwobevent` p-pwoduit paw c-cet enwegistweuw. (///ˬ///✿) o-on nyotewa que we _timecode_ du pwemiew `bwobevent` p-pwoduit , >w< n'a pas besoin d'êtwe nyuw. rawr
 
-## Méthodes
+## m-méthodes
 
-_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent [`Event`](/fr/docs/Web/API/Event)._
+_pas de méthode spécifique&nbsp;; héwite des méthodes de son pawent [`event`](/fw/docs/web/api/event)._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface de base {{domxref("Event")}} .
-- [L'API <i lang="en">MediaStream Recording</i>](/fr/docs/Web/API/MediaStream_Recording_API)&nbsp;: envoie des objets `BlobEvent` chaque fois qu'un fragment de media est prêt.
-- [Utiliser l'API MediaStream Recording](/fr/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- w-w'intewface de b-base {{domxwef("event")}} .
+- [w'api <i w-wang="en">mediastweam wecowding</i>](/fw/docs/web/api/mediastweam_wecowding_api)&nbsp;: envoie des objets `bwobevent` chaque fois qu'un f-fwagment de media e-est pwêt. mya
+- [utiwisew w'api m-mediastweam wecowding](/fw/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)

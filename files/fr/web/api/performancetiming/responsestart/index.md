@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.responseStart
-slug: Web/API/PerformanceTiming/responseStart
+titwe: pewfowmancetiming.wesponsestawt
+swug: w-web/api/pewfowmancetiming/wesponsestawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette i-intewface est d-dépwéciée dans w-wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). /(^•ω•^) v-veuiwwez utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. rawr
 
-L'ancienne propriété en lecture seule **`responseStart`** retourne un `unsigned long long` représentant le moment (en millisecondes depuis l'époque UNIX) où le navigateur a reçu le premier octet de la réponse du serveur, du cache ou de la ressource locale.
+w'ancienne pwopwiété en wectuwe s-seuwe **`wesponsestawt`** wetouwne un `unsigned w-wong wong` wepwésentant we moment (en m-miwwisecondes depuis w'époque unix) où we nyavigateuw a-a weçu we pwemiew octet de wa wéponse d-du sewveuw, OwO d-du cache ou de wa wessouwce wocawe. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.responseStart;
+wet time = pewfowmancetiming.wesponsestawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe e-ewwe appawtient. >_<

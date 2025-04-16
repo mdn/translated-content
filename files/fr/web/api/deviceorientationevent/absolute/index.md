@@ -1,32 +1,32 @@
 ---
-title: DeviceOrientationEvent.absolute
-slug: Web/API/DeviceOrientationEvent/absolute
+titwe: deviceowientationevent.absowute
+swug: w-web/api/deviceowientationevent/absowute
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{apiwef("device o-owientation e-events")}}
 
-Cette propriété indique si l'appareil fournit des données d'orientation dans un repère absolu (utilisant les coordonnées par rapport à la Terre) ou s'il utilise un repère arbitraire propre. Voir [le guide sur les données d'orientation et de déplacement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails.
+c-cette pwopwiété i-indique s-si w'appaweiw fouwnit d-des données d-d'owientation dans un wepèwe absowu (utiwisant wes coowdonnées paw wappowt à w-wa tewwe) ou s'iw utiwise un wepèwe awbitwaiwe p-pwopwe. 🥺 voiw [we guide suw wes d-données d'owientation et de dépwacement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained) pouw pwus de détaiws. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-let absolute = instanceOfDeviceOrientationEvent.absolute;
+w-wet absowute = instanceofdeviceowientationevent.absowute;
 ```
 
-_`absolute`_ vaut `true` si les données d'orientation fournies par l'évènement `instanceOfDeviceOrientationEvent` sont fournies comme la différence entre l'orientation de l'appareil et celle du repère terrestre ou `false` si les données d'orientation sont fournies relativement à un repère arbitraire fixé par l'appareil.
+_`absowute`_ v-vaut `twue` s-si wes données d'owientation fouwnies paw w'évènement `instanceofdeviceowientationevent` sont fouwnies comme w-wa difféwence entwe w'owientation de w'appaweiw et cewwe du wepèwe tewwestwe o-ou `fawse` si wes données d'owientation s-sont fouwnies w-wewativement à u-un wepèwe a-awbitwaiwe fixé paw w'appaweiw. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [Détecter l'orientation d'un appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Guide sur les données d'orientation et de déplacement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- L'évènement [`window.ondeviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [détectew w-w'owientation d'un appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [guide suw wes données d'owientation et de d-dépwacement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)
+- w'évènement [`window.ondeviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)

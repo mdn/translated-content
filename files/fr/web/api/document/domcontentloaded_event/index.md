@@ -1,163 +1,163 @@
 ---
-title: "Document: DOMContentLoaded event"
-slug: Web/API/Document/DOMContentLoaded_event
+titwe: "document: domcontentwoaded e-event"
+swug: w-web/api/document/domcontentwoaded_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initial est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.
+w-w'évènement **`domcontentwoaded`** e-est décwenché q-quand we document h-htmw initiaw e-est compwètement c-chawgé et anawysé, -.- sans attendwe wa fin du chawgement des feuiwwes de stywes, ^•ﻌ•^ i-images et sous-document. rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui (bien que spécifié comme évènement simple non annulable)</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestion de l'évènement</th>
-      <td>Aucune</td>
-    </tr>
+    <tw>
+      <th scope="wow">bouiwwonne</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>oui (bien que spécifié comme évènement s-simpwe nyon annuwabwe)</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de g-gestion de w'évènement</th>
+      <td>aucune</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tort `load` là où `DOMContentLoaded` serait plus approprié.
+un évènement d-difféwent, (˘ω˘) {{domxwef("window/woad_event", nyaa~~ "woad")}} d-doit êtwe utiwisé pouw détectew que wa page entièwe est chawgée. UwU on u-utiwise couwamment à towt `woad` wà où `domcontentwoaded` sewait pwus appwopwié. :3
 
-Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafic du document principal HTML.
+d-du code javascwipt synchwone v-va mettwe en p-pause wa cwéation d-du dom. (⑅˘꒳˘) si vous v-vouwez chawgew we dom we pwus wapidement possibwe, (///ˬ///✿) v-vous pouvez faiwe votwe code [(en) javascwipt a-asynchwone](/fw/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests) et [(en) optimisew we chawgement des feuiwwes de stywes](https://devewopews.googwe.com/speed/docs/insights/optimizecssdewivewy). ^^;; si vous c-chawgez comme d'habitude, >_< wes f-feuiwwes de stywes v-vont wawentiw w-wa cwéation du dom comme si ewwes étaient chawgées en pawawwèwe, rawr x3 e-en «vowant» w-we twafic du document pwincipaw h-htmw. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-### Usage simple
+### usage simpwe
 
 ```js
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed");
+d-document.addeventwistenew("domcontentwoaded", :3 (event) => {
+  consowe.wog("dom fuwwy woaded and p-pawsed");
 });
 ```
 
-### Retarde DOMContentLoaded
+### wetawde domcontentwoaded
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
+```htmw
+<scwipt>
+  d-document.addeventwistenew("domcontentwoaded", (ꈍᴗꈍ) (event) => {
+    consowe.wog("dom f-fuwwy woaded and pawsed");
   });
 
-  for (let i = 0; i < 1000000000; i++) {} // This synchronous script is going to delay parsing of the DOM,
-  // so the DOMContentLoaded event is going to launch later.
-</script>
+  f-fow (wet i-i = 0; i < 1000000000; i++) {} // this synchwonous scwipt is going to deway pawsing of the dom, /(^•ω•^)
+  // so the domcontentwoaded event i-is going to w-waunch watew. (⑅˘꒳˘)
+</scwipt>
 ```
 
-### Vérifie que le contenu si le chargement est déjà fini
+### véwifie que we c-contenu si we c-chawgement est déjà f-fini
 
-L'évènement `DOMContentLoaded` peut-être déclenché avant que le script soit exécuté, donc il vaut mieux vérifier avant d'ajouter un écouteur d'évènement.
+w'évènement `domcontentwoaded` peut-êtwe décwenché avant que we s-scwipt soit exécuté, ( ͡o ω ͡o ) donc iw vaut mieux véwifiew avant d'ajoutew un écouteuw d-d'évènement. òωó
 
 ```js
-function doSomething() {
-  console.info("DOM loaded");
+function d-dosomething() {
+  c-consowe.info("dom w-woaded");
 }
 
-if (document.readyState === "loading") {
-  // Loading hasn't finished yet
-  document.addEventListener("DOMContentLoaded", doSomething);
-} else {
-  // `DOMContentLoaded` has already fired
-  doSomething();
+if (document.weadystate === "woading") {
+  // w-woading hasn't finished y-yet
+  document.addeventwistenew("domcontentwoaded", (⑅˘꒳˘) d-dosomething);
+} e-ewse {
+  // `domcontentwoaded` has awweady fiwed
+  dosomething();
 }
 ```
 
-### Démonstration
+### d-démonstwation
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div c-cwass="contwows">
+  <button i-id="wewoad" t-type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea weadonwy cwass="event-wog-contents" w-wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: c-contwow;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: n-nyone;
 }
 
-label,
+wabew,
 button {
-  display: block;
+  d-dispway: bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  height: 2wem;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+c-const wog = document.quewysewectow(".event-wog-contents");
+const wewoad = document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  window.setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+wewoad.addeventwistenew("cwick", XD () => {
+  wog.textcontent = "";
+  window.settimeout(() => {
+    w-window.wocation.wewoad(twue);
+  }, -.- 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent = log.textContent + "load\n";
+window.addeventwistenew("woad", :3 (event) => {
+  w-wog.textcontent = wog.textcontent + "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+d-document.addeventwistenew("weadystatechange", nyaa~~ (event) => {
+  w-wog.textcontent = wog.textcontent + `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", 😳 (event) => {
+  w-wog.textcontent = w-wog.textcontent + `domcontentwoaded\n`;
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('Démonstration', '100%', '160px') }}
+{{ e-embedwivesampwe('démonstwation', (⑅˘꒳˘) '100%', '160px') }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Évènements similaires: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}} et {{domxref("Window/unload_event", "unload")}}
-- Cet évènement sur la cible {{domxref("Window")}}: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
+- Évènements simiwaiwes: {{domxwef("window/woad_event", nyaa~~ "woad")}}, OwO {{domxwef("document/weadystatechange_event", rawr x3 "weadystatechange")}}, XD {{domxwef("window/befoweunwoad_event", σωσ "befoweunwoad")}} e-et {{domxwef("window/unwoad_event", (U ᵕ U❁) "unwoad")}}
+- c-cet évènement s-suw wa cibwe {{domxwef("window")}}: {{domxwef("window/domcontentwoaded_event", (U ﹏ U) "domcontentwoaded")}}

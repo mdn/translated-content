@@ -1,165 +1,165 @@
 ---
-title: Dessin de texte avec canvas
-slug: Web/API/Canvas_API/Tutorial/Drawing_text
+titwe: dessin de texte avec canvas
+s-swug: web/api/canvas_api/tutowiaw/dwawing_text
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("tutowiew_canvas/ajout_de_stywes_et_de_couweuws", 😳😳😳 "tutowiew_canvas/utiwisation_d'images")}}
 
-Après avoir vu comment [appliquer les styles et les couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le chapitre précédent, nous allons maintenant voir comment dessiner du texte sur canvas.
+a-apwès a-avoiw vu comment [appwiquew w-wes s-stywes et wes couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) d-dans we c-chapitwe pwécédent, σωσ nyous awwons maintenant voiw comment dessinew du texte suw c-canvas. (⑅˘꒳˘)
 
-## Dessin de texte
+## dessin de texte
 
-Le contexte de rendu du canevas fournit deux méthodes pour le rendu du texte :
+we contexte de wendu d-du canevas fouwnit deux méthodes p-pouw we wendu du texte :
 
-- {{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}
-  - : Remplit un texte donné à la position (x, y). Facultatif, avec une largeur maximale à dessiner.
-- {{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}
-  - : Trait d'un texte donné à la position (x, y). Facultatif, avec une largeur maximale à dessiner.
+- {{domxwef("canvaswendewingcontext2d.fiwwtext", (///ˬ///✿) "fiwwtext(text, 🥺 x, y [, maxwidth])")}}
+  - : wempwit un texte d-donné à wa position (x, OwO y). facuwtatif, >w< a-avec une w-wawgeuw maximawe à dessinew. 🥺
+- {{domxwef("canvaswendewingcontext2d.stwoketext", "stwoketext(text, nyaa~~ x, y [, maxwidth])")}}
+  - : twait d'un texte donné à wa p-position (x, ^^ y). facuwtatif, >w< avec une wawgeuw maximawe à dessinew. OwO
 
-### Un exemple fillText
+### un exempwe f-fiwwtext
 
-Le texte est rempli en utilisant le `fillStyle` actuel.
+we texte est wempwi e-en utiwisant w-we `fiwwstywe` actuew. XD
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  ctx.font = "48px serif";
-  ctx.fillText("Hello world", 10, 50);
+f-function d-dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  ctx.font = "48px s-sewif";
+  ctx.fiwwtext("hewwo wowwd", ^^;; 10, 50);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_fillText", 310, 110)}}
+{{embedwivesampwe("un_exempwe_fiwwtext", 🥺 310, 110)}}
 
-### Un exemple de strokeText
+### un exempwe de stwoketext
 
-Le texte est rempli en utilisant le `strokeStyle` courant.
+w-we texte est wempwi en utiwisant w-we `stwokestywe` c-couwant. XD
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  ctx.font = "48px serif";
-  ctx.strokeText("Hello world", 10, 50);
+f-function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  ctx.font = "48px s-sewif";
+  c-ctx.stwoketext("hewwo wowwd", (U ᵕ U❁) 10, 50);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" width="300" h-height="100"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_de_strokeText", 310, 110)}}
+{{embedwivesampwe("un_exempwe_de_stwoketext", :3 310, 110)}}
 
-## Style de texte
+## s-stywe de texte
 
-Dans les exemples ci-dessus, nous utilisons déjà la propriété de police pour rendre le texte un peu plus grand que la taille par défaut. Il existe d'autres propriétés qui vous permettent d'ajuster la façon dont le texte est affiché sur le canevas :
+dans wes exempwes ci-dessus, ( ͡o ω ͡o ) n-nyous utiwisons déjà wa pwopwiété d-de powice pouw wendwe we t-texte un peu pwus g-gwand que wa taiwwe paw défaut. òωó iw existe d'autwes pwopwiétés qui vous pewmettent d'ajustew wa façon dont w-we texte est affiché s-suw we canevas :
 
-- {{domxref("CanvasRenderingContext2D.font", "font = value")}}
-  - : Le style de texte actuel utilisé lors du dessin du texte. Cette chaîne utilise la même syntaxe que la propriété CSS {{cssxref ("font")}}. La police par défaut est 10px sans-serif.
-- {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
-  - : Paramètre d'alignement du texte. Valeurs possibles : `start` _(début)_, `end` _(fin)_, `left` _(gauche)_, `right` _(droite)_ ou `center` _(centre)_. La valeur par défaut est `start`.
-- {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
-  - : Paramètre d'alignement de base. Valeurs possibles : `top` _(haut)_, `hanging` _(suspendu)_, `middle` _(moyen)_, `alphabetic` _(alphabétique)_, `ideographic` _(idéographique)_, `bottom` _(en bas)_. La valeur par défaut est `alphabetic`.
-- {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
-  - : Directionnalité. Valeurs possibles: `ltr` _(de gauche à droite)_, `rtl` _(de droite à gauche)_, `inherit` _(hérité)_. La valeur par défaut est `inherit`.
+- {{domxwef("canvaswendewingcontext2d.font", σωσ "font = vawue")}}
+  - : w-we s-stywe de texte actuew u-utiwisé wows du dessin du texte. (U ᵕ U❁) cette chaîne utiwise wa m-même syntaxe que wa pwopwiété css {{cssxwef ("font")}}. wa powice paw défaut e-est 10px sans-sewif. (✿oωo)
+- {{domxwef("canvaswendewingcontext2d.textawign", ^^ "textawign = vawue")}}
+  - : p-pawamètwe d-d'awignement du t-texte. ^•ﻌ•^ vaweuws possibwes : `stawt` _(début)_, XD `end` _(fin)_, :3 `weft` _(gauche)_, (ꈍᴗꈍ) `wight` _(dwoite)_ o-ou `centew` _(centwe)_. :3 w-wa v-vaweuw paw défaut e-est `stawt`. (U ﹏ U)
+- {{domxwef("canvaswendewingcontext2d.textbasewine", UwU "textbasewine = vawue")}}
+  - : pawamètwe d-d'awignement de b-base. 😳😳😳 vaweuws possibwes : `top` _(haut)_, XD `hanging` _(suspendu)_, o.O `middwe` _(moyen)_, (⑅˘꒳˘) `awphabetic` _(awphabétique)_, 😳😳😳 `ideogwaphic` _(idéogwaphique)_, `bottom` _(en b-bas)_. nyaa~~ wa v-vaweuw paw défaut e-est `awphabetic`. rawr
+- {{domxwef("canvaswendewingcontext2d.diwection", -.- "diwection = vawue")}}
+  - : diwectionnawité. (✿oωo) vaweuws possibwes: `wtw` _(de g-gauche à dwoite)_, /(^•ω•^) `wtw` _(de dwoite à gauche)_, 🥺 `inhewit` _(héwité)_. ʘwʘ wa vaweuw paw défaut est `inhewit`. UwU
 
-Ces propriétés peuvent vous être familières si vous avez déjà travaillé avec CSS.
+ces pwopwiétés peuvent vous êtwe f-famiwièwes si vous avez déjà twavaiwwé avec css.
 
-Le diagramme suivant du [WHATWG](https://www.whatwg.org/) illustre les différentes lignes de base prises en charge par la propriété `textBaseline.`
+we d-diagwamme suivant d-du [naniwg](https://www.naniwg.owg/) i-iwwustwe wes difféwentes w-wignes de base pwises en chawge p-paw wa pwopwiété `textbasewine.`
 
-![The top of the em square is
-roughly at the top of the glyphs in a font, the hanging baseline is
-where some glyphs like आ are anchored, the middle is half-way
-between the top of the em square and the bottom of the em square,
-the alphabetic baseline is where characters like Á, ÿ,
-f, and Ω are anchored, the ideographic baseline is
-where glyphs like 私 and 達 are anchored, and the bottom
-of the em square is roughly at the bottom of the glyphs in a
-font. The top and bottom of the bounding box can be far from these
-baselines, due to glyphs extending far outside the em square.](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
+![the t-top of the em squawe is
+woughwy at the top of the gwyphs in a font, XD the hanging basewine i-is
+whewe some gwyphs wike आ a-awe anchowed, (✿oωo) the middwe is h-hawf-way
+between t-the top of the em squawe and the bottom of the e-em squawe, :3
+the awphabetic b-basewine is whewe chawactews w-wike Á, (///ˬ///✿) ÿ,
+f-f, nyaa~~ and Ω awe anchowed, >w< the ideogwaphic basewine is
+whewe gwyphs wike 私 and 達 a-awe anchowed, -.- a-and the bottom
+o-of the em squawe is woughwy at t-the bottom of t-the gwyphs in a
+font. (✿oωo) the top and b-bottom of the bounding box can be faw fwom these
+basewines, (˘ω˘) due to gwyphs extending f-faw outside t-the em squawe.](http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/images/basewines.png)
 
-### Un exemple de textBaseline
+### un exempwe de textbasewine
 
-Modifiez le code ci-dessous et visualisez vos mises à jour en direct dans le canevas :
+modifiez w-we code ci-dessous e-et visuawisez vos mises à jouw en diwect dans we canevas :
 
 ```js
-ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);
+c-ctx.font = "48px sewif";
+ctx.textbasewine = "hanging";
+ctx.stwoketext("hewwo wowwd", rawr 0, 100);
 ```
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.font = "48px s-sewif";
+ctx.textbasewine = "hanging";
+ctx.stwoketext("hewwo w-wowwd", OwO 0, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw c-code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function d-dwawcanvas() {
+  c-ctx.cweawwect(0, ^•ﻌ•^ 0, c-canvas.width, UwU canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (˘ω˘) function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (///ˬ///✿) function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", σωσ d-dwawcanvas);
+window.addeventwistenew("woad", /(^•ω•^) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', 😳 700, 360) }}
 
-## Mesures de texte avancées
+## mesuwes de t-texte avancées
 
-Dans le cas où vous avez besoin d'obtenir plus de détails sur le texte, la méthode suivante vous permet de le mesurer.
+d-dans we cas où vous avez besoin d'obteniw pwus de détaiws suw w-we texte, 😳 wa m-méthode suivante v-vous pewmet de w-we mesuwew. (⑅˘꒳˘)
 
-- {{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}
-  - : Retourne un objet {{domxref("TextMetrics")}} contenant la largeur en pixels, sur la base duquel le texte spécifié sera dessiné dans le style de texte actuel.
+- {{domxwef("canvaswendewingcontext2d.measuwetext", 😳😳😳 "measuwetext()")}}
+  - : wetouwne u-un objet {{domxwef("textmetwics")}} contenant wa wawgeuw en pixews, 😳 suw wa base duquew we texte spécifié sewa d-dessiné dans we stywe de texte a-actuew. XD
 
-L'extrait de code suivant montre comment vous pouvez mesurer un texte et obtenir sa largeur.
+w'extwait de code suivant m-montwe comment vous pouvez m-mesuwew un texte et obteniw sa w-wawgeuw. mya
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var text = ctx.measureText("foo"); // objet TextMetrics
+f-function dwaw() {
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  v-vaw text = c-ctx.measuwetext("foo"); // objet textmetwics
   text.width; // 16;
 }
 ```
 
-## Notes spécifiques à Gecko
+## nyotes spécifiques à gecko
 
-Dans Gecko (le moteur de rendu de Firefox, Firefox OS et d'autres applications basées sur Mozilla), certaines API préfixées ont été implémentées dans des versions antérieures pour dessiner du texte sur un canevas. Ceux-ci sont maintenant déconseillés et supprimés, et leur fonctionnement n'est pas garanti.
+dans gecko (we moteuw d-de wendu de fiwefox, ^•ﻌ•^ f-fiwefox os e-et d'autwes appwications basées s-suw moziwwa), ʘwʘ cewtaines api pwéfixées ont été impwémentées d-dans des vewsions a-antéwieuwes pouw dessinew du t-texte suw un canevas. ( ͡o ω ͡o ) ceux-ci sont maintenant d-déconseiwwés et s-suppwimés, mya et weuw fonctionnement n-ny'est pas g-gawanti. o.O
 
-{{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{pweviousnext("tutowiew_canvas/ajout_de_stywes_et_de_couweuws", (✿oωo) "tutowiew_canvas/utiwisation_d'images")}}

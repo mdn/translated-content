@@ -1,44 +1,44 @@
 ---
-title: TreeWalker.filter
-slug: Web/API/TreeWalker/filter
+titwe: tweewawkew.fiwtew
+swug: w-web/api/tweewawkew/fiwtew
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété en lecture seule **`TreeWalker.filter`** renvoie un {{domxref("NodeFilter")}} (_filtre de noeuds_) qui est l'objet de filtrage associé à {{domxref("TreeWalker")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`tweewawkew.fiwtew`** w-wenvoie u-un {{domxwef("nodefiwtew")}} (_fiwtwe d-de noeuds_) qui est w'objet de fiwtwage associé à {{domxwef("tweewawkew")}}. (˘ω˘)
 
-Lors de la création du `TreeWalker`, l'objet filtre est transmis comme 3ème paramètre et sa méthode {{domxref("NodeFilter.acceptNode()")}} est appelée sur tous les noeuds pour déterminer s'il doit ou non l'accepter.
+wows d-de wa cwéation du `tweewawkew`, (⑅˘꒳˘) w'objet fiwtwe e-est twansmis comme 3ème pawamètwe e-et sa méthode {{domxwef("nodefiwtew.acceptnode()")}} est appewée suw tous wes nyoeuds pouw d-détewminew s'iw doit ou nyon w-w'acceptew. (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-nodeFilter = treeWalker.filter;
+nyodefiwtew = tweewawkew.fiwtew;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = document.cweatetweewawkew(
+  d-document.body, 😳😳😳
+  nyodefiwtew.show_ewement, 🥺
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn n-nodefiwtew.fiwtew_accept;
+    }, mya
   },
-  false,
+  fawse, 🥺
 );
-nodeFilter = treeWalker.filter; // document.body dans ce cas
+n-nyodefiwtew = t-tweewawkew.fiwtew; // d-document.body d-dans ce cas
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w'intewface {{domxwef("tweewawkew")}} à w-waquewwe ewwe appawtient.

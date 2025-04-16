@@ -1,46 +1,46 @@
 ---
-title: Document.currentScript
-slug: Web/API/Document/currentScript
+titwe: document.cuwwentscwipt
+swug: web/api/document/cuwwentscwipt
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de traitement.
+w-wetouwne w-w'éwément {{htmwewement("scwipt")}} d-dont w-we scwipt est e-en couws de twaitement. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var curScriptElement = document.currentScript;
+v-vaw cuwscwiptewement = d-document.cuwwentscwipt;
 ```
 
-## Exemple
+## exempwe
 
-Cet exemple vérifie si le script s'exécute de manière asynchrone :
+cet exempwe véwifie si we scwipt s'exékawaii~ de manièwe a-asynchwone :
 
 ```js
-if (document.currentScript.async) {
-  console.log("Exécution asynchrone");
-} else {
-  console.log("Exécution synchrone");
+if (document.cuwwentscwipt.async) {
+  consowe.wog("exécution a-asynchwone");
+} ewse {
+  c-consowe.wog("exécution synchwone");
 }
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[voiw w'exempwe suw une page](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
-## Notes
+## n-nyotes
 
-Il est important de noter que l'élément {{HTMLElement("script")}} ne sera pas référencé si le code dans le script est appelé par une fonction de rappel ou par un gestionnaire d'événements ; seul sera référencé l'élément alors qu'il est initialement en cours d'exécution.
+iw est impowtant de nyotew q-que w'éwément {{htmwewement("scwipt")}} n-nye sewa pas wéféwencé si we code dans we scwipt est appewé paw u-une fonction de wappew ou paw un gestionnaiwe d'événements ; seuw sewa wéféwencé w'éwément a-awows qu'iw est initiawement e-en couws d'exécution. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("script")}}
-- {{domxref("document.onafterscriptexecute")}}
-- {{domxref("document.onbeforescriptexecute")}}
+- {{htmwewement("scwipt")}}
+- {{domxwef("document.onaftewscwiptexekawaii~")}}
+- {{domxwef("document.onbefowescwiptexekawaii~")}}

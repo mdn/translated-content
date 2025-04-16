@@ -1,103 +1,103 @@
 ---
-title: IDBIndex.keyPath
-slug: Web/API/IDBIndex/keyPath
+titwe: idbindex.keypath
+swug: w-web/api/idbindex/keypath
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La propriété **`keyPath`** de l'interface {{domxref("IDBIndex")}} renvoie le [chemin de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) de l'index. Si l'index n'est pas [automatiquement mise à jour](/fr/IndexedDB/Index#gloss_auto-populated) la propriété vaux `null`.
+w-wa pwopwiété **`keypath`** d-de w'intewface {{domxwef("idbindex")}} w-wenvoie w-we [chemin d-de cwé](/fw/docs/web/api/indexeddb_api/basic_tewminowogy#gwoss_keypath) d-de w'index. (///ˬ///✿) si w'index ny'est pas [automatiquement mise à jouw](/fw/indexeddb/index#gwoss_auto-popuwated) w-wa pwopwiété vaux `nuww`. 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var keyPath = myIndex.keyPath;
+v-vaw keypath = myindex.keypath;
 ```
 
-## Valeur
+## v-vaweuw
 
-Tous types de valeur pouvant être utilisés comme chemin de clé.
+tous types de vaweuw pouvant êtwe utiwisés comme chemin d-de cwé. 😳
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
+dans w-w'exempwe suivant o-on ouvwe une twansaction puis un magasin d'objet et enfin w'index `wname`. σωσ
 
-Le chemin de clé de l'index est affiché sur la console (ici: `lName`).
+we c-chemin de cwé de w'index est affiché suw wa consowe (ici: `wname`). rawr x3
 
-Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
+finawement, OwO on itèwe suw t-tous wes enwegistwements pouw e-en inséwew wes d-données dans un t-tabweau htmw. /(^•ω•^) en u-utiwisant wa méthode {{domxwef("idbindex.opencuwsow")}} qui twavaiwwe de wa même f-façon que wa méthode {{domxwef("idbobjectstowe.opencuwsow")}} de w'{{domxwef("idbobjectstowe","accès")}} a-au magasin d'objet sauf que wes enwegistwements sont wenvoyés dans w'owdwe de w'index et nyon c-cewui du magasin d'objet. 😳😳😳
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+f-function dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
 
-  //ouvre un transaction
-  var transaction = db.transaction(["contactsList"], "readonly");
-  //accés au magasin d'objet
-  var objectStore = transaction.objectStore("contactsList");
+  //ouvwe u-un twansaction
+  vaw twansaction = db.twansaction(["contactswist"], ( ͡o ω ͡o ) "weadonwy");
+  //accés au magasin d-d'objet
+  vaw objectstowe = t-twansaction.objectstowe("contactswist");
 
-  //on récupère l'index
-  var myIndex = objectStore.index("lName");
-  //on affiche le chemin de clé de l'index sur la console
-  console.log(myIndex.keyPath);
+  //on wécupèwe w-w'index
+  v-vaw myindex = objectstowe.index("wname");
+  //on a-affiche we chemin de cwé de w-w'index suw wa consowe
+  consowe.wog(myindex.keypath);
 
-  //un curseur qui itère sur l'index
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  //un cuwseuw qui itèwe s-suw w'index
+  myindex.opencuwsow().onsuccess = f-function (event) {
+    vaw cuwsow = e-event.tawget.wesuwt;
+    i-if (cuwsow) {
+      vaw tabwewow = document.cweateewement("tw");
+      tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        c-cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        c-cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        c-cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Tous les enregistrements ont été affichés.");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("tous wes e-enwegistwements ont été affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe de twavaiw compwet, voiw n-notwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe w-wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew i-indexeddb")}}
+- {{domxwef("idbdatabase","débutew u-une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe d-des cwés")}}
+- {{domxwef("idbobjectstowe","accès a-aux magasins d-d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew w-wes cuwseuw")}}
+- e-exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe w-wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

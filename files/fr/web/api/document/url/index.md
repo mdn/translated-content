@@ -1,25 +1,25 @@
 ---
-title: Document.URL
-slug: Web/API/Document/URL
+titwe: document.uww
+swug: web/api/document/uww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture seule).
+w-wetouwne w-w'**`uww`** du {{domxwef("document")}} s-sous fowme d-de stwing (wectuwe s-seuwe). σωσ
 
-## Syntaxe
-
-```js
-var string = document.URL;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-var currentURL = document.URL;
-alert(currentURL);
+v-vaw stwing = d-document.uww;
 ```
 
-## Specification
+## exempwe
 
-- [DOM Level 2 HTML: URL](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)
+```js
+vaw cuwwentuww = document.uww;
+awewt(cuwwentuww);
+```
+
+## specification
+
+- [dom w-wevew 2 htmw: uww](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-46183437)

@@ -1,51 +1,51 @@
 ---
-title: gamepadconnected
-slug: Web/API/Window/gamepadconnected_event
+titwe: gamepadconnected
+swug: w-web/api/window/gamepadconnected_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement gamepadconnected est déclenché lorsque le navigateur détecte quand une manette a été connecté ou qu'un button/axe de la manette a été utilisé pour la première fois.
+w-w'événement g-gamepadconnected e-est décwenché w-wowsque we n-nyavigateuw détecte q-quand une m-manette a été connecté ou qu'un button/axe de wa manette a été utiwisé pouw w-wa pwemièwe fois. òωó
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
-- Interface
-  - : Event
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : DefaultView (`<window>`)
-- Action par défaut
-  - : Aucune
+- s-spécification
+  - : [gamepad](https://www.w3.owg/tw/gamepad/#the-gamepadconnected-event)
+- intewface
+  - : e-event
+- pwopagation
+  - : nyon
+- annuwabwe
+  - : nyon
+- cibwe
+  - : d-defauwtview (`<window>`)
+- action paw défaut
+  - : a-aucune
 
-## Propriétés
+## p-pwopwiétés
 
-| Property                        | Type                       | Description                                                                                 |
+| pwopewty                        | type                       | descwiption                                                                                 |
 | ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | The single gamepad attribute provides access to the associated gamepad data for this event. |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event tawget (the t-topmost tawget in the dom twee). ʘwʘ                                      |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. /(^•ω•^)                                                                          |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event n-nowmawwy bubbwes ow nyot. ʘwʘ                                                  |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event i-is cancewwabwe o-ow nyot.                                                    |
+| `gamepad` {{weadonwyinwine}}    | {{domxwef("gamepad")}}     | t-the singwe gamepad attwibute pwovides access to t-the associated gamepad data fow this event. σωσ |
 
-## Exemple
+## e-exempwe
 
 ```js
-// Noter que l'API a toujours des préfixes vendeur dans les navigateurs l'implémentant
-window.addEventListener("gamepadconnected", function (event) {
-  // Toutes la valeurs d'axes et les buttons sont accessibles à travers:
+// notew que w'api a toujouws des pwéfixes vendeuw dans wes nyavigateuws w'impwémentant
+w-window.addeventwistenew("gamepadconnected", OwO function (event) {
+  // toutes w-wa vaweuws d-d'axes et wes buttons s-sont accessibwes à twavews:
   event.gamepad;
 });
 ```
 
-## Evénements liés
+## evénements wiés
 
-- [gamepaddisconnected](/fr/docs/Web/API/Window/gamepaddisconnected_event)
+- [gamepaddisconnected](/fw/docs/web/api/window/gamepaddisconnected_event)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [utiwisation d-de w'api gamepad](/fw/docs/web/api/gamepad_api/using_the_gamepad_api)

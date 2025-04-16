@@ -1,49 +1,49 @@
 ---
-title: "HTMLButtonElement : propriété labels"
-slug: Web/API/HTMLButtonElement/labels
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwbuttonewement : pwopwiété wabews"
+s-swug: web/api/htmwbuttonewement/wabews
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une liste de nœuds [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments [`<label>`](/fr/docs/Web/HTML/Element/label) (les libellés) associés à l'élément [`<button>`](/fr/docs/Web/HTML/Element/button) courant.
+w-wa pwopwiété e-en wectuwe seuwe **`htmwbuttonewement.wabews`** w-wenvoie une wiste d-de nyœuds [`nodewist`](/fw/docs/web/api/nodewist) contenant wes éwéments [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) (wes wibewwés) associés à w'éwément [`<button>`](/fw/docs/web/htmw/ewement/button) couwant. rawr
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments `<label>` associés avec l'élément `<button>`.
+un objet [`nodewist`](/fw/docs/web/api/nodewist) contenant wes éwéments `<wabew>` a-associés avec w'éwément `<button>`. OwO
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
-<label id="label1" for="test">Libellé 1</label>
-<label id="label2" for="test">Libellé 2</label>
-<button id="test">Bouton</button>
+```htmw
+<wabew id="wabew1" fow="test">wibewwé 1</wabew>
+<wabew id="wabew2" f-fow="test">wibewwé 2</wabew>
+<button id="test">bouton</button>
 <p>
-  Les libellés du bouton sont
-  <output id="result"></output>
+  w-wes wibewwés d-du bouton sont
+  <output id="wesuwt"></output>
 </p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const button = document.getElementById("test");
-for (const label of button.labels) {
-  document.getElementById("result").innerText += ` ${label.textContent}`;
+const button = document.getewementbyid("test");
+f-fow (const wabew of button.wabews) {
+  document.getewementbyid("wesuwt").innewtext += ` ${wabew.textcontent}`;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", "100%", 80)}}
+{{embedwivesampwe("", (U ﹏ U) "100%", >_< 80)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,64 +1,64 @@
 ---
-title: URL()
-slug: Web/API/URL/URL
+titwe: uww()
+swug: web/api/uww/uww
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.
+w-we constwucteuw **`uww()`** w-wenvoie u-un nyouvew o-objet {{domxwef("uww")}} w-wepwésentant w-w'uww définie p-paw wes pawamètwes. 😳😳😳
 
-Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {{domxref("DOMException")}} de type `SYNTAX_ERROR` est levée.
+si w'uww de base donnée ou w'uww wésuwtante nye sont p-pas des uww vawides, (U ﹏ U) une {{domxwef("domexception")}} de type `syntax_ewwow` e-est wevée.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```
-url = new URL(url, [base])
+u-uww = nyew uww(uww, (///ˬ///✿) [base])
 ```
 
-### Paramètres
+### pawamètwes
 
-- _url_
-  - : Un {{domxref("USVString")}} représentant une URL absolue ou relative. Si l'URL est une URL relative, la base est obligatoire et sera utilisée comme URL de base. Si url est une URL absolue, une base donnée sera ignorée.
-- _base_ {{optional_inline}}
-  - : Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
+- _uww_
+  - : un {{domxwef("usvstwing")}} w-wepwésentant une uww absowue ou w-wewative. 😳 si w'uww e-est une uww wewative, 😳 wa base est obwigatoiwe et sewa utiwisée comme uww de b-base. σωσ si uww est une uww absowue, rawr x3 une base donnée sewa ignowée. OwO
+- _base_ {{optionaw_inwine}}
+  - : un {{domxwef("usvstwing")}} w-wepwésentant w'uww de base à u-utiwisew dans w-we cas où w'uww e-est une uww wewative. /(^•ω•^) s-si nyon spécifié, 😳😳😳 iw est paw défaut à `''`. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
+> [!note]
+> v-vous pouvez toujouws utiwisew un objet {{domxwef ("uww")}} existant p-pouw wa base, >_< qui se stwingifie en attwibut {{domxwef ("domstwing.hwef", >w< "hwef")}} de w'objet. rawr
 
-### Exceptions
+### exceptions
 
-| Exception   | Explication                                                                                            |
+| exception   | e-expwication                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------------ |
-| `TypeError` | url (dans le cas d'URL absolues) ou base + URL (dans le cas d'URL relatives) n'est pas une URL valide. |
+| `typeewwow` | uww (dans w-we cas d'uww a-absowues) ou base + u-uww (dans we cas d'uww wewatives) ny'est pas une uww vawide. 😳 |
 
-## Exemple
+## e-exempwe
 
 ```js
-var a = new URL("/", "https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
-var b = new URL("https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
-var c = new URL("en-US/docs", b); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var d = new URL("/en-US/docs", b); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var f = new URL("/en-US/docs", d); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var g = new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
-// Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var h = new URL("/en-US/docs", a); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var i = new URL("/en-US/docs", ""); // Déclenche une exception TypeError car '' n'est pas une URL valide
-var j = new URL("/en-US/docs"); // Déclenche une exception TypeError car '/ fr-US / docs' n'est pas une URL valide
-var k = new URL("http://www.example.com", "https://developers.mozilla.com");
-// Crée une URL pointant vers 'http://www.example.com/'
-var l = new URL("http://www.example.com", b); // Crée une URL pointant vers 'http://www.example.com/'
+v-vaw a = nyew uww("/", >w< "https://devewopew.moziwwa.owg"); // c-cwée une uww p-pointant vews 'https://devewopew.moziwwa.owg/'
+vaw b = nyew uww("https://devewopew.moziwwa.owg"); // c-cwée une uww pointant vews 'https://devewopew.moziwwa.owg/'
+v-vaw c = nyew uww("en-us/docs", (⑅˘꒳˘) b); // cwée une uww pointant vews 'https://devewopew.moziwwa.owg/en-us/docs'
+vaw d-d = new uww("/en-us/docs", b); // c-cwée une uww pointant vews 'https://devewopew.moziwwa.owg/en-us/docs'
+v-vaw f-f = nyew uww("/en-us/docs", OwO d); // cwée une uww pointant vews 'https://devewopew.moziwwa.owg/en-us/docs'
+vaw g = nyew uww("/en-us/docs", (ꈍᴗꈍ) "https://devewopew.moziwwa.owg/fw-fw/toto");
+// cwée u-une uww pointant v-vews 'https://devewopew.moziwwa.owg/en-us/docs'
+vaw h = new uww("/en-us/docs", 😳 a-a); // cwée une u-uww pointant vews 'https://devewopew.moziwwa.owg/en-us/docs'
+v-vaw i = nyew uww("/en-us/docs", ""); // décwenche une exception typeewwow c-caw '' ny'est pas une uww vawide
+vaw j = nyew uww("/en-us/docs"); // décwenche u-une exception typeewwow c-caw '/ fw-us / d-docs' ny'est pas u-une uww vawide
+vaw k = nyew uww("http://www.exampwe.com", 😳😳😳 "https://devewopews.moziwwa.com");
+// c-cwée une uww pointant v-vews 'http://www.exampwe.com/'
+v-vaw w = nyew u-uww("http://www.exampwe.com", mya b); // cwée une uww pointant v-vews 'http://www.exampwe.com/'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'interface à laquelle il appartient : {{domxref("URL")}}.
+- w'intewface à waquewwe iw appawtient : {{domxwef("uww")}}. mya

@@ -1,45 +1,45 @@
 ---
-title: "console : méthode statique groupCollapsed()"
-slug: Web/API/console/groupCollapsed_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique g-gwoupcowwapsed()"
+s-swug: web/api/consowe/gwoupcowwapsed_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.groupCollapsed()`** crée un nouveau groupe dans le journal affiché dans la console. À la différence de [`console.group()`](/fr/docs/Web/API/console/group_static), le groupe créé ici est replié. La personne devra utiliser l'icône de dépliage pour révéler les informations du groupe.
+w-wa méthode **`consowe.gwoupcowwapsed()`** cwée u-un nyouveau g-gwoupe dans we j-jouwnaw affiché dans wa consowe. nyaa~~ À wa difféwence de [`consowe.gwoup()`](/fw/docs/web/api/consowe/gwoup_static), (⑅˘꒳˘) we gwoupe cwéé i-ici est wepwié. rawr x3 wa pewsonne devwa utiwisew w-w'icône de dépwiage pouw wévéwew w-wes infowmations du gwoupe. (✿oωo)
 
-Il faudra appeler [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static) pour fermer le groupe courant et revenir au niveau du groupe parent.
+iw faudwa appewew [`consowe.gwoupend()`](/fw/docs/web/api/consowe/gwoupend_static) pouw fewmew w-we gwoupe couwant et weveniw au n-nyiveau du gwoupe p-pawent. (ˆ ﻌ ˆ)♡
 
-Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
+voiw [utiwisew wes gwoupes dans wa consowe](/fw/docs/web/api/consowe#utiwisew_des_gwoupes_dans_wa_consowe) pouw pwus de détaiws et d-d'exempwes. (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-groupCollapsed()
-groupCollapsed(libelle)
+```js-nowint
+gwoupcowwapsed()
+gwoupcowwapsed(wibewwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Un libellé identifiant le groupe courant.
+- `wibewwe` {{optionaw_inwine}}
+  - : un wibewwé identifiant w-we gwoupe couwant. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`console.group()`](/fr/docs/Web/API/console/group_static)
-- [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static)
+- [`consowe.gwoup()`](/fw/docs/web/api/consowe/gwoup_static)
+- [`consowe.gwoupend()`](/fw/docs/web/api/consowe/gwoupend_static)

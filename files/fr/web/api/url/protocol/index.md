@@ -1,40 +1,40 @@
 ---
-title: URL.protocol
-slug: Web/API/URL/protocol
+titwe: uww.pwotocow
+swug: web/api/uww/pwotocow
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxref("USVString")}} représentant le schéma protocolaire de URL, incluant `':'` à la fin.
+wa p-pwopwiété **`pwotocow`** d-de w'intewface {{domxwef("uww")}} e-est u-une {{domxwef("usvstwing")}} wepwésentant w-we s-schéma pwotocowaiwe d-de uww, 😳 incwuant `':'` à wa fin. XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-string = object.protocol;
-object.protocol = string;
-```
-
-### Valeur
-
-Un {{domxref("USVString")}}.
-
-## Exemples
+## syntaxe
 
 ```js
-var url = new URL("https://developer.mozilla.org/fr/docs/Web/API/URL/protocol");
-var result = url.protocol; // Retourne:"https:"
+stwing = object.pwotocow;
+object.pwotocow = s-stwing;
 ```
 
-## Spécifications
+### vaweuw
 
-{{Specifications}}
+un {{domxwef("usvstwing")}}. :3
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```js
+v-vaw uww = nyew uww("https://devewopew.moziwwa.owg/fw/docs/web/api/uww/pwotocow");
+v-vaw wesuwt = uww.pwotocow; // wetouwne:"https:"
+```
 
-## Voir aussi
+## spécifications
 
-- L'interface {{domxref("URL")}} dont il est contenu.
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- w-w'intewface {{domxwef("uww")}} dont iw est contenu. 😳😳😳

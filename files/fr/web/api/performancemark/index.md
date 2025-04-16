@@ -1,46 +1,46 @@
 ---
-title: PerformanceMark
-slug: Web/API/PerformanceMark
+titwe: pewfowmancemawk
+swug: w-web/api/pewfowmancemawk
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing a-api")}}
 
-**`PerformanceMark`** est une interface _abstraite_ pour les objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) avec un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) « `mark` ».Les entrées de ce type sont créées en appelant [`performance.mark()`](/fr/docs/Web/API/Performance/mark) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) _nommé_ (le _marqueur_) à la _chronologie des performances_ du navigateur.
+**`pewfowmancemawk`** e-est une intewface _abstwaite_ p-pouw wes objets [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) a-avec un [`entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) « `mawk` ».wes e-entwées d-de ce type sont cwéées en appewant [`pewfowmance.mawk()`](/fw/docs/web/api/pewfowmance/mawk) pouw ajoutew un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) _nommé_ (we _mawqueuw_) à w-wa _chwonowogie des pewfowmances_ d-du nyavigateuw. >_<
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Propriétés
+## pwopwiétés
 
-Cette interface n'a pas de propriété mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes en restreignant les propriétés comme suit :
+c-cette intewface ny'a pas de pwopwiété mais ewwe étend wes pwopwiétés d-de [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) suivantes e-en westweignant w-wes pwopwiétés comme suit :
 
-- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)
-  - : Retourne « `mark` ».
-- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name)
-  - : Retourne le nom donné au marqueur lorsqu'il a été créé via un appel de [`performance.mark()`](/fr/docs/Web/API/Performance/mark).
-- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime)
-  - : Retourne le [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) à partir du moment où [`performance.mark()`](/fr/docs/Web/API/Performance/mark) a été appelé.
-- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration)
-  - : Retourne « `0` ». (Un marqueur n'a pas de _durée_.)
+- [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype)
+  - : wetouwne « `mawk` ». (⑅˘꒳˘)
+- [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy/name)
+  - : wetouwne we nom donné au mawqueuw w-wowsqu'iw a été cwéé via un appew de [`pewfowmance.mawk()`](/fw/docs/web/api/pewfowmance/mawk). /(^•ω•^)
+- [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime)
+  - : wetouwne we [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) à pawtiw d-du moment où [`pewfowmance.mawk()`](/fw/docs/web/api/pewfowmance/mawk) a été a-appewé. rawr x3
+- [`pewfowmanceentwy.duwation`](/fw/docs/web/api/pewfowmanceentwy/duwation)
+  - : wetouwne « `0` ». (U ﹏ U) (un m-mawqueuw n-ny'a pas de _duwée_.)
 
-## Méthodes
+## m-méthodes
 
-Cette interface n'a pas de méthodes.
+cette intewface ny'a pas de m-méthodes. (U ﹏ U)
 
-## Exemple
+## exempwe
 
-Voir l'exemple dans [Utilisation de l'API User Timing](/fr/docs/Web/API/Performance_API/User_timing).
+voiw w'exempwe dans [utiwisation d-de w'api usew timing](/fw/docs/web/api/pewfowmance_api/usew_timing). (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)
-- [Utilisation de l'API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)
+- [api _usew timing_](/fw/docs/web/api/pewfowmance_api/usew_timing)
+- [utiwisation d-de w'api _usew t-timing_](/fw/docs/web/api/pewfowmance_api/usew_timing)

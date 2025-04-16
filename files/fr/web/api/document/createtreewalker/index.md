@@ -1,178 +1,178 @@
 ---
-title: Document.createTreeWalker()
-slug: Web/API/Document/createTreeWalker
+titwe: document.cweatetweewawkew()
+swug: web/api/document/cweatetweewawkew
 ---
 
-{{ApiRef("Document")}}
+{{apiwef("document")}}
 
-La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel objet {{domxref("TreeWalker")}}.
+w-wa méthode d-de cwéation **`document.cweatetweewawkew()`** w-wenvoie un n-nyouvew objet {{domxwef("tweewawkew")}}. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-treeWalker = document.createTreeWalker(
-  root,
-  whatToShow,
-  filter,
-  entityReferenceExpansion,
+t-tweewawkew = d-document.cweatetweewawkew(
+  w-woot, 🥺
+  nyanitoshow, rawr x3
+  fiwtew, o.O
+  entitywefewenceexpansion, rawr
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- _root_
-  - : est le {{domxref("Node")}} (_noeud_) racine du {{domxref("TreeWalker")}} à traverser. Généralement, ce sera un élément appartenant au document.
-- _whatToShow {{optional_inline}}_
+- _woot_
+  - : est we {{domxwef("node")}} (_noeud_) wacine d-du {{domxwef("tweewawkew")}} à twavewsew. ʘwʘ généwawement, 😳😳😳 c-ce sewa un éwément appawtenant a-au document. ^^;;
+- _nanitoshow {{optionaw_inwine}}_
 
-  - : est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de nœuds. Par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
+  - : est un `unsigned wong` (_wong nyon signé_) f-facuwtatif wepwésentant un m-masque de bits c-cwéé paw combinaison des pwopwiétés de constante de [`nodefiwtew`](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/twavewsaw.htmw#twavewsaw-nodefiwtew). o.O c'est un moyen pwatique d-de fiwtwage pouw cewtains types de nyœuds. (///ˬ///✿) paw défaut `0xffffffff` wepwésentant w-wa constante `show_aww`. σωσ
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td class="header">Constante</td>
-          <td class="header">Valeur numérique</td>
-          <td class="header">Description</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ALL</code></td>
+        <tw>
+          <td cwass="headew">constante</td>
+          <td c-cwass="headew">vaweuw n-nyuméwique</td>
+          <td c-cwass="headew">descwiption</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_aww</code></td>
           <td>
-            <code>-1</code> (c'est la valeur numérique maximale du
-            <code>unsigned long</code> (<em>non signé long</em>))
+            <code>-1</code> (c'est w-wa vaweuw nyuméwique maximawe du
+            <code>unsigned wong</code> (<em>non s-signé wong</em>))
           </td>
-          <td>Affiche tous les noeuds.</td>
-        </tr>
-        <tr>
+          <td>affiche tous wes nyoeuds.</td>
+        </tw>
+        <tw>
           <td>
-            <code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}
+            <code>nodefiwtew.show_attwibute</code> {{depwecated_inwine}}
           </td>
           <td><code>2</code></td>
           <td>
-            Affiche l'attribut {{domxref("Attr")}} des noeuds. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Attr")}} comme racine ; dans ce cas, cela signifie
-            que le nœud d'attribut apparaîtra dans la première position de
-            l'itération ou de la traversée. Comme les attributs ne sont jamais des
-            enfants d'autres nœuds, ils n'apparaissent pas lors de la traversée de
-            l'arbre du document.
+            a-affiche w'attwibut {{domxwef("attw")}} des nyoeuds. nyaa~~ cewa ny'a de sens
+            que wows de wa cwéation d'un {{domxwef("tweewawkew")}} a-avec un
+            n-nyoeud {{domxwef("attw")}} c-comme w-wacine ; dans ce cas, ^^;; cewa signifie
+            que we nyœud d'attwibut appawaîtwa d-dans wa p-pwemièwe position de
+            w-w'itéwation ou d-de wa twavewsée. comme wes attwibuts n-nye sont jamais des
+            e-enfants d'autwes nyœuds, ^•ﻌ•^ iws ny'appawaissent p-pas wows de wa twavewsée d-de
+            w'awbwe du document. σωσ
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td>
-            <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
+            <code>nodefiwtew.show_cdata_section</code> {{depwecated_inwine}}
           </td>
           <td><code>8</code></td>
-          <td>Affiche les noeuds {{domxref("CDATASection")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_COMMENT</code></td>
+          <td>affiche w-wes nyoeuds {{domxwef("cdatasection")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_comment</code></td>
           <td><code>128</code></td>
-          <td>Affiche les noeuds {{domxref("Comment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
+          <td>affiche w-wes nyoeuds {{domxwef("comment")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_document</code></td>
           <td><code>256</code></td>
-          <td>Affiche les noeuds {{domxref("Document")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
+          <td>affiche wes nyoeuds {{domxwef("document")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_document_fwagment</code></td>
           <td><code>1024</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentFragment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
+          <td>affiche wes nyoeuds {{domxwef("documentfwagment")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_document_type</code></td>
           <td><code>512</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentType")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ELEMENT</code></td>
+          <td>affiche wes nyoeuds {{domxwef("documenttype")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_ewement</code></td>
           <td><code>1</code></td>
-          <td>Affiche les noeuds {{domxref("Element")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
+          <td>affiche wes nyoeuds {{domxwef("ewement")}}.</td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_entity</code> {{depwecated_inwine}}</td>
           <td><code>32</code></td>
           <td>
-            Affiche les noeuds {{domxref("Entity")}}. Cela n'a de sens que
-            lors de la création d'un {{domxref("TreeWalker")}} avec un noeud
-            {{ domxref("Entity") }} comme racine ; dans ce cas, il signifie
-            que le noeud d'entité {{domxref("Entity") }} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
+            a-affiche wes n-nyoeuds {{domxwef("entity")}}. -.- cewa n'a de sens q-que
+            w-wows de wa cwéation d-d'un {{domxwef("tweewawkew")}} avec un nyoeud
+            {{ domxwef("entity") }} comme wacine ; d-dans ce cas, ^^;; iw signifie
+            que we nyoeud d'entité {{domxwef("entity") }} appawaîtwa à w-wa
+            pwemièwe p-position de wa t-twavewsée. XD Étant d-donné que wes entités nye f-font
+            p-pas pawtie de w'awbowescence d-du d-document, 🥺 ewwes ny'appawaissent pas wows
+            d-de wa twavewsée d-de w'awbowescence d-du document.
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td>
-            <code>NodeFilter.SHOW_ENTITY_REFERENCE</code>
-            {{deprecated_inline}}
+            <code>nodefiwtew.show_entity_wefewence</code>
+            {{depwecated_inwine}}
           </td>
           <td><code>16</code></td>
-          <td>Affiche les noeuds {{domxref("EntityReference")}}.</td>
-        </tr>
-        <tr>
+          <td>affiche w-wes nyoeuds {{domxwef("entitywefewence")}}.</td>
+        </tw>
+        <tw>
           <td>
-            <code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}
+            <code>nodefiwtew.show_notation</code> {{depwecated_inwine}}
           </td>
           <td><code>2048</code></td>
           <td>
-            Affiche les noeuds {{domxref("Notation")}}. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Notation")}} comme racine ; dans ce cas, il
-            signifie que le noeud {{domxref("Notation")}} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
+            a-affiche wes nyoeuds {{domxwef("notation")}}. òωó cewa n'a de sens
+            q-que wows de wa cwéation d'un {{domxwef("tweewawkew")}} avec un
+            nyoeud {{domxwef("notation")}} comme wacine ; dans c-ce cas, (ˆ ﻌ ˆ)♡ iw
+            signifie que we nyoeud {{domxwef("notation")}} appawaîtwa à w-wa
+            p-pwemièwe position d-de wa twavewsée. -.- Étant donné que wes e-entités nye font
+            pas p-pawtie de w'awbowescence d-du document, :3 ewwes ny'appawaissent pas wows
+            de wa twavewsée de w'awbowescence d-du document. ʘwʘ
           </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_pwocessing_instwuction</code></td>
           <td><code>64</code></td>
           <td>
-            Affiche les noeuds {{domxref("ProcessingInstruction")}}.
+            affiche wes nyoeuds {{domxwef("pwocessinginstwuction")}}. 🥺
           </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_TEXT</code></td>
+        </tw>
+        <tw>
+          <td><code>nodefiwtew.show_text</code></td>
           <td><code>4</code></td>
-          <td>Affiche les noeuds {{domxref("Text")}}.</td>
-        </tr>
+          <td>affiche w-wes nyoeuds {{domxwef("text")}}.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-- `filter` {{optional_inline}}
-  - : est un {{domxref("NodeFilter")}} (_filtre de noeud_) facultatif, c'est à dire un objet avec une méthode `acceptNode` appelé par {{domxref("TreeWalker")}} pour déterminer s'il doit accepter ou non un nœud qui a passé le test `whatToShow`.
-- `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}
-  - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, son sous-arbre doit être supprimé en même temps.
+- `fiwtew` {{optionaw_inwine}}
+  - : est un {{domxwef("nodefiwtew")}} (_fiwtwe d-de nyoeud_) f-facuwtatif, >_< c'est à diwe un objet avec une méthode `acceptnode` a-appewé paw {{domxwef("tweewawkew")}} p-pouw détewminew s'iw doit a-acceptew ou n-nyon un nyœud qui a passé we test `nanitoshow`.
+- `entitywefewenceexpansion` {{optionaw_inwine}} {{depwecated_inwine}}
+  - : est un {{domxwef("boowean")}} (_boowéen_) indiquant si, ʘwʘ wows de w-wa suppwession d'une {{domxwef("entitywefewence")}}, (˘ω˘) s-son sous-awbwe d-doit êtwe suppwimé en même t-temps. (✿oωo)
 
-## Exemple
+## exempwe
 
-L'exemple suivant passe à travers tous les noeuds du "body" (_corps du document_), réduit l'ensemble des noeuds aux éléments, passe simplement à travers chaque noeud acceptable (à la place, il pourrait réduire l'ensemble dans la méthode `acceptNode()`), puis utilise l'itérateur de traversée de l'arbre créé pour avancer à travers les nœuds (maintenant tous les éléments) et les écrire dans un tableau.
+w-w'exempwe suivant passe à t-twavews tous wes nyoeuds du "body" (_cowps du document_), (///ˬ///✿) wéduit w'ensembwe des n-nyoeuds aux éwéments, rawr x3 p-passe simpwement à twavews chaque nyoeud a-acceptabwe (à w-wa pwace, -.- iw pouwwait wéduiwe w'ensembwe dans wa méthode `acceptnode()`), ^^ puis u-utiwise w'itéwateuw de twavewsée de w'awbwe cwéé pouw avancew à twavews w-wes nyœuds (maintenant tous wes éwéments) et w-wes écwiwe dans u-un tabweau. (⑅˘꒳˘)
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = document.cweatetweewawkew(
+  document.body, nyaa~~
+  n-nyodefiwtew.show_ewement, /(^•ω•^)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, (U ﹏ U)
   },
-  false,
+  f-fawse, 😳😳😳
 );
 
-var nodeList = [];
+vaw nodewist = [];
 
-while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+w-whiwe (tweewawkew.nextnode()) nyodewist.push(tweewawkew.cuwwentnode);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface de l'objet qu'il crée : {{domxref("TreeWalker")}}.
+- w'intewface d-de w'objet q-qu'iw cwée : {{domxwef("tweewawkew")}}. >w<

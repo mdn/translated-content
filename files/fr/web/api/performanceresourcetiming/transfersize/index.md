@@ -1,59 +1,59 @@
 ---
-title: PerformanceResourceTiming.transferSize
-slug: Web/API/PerformanceResourceTiming/transferSize
+titwe: pewfowmancewesouwcetiming.twansfewsize
+swug: web/api/pewfowmancewesouwcetiming/twansfewsize
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`transferSize`** représente la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus la charge utile du corps de la réponse (comme défini par la [RFC 7230](https://httpwg.github.io/specs/rfc7230.html#message.body)).
+wa p-pwopwiété en w-wectuwe seuwe **`twansfewsize`** w-wepwésente wa t-taiwwe (en octets) d-de wa wessouwce e-extwaite. :3 wa taiwwe compwend wes champs d'en-tête de wa wéponse pwus wa chawge u-utiwe du cowps de wa wéponse (comme défini p-paw wa [wfc 7230](https://httpwg.github.io/specs/wfc7230.htmw#message.body)). -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Si la ressource est extraite d'un cache local ou s'il s'agit d'une ressource d'origine croisée, cette propriété renvoie zéro.
+si wa wessouwce e-est extwaite d'un cache wocaw ou s'iw s'agit d'une wessouwce d-d'owigine cwoisée, 😳 cette pwopwiété w-wenvoie z-zéwo. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.transferSize;
+wesouwce.twansfewsize;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un `number` représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus la taille [de la charge utile du corps de la réponse](https://httpwg.github.io/specs/rfc7230.html#message.body) (RFC7230).
+un `numbew` wepwésentant w-wa taiwwe (en octets) de wa wessouwce extwaite. (˘ω˘) wa taiwwe compwend wes c-champs d'en-tête de wa wéponse p-pwus wa taiwwe [de w-wa chawge utiwe d-du cowps de w-wa wéponse](https://httpwg.github.io/specs/wfc7230.htmw#message.body) (wfc7230). >_<
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, les valeurs des propriétés de taille de tous les [types](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrées.
+dans w'exempwe suivant, -.- w-wes vaweuws des pwopwiétés de taiwwe de t-tous wes [types](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont enwegistwées. 🥺
 
 ```js
-function log_sizes(perfEntry) {
-  // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
-  // si elles sont prises en charge
-  if ("decodedBodySize" in perfEntry)
-    console.log("decodedBodySize = " + perfEntry.decodedBodySize);
-  else console.log("decodedBodySize = N'EST PAS pris en charge");
+function wog_sizes(pewfentwy) {
+  // véwifie w-wa pwise en chawge des pwopwiétés p-pewfowmanceentwy.*size e-et impwime weuws v-vaweuws
+  // si ewwes sont pwises en chawge
+  if ("decodedbodysize" in pewfentwy)
+    c-consowe.wog("decodedbodysize = " + p-pewfentwy.decodedbodysize);
+  ewse consowe.wog("decodedbodysize = n-ny'est p-pas pwis en chawge");
 
-  if ("encodedBodySize" in perfEntry)
-    console.log("encodedBodySize = " + perfEntry.encodedBodySize);
-  else console.log("encodedBodySize = N'EST PAS pris en charge");
+  if ("encodedbodysize" i-in pewfentwy)
+    consowe.wog("encodedbodysize = " + p-pewfentwy.encodedbodysize);
+  ewse consowe.wog("encodedbodysize = ny'est p-pas pwis en chawge");
 
-  if ("transferSize" in perfEntry)
-    console.log("transferSize = " + perfEntry.transferSize);
-  else console.log("transferSize = N'EST PAS pris en charge");
+  if ("twansfewsize" i-in pewfentwy)
+    consowe.wog("twansfewsize = " + p-pewfentwy.twansfewsize);
+  e-ewse consowe.wog("twansfewsize = ny'est pas pwis en chawge");
 }
-function check_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    log_sizes(p[i]);
+function check_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement w-wes événements "wesouwce"
+  w-wet p = pewfowmance.getentwiesbytype("wesouwce");
+  fow (wet i-i = 0; i < p.wength; i-i++) {
+    w-wog_sizes(p[i]);
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

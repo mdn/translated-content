@@ -1,20 +1,20 @@
 ---
-title: HTMLMediaElement.crossOrigin
-slug: Web/API/HTMLMediaElement/crossOrigin
+titwe: htmwmediaewement.cwossowigin
+swug: web/api/htmwmediaewement/cwossowigin
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLMediaElement.crossOrigin`** est le paramètre CORS pour cet élément d'image. Voir les [attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus de détails.
+wa p-pwopwiété **`htmwmediaewement.cwossowigin`** e-est we pawamètwe c-cows pouw cet éwément d-d'image. (U ﹏ U) v-voiw wes [attwibuts d-des pawamètwes c-cows](/fw/docs/web/htmw/attwibutes/cwossowigin) pouw pwus de détaiws. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
+- w'intewface q-qui powte cette pwopwiété, (ˆ ﻌ ˆ)♡ [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement). (⑅˘꒳˘)

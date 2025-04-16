@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.bottom
-slug: Web/API/DOMRectReadOnly/bottom
+titwe: domwectweadonwy.bottom
+swug: web/api/domwectweadonwy/bottom
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`bottom`** d'une interface **`DOMRectReadOnly`** renvoie la valeur des coordonnées du pied du `DOMRect` (a la même valeur que `y + height` _(y + hauteur)_, ou `y` si `height` est négative).
+w-wa pwopwiété e-en wectuwe seuwe **`bottom`** d-d'une intewface **`domwectweadonwy`** w-wenvoie wa v-vaweuw des coowdonnées d-du pied d-du `domwect` (a w-wa même vaweuw que `y + height` _(y + hauteuw)_, (⑅˘꒳˘) ou `y` si `height` est nyégative). (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var recBottom = DOMRect.bottom;
+vaw wecbottom = domwect.bottom;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un double.
+un doubwe. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

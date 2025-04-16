@@ -1,62 +1,62 @@
 ---
-title: "Window: messageerror event"
-slug: Web/API/Window/messageerror_event
+titwe: "window: messageewwow e-event"
+swug: web/api/window/messageewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.
+w-w'événement `messageewwow` e-est d-décwenché suw u-un objet {{domxwef('window')}} w-wowsqu'iw weçoit u-un message qui n-nye peut pas êtwe déséwiawisé. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("messageevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de gestionnaiwe d-d'événements</th>
       <td>
-        {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}
+        {{domxwef("windoweventhandwews/onmessageewwow", -.- "onmessageewwow")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Écoutez `messageerror` en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} :
+Écoutez `messageewwow` e-en utiwisant {{domxwef("eventtawget/addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} :
 
 ```js
-window.addEventListener("messageerror", (event) => {
-  console.error(event);
+window.addeventwistenew("messageewwow", rawr x3 (event) => {
+  consowe.ewwow(event);
 });
 ```
 
-Idem, mais en utilisant la propriété de gestionnaire d'événements {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} :
+idem, mais en u-utiwisant wa pwopwiété de gestionnaiwe d-d'événements {{domxwef("windoweventhandwews/onmessageewwow", nyaa~~ "onmessageewwow")}} :
 
 ```js
-window.onmessageerror = (event) => {
-  console.error(event);
+w-window.onmessageewwow = (event) => {
+  consowe.ewwow(event);
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Window.postMessage()")}}
-- Événements liés: {{domxref("Window/message_event", "message")}}.
+- {{domxwef("window.postmessage()")}}
+- Événements w-wiés: {{domxwef("window/message_event", /(^•ω•^) "message")}}. rawr

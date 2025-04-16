@@ -1,49 +1,49 @@
 ---
-title: Window.scrollbars
-slug: Web/API/Window/scrollbars
+titwe: window.scwowwbaws
+swug: w-web/api/window/scwowwbaws
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.
+wa p-pwopwiété **`window.scwowwbaws`** w-wenvoie w'objet `scwowwbaws`, mya d-dont wa visibiwité p-peut êtwe v-véwifié. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objRef = window.scrollbars;
+o-objwef = window.scwowwbaws;
 ```
 
-## Exemple
+## exempwe
 
-L'exemple HTML complet suivant montre comment la propriété `visible` de l'objet scrollbars est utilisée.
+w'exempwe htmw compwet suivant montwe comment wa pwopwiété `visibwe` d-de w'objet scwowwbaws est utiwisée. 😳
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Divers Tests DOM</title>
-    <script>
-      let visibleScrollbars = window.scrollbars.visible;
-    </script>
+    <titwe>divews t-tests dom</titwe>
+    <scwipt>
+      wet visibwescwowwbaws = w-window.scwowwbaws.visibwe;
+    </scwipt>
   </head>
   <body>
-    <p>Divers Tests DOM</p>
+    <p>divews tests dom</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("window.locationbar")}}
-- {{domxref("window.menubar")}}
-- {{domxref("window.personalbar")}}
-- {{domxref("window.statusbar")}}
-- {{domxref("window.toolbar")}}
+- {{domxwef("window.wocationbaw")}}
+- {{domxwef("window.menubaw")}}
+- {{domxwef("window.pewsonawbaw")}}
+- {{domxwef("window.statusbaw")}}
+- {{domxwef("window.toowbaw")}}

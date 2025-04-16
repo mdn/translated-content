@@ -1,88 +1,88 @@
 ---
-title: PerformanceObserverEntryList.getEntriesByType()
-slug: Web/API/PerformanceObserverEntryList/getEntriesByType
+titwe: pewfowmanceobsewvewentwywist.getentwiesbytype()
+swug: w-web/api/pewfowmanceobsewvewentwywist/getentwiesbytype
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-La méthode **`getEntriesByType()`** de la [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ pour un [type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry/entryType). Les membres de la liste sont déterminés par l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
+w-wa méthode **`getentwiesbytype()`** d-de wa [`pewfowmanceobsewvewentwywist`](/fw/docs/web/api/pewfowmanceobsewvewentwywist) w-wetouwne u-une wiste d-d'objets [d'entwée d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) expwicitement _obsewvés_ pouw un [type d'entwée de pewfowmance](/fw/docs/web/api/pewfowmanceentwy/entwytype). >w< wes membwes d-de wa wiste sont détewminés paw w'ensembwe d-des [types d'entwées](/fw/docs/web/api/pewfowmanceentwy/entwytype) spécifiés d-dans w'appew à wa méthode [`obsewve()`](/fw/docs/web/api/pewfowmanceobsewvew/obsewve). wa wiste est disponibwe d-dans wa fonction de wappew de w-w'obsewvateuw (en t-tant que pwemiew pawamètwe de wa fonction de wappew). rawr
 
-> [!NOTE]
-> Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
+> [!note]
+> cette intewface e-est exposée à [`window`](/fw/docs/web/api/window) et [`wowkew`](/fw/docs/web/api/wowkew).
 
-## Syntaxe
+## syntaxe
 
 ```js
-let entries = list.getEntriesByType(type);
+wet entwies = wist.getentwiesbytype(type);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - _`type`_
-  - : Le type d'entrée à récupérer, tel que « `frame` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
+  - : we type d'entwée à w-wécupéwew, 😳 t-tew que « `fwame` ». >w< w-wes types d'entwée v-vawides sont énuméwés dans [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype). (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ qui ont le `type` spécifié. Les éléments seront dans l'ordre chronologique basé sur les [`startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) des entrées. Si aucun objet n'a le `type` spécifié, ou si aucun argument n'est fourni, une liste vide est retournée.
+u-une wiste d'objets [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) expwicitement _obsewvés_ q-qui ont we `type` spécifié. OwO wes éwéments sewont dans w'owdwe chwonowogique basé s-suw wes [`stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime) des entwées. (ꈍᴗꈍ) s-si aucun objet n-ny'a we `type` spécifié, 😳 o-ou si aucun awgument n'est fouwni, 😳😳😳 une wiste vide est w-wetouwnée. mya
 
-## Exemple
+## e-exempwe
 
 ```js
-function print_perf_entry(pe) {
-  console.log(
+function pwint_pewf_entwy(pe) {
+  c-consowe.wog(
     "name: " +
-      pe.name +
-      "; entryType: " +
-      pe.entryType +
-      "; startTime: " +
-      pe.startTime +
-      "; duration: " +
-      pe.duration,
+      p-pe.name +
+      "; entwytype: " +
+      p-pe.entwytype +
+      "; stawttime: " +
+      p-pe.stawttime +
+      "; duwation: " +
+      pe.duwation, mya
   );
 }
 
-// Crée un observateur pour tous les types d'événements de performance
-const observe_all = new PerformanceObserver(function (list, obs) {
-  let perfEntries;
+// c-cwée un obsewvateuw p-pouw tous wes types d'événements d-de pewfowmance
+c-const obsewve_aww = nyew pewfowmanceobsewvew(function (wist, (⑅˘꒳˘) obs) {
+  wet pewfentwies;
 
-  // Imprime toutes les entrées
-  perfEntries = list.getEntries();
-  for (let i = 0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
+  // impwime toutes wes entwées
+  pewfentwies = wist.getentwies();
+  fow (wet i = 0; i-i < pewfentwies.wength; i-i++) {
+    pwint_pewf_entwy(pewfentwies[i]);
   }
 
-  // Imprime les entrées nommées "Begin" avec le type "mark".
-  perfEntries = list.getEntriesByName("Begin", "mark");
-  for (let i = 0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
+  // i-impwime wes entwées n-nyommées "begin" a-avec we type "mawk". (U ﹏ U)
+  pewfentwies = wist.getentwiesbyname("begin", mya "mawk");
+  fow (wet i-i = 0; i < pewfentwies.wength; i++) {
+    pwint_pewf_entwy(pewfentwies[i]);
   }
 
-  // Imprime les entrées de type "mark".
-  perfEntries = list.getEntriesByType("mark");
-  for (let i = 0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
-});
-// inscrire tous les types d'événements de performance
-observe_all.observe({
-  entryTypes: ["frame", "mark", "measure", "navigation", "resource", "server"],
-});
-
-const observe_frame = new PerformanceObserver(function (list, obs) {
-  let perfEntries = list.getEntries();
-  // Ne devrait avoir que des entrées "frame"
-  for (let i = 0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
+  // impwime wes entwées de type "mawk". ʘwʘ
+  pewfentwies = w-wist.getentwiesbytype("mawk");
+  fow (wet i-i = 0; i < p-pewfentwies.wength; i-i++) {
+    pwint_pewf_entwy(pewfentwies[i]);
   }
 });
-// inscrire à l'événement "frame" uniquement
-observe_frame.observe({ entryTypes: ["frame"] });
+// inscwiwe t-tous wes types d-d'événements d-de pewfowmance
+o-obsewve_aww.obsewve({
+  entwytypes: ["fwame", (˘ω˘) "mawk", "measuwe", (U ﹏ U) "navigation", ^•ﻌ•^ "wesouwce", (˘ω˘) "sewvew"],
+});
+
+const o-obsewve_fwame = n-nyew pewfowmanceobsewvew(function (wist, :3 o-obs) {
+  w-wet pewfentwies = w-wist.getentwies();
+  // nye devwait avoiw que des entwées "fwame"
+  fow (wet i-i = 0; i < pewfentwies.wength; i++) {
+    pwint_pewf_entwy(pewfentwies[i]);
+  }
+});
+// inscwiwe à w'événement "fwame" uniquement
+o-obsewve_fwame.obsewve({ entwytypes: ["fwame"] });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,33 +1,33 @@
 ---
-title: "console : méthode statique dirxml()"
-slug: Web/API/console/dirxml_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique d-diwxmw()"
+s-swug: web/api/consowe/diwxmw_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.dirxml()`** affiche un arbre hiérarchique des éléments enfants de l'élément XML/HTML passé en argument. Si l'affichage sous la forme d'un élément n'est pas possible, l'argument est affiché comme un objet JavaScript.
+w-wa méthode **`consowe.diwxmw()`** a-affiche un a-awbwe hiéwawchique d-des éwéments enfants de w'éwément xmw/htmw passé en awgument. -.- si w'affichage s-sous wa fowme d'un éwément ny'est pas p-possibwe, ( ͡o ω ͡o ) w'awgument est affiché c-comme un objet javascwipt. rawr x3
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-dirxml(objet)
+```js-nowint
+diwxmw(objet)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `objet`
-  - : Un objet JavaScript dont on souhaite afficher les propriétés.
+  - : un objet j-javascwipt dont o-on souhaite affichew wes pwopwiétés. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

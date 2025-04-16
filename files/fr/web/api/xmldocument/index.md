@@ -1,31 +1,31 @@
 ---
-title: XMLDocument
-slug: Web/API/XMLDocument
+titwe: xmwdocument
+swug: web/api/xmwdocument
 ---
 
-{{ ApiRef("DOM") }} {{SeeCompatTable}}
+{{ a-apiwef("dom") }} {{seecompattabwe}}
 
-L'interface XMLDocument représente un document XML. Elle hérite du {{domxref("Document")}} générique et ne lui ajoute aucune méthode ou propriété spécifique : néanmoins, plusieurs algorithmes se comportent différemment avec les deux types de documents.
+w-w'intewface x-xmwdocument w-wepwésente u-un document xmw. rawr e-ewwe héwite du {{domxwef("document")}} g-généwique e-et nye wui ajoute aucune méthode ou pwopwiété spécifique : nyéanmoins, OwO p-pwusieuws awgowithmes se compowtent difféwemment a-avec wes deux types de documents. (U ﹏ U)
 
-## Propriété
+## p-pwopwiété
 
-_Cette interface n'a pas de propriété spécifique et n'en hérite aucune._
+_cette intewface ny'a pas de pwopwiété s-spécifique et ny'en héwite aucune._
 
-## Méthodes
+## m-méthodes
 
-_Cette interface n'ajoute aucune nouvelle méthode._
+_cette i-intewface ny'ajoute aucune nyouvewwe méthode._
 
-- {{domxref("XMLDocument.load()")}}
-  - : Charge un document XML.
+- {{domxwef("xmwdocument.woad()")}}
+  - : chawge un d-document xmw. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Référence du DOM](/fr/docs/Web/API/Document_Object_Model)
+- [wéféwence du dom](/fw/docs/web/api/document_object_modew)

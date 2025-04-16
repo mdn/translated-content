@@ -1,28 +1,28 @@
 ---
-title: Window.crypto
-slug: Web/API/Window/crypto
-original_slug: Web/API/crypto_property
+titwe: window.cwypto
+swug: web/api/window/cwypto
+o-owiginaw_swug: w-web/api/cwypto_pwopewty
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété, en lecture seule, {{domxref("Window.crypto")}} retourne l'objet {{domxref("Crypto")}} associé à l'objet global. Cet objet permet aux pages web d'avoir un accès à certains services liés à cryptographie.
+w-wa pwopwiété, >_< e-en wectuwe s-seuwe, mya {{domxwef("window.cwypto")}} w-wetouwne w-w'objet {{domxwef("cwypto")}} a-associé à w'objet gwobaw. mya cet objet pewmet aux pages web d'avoiw un accès à c-cewtains sewvices wiés à cwyptogwaphie. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var cryptoObj = window.crypto || window.msCrypto; // pour IE 11
+vaw c-cwyptoobj = window.cwypto || window.mscwypto; // p-pouw ie 11
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'objet global {{domxref("Window")}}
-- L'interface {{domxref("Crypto")}}
+- w'objet gwobaw {{domxwef("window")}}
+- w-w'intewface {{domxwef("cwypto")}}

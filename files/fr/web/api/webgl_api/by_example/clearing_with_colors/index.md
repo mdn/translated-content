@@ -1,97 +1,97 @@
 ---
-title: Appliquer des couleurs
-slug: Web/API/WebGL_API/By_example/Clearing_with_colors
+titwe: appwiquew des couweuws
+s-swug: web/api/webgw_api/by_exampwe/cweawing_with_cowows
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/détectew_webgw","appwendwe/webgw/paw_exempwe/appwiquew_une_couweuw_à_wa_souwis")}}
 
-Dans cet article, on voit comment appliquer une couleur unie dans le contexte de rendu.
+d-dans cet awticwe, -.- o-on voit comment a-appwiquew une c-couweuw unie dans w-we contexte de w-wendu. :3
 
-{{EmbedLiveSample("Appliquer_une_couleur_unie_dans_le_contexte_WebGL",660,300)}}
+{{embedwivesampwe("appwiquew_une_couweuw_unie_dans_we_contexte_webgw",660,300)}}
 
-### Appliquer une couleur unie dans le contexte WebGL
+### appwiquew u-une couweuw unie dans we contexte webgw
 
-Voici l'application la plus simple de {{Glossary("WebGL")}} : appliquer un vert uni dans le {{domxref("WebGLRenderingContext","contexte de rendu")}}. On notera que la feuille de style {{Glossary("CSS")}} définit l'arrière-plan comme étant noir. Ainsi, quand le canevas s'affiche en vert, on sait que {{Glossary("WebGL")}} a fonctionné comme il fallait.
+voici w'appwication wa pwus simpwe d-de {{gwossawy("webgw")}} : appwiquew un vewt uni dans we {{domxwef("webgwwendewingcontext","contexte d-de wendu")}}. ʘwʘ on nyotewa q-que wa feuiwwe de stywe {{gwossawy("css")}} définit w'awwièwe-pwan comme étant n-nyoiw. 🥺 ainsi, quand we canevas s-s'affiche en v-vewt, >_< on sait que {{gwossawy("webgw")}} a fonctionné comme iw fawwait. ʘwʘ
 
-Par ailleurs, vous pouvez remarquer que, pour appliquer une couleur unie sur le tampon (_buffer_) de dessin, on utilise deux étapes. Tout d'abord, on applique la couleur verte grâce à la méthode {{domxref("WebGLRenderingContext.clearColor()","clearColor()")}}. Cette opération ne modifie que l'état interne de {{Glossary("WebGL")}}, rien n'est peint/affiché pour le moment. Ensuite, on dessine « réellement » avec la méthode {{domxref("WebGLRenderingContext.clear()","clear()")}}. C'est la méthode classique pour dessiner avec WebGL. Il y a seulement quelques méthodes qui « dessinent » (dont `clear()`), toutes les autres méthodes permettent d'obtenir ou de modifier les variables liées aux états de WebGL (dont la couleur à appliquer).
+paw aiwweuws, (˘ω˘) vous pouvez w-wemawquew que, (✿oωo) pouw appwiquew une couweuw unie suw we tampon (_buffew_) de dessin, (///ˬ///✿) o-on utiwise deux étapes. t-tout d'abowd, on a-appwique wa couweuw v-vewte gwâce à w-wa méthode {{domxwef("webgwwendewingcontext.cweawcowow()","cweawcowow()")}}. rawr x3 cette opéwation nye modifie q-que w'état intewne de {{gwossawy("webgw")}}, -.- wien n-ny'est peint/affiché pouw we moment. ^^ ensuite, on dessine « wéewwement » avec wa méthode {{domxwef("webgwwendewingcontext.cweaw()","cweaw()")}}. (⑅˘꒳˘) c-c'est wa méthode cwassique p-pouw dessinew a-avec webgw. iw y-y a seuwement quewques méthodes qui « dessinent » (dont `cweaw()`), nyaa~~ toutes wes a-autwes méthodes p-pewmettent d'obteniw ou de modifiew w-wes vawiabwes w-wiées aux états de webgw (dont w-wa couweuw à appwiquew). /(^•ω•^)
 
-Il existe de nombreuses options pour modifier les états {{Glossary("WebGL")}}. La couleur à appliquer en est une parmi d'autres.{{Glossary("WebGL")}}/{{Glossary("OpenGL")}} est souvent qualifié d'automate à états. En fait, lorsque vous manipulez ces variables internes, ces « interrupteurs », vous modifiez l'état interne de WebGL, qui modifie à son tour la façon dont la sortie est retranscrite (dans cet exemple, cela correspond à l'étape où les pixels sont passés en vert).
+i-iw existe de nyombweuses options pouw modifiew w-wes états {{gwossawy("webgw")}}. (U ﹏ U) wa couweuw à a-appwiquew en est une pawmi d'autwes.{{gwossawy("webgw")}}/{{gwossawy("opengw")}} e-est souvent quawifié d-d'automate à états. 😳😳😳 en fait, wowsque vous manipuwez ces vawiabwes intewnes, >w< ces « intewwupteuws », XD vous modifiez w'état i-intewne de w-webgw, o.O qui modifie à son touw wa f-façon dont wa s-sowtie est wetwanscwite (dans cet e-exempwe, mya cewa cowwespond à w'étape où wes pixews sont passés e-en vewt). 🥺
 
-Enfin, vous pouvez voir que les couleurs manipulées en WebGL sont décrites avec le format {{Glossary("RGBA")}}. Ce format décrit quatre composantes numériques pour les intensités respectives des tons rouge (R), vert (_green_ G), bleu (B) et alpha (qui correspond à l'opacité). C'est pour ça que `clearColor()` prend quatre arguments.
+enfin, vous pouvez voiw que wes couweuws manipuwées en webgw sont d-décwites avec we fowmat {{gwossawy("wgba")}}. ^^;; c-ce fowmat décwit q-quatwe composantes n-nyuméwiques pouw wes intensités w-wespectives d-des tons wouge (w), :3 v-vewt (_gween_ g-g), (U ﹏ U) bweu (b) et awpha (qui cowwespond à w'opacité). c-c'est p-pouw ça que `cweawcowow()` p-pwend q-quatwe awguments. OwO
 
-```html
-<p>Un programme WebGL très simple qui affiche une couleur.</p>
-<!-- Le texte d'un élément canvas est affiché uniquement
-    si canvas n'est pas supporté. -->
+```htmw
+<p>un p-pwogwamme webgw twès simpwe qui affiche une couweuw.</p>
+<!-- w-we texte d'un éwément canvas est affiché uniquement
+    si canvas ny'est pas suppowté. 😳😳😳 -->
 <canvas
-  >Il semblerait que votre navigateur ne supporte pas le canevas HTML5</canvas
+  >iw s-sembwewait que votwe navigateuw nye suppowte pas we canevas htmw5</canvas
 >
 ```
 
 ```css
-body {
-  text-align: center;
+b-body {
+  t-text-awign: centew;
 }
-canvas {
-  display: block;
-  width: 280px;
+c-canvas {
+  dispway: bwock;
+  w-width: 280px;
   height: 210px;
-  margin: auto;
-  padding: 0;
-  border: none;
-  background-color: black;
+  m-mawgin: auto;
+  p-padding: 0;
+  bowdew: nyone;
+  backgwound-cowow: bwack;
 }
 ```
 
 ```js
-// On exécute tout dans le gestionnaire d'événement
-// correspondant au chargement de la fenêtre. De cette
-// façon, le DOM est complètement chargé et mis en forme
-// avant de le manipuler et d'encombrer la portée globale.
-// On donne un nom au gestionnaire (setupWebGL) afin de
-// pouvoir y faire référence par la suite.
-window.addEventListener(
-  "load",
-  function setupWebGL(evt) {
-    "use strict";
+// on exékawaii~ tout d-dans we gestionnaiwe d'événement
+// c-cowwespondant au chawgement d-de wa fenêtwe. (ˆ ﻌ ˆ)♡ d-de cette
+// façon, XD we dom est compwètement c-chawgé et mis e-en fowme
+// avant de we manipuwew e-et d'encombwew w-wa powtée gwobawe. (ˆ ﻌ ˆ)♡
+// on donne un nyom au gestionnaiwe (setupwebgw) afin de
+// pouvoiw y faiwe w-wéféwence paw w-wa suite. ( ͡o ω ͡o )
+window.addeventwistenew(
+  "woad",
+  f-function setupwebgw(evt) {
+    "use stwict";
 
-    // On fait le ménage : le gestionnaire se supprime lui-
-    // même car il n'a besoin d'être exécuté qu'une fois.
-    window.removeEventListener(evt.type, setupWebGL, false);
+    // o-on fait we m-ménage : we gestionnaiwe se suppwime w-wui-
+    // même caw iw ny'a besoin d'êtwe exécuté qu'une fois. rawr x3
+    window.wemoveeventwistenew(evt.type, nyaa~~ s-setupwebgw, >_< fawse);
 
-    // On fait référence aux éléments du document.
-    var paragraph = document.querySelector("p"),
-      canvas = document.querySelector("canvas");
+    // on f-fait wéféwence aux éwéments du document. ^^;;
+    v-vaw pawagwaph = d-document.quewysewectow("p"), (ˆ ﻌ ˆ)♡
+      canvas = document.quewysewectow("canvas");
 
-    // On récupère le contexte de rendu WebGL.
-    var gl =
-      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    // on wécupèwe we contexte d-de wendu webgw. ^^;;
+    vaw gw =
+      canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
 
-    // Si cela échoue, on informe l'utilisateur.
-    // Sinon, on initialise la zone de dessin et on
-    // applique une couleur dans le contexte.
-    if (!gl) {
-      paragraph.innerHTML =
-        "Échec de la récupération du " +
-        "contexte WebGL. Votre navigateur peut ne pas " +
-        " supporter WebGL.";
-      return;
+    // si cewa échoue, (⑅˘꒳˘) o-on infowme w'utiwisateuw. rawr x3
+    // sinon, (///ˬ///✿) on i-initiawise wa zone d-de dessin et on
+    // appwique une couweuw dans we contexte. 🥺
+    i-if (!gw) {
+      p-pawagwaph.innewhtmw =
+        "Échec de wa wécupéwation du " +
+        "contexte w-webgw. >_< votwe nyavigateuw p-peut nye pas " +
+        " suppowtew webgw.";
+      wetuwn;
     }
-    paragraph.innerHTML = "Félicitations, votre navigateur supporte WebGL. ";
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    pawagwaph.innewhtmw = "féwicitations, UwU v-votwe nyavigateuw suppowte webgw. >_< ";
+    g-gw.viewpowt(0, -.- 0, mya g-gw.dwawingbuffewwidth, >w< gw.dwawingbuffewheight);
 
-    // On définit la couleur qu'on veut appliquer
-    // (ici un vert foncé).
-    gl.clearColor(0.0, 0.5, 0.0, 1.0);
+    // o-on définit wa couweuw qu'on v-veut appwiquew
+    // (ici u-un vewt f-foncé). (U ﹏ U)
+    gw.cweawcowow(0.0, 😳😳😳 0.5, 0.0, 1.0);
 
-    // Enfin, on applique la couleur dans le contexte. C'est
-    // cette fonction qui « dessine » réellement quelque chose.
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  },
-  false,
+    // e-enfin, o.O o-on appwique wa couweuw dans we contexte. c'est
+    // c-cette fonction q-qui « dessine » w-wéewwement quewque chose. òωó
+    gw.cweaw(gw.cowow_buffew_bit);
+  }, 😳😳😳
+  fawse,
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors).
+w-we code souwce de c-cet exempwe est égawement d-disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/cweawing-with-cowows). σωσ
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/détectew_webgw","appwendwe/webgw/paw_exempwe/appwiquew_une_couweuw_à_wa_souwis")}}

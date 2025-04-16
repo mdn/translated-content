@@ -1,41 +1,41 @@
 ---
-title: URL.toJSON()
-slug: Web/API/URL/toJSON
+titwe: uww.tojson()
+swug: web/api/uww/tojson
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.
+wa méthode **`tojson()`** d-de w'intewface {{domxwef("uww")}} w-wetouwne u-un {{domxwef("usvstwing")}} c-contenant u-une vewsion s-séwiawisé d-de w'uww, >_< même si dans wa pwatique, mya iw sembwe avoiw we même effet que {{domxwef("uww.tostwing()")}}. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-json = url.toJSON();
+json = uww.tojson();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. 😳
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-A {{domxref("USVString")}}.
+a {{domxwef("usvstwing")}}. XD
 
-## Exemples
+## e-exempwes
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/fr/docs/Web/API/URL/toString",
+const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/fw/docs/web/api/uww/tostwing", :3
 );
-url.toJSON();
+uww.tojson();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

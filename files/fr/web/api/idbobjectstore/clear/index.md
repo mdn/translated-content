@@ -1,104 +1,104 @@
 ---
-title: IDBObjectStore.clear()
-slug: Web/API/IDBObjectStore/clear
+titwe: idbobjectstowe.cweaw()
+swug: web/api/idbobjectstowe/cweaw
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La méthode **`clear()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet {{domxref("IDBObjectStore","relié")}}.
+w-wa méthode **`cweaw()`** d-de w-w'intewface {{domxwef("idbobjectstowe")}} f-fait u-une {{domxwef("idbwequest","wequête")}} p-pouw videw w-we magasin d'objet {{domxwef("idbobjectstowe","wewié")}}. mya
 
-Vider un magasin d'objet consiste à supprimer tous les enregistrements et les entrées des index de ce magasin d'objet.
+videw un magasin d'objet consiste à suppwimew tous wes enwegistwements e-et wes entwées des index de ce magasin d-d'objet. ʘwʘ
 
-> [!NOTE]
-> La méthode clear() ne remet pas à zero le compteur du génerateur de clé s'il y en à un.
+> [!note]
+> wa méthode c-cweaw() nye wemet pas à zewo we compteuw du génewateuw de cwé s-s'iw y en à un. (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var request = objectStore.clear();
+vaw w-wequest = objectstowe.cweaw();
 ```
 
-## Renvoie
+## wenvoie
 
-Une {{domxref("IDBRequest","requête")}}.
+une {{domxwef("idbwequest","wequête")}}. (U ﹏ U)
 
-## Exceptions
+## exceptions
 
-- `ReadOnlyError`
-  - : Cette {{domxref("DOMException","exception")}} est levé si la transaction associé à cette requête est en {{domxref("IDBTransaction.mode","mode")}} lecture seule.
-- `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
+- `weadonwyewwow`
+  - : cette {{domxwef("domexception","exception")}} e-est wevé si wa twansaction associé à cette wequête est en {{domxwef("idbtwansaction.mode","mode")}} wectuwe s-seuwe. ^•ﻌ•^
+- `twansactioninactiveewwow`
+  - : cette {{domxwef("domexception","exception")}} e-est wevé s-si wa {{domxwef("idbtwansaction","twansaction")}} d-de w'{{domxwef("idbobjectstowe","accès")}} a-au magasin d'objet est inactive. (˘ω˘)
 
-## Exemple
+## exempwe
 
-Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet `"toDoList"` et le {{domxref("IDBObjectStore.clear","vider")}}
+d-dans we code suivant, :3 on ouvwe une {{domxwef("idbdatabase","connexion")}} à w-wa base de donnée. ^^;; suw cette connexion on démawwe une {{domxwef("idbtwansaction","twansaction")}} en wectuwe/écwituwe p-pouw avoiw un {{domxwef("idbobjectstowe","accès")}} a-au magasin d-d'objet `"todowist"` e-et we {{domxwef("idbobjectstowe.cweaw","videw")}}
 
-La méthode **`clear()`** de l'accès au magasin d'objet fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet `toDoList`.
+wa méthode **`cweaw()`** de w'accès au magasin d-d'objet fait une {{domxwef("idbwequest","wequête")}} p-pouw videw we magasin d'objet `todowist`. 🥺
 
 ```js
-//Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+//connexion à w-wa base de d-données
+vaw dbopenwequest = window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Connexion établie.</li>";
+d-dbopenwequest.onsuccess = function (event) {
+  nyote.innewhtmw += "<wi>connexion étabwie.</wi>";
 
-  //Affecte la connexion à la variable db.
-  db = DBOpenRequest.result;
+  //affecte w-wa connexion à wa vawiabwe db. nyaa~~
+  db = dbopenwequest.wesuwt;
 
-  // Exécutez la fonction clearData () pour vider les données dans le magasin d'objet
-  clearData();
+  // e-exékawaii~z wa fonction c-cweawdata () pouw videw wes données d-dans we magasin d-d'objet
+  cweawdata();
 };
 
-function clearData() {
-  // ouvre une transaction de lecture / écriture prête pour le nettoyage
-  var transaction = db.transaction(["toDoList"], "readwrite");
+function cweawdata() {
+  // ouvwe une twansaction de wectuwe / écwituwe pwête pouw we nyettoyage
+  v-vaw twansaction = d-db.twansaction(["todowist"], "weadwwite");
 
-  // en cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function (event) {
-    note.innerHTML +=
-      "<li>Transaction complété : modification de la base de données terminée.</li>";
+  // en cas de s-succès de w'ouvewtuwe d-de wa twansaction
+  t-twansaction.oncompwete = function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction compwété : m-modification de wa base de données tewminée.</wi>";
   };
 
-  // en cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Transaction en échec à cause de l'erreur : " +
-      transaction.error +
-      "</li>";
+  // en cas d'échec de w'ouvewtuwe d-de wa twansaction
+  twansaction.onewwow = f-function (event) {
+    n-nyote.innewhtmw +=
+      "<wi>twansaction en échec à c-cause de w'ewweuw : " +
+      t-twansaction.ewwow +
+      "</wi>";
   };
 
-  // ouvre l'accès au un magasin "toDoList" de la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // o-ouvwe w'accès a-au un magasin "todowist" d-de wa twansaction
+  vaw objectstowe = twansaction.objectstowe("todowist");
 
-  // Vide le magasin d'objet
-  var objectStoreRequest = objectStore.clear();
+  // v-vide we magasin d-d'objet
+  vaw objectstowewequest = o-objectstowe.cweaw();
 
-  objectStoreRequest.onsuccess = function (event) {
-    // rapporte le succès du nettoyage
-    note.innerHTML += "<li>Enregistrements effacées.</li>";
+  o-objectstowewequest.onsuccess = f-function (event) {
+    // wappowte we succès du nyettoyage
+    nyote.innewhtmw += "<wi>enwegistwements e-effacées.</wi>";
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe de twavaiw compwet, :3 voiw notwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) a-app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew i-indexeddb")}}
+- {{domxwef("idbdatabase","débutew une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe d-des cwés")}}
+- {{domxwef("idbobjectstowe","accès a-aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew wes cuwseuw")}}
+- exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

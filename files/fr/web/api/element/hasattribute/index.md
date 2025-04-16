@@ -1,51 +1,51 @@
 ---
-title: "Element : méthode hasAttribute()"
-slug: Web/API/Element/hasAttribute
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode hasattwibute()"
+s-swug: w-web/api/ewement/hasattwibute
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`hasAttribute()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non.
+w-wa méthode **`hasattwibute()`**, rawr x3 a-associée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), nyaa~~ w-wenvoie u-une **vaweuw boowéenne** indiquant si w'éwément couwant possède w'attwibut s-spécifié ou non. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-hasAttribute(name)
+```js-nowint
+hasattwibute(name)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `name`
-  - : Une chaine de caractères représentant le nom de l'attribut recherché.
+  - : une chaine d-de cawactèwes wepwésentant we nyom de w'attwibut wechewché. rawr
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un booléen indiquant la présence de l'attribut.
+un boowéen i-indiquant wa p-pwésence de w'attwibut. OwO
 
-## Exemples
+## exempwes
 
 ```js
-const toto = document.getElementById("toto");
-if (toto.hasAttribute("truc")) {
-  // faire quelque chose
+const toto = document.getewementbyid("toto");
+if (toto.hasattwibute("twuc")) {
+  // f-faiwe quewque chose
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
+- [`ewement.hasattwibutes()`](/fw/docs/web/api/ewement/hasattwibutes)
+- [`ewement.hasattwibutens()`](/fw/docs/web/api/ewement/hasattwibutens)
+- [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute)
+- [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute)
+- [`ewement.wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute)
+- [`ewement.toggweattwibute()`](/fw/docs/web/api/ewement/toggweattwibute)

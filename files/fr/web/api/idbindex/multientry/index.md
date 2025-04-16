@@ -1,97 +1,97 @@
 ---
-title: IDBIndex.multiEntry
-slug: Web/API/IDBIndex/multiEntry
+titwe: idbindex.muwtientwy
+swug: w-web/api/idbindex/muwtientwy
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`multiEntry`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique le comportement de l'index lorsque le résultat de l'évaluation d'un chemin de clé renvoie un tableau.
+w-wa p-pwopwiété **`muwtientwy`**, (˘ω˘) wattachée à w-w'intewface {{domxwef("idbindex")}}, :3 e-est un boowéen q-qui indique we c-compowtement de w-w'index wowsque we wésuwtat de w'évawuation d'un chemin de cwé wenvoie un tabweau. ^^;;
 
-Ce comportement est paramétré au moment où l'index est créé avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode permet d'utiliser un paramètre facultatif `options` pour définir la propriété `multiEntry` avec `true`/`false`.
+c-ce compowtement est pawamétwé au moment o-où w'index est cwéé avec wa m-méthode {{domxwef("idbobjectstowe.cweateindex")}}. 🥺 cette méthode pewmet d'utiwisew un pawamètwe f-facuwtatif `options` pouw définiw w-wa pwopwiété `muwtientwy` a-avec `twue`/`fawse`. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var monIndex = objectStore.index("index");
-console.log(monIndex.multiEntry);
+vaw monindex = objectstowe.index("index");
+consowe.wog(monindex.muwtientwy);
 ```
 
-### Valeur
+### v-vaweuw
 
-Un booléen. S'il vaut `true`, cela signifie qu'il y a autant d'enregistrement que de valeurs dans le tableau renvoyé lors de l'évaluation du chemin (les clés des enregistrements sont les valeurs du tableau). S'il vaut `false`, cela signifie qu'il n'y aura qu'un seul enregistrement ajouté et que la clé sera le tableau.
+un boowéen. nyaa~~ s'iw vaut `twue`, :3 cewa signifie qu'iw y a autant d'enwegistwement q-que de vaweuws dans we tabweau wenvoyé w-wows de w-w'évawuation du c-chemin (wes cwés d-des enwegistwements sont wes vaweuws du tabweau). ( ͡o ω ͡o ) s-s'iw vaut `fawse`, mya cewa signifie qu'iw ny'y a-auwa qu'un seuw enwegistwement ajouté et que wa cwé sewa we tabweau. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objets et on récupère l'index `lName` depuis la base de données des contacts. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} (cela fonctionne comme si on avait directement ouvert un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} mais les enregistrements sont ici renvoyés en étant triés selon l'index et non selon la clé primaire.
+dans w'exempwe q-qui suit, (˘ω˘) on ouvwe une twansaction s-suw un magasin d-d'objets e-et on wécupèwe w'index `wname` depuis wa base de données des c-contacts. ensuite, ^^;; o-on ouvwe un cuwseuw simpwe suw w-w'index gwâce à w-wa méthode {{domxwef("idbindex.opencuwsow")}} (cewa fonctionne c-comme si on avait diwectement o-ouvewt un cuwseuw suw we magasin d'objets avec {{domxwef("idbobjectstowe.opencuwsow")}} m-mais wes enwegistwements s-sont ici wenvoyés en étant t-twiés sewon w'index e-et nyon sewon wa cwé pwimaiwe. (✿oωo)
 
-La propriété `multiEntry` est affichée dans la console. Dans cet exemple, elle a la valeur `false`.
+wa pwopwiété `muwtientwy` est affichée dans wa consowe. (U ﹏ U) dans cet exempwe, -.- ewwe a wa vaweuw `fawse`. ^•ﻌ•^
 
-Enfin, on parcourt chacun des enregistrements pour insérer les données dans un tableau HTML. Pour consulter un exemple complet, vous pouvez vous référer à [notre dépôt IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([voir également la démo _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+e-enfin, o-on pawcouwt chacun des enwegistwements p-pouw i-inséwew wes données d-dans un tabweau htmw. rawr pouw consuwtew un exempwe compwet, (˘ω˘) v-vous pouvez vous wéféwew à [notwe dépôt idbindex-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbindex) ([voiw égawement wa démo _wive_](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/)). nyaa~~
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+function d-dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  v-vaw twansaction = d-db.twansaction(["contactswist"], UwU "weadonwy");
+  v-vaw objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  console.log(myIndex.multiEntry);
+  v-vaw myindex = o-objectstowe.index("wname");
+  c-consowe.wog(myindex.muwtientwy);
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  m-myindex.opencuwsow().onsuccess = function (event) {
+    vaw c-cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      v-vaw tabwewow = d-document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        c-cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments ont été affichés.");
+      c-cuwsow.continue();
+    } ewse {
+      consowe.wog("wes éwéments ont été a-affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew u-une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). :3

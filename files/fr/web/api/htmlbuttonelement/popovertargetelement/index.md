@@ -1,78 +1,78 @@
 ---
-title: "HTMLButtonElement : propriété popoverTargetElement"
-slug: Web/API/HTMLButtonElement/popoverTargetElement
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: "htmwbuttonewement : pwopwiété popovewtawgetewement"
+s-swug: web/api/htmwbuttonewement/popovewtawgetewement
+w-w10n:
+  souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`popoverTargetElement`** de l'interface [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement) permet de lire et définir l'élément <i lang="en">popover</i> à contrôler via un bouton.
+w-wa p-pwopwiété **`popovewtawgetewement`** d-de w'intewface [`htmwbuttonewement`](/fw/docs/web/api/htmwbuttonewement) p-pewmet de wiwe et d-définiw w'éwément <i w-wang="en">popovew</i> à contwôwew via un bouton. ^^;;
 
-Elle est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Element/button#l_attribut_popovertarget).
+ewwe est w'équivawent javascwipt d-de w'attwibut htmw [`popovewtawget`](/fw/docs/web/htmw/ewement/button#w_attwibut_popovewtawget). >_<
 
-## Valeur
+## vaweuw
 
-Une référence vers un élément <i lang="en">popover</i> dans le DOM.
+une wéféwence vews u-un éwément <i wang="en">popovew</i> d-dans we dom. rawr x3
 
-## Exemples
+## exempwes
 
-### L'action `toggle` avec un <i lang="en">popover</i> automatique
+### w'action `toggwe` avec un <i w-wang="en">popovew</i> automatique
 
-Cet exemple montre l'utilisation de base de l'API Popover, en définissant un élément `<div>` comme <i lang="en">popover</i>, puis en le définissant comme `popoverTargetElement` d'un `<button>`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère), de sorte que le <i lang="en">popover</i> peut être fermé («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone du <i lang="en">popover</i>.
+c-cet exempwe m-montwe w'utiwisation de base de w'api popovew, /(^•ω•^) en définissant un éwément `<div>` c-comme <i wang="en">popovew</i>, :3 puis en we définissant comme `popovewtawgetewement` d'un `<button>`. (ꈍᴗꈍ) w-w'attwibut `popovew` est défini suw [`"auto"`](/fw/docs/web/api/popovew_api/using#w_état_automatique_et_wa_fewmetuwe_wégèwe), /(^•ω•^) de s-sowte que we <i w-wang="en">popovew</i> p-peut êtwe f-fewmé («&nbsp;<i wang="en">wight-dismissed</i>&nbsp;») en c-cwiquant en dehows de wa zone du <i wang="en">popovew</i>. (⑅˘꒳˘)
 
-Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
+t-tout d'abowd, ( ͡o ω ͡o ) nyous définissons un éwément htmw `<button>` que nyous utiwisewons p-pouw affichew et masquew we <i wang="en">popovew</i>, òωó e-et un `<div>` q-qui sewa we <i w-wang="en">popovew</i>. (⑅˘꒳˘) dans ce cas, XD nyous nye définissons pas w-w'attwibut [`popovewtawgetaction`](/fw/docs/web/htmw/ewement/button#popovewtawgetaction) s-suw we `<button>` ou w-w'attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew) s-suw we `<div>`, caw nyous we f-fewons de manièwe pwogwammatique. -.-
 
-```html
-<button id="toggleBtn">Afficher/masquer le popover</button>
-<div id="monpopover">Ceci est le contenu du popover !</div>
+```htmw
+<button i-id="toggwebtn">affichew/masquew we popovew</button>
+<div id="monpopovew">ceci e-est we contenu du popovew !</div>
 ```
 
-Le code JavaScript récupère d'abord une référence vers les éléments `<div>` et `<button>`. Il définit ensuite une fonction pour vérifier la prise en charge du popover.
+w-we code javascwipt wécupèwe d-d'abowd u-une wéféwence vews wes éwéments `<div>` et `<button>`. :3 iw définit ensuite une fonction pouw véwifiew wa pwise e-en chawge du p-popovew. nyaa~~
 
 ```js
-const popover = document.getElementById("monpopover");
-const toggleBtn = document.getElementById("toggleBtn");
+const popovew = d-document.getewementbyid("monpopovew");
+c-const toggwebtn = d-document.getewementbyid("toggwebtn");
 
-// Vérifie la prise en charge de l'API Popover.
-function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+// véwifie wa pwise en chawge de w'api popovew. 😳
+f-function suppowtspopovew() {
+  wetuwn htmwewement.pwototype.hasownpwopewty("popovew");
 }
 ```
 
-Si l'API Popover est prise en charge, le code définit l'attribut `popover` de l'élément `<div>` sur `"auto"` et en fait la cible du <i lang="en">popover</i> du bouton de basculement. Nous définissons ensuite la `popoverTargetAction` du `<button>` sur `"toggle"`. Si l'API Popover n'est pas prise en charge, nous changeons le contenu textuel de l'élément `<div>` pour indiquer cela, et masquons le bouton de basculement.
+si w'api popovew est pwise en chawge, (⑅˘꒳˘) we code définit w-w'attwibut `popovew` de w'éwément `<div>` s-suw `"auto"` e-et en fait wa cibwe d-du <i wang="en">popovew</i> du bouton de bascuwement. nyaa~~ n-nyous d-définissons ensuite w-wa `popovewtawgetaction` d-du `<button>` suw `"toggwe"`. si w'api p-popovew ny'est p-pas pwise en c-chawge, OwO nyous changeons w-we contenu t-textuew de w'éwément `<div>` pouw indiquew cewa, rawr x3 et masquons we bouton de b-bascuwement. XD
 
 ```js
-if (supportsPopover()) {
-  // Définit l'élément <div> comme étant un popover automatique
-  popover.popover = "auto";
+if (suppowtspopovew()) {
+  // définit w'éwément <div> comme étant un popovew automatique
+  p-popovew.popovew = "auto";
 
-  // Définit la cible popover du bouton comme étant le popover
-  toggleBtn.popoverTargetElement = popover;
+  // définit wa cibwe popovew du bouton comme étant w-we popovew
+  t-toggwebtn.popovewtawgetewement = p-popovew;
 
-  // Définit comment le bouton change la visibilité du popover
-  toggleBtn.popoverTargetAction = "toggle";
-} else {
-  popover.textContent = "L'API Popover n'est pas prise en charge.";
-  toggleBtn.hidden = true;
+  // définit comment w-we bouton change wa visibiwité d-du popovew
+  toggwebtn.popovewtawgetaction = "toggwe";
+} e-ewse {
+  popovew.textcontent = "w'api popovew ny'est pas pwise en chawge.";
+  toggwebtn.hidden = twue;
 }
 ```
 
-> [!NOTE]
-> Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
+> [!note]
+> u-un éwément <i wang="en">popovew</i> e-est masqué paw défaut, σωσ m-mais si w'api n-ny'est pas pwise en chawge, (U ᵕ U❁) iw s'affichewa de f-façon cwassique. (U ﹏ U)
 
-Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">popover</i> en activant le bouton. Le <i lang="en">popover</i> `"auto"` peut également être fermé facilement («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors des limites du <i lang="en">popover</i>.
+v-vous pouvez essayew w'exempwe c-ci-apwès. :3 affichez e-et masquez we <i wang="en">popovew</i> en activant we bouton. ( ͡o ω ͡o ) we <i wang="en">popovew</i> `"auto"` p-peut égawement êtwe f-fewmé f-faciwement («&nbsp;<i wang="en">wight-dismissed</i>&nbsp;») e-en cwiquant en d-dehows des wimites du <i wang="en">popovew</i>. σωσ
 
-{{EmbedLiveSample("", "100%")}}
+{{embedwivesampwe("", >w< "100%")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api popovew](/fw/docs/web/api/popovew_api)

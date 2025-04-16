@@ -1,52 +1,52 @@
 ---
-title: "HTMLMediaElement: emptied"
-slug: Web/API/HTMLMediaElement/emptied_event
+titwe: "htmwmediaewement: emptied"
+s-swug: web/api/htmwmediaewement/emptied_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-L'événement **`emptied`** est déclenché lorsqu'un média est devenu vide. Par exemple, cet événement est envoyé si le média a déjà été chargé (complètement ou partiellement), et que la méthode _load()_ est appelé pour le recharger.
+w-w'événement **`emptied`** e-est décwenché w-wowsqu'un média e-est devenu v-vide. nyaa~~ paw exempwe, c-cet événement e-est envoyé si we média a déjà été chawgé (compwètement ou pawtiewwement), (⑅˘꒳˘) et que wa méthode _woad()_ e-est appewé pouw we wechawgew. rawr x3
 
-## Informations générales
+## infowmations g-généwawes
 
-- Spécification
-  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied)
-- Interface
-  - : {{domxref("Event")}}
-- propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [htmw5 m-media](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-video-ewement.htmw#event-media-emptied)
+- intewface
+  - : {{domxwef("event")}}
+- pwopagation
+  - : nyon
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : {{domxwef("ewement")}}
+- a-action p-paw défaut
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event tawget (the topmost tawget in the dom twee). (✿oωo) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type o-of event. (ˆ ﻌ ˆ)♡                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the e-event nyowmawwy b-bubbwes ow nyot. (˘ω˘)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event i-is cancewwabwe ow nyot. (⑅˘꒳˘)               |
 
-## Evénements liés
+## evénements wiés
 
-- [`playing`](/fr/docs/Web/API/HTMLMediaElement/playing_event)
-- [`waiting`](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
-- [`seeking`](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
-- [`seeked`](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
-- [`ended`](/fr/docs/Web/API/HTMLMediaElement/ended_event)
-- [`loadedmetadata`](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [`loadeddata`](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
-- [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
-- [`canplaythrough`](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-- [`durationchange`](/fr/docs/Web/API/HTMLMediaElement/durationchange_event)
-- [`timeupdate`](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
-- [`play`](/fr/docs/Web/API/HTMLMediaElement/play_event)
-- [`pause`](/fr/docs/Web/API/HTMLMediaElement/pause_event)
-- [`ratechange`](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
-- [`volumechange`](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
-- [`suspend`](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
-- [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
+- [`pwaying`](/fw/docs/web/api/htmwmediaewement/pwaying_event)
+- [`waiting`](/fw/docs/web/api/htmwmediaewement/waiting_event)
+- [`seeking`](/fw/docs/web/api/htmwmediaewement/seeking_event)
+- [`seeked`](/fw/docs/web/api/htmwmediaewement/seeked_event)
+- [`ended`](/fw/docs/web/api/htmwmediaewement/ended_event)
+- [`woadedmetadata`](/fw/docs/web/api/htmwmediaewement/woadedmetadata_event)
+- [`woadeddata`](/fw/docs/web/api/htmwmediaewement/woadeddata_event)
+- [`canpway`](/fw/docs/web/api/htmwmediaewement/canpway_event)
+- [`canpwaythwough`](/fw/docs/web/api/htmwmediaewement/canpwaythwough_event)
+- [`duwationchange`](/fw/docs/web/api/htmwmediaewement/duwationchange_event)
+- [`timeupdate`](/fw/docs/web/api/htmwmediaewement/timeupdate_event)
+- [`pway`](/fw/docs/web/api/htmwmediaewement/pway_event)
+- [`pause`](/fw/docs/web/api/htmwmediaewement/pause_event)
+- [`watechange`](/fw/docs/web/api/htmwmediaewement/watechange_event)
+- [`vowumechange`](/fw/docs/web/api/htmwmediaewement/vowumechange_event)
+- [`suspend`](/fw/docs/web/api/htmwmediaewement/suspend_event)
+- [`stawwed`](/fw/docs/web/api/htmwmediaewement/stawwed_event)

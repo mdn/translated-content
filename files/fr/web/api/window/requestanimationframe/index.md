@@ -1,89 +1,89 @@
 ---
-title: Window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+titwe: window.wequestanimationfwame()
+swug: web/api/window/wequestanimationfwame
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`window.requestAnimationFrame()`** indique au navigateur qu'on souhaite exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement à l'écran du navigateur. Cette méthode prend comme argument une fonction de rappel qui sera appelée avant le rafraîchissement du navigateur.
+w-wa méthode **`window.wequestanimationfwame()`** i-indique au n-nyavigateuw qu'on s-souhaite exékawaii~w u-une animation e-et demande q-que cewui-ci exékawaii~ u-une fonction spécifique de mise à jouw de w'animation, OwO avant we pwochain w-wafwaîchissement à w'écwan du nyavigateuw. >w< c-cette méthode pwend comme awgument u-une fonction de wappew qui sewa appewée avant we wafwaîchissement d-du nyavigateuw. 🥺
 
-> [!NOTE]
-> Si vous souhaitez animer une nouvelle <i lang="en">frame</i> durant le prochain affichage, la fonction de rappel doit de nouveau appeler la méthode `requestAnimationFrame()`. Autrement dit, `requestAnimationFrame()` ne fonctionne qu'une fois.
+> [!note]
+> si vous s-souhaitez animew u-une nyouvewwe <i wang="en">fwame</i> duwant we pwochain affichage, nyaa~~ wa fonction d-de wappew doit de nouveau appewew wa méthode `wequestanimationfwame()`. ^^ autwement dit, >w< `wequestanimationfwame()` n-ne fonctionne qu'une fois. OwO
 
-Cette méthode doit être appelée dès que le code est prêt à rafraîchir l'animation. La fonction de rappel contenant l'animation sera ainsi appelée par le navigateur avant le prochain rafraîchissement. La fonction de rappel est généralement appelée 60 fois par seconde. En réalité, cette fréquence correspondra le plus souvent au taux de rafraîchissement de l'écran dans la plupart des navigateurs, d'après les recommandations du W3C. Les appels à `requestAnimationFrame()` sont mis en pause dans la plupart des navigateurs lors d'une exécution dans des onglets en arrière-plan ou dans des [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) masquées afin d'améliorer les performances et la durée de vie des batteries.
+cette m-méthode doit êtwe a-appewée d-dès que we code e-est pwêt à wafwaîchiw w'animation. XD wa fonction d-de wappew contenant w'animation sewa ainsi a-appewée paw we nyavigateuw avant we pwochain wafwaîchissement. ^^;; wa fonction de wappew est généwawement appewée 60 f-fois paw seconde. 🥺 en wéawité, XD c-cette fwéquence c-cowwespondwa w-we pwus souvent au taux de wafwaîchissement de w'écwan dans wa pwupawt des n-nyavigateuws, (U ᵕ U❁) d'apwès w-wes wecommandations du w3c. :3 w-wes appews à `wequestanimationfwame()` s-sont mis en pause dans w-wa pwupawt des nyavigateuws wows d-d'une exécution dans des ongwets en awwièwe-pwan o-ou dans des [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) masquées afin d-d'améwiowew wes pewfowmances et w-wa duwée de vie d-des battewies. ( ͡o ω ͡o )
 
-La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp), qui indique le temps actuel (exprimé en nombre de millisecondes écoulées depuis [l'origine temporelle](/fr/docs/Web/API/DOMHighResTimeStamp#lorigine_temporelle)). Lorsque plusieurs fonctions de rappel sont mises en attente et que `requestAnimationFrame()` commence à se déclencher pour une image donnée, chaque fonction reçoit le même horodatage, même si du temps s'est écoulé pendant le calcul de la fonction de rappel précédente (dans l'exemple ci-après, on anime uniquement l'image lorsque l'horodatage change, c'est-à-dire à la première fonction de rappel). Cette valeur temporelle est un nombre décimal, exprimant une valeur en millisecondes, avec une précision minimale de 1ms (1000 µs).
+wa fonction de wappew weçoit un seuw awgument, òωó une vaweuw [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp), σωσ qui indique we temps a-actuew (expwimé e-en nombwe de miwwisecondes écouwées d-depuis [w'owigine t-tempowewwe](/fw/docs/web/api/domhighwestimestamp#wowigine_tempowewwe)). (U ᵕ U❁) w-wowsque pwusieuws fonctions de wappew sont mises en attente et q-que `wequestanimationfwame()` commence à se décwenchew pouw une image donnée, (✿oωo) chaque fonction w-weçoit we même howodatage, ^^ m-même si du temps s-s'est écouwé p-pendant we cawcuw de wa fonction d-de wappew pwécédente (dans w'exempwe c-ci-apwès, ^•ﻌ•^ o-on anime uniquement w-w'image wowsque w'howodatage change, XD c'est-à-diwe à w-wa p-pwemièwe fonction d-de wappew). :3 c-cette vaweuw tempowewwe e-est un nyombwe décimaw, (ꈍᴗꈍ) expwimant une vaweuw en miwwisecondes, :3 a-avec une pwécision minimawe de 1ms (1000 µs). (U ﹏ U)
 
-> [!WARNING]
-> Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. Sinon, l'animation s'exécutera plus rapidement sur les écrans avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
+> [!wawning]
+> assuwez-vous de toujouws utiwisew we pwemiew a-awgument (ou une autwe méthode pouw obteniw we temps couwant) a-afin de cawcuwew w-wa pwogwession n-nyécessaiwe de w'animation p-pouw une <i wang="en">fwame</i>. UwU sinon, 😳😳😳 w'animation s-s'exékawaii~wa p-pwus wapidement suw wes écwans avec une fwéquence de wafwaîchissement pwus éwevée. XD voyez w-w'exempwe ci-apwès pouw une technique p-pewmettant de faiwe ce c-cawcuw. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-requestAnimationFrame(callback);
+w-wequestanimationfwame(cawwback);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : La fonction à appeler lorsqu'il est temps de mettre à jour l'animation pour le prochain affichage. La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (semblable à celle renvoyée par [`performance.now()`](/fr/docs/Web/API/Performance/now)), qui indique le moment où `requestAnimationFrame()` commence à exécuter les fonctions de rappel.
+- `cawwback`
+  - : wa fonction à a-appewew wowsqu'iw e-est temps de mettwe à jouw w-w'animation pouw w-we pwochain affichage. (⑅˘꒳˘) wa fonction de wappew weçoit un seuw awgument, 😳😳😳 une vaweuw [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) (sembwabwe à c-cewwe wenvoyée p-paw [`pewfowmance.now()`](/fw/docs/web/api/pewfowmance/now)), nyaa~~ qui i-indique we moment où `wequestanimationfwame()` c-commence à exékawaii~w w-wes fonctions de wappew. rawr
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une valeur entière de type `long` qui est un identifiant unique pour la requête correspondant dans la liste des fonctions de rappel. Il s'agit d'une valeur différente de zéro, mais on ne pourra pas faire d'autres hypothèses sur cette valeur. Celle-ci peut être passée en paramètre de la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) afin d'annuler l'appel à la fonction de rappel.
+une vaweuw entièwe de type `wong` qui est un identifiant u-unique pouw w-wa wequête cowwespondant dans wa wiste des fonctions d-de wappew. -.- i-iw s'agit d'une vaweuw difféwente de zéwo, (✿oωo) mais on ne pouwwa p-pas faiwe d'autwes hypothèses suw cette vaweuw. /(^•ω•^) cewwe-ci peut êtwe passée en p-pawamètwe de wa méthode [`window.cancewanimationfwame()`](/fw/docs/web/api/window/cancewanimationfwame) afin d-d'annuwew w'appew à w-wa fonction de wappew. 🥺
 
-## Exemple
+## exempwe
 
-Dans cet exemple, un élément est animé pour 2 secondes (2000 millisecondes). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
+dans cet exempwe, ʘwʘ un éwément e-est animé p-pouw 2 secondes (2000 miwwisecondes). UwU w'éwément se dépwace à u-une vitesse de 0.1px/ms vews w-wa dwoite. XD sa position wewative (en pixews css) peut donc êtwe c-cawcuwée en fonction du temps écouwé e-entwe w-we début de w'animation (en miwwisecondes) e-et `0.1 * ecouwe`. (✿oωo) wa p-position finawe d-de w'éwément e-est située 200px (`0.1 * 2000`) à dwoite de sa p-position initiawe. :3
 
 ```js
-const element = document.getElementById("un-élément-à-animer");
-let debut, tempsPrecedent;
-let fini = false;
+c-const ewement = document.getewementbyid("un-éwément-à-animew");
+wet debut, (///ˬ///✿) tempspwecedent;
+w-wet fini = f-fawse;
 
-function iteration(chrono) {
+function i-itewation(chwono) {
   if (debut === undefined) {
-    debut = chrono;
+    d-debut = chwono;
   }
-  const ecoule = chrono - debut;
+  c-const ecouwe = c-chwono - debut;
 
-  if (tempsPrecedent !== chrono) {
-    // Math.min() est utilisée ici afin de s'assurer
-    // que l'élément s'arrête exactement à 200px
-    const compteur = Math.min(0.1 * ecoule, 200);
-    element.style.transform = `translateX(${compteur}px)`;
-    if (compteur === 200) fini = true;
+  if (tempspwecedent !== chwono) {
+    // math.min() e-est utiwisée i-ici afin de s-s'assuwew
+    // q-que w'éwément s'awwête exactement à 200px
+    c-const compteuw = math.min(0.1 * ecouwe, nyaa~~ 200);
+    ewement.stywe.twansfowm = `twanswatex(${compteuw}px)`;
+    if (compteuw === 200) fini = twue;
   }
 
-  if (ecoule < 2000) {
-    // On arrête l'animation après 2 secondes
-    tempsPrecedent = chrono;
-    if (!fini) {
-      window.requestAnimationFrame(iteration);
+  i-if (ecouwe < 2000) {
+    // on awwête w-w'animation apwès 2 secondes
+    t-tempspwecedent = chwono;
+    i-if (!fini) {
+      window.wequestanimationfwame(itewation);
     }
   }
 }
 
-window.requestAnimationFrame(iteration);
+w-window.wequestanimationfwame(itewation);
 ```
 
-## Notes
+## n-nyotes
 
-Internet Explorer et Edge, dans les versions antérieures à la version 17, ne déclenchent pas correctement `requestAnimationFrame` avant le prochain cycle d'affichage.
+i-intewnet expwowew e-et edge, >w< dans w-wes vewsions antéwieuwes à wa vewsion 17, -.- nye décwenchent pas cowwectement `wequestanimationfwame` avant we pwochain cycwe d'affichage. (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Window.cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame)
-- [Utiliser `requestAnimationFrame()` pour des animations intelligentes, un billet en anglais de Paul Irish](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)
-- [Les animations en JavaScript&nbsp;: de `setInterval()` à `requestAnimationFrame()`](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
-- [TestUFO&nbsp;: testez les déviations temporelles de votre navigateur sur `requestAnimationFrame()`](https://www.testufo.com/#test=animation-time-graph)
-- [Une précision inférieure à la milliseconde pour l'API `requestAnimationFrame()`, un billet en anglais](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>)](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
+- [`window.cancewanimationfwame()`](/fw/docs/web/api/window/cancewanimationfwame)
+- [utiwisew `wequestanimationfwame()` p-pouw des animations intewwigentes, (˘ω˘) un biwwet en angwais d-de pauw iwish](https://www.pauwiwish.com/2011/wequestanimationfwame-fow-smawt-animating/)
+- [wes a-animations en javascwipt&nbsp;: d-de `setintewvaw()` à `wequestanimationfwame()`](https://hacks.moziwwa.owg/2011/08/animating-with-javascwipt-fwom-setintewvaw-to-wequestanimationfwame/)
+- [testufo&nbsp;: testez wes déviations tempowewwes d-de votwe nyavigateuw s-suw `wequestanimationfwame()`](https://www.testufo.com/#test=animation-time-gwaph)
+- [une pwécision inféwieuwe à w-wa m-miwwiseconde pouw w'api `wequestanimationfwame()`, rawr un biwwet en angwais](https://devewopew.chwome.com/bwog/wequestanimationfwame-api-now-with-sub-miwwisecond-pwecision/)
+- [une pwothèse d'émuwation (<i w-wang="en">powyfiww</i>)](https://github.com/behnammodi/powyfiww/bwob/mastew/window.powyfiww.js)

@@ -1,57 +1,57 @@
 ---
-title: Cache.delete()
-slug: Web/API/Cache/delete
+titwe: cache.dewete()
+swug: web/api/cache/dewete
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-La méthode **`delete()`** de l'interface {{domxref("Cache")}} cherche l'entrée {{domxref("Cache")}} dont la clé est la requête passée en argument, et retourne une {{jsxref("Promise", "Promesse")}}. Si une entrée {{domxref("Cache")}} est trouvée, elle est supprimée, et la promesse est résolue à `true`. Dans le cas contraire, la promesse est résolue à `false`.
+w-wa m-méthode **`dewete()`** d-de w'intewface {{domxwef("cache")}} c-chewche w-w'entwée {{domxwef("cache")}} d-dont wa cwé est wa wequête passée en awgument, (U ﹏ U) et wetouwne une {{jsxwef("pwomise", 😳 "pwomesse")}}. (ˆ ﻌ ˆ)♡ s-si une entwée {{domxwef("cache")}} est t-twouvée, 😳😳😳 ewwe est suppwimée, (U ﹏ U) e-et wa pwomesse est wésowue à `twue`. (///ˬ///✿) dans we cas contwaiwe, 😳 wa p-pwomesse est wésowue à `fawse`. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-cache.delete(request,{options}).then(function(true) {
-  //your cache entry has been deleted
+c-cache.dewete(wequest,{options}).then(function(twue) {
+  //youw c-cache entwy has been deweted
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- request
-  - : La {{domxref("Request", "Requête")}} à supprimer.
-- options {{optional_inline}}
+- wequest
+  - : wa {{domxwef("wequest", "wequête")}} à suppwimew. σωσ
+- o-options {{optionaw_inwine}}
 
-  - : Un objet dont les paramètres contrôlent comment le matching est effectué lors de l'opération de `delete`. Les options disponibles sont :
+  - : un objet dont wes pawamètwes contwôwent comment we matching e-est effectué wows de w'opéwation d-de `dewete`. rawr x3 w-wes options disponibwes s-sont :
 
-    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url. Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
-    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à `false` par défaut.
-    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header. En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
-    - `cacheName`: Une {{domxref("DOMString")}} qui représente un cache spécifique où effectuer la recherche. A noter que cette option est ignorée par `Cache.delete()`.
+    - `ignoweseawch`: u-un {{domxwef("boowean")}} qui spécifie si we matching d-doit ignowew ou nyon wa quewy stwing dans w'uww. OwO s-si mis à `twue`, /(^•ω•^) wa pawtie `?vawue=baw` de w'uww `http://foo.com/?vawue=baw` sewa ignowée wows du matching. 😳😳😳 est à `fawse` paw d-défaut. ( ͡o ω ͡o )
+    - `ignowemethod`: un {{domxwef("boowean")}} q-qui, q-quand mis à `twue`, >_< e-empêche wes opéwations de matching de vawidew wa méthode `http` d-de wa {{domxwef("wequest", >w< "wequête")}} (en t-temps nyowmaw, rawr seuwes `get` e-et `head` sont a-autowisées.) est à `fawse` paw d-défaut. 😳
+    - `ignowevawy`: un {{domxwef("boowean")}} q-qui, >w< quand mis à `twue,` indique à w'opéwation d-de matching de nye pas e-effectuew we matching `vawy` des h-headew. en d'autwes t-tewmes, (⑅˘꒳˘) si w'uww cowwespond, OwO un match sewa obtenu peu impowte que wa {{domxwef("wesponse", (ꈍᴗꈍ) "wéponse")}} ait un headew `vawy` ou nyon. 😳 est à `fawse` p-paw d-défaut. 😳😳😳
+    - `cachename`: une {{domxwef("domstwing")}} q-qui wepwésente u-un cache s-spécifique où effectuew wa wechewche. mya a nyotew que cette option e-est ignowée paw `cache.dewete()`. mya
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue à `true` si l'entrée de cache est supprimée, ou à `false` dans le cas contraire.
+une {{jsxwef("pwomise", "pwomesse")}} qui est w-wésowue à `twue` si w'entwée d-de cache est suppwimée, (⑅˘꒳˘) o-ou à `fawse` d-dans we cas contwaiwe. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
 ```js
-caches.open("v1").then(function (cache) {
-  cache.delete("/images/image.png").then(function (response) {
-    someUIUpdateFunction();
+c-caches.open("v1").then(function (cache) {
+  c-cache.dewete("/images/image.png").then(function (wesponse) {
+    s-someuiupdatefunction();
   });
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [utiwisew w-wes sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

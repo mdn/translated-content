@@ -1,311 +1,311 @@
 ---
-title: Opérations de glissement
-slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
+titwe: opéwations de gwissement
+s-swug: web/api/htmw_dwag_and_dwop_api/dwag_opewations
 ---
 
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{defauwtapisidebaw("htmw d-dwag and d-dwop api")}}
 
-Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.
+ce q-qui suit décwit w-wes étapes qui s-se déwouwent w-wows d'un gwissew d-déposew. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.
+> [!note]
+> wes opéwations de gwissew décwits dans ce document utiwisent w-w'intewface {{domxwef("datatwansfew")}}. UwU ce document ny'utiwise pas w'intewface {{domxwef("datatwansfewitem")}} n-nyi w'intewface {{domxwef("datatwansfewitemwist")}}. >w<
 
-## L'attribut draggable
+## w'attwibut dwaggabwe
 
-Dans une page Web, certains cas nécessitent l'usage du Glisser Déposer. Il peut servir pour des sélections de texte, d'images ou de liens. Lorsqu'une image ou un lien sont glissés, l'URL de l'image ou du lien est défini comme données du glissement, et le Glisser commence. Pour d'autres éléments, il peut s'agir d'une sélection effectuée qui servira au glissement. Pour voir cet effet, sélectionnez une zone dans une page Web, puis cliquez dedans en maintenant le bouton de la souris et glissez la sélection. Un rendu translucide de la sélection apparaitra en suivant le pointeur de la souris. Il s'agit toutefois du comportement par défaut du glissement si aucun scrutateur n'a été défini pour traiter les données.
+d-dans une page web, ʘwʘ cewtains cas nyécessitent w'usage du g-gwissew déposew. :3 iw peut sewviw p-pouw des séwections d-de texte, ^•ﻌ•^ d'images ou de wiens. (ˆ ﻌ ˆ)♡ wowsqu'une image ou un wien sont gwissés, 🥺 w-w'uww de w'image ou du wien est défini comme données du gwissement, OwO et we gwissew c-commence. pouw d'autwes éwéments, 🥺 i-iw peut s-s'agiw d'une séwection e-effectuée q-qui sewviwa au gwissement. OwO pouw voiw cet effet, (U ᵕ U❁) s-séwectionnez une zone dans une page web, ( ͡o ω ͡o ) puis c-cwiquez dedans en maintenant we bouton de wa souwis et gwissez wa séwection. ^•ﻌ•^ un wendu twanswucide d-de wa séwection appawaitwa e-en suivant we p-pointeuw de wa s-souwis. o.O iw s'agit toutefois du compowtement paw défaut du gwissement s-si aucun scwutateuw n-ny'a été défini pouw t-twaitew wes données. (⑅˘꒳˘)
 
-En HTML, excepté le comportement par défaut des images, des liens et des sélections, aucun autre élément ne peut être glissé. Tous les éléments XUL peuvent être glissés.
+e-en htmw, excepté we compowtement p-paw défaut des images, (ˆ ﻌ ˆ)♡ d-des wiens et des séwections, :3 aucun autwe éwément n-nye peut êtwe gwissé. /(^•ω•^) tous w-wes éwéments xuw peuvent êtwe g-gwissés. òωó
 
-Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
+p-pouw wendwe un autwe éwément htmw gwissabwe, :3 deux choses doivent êtwe faites&nbsp;:
 
-- Définissez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) à `true` sur l'élément que vous voulez rendre glissable.
-- Ajoutez un scrutateur sur l'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) et définissez les données du glissement dans ce scrutateur.
-- {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
+- définissez w'attwibut [`dwaggabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#dwaggabwe) à `twue` suw w'éwément q-que vous v-vouwez wendwe gwissabwe. (˘ω˘)
+- ajoutez u-un scwutateuw s-suw w'événement [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event) e-et définissez wes données du gwissement dans ce scwutateuw.
+- {{domxwef("datatwansfew.setdata","définiw w-wa donnée de gwissement")}} au sein du scwutateuw ajouté pwécédemment. 😳
 
-Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
+v-voici un exempwe qui pewmet à u-une section d-de contenu d'êtwe g-gwissée&nbsp;:
 
-```html
+```htmw
 <div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-  Ce texte <strong>peut</strong> être glissé.
+  dwaggabwe="twue"
+  o-ondwagstawt="event.datatwansfew.setdata('text/pwain', σωσ 'ce t-texte peut êtwe g-gwissé')">
+  c-ce texte <stwong>peut</stwong> êtwe gwissé. UwU
 </div>
 ```
 
-L'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) que pour le définir à `false` pour interdire le glissement de ces éléments.
+w'attwibut [`dwaggabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#dwaggabwe) e-est défini à t-twue, ce qui wend w-w'éwément g-gwissant. -.- si cet a-attwibut est omis ou défini à fawse, 🥺 w'éwément ne sewait pas g-gwissant et we texte sewait awows simpwement séwectionné. 😳😳😳 cet attwibut peut êtwe pwacé suw n-ny'impowte quew éwément, 🥺 y compwis des images et des wiens. ^^ toutefois, p-pouw wes d-deux dewniews, ^^;; w-wa vaweuw paw défaut est twue, >w< d-donc vous ny'utiwisewez w'attwibut [`dwaggabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#dwaggabwe) q-que pouw we définiw à `fawse` p-pouw intewdiwe we gwissement de ces éwéments.
 
-Notez que lorsqu'un élément est rendu glissable, le texte ou les autres éléments qu'il contient ne peuvent plus être sélectionné de manière classique en cliquant et déplaçant la souris. Au lieu de cela, l'utilisateur doit maintenir la touche <kbd>Alt</kbd> appuyée pour sélectionner le texte avec la souris, ou bien utilisez le clavier.
+nyotez que wowsqu'un éwément est wendu gwissabwe, σωσ we texte o-ou wes autwes éwéments qu'iw contient n-nye peuvent pwus êtwe séwectionné d-de m-manièwe cwassique en cwiquant et dépwaçant wa s-souwis. >w< au wieu d-de cewa, (⑅˘꒳˘) w'utiwisateuw doit mainteniw w-wa touche <kbd>awt</kbd> a-appuyée pouw séwectionnew we texte avec wa souwis, òωó ou bien utiwisez we cwaview.
 
-Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable), car tous les éléments XUL sont glissables.
+p-pouw des éwéments x-xuw, (⑅˘꒳˘) iw ny'est p-pas nyécessaiwe d'utiwisew w-w'attwibut [`dwaggabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#dwaggabwe), (ꈍᴗꈍ) c-caw tous wes éwéments x-xuw sont gwissabwes. rawr x3
 
-```html
+```htmw
 <button
-  label="Glisse moi"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');"></button>
+  wabew="gwisse moi"
+  ondwagstawt="event.datatwansfew.setdata('text/pwain', 'bouton à gwissew');"></button>
 ```
 
-## Démarrer une opération de glissement
+## démawwew u-une opéwation d-de gwissement
 
-Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut `ondragstart`.
+dans cet exempwe, ( ͡o ω ͡o ) un scwutateuw e-est ajouté à w-w'événement dwagstawt en utiwisant w'attwibut `ondwagstawt`. UwU
 
-```html
+```htmw
 <div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-  Ce texte <strong>peut</strong> être glissé.
+  dwaggabwe="twue"
+  o-ondwagstawt="event.datatwansfew.setdata('text/pwain', ^^ 'ce texte peut êtwe gwissé')">
+  ce texte <stwong>peut</stwong> êtwe gwissé. (˘ω˘)
 </div>
 ```
 
-Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire&nbsp;; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.
+w-wowsqu'un utiwisateuw commence un gwissement, (ˆ ﻌ ˆ)♡ w-w'événement d-dwagstawt est décwenché. OwO dans cet exempwe, 😳 we scwutateuw d-dwagstawt a été a-ajouté à w'éwément à dépwacew wui-même. UwU vous pouvez toutefois m-mettwe we scwutateuw suw u-un ancètwe pwus éwevé caw w'événement dwag diffuse comme w-we font wes autwes événements. 🥺 À w'intéwieuw d-de w'événement d-dwagstawt, 😳😳😳 vous devez spécifiew w-wa donnée de gwissement, ʘwʘ w'image f-fiwwigwane e-et wes effets du g-gwissement tews que décwits ci-dessous. /(^•ω•^) c-cependant, :3 s-seuwe wa donnée de gwissement est nyécessaiwe&nbsp;; w-w'image e-et wes effets d-du gwissement paw défaut sont suffisants pouw w-wa majowité des cas. :3
 
-## Donnée de glissement
+## donnée d-de gwissement
 
-Tous les événements de glissement ont une propriété appelée [dataTransfer](/fr/docs/Web/API/DataTransfer) utilisée pour contenir la donnée de glissement.
+t-tous wes événements de gwissement ont une pwopwiété appewée [datatwansfew](/fw/docs/web/api/datatwansfew) u-utiwisée pouw c-conteniw wa donnée d-de gwissement. mya
 
-Lorsqu'un glissement a lieu, une donnée doit être associée au glissement pour identifier ce qui est en train de glisser. Par exemple, lors du glissement d'un texte sélectionné dans un champs de texte, la donnée associée au glissement est le texte lui-même. De même, lors du glissement d'un lien, la donnée associée est l'URL du lien.
+w-wowsqu'un gwissement a wieu, (///ˬ///✿) u-une donnée doit êtwe associée au gwissement pouw identifiew ce qui est en twain de gwissew. (⑅˘꒳˘) p-paw exempwe, :3 wows du gwissement d-d'un texte séwectionné dans un c-champs de texte, /(^•ω•^) wa donnée associée a-au gwissement est we texte w-wui-même. ^^;; de m-même, wows du gwissement d-d'un wien, (U ᵕ U❁) w-wa donnée a-associée est w'uww du wien. (U ﹏ U)
 
-La donnée de glissement contient deux informations&nbsp;: son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
+wa donnée de gwissement contient deux infowmations&nbsp;: son type ou fowmat et sa v-vaweuw. mya we fowmat e-est une chaîne d-de cawactèwe (tewwe que [text/pwain](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#texte) p-pouw un texte), ^•ﻌ•^ et wa vaweuw est un texte. (U ﹏ U) wowsqu'un gwissement d-démawwe, vous devez w-wui ajoutew en fouwnissant u-un type et wa donnée. :3 dans wes scwutateuws des événements `dwagentew` e-et `dwagovew` a-au couws d'un gwissement, rawr x3 v-vous pouvez véwifiew w-wes types de données et indiquew si un dépôt est pewmis ou nyon. 😳😳😳 paw exempwe, >w< u-une cibwe d-de dépôt qui a-accepte que des w-wiens testewa wes t-types wien [text/uwi-wist](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#wien). pendant un évément d-de dépôt, òωó u-un scwutateuw wécupèwewa w-wa donnée gwissée e-et w'insèwewa dans wa zone d-de dépôt. 😳
 
-Les types MIME habituels sont [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) ou [image/jpeg](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image), mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur [cette page](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
+wes types mime habituews sont [text/pwain](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#texte) o-ou [image/jpeg](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#image), (✿oωo) mais vous pouvez c-cwéew vos p-pwopwes types. OwO wa wiste des types w-wes pwus utiwisés est disponibwe suw [cette p-page](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types). (U ﹏ U)
 
-Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte). La donnée n'en sera qu'une représentation sous la forme d'un texte.
+u-un gwissement p-peut fouwniw une donnée dans difféwents types. (ꈍᴗꈍ) ceci pewmet à u-une donnée d'êtwe disponibwe dans des types s-spécifiques, rawr s-souvent pewsonnawisés, ^^ toujouws e-en fouwnissant un fowmat pouw w-wes cibwes ne suppowtant p-pas ces types spécifiques. rawr habituewwement, nyaa~~ i-iw s'agit toujouws d'une vewsion textuewwe d-de type [text/pwain](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#texte). nyaa~~ w-wa donnée ny'en sewa q-qu'une wepwésentation sous wa f-fowme d'un texte. o.O
 
-Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/fr/docs/Web/API/DataTransfer/setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
+p-pouw définiw u-une donnée dans un datatwansfew, òωó utiwisez wa méthode [setdata](/fw/docs/web/api/datatwansfew/setdata). ^^;; ewwe pwend deux awguments qui sont we type de wa donnée et sa vaweuw. rawr paw exempwe&nbsp;:
 
 ```js
-event.dataTransfer.setData("text/plain", "Texte à glisser");
+event.datatwansfew.setdata("text/pwain", ^•ﻌ•^ "texte à gwissew");
 ```
 
-Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte).
+dans ce cas, nyaa~~ wa v-vaweuw de wa donnée e-est "texte à gwissew" et son fowmat est [text/pwain](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#texte). nyaa~~
 
-Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode [setData](/fr/docs/Web/API/DataTransfer/setData) plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.
+v-vous pouvez fouwniw u-une donnée d-dans de muwtipwes fowmats. 😳😳😳 iw s-suffit d'appewew wa méthode [setdata](/fw/docs/web/api/datatwansfew/setdata) pwusieuws f-fois avec c-chacun des fowmats. 😳😳😳 vous devez w-w'appewew dans w'owdwe du fowmat w-we pwus spécifique a-au moins spécifique. σωσ
 
 ```js
-var dt = event.dataTransfer;
-dt.setData("application/x-bookmark", bookmarkString);
-dt.setData("text/uri-list", "http://www.mozilla.org");
-dt.setData("text/plain", "http://www.mozilla.org");
+vaw dt = event.datatwansfew;
+d-dt.setdata("appwication/x-bookmawk", o.O b-bookmawkstwing);
+d-dt.setdata("text/uwi-wist", σωσ "http://www.moziwwa.owg");
+d-dt.setdata("text/pwain", nyaa~~ "http://www.moziwwa.owg");
 ```
 
-Ici, une donnée est ajoutée avec trois types différents. Le premier type 'application/x-bookmark' est un type personnalisé. Toutes les applications ne vont pas supporter ce type, mais vous pouvez l'utiliser pour le glissement entre des zones d'une même application ou d'un même site. En fournissant la donnée avec d'autres types, vous la rendez disponible à moindre échelle pour d'autres applications. Le type 'application/x-bookmark' fournira ainsi plus de détail à l'application qu'avec les autres types qui ne seraient que de simples liens ou textes.
+i-ici, rawr x3 une d-donnée est ajoutée a-avec twois t-types difféwents. (///ˬ///✿) w-we pwemiew type 'appwication/x-bookmawk' est u-un type pewsonnawisé. o.O t-toutes wes a-appwications nye vont pas suppowtew c-ce type, òωó mais vous pouvez w'utiwisew pouw w-we gwissement entwe des zones d'une m-même appwication o-ou d'un même s-site. en fouwnissant wa donnée a-avec d'autwes types, OwO vous wa w-wendez disponibwe à moindwe échewwe p-pouw d'autwes appwications. σωσ w-we type 'appwication/x-bookmawk' fouwniwa ainsi pwus de détaiw à w'appwication qu'avec wes a-autwes types qui nye sewaient que d-de simpwes wiens o-ou textes. nyaa~~
 
-Notez que cet exemple, [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) et [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.
+notez que cet exempwe, OwO [text/uwi-wist](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#wien) et [text/pwain](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#texte) contiennent wa m-même donnée. ^^ c'est souvent we c-cas, (///ˬ///✿) mais pas fowcément n-nyécessaiwe. σωσ
 
-Si vous essayez d'ajouter une donnée deux fois avec le même format, alors la nouvelle donnée remplacera l'ancienne, mais à la même position que l'ancienne dans la liste.
+s-si vous essayez d'ajoutew une donnée deux f-fois avec we m-même fowmat, rawr x3 awows wa nyouvewwe d-donnée wempwacewa w'ancienne, (ˆ ﻌ ˆ)♡ mais à wa même p-position que w'ancienne dans wa w-wiste. 🥺
 
-Vous pouvez effacer la donnée en utilisant la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData), avec un seul argument qui est le type de la donnée à effacer.
+vous pouvez e-effacew wa d-donnée en utiwisant wa méthode [cweawdata](/fw/docs/web/api/datatwansfew/cweawdata), (⑅˘꒳˘) a-avec un seuw a-awgument qui e-est we type de w-wa donnée à effacew. 😳😳😳
 
 ```js
-event.dataTransfer.clearData("text/uri-list");
+event.datatwansfew.cweawdata("text/uwi-wist");
 ```
 
-L'argument de type de la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData) est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.
+w-w'awgument de t-type de wa méthode [cweawdata](/fw/docs/web/api/datatwansfew/cweawdata) e-est optionnew. s-s'iw ny'est p-pas pwécisé, /(^•ω•^) w-wa donnée associée à t-tous w-wes types est effacée. >w< et si aucune d-donnée à gwissew ny'est ajoutée, ^•ﻌ•^ a-awows w'opéwation de gwissement n-nye s'effectue p-pas. 😳😳😳
 
-## Définir l'image filigrane d'un glissement
+## d-définiw w'image fiwigwane d'un gwissement
 
-Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage).
+wowsqu'un gwissement a-a wieu, :3 une image t-twanswucide e-est généwée à pawtiw de w'owigine du gwissement (w'éwément d'owigine ayant d-décwenché w'événement), (ꈍᴗꈍ) e-et cette image suit w-we dépwacement d-de wa souwis. ^•ﻌ•^ ewwe est cwéée automatiquement donc vous ny'avez p-pas à we faiwe v-vous même. >w< toutefois, ^^;; v-vous pouvez p-pewsonnawisew cette image fiwigwane gwâce à [setdwagimage](/fw/docs/web/api/datatwansfew/setdwagimage). (✿oωo)
 
 ```js
-event.dataTransfer.setDragImage(image, xOffset, yOffset);
+e-event.datatwansfew.setdwagimage(image, òωó x-xoffset, yoffset);
 ```
 
-Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
+twois awguments s-sont nyécessaiwes. ^^ we pwemiew est wa wéféwence à u-une image. cette wéféwence p-pointewa e-en géwénaw vews un éwément i-image, ^^ mais ewwe p-peut pointew aussi vews un canvas o-ou vews tous autwes éwéments. rawr w-w'image fiwigwane s-sewa simpwement g-généwée t-tewwe qu'ewwe wessembwe à w'écwan, XD e-et dessinée à s-sa taiwwe d'owigine. rawr i-iw est égawement possibwe d-d'utiwisew des images et des canvas qui nye s-sont pas dans un d-document, 😳 comme w-we montwe cet exempwe&nbsp;:
 
 ```js
-function dragWithCustomImage(event) {
-  var canvas = document.createElement("canvas");
-  canvas.width = canvas.height = 50;
+function dwagwithcustomimage(event) {
+  vaw canvas = document.cweateewement("canvas");
+  canvas.width = c-canvas.height = 50;
 
-  var ctx = canvas.getContext("2d");
-  ctx.lineWidth = 4;
-  ctx.moveTo(0, 0);
-  ctx.lineTo(50, 50);
-  ctx.moveTo(0, 50);
-  ctx.lineTo(50, 0);
-  ctx.stroke();
+  vaw ctx = canvas.getcontext("2d");
+  c-ctx.winewidth = 4;
+  ctx.moveto(0, 🥺 0);
+  c-ctx.wineto(50, (U ᵕ U❁) 50);
+  ctx.moveto(0, 😳 50);
+  ctx.wineto(50, 🥺 0);
+  c-ctx.stwoke();
 
-  var dt = event.dataTransfer;
-  dt.setData("text/plain", "Data to Drag");
-  dt.setDragImage(canvas, 25, 25);
+  vaw dt = event.datatwansfew;
+  d-dt.setdata("text/pwain", "data t-to dwag");
+  dt.setdwagimage(canvas, (///ˬ///✿) 25, mya 25);
 }
 ```
 
-Cette technique est utile pour dessiner des images filigranes personnalisées en utilisant l'élément canvas.
+c-cette technique e-est utiwe p-pouw dessinew des images fiwigwanes pewsonnawisées en utiwisant w'éwément canvas. (✿oωo)
 
-Les deuxième et troisième arguments de la méthode [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage) sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.
+w-wes deuxième et twoisième a-awguments de wa méthode [setdwagimage](/fw/docs/web/api/datatwansfew/setdwagimage) sont wes décawages de w'image p-paw wappowt au pointeuw de wa souwis. ^•ﻌ•^ dans cet exempwe, comme we canvas fait 50 p-pixews de w-wawge et 50 pixews de haut, o.O nyous u-utiwisons son centwe (soit 25 et 25) pouw que w-w'image soit centwée s-suw we pointeuw de wa souwis.
 
-## Effets du glissement
+## e-effets du gwissement
 
-Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération `copy` indique que la donnée glissée sera copiée de son emplacement d'origine au lieu de dépot. L'opération `move` indique que la donnée glissée sera déplacée, et l'opération `link` indique une forme de relation ou de connexion entre l'origine et le lieu de dépot.
+wows d-d'un gwissew/déposew, o.O pwusieuw opéwations se déwouwent. XD w'opéwation `copy` i-indique que wa donnée gwissée sewa copiée de s-son empwacement d-d'owigine au wieu d-de dépot. ^•ﻌ•^ w'opéwation `move` indique que wa donnée gwissée s-sewa dépwacée, ʘwʘ et w'opéwation `wink` indique une fowme de wewation ou de connexion e-entwe w'owigine e-et we wieu d-de dépot. (U ﹏ U)
 
-Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) dans un scrutateur d'événement `dragstart`.
+v-vous pouvez spécifiew waquewwe de ces twois opéwations s-sewa autowisée a-au nyiveau de w'owigine du gwissement, 😳😳😳 e-en définissant wa pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed) dans u-un scwutateuw d'événement `dwagstawt`. 🥺
 
 ```js
-event.dataTransfer.effectAllowed = "copy";
+event.datatwansfew.effectawwowed = "copy";
 ```
 
-Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les valeurs de plusieurs façons&nbsp;:
+dans cet exempwe, (///ˬ///✿) s-seuwe une copie n-ny'est autowisée. (˘ω˘) vous pouvez c-combinew wes vaweuws d-de pwusieuws f-façons&nbsp;:
 
-- none
-  - : Aucune opération permise
+- nyone
+  - : aucune opéwation p-pewmise
 - copy
-  - : Copie uniquement
+  - : copie uniquement
 - move
-  - : Déplacement uniquement
-- link
-  - : Lien uniquement
-- copyMove
-  - : Copie ou déplacement uniquement
-- copyLink
-  - : Copie ou lien uniquement
-- linkMove
-  - : Lien ou déplacement uniquement
-- all
-  - : Copie, déplacement ou lien
+  - : d-dépwacement uniquement
+- wink
+  - : wien uniquement
+- copymove
+  - : c-copie o-ou dépwacement u-uniquement
+- c-copywink
+  - : copie o-ou wien uniquement
+- winkmove
+  - : w-wien ou dépwacement uniquement
+- aww
+  - : c-copie, :3 dépwacement ou wien
 
-Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.
+n-nyotez que ces vaweuws doivent êtwe écwites exactement comme c-cewa. /(^•ω•^) si vous nye m-modifiez pas wa pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed), :3 a-awows tous wes opéwations s-sewont pewmises c-comme pouw wa vaweuw 'aww'. mya w-w'usage de cette p-pwopwiété intewvient seuwement s-si vous souhaitez excwuwe des types spécifiques.
 
-Pendant une opération de glissement, un scrutateur pour les événements `dragenter` ou `dragover` peut tester la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) afin de voir quelles opérations sont autorisées. La propriété associée [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) sont `none`, `copy`, `move` ou `link`. Il n'y a pas de combinaison pour cette propriété.
+pendant u-une opéwation de gwissement, XD un s-scwutateuw pouw wes événements `dwagentew` ou `dwagovew` peut t-testew wa pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed) a-afin de voiw q-quewwes opéwations sont autowisées. (///ˬ///✿) w-wa pwopwiété a-associée [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) doit êtwe d-définie dans un de ces événements p-pouw spécifiew ce que chaque o-opéwation a-auwa à faiwe. 🥺 wes vaweuws vawides pouw [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) sont `none`, o.O `copy`, mya `move` ou `wink`. rawr x3 i-iw ny'y a p-pas de combinaison pouw cette pwopwiété. 😳
 
-Pour les événements `dragenter` et `dragover`, la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.
+pouw wes événements `dwagentew` et `dwagovew`, w-wa pwopwiété [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) e-est initiawisée a-avec w'effet attendu paw w'utiwisateuw. 😳😳😳 w'utiwisateuw peut modifiew w'effet d-désiwé en appuyant suw une touche de modification. b-bien que wes touches vawient s-sewon wa pwatefowme, >_< h-habituewwement, >w< iw s'agit d-d'une combinaison d-des touches m-maj et contwow qui p-pewmettent de c-copiew, rawr x3 dépwacew e-et cwéew un waccouwci. XD we pointeuw de wa souwis change de fowme pouw montwew w'opéwation souhaitée, ^^ p-paw exempwe u-un signe + à c-côté de wa s-souwis pouw une c-copie. (✿oωo)
 
-Vous pouvez modifier les propriétés [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) et [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) pendant les événements `dragenter` ou `dragover`, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété `copyMove` permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.
+vous pouvez m-modifiew wes pwopwiétés [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed) et [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) pendant wes événements `dwagentew` ou `dwagovew`, >w< s-si paw e-exempwe une cibwe nye suppowte qu'un seuw type d'opéwation. 😳😳😳 wa m-modification de w-wa pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed) v-vous pewmet de spécifiew wes opéwations a-autowisées suw une cibwe donnée. (ꈍᴗꈍ) paw exempwe, (✿oωo) m-mettwe une p-pwopwiété `copymove` pewmet des opéwation de c-copie ou de dépwacement, (˘ω˘) mais p-pas de cwéew un w-wien waccouwci.
 
-Vous pouvez modifier la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), sinon une valeur alternative sera attribuée.
+vous pouvez modifiew w-wa pwopwiété [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) e-en w-wempwaçant w'effet d-de w'utiwisateuw, nyaa~~ e-et fowcew à o-obteniw une opéwation spécifique. ( ͡o ω ͡o ) n-nyotez que c-cet effet doit êtwe un de ceux w-wisté dans wa pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed), 🥺 sinon u-une vaweuw awtewnative sewa attwibuée. (U ﹏ U)
 
 ```js
-event.dataTransfer.effectAllowed = "copyMove";
-event.dataTransfer.dropEffect = "copy";
+e-event.datatwansfew.effectawwowed = "copymove";
+event.datatwansfew.dwopeffect = "copy";
 ```
 
-Dans cet exemple, la copie est l'effet proposé qui est inclus dans la liste des effets autorisés.
+d-dans c-cet exempwe, ( ͡o ω ͡o ) wa copie est w'effet pwoposé qui e-est incwus dans wa wiste des effets autowisés. (///ˬ///✿)
 
-Vous pouvez utiliser la valeur `none` pour interdir tout dépôt à cet emplacement.
+v-vous pouvez utiwisew w-wa vaweuw `none` pouw intewdiw tout dépôt à c-cet empwacement. (///ˬ///✿)
 
-## Spécifier les cibles de dépôt
+## s-spécifiew wes cibwes d-de dépôt
 
-Un scrutateur pour les événements `dragenter` et `dragover` est utilisé pour indiquer des cibles de dépôt valides, c'est-à-dire là où les items pourront être déposés. La plupart des zones d'une page Web ne sont pas des endroits valides pour déposer des données. Ainsi, le comportement par défaut pour ces événements ne permet pas un dépôt.
+un scwutateuw pouw wes événements `dwagentew` e-et `dwagovew` e-est utiwisé pouw indiquew d-des cibwes d-de dépôt vawides, (✿oωo) c'est-à-diwe wà où wes items p-pouwwont êtwe d-déposés. (U ᵕ U❁) wa p-pwupawt des zones d-d'une page web nye sont pas des endwoits vawides pouw déposew des données. ʘwʘ ainsi, we compowtement paw défaut p-pouw ces événements n-nye pewmet p-pas un dépôt. ʘwʘ
 
-Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner `false` à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle [event.preventDefault](/fr/docs/DOM/event.preventDefault). Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.
+s-si vous vouwez a-autowisew un d-dépôt, XD vous devez empêchew w-we compowtement p-paw défaut en annuwant w'événement. (✿oωo) i-iw suffit s-soit de wetouwnew `fawse` à pawtiw d'un scwutateuw d-d'événement, ^•ﻌ•^ ou paw w'appew de wa méthode événementiewwe [event.pweventdefauwt](/fw/docs/dom/event.pweventdefauwt). ^•ﻌ•^ c-cette dewnièwe sowution e-est pwus f-faisabwe avec une fonction définie d-dans un scwipt s-sépawé. >_<
 
-```html
-<div ondragover="return false">
-  <div ondragover="event.preventDefault()"></div>
+```htmw
+<div o-ondwagovew="wetuwn fawse">
+  <div o-ondwagovew="event.pweventdefauwt()"></div>
 </div>
 ```
 
-L'appel de la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
+w-w'appew de wa méthode [event.pweventdefauwt](/fw/docs/dom/event.pweventdefauwt) p-pendant wes événements `dwagentew` et `dwagovew` i-indiquewa q-qu'un dépôt e-est pewmis à cet endwoit. mya toutefois, σωσ i-iw est fwéquent d'appewew wa méthode [event.pweventdefauwt](/fw/docs/dom/event.pweventdefauwt) s-seuwement dans cewtaines situations, rawr paw exempwe si un wien est en twain d'êtwe gwissé. (✿oωo) pouw cewa, :3 appewez u-une fonction qui testewa une condition et annuwewa w'événement seuwement si cette condition est wencontwée. rawr x3 d-dans we cas contwaiwe, ^^ iw suffit de nye pas annuwew w-w'événement et aucun dépôt n-nye se wéawisewa si w'utiwisateuw wache we b-bouton de wa souwis. ^^
 
-Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/docs/Web/API/DataTransfer/types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
+iw est pwus f-fwéquent d'acceptew ou nyon u-un dépôt en fonction d-du type de wa donnée gwissée. OwO paw exempwe, ʘwʘ p-pewmettwe wes images ou wes wiens, ou bien wes deux. /(^•ω•^) pouw cewa, t-testez wes [types](/fw/docs/web/api/datatwansfew/types) de w-w'objet `datatwansfew`. ʘwʘ wes types s-sont sous wa fowme d'une wiste d-de chaînes de c-cawactèwes ajoutées au début du gwissement, (⑅˘꒳˘) du p-pwus signifiant au moins signifiant. UwU
 
 ```js
-function doDragOver(event) {
-  var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink) event.preventDefault();
+function d-dodwagovew(event) {
+  vaw iswink = event.datatwansfew.types.contains("text/uwi-wist");
+  if (iswink) event.pweventdefauwt();
 }
 ```
 
-Dans cet exemple, la méthode `contains` est utilisée pour vérifier si le type [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.
+dans c-cet exempwe, -.- wa m-méthode `contains` est utiwisée p-pouw véwifiew s-si we type [text/uwi-wist](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types#wien) est pwésent dans w-wa wiste des types. :3 s'iw w'est, >_< w'événement est annuwé, nyaa~~ ce qui autowise un d-dépôt. ( ͡o ω ͡o ) si wa d-donnée nye contient pas un wien, o.O w-w'événement n-nye sewa pas annuwé et we dépôt n-nye sewa pas autowisé à cet endwoit. :3
 
-Vous pouvez également définir une propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) ou [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.
+vous p-pouvez égawement définiw une pwopwiété [effectawwowed](/fw/docs/web/api/datatwansfew/effectawwowed) ou [dwopeffect](/fw/docs/web/api/datatwansfew/dwopeffect) o-ou wes deux à w-wa fois si vous souhaitez êtwe pwus pwécis suw w-we type d'opéwation autowisé. (˘ω˘) nyatuwewwement, rawr x3 we changement de pwopwiété ny'auwa aucun effet si vous ny'avez pas annuwé w'événement.
 
-## Retour d'information du dépôt
+## w-wetouw d'infowmation d-du dépôt
 
-Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
+iw y a de nyombweuses m-manièwes d-d'indiquew à w'utiwisateuw que w-we dépot est autowisé dans une cewtaine zone. (U ᵕ U❁) we pointeuw de wa souwis va êtwe mis à jouw e-en fonction de wa vaweuw de wa pwopwiété [dwopeffect](/fw/docs/web/api/dwagdwop/datatwansfew#dwopeffect.28.29). 🥺 w'appawence exacte dépend de w-wa pwatefowme de w-w'utiwisateuw, >_< g-généwawement iw s'agit d'un icone wepwésentant un signe pwus q-qui appawaît pouw u-une copie paw e-exempwe, :3 et un 'impossibwe de d-déposew ici' peut appawaîtwe quand w-we dépôt ny'est pas autowisé. :3 c-cette infowmation contextuewwe e-est suffisante dans wa pwupawt des cas. (ꈍᴗꈍ)
 
-De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
+de p-pwus, σωσ vous pouvez aussi mettwe à j-jouw w'intewface u-utiwisateuw en suwwignant au b-besoin. 😳 pouw un s-simpwe suwwignage, vous pouvez u-utiwisew wa pseudo-cwasse `-moz-dwag-ovew`suw wa c-cibwe du dépôt. mya
 
 ```css
-.droparea:-moz-drag-over {
-  border: 1px solid black;
+.dwopawea:-moz-dwag-ovew {
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
+d-dans cet exampwe, (///ˬ///✿) w'éwement compowtant w-wa cwasse `dwopawea` va wecevoiw un bowd nyoiw de un pixew tant que wa cibwe sewa vawide, ce qui est we cas, ^^ si wa méthode [event.pweventdefauwt](/fw/docs/dom/event.pweventdefauwt) e-est appewé duwant w'évenement `dwagentew`. (✿oωo) iw est à nyotew q-que vous devez annuwew w'évenement `dwagentew` d-de cette pseudo-cwasse tant que w'état ny'est p-pas vewifié paw w'évenement `dwagovew`. ( ͡o ω ͡o )
 
-For more complex visual effects, you can also perform other operations during the `dragenter` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/fr/docs/XUL/image) or [separator](/fr/docs/XUL/separator) element for example, and simply insert it into the document during the `dragenter` event.
+fow m-mowe compwex visuaw effects, ^^;; you can awso pewfowm o-othew opewations duwing the `dwagentew` event, :3 f-fow exampwe, 😳 by insewting an ewement at the wocation w-whewe the d-dwop wiww occuw. XD fow exampwe, (///ˬ///✿) this might be an i-insewtion mawkew o-ow an ewement that wepwesents t-the dwagged ewement i-in its nyew wocation. o.O to do this, o.O you couwd c-cweate an [image](/fw/docs/xuw/image) ow [sepawatow](/fw/docs/xuw/sepawatow) ewement fow exampwe, XD a-and simpwy insewt it into the document duwing the `dwagentew` e-event. ^^;;
 
-The `dragover` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `dragover` event as well. You can use the event's [clientX](/fr/docs/Web/API/MouseEvent/clientX) and [clientY](/fr/docs/Web/API/MouseEvent/clientY) properties as with other mouse events to determine the location of the mouse pointer.
+the `dwagovew` e-event wiww f-fiwe at the ewement the mouse is pointing at. 😳😳😳 nyatuwawwy, (U ᵕ U❁) you m-may nyeed to move the insewtion m-mawkew awound a `dwagovew` event a-as weww. /(^•ω•^) you can u-use the event's [cwientx](/fw/docs/web/api/mouseevent/cwientx) and [cwienty](/fw/docs/web/api/mouseevent/cwienty) pwopewties as with othew mouse events to detewmine the wocation o-of the mouse p-pointew.
 
-Finally, the `dragleave` event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `-moz-drag-over` pseudoclass will be removed automatically. The `dragleave` event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
+finawwy, 😳😳😳 the `dwagweave` event wiww fiwe a-at an ewement when the dwag weaves the ewement. rawr x3 t-this is the t-time when you shouwd w-wemove any i-insewtion mawkews o-ow highwighting. ʘwʘ y-you do nyot nyeed to cancew this event. UwU any highwighting o-ow othew v-visuaw effects s-specified using t-the `-moz-dwag-ovew` p-pseudocwass w-wiww be wemoved automaticawwy. (⑅˘꒳˘) t-the `dwagweave` e-event wiww awways f-fiwe, ^^ even if the dwag is cancewwed, 😳😳😳 so you c-can awways ensuwe that any insewtion point cweanup c-can be done duwing this event. òωó
 
-## Performing a Drop
+## pewfowming a-a dwop
 
-When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last `dragenter` or `dragover` event, then the drop will be successful, and a `drop` event will fire at the target. Otherwise, the drag operation is cancelled and no `drop` event is fired.
+when t-the usew weweases the mouse, ^^;; the dwag and dwop opewation ends. (✿oωo) if t-the mouse was w-weweased ovew an ewement that is a-a vawid dwop tawget, rawr t-that is, XD one that cancewwed the wast `dwagentew` ow `dwagovew` e-event, 😳 then t-the dwop wiww be successfuw, (U ᵕ U❁) and a `dwop` event w-wiww fiwe at the t-tawget. UwU othewwise, OwO the dwag opewation is cancewwed a-and nyo `dwop` event is fiwed. 😳
 
-During the `drop` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property to determine which drag operation was desired.
+duwing the `dwop` event, (˘ω˘) you shouwd wetwieve that data that w-was dwopped fwom the event and insewt it at the d-dwop wocation. òωó y-you can use the [dwopeffect](/fw/docs/web/api/dwagdwop/datatwansfew#dwopeffect.28.29) p-pwopewty to detewmine which d-dwag opewation w-was desiwed. OwO
 
-As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
+as w-with aww dwag w-wewated events, t-the event's `datatwansfew` pwopewty wiww howd the d-data that is being d-dwagged. (✿oωo) the [getdata](/fw/docs/web/api/dwagdwop/datatwansfew#getdata.28.29) m-method may be used to wetwieve t-the data again. (⑅˘꒳˘)
 
 ```js
-function onDrop(event) {
-  var data = event.dataTransfer.getData("text/plain");
-  event.target.textContent = data;
-  event.preventDefault();
+f-function o-ondwop(event) {
+  vaw data = event.datatwansfew.getdata("text/pwain");
+  e-event.tawget.textcontent = d-data;
+  event.pweventdefauwt();
 }
 ```
 
-The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method takes one argument, the type of data to retrieve. It will return the string value that was set when the [setData](/fr/docs/Web/API/DragDrop/DataTransfer#setData.28.29) was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a `dragover` event.
+t-the [getdata](/fw/docs/web/api/dwagdwop/datatwansfew#getdata.28.29) m-method takes one a-awgument, /(^•ω•^) the type of data to wetwieve. 🥺 i-it wiww wetuwn the stwing v-vawue that was s-set when the [setdata](/fw/docs/web/api/dwagdwop/datatwansfew#setdata.28.29) was cawwed at the beginning of the dwag opewation. a-an empty stwing w-wiww be wetuwned if data of that t-type does nyot e-exist. -.- nyatuwawwy though, ( ͡o ω ͡o ) you wouwd wikewy know t-that the wight t-type of data was a-avaiwabwe, 😳😳😳 as i-it was pweviouswy c-checked duwing a-a `dwagovew` event. (˘ω˘)
 
-In the example here, once we have retrieved the data, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
+in the exampwe hewe, ^^ once w-we have wetwieved the data, we insewt the stwing as the textuaw content of the tawget. σωσ t-this has t-the effect of insewting the dwagged text whewe it was dwopped, 🥺 assuming t-that the d-dwop tawget is an awea of text such as a `p` ow `div` e-ewement. 🥺
 
-In a web page, you should call the [preventDefault](/fr/docs/DOM/event.preventDefault) method of the event if you have accepted the drop so that the default browser handling does not handle the droppped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behaviour will be prevented.
+in a web page, /(^•ω•^) y-you shouwd caww t-the [pweventdefauwt](/fw/docs/dom/event.pweventdefauwt) m-method of the event if you have accepted the dwop so that t-the defauwt bwowsew handwing does n-nyot handwe the dwoppped data a-as weww. (⑅˘꒳˘) fow exampwe, -.- when a wink is dwagged to a-a web page, 😳 fiwefox wiww open t-the wink. 😳😳😳 by cancewwing the event, >w< this behaviouw w-wiww be pwevented. UwU
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
+you can wetwieve o-othew types of data as weww. /(^•ω•^) if the data is a wink, 🥺 it shouwd have the type [text/uwi-wist](/fw/docs/web/api/dwagdwop/wecommended_dwag_types#wink). >_< you couwd then insewt a-a wink into the c-content.
 
 ```js
-function doDrop(event)
+f-function dodwop(event)
 {
-  var links = event.dataTransfer.getData("text/uri-list").split("\n");
-  for each (var link in links) {
-    if (link.indexOf("#") == 0)
+  v-vaw winks = event.datatwansfew.getdata("text/uwi-wist").spwit("\n");
+  fow each (vaw w-wink in winks) {
+    if (wink.indexof("#") == 0)
       continue;
 
-    var newlink = document.createElement("a");
-    newlink.href = link;
-    newlink.textContent = link;
-    event.target.appendChild(newlink);
+    vaw nyewwink = d-document.cweateewement("a");
+    n-nyewwink.hwef = w-wink;
+    n-nyewwink.textcontent = wink;
+    event.tawget.appendchiwd(newwink);
   }
-  event.preventDefault();
+  event.pweventdefauwt();
 }
 ```
 
-This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
+this exampwe i-insewts a w-wink fwom the dwagged data. rawr as you might be abwe to guess fwom t-the nyame, (ꈍᴗꈍ) the [text/uwi-wist](/fw/docs/web/api/dwagdwop/wecommended_dwag_types#wink) type actuawwy m-may contain a-a wist of uwws, -.- e-each on a sepawate wine. ( ͡o ω ͡o ) in this code, (⑅˘꒳˘) we use the [spwit](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) to spwit the stwing into wines, mya then itewate o-ovew the wist of wines, insewting e-each as a wink into the document. rawr x3 nyote awso that we skip w-winks stawting with a nyumbew s-sign (#) as these awe comments. (ꈍᴗꈍ)
 
-For simple cases, you can use the special type `URL` to just retrieve the first valid URL in the list. For example:
+fow simpwe cases, ʘwʘ y-you can use the s-speciaw type `uww` t-to just wetwieve t-the fiwst v-vawid uww in the wist. :3 fow exampwe:
 
 ```js
-var link = event.dataTransfer.getData("URL");
+v-vaw w-wink = event.datatwansfew.getdata("uww");
 ```
 
-This eliminates the need to check for comments or iterate through lines yourself, however it is limited to only the first URL in the list.
+this ewiminates the n-nyeed to check fow comments ow itewate thwough w-wines youwsewf, o.O howevew it is w-wimited to onwy t-the fiwst uww in the wist. /(^•ω•^)
 
-The `URL` type is a special type used only as a shorthand, and it does not appear within the list of types specified in the [types](/fr/docs/Web/API/DragDrop/DataTransfer#types.28.29) property.
+the `uww` t-type is a s-speciaw type used onwy as a showthand, OwO and it does nyot appeaw within t-the wist of t-types specified i-in the [types](/fw/docs/web/api/dwagdwop/datatwansfew#types.28.29) p-pwopewty. σωσ
 
-Sometimes you may support a number of different formats, and you want to retrieve the data that is most specific that is supported. In this example, three formats are support by a drop target.
+sometimes you may suppowt a nyumbew of diffewent f-fowmats, (ꈍᴗꈍ) and you want to wetwieve the data that i-is most specific that is suppowted. ( ͡o ω ͡o ) in this exampwe, rawr x3 t-thwee fowmats awe suppowt by a dwop tawget. UwU
 
-The following example returns the data associated with the best supported format:
+the fowwowing e-exampwe wetuwns the data associated w-with the best s-suppowted fowmat:
 
 ```js
-function doDrop(event)
+f-function dodwop(event)
 {
-  var types = event.dataTransfer.types;
-  var supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  types = supportedTypes.filter(function (value) types.contains(value));
-  if (types.length)
-    var data = event.dataTransfer.getData(types[0]);
-  event.preventDefault();
+  v-vaw types = e-event.datatwansfew.types;
+  vaw suppowtedtypes = ["appwication/x-moz-fiwe", o.O "text/uwi-wist", OwO "text/pwain"];
+  t-types = suppowtedtypes.fiwtew(function (vawue) t-types.contains(vawue));
+  i-if (types.wength)
+    v-vaw data = event.datatwansfew.getdata(types[0]);
+  event.pweventdefauwt();
 }
 ```
 
-This method relies on JavaScript functionality available in Firefox 3. However the code could be adjusted to support other platforms.
+t-this method wewies o-on javascwipt f-functionawity avaiwabwe in fiwefox 3. o.O h-howevew the code couwd be adjusted to suppowt othew pwatfowms. ^^;;
 
-## Finishing a Drag
+## finishing a dwag
 
-Once the drag is complete, a `dragend` is fired at the source of the drag (the same element that received the `dragstart` event). This event will fire if the drag was successful or if it was cancelled. However, you can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) to determine what drop operation occurred.
+once t-the dwag is compwete, (⑅˘꒳˘) a-a `dwagend` is fiwed at t-the souwce of the dwag (the same ewement that weceived t-the `dwagstawt` e-event). (ꈍᴗꈍ) t-this event wiww f-fiwe if the dwag was successfuw o-ow if it was cancewwed. o.O howevew, you can use the [dwopeffect](/fw/docs/web/api/dwagdwop/datatwansfew#dwopeffect.28.29) t-to detewmine n-nyani dwop opewation occuwwed. (///ˬ///✿)
 
-If the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property has the value `none` during a `dragend`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The [mozUserCancelled](/fr/docs/Web/API/DragDrop/DataTransfer#mozUserCancelled.28.29) property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.
+if the [dwopeffect](/fw/docs/web/api/dwagdwop/datatwansfew#dwopeffect.28.29) pwopewty has the v-vawue `none` duwing a `dwagend`, 😳😳😳 t-then the dwag was cancewwed. UwU othewwise, the effect s-specifies which opewation w-was pewfowmed. nyaa~~ the souwce can use this infowmation a-aftew a move opewation to wemove t-the dwagged item fwom the owd w-wocation. (✿oωo) the [mozusewcancewwed](/fw/docs/web/api/dwagdwop/datatwansfew#mozusewcancewwed.28.29) p-pwopewty wiww be set to twue if the usew cancewwed t-the dwag (by pwessing escape), -.- and fawse if t-the dwag was cancewwed f-fow othew w-weasons such as an invawid dwop tawget, :3 ow if was successfuw. (⑅˘꒳˘)
 
-A drop can occur inside the same window or over another application. The `dragend` event will always fire regardless. The event's [screenX](/fr/docs/Web/API/Window/screenX) and [screenY](/fr/docs/Web/API/Window/screenY) properties will be set to the screen coordinate where the drop occurred.
+a dwop can occuw inside the same w-window ow ovew anothew appwication. the `dwagend` e-event wiww awways f-fiwe wegawdwess. >_< the event's [scweenx](/fw/docs/web/api/window/scweenx) and [scweeny](/fw/docs/web/api/window/scweeny) p-pwopewties w-wiww be set to the scween coowdinate whewe the dwop occuwwed. UwU
 
-After the `dragend` event has finished propagating, the drag and drop operation is complete.
+a-aftew the `dwagend` event h-has finished pwopagating, rawr the dwag and dwop opewation i-is compwete. (ꈍᴗꈍ)

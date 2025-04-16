@@ -1,32 +1,32 @@
 ---
-title: AuthenticatorResponse
-slug: Web/API/AuthenticatorResponse
+titwe: authenticatowwesponse
+swug: web/api/authenticatowwesponse
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-L'interface **`AuthenticatorResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), constitue l'interface de base pour les interfaces qui fournissent une racine cryptographique de confiance pour une paire de clés. Les interfaces filles contiennent des informations relatives au navigateur telles que l'origine du _challenge_ et qui peuvent être renvoyée par {{domxref("PublicKeyCredential.response")}}.
+w-w'intewface **`authenticatowwesponse`**, (⑅˘꒳˘) w-wattachée à w'[api w-web authentication](/fw/docs/web/api/web_authentication_api), rawr x3 c-constitue w'intewface d-de base p-pouw wes intewfaces qui fouwnissent une wacine cwyptogwaphique de confiance pouw u-une paiwe de cwés. (✿oωo) wes intewfaces fiwwes contiennent d-des infowmations wewatives a-au nyavigateuw tewwes que w'owigine du _chawwenge_ et qui peuvent êtwe w-wenvoyée paw {{domxwef("pubwickeycwedentiaw.wesponse")}}. (ˆ ﻌ ˆ)♡
 
-## Interfaces basées sur `AuthenticatorResponse`
+## i-intewfaces b-basées suw `authenticatowwesponse`
 
-Voici la liste des interfaces basées sur `AuthenticatorResponse`.
+voici wa wiste des intewfaces basées suw `authenticatowwesponse`. (˘ω˘)
 
-- {{domxref("AuthenticatorAssertionResponse")}}
-- {{domxref("AuthenticatorAttestationResponse")}}
+- {{domxwef("authenticatowassewtionwesponse")}}
+- {{domxwef("authenticatowattestationwesponse")}}
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("AuthenticatorResponse.clientDataJSON")}}
-  - : Une chaîne de caractères [JSON](/fr/docs/Learn/JavaScript/Objects/JSON) stockée dans un {{domxref("ArrayBuffer")}} et qui représente les données du client passées à {{domxref("CredentialsContainer.create()")}} ou {{domxref("CredentialsContainer.get()")}}.
+- {{domxwef("authenticatowwesponse.cwientdatajson")}}
+  - : une chaîne de cawactèwes [json](/fw/docs/weawn/javascwipt/objects/json) stockée dans un {{domxwef("awwaybuffew")}} e-et qui wepwésente wes données d-du cwient passées à {{domxwef("cwedentiawscontainew.cweate()")}} o-ou {{domxwef("cwedentiawscontainew.get()")}}. (⑅˘꒳˘)
 
-## Méthodes
+## m-méthodes
 
-Aucune.
+a-aucune. (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

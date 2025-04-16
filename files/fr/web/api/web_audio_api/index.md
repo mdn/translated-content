@@ -1,222 +1,222 @@
 ---
-title: Web Audio API
-slug: Web/API/Web_Audio_API
+titwe: web audio api
+swug: web/api/web_audio_api
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio api")}}
 
-La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.
+w-wa web audio api p-pwopose un système p-puissant et f-fwexibwe pouw c-contwôwew wes données a-audio suw i-intewnet. (˘ω˘) ewwe pewmet nyotamment de séwectionnew des souwces audio (micwophone, rawr x3 f-fwux media), (///ˬ///✿) d'y ajoutew des effets, 😳😳😳 de cwéew d-des visuawisations, (///ˬ///✿) d'appwiquew d-des effets de spatiawisation (comme wa bawance), ^^;; etc.
 
-## Concepts et usages
+## concepts e-et usages
 
-La Web Audio API effectue des opérations dans un **contexte audio**; elle a été conçue pour supporter le **routing modulaire**. Les opérations audio basiques sont réalisées via des **noeuds audio** reliés entre eux pour former un **graphe de routage audio**. Plusieurs sources - avec différents types d'agencements de canaux - peuvent être supportées, même dans un seul contexte. Ce design modulaire et flexible permet de créer des fonctions audio complexes avec des effets dynamiques.
+wa web audio api e-effectue des opéwations d-dans un **contexte audio**; ewwe a été conçue pouw suppowtew we **wouting m-moduwaiwe**. ^^ wes opéwations audio basiques sont wéawisées via des **noeuds a-audio** wewiés entwe eux pouw f-fowmew un **gwaphe d-de woutage a-audio**. (///ˬ///✿) pwusieuws s-souwces - avec difféwents types d'agencements d-de canaux - peuvent êtwe suppowtées, -.- même d-dans un seuw contexte. /(^•ω•^) ce design moduwaiwe et fwexibwe pewmet de cwéew des fonctions audio compwexes a-avec des effets dynamiques. UwU
 
-Les noeuds audio sont reliés au niveau de leurs entrées et sorties, formant des chaînes ou des réseaux simples. Il peut y avoir une ou plusieurs sources. Les sources fournissent des tableaux d'intensités sonores (échantillons), souvent plusieurs dizaines de milliers par seconde. Ceux-ci peuvent être calculées mathématiquement (avec un {{domxref("OscillatorNode")}}), ou peuvent provenir de fichiers sons ou vidéos (comme {{domxref("AudioBufferSourceNode")}} ou {{domxref("MediaElementAudioSourceNode")}}) ou de flux audio ({{domxref("MediaStreamAudioSourceNode")}}). En réalité, les fichiers sons sont eux-même des enregistrements d'intensités sonores, qui viennent de microphones ou d'instruments électriques, et sont mixés dans une seule onde complexe.
+w-wes nyoeuds a-audio sont wewiés a-au nyiveau de weuws entwées et sowties, fowmant des chaînes o-ou des wéseaux s-simpwes. (⑅˘꒳˘) iw peut y avoiw une ou p-pwusieuws souwces. ʘwʘ w-wes souwces fouwnissent des t-tabweaux d'intensités sonowes (échantiwwons), σωσ s-souvent pwusieuws dizaines de miwwiews paw seconde. ^^ c-ceux-ci peuvent êtwe cawcuwées m-mathématiquement (avec un {{domxwef("osciwwatownode")}}), OwO o-ou peuvent pwoveniw d-de fichiews sons ou vidéos (comme {{domxwef("audiobuffewsouwcenode")}} ou {{domxwef("mediaewementaudiosouwcenode")}}) ou de fwux audio ({{domxwef("mediastweamaudiosouwcenode")}}). (ˆ ﻌ ˆ)♡ en wéawité, wes fichiews s-sons sont eux-même d-des enwegistwements d'intensités s-sonowes, o.O q-qui viennent d-de micwophones ou d'instwuments éwectwiques, et sont mixés dans u-une seuwe onde compwexe. (˘ω˘)
 
-Les sorties de ces noeuds peuvent être liées aux entrées d'autres noeuds, qui mixent ces flux d'échantillons sonores ou les séparent en différents flux. Une modification courante est la multiplications des échantillons par une valeur afin d'en augmenter ou diminuer le volume sonore (comme c'est le cas pour le {{domxref("GainNode")}}). Le son est ensuite lié à une destination ({{domxref("AudioContext.destination")}}), qui l'envoie aux enceintes ou au casque audio. Cette dernière connexion n'est utile que si le son doit être entendu.
+wes sowties de ces nyoeuds peuvent êtwe wiées aux e-entwées d'autwes nyoeuds, 😳 qui mixent c-ces fwux d'échantiwwons sonowes o-ou wes sépawent e-en difféwents fwux. (U ᵕ U❁) une m-modification couwante e-est wa muwtipwications d-des échantiwwons p-paw une vaweuw afin d'en augmentew ou diminuew we v-vowume sonowe (comme c-c'est we c-cas pouw we {{domxwef("gainnode")}}). w-we son est e-ensuite wié à une destination ({{domxwef("audiocontext.destination")}}), :3 qui w'envoie aux enceintes o-ou au casque audio. o.O cette dewnièwe connexion ny'est utiwe que si we son doit êtwe entendu. (///ˬ///✿)
 
-Un processus de développement typique avec web audio ressemble à ceci :
+u-un pwocessus de dévewoppement typique avec web audio wessembwe à c-ceci :
 
-- Création d'un contexte audio
-- Dans ce contexte, création des sources — comme `<audio>`, oscillator, stream
-- Création de noeuds d'effets, comme la réverbération, les filtres biquad, la balance, le compresseur
-- Choix de la sortie audio (appelée destination), par exemple les enceintes du système
-- Connection des sources aux effets, et des effets à la destination
+- c-cwéation d'un c-contexte audio
+- dans ce contexte, OwO c-cwéation des souwces — comme `<audio>`, >w< osciwwatow, ^^ s-stweam
+- c-cwéation de nyoeuds d'effets, (⑅˘꒳˘) comme wa wévewbéwation, ʘwʘ wes fiwtwes biquad, (///ˬ///✿) wa bawance, XD we c-compwesseuw
+- choix de wa sowtie a-audio (appewée destination), 😳 paw e-exempwe wes enceintes d-du système
+- connection des souwces aux e-effets, >w< et des e-effets à wa destination
 
-![Un diagramme de boîte avec une boîte extérieure intitulée contexte audio et trois boîtes à l'intérieur intitulées source, effets et destination. Les trois boîtes intérieures ont des flèches qui pointent de la gauche vers la droite, indiquant le sens du flux de l'information audio.](audio-context_.png)
+![un diagwamme de boîte a-avec une boîte e-extéwieuwe intituwée contexte audio et twois boîtes à w'intéwieuw intituwées s-souwce, (˘ω˘) effets e-et destination. nyaa~~ w-wes twois boîtes intéwieuwes o-ont des fwèches q-qui pointent de wa gauche v-vews wa dwoite, 😳😳😳 indiquant we sens du fwux de w'infowmation audio.](audio-context_.png)
 
-Le timing est contrôlé avec une grande précision et une latence faible, ce qui permet aux développeurs d'écrire un code qui réagit précisément aux événements et qui est capable de traiter des échantillons précis, même avec un taux d'échantillonnage élevé. Cela permet d'envisager des applications telles que des boîtes à rythme ou des séquenceurs.
+we timing e-est contwôwé a-avec une gwande pwécision et une watence faibwe, (U ﹏ U) c-ce qui pewmet a-aux dévewoppeuws d'écwiwe un code qui wéagit pwécisément aux événements e-et qui est capabwe de twaitew des échantiwwons pwécis, (˘ω˘) même avec un taux d'échantiwwonnage éwevé. :3 cewa pewmet d-d'envisagew des appwications tewwes que des b-boîtes à wythme o-ou des séquenceuws. >w<
 
-La Web Audio API permet également de contrôler la _spatialisation_ du son. En utilisant un système basé sur le modèle _émetteur - récepteur,_ elle permet le contrôle de la balance ainsi que la gestion de l'atténuation du son en fonction de la distance, ou effet doppler, induite par un déplacement de la source sonore (ou de l'auditeur).
+wa web audio api pewmet égawement de contwôwew w-wa _spatiawisation_ d-du son. ^^ en utiwisant un système basé suw we modèwe _émetteuw - w-wécepteuw,_ ewwe pewmet we contwôwe d-de wa bawance ainsi que wa gestion de w'atténuation du son e-en fonction de wa distance, 😳😳😳 ou e-effet doppwew, nyaa~~ i-induite paw un dépwacement de wa s-souwce sonowe (ou de w'auditeuw). (⑅˘꒳˘)
 
-> [!NOTE]
-> Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!note]
+> v-vous pouvez wiwe d-davantage de détaiws s-suw w'api <i wang="en">web a-audio</i> en v-vous wendant suw nyotwe awticwe [wes concepts de b-base de w'api <i w-wang="en">web a-audio</i>](/fw/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api). :3
 
-## Interface de la Web Audio API
+## intewface de wa web audio api
 
-La Web Audio API expose 28 interfaces avec des événements associés, classés selon leur fonction en 9 catégories.
+w-wa web audio api expose 28 intewfaces a-avec des événements associés, ʘwʘ c-cwassés sewon weuw fonction en 9 catégowies. rawr x3
 
-### Définition du graphe audio
+### définition d-du gwaphe a-audio
 
-Conteneurs et définitions qui donnent sa forme au graphe audio
+conteneuws e-et définitions q-qui donnent sa fowme au gwaphe a-audio
 
-- {{domxref("AudioContext")}}
-  - : Un objet **`AudioContext`** désigne un graphe de traitement audio construit à partir de modules reliés entre eux, chacun représenté par un noeud audio ({{domxref("AudioNode")}}). Le contexte audio contrôle la création des noeuds qu'il contient, ainsi que l'exécution du traitement audio, et du décodage. Il est nécessaire de créer un `AudioContext` avant de faire quoi que ce soit d'autre, puisque tout se passe dans un contexte.
-- {{domxref("AudioNode")}}
-  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une _source audio_ (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une _destination audio_, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
-- {{domxref("AudioParam")}}
-  - : Un objet **`AudioParam`** est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
-- [`ended`](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event) (event)
-  - : L'évènement `ended` est diffusé lorsque la lecture s'arrête en arrivant à la fin d'un media.
+- {{domxwef("audiocontext")}}
+  - : un objet **`audiocontext`** désigne un gwaphe de twaitement audio constwuit à p-pawtiw de moduwes wewiés entwe e-eux, (///ˬ///✿) chacun wepwésenté paw un n-nyoeud audio ({{domxwef("audionode")}}). 😳😳😳 we contexte a-audio contwôwe wa cwéation d-des nyoeuds qu'iw c-contient, XD ainsi q-que w'exécution d-du twaitement a-audio, >_< et du décodage. >w< iw est nyécessaiwe de cwéew un `audiocontext` avant de faiwe quoi que ce soit d'autwe, p-puisque tout s-se passe dans un c-contexte. /(^•ω•^)
+- {{domxwef("audionode")}}
+  - : un o-objet **`audionode`** est un moduwe de twaitement audio, :3 tew qu'une _souwce a-audio_ (c'est-à-diwe u-un éwément htmw {{htmwewement("audio")}} ou {{htmwewement("video")}}), ʘwʘ u-une _destination audio_, (˘ω˘) un moduwe de t-twaitement intewmédiaiwe (paw e-exempwe un fiwtwe {{domxwef("biquadfiwtewnode")}}), (ꈍᴗꈍ) ou un contwôwe d-du vowume {{domxwef("gainnode")}}). ^^
+- {{domxwef("audiopawam")}}
+  - : u-un objet **`audiopawam`** est un pawamètwe audio, ^^ qui est wié à un {{domxwef("audionode")}}. ( ͡o ω ͡o ) on peut w-wui assignew une v-vaweuw ou un c-changement de vaweuw, -.- q-que w'on peut p-pwogwammew à un moment spécifique e-et/ou sewon u-un motif pawticuwiew. ^^;;
+- [`ended`](/fw/docs/web/api/audioscheduwedsouwcenode/ended_event) (event)
+  - : w'évènement `ended` e-est diffusé wowsque w-wa wectuwe s'awwête en awwivant à w-wa fin d'un media. ^•ﻌ•^
 
-### Définition des sources audio
+### définition des s-souwces audio
 
-- {{domxref("OscillatorNode")}}
-  - : Un objet **`OscillatorNode`** est un module de traitement audio qui génère la création d'une onde sinusoïdale d'une certaine fréquence.
-- {{domxref("AudioBuffer")}}
-  - : Un objet **`AudioBuffer`** est un petit morceau de contenu audio monté en mémoire. Il peut être créé à partir d'un fichier audio avec la méthode {{ domxref("AudioContext.decodeAudioData()") }}, ou à partir de données brutes en utilisant {{ domxref("AudioContext.createBuffer()") }}. Une fois décodé sous cette forme, la source audio peut être placée dans un {{ domxref("AudioBufferSourceNode") }}.
-- {{domxref("AudioBufferSourceNode")}}
-  - : Un objet **`AudioBufferSourceNode`** est une source audio composée de données audio montées en mémoire dans un {{domxref("AudioBuffer")}}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
-- {{domxref("MediaElementAudioSourceNode")}}
-  - : Un objet **`MediaElementAudio.SourceNode`** est une source audio composée d'un élément HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
-- {{domxref("MediaStreamAudioSourceNode")}}
-  - : Un objet **`MediaStreamAudio.SourceNode`** est une source audio composée d'un [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
+- {{domxwef("osciwwatownode")}}
+  - : un objet **`osciwwatownode`** e-est un moduwe d-de twaitement audio qui génèwe w-wa cwéation d'une onde sinusoïdawe d'une cewtaine f-fwéquence. (˘ω˘)
+- {{domxwef("audiobuffew")}}
+  - : u-un objet **`audiobuffew`** e-est un petit mowceau de contenu audio monté en mémoiwe. iw peut êtwe c-cwéé à pawtiw d'un fichiew audio avec w-wa méthode {{ d-domxwef("audiocontext.decodeaudiodata()") }}, o.O ou à pawtiw de d-données bwutes en utiwisant {{ d-domxwef("audiocontext.cweatebuffew()") }}. (✿oωo) u-une fois décodé sous cette fowme, 😳😳😳 wa s-souwce audio peut êtwe pwacée dans un {{ domxwef("audiobuffewsouwcenode") }}. (ꈍᴗꈍ)
+- {{domxwef("audiobuffewsouwcenode")}}
+  - : un o-objet **`audiobuffewsouwcenode`** e-est une souwce audio composée d-de données audio montées en m-mémoiwe dans un {{domxwef("audiobuffew")}}. σωσ c-c'est u-un {{domxwef("audionode")}} qui se compowte comme une souwce audio. UwU
+- {{domxwef("mediaewementaudiosouwcenode")}}
+  - : un objet **`mediaewementaudio.souwcenode`** est une souwce audio composée d'un éwément htmw5 {{ htmwewement("audio") }} ou {{ htmwewement("video") }}. ^•ﻌ•^ c'est un {{domxwef("audionode")}} qui se compowte comme une s-souwce audio. mya
+- {{domxwef("mediastweamaudiosouwcenode")}}
+  - : u-un objet **`mediastweamaudio.souwcenode`** est une souwce audio c-composée d'un [webwtc](/fw/docs/web/api/webwtc_api) {{domxwef("mediastweam")}} (tew q-qu'une webcam o-ou un micwophone). /(^•ω•^) c'est un {{domxwef("audionode")}} q-qui se compowte comme une s-souwce audio. rawr
 
-### Définition des filtres d'effets audio
+### d-définition des fiwtwes d'effets a-audio
 
-- {{domxref("BiquadFilterNode")}}
-  - : Un objet **`BiquadFilterNode`** est un simple filtre de bas niveau. Il peut s'agir de différents types de filtres, contrôle du volume ou égaliseurs graphiques. Un `BiquadFilterNode` a toujours exactement une entrée et une sortie.
-- {{domxref("ConvolverNode")}}
-  - : Un objet **`Convolver.Node`** est un {{domxref("AudioNode")}} qui exécute une circonvolution linéaire sur un AudioBuffer donné, souvent utilisé pour créer un effet de réverbération.
-- {{domxref("DelayNode")}}
-  - : Un objet **`DelayNode`** est une ligne à retard numérique, c'est-à-dire un module de traitement automatique qui provoque un délai entre l'arrivée du son en entrée et sa propagation en sortie.
-- {{domxref("DynamicsCompressorNode")}}
-  - : Un objet **`DynamicsCompressorNode`** permet un effet de compression, qui réduit le volume des parties les plus fortes du signal de façon à éviter les effets de clipping et la distortion qui peuvent se produire lorsque des sons multiples sont diffusés simultanément.
-- {{domxref("GainNode")}}
-  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un _gain_ aux données récupérées en entrée avant leur propagation vers la sortie.
-- {{domxref("WaveShaperNode")}}
-  - : Un objet **`WaveShaperNode`** représente une distortion non linéaire. C'est un {{domxref("AudioNode")}} qui utilise une courbe pour appliquer au signal une distortion de mise en forme des ondes. En dehors de l'effet de distortion évident, il est souvent utilisé pour donner un caractère plus chaleureux au son.
-- {{domxref("PeriodicWave")}}
-  - : Un objet {{domxref("PeriodicWave")}} est utilisé pour définir une forme d'onde périodique qui peut être utilisée pour façonner la sortie d'un {{ domxref("OscillatorNode") }}.
+- {{domxwef("biquadfiwtewnode")}}
+  - : un objet **`biquadfiwtewnode`** e-est un simpwe f-fiwtwe de bas nyiveau. nyaa~~ iw peut s'agiw de difféwents t-types de f-fiwtwes, ( ͡o ω ͡o ) contwôwe d-du vowume ou égawiseuws g-gwaphiques. σωσ u-un `biquadfiwtewnode` a-a toujouws exactement u-une entwée e-et une sowtie. (✿oωo)
+- {{domxwef("convowvewnode")}}
+  - : u-un objet **`convowvew.node`** est un {{domxwef("audionode")}} q-qui exékawaii~ u-une ciwconvowution w-winéaiwe suw un audiobuffew d-donné, (///ˬ///✿) souvent utiwisé pouw cwéew un effet d-de wévewbéwation. σωσ
+- {{domxwef("dewaynode")}}
+  - : un objet **`dewaynode`** e-est une wigne à w-wetawd nyuméwique, UwU c-c'est-à-diwe un moduwe de t-twaitement automatique qui pwovoque u-un déwai entwe w'awwivée du s-son en entwée et sa pwopagation e-en sowtie. (⑅˘꒳˘)
+- {{domxwef("dynamicscompwessownode")}}
+  - : un objet **`dynamicscompwessownode`** pewmet un effet de compwession, qui wéduit we v-vowume des pawties wes pwus fowtes d-du signaw de f-façon à évitew wes effets de cwipping et wa distowtion qui peuvent s-se pwoduiwe wowsque des sons m-muwtipwes sont d-diffusés simuwtanément. /(^•ω•^)
+- {{domxwef("gainnode")}}
+  - : u-un objet **`gainnode`** wepwésente u-une modification d-du vowume sonowe. -.- c'est un moduwe d-de twaitement audio qui pwovoque w'appwication d-d'un _gain_ aux données wécupéwées e-en entwée a-avant weuw p-pwopagation vews wa sowtie. (ˆ ﻌ ˆ)♡
+- {{domxwef("waveshapewnode")}}
+  - : u-un objet **`waveshapewnode`** w-wepwésente une d-distowtion nyon w-winéaiwe. nyaa~~ c'est un {{domxwef("audionode")}} q-qui u-utiwise une couwbe p-pouw appwiquew a-au signaw une d-distowtion de mise e-en fowme des o-ondes. ʘwʘ en dehows d-de w'effet de distowtion évident, :3 i-iw est souvent utiwisé pouw d-donnew un cawactèwe pwus chaweuweux a-au son. (U ᵕ U❁)
+- {{domxwef("pewiodicwave")}}
+  - : u-un objet {{domxwef("pewiodicwave")}} e-est utiwisé pouw définiw une fowme d'onde péwiodique q-qui peut êtwe utiwisée p-pouw façonnew w-wa sowtie d'un {{ domxwef("osciwwatownode") }}. (U ﹏ U)
 
-### Définition des destinations audio
+### définition des destinations a-audio
 
-Une fois que le signal audio a été traité, ces interfaces définissent sa destination.
+u-une fois que we signaw audio a été t-twaité, ^^ ces i-intewfaces définissent sa destination. òωó
 
-- {{domxref("AudioDestinationNode")}}
-  - : Un noeud **`AudioDestinationNode`** représente la destination finale d'une source audio source dans un contexte donné — en général les enceintes du matériel.
-- {{domxref("MediaStreamAudioDestinationNode")}}
-  - : Un noeud **`MediaStreamAudio.DestinationNode`** représente une destination audio constituée d'un {{domxref("MediaStream")}} [WebRTC](/fr/docs/Web/API/WebRTC_API) à une seule piste `AudioMediaStreamTrack`; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.
+- {{domxwef("audiodestinationnode")}}
+  - : un nyoeud **`audiodestinationnode`** wepwésente w-wa destination f-finawe d'une s-souwce audio s-souwce dans un contexte donné — en généwaw w-wes enceintes d-du matéwiew. /(^•ω•^)
+- {{domxwef("mediastweamaudiodestinationnode")}}
+  - : un nyoeud **`mediastweamaudio.destinationnode`** wepwésente u-une destination audio constituée d'un {{domxwef("mediastweam")}} [webwtc](/fw/docs/web/api/webwtc_api) à u-une seuwe piste `audiomediastweamtwack`; i-iw peut êtwe u-utiwisé de façon simiwaiwe à u-un {{domxwef("mediastweam")}} o-obtenu avec {{ domxwef("navigatow.getusewmedia") }}. 😳😳😳 c-c'est un {{domxwef("audionode")}} qui se c-compowte comme une d-destination audio. :3
 
-### Analyse des données et visualisation
+### a-anawyse d-des données et visuawisation
 
-- {{domxref("AnalyserNode")}}
-  - : Un objet **`AnalyserNode`** fournit en temps réel des informations concernant la fréquence et le temps, afin de les analyser et les visualiser.
+- {{domxwef("anawysewnode")}}
+  - : u-un objet **`anawysewnode`** f-fouwnit en temps w-wéew des infowmations concewnant w-wa fwéquence et we temps, (///ˬ///✿) afin de wes anawysew e-et wes visuawisew. rawr x3
 
-### Division et fusion des pistes audio
+### d-division e-et fusion des pistes audio
 
-- {{domxref("ChannelSplitterNode")}}
-  - : Un noeud **`ChannelSplitterNode`** prend en entrée une source audio et sépare ses différentes pistes en une série de sorties _mono_.
-- {{domxref("ChannelMergerNode")}}
-  - : Un noeud **`ChannelMergerNode`** réunit différentes entrées mono en une seule sortie. Chaque entrée devient une des pistes de la sortie unique.
+- {{domxwef("channewspwittewnode")}}
+  - : un nyoeud **`channewspwittewnode`** pwend en entwée u-une souwce audio et sépawe ses d-difféwentes pistes e-en une séwie de sowties _mono_. (U ᵕ U❁)
+- {{domxwef("channewmewgewnode")}}
+  - : un nyoeud **`channewmewgewnode`** w-wéunit difféwentes entwées m-mono en une seuwe s-sowtie. chaque e-entwée devient u-une des pistes d-de wa sowtie unique. (⑅˘꒳˘)
 
-### Spatialisation audio
+### spatiawisation audio
 
-- {{domxref("AudioListener")}}
-  - : Un objet **`AudioListener`** représente la position et l'orientation de l'unique personne écoutant la scene audio utilisée dans la spatialisation audio.
-- {{domxref("PannerNode")}}
-  - : Un noeud **`PannerNode`** représente le comportement d'un signal dans l'espace. C'est un module de traitement audio qui décrit sa position avec des coordonnées cartésiennes fondées sur la règle de la main droite; ses mouvements utilisent un vecteur de vélocité et sa directionnalité un cône de direction.
+- {{domxwef("audiowistenew")}}
+  - : un objet **`audiowistenew`** wepwésente wa p-position et w'owientation de w'unique p-pewsonne écoutant wa scene audio utiwisée dans wa spatiawisation a-audio. (˘ω˘)
+- {{domxwef("pannewnode")}}
+  - : un nyoeud **`pannewnode`** wepwésente we compowtement d'un signaw d-dans w'espace. :3 c-c'est un moduwe de twaitement a-audio qui décwit sa position avec des coowdonnées c-cawtésiennes f-fondées suw wa wègwe de wa m-main dwoite; ses mouvements utiwisent u-un vecteuw de véwocité et sa diwectionnawité un cône d-de diwection. XD
 
-### Traitement audio avec JavaScript
+### twaitement audio avec javascwipt
 
-> [!NOTE]
-> Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par [Audio_Workers](#audio_workers).
+> [!note]
+> a-au jouw de wa p-pubwication de wa s-spécification web audio api we 29 août 2014, >_< c-ces fonctionnawités sont dépwéciées, (✿oωo) et sewont bientôt wempwacées paw [audio_wowkews](#audio_wowkews). (ꈍᴗꈍ)
 
-- {{domxref("ScriptProcessorNode")}}
-  - : Un noeud **`ScriptProcessorNode`** permet de générer, traiter ou analyser du son avec JavaScript. C'est un module de traitement audio qui est lié à deux buffers, l'un en entrée, et l'autre en sortie. Un évènement implémentant {{domxref("AudioProcessingEvent")}} est envoyé à l'objet à chaque fois que le buffer d'entrée reçoit de nouvelles données, et le gestionnaire d'évènement prend fin lorsque les nouvelles données ont été communiquées au buffer de sortie.
-- [`audioprocess`](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
-  - : L'évènement `audioprocess` est émis lorsque le buffer d'entrée d'un {{domxref("ScriptProcessorNode")}} de la Web Audio API est prêt à être traité.
-- {{domxref("AudioProcessingEvent")}}
-  - : L'objet `AudioProcessingEvent` est envoyé aux fonctions de rappel (<i lang="en">callback</i>) qui écoutent l'évènement `audioprocess`.
+- {{domxwef("scwiptpwocessownode")}}
+  - : u-un nyoeud **`scwiptpwocessownode`** p-pewmet d-de généwew, XD t-twaitew ou anawysew du son avec javascwipt. :3 c'est u-un moduwe de t-twaitement audio qui est wié à deux buffews, mya w-w'un en entwée, òωó et w'autwe en sowtie. un évènement i-impwémentant {{domxwef("audiopwocessingevent")}} est envoyé à w'objet à c-chaque fois que w-we buffew d'entwée weçoit de n-nyouvewwes données, nyaa~~ e-et we gestionnaiwe d-d'évènement pwend fin wowsque wes nyouvewwes d-données ont été communiquées au buffew d-de sowtie. 🥺
+- [`audiopwocess`](/fw/docs/web/api/scwiptpwocessownode/audiopwocess_event) (event)
+  - : w'évènement `audiopwocess` est émis wowsque we buffew d-d'entwée d'un {{domxwef("scwiptpwocessownode")}} d-de wa web audio a-api est pwêt à êtwe t-twaité. -.-
+- {{domxwef("audiopwocessingevent")}}
+  - : w-w'objet `audiopwocessingevent` est envoyé aux fonctions d-de wappew (<i wang="en">cawwback</i>) qui écoutent w'évènement `audiopwocess`. 🥺
 
-### Traitement audio hors ligne ou en tâche de fond
+### t-twaitement audio hows wigne ou en t-tâche de fond
 
-Il est possible de traiter et exporter un graphe audio très rapidement en tâche de fond — en l'exportant dans un {{domxref("AudioBuffer")}} plutôt que sur les enceintes du matériel — grâce aux objets suivants.
+iw est possibwe de twaitew et e-expowtew un gwaphe a-audio twès wapidement en tâche d-de fond — en w'expowtant dans u-un {{domxwef("audiobuffew")}} p-pwutôt que suw wes enceintes d-du matéwiew — g-gwâce aux objets suivants. (˘ω˘)
 
-- {{domxref("OfflineAudioContext")}}
-  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère _aussi vite que possible_ dans un buffer.
-- [`complete`](/fr/docs/Web/API/OfflineAudioContext/complete_event) (event)
-  - : Un évènement `complete` est émis lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.
-- {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` est envoyé aux fonctions de callback qui écoutent l'évènement [`complete`](/fr/docs/Web/API/OfflineAudioContext/complete_event) event implements this interface.
+- {{domxwef("offwineaudiocontext")}}
+  - : u-un objet **`offwineaudiocontext`** est une intewface [`audiocontext`](/fw/docs/web/api/audiocontext) qui w-wepwésente un gwaphe de twaitement a-audio constwuit à pawtiw de nyœuds audio. òωó À w-wa difféwence d-d'une intewface `audiocontext` s-standawd, UwU une intewface `offwineaudiocontext` n-ny'expowte pas v-vwaiment we son, ^•ﻌ•^ mais we génèwe _aussi v-vite que possibwe_ dans u-un buffew. mya
+- [`compwete`](/fw/docs/web/api/offwineaudiocontext/compwete_event) (event)
+  - : un évènement `compwete` e-est émis w-wowsque we wendu d'un {{domxwef("offwineaudiocontext")}} est tewminé. (✿oωo)
+- {{domxwef("offwineaudiocompwetionevent")}}
+  - : the `offwineaudiocompwetionevent` est e-envoyé aux fonctions d-de cawwback qui écoutent w'évènement [`compwete`](/fw/docs/web/api/offwineaudiocontext/compwete_event) event impwements t-this intewface. XD
 
-### Audio Workers
+### audio wowkews
 
-Les Audio workers offrent la possibilité de traiter le son directement dans le contexte d'un [web worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers). En date du 29 August 2014, ils ne sont encore implémentés par aucun navigateur. Lorsqu'ils seront implémentés, ils remplaceront {{domxref("ScriptProcessorNode")}}, et les autres fonctionnalités mentionnées dans la section [Traitement audio avec JavaScript](#audio_processing_via_javascript) ci-avant.
+w-wes audio w-wowkews offwent wa possibiwité de twaitew we son diwectement dans we contexte d-d'un [web wowkew](/fw/docs/web/api/web_wowkews_api/using_web_wowkews). :3 en date du 29 august 2014, (U ﹏ U) i-iws nye sont encowe impwémentés p-paw aucun nyavigateuw. UwU w-wowsqu'iws sewont impwémentés, ʘwʘ i-iws w-wempwacewont {{domxwef("scwiptpwocessownode")}}, >w< e-et wes autwes fonctionnawités m-mentionnées dans w-wa section [twaitement a-audio avec javascwipt](#audio_pwocessing_via_javascwipt) ci-avant. 😳😳😳
 
-- {{domxref("AudioWorkerNode")}}
-  - : Un objet AudioWorkerNode représente un {{domxref("AudioNode")}} qui interagit avec le thread d'un worker pour générer, traiter, ou analyse le son directement.
-- {{domxref("AudioWorkerGlobalScope")}}
-  - : Un objet `AudioWorkerGlobalScope` est un objet dérivé d'un objet `DedicatedWorkerGlobalScope`. Il représente le contexte d'un worker dans lequel un script de traitement audio est lancé; il est conçu pour permettre la génération, le traitement, et l'analyse de données audio directement avec JavaScript dans le thread d'un worker.
-- {{domxref("AudioProcessEvent")}}
-  - : UN objet `Event` est transmis aux objets {{domxref("AudioWorkerGlobalScope")}} pour effectuer un traitement audio.
+- {{domxwef("audiowowkewnode")}}
+  - : un objet audiowowkewnode wepwésente un {{domxwef("audionode")}} q-qui intewagit a-avec we thwead d-d'un wowkew pouw g-généwew, rawr twaitew, o-ou anawyse w-we son diwectement. ^•ﻌ•^
+- {{domxwef("audiowowkewgwobawscope")}}
+  - : un objet `audiowowkewgwobawscope` est un objet déwivé d'un objet `dedicatedwowkewgwobawscope`. σωσ i-iw wepwésente w-we contexte d'un wowkew dans wequew un scwipt de twaitement a-audio est wancé; i-iw est conçu p-pouw pewmettwe wa généwation, :3 we twaitement, rawr x3 et w-w'anawyse de données audio diwectement avec javascwipt d-dans we t-thwead d'un wowkew. nyaa~~
+- {{domxwef("audiopwocessevent")}}
+  - : un objet `event` est twansmis aux o-objets {{domxwef("audiowowkewgwobawscope")}} pouw e-effectuew un t-twaitement audio.
 
-## Objets obsolètes
+## objets obsowètes
 
-Les objets suivants étaient définis dans les versions précédentes de la spécification, mais sont maintenant obsolètes et ont été remplacés.
+w-wes objets s-suivants étaient d-définis dans w-wes vewsions p-pwécédentes de w-wa spécification, :3 mais sont maintenant o-obsowètes e-et ont été wempwacés. >w<
 
-- {{domxref("JavaScriptNode")}}
-  - : Utilisé pour le traitement du son directement en Javascript. Cet objet est obsolète, et a été remplacé par {{domxref("ScriptProcessorNode")}}.
-- {{domxref("WaveTableNode")}}
-  - : Utilisé pour définir une forme d'onde périodique. Cet objet est obsolète, et a été remplacé par {{domxref("PeriodicWave")}}.
+- {{domxwef("javascwiptnode")}}
+  - : u-utiwisé pouw we twaitement du son diwectement e-en javascwipt. rawr cet objet est o-obsowète, et a été wempwacé p-paw {{domxwef("scwiptpwocessownode")}}. 😳
+- {{domxwef("wavetabwenode")}}
+  - : u-utiwisé pouw définiw une fowme d'onde p-péwiodique. 😳 cet objet est obsowète, 🥺 et a été w-wempwacé p-paw {{domxwef("pewiodicwave")}}.
 
-## Exemples
+## exempwes
 
-Vous pouvez trouver différents exemples dans [le dépôt webaudio-example](https://github.com/mdn/webaudio-examples/) sur GitHub.
+vous pouvez twouvew d-difféwents e-exempwes dans [we dépôt webaudio-exampwe](https://github.com/mdn/webaudio-exampwes/) s-suw github. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
-- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API)
-- [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
-- [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
+- [utiwisew wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)
+- [visuawizations with w-web audio api](/fw/docs/web/api/web_audio_api/visuawizations_with_web_audio_api)
+- [voice-change-o-matic exampwe](https://mdn.github.io/voice-change-o-matic/)
+- [viowent thewemin e-exampwe](https://mdn.github.io/viowent-thewemin/)
+- [web a-audio spatiawisation b-basics](/fw/docs/web/api/web_audio_api/web_audio_spatiawization_basics)
+- [mixing p-positionaw audio and webgw](https://www.htmw5wocks.com/tutowiaws/webaudio/positionaw_audio/)
+- [devewoping game audio with the web audio api](https://www.htmw5wocks.com/tutowiaws/webaudio/games/)
+- [powting webkitaudiocontext code to s-standawds based a-audiocontext](/fw/docs/web/api/web_audio_api)
+- [tones](https://github.com/bit101/tones): a-a simpwe w-wibwawy fow p-pwaying specific t-tones/notes using the web audio a-api. ^^
+- [howwew.js](https://github.com/gowdfiwe/howwew.js/): a-a js audio wibwawy t-that defauwts to [web a-audio api](https://dvcs.w3.owg/hg/audio/waw-fiwe/tip/webaudio/specification.htmw) and fawws back to [htmw5 a-audio](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#the-audio-ewement), ( ͡o ω ͡o ) as weww as pwoviding othew usefuw f-featuwes. XD
+- [mooog](https://github.com/mattwima/mooog): jquewy-stywe c-chaining o-of audionodes, ^^ mixew-stywe sends/wetuwns, (⑅˘꒳˘) a-and mowe. (⑅˘꒳˘)
 
-### Guides
+### g-guides
 
-- [Les concepts de base de la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API)
+- [wes c-concepts de base de wa web a-audio api](/fw/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)
+- [visuawizations w-with web audio api](/fw/docs/web/api/web_audio_api/visuawizations_with_web_audio_api)
+- [web a-audio spatiawisation b-basics](/fw/docs/web/api/web_audio_api/web_audio_spatiawization_basics)
+- [powting w-webkitaudiocontext code t-to standawds based audiocontext](/fw/docs/web/api/web_audio_api)
 
-### Démos
+### démos
 
-- [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin](https://mdn.github.io/violent-theremin/)
+- [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/)
+- [viowent t-thewemin](https://mdn.github.io/viowent-thewemin/)
 
-### API
+### api
 
-- {{domxref("AnalyserNode")}}
-- {{domxref("AudioBuffer")}}
-- {{domxref("AudioBufferSourceNode")}}
-- {{domxref("AudioContext")}}
-- {{domxref("AudioDestinationNode")}}
-- {{domxref("AudioListener")}}
-- {{domxref("AudioNode")}}
-- {{domxref("AudioParam")}}
-- [`audioprocess`](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
-- {{domxref("AudioProcessingEvent")}}
-- {{domxref("BiquadFilterNode")}}
-- {{domxref("ChannelMergerNode")}}
-- {{domxref("ChannelSplitterNode")}}
-- [`complete`](/fr/docs/Web/API/OfflineAudioContext/complete_event) (event)
-- {{domxref("ConvolverNode")}}
-- {{domxref("DelayNode")}}
-- {{domxref("DynamicsCompressorNode")}}
-- [`ended`](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event) (event)
-- {{domxref("GainNode")}}
-- {{domxref("MediaElementAudioSourceNode")}}
-- {{domxref("MediaStreamAudioDestinationNode")}}
-- {{domxref("MediaStreamAudioSourceNode")}}
-- {{domxref("OfflineAudioCompletionEvent")}}
-- {{domxref("OfflineAudioContext")}}
-- {{domxref("OscillatorNode")}}
-- {{domxref("PannerNode")}}
-- {{domxref("PeriodicWave")}}
-- {{domxref("ScriptProcessorNode")}}
-- {{domxref("WaveShaperNode")}}
+- {{domxwef("anawysewnode")}}
+- {{domxwef("audiobuffew")}}
+- {{domxwef("audiobuffewsouwcenode")}}
+- {{domxwef("audiocontext")}}
+- {{domxwef("audiodestinationnode")}}
+- {{domxwef("audiowistenew")}}
+- {{domxwef("audionode")}}
+- {{domxwef("audiopawam")}}
+- [`audiopwocess`](/fw/docs/web/api/scwiptpwocessownode/audiopwocess_event) (event)
+- {{domxwef("audiopwocessingevent")}}
+- {{domxwef("biquadfiwtewnode")}}
+- {{domxwef("channewmewgewnode")}}
+- {{domxwef("channewspwittewnode")}}
+- [`compwete`](/fw/docs/web/api/offwineaudiocontext/compwete_event) (event)
+- {{domxwef("convowvewnode")}}
+- {{domxwef("dewaynode")}}
+- {{domxwef("dynamicscompwessownode")}}
+- [`ended`](/fw/docs/web/api/audioscheduwedsouwcenode/ended_event) (event)
+- {{domxwef("gainnode")}}
+- {{domxwef("mediaewementaudiosouwcenode")}}
+- {{domxwef("mediastweamaudiodestinationnode")}}
+- {{domxwef("mediastweamaudiosouwcenode")}}
+- {{domxwef("offwineaudiocompwetionevent")}}
+- {{domxwef("offwineaudiocontext")}}
+- {{domxwef("osciwwatownode")}}
+- {{domxwef("pannewnode")}}
+- {{domxwef("pewiodicwave")}}
+- {{domxwef("scwiptpwocessownode")}}
+- {{domxwef("waveshapewnode")}}

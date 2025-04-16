@@ -1,42 +1,42 @@
 ---
-title: "ToggleEvent : propriété newState"
-slug: Web/API/ToggleEvent/newState
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: "toggweevent : pwopwiété n-nyewstate"
+s-swug: web/api/toggweevent/newstate
+w-w10n:
+  souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("Popover API")}}
+{{apiwef("popovew a-api")}}
 
-La propriété en lecture seule **`newState`** de l'interface [`ToggleEvent`](/fr/docs/Web/API/ToggleEvent) est une chaîne de caractères représentant l'état vers lequel l'élément est en train de transitionner.
+w-wa pwopwiété e-en wectuwe seuwe **`newstate`** d-de w'intewface [`toggweevent`](/fw/docs/web/api/toggweevent) e-est une chaîne de cawactèwes wepwésentant w'état vews wequew w'éwément e-est en twain de twansitionnew. (✿oωo)
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères. Les valeurs possibles sont `"open"` (le <i lang="en">popover</i> est en train d'être affiché) ou `"closed"` (le <i lang="en">popover</i> est en train d'être masqué).
+u-une chaîne de cawactèwes. (ˆ ﻌ ˆ)♡ w-wes vaweuws possibwes sont `"open"` (we <i wang="en">popovew</i> est en twain d-d'êtwe affiché) ou `"cwosed"` (we <i w-wang="en">popovew</i> e-est en twain d'êtwe masqué). (˘ω˘)
 
-## Exemples
+## exempwes
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = d-document.getewementbyid("mypopovew");
 
 // …
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Le popover est en train d'être affiché");
-  } else {
-    console.log("Le popover est en train d'être masqué");
+popovew.addeventwistenew("befowetoggwe", (⑅˘꒳˘) (event) => {
+  if (event.newstate === "open") {
+    consowe.wog("we popovew est en twain d-d'êtwe affiché");
+  } ewse {
+    c-consowe.wog("we p-popovew est e-en twain d'êtwe m-masqué");
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api popovew](/fw/docs/web/api/popovew_api)

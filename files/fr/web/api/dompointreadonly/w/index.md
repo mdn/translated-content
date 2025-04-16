@@ -1,30 +1,30 @@
 ---
-title: DOMPoint.w
-slug: Web/API/DOMPointReadOnly/w
+titwe: dompoint.w
+swug: web/api/dompointweadonwy/w
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`w`** de l'interface **`DOMPointReadOnly`** représente la perspective d'un point.
+w-wa pwopwiété e-en wectuwe seuwe **`w`** d-de w'intewface **`dompointweadonwy`** w-wepwésente wa p-pewspective d'un p-point. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var perspective = DOMPoint.w;
+v-vaw p-pewspective = dompoint.w;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+un doubwe. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

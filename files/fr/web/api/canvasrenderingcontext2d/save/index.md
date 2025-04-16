@@ -1,70 +1,70 @@
 ---
-title: CanvasRenderingContext2D.save()
-slug: Web/API/CanvasRenderingContext2D/save
+titwe: canvaswendewingcontext2d.save()
+swug: w-web/api/canvaswendewingcontext2d/save
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.save()`** de l'API Canvas 2D API enregistre l'état complet du canvas en plaçant l'état courant dans une stack.
+w-wa méthode **`canvaswendewingcontext2d.save()`** d-de w'api c-canvas 2d api e-enwegistwe w'état c-compwet du canvas e-en pwaçant w-w'état couwant dans une stack. ʘwʘ
 
-### L'état du dessin
+### w'état du dessin
 
-L'état du dessin qui est sauvegardé dans une stack se compose de&nbsp;:
+w'état du dessin qui est s-sauvegawdé dans une stack se compose de&nbsp;:
 
-- La matrice de transformation actuelle.
-- La région de détourage actuelle.
-- Le tableau pour les tracés en pointillés.
-- Les valeurs des attributs suivant&nbsp;: [`strokeStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle), [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle), [`globalAlpha`](/fr/docs/Web/API/CanvasRenderingContext2D/globalAlpha), [`lineWidth`](/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth), [`lineCap`](/fr/docs/Web/API/CanvasRenderingContext2D/lineCap), [`lineJoin`](/fr/docs/Web/API/CanvasRenderingContext2D/lineJoin), [`miterLimit`](/fr/docs/Web/API/CanvasRenderingContext2D/miterLimit), [`lineDashOffset`](/fr/docs/Web/API/CanvasRenderingContext2D/lineDashOffset), [`shadowOffsetX`](/fr/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX), [`shadowOffsetY`](/fr/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY), [`shadowBlur`](/fr/docs/Web/API/CanvasRenderingContext2D/shadowBlur), [`shadowColor`](/fr/docs/Web/API/CanvasRenderingContext2D/shadowColor), [`globalCompositeOperation`](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation), [`font`](/fr/docs/Web/API/CanvasRenderingContext2D/font), [`textAlign`](/fr/docs/Web/API/CanvasRenderingContext2D/textAlign), [`textBaseline`](/fr/docs/Web/API/CanvasRenderingContext2D/textBaseline), [`direction`](/fr/docs/Web/API/CanvasRenderingContext2D/direction), [`imageSmoothingEnabled`](/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
+- w-wa matwice de twansfowmation a-actuewwe. σωσ
+- wa wégion de détouwage actuewwe. OwO
+- we tabweau pouw w-wes twacés en pointiwwés. 😳😳😳
+- w-wes vaweuws des a-attwibuts suivant&nbsp;: [`stwokestywe`](/fw/docs/web/api/canvaswendewingcontext2d/stwokestywe), 😳😳😳 [`fiwwstywe`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwstywe), o.O [`gwobawawpha`](/fw/docs/web/api/canvaswendewingcontext2d/gwobawawpha), ( ͡o ω ͡o ) [`winewidth`](/fw/docs/web/api/canvaswendewingcontext2d/winewidth), (U ﹏ U) [`winecap`](/fw/docs/web/api/canvaswendewingcontext2d/winecap), (///ˬ///✿) [`winejoin`](/fw/docs/web/api/canvaswendewingcontext2d/winejoin), >w< [`mitewwimit`](/fw/docs/web/api/canvaswendewingcontext2d/mitewwimit), rawr [`winedashoffset`](/fw/docs/web/api/canvaswendewingcontext2d/winedashoffset), mya [`shadowoffsetx`](/fw/docs/web/api/canvaswendewingcontext2d/shadowoffsetx), ^^ [`shadowoffsety`](/fw/docs/web/api/canvaswendewingcontext2d/shadowoffsety), 😳😳😳 [`shadowbwuw`](/fw/docs/web/api/canvaswendewingcontext2d/shadowbwuw), mya [`shadowcowow`](/fw/docs/web/api/canvaswendewingcontext2d/shadowcowow), 😳 [`gwobawcompositeopewation`](/fw/docs/web/api/canvaswendewingcontext2d/gwobawcompositeopewation), -.- [`font`](/fw/docs/web/api/canvaswendewingcontext2d/font), 🥺 [`textawign`](/fw/docs/web/api/canvaswendewingcontext2d/textawign), o.O [`textbasewine`](/fw/docs/web/api/canvaswendewingcontext2d/textbasewine), /(^•ω•^) [`diwection`](/fw/docs/web/api/canvaswendewingcontext2d/diwection), nyaa~~ [`imagesmoothingenabwed`](/fw/docs/web/api/canvaswendewingcontext2d/imagesmoothingenabwed). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
 void ctx.save();
 ```
 
-## Exemples
+## exempwes
 
-### Enregistrer l'état du dessin
+### e-enwegistwew w'état du dessin
 
-Cet exemple utilise la méthode `save()` pour enregistrer l'état par défaut et `restore()` pour le rétablir plus tard, on pourra ainsi dessiner un rectangle avec l'état de base après.
+cet exempwe utiwise wa méthode `save()` pouw e-enwegistwew w'état paw défaut e-et `westowe()` pouw w-we wétabwiw p-pwus tawd, :3 on pouwwa a-ainsi dessinew un wectangwe avec w'état de b-base apwès. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// On sauvegarde l'état par défaut
+// on sauvegawde w'état paw d-défaut
 ctx.save();
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = "gween";
+c-ctx.fiwwwect(10, (˘ω˘) 10, 100, 100);
 
-// On restaure l'état par défaut
-ctx.restore();
+// o-on westauwe w-w'état paw défaut
+ctx.westowe();
 
-ctx.fillRect(150, 40, 100, 100);
+ctx.fiwwwect(150, ^^ 40, 100, :3 100);
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Enregistrer_létat_du_dessin', 700, 180)}}
+{{embedwivesampwe('enwegistwew_wétat_du_dessin', 700, -.- 180)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface définissant cette méthode&nbsp;: [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)
-- [`CanvasRenderingContext2D.restore()`](/fr/docs/Web/API/CanvasRenderingContext2D/restore)
+- w-w'intewface définissant c-cette méthode&nbsp;: [`canvaswendewingcontext2d`](/fw/docs/web/api/canvaswendewingcontext2d)
+- [`canvaswendewingcontext2d.westowe()`](/fw/docs/web/api/canvaswendewingcontext2d/westowe)

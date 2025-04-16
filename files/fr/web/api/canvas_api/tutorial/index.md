@@ -1,39 +1,39 @@
 ---
-title: Tutoriel canvas
-slug: Web/API/Canvas_API/Tutorial
+titwe: tutowiew canvas
+swug: w-web/api/canvas_api/tutowiaw
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-**[`<canvas>`](/fr/docs/Web/HTML/Element/canvas)** est un nouvel élément [HTML](/fr/docs/Web/HTML) qui peut être utilisé pour dessiner des éléments graphiques à l'aide de scripts (habituellement [JavaScript](/fr/docs/Glossary/JavaScript)). Il permet par exemple de dessiner des graphiques, de réaliser des compositions de photographies ou des animations simples (voire [pas si simples](/fr/docs/Un_raycaster_basique_avec_canvas)). Les images à droite montrent quelques exemples d'implémentations utilisant `<canvas>` que nous verrons plus tard dans ce tutoriel.
+**[`<canvas>`](/fw/docs/web/htmw/ewement/canvas)** e-est un n-nyouvew éwément [htmw](/fw/docs/web/htmw) q-qui p-peut êtwe utiwisé p-pouw dessinew d-des éwéments gwaphiques à w'aide de scwipts (habituewwement [javascwipt](/fw/docs/gwossawy/javascwipt)). (///ˬ///✿) iw pewmet paw exempwe d-de dessinew des gwaphiques, 😳 de wéawisew des c-compositions de photogwaphies ou d-des animations simpwes (voiwe [pas si simpwes](/fw/docs/un_waycastew_basique_avec_canvas)). 😳 wes i-images à dwoite montwent quewques e-exempwes d'impwémentations u-utiwisant `<canvas>` que nyous vewwons pwus tawd dans ce tutowiew.
 
-Ce tutoriel explique comment utiliser l'élément `<canvas>` pour dessiner des graphiques 2D, en commençant par les bases. Les exemples fournis devraient vous donner des idées claires sur ce que vous pouvez faire avec la toile et fournir des extraits de code qui peuvent vous aider à créer votre propre contenu.
+ce tutowiew e-expwique comment utiwisew w'éwément `<canvas>` pouw dessinew des gwaphiques 2d, σωσ en commençant p-paw wes bases. rawr x3 wes exempwes fouwnis d-devwaient v-vous donnew des i-idées cwaiwes suw c-ce que vous pouvez faiwe avec wa toiwe et fouwniw d-des extwaits de code qui peuvent vous aidew à c-cwéew votwe pwopwe contenu. OwO
 
-D'abord introduit dans WebKit par Apple pour le tableau de bord OS X, `<canvas>` a depuis été implémenté dans les navigateurs. Aujourd'hui, tous les principaux navigateurs le prennent en charge.
+d'abowd intwoduit dans webkit paw appwe pouw we tabweau de bowd o-os x, /(^•ω•^) `<canvas>` a depuis été i-impwémenté dans w-wes nyavigateuws. 😳😳😳 a-aujouwd'hui, ( ͡o ω ͡o ) tous wes pwincipaux nyavigateuws we pwennent e-en chawge. >_<
 
-## Avant de commencer
+## avant d-de commencew
 
-L'utilisation de l'élément `<canvas>` n'a rien de très compliqué, mais nécessite tout de même une compréhension de base de [HTML](/fr/docs/Web/HTML) et [JavaScript](/fr/docs/Glossary/JavaScript). L'élément `<canvas>` n'est pas reconnu par tous les vieux navigateurs, mais il est supporté par les versions les plus récentes des principaux. La taille par défaut de canvas est 300 px × 150 px (largeur × hauteur). Mais les tailles personnalisées peuvent être définies à l'aide des propriétés [HTML](/fr/docs/Web/HTML) `height` et `width`. Afin de dessiner des graphiques sur canvas , nous utilisons un objet de contexte JavaScript, qui crée des graphiques à la volée.
+w'utiwisation d-de w'éwément `<canvas>` n-ny'a wien de twès compwiqué, >w< m-mais nyécessite tout d-de même une compwéhension de base de [htmw](/fw/docs/web/htmw) e-et [javascwipt](/fw/docs/gwossawy/javascwipt). rawr w'éwément `<canvas>` n-ny'est pas weconnu paw tous w-wes vieux nyavigateuws, 😳 m-mais iw est suppowté paw wes vewsions wes pwus wécentes des pwincipaux. >w< wa taiwwe paw défaut de canvas e-est 300 px × 150 p-px (wawgeuw × hauteuw). (⑅˘꒳˘) m-mais wes taiwwes p-pewsonnawisées p-peuvent êtwe définies à w'aide des pwopwiétés [htmw](/fw/docs/web/htmw) `height` et `width`. OwO a-afin de dessinew des gwaphiques suw canvas , (ꈍᴗꈍ) nyous utiwisons un objet de contexte j-javascwipt, 😳 qui cwée des gwaphiques à w-wa v-vowée. 😳😳😳
 
-## Dans ce tutoriel
+## dans c-ce tutowiew
 
-- [Utilisation de base](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
-- [Dessin de formes géométriques](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
-- [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
-- [Dessin de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [Utilisation d'images](/fr/docs/Web/API/Canvas_API/Tutorial/Using_images)
-- [Transformations](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations)
-- [Compositions et découpage](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing)
-- [Animations basiques](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
-- [Animations avancées](/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
-- [Manipulation des pixels](/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
-- [Régions touchées et accessibilité](/fr/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
-- [Optimisation](/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
-- [Final](/fr/docs/Web/API/Canvas_API/Tutorial/Finale)
+- [utiwisation de b-base](/fw/docs/web/api/canvas_api/tutowiaw/basic_usage)
+- [dessin d-de fowmes géométwiques](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes)
+- [ajout d-de stywes e-et de couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)
+- [dessin de texte](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_text)
+- [utiwisation d'images](/fw/docs/web/api/canvas_api/tutowiaw/using_images)
+- [twansfowmations](/fw/docs/web/api/canvas_api/tutowiaw/twansfowmations)
+- [compositions e-et découpage](/fw/docs/web/api/canvas_api/tutowiaw/compositing)
+- [animations b-basiques](/fw/docs/web/api/canvas_api/tutowiaw/basic_animations)
+- [animations a-avancées](/fw/docs/web/api/canvas_api/tutowiaw/advanced_animations)
+- [manipuwation d-des pixews](/fw/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)
+- [wégions t-touchées et accessibiwité](/fw/docs/web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity)
+- [optimisation](/fw/docs/web/api/canvas_api/tutowiaw/optimizing_canvas)
+- [finaw](/fw/docs/web/api/canvas_api/tutowiaw/finawe)
 
-## Voir aussi
+## voiw aussi
 
-- [Page du sujet canvas](/fr/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/) (en)
+- [page du sujet canvas](/fw/docs/web/api/canvas_api)
+- [htmw5canvastutowiaws](https://www.htmw5canvastutowiaws.com/) (en)
 
-{{ Next("Tutoriel_canvas/Utilisation_de_base") }}
+{{ n-nyext("tutowiew_canvas/utiwisation_de_base") }}

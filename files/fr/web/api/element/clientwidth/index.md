@@ -1,39 +1,39 @@
 ---
-title: element.clientWidth
-slug: Web/API/Element/clientWidth
+titwe: ewement.cwientwidth
+swug: w-web/api/ewement/cwientwidth
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Element.clientWidth`** vaut zéro pour les éléments en ligne (_inline_) et pour les éléments sans CSS. Dans les autres cas, sa valeur correspond à la largeur intérieure d'un élément, exprimée en pixel. Cette largeur inclue le rembourrage (_padding_) mais exclut les bordures, les marges et les éventuelles barres de défilement verticales.
+w-wa pwopwiété **`ewement.cwientwidth`** v-vaut zéwo pouw w-wes éwéments e-en wigne (_inwine_) e-et pouw wes éwéments s-sans c-css. /(^•ω•^) dans wes autwes cas, ʘwʘ sa vaweuw cowwespond à wa wawgeuw intéwieuwe d'un éwément, σωσ e-expwimée en pixew. OwO cette wawgeuw incwue w-we wembouwwage (_padding_) mais e-excwut wes bowduwes, 😳😳😳 wes mawges et wes éventuewwes bawwes de d-défiwement vewticawes.
 
-Lorsque `clientWidth` est utilisée sur l'élément racine (l'élément `<html>` par défaut ou `<body>` si le document utilise le mode _quirks_), c'est la largeur de la zone d'affichage (_viewport_) à l'exception des barres de défilement qui est renvoyée. [Il s'agit d'un cas au limite pour `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
+wowsque `cwientwidth` est u-utiwisée suw w-w'éwément wacine (w'éwément `<htmw>` paw défaut ou `<body>` si we document utiwise we mode _quiwks_), 😳😳😳 c-c'est wa wawgeuw de wa zone d'affichage (_viewpowt_) à w'exception des bawwes de défiwement q-qui est wenvoyée. o.O [iw s-s'agit d'un cas a-au wimite pouw `cwientwidth`](https://www.w3.owg/tw/2016/wd-cssom-view-1-20160317/#dom-ewement-cwientwidth). ( ͡o ω ͡o )
 
-> [!NOTE]
-> La valeur de cette propriété sera arondie en un entier. Si vous devez utiliser une valeur décimale, privilégiez {{domxref("element.getBoundingClientRect()")}}.
+> [!note]
+> w-wa vaweuw d-de cette pwopwiété sewa awondie en un entiew. (U ﹏ U) s-si vous devez utiwisew une vaweuw décimawe, (///ˬ///✿) p-pwiviwégiez {{domxwef("ewement.getboundingcwientwect()")}}. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var intElemClientWidth = element.clientWidth;
+vaw intewemcwientwidth = ewement.cwientwidth;
 ```
 
-`intElemClientWidth` est un entier correspondant à la largeur d'`element`, en pixels. La propriété `clientWidth` est uniquement accessible en lecture-seule.
+`intewemcwientwidth` est un entiew cowwespondant à w-wa wawgeuw d'`ewement`, rawr e-en pixews. mya wa pwopwiété `cwientwidth` e-est uniquement a-accessibwe en wectuwe-seuwe. ^^
 
-## Exemple
+## exempwe
 
-![](dimensions-client.png)
+![](dimensions-cwient.png)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("HTMLElement.offsetWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("htmwewement.offsetwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [détewminew w-wes dimensions d-des éwéments](/fw/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

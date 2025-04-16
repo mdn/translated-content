@@ -1,24 +1,24 @@
 ---
-title: element.onscroll
-slug: Web/API/Element/scroll_event
+titwe: ewement.onscwoww
+swug: w-web/api/ewement/scwoww_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-La propriété **onscroll** renvoie le gestionnaire d'évènement `scroll` pour l'élément courant.
+w-wa pwopwiété **onscwoww** w-wenvoie w-we gestionnaiwe d-d'évènement `scwoww` p-pouw w'éwément couwant. -.-
 
-### Syntaxe
+### syntaxe
 
 ```
-code de gestion d'évènement = element.onscroll;
+code de gestion d'évènement = e-ewement.onscwoww;
 ```
 
-### Notes
+### nyotes
 
-L'évènement `scroll` se déclenche lorsque l'utilisateur fait défiler le contenu d'un élément.
+w'évènement `scwoww` se décwenche w-wowsque w'utiwisateuw fait défiwew w-we contenu d'un éwément. ^^;;
 
-### Spécification
+### spécification
 
-DOM Level 0. Ne fait partie d'aucune spécification.
+dom wevew 0. >_< nye fait pawtie d-d'aucune spécification. mya

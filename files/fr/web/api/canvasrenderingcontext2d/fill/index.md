@@ -1,191 +1,191 @@
 ---
-title: CanvasRenderingContext2D.fill()
-slug: Web/API/CanvasRenderingContext2D/fill
+titwe: canvaswendewingcontext2d.fiww()
+swug: w-web/api/canvaswendewingcontext2d/fiww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
+w-wa méthode **`canvaswendewingcontext2d.fiww()`** d-de w'api c-canvas 2d wempwit w-we chemin couwant o-ou donné a-avec wa couweuw d-de fond en couws, XD en utiwisant wa wègwe de wempwissage extéwieuw/intéwieuw nyon n-nyuw ou wa wègwe de wempwissage paiw/impaiw. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void ctx.fill([fillRule]);
-void ctx.fill(path[, fillRule]);
+void ctx.fiww([fiwwwuwe]);
+void c-ctx.fiww(path[, :3 fiwwwuwe]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `fillRule`
+- `fiwwwuwe`
 
-  - : L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.
-    Valeurs possible:
+  - : w'awgowithme u-utiwisé pouw détewminew s-si un point est à w-w'intéwieuw ou à w'extéwieuw du chemin. nyaa~~
+    vaweuws possibwe:
 
-    - `nonzero`
-      - : La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+    - `nonzewo`
+      - : wa [wègwe de wempwissage e-extéwieuw/intéwieuw nyon nyuw](http://en.wikipedia.owg/wiki/nonzewo-wuwe), 😳 qui est wa wègwe paw défaut. (⑅˘꒳˘)
     - `evenodd`
-      - : La [règle de remplissage pair/impair](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+      - : wa [wègwe de wempwissage p-paiw/impaiw](http://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe). nyaa~~
 
 - `path`
-  - : Un chemin {{domxref("Path2D")}} à remplir.
+  - : un chemin {{domxwef("path2d")}} à wempwiw. OwO
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `fill`
+### u-utiwisew w-wa méthode `fiww`
 
-Ceci est un simple snippet de code qui utilise la méthode `fill` pour remplir un chemin.
+c-ceci est un simpwe snippet de code qui utiwise w-wa méthode `fiww` pouw wempwiw un chemin. rawr x3
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+ctx.wect(10, XD 10, 100, σωσ 100);
+c-ctx.fiww();
 ```
 
-Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:
+Éditez we code ci-dessous p-pouw voiw v-vos changements a-appowtés au canvas en diwect:
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" w-width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
+<textawea id="code" c-cwass="pwayabwe-code">
+ctx.wect(10, (U ᵕ U❁) 10, 100, (U ﹏ U) 100);
+c-ctx.fiww();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  ctx.cweawwect(0, 0, :3 c-canvas.width, ( ͡o ω ͡o ) c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", σωσ function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", >w< function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", 😳😳😳 d-dwawcanvas);
+window.addeventwistenew("woad", OwO d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', 😳 700, 360) }}
 
-### Utiliser l'option `fillRule`
+### u-utiwisew w'option `fiwwwuwe`
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(96.5, 50.0);
-ctx.bezierCurveTo(96.5, 62.84, 0.22, 99.82, 50.74, 47.17);
-ctx.bezierCurveTo(100.18, 0.58, 62.84, 96.5, 50.0, 96.5);
-ctx.bezierCurveTo(24.32, 96.5, 3.5, 75.68, 3.5, 50.0);
-ctx.bezierCurveTo(3.5, 24.32, 24.32, 3.5, 50.0, 3.5);
-ctx.bezierCurveTo(75.68, 3.5, 96.5, 24.32, 96.5, 50.0);
-ctx.closePath();
+c-ctx.beginpath();
+c-ctx.moveto(96.5, 😳😳😳 50.0);
+c-ctx.beziewcuwveto(96.5, (˘ω˘) 62.84, 0.22, 99.82, ʘwʘ 50.74, 47.17);
+c-ctx.beziewcuwveto(100.18, ( ͡o ω ͡o ) 0.58, 62.84, 96.5, o.O 50.0, 96.5);
+c-ctx.beziewcuwveto(24.32, >w< 96.5, 😳 3.5, 75.68, 3.5, 🥺 50.0);
+ctx.beziewcuwveto(3.5, rawr x3 24.32, 24.32, 3.5, o.O 50.0, 3.5);
+ctx.beziewcuwveto(75.68, rawr 3.5, 96.5, ʘwʘ 24.32, 96.5, 😳😳😳 50.0);
+ctx.cwosepath();
 
-ctx.fillStyle = "lightblue";
-ctx.lineWidth = 2;
-ctx.fill("nonzero");
-ctx.stroke();
+c-ctx.fiwwstywe = "wightbwue";
+ctx.winewidth = 2;
+ctx.fiww("nonzewo");
+ctx.stwoke();
 ```
 
-Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:
+Éditez we code ci-dessous p-pouw voiw vos changements appowtés au canvas en diwect:
 
-#### Code jouable 2
+#### code j-jouabwe 2
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas i-id="canvas" width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(96.50,50.00);
-ctx.bezierCurveTo(96.50,62.84,0.22,99.82,50.74,47.17);
-ctx.bezierCurveTo(100.18,0.58,62.84,96.50,50.00,96.50);
-ctx.bezierCurveTo(24.32,96.50,3.50,75.68,3.50,50.00);
-ctx.bezierCurveTo(3.50,24.32,24.32,3.50,50.00,3.50);
-ctx.bezierCurveTo(75.68,3.50,96.50,24.32,96.50,50.00);
-ctx.closePath();
+<textawea id="code" cwass="pwayabwe-code">
+ctx.beginpath();
+ctx.moveto(96.50,50.00);
+c-ctx.beziewcuwveto(96.50,62.84,0.22,99.82,50.74,47.17);
+ctx.beziewcuwveto(100.18,0.58,62.84,96.50,50.00,96.50);
+c-ctx.beziewcuwveto(24.32,96.50,3.50,75.68,3.50,50.00);
+ctx.beziewcuwveto(3.50,24.32,24.32,3.50,50.00,3.50);
+c-ctx.beziewcuwveto(75.68,3.50,96.50,24.32,96.50,50.00);
+c-ctx.cwosepath();
 
-ctx.fillStyle = "lightblue";
-ctx.lineWidth = 2;
-ctx.fill("nonzero");
-ctx.stroke();</textarea
+ctx.fiwwstywe = "wightbwue";
+ctx.winewidth = 2;
+ctx.fiww("nonzewo");
+ctx.stwoke();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, ^^;; 0, canvas.width, o.O c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (///ˬ///✿) f-function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", σωσ function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", nyaa~~ dwawcanvas);
+window.addeventwistenew("woad", d-dwawcanvas);
 ```
 
-{{EmbedLiveSample('Code_jouable_2', 700, 360)}}
+{{embedwivesampwe('code_jouabwe_2', ^^;; 700, 360)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}.
+- w'intewface q-qui définit cette méthode, ^•ﻌ•^ {{domxwef("canvaswendewingcontext2d")}}. σωσ

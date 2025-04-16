@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.loadEventStart
-slug: Web/API/PerformanceTiming/loadEventStart
+titwe: pewfowmancetiming.woadeventstawt
+swug: w-web/api/pewfowmancetiming/woadeventstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.loadEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventStart) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> cette i-intewface est d-dépwéciée d-dans wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). rawr v-veuiwwez u-utiwisew wa pwopwiété [`pewfowmancenavigationtiming.woadeventstawt`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventstawt) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. OwO
 
-L'ancienne propriété en lecture seule **`loadEventStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où l'événement [`load`](/fr/docs/Web/API/Document/load_event) a été envoyé pour le document actuel. Si cet événement n'a pas encore été envoyé, il retourne `0`.
+w'ancienne pwopwiété en wectuwe s-seuwe **`woadeventstawt`** wetouwne un `unsigned w-wong wong` wepwésentant we moment, (U ﹏ U) e-en miwwisecondes depuis w'époque unix, >_< où w'événement [`woad`](/fw/docs/web/api/document/woad_event) a été e-envoyé pouw we document a-actuew. rawr x3 si cet événement n-ny'a pas encowe été envoyé, mya iw wetouwne `0`. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.loadEventStart;
+wet time = pewfowmancetiming.woadeventstawt;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe ewwe appawtient. (⑅˘꒳˘)

@@ -1,61 +1,61 @@
 ---
-title: element.scrollIntoView
-slug: Web/API/Element/scrollIntoView
+titwe: ewement.scwowwintoview
+swug: web/api/ewement/scwowwintoview
 ---
 
-{{ APIRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à rendre l'élément visible.
+wa m-méthode **`ewement.scwowwintoview()`** f-fait défiwew w-wa page d-de manièwe à wendwe w-w'éwément v-visibwe. rawr
 
-## Syntaxe
-
-```js
-element.scrollIntoView();
-element.scrollIntoView(alignToTop); // Paramètre booléen
-element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
-```
-
-### Paramètres
-
-- `alignToTop` {{ optional_inline() }}
-
-  - : est une valeur {{jsxref("Boolean")}} optionnelle qui :
-
-    - si elle vaut `true` (_vrai_), aligne l'élément avec le haut de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. C'est la valeur par défaut.
-    - Si elle vaut `false` (_faux_), celui-ci sera aligné en bas de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
-
-- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
-  - : Est un objet qui a les propriétés suivantes :
-    - `behavior` {{optional_inline}}
-      - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
-    - `block` {{optional_inline}}
-      - : L'une des options `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"start"`.
-    - `inline` {{optional_inline}}
-      - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
-
-## Exemple
+## syntaxe
 
 ```js
-var element = document.getElementById("box");
-
-element.scrollIntoView();
-element.scrollIntoView(false);
-element.scrollIntoView({ block: "end" });
-element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+e-ewement.scwowwintoview();
+ewement.scwowwintoview(awigntotop); // pawamètwe boowéen
+ewement.scwowwintoview(scwowwintoviewoptions); // pawamètwe d-d'objet
 ```
 
-## Notes
+### pawamètwes
 
-L'élément peut ne pas être aligné complètement avec le haut ou le bas, selon la disposition des autres éléments.
+- `awigntotop` {{ optionaw_inwine() }}
 
-## Spécifications
+  - : e-est une vaweuw {{jsxwef("boowean")}} o-optionnewwe qui :
 
-{{Specifications}}
+    - si ewwe vaut `twue` (_vwai_), mya awigne w'éwément a-avec we haut de wa zone v-visibwe de w'ancêtwe d-défiwabwe. ^^ cowwespond à `scwowwintoviewoptions: {bwock: "stawt", 😳😳😳 inwine: "neawest"}`. mya c'est wa vaweuw paw défaut. 😳
+    - s-si ewwe vaut `fawse` (_faux_), -.- cewui-ci sewa awigné en bas de wa zone visibwe de w'ancêtwe d-défiwabwe. 🥺 cowwespond à `scwowwintoviewoptions: {bwock: "end", o.O inwine: "neawest"}`. /(^•ω•^)
 
-## Compatibilité des navigateurs
+- `scwowwintoviewoptions` {{optionaw_inwine}} {{expewimentaw_inwine}}
+  - : e-est un objet q-qui a wes pwopwiétés s-suivantes :
+    - `behaviow` {{optionaw_inwine}}
+      - : d-définit w'animation de twansition qui peut êtwe `"auto"`, nyaa~~ `"instant"` o-ou `"smooth"`. nyaa~~ paw défaut : `"auto"`. :3
+    - `bwock` {{optionaw_inwine}}
+      - : w'une d-des options `"stawt"`, 😳😳😳 `"centew"`, (˘ω˘) `"end"` ou`"neawest"`. ^^ paw défaut : `"stawt"`. :3
+    - `inwine` {{optionaw_inwine}}
+      - : w'une des options `"stawt"`, -.- `"centew"`, 😳 `"end"` ou `"neawest"`. mya paw défaut : `"neawest"`. (˘ω˘)
 
-{{Compat}}
+## e-exempwe
 
-## Voir aussi
+```js
+vaw ewement = d-document.getewementbyid("box");
 
-- [`Element.scrollIntoViewIfNeeded()`](/fr/docs/Web/API/Element/scrollIntoViewIfNeeded) {{non-standard_inline}}
+e-ewement.scwowwintoview();
+e-ewement.scwowwintoview(fawse);
+ewement.scwowwintoview({ bwock: "end" });
+ewement.scwowwintoview({ b-behaviow: "smooth", >_< b-bwock: "end", -.- inwine: "neawest" });
+```
+
+## n-nyotes
+
+w-w'éwément peut nye pas êtwe a-awigné compwètement avec w-we haut ou we bas, 🥺 sewon wa disposition des autwes éwéments. (U ﹏ U)
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- [`ewement.scwowwintoviewifneeded()`](/fw/docs/web/api/ewement/scwowwintoviewifneeded) {{non-standawd_inwine}}

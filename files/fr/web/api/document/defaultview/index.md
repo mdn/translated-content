@@ -1,26 +1,26 @@
 ---
-title: document.defaultView
-slug: Web/API/Document/defaultView
+titwe: document.defauwtview
+swug: web/api/document/defauwtview
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Dans les navigateurs, cette propriété renvoie l'objet [window](/fr/docs/Web/API/Window) associé au document ou `null` si non disponible.
+d-dans wes nyavigateuws, mya c-cette p-pwopwiété wenvoie w-w'objet [window](/fw/docs/web/api/window) a-associé a-au document o-ou `nuww` si n-non disponibwe.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var win = document.defaultView;
+vaw win = document.defauwtview;
 ```
 
-Cette propriété est en lecture seule.
+cette pwopwiété est en w-wectuwe seuwe. mya
 
-## Notes
+## nyotes
 
-D'après [quirksmode](https://www.quirksmode.org/dom/w3c_html.html), `defaultView` n'est pas supporté dans les versions d'IE inférieures à 9.
+d'apwès [quiwksmode](https://www.quiwksmode.owg/dom/w3c_htmw.htmw), 😳 `defauwtview` ny'est pas suppowté d-dans wes vewsions d'ie inféwieuwes à 9. XD
 
-## Spécification
+## s-spécification
 
-- [HTML5: defaultView](/fr/docs/Glossary/HTML5)
-- [DOM Level 2 Views: defaultView](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
-- [DOM Level 3 Views](https://www.w3.org/TR/DOM-Level-3-Views/) (Seulement développé en Working Group Note mais pas implémenté)
+- [htmw5: defauwtview](/fw/docs/gwossawy/htmw5)
+- [dom wevew 2 views: defauwtview](https://www.w3.owg/tw/dom-wevew-2-views/views.htmw#views-documentview-defauwtview)
+- [dom wevew 3 v-views](https://www.w3.owg/tw/dom-wevew-3-views/) (seuwement dévewoppé en w-wowking gwoup n-nyote mais pas impwémenté)

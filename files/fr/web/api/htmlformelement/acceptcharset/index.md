@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.acceptCharset
-slug: Web/API/HTMLFormElement/acceptCharset
+titwe: htmwfowmewement.acceptchawset
+swug: web/api/htmwfowmewement/acceptchawset
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.acceptCharset`** représente une liste des codages de caratères acceptés par l'élément FORM concerné. Les valeurs de cette liste peuvent être séparés par des virgules ou des espaces.
+w-wa pwopwiété **`htmwfowmewement.acceptchawset`** w-wepwésente u-une wiste des codages d-de cawatèwes a-acceptés paw w-w'éwément fowm c-concewné. ^^;; wes vaweuws de cette wiste peuvent êtwe sépawés paw des viwguwes o-ou des espaces. >_<
 
-## Syntaxe
-
-```js
-string = form.acceptCharset;
-form.acceptCharset = string;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-inputs = document.forms["myform"].acceptCharset;
+stwing = fowm.acceptchawset;
+f-fowm.acceptchawset = stwing;
 ```
 
-## Spécification
+## e-exempwe
 
-[HTML 5, Section 4.10.3: The Form Element](https://www.w3.org/TR/html5/forms.html#dom-form-acceptcharset)
+```js
+inputs = document.fowms["myfowm"].acceptchawset;
+```
 
-[DOM Level 2 HTML: acceptCharset](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-19661795)
+## spécification
+
+[htmw 5, mya section 4.10.3: the fowm e-ewement](https://www.w3.owg/tw/htmw5/fowms.htmw#dom-fowm-acceptchawset)
+
+[dom wevew 2 htmw: acceptchawset](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-19661795)

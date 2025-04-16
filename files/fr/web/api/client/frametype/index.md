@@ -1,22 +1,22 @@
 ---
-title: Client.frameType
-slug: Web/API/Client/frameType
+titwe: cwient.fwametype
+swug: w-web/api/cwient/fwametype
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-La propriété **`frameType`** (accessible en lecture seule) de l'interface {{domxref("Client")}} indique le type de contexte de navigation du {{domxref("Client")}} courant. Cette valeur peut être `auxiliary`, `top-level`, `nested`, ou `none`.
+w-wa pwopwiété **`fwametype`** (accessibwe en w-wectuwe seuwe) d-de w'intewface {{domxwef("cwient")}} i-indique we t-type de contexte d-de nyavigation du {{domxwef("cwient")}} couwant. -.- cette vaweuw peut êtwe `auxiwiawy`, (ˆ ﻌ ˆ)♡ `top-wevew`, (⑅˘꒳˘) `nested`, ou `none`. (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myFrameType = Client.frameType;
+vaw myfwametype = cwient.fwametype;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

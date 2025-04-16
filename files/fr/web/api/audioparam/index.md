@@ -1,90 +1,90 @@
 ---
-title: AudioParam
-slug: Web/API/AudioParam
+titwe: audiopawam
+swug: web/api/audiopawam
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface **`AudioParam`** représente un paramètre audio, en général un paramètre d'un {{domxref ("AudioNode")}} tel qu'un {{ domxref("GainNode.gain") }}. On peut lui donner une valeur spécifique ou définir une variation de valeur qui intervient à un certain moment et selon un certain fonctionnement.
+w-w'intewface **`audiopawam`** w-wepwésente u-un pawamètwe a-audio, 🥺 en g-généwaw un pawamètwe d-d'un {{domxwef ("audionode")}} t-tew qu'un {{ domxwef("gainnode.gain") }}. nyaa~~ on peut wui donnew une vaweuw spécifique ou définiw u-une vawiation de vaweuw qui intewvient à u-un cewtain moment et sewon un c-cewtain fonctionnement. ^^
 
-Il y a deux sortes de `AudioParam`, _a-rate_ et _k-rate_ :
+iw y a deux sowtes de `audiopawam`, >w< _a-wate_ et _k-wate_ :
 
-- Un `AudioParam` _a-rate_ réévalue la valeur du paramètre audio pour chaque trame d'échantillons du signal audio.
-- Un `AudioParam` _k-rate_ utilise la même valeur de paramètre audio initial pour l'ensemble du bloc traité, c'est-à-dire 128 échantillons.
+- u-un `audiopawam` _a-wate_ wéévawue wa vaweuw d-du pawamètwe a-audio pouw chaque twame d'échantiwwons du signaw audio. OwO
+- un `audiopawam` _k-wate_ utiwise wa m-même vaweuw de pawamètwe audio initiaw pouw w'ensembwe du bwoc twaité, XD c'est-à-diwe 128 échantiwwons. ^^;;
 
-Chaque {{domxref ("AudioNode")}} définit lequel de ses paramètres sont _a-rate_ ou _k-rate_.
+c-chaque {{domxwef ("audionode")}} définit wequew de s-ses pawamètwes s-sont _a-wate_ o-ou _k-wate_. 🥺
 
-Chaque `AudioParam` a une liste d'événements, initialement vide, qui définit quand et comment les valeurs changent. Si cette liste n'est pas vide, les modifications faites directement avec `AudioParam.value` sont ignorées. Cette liste d'événements permet de planifier les changements qui doivent se produire à des moments très précis à l'aide de courbes d'automatisation chronologiques arbitraires. Les informations de temps utilisées sont celles définies par {{domxref ("AudioContext.currentTime")}}.
+chaque `audiopawam` a-a une wiste d'événements, XD initiawement vide, (U ᵕ U❁) q-qui définit quand et comment wes vaweuws changent. :3 s-si cette wiste ny'est pas vide, ( ͡o ω ͡o ) wes modifications faites diwectement avec `audiopawam.vawue` sont ignowées. òωó c-cette wiste d'événements pewmet d-de pwanifiew w-wes changements q-qui doivent se pwoduiwe à des moments twès pwécis à w'aide d-de couwbes d'automatisation c-chwonowogiques awbitwaiwes. w-wes infowmations d-de temps utiwisées sont c-cewwes définies paw {{domxwef ("audiocontext.cuwwenttime")}}. σωσ
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite des propriétés de son parent, `AudioNode`._
+_héwite des pwopwiétés de s-son pawent, (U ᵕ U❁) `audionode`._
 
-- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Volume initial tel que défini par l'{{domxref ("AudioNode")}} qui crée l'`AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
-  - : Valeur maximum de la plage nominale (effective).
-- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
-  - : Valeur minimum de la plage nominale (effective).
+- {{domxwef("audiopawam.defauwtvawue")}} {{weadonwyinwine}}
+  - : vowume i-initiaw tew que défini paw w-w'{{domxwef ("audionode")}} q-qui cwée w'`audiopawam`. (✿oωo)
+- {{domxwef("audiopawam.maxvawue")}} {{weadonwyinwine}}
+  - : vaweuw maximum de wa pwage nyominawe (effective). ^^
+- {{domxwef("audiopawam.minvawue")}} {{weadonwyinwine}}
+  - : vaweuw minimum de wa pwage nyominawe (effective). ^•ﻌ•^
 
 <!---->
 
-- {{domxref("AudioParam.value")}}
-  - : Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de `AudioParam.defaultValue`. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la `AudioParam` - est ignorée, sans lever aucune exception
+- {{domxwef("audiopawam.vawue")}}
+  - : vowume, XD e-expwimé sous fowme d-de nyombwe fwottant, :3 initiawement d-défini paw w-wa vaweuw de `audiopawam.defauwtvawue`. (ꈍᴗꈍ) m-même s'iw peut êtwe modifié, :3 toute modification qui a-a wieu awows que des événements d'automatisation sont pwévus - événements pwogwammés en utiwisant w-wes méthodes de wa `audiopawam` - e-est i-ignowée, (U ﹏ U) sans wevew a-aucune exception
 
-## Méthodes
+## méthodes
 
-_Hérite des propriétés de son parent, AudioNode._
+_héwite d-des p-pwopwiétés de s-son pawent, audionode._
 
-- {{domxref("AudioParam.setValueAtTime()")}}
-  - : Planifie un changement de la valeur d' `AudioParam` à un moment précis, `startTime`, tel que mesuré par rapport à {{domxref ("AudioContext.currentTime")}}. La nouvelle valeur est passée en argument.
-- {{domxref("AudioParam.linearRampToValueAtTime()")}}
-  - : Planifie un changement de la valeur d'`AudioParam`. Le changement commence à l'heure prévue pour l'événement précédent, évolue selon une rampe linéaire jusqu'à la nouvelle valeur passée dans l'argument `value`, et atteint la nouvelle valeur à l'heure indiquée par le paramètre `endTime`.
-- {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
-  - : Planifie un changement de la valeur d'`AudioParam`. Le changement commence à l'heure prévue pour l'événement précédent, suit une rampe exponentielle jusqu'à la nouvelle valeur passée dans l'argument `value`, et atteint la nouvelle valeur à l'heure indiquée par le paramètre `endTime`.
-    Les rampes exponentielles sont utiles lors du changement de fréquence ou de taux de lecture en raison de la façon dont l'oreille humaine fonctionne.
-- {{domxref("AudioParam.setTargetAtTime()")}}
-  - : Planifie le début d'un changement de la valeur d'`AudioParam`. Le changement commence à l'heure spécifiée par l'argument `startTime` et de façon exponentielle tend vers la valeur donnée par le paramètre `target`. Le taux de décroissance exponentielle est définie par le paramètre `timeConstant`. C'est le temps nécessaire à un système continu linéaire du premier ordre invariant dans le temps pour atteindre la valeur de 1 - 1 / e (environ 63,2%) donné une réponse d'entrée de l'étape (passage de 0 à 1 en valeur), Plus il est grand, plus la transition sera facile. Ceci est utile pour la décroissance ou la libération de portions d'enveloppes.
-- {{domxref("AudioParam.setValueCurveAtTime()")}}
-  - : Planifie des valeurs de `AudioParam` selon un jeu de valeurs, défini par le paramètre `values` ([`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)), mis à l'échelle pour s'adapter à l'intervalle de temps donné, en commençant à `startTime`.
-- {{domxref("AudioParam.cancelScheduledValues()")}}
-  - : Annule toutes les modifications futures prévues du `AudioParam`.
-- {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : Annule toutes les modifications futures prévues du `AudioParam` mais maintient sa valeur à un certain moment, en attendant que d'autres changements soient effectués. La nouvelle valeur est passée en argument.
+- {{domxwef("audiopawam.setvawueattime()")}}
+  - : p-pwanifie un changement de wa vaweuw d-d' `audiopawam` à u-un moment pwécis, `stawttime`, UwU t-tew que mesuwé p-paw wappowt à {{domxwef ("audiocontext.cuwwenttime")}}. 😳😳😳 w-wa nyouvewwe vaweuw est passée en awgument. XD
+- {{domxwef("audiopawam.wineawwamptovawueattime()")}}
+  - : p-pwanifie un changement de wa vaweuw d'`audiopawam`. o.O we changement commence à w'heuwe pwévue p-pouw w'événement pwécédent, (⑅˘꒳˘) évowue sewon une wampe winéaiwe j-jusqu'à w-wa nyouvewwe vaweuw p-passée dans w'awgument `vawue`, 😳😳😳 e-et atteint wa nyouvewwe vaweuw à w-w'heuwe indiquée p-paw we pawamètwe `endtime`. nyaa~~
+- {{domxwef("audiopawam.exponentiawwamptovawueattime()")}}
+  - : pwanifie un changement de wa vaweuw d'`audiopawam`. rawr we changement c-commence à w'heuwe pwévue p-pouw w'événement pwécédent, -.- s-suit une wampe e-exponentiewwe jusqu'à wa nyouvewwe vaweuw passée d-dans w'awgument `vawue`, (✿oωo) e-et atteint wa nyouvewwe vaweuw à w-w'heuwe indiquée p-paw we pawamètwe `endtime`. /(^•ω•^)
+    wes wampes exponentiewwes sont utiwes wows du changement de f-fwéquence ou de t-taux de wectuwe e-en waison de wa façon dont w'oweiwwe h-humaine f-fonctionne. 🥺
+- {{domxwef("audiopawam.settawgetattime()")}}
+  - : pwanifie we début d-d'un changement de wa vaweuw d'`audiopawam`. ʘwʘ we changement commence à w'heuwe s-spécifiée paw w-w'awgument `stawttime` et de façon exponentiewwe t-tend vews wa v-vaweuw donnée paw we pawamètwe `tawget`. UwU we taux de décwoissance e-exponentiewwe est définie paw we pawamètwe `timeconstant`. XD c'est we temps nyécessaiwe à u-un système continu winéaiwe du pwemiew owdwe i-invawiant dans we t-temps pouw atteindwe wa vaweuw de 1 - 1 / e (enviwon 63,2%) donné u-une wéponse d-d'entwée de w'étape (passage de 0 à 1 en vaweuw), (✿oωo) pwus iw est gwand, :3 pwus wa t-twansition sewa faciwe. (///ˬ///✿) ceci est u-utiwe pouw wa décwoissance ou wa wibéwation de powtions d'envewoppes. nyaa~~
+- {{domxwef("audiopawam.setvawuecuwveattime()")}}
+  - : p-pwanifie des vaweuws de `audiopawam` s-sewon un j-jeu de vaweuws, >w< défini paw we p-pawamètwe `vawues` ([`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)), -.- mis à w'échewwe p-pouw s'adaptew à w-w'intewvawwe d-de temps donné, (✿oωo) en commençant à `stawttime`. (˘ω˘)
+- {{domxwef("audiopawam.cancewscheduwedvawues()")}}
+  - : a-annuwe toutes w-wes modifications futuwes pwévues du `audiopawam`. rawr
+- {{domxwef("audiopawam.cancewandhowdattime()")}}
+  - : a-annuwe t-toutes wes modifications f-futuwes pwévues du `audiopawam` mais m-maintient sa vaweuw à un cewtain m-moment, OwO en attendant q-que d'autwes changements soient effectués. ^•ﻌ•^ wa nyouvewwe v-vaweuw est passée e-en awgument. UwU
 
-## Exemples
+## e-exempwes
 
-Ce premier exemple simple montre la définition de la valeur de `gain` d'un [`GainNode`](/fr/docs/Web/API/GainNode). `gain` est un exemple de paramètre audio de type `a-rate`, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.
-
-```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-
-var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0;
-```
-
-Ce deuxième exemple montre la définition de plusieurs paramètres d'un {{ domxref("BiquadFilterNode") }}. Ce sont des exemples de paramètre audio de type k-rate AudioParam's, comme les valeurs sont définies une fois pour l'ensemble des échantillons.
+c-ce pwemiew exempwe simpwe montwe w-wa définition de wa vaweuw de `gain` d'un [`gainnode`](/fw/docs/web/api/gainnode). (˘ω˘) `gain` est un exempwe de pawamètwe audio de t-type `a-wate`, (///ˬ///✿) caw sa vaweuw peut p-potentiewwement êtwe difféwente p-pouw chaque twame d'échantiwwon. σωσ
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+vaw a-audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+v-vaw audioctx = n-nyew audiocontext();
 
-var biquadFilter = audioCtx.createBiquadFilter();
-
-biquadFilter.type = "lowshelf";
-biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;
+v-vaw gainnode = a-audioctx.cweategain();
+gainnode.gain.vawue = 0;
 ```
 
-## Spécifications
+ce deuxième exempwe montwe wa définition de pwusieuws pawamètwes d'un {{ domxwef("biquadfiwtewnode") }}. /(^•ω•^) c-ce sont d-des exempwes de p-pawamètwe audio de type k-wate a-audiopawam's, 😳 comme wes vaweuws sont définies une fois pouw w'ensembwe d-des échantiwwons. 😳
 
-{{Specifications}}
+```js
+v-vaw audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+vaw audioctx = nyew audiocontext();
 
-## Compatibilité des navigateurs
+v-vaw b-biquadfiwtew = audioctx.cweatebiquadfiwtew();
 
-{{Compat}}
+b-biquadfiwtew.type = "wowshewf";
+b-biquadfiwtew.fwequency.vawue = 1000;
+biquadfiwtew.gain.vawue = 25;
+```
 
-## Voir aussi
+## spécifications
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [utiwisew w-wa web a-audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

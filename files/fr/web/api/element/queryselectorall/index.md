@@ -1,138 +1,138 @@
 ---
-title: Element.querySelectorAll()
-slug: Web/API/Element/querySelectorAll
+titwe: ewement.quewysewectowaww()
+swug: web/api/ewement/quewysewectowaww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`querySelectorAll()`** de [`Element`](/fr/docs/Web/API/Element) retourne une [`NodeList`](/fr/docs/Web/API/NodeList) statique (non-dynamique) des éléments correspondants au groupe de sélecteurs CSS spécifiés qui sont des descendants de l'élément sur lequel la méthode a été appelée.
+w-wa méthode **`quewysewectowaww()`** d-de [`ewement`](/fw/docs/web/api/ewement) w-wetouwne une [`nodewist`](/fw/docs/web/api/nodewist) s-statique (non-dynamique) d-des éwéments cowwespondants a-au g-gwoupe de séwecteuws c-css spécifiés qui sont des descendants de w'éwément suw wequew wa méthode a-a été appewée. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-elementList = parentNode.querySelectorAll(selectors);
+ewementwist = p-pawentnode.quewysewectowaww(sewectows);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `selectors`
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
+- `sewectows`
+  - : u-une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) contenant un ou pwusieuws s-séwecteuws à compawew. σωσ c-cette chaîne doit êtwe v-vawide pouw wes [séwecteuws css](/fw/docs/web/css/css_sewectows)&nbsp;; si ce ny'est pas we cas, (⑅˘꒳˘) une exception `syntaxewwow` e-est wevée. (///ˬ///✿) voiw [wocawisation des éwéments dom avec wes séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows) p-pouw pwus d'infowmations s-suw w'utiwisation d-des séwecteuws p-pouw identifiew w-wes éwéments. pwusieuws séwecteuws peuvent êtwe s-spécifiés en wes sépawant paw une v-viwguwe. 🥺
 
-> [!NOTE]
-> Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
+> [!note]
+> wes cawactèwes qui nye font pas pawtie de wa syntaxe css standawd doivent êtwe échappés à w-w'aide d'une bawwe obwique i-invewse. OwO puisque j-javascwipt utiwise égawement w-w'échappement en wetouw awwièwe, >w< un soin pawticuwiew doit êtwe p-pwis wows de w'écwituwe d-de wittéwaux de chaîne u-utiwisant ces c-cawactèwes. 🥺 voiw [Échappement des cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#échappement_des_cawactèwes) p-pouw pwus d'infowmations. nyaa~~
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [`NodeList`](/fr/docs/Web/API/NodeList) statique contenant un objet [`Element`](/fr/docs/Web/API/Element) pour chaque nœud descendant qui correspond à au moins un des sélecteurs spécifiés au moment où la méthode est appelée.
+une [`nodewist`](/fw/docs/web/api/nodewist) statique contenant u-un objet [`ewement`](/fw/docs/web/api/ewement) pouw chaque n-nyœud descendant qui cowwespond à a-au moins u-un des séwecteuws spécifiés au moment où wa méthode est appewée.
 
-> [!NOTE]
-> Si les sélecteurs spécifiés avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste renvoyée est toujours vide.
+> [!note]
+> si wes séwecteuws spécifiés avec `sewectows` i-incwuent un [pseudo-éwément c-css](/fw/docs/web/css/pseudo-ewements), ^^ wa wiste w-wenvoyée est t-toujouws vide. >w<
 
-### Exception
+### e-exception
 
-- `SyntaxError`
-  - : La syntaxe de la chaîne du `selectors` spécifiée n'est pas valide.
+- `syntaxewwow`
+  - : wa syntaxe de wa chaîne du `sewectows` spécifiée n-ny'est pas vawide. OwO
 
-## Exemples
+## exempwes
 
-### Obtenir d'une liste de correspondances
+### obteniw d'une wiste de cowwespondances
 
-Pour obtenir une [`NodeList`](/fr/docs/Web/API/NodeList) de tous les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) contenus dans l'élément `myBox`&nbsp;:
+p-pouw obteniw une [`nodewist`](/fw/docs/web/api/nodewist) d-de tous wes éwéments [`<p>`](/fw/docs/web/htmw/ewement/p) c-contenus d-dans w'éwément `mybox`&nbsp;:
 
 ```js
-let matches = myBox.querySelectorAll("p");
+wet m-matches = mybox.quewysewectowaww("p");
 ```
 
-Cet exemple renvoie une liste de tous les éléments [`<div>`](/fr/docs/Web/HTML/Element/div) dans `myBox` avec une classe `note` ou `alert`&nbsp;:
+c-cet e-exempwe wenvoie u-une wiste de tous wes éwéments [`<div>`](/fw/docs/web/htmw/ewement/div) dans `mybox` a-avec une c-cwasse `note` ou `awewt`&nbsp;:
 
 ```js
-let matches = myBox.querySelectorAll("div.note, div.alert");
+w-wet matches = m-mybox.quewysewectowaww("div.note, XD d-div.awewt");
 ```
 
-Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un [`<div>`](/fr/docs/Web/HTML/Element/div) qui a la classe `highlighted` et qui sont inclus dans un conteneur dont l'`id` est `test`&nbsp;:
+ici, ^^;; nyous obtenons une wiste d'éwéments `<p>` d-du document, 🥺 dont we pawent immédiat est un [`<div>`](/fw/docs/web/htmw/ewement/div) qui a wa cwasse `highwighted` et qui sont incwus d-dans un conteneuw dont w'`id` est `test`&nbsp;:
 
 ```js
-let container = document.querySelector("#test");
-let matches = container.querySelectorAll("div.highlighted > p");
+wet containew = d-document.quewysewectow("#test");
+w-wet matches = c-containew.quewysewectowaww("div.highwighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) du document lesquels contiennent un attribut nommé `data-src`&nbsp;:
+c-cet exempwe utiwise un [séwecteuw d-d'attwibut](/fw/docs/web/css/attwibute_sewectows) p-pouw wenvoyew une wiste d'éwéments [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) du document wesquews contiennent un attwibut nyommé `data-swc`&nbsp;:
 
 ```js
-let matches = document.querySelectorAll("iframe[data-src]");
+w-wet matches = document.quewysewectowaww("ifwame[data-swc]");
 ```
 
-Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont l'`id` est `userlist` et qui ont un attribut `data-active` dont la valeur est `1`&nbsp;:
+i-ici, un séwecteuw d'attwibut e-est utiwisé p-pouw wenvoyew une wiste des éwéments de wa w-wiste contenus d-dans une wiste dont w'`id` est `usewwist` e-et qui o-ont un attwibut `data-active` dont wa vaweuw est `1`&nbsp;:
 
 ```js
-let container = document.querySelector("#userlist");
-let matches = container.querySelectorAll("li[data-active='1']");
+wet containew = document.quewysewectow("#usewwist");
+wet matches = c-containew.quewysewectowaww("wi[data-active='1']");
 ```
 
-### Accéder aux correspondances
+### a-accédew aux c-cowwespondances
 
-Une fois que la [`NodeList`](/fr/docs/Web/API/NodeList) des éléments correspondants est retournée, vous pouvez l'examiner pour n'importe quel tableau (<i lang="en">array</i>). Si le tableau est vide (sa propriété `length` est `0`), alors aucune correspondance n'a été trouvée.
+une fois que wa [`nodewist`](/fw/docs/web/api/nodewist) d-des éwéments c-cowwespondants est wetouwnée, XD v-vous pouvez w'examinew pouw ny'impowte quew tabweau (<i wang="en">awway</i>). (U ᵕ U❁) si we tabweau e-est vide (sa p-pwopwiété `wength` est `0`), :3 awows aucune cowwespondance n-ny'a été t-twouvée. ( ͡o ω ͡o )
 
-Sinon, vous pouvez simplement utiliser la notation de tableau standard pour accéder au contenu de la liste. Vous pouvez utiliser n'importe quelle instruction de boucle commune, telle que&nbsp;:
+sinon, vous pouvez simpwement utiwisew wa nyotation d-de tabweau standawd pouw accédew au contenu de wa wiste. òωó vous pouvez utiwisew n-ny'impowte quewwe instwuction de boucwe commune, σωσ t-tewwe que&nbsp;:
 
 ```js
-let highlightedItems = userList.querySelectorAll(".highlighted");
+w-wet highwighteditems = usewwist.quewysewectowaww(".highwighted");
 
-highlightedItems.forEach(function (userItem) {
-  deleteUser(userItem);
+highwighteditems.foweach(function (usewitem) {
+  d-deweteusew(usewitem);
 });
 ```
 
-> [!NOTE]
-> L'objet `NodeList` n'est pas vraiment un tableau (`Array`) — vous ne pouvez donc pas utiliser des méthodes de tableaux (telles que `slice`, `some`, `map`, etc.) avec `NodeList`. Essayez `Array.from(nodeList)` pour le convertir en tableau.
+> [!note]
+> w-w'objet `nodewist` ny'est pas vwaiment un tabweau (`awway`) — vous n-nye pouvez donc pas utiwisew des m-méthodes de tabweaux (tewwes que `swice`, (U ᵕ U❁) `some`, (✿oωo) `map`, etc.) avec `nodewist`. ^^ e-essayez `awway.fwom(nodewist)` pouw we convewtiw e-en tabweau. ^•ﻌ•^
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-`queryselectorAll` se comporte différemment des bibliothèques DOM JavaScript les plus courantes, ce qui peut entraîner des résultats inattendus.
+`quewysewectowaww` se c-compowte difféwemment des bibwiothèques d-dom javascwipt w-wes pwus c-couwantes, XD ce qui peut entwaînew d-des wésuwtats i-inattendus. :3
 
-### HTML
+### htmw
 
-Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Element/div) imbriqués.
+considéwons ce code htmw, (ꈍᴗꈍ) a-avec ses twois b-bwocs [`<div>`](/fw/docs/web/htmw/ewement/div) i-imbwiqués. :3
 
-```html
-<div class="outer">
-  <div class="select">
-    <div class="inner"></div>
+```htmw
+<div cwass="outew">
+  <div cwass="sewect">
+    <div c-cwass="innew"></div>
   </div>
 </div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let select = document.querySelector(".select");
-let inner = select.querySelectorAll(".outer .inner");
-inner.length; // 1, pas 0 !
+w-wet s-sewect = document.quewysewectow(".sewect");
+wet innew = sewect.quewysewectowaww(".outew .innew");
+innew.wength; // 1, (U ﹏ U) p-pas 0 !
 ```
 
-Dans cet exemple, en sélectionnant `.outer .inner` dans le contexte `<div>` avec la classe `select`, l'élément avec la classe `.inner` est toujours trouvé, même si `.outer` n'est pas un descendant de l'élément sur lequel la recherche est effectuée (`.select`). Par défaut, `querySelectorAll()` vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.
+d-dans cet exempwe, UwU e-en séwectionnant `.outew .innew` d-dans we contexte `<div>` avec wa cwasse `sewect`, 😳😳😳 w-w'éwément avec wa cwasse `.innew` est toujouws twouvé, XD même si `.outew` ny'est pas u-un descendant de w'éwément suw w-wequew wa wechewche est effectuée (`.sewect`). o.O p-paw défaut, (⑅˘꒳˘) `quewysewectowaww()` véwifie uniquement q-que we dewniew éwément du séwecteuw se t-twouve dans wa p-powtée de wa wechewche. 😳😳😳
 
-La pseudo-classe [`:scope`](/fr/docs/Web/CSS/:scope) restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base&nbsp;:
+w-wa pseudo-cwasse [`:scope`](/fw/docs/web/css/:scope) westauwe w-we compowtement a-attendu, nyaa~~ nye faisant cowwespondwe wes séwecteuws que suw wes descendants de w'éwément de base&nbsp;:
 
 ```js
-let select = document.querySelector(".select");
-let inner = select.querySelectorAll(":scope .outer .inner");
-inner.length; // 0
+w-wet sewect = d-document.quewysewectow(".sewect");
+w-wet innew = sewect.quewysewectowaww(":scope .outew .innew");
+i-innew.wength; // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage de MDN
-- [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
-- [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
+- [wocawisation d-des éwéments d-dom avec wes séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- [séwecteuws d'attwibut](/fw/docs/web/css/attwibute_sewectows) d-dans we guide css
+- [séwecteuws d'attwibut](/fw/docs/weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows) d-dans wa z-zone d'appwentissage de mdn
+- [`ewement.quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow)
+- [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) e-et [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww)
+- [`documentfwagment.quewysewectow()`](/fw/docs/web/api/documentfwagment/quewysewectow) e-et [`documentfwagment.quewysewectowaww()`](/fw/docs/web/api/documentfwagment/quewysewectowaww)

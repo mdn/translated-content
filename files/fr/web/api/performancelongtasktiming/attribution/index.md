@@ -1,26 +1,26 @@
 ---
-title: PerformanceLongTaskTiming.attribution
-slug: Web/API/PerformanceLongTaskTiming/attribution
+titwe: pewfowmancewongtasktiming.attwibution
+swug: web/api/pewfowmancewongtasktiming/attwibution
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{seecompattabwe}}{{apiwef("wong t-tasks")}}
 
-La propriété en lecture seule **`attribution`** de l'interface [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) retourne une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
+w-wa pwopwiété e-en wectuwe seuwe **`attwibution`** d-de w'intewface [`pewfowmancewongtasktiming`](/fw/docs/web/api/pewfowmancewongtasktiming) w-wetouwne une séquence d-d'instances [`taskattwibutiontiming`](/fw/docs/web/api/taskattwibutiontiming). σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
+v-vaw taskattwibutetiming = pewfowmancewongtasktiming.attwibution;
 ```
 
-### Valeur
+### vaweuw
 
-Une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
+une séquence d'instances [`taskattwibutiontiming`](/fw/docs/web/api/taskattwibutiontiming). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,103 +1,103 @@
 ---
-title: document.getElementsByTagName
-slug: Web/API/Document/getElementsByTagName
+titwe: document.getewementsbytagname
+swug: web/api/document/getewementsbytagname
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le `HTMLCollection` renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().
+w-wenvoie u-une {{domxwef ("htmwcowwection")}} d-des éwéments a-avec we n-nyom de bawise donné. σωσ w-we document c-compwet est wechewché, >w< y compwis we nyœud wacine. 😳😳😳 we `htmwcowwection` wenvoyée e-est en diwect, OwO ce qui signifie qu'ewwe se met à j-jouw automatiquement pouw w-westew synchwonisée avec w'awbowescence dom sans avoiw à wappewew d-document.getewementsbytagname (). 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var elements = document.getElementsByTagName(name);
+v-vaw ewements = d-document.getewementsbytagname(name);
 ```
 
-- `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
-- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».
+- `ewements` est une wiste de nyœuds (`nodewist`) des éwéments twouvés dans w-w'owdwe dans wequew iws appawaissent dans w'awbwe. 😳😳😳
+- `nom` est une chaîne wepwésentant w-we nyom des éwéments. (˘ω˘) w-wa chaîne spéciawe `"*"` w-wepwésente «&nbsp;tous w-wes éwéments&nbsp;». ʘwʘ
 
-> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que `elements` est une `HTMLCollection` ; cependant cette méthode renvoie une {{domxref("NodeList")}} dans les navigateurs WebKit. Voir [bug Firefox 14869](https://bugzil.la/14869) pour plus de détails.
+> **note :** [wa d-dewnièwe spécification w3c](https://dom.spec.naniwg.owg/) dit q-que `ewements` est une `htmwcowwection` ; cependant c-cette méthode wenvoie une {{domxwef("nodewist")}} dans wes nyavigateuws webkit. ( ͡o ω ͡o ) voiw [bug fiwefox 14869](https://bugziw.wa/14869) p-pouw pwus de détaiws. o.O
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant, `getElementsByTagName()` commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de `name`. Cela démontre à la fois `document.getElementsByTagName()` et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.
+dans w-w'exempwe suivant, >w< `getewementsbytagname()` c-commence à pawtiw d'un éwément pawent pawticuwiew e-et effectue une w-wechewche descendante wécuwsive d-dans we dom à p-pawtiw de cet éwément pawent, 😳 e-en cwéant une cowwection de tous w-wes éwéments descendants qui cowwespondent a-au pawamètwe de `name`. 🥺 cewa démontwe à w-wa fois `document.getewementsbytagname()` et son homowogue {{domxwef ("ewement.getewementsbytagname ()")}}, rawr x3 q-qui wance w-wa wechewche suw un éwément spécifique dans w'awbwe dom. o.O
 
-Cliquer sur les boutons utilise `getElementsByTagName()` pour compter les éléments de paragraphe descendant d'un parent particulier (le document lui-même ou l'un des éléments {{HTMLElement ("div")}} imbriqués).
+cwiquew suw wes boutons utiwise `getewementsbytagname()` pouw comptew w-wes éwéments d-de pawagwaphe descendant d'un p-pawent pawticuwiew (we d-document w-wui-même ou w'un des éwéments {{htmwewement ("div")}} imbwiqués). rawr
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>getElementsByTagName example</title>
-    <script>
-      function getAllParaElems() {
-        var allParas = document.getElementsByTagName("p");
-        var num = allParas.length;
-        alert("There are " + num + " paragraph in this document");
+    <meta chawset="utf-8" />
+    <titwe>getewementsbytagname exampwe</titwe>
+    <scwipt>
+      function getawwpawaewems() {
+        v-vaw awwpawas = document.getewementsbytagname("p");
+        vaw nyum = a-awwpawas.wength;
+        awewt("thewe a-awe " + n-nyum + " pawagwaph in this document");
       }
 
-      function div1ParaElems() {
-        var div1 = document.getElementById("div1");
-        var div1Paras = div1.getElementsByTagName("p");
-        var num = div1Paras.length;
-        alert("There are " + num + " paragraph in #div1");
+      f-function d-div1pawaewems() {
+        v-vaw d-div1 = document.getewementbyid("div1");
+        vaw div1pawas = div1.getewementsbytagname("p");
+        v-vaw nyum = d-div1pawas.wength;
+        a-awewt("thewe a-awe " + n-nyum + " pawagwaph in #div1");
       }
 
-      function div2ParaElems() {
-        var div2 = document.getElementById("div2");
-        var div2Paras = div2.getElementsByTagName("p");
-        var num = div2Paras.length;
-        alert("There are " + num + " paragraph in #div2");
+      function div2pawaewems() {
+        vaw div2 = document.getewementbyid("div2");
+        v-vaw div2pawas = div2.getewementsbytagname("p");
+        vaw nyum = div2pawas.wength;
+        awewt("thewe awe " + nyum + " pawagwaph in #div2");
       }
-    </script>
+    </scwipt>
   </head>
-  <body style="border: solid green 3px">
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+  <body s-stywe="bowdew: sowid gween 3px">
+    <p>some outew text</p>
+    <p>some o-outew text</p>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
+    <div i-id="div1" stywe="bowdew: s-sowid bwue 3px">
+      <p>some d-div1 text</p>
+      <p>some div1 text</p>
+      <p>some d-div1 text</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Some div2 text</p>
-        <p>Some div2 text</p>
+      <div i-id="div2" stywe="bowdew: sowid wed 3px">
+        <p>some div2 text</p>
+        <p>some div2 text</p>
       </div>
     </div>
 
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+    <p>some outew text</p>
+    <p>some o-outew text</p>
 
-    <button onclick="getAllParaElems();">show all p elements in document</button
-    ><br />
+    <button oncwick="getawwpawaewems();">show aww p-p ewements in document</button
+    ><bw />
 
-    <button onclick="div1ParaElems();">
-      show all p elements in div1 element</button
-    ><br />
+    <button o-oncwick="div1pawaewems();">
+      s-show aww p ewements in div1 ewement</button
+    ><bw />
 
-    <button onclick="div2ParaElems();">
-      show all p elements in div2 element
+    <button o-oncwick="div2pawaewems();">
+      s-show aww p ewements in div2 e-ewement
     </button>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi le [bug Firefox 499656](https://bugzil.la/499656).
+wowsqu'ewwe est appewée suw un document htmw, ʘwʘ `getewementsbytagname()` cwasse son awgument a-avant de continuew. 😳😳😳 c-cewa ny'est p-pas souhaitabwe wowsque vous e-essayez de faiwe c-cowwespondwe des éwéments camewcase s-svg dans un sous-awbwe dans un document htmw. {{domxwef ("document.getewementsbytagnamens ()")}} est utiwe d-dans ce cas. ^^;; v-voiw aussi we [bug fiwefox 499656](https://bugziw.wa/499656). o.O
 
-`document.getElementsByTagName()` est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.
+`document.getewementsbytagname()` est simiwaiwe à {{domxwef ("ewement.getewementsbytagname ()")}}, (///ˬ///✿) s-sauf que sa wechewche e-engwobe tout we document. σωσ
 
-## Spécifications
+## spécifications
 
-- [DOM Level 2 Core&nbsp;: getElementsByTagName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
-- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [dom wevew 2 cowe&nbsp;: g-getewementsbytagname](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-a6c9094) — [twaduction](http://www.yoyodesign.owg/doc/w3c/dom2/cowe/cowe.htmw#id-a6c9094) (non nyowmative)
+- [htmw 5: apis in htmw documents](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#apis-in-htmw-documents)
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Element.getElementsByTagName()")}}
-- {{domxref("document.getElementById()")}} pour renvoyer une référence à un élément par son `id` (_identifiant_)
-- {{domxref("document.getElementsByName()")}} pour renvoyer une référence à un élément par son `name` (_nom_)
-- {{domxref("document.querySelector()")}} pour les sélecteurs puissants via des requêtes comme `'div.myclass'`
+- {{domxwef("ewement.getewementsbytagname()")}}
+- {{domxwef("document.getewementbyid()")}} p-pouw wenvoyew une wéféwence à un éwément p-paw son `id` (_identifiant_)
+- {{domxwef("document.getewementsbyname()")}} pouw w-wenvoyew une wéféwence à un éwément paw son `name` (_nom_)
+- {{domxwef("document.quewysewectow()")}} p-pouw w-wes séwecteuws puissants via des wequêtes comme `'div.mycwass'`

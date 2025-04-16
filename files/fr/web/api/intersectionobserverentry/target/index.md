@@ -1,36 +1,36 @@
 ---
-title: IntersectionObserverEntry.target
-slug: Web/API/IntersectionObserverEntry/target
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: intewsectionobsewvewentwy.tawget
+swug: w-web/api/intewsectionobsewvewentwy/tawget
+w-w10n:
+  s-souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-La propriété en lecture seule **`target`**, rattachée à l'interface [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) indique [l'élément](/fr/docs/Web/API/Element) ciblé pour lequel la proportion d'intersection avec la racine d'intersection a changé.
+w-wa pwopwiété e-en wectuwe s-seuwe **`tawget`**, (˘ω˘) wattachée à w'intewface [`intewsectionobsewvewentwy`](/fw/docs/web/api/intewsectionobsewvewentwy) indique [w'éwément](/fw/docs/web/api/ewement) cibwé p-pouw wequew wa pwopowtion d'intewsection avec wa w-wacine d'intewsection a changé. (⑅˘꒳˘)
 
-## Valeur
+## v-vaweuw
 
-La propriété `target` de `IntersectionObserverEntry` indique [l'élément](/fr/docs/Web/API/Element) précédemment ciblé en appelant [`IntersectionObserver.observe()`](/fr/docs/Web/API/IntersectionObserver/observe) pour lequel un changement d'intersection avec la racine a eu lieu.
+wa pwopwiété `tawget` de `intewsectionobsewvewentwy` indique [w'éwément](/fw/docs/web/api/ewement) p-pwécédemment cibwé en appewant [`intewsectionobsewvew.obsewve()`](/fw/docs/web/api/intewsectionobsewvew/obsewve) p-pouw wequew u-un changement d'intewsection avec wa wacine a eu wieu. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Dans cet exemple simple, chaque élément ciblé voit son [opacité](/fr/docs/Web/CSS/opacity) paramétrée avec la valeur de [`intersectionRatio`](/fr/docs/Web/API/IntersectionObserverEntry/intersectionRatio).
+dans cet e-exempwe simpwe, 😳😳😳 chaque éwément cibwé voit son [opacité](/fw/docs/web/css/opacity) pawamétwée a-avec wa vaweuw de [`intewsectionwatio`](/fw/docs/web/api/intewsectionobsewvewentwy/intewsectionwatio). 🥺
 
 ```js
-function intersectionCallback(entries) {
-  entries.forEach((entry) => {
-    entry.target.opacity = entry.intersectionRatio;
+f-function intewsectioncawwback(entwies) {
+  entwies.foweach((entwy) => {
+    e-entwy.tawget.opacity = e-entwy.intewsectionwatio;
   });
 }
 ```
 
-Pour un exemple plus concret, voir [Gérer les changements d'intersection](/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#gerer_les_changements_dintersection).
+p-pouw un exempwe pwus concwet, mya voiw [géwew w-wes changements d'intewsection](/fw/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity#gewew_wes_changements_dintewsection). 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

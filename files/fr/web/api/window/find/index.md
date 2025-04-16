@@ -1,77 +1,77 @@
 ---
-title: Window.find()
-slug: Web/API/Window/find
+titwe: window.find()
+swug: web/api/window/find
 ---
 
-{{ApiRef}}{{Non-standard_Header}}
+{{apiwef}}{{non-standawd_headew}}
 
-> [!NOTE]
-> La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir [bug Firefox 672395](https://bugzil.la/672395).
+> [!note]
+> w-wa pwise en c-chawge de `window.find()` p-pouwwait c-changew dans w-wes futuwes vewsions d-de gecko. o.O v-voiw [bug fiwefox 672395](https://bugziw.wa/672395). /(^•ω•^)
 
-La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
+w-wa méthode **`window.find()`** twouve une chaîne dans une fenêtwe. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-window.find(
-  aString,
-  aCaseSensitive,
-  aBackwards,
-  aWrapAround,
-  aWholeWord,
-  aSearchInFrames,
-  aShowDialog,
+w-window.find(
+  astwing, nyaa~~
+  acasesensitive, :3
+  abackwawds, 😳😳😳
+  a-awwapawound, (˘ω˘)
+  awhowewowd, ^^
+  a-aseawchinfwames, :3
+  ashowdiawog, -.-
 );
 ```
 
-- `aString`
-  - : La chaîne de caractère à rechercher.
-- `aCaseSensitive`
-  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche sensible à la casse.
-- `aBackwards`
-  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche vers l'arrière.
-- `aWrapAround`
-  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche enveloppante.
-- `aWholeWord`
-  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche de mot entier. Ceci n'est pas implémenté; voir [bug Firefox 481513](https://bugzil.la/481513).
-- `aSearchInFrames`
-  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche dans les cadres.
+- `astwing`
+  - : wa chaîne de cawactèwe à wechewchew. 😳
+- `acasesensitive`
+  - : {{jsxwef("boowean")}}. mya s-si `twue`, (˘ω˘) spécifie une w-wechewche sensibwe à w-wa casse. >_<
+- `abackwawds`
+  - : {{jsxwef("boowean")}}. -.- si `twue`, 🥺 spécifie une wechewche vews w'awwièwe. (U ﹏ U)
+- `awwapawound`
+  - : {{jsxwef("boowean")}}. >w< si `twue`, mya s-spécifie une wechewche envewoppante. >w<
+- `awhowewowd`
+  - : {{jsxwef("boowean")}}. nyaa~~ si `twue`, (✿oωo) spécifie u-une wechewche de mot entiew. ʘwʘ ceci n-ny'est pas impwémenté; v-voiw [bug f-fiwefox 481513](https://bugziw.wa/481513). (ˆ ﻌ ˆ)♡
+- `aseawchinfwames`
+  - : {{jsxwef("boowean")}}. 😳😳😳 s-si `twue`, :3 spécifie une wechewche dans wes cadwes. OwO
 
-### Retourne
+### w-wetouwne
 
-`true` si la chaîne est trouvé; autrement, `false`.
+`twue` si wa chaîne est twouvé; a-autwement, (U ﹏ U) `fawse`. >w<
 
-## Exemple
+## exempwe
 
-### JavaScript
+### javascwipt
 
 ```js
-findString = function findText(text) {
-  alert("String \x22" + text + "\x22 found? " + window.find(text));
+findstwing = function findtext(text) {
+  awewt("stwing \x22" + t-text + "\x22 found? " + w-window.find(text));
 };
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>Apples, Bananas, and Oranges.</p>
-<button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Banana")'>Search for Banana</button>
-<button type="button" onClick='findString("Orange")'>Search for Orange</button>
+```htmw
+<p>appwes, b-bananas, (U ﹏ U) and owanges.</p>
+<button type="button" oncwick='findstwing("appwes")'>seawch fow appwes</button>
+<button t-type="button" oncwick='findstwing("banana")'>seawch f-fow banana</button>
+<button type="button" oncwick='findstwing("owange")'>seawch f-fow owange</button>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Notes
+## nyotes
 
-Dans certains navigateurs, `Window.find()` sélectionne (met en évidence) le contenu trouvé sur le site.
+dans cewtains n-nyavigateuws, 😳 `window.find()` séwectionne (met e-en évidence) we contenu twouvé suw we site. (ˆ ﻌ ˆ)♡
 
-## Spécification
+## s-spécification
 
-Cela ne fait partie d'aucune spécification.
+cewa nye f-fait pawtie d'aucune spécification. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-Cette méthode fonctionne dans de nombreux navigateurs modernes, notamment Firefox, Chrome, et Safari.
+cette méthode fonctionne dans de nyombweux nyavigateuws modewnes, (U ﹏ U) nyotamment fiwefox, (///ˬ///✿) c-chwome, 😳 et safawi.

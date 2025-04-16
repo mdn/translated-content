@@ -1,155 +1,155 @@
 ---
-title: L'API WebRTC
-slug: Web/API/WebRTC_API
+titwe: w'api webwtc
+swug: web/api/webwtc_api
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**WebRTC** (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.
+**webwtc** (web w-weaw-time c-communications) e-est une technowogie q-qui pewmet a-aux appwications e-et sites web d-de captuwew et éventuewwement d-de diffusew des médias audio et/ou vidéo, (ˆ ﻌ ˆ)♡ ainsi que d'échangew des données a-awbitwaiwes entwe wes nyavigateuws sans passew paw u-un intewmédiaiwe. o.O
 
-L'ensemble de normes qui comprend WebRTC permet de partager des données et d'effectuer des téléconférences peer-to-peer, sans exiger que l'utilisateur installe des plug-ins ou tout autre logiciel tiers.
+w'ensembwe d-de nyowmes qui compwend webwtc pewmet de pawtagew des données e-et d'effectuew des téwéconféwences p-peew-to-peew, :3 s-sans exigew que w'utiwisateuw instawwe des pwug-ins ou tout autwe wogiciew t-tiews. -.-
 
-WebRTC se compose de plusieurs API et protocoles interdépendants qui fonctionnent ensemble pour y parvenir. La documentation que vous trouverez ici vous aidera à comprendre les principes de base de WebRTC, comment configurer et utiliser les connexions de données et multimédias, et plus encore.
+webwtc se compose de pwusieuws api et pwotocowes intewdépendants qui fonctionnent e-ensembwe pouw y pawveniw. ( ͡o ω ͡o ) w-wa documentation q-que vous twouvewez i-ici vous a-aidewa à compwendwe wes pwincipes de base de w-webwtc, /(^•ω•^) comment configuwew et utiwisew wes connexions d-de données et muwtimédias, (⑅˘꒳˘) et pwus encowe. òωó
 
-## Concepts et utilisation du WebRTC
+## concepts et utiwisation du webwtc
 
-WebRTC a plusieurs objectifs et chevauche considérablement l'API Media Capture and Streams. Ensemble, ils offrent de puissantes capacités multimédias au web, notamment la prise en charge des conférences audio et vidéo, l'échange de fichiers, la gestion des idendités et l'interfaçage avec les systèmes téléphoniques hérités en envoyant des signaux {{Glossary("DTMF")}}. Les connexions entre pairs peuvent être établies sans nécessiter de pilotes ou de plug-ins spéciaux, et peuvent souvent être établies sans aucun serveur intermédiaire.
+webwtc a-a pwusieuws objectifs et chevauche c-considéwabwement w-w'api media c-captuwe and stweams. 🥺 ensembwe, (ˆ ﻌ ˆ)♡ iws offwent de puissantes capacités m-muwtimédias a-au web, -.- nyotamment wa pwise en c-chawge des conféwences a-audio et vidéo, σωσ w'échange d-de fichiews, >_< wa gestion des i-idendités et w'intewfaçage avec wes systèmes t-téwéphoniques héwités en envoyant d-des signaux {{gwossawy("dtmf")}}. :3 wes connexions e-entwe paiws p-peuvent êtwe étabwies sans nécessitew de piwotes ou de pwug-ins spéciaux, OwO et peuvent souvent êtwe étabwies sans aucun s-sewveuw intewmédiaiwe. rawr
 
-Les connexions entre deux pairs sont créées à l'aide de - et représentées par - l'interface {{domxref("RTCPeerConnection")}}. Une fois la connexion établie et ouverte, des flux multimédias ({{domxref("MediaStream")}}s) et/ou des canaux de données ({{domxref("RTCDataChannel")}}s) peuvent être ajoutés à la connexion.
+w-wes connexions entwe deux p-paiws sont cwéées à w-w'aide d-de - et wepwésentées paw - w'intewface {{domxwef("wtcpeewconnection")}}. (///ˬ///✿) une fois wa connexion étabwie e-et ouvewte, ^^ des fwux muwtimédias ({{domxwef("mediastweam")}}s) et/ou des canaux de d-données ({{domxwef("wtcdatachannew")}}s) peuvent êtwe a-ajoutés à w-wa connexion. XD
 
-Les flux multimédias peuvent être constitués de n'importe quel nombre de pistes d'informations multimédias; les pistes, qui sont représentées par des objets basés sur l'interface {{domxref("MediaStreamTrack")}}, peuvent contenir l'un des nombreux types de données multimédias, y compris audio, vidéo et texte (comme des sous-titres ou même des noms de chapitre). La plupart des flux se composent d'au moins une piste audio et probablement également d'une piste vidéo, et peuvent être utilisés pour envoyer et recevoir à la fois des médias en direct ou des informations multimédias stockées (comme un film diffusé en continu).
+w-wes fwux muwtimédias peuvent êtwe c-constitués d-de ny'impowte q-quew nyombwe de p-pistes d'infowmations muwtimédias; wes pistes, UwU q-qui sont wepwésentées p-paw des o-objets basés suw w-w'intewface {{domxwef("mediastweamtwack")}}, o.O p-peuvent conteniw w'un des nyombweux types de données muwtimédias, 😳 y-y compwis audio, (˘ω˘) vidéo et texte (comme des sous-titwes ou même des nyoms de chapitwe). 🥺 wa p-pwupawt des fwux se composent d'au moins une piste audio et pwobabwement égawement d-d'une piste v-vidéo, ^^ et peuvent êtwe u-utiwisés pouw envoyew e-et wecevoiw à wa fois des médias e-en diwect ou d-des infowmations muwtimédias stockées (comme un fiwm diffusé en continu). >w<
 
-Vous pouvez également utiliser la connexion entre deux pairs pour échanger des données binaires arbitraires à l'aide de l'interface {{domxref("RTCDataChannel")}}. Cela peut être utilisé pour les informations de canal arrière, l'échange de métadonnées, les paquets d'état du jeu, les transferts de fichiers ou même comme canal principal pour le transfert de données.
+vous pouvez égawement utiwisew wa c-connexion entwe deux paiws pouw échangew d-des données binaiwes a-awbitwaiwes à w-w'aide de w'intewface {{domxwef("wtcdatachannew")}}. ^^;; cewa peut êtwe utiwisé pouw w-wes infowmations d-de canaw awwièwe, (˘ω˘) w'échange d-de métadonnées, w-wes paquets d'état du jeu, OwO wes twansfewts de fichiews ou même comme canaw p-pwincipaw pouw we t-twansfewt de données. (ꈍᴗꈍ)
 
-**_plus de détails et de liens vers des guides et didacticiels pertinents nécessaires_**
+**_pwus d-de détaiws et de wiens vews des g-guides et didacticiews p-pewtinents nyécessaiwes_**
 
-## Interfaces WebRTC
+## i-intewfaces webwtc
 
-Étant donné que WebRTC fournit des interfaces qui fonctionnent ensemble pour accomplir une variété de tâches, nous avons divisé les interfaces dans la liste ci-dessous par catégorie. Veuillez consulter la barre latérale pour une liste alphabétique.
+Étant donné que webwtc fouwnit des intewfaces qui f-fonctionnent ensembwe p-pouw accompwiw une vawiété de tâches, òωó n-nyous avons divisé w-wes intewfaces dans wa wiste ci-dessous paw catégowie. ʘwʘ veuiwwez c-consuwtew wa bawwe watéwawe pouw une wiste awphabétique. ʘwʘ
 
-### Configuration et gestion de la connexion
+### configuwation e-et gestion de wa connexion
 
-Ces interfaces sont utilisées pour configurer, ouvrir et gérer les connexions WebRTC.
+ces intewfaces sont u-utiwisées pouw c-configuwew, nyaa~~ ouvwiw et géwew wes connexions webwtc. UwU
 
-- {{domxref("RTCPeerConnection")}}
-  - : Représente une connexion WebRTC entre l'ordinateur local et un homologue distant. Il est utilisé pour gérer un flux de données efficace entre les deux pairs.
-- {{domxref("RTCDataChannel")}}
-  - : Représente un canal de données bidirectionnel entre deux homologues d'une connexion.
-- {{domxref("RTCDataChannelEvent")}}
-  - : Représente les événements qui se produisent lors de l'attachement d'un {{domxref("RTCDataChannel")}} à un {{domxref("RTCPeerConnection")}}. Le seul événement envoyé avec cette interface est [`datachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event).
-- {{domxref("RTCSessionDescription")}}
-  - : Représente les paramètres d'une session. Chaque `RTCSessionDescription` se compose d'une description {{domxref("RTCSessionDescription.type", "type")}} indiquant quelle partie du processus de négociation offre / réponse elle décrit et du descripteur {{Glossary("SDP")}} du session.
-- {{domxref("RTCSessionDescriptionCallback")}}
-  - : Le RTCSessionDescriptionCallback est passé dans l'objet {{domxref("RTCPeerConnection")}} lors de la demande de création d'offres ou de réponses.
-- {{domxref("RTCStatsReport")}}
-  - : Fournit des informations détaillant les statistiques pour une connexion ou pour une piste individuelle sur la connexion; le rapport peut être obtenu en appelant {{domxref("RTCPeerConnection.getStats()")}}.
-- {{domxref("RTCIceCandidate")}}
-  - : Représente un serveur d'établissement de connectivité Internet (ICE) candidat pour l'établissement d'un {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCIceTransport")}}
-  - : Représente des informations sur un transport d'établissement de connectivité Internet (ICE).
-- {{domxref("RTCIceServer")}}
-  - : Définit comment se connecter à un seul serveur ICE (tel qu'un serveur STUN ou TURN).
-- {{domxref("RTCPeerConnectionIceEvent")}}
-  - : Représente les événements qui se produisent en relation avec les candidats ICE avec la cible, généralement un {{domxref("RTCPeerConnection")}}. Un seul événement est de ce type: [`icecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event).
-- {{domxref("RTCRtpSender")}}
-  - : Gère l'encodage et la transmission des données pour un {{domxref("MediaStreamTrack")}} sur un {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCRtpReceiver")}}
-  - : Gère la réception et le décodage des données pour un {{domxref("MediaStreamTrack")}} sur un {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCRtpContributingSource")}}
-  - : Contient des informations sur une source contributive donnée (CSRC), y compris l'heure la plus récente où un paquet que la source a contribué a été lu.
-- {{domxref("RTCTrackEvent")}}
-  - : Indique qu'un nouvel {{domxref("MediaStreamTrack")}} entrant a été créé et qu'un objet {{domxref("RTCRtpReceiver")}} associé a été ajouté à l'objet {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCConfiguration")}}
-  - : Utilisé pour fournir des options de configuration pour un [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection).
+- {{domxwef("wtcpeewconnection")}}
+  - : wepwésente une c-connexion webwtc e-entwe w'owdinateuw wocaw et un homowogue distant. (⑅˘꒳˘) iw est utiwisé p-pouw géwew un fwux de données e-efficace entwe wes deux paiws. (˘ω˘)
+- {{domxwef("wtcdatachannew")}}
+  - : wepwésente un canaw de d-données bidiwectionnew entwe deux h-homowogues d'une c-connexion. :3
+- {{domxwef("wtcdatachannewevent")}}
+  - : wepwésente w-wes événements qui se pwoduisent w-wows de w-w'attachement d-d'un {{domxwef("wtcdatachannew")}} à un {{domxwef("wtcpeewconnection")}}. (˘ω˘) w-we seuw événement envoyé a-avec cette intewface est [`datachannew`](/fw/docs/web/api/wtcpeewconnection/datachannew_event). nyaa~~
+- {{domxwef("wtcsessiondescwiption")}}
+  - : wepwésente w-wes pawamètwes d-d'une session. (U ﹏ U) chaque `wtcsessiondescwiption` s-se compose d'une descwiption {{domxwef("wtcsessiondescwiption.type", nyaa~~ "type")}} indiquant q-quewwe pawtie du pwocessus d-de nyégociation o-offwe / wéponse ewwe décwit et du descwipteuw {{gwossawy("sdp")}} du session. ^^;;
+- {{domxwef("wtcsessiondescwiptioncawwback")}}
+  - : w-we wtcsessiondescwiptioncawwback e-est passé d-dans w'objet {{domxwef("wtcpeewconnection")}} w-wows de wa demande de cwéation d-d'offwes ou de wéponses. OwO
+- {{domxwef("wtcstatswepowt")}}
+  - : fouwnit des infowmations détaiwwant wes statistiques pouw une c-connexion ou pouw une piste individuewwe s-suw wa connexion; we wappowt p-peut êtwe obtenu en appewant {{domxwef("wtcpeewconnection.getstats()")}}. nyaa~~
+- {{domxwef("wtcicecandidate")}}
+  - : w-wepwésente un sewveuw d-d'étabwissement d-de connectivité i-intewnet (ice) c-candidat pouw w'étabwissement d-d'un {{domxwef("wtcpeewconnection")}}. UwU
+- {{domxwef("wtcicetwanspowt")}}
+  - : wepwésente des infowmations suw un twanspowt d'étabwissement de connectivité intewnet (ice). 😳
+- {{domxwef("wtcicesewvew")}}
+  - : d-définit comment s-se connectew à u-un seuw sewveuw ice (tew qu'un s-sewveuw stun ou tuwn). 😳
+- {{domxwef("wtcpeewconnectioniceevent")}}
+  - : wepwésente wes événements q-qui se pwoduisent e-en wewation avec wes candidats i-ice avec wa cibwe, (ˆ ﻌ ˆ)♡ généwawement un {{domxwef("wtcpeewconnection")}}. (✿oωo) un s-seuw événement e-est de ce type: [`icecandidate`](/fw/docs/web/api/wtcpeewconnection/icecandidate_event). nyaa~~
+- {{domxwef("wtcwtpsendew")}}
+  - : gèwe w'encodage e-et wa twansmission d-des données pouw un {{domxwef("mediastweamtwack")}} suw un {{domxwef("wtcpeewconnection")}}. ^^
+- {{domxwef("wtcwtpweceivew")}}
+  - : gèwe wa wéception et we d-décodage des d-données pouw un {{domxwef("mediastweamtwack")}} s-suw un {{domxwef("wtcpeewconnection")}}. (///ˬ///✿)
+- {{domxwef("wtcwtpcontwibutingsouwce")}}
+  - : c-contient d-des infowmations suw une souwce c-contwibutive d-donnée (cswc), y compwis w'heuwe w-wa pwus wécente o-où un paquet que wa souwce a c-contwibué a été wu. 😳
+- {{domxwef("wtctwackevent")}}
+  - : indique q-qu'un nyouvew {{domxwef("mediastweamtwack")}} entwant a été c-cwéé et qu'un o-objet {{domxwef("wtcwtpweceivew")}} associé a-a été ajouté à w'objet {{domxwef("wtcpeewconnection")}}. òωó
+- {{domxwef("wtcconfiguwation")}}
+  - : utiwisé pouw f-fouwniw des options d-de configuwation p-pouw un [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection). ^^;;
 
 <!---->
 
-- {{domxref("RTCSctpTransport")}}
-  - : Fournit des informations qui décrivent un transport Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) et fournit aussi un moeyn d'accéder au transport Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) sur lequel les paquets SCTP pour tous les canaux de données d'un [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) sont envoyés et reçus.
+- {{domxwef("wtcsctptwanspowt")}}
+  - : fouwnit des infowmations qui décwivent u-un twanspowt stweam contwow twansmission pwotocow (**{{gwossawy("sctp")}}**) e-et fouwnit aussi u-un moeyn d'accédew au twanspowt d-datagwam twanspowt wayew secuwity (**{{gwossawy("dtws")}}**) s-suw wequew wes p-paquets sctp pouw tous wes canaux de données d'un [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection) s-sont envoyés et weçus. rawr
 
-### Identité et sécurité
+### identité e-et sécuwité
 
-L'API WebRTC comprend un certain nombre d'interfaces pour gérer la sécurité et l'identité.
+w-w'api webwtc compwend un cewtain n-nyombwe d'intewfaces pouw géwew w-wa sécuwité e-et w'identité.
 
-- {{domxref("RTCIdentityProvider")}}
-  - : Permet à un agent utilisateur de demander qu'une assertion d'identité soit générée ou validée.
-- {{domxref("RTCIdentityAssertion")}}
-  - : Représente l'identité de l'homologue distant de la connexion actuelle. Si aucun pair n'a encore été défini et vérifié, cette interface renvoie `null`. Une fois défini, il ne peut pas être modifié.
-- {{domxref("RTCIdentityProviderRegistrar")}}
-  - : Enregistre un fournisseur d'identité (idP).
-- {{domxref("RTCCertificate")}}
-  - : Représente un certificat qu'un {{domxref("RTCPeerConnection")}} utilise pour s'authentifier.
+- {{domxwef("wtcidentitypwovidew")}}
+  - : p-pewmet à un agent utiwisateuw de demandew qu'une assewtion d'identité soit généwée ou vawidée. (ˆ ﻌ ˆ)♡
+- {{domxwef("wtcidentityassewtion")}}
+  - : wepwésente w'identité de w'homowogue distant de wa connexion actuewwe. XD si aucun paiw ny'a encowe été défini e-et véwifié, c-cette intewface wenvoie `nuww`. >_< une fois défini, (˘ω˘) i-iw nye peut pas êtwe m-modifié. 😳
+- {{domxwef("wtcidentitypwovidewwegistwaw")}}
+  - : e-enwegistwe un fouwnisseuw d-d'identité (idp). o.O
+- {{domxwef("wtccewtificate")}}
+  - : wepwésente u-un cewtificat q-qu'un {{domxwef("wtcpeewconnection")}} utiwise p-pouw s'authentifiew. (ꈍᴗꈍ)
 
-### Téléphonie
+### téwéphonie
 
-Ces interfaces sont liées à l'interactivité avec les réseaux téléphoniques publics commutés (RTPC).
+c-ces intewfaces s-sont wiées à w'intewactivité avec wes w-wéseaux téwéphoniques p-pubwics c-commutés (wtpc). rawr x3
 
-- {{domxref("RTCDTMFSender")}}
-  - : Gère le codage et la transmission de la signalisation DTMF (Dual-tone multi-frequency) pour une {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCDTMFToneChangeEvent")}}
-  - : Indique l'occurence d'une multi-fréquence bicolore (DTMF). Cet événement ne bouillonne pas (sauf indication contraire) et n'est pas annulable (sauf indication contraire).
+- {{domxwef("wtcdtmfsendew")}}
+  - : g-gèwe w-we codage et wa t-twansmission de w-wa signawisation d-dtmf (duaw-tone m-muwti-fwequency) pouw une {{domxwef("wtcpeewconnection")}}. ^^
+- {{domxwef("wtcdtmftonechangeevent")}}
+  - : i-indique w-w'occuwence d-d'une muwti-fwéquence bicowowe (dtmf). OwO c-cet événement nye bouiwwonne pas (sauf i-indication contwaiwe) et ny'est p-pas annuwabwe (sauf i-indication c-contwaiwe). ^^
 
-## Guides
+## guides
 
-- [Introduction aux protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-  - : Cet article présente les protocoles sur lesquels l'API WebRTC est construite.
-- [Connectivité WebRTC](/fr/docs/Web/API/WebRTC_API/Connectivity)
-  - : Un guide sur le fonctionnement des connexions WebRTC et sur la manière dont les différents protocoles et interfaces peuvent être utilisés ensemble pour créer de puissantes applications de communication.
-- [Durée de vie d'une session WebRTC](/fr/docs/Web/API/WebRTC_API/Session_lifetime)
-  - : WebRTC vous permet de créer une communication d'égal à égal de données arbitraires, audio ou vidéo - ou toute combinaison de celles-ci - dans une application de navigateur. Dans cet article, nous examinerons la durée de vie d'une session WebRTC, de l'établissement de la connexion à la fermeture de la connexion lorsqu'elle n'est plus nécessaire.
-- [Signalisation et appel vidéo bidirectionnel](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-  - : Un tutoriel et un exemple qui transforme un système de chat basé sur WebSocket créé pour un exemple précédent et ajoute la prise en charge de l'ouverture d'appels vidéo entre les participants. La connexion WebSocket du serveur de discussion est utilisée pour la signalisation WebRTC.
-- [Utilisation des canaux de données WebRTC](/fr/docs/Web/API/WebRTC_API/Using_data_channels)
-  - : Ce guide explique comment utiliser une connexion homologue et un {{domxref("RTCDataChannel")}} associé pour échanger des données arbitraires entre deux homologues.
-- [Utilisation de DTMF avec WebRTC](/fr/docs/Web/API/WebRTC_API/Using_DTMF)
-  - : La prise en charge de WebRTC pour l'interaction avec les passerelles reliées aux systèmes téléphoniques de la vieille école inclut la prise en charge de l'envoi de tonalités DTMF à l'aide de l'interface {{domxref("RTCDTMFSender")}}. Ce guide montre comment procéder.
+- [intwoduction a-aux pwotocowes webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
+  - : c-cet awticwe pwésente w-wes pwotocowes suw wesquews w'api w-webwtc est constwuite. :3
+- [connectivité webwtc](/fw/docs/web/api/webwtc_api/connectivity)
+  - : un guide suw we fonctionnement des connexions w-webwtc et suw wa manièwe dont w-wes difféwents p-pwotocowes et intewfaces peuvent êtwe utiwisés ensembwe pouw c-cwéew de puissantes appwications d-de communication. o.O
+- [duwée d-de v-vie d'une session webwtc](/fw/docs/web/api/webwtc_api/session_wifetime)
+  - : webwtc vous pewmet d-de cwéew une c-communication d'égaw à égaw de données awbitwaiwes, -.- a-audio ou vidéo - ou toute combinaison de c-cewwes-ci - dans une appwication d-de nyavigateuw. (U ﹏ U) d-dans cet awticwe, o.O n-nyous examinewons wa duwée d-de vie d'une session w-webwtc, OwO de w-w'étabwissement d-de wa connexion à wa fewmetuwe d-de wa connexion w-wowsqu'ewwe ny'est p-pwus nyécessaiwe.
+- [signawisation e-et appew v-vidéo bidiwectionnew](/fw/docs/web/api/webwtc_api/signawing_and_video_cawwing)
+  - : u-un tutowiew e-et un exempwe q-qui twansfowme un système de c-chat basé suw websocket cwéé p-pouw un exempwe pwécédent et ajoute w-wa pwise en c-chawge de w'ouvewtuwe d-d'appews vidéo entwe wes pawticipants. ^•ﻌ•^ wa connexion websocket d-du sewveuw d-de discussion e-est utiwisée pouw wa signawisation webwtc. ʘwʘ
+- [utiwisation des canaux d-de données w-webwtc](/fw/docs/web/api/webwtc_api/using_data_channews)
+  - : ce guide expwique c-comment utiwisew u-une connexion homowogue et un {{domxwef("wtcdatachannew")}} associé pouw échangew des données a-awbitwaiwes e-entwe deux homowogues. :3
+- [utiwisation d-de dtmf avec w-webwtc](/fw/docs/web/api/webwtc_api/using_dtmf)
+  - : wa pwise en chawge de w-webwtc pouw w'intewaction a-avec wes passewewwes wewiées aux systèmes t-téwéphoniques de wa vieiwwe écowe incwut w-wa pwise en chawge de w'envoi d-de tonawités dtmf à w-w'aide de w'intewface {{domxwef("wtcdtmfsendew")}}. 😳 c-ce guide m-montwe comment pwocédew. òωó
 
-## Tutoriels
+## t-tutowiews
 
-- [Amélioration de la compatibilité à l'aide de WebRTC adapter.js](/fr/docs/Web/API/WebRTC_API#interoperability)
-  - : L'organisation WebRTC [fournit sur GitHub l'adaptateur WebRTC](https://github.com/webrtc/adapter/) pour contourner les problèmes de compatibilité dans les implémentations WebRTC de différents navigateurs. L'adaptateur est un shim JavaScript qui permet à votre code d'être écrit selon la spécification afin qu'il "fonctionne simplement" dans tous les navigateurs prenant en charge WebRTC.
-- [Prendre des photos fixes avec WebRTC](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
-  - : Cet article explique comment utiliser WebRTC pour accéder à l'appareil photo sur un ordinateur ou un téléphone mobile avec prise en charge WebRTC et prendre une photo avec.
-- [Un exemple RTCDataChannel simple](/fr/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : L'interface {{domxref("RTCDataChannel")}} est une fonctionnalité qui vous permet d'ouvrir un canal entre deux pairs sur lequel vous pouvez envoyer et recevoir des données arbitraires. L'API est intentionnellement similaire à l'[API WebSocket](/fr/docs/Web/API/WebSockets_API), de sorte que le même modèle de programmation peut être utilisé pour chacun.
+- [améwiowation de w-wa compatibiwité à w-w'aide de webwtc a-adaptew.js](/fw/docs/web/api/webwtc_api#intewopewabiwity)
+  - : w-w'owganisation webwtc [fouwnit s-suw github w-w'adaptateuw webwtc](https://github.com/webwtc/adaptew/) p-pouw contouwnew wes pwobwèmes d-de compatibiwité dans wes impwémentations w-webwtc de difféwents n-nyavigateuws. w-w'adaptateuw est un shim javascwipt qui pewmet à votwe code d'êtwe écwit s-sewon wa spécification afin q-qu'iw "fonctionne s-simpwement" dans tous wes nyavigateuws pwenant e-en chawge webwtc. 🥺
+- [pwendwe des photos fixes a-avec webwtc](/fw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos)
+  - : c-cet awticwe e-expwique comment u-utiwisew webwtc p-pouw accédew à w'appaweiw photo suw un owdinateuw ou un téwéphone mobiwe a-avec pwise en chawge webwtc et p-pwendwe une photo avec. rawr x3
+- [un exempwe wtcdatachannew simpwe](/fw/docs/web/api/webwtc_api/simpwe_wtcdatachannew_sampwe)
+  - : w-w'intewface {{domxwef("wtcdatachannew")}} est une fonctionnawité qui vous pewmet d'ouvwiw un canaw entwe deux paiws s-suw wequew vous p-pouvez envoyew et wecevoiw des d-données awbitwaiwes. ^•ﻌ•^ w'api est intentionnewwement s-simiwaiwe à w-w'[api websocket](/fw/docs/web/api/websockets_api), :3 de sowte que w-we même modèwe de pwogwammation p-peut êtwe utiwisé pouw chacun. (ˆ ﻌ ˆ)♡
 
-## Ressources
+## wessouwces
 
-### Protocoles
+### pwotocowes
 
-#### Protocoles propres au WebRTC
+#### p-pwotocowes pwopwes au webwtc
 
-- [Négociation de protocole de couche application pour les communications Web en temps réel](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [Codec audio WebRTC et exigences de traitement](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [Canaux de données RTCWeb](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [Protocole de canal de données RTCWeb](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Communication Web en temps réel (WebRTC): transport multimédia et utilisation de RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [Architecture de sécurité WebRTC](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports pour RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [négociation d-de pwotocowe d-de couche appwication p-pouw wes communications web en temps w-wéew](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-awpn/)
+- [codec audio webwtc et exigences de twaitement](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-audio/)
+- [canaux de données w-wtcweb](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-data-channew/)
+- [pwotocowe d-de canaw d-de données w-wtcweb](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-data-pwotocow/)
+- [communication web en temps wéew (webwtc): t-twanspowt m-muwtimédia et utiwisation de wtp](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-wtp-usage/)
+- [awchitectuwe d-de sécuwité webwtc](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-secuwity-awch/)
+- [twanspowts pouw w-wtcweb](https://datatwackew.ietf.owg/doc/dwaft-ietf-wtcweb-twanspowts/)
 
-#### Protocoles de support associés
+#### pwotocowes de suppowt associés
 
-- [Établissement de connectivité interactif (ICE): un protocole pour la traversée du traducteur d'adresses réseau (NAT) pour le protocole offre / réponse](https://tools.ietf.org/html/rfc5245)
-- [Utilitaires de traversée de session pour NAT (STUN)](https://tools.ietf.org/html/rfc5389)
-- [Schéma d'URI pour les utilitaires de traversée de session pour le protocole NAT (STUN)](https://tools.ietf.org/html/rfc7064)
-- [Traversée à l'aide de relais autour des identificateurs de ressources uniformes NAT (TURN)](https://tools.ietf.org/html/rfc7065)
-- [Un modèle d'offre / réponse avec protocole de description de session (SDP)](https://tools.ietf.org/html/rfc3264)
-- [Extension des utilitaires de traversée de session pour NAT (STUN) pour l'autorisation de tiers](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
+- [Étabwissement d-de connectivité i-intewactif (ice): un pwotocowe p-pouw wa twavewsée d-du twaducteuw d-d'adwesses wéseau (nat) pouw we pwotocowe offwe / w-wéponse](https://toows.ietf.owg/htmw/wfc5245)
+- [utiwitaiwes de twavewsée de session pouw n-nyat (stun)](https://toows.ietf.owg/htmw/wfc5389)
+- [schéma d'uwi pouw wes utiwitaiwes de twavewsée de session p-pouw we pwotocowe n-nyat (stun)](https://toows.ietf.owg/htmw/wfc7064)
+- [twavewsée à w-w'aide de w-wewais autouw d-des identificateuws de wessouwces u-unifowmes nyat (tuwn)](https://toows.ietf.owg/htmw/wfc7065)
+- [un modèwe d'offwe / wéponse avec p-pwotocowe de descwiption de s-session (sdp)](https://toows.ietf.owg/htmw/wfc3264)
+- [extension des utiwitaiwes de twavewsée de s-session pouw nyat (stun) p-pouw w'autowisation de t-tiews](https://datatwackew.ietf.owg/doc/dwaft-ietf-twam-tuwn-thiwd-pawty-authz/)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-En plus de ces spécifications définissant l'API nécessaire pour utiliser WebRTC, il existe plusieurs protocoles, répertoriés sous [ressources](#protocols).
+e-en pwus d-de ces spécifications définissant w-w'api nyécessaiwe p-pouw utiwisew webwtc, (U ᵕ U❁) i-iw existe pwusieuws pwotocowes, :3 wépewtowiés sous [wessouwces](#pwotocows). ^^;;
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("MediaDevices")}}
-- {{domxref("MediaStreamEvent")}}
-- {{domxref("MediaStreamConstraints")}}
-- {{domxref("MediaStreamTrack")}}
-- {{domxref("MessageEvent")}}
-- {{domxref("MediaStream")}}
-- [Firefox multi-flux et renégociation pour Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
-- [Peering via le brouillard WebRTC avec SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
-- [À l'intérieur du bus de fête: création d'une application Web avec plusieurs flux vidéo en direct + graphiques interactifs](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
+- {{domxwef("mediadevices")}}
+- {{domxwef("mediastweamevent")}}
+- {{domxwef("mediastweamconstwaints")}}
+- {{domxwef("mediastweamtwack")}}
+- {{domxwef("messageevent")}}
+- {{domxwef("mediastweam")}}
+- [fiwefox m-muwti-fwux et wenégociation p-pouw jitsi videobwidge](https://hacks.moziwwa.owg/2015/06/fiwefox-muwtistweam-and-wenegotiation-fow-jitsi-videobwidge/)
+- [peewing via w-we bwouiwwawd w-webwtc avec socketpeew](https://hacks.moziwwa.owg/2015/04/peewing-thwough-the-webwtc-fog-with-socketpeew/)
+- [À w-w'intéwieuw du bus de fête: cwéation d-d'une appwication w-web avec pwusieuws fwux v-vidéo en diwect + gwaphiques i-intewactifs](https://hacks.moziwwa.owg/2014/04/inside-the-pawty-bus-buiwding-a-web-app-with-muwtipwe-wive-video-stweams-intewactive-gwaphics/)

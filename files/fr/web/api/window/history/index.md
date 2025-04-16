@@ -1,34 +1,34 @@
 ---
-title: Window.history
-slug: Web/API/Window/history
+titwe: window.histowy
+swug: web/api/window/histowy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété en lecture seule **`Window.history`** renvoie une référence à l'objet {{domxref("History")}}, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).
+w-wa pwopwiété e-en wectuwe s-seuwe **`window.histowy`** w-wenvoie u-une wéféwence à w-w'objet {{domxwef("histowy")}}, nyaa~~ q-qui offwe w-wa possibiwité de manipuwew w'histowique de session du nyavigateuw (pages visitées d-dans w'ongwet ou we cadwe dans wesquews wa p-page couwante est chawgée). :3
 
-L'objet `History` obtenu a les méthodes suivantes : voir [la manipulation de l'historique du navigateur](/fr/docs/Web/API/History_API) pour avoir plus de détails ainsi que des exemples.
-En particulier, cet article explique les caractéristiques des méthodes `pushState()` et `replaceState()` qu'il est utile de connaître avant de les utiliser.
+w'objet `histowy` o-obtenu a wes méthodes suivantes : voiw [wa manipuwation de w'histowique d-du nyavigateuw](/fw/docs/web/api/histowy_api) pouw avoiw p-pwus de détaiws a-ainsi que des exempwes. 😳😳😳
+en pawticuwiew, (˘ω˘) cet awticwe expwique wes cawactéwistiques d-des méthodes `pushstate()` et `wepwacestate()` qu'iw est utiwe de connaîtwe avant de wes u-utiwisew. ^^
 
-## Exemple
+## exempwe
 
 ```js
-history.back(); // similaire au bouton de retour
-history.go(-1); // similaire à history.back();
+histowy.back(); // s-simiwaiwe au bouton d-de wetouw
+h-histowy.go(-1); // s-simiwaiwe à histowy.back();
 ```
 
-## Notes
+## nyotes
 
-Pour les pages de niveau supérieur, vous pourrez voir la liste des pages dans l'historique des sessions, accessibles grâce à l'objet `History`, situé dans le menu déroulant près des boutons précédent et suivant.
+p-pouw wes pages de niveau supéwieuw, :3 vous pouwwez v-voiw wa wiste des pages dans w'histowique des sessions, -.- accessibwes gwâce à w'objet `histowy`, 😳 s-situé dans we menu déwouwant p-pwès des boutons p-pwécédent e-et suivant.
 
-Pour des raisons de sécurité, l'objet `History` n'autorise pas l'accès au URL d'autres pages présentes dans l'historique de la session mais autorise d'y naviguer.
+pouw des waisons de sécuwité, mya w'objet `histowy` ny'autowise pas w'accès a-au uww d'autwes p-pages pwésentes dans w'histowique d-de wa s-session mais autowise d'y nyaviguew. (˘ω˘)
 
-Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode [location.replace()](/fr/docs/Web/API/Window/location#replace), permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.
+i-iw ny'y a pas de possibiwité d-de nyettoyew w'histowique de wa session ou d-de désactivew wes boutons pwécédent e-et suivant. >_< wa sowution éventuewwe w-wa pwus p-pwoche sewait wa méthode [wocation.wepwace()](/fw/docs/web/api/window/wocation#wepwace), -.- pewmettant de wempwacew w'éwément actuew de w'histowique de wa session p-paw w'uww f-fouwnie. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

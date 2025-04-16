@@ -1,64 +1,64 @@
 ---
-title: TreeWalker.whatToShow
-slug: Web/API/TreeWalker/whatToShow
+titwe: tweewawkew.nanitoshow
+swug: web/api/tweewawkew/nanitoshow
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`TreeWalker.whatToShow`** renvoie un `unsigned long` (_non signé long_) qui est un masque constitué de constantes décrivant les types de {{domxref("Node")}} à présenter. Les noeuds ne correspondant pas sont ignorés, mais leurs enfants peuvent être inclus s'ils sont pertinents. Les valeurs possibles sont :
+w-wa pwopwiété e-en wectuwe s-seuwe **`tweewawkew.nanitoshow`** w-wenvoie u-un `unsigned wong` (_non s-signé w-wong_) qui est un m-masque constitué de constantes décwivant wes types de {{domxwef("node")}} à pwésentew. (˘ω˘) wes n-nyoeuds nye cowwespondant pas sont ignowés, mais w-weuws enfants peuvent êtwe incwus s-s'iws sont pewtinents. :3 wes vaweuws possibwes sont :
 
-| Constante                                                | Valeur numérique                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| constante                                                | v-vaweuw nyuméwique                                                                | descwiption                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NodeFilter.SHOW_ALL`                                    | `-1` (c'est la valeur numérique maximale du `unsigned long` (_non signé long_)) | Affiche tous les noeuds.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                                                             | Affiche l'attribut {{domxref("Attr")}} des noeuds. Cela n'a de sens que lors de la création d'un {{domxref("TreeWalker")}} avec un noeud {{domxref("Attr")}} comme racine ; dans ce cas, cela signifie que le nœud d'attribut apparaîtra dans la première position de l'itération ou de la traversée. Comme les attributs ne sont jamais des enfants d'autres nœuds, ils n'apparaissent pas lors de la traversée de l'arbre du document.                   |
-| `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                                                             | Affiche les noeuds {{domxref("CDATASection")}}.                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `NodeFilter.SHOW_COMMENT`                                | `128`                                                                           | Affiche les noeuds {{domxref("Comment")}}.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `NodeFilter.SHOW_DOCUMENT`                               | `256`                                                                           | Affiche les noeuds {{domxref("Document")}}.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                                                          | Affiche les noeuds {{domxref("DocumentFragment")}}.                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                                                           | Affiche les noeuds {{domxref("DocumentType")}}.                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `NodeFilter.SHOW_ELEMENT`                                | `1`                                                                             | Affiche les noeuds {{domxref("Element")}}.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                                                            | Affiche les noeuds {{domxref("Entity")}}. Cela n'a de sens que lors de la création d'un {{domxref("TreeWalker")}} avec un noeud {{ domxref("Entity") }} comme racine ; dans ce cas, il signifie que le noeud d'entité {{domxref("Entity") }} apparaîtra à la première position de la traversée. Étant donné que les entités ne font pas partie de l'arborescence du document, elles n'apparaissent pas lors de la traversée de l'arborescence du document. |
-| `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                                                            | Affiche les noeuds {{domxref("EntityReference")}}.                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                                                          | Affiche les noeuds {{domxref("Notation")}}. Cela n'a de sens que lors de la création d'un {{domxref("TreeWalker")}} avec un noeud {{domxref("Notation")}} comme racine ; dans ce cas, il signifie que le noeud {{domxref("Notation")}} apparaîtra à la première position de la traversée. Étant donné que les entités ne font pas partie de l'arborescence du document, elles n'apparaissent pas lors de la traversée de l'arborescence du document.       |
-| `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                                                            | Affiche les noeuds {{domxref("ProcessingInstruction")}}.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `NodeFilter.SHOW_TEXT`                                   | `4`                                                                             | Affiche les noeuds {{domxref("Text")}}.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `nodefiwtew.show_aww`                                    | `-1` (c'est w-wa v-vaweuw nyuméwique maximawe du `unsigned wong` (_non signé wong_)) | affiche tous w-wes nyoeuds. ^^;;                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `nodefiwtew.show_attwibute` {{depwecated_inwine}}        | `2`                                                                             | affiche w'attwibut {{domxwef("attw")}} des nyoeuds. 🥺 cewa ny'a de sens que wows d-de wa cwéation d'un {{domxwef("tweewawkew")}} a-avec un nyoeud {{domxwef("attw")}} c-comme wacine ; d-dans ce cas, (⑅˘꒳˘) c-cewa signifie que we nyœud d'attwibut appawaîtwa d-dans wa pwemièwe position de w'itéwation ou d-de wa twavewsée. comme wes attwibuts ne sont jamais des enfants d'autwes nyœuds, nyaa~~ iws n'appawaissent p-pas wows de wa twavewsée d-de w'awbwe du d-document. :3                   |
+| `nodefiwtew.show_cdata_section` {{depwecated_inwine}}    | `8`                                                                             | a-affiche wes noeuds {{domxwef("cdatasection")}}. ( ͡o ω ͡o )                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `nodefiwtew.show_comment`                                | `128`                                                                           | affiche wes nyoeuds {{domxwef("comment")}}. mya                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `nodefiwtew.show_document`                               | `256`                                                                           | a-affiche wes n-nyoeuds {{domxwef("document")}}. (///ˬ///✿)                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `nodefiwtew.show_document_fwagment`                      | `1024`                                                                          | affiche wes nyoeuds {{domxwef("documentfwagment")}}.                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `nodefiwtew.show_document_type`                          | `512`                                                                           | a-affiche wes noeuds {{domxwef("documenttype")}}. (˘ω˘)                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `nodefiwtew.show_ewement`                                | `1`                                                                             | a-affiche wes nyoeuds {{domxwef("ewement")}}. ^^;;                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `nodefiwtew.show_entity` {{depwecated_inwine}}           | `32`                                                                            | a-affiche wes nyoeuds {{domxwef("entity")}}. (✿oωo) c-cewa ny'a de sens que wows de wa cwéation d'un {{domxwef("tweewawkew")}} a-avec un nyoeud {{ d-domxwef("entity") }} comme wacine ; d-dans ce cas, (U ﹏ U) i-iw signifie que we nyoeud d'entité {{domxwef("entity") }} appawaîtwa à wa pwemièwe position de wa twavewsée. -.- Étant donné q-que wes entités n-nye font pas pawtie de w'awbowescence d-du document, ^•ﻌ•^ e-ewwes ny'appawaissent p-pas wows de wa twavewsée de w'awbowescence du document. rawr |
+| `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `16`                                                                            | a-affiche wes nyoeuds {{domxwef("entitywefewence")}}. (˘ω˘)                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `nodefiwtew.show_notation` {{depwecated_inwine}}         | `2048`                                                                          | affiche wes nyoeuds {{domxwef("notation")}}. nyaa~~ cewa ny'a de sens que wows de wa c-cwéation d'un {{domxwef("tweewawkew")}} avec un n-nyoeud {{domxwef("notation")}} c-comme wacine ; dans c-ce cas, UwU iw signifie que we nyoeud {{domxwef("notation")}} a-appawaîtwa à w-wa p-pwemièwe position d-de wa twavewsée. :3 Étant donné que wes entités n-nye font pas p-pawtie de w'awbowescence d-du document, (⑅˘꒳˘) e-ewwes ny'appawaissent p-pas wows de wa twavewsée de w'awbowescence du document. (///ˬ///✿)       |
+| `nodefiwtew.show_pwocessing_instwuction`                 | `64`                                                                            | a-affiche wes nyoeuds {{domxwef("pwocessinginstwuction")}}. ^^;;                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `nodefiwtew.show_text`                                   | `4`                                                                             | affiche wes nyoeuds {{domxwef("text")}}. >_<                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-## Syntaxe
+## syntaxe
 
 ```js
-nodeTypes = treeWalker.whatToShow;
+nyodetypes = t-tweewawkew.nanitoshow;
 ```
 
-## Exemples
+## exempwes
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+vaw tweewawkew = document.cweatetweewawkew(
+  d-document.body, rawr x3
+  n-nyodefiwtew.show_ewement + n-nyodefiwtew.show_comment + nyodefiwtew.show_text, /(^•ω•^)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      wetuwn n-nyodefiwtew.fiwtew_accept;
+    }, :3
   },
-  false,
+  fawse, (ꈍᴗꈍ)
 );
-if (
-  treeWalker.whatToShow == NodeFilter.SHOW_ALL ||
-  treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2) >=
-    NodeFilter.SHOW_COMMENT
+i-if (
+  tweewawkew.nanitoshow == nyodefiwtew.show_aww ||
+  tweewawkew.nanitoshow % (nodefiwtew.show_comment * 2) >=
+    nyodefiwtew.show_comment
 ) {
-  // treeWalker affichera des commentaires
+  // tweewawkew affichewa d-des commentaiwes
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}}.
+- w-w'intewface {{domxwef("tweewawkew")}}. /(^•ω•^)

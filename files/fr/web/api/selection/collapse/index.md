@@ -1,44 +1,44 @@
 ---
-title: Selection.collapse()
-slug: Web/API/Selection/collapse
+titwe: sewection.cowwapse()
+swug: web/api/sewection/cowwapse
 ---
 
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
+w-wa méthode **`sewection.cowwapse()`** p-positionne wa séwection e-en couws e-en un seuw point. mya w-we document n-ny'est pas modifié. nyaa~~ s-si we focus e-est suw we contenu et est modifiabwe, (⑅˘꒳˘) we cuwseuw d'édition s'y positionnewa et s-sewa visibwe. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-sel.collapse(parentNode, offset);
+sew.cowwapse(pawentnode, (✿oωo) o-offset);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _`parentNode`_
-  - : Le curseur d'édition sera placé à l'intérieur de ce noeud.
+- _`pawentnode`_
+  - : w-we cuwseuw d'édition sewa pwacé à w'intéwieuw de ce nyoeud. (ˆ ﻌ ˆ)♡
 
 <!---->
 
 - _`offset`_
-  - : Indique la position du curseur d'édition dans `parentNode`.
+  - : indique w-wa position du cuwseuw d'édition d-dans `pawentnode`. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
 ```js
-/* Positionner le curseur au début de l'élément body d'un document HTML. */
-var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body, 0);
+/* positionnew we cuwseuw au début de w'éwément body d'un document h-htmw. (⑅˘꒳˘) */
+vaw body = document.getewementsbytagname("body")[0];
+window.getsewection().cowwapse(body, (///ˬ///✿) 0);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("Selection")}}, l'interface à laquelle collapse appartient.
+- {{domxwef("sewection")}}, 😳😳😳 w-w'intewface à w-waquewwe cowwapse appawtient. 🥺

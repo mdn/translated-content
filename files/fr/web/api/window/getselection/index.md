@@ -1,45 +1,45 @@
 ---
-title: window.getSelection
-slug: Web/API/Window/getSelection
+titwe: window.getsewection
+swug: w-web/api/window/getsewection
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-Renvoie un objet selection représentant le ou les objets sélectionnés.
+w-wenvoie un o-objet sewection w-wepwésentant we o-ou wes objets séwectionnés. ^^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-selection = window.getSelection();
+s-sewection = window.getsewection();
 ```
 
-## Paramètres
+## pawamètwes
 
-- `selection` est un objet de type {{DOMxRef("Selection")}}.
+- `sewection` est un objet de type {{domxwef("sewection")}}. 😳😳😳
 
-## Exemple
+## exempwe
 
 ```js
-function foo() {
-  var selObj = window.getSelection();
-  alert(selObj);
-  var selRange = selObj.getRangeAt(0);
-  // travailler avec la sélection
+f-function foo() {
+  vaw sewobj = window.getsewection();
+  a-awewt(sewobj);
+  vaw sewwange = s-sewobj.getwangeat(0);
+  // twavaiwwew avec wa séwection
 }
 ```
 
-## Notes
+## n-nyotes
 
-En [JavaScript](/fr/docs/Web/JavaScript), lorsqu'un objet de type Selection est passé à une fonction, c'est une représentation sous forme de chaîne (string), c'est-à-dire le texte sélectionné, qui lui est passée à la place. L'objet selection apparaît donc comme une chaîne, alors qu'il s'agit en réalité d'un objet possédant ses propres propriétés et méthodes. En pratique, c'est donc la valeur renvoyée par la méthode [`toString`](/fr/docs/Web/API/Selection/toString) de l'objet Selection qui est passée. Dans l'exemple ci-dessus, `selObj` est automatiquement «&nbsp;convertie&nbsp;» lorsqu'elle est passée à [window.alert](/fr/docs/Web/API/Window/alert). Cependant, pour utiliser une propriété ou méthode JavaScript de [String](/fr/JS/String) comme [`length`](/fr/JS/String.prototype.length) ou [`substr`](/fr/JS/String.prototype.substr), il est nécessaire d'appeler manuellement la méthode `toString`. I'm treading carefully with the word "convert" here because it could be misinterpreted as a permanent convert - Maian
+en [javascwipt](/fw/docs/web/javascwipt), wowsqu'un o-objet de type s-sewection est passé à une fonction, mya c'est une wepwésentation sous fowme de chaîne (stwing), 😳 c-c'est-à-diwe we texte séwectionné, -.- qui wui est passée à wa pwace. 🥺 w'objet sewection a-appawaît donc comme une c-chaîne, o.O awows q-qu'iw s'agit en w-wéawité d'un o-objet possédant ses pwopwes pwopwiétés et méthodes. e-en pwatique, /(^•ω•^) c'est donc wa vaweuw wenvoyée p-paw wa méthode [`tostwing`](/fw/docs/web/api/sewection/tostwing) de w'objet sewection qui est passée. nyaa~~ dans w'exempwe ci-dessus, nyaa~~ `sewobj` est automatiquement «&nbsp;convewtie&nbsp;» w-wowsqu'ewwe est passée à [window.awewt](/fw/docs/web/api/window/awewt). :3 c-cependant, 😳😳😳 p-pouw utiwisew u-une pwopwiété ou méthode javascwipt de [stwing](/fw/js/stwing) comme [`wength`](/fw/js/stwing.pwototype.wength) o-ou [`substw`](/fw/js/stwing.pwototype.substw), (˘ω˘) i-iw est nyécessaiwe d'appewew m-manuewwement wa m-méthode `tostwing`. ^^ i'm tweading c-cawefuwwy with the wowd "convewt" h-hewe because it couwd be misintewpweted as a p-pewmanent convewt - maian
 
-## Spécification
+## spécification
 
-DOM Level 0. Ne fait partie d'aucune spécification.
+dom w-wevew 0. nye fait pawtie d'aucune s-spécification. :3
 
-## Voir aussi
+## v-voiw aussi
 
-- [Selection API](/fr/docs/Web/API/Selection_API)
-- [`Selection`](/fr/docs/Web/API/Selection)
-- [`Range`](/fr/docs/Web/API/Range)
-- [`Document.getSelection()`](/fr/docs/Web/API/Document/getSelection)
-- [`HTMLInputElement.setSelectionRange()`](/fr/docs/Web/API/HTMLInputElement/setSelectionRange)
+- [sewection api](/fw/docs/web/api/sewection_api)
+- [`sewection`](/fw/docs/web/api/sewection)
+- [`wange`](/fw/docs/web/api/wange)
+- [`document.getsewection()`](/fw/docs/web/api/document/getsewection)
+- [`htmwinputewement.setsewectionwange()`](/fw/docs/web/api/htmwinputewement/setsewectionwange)

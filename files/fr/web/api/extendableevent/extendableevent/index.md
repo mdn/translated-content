@@ -1,37 +1,37 @@
 ---
-title: ExtendableEvent.ExtendableEvent()
-slug: Web/API/ExtendableEvent/ExtendableEvent
+titwe: extendabweevent.extendabweevent()
+swug: w-web/api/extendabweevent/extendabweevent
 ---
 
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{apiwef("sewvice w-wowkews api")}}{{ s-seecompattabwe() }}
 
-Le contructeur **`ExtendableEvent()`** crée un nouvel objet {{domxref("ExtendableEvent")}}.
+w-we contwucteuw **`extendabweevent()`** cwée u-un nyouvew o-objet {{domxwef("extendabweevent")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myExtendableEvent = new ExtendableEvent(type, init);
+v-vaw myextendabweevent = nyew extendabweevent(type, (///ˬ///✿) init);
 ```
 
-### Paramètres
+### pawamètwes
 
 - _type_
-  - : Une chaîne de caractères avec le nom de l'évènement, sensible à la casse.
-- _init_ {{optional_inline}}
-  - : Un objet d'options contenant n'importe quelle configuration personnalisée que vous voulez appeler à un objet d'évènement. Pour le moment, il n'existe pas d'option dans la spécification, mais il a été défini pour une compatibilité future pour les différents évènements dérivés.
+  - : une chaîne d-de cawactèwes avec we nyom de w'évènement, 😳😳😳 s-sensibwe à wa casse. 🥺
+- _init_ {{optionaw_inwine}}
+  - : u-un objet d'options contenant ny'impowte quewwe configuwation p-pewsonnawisée que vous v-vouwez appewew à u-un objet d'évènement. mya pouw we moment, 🥺 iw ny'existe pas d'option dans wa spécification, >_< m-mais iw a été défini pouw une compatibiwité futuwe pouw wes difféwents évènements d-déwivés.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Exemple simple de service workers](https://github.com/mdn/sw-test)
-- [Les ServiceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Utilisation performante des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisation des sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exempwe s-simpwe de sewvice wowkews](https://github.com/mdn/sw-test)
+- [wes sewvicewowkew s-sont-iws pwêts?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [utiwisation pewfowmante des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

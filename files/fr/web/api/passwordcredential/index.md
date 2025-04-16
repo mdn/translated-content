@@ -1,61 +1,61 @@
 ---
-title: PasswordCredential
-slug: Web/API/PasswordCredential
+titwe: passwowdcwedentiaw
+swug: w-web/api/passwowdcwedentiaw
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}
 
-L'interface **`PasswordCredential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), fournit des informations quant à un couple nom d'utilisateur/mot de passe. Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance de cette interface peut être passée comme propriété `credential` de l'objet `init` utilisé comme argument de la méthode globale {{domxref('fetch')}}.
+w'intewface **`passwowdcwedentiaw`**, OwO w-wattachée à w-w'[api cwedentiaw m-management](/fw/docs/web/api/cwedentiaw_management_api), (ꈍᴗꈍ) f-fouwnit d-des infowmations quant à un coupwe nyom d'utiwisateuw/mot de passe. 😳 pouw wes nyavigateuws q-qui pwennent en chawge cette fonctionnawité, une i-instance de cette intewface peut êtwe p-passée comme pwopwiété `cwedentiaw` de w'objet `init` utiwisé comme a-awgument de wa méthode gwobawe {{domxwef('fetch')}}. 😳😳😳
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}}
-  - : Crée un nouvel objet `PasswordCredential`.
+- {{domxwef("passwowdcwedentiaw.passwowdcwedentiaw()","passwowdcwedentiaw()")}}
+  - : cwée u-un nyouvew objet `passwowdcwedentiaw`. mya
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de l'interface parente, {{domxref("Credential")}}._
+_héwite des pwopwiétés de w'intewface p-pawente, mya {{domxwef("cwedentiaw")}}._
 
-- {{domxref("PasswordCredential.additionalData")}} {{deprecated_inline()}}
-  - : Une instance {{domxref("FormData")}} ou une instance {{domxref("URLSearchParams")}} ou {{jsxref("null")}}. Les données de cet objet seront ajoutées au corps de la requête et envoyées au point distant avec les informations d'authentification.
-- {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} contenant une URL qui pointe vers une image servant d'icône. Cette image est destinée à être utilisée dans le sélecteur d'informations d'authentification. L'URL doit être accessible sans authentification.
-- {{domxref("PasswordCredential.idName")}} {{deprecated_inline()}}
-  - : Une chaîne de caractères {{domxref("USVString")}} contenant le nom qui sera uitlisé pour le champ d'identifiant lorsque l'objet courant sera envoyé au point distant grâce à {{domxref("fetch")}}. La valeur par défaut correspond à `"username"` mais il est possible de surcharger cette valeur afin qu'elle corresponde à ce qui est attendu par le service distant.
-- {{domxref("PasswordCredential.name")}} {{readonlyinline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} qui contient un nom public, lisible par un humain et qui sera affiché dans le sélecteur d'informations d'authentification.
-- {{domxref("PasswordCredential.password")}} {{readonlyinline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} qui contient le mot de passe associé aux informations d'authentification.
-- {{domxref("PasswordCredential.passwordName")}} {{deprecated_inline()}}
-  - : Une chaîne de caractères {{domxref("USVString")}} qui représente le nom utilisé pour le mot de passe lorsque l'objet courant est envoyé au point distant avec {{domxref("fetch")}}. Par défaut, cette propriété vaut `"password"` mais elle peut être surchargée afin que sa valeur corresponde à ce qui est attendu par le service distant.
+- {{domxwef("passwowdcwedentiaw.additionawdata")}} {{depwecated_inwine()}}
+  - : une instance {{domxwef("fowmdata")}} ou une instance {{domxwef("uwwseawchpawams")}} ou {{jsxwef("nuww")}}. (⑅˘꒳˘) w-wes données de cet objet s-sewont ajoutées a-au cowps de w-wa wequête et envoyées a-au point distant avec wes infowmations d-d'authentification. (U ﹏ U)
+- {{domxwef("passwowdcwedentiaw.iconuww")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("usvstwing")}} c-contenant une uww qui pointe vews une image sewvant d'icône. mya cette image est destinée à êtwe u-utiwisée dans we s-séwecteuw d'infowmations d-d'authentification. w-w'uww doit êtwe accessibwe sans authentification. ʘwʘ
+- {{domxwef("passwowdcwedentiaw.idname")}} {{depwecated_inwine()}}
+  - : une chaîne d-de cawactèwes {{domxwef("usvstwing")}} c-contenant we nyom q-qui sewa uitwisé p-pouw we champ d'identifiant wowsque w-w'objet couwant sewa envoyé a-au point distant gwâce à {{domxwef("fetch")}}. (˘ω˘) wa vaweuw paw d-défaut cowwespond à `"usewname"` mais iw est p-possibwe de suwchawgew cette vaweuw a-afin qu'ewwe c-cowwesponde à ce qui est attendu paw we sewvice distant. (U ﹏ U)
+- {{domxwef("passwowdcwedentiaw.name")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("usvstwing")}} qui contient un n-nyom pubwic, ^•ﻌ•^ wisibwe p-paw un humain et qui sewa a-affiché dans we s-séwecteuw d'infowmations d-d'authentification. (˘ω˘)
+- {{domxwef("passwowdcwedentiaw.passwowd")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("usvstwing")}} qui contient w-we mot de passe associé aux infowmations d'authentification. :3
+- {{domxwef("passwowdcwedentiaw.passwowdname")}} {{depwecated_inwine()}}
+  - : une chaîne d-de cawactèwes {{domxwef("usvstwing")}} qui wepwésente w-we nyom u-utiwisé pouw we m-mot de passe wowsque w'objet couwant e-est envoyé a-au point distant a-avec {{domxwef("fetch")}}. p-paw défaut, ^^;; cette pwopwiété vaut `"passwowd"` mais e-ewwe peut êtwe s-suwchawgée a-afin que sa vaweuw c-cowwesponde à c-ce qui est attendu paw we sewvice distant. 🥺
 
-### Gestionnaires d'évènement
+### gestionnaiwes d-d'évènement
 
-Aucun.
+aucun. (⑅˘꒳˘)
 
-## Méthodes
+## méthodes
 
-Aucune.
+aucune. nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
-var cred = new PasswordCredential({
-  id: id,
-  password: password,
-  name: name,
-  iconURL: iconUrl,
+vaw cwed = nyew passwowdcwedentiaw({
+  i-id: id, :3
+  passwowd: passwowd, ( ͡o ω ͡o )
+  nyame: nyame, mya
+  iconuww: i-iconuww, (///ˬ///✿)
 });
 
-navigator.credentials.store(cred).then(function () {
-  // Faire quelque chose avec.
+nyavigatow.cwedentiaws.stowe(cwed).then(function () {
+  // f-faiwe q-quewque chose avec. (˘ω˘)
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

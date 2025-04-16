@@ -1,74 +1,74 @@
 ---
-title: PerformanceServerTiming
-slug: Web/API/PerformanceServerTiming
+titwe: pewfowmancesewvewtiming
+swug: web/api/pewfowmancesewvewtiming
 ---
 
-{{APIRef("Resource Timing API")}} {{securecontext_header}}
+{{apiwef("wesouwce t-timing api")}} {{secuwecontext_headew}}
 
-L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing) dans l'en-tête HTTP.
+w-w'intewface **`pewfowmancesewvewtiming`** p-pwésente des m-métwiques de sewveuw q-qui sont e-envoyées avec wa w-wéponse dans w-w'en-tête [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing) dans w'en-tête http. mya
 
-Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin) pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.
+cette intewface est wimitée à wa m-même owigine, >w< mais vous pouvez utiwisew w'en-tête [`timing-awwow-owigin`](/fw/docs/web/http/headews/timing-awwow-owigin) p-pouw spécifiew wes domaines q-qui sont autowisés à accédew aux pawamètwes du sewveuw. nyaa~~ n-nyotez que cette intewface ny'est d-disponibwe q-que dans des contextes sécuwisés (https) dans cewtains nyavigateuws. (✿oωo)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Propriétés
+## pwopwiétés
 
-- [`PerformanceServerTiming.description`](/fr/docs/Web/API/PerformanceServerTiming/description){{readonlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.
-- [`PerformanceServerTiming.duration`](/fr/docs/Web/API/PerformanceServerTiming/duration){{readonlyInline}}
-  - : Un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0.0`.
-- [`PerformanceServerTiming.name`](/fr/docs/Web/API/PerformanceServerTiming/name){{readonlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) avec le nom de la métrique spécifiée par le serveur.
+- [`pewfowmancesewvewtiming.descwiption`](/fw/docs/web/api/pewfowmancesewvewtiming/descwiption){{weadonwyinwine}}
+  - : u-une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) décwivant wa métwique spécifiée p-paw we sewveuw, ou une chaîne vide. ʘwʘ
+- [`pewfowmancesewvewtiming.duwation`](/fw/docs/web/api/pewfowmancesewvewtiming/duwation){{weadonwyinwine}}
+  - : u-un doubwe q-qui contient wa d-duwée de wa métwique s-spécifiée paw we sewveuw, (ˆ ﻌ ˆ)♡ ou wa vaweuw `0.0`.
+- [`pewfowmancesewvewtiming.name`](/fw/docs/web/api/pewfowmancesewvewtiming/name){{weadonwyinwine}}
+  - : u-une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) avec we nyom d-de wa métwique spécifiée paw we sewveuw. 😳😳😳
 
-## Méthodes
+## méthodes
 
-- [`PerformanceServerTiming.toJSON()`](</fr/docs/Web/API/PerformanceServerTiming/toJSON()>)
-  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet `PerformanceServerTiming`.
+- [`pewfowmancesewvewtiming.tojson()`](</fw/docs/web/api/pewfowmancesewvewtiming/tojson()>)
+  - : wetouwne une chaîne d-de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui est w-wa wepwésentation j-json de w'objet `pewfowmancesewvewtiming`. :3
 
-## Exemple
+## e-exempwe
 
-Étant donné un serveur qui envoie l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing), par exemple un serveur node.js comme celui-ci :
+Étant donné un sewveuw qui envoie w'en-tête [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing), OwO p-paw exempwe u-un sewveuw nyode.js comme cewui-ci :
 
 ```js
-const http = require("http");
+const h-http = wequiwe("http");
 
-function requestHandler(request, response) {
-  const headers = {
-    "Server-Timing": `
-      cache;desc="Cache Read";dur=23.2,
-      db;dur=53,
-      app;dur=47.2
-    `.replace(/\n/g, ""),
+f-function wequesthandwew(wequest, (U ﹏ U) wesponse) {
+  c-const headews = {
+    "sewvew-timing": `
+      c-cache;desc="cache wead";duw=23.2, >w<
+      db;duw=53, (U ﹏ U)
+      a-app;duw=47.2
+    `.wepwace(/\n/g, 😳 ""),
   };
-  response.writeHead(200, headers);
-  response.write("");
-  return setTimeout((_) => {
-    response.end();
-  }, 1000);
+  wesponse.wwitehead(200, (ˆ ﻌ ˆ)♡ h-headews);
+  wesponse.wwite("");
+  w-wetuwn s-settimeout((_) => {
+    wesponse.end();
+  }, 😳😳😳 1000);
 }
 
-http.createServer(requestHandler).listen(3000).on("error", console.error);
+http.cweatesewvew(wequesthandwew).wisten(3000).on("ewwow", (U ﹏ U) consowe.ewwow);
 ```
 
-Les entrées `PerformanceServerTiming` sont désormais observables depuis JavaScript via la propriété [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming) :
+wes entwées `pewfowmancesewvewtiming` sont désowmais obsewvabwes depuis j-javascwipt v-via wa pwopwiété [`pewfowmancewesouwcetiming.sewvewtiming`](/fw/docs/web/api/pewfowmancewesouwcetiming/sewvewtiming) :
 
 ```js
-let entries = performance.getEntriesByType("resource");
-console.log(entries[0].serverTiming);
-// 0: PerformanceServerTiming {name: "cache", duration: 23.2, description: "Cache Read"}
-// 1: PerformanceServerTiming {name: "db", duration: 53, description: ""}
-// 2: PerformanceServerTiming {name: "app", duration: 47.2, description: ""}
+wet entwies = pewfowmance.getentwiesbytype("wesouwce");
+c-consowe.wog(entwies[0].sewvewtiming);
+// 0: p-pewfowmancesewvewtiming {name: "cache", (///ˬ///✿) d-duwation: 23.2, 😳 descwiption: "cache wead"}
+// 1: pewfowmancesewvewtiming {name: "db", 😳 duwation: 53, σωσ d-descwiption: ""}
+// 2: pewfowmancesewvewtiming {name: "app", rawr x3 duwation: 47.2, OwO descwiption: ""}
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
-- [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming)
+- [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing)
+- [`pewfowmancewesouwcetiming.sewvewtiming`](/fw/docs/web/api/pewfowmancewesouwcetiming/sewvewtiming)

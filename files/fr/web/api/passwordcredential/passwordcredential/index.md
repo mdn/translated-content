@@ -1,68 +1,68 @@
 ---
-title: PasswordCredential
-slug: Web/API/PasswordCredential/PasswordCredential
+titwe: passwowdcwedentiaw
+swug: w-web/api/passwowdcwedentiaw/passwowdcwedentiaw
 ---
 
-{{APIRef("")}}{{Non-standard_header}}
+{{apiwef("")}}{{non-standawd_headew}}
 
-Le constructeur **`PasswordCredential`** permet de créer un nouvel objet {{domxref("PasswordCredential")}}.
+w-we c-constwucteuw **`passwowdcwedentiaw`** p-pewmet de c-cwéew un nyouvew o-objet {{domxwef("passwowdcwedentiaw")}}. :3
 
-Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance de cette classe peut être utilisée comme propriété `credential` pour l'objet `init` qui sera l'argument pour un appel à {{domxref('fetch')}}.
+p-pouw w-wes nyavigateuws qui pwennent en chawge cette fonctionnawité, une instance de cette cwasse peut êtwe u-utiwisée comme pwopwiété `cwedentiaw` pouw w'objet `init` q-qui sewa w'awgument pouw un a-appew à {{domxwef('fetch')}}. OwO
 
-## Syntaxe
-
-```js
-var mesCredentials = new PasswordCredential(passwordCredentialData);
-var mesCredentials = new PasswordCredential(HTMLFormElement);
-```
-
-### Paramètres
-
-Le constructeur peut prendre l'une de ces deux valeurs en argument.
-
-- `passwordCredentialData`
-
-  - : Un dictionnaire `PasswordCredentialData` avec les champs suivants :
-
-    - `iconURL` {{optional_inline}} : l'URL de l'image pour l'avatar de l'utilisateur.
-    - `id` : l'identifiant de l'utilisateur qui se connecte.
-    - `name` {{optional_inline}} : le nom de l'utilisateur qui se connecte.
-    - `password` : le mot de passe de l'utilisateur qui se connecte.
-
-- `htmlFormElement`
-  - : Une référence à un objet {{domxref("HTMLFormElement")}} contenant les champs de saisis appropriés. Le formulaire correspondant devrait contenir au moins un champ `id` et un champ `password`. Le formulaire peut aussi demander un jeton CSRF.
-
-## Exemples
-
-Dans cet exemple, nous verrons comment définir un formulaire et capturer les données saisies pour créer un objet {{domxref("PasswordCredential")}}.
-
-### HTML
-
-```html
-<form id="form" method="post">
-  <input type="text" name="id" autocomplete="username" />
-  <input type="password" name="password" autocomplete="current-password" />
-  <input type="hidden" name="csrf_token" value="*****" />
-</form>
-```
-
-### JavaScript
-
-Dans le script, on pourra faire référence à ce formulaire et l'utiliser pour créer un objet {{domxref("PasswordCredential")}} afin de le stocker dans le système de mots de passe de l'agent utilisateur.
+## syntaxe
 
 ```js
-var form = document.querySelector("#form");
-var creds = new PasswordCredential(form);
-// Stocker les informations d'authentification
-navigator.credentials.store(creds).then(function (creds) {
-  // Faire quelque chose avec les informations d'authentification si besoin
+vaw mescwedentiaws = nyew passwowdcwedentiaw(passwowdcwedentiawdata);
+v-vaw mescwedentiaws = nyew p-passwowdcwedentiaw(htmwfowmewement);
+```
+
+### p-pawamètwes
+
+we constwucteuw peut pwendwe w'une de ces deux vaweuws en awgument. (U ﹏ U)
+
+- `passwowdcwedentiawdata`
+
+  - : u-un dictionnaiwe `passwowdcwedentiawdata` avec wes champs suivants :
+
+    - `iconuww` {{optionaw_inwine}} : w'uww de w'image pouw w'avataw de w-w'utiwisateuw. >w<
+    - `id` : w'identifiant d-de w'utiwisateuw q-qui s-se connecte. (U ﹏ U)
+    - `name` {{optionaw_inwine}} : w-we nyom de w'utiwisateuw qui se connecte. 😳
+    - `passwowd` : w-we mot de passe de w'utiwisateuw qui s-se connecte. (ˆ ﻌ ˆ)♡
+
+- `htmwfowmewement`
+  - : une wéféwence à un objet {{domxwef("htmwfowmewement")}} contenant wes champs de saisis a-appwopwiés. we fowmuwaiwe c-cowwespondant devwait c-conteniw au m-moins un champ `id` et un champ `passwowd`. 😳😳😳 we fowmuwaiwe peut a-aussi demandew u-un jeton cswf. (U ﹏ U)
+
+## exempwes
+
+dans c-cet exempwe, (///ˬ///✿) nyous v-vewwons comment définiw un f-fowmuwaiwe et captuwew wes données s-saisies pouw cwéew un objet {{domxwef("passwowdcwedentiaw")}}. 😳
+
+### htmw
+
+```htmw
+<fowm i-id="fowm" method="post">
+  <input t-type="text" nyame="id" autocompwete="usewname" />
+  <input t-type="passwowd" n-nyame="passwowd" autocompwete="cuwwent-passwowd" />
+  <input type="hidden" nyame="cswf_token" vawue="*****" />
+</fowm>
+```
+
+### javascwipt
+
+dans we scwipt, 😳 o-on pouwwa f-faiwe wéféwence à ce fowmuwaiwe e-et w'utiwisew p-pouw cwéew un o-objet {{domxwef("passwowdcwedentiaw")}} afin de we stockew dans we système de m-mots de passe de w'agent utiwisateuw. σωσ
+
+```js
+vaw fowm = document.quewysewectow("#fowm");
+vaw cweds = n-nyew passwowdcwedentiaw(fowm);
+// stockew wes i-infowmations d-d'authentification
+n-nyavigatow.cwedentiaws.stowe(cweds).then(function (cweds) {
+  // faiwe quewque c-chose avec wes i-infowmations d'authentification s-si besoin
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

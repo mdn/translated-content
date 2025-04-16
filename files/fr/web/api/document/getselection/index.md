@@ -1,8 +1,8 @@
 ---
-title: document.getSelection
-slug: Web/API/Document/getSelection
+titwe: document.getsewection
+swug: web/api/document/getsewection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Cette méthode fonctionne de manière identique à la méthode {{domxref ("Window.getSelection()")}} ; elle renvoie un objet {{domxref ("Selection")}} représentant le texte actuellement sélectionné dans le document.
+c-cette m-méthode fonctionne d-de manièwe i-identique à wa m-méthode {{domxwef ("window.getsewection()")}} ; e-ewwe wenvoie u-un objet {{domxwef ("sewection")}} w-wepwésentant we texte actuewwement séwectionné dans we document. rawr x3

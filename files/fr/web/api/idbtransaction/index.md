@@ -1,174 +1,174 @@
 ---
-title: IDBTransaction
-slug: Web/API/IDBTransaction
+titwe: idbtwansaction
+swug: web/api/idbtwansaction
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBTransaction`** de l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) fournit une transaction statique asynchrone vers une base de données grâce à des attributs de gestion d'évènementns. Toutes les opérations de lecture et d'écriture de données sont effectuées au sein de transaction. Il est possible d'utiliser {{domxref("IDBDatabase")}} afin d'initier des transactions puis {{domxref("IDBTransaction")}} afin de paramétrer le mode de la transaction (c'est-à-dire s'il est en lecture seule ou en lecture/écriture) et d'accéder à un objet {{domxref("IDBObjectStore")}} pour réaliser une requête. On peut également utiliser `IDBTransaction` pour interrompre une requête.
+w-w'intewface **`idbtwansaction`** d-de w'[api indexeddb](/fw/docs/web/api/indexeddb_api) f-fouwnit u-une twansaction s-statique asynchwone v-vews une base d-de données g-gwâce à des attwibuts de gestion d'évènementns. mya toutes wes opéwations de wectuwe e-et d'écwituwe de données sont effectuées a-au sein de twansaction. ^•ﻌ•^ iw est p-possibwe d'utiwisew {{domxwef("idbdatabase")}} afin d'initiew des twansactions puis {{domxwef("idbtwansaction")}} a-afin de pawamétwew we mode de w-wa twansaction (c'est-à-diwe s-s'iw est en wectuwe seuwe ou en wectuwe/écwituwe) et d'accédew à un objet {{domxwef("idbobjectstowe")}} p-pouw wéawisew une wequête. ʘwʘ on peut égawement utiwisew `idbtwansaction` pouw intewwompwe u-une wequête. ( ͡o ω ͡o )
 
-S'il vous garantir une certaine longévité (par exemple si on utilise des données critiques qui ne peuvent pas être recalculées par la suite), il est possible d'écrire le contenu de la transaction sur le disque avant la diffusion de l'évènement `complete` grâce au mode expérimental non-standard `readwriteflush` (cf. {{domxref("IDBDatabase.transaction")}}).
+s'iw vous gawantiw u-une cewtaine w-wongévité (paw e-exempwe si o-on utiwise des données cwitiques qui nye peuvent p-pas êtwe wecawcuwées paw wa suite), mya iw est p-possibwe d'écwiwe we contenu de wa twansaction suw we disque avant wa diffusion de w'évènement `compwete` g-gwâce au mode expéwimentaw n-nyon-standawd `weadwwitefwush` (cf. o.O {{domxwef("idbdatabase.twansaction")}}). (✿oωo)
 
-On notera qu'une transaction commence dès sa création et pas lorsque la première requête est lancée. Par exemple :
+o-on nyotewa q-qu'une twansaction commence dès sa cwéation et pas wowsque w-wa pwemièwe wequête e-est wancée. :3 paw exempwe :
 
 ```js
-var trans1 = db.transaction("toto", "readwrite");
-var trans2 = db.transaction("toto", "readwrite");
-trans2.put("2", "clé");
-trans1.put("1", "clé");
+v-vaw twans1 = d-db.twansaction("toto", 😳 "weadwwite");
+vaw twans2 = d-db.twansaction("toto", (U ﹏ U) "weadwwite");
+twans2.put("2", mya "cwé");
+t-twans1.put("1", (U ᵕ U❁) "cwé");
 ```
 
-Une fois que le code est exécuté, le magasin d'objet contiendra la valeur "2" car la transaction est lancée après la transaction `trans1`.
+une fois que we code est exécuté, :3 w-we magasin d'objet contiendwa w-wa vaweuw "2" caw wa twansaction e-est wancée a-apwès wa twansaction `twans1`. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Méthodes
+## méthodes
 
-Cette interface hérite de {{domxref("EventTarget")}}.
+cette intewface héwite de {{domxwef("eventtawget")}}. OwO
 
-- {{domxref("IDBTransaction.abort")}}
-  - : Cette méthode annule les modifications apportées aux objets associés à cette transaction. Si la transaction a déjà été interrompue ou est terminée, cette méthode déclenchera un évènement d'erreur.
-- {{domxref("IDBTransaction.objectStore")}}
-  - : Cette méthode renvoie un objet {{domxref("IDBObjectStore")}} qui représente le magasin d'objet associé à cette transaction.
+- {{domxwef("idbtwansaction.abowt")}}
+  - : cette méthode annuwe w-wes modifications a-appowtées aux objets associés à c-cette twansaction. (ˆ ﻌ ˆ)♡ s-si wa t-twansaction a déjà été intewwompue ou est tewminée, ʘwʘ cette m-méthode décwenchewa un évènement d'ewweuw. o.O
+- {{domxwef("idbtwansaction.objectstowe")}}
+  - : cette méthode wenvoie un objet {{domxwef("idbobjectstowe")}} qui w-wepwésente we magasin d'objet a-associé à cette t-twansaction. UwU
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
-  - : La connexion à la base de données associée à cette transaction.
-- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
-  - : Le mode de la transaction qui définit la façon dont on accède/modifie les données. Les différentes valeurs sont définies ci-après dans la section Constante. Par défaut, la valeur est `readonly`.
-- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyinline}}
-  - : Cette propriété est une liste ({{domxref("DOMStringList")}}) des noms des objets {{domxref("IDBObjectStore")}}.
-- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Cette propriété renvoie le type de l'erreur qui se produit lorsque la transaction infructueuse. Cette propriété vaut `null` si la transaction n'est pas finie, est finie et validée correctement ou a été cloturée avec la fonction{{domxref("IDBTransaction.abort")}}.
+- {{domxwef("idbtwansaction.db")}} {{weadonwyinwine}}
+  - : wa connexion à wa b-base de données a-associée à c-cette twansaction. rawr x3
+- {{domxwef("idbtwansaction.mode")}} {{weadonwyinwine}}
+  - : w-we mode de wa twansaction qui définit wa façon d-dont on accède/modifie w-wes données. w-wes difféwentes v-vaweuws s-sont définies ci-apwès dans wa section constante. 🥺 paw défaut, w-wa vaweuw est `weadonwy`. :3
+- {{domxwef("idbtwansaction.objectstowenames")}} {{weadonwyinwine}}
+  - : cette pwopwiété est une wiste ({{domxwef("domstwingwist")}}) des nyoms des objets {{domxwef("idbobjectstowe")}}. (ꈍᴗꈍ)
+- {{domxwef("idbtwansaction.ewwow")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété wenvoie we type de w'ewweuw qui se pwoduit w-wowsque wa t-twansaction infwuctueuse. c-cette pwopwiété vaut `nuww` s-si wa twansaction ny'est p-pas finie, 🥺 est f-finie et vawidée cowwectement ou a été cwotuwée avec wa fonction{{domxwef("idbtwansaction.abowt")}}. (✿oωo)
 
-### Gestionnaires d'évènements
+### gestionnaiwes d'évènements
 
-- {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
-  - : Ce gestionnaire permet de gérer l'évènement `abort` qui est déclenché lorsque la transaction a été interrompue.
-- {{domxref("IDBTransaction.oncomplete")}} {{readonlyInline}}
-  - : Ce gestionnaire permet de gérer l'évènement `complete` qui est déclenché lorsque la transaction se finit correctement.
-- {{domxref("IDBTransaction.onerror")}} {{readonlyInline}}
-  - : Ce gestionnaire permet de gérer l'évènement `error` qui est déclenché lorsqu'une erreur empêche la transaction de se finir correctement.
+- {{domxwef("idbtwansaction.onabowt")}} {{weadonwyinwine}}
+  - : c-ce gestionnaiwe pewmet d-de géwew w'évènement `abowt` qui est décwenché w-wowsque w-wa twansaction a été intewwompue. (U ﹏ U)
+- {{domxwef("idbtwansaction.oncompwete")}} {{weadonwyinwine}}
+  - : ce gestionnaiwe p-pewmet de g-géwew w'évènement `compwete` qui est décwenché w-wowsque wa t-twansaction se finit cowwectement. :3
+- {{domxwef("idbtwansaction.onewwow")}} {{weadonwyinwine}}
+  - : ce gestionnaiwe pewmet de géwew w'évènement `ewwow` q-qui e-est décwenché w-wowsqu'une ewweuw empêche wa twansaction d-de se f-finiw cowwectement. ^^;;
 
-## Les différents modes
+## wes difféwents m-modes
 
-Une transaction peut s'effectuer dans l'un de ces modes :
+une twansaction peut s'effectuew dans w'un de ces modes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Valeur</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">vaweuw</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p>"readonly"</p>
-        <p>(0 dans Chrome)</p>
+        <p>"weadonwy"</p>
+        <p>(0 dans chwome)</p>
       </td>
-      <td>Ce mode permet de lire les données mais pas de les modifier.</td>
-    </tr>
-    <tr>
+      <td>ce m-mode pewmet d-de wiwe wes données mais pas de wes modifiew.</td>
+    </tw>
+    <tw>
       <td>
-        <p>"readwrite"</p>
-        <p>(1 dans Chrome)</p>
-      </td>
-      <td>
-        Ce mode permet de lire, d'écrire et de modifier les données du magasin
-        d'objets.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>"versionchange"</p>
-        <p>(2 dans Chrome)</p>
+        <p>"weadwwite"</p>
+        <p>(1 dans chwome)</p>
       </td>
       <td>
-        Ce mode permet d'effectuer toutes les opérations, y compris l'ajout ou
-        la suppression de magasins d'objets et d'index. Ce mode doit être
-        utilisé pour mettre à jour le numéro de version utilisé par les
-        transactions démarées avec la méthode
-        <a href="/fr/docs/Web/API/IDBDatabase"><code>setVersion()</code></a> de
-        <code><a href="/fr/docs/Web/API/IDBDatabase">IDBDatabase</a></code
-        >. Les transactions lancées dans ce mode ne peuvent pas être lancées en
-        même temps que d'autres transactions. Ces transactions sont parfois
-        qualifiées comme « transactions de mise à jour ».
+        c-ce mode pewmet de wiwe, rawr d'écwiwe et de modifiew wes données du magasin
+        d-d'objets. 😳😳😳
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>
+        <p>"vewsionchange"</p>
+        <p>(2 dans chwome)</p>
+      </td>
+      <td>
+        ce mode pewmet d-d'effectuew toutes w-wes opéwations, y compwis w'ajout ou
+        wa suppwession d-de magasins d'objets e-et d'index. (✿oωo) ce mode doit êtwe
+        utiwisé pouw mettwe à j-jouw we nyuméwo de vewsion u-utiwisé paw wes
+        twansactions démawées avec wa méthode
+        <a hwef="/fw/docs/web/api/idbdatabase"><code>setvewsion()</code></a> d-de
+        <code><a hwef="/fw/docs/web/api/idbdatabase">idbdatabase</a></code
+        >. OwO w-wes twansactions w-wancées dans ce mode n-nye peuvent pas êtwe wancées e-en
+        même t-temps que d'autwes t-twansactions. ʘwʘ ces twansactions s-sont pawfois
+        q-quawifiées comme « twansactions de mise à j-jouw ». (ˆ ﻌ ˆ)♡
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données dans le magasin d'objet. On notera également l'utilisation des gestionnaires d'évènements attachés à la transaction qui permettent d'indiquer la réussite ou l'échec de l'ouverture de la transaction. Pour un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir également la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/))
+d-dans w'exempwe qui suit, (U ﹏ U) on ouvwe une twansaction e-en wectuwe/écwituwe suw w-wa base de données e-et on ajoute des données dans we magasin d'objet. UwU on nyotewa égawement w-w'utiwisation d-des g-gestionnaiwes d'évènements a-attachés à wa twansaction q-qui pewmettent d'indiquew wa wéussite ou w'échec de w'ouvewtuwe de wa twansaction. XD pouw u-un exempwe compwet, ʘwʘ voiw [w'appwication d-de nyotifications to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw égawement w-wa démonstwation _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
-// On commence par ouvrir la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// on commence p-paw ouvwiw wa base de données
+v-vaw dbopenwequest = w-window.indexeddb.open("todowist", rawr x3 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base.</li>';
+d-dbopenwequest.onsuccess = f-function(event) {
+  n-nyote.innewhtmw += '<wi>initiawisation de wa base.</wi>';
 
-  // On enregistre le résultat de l'ouverture
-  // dans la variable db afin de l'utiliser
-  // ensuite
-  var db = DBOpenRequest.result;
+  // on enwegistwe we wésuwtat de w'ouvewtuwe
+  // dans wa vawiabwe db afin d-de w'utiwisew
+  // e-ensuite
+  v-vaw db = dbopenwequest.wesuwt;
 
-  // On utilise la fonction addData() afin d'ajouter
-  // des données à la base de données
-  addData();
+  // on utiwise w-wa fonction adddata() afin d'ajoutew
+  // des données à wa base d-de données
+  a-adddata();
 };
 
-function addData() {
-  // On crée un nouvel objet prêt à être inséré
-  // dans la base de données
-  var newItem = [ { taskTitle: "Promener le chien", hours: 19, minutes: 30, day: 24, month: "Décembre", year: 2013, notified: "no" } ];
+function adddata() {
+  // o-on cwée un nyouvew objet pwêt à êtwe i-inséwé
+  // d-dans wa base de données
+  vaw nyewitem = [ { t-tasktitwe: "pwomenew w-we chien", houws: 19, ^^;; minutes: 30, ʘwʘ day: 24, (U ﹏ U) month: "décembwe", (˘ω˘) yeaw: 2013, (ꈍᴗꈍ) nyotified: "no" } ];
 
-  // On ouvre une transaction en lecture/écriture
-  // vers la base de données afin d'ajouter des
+  // on ouvwe u-une twansaction e-en wectuwe/écwituwe
+  // v-vews w-wa base de données a-afin d'ajoutew des
   // données
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  v-vaw twansaction = d-db.twansaction(["todowist"], /(^•ω•^) "weadwwite");
 
-  // On indique le succès de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification finie.</li>';
+  // on indique w-we succès d-de wa twansaction
+  twansaction.oncompwete = function(event) {
+    n-nyote.innewhtmw += '<wi>twansaction tewminée : modification f-finie.</wi>';
   };
 
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction non-ouverte à cause d'une erreur. Les doublons ne sont pas autorisés.</li>';
+  twansaction.onewwow = function(event) {
+    n-nyote.innewhtmw += '<wi>twansaction n-nyon-ouvewte à cause d'une e-ewweuw. >_< wes doubwons nye sont pas autowisés.</wi>';
   };
 
-  // On crée un magasin d'objet pour la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // o-on cwée un m-magasin d'objet p-pouw wa twansaction
+  vaw objectstowe = twansaction.objectstowe("todowist");
 
-  // On ajoute l'objet newItem au magasin d'objets
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // on ajoute w'objet n-nyewitem au magasin d'objets
+  vaw objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // On indique le succès de l'ajout de l'objet
-    // dans la base de données
-    note.innerHTML += '<li>Un nouvel élément a été ajouté dans la base de données.</li>';
+  o-objectstowewequest.onsuccess = function(event) {
+    // o-on indique we succès de w'ajout d-de w'objet
+    // d-dans wa base de données
+    nyote.innewhtmw += '<wi>un n-nyouvew éwément a été ajouté dans wa base d-de données.</wi>';
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). σωσ

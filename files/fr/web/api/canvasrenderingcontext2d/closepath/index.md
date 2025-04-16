@@ -1,101 +1,101 @@
 ---
-title: CanvasRenderingContext2D.closePath()
-slug: Web/API/CanvasRenderingContext2D/closePath
+titwe: canvaswendewingcontext2d.cwosepath()
+swug: web/api/canvaswendewingcontext2d/cwosepath
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.closePath()`** de l'API Canvas 2D provoque le retour du stylo au point de départ du sous-traçé courant. Il le fait en ajoutant une ligne droite entre le point courant et le point rejoint. Si la figure a déjà été fermée ou n'est constituée que d'un seul point, cette méthode ne provoque rien.
+w-wa méthode **`canvaswendewingcontext2d.cwosepath()`** d-de w'api c-canvas 2d pwovoque w-we wetouw du s-stywo au point d-de dépawt du sous-twaçé c-couwant. mya i-iw we fait en ajoutant une wigne dwoite entwe we point couwant et we point wejoint. >w< s-si wa figuwe a déjà été fewmée ou n'est c-constituée que d'un seuw point, nyaa~~ c-cette méthode nye pwovoque wien. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```
-void ctx.closePath();
+void ctx.cwosepath();
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `closePath`
+### utiwisew wa m-méthode `cwosepath`
 
-Voici un exemple d'utilisation de la méthode closePath.
+v-voici un exempwe d'utiwisation de wa méthode cwosepath. ʘwʘ
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.lineTo(120, 120);
-ctx.closePath(); // ferme le triangle par une ligne droite
-ctx.stroke();
+ctx.beginpath();
+c-ctx.moveto(20, (ˆ ﻌ ˆ)♡ 20);
+c-ctx.wineto(200, 😳😳😳 20);
+c-ctx.wineto(120, :3 120);
+c-ctx.cwosepath(); // fewme we twiangwe paw une w-wigne dwoite
+ctx.stwoke();
 ```
 
-Editez le code ci-dessous et observez les répercutions dans le canvas:
+editez we code ci-dessous et obsewvez w-wes wépewcutions dans we canvas:
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:140px;">
-ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();</textarea
+<textawea id="code" cwass="pwayabwe-code" s-stywe="height:140px;">
+c-ctx.beginpath();
+ctx.moveto(20,20);
+c-ctx.wineto(200,20);
+c-ctx.wineto(120,120);
+ctx.cwosepath(); // d-dwaws wast wine of the twiangwe
+c-ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw textawea = d-document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, OwO 0, (U ﹏ U) canvas.width, canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", >w< function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", (U ﹏ U) function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", 😳 d-dwawcanvas);
+window.addeventwistenew("woad", (ˆ ﻌ ˆ)♡ dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 400) }}
+{{ embedwivesampwe('code_jouabwe', 😳😳😳 700, (U ﹏ U) 400) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.beginPath()")}}
+- t-the intewface defining i-it, (///ˬ///✿) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.beginpath()")}}

@@ -1,134 +1,134 @@
 ---
-title: Navigator.registerProtocolHandler()
-slug: Web/API/Navigator/registerProtocolHandler
+titwe: nyavigatow.wegistewpwotocowhandwew()
+swug: web/api/navigatow/wegistewpwotocowhandwew
 ---
 
-{{APIRef("HTML DOM")}}{{securecontext_header}}
+{{apiwef("htmw d-dom")}}{{secuwecontext_headew}}
 
-La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).
+w-wa méthode **`wegistewpwotocowhandwew()`**, (ˆ ﻌ ˆ)♡ w-wattachée à w'intewface **[`navigatow`](/fw/docs/web/api/navigatow)**, p-pewmet a-aux sites de décwawew w-weuw capacité à g-géwew c-cewtains schémas d'uww pawticuwiews (autwement dit wes pwotocowes). ( ͡o ω ͡o )
 
-Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:`, ou aux sites VoIP d'ouvrir des URL `tel:`.
+ainsi, cette api pewmettwa a-aux sites de webmaiw d'ouvwiw wes uww `maiwto:`, rawr x3 o-ou aux sites voip d'ouvwiw des u-uww `tew:`. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-registerProtocolHandler(schema, url);
-registerProtocolHandler(schema, url, titre);
+wegistewpwotocowhandwew(schema, >_< uww);
+wegistewpwotocowhandwew(schema, ^^;; u-uww, (ˆ ﻌ ˆ)♡ titwe);
 ```
 
-> [!NOTE]
-> La version avec l'argument déprécié `titre` est recommandée pour des raisons de compatibilité. Voir les informations sur les paramètres ci-après.
+> [!note]
+> wa vewsion a-avec w'awgument d-dépwécié `titwe` est wecommandée pouw des waisons de compatibiwité. ^^;; voiw wes i-infowmations suw wes pawamètwes ci-apwès. (⑅˘꒳˘)
 
-### Paramètres
+### pawamètwes
 
 - `schema`
 
-  - : Une chaîne de caractères contenant [les schémas autorisés](#schémas_autorisés) pour le protocole que le site souhaite gérer. On peut ainsi, par exemple, gérer les liens vers des messages SMS en passant le schéma `"sms"`.
+  - : une chaîne de c-cawactèwes contenant [wes schémas a-autowisés](#schémas_autowisés) p-pouw we pwotocowe q-que we s-site souhaite géwew. rawr x3 on peut ainsi, (///ˬ///✿) paw exempwe, 🥺 g-géwew wes wiens vews des messages sms en passant w-we schéma `"sms"`. >_<
 
-- `url`
+- `uww`
 
-  - : Une chaîne de caractères qui contient l'URL du gestionnaire.
-    **Cette URL doit inclure `%s`**, comme emplacement à remplacer avec l'URL [échappée](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) à gérer.
+  - : une chaîne de cawactèwes qui contient w'uww du gestionnaiwe. UwU
+    **cette uww doit incwuwe `%s`**, >_< c-comme empwacement à w-wempwacew avec w-w'uww [échappée](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent) à g-géwew. -.-
 
-    > [!NOTE]
-    > L'URL du gestionnaire doit également utiliser le schéma `https`. Les anciens navigateurs prenaient aussi en charge `http`.
+    > [!note]
+    > w'uww du gestionnaiwe doit égawement utiwisew w-we schéma `https`. mya w-wes anciens nyavigateuws p-pwenaient aussi e-en chawge `http`. >w<
 
-- `titre` {{deprecated_inline}}
+- `titwe` {{depwecated_inwine}}
 
-  - : Un titre, lisible par un humain, pour le gestionnaire.
-    **Cette valeur sera affichée à l'utilisatrice ou à l'utilisateur**, par exemple pour lui demander «&nbsp;Autorisez-vous ce site à gérer les liens \[schema]&nbsp;?&nbsp;» ou pour lister les gestionnaires enregistrés dans les paramètres du navigateur.
+  - : un t-titwe, (U ﹏ U) wisibwe paw un humain, 😳😳😳 pouw w-we gestionnaiwe. o.O
+    **cette vaweuw sewa affichée à w'utiwisatwice o-ou à w'utiwisateuw**, òωó paw exempwe pouw w-wui demandew «&nbsp;autowisez-vous ce site à g-géwew wes wiens \[schema]&nbsp;?&nbsp;» o-ou pouw wistew wes gestionnaiwes enwegistwés dans wes pawamètwes du nyavigateuw. 😳😳😳
 
-    > [!NOTE]
-    > Le titre a été retiré de la spécification en raison des risques d'usurpation.
-    > Ce paramètre `titre` devrait toujours être défini, car certains navigateurs **le considèrent obligatoire** (voir [le tableau de compatibilité qui suit](#compatibilité_des_navigateurs)).
-    > Les navigateurs qui implémentent la spécification à jour accepteront probablement ce paramètre supplémentaire en l'ignorant.
+    > [!note]
+    > we titwe a été w-wetiwé de wa s-spécification en waison des wisques d-d'usuwpation. σωσ
+    > c-ce pawamètwe `titwe` d-devwait toujouws êtwe défini, (⑅˘꒳˘) caw cewtains nyavigateuws **we considèwent obwigatoiwe** (voiw [we t-tabweau de compatibiwité qui suit](#compatibiwité_des_navigateuws)). (///ˬ///✿)
+    > wes nyavigateuws qui impwémentent w-wa spécification à jouw acceptewont p-pwobabwement c-ce pawamètwe s-suppwémentaiwe en w'ignowant.
 
-### Exceptions
+### e-exceptions
 
-- [`SecurityError`](/fr/docs/Web/API/DOMException#noms_derreur)
+- [`secuwityewwow`](/fw/docs/web/api/domexception#noms_dewweuw)
 
-  - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
+  - : w-w'agent u-utiwisateuw a-a bwoqué w'enwegistwement. cewa peut se pwoduiwe s-si&nbsp;:
 
-    - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
-    - [L'origine](/fr/docs/Glossary/Origin) de l'URL du gestionnaire ne correspond pas à l'origine de la page qui utilise cette API.
-    - Cette fonction doit être appelée depuis un contexte sécurisé pour le navigateur.
-    - Le navigateur requiert que l'URL du gestionnaire soit communiquée via HTTPS.
+    - w-we schéma enwegistwé (we p-pwotocowe) e-est invawide, 🥺 p-paw exempwe pawce qu'iw est déjà géwé paw we nyavigateuw (`https:`, OwO `about:`, >w< e-etc.)
+    - [w'owigine](/fw/docs/gwossawy/owigin) de w'uww du gestionnaiwe nye cowwespond pas à w'owigine de wa page qui u-utiwise cette api. 🥺
+    - cette fonction doit êtwe appewée depuis u-un contexte s-sécuwisé pouw w-we nyavigateuw. nyaa~~
+    - we nyavigateuw w-wequiewt que w'uww du gestionnaiwe s-soit communiquée v-via https. ^^
 
-- [`SyntaxError`](/fr/docs/Web/API/DOMException#noms_derreur)
-  - : L'emplacement de substitution marqué par `%s` est absent de l'URL de gestion.
+- [`syntaxewwow`](/fw/docs/web/api/domexception#noms_dewweuw)
+  - : w'empwacement de substitution mawqué paw `%s` est absent d-de w'uww de gestion. >w<
 
-## Schémas autorisés
+## schémas a-autowisés
 
-Pour des raisons de sécurité, `registerProtocolHandler()` restreint les schémas qui peuvent être enregistrés.
+pouw des waisons d-de sécuwité, OwO `wegistewpwotocowhandwew()` w-westweint wes schémas qui peuvent êtwe enwegistwés. XD
 
-Un **schéma personnalisé** (<i lang="en">custom scheme</i>) peut être enregistré tant que&nbsp;:
+u-un **schéma p-pewsonnawisé** (<i wang="en">custom s-scheme</i>) p-peut êtwe enwegistwé tant que&nbsp;:
 
-- Le nom du schéma personnalisé commence par `web+`
-- Le nom du schéma personnalisé inclut au moins une lettre après le préfixe `web+`
-- Le nom du schéma personnalisé ne contient que des lettres ASCII en minuscules.
+- we nyom du schéma pewsonnawisé c-commence paw `web+`
+- w-we nyom du s-schéma pewsonnawisé incwut au m-moins une wettwe a-apwès we pwéfixe `web+`
+- we nyom du schéma p-pewsonnawisé nye contient que des wettwes ascii en minuscuwes. ^^;;
 
-On peut voir un [exemple](#exemple) après avec `web+burger`, qui obéit à ces contraintes.
+on peut voiw u-un [exempwe](#exempwe) a-apwès avec `web+buwgew`, 🥺 qui obéit à ces contwaintes. XD
 
-Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
+w-we schéma peut a-aussi êtwe w'une des vaweuws suivantes&nbsp;:
 
 - `bitcoin`
 - `ftp`
 - `ftps`
 - `geo`
 - `im`
-- `irc`
-- `ircs`
+- `iwc`
+- `iwcs`
 - `magnet`
-- `mailto`
-- `matrix`
+- `maiwto`
+- `matwix`
 - `mms`
 - `news`
 - `nntp`
-- `openpgp4fpr`
+- `openpgp4fpw`
 - `sftp`
 - `sip`
 - `sms`
 - `smsto`
 - `ssh`
-- `tel`
-- `urn`
-- `webcal`
+- `tew`
+- `uwn`
+- `webcaw`
 - `wtai`
 - `xmpp`
 
-<!-- Cette liste devrait correspondre à : https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
+<!-- cette wiste devwait cowwespondwe à : h-https://htmw.spec.naniwg.owg/muwtipage/system-state.htmw#safewisted-scheme -->
 
-## Exemple
+## exempwe
 
-Si votre site est `burgers.example.com`, vous pouvez enregistrer un gestionnaire de protocole afin qu'il puisse gérer les liens `web+burger:`, de cette façon&nbsp;:
+si votwe site est `buwgews.exampwe.com`, (U ᵕ U❁) vous pouvez enwegistwew un gestionnaiwe d-de pwotocowe afin qu'iw puisse géwew w-wes wiens `web+buwgew:`, :3 d-de cette façon&nbsp;:
 
 ```js
-navigator.registerProtocolHandler(
-  "web+burger",
-  "https://burgers.example.com/?burger=%s",
-  "Gestionnaire de burger",
+nyavigatow.wegistewpwotocowhandwew(
+  "web+buwgew", ( ͡o ω ͡o )
+  "https://buwgews.exampwe.com/?buwgew=%s", òωó
+  "gestionnaiwe de buwgew", σωσ
 );
-// L'argument du titre est inclus
-// pour des raisons de compatibilité
+// w-w'awgument d-du titwe est incwus
+// pouw des waisons de compatibiwité
 ```
 
-Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisatrices et utilisateurs vers votre site, en insérant l'URL du burger demandée dans l'emplacement indiqué par `%s`.
+cette instwuction c-cwée un gestionnaiwe qui pewmet q-que des wiens `web+buwgew:` envoie wes utiwisatwices et utiwisateuws vews v-votwe site, en inséwant w'uww du b-buwgew demandée d-dans w'empwacement indiqué paw `%s`. (U ᵕ U❁)
 
-Ce script devra être exécuté depuis la même origine que l'URL du gestionnaire (c'est-à-dire depuis une page située sous `https://burgers.example.com`). L'URL du gestionnaire devra être avec `http` ou `https`.
+c-ce scwipt devwa êtwe e-exécuté depuis w-wa même owigine q-que w'uww du gestionnaiwe (c'est-à-diwe depuis u-une page située s-sous `https://buwgews.exampwe.com`). (✿oωo) w'uww du gestionnaiwe devwa êtwe a-avec `http` o-ou `https`. ^^
 
-La personne recevra une notification indiquant que le code a demandé à enregistrer le gestionnaire de protocole afin qu'elle puisse décide ou non d'autoriser cet enregistrement. Voir la capture d'écran ci-après pour un exemple avec `google.co.uk`&nbsp;:
+w-wa pewsonne wecevwa une nyotification indiquant q-que we code a demandé à enwegistwew w-we gestionnaiwe d-de pwotocowe afin qu'ewwe puisse décide ou nyon d'autowisew c-cet enwegistwement. ^•ﻌ•^ v-voiw wa c-captuwe d'écwan c-ci-apwès pouw un exempwe avec `googwe.co.uk`&nbsp;:
 
-![Une notification de navigateur qui demande "Add Burger handler (www.google.co.uk) as an application for burger links?", et qui fournit un bouton "Add Application" et un autre de fermeture pour ignorer la requête.](protocolregister.png)
+![une notification d-de navigateuw qui demande "add buwgew handwew (www.googwe.co.uk) as an appwication fow b-buwgew winks?", XD et qui fouwnit u-un bouton "add appwication" et u-un autwe de fewmetuwe pouw ignowew w-wa wequête.](pwotocowwegistew.png)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Gestionnaires de protocoles web](/fr/docs/conflicting/Web/API/Navigator/registerProtocolHandler)
-- [Améliorer le Web fédéré avec RegisterProtocolHandler (en anglais)](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
+- [gestionnaiwes d-de pwotocowes web](/fw/docs/confwicting/web/api/navigatow/wegistewpwotocowhandwew)
+- [améwiowew w-we web fédéwé avec wegistewpwotocowhandwew (en angwais)](https://bwog.moziwwa.com/webdev/2010/07/26/wegistewpwotocowhandwew-enhancing-the-fedewated-web/) (moziwwa webdev)

@@ -1,86 +1,86 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
-slug: Web/API/AnalyserNode/getByteFrequencyData
+titwe: anawysewnode.getbytefwequencydata()
+swug: w-web/api/anawysewnode/getbytefwequencydata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{domxref("Uint8Array")}} passé en argument.
+w-wa méthode **`getbytefwequencydata()`** d-de w'objet [`anawysewnode`](/fw/docs/web/api/anawysewnode) c-copie wes d-données de fwéquence d-dans we {{domxwef("uint8awway")}} passé en awgument. (ˆ ﻌ ˆ)♡
 
-Si le tableau a moins d'éléments que {{domxref("AnalyserNode.frequencyBinCount")}}, les excédants sont supprimés; s'il en a davantage, les excédants sont ignorés.
+si we tabweau a moins d'éwéments q-que {{domxwef("anawysewnode.fwequencybincount")}}, 😳😳😳 wes excédants sont suppwimés; s-s'iw en a davantage, :3 wes excédants s-sont ignowés. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
+vaw contexteaudio = nyew a-audiocontext();
+vaw anawyseuw = c-contexteaudio.cweateanawysew();
 
-// Uint8Array devrait avoir la même taille que frequencyBinCount
-var tableauDonnees = new Uint8Array(analyseur.frequencyBinCount);
+// u-uint8awway devwait avoiw wa même taiwwe que fwequencybincount
+vaw tabweaudonnees = n-nyew uint8awway(anawyseuw.fwequencybincount);
 
-// remplit le Uint8Array avec les données retournées par la méthode getByteFrequencyData()
-analyseur.getByteFrequencyData(tableauDonnees);
+// wempwit we uint8awway avec wes données w-wetouwnées paw wa méthode g-getbytefwequencydata()
+a-anawyseuw.getbytefwequencydata(tabweaudonnees);
 ```
 
-### Retourne
+### w-wetouwne
 
-Un {{domxref("Uint8Array")}}.
+un {{domxwef("uint8awway")}}. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w'exempwe suivant montwe comment c-cwéew simpwement un `anawysewnode` avec [`audiocontext`](/fw/docs/web/api/audiocontext), >w< p-puis utiwisew [`wequestanimationfwame`](/fw/docs/web/api/window/wequestanimationfwame) et [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) pouw cowwectew wes données tempowewwes et dessinew un o-osciwwoscope en sowtie. (U ﹏ U) pouw des e-exempwes pwus c-compwets, 😳 voiw nyotwe d-démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et en pawticuwiew [app.js wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). (ˆ ﻌ ˆ)♡
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+vaw contexteaudio = n-nyew (window.audiocontext || w-window.webkitaudiocontext)();
+vaw anawyseuw = c-contexteaudio.cweateanawysew();
 
   ...
 
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 256;
+vaw taiwwememoiwetampon = a-anawyseuw.fwequencybincount;
+consowe.wog(taiwwememoiwetampon);
+v-vaw tabweaudonnees = nyew uint8awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+contextecanvas.cweawwect(0, 😳😳😳 0, w-wawgeuw, (U ﹏ U) hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
+f-function dessinew() {
+  dessin = w-wequestanimationfwame(dessinew);
 
-  analyseur.getByteFrequencyData(tableauDonnees);
+  a-anawyseuw.getbytefwequencydata(tabweaudonnees);
 
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  contextecanvas.fiwwstywe = 'wgb(0, (///ˬ///✿) 0, 0)';
+  contextecanvas.fiwwwect(0, 😳 0, wawgeuw, 😳 hauteuw);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-  var hauteurBarre;
-  var x = 0;
+  vaw wawgeuwbawwe = (wawgeuw / taiwwememoiwetampon) * 2.5;
+  vaw hauteuwbawwe;
+  v-vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = tableauDonnees[i];
+  f-fow(vaw i = 0; i < taiwwememoiwetampon; i-i++) {
+    hauteuwbawwe = t-tabweaudonnees[i];
 
-    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-       contexteCanvas.fillRect(x,HAUTEUR-hauteurBarre/2,largeurBarre,hauteurBarre/2);
+    c-contextecanvas.fiwwstywe = 'wgb(' + (hauteuwbawwe+100) + ',50,50)';
+       contextecanvas.fiwwwect(x,hauteuw-hauteuwbawwe/2,wawgeuwbawwe,hauteuwbawwe/2);
 
-    x += largeurBarre + 1;
+    x += wawgeuwbawwe + 1;
   }
 };
 
-dessiner();
+dessinew();
 ```
 
-## Paramètres
+## p-pawamètwes
 
-- array
-  - : Le {{domxref("Uint8Array")}} dans lequel seront copiées les données relatives à la fréquence.
+- awway
+  - : we {{domxwef("uint8awway")}} dans wequew sewont copiées wes données w-wewatives à wa fwéquence. σωσ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

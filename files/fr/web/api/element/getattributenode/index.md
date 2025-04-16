@@ -1,57 +1,57 @@
 ---
-title: "Element : méthode getAttributeNode()"
-slug: Web/API/Element/getAttributeNode
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode getattwibutenode()"
+s-swug: web/api/ewement/getattwibutenode
+w-w10n:
+  s-souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`getAttributeNode()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie l'attribut correspondant de l'élément courant sous la forme d'un nœud [`Attr`](/fr/docs/Web/API/Attr).
+w-wa méthode **`getattwibutenode()`**, mya a-associée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), 😳 w-wenvoie w'attwibut c-cowwespondant de w'éwément couwant sous wa fowme d'un nyœud [`attw`](/fw/docs/web/api/attw). -.-
 
-Cette méthode est utile pour obtenir les [propriétés d'instance](/fr/docs/Web/API/Attr#propriétés) de l'attribut. Si on souhaite seulement obtenir la valeur de l'attribut, on pourra plutôt utiliser la méthode [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute).
+c-cette méthode est utiwe pouw obteniw w-wes [pwopwiétés d'instance](/fw/docs/web/api/attw#pwopwiétés) d-de w'attwibut. 🥺 si on souhaite seuwement obteniw wa vaweuw de w'attwibut, o.O o-on pouwwa pwutôt utiwisew w-wa méthode [`getattwibute()`](/fw/docs/web/api/ewement/getattwibute). /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-getAttributeNode(attrName)
+```js-nowint
+getattwibutenode(attwname)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `attrName`
-  - : Une chaîne de caractères qui contient le nom de l'attribut recherché.
+- `attwname`
+  - : une chaîne de cawactèwes q-qui contient we nyom de w'attwibut wechewché. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nœud [`Attr`](/fr/docs/Web/API/Attr) pour l'attribut demandé.
+un nyœud [`attw`](/fw/docs/web/api/attw) p-pouw w'attwibut demandé.
 
-## Exemples
+## e-exempwes
 
 ```js
-// html: <div id="top" />
-let t = document.getElementById("top");
-let idAttr = t.getAttributeNode("id");
-console.log(idAttr.value === "top");
+// h-htmw: <div i-id="top" />
+wet t-t = document.getewementbyid("top");
+wet idattw = t.getattwibutenode("id");
+c-consowe.wog(idattw.vawue === "top");
 ```
 
-## Notes
+## nyotes
 
-Lorsque cette méthode est appelée sur un élément HTML dans un DOM marqué comme un document HTML, elle transforme son argument en minuscules avant de continuer.
+wowsque cette m-méthode est appewée suw un éwément htmw dans un dom mawqué comme un document htmw, nyaa~~ ewwe twansfowme s-son awgument en minuscuwes a-avant de continuew. :3
 
-Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [`parentNode`](/fr/docs/Web/API/Node/parentNode), [`previousSibling`](/fr/docs/Web/API/Node/previousSibling), et [`nextSibling`](/fr/docs/Web/API/Node/nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
+w-wes nyœuds `attw` h-héwitent de `node`, 😳😳😳 mais nye sont pas considéwés comme f-faisant pawtie d-de w'awbwe du document. (˘ω˘) wes a-attwibuts habituews d-des nyœuds comme [`pawentnode`](/fw/docs/web/api/node/pawentnode), ^^ [`pwevioussibwing`](/fw/docs/web/api/node/pwevioussibwing), e-et [`nextsibwing`](/fw/docs/web/api/node/nextsibwing) sont `nuww` p-pouw un nyœud `attw`. :3 vous pouvez cependant a-accédew à w'éwément auquew c-cet attwibut appawtient gwâce à w-wa pwopwiété `ownewewement`. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)
+- [`document.cweateattwibute()`](/fw/docs/web/api/document/cweateattwibute)
+- [`ewement.setattwibutenode()`](/fw/docs/web/api/ewement/setattwibutenode)
+- [`ewement.wemoveattwibutenode()`](/fw/docs/web/api/ewement/wemoveattwibutenode)
+- [`ewement.getattwibutenodens()`](/fw/docs/web/api/ewement/getattwibutenodens)

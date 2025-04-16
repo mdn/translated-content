@@ -1,39 +1,39 @@
 ---
-title: BroadcastChannel.postMessage()
-slug: Web/API/BroadcastChannel/postMessage
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: bwoadcastchannew.postmessage()
+swug: web/api/bwoadcastchannew/postmessage
+w-w10n:
+  souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-La méthode **`BroadcastChannel.postMessage()`** envoie un message qui peut être de n'importe quel type d'[`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) à chaque écouteur de n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Le message est transmis en tant qu'évènement [`message`](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lié au canal.
+wa méthode **`bwoadcastchannew.postmessage()`** e-envoie u-un message qui p-peut êtwe de n-ny'impowte quew t-type d'[`object`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object) à chaque écouteuw de ny'impowte quew [contexte de nyavigation](/fw/docs/gwossawy/bwowsing_context) d'une même [owigine](/fw/docs/gwossawy/owigin). (⑅˘꒳˘) w-we message est twansmis en tant qu'évènement [`message`](/fw/docs/web/api/bwoadcastchannew/message_event) c-cibwant chaque [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew) w-wié au canaw. (///ˬ///✿)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-canal.postMessage(message);
+canaw.postmessage(message);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `message`
-  - : Données à envoyer à la fenêtre. Les données sont sérialisées en utilisant l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Cela signifie que vous pouvez passer un large spectre de type de données de manière sûre à la fenêtre de destination sans avoir à réaliser le traitement de sérialisation par vous-même.
+  - : données à envoyew à w-wa fenêtwe. 😳😳😳 wes données s-sont séwiawisées e-en utiwisant w'[awgowithme de cwonage de stwuctuwe](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). 🥺 cewa signifie q-que vous pouvez passew un wawge spectwe de type de données de manièwe sûwe à w-wa fenêtwe de destination s-sans avoiw à w-wéawisew we twaitement d-de séwiawisation p-paw vous-même. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune.
+aucune. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.
+- [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew), >_< w-w'intewface à waquewwe ewwe se wappowte. >_<

@@ -1,145 +1,145 @@
 ---
-title: Navigator
-slug: Web/API/Navigator
+titwe: nyavigatow
+swug: web/api/navigatow
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`Navigator`** représente l'état et l'identité de l'agent utilisateur courant. Elle permet aux scripts de consulter ces informations et de s'enregistrer en vue de certaines activités.
+w-w'intewface **`navigatow`** w-wepwésente w'état e-et w'identité d-de w'agent utiwisateuw c-couwant. σωσ e-ewwe pewmet a-aux scwipts de consuwtew c-ces infowmations et de s'enwegistwew en vue de cewtaines activités. (U ﹏ U)
 
-Un objet instanciant `Navigator` peut être récupéré grâce à la propriété en lecture seule [`window.navigator`](/fr/docs/Web/API/Window/navigator).
+un o-objet instanciant `navigatow` peut êtwe wécupéwé gwâce à w-wa pwopwiété en wectuwe seuwe [`window.navigatow`](/fw/docs/web/api/window/navigatow). >w<
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface n'hérite d'aucune propriété mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/Navigator), [`NavigatorLanguage`](/fr/docs/Web/API/Navigator), [`NavigatorOnLine`](/fr/docs/Web/API/Navigator), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorStorage`](/fr/docs/Web/API/Navigator), [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils), [`NavigatorConcurrentHardware`](/fr/docs/Web/API/Navigator), [`NavigatorPlugins`](/fr/docs/Web/API/Navigator) et [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia)._
+_cette intewface ny'héwite d'aucune pwopwiété mais i-impwémente cewwes définies paw [`navigatowid`](/fw/docs/web/api/navigatow), σωσ [`navigatowwanguage`](/fw/docs/web/api/navigatow), nyaa~~ [`navigatowonwine`](/fw/docs/web/api/navigatow), 🥺 [`navigatowcontentutiws`](/fw/docs/web/api/navigatowcontentutiws), rawr x3 [`navigatowstowage`](/fw/docs/web/api/navigatow), σωσ [`navigatowstowageutiws`](/fw/docs/web/api/navigatowstowageutiws), (///ˬ///✿) [`navigatowconcuwwenthawdwawe`](/fw/docs/web/api/navigatow), (U ﹏ U) [`navigatowpwugins`](/fw/docs/web/api/navigatow) e-et [`navigatowusewmedia`](/fw/docs/web/api/navigatowusewmedia)._
 
-### Propriétés standard
+### p-pwopwiétés standawd
 
-- [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection) {{readonlyInline}} {{experimental_inline}}
-  - : Fournit un objet [`NetworkInformation`](/fr/docs/Web/API/NetworkInformation) contenant des informations quant à la connection réseau de l'appareil.
-- [`Navigator.cookieEnabled`](/fr/docs/Web/API/Navigator/cookieEnabled) {{readonlyinline}}
-  - : Renvoie un booléen indiquant si l'ajout d'un cookie sera pris en compte.
-- [`Navigator.credentials`](/fr/docs/Web/API/Navigator/credentials) {{readonlyInline}}
-  - : Renvoie l'interface [`CredentialsContainer`](/fr/docs/Web/API/CredentialsContainer) qui expose des méthodes pour la demande d'informations d'authentification et qui notifie l'agent utilisateur lors d'évènements particuliers tels que les connexions ou déconnexions.
-- [`Navigator.deviceMemory`](/fr/docs/Web/API/Navigator/deviceMemory) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie la quantité de mémoire de l'appareil, exprimée en gigaoctets. Cette valeur est une approximation calculée en prenant la plus proche puissance de 2 puis en divisant le résultat par 1024.
-- [`Navigator.doNotTrack`](/fr/docs/Web/API/Navigator/doNotTrack) {{readonlyInline}} {{experimental_inline}}
-  - : Indique le choix de l'utilisateur fournit pour la préférence _do-not-track_. Lorsque cette valeur vaut "1", l'application web ne devrait pas pister l'utilisateur.
-- [`Navigator.geolocation`](/fr/docs/Web/API/Navigator/geolocation) {{readonlyInline}}
-  - : Renvoie un objet [`Geolocation`](/fr/docs/Web/API/Geolocation) permettant l'accès à l'emplacement géographique de l'appareil.
-- [`NavigatorConcurrentHardware.hardwareConcurrency`](/fr/docs/Web/API/NavigatorConcurrentHardware.hardwareConcurrency) {{readonlyInline}}
-  - : Renvoie le nombre de cœurs logiques du processeur.
-- [`NavigatorPlugins.javaEnabled`](/fr/docs/Web/API/Navigator/javaEnabled) {{readonlyInline}}
-  - : Renvoie le booléen `false`.
-- [`Navigator.keyboard`](/fr/docs/Web/API/Navigator.keyboard) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`Keyboard`](/fr/docs/Web/API/Keyboard) qui permet d'accéder à des fonctions pour récupérer des informations sur la disposition du clavier et la capture de touches du clavier physique.
-- [`NavigatorLanguage.language`](/fr/docs/Web/API/Navigator/language) {{readonlyInline}}
-  - : Renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) indiquant la langue préférée de l'utilisateur (qui correspond généralement à la langue utilisée pour l'interface utilisateur du navigateur). La valeur `null` est renvoyée si cette information est inconnue.
-- [`NavigatorLanguage.languages`](/fr/docs/Web/API/Navigator/languages) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie un tableau de chaînes [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente les langues connues de l'utilisateur, triées par ordre de préférence.
-- [`Navigator.locks`](/fr/docs/Web/API/Navigator/locks) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`LockManager`](/fr/docs/Web/API/LockManager) qui fournit des méthodes pour demander un nouvel objet [`Lock`](/fr/docs/Web/API/Lock) ou s'enquérir d'un objet [`Lock`](/fr/docs/Web/API/Lock) existant.
-- [`Navigator.maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) {{readonlyInline}}
-  - : Renvoie le nombre maximum de points de toucher simultanés possible pour l'appareil courant.
-- [`Navigator.mediaCapabilities`](/fr/docs/Web/API/Navigator/mediaCapabilities) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`MediaCapabilities`](/fr/docs/Web/API/MediaCapabilities) qui peut exposer des informations sur le décodage/l'encodage d'un format donné.
-- [`Navigator.mediaDevices`](/fr/docs/Web/API/Navigator/mediaDevices) {{readonlyinline}}
-  - : Renvoie une référence vers un objet [`MediaDevices`](/fr/docs/Web/API/MediaDevices) permettant d'obtenir des informations à propos des appareils médias disponibles ([`MediaDevices.enumerateDevices()`](</fr/docs/Web/API/MediaDevices.enumerateDevices()>)), de déterminer les propriétés et contraintes prises en charge pour les médias sur cet agent utilisateur et cet ordinateur ([`MediaDevices.getSupportedConstraints()`](</fr/docs/Web/API/MediaDevices.getSupportedConstraints()>)), de demander l'accès au média via [`MediaDevices.getUserMedia()`](</fr/docs/Web/API/MediaDevices.getUserMedia()>).
-- [`Navigator.mediaSession`](/fr/docs/Web/API/Navigator/mediaSession) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`MediaSession`](/fr/docs/Web/API/MediaSession) pouvant être utilisé afin de fournir des métadonnées utilisées par le navigateur afin de présenter des informations sur le média en cours de lecture (par exemple pour les interfaces utilisateurs générales de contrôle des médias).
-- [`NavigatorPlugins.mimeTypes`](/fr/docs/Web/API/Navigator/mimeTypes) {{readonlyInline}}{{deprecated_inline}}
-  - : Renvoie une liste [`MimeTypeArray`](/fr/docs/Web/API/MimeTypeArray) des types MIME pris en charge par le navigateur.
-- [`NavigatorOnLine.onLine`](/fr/docs/Web/API/Navigator/onLine) {{readonlyInline}}
-  - : Renvoie un booléen indiquant si le navigateur est en ligne.
-- [`Navigator.permissions`](/fr/docs/Web/API/Navigator/permissions) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`Permissions`](/fr/docs/Web/API/Permissions) pouvant être utilisé pour demander ou mettre à jour les informations de permissions pour les API couvertes par l'API [Permissions](/fr/docs/Web/API/Permissions_API).
-- [`NavigatorPlugins.plugins`](/fr/docs/Web/API/Navigator/plugins) {{readonlyInline}}{{deprecated_inline}}
-  - : Renvoie une liste [`PluginArray`](/fr/docs/Web/API/PluginArray) indiquant les plugins installés sur le navigateur.
-- [`Navigator.presentation`](/fr/docs/Web/API/Navigator/presentation) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie une référence à l'API [`Presentation`](/fr/docs/Web/API/Presentation) .
-- [`Navigator.serial`](/fr/docs/Web/API/Navigator/serial) {{readonlyInline}}
-  - : Renvoie un objet [`Serial`](/fr/docs/Web/API/Serial) représentant le point d'entrée vers l'API [`Web Serial`](</fr/docs/Web/API/Web Serial API>) qui permet de contrôler les ports série.
-- [`Navigator.serviceWorker`](/fr/docs/Web/API/Navigator/serviceWorker) {{readonlyInline}}
-  - : Renvoie un objet [`ServiceWorkerContainer`](/fr/docs/Web/API/ServiceWorkerContainer) qui permet d'enregistrer, de supprimer, de mettre à jour ou de communiquer avec des objets [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) pour le [document associé](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- [`NavigatorStorage.storage`](/fr/docs/Web/API/NavigatorStorage.storage) {{readonlyinline}}
-  - : Renvoie le singleton [`StorageManager`](/fr/docs/Web/API/StorageManager) utilisé pour la persistence des permissions et la gestion du stockage disponible site par site/application par application.
-- [`NavigatorID.userAgent`](/fr/docs/Web/API/Navigator/userAgent) {{readonlyInline}}
-  - : Renvoie la chaîne de caractères de l'agent utilisateur pour le navigateur courant.
-- [`Navigator.vendor`](/fr/docs/Web/API/Navigator/vendor) {{readonlyInline}}
-  - : Renvoie le nom de l'éditeur du navigateur courant (par exemple "Netscape6").
-- [`Navigator.webdriver`](/fr/docs/Web/API/Navigator/webdriver) {{readonlyInline}} {{experimental_inline}}
-  - : Indique si l'agent utilisateur est contrôlé par un outil automatisé.
-- [`Navigator.xr`](/fr/docs/Web/API/Navigator/xr) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie un objet [`XRSystem`](/fr/docs/Web/API/XRSystem) qui représente le point d'entrée sur l'API [WebXR](/fr/docs/Web/API/WebXR_Device_API).
+- [`navigatow.connection`](/fw/docs/web/api/navigatow/connection) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : fouwnit un objet [`netwowkinfowmation`](/fw/docs/web/api/netwowkinfowmation) contenant des infowmations q-quant à wa connection wéseau de w'appaweiw. ^^;;
+- [`navigatow.cookieenabwed`](/fw/docs/web/api/navigatow/cookieenabwed) {{weadonwyinwine}}
+  - : wenvoie un boowéen indiquant si w-w'ajout d'un cookie sewa pwis e-en compte. 🥺
+- [`navigatow.cwedentiaws`](/fw/docs/web/api/navigatow/cwedentiaws) {{weadonwyinwine}}
+  - : w-wenvoie w-w'intewface [`cwedentiawscontainew`](/fw/docs/web/api/cwedentiawscontainew) q-qui expose des méthodes pouw wa demande d-d'infowmations d'authentification et qui nyotifie w-w'agent utiwisateuw wows d'évènements pawticuwiews tews que wes connexions ou déconnexions. òωó
+- [`navigatow.devicememowy`](/fw/docs/web/api/navigatow/devicememowy) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : w-wenvoie wa quantité d-de mémoiwe de w-w'appaweiw, XD expwimée e-en gigaoctets. :3 cette vaweuw est une appwoximation cawcuwée e-en pwenant wa p-pwus pwoche puissance de 2 puis e-en divisant we w-wésuwtat paw 1024.
+- [`navigatow.donottwack`](/fw/docs/web/api/navigatow/donottwack) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : indique we c-choix de w'utiwisateuw fouwnit p-pouw wa pwéféwence _do-not-twack_. (U ﹏ U) wowsque cette vaweuw vaut "1", >w< w-w'appwication web nye devwait p-pas pistew w'utiwisateuw. /(^•ω•^)
+- [`navigatow.geowocation`](/fw/docs/web/api/navigatow/geowocation) {{weadonwyinwine}}
+  - : wenvoie u-un objet [`geowocation`](/fw/docs/web/api/geowocation) p-pewmettant w'accès à w'empwacement géogwaphique de w'appaweiw. (⑅˘꒳˘)
+- [`navigatowconcuwwenthawdwawe.hawdwaweconcuwwency`](/fw/docs/web/api/navigatowconcuwwenthawdwawe.hawdwaweconcuwwency) {{weadonwyinwine}}
+  - : wenvoie we nyombwe de cœuws wogiques d-du pwocesseuw. ʘwʘ
+- [`navigatowpwugins.javaenabwed`](/fw/docs/web/api/navigatow/javaenabwed) {{weadonwyinwine}}
+  - : w-wenvoie we boowéen `fawse`. rawr x3
+- [`navigatow.keyboawd`](/fw/docs/web/api/navigatow.keyboawd) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : w-wenvoie un objet [`keyboawd`](/fw/docs/web/api/keyboawd) q-qui pewmet d-d'accédew à des fonctions pouw wécupéwew des infowmations s-suw wa disposition du cwaview et wa captuwe de touches du cwaview physique. (˘ω˘)
+- [`navigatowwanguage.wanguage`](/fw/docs/web/api/navigatow/wanguage) {{weadonwyinwine}}
+  - : w-wenvoie une chaîne d-de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) i-indiquant w-wa wangue pwéféwée de w'utiwisateuw (qui c-cowwespond g-généwawement à w-wa wangue u-utiwisée pouw w'intewface utiwisateuw du nyavigateuw). o.O w-wa v-vaweuw `nuww` est w-wenvoyée si cette i-infowmation e-est inconnue. 😳
+- [`navigatowwanguage.wanguages`](/fw/docs/web/api/navigatow/wanguages) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie un tabweau de chaînes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui w-wepwésente wes wangues connues de w'utiwisateuw, o.O twiées paw owdwe de pwéféwence. ^^;;
+- [`navigatow.wocks`](/fw/docs/web/api/navigatow/wocks) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie un objet [`wockmanagew`](/fw/docs/web/api/wockmanagew) qui f-fouwnit des méthodes pouw demandew un nyouvew objet [`wock`](/fw/docs/web/api/wock) o-ou s'enquéwiw d-d'un objet [`wock`](/fw/docs/web/api/wock) e-existant. ( ͡o ω ͡o )
+- [`navigatow.maxtouchpoints`](/fw/docs/web/api/navigatow/maxtouchpoints) {{weadonwyinwine}}
+  - : wenvoie we nyombwe m-maximum de points de touchew simuwtanés p-possibwe p-pouw w'appaweiw couwant. ^^;;
+- [`navigatow.mediacapabiwities`](/fw/docs/web/api/navigatow/mediacapabiwities) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie un objet [`mediacapabiwities`](/fw/docs/web/api/mediacapabiwities) qui peut exposew des infowmations s-suw we décodage/w'encodage d-d'un fowmat donné. ^^;;
+- [`navigatow.mediadevices`](/fw/docs/web/api/navigatow/mediadevices) {{weadonwyinwine}}
+  - : w-wenvoie u-une wéféwence vews un objet [`mediadevices`](/fw/docs/web/api/mediadevices) pewmettant d'obteniw d-des infowmations à p-pwopos des appaweiws médias d-disponibwes ([`mediadevices.enumewatedevices()`](</fw/docs/web/api/mediadevices.enumewatedevices()>)), XD d-de détewminew wes pwopwiétés et contwaintes pwises en chawge pouw w-wes médias suw c-cet agent utiwisateuw e-et cet owdinateuw ([`mediadevices.getsuppowtedconstwaints()`](</fw/docs/web/api/mediadevices.getsuppowtedconstwaints()>)), 🥺 de demandew w'accès a-au média v-via [`mediadevices.getusewmedia()`](</fw/docs/web/api/mediadevices.getusewmedia()>). (///ˬ///✿)
+- [`navigatow.mediasession`](/fw/docs/web/api/navigatow/mediasession) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie u-un objet [`mediasession`](/fw/docs/web/api/mediasession) pouvant êtwe utiwisé afin de fouwniw des métadonnées utiwisées p-paw we nyavigateuw a-afin de pwésentew des infowmations suw we m-média en couws d-de wectuwe (paw exempwe pouw wes intewfaces utiwisateuws généwawes d-de contwôwe des médias). (U ᵕ U❁)
+- [`navigatowpwugins.mimetypes`](/fw/docs/web/api/navigatow/mimetypes) {{weadonwyinwine}}{{depwecated_inwine}}
+  - : wenvoie une wiste [`mimetypeawway`](/fw/docs/web/api/mimetypeawway) des types m-mime pwis en chawge paw we nyavigateuw. ^^;;
+- [`navigatowonwine.onwine`](/fw/docs/web/api/navigatow/onwine) {{weadonwyinwine}}
+  - : wenvoie un b-boowéen indiquant s-si we navigateuw est en wigne. ^^;;
+- [`navigatow.pewmissions`](/fw/docs/web/api/navigatow/pewmissions) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie un objet [`pewmissions`](/fw/docs/web/api/pewmissions) p-pouvant êtwe u-utiwisé pouw demandew ou mettwe à jouw wes infowmations de p-pewmissions pouw wes api couvewtes p-paw w'api [pewmissions](/fw/docs/web/api/pewmissions_api). rawr
+- [`navigatowpwugins.pwugins`](/fw/docs/web/api/navigatow/pwugins) {{weadonwyinwine}}{{depwecated_inwine}}
+  - : wenvoie une wiste [`pwuginawway`](/fw/docs/web/api/pwuginawway) indiquant wes pwugins instawwés s-suw we nyavigateuw. (˘ω˘)
+- [`navigatow.pwesentation`](/fw/docs/web/api/navigatow/pwesentation) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : wenvoie u-une wéféwence à w-w'api [`pwesentation`](/fw/docs/web/api/pwesentation) . 🥺
+- [`navigatow.sewiaw`](/fw/docs/web/api/navigatow/sewiaw) {{weadonwyinwine}}
+  - : wenvoie un objet [`sewiaw`](/fw/docs/web/api/sewiaw) w-wepwésentant we point d'entwée v-vews w'api [`web s-sewiaw`](</fw/docs/web/api/web s-sewiaw api>) qui pewmet d-de contwôwew wes p-powts séwie. nyaa~~
+- [`navigatow.sewvicewowkew`](/fw/docs/web/api/navigatow/sewvicewowkew) {{weadonwyinwine}}
+  - : wenvoie un objet [`sewvicewowkewcontainew`](/fw/docs/web/api/sewvicewowkewcontainew) qui pewmet d-d'enwegistwew, :3 d-de suppwimew, /(^•ω•^) de m-mettwe à jouw ou de communiquew avec des objets [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) p-pouw we [document associé](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#concept-document-window). ^•ﻌ•^
+- [`navigatowstowage.stowage`](/fw/docs/web/api/navigatowstowage.stowage) {{weadonwyinwine}}
+  - : w-wenvoie we singweton [`stowagemanagew`](/fw/docs/web/api/stowagemanagew) u-utiwisé pouw wa pewsistence des pewmissions et wa gestion d-du stockage d-disponibwe site p-paw site/appwication p-paw appwication.
+- [`navigatowid.usewagent`](/fw/docs/web/api/navigatow/usewagent) {{weadonwyinwine}}
+  - : wenvoie wa chaîne d-de cawactèwes de w'agent utiwisateuw pouw we nyavigateuw couwant. UwU
+- [`navigatow.vendow`](/fw/docs/web/api/navigatow/vendow) {{weadonwyinwine}}
+  - : wenvoie w-we nyom de w'éditeuw du nyavigateuw c-couwant (paw exempwe "netscape6"). 😳😳😳
+- [`navigatow.webdwivew`](/fw/docs/web/api/navigatow/webdwivew) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : i-indique si w'agent u-utiwisateuw est contwôwé paw un o-outiw automatisé. OwO
+- [`navigatow.xw`](/fw/docs/web/api/navigatow/xw) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : w-wenvoie u-un objet [`xwsystem`](/fw/docs/web/api/xwsystem) q-qui wepwésente w-we point d'entwée suw w'api [webxw](/fw/docs/web/api/webxw_device_api). ^•ﻌ•^
 
-### Propriétés non-standard
+### pwopwiétés nyon-standawd
 
-- [`Navigator.buildID`](/fr/docs/Web/API/Navigator/buildID) {{non-standard_inline}}
-  - : Renvoie l'identifiant de build du navigateur. Les navigateurs renvoient un horodatage fixe pour éviter le pistage (par exemple `20181001000000` à partir de Firefox 64).
-- [`Navigator.contacts`](/fr/docs/Web/API/Navigator/contacts) {{readonlyInline}} {{non-standard_inline}}
-  - : Renvoie une interface [`ContactsManager`](/fr/docs/Web/API/ContactsManager) qui permet à l'utilisateur de sélectionner certaines entrées dans la liste des contacts afin de partager certains détails limités avec une application web.
-- [`Navigator.securitypolicy`](/fr/docs/Web/API/Navigator/securitypolicy) {{non-standard_inline}}
-  - : Renvoie une chaîne de caractères vide. Netscape 4.7x renvoyait "US & CA domestic policy" ou "Export policy".
-- [`Navigator.standalone`](/fr/docs/Web/API/Navigator/standalone) {{non-standard_inline}}
-  - : Renvoie un booléen indiquant si le navigateur s'exécute en mode _standalone_. Uniquement disponible sur Safari pour iOS.
-- [`Navigator.wakeLock`](/fr/docs/Web/API/Navigator/wakeLock) {{readonlyInline}} {{non-standard_inline}}
-  - : Renvoie une interface [`WakeLock`](/fr/docs/Web/API/WakeLock) pouvant être utilisée afin de demander un verrou sur l'écran afin de l'empêcher d'entrer en veille, de s'estomper ou de s'éteindre.
+- [`navigatow.buiwdid`](/fw/docs/web/api/navigatow/buiwdid) {{non-standawd_inwine}}
+  - : wenvoie w'identifiant de buiwd du nyavigateuw. wes nyavigateuws w-wenvoient un h-howodatage fixe p-pouw évitew we pistage (paw exempwe `20181001000000` à p-pawtiw de fiwefox 64). (ꈍᴗꈍ)
+- [`navigatow.contacts`](/fw/docs/web/api/navigatow/contacts) {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : wenvoie une intewface [`contactsmanagew`](/fw/docs/web/api/contactsmanagew) qui p-pewmet à w'utiwisateuw d-de séwectionnew cewtaines e-entwées dans wa wiste des contacts afin de p-pawtagew cewtains d-détaiws wimités avec une appwication w-web. (⑅˘꒳˘)
+- [`navigatow.secuwitypowicy`](/fw/docs/web/api/navigatow/secuwitypowicy) {{non-standawd_inwine}}
+  - : w-wenvoie une chaîne de cawactèwes vide. (⑅˘꒳˘) nyetscape 4.7x wenvoyait "us & ca d-domestic powicy" o-ou "expowt powicy". (ˆ ﻌ ˆ)♡
+- [`navigatow.standawone`](/fw/docs/web/api/navigatow/standawone) {{non-standawd_inwine}}
+  - : w-wenvoie un b-boowéen indiquant s-si we nyavigateuw s'exékawaii~ e-en mode _standawone_. /(^•ω•^) u-uniquement disponibwe s-suw safawi pouw i-ios. òωó
+- [`navigatow.wakewock`](/fw/docs/web/api/navigatow/wakewock) {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : wenvoie une i-intewface [`wakewock`](/fw/docs/web/api/wakewock) pouvant êtwe utiwisée afin de d-demandew un vewwou suw w'écwan a-afin de w'empêchew d-d'entwew en veiwwe, (⑅˘꒳˘) de s'estompew o-ou de s'éteindwe. (U ᵕ U❁)
 
-### Propriétés dépréciées
+### pwopwiétés dépwéciées
 
-- [`NavigatorID.appCodeName`](/fr/docs/Web/API/Navigator/appCodeName) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie le nom de code interne du navigateur. Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
-- [`NavigatorID.appName`](/fr/docs/Web/API/Navigator/appName) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie une chaîne [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant le nom officiel du navigateur. Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
-- [`NavigatorID.appVersion`](/fr/docs/Web/API/Navigator/appVersion) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie la version du navigateur sous la forme d'une chaîne [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
-- [`Navigator.activeVRDisplays`](/fr/docs/Web/API/Navigator/activeVRDisplays) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie un tableau contenant chaque objet [`VRDisplay`](/fr/docs/Web/API/VRDisplay) actuellement utilisé pour afficher (autrement dit, pour chaque objet où [`VRDisplay.ispresenting`](/fr/docs/Web/API/VRDisplay.ispresenting) vaut `true`).
-- [`Navigator.battery`](/fr/docs/Web/API/Navigator/getBattery) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie un objet [`BatteryManager`](/fr/docs/Web/API/BatteryManager) permettant d'avoir des informations sur le statut de charge de la batterie.
-- [`Navigator.oscpu`](/fr/docs/Web/API/Navigator/oscpu) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie une chaîne de caractères qui représente le système d'exploitation courant.
-- [`NavigatorID.platform`](/fr/docs/Web/API/Navigator/platform) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie une chaîne de caractères représentant la plateforme du navigateur. N'utilisez pas cette fonction afin d'obtenir une valeur significative.
-- [`NavigatorID.product`](/fr/docs/Web/API/Navigator/product) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie toujours `'Gecko'` quel que soit le navigateur. Cette propriété est uniquement conservée à des fins de compatibilité.
-- [`Navigator.productSub`](/fr/docs/Web/API/Navigator/productSub) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie le numéro de _build_ précis du navigateur (par exemple "20060909").
-- [`Navigator.vendorSub`](/fr/docs/Web/API/Navigator/vendorSub) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie le numéro de version de l'éditeur (e.g. "6.1").
+- [`navigatowid.appcodename`](/fw/docs/web/api/navigatow/appcodename) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wenvoie we nyom d-de code intewne d-du nyavigateuw. >w< n-nye vous attendez pas à ce que cette pwopwiété wenvoie une vaweuw c-cowwecte. σωσ
+- [`navigatowid.appname`](/fw/docs/web/api/navigatow/appname) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wenvoie une chaîne [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-contenant w-we nom officiew du navigateuw. -.- n-nye vous attendez pas à ce que c-cette pwopwiété w-wenvoie une vaweuw cowwecte.
+- [`navigatowid.appvewsion`](/fw/docs/web/api/navigatow/appvewsion) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wenvoie wa vewsion d-du nyavigateuw sous wa fowme d'une chaîne [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). o.O n-nye vous a-attendez pas à ce que cette pwopwiété w-wenvoie une vaweuw cowwecte.
+- [`navigatow.activevwdispways`](/fw/docs/web/api/navigatow/activevwdispways) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie un t-tabweau contenant c-chaque objet [`vwdispway`](/fw/docs/web/api/vwdispway) actuewwement utiwisé pouw affichew (autwement dit, ^^ pouw chaque objet où [`vwdispway.ispwesenting`](/fw/docs/web/api/vwdispway.ispwesenting) vaut `twue`). >_<
+- [`navigatow.battewy`](/fw/docs/web/api/navigatow/getbattewy) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wenvoie un objet [`battewymanagew`](/fw/docs/web/api/battewymanagew) pewmettant d'avoiw des infowmations suw we statut de chawge de wa battewie. >w<
+- [`navigatow.oscpu`](/fw/docs/web/api/navigatow/oscpu) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie u-une chaîne de cawactèwes qui wepwésente we s-système d'expwoitation c-couwant. >_<
+- [`navigatowid.pwatfowm`](/fw/docs/web/api/navigatow/pwatfowm) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie une chaîne de cawactèwes w-wepwésentant wa pwatefowme d-du nyavigateuw. >w< n-ny'utiwisez pas cette fonction afin d-d'obteniw une vaweuw significative. rawr
+- [`navigatowid.pwoduct`](/fw/docs/web/api/navigatow/pwoduct) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie toujouws `'gecko'` q-quew que soit we nyavigateuw. rawr x3 cette pwopwiété e-est uniquement consewvée à d-des f-fins de compatibiwité. ( ͡o ω ͡o )
+- [`navigatow.pwoductsub`](/fw/docs/web/api/navigatow/pwoductsub) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie w-we nyuméwo de _buiwd_ p-pwécis d-du nyavigateuw (paw e-exempwe "20060909"). (˘ω˘)
+- [`navigatow.vendowsub`](/fw/docs/web/api/navigatow/vendowsub) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie we nyuméwo de v-vewsion de w'éditeuw (e.g. 😳 "6.1").
 
-## Méthodes
+## m-méthodes
 
-_Cette interface n'hérite d'aucune méthode mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/Navigator), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia), and [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils)._
+_cette i-intewface ny'héwite d'aucune m-méthode mais impwémente cewwes définies p-paw [`navigatowid`](/fw/docs/web/api/navigatow), OwO [`navigatowcontentutiws`](/fw/docs/web/api/navigatowcontentutiws), (˘ω˘) [`navigatowusewmedia`](/fw/docs/web/api/navigatowusewmedia), òωó and [`navigatowstowageutiws`](/fw/docs/web/api/navigatowstowageutiws)._
 
-- [`Navigator.canShare()`](</fr/docs/Web/API/Navigator/canShare()>)
-  - : Renvoie `true` si un appel à `Navigator.share()` réussirait.
-- [`Navigator.registerProtocolHandler()`](</fr/docs/Web/API/Navigator/registerProtocolHandler()>)
-  - : Permet aux sites web de s'enregistrer afin de gérer un protocole donné.
-- [`Navigator.requestMediaKeySystemAccess()`](</fr/docs/Web/API/Navigator/requestMediaKeySystemAccess()>)
-  - : Renvoie une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) qui se résout en un objet `MediaKeySystemAccess`.
-- [`Navigator.sendBeacon()`](</fr/docs/Web/API/Navigator/sendBeacon()>)
-  - : Transfère, de façon asynchrone, une petite quantité de donnée avec HTTP depuis l'agent utilisateur vers un serveur web.
-- [`Navigator.share()`](</fr/docs/Web/API/Navigator/share()>)
-  - : Invoque la fonctionnalité native de partage pour la plateforme courant.
-- [`Navigator.vibrate()`](</fr/docs/Web/API/Navigator/vibrate()>)
-  - : Permet de faire vibrer l'appareil si celui-ci prend en charge cette fonctionnalité. Aucun effet n'est produit s'il n'y a pas de compatibilité.
+- [`navigatow.canshawe()`](</fw/docs/web/api/navigatow/canshawe()>)
+  - : w-wenvoie `twue` s-si un appew à `navigatow.shawe()` w-wéussiwait. ( ͡o ω ͡o )
+- [`navigatow.wegistewpwotocowhandwew()`](</fw/docs/web/api/navigatow/wegistewpwotocowhandwew()>)
+  - : pewmet a-aux sites web de s'enwegistwew a-afin de géwew un pwotocowe d-donné. UwU
+- [`navigatow.wequestmediakeysystemaccess()`](</fw/docs/web/api/navigatow/wequestmediakeysystemaccess()>)
+  - : wenvoie u-une pwomesse ([`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)) qui se wésout en un objet `mediakeysystemaccess`. /(^•ω•^)
+- [`navigatow.sendbeacon()`](</fw/docs/web/api/navigatow/sendbeacon()>)
+  - : twansfèwe, de façon asynchwone, (ꈍᴗꈍ) u-une petite quantité de d-donnée avec http d-depuis w'agent utiwisateuw vews un sewveuw web. 😳
+- [`navigatow.shawe()`](</fw/docs/web/api/navigatow/shawe()>)
+  - : invoque wa f-fonctionnawité nyative de pawtage p-pouw wa pwatefowme c-couwant. mya
+- [`navigatow.vibwate()`](</fw/docs/web/api/navigatow/vibwate()>)
+  - : p-pewmet de faiwe vibwew w'appaweiw si cewui-ci p-pwend en chawge c-cette fonctionnawité. mya aucun e-effet ny'est pwoduit s'iw ny'y a pas de compatibiwité. /(^•ω•^)
 
-### Méthodes dépréciées
+### m-méthodes dépwéciées
 
-- [`Navigator.getVRDisplays()`](</fr/docs/Web/API/Navigator/getVRDisplays()>) {{deprecated_inline}}
-  - : Renvoie une promesse qui se résout en un tableau d'objets [`VRDisplay`](/fr/docs/Web/API/VRDisplay) représentant chacun un appareil de réalité virtuelle connecté à l'ordinateur.
-- [`Navigator.getUserMedia()`](</fr/docs/Web/API/Navigator/getUserMedia()>) {{deprecated_inline}}
-  - : Après avoir demandé la permission à l'utilisateur, renvoie le flux audio ou vidéo associé à une caméra ou à un micro sur l'ordinateur local.
-- [`Navigator.registerContentHandler()`](</fr/docs/Web/API/Navigator/registerContentHandler()>) {{deprecated_inline}}
-  - : Permet aux sites web de s'enregistrer pour gérer certains types MIME.
-- [`NavigatorID.taintEnabled()`](</fr/docs/Web/API/NavigatorID/taintEnabled()>) {{deprecated_inline}}
-  - : Renvoie `false`. Les fonctions JavaScript jouant sur cet aspect ont été retirées avec JavaScript 1.2.
+- [`navigatow.getvwdispways()`](</fw/docs/web/api/navigatow/getvwdispways()>) {{depwecated_inwine}}
+  - : wenvoie une pwomesse q-qui se wésout e-en un tabweau d-d'objets [`vwdispway`](/fw/docs/web/api/vwdispway) wepwésentant c-chacun un a-appaweiw de wéawité v-viwtuewwe c-connecté à w'owdinateuw. ^^;;
+- [`navigatow.getusewmedia()`](</fw/docs/web/api/navigatow/getusewmedia()>) {{depwecated_inwine}}
+  - : apwès avoiw d-demandé wa pewmission à w-w'utiwisateuw, 🥺 w-wenvoie w-we fwux audio ou v-vidéo associé à u-une caméwa o-ou à un micwo s-suw w'owdinateuw wocaw. ^^
+- [`navigatow.wegistewcontenthandwew()`](</fw/docs/web/api/navigatow/wegistewcontenthandwew()>) {{depwecated_inwine}}
+  - : p-pewmet aux sites web de s'enwegistwew p-pouw géwew cewtains types m-mime. ^•ﻌ•^
+- [`navigatowid.taintenabwed()`](</fw/docs/web/api/navigatowid/taintenabwed()>) {{depwecated_inwine}}
+  - : w-wenvoie `fawse`. /(^•ω•^) w-wes fonctions javascwipt jouant suw cet aspect ont été w-wetiwées avec j-javascwipt 1.2.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

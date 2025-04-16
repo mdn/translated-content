@@ -1,76 +1,76 @@
 ---
-title: Window.scroll()
-slug: Web/API/Window/scroll
+titwe: window.scwoww()
+swug: w-web/api/window/scwoww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`Window.scroll()`** permet de faire défiler la fenêtre jusqu'à un endroit donné du document.
+w-wa méthode **`window.scwoww()`** p-pewmet d-de faiwe défiwew w-wa fenêtwe jusqu'à u-un endwoit d-donné du document. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.scroll(x, y);
-window.scroll(options);
+window.scwoww(x, (U ﹏ U) y);
+window.scwoww(options);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Le numéro de pixel sur l'axe horizontal du document qu'on souhaite avoir affiché dans le coin supérieur gauche.
+  - : we nyuméwo de pixew suw w-w'axe howizontaw du document qu'on souhaite avoiw a-affiché dans we coin supéwieuw g-gauche. >w<
 - `y`
-  - : Le numéro de pixel sur l'axe vertical du document qu'on souhaite avoir affiché dans le coin supérieur gauche.
+  - : we nyuméwo de pixew suw w'axe vewticaw d-du document qu'on souhaite avoiw a-affiché dans we c-coin supéwieuw gauche. mya
 
-Ou avec `options`&nbsp;:
+ou avec `options`&nbsp;:
 
 - `options`
-  - : Un dictionnaire qui contient les paramètres suivants&nbsp;:
+  - : un dictionnaiwe qui contient wes pawamètwes s-suivants&nbsp;:
     - `top`
-      - : Indique le nombre de pixels sur l'axe vertical le long desquels faire défiler la fenêtre ou l'élément.
-    - `left`
-      - : Indique le nombre de pixels sur l'axe horizontal le long desquels faire défiler la fenêtre ou l'élément.
-    - `behavior`
-      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de caractères qui doit être l'une de ces valeurs&nbsp;:
-        - `smooth`&nbsp;: le défilement doit s'animer en douceur
-        - `instant`&nbsp;: le défilement devrait se produire instantanément, en un seul saut
-        - `auto`&nbsp;: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
+      - : indique we nyombwe de pixews suw w'axe vewticaw we wong d-desquews faiwe défiwew wa fenêtwe o-ou w'éwément. >w<
+    - `weft`
+      - : i-indique w-we nyombwe d-de pixews suw w'axe howizontaw we wong desquews f-faiwe défiwew wa fenêtwe ou w'éwément. nyaa~~
+    - `behaviow`
+      - : indique si w-we défiwement devwait êtwe instantané ou doux. (✿oωo) cette option est une chaine de cawactèwes qui d-doit êtwe w'une de ces vaweuws&nbsp;:
+        - `smooth`&nbsp;: w-we défiwement d-doit s'animew e-en douceuw
+        - `instant`&nbsp;: we défiwement devwait se pwoduiwe instantanément, ʘwʘ e-en un s-seuw saut
+        - `auto`&nbsp;: we compowtement d-de défiwement e-est détewminé paw wa vaweuw cawcuwée d-de ([scwoww-behaviow](/fw/docs/web/css/scwoww-behaviow))
 
-## Exemples
+## exempwes
 
-```html
-<!-- On place le 100e pixel, sur l'axe vertical, en haut de la fenêtre -->
+```htmw
+<!-- o-on pwace we 100e pixew, (ˆ ﻌ ˆ)♡ suw w'axe vewticaw, 😳😳😳 e-en haut de wa fenêtwe -->
 
-<button onclick="scroll(0, 100);">
-  Cliquez pour faire défiler jusqu'au 100e pixel
+<button o-oncwick="scwoww(0, :3 100);">
+  cwiquez p-pouw faiwe défiwew j-jusqu'au 100e pixew
 </button>
 ```
 
-Avec `options`&nbsp;:
+avec `options`&nbsp;:
 
 ```js
-window.scroll({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+window.scwoww({
+  top: 100, OwO
+  weft: 100, (U ﹏ U)
+  behaviow: "smooth", >w<
 });
 ```
 
-## Notes
+## n-nyotes
 
-[`Window.scrollTo()`](/fr/docs/Web/API/Window/scrollTo) est en pratique identique à cette méthode. Pour le défilement relatif, voir les méthodes [`Window.scrollBy()`](/fr/docs/Web/API/Window/scrollBy), [`Window.scrollByLines()`](/fr/docs/Web/API/Window/scrollByLines), et [`Window.scrollByPages()`](/fr/docs/Web/API/Window/scrollByPages).
+[`window.scwowwto()`](/fw/docs/web/api/window/scwowwto) e-est en pwatique identique à cette m-méthode. (U ﹏ U) pouw w-we défiwement w-wewatif, 😳 voiw wes méthodes [`window.scwowwby()`](/fw/docs/web/api/window/scwowwby), (ˆ ﻌ ˆ)♡ [`window.scwowwbywines()`](/fw/docs/web/api/window/scwowwbywines), 😳😳😳 et [`window.scwowwbypages()`](/fw/docs/web/api/window/scwowwbypages). (U ﹏ U)
 
-Pour faire défiler les éléments, voir [`Element.scrollTop`](/fr/docs/Web/API/Element/scrollTop) et [`Element.scrollLeft`](/fr/docs/Web/API/Element/scrollLeft).
+pouw faiwe défiwew w-wes éwéments, (///ˬ///✿) voiw [`ewement.scwowwtop`](/fw/docs/web/api/ewement/scwowwtop) et [`ewement.scwowwweft`](/fw/docs/web/api/ewement/scwowwweft). 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Window.scrollByLines()`](/fr/docs/Web/API/Window/scrollByLines)
-- [`Window.scrollByPages()`](/fr/docs/Web/API/Window/scrollByPages)
-- [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView)
+- [`window.scwowwbywines()`](/fw/docs/web/api/window/scwowwbywines)
+- [`window.scwowwbypages()`](/fw/docs/web/api/window/scwowwbypages)
+- [`ewement.scwowwintoview()`](/fw/docs/web/api/ewement/scwowwintoview)

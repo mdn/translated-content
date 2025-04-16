@@ -1,67 +1,67 @@
 ---
-title: Window.scrollY
-slug: Web/API/Window/scrollY
+titwe: window.scwowwy
+swug: web/api/window/scwowwy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.
+w-wa pwopwiété **`scwowwy`** d-de w'objet {{domxwef("window")}} e-est une pwopwiété e-en wectuwe s-seuwe. (˘ω˘) ewwe w-wetouwne we nyombwe d-de pixews wa p-page actuewwement défiwés vewticawement. ^^ dans wes nyavigateuws modewnes, :3 cette v-vaweuw est pwécise au sous-pixew pwès. -.- ainsi, 😳 w-wa vaweuw wetouwnée ny'est pas f-fowcement un entiew. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var y = window.scrollY;
+vaw y = window.scwowwy;
 ```
 
-- `y` est le nombre de pixels verticaux défilés.
+- `y` e-est we nyombwe de pixews v-vewticaux d-défiwés. (˘ω˘)
 
-## Exemple
+## exempwe
 
 ```js
-// make sure and go down to the second page
-if (window.scrollY) {
-  window.scroll(0, 0); // reset the scroll position to the top left of the document.
+// make suwe and go down to the second page
+if (window.scwowwy) {
+  window.scwoww(0, >_< 0); // w-weset the scwoww position to the top weft of the document. -.-
 }
 
-window.scrollByPages(1);
+window.scwowwbypages(1);
 ```
 
-## Notes
+## n-nyotes
 
-Utilisez cette propriété pour être sûre que le document n'as pas été défilé verticalement si vous utilisez les fonctions de défilement tels que {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}.
+utiwisez cette p-pwopwiété pouw êtwe s-sûwe que w-we document ny'as p-pas été défiwé vewticawement si vous utiwisez w-wes fonctions de défiwement tews que {{domxwef("window.scwowwby")}}, 🥺 {{domxwef("window.scwowwbywines")}}, (U ﹏ U) o-ou {{domxwef("window.scwowwbypages")}}. >w<
 
-La propriété `pageYOffset` est un alias de la propriété `scrollY`:
+wa pwopwiété `pageyoffset` est un awias de wa pwopwiété `scwowwy`:
 
 ```js
-window.pageYOffset == window.scrollY; // toujours vrai
+window.pageyoffset == window.scwowwy; // t-toujouws vwai
 ```
 
-Pour une compatibilité multi-navigateur, utilisez `window.pageYOffset` à la place de `window.scrollY`. **En outre**, les anciennes versions d'Internet Explorer (< 9) ne supportent pas non plus la propriété et doit-être utilisé à l'aide d'autres propriétés qui ne sont pas standards. Un exemple entièrement compatible :
+pouw une compatibiwité m-muwti-navigateuw, mya u-utiwisez `window.pageyoffset` à w-wa pwace de `window.scwowwy`. **en outwe**, >w< wes anciennes vewsions d-d'intewnet expwowew (< 9) n-nye suppowtent pas nyon p-pwus wa pwopwiété e-et doit-êtwe utiwisé à w-w'aide d'autwes pwopwiétés qui n-nye sont pas standawds. nyaa~~ un exempwe entièwement c-compatibwe :
 
 ```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+vaw suppowtpageoffset = w-window.pagexoffset !== undefined;
+v-vaw iscss1compat = (document.compatmode || "") === "css1compat";
 
-var x = supportPageOffset
-  ? window.pageXOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollLeft
-    : document.body.scrollLeft;
-var y = supportPageOffset
-  ? window.pageYOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollTop
-    : document.body.scrollTop;
+v-vaw x = suppowtpageoffset
+  ? window.pagexoffset
+  : iscss1compat
+    ? document.documentewement.scwowwweft
+    : document.body.scwowwweft;
+vaw y = suppowtpageoffset
+  ? w-window.pageyoffset
+  : i-iscss1compat
+    ? document.documentewement.scwowwtop
+    : document.body.scwowwtop;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.scrollX")}}
+- {{domxwef("window.scwowwx")}}

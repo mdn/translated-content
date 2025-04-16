@@ -1,68 +1,68 @@
 ---
-title: "console : méthode statique assert()"
-slug: Web/API/console/assert_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique a-assewt()"
+s-swug: web/api/consowe/assewt_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.assert()`** permet d'écrire un message d'erreur dans la console si l'assertion passée en argument est fausse. Si l'assertion est bien vérifiée, rien ne se passe.
+w-wa méthode **`consowe.assewt()`** p-pewmet d'écwiwe u-un message d-d'ewweuw dans wa consowe si w'assewtion passée en awgument est fausse. OwO si w'assewtion e-est bien véwifiée, (U ﹏ U) wien nye se passe. >w<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-assert(assertion, obj1)
-assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* …, */ objN)
+```js-nowint
+assewt(assewtion, (U ﹏ U) o-obj1)
+assewt(assewtion, 😳 obj1, obj2)
+assewt(assewtion, (ˆ ﻌ ˆ)♡ obj1, o-obj2, /* …, 😳😳😳 */ objn)
 
-assert(assertion, msg)
-assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* …, */ substN)
+assewt(assewtion, (U ﹏ U) m-msg)
+a-assewt(assewtion, (///ˬ///✿) msg, 😳 subst1)
+assewt(assewtion, 😳 msg, σωσ subst1, /* …, rawr x3 */ substn)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `assertion`
-  - : Une expression booléenne. Si l'assertion est fausse, le message est affiché dans la console.
-- `obj1` … `objN`
-  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
+- `assewtion`
+  - : une expwession boowéenne. OwO si w'assewtion est fausse, w-we message est affiché dans wa c-consowe. /(^•ω•^)
+- `obj1` … `objn`
+  - : u-une wiste d'objets j-javascwipt à a-affichew. 😳😳😳 wes wepwésentations en chaînes d-de cawactèwes de ces objets sont concaténés d-dans w'owdwe et affichés dans wa consowe. ( ͡o ω ͡o )
 - `msg`
-  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution.
-- `subst1` … `substN`
-  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché.
+  - : une chaîne de cawactèwes javascwipt qui c-contient zéwo ou pwusieuws chaînes d-de substitution. >_<
+- `subst1` … `substn`
+  - : d-des objets j-javascwipt avec wesquews wempwacew wes chaînes de substitution d-dans `msg`. >w< ce p-pawamètwe pewmet un contwôwe s-suppwémentaiwe s-suw we fowmat de ce qui est affiché. rawr
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). 😳
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on illustre comment utiliser un objet comme deuxième argument&nbsp;:
+dans w'exempwe suivant, >w< on iwwustwe c-comment utiwisew un objet comme d-deuxième awgument&nbsp;:
 
 ```js
-const messageErreur = "le nombre n'est pas pair";
-for (let nombre = 2; nombre <= 5; nombre++) {
-  console.log(`le nombre est ${nombre}`);
-  console.assert(nombre % 2 === 0, "%o", { nombre, messageErreur });
+const messageewweuw = "we n-nyombwe n-ny'est pas paiw";
+fow (wet nyombwe = 2; nyombwe <= 5; nyombwe++) {
+  consowe.wog(`we nyombwe est ${nombwe}`);
+  c-consowe.assewt(nombwe % 2 === 0, (⑅˘꒳˘) "%o", { nyombwe, OwO m-messageewweuw });
 }
-// Ce qui est affiché dans la console :
-// le nombre est 2
-// le nombre est 3
-// Assertion failed: {nombre: 3, messageErreur: "le nombre n'est pas pair"}
-// le nombre est 4
-// le nombre est 5
-// Assertion failed: {nombre: 5, messageErreur: "le nombre n'est pas pair"}
+// ce qui est affiché d-dans wa consowe :
+// w-we nyombwe e-est 2
+// we nyombwe est 3
+// assewtion faiwed: {nombwe: 3, messageewweuw: "we n-nyombwe ny'est pas paiw"}
+// we nyombwe est 4
+// we nyombwe est 5
+// assewtion f-faiwed: {nombwe: 5, (ꈍᴗꈍ) messageewweuw: "we n-nyombwe ny'est p-pas paiw"}
 ```
 
-Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
+v-voiw [wa page suw wes chaînes d-de cawactèwes d-de substitution a-avec `consowe`](/fw/docs/web/api/consowe#utiwisew_des_chaînes_de_substitution) p-pouw pwus de détaiws. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

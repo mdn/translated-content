@@ -1,25 +1,25 @@
 ---
-title: Document.applets
-slug: Web/API/Document/applets
+titwe: document.appwets
+swug: w-web/api/document/appwets
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-`applets` retourne une liste ordonnée des applets contenus dans un document.
+`appwets` w-wetouwne u-une wiste owdonnée d-des appwets c-contenus dans u-un document. (ˆ ﻌ ˆ)♡
 
-### Syntaxe
-
-```js
-nodeList = document.applets;
-```
-
-### Exemple
+### s-syntaxe
 
 ```js
-// ( Si vous savez que le second applet est celui que vous voulez )
-my_java_app = document.applets[1];
+nyodewist = document.appwets;
 ```
 
-### Spécification
+### exempwe
 
-[DOM Level 2 HTML: applets](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)
+```js
+// ( si vous savez que we s-second appwet est cewui que vous vouwez )
+my_java_app = d-document.appwets[1];
+```
+
+### spécification
+
+[dom w-wevew 2 htmw: appwets](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-85113862)

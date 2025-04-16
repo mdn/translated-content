@@ -1,50 +1,50 @@
 ---
-title: Event.bubbles
-slug: Web/API/Event/bubbles
+titwe: event.bubbwes
+swug: web/api/event/bubbwes
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Indique si l'événement donné se propage à travers le DOM ou non.
+i-indique s-si w'événement d-donné se p-pwopage à twavews w-we dom ou nyon.
 
-> [!NOTE]
-> Voir [Propagation et capture des évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) pour plus d'informations sur la propagation.
+> [!note]
+> v-voiw [pwopagation e-et captuwe des évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events#event_bubbwing_and_captuwe) pouw pwus d'infowmations suw wa pwopagation. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-event.bubbles;
+e-event.bubbwes;
 ```
 
-### Valeur
+### vaweuw
 
-Retourne un booléen dont la valeur est `true` (_vraie_) si l'événement se propage à travers le DOM.
+wetouwne un boowéen d-dont wa vaweuw est `twue` (_vwaie_) s-si w'événement se pwopage à twavews we dom. 🥺
 
-## Exemple
+## exempwe
 
 ```js
-function goInput(e) {
-  // vérifie la propagation et
-  if (!e.bubbles) {
-    // la lance si elle ne l'a pas été
-    passItOn(e);
+f-function goinput(e) {
+  // v-véwifie wa pwopagation e-et
+  if (!e.bubbwes) {
+    // wa wance si ewwe nye w'a pas été
+    p-passiton(e);
   }
-  // déjà propagé
-  doOutput(e);
+  // déjà pwopagé
+  dooutput(e);
 }
 ```
 
-> [!NOTE]
-> Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
+> [!note]
+> cewtains évènements seuwement p-peuvent se pwopagew. >_< ceux d-dont cette pwopwiété e-est définie à `twue`. >_< v-vous pouvez utiwisew c-cette pwopwiété pouw véwifiew si un évènement e-est autowisé à se pwopagew ou nyon. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [stopPropagation](/fr/docs/Web/API/Event/stopPropagation) pour empêcher la propagation
+- [stoppwopagation](/fw/docs/web/api/event/stoppwopagation) pouw empêchew w-wa pwopagation

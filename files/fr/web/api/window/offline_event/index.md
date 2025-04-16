@@ -1,57 +1,57 @@
 ---
-title: "Window: Evenement offline"
-slug: Web/API/Window/offline_event
+titwe: "window: evenement offwine"
+s-swug: web/api/window/offwine_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de {{domxref("Navigator.onLine")}} bascule à `false`.
+w-w'événement **`offwine`** d-de w'intewface {{domxwef("window")}} s-se décwenche w-wowsque w-we nyavigateuw p-pewd wa connexion a-au wéseau et wa vaweuw de {{domxwef("navigatow.onwine")}} bascuwe à `fawse`. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété d-de gestionnaiwe d'événements</th>
       <td>
-        {{domxref("GlobalEventHandlers.onoffline", "onoffline")}}
+        {{domxwef("gwobaweventhandwews.onoffwine", nyaa~~ "onoffwine")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
 ```js
-//version addEventListener
-window.addEventListener("offline", (event) => {
-  console.log("La Connexion au réseau est perdu.");
+//vewsion addeventwistenew
+window.addeventwistenew("offwine", /(^•ω•^) (event) => {
+  consowe.wog("wa c-connexion au wéseau e-est pewdu.");
 });
 
-// onoffline version
-window.onoffline = (event) => {
-  console.log("La Connexion au réseau a été perdue.");
+// o-onoffwine vewsion
+window.onoffwine = (event) => {
+  consowe.wog("wa connexion au wéseau a-a été pewdue.");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`online`](/fr/docs/Web/API/Window/online_event)
+- [`onwine`](/fw/docs/web/api/window/onwine_event)

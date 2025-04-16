@@ -1,60 +1,60 @@
 ---
-title: AudioBufferSourceNode.detune
-slug: Web/API/AudioBufferSourceNode/detune
+titwe: audiobuffewsouwcenode.detune
+swug: web/api/audiobuffewsouwcenode/detune
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété `detune` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate) représentant le désaccord des oscillations en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
+w-wa pwopwiété `detune` d-de w-w'intewface {{ d-domxwef("audiobuffewsouwcenode") }} e-est un {{domxwef("audiopawam")}} d-de type [k-wate](/fw/docs/web/api/audiopawam#k-wate) wepwésentant we désaccowd des osciwwations en [cents](http://en.wikipedia.owg/wiki/cent_%28music%29). (U ﹏ U)
 
-Ses valeur sont comprises entre -1200 et 1200.
+s-ses vaweuw sont compwises entwe -1200 et 1200. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var source = contexteAudio.createBufferSource();
-source.detune.value = 100; // valeur en cents
+vaw souwce = c-contexteaudio.cweatebuffewsouwce();
+souwce.detune.vawue = 100; // vaweuw en cents
 ```
 
-> [!NOTE]
-> Bien que l'`AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
+> [!note]
+> bien que w'`audiopawam` w-wenvoyé soit en wectuwe s-seuwe, òωó wa v-vaweuw qu'iw wepwésente nye w'est pas. ʘwʘ
 
-### Valeur
+### vaweuw
 
-Un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate).
+un {{domxwef("audiopawam")}} de type [k-wate](/fw/docs/web/api/audiopawam#k-wate). /(^•ω•^)
 
-## Exemple
+## e-exempwe
 
 ```js
-var audioCtx = new AudioContext();
+vaw audioctx = nyew audiocontext();
 
-var nbChan = 2;
-var nbFrames = audioCtx.sampleRate * 2.0;
+vaw nybchan = 2;
+vaw nybfwames = a-audioctx.sampwewate * 2.0;
 
-var audioBuffer = audioCtx.createBuffer(nbChan, nbFrames, audioCtx.sampleRate);
+vaw a-audiobuffew = audioctx.cweatebuffew(nbchan, ʘwʘ n-nybfwames, σωσ a-audioctx.sampwewate);
 
-for (var chan = 0; chan < nbChan; chan++) {
-  var chanData = audioBuffer.getChannelData(chan);
-  for (var i = 0; i < nbFrames; i++) {
-    chanData[i] = Math.random() * 2 - 1;
+fow (vaw c-chan = 0; chan < nybchan; chan++) {
+  vaw c-chandata = audiobuffew.getchannewdata(chan);
+  fow (vaw i = 0; i < nbfwames; i++) {
+    c-chandata[i] = math.wandom() * 2 - 1;
   }
 }
 
-var source = audioCtx.createBufferSource();
-source.buffer = audioBuffer;
-source.connect(audioCtx.destination);
-source.detune.value = 100; // valeur en cents
-source.start();
+vaw souwce = audioctx.cweatebuffewsouwce();
+souwce.buffew = audiobuffew;
+souwce.connect(audioctx.destination);
+s-souwce.detune.vawue = 100; // vaweuw en cents
+s-souwce.stawt();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web a-audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

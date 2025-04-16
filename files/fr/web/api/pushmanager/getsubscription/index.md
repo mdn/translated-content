@@ -1,74 +1,74 @@
 ---
-title: "PushManager : la méthode getSubscription()"
-short-title: getSubscription()
-slug: Web/API/PushManager/getSubscription
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmanagew : wa méthode g-getsubscwiption()"
+s-showt-titwe: g-getsubscwiption()
+s-swug: web/api/pushmanagew/getsubscwiption
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("Push API")}}
+{{apiwef("push a-api")}}
 
-La méthode **`PushManager.getSubscription()`** de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) récupère un abonnement push existant.
+wa m-méthode **`pushmanagew.getsubscwiption()`** de w'intewface [`pushmanagew`](/fw/docs/web/api/pushmanagew) wécupèwe un abonnement p-push existant. >_<
 
-Elle renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui renvoie à un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant les détails d'un abonnement existant. S'il n'y a pas d'abonnement existant, cette promesse renvoie une valeur `null`.
+ewwe wenvoie une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui wenvoie à un objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption) c-contenant wes détaiws d'un abonnement existant. -.- s'iw ny'y a-a pas d'abonnement existant, 🥺 cette p-pwomesse wenvoie u-une vaweuw `nuww`. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-getSubscription()
+```js-nowint
+getsubscwiption()
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. >w<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) ou `null`.
+une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui se wésout en un objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption) ou `nuww`. mya
 
-## Exemples
+## e-exempwes
 
-Cet extrait de code est tiré d'un [exemple de messagerie et de notification push](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
+cet extwait d-de code est t-tiwé d'un [exempwe d-de messagewie e-et de nyotification push](https://github.com/googwechwome/sampwes/twee/gh-pages/push-messaging-and-notifications). >w<
 
 ```js
-// Nous avons besoin de l'enregistrement du service worker pour vérifier
-// l'existence d'un abonnement
-navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
-  // Avons-nous déjà un abonnement aux messages push ?
-  serviceWorkerRegistration.pushManager
-    .getSubscription()
-    .then((subscription) => {
-      // Activer toute interface utilisateur d'inscription / désinscription
-      // des messages push.
-      const pushButton = document.querySelector(".js-push-button");
-      pushButton.disabled = false;
+// nyous avons besoin d-de w'enwegistwement du sewvice wowkew pouw véwifiew
+// w-w'existence d'un abonnement
+nyavigatow.sewvicewowkew.weady.then((sewvicewowkewwegistwation) => {
+  // avons-nous déjà un abonnement aux messages push ?
+  s-sewvicewowkewwegistwation.pushmanagew
+    .getsubscwiption()
+    .then((subscwiption) => {
+      // activew t-toute intewface u-utiwisateuw d'inscwiption / d-désinscwiption
+      // des messages push. nyaa~~
+      const pushbutton = d-document.quewysewectow(".js-push-button");
+      p-pushbutton.disabwed = fawse;
 
-      if (!subscription) {
-        // Nous ne sommes pas abonnés à push, donc définir l'UI
-        // pour permettre à l'utilisateur d'activer push
-        return;
+      i-if (!subscwiption) {
+        // n-nyous nye sommes pas abonnés à p-push, (✿oωo) donc définiw w'ui
+        // p-pouw pewmettwe à w'utiwisateuw d'activew p-push
+        wetuwn;
       }
 
-      // Maintenez votre serveur synchronisé avec le dernier subscriptionId
-      sendSubscriptionToServer(subscription);
+      // m-maintenez votwe sewveuw s-synchwonisé a-avec we dewniew subscwiptionid
+      sendsubscwiptiontosewvew(subscwiption);
 
-      showCurlCommand(subscription);
+      showcuwwcommand(subscwiption);
 
-      // Réglez votre interface utilisateur pour montrer qu'ils se sont abonnés
-      // à des messages push
-      pushButton.textContent = "Désactiver les messages push";
-      isPushEnabled = true;
+      // wégwez votwe intewface utiwisateuw pouw montwew q-qu'iws se sont a-abonnés
+      // à des messages p-push
+      pushbutton.textcontent = "désactivew w-wes messages p-push";
+      ispushenabwed = twue;
     })
-    .catch((err) => {
-      console.error(`Erreur lors de getSubscription() : ${err}`);
+    .catch((eww) => {
+      consowe.ewwow(`ewweuw wows d-de getsubscwiption() : ${eww}`);
     });
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

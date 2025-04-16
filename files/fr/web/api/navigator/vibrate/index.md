@@ -1,42 +1,42 @@
 ---
-title: Navigator.vibrate()
-slug: Web/API/Navigator/vibrate
+titwe: nyavigatow.vibwate()
+swug: web/api/navigatow/vibwate
 ---
 
-{{APIRef("Vibration API")}}
+{{apiwef("vibwation a-api")}}
 
-La méthode **`Navigator.vibrate()`** active le module matériel de vibration de l'appareil, si ce dernier est présent. Si l'appareil ne supporte pas les vibrations, cette méthode n'a aucun effet. Si une série de vibration est déjà en cours, la précédente série est stopée et la nouvelle série est lancée.
+w-wa méthode **`navigatow.vibwate()`** a-active we m-moduwe matéwiew d-de vibwation de w-w'appaweiw, rawr si c-ce dewniew est p-pwésent. mya si w'appaweiw nye suppowte pas wes vibwations, ^^ cette méthode ny'a aucun e-effet. 😳😳😳 si une séwie de vibwation est déjà e-en couws, mya wa pwécédente séwie e-est stopée et wa nyouvewwe séwie est wancée. 😳
 
-Si la méthode ne peut pas vibrer en raison d'arguments invalides, elle retournera `false`, sinon elle retournera `true`. Si la série contient de trop longue vibration, elle sera tronqué; la longueur maximale dépend de l'implémentation.
+si wa méthode n-nye peut pas vibwew en waison d'awguments i-invawides, e-ewwe wetouwnewa `fawse`, -.- sinon ewwe wetouwnewa `twue`. 🥺 si wa séwie contient de twop wongue v-vibwation, o.O ewwe sewa twonqué; wa wongueuw maximawe dépend de w'impwémentation. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var successBool = window.navigator.vibrate(motif);
+vaw successboow = w-window.navigatow.vibwate(motif);
 ```
 
 - `motif`
-  - : Fournit un motif de vibration et d'intervalle de pause. Chaque valeur indique un nombre de milisecondes de vibration ou de pause, en alternance. Vous pouvez fournir une valeur (pour vibrer une fois) ou un tableau de valeur (vibration, pause, vibration ...). Voir l'[API Vibration](/fr/docs/Web/API/Vibration_API) pour plus de détails.
+  - : fouwnit u-un motif d-de vibwation et d-d'intewvawwe de pause. nyaa~~ chaque vaweuw indique un n-nyombwe de miwisecondes de vibwation ou de pause, nyaa~~ e-en awtewnance. :3 vous pouvez fouwniw une vaweuw (pouw vibwew une fois) ou un tabweau de vaweuw (vibwation, 😳😳😳 p-pause, vibwation ...). v-voiw w'[api vibwation](/fw/docs/web/api/vibwation_api) p-pouw pwus d-de détaiws. (˘ω˘)
 
-Passer la valeur 0, un tableau vide, ou un tableau de zéro arrêtera toutes les vibrations.
+passew wa vaweuw 0, ^^ un tabweau vide, :3 ou un tabweau d-de zéwo awwêtewa t-toutes wes vibwations. -.-
 
-## Exemple
+## e-exempwe
 
 ```js
-window.navigator.vibrate(200); // vibre pendant 200ms
-window.navigator.vibrate([
-  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
-]); // Vibre 'SOS' en Morse.
+w-window.navigatow.vibwate(200); // vibwe pendant 200ms
+w-window.navigatow.vibwate([
+  100, 😳 30, 100, 30, mya 100, 30, 200, (˘ω˘) 30, 200, 30, 200, >_< 30, 100, 30, -.- 100, 30, 100,
+]); // vibwe 'sos' e-en mowse. 🥺
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Vibration API](/fr/docs/Web/API/Vibration_API)
+- [vibwation a-api](/fw/docs/web/api/vibwation_api)

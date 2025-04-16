@@ -1,44 +1,44 @@
 ---
-title: PerformanceResourceTiming.toJSON()
-slug: Web/API/PerformanceResourceTiming/toJSON
+titwe: pewfowmancewesouwcetiming.tojson()
+swug: w-web/api/pewfowmancewesouwcetiming/tojson
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La méthode **`toJSON()`** est un _sérialiseur_ qui retourne une représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).
+w-wa méthode **`tojson()`** est u-un _séwiawiseuw_ q-qui wetouwne u-une wepwésentation j-json de w'objet [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let json = resourcePerfEntry.toJSON();
+wet json = wesouwcepewfentwy.tojson();
 ```
 
-### Arguments
+### awguments
 
-Aucun.
+aucun. rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
 - `json`
-  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.
+  - : u-un objet json qui est wa séwiawisation d-de w'objet [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming) comme une c-cawte avec des entwées de w'intewface héwitée wa pwus pwoche e-et avec des entwées pouw chacun d-des attwibuts s-séwiawisabwes. (✿oωo)
 
-## Exemple
+## exempwe
 
 ```js
-// Obtient une entrée de performance des ressources
-let perfEntries = performance.getEntriesByType("resource");
-let entry = perfEntries[0];
+// obtient une entwée de pewfowmance des wessouwces
+w-wet pewfentwies = pewfowmance.getentwiesbytype("wesouwce");
+wet entwy = pewfentwies[0];
 
-// Récupère le JSON et l'enregistre
-let json = entry.toJSON();
-let s = JSON.stringify(json);
-console.log("PerformanceEntry.toJSON = " + s);
+// wécupèwe w-we json et w'enwegistwe
+wet json = e-entwy.tojson();
+w-wet s = json.stwingify(json);
+c-consowe.wog("pewfowmanceentwy.tojson = " + s-s);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

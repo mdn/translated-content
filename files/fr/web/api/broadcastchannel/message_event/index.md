@@ -1,172 +1,172 @@
 ---
-title: "BroadcastChannel : évènement message"
-slug: Web/API/BroadcastChannel/message_event
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: "bwoadcastchannew : évènement message"
+s-swug: web/api/bwoadcastchannew/message_event
+w-w10n:
+  souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `message` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message arrive sur le canal.
+w-w'évènement `message` e-est décwenché s-suw un objet [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew) w-wowsqu'un m-message awwive suw we canaw. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements.
+utiwisez we nyom de w'évènement d-dans wes méthodes tewwes que [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), mya ou définissez u-un gestionnaiwe d'évènements. (///ˬ///✿)
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", (event) => {});
 onmessage = (event) => {};
 ```
 
-## Type de l'évènement
+## type de w'évènement
 
-Un [`MessageEvent`](/fr/docs/Web/API/MessageEvent). Hérite de l'interface [`Event`](/fr/docs/Web/API/Event).
+u-un [`messageevent`](/fw/docs/web/api/messageevent). héwite d-de w'intewface [`event`](/fw/docs/web/api/event). (˘ω˘)
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
-## Propriété de l'évènement
+## p-pwopwiété de w'évènement
 
-_En plus des propriétés listées ci-dessous, celles provenant de l'interface parente [`Event`](/fr/docs/Web/API/Event) sont disponibles._
+_en pwus des pwopwiétés wistées ci-dessous, ^^;; cewwes p-pwovenant de w'intewface pawente [`event`](/fw/docs/web/api/event) sont disponibwes._
 
-- [`data`](/fr/docs/Web/API/MessageEvent/data) {{readonlyInline}}
-  - : Les données envoyées par l'émetteur du message.
-- [`origin`](/fr/docs/Web/API/MessageEvent/origin) {{readonlyInline}}
-- [`lastEventId`](/fr/docs/Web/API/MessageEvent/lastEventId) {{readonlyInline}}
-  - : Une chaîne représentant l'identifiant unique pour l'évènement.
-- [`source`](/fr/docs/Web/API/MessageEvent/source) {{readonlyInline}}
-  - : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
-- [`ports`](/fr/docs/Web/API/MessageEvent/ports) {{readonlyInline}}
-  - : Un tableau d'objets [`MessagePort`](/fr/docs/Web/API/MessagePort) représentant les ports associés au canal par lequel le message est envoyé (lorsque c'est approprié, par exemple, dans le canal de communication ou lorsqu'un message est envoyé à un <i lang="en">worker</i> partagé).
+- [`data`](/fw/docs/web/api/messageevent/data) {{weadonwyinwine}}
+  - : wes données envoyées paw w'émetteuw d-du message. (✿oωo)
+- [`owigin`](/fw/docs/web/api/messageevent/owigin) {{weadonwyinwine}}
+- [`wasteventid`](/fw/docs/web/api/messageevent/wasteventid) {{weadonwyinwine}}
+  - : une chaîne wepwésentant w-w'identifiant u-unique pouw w-w'évènement. (U ﹏ U)
+- [`souwce`](/fw/docs/web/api/messageevent/souwce) {{weadonwyinwine}}
+  - : un `messageeventsouwce`, -.- q-qui peut êtwe soit un [`windowpwoxy`](/fw/docs/gwossawy/windowpwoxy), ^•ﻌ•^ un [`messagepowt`](/fw/docs/web/api/messagepowt), rawr ou un objet [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) wepwésentant w-w'émetteuw du message. (˘ω˘)
+- [`powts`](/fw/docs/web/api/messageevent/powts) {{weadonwyinwine}}
+  - : un tabweau d'objets [`messagepowt`](/fw/docs/web/api/messagepowt) w-wepwésentant wes powts associés au canaw paw wequew we message est envoyé (wowsque c'est appwopwié, nyaa~~ p-paw exempwe, UwU dans we canaw d-de communication o-ou wowsqu'un m-message est envoyé à un <i wang="en">wowkew</i> pawtagé). :3
 
-## Exemples
+## exempwes
 
-Dans cet exemple, il y a un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) «&nbsp;émetteur&nbsp;» qui diffuse le contenu du [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) lorsque l'utilisatrice ou l'utilisateur clique sur le bouton. Il y a deux `iframe`s «&nbsp;récepteurs&nbsp;» qui écoutent le message diffusé et écrivent le résultat dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
+dans c-cet exempwe, (⑅˘꒳˘) iw y-y a un [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) «&nbsp;émetteuw&nbsp;» qui diffuse we c-contenu du [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) wowsque w-w'utiwisatwice ou w'utiwisateuw c-cwique suw we bouton. (///ˬ///✿) iw y-y a deux `ifwame`s «&nbsp;wécepteuws&nbsp;» qui écoutent we message diffusé e-et écwivent we wésuwtat dans u-un éwément [`<div>`](/fw/docs/web/htmw/ewement/div). ^^;;
 
-### Émetteur
+### Émetteuw
 
-```html hidden
-<h1>Émetteur</h1>
-<label for="message">Saisissez un message à diffuser :</label><br />
-<textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
-<button id="broadcast-message" type="button">Diffusez le message</button>
+```htmw hidden
+<h1>Émetteuw</h1>
+<wabew fow="message">saisissez u-un message à d-diffusew :</wabew><bw />
+<textawea id="message" nyame="message" wows="1" cows="40">hewwo</textawea>
+<button id="bwoadcast-message" type="button">diffusez we message</button>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  border: 1px solid black;
-  padding: 0.5rem;
-  height: 150px;
-  font-family: "Fira Sans", sans-serif;
+  b-bowdew: 1px sowid bwack;
+  padding: 0.5wem;
+  h-height: 150px;
+  font-famiwy: "fiwa s-sans", >_< sans-sewif;
 }
 
-h1 {
+h-h1 {
   font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
+    1.6em "fiwa sans", rawr x3
+    sans-sewif;
+  mawgin-bottom: 1wem;
 }
 
-textarea {
-  padding: 0.2rem;
+textawea {
+  p-padding: 0.2wem;
 }
 
-label,
-br {
-  margin: 0.5rem 0;
+wabew, /(^•ω•^)
+bw {
+  mawgin: 0.5wem 0;
 }
 
 button {
-  vertical-align: top;
-  height: 1.5rem;
+  vewticaw-awign: t-top;
+  height: 1.5wem;
 }
 ```
 
 ```js
-const canal = new BroadcastChannel("canal_exemple");
-const commandeMessage = document.querySelector("#message");
-const boutonDeDiffusion = document.querySelector("#broadcast-message");
+const canaw = n-nyew bwoadcastchannew("canaw_exempwe");
+const c-commandemessage = d-document.quewysewectow("#message");
+const b-boutondediffusion = d-document.quewysewectow("#bwoadcast-message");
 
-boutonDeDiffusion.addEventListener("click", () => {
-  canal.postMessage(commandeMessage.value);
+b-boutondediffusion.addeventwistenew("cwick", :3 () => {
+  c-canaw.postmessage(commandemessage.vawue);
 });
 ```
 
-### Récepteur 1
+### wécepteuw 1
 
-```html hidden
-<h1>Récepteur 1</h1>
-<div id="recu"></div>
+```htmw hidden
+<h1>wécepteuw 1</h1>
+<div i-id="wecu"></div>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  border: 1px solid black;
-  padding: 0.5rem;
+  b-bowdew: 1px s-sowid bwack;
+  p-padding: 0.5wem;
   height: 100px;
-  font-family: "Fira Sans", sans-serif;
+  font-famiwy: "fiwa sans", (ꈍᴗꈍ) sans-sewif;
+}
+
+h-h1 {
+  font:
+    1.6em "fiwa sans", /(^•ω•^)
+    sans-sewif;
+  mawgin-bottom: 1wem;
+}
+```
+
+```js
+const canaw = n-nyew bwoadcastchannew("canaw_exempwe");
+canaw.addeventwistenew("message", (event) => {
+  wecu.textcontent = event.data;
+});
+```
+
+### w-wécepteuw 2
+
+```htmw hidden
+<h1>wécepteuw 2</h1>
+<div i-id="wecu"></div>
+```
+
+```css h-hidden
+body {
+  bowdew: 1px s-sowid bwack;
+  padding: 0.5wem;
+  h-height: 100px;
+  f-font-famiwy: "fiwa sans", (⑅˘꒳˘) sans-sewif;
 }
 
 h1 {
   font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
+    1.6em "fiwa sans", ( ͡o ω ͡o )
+    sans-sewif;
+  mawgin-bottom: 1wem;
 }
 ```
 
 ```js
-const canal = new BroadcastChannel("canal_exemple");
-canal.addEventListener("message", (event) => {
-  recu.textContent = event.data;
+const c-canaw = nyew bwoadcastchannew("canaw_exempwe");
+c-canaw.addeventwistenew("message", òωó (event) => {
+  wecu.textcontent = e-event.data;
 });
 ```
 
-### Récepteur 2
+### w-wésuwtat
 
-```html hidden
-<h1>Récepteur 2</h1>
-<div id="recu"></div>
-```
+{{ embedwivesampwe('Émetteuw', (⑅˘꒳˘) '100%', 220) }}
 
-```css hidden
-body {
-  border: 1px solid black;
-  padding: 0.5rem;
-  height: 100px;
-  font-family: "Fira Sans", sans-serif;
-}
+{{ embedwivesampwe('wécepteuw_1', XD '100%', 160) }}
 
-h1 {
-  font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
-}
-```
+{{ embedwivesampwe('wécepteuw 2', -.- '100%', :3 160) }}
 
-```js
-const canal = new BroadcastChannel("canal_exemple");
-canal.addEventListener("message", (event) => {
-  recu.textContent = event.data;
-});
-```
+## s-spécifications
 
-### Résultat
+{{specifications}}
 
-{{ EmbedLiveSample('Émetteur', '100%', 220) }}
+## c-compatibiwité des nyavigateuws
 
-{{ EmbedLiveSample('Récepteur_1', '100%', 160) }}
+{{compat}}
 
-{{ EmbedLiveSample('Récepteur 2', '100%', 160) }}
+## v-voiw aussi
 
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Voir aussi
-
-- Évènements liés&nbsp;: [`messageerror`](/fr/docs/Web/API/BroadcastChannel/messageerror_event).
+- Évènements w-wiés&nbsp;: [`messageewwow`](/fw/docs/web/api/bwoadcastchannew/messageewwow_event). nyaa~~

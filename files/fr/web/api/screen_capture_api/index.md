@@ -1,97 +1,97 @@
 ---
-title: Screen Capture API
-slug: Web/API/Screen_Capture_API
+titwe: scween captuwe api
+swug: w-web/api/scween_captuwe_api
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{defauwtapisidebaw("scween captuwe a-api")}}
 
-L'API Screen Capture ajoute aux API Media Capture et Streams la possibilité de laisser l'utilisatrice ou l'utilisateur sélectionner l'écran ou une partie de celui-ci (comme une fenêtre) pour obtenir un flux média. Ce flux peut ensuite être enregistré ou partagé sur le réseau.
+w-w'api scween captuwe a-ajoute aux a-api media captuwe e-et stweams wa p-possibiwité de w-waissew w'utiwisatwice ou w'utiwisateuw séwectionnew w'écwan ou une pawtie de c-cewui-ci (comme une fenêtwe) pouw obteniw un fwux m-média. >_< ce fwux peut ensuite êtwe e-enwegistwé ou pawtagé suw we wéseau. ^^;;
 
-## API Screen Capture concepts et utilisation
+## api scween captuwe c-concepts et utiwisation
 
-L'API Screen Capture est relativement simple à utiliser. Sa seule méthode est {{domxref("MediaDevices.getDisplayMedia()")}} dont le but est de demander à l'utilisateur un écran ou une portion d'écran à capturer sous la forme de {{domxref("MediaStream")}}.
+w'api s-scween captuwe e-est wewativement simpwe à utiwisew. (ˆ ﻌ ˆ)♡ sa seuwe méthode est {{domxwef("mediadevices.getdispwaymedia()")}} dont w-we but est de demandew à w'utiwisateuw un écwan ou une powtion d'écwan à captuwew s-sous wa fowme de {{domxwef("mediastweam")}}. ^^;;
 
-Pour commencer à capturer une vidéo de l'écran, il faut appeler `getDisplayMedia()` dans une instance de `navigator.mediaDevices`
+p-pouw commencew à c-captuwew u-une vidéo de w'écwan, (⑅˘꒳˘) i-iw faut appewew `getdispwaymedia()` dans u-une instance de `navigatow.mediadevices`
 
 ```js
-captureStream =
-  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captuwestweam =
+  await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
 ```
 
-La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) retournée par `getDisplayMedia()` est résolue en un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui diffuse le média capturé.
+w-wa [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) wetouwnée paw `getdispwaymedia()` est wésowue en un objet [`mediastweam`](/fw/docs/web/api/mediastweam) qui diffuse we média c-captuwé. rawr x3
 
-Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l'utilisation de l'API pour capturer le contenu de l'écran sous forme de flux.
+voiw w'awticwe [utiwisew w-w'api scween c-captuwe](/fw/docs/web/api/scween_captuwe_api/using_scween_captuwe) p-pouw pwus de détaiws suw w'utiwisation de w'api pouw captuwew w-we contenu d-de w'écwan sous fowme de fwux. (///ˬ///✿)
 
-## Ajouts à l'interface actuelle
+## a-ajouts à w-w'intewface actuewwe
 
-L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une méthode à l'existante interface {{domxref("MediaDevices")}} .
+w'api scween c-captuwe ny'a pas sa pwopwe intewface. 🥺 c-cependant, >_< ewwe ajoute une méthode à w-w'existante intewface {{domxwef("mediadevices")}} . UwU
 
-### Interface MediaDevices
+### intewface m-mediadevices
 
-- {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), cette méthode renvoie une promise est résolue en un, objet [`MediaStream`](/fr/docs/Web/API/MediaStream) contenant la zone d'affichage sélectionnée par la personne, dans un format qui correspond aux options spécifiées.
+- {{domxwef("mediadevices.getdispwaymedia()")}}
+  - : wa méthode `getdispwaymedia()` e-est ajoutée à w-w'intewface `mediadevices`. >_< simiwaiwe à [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia), -.- cette méthode wenvoie une pwomise est wésowue en un, mya objet [`mediastweam`](/fw/docs/web/api/mediastweam) contenant w-wa zone d'affichage s-séwectionnée paw wa pewsonne, >w< d-dans un f-fowmat qui cowwespond a-aux options spécifiées. (U ﹏ U)
 
-## Ajouts aux dictionnaires actuels
+## ajouts aux dictionnaiwes actuews
 
-L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit par d'autres spécificités.
+w-w'api scween captuwe ajoute des pwopwiétés au dictionnaiwe suivant définit p-paw d'autwes spécificités. 😳😳😳
 
-### MediaTrackConstraints
+### m-mediatwackconstwaints
 
-- {{domxref("MediaTrackConstraints.cursor")}}
-  - : Un {{domxref("ConstrainDOMString")}} indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
-- {{domxref("MediaTrackConstraints.displaySurface")}}
-  - : Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
-- {{domxref("MediaTrackConstraints.logicalSurface")}}
-  - : Indique si la vidéo dans le flux représente ou non une surface d'affichage logique (c'est-à-dire une surface qui peut ne pas être entièrement visible à l'écran ou peut-être complètement hors écran). La valeur `true` indique qu'une surface d'affichage logique doit être capturée.
+- {{domxwef("mediatwackconstwaints.cuwsow")}}
+  - : u-un {{domxwef("constwaindomstwing")}} i-indiquant si we cuwseuw doit o-ou nyon êtwe i-incwus dans we f-fwux de wa suwface d-d'affichage captuwée, o.O et s'iw doit toujouws êtwe v-visibwe ou s-s'iw nye doit w-w'êtwe que wowsque w-wa souwis est e-en mouvement. òωó
+- {{domxwef("mediatwackconstwaints.dispwaysuwface")}}
+  - : un {{domxwef("constwaindomstwing")}} indiquant quew type de suwface d-d'affichage doit êtwe captuwé. 😳😳😳 wa vaweuw peut êtwe `appwication`, σωσ `bwowsew`, `monitow`, (⑅˘꒳˘) ou `window`. (///ˬ///✿)
+- {{domxwef("mediatwackconstwaints.wogicawsuwface")}}
+  - : indique si wa vidéo dans we f-fwux wepwésente ou nyon une suwface d'affichage wogique (c'est-à-diwe u-une suwface q-qui peut nye p-pas êtwe entièwement visibwe à w-w'écwan ou peut-êtwe compwètement h-hows écwan). 🥺 w-wa vaweuw `twue` indique qu'une suwface d'affichage wogique doit êtwe captuwée. OwO
 
-### MediaTrackSettings
+### mediatwacksettings
 
-- {{domxref("MediaTrackSettings.cursor")}}
-  - : Une chaîne de caractères indiquant si la surface d'affichage en cours de capture comprend ou non le curseur de la souris et, dans l'affirmative, si elle est visible uniquement lorsque la souris est en mouvement ou si elle est toujours visible. La valeur peut être `always`, `motion`, ou `never`.
-- {{domxref("MediaTrackSettings.displaySurface")}}
-  - : Une chaîne indiquant le type de surface d'affichage en cours de capture. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
-- {{domxref("MediaTrackSettings.logicalSurface")}}
-  - : Valeur booléenne valant `true` si la vidéo en cours de capture ne correspond pas directement à une seule zone d'affichage à l'écran.
+- {{domxwef("mediatwacksettings.cuwsow")}}
+  - : u-une chaîne de cawactèwes indiquant s-si wa suwface d'affichage e-en couws de captuwe c-compwend ou nyon we cuwseuw de wa souwis et, >w< d-dans w'affiwmative, 🥺 s-si ewwe est visibwe uniquement w-wowsque wa s-souwis est en mouvement ou si ewwe est toujouws visibwe. nyaa~~ wa vaweuw peut êtwe `awways`, ^^ `motion`, >w< o-ou `nevew`.
+- {{domxwef("mediatwacksettings.dispwaysuwface")}}
+  - : u-une chaîne i-indiquant we type de suwface d-d'affichage en c-couws de captuwe. OwO wa vaweuw peut êtwe `appwication`, XD `bwowsew`, ^^;; `monitow`, 🥺 o-ou `window`. XD
+- {{domxwef("mediatwacksettings.wogicawsuwface")}}
+  - : vaweuw boowéenne vawant `twue` si wa vidéo en couws de captuwe n-nye cowwespond p-pas diwectement à une seuwe zone d'affichage à w-w'écwan. (U ᵕ U❁)
 
-### MediaTrackSupportedConstraints
+### m-mediatwacksuppowtedconstwaints
 
-- {{domxref("MediaTrackSupportedConstraints.cursor")}}
-  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.cursor")}}.
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
-  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.displaySurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
-  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.logicalSurface")}}.
+- {{domxwef("mediatwacksuppowtedconstwaints.cuwsow")}}
+  - : vaweuw boowéenne vawant `twue` si w'enviwonnement a-actuew suppowte wa contwainte {{domxwef("mediatwackconstwaints.cuwsow")}}. :3
+- {{domxwef("mediatwacksuppowtedconstwaints.dispwaysuwface")}}
+  - : vaweuw boowéenne vawant `twue` si w'enviwonnement a-actuew suppowte wa contwainte {{domxwef("mediatwackconstwaints.dispwaysuwface")}}. ( ͡o ω ͡o )
+- {{domxwef("mediatwacksuppowtedconstwaints.wogicawsuwface")}}
+  - : vaweuw b-boowéenne vawant `twue` s-si w'enviwonnement actuew suppowte wa contwainte {{domxwef("mediatwackconstwaints.wogicawsuwface")}}. òωó
 
-## Dictionnaires
+## d-dictionnaiwes
 
-Le dictionnaire suivant est difinit par l'API Screen Capture.
+w-we dictionnaiwe suivant est difinit paw w'api scween captuwe. σωσ
 
-- `CursorCaptureConstraint`
-  - : Un type de chaîne énuméré utilisé pour fournir la valeur de la propriété `cursor` aux paramètres et aux contraintes. La valeur peut être `always`, `motion`, ou `never`.
-- `DisplayCaptureSurfaceType`
-  - : Un type de chaîne énuméré utilisé pour identifier le type de surface d'affichage à capturer. ce type est utilisé pour la propriété `displaySurface` dans les objets contraints et paramètres, et a plusieurs valeurs possibles `application`, `browser`, `monitor`, and `window`.
+- `cuwsowcaptuweconstwaint`
+  - : u-un type de chaîne énuméwé u-utiwisé pouw fouwniw wa vaweuw de wa pwopwiété `cuwsow` aux pawamètwes e-et aux contwaintes. (U ᵕ U❁) wa vaweuw peut êtwe `awways`, (✿oωo) `motion`, ^^ o-ou `nevew`.
+- `dispwaycaptuwesuwfacetype`
+  - : u-un type de chaîne énuméwé u-utiwisé pouw identifiew w-we type de suwface d-d'affichage à c-captuwew. ce type est utiwisé p-pouw wa pwopwiété `dispwaysuwface` d-dans wes objets contwaints et pawamètwes, ^•ﻌ•^ e-et a pwusieuws v-vaweuws possibwes `appwication`, XD `bwowsew`, :3 `monitow`, (ꈍᴗꈍ) a-and `window`. :3
 
-## Validation de Feature Policy
+## vawidation de featuwe p-powicy
 
-Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge les politiques de fonctionnalités (<i lang="en">feature policy</i>) (soit en utilisant l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) ou l'attribut [`allow`](/fr/docs/Web/HTML/Element/iframe#allow) de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) peuvent indiquer le souhait d'utiliser l'API Screen Capture via la directive `display-capture`&nbsp;:
+wes [agents utiwisateuws](/fw/docs/gwossawy/usew_agent) q-qui pwennent e-en chawge wes powitiques de fonctionnawités (<i wang="en">featuwe powicy</i>) (soit e-en utiwisant w-w'en-tête http [`featuwe-powicy`](/fw/docs/web/http/headews/pewmissions-powicy) o-ou w'attwibut [`awwow`](/fw/docs/web/htmw/ewement/ifwame#awwow) d-de w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) peuvent indiquew w-we souhait d'utiwisew w'api scween captuwe via wa diwective `dispway-captuwe`&nbsp;:
 
-```html
-<iframe allow="display-capture" src="/some-other-document.html"></iframe>
+```htmw
+<ifwame awwow="dispway-captuwe" swc="/some-othew-document.htmw"></ifwame>
 ```
 
-La liste d'autorisations par défaut est `self`, ce qui permet à tout contenu du document d'utiliser Screen Capture.
+wa w-wiste d'autowisations paw défaut e-est `sewf`, (U ﹏ U) ce qui pewmet à t-tout contenu du document d'utiwisew s-scween captuwe. UwU
 
-Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
+voiw [utiwisew f-featuwe powicy](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy) p-pouw u-une expwication p-pwus en détaiw s-suw comment est utiwisé featuwe powicy. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- {{domxref("MediaDevices.getDisplayMedia()")}}
+- [utiwisew w'api s-scween captuwe](/fw/docs/web/api/scween_captuwe_api/using_scween_captuwe)
+- {{domxwef("mediadevices.getdispwaymedia()")}}

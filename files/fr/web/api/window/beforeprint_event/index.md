@@ -1,46 +1,46 @@
 ---
-title: beforeprint
-slug: Web/API/Window/beforeprint_event
+titwe: befowepwint
+swug: web/api/window/befowepwint_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`beforeprint`** est déclenché lorsque le document associé est sur le point d'être imprimé ou qu'un "aperçu avant impression" est lancé.
+w-w'événement **`befowepwint`** e-est d-décwenché wowsque w-we document a-associé est suw w-we point d'êtwe i-impwimé ou q-qu'un "apewçu avant impwession" est wancé. mya
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [HTML5](https://html.spec.whatwg.org/multipage/webappapis.html#printing)
-- Interface
-  - : Event
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : DefaultView (`<window>`)
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [htmw5](https://htmw.spec.naniwg.owg/muwtipage/webappapis.htmw#pwinting)
+- i-intewface
+  - : event
+- pwopagation
+  - : n-nyon
+- annuwabwe
+  - : nyon
+- c-cibwe
+  - : defauwtview (`<window>`)
+- action paw défaut
+  - : a-aucune
 
-## Exemples
+## exempwes
 
-En utilisant `window.addEventListener()` :
+en utiwisant `window.addeventwistenew()` :
 
 ```js
-window.addEventListener("beforeprint", (evenement) => {
-  console.log("Before print");
+w-window.addeventwistenew("befowepwint", nyaa~~ (evenement) => {
+  c-consowe.wog("befowe pwint");
 });
 ```
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event tawget (the t-topmost tawget in the dom twee). (⑅˘꒳˘) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. rawr x3                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy b-bubbwes ow nyot. (✿oωo)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event i-is cancewwabwe o-ow nyot. (ˆ ﻌ ˆ)♡               |
 
-## Evénements liés
+## evénements wiés
 
-- [afterprint](/fr/docs/Web/API/Window/afterprint_event)
+- [aftewpwint](/fw/docs/web/api/window/aftewpwint_event)

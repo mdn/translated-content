@@ -1,188 +1,188 @@
 ---
-title: "WebGL : graphismes 2D et 3D pour le Web"
-slug: Web/API/WebGL_API
-l10n:
-  sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
+titwe: "webgw : gwaphismes 2d e-et 3d pouw we web"
+s-swug: web/api/webgw_api
+w-w10n:
+  s-souwcecommit: f-fff0462a1f0cdd479b62808e810e9fd030622c8e
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-**WebGL** (<i lang="en">Web Graphics Library</i>, qu'on pourrait traduire en «&nbsp;bibliothèque de graphismes pour le Web&nbsp;») est une API JavaScript permettant le rendu de graphismes en 2D ou 3D avec de hautes performances, sans avoir à utiliser de plugin. WebGL introduit une API qui est conforme de près à OpenGL ES 2.0 et qui peut être utilisée sur les éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cette conformité permet à l'API de tirer parti de l'accélération matérielle graphique fournie par l'appareil.
+**webgw** (<i w-wang="en">web g-gwaphics w-wibwawy</i>, rawr qu'on pouwwait twaduiwe en «&nbsp;bibwiothèque de gwaphismes pouw we web&nbsp;») e-est une api javascwipt pewmettant we wendu d-de gwaphismes en 2d ou 3d avec d-de hautes pewfowmances, XD sans avoiw à utiwisew de pwugin. webgw i-intwoduit une api qui est confowme d-de pwès à opengw e-es 2.0 et qui peut êtwe utiwisée suw wes éwéments htmw [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). (U ﹏ U) cette confowmité p-pewmet à w'api de tiwew pawti de w'accéwéwation matéwiewwe gwaphique fouwnie p-paw w'appaweiw. (˘ω˘)
 
-WebGL est pris en charge par [Firefox](/fr/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, et [Microsoft Edge](https://www.microsoft.com/fr-FR/edge) build 10240+. Il est également nécessaire que le matériel de l'appareil utilisé prenne en charge ces fonctionnalités.
+webgw est pwis e-en chawge paw [fiwefox](/fw/docs/moziwwa/fiwefox) 4+, UwU [googwe c-chwome](https://www.googwe.com/chwome/) 9+, >_< [opewa](https://www.opewa.com/) 12+, σωσ [safawi](https://www.appwe.com/safawi/) 5.1+, 🥺 e-et [micwosoft edge](https://www.micwosoft.com/fw-fw/edge) b-buiwd 10240+. 🥺 iw est égawement nyécessaiwe q-que we matéwiew de w'appaweiw utiwisé p-pwenne en chawge ces fonctionnawités. ʘwʘ
 
-L'API [WebGL 2](#webgl_2) fournit la plupart des fonctionnalités de OpenGL ES 3.0. Elle est fournie via l'interface [`WebGL2RenderingContext`](/fr/docs/Web/API/WebGL2RenderingContext).
+w'api [webgw 2](#webgw_2) fouwnit wa pwupawt des fonctionnawités de opengw e-es 3.0. :3 ewwe est fouwnie via w-w'intewface [`webgw2wendewingcontext`](/fw/docs/web/api/webgw2wendewingcontext). (U ﹏ U)
 
-L'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) est également utilisé par [l'API <i lang="en">Canvas</i>](/fr/docs/Web/API/Canvas_API) pour réaliser des graphismes en 2D sur des pages web.
+w-w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) e-est égawement utiwisé paw [w'api <i wang="en">canvas</i>](/fw/docs/web/api/canvas_api) p-pouw wéawisew d-des gwaphismes en 2d suw des p-pages web. (U ﹏ U)
 
-## Référence
+## w-wéféwence
 
-### Interfaces standard
+### intewfaces standawd
 
-- [`WebGLRenderingContext`](/fr/docs/Web/API/WebGLRenderingContext)
-- [`WebGL2RenderingContext`](/fr/docs/Web/API/WebGL2RenderingContext)
-- [`WebGLActiveInfo`](/fr/docs/Web/API/WebGLActiveInfo)
-- [`WebGLBuffer`](/fr/docs/Web/API/WebGLBuffer)
-- [`WebGLContextEvent`](/fr/docs/Web/API/WebGLContextEvent)
-- [`WebGLFramebuffer`](/fr/docs/Web/API/WebGLFramebuffer)
-- [`WebGLProgram`](/fr/docs/Web/API/WebGLProgram)
-- [`WebGLQuery`](/fr/docs/Web/API/WebGLQuery)
-- [`WebGLRenderbuffer`](/fr/docs/Web/API/WebGLRenderbuffer)
-- [`WebGLSampler`](/fr/docs/Web/API/WebGLSampler)
-- [`WebGLShader`](/fr/docs/Web/API/WebGLShader)
-- [`WebGLShaderPrecisionFormat`](/fr/docs/Web/API/WebGLShaderPrecisionFormat)
-- [`WebGLSync`](/fr/docs/Web/API/WebGLSync)
-- [`WebGLTexture`](/fr/docs/Web/API/WebGLTexture)
-- [`WebGLTransformFeedback`](/fr/docs/Web/API/WebGLTransformFeedback)
-- [`WebGLUniformLocation`](/fr/docs/Web/API/WebGLUniformLocation)
-- [`WebGLVertexArrayObject`](/fr/docs/Web/API/WebGLVertexArrayObject)
+- [`webgwwendewingcontext`](/fw/docs/web/api/webgwwendewingcontext)
+- [`webgw2wendewingcontext`](/fw/docs/web/api/webgw2wendewingcontext)
+- [`webgwactiveinfo`](/fw/docs/web/api/webgwactiveinfo)
+- [`webgwbuffew`](/fw/docs/web/api/webgwbuffew)
+- [`webgwcontextevent`](/fw/docs/web/api/webgwcontextevent)
+- [`webgwfwamebuffew`](/fw/docs/web/api/webgwfwamebuffew)
+- [`webgwpwogwam`](/fw/docs/web/api/webgwpwogwam)
+- [`webgwquewy`](/fw/docs/web/api/webgwquewy)
+- [`webgwwendewbuffew`](/fw/docs/web/api/webgwwendewbuffew)
+- [`webgwsampwew`](/fw/docs/web/api/webgwsampwew)
+- [`webgwshadew`](/fw/docs/web/api/webgwshadew)
+- [`webgwshadewpwecisionfowmat`](/fw/docs/web/api/webgwshadewpwecisionfowmat)
+- [`webgwsync`](/fw/docs/web/api/webgwsync)
+- [`webgwtextuwe`](/fw/docs/web/api/webgwtextuwe)
+- [`webgwtwansfowmfeedback`](/fw/docs/web/api/webgwtwansfowmfeedback)
+- [`webgwunifowmwocation`](/fw/docs/web/api/webgwunifowmwocation)
+- [`webgwvewtexawwayobject`](/fw/docs/web/api/webgwvewtexawwayobject)
 
-### Extensions
+### e-extensions
 
-- [`ANGLE_instanced_arrays`](/fr/docs/Web/API/ANGLE_instanced_arrays)
-- [`EXT_blend_minmax`](/fr/docs/Web/API/EXT_blend_minmax)
-- [`EXT_color_buffer_float`](/fr/docs/Web/API/EXT_color_buffer_float)
-- [`EXT_color_buffer_half_float`](/fr/docs/Web/API/EXT_color_buffer_half_float)
-- [`EXT_disjoint_timer_query`](/fr/docs/Web/API/EXT_disjoint_timer_query)
-- [`EXT_float_blend`](/fr/docs/Web/API/EXT_float_blend)
-- [`EXT_frag_depth`](/fr/docs/Web/API/EXT_frag_depth)
-- [`EXT_shader_texture_lod`](/fr/docs/Web/API/EXT_shader_texture_lod)
-- [`EXT_sRGB`](/fr/docs/Web/API/EXT_sRGB)
-- [`EXT_texture_compression_bptc`](/fr/docs/Web/API/EXT_texture_compression_bptc)
-- [`EXT_texture_compression_rgtc`](/fr/docs/Web/API/EXT_texture_compression_rgtc)
-- [`EXT_texture_filter_anisotropic`](/fr/docs/Web/API/EXT_texture_filter_anisotropic)
-- [`EXT_texture_norm16`](/fr/docs/Web/API/EXT_texture_norm16)
-- [`KHR_parallel_shader_compile`](/fr/docs/Web/API/KHR_parallel_shader_compile)
-- [`OES_element_index_uint`](/fr/docs/Web/API/OES_element_index_uint)
-- [`OES_fbo_render_mipmap`](/fr/docs/Web/API/OES_fbo_render_mipmap)
-- [`OES_standard_derivatives`](/fr/docs/Web/API/OES_standard_derivatives)
-- [`OES_texture_float`](/fr/docs/Web/API/OES_texture_float)
-- [`OES_texture_float_linear`](/fr/docs/Web/API/OES_texture_float_linear)
-- [`OES_texture_half_float`](/fr/docs/Web/API/OES_texture_half_float)
-- [`OES_texture_half_float_linear`](/fr/docs/Web/API/OES_texture_half_float_linear)
-- [`OES_vertex_array_object`](/fr/docs/Web/API/OES_vertex_array_object)
-- [`OVR_multiview2`](/fr/docs/Web/API/OVR_multiview2)
-- [`WEBGL_color_buffer_float`](/fr/docs/Web/API/WEBGL_color_buffer_float)
-- [`WEBGL_compressed_texture_astc`](/fr/docs/Web/API/WEBGL_compressed_texture_astc)
-- [`WEBGL_compressed_texture_etc`](/fr/docs/Web/API/WEBGL_compressed_texture_etc)
-- [`WEBGL_compressed_texture_etc1`](/fr/docs/Web/API/WEBGL_compressed_texture_etc1)
-- [`WEBGL_compressed_texture_pvrtc`](/fr/docs/Web/API/WEBGL_compressed_texture_pvrtc)
-- [`WEBGL_compressed_texture_s3tc`](/fr/docs/Web/API/WEBGL_compressed_texture_s3tc)
-- [`WEBGL_compressed_texture_s3tc_srgb`](/fr/docs/Web/API/WEBGL_compressed_texture_s3tc_srgb)
-- [`WEBGL_debug_renderer_info`](/fr/docs/Web/API/WEBGL_debug_renderer_info)
-- [`WEBGL_debug_shaders`](/fr/docs/Web/API/WEBGL_debug_shaders)
-- [`WEBGL_depth_texture`](/fr/docs/Web/API/WEBGL_depth_texture)
-- [`WEBGL_draw_buffers`](/fr/docs/Web/API/WEBGL_draw_buffers)
-- [`WEBGL_lose_context`](/fr/docs/Web/API/WEBGL_lose_context)
-- [`WEBGL_multi_draw`](/fr/docs/Web/API/WEBGL_multi_draw)
+- [`angwe_instanced_awways`](/fw/docs/web/api/angwe_instanced_awways)
+- [`ext_bwend_minmax`](/fw/docs/web/api/ext_bwend_minmax)
+- [`ext_cowow_buffew_fwoat`](/fw/docs/web/api/ext_cowow_buffew_fwoat)
+- [`ext_cowow_buffew_hawf_fwoat`](/fw/docs/web/api/ext_cowow_buffew_hawf_fwoat)
+- [`ext_disjoint_timew_quewy`](/fw/docs/web/api/ext_disjoint_timew_quewy)
+- [`ext_fwoat_bwend`](/fw/docs/web/api/ext_fwoat_bwend)
+- [`ext_fwag_depth`](/fw/docs/web/api/ext_fwag_depth)
+- [`ext_shadew_textuwe_wod`](/fw/docs/web/api/ext_shadew_textuwe_wod)
+- [`ext_swgb`](/fw/docs/web/api/ext_swgb)
+- [`ext_textuwe_compwession_bptc`](/fw/docs/web/api/ext_textuwe_compwession_bptc)
+- [`ext_textuwe_compwession_wgtc`](/fw/docs/web/api/ext_textuwe_compwession_wgtc)
+- [`ext_textuwe_fiwtew_anisotwopic`](/fw/docs/web/api/ext_textuwe_fiwtew_anisotwopic)
+- [`ext_textuwe_nowm16`](/fw/docs/web/api/ext_textuwe_nowm16)
+- [`khw_pawawwew_shadew_compiwe`](/fw/docs/web/api/khw_pawawwew_shadew_compiwe)
+- [`oes_ewement_index_uint`](/fw/docs/web/api/oes_ewement_index_uint)
+- [`oes_fbo_wendew_mipmap`](/fw/docs/web/api/oes_fbo_wendew_mipmap)
+- [`oes_standawd_dewivatives`](/fw/docs/web/api/oes_standawd_dewivatives)
+- [`oes_textuwe_fwoat`](/fw/docs/web/api/oes_textuwe_fwoat)
+- [`oes_textuwe_fwoat_wineaw`](/fw/docs/web/api/oes_textuwe_fwoat_wineaw)
+- [`oes_textuwe_hawf_fwoat`](/fw/docs/web/api/oes_textuwe_hawf_fwoat)
+- [`oes_textuwe_hawf_fwoat_wineaw`](/fw/docs/web/api/oes_textuwe_hawf_fwoat_wineaw)
+- [`oes_vewtex_awway_object`](/fw/docs/web/api/oes_vewtex_awway_object)
+- [`ovw_muwtiview2`](/fw/docs/web/api/ovw_muwtiview2)
+- [`webgw_cowow_buffew_fwoat`](/fw/docs/web/api/webgw_cowow_buffew_fwoat)
+- [`webgw_compwessed_textuwe_astc`](/fw/docs/web/api/webgw_compwessed_textuwe_astc)
+- [`webgw_compwessed_textuwe_etc`](/fw/docs/web/api/webgw_compwessed_textuwe_etc)
+- [`webgw_compwessed_textuwe_etc1`](/fw/docs/web/api/webgw_compwessed_textuwe_etc1)
+- [`webgw_compwessed_textuwe_pvwtc`](/fw/docs/web/api/webgw_compwessed_textuwe_pvwtc)
+- [`webgw_compwessed_textuwe_s3tc`](/fw/docs/web/api/webgw_compwessed_textuwe_s3tc)
+- [`webgw_compwessed_textuwe_s3tc_swgb`](/fw/docs/web/api/webgw_compwessed_textuwe_s3tc_swgb)
+- [`webgw_debug_wendewew_info`](/fw/docs/web/api/webgw_debug_wendewew_info)
+- [`webgw_debug_shadews`](/fw/docs/web/api/webgw_debug_shadews)
+- [`webgw_depth_textuwe`](/fw/docs/web/api/webgw_depth_textuwe)
+- [`webgw_dwaw_buffews`](/fw/docs/web/api/webgw_dwaw_buffews)
+- [`webgw_wose_context`](/fw/docs/web/api/webgw_wose_context)
+- [`webgw_muwti_dwaw`](/fw/docs/web/api/webgw_muwti_dwaw)
 
 ### Évènements
 
-- [`webglcontextlost`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
-- [`webglcontextrestored`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
-- [`webglcontextcreationerror`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+- [`webgwcontextwost`](/fw/docs/web/api/htmwcanvasewement/webgwcontextwost_event)
+- [`webgwcontextwestowed`](/fw/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event)
+- [`webgwcontextcweationewwow`](/fw/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)
 
-### Types et constantes
+### types et c-constantes
 
-- [Constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants)
-- [Types WebGL](/fr/docs/Web/API/WebGL_API/Types)
+- [constantes webgw](/fw/docs/web/api/webgw_api/constants)
+- [types webgw](/fw/docs/web/api/webgw_api/types)
 
-### WebGL 2
+### w-webgw 2
 
-WebGL 2 est une mise à jour majeure de WebGL et est fournie par l'interface [`WebGL2RenderingContext`](/fr/docs/Web/API/WebGL2RenderingContext). Basée sur OpenGL ES 3.0, les nouvelles fonctionnalités incluent&nbsp;:
+webgw 2 est u-une mise à jouw majeuwe de webgw e-et est fouwnie p-paw w'intewface [`webgw2wendewingcontext`](/fw/docs/web/api/webgw2wendewingcontext). ʘwʘ basée suw opengw es 3.0, >w< wes nyouvewwes fonctionnawités incwuent&nbsp;:
 
-- [Textures 3D](/fr/docs/Web/API/WebGL2RenderingContext/texImage3D),
-- [Objets d'échantillonnage des textures (`WebGLSampler`)](/fr/docs/Web/API/WebGLSampler),
-- [Objets de tampon uniformes](/fr/docs/Web/API/WebGL2RenderingContext#objets_tampons_uniforms),
-- [Objets de synchronisation (`WebGLSync`)](/fr/docs/Web/API/WebGLSync),
-- [Objets de requête (`WebGLQuery`)](/fr/docs/Web/API/WebGLQuery),
-- [Objets de retour de transformation (`WebGLTransformFeedback`)](/fr/docs/Web/API/WebGLTransformFeedback),
-- Les extensions ayant été promues et qui font partie de WebGL 2&nbsp;:
-  - [Objets pour les tableaux de sommets](/fr/docs/Web/API/WebGLVertexArrayObject),
-  - [Instanciation](/fr/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced),
-  - [Cibles de rendu multiples](/fr/docs/Web/API/WebGL2RenderingContext/drawBuffers),
-  - [Profondeur de fragment](/fr/docs/Web/API/EXT_frag_depth).
+- [textuwes 3d](/fw/docs/web/api/webgw2wendewingcontext/teximage3d), rawr x3
+- [objets d'échantiwwonnage d-des textuwes (`webgwsampwew`)](/fw/docs/web/api/webgwsampwew), OwO
+- [objets de t-tampon unifowmes](/fw/docs/web/api/webgw2wendewingcontext#objets_tampons_unifowms), ^•ﻌ•^
+- [objets de synchwonisation (`webgwsync`)](/fw/docs/web/api/webgwsync), >_<
+- [objets d-de wequête (`webgwquewy`)](/fw/docs/web/api/webgwquewy), OwO
+- [objets d-de w-wetouw de twansfowmation (`webgwtwansfowmfeedback`)](/fw/docs/web/api/webgwtwansfowmfeedback), >_<
+- wes extensions ayant été pwomues et qui font p-pawtie de webgw 2&nbsp;:
+  - [objets pouw wes tabweaux de sommets](/fw/docs/web/api/webgwvewtexawwayobject), (ꈍᴗꈍ)
+  - [instanciation](/fw/docs/web/api/webgw2wendewingcontext/dwawawwaysinstanced), >w<
+  - [cibwes de wendu muwtipwes](/fw/docs/web/api/webgw2wendewingcontext/dwawbuffews), (U ﹏ U)
+  - [pwofondeuw d-de fwagment](/fw/docs/web/api/ext_fwag_depth). ^^
 
-Voir aussi le billet [<i lang="en">"WebGL 2 lands in Firefox"</i> (en anglais)](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) et [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) pour plusieurs démos.
+voiw aussi w-we biwwet [<i wang="en">"webgw 2 w-wands in fiwefox"</i> (en a-angwais)](https://hacks.moziwwa.owg/2017/01/webgw-2-wands-in-fiwefox/) et [webgwsampwes.owg/webgw2sampwes](https://webgwsampwes.owg/webgw2sampwes/) pouw p-pwusieuws démos. (U ﹏ U)
 
-## Guides et tutoriels
+## g-guides e-et tutowiews
 
-Dans la section qui suit, vous trouverez un ensemble de guide pour apprendre les concepts WebGL et de tutoriels pour des exercices guidés pas à pas et des exemples.
+dans w-wa section qui suit, :3 vous twouvewez un ensembwe d-de guide pouw a-appwendwe wes c-concepts webgw et d-de tutowiews pouw d-des exewcices guidés pas à pas et des exempwes. (✿oωo)
 
-### Guides
+### guides
 
-- [Les données en WebGL](/fr/docs/Web/API/WebGL_API/Data)
-  - : Un guide sur les variables, les tampons et autres types de données utilisées pour l'écriture de code WebGL.
-- [Bonnes pratiques WebGL](/fr/docs/Web/API/WebGL_API/WebGL_best_practices)
-  - : Des conseils et suggestions pour vous aider à améliorer la qualité, la performance et la fiabilité de votre contenu WebGL.
-- [Utiliser les extensions](/fr/docs/Web/API/WebGL_API/Using_Extensions)
-  - : Un guide sur l'utilisation des extensions WebGL.
+- [wes d-données en webgw](/fw/docs/web/api/webgw_api/data)
+  - : un guide suw wes vawiabwes, wes tampons et autwes types de données u-utiwisées pouw w'écwituwe de code webgw. XD
+- [bonnes pwatiques w-webgw](/fw/docs/web/api/webgw_api/webgw_best_pwactices)
+  - : d-des conseiws e-et suggestions pouw vous aidew à a-améwiowew wa quawité, >w< wa pewfowmance e-et wa f-fiabiwité de votwe contenu webgw. òωó
+- [utiwisew wes extensions](/fw/docs/web/api/webgw_api/using_extensions)
+  - : un guide suw w'utiwisation des extensions webgw. (ꈍᴗꈍ)
 
-### Tutoriels
+### t-tutowiews
 
-- [Tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial)
-  - : Un guide pour commencer avec WebGL et découvrir les concepts principaux. Il s'agit d'un bon point de départ si vous n'avez jamais utilisé WebGL auparavant.
+- [tutowiew webgw](/fw/docs/web/api/webgw_api/tutowiaw)
+  - : u-un guide pouw commencew avec webgw e-et découvwiw w-wes concepts pwincipaux. rawr x3 iw s'agit d'un bon point d-de dépawt s-si vous ny'avez jamais utiwisé w-webgw aupawavant. rawr x3
 
-### Exemples
+### e-exempwes
 
-- [Un exemple d'animation WebGL simple en 2D](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example)
-  - : Cet exemple illustre une animation simple d'une forme avec une couleur. Cet article aborde l'adaptation aux facteurs de forme, une fonction pour construire des <i lang="en">shaders</i> à partir de plusieurs <i lang="en">shaders</i>, ainsi que les bases du dessin en WebGL.
-- [WebGL par l'exemple](/fr/docs/Web/API/WebGL_API/By_example)
-  - : Un ensemble d'exemples avec des explications concises qui montrent les concepts et possibilités offertes par WebGL. Les exemples sont triés selon le sujet et le niveau de difficulté. Cet article aborde le contexte de rendu WebGL, la programmation de <i lang="en">shaders</i>, les textures, la géométrie, les interactions avec l'utilisatrice ou l'utilisateur, etc.
+- [un exempwe d'animation webgw simpwe en 2d](/fw/docs/web/api/webgw_api/basic_2d_animation_exampwe)
+  - : cet e-exempwe iwwustwe u-une animation simpwe d-d'une fowme avec une couweuw. σωσ c-cet awticwe a-abowde w'adaptation aux facteuws d-de fowme, (ꈍᴗꈍ) une fonction pouw constwuiwe des <i wang="en">shadews</i> à pawtiw de pwusieuws <i wang="en">shadews</i>, a-ainsi que w-wes bases du dessin en webgw. rawr
+- [webgw paw w'exempwe](/fw/docs/web/api/webgw_api/by_exampwe)
+  - : u-un ensembwe d'exempwes a-avec des expwications concises qui montwent wes concepts e-et possibiwités offewtes paw webgw. ^^;; wes exempwes sont twiés sewon we sujet e-et we nyiveau de difficuwté. rawr x3 cet awticwe abowde w-we contexte de w-wendu webgw, (ˆ ﻌ ˆ)♡ wa pwogwammation de <i wang="en">shadews</i>, σωσ wes textuwes, (U ﹏ U) w-wa géométwie, >w< w-wes intewactions avec w'utiwisatwice ou w'utiwisateuw, σωσ e-etc. nyaa~~
 
-### Tutoriels avancés
+### tutowiews avancés
 
-- [Explications sur le modèle, la vue et la projection WebGL](/fr/docs/Web/API/WebGL_API/WebGL_model_view_projection)
-  - : Une explication détaillée sur les trois matrices principales généralement utilisées pour représenter une vue d'un objet 3D&nbsp;: les matrices de modèle, de vue et de projection.
-- [Mathématiques matricielles pour le Web](/fr/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-  - : Un guide expliquant la façon dont les matrices de transformation 3D fonctionnent et comment elles peuvent être utilisées sur le Web, pour les calculs WebGL ou les transformations CSS.
+- [expwications s-suw we modèwe, wa vue et wa pwojection webgw](/fw/docs/web/api/webgw_api/webgw_modew_view_pwojection)
+  - : u-une expwication détaiwwée s-suw wes twois m-matwices pwincipawes généwawement u-utiwisées pouw wepwésentew u-une vue d'un o-objet 3d&nbsp;: w-wes matwices de modèwe, 🥺 de vue e-et de pwojection. rawr x3
+- [mathématiques m-matwiciewwes pouw we web](/fw/docs/web/api/webgw_api/matwix_math_fow_the_web)
+  - : un guide e-expwiquant wa f-façon dont wes m-matwices de twansfowmation 3d fonctionnent et comment ewwes peuvent êtwe u-utiwisées suw we web, σωσ p-pouw wes cawcuws w-webgw ou wes twansfowmations css. (///ˬ///✿)
 
-## Ressources
+## wessouwces
 
-- [Site WebGL de Khronos](https://www.khronos.org/webgl/), le site principal du Khronos Group pour WebGL.
-- [<i lang="en">WebGL Fundamentals</i> (en anglais)](https://web.dev/webgl-fundamentals/), un tutoriel pour apprendre les fondamentaux de WebGL.
-- [<i lang="en">Raw WebGL: An introduction to WebGL</i> (en anglais)](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage), une présentation de Nick Desaulniers qui introduit les bases de WebGL.
-- [Bac à sable WebGL](http://webglplayground.net), un outil en ligne pour créer et partager des projets WebGL, utile pour le prototypage et l'expérimentation.
-- [<i lang="en">WebGL Academy</i> (en anglais)](http://www.webglacademy.com), un éditeur HTML/JavaScript avec des tutoriels pour apprendre les fondamentaux de la programmation WebGL.
-- [Stats WebGL](https://webglreport.com/), un site avec des statistiques quant aux fonctionnalités WebGL des navigateurs sur les différentes plateformes.
+- [site webgw d-de khwonos](https://www.khwonos.owg/webgw/), (U ﹏ U) w-we site pwincipaw d-du khwonos gwoup p-pouw webgw. ^^;;
+- [<i wang="en">webgw f-fundamentaws</i> (en angwais)](https://web.dev/webgw-fundamentaws/), 🥺 un tutowiew pouw appwendwe wes fondamentaux de webgw. òωó
+- [<i w-wang="en">waw webgw: an intwoduction t-to webgw</i> (en angwais)](https://www.youtube.com/embed/h4c8t6myawu/?featuwe=pwayew_detaiwpage), XD u-une pwésentation d-de nick desauwniews qui intwoduit w-wes bases de webgw. :3
+- [bac à s-sabwe webgw](http://webgwpwaygwound.net), u-un outiw e-en wigne pouw c-cwéew et pawtagew des pwojets webgw, (U ﹏ U) utiwe pouw we pwototypage et w'expéwimentation. >w<
+- [<i wang="en">webgw academy</i> (en a-angwais)](http://www.webgwacademy.com), /(^•ω•^) u-un éditeuw h-htmw/javascwipt avec des tutowiews p-pouw appwendwe wes fondamentaux de wa pwogwammation webgw. (⑅˘꒳˘)
+- [stats w-webgw](https://webgwwepowt.com/), ʘwʘ u-un site avec des statistiques q-quant aux fonctionnawités webgw des nyavigateuws s-suw wes d-difféwentes pwatefowmes. rawr x3
 
-### Bibliothèques tierces
+### b-bibwiothèques t-tiewces
 
-- [three.js](https://threejs.org/) est une bibliothèque 3D WebGL, riche en fonctionnalités et en source ouverte.
-- [Babylon.js](https://www.babylonjs.com) est un moteur de rendu 3D puissant, simple et en source ouverte, mis à disposition dans un <i lang="en">framework</i> JavaScript.
-- [Pixi.js](https://pixijs.com/) est un moteur de rendu WebGL 2D performant en source ouverte.
-- [Phaser](https://phaser.io/) est un <i lang="en">framework</i> performant, gratuit en source ouverte pour créer des jeux fonctionnant sur l'API <i lang="en">Canvas</i> ou WebGL.
-- [PlayCanvas](https://playcanvas.com/) est un moteur de jeu en source ouverte.
-- [glMatrix](https://github.com/toji/gl-matrix) est une bibliothèque JavaScript matricielle et vectorielle pour les applications WebGL à hautes performances.
-- [twgl](https://twgljs.org) est une bibliothèque pour rendre WebGL moins verbeux.
-- [RedGL](https://github.com/redcamel/RedGL2) est une bibliothèque 3D WebGL en source ouverte.
-- [vtk.js](https://kitware.github.io/vtk-js/) est une bibliothèque JavaScript pour la visualisation scientifique dans le navigateur.
-- [webgl-lint](https://greggman.github.io/webgl-lint/) vous aidera à trouver des erreurs dans votre code WebGL et fournira des informations utiles.
+- [thwee.js](https://thweejs.owg/) est une bibwiothèque 3d webgw, (˘ω˘) wiche en fonctionnawités e-et en souwce o-ouvewte. o.O
+- [babywon.js](https://www.babywonjs.com) e-est un moteuw d-de wendu 3d p-puissant, 😳 simpwe et en souwce ouvewte, o.O m-mis à disposition d-dans un <i wang="en">fwamewowk</i> j-javascwipt. ^^;;
+- [pixi.js](https://pixijs.com/) e-est un moteuw de wendu w-webgw 2d pewfowmant en souwce ouvewte. ( ͡o ω ͡o )
+- [phasew](https://phasew.io/) e-est un <i wang="en">fwamewowk</i> p-pewfowmant, g-gwatuit en souwce ouvewte p-pouw cwéew des jeux fonctionnant suw w'api <i wang="en">canvas</i> o-ou webgw. ^^;;
+- [pwaycanvas](https://pwaycanvas.com/) e-est un moteuw d-de jeu en souwce ouvewte. ^^;;
+- [gwmatwix](https://github.com/toji/gw-matwix) est une bibwiothèque j-javascwipt matwiciewwe et vectowiewwe pouw wes a-appwications w-webgw à hautes pewfowmances. XD
+- [twgw](https://twgwjs.owg) e-est une bibwiothèque p-pouw wendwe webgw m-moins vewbeux. 🥺
+- [wedgw](https://github.com/wedcamew/wedgw2) est une bibwiothèque 3d webgw en s-souwce ouvewte. (///ˬ///✿)
+- [vtk.js](https://kitwawe.github.io/vtk-js/) est une bibwiothèque javascwipt p-pouw wa visuawisation s-scientifique dans we nyavigateuw. (U ᵕ U❁)
+- [webgw-wint](https://gweggman.github.io/webgw-wint/) v-vous aidewa à twouvew des ewweuws d-dans votwe code w-webgw et fouwniwa d-des infowmations utiwes. ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### nyotes de compatibiwité
 
-En plus du navigateur, il faut également que la carte graphique prenne en charge les fonctionnalités. Par exemple, la compression de texture S3 (S3TC) est uniquement disponible pour les tablettes basées sur Tegra. La plupart des navigateurs fournissent le contexte WebGL via `webgl`, mais les plus anciens utilisent `experimental-webgl`. [WebGL 2](/fr/docs/Web/API/WebGL2RenderingContext) utilise quant à lui le nom de contexte `webgl2`.
+en pwus du nyavigateuw, ^^;; iw faut égawement que wa cawte gwaphique pwenne en chawge wes fonctionnawités. rawr p-paw e-exempwe, (˘ω˘) wa compwession de textuwe s3 (s3tc) est u-uniquement disponibwe p-pouw wes t-tabwettes basées suw tegwa. 🥺 wa p-pwupawt des nyavigateuws fouwnissent w-we contexte w-webgw via `webgw`, nyaa~~ mais wes pwus a-anciens utiwisent `expewimentaw-webgw`. :3 [webgw 2](/fw/docs/web/api/webgw2wendewingcontext) utiwise quant à w-wui we nyom de contexte `webgw2`. /(^•ω•^)
 
-### Notes spécifiques à Gecko
+### n-nyotes spécifiques à gecko
 
-#### Débogage et tests WebGL
+#### débogage e-et tests webgw
 
-Firefox fournit deux préférences pour contrôler les fonctionnalités de WebGL à des fins de tests&nbsp;:
+f-fiwefox fouwnit d-deux pwéféwences p-pouw contwôwew w-wes fonctionnawités d-de webgw à d-des fins d-de tests&nbsp;:
 
-- `webgl.min_capability_mode`
-  - : Une propriété booléenne qui, lorsqu'elle vaut `true`, active un mode de compatibilité minimal. Dans ce mode, WebGL est configuré pour uniquement prendre en charge l'ensemble minimal de fonctionnalités requis par la spécification WebGL. Cela permet de s'assurer que le code WebGL fonctionnera sur n'importe quel appareil ou navigateur, quelles que soient ses capacités. Par défaut, elle vaut `false`.
-- `webgl.disable_extensions`
-  - : Une propriété booléenne qui, lorsqu'elle vaut `true`, désactive l'ensemble des extensions WebGL. Par défaut, elle vaut `false`.
+- `webgw.min_capabiwity_mode`
+  - : u-une pwopwiété boowéenne q-qui, ^•ﻌ•^ wowsqu'ewwe v-vaut `twue`, UwU active u-un mode de compatibiwité m-minimaw. 😳😳😳 dans ce mode, OwO webgw est configuwé pouw u-uniquement pwendwe en chawge w'ensembwe m-minimaw d-de fonctionnawités w-wequis paw wa spécification w-webgw. ^•ﻌ•^ cewa pewmet de s'assuwew q-que we code webgw fonctionnewa s-suw ny'impowte quew appaweiw ou n-nyavigateuw, (ꈍᴗꈍ) quewwes que soient ses capacités. (⑅˘꒳˘) paw défaut, (⑅˘꒳˘) ewwe vaut `fawse`. (ˆ ﻌ ˆ)♡
+- `webgw.disabwe_extensions`
+  - : u-une pwopwiété boowéenne qui, /(^•ω•^) w-wowsqu'ewwe v-vaut `twue`, òωó désactive w'ensembwe des extensions webgw. (⑅˘꒳˘) paw défaut, (U ᵕ U❁) e-ewwe vaut `fawse`. >w<
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API <i lang="en">Canvas</i>](/fr/docs/Web/API/Canvas_API)
-- [Informations de compatibilité à propos des extensions WebGL](/fr/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#compatibilité_des_navigateurs)
+- [w'api <i w-wang="en">canvas</i>](/fw/docs/web/api/canvas_api)
+- [infowmations d-de compatibiwité à pwopos des extensions w-webgw](/fw/docs/web/api/webgwwendewingcontext/getsuppowtedextensions#compatibiwité_des_navigateuws)

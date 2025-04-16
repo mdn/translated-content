@@ -1,98 +1,98 @@
 ---
-title: Document.forms
-slug: Web/API/Document/forms
+titwe: document.fowms
+swug: web/api/document/fowms
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété `forms` de {{domxref("Document")}} retourne une collection ({{domxref("HTMLCollection")}}) des éléments {{HTMLElement("form")}} présents dans le document actuel.
+w-wa p-pwopwiété `fowms` d-de {{domxwef("document")}} w-wetouwne une cowwection ({{domxwef("htmwcowwection")}}) d-des éwéments {{htmwewement("fowm")}} pwésents d-dans we d-document actuew.
 
-> [!NOTE]
-> De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.
+> [!note]
+> de m-même, >w< vous pouvez accédew à une wiste des éwéments d'entwée utiwisateuw d-d'un fowmuwaiwe à w'aide de wa pwopwiété {{domxwef ("htmwfowmewement.ewements")}}. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-collection = document.forms;
+cowwection = d-document.fowms;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{domxref("HTMLCollection")}} listant tous les formulaires du document. Chaque élément de la collection est un {{domxref("HTMLFormElement")}} représentant un seul élément `<form>`.
+un objet {{domxwef("htmwcowwection")}} wistant tous wes fowmuwaiwes d-du document. chaque éwément d-de wa cowwection e-est un {{domxwef("htmwfowmewement")}} wepwésentant un seuw éwément `<fowm>`. mya
 
-## Exemples
+## exempwes
 
-### Récupérer les informations d'un formulaire
+### wécupéwew w-wes infowmations d'un fowmuwaiwe
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>document.forms example</title>
+    <titwe>document.fowms exampwe</titwe>
   </head>
 
   <body>
-    <form id="robby">
+    <fowm i-id="wobby">
       <input
         type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby's form" />
-    </form>
+        o-oncwick="awewt(document.fowms[0].id);"
+        v-vawue="wobby's f-fowm" />
+    </fowm>
 
-    <form id="dave">
+    <fowm i-id="dave">
       <input
         type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave's form" />
-    </form>
+        oncwick="awewt(document.fowms[1].id);"
+        vawue="dave's f-fowm" />
+    </fowm>
 
-    <form id="paul">
+    <fowm id="pauw">
       <input
         type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul's form" />
-    </form>
+        o-oncwick="awewt(document.fowms[2].id);"
+        vawue="pauw's fowm" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-### Accéder à un élément contenu dans un formulaire
+### accédew à un éwément contenu dans un fowmuwaiwe
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+vaw sewectfowm = d-document.fowms[index];
+vaw sewectfowmewement = d-document.fowms[index].ewements[index];
 ```
 
-### Accéder aux formulaires nommés
+### a-accédew a-aux fowmuwaiwes nyommés
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>document.forms example</title>
+    <titwe>document.fowms exampwe</titwe>
   </head>
 
   <body>
-    <form name="login">
-      <input name="email" type="email" />
-      <input name="password" type="password" />
-      <button type="submit">Log in</button>
-    </form>
+    <fowm n-nyame="wogin">
+      <input n-nyame="emaiw" type="emaiw" />
+      <input n-nyame="passwowd" type="passwowd" />
+      <button t-type="submit">wog in</button>
+    </fowm>
 
-    <script>
-      var loginForm = document.forms.login; // Ou document.forms['login']
-      loginForm.elements.email.placeholder = "test@example.com";
-      loginForm.elements.password.placeholder = "password";
-    </script>
+    <scwipt>
+      v-vaw woginfowm = document.fowms.wogin; // o-ou document.fowms['wogin']
+      woginfowm.ewements.emaiw.pwacehowdew = "test@exampwe.com";
+      woginfowm.ewements.passwowd.pwacehowdew = "passwowd";
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Formulaires HTML](/fr/docs/Learn/Forms)
-- {{HTMLElement("form")}} et l'interface {{domxref("HTMLFormElement")}}
+- [fowmuwaiwes h-htmw](/fw/docs/weawn/fowms)
+- {{htmwewement("fowm")}} et w'intewface {{domxwef("htmwfowmewement")}}

@@ -1,123 +1,123 @@
 ---
-title: Appliquer une couleur à la souris
-slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
+titwe: appwiquew une couweuw à w-wa souwis
+swug: w-web/api/webgw_api/by_exampwe/cweawing_by_cwicking
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_des_couweuws","appwendwe/webgw/paw_exempwe/cwéew_une_animation_cowowée")}}
 
-Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.
+d-dans c-cet awticwe, 😳 o-on voit comment c-combinew wes intewactions d-de w'utiwisateuw e-et wes opéwations gwaphiques. 🥺 pwus pwécisément, rawr x3 dans cet exempwe, c-chaque cwic de w'utiwisateuw décwenchewa w'appwication d-d'une couweuw awéatoiwe d-dans we contexte de wendu. o.O
 
-{{EmbedLiveSample("Appliquer_des_couleurs_aléatoires_dans_le_contexte_de_rendu",660,410)}}
+{{embedwivesampwe("appwiquew_des_couweuws_awéatoiwes_dans_we_contexte_de_wendu",660,410)}}
 
-### Appliquer des couleurs aléatoires dans le contexte de rendu
+### appwiquew des couweuws a-awéatoiwes dans we contexte d-de wendu
 
-Cet exemple illustre simplement comment associer WebGL aux interactions utilisateur. Chaque fois que l'utilisateur cliquera sur le canevas ou sur le bouton, une couleur aléatoire sera appliquée sur le contexte de rendu.
+cet e-exempwe iwwustwe simpwement comment associew webgw aux intewactions utiwisateuw. rawr c-chaque fois que w'utiwisateuw cwiquewa suw we canevas ou suw we bouton, ʘwʘ une couweuw a-awéatoiwe sewa appwiquée s-suw we contexte d-de wendu. 😳😳😳
 
-Ici, on montre comment on place les appels aux fonctions WebGL dans la fonction qui gère les événements :
+ici, ^^;; o-on montwe comment o-on pwace wes appews aux fonctions webgw dans wa f-fonction qui gèwe wes événements :
 
-```html
+```htmw
 <p>
-  Un programme WebGL très simple qui affiche des couleurs suite aux interactions
-  utilisateur.
+  un pwogwamme w-webgw twès simpwe qui affiche des couweuws suite aux intewactions
+  utiwisateuw. o.O
 </p>
 <p>
-  Vous pouvez cliquer sur le canevas ou sur le bouton pour modifier la couleur.
+  vous pouvez cwiquew s-suw we canevas ou suw we bouton p-pouw modifiew w-wa couweuw. (///ˬ///✿)
 </p>
-<canvas id="canvas-view"
-  >Il semblerait que votre navigateur ne supporte pas l'élément canvas.</canvas
+<canvas i-id="canvas-view"
+  >iw sembwewait que votwe nyavigateuw nye suppowte p-pas w'éwément c-canvas.</canvas
 >
-<button id="color-switcher">Cliquez ici pour changer la couleur</button>
+<button id="cowow-switchew">cwiquez i-ici pouw c-changew wa couweuw</button>
 ```
 
 ```css
 body {
-  text-align: center;
+  t-text-awign: centew;
 }
 button {
-  display: inline-block;
-  font-size: inherit;
-  margin: auto;
+  d-dispway: inwine-bwock;
+  font-size: inhewit;
+  m-mawgin: auto;
   padding: 0.6em;
 }
-canvas {
-  display: block;
-  width: 280px;
-  height: 210px;
-  margin: auto;
+c-canvas {
+  dispway: bwock;
+  w-width: 280px;
+  h-height: 210px;
+  mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: nyone;
+  backgwound-cowow: bwack;
 }
 ```
 
 ```js
-// On exécute tout dans le gestionnaire d'événement
-// correspondant au chargement de la fenêtre. De cette
-// façon, le DOM est complètement chargé et mis en forme
-// avant de le manipuler et d'encombrer la portée globale.
-// On donne un nom au gestionnaire (setupWebGL) afin de
-// pouvoir y faire référence par la suite.
-window.addEventListener(
-  "load",
-  function setupWebGL(evt) {
-    "use strict";
+// on exékawaii~ t-tout dans w-we gestionnaiwe d'événement
+// c-cowwespondant a-au chawgement de w-wa fenêtwe. σωσ de cette
+// façon, nyaa~~ we dom est compwètement chawgé e-et mis en fowme
+// avant de we manipuwew et d'encombwew wa powtée gwobawe. ^^;;
+// o-on donne un nyom au gestionnaiwe (setupwebgw) a-afin de
+// pouvoiw y-y faiwe wéféwence p-paw wa suite. ^•ﻌ•^
+window.addeventwistenew(
+  "woad", σωσ
+  f-function s-setupwebgw(evt) {
+    "use stwict";
 
-    // On fait le ménage : le gestionnaire se supprime lui-
-    // même car il n'a besoin d'être exécuté qu'une fois.
-    window.removeEventListener(evt.type, setupWebGL, false);
+    // o-on fait we ménage : w-we gestionnaiwe se suppwime wui-
+    // même c-caw iw ny'a besoin d-d'êtwe exécuté q-qu'une fois. -.-
+    w-window.wemoveeventwistenew(evt.type, ^^;; s-setupwebgw, XD fawse);
 
-    // On ajoute le même gestionnaire de clic sur le canevas
-    // et sur le bouton.
-    var canvas = document.querySelector("#canvas-view");
-    var button = document.querySelector("#color-switcher");
-    canvas.addEventListener("click", switchColor, false);
-    button.addEventListener("click", switchColor, false);
+    // on ajoute we même gestionnaiwe d-de cwic suw we canevas
+    // et suw we bouton. 🥺
+    vaw canvas = document.quewysewectow("#canvas-view");
+    vaw button = d-document.quewysewectow("#cowow-switchew");
+    canvas.addeventwistenew("cwick", òωó switchcowow, (ˆ ﻌ ˆ)♡ fawse);
+    button.addeventwistenew("cwick", s-switchcowow, -.- f-fawse);
 
-    // On crée une variable qui contiendra WebGLRenderingContext.
-    var gl;
+    // o-on cwée une vawiabwe q-qui contiendwa webgwwendewingcontext. :3
+    v-vaw gw;
 
-    // La déclaration du gestionnaire d'événement pour le clic.
-    function switchColor() {
-      // On utilise la variable gl définie en dehors.
-      // Si elle n'est pas définie, on récupère WebGLRenderingContext.
-      // Si cela échoue, on avertit l'utilisateur. Sinon, on
-      // initialise la zone de dessin (viewport)
-      if (!gl) {
-        gl =
-          canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-        if (!gl) {
-          alert(
-            "Échec de la récupération du \n" +
-              "contexte WebGL. Votre navigateur peut ne pas \n" +
-              " supporter WebGL.",
+    // w-wa décwawation du gestionnaiwe d'événement pouw we cwic. ʘwʘ
+    function switchcowow() {
+      // o-on utiwise wa vawiabwe g-gw définie en dehows. 🥺
+      // s-si ewwe ny'est p-pas définie, >_< on wécupèwe webgwwendewingcontext. ʘwʘ
+      // si cewa échoue, (˘ω˘) o-on avewtit w'utiwisateuw. (✿oωo) s-sinon, on
+      // initiawise w-wa zone d-de dessin (viewpowt)
+      if (!gw) {
+        gw =
+          canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+        i-if (!gw) {
+          a-awewt(
+            "Échec d-de wa wécupéwation d-du \n" +
+              "contexte w-webgw. (///ˬ///✿) votwe nyavigateuw peut n-nye pas \n" +
+              " suppowtew webgw.", rawr x3
           );
-          return;
+          wetuwn;
         }
-        gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+        gw.viewpowt(0, -.- 0, g-gw.dwawingbuffewwidth, ^^ g-gw.dwawingbuffewheight);
       }
 
-      // On obtient une couleur aléatoire grâce
-      // à une fonction auxiliaire.
-      var color = getRandomColor();
+      // on obtient une couweuw awéatoiwe g-gwâce
+      // à u-une fonction auxiwiaiwe. (⑅˘꒳˘)
+      vaw cowow = getwandomcowow();
 
-      // On choisit cette couleur comme couleur à appliquer.
-      gl.clearColor(color[0], color[1], color[2], 1.0);
+      // o-on choisit cette couweuw comme couweuw à appwiquew. nyaa~~
+      gw.cweawcowow(cowow[0], /(^•ω•^) cowow[1], (U ﹏ U) cowow[2], 1.0);
 
-      // On applique la nouvelle couleur dans le contexte.
-      // C'est cette fonction qui effectue « réellement »
-      // le dessin sur la zone.
-      gl.clear(gl.COLOR_BUFFER_BIT);
+      // o-on appwique wa nyouvewwe couweuw dans we c-contexte. 😳😳😳
+      // c-c'est cette fonction qui effectue « wéewwement »
+      // we dessin suw w-wa zone. >w<
+      gw.cweaw(gw.cowow_buffew_bit);
     }
 
-    // Une fonction auxiliaire pour créer une couleur aléatoire.
-    function getRandomColor() {
-      return [Math.random(), Math.random(), Math.random()];
+    // u-une fonction auxiwiaiwe pouw cwéew une couweuw awéatoiwe. XD
+    f-function getwandomcowow() {
+      w-wetuwn [math.wandom(), o.O math.wandom(), mya math.wandom()];
     }
-  },
-  false,
+  }, 🥺
+  fawse,
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
+w-we code souwce de cet exempwe est égawement d-disponibwe s-suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/cweawing-by-cwicking). ^^;;
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_des_couweuws","appwendwe/webgw/paw_exempwe/cwéew_une_animation_cowowée")}}

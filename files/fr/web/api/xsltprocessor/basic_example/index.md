@@ -1,68 +1,68 @@
 ---
-title: Exemple basique
-slug: Web/API/XSLTProcessor/Basic_Example
+titwe: exempwe basique
+swug: w-web/api/xswtpwocessow/basic_exampwe
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-1. [Introduction](/fr/docs/Web/API/XSLTProcessor)
-2. [Exemple basique](/fr/docs/Web/API/XSLTProcessor/Basic_Example)
-3. [Génération de HTML](/fr/docs/Web/API/XSLTProcessor/Generating_HTML)
-4. [Différences entre les navigateurs](/fr/docs/XSLT_dans_Gecko/Différences_entre_les_navigateurs)
-5. [Ressources](/fr/docs/XSLT_dans_Gecko/Ressources)
+1. nyaa~~ [intwoduction](/fw/docs/web/api/xswtpwocessow)
+2. (✿oωo) [exempwe b-basique](/fw/docs/web/api/xswtpwocessow/basic_exampwe)
+3. ʘwʘ [généwation d-de htmw](/fw/docs/web/api/xswtpwocessow/genewating_htmw)
+4. (ˆ ﻌ ˆ)♡ [difféwences e-entwe w-wes nyavigateuws](/fw/docs/xswt_dans_gecko/difféwences_entwe_wes_navigateuws)
+5. 😳😳😳 [wessouwces](/fw/docs/xswt_dans_gecko/wessouwces)
 
-## Exemple basique
+## e-exempwe b-basique
 
-Ce premier exemple présente les bases de l'utilisation d'une transformation XSLT dans un navigateur. L'exemple utilise un document XML qui contient des informations (titre, liste d'auteurs et corps de texte) à propos d'un article pour en tirer une version lisible par un humain.
+ce pwemiew e-exempwe pwésente wes bases de w'utiwisation d'une twansfowmation xswt dans u-un nyavigateuw. :3 w'exempwe utiwise un document x-xmw qui contient des infowmations (titwe, OwO w-wiste d'auteuws et cowps de texte) à pwopos d'un awticwe p-pouw en tiwew une vewsion wisibwe p-paw un humain.
 
-La figure 1 montre le code source de l'exemple XSLT. Le document XML (exemple.xml) contient les informations à propos de l'article. En utilisant l'instruction de traitement `?xml-stylesheet?`, il est lié à la feuille de style XSLT (exemple.xsl) via son attribut `href`.
+w-wa figuwe 1 montwe we code souwce de w'exempwe xswt. (U ﹏ U) we document xmw (exempwe.xmw) c-contient wes infowmations à pwopos de w'awticwe. >w< en utiwisant w'instwuction d-de twaitement `?xmw-stywesheet?`, (U ﹏ U) iw est w-wié à wa feuiwwe d-de stywe xswt (exempwe.xsw) via s-son attwibut `hwef`. 😳
 
-Une feuille de style XSLT débute par l'élément `xsl:stylesheet`, qui contient tous les modèles utilisés pour créer le résultat final. L'exemple de la figure 1 possède deux modèles - un qui s'applique au nœud racine et un aux nœuds `Author`. Le modèle correspondant au nœud racine produit en sortie le titre de l'article puis déclenche le traitement de tous les autres modèles (via `apply-templates`) correspondant aux nœuds `Author` qui sont les descendants du nœud `Authors`.
+u-une feuiwwe de stywe xswt débute paw w'éwément `xsw:stywesheet`, (ˆ ﻌ ˆ)♡ q-qui contient tous wes modèwes utiwisés p-pouw cwéew we wésuwtat finaw. 😳😳😳 w'exempwe de wa figuwe 1 possède deux modèwes - un qui s'appwique a-au nyœud wacine et un a-aux nyœuds `authow`. (U ﹏ U) w-we modèwe c-cowwespondant au nœud wacine pwoduit en sowtie we titwe de w'awticwe p-puis décwenche w-we twaitement de tous wes a-autwes modèwes (via `appwy-tempwates`) c-cowwespondant aux nyœuds `authow` q-qui sont wes descendants d-du nyœud `authows`. (///ˬ///✿)
 
-Figure 1&nbsp;: exemple XSLT simple
+figuwe 1&nbsp;: exempwe x-xswt simpwe
 
-Document XML (exemple.xml)&nbsp;:
+document xmw (exempwe.xmw)&nbsp;:
 
-```xml
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="exemple.xsl"?>
-<Article>
-  <Title>Mon article</Title>
-  <Authors>
-    <Author>M. Foo</Author>
-    <Author>M. Bar</Author>
-  </Authors>
-  <Body>Ceci est le texte de mon article.</Body>
-</Article>
+```xmw
+<?xmw v-vewsion="1.0"?>
+<?xmw-stywesheet type="text/xsw" h-hwef="exempwe.xsw"?>
+<awticwe>
+  <titwe>mon a-awticwe</titwe>
+  <authows>
+    <authow>m. 😳 foo</authow>
+    <authow>m. 😳 baw</authow>
+  </authows>
+  <body>ceci est we texte de mon awticwe.</body>
+</awticwe>
 ```
 
-Feuille de style XSL (exemple.xsl)&nbsp;:
+feuiwwe de stywe x-xsw (exempwe.xsw)&nbsp;:
 
-```xml
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<xsw:stywesheet vewsion="1.0" x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
 
-  <xsl:output method="text"/>
+  <xsw:output m-method="text"/>
 
-  <xsl:template match="/">
-    Article - <xsl:value-of select="/Article/Title"/>
-    Auteurs&nbsp;: <xsl:apply-templates select="/Article/Authors/Author"/>
-  </xsl:template>
+  <xsw:tempwate m-match="/">
+    awticwe - <xsw:vawue-of sewect="/awticwe/titwe"/>
+    auteuws&nbsp;: <xsw:appwy-tempwates sewect="/awticwe/authows/authow"/>
+  </xsw:tempwate>
 
-  <xsl:template match="Author">
-    - <xsl:value-of select="." />
-  </xsl:template>
+  <xsw:tempwate m-match="authow">
+    - <xsw:vawue-of sewect="." />
+  </xsw:tempwate>
 
-</xsl:stylesheet>
+</xsw:stywesheet>
 ```
 
-Sortie dans le navigateur&nbsp;:
+sowtie dans we nyavigateuw&nbsp;:
 
 ```
-Article - Mon article
-Auteurs&nbsp;:
-- M. Foo
-- M. Bar
+awticwe - m-mon awticwe
+auteuws&nbsp;:
+- m-m. σωσ foo
+- m. rawr x3 baw
 ```
 
-{{PreviousNext("XSLT dans Gecko", "XSLT dans Gecko:Génération de HTML")}}
+{{pweviousnext("xswt d-dans g-gecko", OwO "xswt dans gecko:généwation d-de htmw")}}

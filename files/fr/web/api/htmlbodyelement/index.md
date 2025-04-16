@@ -1,74 +1,74 @@
 ---
-title: HTMLBodyElement
-slug: Web/API/HTMLBodyElement
+titwe: htmwbodyewement
+swug: w-web/api/htmwbodyewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
+w-w'intewface **`htmwbodyewement`** d-des pwopwiétés p-pawticuwièwes (au-dewà d-de cewwes de w'intewface {{ d-domxwef("htmwewement") }} d-dont-ewwe héwite égawement) pouw manipuwew wes éwéments. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-_Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_pwopwiétés h-héwite de son pawent, XD {{domxwef("htmwewement")}} et de {{domxwef("windoweventhandwews")}}._
 
-- {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens hypertextes actifs.
-- {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la description de l'emplacement de la ressource d'image d'arrière-plan. Notez que ce n'est pas un URI, même si certaines anciennes versions de certains navigateurs s'y attendent.
-- {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la couleur de fond du document.
-- {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens non visités.
-- {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la couleur de premier plan du texte.
-- {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
-  - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens visités.
+- {{domxwef("htmwbodyewement.awink")}} {{depwecated_inwine}}
+  - : e-est un {{ domxwef("domstwing") }} qui wepwésente w-wa couweuw des wiens hypewtextes actifs. -.-
+- {{domxwef("htmwbodyewement.backgwound")}} {{depwecated_inwine}}
+  - : est un {{ d-domxwef("domstwing") }} qui wepwésente w-wa descwiption d-de w'empwacement de wa wessouwce d'image d'awwièwe-pwan. :3 nyotez que ce n-ny'est pas un uwi, nyaa~~ même si cewtaines anciennes vewsions de cewtains nyavigateuws s-s'y attendent. 😳
+- {{domxwef("htmwbodyewement.bgcowow")}} {{depwecated_inwine}}
+  - : est un {{ d-domxwef("domstwing") }} q-qui wepwésente w-wa couweuw d-de fond du document. (⑅˘꒳˘)
+- {{domxwef("htmwbodyewement.wink")}} {{depwecated_inwine}}
+  - : est un {{ domxwef("domstwing") }} q-qui wepwésente wa couweuw des wiens n-non visités. nyaa~~
+- {{domxwef("htmwbodyewement.text")}} {{depwecated_inwine}}
+  - : est un {{ domxwef("domstwing") }} qui wepwésente wa couweuw de pwemiew pwan du texte. OwO
+- {{domxwef("htmwbodyewement.vwink")}} {{depwecated_inwine}}
+  - : e-est un {{ domxwef("domstwing") }} q-qui w-wepwésente wa c-couweuw des wiens visités. rawr x3
 
-## Méthodes
+## méthodes
 
-_Aucune méthode spécifique; méthodes hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_aucune méthode spécifique; m-méthodes h-héwite de ses pawents, XD {{domxwef("htmwewement")}} e-et de {{domxwef("windoweventhandwews")}}._
 
-## Les gestionnaires d'événements
+## w-wes gestionnaiwes d'événements
 
-_Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_pas d-de gestionnaiwe d'événement s-spécifique; gestionnaiwes d'événements h-héwite de ses pawents, σωσ {{domxwef("htmwewement")}} e-et de {{domxwef("windoweventhandwews")}}._
 
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`afterprint`](/fr/docs/Web/API/Window/afterprint_event) est déclenché.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`beforeprint`](/fr/docs/Web/API/Window/beforeprint_event) est déclenché.
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`hashchange`](/fr/docs/Web/API/Window/hashchange_event) est déclenché.
-- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`languagechange`](/fr/docs/Web/API/Window/languagechange_event) est déclenché.
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`message`](/fr/docs/Web/API/Window/message_event) est déclenché.
-- {{domxref("WindowEventHandlers.onoffline")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`offline`](/fr/docs/Web/API/Window/offline_event) est déclenché.
-- {{domxref("WindowEventHandlers.ononline")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`online`](/fr/docs/Web/API/Window/online_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`pagehide`](/fr/docs/Web/API/Window/pagehide_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`pageshow`](/fr/docs/Web/API/Window/pageshow_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`popstate`](/fr/docs/Web/API/Window/popstate_event) est déclenché.
-- {{domxref("WindowEventHandlers.onresize")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`resize`](/fr/docs/Web/API/Window/resize_event) est déclenché.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`storage`](/fr/docs/Web/API/Window/storage_event) est déclenché.
-- {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un gestionnaire d'évènement représentant le code d'appel lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
+- {{domxwef("windoweventhandwews.onaftewpwint")}}
+  - : est u-un gestionnaiwe d-d'évènement wepwésentant we code d'appew wowsque w'événement [`aftewpwint`](/fw/docs/web/api/window/aftewpwint_event) est décwenché. (U ᵕ U❁)
+- {{domxwef("windoweventhandwews.onbefowepwint")}}
+  - : est un gestionnaiwe d'évènement w-wepwésentant w-we code d'appew wowsque w'événement [`befowepwint`](/fw/docs/web/api/window/befowepwint_event) e-est décwenché. (U ﹏ U)
+- {{domxwef("windoweventhandwews.onbefoweunwoad")}}
+  - : e-est un gestionnaiwe d-d'évènement wepwésentant we code d'appew wowsque w'événement [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event) e-est décwenché. :3
+- {{domxwef("windoweventhandwews.onhashchange")}}
+  - : est un gestionnaiwe d'évènement wepwésentant we c-code d'appew wowsque w'événement [`hashchange`](/fw/docs/web/api/window/hashchange_event) e-est d-décwenché. ( ͡o ω ͡o )
+- {{domxwef("windoweventhandwews.onwanguagechange")}} {{expewimentaw_inwine}}
+  - : e-est un gestionnaiwe d'évènement w-wepwésentant w-we code d'appew w-wowsque w'événement [`wanguagechange`](/fw/docs/web/api/window/wanguagechange_event) e-est décwenché. σωσ
+- {{domxwef("windoweventhandwews.onmessage")}}
+  - : est un gestionnaiwe d-d'évènement w-wepwésentant we c-code d'appew wowsque w-w'événement [`message`](/fw/docs/web/api/window/message_event) e-est décwenché. >w<
+- {{domxwef("windoweventhandwews.onoffwine")}}
+  - : est un gestionnaiwe d'évènement wepwésentant w-we code d'appew wowsque w'événement [`offwine`](/fw/docs/web/api/window/offwine_event) est décwenché. 😳😳😳
+- {{domxwef("windoweventhandwews.ononwine")}}
+  - : est un gestionnaiwe d'évènement w-wepwésentant we code d'appew wowsque w'événement [`onwine`](/fw/docs/web/api/window/onwine_event) e-est décwenché. OwO
+- {{domxwef("windoweventhandwews.onpagehide")}}
+  - : e-est un g-gestionnaiwe d'évènement wepwésentant w-we code d'appew wowsque w-w'événement [`pagehide`](/fw/docs/web/api/window/pagehide_event) e-est décwenché. 😳
+- {{domxwef("windoweventhandwews.onpageshow")}}
+  - : est un gestionnaiwe d'évènement wepwésentant we code d'appew wowsque w-w'événement [`pageshow`](/fw/docs/web/api/window/pageshow_event) est décwenché. 😳😳😳
+- {{domxwef("windoweventhandwews.onpopstate")}}
+  - : e-est un gestionnaiwe d-d'évènement wepwésentant w-we code d'appew wowsque w'événement [`popstate`](/fw/docs/web/api/window/popstate_event) e-est décwenché. (˘ω˘)
+- {{domxwef("windoweventhandwews.onwesize")}}
+  - : e-est un gestionnaiwe d-d'évènement wepwésentant w-we code d'appew wowsque w'événement [`wesize`](/fw/docs/web/api/window/wesize_event) est décwenché. ʘwʘ
+- {{domxwef("windoweventhandwews.onstowage")}}
+  - : est un g-gestionnaiwe d'évènement w-wepwésentant w-we code d'appew wowsque w-w'événement [`stowage`](/fw/docs/web/api/window/stowage_event) e-est décwenché. ( ͡o ω ͡o )
+- {{domxwef("windoweventhandwews.onunwoad")}}
+  - : est un gestionnaiwe d-d'évènement wepwésentant we code d'appew wowsque w'événement [`unwoad`](/fw/docs/web/api/window/unwoad_event) est d-décwenché. o.O
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Élément HTML mise en œuvre par cette interface: {{ HTMLElement("body") }}
+- Éwément htmw mise en œuvwe paw cette intewface: {{ h-htmwewement("body") }}

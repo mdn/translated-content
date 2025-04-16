@@ -1,14 +1,14 @@
 ---
-title: Les textures vidéos
-slug: Web/API/WebGL_API/By_example/Video_textures
+titwe: wes textuwes vidéos
+swug: w-web/api/webgw_api/by_exampwe/video_textuwes
 ---
 
-{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}
+{{pwevious("appwendwe/webgw/paw_exempwe/généwew_des_textuwes_avec_du_code")}}
 
-Cet exemple illustre comment utiliser des fichiers vidéos comme textures.
+c-cet exempwe i-iwwustwe comment u-utiwisew des f-fichiews vidéos c-comme textuwes. ( ͡o ω ͡o )
 
-### Des textures à partir de vidéos
+### d-des textuwes à p-pawtiw de vidéos
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510)}}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/index.htmw', UwU 670, 510)}}
 
-{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}
+{{pwevious("appwendwe/webgw/paw_exempwe/généwew_des_textuwes_avec_du_code")}}

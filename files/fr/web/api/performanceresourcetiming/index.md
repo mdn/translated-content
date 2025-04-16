@@ -1,88 +1,88 @@
 ---
-title: PerformanceResourceTiming
-slug: Web/API/PerformanceResourceTiming
+titwe: pewfowmancewesouwcetiming
+swug: web/api/pewfowmancewesouwcetiming
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-L'interface **`PerformanceResourceTiming`** permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des _ressources_ d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), un élément [`<svg>`](/fr/docs/Web/SVG/Element/svg), une image ou un script.
+w-w'intewface **`pewfowmancewesouwcetiming`** p-pewmet de wécupéwew e-et d'anawysew d-des données d-de synchwonisation w-wéseau détaiwwées c-concewnant we chawgement des _wessouwces_ d'une appwication. >w< une appwication p-peut utiwisew wes mesuwes tempowewwes pouw d-détewminew, 🥺 paw exempwe, wa duwée n-nyécessaiwe à w'extwaction d'une wessouwce spécifique, nyaa~~ tewwe q-qu'une [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), ^^ un éwément [`<svg>`](/fw/docs/web/svg/ewement/svg), >w< u-une image o-ou un scwipt. OwO
 
-Les propriétés de l'interface créent une _chronologie de chargement des ressources_ avec un [timestamps haute résolution](/fr/docs/Web/API/DOMHighResTimeStamp) pour les événements réseau tels que les heures de début et de fin de redirection, les heures de début de récupération, les heures de début et de fin de recherche DNS, les heures de début et de fin de réponse, etc. En outre, l'interface étend [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) avec d'autres propriétés qui fournissent des données sur la taille de la ressource extraite ainsi que le _type_ de ressource qui a initié l'extraction.
+wes pwopwiétés de w'intewface cwéent une _chwonowogie de chawgement d-des wessouwces_ avec un [timestamps haute wésowution](/fw/docs/web/api/domhighwestimestamp) pouw wes événements w-wéseau tews que wes heuwes d-de début e-et de fin de wediwection, XD w-wes heuwes d-de début de wécupéwation, ^^;; wes heuwes de d-début et de fin de wechewche dns, 🥺 wes heuwes de d-début et de fin de wéponse, XD etc. en outwe, (U ᵕ U❁) w'intewface étend [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) avec d'autwes pwopwiétés qui fouwnissent d-des données suw wa taiwwe de w-wa wessouwce extwaite a-ainsi que w-we _type_ de wessouwce qui a initié w'extwaction. :3
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Propriétés
+## pwopwiétés
 
-Cette interface étend les propriétés [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes pour les types d'entrée de performance des ressources en les restreignant comme suit :
+c-cette intewface étend w-wes pwopwiétés [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) s-suivantes p-pouw wes types d'entwée de pewfowmance d-des wessouwces en wes westweignant c-comme suit :
 
-- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) {{readonlyInline}}
-  - : Retourne `"resource"`.
-- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) {{readonlyInline}}
-  - : Retourne l'URL des ressources.
-- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) {{readonlyInline}}
-  - : Retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) de l'heure de début de la récupération d'une ressource. Cette valeur est équivalente à [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
-- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration) {{readonlyInline}}
-  - : Retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui est la différence entre les propriétés [`responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) et [`startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
+- [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) {{weadonwyinwine}}
+  - : wetouwne `"wesouwce"`. ( ͡o ω ͡o )
+- [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy/name) {{weadonwyinwine}}
+  - : w-wetouwne w'uww des wessouwces. òωó
+- [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime) {{weadonwyinwine}}
+  - : w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) d-de w'heuwe d-de début de wa wécupéwation d'une wessouwce. σωσ cette vaweuw est équivawente à [`pewfowmancewesouwcetiming.fetchstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/fetchstawt).
+- [`pewfowmanceentwy.duwation`](/fw/docs/web/api/pewfowmanceentwy/duwation) {{weadonwyinwine}}
+  - : wetouwne un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) q-qui e-est wa difféwence entwe wes pwopwiétés [`wesponseend`](/fw/docs/web/api/pewfowmancewesouwcetiming/wesponseend) e-et [`stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime).
 
-L'interface prend également en charge les propriétés suivantes, qui sont énumérées dans l'ordre temporel selon lequel elles sont enregistrées pour l'extraction d'une seule ressource. Une liste alphabétique est présentée dans la navigation, à gauche.
+w-w'intewface pwend égawement e-en chawge wes pwopwiétés suivantes, (U ᵕ U❁) qui sont énuméwées dans w-w'owdwe tempowew sewon wequew ewwes sont enwegistwées pouw w'extwaction d'une s-seuwe wessouwce. (✿oωo) une wiste awphabétique e-est pwésentée d-dans wa n-nyavigation, ^^ à gauche. ^•ﻌ•^
 
-- [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType) {{readonlyInline}}
-  - : Une chaîne de caractère [`string`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _type_ de ressource qui a initié l'entrée de performance, comme spécifié dans [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType).
-- [`PerformanceResourceTiming.nextHopProtocol`](/fr/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) {{readonlyInline}}
-  - : Une chaîne de caractère [`string`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
-- [`PerformanceResourceTiming.workerStart`](/fr/docs/Web/API/PerformanceResourceTiming/workerStart) {{readonlyInline}}
-  - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant de transmettre le [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de Service Worker est déjà en cours, ou immédiatement avant de lancer le processus de Service Worker s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un Service Worker, la propriété retourne toujours 0.
-- [`PerformanceResourceTiming.redirectStart`](/fr/docs/Web/API/PerformanceResourceTiming/redirectStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui représente l'heure de début de l'extraction qui déclenche la redirection.
-- [`PerformanceResourceTiming.redirectEnd`](/fr/docs/Web/API/PerformanceResourceTiming/redirectEnd) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception du dernier octet de la réponse de la dernière redirection.
-- [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à récupérer la ressource.
-- [`PerformanceResourceTiming.domainLookupStart`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.
-- [`PerformanceResourceTiming.domainLookupEnd`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupEnd) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.
-- [`PerformanceResourceTiming.connectStart`](/fr/docs/Web/API/PerformanceResourceTiming/connectStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à établir la connexion avec le serveur pour récupérer la ressource.
-- [`PerformanceResourceTiming.connectEnd`](/fr/docs/Web/API/PerformanceResourceTiming/connectEnd) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait fini d'établir la connexion avec le serveur pour récupérer la ressource.
-- [`PerformanceResourceTiming.secureConnectionStart`](/fr/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne lance le processus de reconnaissance pour sécuriser la connexion en cours.
-- [`PerformanceResourceTiming.requestStart`](/fr/docs/Web/API/PerformanceResourceTiming/requestStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à demander la ressource au serveur.
-- [`PerformanceResourceTiming.responseStart`](/fr/docs/Web/API/PerformanceResourceTiming/responseStart) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait reçu le premier octet de la réponse du serveur.
-- [`PerformanceResourceTiming.responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) {{readonlyInline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transfert, selon la première éventualité.
-- [`PerformanceResourceTiming.transferSize`](/fr/docs/Web/API/PerformanceResourceTiming/transferSize) {{readonlyInline}}
-  - : Un nombre représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus le corps des données utiles de la réponse.
-- [`PerformanceResourceTiming.encodedBodySize`](/fr/docs/Web/API/PerformanceResourceTiming/encodedBodySize) {{readonlyInline}}
-  - : Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée_, avant de supprimer tout codage de contenu appliqué.
-- [`PerformanceResourceTiming.decodedBodySize`](/fr/docs/Web/API/PerformanceResourceTiming/decodedBodySize) {{readonlyInline}}
-  - : Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache) du _message body_, après avoir retiré tout codage de contenu appliqué.
-- [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming) {{readonlyInline}}
-  - : Un tableau d'entrées [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming) contenant des mesures de synchronisation du serveur.
+- [`pewfowmancewesouwcetiming.initiatowtype`](/fw/docs/web/api/pewfowmancewesouwcetiming/initiatowtype) {{weadonwyinwine}}
+  - : u-une chaîne d-de cawactèwe [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant w-we _type_ de wessouwce qui a initié w'entwée d-de pewfowmance, XD c-comme spécifié d-dans [`pewfowmancewesouwcetiming.initiatowtype`](/fw/docs/web/api/pewfowmancewesouwcetiming/initiatowtype). :3
+- [`pewfowmancewesouwcetiming.nexthoppwotocow`](/fw/docs/web/api/pewfowmancewesouwcetiming/nexthoppwotocow) {{weadonwyinwine}}
+  - : u-une chaîne d-de cawactèwe [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant we _pwotocowe wéseau_ utiwisé p-pouw wécupéwew wa wessouwce, (ꈍᴗꈍ) tew qu'identifié paw we [awpn pwotocow id (wfc7301)](https://datatwackew.ietf.owg/doc/htmw/wfc7301). :3
+- [`pewfowmancewesouwcetiming.wowkewstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/wowkewstawt) {{weadonwyinwine}}
+  - : wetouwne un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant de twansmettwe we [`fetchevent`](/fw/docs/web/api/fetchevent) si un pwocessus d-de sewvice wowkew e-est déjà e-en couws, (U ﹏ U) ou immédiatement avant d-de wancew we pwocessus de sewvice w-wowkew s'iw n-ny'est pas encowe en couws. UwU si wa wessouwce ny'est pas intewceptée paw un sewvice wowkew, 😳😳😳 wa pwopwiété w-wetouwne toujouws 0. XD
+- [`pewfowmancewesouwcetiming.wediwectstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/wediwectstawt) {{weadonwyinwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) qui wepwésente w-w'heuwe de début d-de w'extwaction qui décwenche wa wediwection. o.O
+- [`pewfowmancewesouwcetiming.wediwectend`](/fw/docs/web/api/pewfowmancewesouwcetiming/wediwectend) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement apwès w-wa wéception du dewniew octet d-de wa wéponse d-de wa dewnièwe wediwection. (⑅˘꒳˘)
+- [`pewfowmancewesouwcetiming.fetchstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/fetchstawt) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement avant q-que we nyavigateuw n-nye commence à w-wécupéwew wa wessouwce. 😳😳😳
+- [`pewfowmancewesouwcetiming.domainwookupstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/domainwookupstawt) {{weadonwyinwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant que w-we navigateuw nye commence wa wechewche du nyom de domaine pouw wa wessouwce. nyaa~~
+- [`pewfowmancewesouwcetiming.domainwookupend`](/fw/docs/web/api/pewfowmancewesouwcetiming/domainwookupend) {{weadonwyinwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w'heuwe immédiatement apwès w-wa fin de wa wechewche d-du nyom de domaine de wa wessouwce paw we nyavigateuw. rawr
+- [`pewfowmancewesouwcetiming.connectstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/connectstawt) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant que we nyavigateuw nye commence à étabwiw wa connexion avec we sewveuw pouw w-wécupéwew wa wessouwce. -.-
+- [`pewfowmancewesouwcetiming.connectend`](/fw/docs/web/api/pewfowmancewesouwcetiming/connectend) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-apwès que we nyavigateuw ait fini d'étabwiw wa connexion a-avec we sewveuw p-pouw wécupéwew wa wessouwce.
+- [`pewfowmancewesouwcetiming.secuweconnectionstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/secuweconnectionstawt) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement a-avant que we nyavigateuw nye w-wance we pwocessus de weconnaissance pouw sécuwisew wa connexion e-en couws.
+- [`pewfowmancewesouwcetiming.wequeststawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/wequeststawt) {{weadonwyinwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-avant que we nyavigateuw n-nye commence à demandew wa w-wessouwce au sewveuw. (✿oωo)
+- [`pewfowmancewesouwcetiming.wesponsestawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/wesponsestawt) {{weadonwyinwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement apwès que w-we nyavigateuw a-ait weçu we pwemiew octet de wa wéponse du sewveuw. /(^•ω•^)
+- [`pewfowmancewesouwcetiming.wesponseend`](/fw/docs/web/api/pewfowmancewesouwcetiming/wesponseend) {{weadonwyinwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-apwès wa wéception paw we nyavigateuw du dewniew o-octet de wa wessouwce ou i-immédiatement avant w-wa fewmetuwe de wa connexion de twansfewt, sewon wa pwemièwe éventuawité. 🥺
+- [`pewfowmancewesouwcetiming.twansfewsize`](/fw/docs/web/api/pewfowmancewesouwcetiming/twansfewsize) {{weadonwyinwine}}
+  - : u-un nyombwe wepwésentant w-wa taiwwe (en o-octets) d-de wa wessouwce extwaite. ʘwʘ wa taiwwe c-compwend wes champs d'en-tête de wa wéponse pwus we cowps des données utiwes de wa wéponse. UwU
+- [`pewfowmancewesouwcetiming.encodedbodysize`](/fw/docs/web/api/pewfowmancewesouwcetiming/encodedbodysize) {{weadonwyinwine}}
+  - : u-un nyombwe wepwésentant w-wa taiwwe (en octets) weçue de w-wa wécupéwation (http ou cache), XD d-du _cowps de wa donnée_, (✿oωo) avant d-de suppwimew t-tout codage de c-contenu appwiqué. :3
+- [`pewfowmancewesouwcetiming.decodedbodysize`](/fw/docs/web/api/pewfowmancewesouwcetiming/decodedbodysize) {{weadonwyinwine}}
+  - : u-un nyombwe w-wepwésentant wa taiwwe (en octets) weçue de wa wécupéwation (http ou cache) du _message body_, (///ˬ///✿) apwès avoiw w-wetiwé tout c-codage de contenu a-appwiqué.
+- [`pewfowmancewesouwcetiming.sewvewtiming`](/fw/docs/web/api/pewfowmancewesouwcetiming/sewvewtiming) {{weadonwyinwine}}
+  - : un t-tabweau d'entwées [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming) contenant des mesuwes de synchwonisation d-du sewveuw. nyaa~~
 
-## Méthodes
+## m-méthodes
 
-- [`PerformanceResourceTiming.toJSON()`](/fr/docs/Web/API/PerformanceResourceTiming/toJSON)
-  - : Renvoie une chaîne de caractère [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).
+- [`pewfowmancewesouwcetiming.tojson()`](/fw/docs/web/api/pewfowmancewesouwcetiming/tojson)
+  - : wenvoie une chaîne d-de cawactèwe [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui est wa wepwésentation j-json de w'objet [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming). >w<
 
-## Exemple
+## e-exempwe
 
-Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Performance_API/Resource_timing).
+voiw w'exempwe dans [utiwisation d-de wesouwce t-timing api](/fw/docs/web/api/pewfowmance_api/wesouwce_timing). -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API _Resource Timing_](/fr/docs/Web/API/Performance_API/Resource_timing)
-- [Utilisation de l'API _Resource Timing_](/fr/docs/Web/API/Performance_API/Resource_timing)
+- [w'api _wesouwce t-timing_](/fw/docs/web/api/pewfowmance_api/wesouwce_timing)
+- [utiwisation d-de w'api _wesouwce timing_](/fw/docs/web/api/pewfowmance_api/wesouwce_timing)

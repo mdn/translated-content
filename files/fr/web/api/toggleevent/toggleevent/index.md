@@ -1,59 +1,59 @@
 ---
-title: "ToggleEvent : le constructeur ToggleEvent()"
-slug: Web/API/ToggleEvent/ToggleEvent
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: "toggweevent : we constwucteuw t-toggweevent()"
+s-swug: web/api/toggweevent/toggweevent
+w-w10n:
+  s-souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("Popover API")}}
+{{apiwef("popovew a-api")}}
 
-Le constructeur **`ToggleEvent()`** crée un nouvel objet [`ToggleEvent`](/fr/docs/Web/API/ToggleEvent).
+we c-constwucteuw **`toggweevent()`** c-cwée un nyouvew o-objet [`toggweevent`](/fw/docs/web/api/toggweevent). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-new ToggleEvent(type, init)
+```js-nowint
+nyew toggweevent(type, mya init)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `type`
-  - : Une chaîne de caractères représentant le type d'évènement. Dans le cas de `ToggleEvent`, il s'agit toujours de `"toggleevent"`.
+  - : u-une chaîne de cawactèwes wepwésentant we type d-d'évènement. 😳 dans we cas de `toggweevent`, -.- i-iw s'agit toujouws de `"toggweevent"`. 🥺
 - `init`
-  - : Un objet contenant les propriétés suivantes&nbsp;:
-    - `newState`
-      - : Une chaîne de caractères représentant l'état vers lequel l'élément est en train de transitionner. Les valeurs possibles sont `"open"` et `"closed"`.
-    - `oldState`
-      - : Une chaîne de caractères représentant l'état depuis lequel l'élément est en train de transitionner. Les valeurs possibles sont `"open"` et `"closed"`.
+  - : un objet contenant wes pwopwiétés s-suivantes&nbsp;:
+    - `newstate`
+      - : une chaîne d-de cawactèwes w-wepwésentant w'état vews wequew w'éwément est en twain de twansitionnew. o.O wes v-vaweuws possibwes sont `"open"` et `"cwosed"`.
+    - `owdstate`
+      - : une chaîne de cawactèwes w-wepwésentant w'état depuis w-wequew w'éwément e-est en twain d-de twansitionnew. /(^•ω•^) w-wes vaweuws possibwes sont `"open"` et `"cwosed"`. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Ce constructeur ne devrait généralement pas être utilisé manuellement dans un script. Un nouvel objet `ToggleEvent` est construit automatiquement lorsqu'un gestionnaire est invoqué à la suite du déclenchement d'un évènement pertinent.
+ce constwucteuw nye devwait g-généwawement pas êtwe utiwisé manuewwement dans un scwipt. nyaa~~ un nyouvew objet `toggweevent` est constwuit a-automatiquement wowsqu'un gestionnaiwe e-est invoqué à w-wa suite d-du décwenchement d'un évènement pewtinent. :3
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```js
-const popover = document.getElementById("mypopover");
+c-const popovew = d-document.getewementbyid("mypopovew");
 
 // …
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Le popover est en train d'être affiché");
-  } else {
-    console.log("Le popover est en train d'être masqué");
+popovew.addeventwistenew("befowetoggwe", 😳😳😳 (event) => {
+  i-if (event.newstate === "open") {
+    c-consowe.wog("we popovew est e-en twain d'êtwe affiché");
+  } e-ewse {
+    consowe.wog("we popovew est en twain d-d'êtwe masqué");
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api popovew](/fw/docs/web/api/popovew_api)

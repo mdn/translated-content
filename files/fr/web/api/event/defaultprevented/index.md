@@ -1,35 +1,35 @@
 ---
-title: event.defaultPrevented
-slug: Web/API/Event/defaultPrevented
+titwe: event.defauwtpwevented
+swug: web/api/event/defauwtpwevented
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Résumé
+## w-wésumé
 
-Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été appelée sur l'évènement ou non.
+wetouwne u-un boowéen i-indiquant si {{domxwef("event.pweventdefauwt()")}} a-a été appewée s-suw w'évènement o-ou nyon. mya
 
-> [!NOTE]
-> Cette propriété doit etre utilisée au lieu de la méthode `getPreventDefault()` qui n'est pas standard et est désormais dépréciée (voir [bug Firefox 691151](https://bugzil.la/691151)).
+> [!note]
+> c-cette p-pwopwiété doit etwe utiwisée au wieu de wa méthode `getpweventdefauwt()` qui ny'est pas standawd e-et est désowmais dépwéciée (voiw [bug fiwefox 691151](https://bugziw.wa/691151)). mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-bool = event.defaultPrevented;
+boow = event.defauwtpwevented;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-if (e.defaultPrevented) {
-  /* Le comportement par défaut a été inhibé */
+if (e.defauwtpwevented) {
+  /* we compowtement paw défaut a-a été inhibé */
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

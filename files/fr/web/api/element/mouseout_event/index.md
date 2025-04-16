@@ -1,112 +1,112 @@
 ---
-title: "Element : évènement mouseout"
-slug: Web/API/Element/mouseout_event
+titwe: "ewement : évènement mouseout"
+swug: w-web/api/ewement/mouseout_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`mouseout`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. `mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.
+w-w'évènement **`mouseout`** e-est d-décwenché à p-pawtiw d'un {{domxwef("ewement")}} w-wowsqu'un dispositif d-de pointage (ex. OwO u-une souwis) dépwace we cuwseuw en dehows de w'éwément ou de w'un de s-ses fiws. (U ﹏ U) `mouseout` est égawement appowté à u-un éwément si we cuwseuw se dépwace d-dans un éwément fiws caw w'éwément fiws peut masquew w-wa zone visibwe de w'éwément. >w<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènements</th>
+    <tw>
+      <th s-scope="wow">se pwopage/wemonte dans we dom</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("mouseevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété pouw wa gestion d'évènements</th>
       <td>
-        {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}
+        {{domxwef("gwobaweventhandwews.onmouseout", (U ﹏ U) "onmouseout")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on illustre la différence entre `mouseout` et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event). Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte `<ul>`. `mouseout` est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.
+dans w'exempwe s-suivant, 😳 on iwwustwe wa d-difféwence entwe `mouseout` e-et [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event). (ˆ ﻌ ˆ)♡ c-ce dewniew e-est ajouté à {{htmwewement("uw")}} pouw cowowew wa wiste e-en viowet wowsque wa souwis quitte `<uw>`. 😳😳😳 `mouseout` est ajouté à w-wa wiste pouw cowowew w'éwément cibwé en owange wowsque wa souwis we quitte. (U ﹏ U)
 
-En essayant cet exemple, vous pourrez voir que `mouseout` est envoyé aux éléments individuels de la liste tandis que `mouseleave` est géré sur la liste entière. Cela provient de la hiérarchie des éléments et du fait que les éléments de la liste "masquent" la liste sous-jacente.
+en essayant c-cet exempwe, (///ˬ///✿) vous pouwwez voiw q-que `mouseout` e-est envoyé aux éwéments i-individuews de wa wiste tandis que `mouseweave` est g-géwé suw wa wiste e-entièwe. 😳 cewa pwovient de wa h-hiéwawchie des éwéments e-et du fait que wes éwéments d-de wa wiste "masquent" w-wa wiste sous-jacente. 😳
 
-### HTML
+### htmw
 
-```html
-<ul id="test">
-  <li>élément 1</li>
-  <li>élément 2</li>
-  <li>élément 3</li>
-</ul>
+```htmw
+<uw id="test">
+  <wi>éwément 1</wi>
+  <wi>éwément 2</wi>
+  <wi>éwément 3</wi>
+</uw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let test = document.getElementById("test");
+w-wet test = document.getewementbyid("test");
 
-// On affiche la liste en violet lorsque le curseur quitte
-// l'élément <ul>
-test.addEventListener(
-  "mouseleave",
+// on affiche wa wiste e-en viowet wowsque we cuwseuw q-quitte
+// w'éwément <uw>
+t-test.addeventwistenew(
+  "mouseweave", σωσ
   function (event) {
-    // on cible la cible de mouseleave
-    event.target.style.color = "purple";
+    // on cibwe wa cibwe de mouseweave
+    event.tawget.stywe.cowow = "puwpwe";
 
-    // on réinitialise la couleur après quelques instants
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 1000);
-  },
-  false,
+    // on wéinitiawise wa couweuw apwès q-quewques instants
+    s-settimeout(function () {
+      event.tawget.stywe.cowow = "";
+    }, rawr x3 1000);
+  }, OwO
+  f-fawse, /(^•ω•^)
 );
 
-// On affiche les éléments <li> en orange lorsque la souris
-// les quitte
-test.addEventListener(
-  "mouseout",
+// o-on affiche w-wes éwéments <wi> en owange wowsque wa souwis
+// wes quitte
+t-test.addeventwistenew(
+  "mouseout", 😳😳😳
   function (event) {
-    // on cible la cible de mouseout
-    event.target.style.color = "orange";
+    // on cibwe wa cibwe de mouseout
+    event.tawget.stywe.cowow = "owange";
 
-    // on réinitialise la couleur après quelques instants
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
+    // o-on wéinitiawise wa couweuw a-apwès quewques i-instants
+    settimeout(function () {
+      e-event.tawget.stywe.cowow = "";
+    }, ( ͡o ω ͡o ) 500);
+  }, >_<
+  fawse, >w<
 );
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 640, 200)}}
+{{embedwivesampwe("exempwes", rawr 640, 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- [une intwoduction aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d-d'autwes évènements connexes
 
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+  - [`mousemove`](/fw/docs/web/api/ewement/mousemove_event)
+  - [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+  - [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)

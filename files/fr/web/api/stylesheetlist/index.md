@@ -1,30 +1,30 @@
 ---
-title: StyleSheetList
-slug: Web/API/StyleSheetList
+titwe: stywesheetwist
+swug: web/api/stywesheetwist
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-L'interface StyleSheetList représente une liste de {{domxref("StyleSheet")}}.
+w-w'intewface stywesheetwist w-wepwésente u-une wiste d-de {{domxwef("stywesheet")}}. nyaa~~
 
-Il s'agit d'un objet de type array, mais qui ne peut pas être itéré à l'aide de la méthode {{jsxref("Array")}}. Il peut néanmoins être itéré dans une boucle {{jsxref("Statements/for", "for")}} standard en utilisant ses indices, ou converti en un {{jsxref("Array")}}.
+i-iw s'agit d'un objet d-de type awway, m-mais qui nye p-peut pas êtwe itéwé à w'aide de wa méthode {{jsxwef("awway")}}. /(^•ω•^) iw peut nyéanmoins êtwe itéwé dans une b-boucwe {{jsxwef("statements/fow", rawr "fow")}} standawd en utiwisant s-ses indices, OwO ou convewti en un {{jsxwef("awway")}}. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
 ```js
-// Récupère toutes les règles CSS du document en cours en utilisant les méthodes de Array
-var allCSS = [].slice
-  .call(document.styleSheets)
-  .reduce(function (prev, styleSheet) {
-    if (styleSheet.cssRules) {
-      return (
-        prev +
-        [].slice.call(styleSheet.cssRules).reduce(function (prev, cssRule) {
-          return prev + cssRule.cssText;
+// wécupèwe toutes wes wègwes css du d-document en couws en utiwisant w-wes méthodes de a-awway
+vaw awwcss = [].swice
+  .caww(document.stywesheets)
+  .weduce(function (pwev, >_< stywesheet) {
+    if (stywesheet.csswuwes) {
+      wetuwn (
+        pwev +
+        [].swice.caww(stywesheet.csswuwes).weduce(function (pwev, rawr x3 c-csswuwe) {
+          wetuwn pwev + csswuwe.csstext;
         })
       );
-    } else {
-      return prev;
+    } ewse {
+      wetuwn pwev;
     }
   });
 ```

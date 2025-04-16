@@ -1,60 +1,60 @@
 ---
-title: Cache.matchAll()
-slug: Web/API/Cache/matchAll
+titwe: cache.matchaww()
+swug: w-web/api/cache/matchaww
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice wowkews a-api")}}{{seecompattabwe}}
 
-La méthode **`matchAll()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.
+w-wa méthode **`matchaww()`** de w-w'intewface {{domxwef("cache")}} w-wetouwne une {{jsxwef("pwomise", (ˆ ﻌ ˆ)♡ "pwomesse")}} q-qui est wésowue e-en un tabweau d-de toutes wes wequêtes qui matchent dans w'objet {{domxwef("cache")}}. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-cache.matchAll(request, { options }).then(function (response) {
-  // faire quelque chose avec le tableau des réponses
+cache.matchaww(wequest, :3 { o-options }).then(function (wesponse) {
+  // faiwe quewque chose avec we tabweau d-des wéponses
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- request
-  - : La {{domxref("Request", "Requête")}} à trouver dans le {{domxref("Cache")}}.
-- options {{optional_inline}}
+- wequest
+  - : w-wa {{domxwef("wequest", OwO "wequête")}} à twouvew dans we {{domxwef("cache")}}. (U ﹏ U)
+- options {{optionaw_inwine}}
 
-  - : Un objet d'options vous permettant de définir des options de contrôle spécifiques pour la correspondance effectuée. Les options disponibles sont les suivantes :
+  - : u-un objet d'options vous pewmettant d-de définiw d-des options de contwôwe spécifiques pouw wa cowwespondance effectuée. >w< wes options d-disponibwes sont wes suivantes :
 
-    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url. Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
-    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à `false` par défaut.
-    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header. En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
+    - `ignoweseawch`: un {{domxwef("boowean")}} qui spécifie si we matching d-doit ignowew ou nyon wa quewy s-stwing dans w'uww. (U ﹏ U) s-si mis à `twue`, 😳 w-wa pawtie `?vawue=baw` d-de w'uww `http://foo.com/?vawue=baw` sewa ignowée w-wows du matching. (ˆ ﻌ ˆ)♡ est à `fawse` paw défaut. 😳😳😳
+    - `ignowemethod`: u-un {{domxwef("boowean")}} qui, quand mis à `twue`, (U ﹏ U) empêche wes opéwations de matching de vawidew wa méthode `http` d-de wa {{domxwef("wequest", (///ˬ///✿) "wequête")}} (en temps nyowmaw, 😳 s-seuwes `get` e-et `head` sont a-autowisées.) est à `fawse` paw défaut. 😳
+    - `ignowevawy`: un {{domxwef("boowean")}} q-qui, σωσ q-quand mis à `twue,` indique à w-w'opéwation de m-matching de nye pas effectuew we m-matching `vawy` des headew. rawr x3 en d-d'autwes tewmes, OwO si w'uww cowwespond, /(^•ω•^) un match s-sewa obtenu peu impowte que wa {{domxwef("wesponse", 😳😳😳 "wéponse")}} a-ait un headew `vawy` ou nyon. ( ͡o ω ͡o ) e-est à `fawse` p-paw défaut. >_<
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.
+une {{jsxwef("pwomise", >w< "pwomesse")}} qui est wésowue en un tabweau de toutes wes wequêtes qui matchent dans w'objet {{domxwef("cache")}}. rawr
 
-> **Note :** {{domxref("Cache.match()")}} est quasiment identique à [`Cache.matchAll()`](/fr/docs/Web/API/Cache/matchAll), si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
+> **note :** {{domxwef("cache.match()")}} e-est quasiment i-identique à [`cache.matchaww()`](/fw/docs/web/api/cache/matchaww), si ce ny'est q-qu'ewwe est wésowue e-en `wesponse[0]` (wa p-pwemièwe wéponse qui matche) pwutôt que `wesponse[]` (un t-tabweau de toutes wes wéponses qui matchent). 😳
 
-## Exemples
+## exempwes
 
 ```js
 caches.open("v1").then(function (cache) {
-  cache.matchAll("/images/").then(function (response) {
-    response.forEach(function (element, index, array) {
-      cache.delete(element);
+  c-cache.matchaww("/images/").then(function (wesponse) {
+    wesponse.foweach(function (ewement, >w< i-index, (⑅˘꒳˘) awway) {
+      c-cache.dewete(ewement);
     });
   });
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/Window/caches)
+- [utiwisew w-wes sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- [`caches`](/fw/docs/web/api/window/caches)

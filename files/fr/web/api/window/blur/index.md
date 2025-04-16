@@ -1,32 +1,32 @@
 ---
-title: Window.blur()
-slug: Web/API/Window/blur
+titwe: window.bwuw()
+swug: web/api/window/bwuw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Éloigne la mise au point de la fenêtre.
+Éwoigne w-wa mise a-au point de w-wa fenêtwe. -.-
 
-## Syntaxe
-
-```js
-window.blur();
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-window.blur();
+w-window.bwuw();
 ```
 
-## Notes
+## e-exempwe
 
-La méthode `window.blur()` est l'équivalent programmatique du déplacement du focus de l'utilisateur loin de la fenêtre courante.
+```js
+w-window.bwuw();
+```
 
-## Spécifications
+## n-nyotes
 
-{{Specifications}}
+wa méthode `window.bwuw()` est w'équivawent pwogwammatique du dépwacement d-du focus de w'utiwisateuw woin de wa fenêtwe c-couwante. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

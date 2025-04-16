@@ -1,99 +1,99 @@
 ---
-title: document.querySelector
-slug: Web/API/Document/querySelector
+titwe: document.quewysewectow
+swug: web/api/document/quewysewectow
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
+w-wa méthode **`quewysewectow()`** d-de w'intewface {{domxwef("document")}} w-wetouwne w-we pwemiew {{domxwef("ewement")}} d-dans we document c-cowwespondant a-au séwecteuw - ou gwoupe de séwecteuws - spécifié(s), 🥺 ou `nuww` si aucune c-cowwespondance ny'est twouvée. rawr x3
 
-> [!NOTE]
-> La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.
+> [!note]
+> wa c-cowwespondance est effectuée en u-utiwisant we pawcouws pwé-owdonné pwofondeuw-d'abowd des nyœuds d-du document, o.O en pawtant du p-pwemiew éwément d-dans we bawisage du document et en itéwant à twavews wes nyœuds en séquence, rawr p-paw owdwe du compte de nyœuds enfants. ʘwʘ
 
-## Syntaxe
-
-```js
-element = document.querySelector(sélecteurs);
-```
-
-### Paramètres
-
-- `selectors` (sélecteurs)
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur les sélecteurs et leur gestion.
-
-> [!NOTE]
-> Les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour plus d'informations.
-
-### Valeur retournée
-
-Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
-
-Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.
-
-### Exception
-
-- `SYNTAX_ERR`
-  - : La syntaxe des sélecteurs spécifiés est invalide.
-
-## Notes d'utilisation
-
-Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
-
-Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](https://www.w3.org/TR/selectors-api/#grammar) (en).
-
-### Échapper des caractères spéciaux
-
-Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`)&nbsp;:
-
-```html
-<div id="machin\bidule"></div>
-<div id="machin:bidule"></div>
-
-<script>
-  console.log("#machin\bidule"); // "#machinidule" (\b est le caractère de contrôle retour arrière)
-  document.querySelector("#machin\bidule"); // ne correspond à rien
-
-  console.log("#machin\\bidule"); // "#machin\bidule"
-  console.log("#machin\\\\bidule"); // "#machin\\bidule"
-  document.querySelector("#machin\\\\bidule"); // correspond au premier div
-
-  document.querySelector("#machin:bidule"); // ne correspond à rien
-  document.querySelector("#machin\\:bidule"); // correspond au second div
-</script>
-```
-
-## Exemples
-
-### Trouver le premier élément correspondant à une classe
-
-Dans cet exemple, le premier élément dans le document qui contient la classe "`maclasse`" est retourné&nbsp;:
+## syntaxe
 
 ```js
-var el = document.querySelector(".maclasse");
+ewement = document.quewysewectow(séwecteuws);
 ```
 
-### Un sélecteur plus complexe
+### p-pawamètwes
 
-Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
+- `sewectows` (séwecteuws)
+  - : une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) q-qui c-contient un ou p-pwusieuws séwecteuws à compawew. 😳😳😳 wa chaîne doit êtwe c-composée de séwecteuws css vawides ; s-sinon une exception `syntax_eww` est wancée. ^^;; voiw [wocawisation des éwéments dom avec wes séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows) pouw pwus d'infowmations s-suw wes séwecteuws et weuw gestion. o.O
+
+> [!note]
+> w-wes cawactèwes q-qui ny'appawtiennent p-pas à wa syntaxe standawd css doivent êtwe échappés paw un antiswash ("\\"). (///ˬ///✿) p-puisque j-javascwipt utiwise aussi cette b-bawwe pouw w'échappement, σωσ u-une attention pawticuwièwe e-est nyécessaiwe quand des c-chaînes compwennent ces cawactèwes. nyaa~~ voiw [Échappew d-des cawactèwes spéciaux](#échappew_des_cawactèwes_spéciaux) p-pouw pwus d'infowmations. ^^;;
+
+### v-vaweuw wetouwnée
+
+u-un objet {{domxwef("ewement")}} wepwésentant we pwemiew éwément dans we document qui cowwesponde au jeu de [séwecteuws c-css](/fw/docs/web/css/css_sewectows) s-spécifié, ^•ﻌ•^ ou `nuww` s-s'iw ny'y a pas d-de cowwespondances. σωσ
+
+s-si vous avez besoin d'une wiste de tous wes éwéments cowwespondant a-aux séwecteuws spécifiés, -.- vous devez utiwisew {{domxwef("document.quewysewectowaww", ^^;; "quewysewectowaww()")}} à wa p-pwace. XD
+
+### exception
+
+- `syntax_eww`
+  - : wa s-syntaxe des séwecteuws s-spécifiés e-est invawide. 🥺
+
+## notes d'utiwisation
+
+s-si we s-séwecteuw cowwespond à u-un id e-et que cet id est utiwisé de façon ewwonée pwusieuws f-fois dans w-we document, òωó we p-pwemiew éwément e-en cowwespondance e-est wetouwné. (ˆ ﻌ ˆ)♡
+
+wes [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements) css nye wetouwnewont jamais aucun éwément, -.- c-comme spécifié dans w'[api des séwecteuws](https://www.w3.owg/tw/sewectows-api/#gwammaw) (en). :3
+
+### Échappew des cawactèwes spéciaux
+
+pouw faiwe c-cowwespondwe un id (_identifiant_) ou un séwecteuw qui nye w-wespecte pas wa s-syntaxe css (en u-utiwisant un point viwguwe ou un e-espace paw exempwe), vous devez échappew w-we cawactèwe a-avec un antiswash (\\). ʘwʘ comme w'antiswash est un cawactèwe d'échappement en javascwipt, 🥺 s-si vous entwez une chaîne de c-cawactèwes wittéwawe, >_< vous devez d-donc w'échappew _deux f-fois_ (une pouw wa chaîne de cawactèwes j-javascwipt e-et une autwe fois pouw `quewysewectow`)&nbsp;:
+
+```htmw
+<div i-id="machin\biduwe"></div>
+<div i-id="machin:biduwe"></div>
+
+<scwipt>
+  consowe.wog("#machin\biduwe"); // "#machiniduwe" (\b est we cawactèwe de contwôwe wetouw awwièwe)
+  d-document.quewysewectow("#machin\biduwe"); // n-nye cowwespond à w-wien
+
+  consowe.wog("#machin\\biduwe"); // "#machin\biduwe"
+  c-consowe.wog("#machin\\\\biduwe"); // "#machin\\biduwe"
+  document.quewysewectow("#machin\\\\biduwe"); // cowwespond a-au pwemiew div
+
+  document.quewysewectow("#machin:biduwe"); // n-ne cowwespond à wien
+  document.quewysewectow("#machin\\:biduwe"); // cowwespond au second div
+</scwipt>
+```
+
+## e-exempwes
+
+### t-twouvew we pwemiew éwément cowwespondant à u-une cwasse
+
+d-dans cet exempwe, ʘwʘ we pwemiew éwément dans we document qui contient w-wa cwasse "`macwasse`" est wetouwné&nbsp;:
 
 ```js
-var el = document.querySelector(
-  "div.panneau-utilisateur.principal input[name='identifiant']",
+vaw ew = document.quewysewectow(".macwasse");
+```
+
+### un séwecteuw p-pwus compwexe
+
+wes _séwecteuws_ peuvent égawement êtwe wéewwement p-puissants c-comme we montwe w'exempwe suivant. (˘ω˘) ici, (✿oωo) we pwemiew éwément `<input nyame="identifiant"/>` d-dans u-un `<div cwass="panneau-utiwisateuw pwincipaw">` dans we document est wetouwné :
+
+```js
+v-vaw ew = document.quewysewectow(
+  "div.panneau-utiwisateuw.pwincipaw i-input[name='identifiant']", (///ˬ///✿)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- {{domxref("document.querySelectorAll()")}}&nbsp;;
-- {{domxref("element.querySelector()")}}&nbsp;;
-- {{domxref("element.querySelectorAll()")}}&nbsp;;
-- [Extraits de code pour `querySelector`](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector)
+- [wocawisation des éwéments d-dom avec w-wes séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- {{domxwef("document.quewysewectowaww()")}}&nbsp;;
+- {{domxwef("ewement.quewysewectow()")}}&nbsp;;
+- {{domxwef("ewement.quewysewectowaww()")}}&nbsp;;
+- [extwaits de code pouw `quewysewectow`](/fw/docs/awchive/add-ons/code_snippets/quewysewectow)

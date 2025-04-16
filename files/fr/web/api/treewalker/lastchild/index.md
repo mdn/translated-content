@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.lastChild()
-slug: Web/API/TreeWalker/lastChild
+titwe: tweewawkew.wastchiwd()
+swug: web/api/tweewawkew/wastchiwd
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.lastChild()`** déplace le {{domxref("Node")}} courant au dernier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle retourne `null` et le noeud courant reste inchangé.
+w-wa m-méthode **`tweewawkew.wastchiwd()`** d-dépwace w-we {{domxwef("node")}} c-couwant au d-dewniew enfant _visibwe_ d-du nyoeud couwant et wenvoie w'enfant twouvé. nyaa~~ iw dépwace aussi we nyoeud c-couwant vews cet enfant. (⑅˘꒳˘) si aucun enfant ny'existe, rawr x3 e-ewwe wetouwne `nuww` et we nyoeud couwant w-weste inchangé. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = treeWalker.lastChild();
+nyode = tweewawkew.wastchiwd();
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = d-document.cweatetweewawkew(
+  d-document.body, (ˆ ﻌ ˆ)♡
+  nyodefiwtew.show_ewement, (˘ω˘)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, (⑅˘꒳˘)
   },
-  false,
+  fawse, (///ˬ///✿)
 );
-var node = treeWalker.lastChild(); // renvoie le dernier enfant visible de l'élément racine
+vaw n-nyode = tweewawkew.wastchiwd(); // wenvoie we dewniew enfant visibwe de w'éwément wacine
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w'intewface {{domxwef("tweewawkew")}} à waquewwe ewwe appawtient. 😳😳😳

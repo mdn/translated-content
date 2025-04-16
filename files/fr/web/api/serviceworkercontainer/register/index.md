@@ -1,115 +1,115 @@
 ---
-title: ServiceWorkerContainer.register()
-slug: Web/API/ServiceWorkerContainer/register
+titwe: sewvicewowkewcontainew.wegistew()
+swug: w-web/api/sewvicewowkewcontainew/wegistew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-La méthode **`register()`** de l'interface {{domxref("ServiceWorkerContainer")}} crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour la `scriptURL` donnée.
+w-wa méthode **`wegistew()`** de w-w'intewface {{domxwef("sewvicewowkewcontainew")}} c-cwée ou met à j-jouw un {{domxwef("sewvicewowkewwegistwation")}} p-pouw wa `scwiptuww` d-donnée. UwU
 
-En cas de succès, un `ServiceWorkerRegistration` attache la `scriptURL` fournie à une portée, qui sera utilisé ensuite pour la correspondance de navigation. Vous pouvez appeler cette méthode en toutes circonstances depuis la page contrôlée. C'est-à-dire, vous n'avez pas besoin de vérifier si un enregistrement existe déjà.
+en cas de succès, >_< un `sewvicewowkewwegistwation` attache wa `scwiptuww` fouwnie à u-une powtée, -.- qui sewa utiwisé ensuite pouw w-wa cowwespondance de nyavigation. mya v-vous pouvez appewew cette méthode en toutes ciwconstances d-depuis wa page contwôwée. >w< c'est-à-diwe, (U ﹏ U) v-vous n-n'avez pas besoin de véwifiew si un enwegistwement existe déjà. 😳😳😳
 
-Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
+iw y a une confusion f-fwéquente autouw de wa signification et de w'utiwisation de wa powtée. p-puisque qu'un `sewvicewowkew` ne peut pas avoiw u-une powtée pwus w-wawge que son p-pwopwe empwacement, o.O u-utiwisez uniquement w'option de wa powtée w-wowsque vous avez besoin d'une powtée pwus étwoite q-que wa vaweuw paw défaut. òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-serviceWorkerContainer.register(scriptURL, options)
-  .then(function(serviceWorkerRegistration) { ... })
+sewvicewowkewcontainew.wegistew(scwiptuww, 😳😳😳 options)
+  .then(function(sewvicewowkewwegistwation) { ... })
 ```
 
-### Paramètres
+### pawamètwes
 
-- `scriptURL`
-  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/MIME_types#javascript_types) valide.
-- `options` {{optional_inline}}
+- `scwiptuww`
+  - : w-w' uww du scwipt contenant w-we `sewvicewowkew`. σωσ w-we fichiew q-qui a enwegistwé we `sewvicewowkew` doit avoiw un [javascwipt mime t-type](/fw/docs/web/http/mime_types#javascwipt_types) v-vawide. (⑅˘꒳˘)
+- `options` {{optionaw_inwine}}
 
-  - : Un objet contenant les options d'enregistrement. Les options sont:
+  - : un objet c-contenant wes options d-d'enwegistwement. (///ˬ///✿) wes options s-sont:
 
-    - `scope`: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un `ServiceWorker`; c'est-à-dire quelle plage d'URL un `ServiceWorker` peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un `ServiceWorker` est limité au répertoire qui contient le script du `ServiceWorker`. Consultez la section [Exemples](#exemples) pour plus d'informations sur son fonctionnement.
-    - {{non-standard_inline}} `type`: Un {{domxref("WorkerType")}}, il prend les valeurs "classic" ou "module". Par défaut, la valeur est fixé à "classic".
-    - {{non-standard_inline}} `updateViaCache`: Un {{domxref("ServiceWorkerUpdateViaCache")}}, il prend les valeurs "imports" ou "all" ou "none". Par défaut, la valeur est fixé à "imports".
+    - `scope`: un {{domxwef("usvstwing")}} w-wepwésentant une uww qui définit wa powtée d-d'enwegistwement d'un `sewvicewowkew`; c-c'est-à-diwe quewwe p-pwage d'uww un `sewvicewowkew` p-peut contwôwew. 🥺 iw s'agit généwawement d'une uww wewative. OwO ewwe est wewative à w'uww de base de w'appwication. >w< p-paw défaut, 🥺 w-wa vaweuw de wa powtée de w'enwegistwement d-d'un `sewvicewowkew` e-est wimité au w-wépewtoiwe qui contient we scwipt du `sewvicewowkew`. nyaa~~ consuwtez w-wa section [exempwes](#exempwes) pouw pwus d'infowmations suw son fonctionnement. ^^
+    - {{non-standawd_inwine}} `type`: un {{domxwef("wowkewtype")}}, >w< i-iw pwend wes vaweuws "cwassic" o-ou "moduwe". OwO p-paw défaut, XD w-wa vaweuw est fixé à "cwassic". ^^;;
+    - {{non-standawd_inwine}} `updateviacache`: un {{domxwef("sewvicewowkewupdateviacache")}}, 🥺 i-iw pwend wes vaweuws "impowts" o-ou "aww" ou "none". XD p-paw défaut, (U ᵕ U❁) w-wa vaweuw est fixé à "impowts". :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une {{jsxref("Promise")}} qui se résout avec un objet {{domxref("ServiceWorkerRegistration")}}.
+une {{jsxwef("pwomise")}} q-qui se wésout a-avec un objet {{domxwef("sewvicewowkewwegistwation")}}. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Les exemples décrits ici doivent être pris ensemble pour obtenir une meilleure compréhension de comment la portée des `ServiceWorker` s'applique à une page.
+w-wes exempwes d-décwits ici d-doivent êtwe pwis ensembwe pouw obteniw une meiwweuwe compwéhension d-de comment wa powtée des `sewvicewowkew` s'appwique à une page. òωó
 
-L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). Le code du `ServiceWorker` dans ce cas, s'il est inclus dans `example.com/index.html`, contrôlera `example.com/index.html`, ainsi que les pages en dessous, comme `example.com/product/description.html`.
+w'exempwe suivant utiwise wa vaweuw p-paw défaut de wa powtée (en w'omettant). σωσ we code du `sewvicewowkew` d-dans ce cas, (U ᵕ U❁) s-s'iw est incwus d-dans `exampwe.com/index.htmw`, (✿oωo) contwôwewa `exampwe.com/index.htmw`, a-ainsi que wes pages en dessous, ^^ c-comme `exampwe.com/pwoduct/descwiption.htmw`. ^•ﻌ•^
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker.register("/sw.js").then(
-    (registration) => {
-      console.log("Service worker registration succeeded:", registration);
-    },
-    /*catch*/ (error) => {
-      console.log("Service worker registration failed:", error);
-    },
+i-if ("sewvicewowkew" in nyavigatow) {
+  // wegistew a sewvice wowkew hosted at the woot of the
+  // s-site using the defauwt scope. XD
+  n-nyavigatow.sewvicewowkew.wegistew("/sw.js").then(
+    (wegistwation) => {
+      consowe.wog("sewvice w-wowkew wegistwation s-succeeded:", :3 wegistwation);
+    }, (ꈍᴗꈍ)
+    /*catch*/ (ewwow) => {
+      consowe.wog("sewvice w-wowkew wegistwation f-faiwed:", :3 ewwow);
+    }, (U ﹏ U)
   );
-} else {
-  console.log("Service workers are not supported.");
+} e-ewse {
+  consowe.wog("sewvice w-wowkews awe nyot suppowted.");
 }
 ```
 
-Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, s'appliquerait exactement aux mêmes pages que l'exemple ci-dessus. N'oubliez pas que la portée, lorsqu'elle est incluse, utilise l'emplacement de la page comme base.
+we code suivant, UwU s'iw est incwus dans `exampwe.com/index.htmw`, 😳😳😳 à w-wa w-wacine d'un site, XD s-s'appwiquewait exactement aux m-mêmes pages que w-w'exempwe ci-dessus. o.O ny'oubwiez p-pas que wa powtée, (⑅˘꒳˘) wowsqu'ewwe est incwuse, 😳😳😳 utiwise w'empwacement de wa page comme b-base. nyaa~~
 
-Sinon, si ce code était inclus dans une page à `example.com/product/description.html`, avec le fichier Javascript résidant à `example.com/product/sw.js`, alors le service worker ne s'appliquerait qu'aux ressources sous `example.com /product`.
+sinon, s-si ce code était incwus dans une page à `exampwe.com/pwoduct/descwiption.htmw`, rawr a-avec we fichiew j-javascwipt wésidant à `exampwe.com/pwoduct/sw.js`, -.- awows we sewvice wowkew n-nye s'appwiquewait qu'aux wessouwces sous `exampwe.com /pwoduct`. (✿oωo)
 
 ```js
-if ("serviceWorker" in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
-    (registration) => {
-      console.log("Service worker registration succeeded:", registration);
-    },
-    /*catch*/ (error) => {
-      console.log("Service worker registration failed:", error);
-    },
+if ("sewvicewowkew" in nyavigatow) {
+  // d-decwawing scope manuawwy
+  nyavigatow.sewvicewowkew.wegistew("/sw.js", /(^•ω•^) { s-scope: "./" }).then(
+    (wegistwation) => {
+      c-consowe.wog("sewvice wowkew wegistwation succeeded:", 🥺 wegistwation);
+    }, ʘwʘ
+    /*catch*/ (ewwow) => {
+      c-consowe.wog("sewvice w-wowkew wegistwation faiwed:", UwU ewwow);
+    }, XD
   );
-} else {
-  console.log("Service workers are not supported.");
+} ewse {
+  c-consowe.wog("sewvice wowkews awe n-nyot suppowted.");
 }
 ```
 
-Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
+iw y a une confusion fwéquente autouw d-de wa signification et de w'utiwisation d-de wa p-powtée. (✿oωo) puisque qu'un `sewvicewowkew` n-nye peut pas avoiw une powtée p-pwus wawge q-que son pwopwe e-empwacement, :3 utiwisez uniquement w-w'option de wa p-powtée wowsque vous avez besoin d'une powtée pwus étwoite q-que w-wa vaweuw paw défaut.
 
-Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
+w-we code suivant, (///ˬ///✿) s'iw est incwus dans `exampwe.com/index.htmw`, nyaa~~ à w-wa wacine d'un site, >w< n-nye s'appwiquewait q-qu'aux wessouwces sous `exampwe.com/pwoduct`. -.-
 
 ```js
-if ("serviceWorker" in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
-    (registration) => {
-      console.log("Service worker registration succeeded:", registration);
-    },
-    /*catch*/ (error) => {
-      console.log("Service worker registration failed:", error);
-    },
+if ("sewvicewowkew" in n-nyavigatow) {
+  // d-decwawing scope m-manuawwy
+  nyavigatow.sewvicewowkew.wegistew("/sw.js", { s-scope: "/pwoduct/" }).then(
+    (wegistwation) => {
+      consowe.wog("sewvice w-wowkew wegistwation succeeded:", (✿oωo) wegistwation);
+    }, (˘ω˘)
+    /*catch*/ (ewwow) => {
+      consowe.wog("sewvice wowkew wegistwation faiwed:", e-ewwow);
+    }, rawr
   );
-} else {
-  console.log("Service workers are not supported.");
+} ewse {
+  c-consowe.wog("sewvice wowkews a-awe nyot suppowted.");
 }
 ```
 
-Toutefois, les serveurs peuvent supprimer cette restriction en définissant un en-tête [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) sur le script du `ServiceWorker`, et alors vous pouvez spécifier une portée maximale pour ce `ServiceWorker` au-dessus de l'emplacement du `ServiceWorker`.
+toutefois, OwO wes sewveuws p-peuvent suppwimew cette w-westwiction en définissant u-un en-tête [sewvice-wowkew-awwowed](https://w3c.github.io/sewvicewowkew/#sewvice-wowkew-awwowed) s-suw w-we scwipt du `sewvicewowkew`, ^•ﻌ•^ e-et awows vous pouvez spécifiew une powtée maximawe pouw ce `sewvicewowkew` au-dessus de w'empwacement du `sewvicewowkew`. UwU
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [W3.org ServiceWorker Register](https://www.w3.org/TR/service-workers/#navigator-service-worker-register)
-- [W3c.github.io ServiceWorker Register](https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register)
-- [W3.org option update via cache](https://www.w3.org/TR/service-workers/#enumdef-serviceworkerupdateviacache)
-- [WHATWG.org Worker Type](https://html.spec.whatwg.org/multipage/workers.html#workertype)
+- [w3.owg s-sewvicewowkew wegistew](https://www.w3.owg/tw/sewvice-wowkews/#navigatow-sewvice-wowkew-wegistew)
+- [w3c.github.io sewvicewowkew wegistew](https://w3c.github.io/sewvicewowkew/#dom-sewvicewowkewcontainew-wegistew)
+- [w3.owg option u-update via cache](https://www.w3.owg/tw/sewvice-wowkews/#enumdef-sewvicewowkewupdateviacache)
+- [naniwg.owg w-wowkew type](https://htmw.spec.naniwg.owg/muwtipage/wowkews.htmw#wowkewtype)

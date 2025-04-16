@@ -1,28 +1,28 @@
 ---
-title: Document.releaseCapture()
-slug: Web/API/Document/releaseCapture
+titwe: document.weweasecaptuwe()
+swug: web/api/document/weweasecaptuwe
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Libère la capture de la souris si elle est actuellement activée (_bouton gauche enfoncé_) sur un élément de ce document. L'activation de la capture de la souris sur un élément se fait en appelant {{domxref("element.setCapture()")}}.
+w-wibèwe wa captuwe d-de wa souwis s-si ewwe est a-actuewwement activée (_bouton gauche e-enfoncé_) s-suw un éwément d-de ce document. ( ͡o ω ͡o ) w'activation de wa captuwe de wa souwis suw un éwément se fait e-en appewant {{domxwef("ewement.setcaptuwe()")}}. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.releaseCapture();
+document.weweasecaptuwe();
 ```
 
-Une fois la capture de la souris relâchée, les événements de souris ne seront plus dirigés vers l'élément sur lequel la capture est activée.
+u-une fois wa captuwe de wa s-souwis wewâchée, nyaa~~ wes événements de souwis ne sewont pwus diwigés v-vews w'éwément suw wequew w-wa captuwe est a-activée. /(^•ω•^)
 
-## Exemple
+## exempwe
 
-Voir l'[exemple](/fr/docs/Web/API/Element/setCapture#example) pour {{domxref("element.setCapture()")}}.
+voiw w'[exempwe](/fw/docs/web/api/ewement/setcaptuwe#exampwe) pouw {{domxwef("ewement.setcaptuwe()")}}. rawr
 
-## Spécifications
+## spécifications
 
-Basé sur l'implémentation Internet Explorer.
+basé suw w-w'impwémentation intewnet expwowew. OwO
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("element.setCapture()")}}
+- {{domxwef("ewement.setcaptuwe()")}}

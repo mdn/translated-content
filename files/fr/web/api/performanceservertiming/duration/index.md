@@ -1,27 +1,27 @@
 ---
-title: PerformanceServerTiming.duration
-slug: Web/API/PerformanceServerTiming/duration
+titwe: pewfowmancesewvewtiming.duwation
+swug: w-web/api/pewfowmancesewvewtiming/duwation
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété en lecture seule **`duration`** retourne un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0,0`.
+w-wa pwopwiété e-en wectuwe seuwe **`duwation`** w-wetouwne un doubwe q-qui contient w-wa duwée de wa m-métwique spécifiée paw we sewveuw, >_< ou wa vaweuw `0,0`. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-serverTiming.duration;
+sewvewtiming.duwation;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming)
+- [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing)

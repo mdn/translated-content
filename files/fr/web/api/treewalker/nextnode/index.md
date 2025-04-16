@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.nextNode()
-slug: Web/API/TreeWalker/nextNode
+titwe: tweewawkew.nextnode()
+swug: web/api/tweewawkew/nextnode
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.nextNode()`** déplace le {{domxref("Node")}} courant au noeud suivant _visible_ dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. Si aucun noeud n'existe, elle renvoie `null` et le noeud courant est inchangé.
+w-wa méthode **`tweewawkew.nextnode()`** d-dépwace we {{domxwef("node")}} c-couwant au noeud s-suivant _visibwe_ d-dans w'owdwe d-du document e-et wenvoie we nyoeud twouvé. nyaa~~ ewwe dépwace aussi we nyoeud couwant vews cewui-ci. (⑅˘꒳˘) s-si aucun nyoeud ny'existe, ewwe wenvoie `nuww` e-et we nyoeud couwant est inchangé. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-node = treeWalker.nextNode();
+nyode = tweewawkew.nextnode();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw t-tweewawkew = document.cweatetweewawkew(
+  d-document.body, (✿oωo)
+  n-nyodefiwtew.show_ewement, (ˆ ﻌ ˆ)♡
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, (˘ω˘)
   },
-  false,
+  fawse, (⑅˘꒳˘)
 );
-var node = treeWalker.nextNode(); // renvoie le premier enfant de la racine, car il s'agit du noeud suivant dans l'ordre du document
+vaw nyode = tweewawkew.nextnode(); // w-wenvoie we pwemiew enfant de wa wacine, (///ˬ///✿) caw iw s'agit du nyoeud suivant dans w-w'owdwe du document
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w-w'intewface {{domxwef("tweewawkew")}} à waquewwe ewwe appawtient. 😳😳😳

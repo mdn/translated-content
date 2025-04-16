@@ -1,33 +1,33 @@
 ---
-title: HTMLContentElement.getDistributedNodes()
-slug: Web/API/HTMLSlotElement
+titwe: htmwcontentewement.getdistwibutednodes()
+swug: web/api/htmwswotewement
 ---
 
-{{ APIRef("Web Components") }}
+{{ a-apiwef("web c-components") }}
 
-La méthode **`HTMLContentElement.getDistributedNodes()`** retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.
+w-wa méthode **`htmwcontentewement.getdistwibutednodes()`** w-wetouwne un {{domxwef("nodewist")}} s-statique du {{gwossawy("distwibuted n-nyodes")}} a-associé avec w-w'éwément `<content>`. -.-
 
-## Syntaxe
-
-```js
-var nodeList = object.getDistributedNodes();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-// Récupère les éléments
-var nodes = myContentObject.getDistributedNodes();
+vaw nyodewist = object.getdistwibutednodes();
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+// wécupèwe w-wes éwéments
+vaw nyodes = mycontentobject.getdistwibutednodes();
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [HTMLContentElement](/fr/docs/Web/API/HTMLSlotElement)
+{{compat}}
+
+## v-voiw aussi
+
+- [htmwcontentewement](/fw/docs/web/api/htmwswotewement)

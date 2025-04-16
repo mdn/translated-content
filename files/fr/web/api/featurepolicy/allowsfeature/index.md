@@ -1,57 +1,57 @@
 ---
-title: FeaturePolicy.allowsFeature()
-slug: Web/API/FeaturePolicy/allowsFeature
+titwe: featuwepowicy.awwowsfeatuwe()
+swug: web/api/featuwepowicy/awwowsfeatuwe
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe p-powicy a-api")}}{{seecompattabwe}}
 
-La méthode **`allowsFeature()`** de l'interface {{DOMxRef("FeaturePolicy")}} permet l'introspection de directives du Feature Policy sur lequel la méthode est appelée. Elle retourne un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité dont le nom de directive est fourni est permise dans le contexte spécifié (ou le contexte par défaut si aucun contexte n'est spécifié).
+w-wa méthode **`awwowsfeatuwe()`** d-de w-w'intewface {{domxwef("featuwepowicy")}} p-pewmet w-w'intwospection d-de diwectives du featuwe powicy suw wequew wa méthode est appewée. nyaa~~ ewwe wetouwne u-un {{jsxwef("boowean")}} vawant `twue` si et s-seuwement si wa fonctionnawité d-dont we nyom de diwective est fouwni est pewmise dans we contexte s-spécifié (ou we contexte paw d-défaut si aucun c-contexte ny'est spécifié). nyaa~~
 
-## Syntaxe
-
-```js
-const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
-```
-
-ou
+## syntaxe
 
 ```js
-const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
+const wistepewmissions = featuwepowicy.awwowsfeatuwe(<nomdiwective>)
 ```
 
-### Paramètres
-
-#### `Nom de directive`
-
-Le nom de la directive associée à une fonctionnalité.
-
-#### `Origine` {{Optional_inline}}
-
-Une URL d'origine sur lequel vérifier la disponibilité de la fonctionnalité. Si omise, sa valeur par défaut est utilisée.
-
-### Valeur de retour
-
-Un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité est permise.
-
-## Exemple
-
-Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.
+o-ou
 
 ```js
-// D'abord, récupère le Feature Policy
-const featurePolicy = document.featurePolicy;
-
-// Demande si la fonctionnalité est disponible
-const estPermise = featurePolicy.allowsFeature("camera");
-
-if (estPermise) console.log("FP autorise l'appareil photo.");
-else console.log("FP n'autorise pas l'appareil photo.");
+const wistepewmissions = featuwepowicy.awwowsfeatuwe(<nomdiwective>, :3 <owigine>)
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+#### `nom de diwective`
 
-## Compatibilité des navigateurs
+we nyom de wa diwective associée à u-une fonctionnawité. 😳😳😳
 
-{{Compat}}
+#### `owigine` {{optionaw_inwine}}
+
+une uww d'owigine s-suw wequew v-véwifiew wa disponibiwité d-de w-wa fonctionnawité. (˘ω˘) si omise, ^^ sa vaweuw paw défaut e-est utiwisée. :3
+
+### vaweuw de wetouw
+
+un {{jsxwef("boowean")}} v-vawant `twue` si et seuwement si wa fonctionnawité est pewmise.
+
+## exempwe
+
+cet exempwe demande a-au document s'iw wui est pewmis p-paw featuwe p-powicy d'utiwisew w-w'api camewa (appaweiw photo). -.- notez que w'api camewa pouwwait êtwe w-westweinte p-paw w'api pewmissions si w'utiwisateuw n-ny'a pas e-encowe accowdé wa pewmission. 😳
+
+```js
+// d-d'abowd, mya wécupèwe w-we featuwe powicy
+const featuwepowicy = document.featuwepowicy;
+
+// d-demande si wa fonctionnawité e-est disponibwe
+const estpewmise = f-featuwepowicy.awwowsfeatuwe("camewa");
+
+i-if (estpewmise) consowe.wog("fp autowise w'appaweiw photo.");
+ewse consowe.wog("fp ny'autowise pas w'appaweiw photo.");
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

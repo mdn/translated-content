@@ -1,40 +1,40 @@
 ---
-title: CSS
-slug: Web/API/CSS
+titwe: css
+swug: web/api/css
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-L'interface CSS possède les méthodes utiles au CSS. Aucun objet de cette interface ne sont implémentés : il ne contient que des méthodes statiques et est donc une interface abstraite.
+w-w'intewface c-css possède w-wes méthodes u-utiwes au css. (///ˬ///✿) a-aucun objet de cette i-intewface ne s-sont impwémentés : i-iw nye contient que des méthodes statiques et est donc une intewface abstwaite. 😳😳😳
 
-## Propriétés
+## p-pwopwiétés
 
-L'interface CSS est une interface et aucun objet de ce type ne peut être créé: seules les méthodes statiques sont définies.
+w'intewface css est une i-intewface et aucun objet de ce t-type nye peut êtwe cwéé: seuwes wes méthodes statiques sont d-définies. 🥺
 
-## Méthodes
+## méthodes
 
-L'interface CSS est une interface et aucun objet de ce type ne peut être créé: seules les méthodes statiques sont définies.
+w'intewface c-css est une i-intewface et aucun objet de ce type nye peut êtwe cwéé: seuwes wes méthodes s-statiques sont définies. mya
 
-## Static methods
+## static methods
 
-_Aucun héritage de méthode statique_.
+_aucun héwitage de méthode statique_. 🥺
 
-- {{domxref("CSS.supports()")}}
-  - : Retourne un {{domxref("Boolean")}} qui indique si la paire _propriété/valeur_, ou si la condition, passée en paramètre est supportée.
+- {{domxwef("css.suppowts()")}}
+  - : w-wetouwne un {{domxwef("boowean")}} qui indique si w-wa paiwe _pwopwiété/vaweuw_, >_< o-ou si wa condition, >_< p-passée en p-pawamètwe est suppowtée. (⑅˘꒳˘)
 
 <!---->
 
-- {{domxref("CSS.escape()")}} {{experimental_inline}}
-  - : Utilisée pour protéger une chaine de caractère qui sera utiliser comme sélecteur CSS.
+- {{domxwef("css.escape()")}} {{expewimentaw_inwine}}
+  - : utiwisée pouw pwotégew une chaine d-de cawactèwe qui sewa utiwisew comme séwecteuw c-css. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)
+- [components.utiws.impowtgwobawpwopewties](/fw/docs/components.utiws.impowtgwobawpwopewties)

@@ -1,32 +1,32 @@
 ---
-title: PerformanceTiming.domInteractive
-slug: Web/API/PerformanceTiming/domInteractive
+titwe: pewfowmancetiming.domintewactive
+swug: w-web/api/pewfowmancetiming/domintewactive
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domInteractive`](/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> cette i-intewface est d-dépwéciée d-dans wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). 😳 v-veuiwwez u-utiwisew wa pwopwiété [`pewfowmancenavigationtiming.domintewactive`](/fw/docs/web/api/pewfowmancenavigationtiming/domintewactive) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. -.-
 
-L'ancienne propriété en lecture seule **`domInteractive`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son [`Document.readyState`](/fr/docs/Web/API/Document/readyState) passe à `"interactive"` et que l'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) correspondant est lancé.
+w'ancienne pwopwiété en wectuwe s-seuwe **`domintewactive`** wetouwne un `unsigned w-wong wong` wepwésentant we moment, 🥺 e-en miwwisecondes depuis w'époque unix, o.O où we pawseuw a tewminé s-son twavaiw suw we document p-pwincipaw, /(^•ω•^) c'est-à-diwe w-wowsque son [`document.weadystate`](/fw/docs/web/api/document/weadystate) passe à `"intewactive"` et que w'événement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event) cowwespondant e-est wancé. nyaa~~
 
-Cette propriété peut être utilisée pour mesurer la vitesse de chargement des sites Web que les utilisateurs _ressentent_. Néanmoins, il y a quelques mises en garde qui se produisent si des scripts bloquent le rendu et ne sont pas chargés de manière asynchrone ou avec des polices Web personnalisées. [Vérifiez si vous êtes dans l'un de ces cas](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) avant d'utiliser cette propriété comme un proxy pour l'expérience utilisateur de la vitesse de chargement d'un site Web.
+cette pwopwiété peut êtwe utiwisée pouw mesuwew wa vitesse d-de chawgement des sites web q-que wes utiwisateuws _wessentent_. nyaa~~ n-nyéanmoins, :3 i-iw y a quewques m-mises en gawde qui se pwoduisent si des scwipts b-bwoquent we wendu et nye sont pas chawgés de m-manièwe asynchwone ou avec des powices web pewsonnawisées. 😳😳😳 [véwifiez si vous êtes dans w'un de ces cas](https://www.stevesoudews.com/bwog/2015/08/07/domintewactive-is-it-weawwy/) a-avant d'utiwisew cette pwopwiété c-comme u-un pwoxy pouw w'expéwience u-utiwisateuw de wa vitesse de chawgement d'un site web. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performanceTiming.domInteractive;
+w-wet time = pewfowmancetiming.domintewactive;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
-- L'article « [domInteractive: is it? really?](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) (en) » explique quand vous pouvez utiliser cette propriété comme un proxy pour l'expérience utilisateur du chargement d'un site Web.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe ewwe appawtient. ^^
+- w'awticwe « [domintewactive: i-is it? weawwy?](https://www.stevesoudews.com/bwog/2015/08/07/domintewactive-is-it-weawwy/) (en) » expwique q-quand vous pouvez utiwisew cette p-pwopwiété comme u-un pwoxy pouw w'expéwience utiwisateuw du chawgement d'un site web.

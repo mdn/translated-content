@@ -1,26 +1,26 @@
 ---
-title: WebSocket.protocol
-slug: Web/API/WebSocket/protocol
+titwe: websocket.pwotocow
+swug: w-web/api/websocket/pwotocow
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propriété en lecture seule **`WebSocket.protocol`** renvoie le nom du sous protocole sélectionné par le serveur. Cette valeur sera l'une des chaînes de caractères du paramètre `protocols` utilisé lors de la création de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ou la chaîne vide si aucune connexion n'est établie.
+w-wa pwopwiété e-en wectuwe seuwe **`websocket.pwotocow`** w-wenvoie w-we nyom du sous p-pwotocowe séwectionné p-paw we sewveuw. XD cette vaweuw sewa w'une des chaînes de cawactèwes du p-pawamètwe `pwotocows` utiwisé wows de wa cwéation d-de w'objet [`websocket`](/fw/docs/web/api/websocket) ou wa c-chaîne vide si aucune connexion ny'est étabwie. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var protocol = uneWebSocket.protocol;
+v-vaw pwotocow = unewebsocket.pwotocow;
 ```
 
-## Valeur
+## v-vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+une c-chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

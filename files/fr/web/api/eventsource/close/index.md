@@ -1,52 +1,52 @@
 ---
-title: EventSource.close()
-slug: Web/API/EventSource/close
+titwe: eventsouwce.cwose()
+swug: w-web/api/eventsouwce/cwose
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur `2` (closed).
+w-wa fonction **`cwose()`** d-de w'intewface {{domxwef("eventsouwce")}} c-coupe wa connection, OwO s-si existante, (U ﹏ U) e-et affecte à w-wa vawiabwe {{domxwef("eventsouwce.weadystate")}} wa vaweuw `2` (cwosed).
 
-> [!NOTE]
-> Si la connexion est déjà fermé, la fonction n'agit pas.
+> [!note]
+> si wa connexion est déjà fewmé, w-wa fonction ny'agit pas. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-eventSource.close();
+eventsouwce.cwose();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. rawr x3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Nulle.
+nyuwwe. mya
 
-## Exemples
+## exempwes
 
 ```js
-var bouton = document.querySelector("button");
-var evtSource = new EventSource("sse.php");
+vaw bouton = document.quewysewectow("button");
+v-vaw evtsouwce = nyew eventsouwce("sse.php");
 
-bouton.onclick = function () {
-  console.log("Connection fermée");
-  evtSource.close();
+b-bouton.oncwick = function () {
+  consowe.wog("connection f-fewmée");
+  evtsouwce.cwose();
 };
 ```
 
-> [!NOTE]
-> Vous pouvez trouver un exemple complet sur GitHub — voir [Demo simple de SSE utilisant PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> vous pouvez twouvew un exempwe compwet s-suw github — voiw [demo simpwe de sse utiwisant php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

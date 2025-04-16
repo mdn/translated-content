@@ -1,35 +1,35 @@
 ---
-title: AnalyserNode()
-slug: Web/API/AnalyserNode/AnalyserNode
+titwe: anawysewnode()
+swug: web/api/anawysewnode/anawysewnode
 ---
 
-{{APIRef("'Web Audio API'")}}{{SeeCompatTable}}
+{{apiwef("'web a-audio api'")}}{{seecompattabwe}}
 
-Le constructeur **`AnalyserNode`** crée un nouvel objet {{domxref("AnalyserNode")}}.
+w-we constwucteuw **`anawysewnode`** c-cwée u-un nyouvew objet {{domxwef("anawysewnode")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var analyserNode = new AnalyserNode(context, options);
+v-vaw anawysewnode = n-nyew anawysewnode(context, mya options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - _context_
-  - : Référence à un {{domxref("AudioContext")}}.
-- _options_ {{optional_inline}}
+  - : wéféwence à un {{domxwef("audiocontext")}}.
+- _options_ {{optionaw_inwine}}
 
-  - : Un objet avec les propriétés suivantes :
+  - : un objet avec wes pwopwiétés s-suivantes :
 
-    - `fftSize`: taille initiale sde la FFT pour l'analyse du domaine fréquentiel . La valeur par défaut est 2048.
-    - `maxDecibels`: valeur maximale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -30.
-    - `minDecibels`: valeur minimale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -100.
-    - `smoothingTimeConstant`: valeur de lissage pour l'analyse FFT. La valeur par défaut est 0.8
+    - `fftsize`: taiwwe initiawe sde wa fft pouw w-w'anawyse du domaine fwéquentiew . nyaa~~ w-wa vaweuw paw défaut est 2048. (⑅˘꒳˘)
+    - `maxdecibews`: vaweuw maximawe de p-puissance de wa pwage pouw w'anawyse f-fft, rawr x3 en décibews. (✿oωo) w-wa vaweuw paw défaut est -30. (ˆ ﻌ ˆ)♡
+    - `mindecibews`: vaweuw minimawe de puissance de wa pwage p-pouw w'anawyse fft, (˘ω˘) en décibews. (⑅˘꒳˘) wa vaweuw paw défaut est -100. (///ˬ///✿)
+    - `smoothingtimeconstant`: vaweuw de w-wissage pouw w'anawyse fft. 😳😳😳 wa vaweuw p-paw défaut e-est 0.8
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,52 +1,52 @@
 ---
-title: "HTMLMediaElement: durationchange"
-slug: Web/API/HTMLMediaElement/durationchange_event
+titwe: "htmwmediaewement: duwationchange"
+s-swug: w-web/api/htmwmediaewement/duwationchange_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-L'évènement **`durationchange`** est déclenché quand l'attribut de durée est mis à jour.
+w-w'évènement **`duwationchange`** e-est décwenché q-quand w'attwibut d-de duwée e-est mis à jouw. OwO
 
-## Informations générales
+## i-infowmations généwawes
 
-- Spécification
-  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange)
-- Interface
-  - : {{domxref("Event")}}
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
-- Default Action
-  - : Aucune.
+- spécification
+  - : [htmw5 media](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-video-ewement.htmw#event-media-duwationchange)
+- intewface
+  - : {{domxwef("event")}}
+- p-pwopagation
+  - : nyon
+- annuwabwe
+  - : nyon
+- c-cibwe
+  - : {{domxwef("ewement")}}
+- defauwt action
+  - : a-aucune. (U ﹏ U)
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | type                       | d-descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event t-tawget (the t-topmost tawget in the dom twee). >_< |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. rawr x3                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew t-the event nyowmawwy bubbwes ow nyot. mya             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe o-ow nyot. nyaa~~               |
 
-## Evénements liés
+## evénements w-wiés
 
-- [`playing`](/fr/docs/Web/API/HTMLMediaElement/playing_event)
-- [`waiting`](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
-- [`seeking`](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
-- [`seeked`](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
-- [`ended`](/fr/docs/Web/API/HTMLMediaElement/ended_event)
-- [`loadedmetadata`](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [`loadeddata`](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
-- [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
-- [`canplaythrough`](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-- [`timeupdate`](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
-- [`play`](/fr/docs/Web/API/HTMLMediaElement/play_event)
-- [`pause`](/fr/docs/Web/API/HTMLMediaElement/pause_event)
-- [`ratechange`](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
-- [`volumechange`](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
-- [`suspend`](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
-- [`emptied`](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
-- [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
+- [`pwaying`](/fw/docs/web/api/htmwmediaewement/pwaying_event)
+- [`waiting`](/fw/docs/web/api/htmwmediaewement/waiting_event)
+- [`seeking`](/fw/docs/web/api/htmwmediaewement/seeking_event)
+- [`seeked`](/fw/docs/web/api/htmwmediaewement/seeked_event)
+- [`ended`](/fw/docs/web/api/htmwmediaewement/ended_event)
+- [`woadedmetadata`](/fw/docs/web/api/htmwmediaewement/woadedmetadata_event)
+- [`woadeddata`](/fw/docs/web/api/htmwmediaewement/woadeddata_event)
+- [`canpway`](/fw/docs/web/api/htmwmediaewement/canpway_event)
+- [`canpwaythwough`](/fw/docs/web/api/htmwmediaewement/canpwaythwough_event)
+- [`timeupdate`](/fw/docs/web/api/htmwmediaewement/timeupdate_event)
+- [`pway`](/fw/docs/web/api/htmwmediaewement/pway_event)
+- [`pause`](/fw/docs/web/api/htmwmediaewement/pause_event)
+- [`watechange`](/fw/docs/web/api/htmwmediaewement/watechange_event)
+- [`vowumechange`](/fw/docs/web/api/htmwmediaewement/vowumechange_event)
+- [`suspend`](/fw/docs/web/api/htmwmediaewement/suspend_event)
+- [`emptied`](/fw/docs/web/api/htmwmediaewement/emptied_event)
+- [`stawwed`](/fw/docs/web/api/htmwmediaewement/stawwed_event)

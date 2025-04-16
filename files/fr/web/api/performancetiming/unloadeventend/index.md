@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.unloadEventEnd
-slug: Web/API/PerformanceTiming/unloadEventEnd
+titwe: pewfowmancetiming.unwoadeventend
+swug: w-web/api/pewfowmancetiming/unwoadeventend
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.unloadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> cette i-intewface est d-dépwéciée d-dans wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (⑅˘꒳˘) v-veuiwwez u-utiwisew wa pwopwiété [`pewfowmancenavigationtiming.unwoadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/unwoadeventend) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. rawr x3
 
-L'ancienne propriété en lecture seule **`unloadEventEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le gestionnaire d'événement [`unload`](/fr/docs/Web/API/Window/unload_event) se termine. S'il n'y a pas de document précédent, ou si le document précédent, ou l'une des redirections nécessaires, n'est pas de la même origine, la valeur retournée est `0`.
+w'ancienne pwopwiété en wectuwe s-seuwe **`unwoadeventend`** wetouwne un `unsigned w-wong wong` wepwésentant we moment, (✿oωo) e-en miwwisecondes depuis w'époque unix, (ˆ ﻌ ˆ)♡ où we gestionnaiwe d-d'événement [`unwoad`](/fw/docs/web/api/window/unwoad_event) se tewmine. (˘ω˘) s'iw n-ny'y a pas de d-document pwécédent, (⑅˘꒳˘) ou si we document pwécédent, (///ˬ///✿) ou w'une des wediwections nyécessaiwes, 😳😳😳 n-ny'est pas de wa même owigine, 🥺 wa vaweuw wetouwnée est `0`. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performanceTiming.unloadEventEnd;
+wet time = pewfowmancetiming.unwoadeventend;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe ewwe a-appawtient. 🥺

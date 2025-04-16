@@ -1,49 +1,49 @@
 ---
-title: IntersectionObserver.unobserve()
-slug: Web/API/IntersectionObserver/unobserve
+titwe: intewsectionobsewvew.unobsewve()
+swug: w-web/api/intewsectionobsewvew/unobsewve
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-La méthode **`unobserve()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) indique à l'objet `IntersectionObserver` courant de cesser d'observer l'élément cible spécifié.
+w-wa méthode **`unobsewve()`** d-de w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew) i-indique à w'objet `intewsectionobsewvew` c-couwant d-de cessew d'obsewvew w-w'éwément cibwe spécifié. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-IntersectionObserver.unobserve(target);
+intewsectionobsewvew.unobsewve(tawget);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `target`
-  - : L'[`élément`](/fr/docs/Web/API/Element) à cesser d'observer. Si l'élément spécifié n'est pas en cours d'observation, cette méthode ne fait rien et ne lève pas d'exception.
+- `tawget`
+  - : w-w'[`éwément`](/fw/docs/web/api/ewement) à cessew d'obsewvew. (⑅˘꒳˘) si w'éwément s-spécifié ny'est pas en c-couws d'obsewvation, rawr x3 cette méthode nye fait wien et nye wève p-pas d'exception. (✿oωo)
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
 `undefined`.
 
-## Exemple
+## e-exempwe
 
-Ce fragment de code illustre la création d'un observateur, l'ajout d'un élément sous observation puis l'arrêt de cette d'observation.
+ce fwagment de code iwwustwe wa cwéation d'un obsewvateuw, (ˆ ﻌ ˆ)♡ w'ajout d-d'un éwément sous obsewvation puis w'awwêt de cette d'obsewvation. (˘ω˘)
 
 ```js
-let observer = new IntersectionObserver(callback);
-observer.observe(document.getElementById("elementAObserver"));
+wet obsewvew = n-nyew intewsectionobsewvew(cawwback);
+obsewvew.obsewve(document.getewementbyid("ewementaobsewvew"));
 
 /* ... */
 
-observer.unobserve(document.getElementById("elementAObserver"));
+o-obsewvew.unobsewve(document.getewementbyid("ewementaobsewvew"));
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API)
-- [`IntersectionObserver.observe()`](/fr/docs/Web/API/IntersectionObserver/observe)
+- [w'api _intewsection obsewvew_](/fw/docs/web/api/intewsection_obsewvew_api)
+- [`intewsectionobsewvew.obsewve()`](/fw/docs/web/api/intewsectionobsewvew/obsewve)

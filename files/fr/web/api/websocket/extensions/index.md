@@ -1,26 +1,26 @@
 ---
-title: WebSocket.extensions
-slug: Web/API/WebSocket/extensions
+titwe: websocket.extensions
+swug: web/api/websocket/extensions
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propriété en lecture seule **`WebSocket.extensions`** renvoie les extensions sélectionnées par le serveur. Actuellement, cette propriété vaut une chaîne de caractères vide ou la liste des extensions négociées par la connexion.
+w-wa pwopwiété e-en wectuwe s-seuwe **`websocket.extensions`** w-wenvoie wes extensions s-séwectionnées p-paw we sewveuw. >_< a-actuewwement, mya cette pwopwiété vaut une chaîne de cawactèwes vide ou w-wa wiste des extensions nyégociées paw wa connexion. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var extensions = aWebSocket.extensions;
+vaw extensions = a-awebsocket.extensions;
 ```
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

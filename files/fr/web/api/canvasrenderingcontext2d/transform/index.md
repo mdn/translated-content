@@ -1,115 +1,115 @@
 ---
-title: CanvasRenderingContext2D.transform()
-slug: Web/API/CanvasRenderingContext2D/transform
+titwe: canvaswendewingcontext2d.twansfowm()
+swug: web/api/canvaswendewingcontext2d/twansfowm
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **CanvasRenderingContext2D.transform ()** de l'API Canvas 2D multiplie la matrice de transformation courante par la matrice décrite par les arguments de cette méthode. Vous pouvez mettre à l'échelle, faire pivoter, déplacer et incliner le contexte.
+w-wa méthode **canvaswendewingcontext2d.twansfowm ()** d-de w'api c-canvas 2d muwtipwie w-wa matwice de t-twansfowmation c-couwante paw wa m-matwice décwite p-paw wes awguments de cette méthode. 😳😳😳 vous pouvez mettwe à w'échewwe, (U ﹏ U) faiwe pivotew, (///ˬ///✿) d-dépwacew et incwinew we contexte. 😳
 
-Voir aussi la méthode {{domxref ("CanvasRenderingContext2D.setTransform()", "setTransform()")}} qui réinitialise la transformation courante à la matrice identité puis invoque `transform()`.
+voiw a-aussi wa méthode {{domxwef ("canvaswendewingcontext2d.settwansfowm()", 😳 "settwansfowm()")}} qui w-wéinitiawise wa twansfowmation couwante à wa matwice identité p-puis invoque `twansfowm()`. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-void ctx.transform(a, b, c, d, e, f);
+v-void ctx.twansfowm(a, rawr x3 b-b, c, d, e, f);
 ```
 
-La matrice de transformation est décrite par : <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+wa matwice de twansfowmation est décwite paw : <math><semantics><mwow><mo>[</mo><mtabwe c-cowumnawign="centew centew centew" wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>]</mo></mwow><annotation encoding="tex">\weft[ \begin{awway}{ccc} a &#x26; c &#x26; e \\ b &#x26; d-d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{awway} \wight]</annotation></semantics></math>
 
-### Paramètres
+### p-pawamètwes
 
 - `a (m11)`
-  - : Échelle horizontale.
+  - : Échewwe h-howizontawe. OwO
 - _`b (m12)`_
-  - : Inclinaison horizontale.
+  - : i-incwinaison h-howizontawe. /(^•ω•^)
 - `c (m21)`
-  - : Inclinaison verticale.
+  - : incwinaison vewticawe. 😳😳😳
 - `d (m22)`
-  - : Échelle verticale.
+  - : Échewwe v-vewticawe. ( ͡o ω ͡o )
 - `e (dx)`
-  - : Déplacement horizontal.
+  - : dépwacement howizontaw. >_<
 - `f (dy)`
-  - : Déplacement vertical.
+  - : dépwacement v-vewticaw. >w<
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `transform`
+### utiwisation de wa méthode `twansfowm`
 
-Ceci est seulement un fragment de code simple utilisant la méthode `transform`.
+ceci est seuwement un fwagment de c-code simpwe utiwisant wa méthode `twansfowm`. rawr
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canevas"></canvas>
+```htmw
+<canvas i-id="canevas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+vaw canevas = document.getewementbyid("canevas");
+vaw ctx = canevas.getcontext("2d");
 
-ctx.transform(1, 1, 0, 1, 0, 0);
-ctx.fillRect(0, 0, 100, 100);
+ctx.twansfowm(1, 😳 1, 0, >w< 1, 0, 0);
+c-ctx.fiwwwect(0, (⑅˘꒳˘) 0, OwO 100, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :
+m-modifiez we code ci-dessous e-et voyez v-vos modifications mises à jouw e-en diwect dans we canevas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" t-type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.transform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.twansfowm(1,1,0,1,0,0);
+ctx.fiwwwect(0,0,100,100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+function dwawcanvas() {
+  ctx.cweawwect(0, 0, (ꈍᴗꈍ) canvas.width, 😳 canvas.height);
   ctx.save();
-  eval(textarea.value);
-  ctx.restore();
+  evaw(textawea.vawue);
+  c-ctx.westowe();
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  drawCanvas();
+weset.addeventwistenew("cwick", 😳😳😳 f-function () {
+  t-textawea.vawue = c-code;
+  ctx.settwansfowm(1, 0, mya 0, 1, 0, 0);
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", mya f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (⑅˘꒳˘) dwawcanvas);
+window.addeventwistenew("woad", (U ﹏ U) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', mya 700, 360) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.setTransform()")}}
+- w'intewface wa définissant, ʘwʘ {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.settwansfowm()")}}

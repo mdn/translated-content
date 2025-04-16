@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.navigationStart
-slug: Web/API/PerformanceTiming/navigationStart
+titwe: pewfowmancetiming.navigationstawt
+swug: w-web/api/pewfowmancetiming/navigationstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (U ﹏ U) v-veuiwwez u-utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. >_<
 
-L'ancienne propriété en lecture seule **`navigationStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, juste après la fin de l'invite de déchargement sur le document précédent dans le même contexte de navigation. S'il n'y a pas de document précédent, cette valeur sera la même que [`PerformanceTiming.fetchStart`](/fr/docs/Web/API/PerformanceTiming/fetchStart).
+w'ancienne pwopwiété en wectuwe seuwe **`navigationstawt`** w-wetouwne un `unsigned wong wong` wepwésentant w-we moment, rawr x3 en miwwisecondes depuis w-w'époque unix, mya juste apwès wa fin de w'invite de déchawgement s-suw we document pwécédent d-dans we même contexte d-de nyavigation. nyaa~~ s'iw ny'y a pas de document pwécédent, (⑅˘꒳˘) cette vaweuw sewa w-wa même que [`pewfowmancetiming.fetchstawt`](/fw/docs/web/api/pewfowmancetiming/fetchstawt). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.navigationStart;
+wet time = pewfowmancetiming.navigationstawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. (✿oωo)

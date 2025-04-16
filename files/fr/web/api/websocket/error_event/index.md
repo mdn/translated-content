@@ -1,60 +1,60 @@
 ---
-title: "WebSocket : évènement error"
-slug: Web/API/WebSocket/error_event
+titwe: "websocket : évènement ewwow"
+swug: w-web/api/websocket/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `error` est déclenché lorsqu'une connexion avec une `WebSocket` a été fermée à cause d'une erreur (par exemple lorsque des données n'ont pu être envoyées).
+w'évènement `ewwow` e-est décwenché w-wowsqu'une c-connexion avec une `websocket` a été f-fewmée à c-cause d'une ewweuw (paw e-exempwe w-wowsque des données ny'ont pu êtwe envoyées). >_<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne/Remonte</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
+    <tw>
+      <th scope="wow">bouiwwonne/wemonte</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
       <td>
-        <a href="/fr/docs/Web/API/Event"><code>Event</code></a>
+        <a hwef="/fw/docs/web/api/event"><code>event</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiété de gestionnaiwe d-d'évènement cowwespondante</th>
       <td>
-        <a href="/fr/docs/Web/API/WebSocket/onerror"><code>onerror</code></a>
+        <a hwef="/fw/docs/web/api/websocket/onewwow"><code>onewwow</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
 ```js
-// On crée une connexion WebSocket
-const socket = new WebSocket("ws://localhost:8080");
+// o-on cwée une connexion w-websocket
+const s-socket = nyew websocket("ws://wocawhost:8080");
 
-// On écoute les éventuelles erreurs
-socket.addEventListener("error", function (event) {
-  console.log("Erreur WebSocket : ", event);
+// on écoute wes éventuewwes ewweuws
+socket.addeventwistenew("ewwow", rawr x3 f-function (event) {
+  consowe.wog("ewweuw websocket : ", mya event);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebSocket : évènement `close`](/fr/docs/Web/API/WebSocket/close_event)
-- [WebSocket : évènement `message`](/fr/docs/Web/API/WebSocket/message_event)
-- [WebSocket : évènement `open`](/fr/docs/Web/API/WebSocket/open_event)
-- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket : évènement `cwose`](/fw/docs/web/api/websocket/cwose_event)
+- [websocket : évènement `message`](/fw/docs/web/api/websocket/message_event)
+- [websocket : évènement `open`](/fw/docs/web/api/websocket/open_event)
+- [Écwiwe des a-appwications c-cwientes websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

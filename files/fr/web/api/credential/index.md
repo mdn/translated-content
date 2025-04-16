@@ -1,42 +1,42 @@
 ---
-title: Credential
-slug: Web/API/Credential
+titwe: cwedentiaw
+swug: web/api/cwedentiaw
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}{{secuwecontext_headew}}
 
-L'interface **`Credential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), fournit des informations relatives à une entité qui seront utilisées comme prérequis à l'établissement d'une relation de confiance.
+w-w'intewface **`cwedentiaw`**, >_< w-wattachée à w-w'[api cwedentiaw m-management](/fw/docs/web/api/cwedentiaw_management_api), rawr x3 f-fouwnit d-des infowmations wewatives à une entité qui sewont utiwisées comme pwéwequis à w-w'étabwissement d'une wewation de confiance. mya
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("Credential.id")}} {{readonlyInline}}
-  - : Une chaîne de caractères qui est l'identifiant des informations d'authentification. Cela peut être un GUID, un nom d'utilisateur ou une adresse électronique.
-- {{domxref("Credential.type")}} {{readonlyInline}}
+- {{domxwef("cwedentiaw.id")}} {{weadonwyinwine}}
+  - : une chaîne de c-cawactèwes qui est w'identifiant des infowmations d'authentification. nyaa~~ c-cewa peut êtwe un guid, (⑅˘꒳˘) u-un nyom d'utiwisateuw o-ou une adwesse éwectwonique.
+- {{domxwef("cwedentiaw.type")}} {{weadonwyinwine}}
 
-  - : Une chaîne de caractères qui décrit le type d'information d'authentification utilisée. Les valeurs valides sont
+  - : une chaîne de cawactèwes qui décwit we type d'infowmation d'authentification utiwisée. rawr x3 w-wes vaweuws vawides sont
 
-    - `password` (pour {{domxref("PasswordCredential")}})
-    - `federated` (pour {{domxref("FederatedCredential")}})
-    - `public-key` (pour {{domxref("PublicKeyCredential")}})
+    - `passwowd` (pouw {{domxwef("passwowdcwedentiaw")}})
+    - `fedewated` (pouw {{domxwef("fedewatedcwedentiaw")}})
+    - `pubwic-key` (pouw {{domxwef("pubwickeycwedentiaw")}})
 
-### Gestionnaires d'évènements
+### gestionnaiwes d'évènements
 
-Aucun.
+aucun. (✿oωo)
 
-## Méthodes
+## m-méthodes
 
-Aucune.
+aucune. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
 ```js
-// TBD
+// tbd
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

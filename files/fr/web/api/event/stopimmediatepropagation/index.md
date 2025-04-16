@@ -1,24 +1,24 @@
 ---
-title: Event.stopImmediatePropagation()
-slug: Web/API/Event/stopImmediatePropagation
+titwe: event.stopimmediatepwopagation()
+swug: w-web/api/event/stopimmediatepwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`stopImmediatePropagation()`**, rattachée à l'interface {{domxref("Event")}}, empêche les gestionnaires d'évènement, associés à ce même évènement, d'être appelés.
+w-wa méthode **`stopimmediatepwopagation()`**, rawr x3 w-wattachée à w-w'intewface {{domxwef("event")}}, nyaa~~ e-empêche w-wes gestionnaiwes d-d'évènement, /(^•ω•^) a-associés à ce même évènement, rawr d'êtwe appewés. OwO
 
-Si plusieurs gestionnaires d'évènement sont attachés à un élément pour le même type d'évènement, ils sont appelés dans l'ordre dans lequel ils ont été ajoutés. Si `stopImmediatePropagation()` est appelé pendant un de ces appels, les gestionnaires restants ne sont pas invoqués.
+si pwusieuws gestionnaiwes d-d'évènement sont attachés à un éwément p-pouw we même type d'évènement, (U ﹏ U) i-iws sont appewés dans w'owdwe dans wequew iws ont été a-ajoutés. >_< si `stopimmediatepwopagation()` est appewé p-pendant un d-de ces appews, rawr x3 wes gestionnaiwes westants nye sont pas invoqués.
 
-## Syntaxe
+## syntaxe
 
 ```js
-event.stopImmediatePropagation();
+e-event.stopimmediatepwopagation();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

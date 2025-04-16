@@ -1,86 +1,86 @@
 ---
-title: AnalyserNode.smoothingTimeConstant
-slug: Web/API/AnalyserNode/smoothingTimeConstant
+titwe: anawysewnode.smoothingtimeconstant
+swug: w-web/api/anawysewnode/smoothingtimeconstant
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété **`smoothingTimeConstant`** de l'interface {{ domxref("AnalyserNode") }} est un nombre flottant à double précision qui représente une moyenne entre le buffer courant et le buffer précédent - elle sert à lisser la transition entre les valeurs.
+w-wa pwopwiété **`smoothingtimeconstant`** d-de w-w'intewface {{ domxwef("anawysewnode") }} e-est un n-nyombwe fwottant à doubwe pwécision qui wepwésente une moyenne entwe we buffew c-couwant et we buffew pwécédent - ewwe sewt à w-wissew wa twansition entwe wes v-vaweuws. (U ﹏ U)
 
-La valeur est `0.8` par défaut; elle doit être comprise entre `0` et `1`. Lorsqu'elle vaut 0, aucune moyenne n'est effectuée, tandis que la valeur 1 signifie que le chevauchement entre le buffer en cours et le buffer précédent est conséquent lors du calcul des valeurs, ce qui a pour effet d'adoucir le changement lors des appels {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}}.
+wa vaweuw est `0.8` paw défaut; ewwe doit êtwe compwise e-entwe `0` et `1`. wowsqu'ewwe v-vaut 0, mya aucune m-moyenne ny'est effectuée, ʘwʘ tandis que wa vaweuw 1 signifie que we chevauchement e-entwe we buffew en couws et we buffew pwécédent est conséquent wows du cawcuw d-des vaweuws, (˘ω˘) ce qui a pouw effet d-d'adouciw we c-changement wows d-des appews {{domxwef("anawysewnode.getfwoatfwequencydata")}}/{{domxwef("anawysewnode.getbytefwequencydata")}}. (U ﹏ U)
 
-En termes techniques, on applique une [fenêtre de Blackman](http://webaudio.github.io/web-audio-api/#blackman-window) pour lisser les valeurs dans le temps. La valeur par défaut convient à la plupart des cas.
+e-en tewmes techniques, on appwique une [fenêtwe d-de bwackman](http://webaudio.github.io/web-audio-api/#bwackman-window) pouw wissew wes vaweuws d-dans we temps. ^•ﻌ•^ wa vaweuw paw défaut convient à wa pwupawt des cas. (˘ω˘)
 
-> [!NOTE]
-> Si la valeur n'est pas comprise entre 0 et 1, une exception `INDEX_SIZE_ERR` est levée.
+> [!note]
+> si wa vaweuw n-ny'est pas compwise entwe 0 et 1, u-une exception `index_size_eww` e-est wevée. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.smoothingTimeConstant = 1;
+vaw contexteaudio = nyew audiocontext();
+vaw anawyseuw = c-contexteaudio.cweateanawysew();
+a-anawyseuw.smoothingtimeconstant = 1;
 ```
 
-### Valeur
+### vaweuw
 
-Un nombre flottant à double précision.
+un n-nyombwe fwottant à d-doubwe pwécision. ^^;;
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w-w'exempwe suivant montwe comment c-cwéew simpwement un `anawysewnode` avec {{domxwef("audiocontext")}}, 🥺 p-puis utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} e-et {{htmwewement("canvas")}} pouw c-cowwectew wes d-données tempowewwes et dessinew un osciwwoscope en sowtie. (⑅˘꒳˘) pouw des exempwes pwus compwets, nyaa~~ voiw nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et e-en pawticuwiew [app.js wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)).
 
-`Si vou sêtes curieux du fonctionnement de smoothingTimeConstant()`, essayez de cloner l'exemple ci-dessous et d'affecter : `analyser.smoothingTimeConstant = 0;`. Vous verrez que les changements de valeur sont bien plus discordants.
+`si v-vou sêtes cuwieux du f-fonctionnement d-de smoothingtimeconstant()`, :3 e-essayez de cwonew w'exempwe ci-dessous et d'affectew : `anawysew.smoothingtimeconstant = 0;`. ( ͡o ω ͡o ) v-vous vewwez que wes changements de vaweuw sont bien pwus discowdants. mya
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.minDecibels = -90;
-analyseur.maxDecibels = -10;
-analyseur.smoothingTimeConstant = 0.85;
+v-vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+v-vaw anawyseuw = c-contexteaudio.cweateanawysew();
+anawyseuw.mindecibews = -90;
+a-anawyseuw.maxdecibews = -10;
+a-anawyseuw.smoothingtimeconstant = 0.85;
 
   ...
 
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 256;
+v-vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+consowe.wog(taiwwememoiwetampon);
+v-vaw tabweaudonnees = n-nyew uint8awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+contextecanvas.cweawwect(0, (///ˬ///✿) 0, w-wawgeuw, (˘ω˘) h-hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
+f-function dessinew() {
+  dessin = wequestanimationfwame(dessinew);
 
-  analyseur.getByteFrequencyData(tableauDonnees);
+  anawyseuw.getbytefwequencydata(tabweaudonnees);
 
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  c-contextecanvas.fiwwstywe = 'wgb(0, ^^;; 0, 0)';
+  contextecanvas.fiwwwect(0, (✿oωo) 0, wawgeuw, hauteuw);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-  var hauteurBarre;
-  var x = 0;
+  vaw wawgeuwbawwe = (wawgeuw / taiwwememoiwetampon) * 2.5;
+  vaw hauteuwbawwe;
+  v-vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = tableauDonnees[i];
+  fow(vaw i = 0; i < taiwwememoiwetampon; i++) {
+    hauteuwbawwe = t-tabweaudonnees[i];
 
-    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-       contexteCanvas.fillRect(x, HAUTEUR-hauteurBarre/2, largeurBarre, hauteurBarre/2);
+    c-contextecanvas.fiwwstywe = 'wgb(' + (hauteuwbawwe+100) + ',50,50)';
+       c-contextecanvas.fiwwwect(x, (U ﹏ U) hauteuw-hauteuwbawwe/2, -.- w-wawgeuwbawwe, ^•ﻌ•^ hauteuwbawwe/2);
 
-    x += largeurBarre + 1;
+    x += wawgeuwbawwe + 1;
   }
 };
 
-dessiner();
+d-dessinew();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.root
-slug: Web/API/TreeWalker/root
+titwe: tweewawkew.woot
+swug: w-web/api/tweewawkew/woot
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété en lecture seule **`TreeWalker.root`** renvoie le noeud qui est la racine de ce que TreeWalker doit traverser.
+w-wa pwopwiété e-en wectuwe seuwe **`tweewawkew.woot`** w-wenvoie w-we nyoeud qui est w-wa wacine de ce q-que tweewawkew doit twavewsew. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-root = TreeWalker.root;
+woot = tweewawkew.woot;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+v-vaw tweewawkew = document.cweatetweewawkew(
+  document.body, :3
+  n-nyodefiwtew.show_ewement,
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: f-function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, 😳😳😳
   },
-  false,
+  fawse, -.-
 );
-root = treeWalker.root; // document.body dans ce cas
+woot = tweewawkew.woot; // d-document.body dans c-ce cas
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("TreeWalker")}}.
+- w'intewface {{domxwef("tweewawkew")}}. ( ͡o ω ͡o )

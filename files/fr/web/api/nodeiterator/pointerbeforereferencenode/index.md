@@ -1,42 +1,42 @@
 ---
-title: NodeIterator.pointerBeforeReferenceNode
-slug: Web/API/NodeIterator/pointerBeforeReferenceNode
+titwe: nyodeitewatow.pointewbefowewefewencenode
+swug: web/api/nodeitewatow/pointewbefowewefewencenode
 ---
 
-{{APIRef("DOM")}} {{SeeCompatTable}}
+{{apiwef("dom")}} {{seecompattabwe}}
 
-La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** renvoie un {{domxref("Boolean")}} (booléen) qui indique si le {{domxref("NodeFilter")}} est ancré avant (si la valeur est `true` (_vrai_)) ou après (`false` (_faux_)) le noeud-ancre indiqué par la propriété {{domxref("NodeIterator.referenceNode")}}.
+w-wa pwopwiété e-en wectuwe seuwe **`nodeitewatow.pointewbefowewefewencenode`** w-wenvoie un {{domxwef("boowean")}} (boowéen) qui i-indique si we {{domxwef("nodefiwtew")}} e-est ancwé a-avant (si w-wa vaweuw est `twue` (_vwai_)) ou a-apwès (`fawse` (_faux_)) we nyoeud-ancwe indiqué paw wa pwopwiété {{domxwef("nodeitewatow.wefewencenode")}}. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-flag = nodeIterator.pointerBeforeReferenceNode;
+f-fwag = nyodeitewatow.pointewbefowewefewencenode;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw nodeitewatow = d-document.cweatenodeitewatow(
+  document.body, :3
+  n-nyodefiwtew.show_ewement, 😳😳😳
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, -.-
   },
-  false,
+  fawse, ( ͡o ω ͡o )
 );
-flag = nodeIterator.pointerBeforeReferenceNode;
+f-fwag = nyodeitewatow.pointewbefowewefewencenode;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface à laquelle elle appartient : {{domxref("NodeIterator")}}
+- w'intewface à waquewwe ewwe appawtient : {{domxwef("nodeitewatow")}}

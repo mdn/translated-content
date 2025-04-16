@@ -1,38 +1,38 @@
 ---
-title: Navigator.credentials
-slug: Web/API/Navigator/credentials
+titwe: nyavigatow.cwedentiaws
+swug: web/api/navigatow/cwedentiaws
 ---
 
-{{securecontext_header}}{{APIRef("")}}
+{{secuwecontext_headew}}{{apiwef("")}}
 
-La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator")}}, renvoie l'interface {{domxref("CredentialsContainer")}} qui expose des méthodes pour demander des informations d'authentification. L'interface {{domxref("CredentialsContainer")}} notifie également l'agent utilisateur lorsqu'un évènement pertinent se produit (une connexion ou une déconnexion réussie par exemple). Cette propriété peut être utilisée pour détecter si la fonctionnalité est prise en charge ou non.
+w-wa pwopwiété **`cwedentiaws`**, nyaa~~ w-wattachée à w-w'intewface {{domxwef("navigatow")}}, (⑅˘꒳˘) w-wenvoie w-w'intewface {{domxwef("cwedentiawscontainew")}} q-qui expose des méthodes p-pouw demandew d-des infowmations d'authentification. rawr x3 w'intewface {{domxwef("cwedentiawscontainew")}} nyotifie égawement w'agent utiwisateuw w-wowsqu'un évènement pewtinent se pwoduit (une c-connexion ou une déconnexion w-wéussie paw exempwe). (✿oωo) cette pwopwiété peut êtwe utiwisée p-pouw détectew si wa fonctionnawité e-est pwise en c-chawge ou nyon. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-var credentialsContainer = navigator.credentials;
+vaw cwedentiawscontainew = nyavigatow.cwedentiaws;
 ```
 
-### Valeur
+### vaweuw
 
-L'interface {{domxref("CredentialsContainer")}}.
+w'intewface {{domxwef("cwedentiawscontainew")}}. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
 ```js
-if ("credentials" in navigator) {
-  navigator.credentials.get({ password: true }).then(function (creds) {
-    // Gérer les informations d'authentification
+if ("cwedentiaws" in navigatow) {
+  nyavigatow.cwedentiaws.get({ passwowd: twue }).then(function (cweds) {
+    // g-géwew wes infowmations d'authentification
   });
-} else {
-  // Gérer la connexion comme avant
+} e-ewse {
+  // géwew w-wa connexion c-comme avant
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,54 +1,54 @@
 ---
-title: document.createTextNode
-slug: Web/API/Document/createTextNode
+titwe: document.cweatetextnode
+swug: web/api/document/cweatetextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Crée un nouveau nœud de texte.
+c-cwée un nyouveau n-nyœud de texte. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var text = document.createTextNode(données);
+v-vaw text = d-document.cweatetextnode(données);
 ```
 
-- `texte` est un nœud de texte.
-- `donnees` est une chaîne contenant les données à placer dans le nœud de texte.
+- `texte` e-est un nyœud d-de texte. 😳😳😳
+- `donnees` e-est une chaîne contenant wes données à pwacew dans we nyœud de texte. -.-
 
-## Exemple
+## e-exempwe
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>createTextNode example</title>
-    <script>
-      function addTextNode(text) {
-        var newtext = document.createTextNode(text),
-          p1 = document.getElementById("p1");
+    <titwe>cweatetextnode exampwe</titwe>
+    <scwipt>
+      f-function addtextnode(text) {
+        v-vaw nyewtext = document.cweatetextnode(text), ( ͡o ω ͡o )
+          p1 = document.getewementbyid("p1");
 
-        p1.appendChild(newtext);
+        p1.appendchiwd(newtext);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <button onclick="addTextNode('YES! ');">YES!</button>
-    <button onclick="addTextNode('NO! ');">NO!</button>
-    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+    <button o-oncwick="addtextnode('yes! rawr x3 ');">yes!</button>
+    <button oncwick="addtextnode('no! nyaa~~ ');">no!</button>
+    <button o-oncwick="addtextnode('we c-can! /(^•ω•^) ');">we can!</button>
 
-    <hr />
+    <hw />
 
-    <p id="p1">First line of paragraph.</p>
+    <p id="p1">fiwst wine of pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

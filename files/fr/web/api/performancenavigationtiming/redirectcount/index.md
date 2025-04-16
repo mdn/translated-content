@@ -1,59 +1,59 @@
 ---
-title: PerformanceNavigationTiming.redirectCount
-slug: Web/API/PerformanceNavigationTiming/redirectCount
+titwe: pewfowmancenavigationtiming.wediwectcount
+swug: web/api/pewfowmancenavigationtiming/wediwectcount
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`redirectCount`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le nombre de redirections depuis la dernière navigation sans redirection dans le contexte de navigation actuel.
+w-wa pwopwiété e-en wectuwe seuwe **`wediwectcount`** w-wenvoie u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w-we nyombwe d-de wediwections depuis wa dewnièwe nyavigation sans wediwection dans we contexte d-de nyavigation actuew. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-perfEntry.redirectCount;
+pewfentwy.wediwectcount;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nombre représentant le nombre de redirections depuis la dernière navigation sans redirection dans le contexte de navigation actuel.
+u-un nyombwe wepwésentant we nyombwe de wediwections depuis wa dewnièwe n-nyavigation sans wediwection d-dans we contexte d-de nyavigation actuew. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w'exempwe suivant iwwustwe w'utiwisation d-de cette pwopwiété. >w<
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+function pwint_nav_timing_data() {
+  // utiwise getentwiesbytype() pouw obteniw u-uniquement wes événements de type "navigation". rawr
+  w-wet pewfentwies = p-pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  f-fow (wet i = 0; i-i < pewfentwies.wength; i++) {
+    consowe.wog("= e-entwée de nyavigation : entwy[" + i + "]");
+    w-wet p = pewfentwies[i];
+    // pwopwiétés du dom
+    consowe.wog(
+      "contenu du dom chawgé = " +
+        (p.domcontentwoadedeventend - p-p.domcontentwoadedeventstawt), mya
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    consowe.wog("contenu d-du dom compwet = " + p-p.domcompwete);
+    c-consowe.wog("contenu du dom intewactif = " + p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps de chawgement e-et de déchawgement d-des documents
+    consowe.wog("document c-chawgé = " + (p.woadeventend - p-p.woadeventstawt));
+    consowe.wog(
+      "document d-déchawgé = " + (p.unwoadeventend - p.unwoadeventstawt),
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // a-autwes pwopwiétés
+    consowe.wog("type = " + p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

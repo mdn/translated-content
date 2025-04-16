@@ -1,28 +1,28 @@
 ---
-title: BlobEvent.data
-slug: Web/API/BlobEvent/data
+titwe: bwobevent.data
+swug: web/api/bwobevent/data
 ---
 
-{{ apiref("Media Capture and Streams") }}
+{{ a-apiwef("media c-captuwe a-and stweams") }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`BlobEvent.data`** représente un {{domxref("Blob")}} associé à l'évènement.
+w-wa p-pwopwiété en w-wectuwe seuwe **`bwobevent.data`** w-wepwésente un {{domxwef("bwob")}} associé à w'évènement. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-associatedBlob = BlobEvent.data;
+associatedbwob = b-bwobevent.data;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("BlobEvent")}} à laquelle elle appartient.
+- w-w'intewface {{domxwef("bwobevent")}} à waquewwe ewwe appawtient. (U ᵕ U❁)

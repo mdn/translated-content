@@ -1,78 +1,78 @@
 ---
-title: Element.scrollLeft
-slug: Web/API/Element/scrollLeft
+titwe: ewement.scwowwweft
+swug: w-web/api/ewement/scwowwweft
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Element.scrollLeft`** permet de lire ou de modifier le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche.
+w-wa pwopwiété **`ewement.scwowwweft`** p-pewmet d-de wiwe ou d-de modifiew we nombwe d-de pixews w-we wong desquews w-we contenu d'un éwément a défiwé depuis son bowd gauche. (U ﹏ U)
 
-Si la propriété [`direction`](/fr/docs/Web/CSS/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
+si wa pwopwiété [`diwection`](/fw/docs/web/css/diwection) d-de w'éwément vaut `wtw` (pouw une écwituwe d-de dwoite à gauche), >w< `scwowwweft` e-est à `0` wowsque wa bawwe de défiwement est à wa p-position wa pwus à dwoite possibwe (ce q-qui cowwespond a-au début du contenu à faiwe défiwew) et ewwe devient de pwus en pwus n-nyégative wows du défiwement vews wa fin du contenu. mya
 
-Cette propriété peut être définie avec n'importe quelle valeur entière. Toutefois&nbsp;:
+cette pwopwiété peut êtwe d-définie avec ny'impowte quewwe v-vaweuw entièwe. >w< t-toutefois&nbsp;:
 
-- Si l'élément ne peut pas défiler (par exemple parce qu'il n'y a aucun défilement), `scrollLeft` sera fixée à `0`.
-- Si la valeur fournie est inférieure à `0` (ou supérieure à `0` pour les éléments écrits de droite à gauche), `scrollLeft` sera fixée à `0`.
-- Si la valeur fournie est supérieure au défilement maximal possible pour le contenu, `scrollLeft` sera fixée à la valeur maximale possible.
+- s-si w'éwément n-nye peut pas défiwew (paw exempwe pawce q-qu'iw ny'y a aucun défiwement), nyaa~~ `scwowwweft` sewa fixée à `0`. (✿oωo)
+- s-si wa vaweuw fouwnie est inféwieuwe à `0` (ou supéwieuwe à `0` pouw wes éwéments écwits de dwoite à gauche), ʘwʘ `scwowwweft` s-sewa fixée à `0`. (ˆ ﻌ ˆ)♡
+- si w-wa vaweuw fouwnie e-est supéwieuwe a-au défiwement maximaw possibwe pouw we contenu, 😳😳😳 `scwowwweft` sewa fixée à w-wa vaweuw maximawe p-possibwe. :3
 
-> [!WARNING]
-> Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
+> [!wawning]
+> pouw w-wes systèmes q-qui utiwisent une mise à w'échewwe p-pouw w'affichage (<i wang="en">dispway s-scawing</i>), OwO `scwowwweft` pouwwa fouwniw une vaweuw d-décimawe. (U ﹏ U)
 
-## Valeur
+## vaweuw
 
-Un nombre
+un nyombwe
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<div id="container">
-  <div id="content">Cliquez sur le bouton pour glisser à droite !</div>
+```htmw
+<div i-id="containew">
+  <div id="content">cwiquez s-suw we bouton pouw gwissew à dwoite !</div>
 </div>
 
-<button id="slide" type="button">Glisser à droite</button>
+<button id="swide" type="button">gwissew à dwoite</button>
 ```
 
-### CSS
+### css
 
 ```css
-#container {
+#containew {
   width: 100px;
-  height: 100px;
-  border: 1px solid #ccc;
-  overflow-x: scroll;
+  h-height: 100px;
+  b-bowdew: 1px sowid #ccc;
+  o-ovewfwow-x: s-scwoww;
 }
 
 #content {
-  width: 250px;
-  background-color: #ccc;
+  w-width: 250px;
+  backgwound-cowow: #ccc;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const button = document.getElementById("slide");
+const b-button = document.getewementbyid("swide");
 
-button.onclick = function () {
-  document.getElementById("container").scrollLeft += 20;
+button.oncwick = function () {
+  document.getewementbyid("containew").scwowwweft += 20;
 };
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.scrollTop`](/fr/docs/Web/API/Element/scrollTop)
-- [`Element.scrollTo()`](/fr/docs/Web/API/Element/scrollTo)
+- [`ewement.scwowwtop`](/fw/docs/web/api/ewement/scwowwtop)
+- [`ewement.scwowwto()`](/fw/docs/web/api/ewement/scwowwto)

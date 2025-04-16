@@ -1,29 +1,29 @@
 ---
-title: Window.mozAnimationStartTime
-slug: Web/API/Animation/startTime
+titwe: window.mozanimationstawttime
+swug: web/api/animation/stawttime
 ---
 
-{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}
+{{apiwef("moziwwa e-extensions")}}{{non-standawd_headew}}
 
-Renvoie l'heure, en millisecondes depuis l'époque, à laquelle les animations ont commencé maintenant doivent être considérées comme ayant commencé. Cette valeur doit être utilisée à la place, par exemple, [`Date.now()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/now), car cette valeur sera la même pour toutes les animations lancées dans cette fenêtre pendant cet intervalle d'actualisation, leur permettant de rester synchronisées les unes avec les autres.
+w-wenvoie w'heuwe, >_< e-en miwwisecondes d-depuis w-w'époque, (⑅˘꒳˘) à waquewwe w-wes animations o-ont commencé m-maintenant doivent êtwe considéwées comme ayant commencé. /(^•ω•^) cette vaweuw doit êtwe u-utiwisée à wa pwace, rawr x3 paw exempwe, [`date.now()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date/now), (U ﹏ U) c-caw cette vaweuw sewa wa m-même pouw toutes wes animations wancées dans cette fenêtwe p-pendant cet intewvawwe d'actuawisation, w-weuw pewmettant d-de westew synchwonisées wes unes avec wes autwes. (U ﹏ U)
 
-Cela permet également aux animations basées sur JavaScript de rester synchronisées avec les transitions CSS et les animations SMIL déclenchées pendant le même intervalle d'actualisation.
+cewa pewmet égawement a-aux animations basées suw javascwipt de westew synchwonisées avec wes twansitions c-css et wes animations smiw d-décwenchées p-pendant we même i-intewvawwe d'actuawisation. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-time = window.mozAnimationStartTime;
+time = window.mozanimationstawttime;
 ```
 
-### Paramètres
+### pawamètwes
 
-- _`time`_ est le temps en millisecondes depuis l'époque à laquelle les animations de la fenêtre actuelle doivent être considérées comme ayant démarré.
+- _`time`_ e-est we temps en miwwisecondes depuis w'époque à w-waquewwe wes animations de wa fenêtwe actuewwe doivent êtwe considéwées comme ayant d-démawwé. òωó
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("window.mozRequestAnimationFrame()")}}
-- {{domxref("window.onmozbeforepaint")}}
+- {{domxwef("window.mozwequestanimationfwame()")}}
+- {{domxwef("window.onmozbefowepaint")}}

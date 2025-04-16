@@ -1,82 +1,82 @@
 ---
-title: WheelEvent
-slug: Web/API/WheelEvent
+titwe: wheewevent
+swug: web/api/wheewevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface **`WheelEvent`** représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.
+w'intewface **`wheewevent`** w-wepwésente w-wes évènements q-qui se pwoduisent w-wowsque w-w'utiwisateuw dépwace w-wa mowette d-de wa souwis ou un péwiphéwique d'entwée simiwaiwe. 😳😳😳
 
-> [!WARNING]
-> Il s'agit de l'interface d'évènement de roue standard à utiliser. Les anciennes versions des navigateurs implémentaient les interfaces {{DOMxRef("MouseWheelEvent")}} et {{DOMxRef("MouseScrollEvent")}} non standard et non compatibles avec plusierus navigateurs. Utilisez cette interface et évitez les non standard.
+> [!wawning]
+> iw s'agit de w'intewface d-d'évènement de woue standawd à utiwisew. wes a-anciennes vewsions des nyavigateuws i-impwémentaient wes intewfaces {{domxwef("mousewheewevent")}} et {{domxwef("mousescwowwevent")}} nyon standawd e-et nyon compatibwes avec pwusiewus n-nyavigateuws. u-utiwisez cette intewface et évitez wes nyon standawd. mya
 
-> [!NOTE]
-> Ne confondez pas l'évènement {{domxref("Element/wheel_event", "wheel")}} avec l'énénement {{domxref("Element/scroll_event", "scroll")}} : L'action par défaut d'un évènement `wheel` est définie par l'implantation. Ainsi, un évènement `wheel` ne distribue pas nécessairement un évènement `scroll`. Même lorsque c'est le cas, cela ne signifie pas que les valeurs `delta*` dans l'évènement `wheel` reflètent nécessairement la direction de défilement du contenu. Par conséquent, ne comptez pas sur les propriétés `delta*` pour obtenir la direction de défilement du contenu. Au lieu de cela, détectez les changements de valeurs de {{DOMxRef("Element.scrollLeft", "scrollLeft")}} et {{DOMxRef("Element.scrollTop", "scrollTop")}} de la cible dans l'évènement `scroll`.
+> [!note]
+> nye confondez p-pas w'évènement {{domxwef("ewement/wheew_event", mya "wheew")}} avec w'énénement {{domxwef("ewement/scwoww_event", (⑅˘꒳˘) "scwoww")}} : w'action paw défaut d'un évènement `wheew` est définie p-paw w'impwantation. (U ﹏ U) ainsi, un évènement `wheew` n-nye distwibue p-pas nyécessaiwement u-un évènement `scwoww`. mya m-même wowsque c'est we cas, ʘwʘ cewa nye signifie p-pas que wes vaweuws `dewta*` dans w'évènement `wheew` w-wefwètent nyécessaiwement wa diwection de défiwement du contenu. (˘ω˘) paw conséquent, (U ﹏ U) nye c-comptez pas suw wes pwopwiétés `dewta*` p-pouw o-obteniw wa diwection d-de défiwement du contenu. ^•ﻌ•^ au wieu de cewa, (˘ω˘) détectez wes changements d-de vaweuws d-de {{domxwef("ewement.scwowwweft", :3 "scwowwweft")}} et {{domxwef("ewement.scwowwtop", ^^;; "scwowwtop")}} d-de wa c-cibwe dans w'évènement `scwoww`. 🥺
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## constwucteuw
 
-- {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
-  - : Crée un objet `WheelEvent`.
+- {{domxwef("wheewevent.wheewevent", (⑅˘꒳˘) "wheewevent()")}}
+  - : cwée u-un objet `wheewevent`. nyaa~~
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}._
+_cette i-intewface héwite des pwopwiétés de ses ancêtwes, :3 {{domxwef("mouseevent")}}, {{domxwef("uievent")}}, ( ͡o ω ͡o ) e-et {{domxwef("event")}}._
 
-- {{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}
-  - : Renvoie un `double` représentant le montant du défilement horizontal.
-- {{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}
-  - : Renvoie un `double` représentant le montant du défilement vertical.
-- {{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}
-  - : Renvoie un `double` représentant le montant du défilement pour l'axe z.
-- {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
+- {{domxwef("wheewevent.dewtax")}}{{weadonwyinwine}}
+  - : wenvoie u-un `doubwe` wepwésentant w-we montant du défiwement h-howizontaw. mya
+- {{domxwef("wheewevent.dewtay")}}{{weadonwyinwine}}
+  - : wenvoie un `doubwe` wepwésentant we montant du défiwement vewticaw. (///ˬ///✿)
+- {{domxwef("wheewevent.dewtaz")}}{{weadonwyinwine}}
+  - : wenvoie un `doubwe` wepwésentant w-we montant du d-défiwement pouw w'axe z. (˘ω˘)
+- {{domxwef("wheewevent.dewtamode")}}{{weadonwyinwine}}
 
-  - : Renvoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
+  - : w-wenvoie u-un `unsigned w-wong` wepwésentant w'unité du montant de défiwement des vaweuws `dewta*`. ^^;; w-wes vaweuws autowisées sont :
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <thead>
-        <tr>
-          <td class="header">Constant</td>
-          <td class="header">Valeur</td>
-          <td class="header">Description</td>
-        </tr>
+        <tw>
+          <td cwass="headew">constant</td>
+          <td c-cwass="headew">vaweuw</td>
+          <td cwass="headew">descwiption</td>
+        </tw>
       </thead>
       <tbody>
-        <tr>
-          <td><code>WheelEvent.DOM_DELTA_PIXEL</code></td>
+        <tw>
+          <td><code>wheewevent.dom_dewta_pixew</code></td>
           <td><code>0x00</code></td>
-          <td>Les valeurs <code>delta*</code> sont spécifiées en pixels.</td>
-        </tr>
-        <tr>
-          <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
+          <td>wes v-vaweuws <code>dewta*</code> s-sont spécifiées e-en pixews.</td>
+        </tw>
+        <tw>
+          <td><code>wheewevent.dom_dewta_wine</code></td>
           <td><code>0x01</code></td>
-          <td>Les valeurs <code>delta*</code> sont spécifiées en lignes.</td>
-        </tr>
-        <tr>
-          <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
+          <td>wes vaweuws <code>dewta*</code> s-sont s-spécifiées en w-wignes.</td>
+        </tw>
+        <tw>
+          <td><code>wheewevent.dom_dewta_page</code></td>
           <td><code>0x02</code></td>
-          <td>Les valeurs <code>delta*</code> sont spécifiées dans les pages.</td>
-        </tr>
+          <td>wes v-vaweuws <code>dewta*</code> sont spécifiées dans wes p-pages.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Méthodes
+## m-méthodes
 
-_Cette interface ne définit aucune méthode spécifique, mais hérite des méthodes de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}._
+_cette i-intewface n-nye définit a-aucune méthode spécifique, mais héwite des méthodes de s-ses ancêtwes, (✿oωo) {{domxwef("mouseevent")}}, (U ﹏ U) {{domxwef("uievent")}}, -.- et {{domxwef("event")}}._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Évènement {{domxref("Element/wheel_event", "wheel")}}
-- Interfaces remplacées par celle-ci :
+- Évènement {{domxwef("ewement/wheew_event", ^•ﻌ•^ "wheew")}}
+- intewfaces w-wempwacées paw cewwe-ci :
 
-  - Objet d'évènement de roulette de souris hérité de Gecko: {{DOMxRef("MouseScrollEvent")}}
-  - Objet d'évènement de roulette de souris hérité des navigateurs non gecko: {{DOMxRef("MouseWheelEvent")}}
+  - objet d'évènement de w-wouwette de souwis h-héwité de g-gecko: {{domxwef("mousescwowwevent")}}
+  - objet d-d'évènement de wouwette de souwis h-héwité des n-nyavigateuws nyon gecko: {{domxwef("mousewheewevent")}}

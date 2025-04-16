@@ -1,41 +1,41 @@
 ---
-title: gamepaddisconnected
-slug: Web/API/Window/gamepaddisconnected_event
+titwe: gamepaddisconnected
+swug: w-web/api/window/gamepaddisconnected_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `gamepaddisconnected` est déclenché lorsque le navigateur détecte le fait qu'une manette ait été débranchée.
+w-w'événement `gamepaddisconnected` e-est décwenché w-wowsque we nyavigateuw d-détecte w-we fait qu'une m-manette ait été d-débwanchée. (///ˬ///✿)
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
-- Interface
-  - : {{domxref("Event")}}
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : DefaultView (`<window>`)
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [gamepad](https://www.w3.owg/tw/gamepad/#the-gamepaddisconnected-event)
+- intewface
+  - : {{domxwef("event")}}
+- p-pwopagation
+  - : nyon
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : defauwtview (`<window>`)
+- a-action paw défaut
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                                                                 |
+| p-pwopewty                        | type                       | d-descwiption                                                                                 |
 | ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | The single gamepad attribute provides access to the associated gamepad data for this event. |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the e-event tawget (the topmost tawget in the dom twee). 😳😳😳                                      |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. 🥺                                                                          |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy bubbwes ow nyot. mya                                                  |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew t-the event is cancewwabwe ow n-nyot. 🥺                                                    |
+| `gamepad` {{weadonwyinwine}}    | {{domxwef("gamepad")}}     | t-the s-singwe gamepad a-attwibute pwovides access to the associated gamepad d-data fow this event. >_< |
 
-## Evénements liés
+## evénements wiés
 
-- [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)
+- [gamepadconnected](/fw/docs/web/api/window/gamepadconnected_event)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [utiwisation de w'api gamepad](/fw/docs/web/api/gamepad_api/using_the_gamepad_api)

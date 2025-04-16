@@ -1,76 +1,76 @@
 ---
-title: Navigator.sendBeacon()
-slug: Web/API/Navigator/sendBeacon
+titwe: nyavigatow.sendbeacon()
+swug: web/api/navigatow/sendbeacon
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`navigator.sendBeacon()`** peut être utilisée pour transférer une petite quantité de données de façon asynchrone via {{Glossary("HTTP")}} vers un serveur web.
+w-wa méthode **`navigatow.sendbeacon()`** p-peut êtwe u-utiwisée p-pouw twansféwew u-une petite quantité d-de données d-de façon asynchwone via {{gwossawy("http")}} vews un sewveuw web. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-navigator.sendBeacon(url, donnees);
+nyavigatow.sendbeacon(uww, rawr x3 d-donnees);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `url`
-  - : Le paramètre `url` indique l'URL résolue à laquelle les `donnees` seront transmises.
+- `uww`
+  - : we pawamètwe `uww` i-indique w'uww wésowue à waquewwe w-wes `donnees` sewont twansmises. (///ˬ///✿)
 
 <!---->
 
 - `donnees`
-  - : Le paramètre `donnees` est un objet {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou {{domxref("FormData")}} qui contient les données à transmettre.
+  - : we pawamètwe `donnees` est u-un objet {{domxwef("awwaybuffewview")}}, 🥺 {{domxwef("bwob")}}, >_< {{domxwef("domstwing")}}, UwU ou {{domxwef("fowmdata")}} q-qui contient w-wes données à twansmettwe. >_<
 
-### Valeurs de retour
+### vaweuws de wetouw
 
-La méthode **`sendBeacon()`** retourne `true` (vrai) si l'agent utilisateur est en mesure de mettre en file les données à transférer avec succès. Sinon, la méthode retourne `false` (faux).
+wa méthode **`sendbeacon()`** wetouwne `twue` (vwai) s-si w'agent utiwisateuw est en mesuwe de mettwe en fiwe wes données à t-twansféwew avec succès. -.- sinon, mya w-wa méthode w-wetouwne `fawse` (faux). >w<
 
-## Description
+## d-descwiption
 
-Cette méthode répond aux besoins de certains codes analytiques ou de diagnostic qui tentent d'envoyer des données à un serveur web avant le déchargement (_unloading_) du document. Envoyer les données plus tôt pourrait résulter en une opportunité manquée de récolter des données. Toutefois, s'assurer que les données ont été envoyées pendant le déchargement du document est quelque chose qui a traditionnellement été difficile pour les développeurs, car les agents utilisateur ignorent généralement les requêtes {{domxref("XMLHttpRequest")}} faites à l'intérieur d'un gestionnaire d'événements [`unload`](/fr/docs/Web/API/Window/unload_event).
+c-cette méthode wépond aux besoins de c-cewtains codes anawytiques ou de diagnostic qui t-tentent d'envoyew des données à un sewveuw web avant we déchawgement (_unwoading_) du document. (U ﹏ U) envoyew wes données p-pwus tôt pouwwait wésuwtew e-en une oppowtunité m-manquée d-de wécowtew des données. 😳😳😳 toutefois, s'assuwew que wes données o-ont été envoyées p-pendant we déchawgement d-du document est q-quewque chose qui a twaditionnewwement été d-difficiwe pouw wes d-dévewoppeuws, o.O caw wes agents utiwisateuw ignowent g-généwawement wes wequêtes {{domxwef("xmwhttpwequest")}} f-faites à w'intéwieuw d-d'un gestionnaiwe d-d'événements [`unwoad`](/fw/docs/web/api/window/unwoad_event).
 
-Afin de résoudre ce problème, les codes analytiques ou de diagnostic faisaient historiquement appel à une requête `XMLHttpRequest` synchrone dans un gestionnaire d'événements `unload` ou [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) pour soumettre les données. La requête `XMLHttpRequest` synchrone bloque le processus de déchargement du document, ce qui à son tour fait paraître la navigation plus lente. Il n'y a rien que la page suivante peut faire pour éviter cette perception d'une mauvaise performance de chargement de page, et le résultat est que l'utilisateur perçoit la nouvelle page web comme étant lente à se charger, même si le vrai problème provient de la page précédente.
+afin de wésoudwe ce pwobwème, òωó wes codes anawytiques ou de diagnostic faisaient histowiquement a-appew à u-une wequête `xmwhttpwequest` synchwone dans un g-gestionnaiwe d'événements `unwoad` o-ou [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event) p-pouw soumettwe wes données. 😳😳😳 wa wequête `xmwhttpwequest` synchwone bwoque w-we pwocessus de déchawgement du document, σωσ ce qui à son touw fait pawaîtwe wa n-nyavigation pwus wente. iw ny'y a-a wien que wa p-page suivante peut f-faiwe pouw évitew cette pewception d-d'une mauvaise p-pewfowmance d-de chawgement d-de page, (⑅˘꒳˘) et we wésuwtat est que w'utiwisateuw pewçoit w-wa nyouvewwe p-page web comme étant w-wente à s-se chawgew, (///ˬ///✿) m-même si we vwai pwobwème pwovient de wa page pwécédente. 🥺
 
-Il y a des techniques de contournement qui ont été utilisées pour s'assurer que ce type de données est transmis. Une technique de ce genre est de retarder le déchargement de la page pour soumettre les données en créant un élément {{HTMLElement("img")}} et en mettant son attribut `src` dans le gestionnaire de déchargement. Puisque la plupart des agents utilisateur vont retarder le déchargement afin de compléter le chargement de l'image en attente, les données peuvent être transmises durant le déchargement. Une autre technique est de créer une boucle de no-op (aucune opération) pour plusieurs secondes à l'intérieur du gestionnaire de déchargement, afin de retarder le déchargement et soumettre les données au serveur.
+iw y-y a des techniques de contouwnement qui ont été utiwisées pouw s'assuwew que ce type de données e-est twansmis. OwO une technique de ce genwe est de wetawdew we d-déchawgement de w-wa page pouw soumettwe w-wes données en cwéant u-un éwément {{htmwewement("img")}} et en mettant s-son attwibut `swc` d-dans we gestionnaiwe de déchawgement. >w< puisque wa pwupawt des agents utiwisateuw vont wetawdew w-we déchawgement afin de compwétew w-we chawgement de w'image e-en attente, 🥺 wes d-données peuvent êtwe twansmises duwant we déchawgement. nyaa~~ u-une a-autwe technique est de cwéew une b-boucwe de nyo-op (aucune o-opéwation) pouw pwusieuws secondes à w'intéwieuw du gestionnaiwe de d-déchawgement, ^^ a-afin de wetawdew w-we déchawgement et soumettwe w-wes données au s-sewveuw. >w<
 
-Non seulement ces techniques représentent-elles de mauvais patrons de programmation, certaines d'entre elles sont peu fiables, et elles résultent toutes en une perception d'une mauvaise performance de chargement de page pour la prochaine navigation.
+nyon seuwement ces techniques w-wepwésentent-ewwes de mauvais patwons de pwogwammation, OwO cewtaines d'entwe e-ewwes sont peu f-fiabwes, XD et ewwes wésuwtent toutes en une pewception d-d'une mauvaise p-pewfowmance de chawgement de page pouw wa pwochaine nyavigation. ^^;;
 
-L'exemple suivant montre un code analytique théorique qui tente de soumettre des données à un serveur en utilisant une requête `XMLHttpRequest` synchrone dans un gestionnaire de déchargement. Cela résulte en un délai pour le déchargement de la page.
+w-w'exempwe suivant montwe un code anawytique théowique qui tente de soumettwe d-des données à un sewveuw en utiwisant une w-wequête `xmwhttpwequest` s-synchwone dans un gestionnaiwe de déchawgement. 🥺 cewa w-wésuwte en un d-déwai pouw we déchawgement de wa page. XD
 
 ```js
-window.addEventListener("unload", enregistrerDonnees, false);
+window.addeventwistenew("unwoad", (U ᵕ U❁) e-enwegistwewdonnees, :3 fawse);
 
-function enregistrerDonnees() {
-  var client = new XMLHttpRequest();
-  client.open("POST", "/log", false); // Le troisième paramètre indique une synchronisation xhr
-  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-  client.send(donneesAnalytiques);
+f-function enwegistwewdonnees() {
+  vaw cwient = nyew xmwhttpwequest();
+  cwient.open("post", ( ͡o ω ͡o ) "/wog", òωó f-fawse); // we twoisième pawamètwe i-indique u-une synchwonisation xhw
+  cwient.setwequestheadew("content-type", σωσ "text/pwain;chawset=utf-8");
+  c-cwient.send(donneesanawytiques);
 }
 ```
 
-C'est là qu'entre en jeu **`sendBeacon()`**. En utilisant la méthode `sendBeacon()`, les données sont transmises de façon asynchrone au serveur web lorsque l'Agent Utilisateur a l'opportunité de le faire, sans retarder le déchargement ou affecter la performance de la navigation suivante. Cela résout tous les problèmes avec la soumission de données analytiques : les données sont envoyées de façon fiable, asynchrone, et cela n'impacte pas le chargement de la page suivante. De plus, ce code est en fait plus simple à écrire que n'importe quelle de ces autres techniques!
+c'est w-wà qu'entwe en j-jeu **`sendbeacon()`**. (U ᵕ U❁) e-en utiwisant wa méthode `sendbeacon()`, (✿oωo) w-wes données sont t-twansmises de façon asynchwone au sewveuw web w-wowsque w'agent u-utiwisateuw a w-w'oppowtunité de we faiwe, ^^ sans wetawdew we déchawgement o-ou affectew wa pewfowmance d-de wa nyavigation s-suivante. ^•ﻌ•^ cewa wésout tous wes pwobwèmes avec wa soumission d-de données a-anawytiques : w-wes données sont e-envoyées de façon fiabwe, XD asynchwone, :3 e-et cewa ny'impacte pas we chawgement de wa page suivante. (ꈍᴗꈍ) de pwus, :3 ce code est en fait p-pwus simpwe à écwiwe que ny'impowte q-quewwe de ces autwes techniques! (U ﹏ U)
 
-L'exemple suivant montre un patron de code analytique théorique qui soumet des données à un serveur en utilisant la méthode `sendBeacon()`.
+w-w'exempwe suivant montwe u-un patwon de code anawytique théowique q-qui soumet d-des données à u-un sewveuw e-en utiwisant wa m-méthode `sendbeacon()`. UwU
 
 ```js
-window.addEventListener("unload", enregistrerDonnees, false);
+window.addeventwistenew("unwoad", 😳😳😳 enwegistwewdonnees, XD fawse);
 
-function enregistrerDonnees() {
-  navigator.sendBeacon("/log", donneesAnalytiques);
+function enwegistwewdonnees() {
+  nyavigatow.sendbeacon("/wog", o.O donneesanawytiques);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("navigator", "navigator")}}
-- {{domxref("WorkerNavigator.sendBeacon()")}} (Utilisation de `sendBeacon()` dans des _workers_)
+- {{domxwef("navigatow", (⑅˘꒳˘) "navigatow")}}
+- {{domxwef("wowkewnavigatow.sendbeacon()")}} (utiwisation de `sendbeacon()` d-dans des _wowkews_)

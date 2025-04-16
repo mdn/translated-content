@@ -1,82 +1,82 @@
 ---
-title: "BroadcastChannel : évènement messageerror"
-slug: Web/API/BroadcastChannel/messageerror_event
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: "bwoadcastchannew : évènement messageewwow"
+s-swug: web/api/bwoadcastchannew/messageewwow_event
+w-w10n:
+  s-souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message qui n'a pas pu être désérialisé arrive dans le canal.
+w-w'évènement `messageewwow` e-est décwenché s-suw un objet [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew) w-wowsqu'un message qui ny'a pas pu êtwe déséwiawisé awwive dans we c-canaw. >w<
 
-## Syntaxe
+## syntaxe
 
-Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements dans la propriété.
+utiwisez we nyom de w'évènement d-dans wes méthodes tewwes q-que [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), mya ou définissez un gestionnaiwe d'évènements d-dans wa pwopwiété. >w<
 
 ```js
-addEventListener("messageerror", (event) => {});
-onmessageerror = (event) => {};
+a-addeventwistenew("messageewwow", nyaa~~ (event) => {});
+o-onmessageewwow = (event) => {};
 ```
 
-## Type de l'évènement
+## type de w'évènement
 
-Un [`MessageEvent`](/fr/docs/Web/API/MessageEvent). Hérite de l'interface [`Event`](/fr/docs/Web/API/Event).
+un [`messageevent`](/fw/docs/web/api/messageevent). (✿oωo) héwite de w'intewface [`event`](/fw/docs/web/api/event). ʘwʘ
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
-## Propriétés de l'évènement
+## p-pwopwiétés de w'évènement
 
-_En plus des propriétés listées ci-dessous, les propriétés de l'interface parente [`Event`](/fr/docs/Web/API/Event) sont accessibles._
+_en pwus des pwopwiétés wistées ci-dessous, (ˆ ﻌ ˆ)♡ wes p-pwopwiétés de w'intewface pawente [`event`](/fw/docs/web/api/event) s-sont accessibwes._
 
-- [`data`](/fr/docs/Web/API/MessageEvent/data) {{readonlyInline}}
-  - : Les données envoyées par l'émetteur du message.
-- [`origin`](/fr/docs/Web/API/MessageEvent/origin) {{readonlyInline}}
-  - : Une chaîne représentant l'origine de l'émetteur du message.
-- [`lastEventId`](/fr/docs/Web/API/MessageEvent/lastEventId){{readonlyInline}}
-  - : Une chaîne représentant l'identifiant unique pour l'évènement.
-- [`source`](/fr/docs/Web/API/MessageEvent/source) {{readonlyInline}}
-  - : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
-- [`ports`](/fr/docs/Web/API/MessageEvent/ports) {{readonlyInline}}
-  - : Un tableau d'objets [`MessagePort`](/fr/docs/Web/API/MessagePort) représentant les ports associés au canal par lequel le message est envoyé (lorsque c'est approprié, par exemple, dans le canal de communication ou lorsqu'un message est envoyé à un <i lang="en">worker</i> partagé).
+- [`data`](/fw/docs/web/api/messageevent/data) {{weadonwyinwine}}
+  - : w-wes données e-envoyées paw w-w'émetteuw du message.
+- [`owigin`](/fw/docs/web/api/messageevent/owigin) {{weadonwyinwine}}
+  - : une chaîne wepwésentant w'owigine d-de w'émetteuw du message. 😳😳😳
+- [`wasteventid`](/fw/docs/web/api/messageevent/wasteventid){{weadonwyinwine}}
+  - : une chaîne w-wepwésentant w'identifiant unique pouw w'évènement. :3
+- [`souwce`](/fw/docs/web/api/messageevent/souwce) {{weadonwyinwine}}
+  - : un `messageeventsouwce`, OwO qui peut êtwe soit un [`windowpwoxy`](/fw/docs/gwossawy/windowpwoxy), (U ﹏ U) u-un [`messagepowt`](/fw/docs/web/api/messagepowt), >w< ou un objet [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) w-wepwésentant w-w'émetteuw d-du message. (U ﹏ U)
+- [`powts`](/fw/docs/web/api/messageevent/powts) {{weadonwyinwine}}
+  - : un tabweau d'objets [`messagepowt`](/fw/docs/web/api/messagepowt) wepwésentant w-wes powts a-associés au canaw paw wequew we m-message est envoyé (wowsque c'est a-appwopwié, 😳 paw exempwe, (ˆ ﻌ ˆ)♡ dans w-we canaw de communication ou w-wowsqu'un message est envoyé à un <i wang="en">wowkew</i> p-pawtagé). 😳😳😳
 
-## Exemples
+## exempwes
 
-Ce code utilise [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) pour écouter les messages et les erreurs&nbsp;:
+c-ce code utiwise [`addeventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) pouw écoutew w-wes messages e-et wes ewweuws&nbsp;:
 
 ```js
-const canal = new BroadcastChannel("canal_exemple");
+const canaw = nyew bwoadcastchannew("canaw_exempwe");
 
-canal.addEventListener("message", (event) => {
-  received.textContent = event.data;
+canaw.addeventwistenew("message", (U ﹏ U) (event) => {
+  weceived.textcontent = event.data;
 });
 
-canal.addEventListener("messageerror", (event) => {
-  console.error(event);
+canaw.addeventwistenew("messageewwow", (event) => {
+  c-consowe.ewwow(event);
 });
 ```
 
-Voici un exemple similaire qui utilise les gestionnaires d'évènements `onmessage` et `onmessageerror`&nbsp;:
+v-voici un exempwe simiwaiwe q-qui utiwise wes g-gestionnaiwes d'évènements `onmessage` e-et `onmessageewwow`&nbsp;:
 
 ```js
-const canal = new BroadcastChannel("canal_exemple");
+const canaw = nyew bwoadcastchannew("canaw_exempwe");
 
-canal.onmessage = (event) => {
-  received.textContent = event.data;
+canaw.onmessage = (event) => {
+  w-weceived.textcontent = event.data;
 };
 
-canal.onmessageerror = (event) => {
-  console.log(event);
+canaw.onmessageewwow = (event) => {
+  consowe.wog(event);
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Évènements liés&nbsp;: [`message`](/fr/docs/Web/API/BroadcastChannel/message_event).
+- Évènements w-wiés&nbsp;: [`message`](/fw/docs/web/api/bwoadcastchannew/message_event). (///ˬ///✿)

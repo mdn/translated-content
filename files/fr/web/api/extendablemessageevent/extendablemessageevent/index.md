@@ -1,55 +1,55 @@
 ---
-title: ExtendableMessageEvent.ExtendableMessageEvent()
-slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
+titwe: extendabwemessageevent.extendabwemessageevent()
+swug: w-web/api/extendabwemessageevent/extendabwemessageevent
 ---
 
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{apiwef("sewvice w-wowkews a-api")}}{{ seecompattabwe() }}
 
-Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
+w-we constwucteuw **`extendabwe.messageevent()`** c-cwée une nyouvewwe i-instance d-d'un {{domxwef("extendabwemessageevent")}}. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myEME = new ExtendableMessageEvent(type, init);
+vaw myeme = nyew extendabwemessageevent(type, o.O init);
 ```
 
-### Paramètres
+### pawamètwes
 
-- type
-  - : Un {{domxref("DOMString")}} qui définie le type de message créé.
-- init {{optional_inline}}
+- t-type
+  - : un {{domxwef("domstwing")}} qui définie w-we type de message cwéé.
+- init {{optionaw_inwine}}
 
-  - : Un objet d'initialisation, qui doit contenir les paramètres suivant:
+  - : u-un objet d'initiawisation, ( ͡o ω ͡o ) qui doit conteniw wes pawamètwes s-suivant:
 
-    - `data`: Les données de l'évènement — peut être de n'importe quel type.
-    - `origin`: Une {{domxref("DOMString")}} qui définie l'origine de l'environnement du service worker correspondant.
-    - `lastEventId`: Une {{domxref("DOMString")}} qui définie le dernier l'id du dernier évènement de l'évènement source.
-    - `source`: Le {{domxref("Client")}}, {{domxref("ServiceWorker")}} ou {{domxref("MessagePort")}} qui a envoyé un message.
-    - `ports`: Un tableau contenant les objets {{domxref("MessagePort")}} connectés au canal d'envoie des messages.
+    - `data`: wes données d-de w'évènement — p-peut êtwe de ny'impowte quew type. (U ﹏ U)
+    - `owigin`: une {{domxwef("domstwing")}} qui définie w-w'owigine de w'enviwonnement du sewvice wowkew cowwespondant. (///ˬ///✿)
+    - `wasteventid`: une {{domxwef("domstwing")}} q-qui définie we dewniew w'id d-du dewniew évènement d-de w'évènement s-souwce. >w<
+    - `souwce`: w-we {{domxwef("cwient")}}, rawr {{domxwef("sewvicewowkew")}} ou {{domxwef("messagepowt")}} qui a envoyé u-un message. mya
+    - `powts`: un tabweau contenant w-wes objets {{domxwef("messagepowt")}} connectés au canaw d'envoie des messages.
 
-## Exemples
+## exempwes
 
 ```js
-var init = {
-  data: "Message de bienvenue",
-  source: MessagePortReference,
-  ports: MessagePortListReference,
+vaw init = {
+  d-data: "message de bienvenue", ^^
+  s-souwce: messagepowtwefewence, 😳😳😳
+  p-powts: messagepowtwistwefewence, mya
 };
 
-var myEME = new ExtendableMessageEvent("message", init);
+v-vaw myeme = nyew extendabwemessageevent("message", 😳 init);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Exemple simple de service workers](https://github.com/mdn/sw-test)
-- [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Canal de messages](/fr/docs/Web/API/Channel_Messaging_API)
+- [utiwisew wes s-sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exempwe s-simpwe de sewvice wowkews](https://github.com/mdn/sw-test)
+- [wes s-sewvices wowkews sont-iws p-pwêts ?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [canaw de messages](/fw/docs/web/api/channew_messaging_api)

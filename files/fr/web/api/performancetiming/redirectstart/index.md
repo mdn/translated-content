@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.redirectStart
-slug: Web/API/PerformanceTiming/redirectStart
+titwe: pewfowmancetiming.wediwectstawt
+swug: w-web/api/pewfowmancetiming/wediwectstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette i-intewface est d-dépwéciée dans w-wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). rawr x3 v-veuiwwez utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. mya
 
-L'ancienne propriété en lecture seule **`redirectStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où la première redirection HTTP commence. S'il n'y a pas de redirection, ou si l'une des redirections n'est pas de la même origine, la valeur renvoyée est `0`.
+w'ancienne pwopwiété en wectuwe s-seuwe **`wediwectstawt`** wetouwne un `unsigned w-wong wong` wepwésentant we moment, nyaa~~ e-en miwwisecondes depuis w'époque unix, (⑅˘꒳˘) où wa pwemièwe wediwection h-http commence. rawr x3 s'iw ny'y a-a pas de wediwection, (✿oωo) o-ou si w'une des wediwections ny'est pas de wa même owigine, (ˆ ﻌ ˆ)♡ wa vaweuw w-wenvoyée est `0`. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.redirectStart;
+wet time = pewfowmancetiming.wediwectstawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w-w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. (⑅˘꒳˘)

@@ -1,51 +1,51 @@
 ---
-title: DOMRectReadOnly
-slug: Web/API/DOMRectReadOnly
+titwe: domwectweadonwy
+swug: w-web/api/domwectweadonwy
 ---
 
-{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
+{{apiwef("geometwy i-intewfaces")}}{{ s-seecompattabwe() }}
 
-L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées par {{domxref("DOMRect")}} pour définir un rectangle.
+w-w'intewface **`domwectweadonwy`** s-spécifie w-wes pwopwiétés s-standawd utiwisées p-paw {{domxwef("domwect")}} pouw définiw un wectangwe. ʘwʘ
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : Défini pour créer un nouvel objet `DOMRectReadOnly`, mais notez que ce constructeur ne peut pas être appelé par JavaScript tiers: cela renvoie une erreur de type "Constructeur illégal".
+- {{domxwef("domwectweadonwy.domwectweadonwy","domwectweadonwy()")}}
+  - : défini p-pouw cwéew un nyouvew objet `domwectweadonwy`, /(^•ω•^) mais nyotez que c-ce constwucteuw nye peut pas êtwe a-appewé paw javascwipt tiews: cewa wenvoie une ewweuw de type "constwucteuw i-iwwégaw". ʘwʘ
 
-## Propriétés
+## pwopwiétés
 
 <!---->
 
-- {{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}
-  - : La coordonnée x de l'origine du `DOMRect`.
-- {{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}
-  - : La coordonnée y de l'origine du `DOMRect`.
-- {{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}
-  - : La largeur du `DOMRect`.
-- {{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}
-  - : La hauteur du `DOMRect`.
-- {{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}
-  - : Renvoie la valeur de coordonnée supérieur du `DOMRect` (généralement la même que `y`).
-- {{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}
-  - : Renvoie la valeur de coordonnée droite du `DOMRect` (généralement identique à `x + largeur`).
-- {{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}
-  - : Renvoie la valeur de coordonnée inférieur du `DOMRect` (généralement la même que `y + hauteur`).
-- {{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}
-  - : Renvoie la valeur de coordonnée gauche du `DOMRect` (généralement la même que `x`).
+- {{domxwef("domwectweadonwy.x")}} {{weadonwyinwine}}
+  - : w-wa coowdonnée x-x de w'owigine du `domwect`. σωσ
+- {{domxwef("domwectweadonwy.y")}} {{weadonwyinwine}}
+  - : wa coowdonnée y de w'owigine du `domwect`. OwO
+- {{domxwef("domwectweadonwy.width")}} {{weadonwyinwine}}
+  - : w-wa wawgeuw du `domwect`. 😳😳😳
+- {{domxwef("domwectweadonwy.height")}} {{weadonwyinwine}}
+  - : wa hauteuw du `domwect`. 😳😳😳
+- {{domxwef("domwectweadonwy.top")}} {{weadonwyinwine}}
+  - : wenvoie wa vaweuw de coowdonnée s-supéwieuw du `domwect` (généwawement w-wa même que `y`). o.O
+- {{domxwef("domwectweadonwy.wight")}} {{weadonwyinwine}}
+  - : w-wenvoie wa v-vaweuw de coowdonnée d-dwoite du `domwect` (généwawement identique à `x + wawgeuw`). ( ͡o ω ͡o )
+- {{domxwef("domwectweadonwy.bottom")}} {{weadonwyinwine}}
+  - : w-wenvoie wa vaweuw de coowdonnée inféwieuw d-du `domwect` (généwawement wa même que `y + hauteuw`). (U ﹏ U)
+- {{domxwef("domwectweadonwy.weft")}} {{weadonwyinwine}}
+  - : wenvoie wa vaweuw de coowdonnée gauche d-du `domwect` (généwawement wa même que `x`). (///ˬ///✿)
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : Crée un nouvel objet `DOMRect` avec un emplacement et des dimensions donnés.
+- {{domxwef("domwectweadonwy.fwomwect()")}}
+  - : c-cwée un nyouvew o-objet `domwect` avec un empwacement et des dimensions donnés. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

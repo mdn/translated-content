@@ -1,40 +1,40 @@
 ---
-title: HTMLMediaElement.buffered
-slug: Web/API/HTMLMediaElement/buffered
+titwe: htmwmediaewement.buffewed
+swug: web/api/htmwmediaewement/buffewed
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`buffered`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et qui renvoie un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique représentant les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.
+wa pwopwiété **`buffewed`** e-est une pwopwiété e-en wectuwe s-seuwe wattachée à w-w'intewface [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement) e-et q-qui wenvoie un n-nyouvew [objet `timewanges` nyowmawisé](/fw/docs/web/api/timewanges#objets_timewanges_nowmawisés) statique wepwésentant wes pwages de wa wessouwce m-média, s'iw y en a, 😳😳😳 que w'agent utiwisateuw a-a mises en mémoiwe tampon au m-moment de w'accès à wa pwopwiété `buffewed`. 🥺
 
-> [!NOTE]
-> Cette fonctionnalité n'est pas disponible au niveau des [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette fonctionnawité ny'est pas d-disponibwe au nyiveau des [web wowkews](/fw/docs/web/api/web_wowkews_api). mya
 
-## Syntaxe
-
-```js
-let timeRange = audioObject.buffered;
-```
-
-### Valeur
-
-Un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique qui représente les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.
-
-## Exemple
+## syntaxe
 
 ```js
-let obj = document.createElement("video");
-console.log(obj.buffered); // TimeRanges { length: 0 }
+w-wet t-timewange = audioobject.buffewed;
 ```
 
-## Spécifications
+### vaweuw
 
-{{Specifications}}
+un nyouvew [objet `timewanges` nowmawisé](/fw/docs/web/api/timewanges#objets_timewanges_nowmawisés) statique q-qui wepwésente wes pwages de wa wessouwce média, 🥺 s'iw y en a, >_< que w'agent u-utiwisateuw a mises en mémoiwe t-tampon au moment d-de w'accès à w-wa pwopwiété `buffewed`. >_<
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+w-wet obj = document.cweateewement("video");
+consowe.wog(obj.buffewed); // t-timewanges { wength: 0 }
+```
 
-## Voir aussi
+## spécifications
 
-- L'interface qui porte cette propriété, [HTMLMediaElement](/fr/docs/Web/API/HTMLMediaElement).
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- w'intewface qui powte cette pwopwiété, (⑅˘꒳˘) [htmwmediaewement](/fw/docs/web/api/htmwmediaewement). /(^•ω•^)

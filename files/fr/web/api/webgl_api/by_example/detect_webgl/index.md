@@ -1,76 +1,76 @@
 ---
-title: Détecter WebGL
-slug: Web/API/WebGL_API/By_example/Detect_WebGL
+titwe: détectew webgw
+swug: w-web/api/webgw_api/by_exampwe/detect_webgw
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe","appwendwe/webgw/paw_exempwe/appwiquew_des_couweuws")}}
 
-Dans cet exemple, on voit comment détecter un contexte de rendu {{Glossary("WebGL")}} et afficher le résultat à l'utilisateur.
+d-dans cet exempwe, (ꈍᴗꈍ) o-on voit comment d-détectew u-un contexte de w-wendu {{gwossawy("webgw")}} e-et affichew w-we wésuwtat à w'utiwisateuw. 😳
 
-{{EmbedLiveSample("Détecter_le_support_WebGL",660,150)}}
+{{embedwivesampwe("détectew_we_suppowt_webgw",660,150)}}
 
-### Détecter le support WebGL
+### détectew we suppowt webgw
 
-Dans ce premier exemple, on vérifie si le navigateur prend en charge {{Glossary("WebGL")}}. Pour cela, on essaye d'obtenir le {{domxref("WebGLRenderingContext","contexte de rendu WebGL","",1)}} à partir d'un élément {{domxref("HTMLCanvasElement","canvas")}}. Le {{domxref("WebGLRenderingContext","contexte de rendu WebGL", "", 1)}} est une interface qui permet de connaître et de modifier l'état du moteur graphique WebGL, d'envoyer des données à WebGL et d'exécuter des commandes de dessin.
+dans ce pwemiew e-exempwe, 😳😳😳 on véwifie si we nyavigateuw pwend e-en chawge {{gwossawy("webgw")}}. mya pouw cewa, on essaye d-d'obteniw we {{domxwef("webgwwendewingcontext","contexte de wendu webgw","",1)}} à pawtiw d-d'un éwément {{domxwef("htmwcanvasewement","canvas")}}. mya we {{domxwef("webgwwendewingcontext","contexte d-de wendu w-webgw", (⑅˘꒳˘) "", 1)}} est une intewface qui pewmet de connaîtwe et de modifiew w'état d-du moteuw gwaphique webgw, (U ﹏ U) d'envoyew des données à webgw et d'exékawaii~w d-des commandes de dessin. mya
 
-La gestion d'une machine graphique au sein d'une seule interface n'est pas propre à {{Glossary("WebGL")}}. Les autres {̣{Glossary("API")}} graphiques comme {{domxref("CanvasRenderingContext2D","le contexte de rendu 2D du canevas", "", 1)}}. Cependant, les propriétés et variables qui peuvent être manipulées changent d'une API à l'autre.
+wa g-gestion d'une machine g-gwaphique a-au sein d'une seuwe i-intewface ny'est pas pwopwe à {{gwossawy("webgw")}}. ʘwʘ wes autwes {̣{gwossawy("api")}} g-gwaphiques comme {{domxwef("canvaswendewingcontext2d","we contexte de w-wendu 2d du canevas", (˘ω˘) "", 1)}}. cependant, (U ﹏ U) wes pwopwiétés et vawiabwes qui peuvent êtwe manipuwées changent d-d'une api à w'autwe. ^•ﻌ•^
 
-```html
-<p>[ On affichera ici le résultat de la détection du support WebGL ]</p>
-<button>Cliquez ici pour détecter WebGLRenderingContext</button>
+```htmw
+<p>[ on affichewa i-ici we wésuwtat d-de wa détection d-du suppowt webgw ]</p>
+<button>cwiquez ici pouw détectew webgwwendewingcontext</button>
 ```
 
 ```css
 body {
-  text-align: center;
+  t-text-awign: centew;
 }
-button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+b-button {
+  dispway: bwock;
+  f-font-size: i-inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 ```
 
 ```js
-// On exécute tout dans le gestionnaire d'événement
-// correspondant au chargement de la fenêtre. De cette
-// façon, le DOM est complètement chargé et mis en forme
-// avant de le manipuler.
-window.addEventListener(
-  "load",
+// o-on exékawaii~ tout dans w-we gestionnaiwe d'événement
+// cowwespondant a-au chawgement de wa fenêtwe. (˘ω˘) d-de cette
+// façon, :3 we dom est c-compwètement chawgé e-et mis en fowme
+// avant de we manipuwew. ^^;;
+window.addeventwistenew(
+  "woad", 🥺
   function () {
-    var paragraph = document.querySelector("p"),
-      button = document.querySelector("button");
+    vaw pawagwaph = document.quewysewectow("p"), (⑅˘꒳˘)
+      b-button = d-document.quewysewectow("button");
 
-    // On ajoute un gestionnaire d'événement pour
-    // le clic sur le bouton
-    button.addEventListener("click", detectWebGLContext, false);
-    function detectWebGLContext() {
-      // On crée un élément canvas. Le canvas n'est pas
-      // ajouté au document et il n'est donc jamais
-      // affiché dans la fenêtre du navigateur
-      var canvas = document.createElement("canvas");
+    // on a-ajoute un gestionnaiwe d-d'événement p-pouw
+    // we cwic suw we bouton
+    button.addeventwistenew("cwick", nyaa~~ detectwebgwcontext, :3 f-fawse);
+    function detectwebgwcontext() {
+      // on cwée un éwément canvas. ( ͡o ω ͡o ) we canvas ny'est p-pas
+      // ajouté au document e-et iw ny'est d-donc jamais
+      // a-affiché dans wa fenêtwe d-du nyavigateuw
+      v-vaw canvas = d-document.cweateewement("canvas");
 
-      // On récupère le contexte WebGLRenderingContext
-      // depuis l'élément canvas.
-      var gl =
-        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      // on w-wécupèwe we contexte webgwwendewingcontext
+      // depuis w'éwément c-canvas. mya
+      v-vaw gw =
+        c-canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
 
-      // On affiche le résultat.
-      if (gl && gl instanceof WebGLRenderingContext) {
-        paragraph.innerHTML = "Félicitations, votre navigateur supporte WebGL.";
-      } else {
-        paragraph.innerHTML =
-          "Échec du contexte WebGL. " +
-          "Votre navigateur peut ne pas supporter WebGL.";
+      // o-on affiche we wésuwtat. (///ˬ///✿)
+      if (gw && gw instanceof w-webgwwendewingcontext) {
+        pawagwaph.innewhtmw = "féwicitations, (˘ω˘) votwe nyavigateuw suppowte webgw.";
+      } ewse {
+        p-pawagwaph.innewhtmw =
+          "Échec du contexte webgw. ^^;; " +
+          "votwe navigateuw p-peut ne pas suppowtew w-webgw.";
       }
     }
-  },
-  false,
+  }, (✿oωo)
+  f-fawse, (U ﹏ U)
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
+we code souwce d-de cet exempwe est égawement d-disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/detect-webgw). -.-
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe","appwendwe/webgw/paw_exempwe/appwiquew_des_couweuws")}}

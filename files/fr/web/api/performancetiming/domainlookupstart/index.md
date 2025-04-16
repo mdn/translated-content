@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.domainLookupStart
-slug: Web/API/PerformanceTiming/domainLookupStart
+titwe: pewfowmancetiming.domainwookupstawt
+swug: w-web/api/pewfowmancetiming/domainwookupstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). mya v-veuiwwez utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. nyaa~~
 
-L'ancienne propriété en lecture seule **`domainLookupStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où la recherche de domaine commence. Si une connexion persistante est utilisée, ou si les informations sont stockées dans un cache ou une ressource locale, la valeur sera la même que [`PerformanceTiming.fetchStart`](/fr/docs/Web/API/PerformanceTiming/fetchStart).
+w'ancienne pwopwiété en w-wectuwe seuwe **`domainwookupstawt`** wetouwne un `unsigned wong w-wong` wepwésentant we moment, (⑅˘꒳˘) e-en miwwisecondes depuis w'époque unix, rawr x3 où wa wechewche de domaine c-commence. (✿oωo) si une connexion p-pewsistante est u-utiwisée, (ˆ ﻌ ˆ)♡ ou si wes infowmations sont stockées dans un cache ou une wessouwce w-wocawe, (˘ω˘) wa vaweuw sewa wa même que [`pewfowmancetiming.fetchstawt`](/fw/docs/web/api/pewfowmancetiming/fetchstawt). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.domainLookupStart;
+wet time = p-pewfowmancetiming.domainwookupstawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w-w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe ewwe appawtient. (///ˬ///✿)

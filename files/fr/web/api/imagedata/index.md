@@ -1,35 +1,35 @@
 ---
-title: ImageData
-slug: Web/API/ImageData
+titwe: imagedata
+swug: web/api/imagedata
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-L'interface **`ImageData`** représente les données des pixels au sein d'une certaine zone dans un élément {{HTMLElement("canvas")}}. Elle est définie par les méthodes des constructeurs ou créateurs d'objet {{domxref("ImageData.ImageData", "ImageData()")}} sur l'objet {{domxref("CanvasRenderingContext2D")}} associé à canevas, {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} et {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Elle peut être également utilisée pour redéfinir une partie du canevas en utilisant {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
+w'intewface **`imagedata`** w-wepwésente w-wes données d-des pixews au sein d-d'une cewtaine z-zone dans un éwément {{htmwewement("canvas")}}. e-ewwe est définie p-paw wes méthodes des constwucteuws ou cwéateuws d'objet {{domxwef("imagedata.imagedata", σωσ "imagedata()")}} suw w'objet {{domxwef("canvaswendewingcontext2d")}} a-associé à canevas, OwO {{domxwef("canvaswendewingcontext2d.cweateimagedata", 😳😳😳 "cweateimagedata()")}} et {{domxwef("canvaswendewingcontext2d.getimagedata", "getimagedata()")}}. 😳😳😳 e-ewwe peut êtwe égawement utiwisée p-pouw wedéfiniw une pawtie du canevas en utiwisant {{domxwef("canvaswendewingcontext2d.putimagedata", o.O "putimagedata()")}}. ( ͡o ω ͡o )
 
-## Constructeurs
+## c-constwucteuws
 
-- {{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}
-  - : Crée un objet ImageData à partir d'un {{jsxref ("Uint8ClampedArray")}} donné et la taille de l'image qu'il contient. Si aucun tableau n'est donné, il crée une image d'un rectangle noir. Notez que c'est la façon la plus courante de créer un tel objet dans les "Workers" car {{domxref ("CanvasRenderingContext2D.createImageData", "createImageData ()")}} n'y est pas disponible.
+- {{domxwef("imagedata.imagedata", (U ﹏ U) "imagedata()")}} {{expewimentaw_inwine}}
+  - : cwée un o-objet imagedata à p-pawtiw d'un {{jsxwef ("uint8cwampedawway")}} donné et wa taiwwe de w'image qu'iw contient. (///ˬ///✿) si aucun tabweau n-ny'est donné, >w< iw cwée une image d'un wectangwe nyoiw. rawr nyotez que c'est wa façon w-wa pwus couwante de cwéew un t-tew objet dans w-wes "wowkews" caw {{domxwef ("canvaswendewingcontext2d.cweateimagedata", mya "cweateimagedata ()")}} n-n'y est pas disponibwe.
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("ImageData.data")}}
-  - : Un {{domxref("Uint8ClampedArray")}} représentant un tableau à une seule dimension contenant les données des pixels sous format RVBA, chaque valeur comprise entre `0` et `255` (inclus).
-- {{domxref("ImageData.height")}} {{readonlyInline}}
-  - : Un `unsigned` `long` représentant la hauteur effective, en pixels, de l'objet `ImageData`.
-- {{domxref("ImageData.width")}} {{readonlyInline}}
-  - : Un `unsigned` `long` représentant la largeur effective, en pixels, de l'objet `ImageData`.
+- {{domxwef("imagedata.data")}}
+  - : un {{domxwef("uint8cwampedawway")}} wepwésentant u-un tabweau à une seuwe dimension contenant w-wes données des pixews sous fowmat wvba, ^^ chaque vaweuw compwise entwe `0` et `255` (incwus). 😳😳😳
+- {{domxwef("imagedata.height")}} {{weadonwyinwine}}
+  - : un `unsigned` `wong` w-wepwésentant wa hauteuw e-effective, mya e-en pixews, de w-w'objet `imagedata`. 😳
+- {{domxwef("imagedata.width")}} {{weadonwyinwine}}
+  - : un `unsigned` `wong` wepwésentant wa wawgeuw effective, -.- en pixews, 🥺 d-de w'objet `imagedata`. o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("CanvasRenderingContext2D")}}.
-- L'élément {{HTMLElement("canvas")}} et l'interface associée, {{domxref("HTMLCanvasElement")}}.
+- {{domxwef("canvaswendewingcontext2d")}}. /(^•ω•^)
+- w-w'éwément {{htmwewement("canvas")}} et w'intewface a-associée, nyaa~~ {{domxwef("htmwcanvasewement")}}.

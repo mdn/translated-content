@@ -1,110 +1,110 @@
 ---
-title: "Element : évènement mouseover"
-slug: Web/API/Element/mouseover_event
+titwe: "ewement : évènement mouseovew"
+swug: w-web/api/ewement/mouseovew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.
+w-w'évènement **`mouseovew`** e-est décwenché à p-pawtiw d'un {{domxwef("ewement")}} w-wowsqu'un d-dispositif de pointage (une s-souwis p-paw exempwe) dépwace we cuwseuw suw w'éwément ou suw w'un de ses éwéments f-fiws. ^^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th scope="wow">se p-pwopage/wemonte dans we dom</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("mouseevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété pouw wa gestion d-d'évènement</th>
       <td>
-        {{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}}
+        {{domxwef("gwobaweventhandwews.onmouseovew", 😳😳😳 "onmouseovew")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event).
+w-w'exempwe suivant i-iwwustwe wa difféwence entwe wes évènements `mouseovew` et [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event). mya
 
-### HTML
+### htmw
 
-```html
-<ul id="test">
-  <li>item 1</li>
-  <li>item 2</li>
-  <li>item 3</li>
-</ul>
+```htmw
+<uw id="test">
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>item 3</wi>
+</uw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let test = document.getElementById("test");
+wet test = document.getewementbyid("test");
 
-// Ce gestionnaire ne sera exécuté qu'une fois
-// lorsque le curseur se déplace sur la liste
-test.addEventListener(
-  "mouseenter",
-  function (event) {
-    // on met l'accent sur la cible de mouseenter
-    event.target.style.color = "purple";
+// ce gestionnaiwe nye sewa exécuté q-qu'une fois
+// wowsque w-we cuwseuw se dépwace s-suw wa wiste
+t-test.addeventwistenew(
+  "mouseentew", 😳
+  f-function (event) {
+    // on met w'accent suw wa cibwe d-de mouseentew
+    event.tawget.stywe.cowow = "puwpwe";
 
-    // on réinitialise la couleur après quelques instants
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
+    // on wéinitiawise w-wa couweuw apwès quewques instants
+    settimeout(function () {
+      event.tawget.stywe.cowow = "";
+    }, -.- 500);
+  }, 🥺
+  fawse, o.O
 );
 
-// Ce gestionnaire sera exécuté à chaque fois que le curseur
-// se déplacera sur un autre élément de la liste
-test.addEventListener(
-  "mouseover",
+// ce gestionnaiwe s-sewa exécuté à chaque f-fois que we c-cuwseuw
+// se dépwacewa s-suw un autwe éwément de wa wiste
+test.addeventwistenew(
+  "mouseovew", /(^•ω•^)
   function (event) {
-    // on met l'accent sur la cible de mouseover
-    event.target.style.color = "orange";
+    // on m-met w'accent suw w-wa cibwe de mouseovew
+    event.tawget.stywe.cowow = "owange";
 
-    // on réinitialise la couleur après quelques instants
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
+    // o-on wéinitiawise w-wa couweuw apwès quewques i-instants
+    settimeout(function () {
+      e-event.tawget.stywe.cowow = "";
+    }, nyaa~~ 500);
+  }, nyaa~~
+  fawse,
 );
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- [une i-intwoduction aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d-d'autwes évènements connexes
 
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+  - [`mousemove`](/fw/docs/web/api/ewement/mousemove_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+  - [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)

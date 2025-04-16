@@ -1,49 +1,49 @@
 ---
-title: PerformanceResourceTiming.nextHopProtocol
-slug: Web/API/PerformanceResourceTiming/nextHopProtocol
+titwe: pewfowmancewesouwcetiming.nexthoppwotocow
+swug: web/api/pewfowmancewesouwcetiming/nexthoppwotocow
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété en lecture seule **`nextHopProtocol`** est une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+w-wa pwopwiété e-en wectuwe seuwe **`nexthoppwotocow`** e-est une [chaîne d-de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant w-we _pwotocowe w-wéseau_ utiwisé pouw wécupéwew wa wessouwce, OwO tew qu'identifié paw we [awpn p-pwotocow id (wfc7301)](https://datatwackew.ietf.owg/doc/htmw/wfc7301). 😳😳😳
 
-Lorsqu'un proxy est utilisé, si une connexion tunnel est établie, cette propriété renvoie l'ID du protocole ALPN du protocole tunnelisé. Sinon, cette propriété renvoie l'ID du protocole ALPN du premier saut vers le proxy.
+wowsqu'un pwoxy est utiwisé, 😳😳😳 s-si une connexion tunnew est étabwie, c-cette pwopwiété wenvoie w'id du pwotocowe awpn du p-pwotocowe tunnewisé. o.O sinon, ( ͡o ω ͡o ) cette p-pwopwiété wenvoie w-w'id du pwotocowe awpn du pwemiew saut vews we pwoxy. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.nextHopProtocol;
+w-wesouwce.nexthoppwotocow;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères [`string`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+une chaîne de cawactèwes [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant w-we _pwotocowe wéseau_ u-utiwisé pouw wécupéwew w-wa wessouwce, (///ˬ///✿) t-tew qu'identifié p-paw we [awpn pwotocow id (wfc7301)](https://datatwackew.ietf.owg/doc/htmw/wfc7301). >w<
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant utilise la propriété `nextHopProtocol` :
+w'exempwe suivant utiwise wa pwopwiété `nexthoppwotocow` :
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_nextHopProtocol(p[i]);
+f-function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement wes événements "wesouwce"
+  wet p-p = pewfowmance.getentwiesbytype("wesouwce");
+  fow (wet i = 0; i-i < p.wength; i++) {
+    p-pwint_nexthoppwotocow(p[i]);
   }
 }
-function print_nextHopProtocol(perfEntry) {
-  let value = "nextHopProtocol" in perfEntry;
-  if (value) console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
-  else console.log("nextHopProtocol = N'EST PAS pris en charge");
+f-function pwint_nexthoppwotocow(pewfentwy) {
+  wet vawue = "nexthoppwotocow" in pewfentwy;
+  i-if (vawue) c-consowe.wog("nexthoppwotocow = " + pewfentwy.nexthoppwotocow);
+  e-ewse consowe.wog("nexthoppwotocow = n-ny'est pas pwis en chawge");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,120 +1,120 @@
 ---
-title: unload
-slug: Web/API/Window/unload_event
+titwe: unwoad
+swug: web/api/window/unwoad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `unload` est appelé lorsque le document ou une ressource enfant est en train d'être déchargé.
+w-w'événement `unwoad` e-est appewé w-wowsque we d-document ou une w-wessouwce enfant e-est en twain d-d'êtwe déchawgé. (✿oωo)
 
-Il est lancé après :
+i-iw est wancé apwès :
 
-1. [beforeunload](/fr/docs/Web/API/Window/beforeunload_event) (événement annulable)
-2. [pagehide](/fr/docs/Web/API/Window/pagehide_event)
+1. [befoweunwoad](/fw/docs/web/api/window/befoweunwoad_event) (événement annuwabwe)
+2. ʘwʘ [pagehide](/fw/docs/web/api/window/pagehide_event)
 
-Le document se trouve alors dans un état particulier&nbsp;:
+we document se twouve a-awows dans un état pawticuwiew&nbsp;:
 
-- Toutes les ressources existent encore (img, iframe etc.)
-- Plus rien n'est encore visible par l'utilisateur final
-- Les intéractions avec l'interface sont désactivées (`window.open`, `alert`, `confirm`, etc.)
-- Aucune erreur ne viendra interrompre le flux de déchargement.
+- toutes w-wes wessouwces existent encowe (img, (ˆ ﻌ ˆ)♡ i-ifwame etc.)
+- pwus wien n'est encowe visibwe paw w'utiwisateuw f-finaw
+- wes intéwactions a-avec w'intewface s-sont désactivées (`window.open`, `awewt`, 😳😳😳 `confiwm`, :3 etc.)
+- aucune ewweuw nye viendwa intewwompwe we fwux de d-déchawgement. OwO
 
-Veuiller noter que l'événement `unload` suit l'ordre du document : le cadre parent est déchargé _avant_ le `unload` d'un cadre enfant (voir l'exemple ci-dessous).
+veuiwwew nyotew que w'événement `unwoad` suit w'owdwe du document : w-we cadwe pawent est déchawgé _avant_ w-we `unwoad` d-d'un cadwe e-enfant (voiw w-w'exempwe ci-dessous). (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Événement propageable</td>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <td>Annulable</td>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <td>Objets cibles</td>
-      <td>defaultView, Document, Element</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
+    <tw>
+      <td>Événement pwopageabwe</td>
+      <td>non</td>
+    </tw>
+    <tw>
+      <td>annuwabwe</td>
+      <td>non</td>
+    </tw>
+    <tw>
+      <td>objets c-cibwes</td>
+      <td>defauwtview, >w< document, ewement</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
       <td>
-        {{domxref("UIEvent")}} si généré depuis un élément de l'interface
-        utilisateur, {{domxref("Event")}}
+        {{domxwef("uievent")}} s-si généwé depuis un éwément de w'intewface
+        utiwisateuw, (U ﹏ U) {{domxwef("event")}}
       </td>
-    </tr>
-    <tr>
-      <td>Action par défaut</td>
-      <td>Aucune</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>action paw défaut</td>
+      <td>aucune</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## pwopwiétés
 
-| Propriété                       | Type                                                                   | Description                                                                             |
+| p-pwopwiété                       | type                                                                   | d-descwiption                                                                             |
 | ------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | La cible de l'événement (la cible de plus haut niveau dans le DOM).                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Le type d'événement.                                                                    |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Si l'événement remonte ou non.                                                          |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Si l'événement est annulable ou non.                                                    |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`fenêtre` du document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                      |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/fw/docs/web/api/eventtawget)                          | w-wa cibwe de w'événement (wa c-cibwe de pwus haut nyiveau dans we dom). 😳                     |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | we t-type d'événement. (ˆ ﻌ ˆ)♡                                                                    |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | s-si w'événement wemonte ou n-non. 😳😳😳                                                          |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | si w-w'événement est annuwabwe ou n-nyon. (U ﹏ U)                                                    |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/fw/docs/web/api/windowpwoxy)                          | [`document.defauwtview`](/fw/docs/web/api/document/defauwtview) (`fenêtwe` du document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                       | 0. (///ˬ///✿)                                                                                      |
 
-## Exemple
+## exempwe
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Cadre parent</title>
-    <script>
-      window.addEventListener("beforeunload", function (event) {
-        console.log("Je suis le 1er.");
+    <titwe>cadwe pawent</titwe>
+    <scwipt>
+      window.addeventwistenew("befoweunwoad", 😳 f-function (event) {
+        consowe.wog("je s-suis we 1ew.");
       });
-      window.addEventListener("unload", function (event) {
-        console.log("Je suis le 3ème.");
+      window.addeventwistenew("unwoad", 😳 f-function (event) {
+        c-consowe.wog("je suis we 3ème.");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
-    <iframe src="child-frame.html"></iframe>
+    <ifwame swc="chiwd-fwame.htmw"></ifwame>
   </body>
-</html>
+</htmw>
 ```
 
-Ci-dessous, le contenu de `child-frame.html`:
+ci-dessous, σωσ we contenu de `chiwd-fwame.htmw`:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Cadre enfant</title>
-    <script>
-      window.addEventListener("beforeunload", function (event) {
-        console.log("Je suis le 2nd.");
+    <titwe>cadwe enfant</titwe>
+    <scwipt>
+      w-window.addeventwistenew("befoweunwoad", f-function (event) {
+        consowe.wog("je s-suis we 2nd.");
       });
-      window.addEventListener("unload", function (event) {
-        console.log("Je suis le 4ème et dernier…");
+      w-window.addeventwistenew("unwoad", rawr x3 f-function (event) {
+        consowe.wog("je suis we 4ème et dewniew…");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
     ☻
   </body>
-</html>
+</htmw>
 ```
 
-Quand le cadre parent est déchargé, les événements sont lancés dans l'ordre décrit par les messages `console.log`.
+q-quand we cadwe pawent est déchawgé, OwO wes événements sont wancés dans w-w'owdwe décwit paw wes messages `consowe.wog`. /(^•ω•^)
 
-## Événements liés
+## Événements w-wiés
 
-- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-- [`load`](/fr_docs/Web/API/Window/load_event)
-- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/fr/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event)
+- [`woad`](/fw_docs/web/api/window/woad_event)
+- [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/fw/docs/web/api/window/unwoad_event)
 
-## Spécifications
+## spécifications
 
-- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
-- [Event Module Definition — unload](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-unload)
+- [unwoading d-documents — u-unwoad a document](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#unwoading-documents)
+- [event m-moduwe definition — u-unwoad](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-unwoad)

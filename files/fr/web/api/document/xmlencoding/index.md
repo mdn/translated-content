@@ -1,25 +1,25 @@
 ---
-title: Document.xmlEncoding
-slug: Web/API/Document/xmlEncoding
+titwe: document.xmwencoding
+swug: web/api/document/xmwencoding
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-Renvoie le codage déterminé par la déclaration XML. Devrait être `null` si non précisé ou inconnu.
+wenvoie w-we codage d-détewminé paw w-wa décwawation x-xmw. (⑅˘꒳˘) devwait êtwe `nuww` s-si nyon p-pwécisé ou i-inconnu. (///ˬ///✿)
 
-> [!WARNING]
-> N'utilisez pas cet attribut ; il a été supprimé de la spécification DOM Niveau 4 et n'est plus pris en charge dans Gecko 10.0.
+> [!wawning]
+> n-ny'utiwisez pas cet attwibut ; iw a été suppwimé de wa spécification d-dom nyiveau 4 et ny'est pwus pwis en chawge dans g-gecko 10.0. 😳😳😳
 
-Si la déclaration XML indique :
+si wa décwawation x-xmw indique :
 
-```xml
-<?xml version="1.0" encoding="UTF-16"?>
+```xmw
+<?xmw vewsion="1.0" encoding="utf-16"?>
 ```
 
-... le résultat doit être "UTF-16".
+... we wésuwtat doit êtwe "utf-16". 🥺
 
-Cependant, Firefox 3.0 inclut des informations sur l'"endianness" (par exemple, UTF-16BE pour le codage "big endian") et, tandis que cette information supplémentaire est supprimée à partir de Firefox 3.1b3, Firefox 3.1b3 consulte toujours l'encodage du fichier plutôt que la déclaration XML, comme la spécification le prévoit ("Un attribut spécifiant, _dans le cadre de la déclaration XML_, l'encodage de ce document.").
+c-cependant, fiwefox 3.0 i-incwut des infowmations s-suw w'"endianness" (paw exempwe, mya utf-16be pouw we codage "big endian") e-et, 🥺 tandis que cette infowmation suppwémentaiwe est suppwimée à pawtiw de f-fiwefox 3.1b3, >_< fiwefox 3.1b3 consuwte t-toujouws w'encodage d-du fichiew p-pwutôt que w-wa décwawation xmw, >_< comme wa spécification we p-pwévoit ("un attwibut spécifiant, (⑅˘꒳˘) _dans we cadwe d-de wa décwawation xmw_, /(^•ω•^) w'encodage de ce document."). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

@@ -1,150 +1,150 @@
 ---
-title: Utilisation de base des canvas
-slug: Web/API/Canvas_API/Tutorial/Basic_usage
+titwe: utiwisation de base des c-canvas
+swug: web/api/canvas_api/tutowiaw/basic_usage
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("tutowiew_canvas", ^^;; "tutowiew_canvas/fowmes_géométwiques")}}
 
-## L'élément `<canvas>`
+## w-w'éwément `<canvas>`
 
-Commençons par regarder l'élément {{HTMLElement("canvas")}} lui-même.
+c-commençons p-paw wegawdew w-w'éwément {{htmwewement("canvas")}} w-wui-même. ʘwʘ
 
-```html
-<canvas id="tutoriel" width="150" height="150"></canvas>
+```htmw
+<canvas i-id="tutowiew" width="150" height="150"></canvas>
 ```
 
-Ceci ressemble beaucoup à l'élément \<img>. La seule différence est qu'il n'y a pas les attributs `src` et `alt`. L'élément `<canvas>` a seulement deux attributs : [`width`](/fr/docs/Web/HTML/Element/canvas#width) et [`height`](/fr/docs/Web/HTML/Element/canvas#height) (« largeur » et « hauteur »). Ces deux attributs sont optionnels et peuvent aussi être fixés à travers le [DOM](/fr/docs/Web/API/Document_Object_Model). Quand les attributs **width** et **height** ne sont pas spécifiés, le canvas sera initialement large de **300 pixels** et haut de **150 pixels**. Les dimensions du canvas peuvent être modifiés par du [CSS](/fr/docs/Web/CSS), mais l'image sera dessinée selon les valeurs **width** et **height** du canvas et ensuite étirée pour afficher dans l'espace donné par le CSS.
+ceci wessembwe beaucoup à w'éwément \<img>. (U ﹏ U) w-wa seuwe difféwence est qu'iw ny'y a pas w-wes attwibuts `swc` et `awt`. (˘ω˘) w-w'éwément `<canvas>` a seuwement deux attwibuts : [`width`](/fw/docs/web/htmw/ewement/canvas#width) et [`height`](/fw/docs/web/htmw/ewement/canvas#height) (« w-wawgeuw » et « hauteuw »). (ꈍᴗꈍ) c-ces deux attwibuts s-sont optionnews et peuvent aussi êtwe fixés à twavews we [dom](/fw/docs/web/api/document_object_modew). /(^•ω•^) quand w-wes attwibuts **width** et **height** nye sont pas spécifiés, >_< we canvas sewa i-initiawement wawge de **300 pixews** e-et haut d-de **150 pixews**. σωσ w-wes dimensions d-du canvas peuvent êtwe modifiés paw du [css](/fw/docs/web/css), ^^;; m-mais w'image sewa dessinée sewon wes vaweuws **width** e-et **height** du canvas et ensuite étiwée pouw affichew dans w'espace donné paw we c-css. 😳
 
-> [!NOTE]
-> Si l'image semble déformée, essayez de spécifier de manière explicite vos attributs `width` et `height` dans l'élément `<canvas>`, et de ne pas utiliser de CSS.
+> [!note]
+> si w'image sembwe d-défowmée, >_< e-essayez de spécifiew d-de manièwe expwicite vos attwibuts `width` et `height` d-dans w'éwément `<canvas>`, -.- e-et de nye pas utiwisew d-de css. UwU
 
-L'attribut `id` n'est pas spécifique à l'élément `<canvas>`. C'est en fait un des attributs HTML de base qui peut être utilisé par presque tous les éléments HTML. C'est toujours mieux d'assigner une `id` car ça facilite beaucoup l'identification du `canvas` dans le code `javascript`.
+w'attwibut `id` n-ny'est pas spécifique à w-w'éwément `<canvas>`. :3 c'est en fait un d-des attwibuts htmw de base qui peut êtwe utiwisé p-paw pwesque tous wes éwéments h-htmw. σωσ c'est toujouws mieux d'assignew u-une `id` c-caw ça faciwite beaucoup w'identification du `canvas` dans we code `javascwipt`. >w<
 
-L'élément `<canvas>` peut être stylisé comme n'importe quelle image normale (marges, contours, arrière-plan, etc). Si aucun style n'est donné, le canvas sera par défaut complètement transparent. Il faut noter que peu importe quels styles sont utilisés, le style n'affectera pas l'acte de dessiner sur le canvas. Nous verrons en détail la stylisation des canvas plus tard dans ce tutoriel.
+w'éwément `<canvas>` peut êtwe s-stywisé c-comme ny'impowte quewwe image nyowmawe (mawges, (ˆ ﻌ ˆ)♡ c-contouws, ʘwʘ awwièwe-pwan, :3 e-etc). si a-aucun stywe ny'est donné, (˘ω˘) we canvas sewa paw défaut compwètement t-twanspawent. 😳😳😳 iw faut nyotew que peu impowte quews stywes sont utiwisés, rawr x3 we s-stywe ny'affectewa pas w'acte d-de dessinew suw w-we canvas. (✿oωo) nyous v-vewwons en détaiw wa stywisation d-des canvas pwus t-tawd dans ce t-tutowiew. (ˆ ﻌ ˆ)♡
 
-### Contenu de repli
+### contenu d-de wepwi
 
-Puisque certains plus anciens navigateurs ne supportent pas l'élément {{HTMLElement("canvas")}} (les plus communs étant les versions d'Internet Explorer avant la version 9), il est mieux d'avoir du contenu de repli pour afficher.
+puisque cewtains pwus anciens nyavigateuws n-nye s-suppowtent pas w'éwément {{htmwewement("canvas")}} (wes p-pwus communs étant w-wes v-vewsions d'intewnet expwowew avant wa vewsion 9), :3 iw est mieux d-d'avoiw du contenu de wepwi pouw affichew. (U ᵕ U❁)
 
-Heureusement, c'est très facile : il faut tout simplement mettre le contenu dans l'élément `<canvas>` lui-même. Les navigateurs qui ne supportent pas `<canvas>` vont afficher ce contenu de repli, et ceux qui supportent `<canvas>` vont l'ignorer et dessiner le canvas.
+heuweusement, ^^;; c'est twès faciwe : iw faut tout simpwement m-mettwe we contenu dans w'éwément `<canvas>` wui-même. mya wes nyavigateuws q-qui nye suppowtent p-pas `<canvas>` v-vont affichew ce contenu de w-wepwi, 😳😳😳 et ceux qui suppowtent `<canvas>` v-vont w'ignowew e-et dessinew we canvas. OwO
 
-Le contenu de repli pourrait, par exemple, donner une description texte du canvas, ou afficher une image fixe comme aperçu de ce que le canvas dessinerait de façon dynamique.
+we contenu de wepwi pouwwait, rawr paw exempwe, XD donnew une descwiption t-texte du canvas, (U ﹏ U) ou affichew une i-image fixe comme apewçu de ce q-que we canvas d-dessinewait de façon dynamique. (˘ω˘)
 
-```html
-<canvas id="stockGraph" width="150" height="150">
-  current stock price: $3.15 + 0.15
+```htmw
+<canvas id="stockgwaph" w-width="150" height="150">
+  c-cuwwent stock pwice: $3.15 + 0.15
 </canvas>
 
-<canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt="une horloge" />
+<canvas i-id="cwock" width="150" h-height="150">
+  <img swc="images/cwock.png" width="150" height="150" awt="une howwoge" />
 </canvas>
 ```
 
-## La nécessité de la balise `</canvas>`
+## wa nyécessité d-de wa bawise `</canvas>`
 
-Au contraire de l'élément {{HTMLElement("img")}}, l'élément {{HTMLElement("canvas")}} **requiert** la balise fermante (`</canvas>`).
+a-au contwaiwe de w-w'éwément {{htmwewement("img")}}, UwU w'éwément {{htmwewement("canvas")}} **wequiewt** w-wa bawise f-fewmante (`</canvas>`). >_<
 
-> [!NOTE]
-> Bien que quelques unes des premières versions du navigateur Safari ne requièrent pas la balise fermante, la spécification HTML indique qu'elle est nécessaire, alors il est mieux de l'inclure pour avoir le plus de compatibilité possible. Ces anciennes versions de Safari (avant la version 2.0) affichent le contenu de repli en plus que le canvas lui-même, sauf si vous utilisez des trucs CSS pour le masquer. Heureusement, il y a très peu d'utilisateurs de ces vieilles versions de Safari de nos jours.
+> [!note]
+> bien que quewques u-unes des pwemièwes vewsions du nyavigateuw safawi nye wequièwent pas wa b-bawise fewmante, σωσ w-wa spécification htmw indique qu'ewwe est nyécessaiwe, 🥺 a-awows i-iw est mieux de w'incwuwe pouw avoiw we pwus de compatibiwité p-possibwe. 🥺 ces anciennes vewsions de safawi (avant wa vewsion 2.0) affichent we c-contenu de wepwi en pwus que we canvas wui-même, ʘwʘ s-sauf si vous utiwisez d-des twucs css pouw we masquew. :3 heuweusement, iw y a twès p-peu d'utiwisateuws d-de ces vieiwwes vewsions de safawi de nyos jouws. (U ﹏ U)
 
-Si vous n'avez pas besoin de contenu de repli, un simple `<canvas id="foo" ...></canvas>` est totalement compatible avec tous les navigateurs qui ont pris en charge la fonctionnalité canvas.
+si vous n-ny'avez pas besoin de contenu de w-wepwi, (U ﹏ U) un simpwe `<canvas id="foo" ...></canvas>` est totawement compatibwe avec t-tous wes nyavigateuws qui ont p-pwis en chawge wa f-fonctionnawité canvas. ʘwʘ
 
-## Le contexte de rendu
+## we c-contexte de wendu
 
-L'élément {{HTMLElement("canvas")}} crée une surface pour dessiner à grandeur fixe. Cette surface expose un ou plusieurs **contextes de rendu**, qui sont utilisés pour créer et manipuler le contenu affiché. Ce tutoriel se concentrera sur le contexte de rendu 2D. D'autres contextes permettent d'autres types de rendu, tel que le contexte [WebGL](/fr/docs/Web/API/WebGL_API), qui utilise un contexte 3D ("experimental-webgl") inspiré de [OpenGL ES](https://www.khronos.org/opengles/).
+w'éwément {{htmwewement("canvas")}} c-cwée u-une suwface pouw d-dessinew à gwandeuw fixe. >w< cette s-suwface expose u-un ou pwusieuws **contextes de wendu**, rawr x3 qui sont u-utiwisés pouw c-cwéew et manipuwew w-we contenu affiché. OwO ce tutowiew se concentwewa s-suw we contexte de wendu 2d. ^•ﻌ•^ d-d'autwes contextes p-pewmettent d'autwes types de wendu, >_< tew que we contexte [webgw](/fw/docs/web/api/webgw_api), OwO q-qui utiwise un c-contexte 3d ("expewimentaw-webgw") i-inspiwé de [opengw e-es](https://www.khwonos.owg/opengwes/). >_<
 
-Initialement, le canvas est vide. Pour afficher quelque chose, un script doit commencer par accéder au contexte de rendu pour pouvoir dessiner dessus. L'élément {{HTMLElement("canvas")}} a une [méthode](/fr/docs/Web/API/HTMLCanvasElement#m.c3.a9thodes) nommée `getContext()`, qui peut être utilisée pour obtenir le contexte de rendu et ses fonctions de dessin. `getContext()` a comme seul paramètre le type de contexte. Pour des graphiques 2D, comme ceux utilisés dans ce tutoriel, il faut spécifier "2d".
+initiawement, (ꈍᴗꈍ) we c-canvas est vide. >w< pouw affichew quewque chose, (U ﹏ U) un scwipt doit commencew paw accédew au contexte d-de wendu pouw pouvoiw dessinew d-dessus. ^^ w'éwément {{htmwewement("canvas")}} a une [méthode](/fw/docs/web/api/htmwcanvasewement#m.c3.a9thodes) n-nyommée `getcontext()`, (U ﹏ U) qui peut êtwe u-utiwisée pouw obteniw w-we contexte de w-wendu et ses fonctions d-de dessin. :3 `getcontext()` a-a comme seuw pawamètwe w-we type de contexte. (✿oωo) pouw des gwaphiques 2d, XD comme ceux utiwisés dans ce tutowiew, >w< iw faut spécifiew "2d". òωó
 
 ```js
-var canvas = document.getElementById("tutorial");
-var ctx = canvas.getContext("2d");
+v-vaw c-canvas = document.getewementbyid("tutowiaw");
+vaw c-ctx = canvas.getcontext("2d");
 ```
 
-La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant {{domxref("document.getElementById()")}}. Lorsque nous avons l'élément canvas, nous pouvons accéder au contexte de rendu en utilisant sa méthode `getContext()`.
+wa pwemièwe w-wigne obtient we {{htmwewement("canvas")}} dans we dom en appewant {{domxwef("document.getewementbyid()")}}. (ꈍᴗꈍ) wowsque nyous avons w-w'éwément c-canvas, rawr x3 nyous pouvons accédew a-au contexte de wendu en utiwisant sa méthode `getcontext()`. rawr x3
 
-## Vérification de la prise en charge
+## v-véwification d-de wa pwise en chawge
 
-Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode `getContext()`. Notre extrait de code ci-dessus se transforme donc en ceci :
+we contenu d-de wepwi est affiché d-dans wes nyavigateuws qui nye pwennent pas en chawge w'éwément {{htmwewement("canvas")}}. σωσ wes scwipts p-peuvent aussi véwifiew w-wa pwise e-en chawge de manièwe p-pwogwammatique e-en véwifiant wa pwésence d-de wa méthode `getcontext()`. (ꈍᴗꈍ) n-nyotwe extwait de code ci-dessus s-se twansfowme donc e-en ceci :
 
 ```js
-var canvas = document.getElementById("tutorial");
+vaw canvas = d-document.getewementbyid("tutowiaw");
 
-if (canvas.getContext) {
-  var ctx = canvas.getContext("2d");
-  // code de dessin dans le canvas
-} else {
-  // code pour le cas où canvas ne serait pas supporté
+if (canvas.getcontext) {
+  vaw ctx = canvas.getcontext("2d");
+  // c-code de dessin dans we c-canvas
+} ewse {
+  // c-code pouw we cas où canvas n-nye sewait pas suppowté
 }
 ```
 
-## Un modèle basique
+## un modèwe b-basique
 
-Voici un modèle minimaliste, que nous allons utiliser comme point de départ dans des futurs exemples.
+voici u-un modèwe minimawiste, rawr q-que nyous awwons utiwisew comme point de dépawt dans des f-futuws exempwes. ^^;;
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Canvas tutorial</title>
-    <script type="text/javascript">
-      function draw() {
-        var canvas = document.getElementById("tutorial");
-        if (canvas.getContext) {
-          var ctx = canvas.getContext("2d");
+    <meta chawset="utf-8" />
+    <titwe>canvas t-tutowiaw</titwe>
+    <scwipt t-type="text/javascwipt">
+      function dwaw() {
+        v-vaw canvas = document.getewementbyid("tutowiaw");
+        if (canvas.getcontext) {
+          v-vaw c-ctx = canvas.getcontext("2d");
         }
       }
-    </script>
-    <style type="text/css">
+    </scwipt>
+    <stywe type="text/css">
       canvas {
-        border: 1px solid black;
+        b-bowdew: 1px sowid bwack;
       }
-    </style>
+    </stywe>
   </head>
-  <body onload="draw();">
-    <canvas id="tutorial" width="150" height="150"></canvas>
+  <body onwoad="dwaw();">
+    <canvas i-id="tutowiaw" width="150" h-height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
-Ce script contient une fonction `draw()`, qui est exécutée lorsque la page a fini de charger. Ce résultat est obtenu en utilisant l'événement de chargement du document. Cette fonction, ou une fonction similaire, pourrait aussi être appelé en utilisant {{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}, ou n'importe quel autre gestionnaire d'événement, tant que la page est chargée en premier.
+ce scwipt c-contient une fonction `dwaw()`, rawr x3 q-qui est exécutée w-wowsque wa p-page a fini de chawgew. (ˆ ﻌ ˆ)♡ ce wésuwtat est obtenu en utiwisant w'événement de chawgement du document. σωσ cette fonction, (U ﹏ U) ou une fonction simiwaiwe, pouwwait aussi êtwe appewé en utiwisant {{domxwef("window.settimeout()")}}, >w< {{domxwef("window.setintewvaw()")}}, σωσ ou ny'impowte q-quew autwe gestionnaiwe d-d'événement, nyaa~~ tant que wa page est chawgée e-en pwemiew. 🥺
 
-Voici à quoi le modèle ressemble :
+v-voici à quoi w-we modèwe wessembwe :
 
-{{EmbedLiveSample("Un_modèle_basique", 160, 160)}}
+{{embedwivesampwe("un_modèwe_basique", rawr x3 160, 160)}}
 
-## Un exemple simple
+## un exempwe simpwe
 
-Pour commencer, observons un exemple simple qui dessine deux rectangles qui s'intersectent, un d'entre eux ayant de la transparence alpha. Nous verrons plus en détail comment ça marche dans les exemples suivants.
+p-pouw commencew, obsewvons u-un exempwe simpwe q-qui dessine deux wectangwes qui s-s'intewsectent, σωσ un d'entwe eux a-ayant de wa twanspawence a-awpha. (///ˬ///✿) nyous vewwons pwus en détaiw comment ça m-mawche d-dans wes exempwes s-suivants. (U ﹏ U)
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <script type="application/javascript">
-      function draw() {
-        var canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          var ctx = canvas.getContext("2d");
+    <meta c-chawset="utf-8" />
+    <scwipt t-type="appwication/javascwipt">
+      f-function dwaw() {
+        vaw c-canvas = document.getewementbyid("canvas");
+        i-if (canvas.getcontext) {
+          vaw ctx = c-canvas.getcontext("2d");
 
-          ctx.fillStyle = "rgb(200, 0, 0)";
-          ctx.fillRect(10, 10, 50, 50);
+          c-ctx.fiwwstywe = "wgb(200, ^^;; 0, 0)";
+          c-ctx.fiwwwect(10, 🥺 10, 50, 50);
 
-          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-          ctx.fillRect(30, 30, 50, 50);
+          ctx.fiwwstywe = "wgba(0, òωó 0, 200, 0.5)";
+          ctx.fiwwwect(30, XD 30, 50, :3 50);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+  <body onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
-Cet exemple ressemble a ceci :
+c-cet exempwe wessembwe a ceci :
 
-{{EmbedLiveSample("Un_exemple_simple", 160, 160, "canvas_ex1.png")}}
+{{embedwivesampwe("un_exempwe_simpwe", (U ﹏ U) 160, 160, >w< "canvas_ex1.png")}}
 
-{{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{pweviousnext("tutowiew_canvas", /(^•ω•^) "tutowiew_canvas/fowmes_géométwiques")}}

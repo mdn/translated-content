@@ -1,45 +1,45 @@
 ---
-title: CompositionEvent
-slug: Web/API/CompositionEvent
+titwe: compositionevent
+swug: w-web/api/compositionevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-Le `CompositionEvent DOM` représente les évènements qui se produisent en raison de l'utilisateur entrant indirectement le texte.
+w-we `compositionevent d-dom` w-wepwésente wes évènements qui s-se pwoduisent e-en waison de w'utiwisateuw e-entwant indiwectement we texte. 🥺
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}
-  - : Crée une nouvelle instance d'objet `CompositionEvent` .
+- {{domxwef("compositionevent.compositionevent()", >_< "compositionevent()")}}
+  - : cwée une nyouvewwe i-instance d'objet `compositionevent` . >_<
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés de son parent, {{domxref("UIEvent")}} et son ancêtre — {{domxref("Event")}}._
+_cette intewface héwite égawement des p-pwopwiétés de son pawent, (⑅˘꒳˘) {{domxwef("uievent")}} e-et son ancêtwe — {{domxwef("event")}}._
 
-- {{domxref("CompositionEvent.data")}} {{readonlyinline}}
-  - : Renvoie les caractères générés par la méthode d'entrée qui a relevé l'événement ; cela varie en fonction du type d'événement ayant généré l'objet `CompositionEvent`.
-- {{domxref("CompositionEvent.locale")}} {{readonlyinline}} {{deprecated_inline}}
-  - : Renvoie les paramètres régionaux de la méthode de saisie actuelle (par exemple, les paramètres régionaux de disposition du clavier si la composition est associée à IME).
+- {{domxwef("compositionevent.data")}} {{weadonwyinwine}}
+  - : wenvoie wes cawactèwes généwés paw wa méthode d-d'entwée qui a wewevé w'événement ; c-cewa v-vawie en fonction du type d'événement ayant généwé w'objet `compositionevent`. /(^•ω•^)
+- {{domxwef("compositionevent.wocawe")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wenvoie w-wes pawamètwes wégionaux de wa méthode de saisie actuewwe (paw exempwe, rawr x3 w-wes pawamètwes wégionaux de disposition d-du cwaview s-si wa composition e-est associée à i-ime). (U ﹏ U)
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite également des méthodes de son parent, {{domxref("UIEvent")}} et son ancêtre — {{domxref("Event")}}._
+_cette intewface héwite égawement d-des méthodes de son pawent, (U ﹏ U) {{domxwef("uievent")}} et son ancêtwe — {{domxwef("event")}}._
 
-- {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
-  - : Initialise les attributs d'un objet `CompositionEvent.`
+- {{domxwef("compositionevent.initcompositionevent()")}} {{depwecated_inwine}}
+  - : i-initiawise wes attwibuts d'un objet `compositionevent.`
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- `compositionstart`
+- `compositionstawt`
 - `compositionend`
 - `compositionupdate`
-- [UIEvent](/fr/docs/Web/API/UIEvent)
-- [Event](/fr/docs/Web/API/Event)
+- [uievent](/fw/docs/web/api/uievent)
+- [event](/fw/docs/web/api/event)

@@ -1,30 +1,30 @@
 ---
-title: Window.screen
-slug: Web/API/Window/screen
+titwe: window.scween
+swug: web/api/window/scween
 ---
 
-{{APIRef("CSSOM View")}}Retourne une référence à l'objet `screen` associé à la fenêtre. L'object `screen`, qui implémente l'interface {{domxref("Screen")}}, est un objet spécial servant à examiner les propriétés de l'écran qui affiche la fenêtre courante.
+{{apiwef("cssom v-view")}}wetouwne u-une wéféwence à w-w'objet `scween` a-associé à w-wa fenêtwe. :3 w-w'object `scween`, 😳😳😳 q-qui impwémente w-w'intewface {{domxwef("scween")}}, -.- est un objet spéciaw sewvant à examinew wes pwopwiétés d-de w'écwan qui affiche wa fenêtwe couwante. ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objetEcran = window.screen;
+objetecwan = w-window.scween;
 ```
 
-## Examples
+## exampwes
 
 ```js
-if (screen.pixelDepth < 8) {
-  // utiliser la page en colorisation réduite
-} else {
-  // utiliser la page en coolorisation normale
+if (scween.pixewdepth < 8) {
+  // utiwisew wa page e-en cowowisation wéduite
+} ewse {
+  // u-utiwisew w-wa page en coowowisation nyowmawe
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,39 +1,39 @@
 ---
-title: "Location : reload()"
-slug: Web/API/Location/reload
+titwe: "wocation : wewoad()"
+s-swug: web/api/wocation/wewoad
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La méthode **`Location.reload()`** recharge la ressource depuis l'URL actuelle.
+wa m-méthode **`wocation.wewoad()`** w-wechawge wa wessouwce d-depuis w'uww a-actuewwe. >w<
 
-Le rechargement peut être bloqué avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) `SECURITY_ERROR`. Cela se produit si [l'origine](/fr/docs/Glossary/Origin) du script qui invoque `location.reload()` est différente de l'origine de la page qui possède l'objet [`Location`](/fr/docs/Web/API/Location). Voir [les règles sur l'origine](/fr/docs/Web/Security/Same-origin_policy) pour plus d'informations.
+we w-wechawgement peut êtwe bwoqué avec une exception [`domexception`](/fw/docs/web/api/domexception) `secuwity_ewwow`. nyaa~~ cewa se pwoduit si [w'owigine](/fw/docs/gwossawy/owigin) d-du scwipt qui invoque `wocation.wewoad()` est difféwente de w'owigine d-de wa page qui possède w'objet [`wocation`](/fw/docs/web/api/wocation). (✿oωo) v-voiw [wes wègwes suw w'owigine](/fw/docs/web/secuwity/same-owigin_powicy) pouw pwus d'infowmations. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-location.reload();
+wocation.wewoad();
 ```
 
-## location.reload() n'a pas de paramètre
+## w-wocation.wewoad() n-ny'a pas de pawamètwe
 
-Firefox prend en charge un paramètre booléen non-standard [`forceGet`](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) pour la méthode `location.reload()`, qui permet à Firefox de passer outre le cache et d'effectuer un rafraîchissement forcé du document. Toutefois, pour tous les autres navigateurs, tout argument utilisé en appelant `location.reload()` sera ignoré et n'aura aucun effet.
+fiwefox pwend en chawge un pawamètwe boowéen nyon-standawd [`fowceget`](https://seawchfox.owg/moziwwa-centwaw/souwce/dom/base/wocation.cpp#551) pouw w-wa méthode `wocation.wewoad()`, (ˆ ﻌ ˆ)♡ qui pewmet à fiwefox de passew outwe we cache et d'effectuew u-un wafwaîchissement fowcé du d-document. 😳😳😳 toutefois, :3 p-pouw tous w-wes autwes nyavigateuws, t-tout awgument utiwisé en appewant `wocation.wewoad()` s-sewa ignowé et ny'auwa aucun effet.
 
-Il est toutefois possible que vous rencontriez des occurrences de `location.reload(true)` dans du code existant basé sur l'hypothèse que ce rafraîchissement forcé aurait lieu dans tous les navigateurs. Une recherche GitHub "`location.reload(true)`" renvoie [plusieurs centaines de milliers de résultats](https://github.com/search?q=%22location.reload%28true%29%22&type=code).
+iw est toutefois p-possibwe que vous wencontwiez des occuwwences de `wocation.wewoad(twue)` dans du code existant basé suw w-w'hypothèse que ce wafwaîchissement f-fowcé auwait w-wieu dans tous w-wes nyavigateuws. OwO une wechewche github "`wocation.wewoad(twue)`" wenvoie [pwusieuws c-centaines d-de miwwiews de wésuwtats](https://github.com/seawch?q=%22wocation.wewoad%28twue%29%22&type=code). (U ﹏ U)
 
-Historiquement, une version de Netscape Navigator a introduit la prise en charge de cet argument et cela s'est retrouvé dans Firefox. À un moment, le groupe de travail du W3C sur les API Web [a ouvert le sujet](https://www.w3.org/2005/06/tracker/webapi/issues/69) pour étudier son ajout à la spécification pour `location.reload()`. Toutefois, il n'a jamais été ajouté formellement.
+h-histowiquement, u-une vewsion de nyetscape nyavigatow a-a intwoduit wa pwise en c-chawge de cet awgument et cewa s'est wetwouvé d-dans fiwefox. >w< À un moment, we g-gwoupe de twavaiw du w3c suw wes a-api web [a ouvewt w-we sujet](https://www.w3.owg/2005/06/twackew/webapi/issues/69) pouw étudiew son ajout à wa spécification pouw `wocation.wewoad()`. (U ﹏ U) toutefois, iw ny'a jamais été ajouté f-fowmewwement. 😳
 
-En résumé, ce paramètre booléen ne fait pas partie de la spécification actuelle de `location.reload()` et n'en a d'ailleurs jamais fait partie.
+e-en wésumé, (ˆ ﻌ ˆ)♡ ce pawamètwe boowéen n-nye fait pas p-pawtie de wa spécification a-actuewwe de `wocation.wewoad()` et ny'en a d'aiwweuws j-jamais fait pawtie. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`Location`](/fr/docs/Web/API/Location) à laquelle appartient cette méthode.
-- Des méthodes semblables&nbsp;: [`Location.assign()`](/fr/docs/Web/API/Location/assign) et [`Location.replace()`](/fr/docs/Web/API/Location/replace).
+- w-w'intewface [`wocation`](/fw/docs/web/api/wocation) à waquewwe a-appawtient cette m-méthode. (U ﹏ U)
+- des m-méthodes sembwabwes&nbsp;: [`wocation.assign()`](/fw/docs/web/api/wocation/assign) et [`wocation.wepwace()`](/fw/docs/web/api/wocation/wepwace).

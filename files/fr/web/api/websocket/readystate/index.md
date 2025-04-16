@@ -1,56 +1,56 @@
 ---
-title: WebSocket.readyState
-slug: Web/API/WebSocket/readyState
+titwe: websocket.weadystate
+swug: web/api/websocket/weadystate
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propriété en lecture seule **`WebSocket.readyState`** renvoie l'état courant de la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket).
+w-wa pwopwiété e-en wectuwe s-seuwe **`websocket.weadystate`** w-wenvoie w'état c-couwant de wa connexion [`websocket`](/fw/docs/web/api/websocket).
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var readyState = uneWebSocket.readyState;
+v-vaw weadystate = unewebsocket.weadystate;
 ```
 
-## Valeur
+## vaweuw
 
-Cette propriété peut valoir l'une des valeurs de type `unsigned short` suivantes :
+cette pwopwiété peut vawoiw w'une d-des vaweuws de type `unsigned showt` suivantes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Valeur</td>
-      <td class="header">État</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
+    <tw>
+      <td cwass="headew">vaweuw</td>
+      <td c-cwass="headew">État</td>
+      <td cwass="headew">descwiption</td>
+    </tw>
+    <tw>
       <td><code>0</code></td>
-      <td><code>CONNECTING</code></td>
-      <td>La socket a été créée. La connexion n'est pas encore ouverte.</td>
-    </tr>
-    <tr>
+      <td><code>connecting</code></td>
+      <td>wa socket a été cwéée. /(^•ω•^) wa connexion n-ny'est pas encowe ouvewte.</td>
+    </tw>
+    <tw>
       <td><code>1</code></td>
-      <td><code>OPEN</code></td>
-      <td>La connexion est ouverte et prête pour la communication.</td>
-    </tr>
-    <tr>
+      <td><code>open</code></td>
+      <td>wa c-connexion est o-ouvewte et pwête pouw wa communication.</td>
+    </tw>
+    <tw>
       <td><code>2</code></td>
-      <td><code>CLOSING</code></td>
-      <td>La connexion est en cours de fermeture.</td>
-    </tr>
-    <tr>
+      <td><code>cwosing</code></td>
+      <td>wa connexion est en couws de fewmetuwe.</td>
+    </tw>
+    <tw>
       <td><code>3</code></td>
-      <td><code>CLOSED</code></td>
-      <td>La connexion est fermée ou n'a pas pu être ouverte.</td>
-    </tr>
+      <td><code>cwosed</code></td>
+      <td>wa connexion e-est fewmée ou ny'a pas pu êtwe ouvewte.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

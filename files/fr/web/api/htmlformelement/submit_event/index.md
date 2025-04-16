@@ -1,34 +1,34 @@
 ---
-title: submit
-slug: Web/API/HTMLFormElement/submit_event
+titwe: submit
+swug: web/api/htmwfowmewement/submit_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `submit` est émis lorsqu'un formulaire est soumis au serveur.
+w-w'événement `submit` e-est émis wowsqu'un f-fowmuwaiwe e-est soumis au s-sewveuw. (⑅˘꒳˘)
 
-Notez que l'événement `submit` se déclenche **uniquement** sur [l'élement form](/fr/docs/Web/HTML/Element/form), et pas sur les éléments [button](/fr/docs/Web/HTML/Element/button) ou [input submit](/fr/docs/Web/HTML/Element/input/submit). (Les formulaires sont soumis, pas les boutons.)
+nyotez q-que w'événement `submit` s-se d-décwenche **uniquement** suw [w'éwement fowm](/fw/docs/web/htmw/ewement/fowm), (///ˬ///✿) et pas suw wes éwéments [button](/fw/docs/web/htmw/ewement/button) ou [input s-submit](/fw/docs/web/htmw/ewement/input/submit). 😳😳😳 (wes fowmuwaiwes sont soumis, 🥺 pas w-wes boutons.)
 
-## Informations générales
+## infowmations g-généwawes
 
-- Spécification
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#form-submission-algorithm)
-- Interface
-  - : {{domxref("Event")}}
-- Bouillonne
-  - : Oui (bien que spécifié comme un événement simple qui ne bouillonne pas)
-- Annulable
-  - : Oui
-- Cible
-  - : Élément
-- Action par défaut
-  - : Variable (envoie le contenu du formulaire au serveur)
+- spécification
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/association-of-contwows-and-fowms.htmw#fowm-submission-awgowithm)
+- intewface
+  - : {{domxwef("event")}}
+- bouiwwonne
+  - : oui (bien q-que spécifié comme un événement s-simpwe qui n-ne bouiwwonne pas)
+- annuwabwe
+  - : oui
+- cibwe
+  - : Éwément
+- action paw défaut
+  - : vawiabwe (envoie w-we contenu du fowmuwaiwe au sewveuw)
 
-## Propriétés
+## pwopwiétés
 
-| Propriété                       | Type                       | Description                                                        |
+| pwopwiété                       | t-type                       | descwiption                                                        |
 | ------------------------------- | -------------------------- | ------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la cible la plus haute dans l'arbre DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type de l'évènement.                                            |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si l'évènement bouillonne normalement ou non.                      |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si l'évènement est annulable ou non.                               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | w-wa cibwe de w'évènement (wa c-cibwe wa pwus haute d-dans w'awbwe d-dom). |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | we type de w'évènement. mya                                            |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | s-si w'évènement bouiwwonne nyowmawement ou nyon. 🥺                      |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | s-si w'évènement est annuwabwe ou nyon. >_<                               |

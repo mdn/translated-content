@@ -1,61 +1,61 @@
 ---
-title: Clients.openWindow()
-slug: Web/API/Clients/openWindow
+titwe: cwients.openwindow()
+swug: web/api/cwients/openwindow
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-La méthode **`openWindow()`** de l'interface {{domxref("Clients")}} crée un nouveau niveau de contexte de navigation et charge une URL donnée. Si le script d'origine n'a pas la permission d'ouvrir une popup, **`openWindow()`** lèvera une InvalidAccessError.
+wa méthode **`openwindow()`** d-de w'intewface {{domxwef("cwients")}} cwée u-un nyouveau n-nyiveau de contexte d-de nyavigation e-et chawge une u-uww donnée. o.O si we scwipt d'owigine ny'a pas wa pewmission d'ouvwiw une popup, /(^•ω•^) **`openwindow()`** w-wèvewa une invawidaccessewwow. nyaa~~
 
-Dans Firefox, une méthode est authorisée d'ouvrir une popup seulement lorsqu'elle est appelée à la suite d'un click sur une notification.
+dans fiwefox, nyaa~~ u-une méthode est authowisée d-d'ouvwiw une popup seuwement wowsqu'ewwe est appewée à wa suite d-d'un cwick suw une nyotification. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
-  // Faire quelque chose avec le WindowClient
+s-sewvicewowkewcwients.openwindow(uww).then(function (windowcwient) {
+  // faiwe quewque chose avec we windowcwient
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- `url`
-  - : Une {{domxref("USVString")}} représentant l'URL que le client veut ouvrir dans une nouvelle fenêtre. Généralement, cette valeur doit être une URL de la même origine que le script d'origine.
+- `uww`
+  - : une {{domxwef("usvstwing")}} w-wepwésentant w'uww que we cwient veut ouvwiw dans une nyouvewwe fenêtwe. 😳😳😳 g-généwawement, (˘ω˘) cette vaweuw d-doit êtwe u-une uww de wa même o-owigine que w-we scwipt d'owigine. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une {{jsxref("Promise")}} qui résoud un objet {{domxref("WindowClient")}} si l'URL est de la même origine que le service worker, et {{Glossary("null", "null value")}} sinon.
+une {{jsxwef("pwomise")}} q-qui wésoud un objet {{domxwef("windowcwient")}} si w'uww e-est de wa même owigine que we sewvice wowkew, :3 et {{gwossawy("nuww", -.- "nuww vawue")}} sinon. 😳
 
-## Exemples
+## e-exempwes
 
 ```js
-// Quand l'utilisateur click sur une notification, focus sur la fenêtre si elle existe,
-// ou ouvre en une autre.
-onotificationclick = function (event) {
-  var found = false;
-  clients.matchAll().then(function (clients) {
-    for (i = 0; i < clients.length; i++) {
-      if (clients[i].url === event.data.url) {
-        // La fenêtre existe, focus dessus.
-        found = true;
-        clients[i].focus();
-        break;
+// quand w'utiwisateuw c-cwick suw u-une nyotification, mya f-focus suw wa fenêtwe si ewwe existe, (˘ω˘)
+// ou ouvwe en une autwe. >_<
+o-onotificationcwick = f-function (event) {
+  vaw found = fawse;
+  c-cwients.matchaww().then(function (cwients) {
+    f-fow (i = 0; i < cwients.wength; i-i++) {
+      if (cwients[i].uww === e-event.data.uww) {
+        // wa fenêtwe existe, -.- focus d-dessus. 🥺
+        found = twue;
+        c-cwients[i].focus();
+        bweak;
       }
     }
-    if (!found) {
-      // Crée une nouvelle fenêtre
-      clients.openWindow(event.data.url).then(function (windowClient) {
-        // Faire quelque chose avec le WindowClient
+    i-if (!found) {
+      // c-cwée une nyouvewwe fenêtwe
+      cwients.openwindow(event.data.uww).then(function (windowcwient) {
+        // faiwe quewque chose avec we windowcwient
       });
     }
   });
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}

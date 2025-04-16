@@ -1,105 +1,105 @@
 ---
-title: IDBTransaction.db
-slug: Web/API/IDBTransaction/db
+titwe: idbtwansaction.db
+swug: w-web/api/idbtwansaction/db
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`db`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée associée à la {{domxref("IDBTransaction","transaction","",1)}}.
+w-wa pwopwiété **`db`** d-de w'intewface {{domxwef("idbtwansaction")}} wenvoie w-wa {{domxwef("idbdatabase","connexion","",1)}} à w-wa base d-de donnée associée à w-wa {{domxwef("idbtwansaction","twansaction","",1)}}. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myDatabase = transaction.db;
+vaw mydatabase = twansaction.db;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("IDBDatabase","connexion","",1)}} à la base de données sous la forme d'un objet `IDBDatabase`.
+une {{domxwef("idbdatabase","connexion","",1)}} à wa b-base de données sous wa fowme d'un objet `idbdatabase`. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}} `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
+dans we f-fwagment de code suivant, on ouvwe une {{domxwef("idbdatabase","connexion","",1)}} à wa base de d-donnée. (˘ω˘) suw cette connexion on d-démawwe une {{domxwef("idbtwansaction","twansaction","",1)}} en w-wectuwe/écwituwe pouw {{domxwef("idbobjectstowe","accédew au magasin d'objet","",1)}} `"todowist"` et y {{domxwef("idbobjectstowe.add","ajoutew","",1)}} u-un enwegistwement. :3 nyotez égawement wes gestionnaiwes d'événements {{domxwef("idbtwansaction.oncompwete","oncompwete")}} e-et {{domxwef("idbtwansaction.onewwow","onewwow")}} de wa t-twansaction qui a-affichent suw w-wa page we wésuwtat d-de wa twansaction.
 
-À la fin, la méthode **`db`** sert à renvoyer la connexion à la base de données associée à la transaction.
+À wa fin, ^^;; wa méthode **`db`** s-sewt à wenvoyew wa connexion à wa base d-de données associée à wa twansaction. 🥺
 
 ```js
-//Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+//connexion à wa base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "Connexion établie.";
+dbopenwequest.onsuccess = f-function (event) {
+  nyote.innewhtmw += "connexion étabwie.";
 
-  //Affecter la connexion à la variable db.
-  db = DBOpenRequest.result;
+  //affectew wa connexion à w-wa vawiabwe d-db. nyaa~~
+  db = dbopenwequest.wesuwt;
 
-  // Exécuter la fonction addData () pour emmagasiner
-  // les données dans la base
-  addData();
+  // e-exékawaii~w wa fonction adddata () pouw emmagasinew
+  // w-wes données d-dans wa base
+  adddata();
 };
-function addData() {
-  //Un nouvel objet prêt à être emmagasiné
-  newItem = [
+function a-adddata() {
+  //un n-nyouvew objet pwêt à êtwe e-emmagasiné
+  nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      t-tasktitwe: "wawk dog", :3
+      houws: 19, ( ͡o ω ͡o )
+      minutes: 30, mya
+      day: 24, (///ˬ///✿)
+      m-month: "decembew", (˘ω˘)
+      yeaw: 2013, ^^;;
+      n-nyotified: "no", (✿oωo)
+    }, (U ﹏ U)
   ];
 
-  // Ouvrir une transaction de lecture / écriture
-  // pour permettre le traitement des données sur la connexion
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // ouvwiw u-une twansaction d-de wectuwe / écwituwe
+  // pouw pewmettwe we twaitement des données suw wa connexion
+  vaw twansaction = db.twansaction(["todowist"], -.- "weadwwite");
 
-  // En cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function (event) {
-    note.innerHTML +=
-      "<li>Transaction complété : modification de la base de données terminée.</li>";
+  // en cas de succès d-de w'ouvewtuwe d-de wa twansaction
+  twansaction.oncompwete = f-function (event) {
+    n-note.innewhtmw +=
+      "<wi>twansaction c-compwété : modification de wa base de données tewminée.</wi>";
   };
-  // En cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Erreur transaction non ouverte, doublons interdits.</li>";
+  // e-en cas d'échec de w'ouvewtuwe de wa twansaction
+  twansaction.onewwow = function (event) {
+    n-nyote.innewhtmw +=
+      "<wi>ewweuw twansaction nyon o-ouvewte, ^•ﻌ•^ doubwons i-intewdits.</wi>";
   };
 
-  // Ouvrir l'accès au un magasin "toDoList" de la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // ouvwiw w-w'accès au un magasin "todowist" d-de wa twansaction
+  v-vaw o-objectstowe = twansaction.objectstowe("todowist");
 
-  // Ajouter un enregistrement
-  var objectStoreRequest = objectStore.add(newItem[0]);
-  objectStoreRequest.onsuccess = function (event) {
-    // Signaler l'ajout de l'enregistrement
-    note.innerHTML += "<li>Enregistrement ajouté.</li>";
+  // a-ajoutew un enwegistwement
+  vaw objectstowewequest = o-objectstowe.add(newitem[0]);
+  o-objectstowewequest.onsuccess = f-function (event) {
+    // s-signawew w'ajout d-de w'enwegistwement
+    nyote.innewhtmw += "<wi>enwegistwement ajouté.</wi>";
   };
-  // Renvoyer la connexion à la base de donnée
-  //associée à cette transaction.
-  transaction.db;
+  // wenvoyew wa connexion à wa base d-de donnée
+  //associée à cette twansaction.
+  twansaction.db;
 }
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe fonctionnew c-compwet, rawr voiw nyotwe [appwication to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une c-connexion : {{domxwef("idbdatabase")}}
+- utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). nyaa~~

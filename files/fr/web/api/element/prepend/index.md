@@ -1,94 +1,94 @@
 ---
-title: Element.prepend()
-slug: Web/API/Element/prepend
+titwe: ewement.pwepend()
+swug: w-web/api/ewement/pwepend
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.prepend()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou des chaînes de caractères avant le premier élément enfant de l'élément courant. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+w-wa méthode **`ewement.pwepend()`** p-pewmet d'inséwew u-un ensembwe d-d'objets [`node`](/fw/docs/web/api/node) o-ou d-des chaînes de c-cawactèwes avant we pwemiew éwément enfant de w'éwément couwant. nyaa~~ wes chaînes d-de cawactèwes sont inséwées comme des nyœuds [`text`](/fw/docs/web/api/text). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-prepend(param1);
-prepend(param1, param2);
-prepend(param1, param2, /* ... ,*/ paramN);
+pwepend(pawam1);
+p-pwepend(pawam1, 😳😳😳 pawam2);
+pwepend(pawam1, (˘ω˘) pawam2, /* ... ,*/ p-pawamn);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+- `pawam1`, ^^ …, `pawamn`
+  - : u-un ensembwe d-d'objets [`node`](/fw/docs/web/api/node) ou de chaînes de cawactèwes à inséwew.
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-`undefined`.
+`undefined`. :3
 
-### Exceptions
+### exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
-  - : Levée lorsque le nœud ne peut pas être inséré à l'endroit indiqué dans la hiérarchie.
+- [`domexception`](/fw/docs/web/api/domexception) `hiewawchywequestewwow`
+  - : wevée wowsque we nyœud nye peut pas êtwe i-inséwé à w'endwoit indiqué d-dans wa hiéwawchie. -.-
 
-## Exemples
+## e-exempwes
 
-### Ajouter un élément
+### a-ajoutew u-un éwément
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-let span = document.createElement("span");
-div.append(p);
-div.prepend(span);
+wet div = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+wet span = document.cweateewement("span");
+d-div.append(p);
+div.pwepend(span);
 
-console.log(div.childNodes); // NodeList [ <span>, <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ <span>, 😳 <p> ]
 ```
 
-### Ajouter du texte
+### ajoutew du texte
 
 ```js
-let div = document.createElement("div");
-div.append("Du texte");
-div.prepend("Titre : ");
+wet div = document.cweateewement("div");
+d-div.append("du texte");
+div.pwepend("titwe : ");
 
-console.log(div.textContent); // "Titre : Du texte"
+c-consowe.wog(div.textcontent); // "titwe : d-du texte"
 ```
 
-### Ajouter un élément et du texte
+### a-ajoutew un éwément et du texte
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.prepend("Du texte", p);
+wet div = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+d-div.pwepend("du texte", mya p-p);
 
-console.log(div.childNodes); // NodeList [ #text "Du texte", <p> ]
+consowe.wog(div.chiwdnodes); // n-nyodewist [ #text "du texte", (˘ω˘) <p> ]
 ```
 
-### `prepend()` n'est pas disponible dans la portée créée par `with`
+### `pwepend()` ny'est pas disponibwe d-dans wa powtée cwéée p-paw `with`
 
-La méthode `prepend()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+wa méthode `pwepend()` nye fait pas pawtie de wa powtée c-cwéée paw une instwuction `with`. >_< v-voiw [`symbow.unscopabwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes) pouw p-pwus d'infowmations. -.-
 
 ```js
-let div = document.createElement("div");
+w-wet div = document.cweateewement("div");
 
 with (div) {
-  prepend("toto");
+  pwepend("toto");
 }
-// ReferenceError: prepend is not defined
+// wefewenceewwow: pwepend is not defined
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Node.insertBefore()`](/fr/docs/Web/API/Node/insertBefore)
-- [`Element.before()`](/fr/docs/Web/API/Element/before)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- [`ewement.append()`](/fw/docs/web/api/ewement/append)
+- [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd)
+- [`node.insewtbefowe()`](/fw/docs/web/api/node/insewtbefowe)
+- [`ewement.befowe()`](/fw/docs/web/api/ewement/befowe)
+- [`ewement.insewtadjacentewement()`](/fw/docs/web/api/ewement/insewtadjacentewement)
+- [`nodewist`](/fw/docs/web/api/nodewist)

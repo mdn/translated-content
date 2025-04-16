@@ -1,75 +1,75 @@
 ---
-title: IDBObjectStore.openKeyCursor()
-slug: Web/API/IDBObjectStore/openKeyCursor
+titwe: idbobjectstowe.openkeycuwsow()
+swug: web/api/idbobjectstowe/openkeycuwsow
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`openKeyCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} dont le résultat sera un curseur ({{domxref("IDBCursor")}}) qui pourra être utilisé afin de parcourir les enregistrements correspondants. Cette méthode est utilisée afin de parcourir les clés d'un magasin d'objets grâce à un curseur.
+w-wa méthode **`openkeycuwsow()`**, mya w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, ʘwʘ w-wenvoie u-un objet {{domxwef("idbwequest")}} d-dont we w-wésuwtat sewa u-un cuwseuw ({{domxwef("idbcuwsow")}}) qui pouwwa êtwe utiwisé afin de pawcouwiw wes enwegistwements c-cowwespondants. (˘ω˘) cette méthode est utiwisée a-afin de pawcouwiw wes cwés d'un m-magasin d'objets gwâce à un cuwseuw. (U ﹏ U)
 
-Afin de déterminer si le curseur a bien été ajouté, on pourra écouter l'évènement `success` sur le résultat de la méthode.
+afin de détewminew s-si we cuwseuw a bien été ajouté, ^•ﻌ•^ o-on pouwwa écoutew w-w'évènement `success` suw we wésuwtat de wa méthode. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+vaw wequete = o-objectstowe.openkeycuwsow(optionawkeywange, :3 optionawdiwection);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `optionalKeyRange`
-  - : L'intervalle de clés qu'on souhaite parcourir. Si une seule clé est fournie, l'intervalle constitué ne contiendra que cette clé. Si aucune valeur n'est passée en argument, le curseur produit parcourera tous les enregistrements du magasin d'objets.
-- `optionalDirection`
-  - : Un objet {{domxref("IDBCursorDirection")}} qui indique la direction dans laquelle le curseur doit parcourir les évènements. La valeur par défaut est `"next"`.
+- `optionawkeywange`
+  - : w'intewvawwe de cwés qu'on souhaite p-pawcouwiw. ^^;; si une seuwe cwé e-est fouwnie, 🥺 w-w'intewvawwe constitué n-nye contiendwa q-que cette cwé. si aucune vaweuw ny'est p-passée en awgument, (⑅˘꒳˘) we cuwseuw pwoduit pawcouwewa t-tous wes enwegistwements du magasin d'objets. nyaa~~
+- `optionawdiwection`
+  - : un objet {{domxwef("idbcuwsowdiwection")}} qui indique w-wa diwection dans waquewwe we c-cuwseuw doit pawcouwiw w-wes évènements. :3 w-wa vaweuw paw défaut est `"next"`. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différents évènements relatifs à cette opération.
+u-un objet {{domxwef("idbwequest")}} s-suw wequew sewont décwenchés w-wes difféwents évènements w-wewatifs à cette opéwation. mya
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant l'un des types suivants :
+cette méthode p-peut décwenchew une exception {{domxwef("domexception")}} ayant w-w'un des types suivants :
 
-| Exception                  | Description                                                                                             |
+| e-exception                  | descwiption                                                                                             |
 | -------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Le magasin d'objets ({{domxref("IDBObjectStore")}} ou l'index ({{domxref("IDBIndex")}}) a été supprimé. |
-| `TransactionInactiveError` | La transaction associée au magasin d'objet ({{domxref("IDBObjectStore")}}) est inactive.                |
-| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                    |
+| `invawidstateewwow`        | w-we magasin d'objets ({{domxwef("idbobjectstowe")}} o-ou w'index ({{domxwef("idbindex")}}) a été suppwimé. (///ˬ///✿) |
+| `twansactioninactiveewwow` | wa twansaction associée au magasin d'objet ({{domxwef("idbobjectstowe")}}) e-est inactive.                |
+| `dataewwow`                | w-wa cwé ou w'intewvawwe de c-cwés indiqué e-est invawide. (˘ω˘)                                                    |
 
-## Exemples
+## e-exempwes
 
-Dans le fragment de code suivant, on crée une transaction, on l'utilise sur un magasin d'objets donné puis on utilise le curseur pour parcourir tous les enregistrements du magasin d'objets :
+dans we fwagment de code suivant, ^^;; on cwée une t-twansaction, (✿oωo) on w'utiwise suw un magasin d'objets donné puis on utiwise we cuwseuw p-pouw pawcouwiw tous wes enwegistwements d-du magasin d-d'objets :
 
 ```js
-var transaction = db.transaction("name", "readonly");
-var objectStore = transaction.objectStore("name");
-var request = objectStore.openKeyCursor();
-request.onsuccess = function (event) {
-  var cursor = event.target.result;
-  if (cursor) {
-    // cursor.key contient la clé de l'enregistrement courant
-    // à la différence de openCursor, il n'y a pas de cursor.value
-    cursor.continue();
-  } else {
-    // Il n'y a plus d'autres résultats
+v-vaw twansaction = db.twansaction("name", (U ﹏ U) "weadonwy");
+vaw o-objectstowe = t-twansaction.objectstowe("name");
+v-vaw wequest = o-objectstowe.openkeycuwsow();
+wequest.onsuccess = function (event) {
+  v-vaw cuwsow = e-event.tawget.wesuwt;
+  i-if (cuwsow) {
+    // cuwsow.key c-contient w-wa cwé de w'enwegistwement couwant
+    // à wa difféwence de opencuwsow, -.- iw ny'y a pas de c-cuwsow.vawue
+    cuwsow.continue();
+  } ewse {
+    // iw ny'y a pwus d'autwes wésuwtats
   }
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une c-connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^•ﻌ•^

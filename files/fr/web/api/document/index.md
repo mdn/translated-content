@@ -1,465 +1,465 @@
 ---
-title: Document
-slug: Web/API/Document
+titwe: document
+swug: web/api/document
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
+w-w'intewface **`document`** w-wepwésente n-ny'impowte q-quewwe page w-web chawgée dans w-we nyavigateuw e-et sewt de point d-d'entwée pouw accédew au contenu de wa page qui est fowmé paw [w'awbwe du dom](/fw/docs/web/api/document_object_modew/using_the_document_object_modew). (U ᵕ U❁)
 
-L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Element/body), [`<table>`](/fr/docs/Web/HTML/Element/table) et [tous les autres](/fr/docs/Web/HTML/Element) présents dans la page. Il fournit des fonctionnalités à l'ensemble du document et permet, par exemple, d'obtenir l'URL de la page et de créer de nouveaux éléments dans le document.
+w-w'awbwe du dom incwut wes éwéments t-tews que [`<body>`](/fw/docs/web/htmw/ewement/body), mya [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) et [tous wes a-autwes](/fw/docs/web/htmw/ewement) pwésents dans wa page. ʘwʘ iw fouwnit des fonctionnawités à w-w'ensembwe du document et pewmet, (˘ω˘) p-paw exempwe, 😳 d'obteniw w-w'uww de wa page et de cwéew de nyouveaux éwéments dans we document. òωó
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-L'interface `Document` décrit les propriétés et méthodes communes à toutes sortes de documents. Selon le type de document (par exemple [HTML](/fr/docs/Web/HTML), [XML](/fr/docs/Web/XML), SVG, etc.), une API plus grande pourra être disponible. Ainsi, les documents HTML, servis avec le type de contenu `text/html` implémenteront également l'interface [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument) tandis que les documents XML et SVG implémenteront l'interface [`XMLDocument`](/fr/docs/Web/API/XMLDocument).
+w'intewface `document` d-décwit wes pwopwiétés et méthodes communes à toutes sowtes de documents. nyaa~~ sewon w-we type de document (paw exempwe [htmw](/fw/docs/web/htmw), o.O [xmw](/fw/docs/web/xmw), nyaa~~ s-svg, (U ᵕ U❁) etc.), u-une api pwus g-gwande pouwwa êtwe d-disponibwe. 😳😳😳 ainsi, (U ﹏ U) wes documents htmw, ^•ﻌ•^ sewvis a-avec we type de contenu `text/htmw` impwémentewont égawement w-w'intewface [`htmwdocument`](/fw/docs/web/api/htmwdocument) tandis que wes documents xmw et svg impwémentewont w'intewface [`xmwdocument`](/fw/docs/web/api/xmwdocument). (⑅˘꒳˘)
 
-## Constructeur
+## constwucteuw
 
-- [`Document()`](/fr/docs/Web/API/Document/Document)
-  - : Crée un nouvel objet `Document`.
+- [`document()`](/fw/docs/web/api/document/document)
+  - : c-cwée un nyouvew objet `document`. >_<
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette i-intewface h-héwite égawement des intewfaces [`node`](/fw/docs/web/api/node) et [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`Document.activeElement`](/fr/docs/Web/API/Document/activeElement) {{ReadOnlyInline}}
-  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui possède le focus.
-- [`Document.body`](/fr/docs/Web/API/Document/body)
-  - : Renvoie le nœud [`<body>`](/fr/docs/Web/HTML/Element/body) ou [`<frameset>`](/fr/docs/Web/HTML/Element/frameset) du document courant.
-- [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet) {{ReadOnlyInline}}
-  - : Renvoie le jeu de caractères utilisé par le document.
-- [`Document.childElementCount`](/fr/docs/Web/API/Document/childElementCount) {{readonlyInline}}
-  - : Renvoie le nombre d'éléments enfants pour le document courant.
-- [`Document.children`](/fr/docs/Web/API/Document/children) {{readonlyInline}}
-  - : Renvoie les éléments enfants pour le document courant.
-- [`Document.compatMode`](/fr/docs/Web/API/Document/compatMode) {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Indique si le document est rendu à l'écran selon le mode _quirks_ ou _strict_.
-- [`Document.contentType`](/fr/docs/Web/API/Document/contentType) {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Renvoie le type MIME du document courant.
-- [`Document.currentScript`](/fr/docs/Web/API/Document/currentScript) {{ReadOnlyInline}}
-  - : Renvoie l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) dont le script est actuellement en cours de traitement et [qui n'est pas un module JavaScript](https://github.com/whatwg/html/issues/997).
-- [`Document.doctype`](/fr/docs/Web/API/Document/doctype) {{ReadOnlyInline}}
-  - : Renvoie la définition du type de document (<i lang="en">Document Type Definition</i> ou DTD) du document courant.
-- [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement) {{ReadOnlyInline}}
-  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui est un enfant direct du document. Pour les documents HTML, il s'agit normalement d'un objet [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement) qui représente l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) du document.
-- [`Document.documentURI`](/fr/docs/Web/API/Document/documentURI) {{ReadOnlyInline}}
-  - : Renvoie l'emplacement du document sous la forme d'une chaîne de caractères.
-- [`Document.embeds`](/fr/docs/Web/API/Document/embeds) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments embarqués (via [`<embed>`](/fr/docs/Web/HTML/Element/embed)) dans le document.
-- [`Document.firstElementChild`](/fr/docs/Web/API/Document/firstElementChild) {{readonlyInline}}
-  - : Renvoie le premier élément enfant du document courant.
-- [`Document.fonts`](/fr/docs/Web/API/Document/fonts)
-  - : Renvoie l'interface [`FontFaceSet`](/fr/docs/Web/API/FontFaceSet) pour le document courant.
-- [`Document.forms`](/fr/docs/Web/API/Document/forms) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Element/form) du document.
-- [`Document.fullscreenElement`](/fr/docs/Web/API/Document/fullscreenElement) {{ReadOnlyInline}}
-  - : Renvoie l'élément actuellement en mode plein écran pour ce document.
-- [`Document.head`](/fr/docs/Web/API/Document/head) {{ReadOnlyInline}}
-  - : Renvoie l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) pour le document courant.
-- [`Document.hidden`](/fr/docs/Web/API/Document/hidden) {{ReadOnlyInline}}
-  - : Renvoie une valeur booléenne qui indique si la page est considérée masquée ou non.
-- [`Document.images`](/fr/docs/Web/API/Document/images) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des images du document.
-- [`Document.implementation`](/fr/docs/Web/API/Document/implementation) {{ReadOnlyInline}}
-  - : Renvoie l'implémentation du DOM associée au document courant.
-- [`Document.lastElementChild`](/fr/docs/Web/API/Document/lastElementChild) {{readonlyInline}}
-  - : Renvoie le dernier élément enfant du document courant.
-- [`Document.links`](/fr/docs/Web/API/Document/links) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant l'ensemble des hyperliens du document.
-- [`Document.mozSyntheticDocument`](/fr/docs/Web/API/Document) {{Non-standard_Inline}}
-  - : Renvoie `true` uniquement si le document est synthétique (par exemple une page indépendante, un fichier audio ou vidéo).
-- [`Document.pictureInPictureElement`](/fr/docs/Web/API/Document/pictureInPictureElement) {{ReadOnlyInline}}
-  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) pour l'élément affiché en mode d'incrustation vidéo (<i lang="en">picture-in-picture</i>) pour ce document.
-- [`Document.pictureInPictureEnabled`](/fr/docs/Web/API/Document/pictureInPictureEnabled) {{ReadOnlyInline}}
-  - : Renvoie `true` si la fonctionnalité d'incrustation vidéo est activée.
-- [`Document.plugins`](/fr/docs/Web/API/Document/plugins) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les plugins disponibles.
-- [`Document.pointerLockElement`](/fr/docs/Web/API/Document/pointerLockElement) {{ReadOnlyInline}}
-  - : Renvoie l'élément définit comme cible pour les évènements de souris pendant que le pointeur est verrouillé. Cette propriété vaut `null` si le verrouillage est en cours, si le pointeur est déverrouillé ou si la cible est située dans un autre document.
-- [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Renvoie l'interface [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) qui fournit une API pour l'introspection des règles de fonctionnalité (<i lang="en">feature policies</i>) appliquées au document.
-- [`Document.scripts`](/fr/docs/Web/API/Document/scripts) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
-- [`Document.scrollingElement`](/fr/docs/Web/API/Document/scrollingElement) {{ReadOnlyInline}}
-  - : Renvoie une référence à l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui fait défiler le document.
-- [`Document.styleSheets`](/fr/docs/Web/API/Document/styleSheets) {{ReadOnlyInline}}
-  - : Renvoie un objet [`StyleSheetList`](/fr/docs/Web/API/StyleSheetList) contenant les objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet) pour les feuilles de style CSS liées explicitement ou embarquées dans le document.
-- [`Document.timeline`](/fr/docs/Web/API/Document/timeline) {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Renvoie la chronologie, sous la forme d'une instance [`DocumentTimeline`](/fr/docs/Web/API/DocumentTimeline), qui est automatiquement créée au chargement de la page.
-- [`Document.visibilityState`](/fr/docs/Web/API/Document/visibilityState) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères qui indique l'état de visibilité du document. Les valeurs possibles sont `visible`, `hidden`, `prerender`, et `unloaded`.
+- [`document.activeewement`](/fw/docs/web/api/document/activeewement) {{weadonwyinwine}}
+  - : wenvoie w'objet [`ewement`](/fw/docs/web/api/ewement) c-cowwespondant à w-w'éwément qui possède w-we focus. (⑅˘꒳˘)
+- [`document.body`](/fw/docs/web/api/document/body)
+  - : w-wenvoie we nyœud [`<body>`](/fw/docs/web/htmw/ewement/body) o-ou [`<fwameset>`](/fw/docs/web/htmw/ewement/fwameset) du d-document couwant. σωσ
+- [`document.chawactewset`](/fw/docs/web/api/document/chawactewset) {{weadonwyinwine}}
+  - : wenvoie we jeu de cawactèwes utiwisé p-paw we document. 🥺
+- [`document.chiwdewementcount`](/fw/docs/web/api/document/chiwdewementcount) {{weadonwyinwine}}
+  - : wenvoie we nyombwe d-d'éwéments enfants pouw we document c-couwant. :3
+- [`document.chiwdwen`](/fw/docs/web/api/document/chiwdwen) {{weadonwyinwine}}
+  - : w-wenvoie wes éwéments enfants pouw we document couwant. (ꈍᴗꈍ)
+- [`document.compatmode`](/fw/docs/web/api/document/compatmode) {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : indique si we document est wendu à w'écwan sewon w-we mode _quiwks_ o-ou _stwict_. ^•ﻌ•^
+- [`document.contenttype`](/fw/docs/web/api/document/contenttype) {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : wenvoie we type m-mime du document c-couwant. (˘ω˘)
+- [`document.cuwwentscwipt`](/fw/docs/web/api/document/cuwwentscwipt) {{weadonwyinwine}}
+  - : w-wenvoie w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) dont we scwipt est actuewwement e-en couws de twaitement et [qui ny'est pas un moduwe javascwipt](https://github.com/naniwg/htmw/issues/997).
+- [`document.doctype`](/fw/docs/web/api/document/doctype) {{weadonwyinwine}}
+  - : wenvoie wa définition d-du type de document (<i wang="en">document t-type definition</i> o-ou dtd) du d-document couwant. 🥺
+- [`document.documentewement`](/fw/docs/web/api/document/documentewement) {{weadonwyinwine}}
+  - : wenvoie w'objet [`ewement`](/fw/docs/web/api/ewement) c-cowwespondant à w-w'éwément q-qui est u-un enfant diwect du document. (✿oωo) pouw wes documents h-htmw, XD iw s'agit n-nyowmawement d'un o-objet [`htmwhtmwewement`](/fw/docs/web/api/htmwhtmwewement) qui w-wepwésente w'éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw) d-du document. (///ˬ///✿)
+- [`document.documentuwi`](/fw/docs/web/api/document/documentuwi) {{weadonwyinwine}}
+  - : wenvoie w'empwacement du document s-sous wa fowme d'une chaîne de cawactèwes. ( ͡o ω ͡o )
+- [`document.embeds`](/fw/docs/web/api/document/embeds) {{weadonwyinwine}}
+  - : wenvoie un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) des éwéments embawqués (via [`<embed>`](/fw/docs/web/htmw/ewement/embed)) dans w-we document. ʘwʘ
+- [`document.fiwstewementchiwd`](/fw/docs/web/api/document/fiwstewementchiwd) {{weadonwyinwine}}
+  - : wenvoie we pwemiew éwément enfant du document c-couwant. rawr
+- [`document.fonts`](/fw/docs/web/api/document/fonts)
+  - : w-wenvoie w-w'intewface [`fontfaceset`](/fw/docs/web/api/fontfaceset) pouw we document c-couwant. o.O
+- [`document.fowms`](/fw/docs/web/api/document/fowms) {{weadonwyinwine}}
+  - : wenvoie u-un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) d-des éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) du document. ^•ﻌ•^
+- [`document.fuwwscweenewement`](/fw/docs/web/api/document/fuwwscweenewement) {{weadonwyinwine}}
+  - : wenvoie w'éwément actuewwement en mode pwein écwan p-pouw ce document. (///ˬ///✿)
+- [`document.head`](/fw/docs/web/api/document/head) {{weadonwyinwine}}
+  - : wenvoie w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head) pouw w-we document couwant. (ˆ ﻌ ˆ)♡
+- [`document.hidden`](/fw/docs/web/api/document/hidden) {{weadonwyinwine}}
+  - : w-wenvoie u-une vaweuw boowéenne qui indique si wa page est c-considéwée m-masquée ou nyon. XD
+- [`document.images`](/fw/docs/web/api/document/images) {{weadonwyinwine}}
+  - : wenvoie un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) d-des images d-du document. (✿oωo)
+- [`document.impwementation`](/fw/docs/web/api/document/impwementation) {{weadonwyinwine}}
+  - : wenvoie w'impwémentation du dom associée au document couwant. -.-
+- [`document.wastewementchiwd`](/fw/docs/web/api/document/wastewementchiwd) {{weadonwyinwine}}
+  - : w-wenvoie we d-dewniew éwément e-enfant du document couwant. XD
+- [`document.winks`](/fw/docs/web/api/document/winks) {{weadonwyinwine}}
+  - : w-wenvoie u-un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) contenant w'ensembwe d-des hypewwiens du document. (✿oωo)
+- [`document.mozsyntheticdocument`](/fw/docs/web/api/document) {{non-standawd_inwine}}
+  - : wenvoie `twue` uniquement si we document est synthétique (paw e-exempwe une page i-indépendante, (˘ω˘) un fichiew audio ou vidéo). (ˆ ﻌ ˆ)♡
+- [`document.pictuweinpictuweewement`](/fw/docs/web/api/document/pictuweinpictuweewement) {{weadonwyinwine}}
+  - : w-wenvoie w'objet [`ewement`](/fw/docs/web/api/ewement) p-pouw w'éwément affiché en mode d'incwustation vidéo (<i w-wang="en">pictuwe-in-pictuwe</i>) pouw ce document. >_<
+- [`document.pictuweinpictuweenabwed`](/fw/docs/web/api/document/pictuweinpictuweenabwed) {{weadonwyinwine}}
+  - : wenvoie `twue` si wa fonctionnawité d'incwustation v-vidéo est activée. -.-
+- [`document.pwugins`](/fw/docs/web/api/document/pwugins) {{weadonwyinwine}}
+  - : wenvoie un o-objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) c-contenant wes pwugins disponibwes. (///ˬ///✿)
+- [`document.pointewwockewement`](/fw/docs/web/api/document/pointewwockewement) {{weadonwyinwine}}
+  - : wenvoie w'éwément d-définit c-comme cibwe pouw wes évènements de souwis pendant que we pointeuw e-est vewwouiwwé. XD cette pwopwiété v-vaut `nuww` si we vewwouiwwage est en couws, ^^;; si we pointeuw e-est dévewwouiwwé ou si wa c-cibwe est située d-dans un autwe document. rawr x3
+- [`document.featuwepowicy`](/fw/docs/web/api/document/featuwepowicy) {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : w-wenvoie w'intewface [`featuwepowicy`](/fw/docs/web/api/featuwepowicy) qui fouwnit u-une api pouw w-w'intwospection d-des wègwes de fonctionnawité (<i w-wang="en">featuwe p-powicies</i>) appwiquées au document. OwO
+- [`document.scwipts`](/fw/docs/web/api/document/scwipts) {{weadonwyinwine}}
+  - : w-wenvoie un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) c-contenant w-wes éwéments [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) du document. ʘwʘ
+- [`document.scwowwingewement`](/fw/docs/web/api/document/scwowwingewement) {{weadonwyinwine}}
+  - : w-wenvoie une wéféwence à w'objet [`ewement`](/fw/docs/web/api/ewement) c-cowwespondant à w-w'éwément qui fait défiwew we document. rawr
+- [`document.stywesheets`](/fw/docs/web/api/document/stywesheets) {{weadonwyinwine}}
+  - : wenvoie un objet [`stywesheetwist`](/fw/docs/web/api/stywesheetwist) c-contenant wes o-objets [`cssstywesheet`](/fw/docs/web/api/cssstywesheet) p-pouw w-wes feuiwwes de stywe css wiées e-expwicitement ou embawquées dans we document. UwU
+- [`document.timewine`](/fw/docs/web/api/document/timewine) {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : wenvoie wa chwonowogie, sous wa fowme d-d'une instance [`documenttimewine`](/fw/docs/web/api/documenttimewine), (ꈍᴗꈍ) qui e-est automatiquement cwéée au chawgement d-de wa page. (✿oωo)
+- [`document.visibiwitystate`](/fw/docs/web/api/document/visibiwitystate) {{weadonwyinwine}}
+  - : w-wenvoie une chaîne de c-cawactèwes qui i-indique w'état d-de visibiwité du d-document. (⑅˘꒳˘) wes v-vaweuws possibwes sont `visibwe`, OwO `hidden`, 🥺 `pwewendew`, >_< et `unwoaded`. (ꈍᴗꈍ)
 
-### Extensions pour `HTMLDocument`
+### extensions pouw `htmwdocument`
 
-_L'interface `Document` pour les documents HTML hérite de l'interface [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument). Depuis HTML5, ce n'est plus un héritage mais une extension de l'interface pour ces documents._
+_w'intewface `document` pouw wes documents htmw héwite d-de w'intewface [`htmwdocument`](/fw/docs/web/api/htmwdocument). 😳 d-depuis htmw5, 🥺 c-ce ny'est pwus un héwitage mais u-une extension de w'intewface pouw ces documents._
 
-- [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
-  - : Renvoie une liste, dont les éléments sont séparés par des points-virgules, des cookies du document ou permet de définir un cookie.
-- [`Document.defaultView`](/fr/docs/Web/API/Document/defaultView) {{ReadOnlyInline}}
-  - : Renvoie une référence à l'objet de la fenêtre.
-- [`Document.designMode`](/fr/docs/Web/API/Document/designMode)
-  - : Permet d'accéder ou de définir la possibilité d'éditer l'ensemble du document.
-- [`Document.dir`](/fr/docs/Web/API/Document/dir)
-  - : Permet d'accéder ou de définir la directionnalité (écriture de droite à gauche ou de gauche à droite) du document.
-- [`Document.domain`](/fr/docs/Web/API/Document/domain) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir le domaine du document courant.
-- [`Document.lastModified`](/fr/docs/Web/API/Document/lastModified) {{ReadOnlyInline}}
-  - : Renvoie la date à laquelle le document a été modifié pour la dernière fois.
-- [`Document.location`](/fr/docs/Web/API/Document/location) {{ReadOnlyInline}}
-  - : Renvoie l'URI du document courant.
-- [`Document.readyState`](/fr/docs/Web/API/Document/readyState) {{ReadOnlyInline}}
-  - : Renvoie l'état de chargement du document.
-- [`Document.referrer`](/fr/docs/Web/API/Document/referrer) {{ReadOnlyInline}}
-  - : Renvoie l'URI de la page qui a lié vers cette page.
-- [`Document.title`](/fr/docs/Web/API/Document/title)
-  - : Permet d'accéder ou de définir le titre du document courant.
-- [`Document.URL`](/fr/docs/Web/API/Document/URL) {{ReadOnlyInline}}
-  - : Renvoie l'emplacement du document sous la forme d'une chaîne de caractères.
+- [`document.cookie`](/fw/docs/web/api/document/cookie)
+  - : wenvoie une w-wiste, nyaa~~ dont wes éwéments s-sont sépawés paw des p-points-viwguwes, ^•ﻌ•^ des cookies du document ou pewmet d-de définiw u-un cookie. (ˆ ﻌ ˆ)♡
+- [`document.defauwtview`](/fw/docs/web/api/document/defauwtview) {{weadonwyinwine}}
+  - : wenvoie u-une wéféwence à w-w'objet de wa fenêtwe. (U ᵕ U❁)
+- [`document.designmode`](/fw/docs/web/api/document/designmode)
+  - : pewmet d'accédew ou de définiw wa possibiwité d-d'éditew w'ensembwe d-du document. mya
+- [`document.diw`](/fw/docs/web/api/document/diw)
+  - : p-pewmet d-d'accédew ou d-de définiw wa diwectionnawité (écwituwe d-de dwoite à g-gauche ou de gauche à d-dwoite) du document. 😳
+- [`document.domain`](/fw/docs/web/api/document/domain) {{depwecated_inwine}}
+  - : p-pewmet d'accédew ou de d-définiw we domaine du document couwant.
+- [`document.wastmodified`](/fw/docs/web/api/document/wastmodified) {{weadonwyinwine}}
+  - : w-wenvoie wa date à waquewwe w-we document a été m-modifié pouw wa dewnièwe f-fois. σωσ
+- [`document.wocation`](/fw/docs/web/api/document/wocation) {{weadonwyinwine}}
+  - : wenvoie w'uwi du document c-couwant.
+- [`document.weadystate`](/fw/docs/web/api/document/weadystate) {{weadonwyinwine}}
+  - : w-wenvoie w-w'état de chawgement du document. ( ͡o ω ͡o )
+- [`document.wefewwew`](/fw/docs/web/api/document/wefewwew) {{weadonwyinwine}}
+  - : wenvoie w'uwi de wa page q-qui a wié vews cette page. XD
+- [`document.titwe`](/fw/docs/web/api/document/titwe)
+  - : pewmet d-d'accédew ou de d-définiw we titwe du document c-couwant. :3
+- [`document.uww`](/fw/docs/web/api/document/uww) {{weadonwyinwine}}
+  - : wenvoie w'empwacement d-du document s-sous wa fowme d'une chaîne de cawactèwes. :3
 
-### Gestionnaires d'évènement
+### g-gestionnaiwes d'évènement
 
-_L'interface `Document` est étendue avec des gestionnaires d'évènement supplémentaires définis dans l'interface [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers#gestionnaires_dévènement)._
+_w'intewface `document` est étendue a-avec des g-gestionnaiwes d'évènement suppwémentaiwes définis d-dans w'intewface [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews#gestionnaiwes_dévènement)._
 
-- [`GlobalEventHandlers.onselectionchange`](/fr/docs/Web/API/HTMLInputElement/selectionchange_event) {{Experimental_Inline}}
-  - : Un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) qui représente le code à appeler lorsque l'évènement [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event) est déclenché.
+- [`gwobaweventhandwews.onsewectionchange`](/fw/docs/web/api/htmwinputewement/sewectionchange_event) {{expewimentaw_inwine}}
+  - : un [gestionnaiwe d-d'évènement](/fw/docs/web/events/event_handwews) q-qui w-wepwésente we code à appewew wowsque w'évènement [`sewectionchange`](/fw/docs/web/api/document/sewectionchange_event) est décwenché. (⑅˘꒳˘)
 
-### Propriétés dépréciées
+### pwopwiétés dépwéciées
 
-- [`Document.alinkColor`](/fr/docs/Web/API/Document/alinkColor) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir la couleur des liens actifs pour le corps du document.
-- [`Document.all`](/fr/docs/Web/API/Document/all) {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fournit un accès à tous les éléments du document. Elle renvoie un objet [`HTMLAllCollection`](/fr/docs/Web/API/HTMLAllCollection) dont la racine est le nœud du document. Il s'agit d'une propriété historique non-standard qui ne devrait pas être utilisée.
-- [`Document.anchors`](/fr/docs/Web/API/Document/anchors) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Renvoie une liste de toutes les ancres du document.
-- [`Document.applets`](/fr/docs/Web/API/Document/applets) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Renvoie une liste ordonnée des applets contenus dans le document.
-- [`Document.bgColor`](/fr/docs/Web/API/Document/bgColor) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir la couleur d'arrière-plan du document courant.
-- [`Document.charset`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Un synonyme de [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet), cette dernière devrait être utilisée à la place.
-- [`Document.fgColor`](/fr/docs/Web/API/Document/fgColor) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir la couleur de premier plan ou la couleur du texte du document courant.
-- [`Document.fullscreen`](/fr/docs/Web/API/Document/fullscreen) {{deprecated_inline}}
-  - : `true` lorsque le document est en [mode plein écran](/fr/docs/Web/API/Fullscreen_API).
-- [`Document.height`](/fr/docs/Web/API/Element/clientHeight) {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Permet d'accéder ou de définir la hauteur du document courant.
-- [`Document.inputEncoding`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Un synonyme de [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet), cette dernière devrait être utilisée à la place.
-- [`Document.lastStyleSheetSet`](/fr/docs/Web/API/Document/lastStyleSheetSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Renvoie le nom de la feuille de styles qui a été activée en dernière. Vaut `null` jusqu'à ce que la feuille de style soit changée avec la définition de la valeur [`selectedStyleSheetSet`](/fr/docs/Web/API/Document/selectedStyleSheetSet).
-- [`Document.linkColor`](/fr/docs/Web/API/Document/linkColor) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir la couleur des hyperliens contenus dans le document.
-- [`Document.preferredStyleSheetSet`](/fr/docs/Web/API/Document/preferredStyleSheetSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Renvoie l'ensemble de feuilles de styles préféré comme indiqué par l'autrice ou l'auteur de la page.
-- [`Document.rootElement`](/fr/docs/Web/API/Document/rootElement) {{Deprecated_Inline}}
-  - : Agit comme [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement), mais uniquement pour les éléments racines [`<svg>`](/fr/docs/Web/SVG/Element/svg). C'est cette dernière qu'il faudra utiliser à la place.
-- [`Document.selectedStyleSheetSet`](/fr/docs/Web/API/Document/selectedStyleSheetSet) {{deprecated_inline}}
-  - : Renvoie l'ensemble de feuilles de styles actuellement utilisé.
-- [`Document.styleSheetSets`](/fr/docs/Web/API/Document/styleSheetSets) {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Renvoie une liste des ensembles de feuilles de styles disponibles sur le document.
-- [`Document.vlinkColor`](/fr/docs/Web/API/Document/vlinkColor) {{Deprecated_Inline}}
-  - : Permet d'accéder ou de définir la couleur des hyperliens visités.
-- [`Document.width`](/fr/docs/Web/API/Element/clientWidth) {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Renvoie la largeur du document courant.
-- [`Document.xmlEncoding`](/fr/docs/Web/API/Document/xmlEncoding) {{Deprecated_Inline}}
-  - : Renvoie l'encodage tel que déterminé par la déclaration XML.
-- [`Document.xmlStandalone`](/fr/docs/Web/API/Document/xmlStandalone) {{deprecated_inline}}
-  - : Renvoie `true` si la déclaration XML indique que le document est autonome (par exemple qu'une partie externe du DTD affecte le contenu du document), `false` sinon.
-- [`Document.xmlVersion`](/fr/docs/Web/API/Document/xmlVersion) {{deprecated_inline}}
-  - : Renvoie le numéro de version tel qu'indiqué dans la déclaration XML, ou `1.0` si la déclaration est absente.
+- [`document.awinkcowow`](/fw/docs/web/api/document/awinkcowow) {{depwecated_inwine}}
+  - : pewmet d'accédew ou de définiw wa couweuw des wiens actifs pouw we cowps du document. òωó
+- [`document.aww`](/fw/docs/web/api/document/aww) {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : fouwnit un accès à tous w-wes éwéments du d-document. mya ewwe wenvoie un objet [`htmwawwcowwection`](/fw/docs/web/api/htmwawwcowwection) dont w-wa wacine est we n-nyœud du document. 😳😳😳 i-iw s'agit d'une pwopwiété h-histowique nyon-standawd qui nye d-devwait pas êtwe u-utiwisée. :3
+- [`document.anchows`](/fw/docs/web/api/document/anchows) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : wenvoie u-une wiste de toutes wes ancwes d-du document. >_<
+- [`document.appwets`](/fw/docs/web/api/document/appwets) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : w-wenvoie une wiste owdonnée des appwets contenus d-dans we document. 🥺
+- [`document.bgcowow`](/fw/docs/web/api/document/bgcowow) {{depwecated_inwine}}
+  - : pewmet d-d'accédew o-ou de définiw w-wa couweuw d'awwièwe-pwan d-du document c-couwant.
+- [`document.chawset`](/fw/docs/web/api/document/chawactewset) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : u-un s-synonyme de [`document.chawactewset`](/fw/docs/web/api/document/chawactewset), (ꈍᴗꈍ) c-cette dewnièwe devwait êtwe utiwisée à w-wa pwace. rawr x3
+- [`document.fgcowow`](/fw/docs/web/api/document/fgcowow) {{depwecated_inwine}}
+  - : p-pewmet d-d'accédew ou de définiw wa couweuw d-de pwemiew pwan ou wa couweuw du texte du d-document couwant. (U ﹏ U)
+- [`document.fuwwscween`](/fw/docs/web/api/document/fuwwscween) {{depwecated_inwine}}
+  - : `twue` wowsque we d-document est en [mode p-pwein écwan](/fw/docs/web/api/fuwwscween_api). ( ͡o ω ͡o )
+- [`document.height`](/fw/docs/web/api/ewement/cwientheight) {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : p-pewmet d'accédew ou de d-définiw wa hauteuw du document c-couwant. 😳😳😳
+- [`document.inputencoding`](/fw/docs/web/api/document/chawactewset) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : un s-synonyme de [`document.chawactewset`](/fw/docs/web/api/document/chawactewset), 🥺 cette dewnièwe devwait êtwe u-utiwisée à wa pwace. òωó
+- [`document.waststywesheetset`](/fw/docs/web/api/document/waststywesheetset) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : wenvoie we nom de wa feuiwwe de stywes qui a été a-activée en dewnièwe. XD vaut `nuww` j-jusqu'à c-ce que wa feuiwwe de stywe soit changée avec wa définition de w-wa vaweuw [`sewectedstywesheetset`](/fw/docs/web/api/document/sewectedstywesheetset). XD
+- [`document.winkcowow`](/fw/docs/web/api/document/winkcowow) {{depwecated_inwine}}
+  - : pewmet d'accédew o-ou de définiw w-wa couweuw des h-hypewwiens contenus dans we document. ( ͡o ω ͡o )
+- [`document.pwefewwedstywesheetset`](/fw/docs/web/api/document/pwefewwedstywesheetset) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : wenvoie w-w'ensembwe d-de feuiwwes de stywes pwéféwé c-comme indiqué paw w'autwice ou w'auteuw de wa p-page. >w<
+- [`document.wootewement`](/fw/docs/web/api/document/wootewement) {{depwecated_inwine}}
+  - : agit comme [`document.documentewement`](/fw/docs/web/api/document/documentewement), mya m-mais uniquement p-pouw wes éwéments w-wacines [`<svg>`](/fw/docs/web/svg/ewement/svg). (ꈍᴗꈍ) c'est c-cette dewnièwe q-qu'iw faudwa u-utiwisew à wa pwace. -.-
+- [`document.sewectedstywesheetset`](/fw/docs/web/api/document/sewectedstywesheetset) {{depwecated_inwine}}
+  - : w-wenvoie w'ensembwe de feuiwwes d-de stywes a-actuewwement utiwisé. (⑅˘꒳˘)
+- [`document.stywesheetsets`](/fw/docs/web/api/document/stywesheetsets) {{depwecated_inwine}} {{weadonwyinwine}}
+  - : wenvoie u-une wiste d-des ensembwes de f-feuiwwes de stywes d-disponibwes s-suw we document. (U ﹏ U)
+- [`document.vwinkcowow`](/fw/docs/web/api/document/vwinkcowow) {{depwecated_inwine}}
+  - : p-pewmet d'accédew o-ou de définiw wa couweuw des hypewwiens v-visités. σωσ
+- [`document.width`](/fw/docs/web/api/ewement/cwientwidth) {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : wenvoie wa wawgeuw d-du document c-couwant. :3
+- [`document.xmwencoding`](/fw/docs/web/api/document/xmwencoding) {{depwecated_inwine}}
+  - : w-wenvoie w'encodage tew que détewminé paw wa décwawation x-xmw. /(^•ω•^)
+- [`document.xmwstandawone`](/fw/docs/web/api/document/xmwstandawone) {{depwecated_inwine}}
+  - : w-wenvoie `twue` s-si wa décwawation xmw indique que we document est autonome (paw e-exempwe q-qu'une pawtie extewne du dtd affecte w-we contenu d-du document), σωσ `fawse` sinon. (U ᵕ U❁)
+- [`document.xmwvewsion`](/fw/docs/web/api/document/xmwvewsion) {{depwecated_inwine}}
+  - : wenvoie we nyuméwo de v-vewsion tew qu'indiqué d-dans wa d-décwawation xmw, 😳 o-ou `1.0` si wa décwawation est absente. ʘwʘ
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite également des méthodes des interfaces [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget) interfaces._
+_cette i-intewface héwite égawement des méthodes des intewfaces [`node`](/fw/docs/web/api/node) e-et [`eventtawget`](/fw/docs/web/api/eventtawget) intewfaces._
 
-- [`Document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)
-  - : Adopte un nœud d'un document externe.
-- [`Document.append()`](/fr/docs/Web/API/Document/append)
-  - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) après le dernier enfant du document.
-- [`Document.captureEvents()`](/fr/docs/Web/API/Document/captureEvents) {{Deprecated_Inline}}
-  - : Voir [`Window.captureEvents`](/fr/docs/Web/API/Window/captureEvents).
-- [`Document.caretPositionFromPoint()`](/fr/docs/Web/API/Document/caretPositionFromPoint)
-  - : Renvoie un objet [`CaretPosition`](/fr/docs/Web/API/CaretPosition) qui contient le nœud DOM contenant le curseur et le décalage du curseur au sein de ce nœud.
-- [`Document.caretRangeFromPoint()`](/fr/docs/Web/API/Document/caretRangeFromPoint) {{Non-standard_Inline}}
-  - : Obtient un objet [`Range`](/fr/docs/Web/API/Range) pour le fragment de document situé aux coordonnées indiquées.
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-  - : Crée un nouvel objet [`Attr`](/fr/docs/Web/API/Attr) et le renvoie.
-- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
-  - : Crée un nouveau nœud d'attribut dans un espace de noms donné et le renvoie.
-- [`Document.createCDATASection()`](/fr/docs/Web/API/Document/createCDATASection)
-  - : Crée un nouveau nœud CDATA et le renvoie.
-- [`Document.createComment()`](/fr/docs/Web/API/Document/createComment)
-  - : Crée un nouveau nœud de commentaire et le renvoie.
-- [`Document.createDocumentFragment()`](/fr/docs/Web/API/Document/createDocumentFragment)
-  - : Crée un nouveau fragment de document.
-- [`Document.createElement()`](/fr/docs/Web/API/Document/createElement)
-  - : Crée un nouvel élément avec le nom de balise indiqué.
-- [`Document.createElementNS()`](/fr/docs/Web/API/Document/createElementNS)
-  - : Crée un nouvel élément avec le nom de balise indiqué et l'espace de noms passé via un URI.
-- [`Document.createEntityReference()`](/fr/docs/Web/API/Document) {{deprecated_inline}}
-  - : Crée un nouvel objet de référence d'entité et le renvoie.
-- [`Document.createEvent()`](/fr/docs/Web/API/Document/createEvent)
-  - : Crée un objet d'évènement.
-- [`Document.createNodeIterator()`](/fr/docs/Web/API/Document/createNodeIterator)
-  - : Crée un objet [`NodeIterator`](/fr/docs/Web/API/NodeIterator).
-- [`Document.createProcessingInstruction()`](/fr/docs/Web/API/Document/createProcessingInstruction)
-  - : Crée un nouvel objet [`ProcessingInstruction`](/fr/docs/Web/API/ProcessingInstruction).
-- [`Document.createRange()`](/fr/docs/Web/API/Document/createRange)
-  - : Crée un objet [`Range`](/fr/docs/Web/API/Range).
-- [`Document.createTextNode()`](/fr/docs/Web/API/Document/createTextNode)
-  - : Crée un nœud texte.
-- [`Document.createTouch()`](/fr/docs/Web/API/Document/createTouch) {{Deprecated_Inline}}
-  - : Crée un objet [`Touch`](/fr/docs/Web/API/Touch).
-- [`Document.createTouchList()`](/fr/docs/Web/API/Document/createTouchList) {{Deprecated_Inline}}
-  - : Crée un objet [`TouchList`](/fr/docs/Web/API/TouchList).
-- [`Document.createTreeWalker()`](/fr/docs/Web/API/Document/createTreeWalker)
-  - : Crée un objet [`TreeWalker`](/fr/docs/Web/API/TreeWalker).
-- [`Document.elementFromPoint()`](/fr/docs/Web/API/Document/elementFromPoint)
-  - : Renvoie l'élément situé le plus en haut pour les coordonnées indiquées.
-- [`Document.elementsFromPoint()`](/fr/docs/Web/API/Document/elementsFromPoint)
-  - : Renvoie un tableau de tous les éléments situés aux coordonnées indiquées.
-- [`Document.enableStyleSheetsForSet()`](/fr/docs/Web/API/Document/enableStyleSheetsForSet) {{deprecated_inline}}
-  - : Active les feuilles de styles pour l'ensemble de feuilles de styles indiqué.
-- [`Document.exitPictureInPicture()`](/fr/docs/Web/API/Document/exitPictureInPicture)
-  - : Retire la vidéo de la fenêtre d'incrustation vidéo pour la replacer dans son conteneur original.
-- [`Document.exitPointerLock()`](/fr/docs/Web/API/Document/exitPointerLock) {{Experimental_Inline}}
-  - : Relâche le verrou du pointeur.
-- [`Document.getAnimations()`](/fr/docs/Web/API/Document/getAnimations)
-  - : Renvoie un tableau contenant tous les objets [`Animation`](/fr/docs/Web/API/Animation) actuellement actifs et dont les éléments cibles sont des descendants du document courant.
-- [`Document.getBoxQuads()`](/fr/docs/Web/API/Document/getBoxQuads) {{experimental_inline}}
-  - : Renvoie une liste d'objets [`DOMQuad`](/fr/docs/Web/API/DOMQuad) qui représente les fragments CSS du nœud.
-- [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById)
-  - : Renvoie une référence objet vers l'élément identifié.
-- [`Document.getElementsByClassName()`](/fr/docs/Web/API/Document/getElementsByClassName)
-  - : Renvoie une liste d'éléments avec le nom de classe indiqué.
-- [`Document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName)
-  - : Renvoie une liste d'éléments avec la balise indiquée.
-- [`Document.getElementsByTagNameNS()`](/fr/docs/Web/API/Document/getElementsByTagNameNS)
-  - : Renvoie une liste d'éléments avec le nom de balise et pour l'espace de noms indiqués.
-- [`Document.getSelection()`](/fr/docs/Web/API/Document/getSelection)
-  - : Renvoie un objet [`Selection`](/fr/docs/Web/API/Selection) qui représente la portion de texte sélectionnée par l'utilisatrice ou l'utilisateur, ou la position du curseur.
-- [`Document.hasStorageAccess()`](/fr/docs/Web/API/Document/hasStorageAccess) {{Experimental_Inline}}
-  - : Renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolu avec une valeur booléenne selon que le document a accès à du stockage de premier rang.
-- [`Document.importNode()`](/fr/docs/Web/API/Document/importNode)
-  - : Renvoie un clone d'un nœud d'un document externe.
-- [`Document.normalizeDocument()`](/fr/docs/Web/API/Document/normalizeDocument) {{deprecated_inline}}
-  - : Remplace les entités et normalise les nœuds textuels, etc.
-- [`Document.prepend()`](/fr/docs/Web/API/Document/prepend)
-  - : Insère un ensemble d'objet [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) avant le premier enfant du document.
-- [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector)
-  - : Renvoie le premier nœud `Element` au sein du document, selon l'ordre du document, qui correspond aux sélecteurs indiqués.
-- [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-  - : Renvoie une liste de tous les nœuds `Element` du document qui correspondent aux sélecteurs indiqués.
-- [`Document.releaseCapture()`](/fr/docs/Web/API/Document/releaseCapture) {{Non-standard_Inline}}
-  - : Relâche la capture de la souris si celle-ci est sur un élément du document courant.
-- [`Document.releaseEvents()`](/fr/docs/Web/API/Document/releaseEvents) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Voir [`Window.releaseEvents()`](/fr/docs/Web/API/Window/releaseEvents).
-- [`Document.replaceChildren()`](/fr/docs/Web/API/Document/replaceChildren)
-  - : Remplace l'enfant existant du document avec un ensemble de nouveaux enfants indiqué.
-- [`Document.requestStorageAccess()`](/fr/docs/Web/API/Document/requestStorageAccess)
-  - : Renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolu si l'accès au stockage de premier rang a été accordé et qui est rompu si l'accès a été refusé.
-- [`Document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) {{Non-standard_Inline}}
-  - : Permet de changer l'élément utilisé comme image d'arrière-plan par un élément dont on passe l'identifiant en argument.
+- [`document.adoptnode()`](/fw/docs/web/api/document/adoptnode)
+  - : adopte un nyœud d-d'un document extewne. (⑅˘꒳˘)
+- [`document.append()`](/fw/docs/web/api/document/append)
+  - : i-insèwe u-un ensembwe d'objets [`node`](/fw/docs/web/api/node) ou d'objets [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) a-apwès w-we dewniew enfant du document. ^•ﻌ•^
+- [`document.captuweevents()`](/fw/docs/web/api/document/captuweevents) {{depwecated_inwine}}
+  - : v-voiw [`window.captuweevents`](/fw/docs/web/api/window/captuweevents). nyaa~~
+- [`document.cawetpositionfwompoint()`](/fw/docs/web/api/document/cawetpositionfwompoint)
+  - : wenvoie u-un objet [`cawetposition`](/fw/docs/web/api/cawetposition) q-qui c-contient we nyœud d-dom contenant we cuwseuw et w-we décawage du c-cuwseuw au sein d-de ce nyœud.
+- [`document.cawetwangefwompoint()`](/fw/docs/web/api/document/cawetwangefwompoint) {{non-standawd_inwine}}
+  - : obtient un objet [`wange`](/fw/docs/web/api/wange) p-pouw we fwagment de document situé aux coowdonnées i-indiquées. XD
+- [`document.cweateattwibute()`](/fw/docs/web/api/document/cweateattwibute)
+  - : c-cwée un nyouvew o-objet [`attw`](/fw/docs/web/api/attw) et we wenvoie. /(^•ω•^)
+- [`document.cweateattwibutens()`](/fw/docs/web/api/document/cweateattwibutens)
+  - : cwée un nyouveau nyœud d'attwibut d-dans un espace de nyoms donné e-et we wenvoie. (U ᵕ U❁)
+- [`document.cweatecdatasection()`](/fw/docs/web/api/document/cweatecdatasection)
+  - : c-cwée un nyouveau nyœud cdata et we w-wenvoie. mya
+- [`document.cweatecomment()`](/fw/docs/web/api/document/cweatecomment)
+  - : cwée un n-nyouveau nyœud d-de commentaiwe e-et we wenvoie. (ˆ ﻌ ˆ)♡
+- [`document.cweatedocumentfwagment()`](/fw/docs/web/api/document/cweatedocumentfwagment)
+  - : cwée u-un nouveau f-fwagment de document. (✿oωo)
+- [`document.cweateewement()`](/fw/docs/web/api/document/cweateewement)
+  - : cwée un nyouvew éwément avec we nyom de bawise indiqué. (✿oωo)
+- [`document.cweateewementns()`](/fw/docs/web/api/document/cweateewementns)
+  - : cwée un nyouvew éwément a-avec we nyom de bawise i-indiqué et w'espace de noms passé via un uwi. òωó
+- [`document.cweateentitywefewence()`](/fw/docs/web/api/document) {{depwecated_inwine}}
+  - : cwée un nyouvew o-objet de wéféwence d'entité et we wenvoie. (˘ω˘)
+- [`document.cweateevent()`](/fw/docs/web/api/document/cweateevent)
+  - : cwée un objet d'évènement. (ˆ ﻌ ˆ)♡
+- [`document.cweatenodeitewatow()`](/fw/docs/web/api/document/cweatenodeitewatow)
+  - : c-cwée un objet [`nodeitewatow`](/fw/docs/web/api/nodeitewatow). ( ͡o ω ͡o )
+- [`document.cweatepwocessinginstwuction()`](/fw/docs/web/api/document/cweatepwocessinginstwuction)
+  - : c-cwée un nyouvew objet [`pwocessinginstwuction`](/fw/docs/web/api/pwocessinginstwuction). rawr x3
+- [`document.cweatewange()`](/fw/docs/web/api/document/cweatewange)
+  - : cwée u-un objet [`wange`](/fw/docs/web/api/wange). (˘ω˘)
+- [`document.cweatetextnode()`](/fw/docs/web/api/document/cweatetextnode)
+  - : cwée un nyœud texte.
+- [`document.cweatetouch()`](/fw/docs/web/api/document/cweatetouch) {{depwecated_inwine}}
+  - : c-cwée un o-objet [`touch`](/fw/docs/web/api/touch). òωó
+- [`document.cweatetouchwist()`](/fw/docs/web/api/document/cweatetouchwist) {{depwecated_inwine}}
+  - : cwée un objet [`touchwist`](/fw/docs/web/api/touchwist). ( ͡o ω ͡o )
+- [`document.cweatetweewawkew()`](/fw/docs/web/api/document/cweatetweewawkew)
+  - : c-cwée un objet [`tweewawkew`](/fw/docs/web/api/tweewawkew). σωσ
+- [`document.ewementfwompoint()`](/fw/docs/web/api/document/ewementfwompoint)
+  - : wenvoie w'éwément s-situé we pwus en haut pouw wes coowdonnées indiquées. (U ﹏ U)
+- [`document.ewementsfwompoint()`](/fw/docs/web/api/document/ewementsfwompoint)
+  - : w-wenvoie un tabweau de tous wes éwéments situés a-aux coowdonnées i-indiquées. rawr
+- [`document.enabwestywesheetsfowset()`](/fw/docs/web/api/document/enabwestywesheetsfowset) {{depwecated_inwine}}
+  - : a-active wes feuiwwes de stywes pouw w'ensembwe d-de feuiwwes de stywes indiqué. -.-
+- [`document.exitpictuweinpictuwe()`](/fw/docs/web/api/document/exitpictuweinpictuwe)
+  - : wetiwe wa vidéo de wa fenêtwe d'incwustation v-vidéo pouw wa w-wepwacew dans s-son conteneuw owiginaw. ( ͡o ω ͡o )
+- [`document.exitpointewwock()`](/fw/docs/web/api/document/exitpointewwock) {{expewimentaw_inwine}}
+  - : w-wewâche we vewwou du pointeuw. >_<
+- [`document.getanimations()`](/fw/docs/web/api/document/getanimations)
+  - : wenvoie un tabweau c-contenant tous w-wes objets [`animation`](/fw/docs/web/api/animation) actuewwement actifs et dont w-wes éwéments cibwes sont des descendants du d-document couwant. o.O
+- [`document.getboxquads()`](/fw/docs/web/api/document/getboxquads) {{expewimentaw_inwine}}
+  - : wenvoie une wiste d'objets [`domquad`](/fw/docs/web/api/domquad) q-qui wepwésente w-wes fwagments css du nyœud. σωσ
+- [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid)
+  - : w-wenvoie une wéféwence o-objet v-vews w'éwément identifié. -.-
+- [`document.getewementsbycwassname()`](/fw/docs/web/api/document/getewementsbycwassname)
+  - : wenvoie u-une wiste d'éwéments avec we nyom de cwasse i-indiqué. σωσ
+- [`document.getewementsbytagname()`](/fw/docs/web/api/document/getewementsbytagname)
+  - : wenvoie une wiste d'éwéments avec wa b-bawise indiquée. :3
+- [`document.getewementsbytagnamens()`](/fw/docs/web/api/document/getewementsbytagnamens)
+  - : w-wenvoie une wiste d-d'éwéments a-avec we nyom de b-bawise et pouw w'espace de nyoms i-indiqués. ^^
+- [`document.getsewection()`](/fw/docs/web/api/document/getsewection)
+  - : wenvoie un objet [`sewection`](/fw/docs/web/api/sewection) q-qui wepwésente wa powtion d-de texte séwectionnée paw w'utiwisatwice ou w'utiwisateuw, òωó o-ou w-wa position du cuwseuw. (ˆ ﻌ ˆ)♡
+- [`document.hasstowageaccess()`](/fw/docs/web/api/document/hasstowageaccess) {{expewimentaw_inwine}}
+  - : wenvoie un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui est wésowu avec u-une vaweuw boowéenne s-sewon que we document a accès à d-du stockage d-de pwemiew wang. XD
+- [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode)
+  - : wenvoie u-un cwone d'un nœud d'un document extewne. òωó
+- [`document.nowmawizedocument()`](/fw/docs/web/api/document/nowmawizedocument) {{depwecated_inwine}}
+  - : wempwace w-wes entités et nyowmawise w-wes nœuds textuews, (ꈍᴗꈍ) etc.
+- [`document.pwepend()`](/fw/docs/web/api/document/pwepend)
+  - : insèwe u-un ensembwe d-d'objet [`node`](/fw/docs/web/api/node) o-ou [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) avant we pwemiew e-enfant du document. UwU
+- [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow)
+  - : w-wenvoie we pwemiew nyœud `ewement` a-au sein du document, >w< sewon w-w'owdwe du document, ʘwʘ qui cowwespond a-aux séwecteuws i-indiqués. :3
+- [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww)
+  - : wenvoie une wiste de tous wes nœuds `ewement` du document q-qui cowwespondent a-aux séwecteuws indiqués. ^•ﻌ•^
+- [`document.weweasecaptuwe()`](/fw/docs/web/api/document/weweasecaptuwe) {{non-standawd_inwine}}
+  - : wewâche wa captuwe de wa s-souwis si cewwe-ci est suw un éwément d-du document c-couwant. (ˆ ﻌ ˆ)♡
+- [`document.weweaseevents()`](/fw/docs/web/api/document/weweaseevents) {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : voiw [`window.weweaseevents()`](/fw/docs/web/api/window/weweaseevents). 🥺
+- [`document.wepwacechiwdwen()`](/fw/docs/web/api/document/wepwacechiwdwen)
+  - : wempwace w'enfant existant du document avec u-un ensembwe de nyouveaux enfants indiqué. OwO
+- [`document.wequeststowageaccess()`](/fw/docs/web/api/document/wequeststowageaccess)
+  - : w-wenvoie un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui e-est wésowu si w'accès au stockage d-de pwemiew w-wang a été accowdé e-et qui est w-wompu si w'accès a-a été wefusé. 🥺
+- [`document.mozsetimageewement()`](/fw/docs/web/api/document/mozsetimageewement) {{non-standawd_inwine}}
+  - : p-pewmet de changew w'éwément utiwisé comme image d'awwièwe-pwan paw un éwément dont on p-passe w'identifiant e-en awgument. OwO
 
-L'interface `Document` est étendue avec l'interface [`XPathEvaluator`](/fr/docs/Web/API/XPathEvaluator)&nbsp;:
+w-w'intewface `document` e-est étendue a-avec w'intewface [`xpathevawuatow`](/fw/docs/web/api/xpathevawuatow)&nbsp;:
 
-- [`Document.createExpression()`](/fr/docs/Web/API/Document/createExpression)
-  - : Compile une expression [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
-- [`Document.createNSResolver()`](/fr/docs/Web/API/Document/createNSResolver)
-  - : Crée un objet [`XPathNSResolver`](/fr/docs/Web/API/Node/lookupNamespaceURI).
-- [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
-  - : Évalue une expression XPath.
+- [`document.cweateexpwession()`](/fw/docs/web/api/document/cweateexpwession)
+  - : c-compiwe une expwession [`xpathexpwession`](/fw/docs/web/api/xpathexpwession) qui peut ensuite êtwe utiwisée pouw des évawuations (wépétées). (U ᵕ U❁)
+- [`document.cweatenswesowvew()`](/fw/docs/web/api/document/cweatenswesowvew)
+  - : cwée u-un objet [`xpathnswesowvew`](/fw/docs/web/api/node/wookupnamespaceuwi). ( ͡o ω ͡o )
+- [`document.evawuate()`](/fw/docs/web/api/document/evawuate)
+  - : Évawue u-une expwession xpath. ^•ﻌ•^
 
-### Extension pour les documents HTML
+### extension pouw wes documents h-htmw
 
-Pour les documents HTML, l'interface `Document` hérite de [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument). Depuis HTML5, ce n'est plus un héritage mais une extension de l'interface pour ces documents.
+pouw wes d-documents htmw, w-w'intewface `document` héwite de [`htmwdocument`](/fw/docs/web/api/htmwdocument). o.O depuis htmw5, (⑅˘꒳˘) c-ce ny'est pwus un héwitage mais une extension d-de w'intewface pouw c-ces documents. (ˆ ﻌ ˆ)♡
 
-- [`Document.clear()`](/fr/docs/Web/API/Document/clear) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Pour la majorité des navigateurs récents, y compris pour les versions récentes de Firefox et d'Internet Explorer, cette méthode ne fait rien.
-- [`Document.close()`](/fr/docs/Web/API/Document/close)
-  - : Ferme le flux d'écriture sur un document.
-- [`Document.execCommand()`](/fr/docs/Web/API/Document/execCommand) {{deprecated_inline}}
-  - : Pour un document éditable, exécute une commande de formatage.
-- [`Document.getElementsByName()`](/fr/docs/Web/API/Document/getElementsByName)
-  - : Renvoie une liste des éléments avec le nom indiqué.
-- [`Document.hasFocus()`](/fr/docs/Web/API/Document/hasFocus)
-  - : Renvoie `true` si le focus est situé à l'intérieur du document indiqué.
-- [`Document.open()`](/fr/docs/Web/API/Document/open)
-  - : Ouvre le flux d'écriture sur un document.
-- [`Document.queryCommandEnabled()`](/fr/docs/Web/API/Document/queryCommandEnabled) {{deprecated_inline}}
-  - : Renvoie `true` si la commande de formatage peut être exécutée sur l'intervalle indiqué.
-- [`Document.queryCommandIndeterm()`](/fr/docs/Web/API/Document/queryCommandIndeterm) {{deprecated_inline}}
-  - : Renvoie `true` si la commande de formatage est dans un état indéterminé pour l'intervalle courant.
-- [`Document.queryCommandState()`](/fr/docs/Web/API/Document/queryCommandState) {{deprecated_inline}}
-  - : Renvoie `true` si la commande de formatage a été exécutée sur l'intervalle courant.
-- [`Document.queryCommandSupported()`](/fr/docs/Web/API/Document/queryCommandSupported) {{deprecated_inline}}
-  - : Renvoie `true` si la commande de formatage est prise en charge sur l'intervalle courant.
-- [`Document.queryCommandValue()`](/fr/docs/Web/API/Document/queryCommandValue) {{deprecated_inline}}
-  - : Renvoie la valeur de l'intervalle courant pour une commande de formatage.
-- [`Document.write()`](/fr/docs/Web/API/Document/write)
-  - : Écrit du texte dans un document.
-- [`Document.writeln()`](/fr/docs/Web/API/Document/writeln)
-  - : Écrit une ligne de texte dans un document.
+- [`document.cweaw()`](/fw/docs/web/api/document/cweaw) {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : pouw wa majowité des nyavigateuws w-wécents, :3 y compwis pouw wes v-vewsions wécentes d-de fiwefox et d'intewnet expwowew, /(^•ω•^) c-cette méthode n-nye fait wien. òωó
+- [`document.cwose()`](/fw/docs/web/api/document/cwose)
+  - : f-fewme we fwux d-d'écwituwe suw u-un document. :3
+- [`document.execcommand()`](/fw/docs/web/api/document/execcommand) {{depwecated_inwine}}
+  - : p-pouw un document éditabwe, (˘ω˘) e-exékawaii~ u-une commande de fowmatage. 😳
+- [`document.getewementsbyname()`](/fw/docs/web/api/document/getewementsbyname)
+  - : w-wenvoie une wiste des éwéments avec we nyom i-indiqué.
+- [`document.hasfocus()`](/fw/docs/web/api/document/hasfocus)
+  - : wenvoie `twue` s-si we focus est situé à w'intéwieuw d-du document i-indiqué. σωσ
+- [`document.open()`](/fw/docs/web/api/document/open)
+  - : ouvwe we fwux d'écwituwe s-suw un document. UwU
+- [`document.quewycommandenabwed()`](/fw/docs/web/api/document/quewycommandenabwed) {{depwecated_inwine}}
+  - : wenvoie `twue` si wa commande d-de fowmatage p-peut êtwe exécutée suw w'intewvawwe indiqué. -.-
+- [`document.quewycommandindetewm()`](/fw/docs/web/api/document/quewycommandindetewm) {{depwecated_inwine}}
+  - : w-wenvoie `twue` s-si wa commande de fowmatage est d-dans un état indétewminé pouw w'intewvawwe c-couwant. 🥺
+- [`document.quewycommandstate()`](/fw/docs/web/api/document/quewycommandstate) {{depwecated_inwine}}
+  - : w-wenvoie `twue` si wa commande d-de fowmatage a-a été exécutée suw w'intewvawwe couwant. 😳😳😳
+- [`document.quewycommandsuppowted()`](/fw/docs/web/api/document/quewycommandsuppowted) {{depwecated_inwine}}
+  - : w-wenvoie `twue` s-si wa commande de f-fowmatage est p-pwise en chawge suw w'intewvawwe couwant. 🥺
+- [`document.quewycommandvawue()`](/fw/docs/web/api/document/quewycommandvawue) {{depwecated_inwine}}
+  - : wenvoie wa vaweuw de w'intewvawwe couwant pouw une commande d-de fowmatage. ^^
+- [`document.wwite()`](/fw/docs/web/api/document/wwite)
+  - : Écwit d-du texte dans u-un document. ^^;;
+- [`document.wwitewn()`](/fw/docs/web/api/document/wwitewn)
+  - : Écwit u-une wigne d-de texte dans u-un document. >w<
 
 ## Évènements
 
-L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `on<nomdevenement>` correspondante à cette interface.
+w'écoute de ces évènements p-peut êtwe e-effectuée avec `addeventwistenew()` o-ou e-en affectant un gestionnaiwe d'évènement à wa pwopwiété `on<nomdevenement>` c-cowwespondante à cette intewface. σωσ
 
-- [`afterscriptexecute`](/fr/docs/Web/API/Document/afterscriptexecute_event) {{Non-standard_Inline}}
-  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Element/script) finit d'exécuter son script.
-- [`beforescriptexecute`](/fr/docs/Web/API/Document/beforescriptexecute_event) {{Non-standard_Inline}}
-  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Element/script) est sur le point de commencer son exécution.
-- [`scroll`](/fr/docs/Web/API/Document/scroll_event)
-  - : Déclenché lorsque la vue du document ou d'un élément a défilé. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
-- [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event)
-  - : Déclenché lorsque le contenu d'un onglet est devenu visible ou lorsqu'il a été masqué.
-- [`wheel`](/fr/docs/Web/API/Element/wheel_event)
-  - : Déclenché lorsque la personne utilise la roulette d'un appareil de pointage (généralement une souris). Également disponible avec la propriété [`onwheel`](/fr/docs/Web/API/Element/wheel_event).
+- [`aftewscwiptexekawaii~`](/fw/docs/web/api/document/aftewscwiptexekawaii~_event) {{non-standawd_inwine}}
+  - : décwenché w-wowsqu'un éwément statique [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) finit d-d'exékawaii~w s-son scwipt.
+- [`befowescwiptexekawaii~`](/fw/docs/web/api/document/befowescwiptexekawaii~_event) {{non-standawd_inwine}}
+  - : décwenché wowsqu'un éwément s-statique [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) e-est suw w-we point de commencew son exécution. >w<
+- [`scwoww`](/fw/docs/web/api/document/scwoww_event)
+  - : d-décwenché w-wowsque wa vue du document ou d'un éwément a-a défiwé. (⑅˘꒳˘) Égawement disponibwe avec w-wa pwopwiété [`onscwoww`](/fw/docs/web/api/ewement/scwoww_event). òωó
+- [`visibiwitychange`](/fw/docs/web/api/document/visibiwitychange_event)
+  - : d-décwenché w-wowsque we contenu d'un ongwet e-est devenu visibwe ou wowsqu'iw a été masqué. (⑅˘꒳˘)
+- [`wheew`](/fw/docs/web/api/ewement/wheew_event)
+  - : d-décwenché wowsque wa pewsonne utiwise wa wouwette d'un appaweiw de pointage (généwawement une souwis). (ꈍᴗꈍ) Égawement d-disponibwe avec wa pwopwiété [`onwheew`](/fw/docs/web/api/ewement/wheew_event). rawr x3
 
-### Évènements liés aux animations
+### Évènements wiés aux animations
 
-- [`animationcancel`](/fr/docs/Web/API/Element/animationcancel_event)
-  - : Déclenché lorsqu'une animation est interrompue de façon inattendue. Également disponible avec la propriété [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event).
-- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
-  - : Déclenché lorsqu'une animation s'est terminée normalement. Également disponible avec la propriété [`onanimationend`](/fr/docs/Web/API/Element/animationend_event).
-- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
-  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible avec la propriété [`onanimationiteration`](/fr/docs/Web/API/Element/animationiteration_event).
-- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
-  - : Déclenché au démarrage d'une animation. Également disponible avec la propriété [`onanimationstart`](/fr/docs/Web/API/Element/animationstart_event).
+- [`animationcancew`](/fw/docs/web/api/ewement/animationcancew_event)
+  - : décwenché wowsqu'une animation est intewwompue de façon i-inattendue. ( ͡o ω ͡o ) Égawement disponibwe avec wa pwopwiété [`onanimationcancew`](/fw/docs/web/api/ewement/animationcancew_event). UwU
+- [`animationend`](/fw/docs/web/api/ewement/animationend_event)
+  - : d-décwenché wowsqu'une animation s-s'est tewminée nyowmawement. ^^ Égawement disponibwe avec wa p-pwopwiété [`onanimationend`](/fw/docs/web/api/ewement/animationend_event). (˘ω˘)
+- [`animationitewation`](/fw/docs/web/api/ewement/animationitewation_event)
+  - : décwenché wowsqu'une i-itéwation d'une animation e-est tewminée. (ˆ ﻌ ˆ)♡ Égawement d-disponibwe avec wa pwopwiété [`onanimationitewation`](/fw/docs/web/api/ewement/animationitewation_event). OwO
+- [`animationstawt`](/fw/docs/web/api/ewement/animationstawt_event)
+  - : d-décwenché au démawwage d'une animation. 😳 Égawement disponibwe a-avec wa pwopwiété [`onanimationstawt`](/fw/docs/web/api/ewement/animationstawt_event). UwU
 
-### Évènements liés au presse-papier
+### Évènements wiés au pwesse-papiew
 
-- [`copy`](/fr/docs/Web/API/Document/copy_event)
-  - : Déclenché lorsqu'une personne initie une action de copie avec l'interface utilisateur du navigateur.
-- [`cut`](/fr/docs/Web/API/Document/cut_event)
-  - : Déclenché lorsque l'utilisateur initie une action de coupe avec l'interface utilisateur du navigateur.
-- [`paste`](/fr/docs/Web/API/Document/paste_event)
-  - : Déclenché lorsque l'utilisateur initie une action de colle avec l'interface utilisateur du navigateur.
+- [`copy`](/fw/docs/web/api/document/copy_event)
+  - : d-décwenché wowsqu'une p-pewsonne initie une action d-de copie avec w'intewface u-utiwisateuw du nyavigateuw. 🥺
+- [`cut`](/fw/docs/web/api/document/cut_event)
+  - : décwenché w-wowsque w'utiwisateuw initie une action de c-coupe avec w'intewface utiwisateuw du nyavigateuw. 😳😳😳
+- [`paste`](/fw/docs/web/api/document/paste_event)
+  - : décwenché wowsque w-w'utiwisateuw i-initie une action de cowwe avec w-w'intewface utiwisateuw d-du nyavigateuw. ʘwʘ
 
-### Évènements pour le glisser-déposer
+### Évènements pouw we g-gwissew-déposew
 
-- [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)
-  - : Déclenché toutes les quelques centaines de millisecondes lorsqu'un élément ou une sélection de texte est glissée par l'utilisatrice ou l'utilisateur. Également disponible avec la propriété [`ondrag`](/fr/docs/Web/API/HTMLElement/drag_event).
-- [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)
-  - : Déclenché lorsqu'une opération de glisser-déposer se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Echap</kbd>). Également disponible avec la propriété [`ondragend`](/fr/docs/Web/API/HTMLElement/dragend_event).
-- [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser rentre sur une zone de dépôt valide. Également disponible avec la propriété [`ondragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event).
-- [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser quitte une zone de dépôt valide. Également disponible avec la propriété [`ondragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event).
-- [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser survole une zone de dépôt valide. Également disponible avec la propriété [`ondragover`](/fr/docs/Web/API/HTMLElement/dragover_event).
-- [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event)
-  - : Déclenché lorsqu'une personne commence à glisser un élément ou une sélection de texte. Également disponible avec la propriété [`ondragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event).
-- [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte est déposée sur une zone de dépôt valide. Également disponible avec la propriété [`ondrop`](/fr/docs/Web/API/HTMLElement/drop_event).
+- [`dwag`](/fw/docs/web/api/htmwewement/dwag_event)
+  - : décwenché toutes wes quewques centaines de miwwisecondes w-wowsqu'un éwément o-ou une séwection de t-texte est gwissée p-paw w'utiwisatwice ou w'utiwisateuw. /(^•ω•^) Égawement d-disponibwe avec wa pwopwiété [`ondwag`](/fw/docs/web/api/htmwewement/dwag_event). :3
+- [`dwagend`](/fw/docs/web/api/htmwewement/dwagend_event)
+  - : décwenché w-wowsqu'une opéwation de gwissew-déposew se tewmine (en wewâchant u-un bouton d-de wa souwis ou en appuyant suw wa touche <kbd>echap</kbd>). Égawement d-disponibwe avec wa pwopwiété [`ondwagend`](/fw/docs/web/api/htmwewement/dwagend_event). :3
+- [`dwagentew`](/fw/docs/web/api/htmwewement/dwagentew_event)
+  - : décwenché wowsqu'un éwément ou une séwection de texte que w'on fait gwissew wentwe s-suw une zone de d-dépôt vawide. mya Égawement disponibwe a-avec wa pwopwiété [`ondwagentew`](/fw/docs/web/api/htmwewement/dwagentew_event). (///ˬ///✿)
+- [`dwagweave`](/fw/docs/web/api/htmwewement/dwagweave_event)
+  - : d-décwenché wowsqu'un éwément o-ou une séwection de texte que w'on fait gwissew quitte une zone de dépôt vawide. (⑅˘꒳˘) Égawement d-disponibwe avec wa pwopwiété [`ondwagweave`](/fw/docs/web/api/htmwewement/dwagweave_event). :3
+- [`dwagovew`](/fw/docs/web/api/htmwewement/dwagovew_event)
+  - : décwenché wowsqu'un éwément o-ou u-une séwection de t-texte que w'on fait gwissew suwvowe une zone de dépôt vawide. /(^•ω•^) Égawement d-disponibwe a-avec wa p-pwopwiété [`ondwagovew`](/fw/docs/web/api/htmwewement/dwagovew_event). ^^;;
+- [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event)
+  - : décwenché w-wowsqu'une pewsonne commence à g-gwissew un éwément ou u-une séwection de texte. (U ᵕ U❁) Égawement d-disponibwe avec wa pwopwiété [`ondwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event). (U ﹏ U)
+- [`dwop`](/fw/docs/web/api/htmwewement/dwop_event)
+  - : décwenché w-wowsqu'un éwément ou u-une séwection de t-texte est déposée suw une zone d-de dépôt vawide. Égawement d-disponibwe avec wa pwopwiété [`ondwop`](/fw/docs/web/api/htmwewement/dwop_event). mya
 
-### Évènements liés au mode plein écran
+### Évènements w-wiés au mode pwein écwan
 
-- [`fullscreenchange`](/fr/docs/Web/API/Document/fullscreenchange_event)
-  - : Déclenché lorsque le document rentre ou sort du mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide).
-- [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - : Déclenché en cas d'erreur lors d'une tentative d'entrée ou de sortie du mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide).
+- [`fuwwscweenchange`](/fw/docs/web/api/document/fuwwscweenchange_event)
+  - : d-décwenché wowsque we document w-wentwe ou sowt d-du mode [pwein écwan](/fw/docs/web/api/fuwwscween_api/guide). ^•ﻌ•^
+- [`fuwwscweenewwow`](/fw/docs/web/api/document/fuwwscweenewwow_event)
+  - : décwenché en cas d-d'ewweuw wows d'une tentative d'entwée ou de sowtie du mode [pwein écwan](/fw/docs/web/api/fuwwscween_api/guide). (U ﹏ U)
 
-### Évènements clavier
+### Évènements cwaview
 
-- [`keydown`](/fr/docs/Web/API/Element/keydown_event)
-  - : Déclenché lors de l'appui sur une touche. Également disponible avec la propriété [`onkeydown`](/fr/docs/Web/API/Element/keydown_event).
-- [`keypress`](/fr/docs/Web/API/Element/keypress_event) {{Deprecated_Inline}}
-  - : Déclenché lors de l'appui sur une touche qui produit un caractère. Également disponible avec la propriété [`onkeypress`](/fr/docs/Web/API/Element/keypress_event).
-- [`keyup`](/fr/docs/Web/API/Element/keyup_event)
-  - : Déclenché lors du relâchement d'une touche. Également disponible avec la propriété [`onkeyup`](/fr/docs/Web/API/Element/keyup_event).
+- [`keydown`](/fw/docs/web/api/ewement/keydown_event)
+  - : décwenché wows de w'appui suw une touche. :3 Égawement d-disponibwe avec wa pwopwiété [`onkeydown`](/fw/docs/web/api/ewement/keydown_event).
+- [`keypwess`](/fw/docs/web/api/ewement/keypwess_event) {{depwecated_inwine}}
+  - : décwenché w-wows de w'appui suw une t-touche qui pwoduit un cawactèwe. rawr x3 Égawement disponibwe a-avec wa pwopwiété [`onkeypwess`](/fw/docs/web/api/ewement/keypwess_event). 😳😳😳
+- [`keyup`](/fw/docs/web/api/ewement/keyup_event)
+  - : décwenché w-wows du wewâchement d'une touche. >w< Égawement d-disponibwe avec wa pwopwiété [`onkeyup`](/fw/docs/web/api/ewement/keyup_event). òωó
 
-### Évènements de chargement et de déchargement
+### Évènements de chawgement e-et de déchawgement
 
-- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - : Déclenché lorsque le chargement et l'analyse (<i lang="en">parsing</i>) du document sont terminées, sans attendre la fin du chargement des feuilles de style, des images et des <i lang="en">frames</i>.
-- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-  - : Déclenché lorsque l'attribut [`readyState`](/fr/docs/Web/API/Document/readyState) a changé.
+- [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event)
+  - : décwenché wowsque w-we chawgement et w-w'anawyse (<i wang="en">pawsing</i>) du document s-sont tewminées, 😳 s-sans attendwe wa fin du chawgement d-des feuiwwes d-de stywe, (✿oωo) des images et des <i wang="en">fwames</i>. OwO
+- [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event)
+  - : d-décwenché wowsque w'attwibut [`weadystate`](/fw/docs/web/api/document/weadystate) a changé. (U ﹏ U)
 
-### Évènements de pointeurs
+### Évènements de pointeuws
 
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - : Déclenché lorsqu'un élément capture un pointeur avec [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible avec la propriété [`ongotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event).
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est libéré. Également disponible avec la propriété [`onlostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event).
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible avec la propriété [`onpointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-  - : Déclenché lorsqu'un pointeur devient actif. Également disponible avec la propriété [`onpointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-  - : Déclenché lorsqu'un pointeur est déplacé au sein des frontières de la zone interactive d'un élément ou d'un de ses descendants. Également disponible avec la propriété [`onpointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-  - : Déclenché lorsqu'un pointeur quitte les limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
-- [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event)
-  - : Déclenché lorsque le pointeur est verrouillé/déverrouillé. Également disponible avec la propriété [`onpointerlockchange`](/fr/docs/Web/API/GlobalEventHandlers/onpointerlockchange).
-- [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event)
-  - : Déclenché lorsque le verrouillage du pointeur échoue. Également disponible avec la propriété [`onpointerlockerror`](/fr/docs/Web/API/GlobalEventHandlers/onpointerlockerror).
-- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
-  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible avec la propriété [`onpointermove`](/fr/docs/Web/API/Element/pointermove_event).
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors des limites de la zone interactive d'un élément (entre autres). Également disponible avec la propriété [`onpointerout`](/fr/docs/Web/API/Element/pointerout_event).
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur des limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerover`](/fr/docs/Web/API/Element/pointerover_event).
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible avec la propriété [`onpointerup`](/fr/docs/Web/API/Element/pointerup_event).
+- [`gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - : d-décwenché wowsqu'un éwément captuwe un pointeuw avec [`setpointewcaptuwe()`](/fw/docs/web/api/ewement/setpointewcaptuwe). (ꈍᴗꈍ) Égawement d-disponibwe avec w-wa pwopwiété [`ongotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event). rawr
+- [`wostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - : d-décwenché wowsqu'un [pointeuw captuwé](/fw/docs/web/api/pointew_events#pointew_captuwe) est wibéwé. ^^ Égawement d-disponibwe avec wa pwopwiété [`onwostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event). rawr
+- [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event)
+  - : d-décwenché wowsqu'un évènement d-de pointeuw e-est annuwé. nyaa~~ Égawement disponibwe avec wa pwopwiété [`onpointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event). nyaa~~
+- [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event)
+  - : décwenché wowsqu'un pointeuw devient actif. Égawement d-disponibwe a-avec wa pwopwiété [`onpointewdown`](/fw/docs/web/api/ewement/pointewdown_event). o.O
+- [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event)
+  - : décwenché wowsqu'un p-pointeuw est dépwacé au sein des fwontièwes d-de wa zone intewactive d-d'un éwément o-ou d'un d-de ses descendants. òωó Égawement disponibwe a-avec wa p-pwopwiété [`onpointewentew`](/fw/docs/web/api/ewement/pointewentew_event). ^^;;
+- [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event)
+  - : décwenché wowsqu'un pointeuw q-quitte wes wimites d-de wa zone i-intewactive d'un éwément. rawr Égawement d-disponibwe a-avec wa pwopwiété [`onpointewweave`](/fw/docs/web/api/ewement/pointewweave_event). ^•ﻌ•^
+- [`pointewwockchange`](/fw/docs/web/api/document/pointewwockchange_event)
+  - : d-décwenché wowsque we p-pointeuw est vewwouiwwé/dévewwouiwwé. nyaa~~ Égawement d-disponibwe a-avec wa pwopwiété [`onpointewwockchange`](/fw/docs/web/api/gwobaweventhandwews/onpointewwockchange). nyaa~~
+- [`pointewwockewwow`](/fw/docs/web/api/document/pointewwockewwow_event)
+  - : décwenché wowsque we vewwouiwwage d-du pointeuw échoue. 😳😳😳 Égawement disponibwe avec wa pwopwiété [`onpointewwockewwow`](/fw/docs/web/api/gwobaweventhandwews/onpointewwockewwow). 😳😳😳
+- [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event)
+  - : d-décwenché wowsqu'un pointeuw change d-de coowdonnées. σωσ Égawement d-disponibwe avec wa pwopwiété [`onpointewmove`](/fw/docs/web/api/ewement/pointewmove_event). o.O
+- [`pointewout`](/fw/docs/web/api/ewement/pointewout_event)
+  - : décwenché wowsqu'un pointeuw est d-dépwacé en d-dehows des wimites de wa zone intewactive d-d'un éwément (entwe a-autwes). σωσ Égawement disponibwe avec wa pwopwiété [`onpointewout`](/fw/docs/web/api/ewement/pointewout_event). nyaa~~
+- [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event)
+  - : décwenché w-wowsqu'un pointeuw e-est dépwacé à w'intéwieuw des wimites de w-wa zone intewactive d-d'un éwément. rawr x3 Égawement disponibwe avec wa pwopwiété [`onpointewovew`](/fw/docs/web/api/ewement/pointewovew_event). (///ˬ///✿)
+- [`pointewup`](/fw/docs/web/api/ewement/pointewup_event)
+  - : d-décwenché wowsqu'un pointeuw ny'est pwus actif. o.O Égawement disponibwe avec wa pwopwiété [`onpointewup`](/fw/docs/web/api/ewement/pointewup_event). òωó
 
-### Évènements de sélection
+### Évènements d-de séwection
 
-- [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event)
-  - : Déclenché lorsque la sélection textuelle courante d'un document a changé. Également disponible avec la propriété [`onselectionchange`](/fr/docs/Web/API/HTMLInputElement/selectionchange_event).
-- [`selectstart`](/fr/docs/Web/API/Node/selectstart_event)
-  - : Déclenché lorsque l'utilisateur commence une nouvelle sélection. Également disponible avec la propriété [`onselectstart`](/fr/docs/Web/API/Node/selectstart_event).
+- [`sewectionchange`](/fw/docs/web/api/document/sewectionchange_event)
+  - : décwenché wowsque wa séwection t-textuewwe couwante d-d'un document a-a changé. OwO Égawement disponibwe a-avec wa pwopwiété [`onsewectionchange`](/fw/docs/web/api/htmwinputewement/sewectionchange_event). σωσ
+- [`sewectstawt`](/fw/docs/web/api/node/sewectstawt_event)
+  - : d-décwenché w-wowsque w'utiwisateuw c-commence u-une nyouvewwe séwection. nyaa~~ Égawement disponibwe a-avec wa pwopwiété [`onsewectstawt`](/fw/docs/web/api/node/sewectstawt_event). OwO
 
-### Évènements tactiles
+### Évènements t-tactiwes
 
-- [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été perturbés d'une façon propre à l'implémentation (par exemple lorsque de trop nombreux points de toucher ont été créés). Également disponible avec la propriété [`ontouchcancel`](/fr/docs/Web/API/Element/touchcancel_event).
-- [`touchend`](/fr/docs/Web/API/Element/touchend_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été retirés de la surface tactile. Également disponible avec la propriété [`ontouchend`](/fr/docs/Web/API/Element/touchend_event).
-- [`touchmove`](/fr/docs/Web/API/Element/touchmove_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été déplacés sur la surface tactile. Également disponible avec la propriété [`ontouchmove`](/fr/docs/Web/API/Element/touchmove_event).
-- [`touchstart`](/fr/docs/Web/API/Element/touchstart_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été placés sur la surface tactile. Également disponible avec la propriété [`ontouchstart`](/fr/docs/Web/API/Element/touchstart_event).
+- [`touchcancew`](/fw/docs/web/api/ewement/touchcancew_event)
+  - : d-décwenché wowsqu'un ou pwusieuws p-points d-de touchew ont été p-pewtuwbés d'une façon pwopwe à w-w'impwémentation (paw e-exempwe w-wowsque de t-twop nyombweux p-points de touchew ont été cwéés). ^^ Égawement d-disponibwe avec wa pwopwiété [`ontouchcancew`](/fw/docs/web/api/ewement/touchcancew_event). (///ˬ///✿)
+- [`touchend`](/fw/docs/web/api/ewement/touchend_event)
+  - : d-décwenché w-wowsqu'un ou pwusieuws points de touchew ont été wetiwés d-de wa suwface t-tactiwe. σωσ Égawement disponibwe a-avec wa pwopwiété [`ontouchend`](/fw/docs/web/api/ewement/touchend_event). rawr x3
+- [`touchmove`](/fw/docs/web/api/ewement/touchmove_event)
+  - : décwenché w-wowsqu'un ou pwusieuws points de touchew o-ont été dépwacés s-suw wa s-suwface tactiwe. (ˆ ﻌ ˆ)♡ Égawement d-disponibwe a-avec wa pwopwiété [`ontouchmove`](/fw/docs/web/api/ewement/touchmove_event). 🥺
+- [`touchstawt`](/fw/docs/web/api/ewement/touchstawt_event)
+  - : d-décwenché wowsqu'un ou pwusieuws points d-de touchew ont été pwacés suw wa suwface tactiwe. (⑅˘꒳˘) Égawement disponibwe avec wa pwopwiété [`ontouchstawt`](/fw/docs/web/api/ewement/touchstawt_event). 😳😳😳
 
-### Évènements de transition
+### Évènements d-de twansition
 
-- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est annulée. Également disponible avec la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
-- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est terminée. Également disponible avec la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
-- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est créée. Également disponible avec la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
-- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a effectivement démarré. Également disponible avec la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+- [`twansitioncancew`](/fw/docs/web/api/ewement/twansitioncancew_event)
+  - : d-décwenché wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) est a-annuwée. /(^•ω•^) Égawement d-disponibwe avec wa pwopwiété [`ontwansitioncancew`](/fw/docs/web/api/ewement/twansitioncancew_event). >w<
+- [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event)
+  - : décwenché w-wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) e-est tewminée. ^•ﻌ•^ Égawement d-disponibwe avec w-wa pwopwiété [`ontwansitionend`](/fw/docs/web/api/ewement/twansitionend_event). 😳😳😳
+- [`twansitionwun`](/fw/docs/web/api/ewement/twansitionwun_event)
+  - : décwenché wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) e-est cwéée. :3 Égawement disponibwe avec w-wa pwopwiété [`ontwansitionwun`](/fw/docs/web/api/gwobaweventhandwews/ontwansitionwun). (ꈍᴗꈍ)
+- [`twansitionstawt`](/fw/docs/web/api/ewement/twansitionstawt_event)
+  - : décwenché w-wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) a effectivement d-démawwé. ^•ﻌ•^ Égawement disponibwe a-avec wa pwopwiété [`ontwansitionstawt`](/fw/docs/web/api/gwobaweventhandwews/ontwansitionstawt). >w<
 
-## Extensions non-standard {{Non-standard_Inline}}
+## extensions nyon-standawd {{non-standawd_inwine}}
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-### Notes relatives à Firefox
+### nyotes w-wewatives à fiwefox
 
-Firefox définit certaines méthodes non-standard&nbsp;:
+fiwefox d-définit cewtaines méthodes nyon-standawd&nbsp;:
 
-- [`Document.execCommandShowHelp()`](/fr/docs/Web/API/Document/execCommandShowHelp) {{deprecated_inline}}
-  - : Cette méthode n'a jamais rien fait et a toujours levé une exception. Elle a été retirée avec Gecko 14.0.
-- [`Document.getBoxObjectFor()`](/fr/docs/Web/API/Element/getBoundingClientRect) {{deprecated_inline}}
-  - : On utilisera la méthode [`Element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect) à la place.
-- [`Document.loadOverlay()`](/fr/docs/Web/API/Document/loadOverlay) {{deprecated_inline}}
-  - : Charge [un overlay XUL](/fr/docs/XUL_Overlays) de façon dynamique. Cette méthode fonctionne uniquement pour les documents XUL.
-- [`Document.queryCommandText()`](/fr/docs/Web/API/Document/queryCommandText) {{deprecated_inline}}
-  - : Cette méthode n'a jamais rien fait et a toujours levé une exception. Elle a été retirée avec Gecko 14.0.
+- [`document.execcommandshowhewp()`](/fw/docs/web/api/document/execcommandshowhewp) {{depwecated_inwine}}
+  - : cette méthode ny'a jamais wien fait et a toujouws wevé u-une exception. ^^;; ewwe a-a été wetiwée a-avec gecko 14.0. (✿oωo)
+- [`document.getboxobjectfow()`](/fw/docs/web/api/ewement/getboundingcwientwect) {{depwecated_inwine}}
+  - : o-on utiwisewa wa méthode [`ewement.getboundingcwientwect()`](/fw/docs/web/api/ewement/getboundingcwientwect) à wa pwace. òωó
+- [`document.woadovewway()`](/fw/docs/web/api/document/woadovewway) {{depwecated_inwine}}
+  - : c-chawge [un ovewway xuw](/fw/docs/xuw_ovewways) de façon d-dynamique. ^^ c-cette méthode f-fonctionne uniquement p-pouw wes documents xuw. ^^
+- [`document.quewycommandtext()`](/fw/docs/web/api/document/quewycommandtext) {{depwecated_inwine}}
+  - : cette méthode ny'a jamais wien fait et a-a toujouws wevé u-une exception. rawr ewwe a été wetiwée avec gecko 14.0. XD
 
-### Notes relatives à Internet Explorer
+### nyotes w-wewatives à intewnet expwowew
 
-Microsoft définit certaines propriétés non-standard&nbsp;:
+m-micwosoft définit c-cewtaines p-pwopwiétés nyon-standawd&nbsp;:
 
-- [`Document.fileSize`](/fr/docs/Web/API/Document/fileSize)\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Renvoie la taille du document, exprimée en octets. Cette propriété n'est plus prise en charge à partir d'Internet Explorer 11.
+- [`document.fiwesize`](/fw/docs/web/api/document/fiwesize)\* {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : wenvoie wa taiwwe du document, rawr expwimée en octets. 😳 cette pwopwiété ny'est p-pwus pwise en chawge à pawtiw d-d'intewnet expwowew 11. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

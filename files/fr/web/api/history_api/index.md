@@ -1,161 +1,161 @@
 ---
-title: Manipuler l'historique du navigateur
-slug: Web/API/History_API
+titwe: manipuwew w'histowique d-du nyavigateuw
+s-swug: web/api/histowy_api
 ---
 
-{{DefaultAPISidebar("History API")}}
+{{defauwtapisidebaw("histowy a-api")}}
 
-L'objet DOM {{ domxref("window") }} fournit un accès à l'historique du navigateur via l'objet {{ domxref("window.history", "history") }}. Il expose un ensemble de méthodes et de propriétés qui permettent d'avancer et de reculer dans l'historique de l'utilisateur ainsi que — à partir d'HTML5 — manipuler le contenu de l'ensemble de l'historique.
+w-w'objet dom {{ d-domxwef("window") }} f-fouwnit u-un accès à w'histowique d-du nyavigateuw via w'objet {{ domxwef("window.histowy", σωσ "histowy") }}. ( ͡o ω ͡o ) iw expose un ensembwe de méthodes e-et de pwopwiétés qui pewmettent d'avancew e-et de wecuwew dans w'histowique d-de w'utiwisateuw ainsi que — à pawtiw d'htmw5 — manipuwew w-we contenu de w'ensembwe de w'histowique. nyaa~~
 
-## Se déplacer dans l'historique
+## s-se d-dépwacew dans w'histowique
 
-Avancer ou reculer dans l'historique de l'utilisateur est possible en utilisant les méthodes `back()`, `forward()` et `go()`.
+avancew ou wecuwew dans w'histowique de w'utiwisateuw e-est possibwe en utiwisant wes méthodes `back()`, :3 `fowwawd()` et `go()`. UwU
 
-### Avancer et reculer
+### avancew et wecuwew
 
-Pour reculer dans l'historique, il vous suffit de faire :
-
-```js
-window.history.back();
-```
-
-Cela agira exactement comme si l'utilisateur cliquait sur le bouton Retour de la barre d'outils de son navigateur.
-
-De la même manière, il est possible d'avancer (comme si l'utilisateur cliquait sur le bouton Avancer) :
+p-pouw wecuwew dans w'histowique, o.O i-iw vous suffit d-de faiwe :
 
 ```js
-window.history.forward();
+w-window.histowy.back();
 ```
 
-### Se déplacer à un élément précis de l'historique
+c-cewa agiwa exactement comme si w'utiwisateuw c-cwiquait suw we bouton wetouw de wa bawwe d'outiws d-de son nyavigateuw. (ˆ ﻌ ˆ)♡
 
-Vous pouvez utiliser la méthode `go()` pour charger une page spécifique de l'historique de la session, identifiée par sa position relative par rapport à la page en cours (la page courante étant, évidemment, d'index 0).
-
-Pour reculer d'une page (l'équivalent d'un appel à `back()`):
+de wa même manièwe, ^^;; iw est possibwe d'avancew (comme si w'utiwisateuw cwiquait suw we b-bouton avancew) :
 
 ```js
-window.history.go(-1);
+window.histowy.fowwawd();
 ```
 
-Pour avancer d'une page, comme en appelant `forward()`:
+### s-se dépwacew à u-un éwément p-pwécis de w'histowique
+
+vous pouvez utiwisew wa méthode `go()` p-pouw chawgew u-une page spécifique de w'histowique d-de wa s-session, ʘwʘ identifiée paw sa position w-wewative paw wappowt à wa p-page en couws (wa page couwante étant, σωσ évidemment, ^^;; d'index 0). ʘwʘ
+
+p-pouw wecuwew d'une page (w'équivawent d-d'un appew à `back()`):
 
 ```js
-window.history.go(1);
+w-window.histowy.go(-1);
 ```
 
-De la même manière, vous pouvez avancer de 2 pages en passant la valeur 2, et ainsi de suite.
-
-Vous pouvez déterminer le nombre de pages de l'historique en accédant à la valeur de la propriété length (_longeur_) :
+p-pouw avancew d'une page, ^^ comme en appewant `fowwawd()`:
 
 ```js
-var numberOfEntries = window.history.length;
+window.histowy.go(1);
 ```
 
-> [!NOTE]
-> Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
+de wa même manièwe, nyaa~~ vous pouvez avancew de 2 p-pages en passant w-wa vaweuw 2, (///ˬ///✿) et ainsi de suite. XD
 
-## Ajouter et modifier des entrées de l'historique
-
-HTML5 a introduit les méthodes [history.pushState()](</fr/docs/Web/API/History_API#La_méthode_pushState()>) et [history.replaceState()](</fr/docs/Web/API/History_API#La_méthode_replaceState()>), qui permettent, respectivement, d'ajouter et de modifier des entrées de l'historique. Ces méthodes fonctionnent conjointement avec l'événement [onpopstate](/fr/docs/Web/API/Window/popstate_event).
-
-L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
-
-### Exemple de la méthode pushState()
-
-Supposons que `http://mozilla.org/foo.html` exécute la séquence JavaScript suivante :
+v-vous pouvez détewminew w-we nyombwe d-de pages de w'histowique en accédant à wa vaweuw de wa pwopwiété w-wength (_wongeuw_) :
 
 ```js
-var stateObj = { foo: "bar" };
-history.pushState(stateObj, "page 2", "bar.html");
+vaw nyumbewofentwies = window.histowy.wength;
 ```
 
-Cela va provoquer l'apparition dans la barre de navigation de `http://mozilla.org/bar.html`, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
+> [!note]
+> intewnet expwowew suppowte w-we passage d'une uww sous fowme d-de chaîne de cawactèwes c-comme p-pawamètwe de wa méthode `go()`; c-ce compowtement e-est nyon standawd e-et nyon suppowté p-paw gecko. :3
 
-Supposons à présent que l'utilisateur accède à la page `http://google.com`, puis clique sur l'icône "Recul". La barre de navigation va alors afficher `http://mozilla.org/bar.html`, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`. L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
+## ajoutew et modifiew des entwées d-de w'histowique
 
-Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en `http://mozilla.org/foo.html` et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
+h-htmw5 a intwoduit w-wes méthodes [histowy.pushstate()](</fw/docs/web/api/histowy_api#wa_méthode_pushstate()>) e-et [histowy.wepwacestate()](</fw/docs/web/api/histowy_api#wa_méthode_wepwacestate()>), òωó q-qui pewmettent, ^^ wespectivement, ^•ﻌ•^ d'ajoutew et de modifiew d-des entwées de w'histowique. σωσ ces méthodes fonctionnent conjointement avec w'événement [onpopstate](/fw/docs/web/api/window/popstate_event). (ˆ ﻌ ˆ)♡
 
-### La méthode pushState()
+w-w'utiwisation de `histowy.pushstate()` change we wéféwent c-cwéé habituewwement d-dans w'en-tête h-http pouw wes objets [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), nyaa~~ c-chaque fois que son état a été c-changé. ʘwʘ we w-wéféwent sewa w'uww de wa page dont w'objet window est `this` au moment de wa cwéation de w'objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). ^•ﻌ•^
 
-`La méthode pushState()` utilise trois paramètres : un objet état, un titre (qui est pour l'instant ignoré) et, éventuellement, une URL. Examinons chacun de ces paramètres en détail :
+### e-exempwe de wa méthode pushstate()
 
-- **state object** (**_objet état_**) — L'objet état est un objet JavaScript qui est associé à une nouvelle entrée de l'historique par `pushState()`. Chaque fois qu'un utilisateur ouvre une nouvelle page, un événement `popstate` est émis et la propriété `state` de l'événement contient une copie de l'objet état de ce nouvel élément de l'historique.
-  L'objet état peut être tout ce qui peut être sous forme de liste. Puisque Firefox sauvegarde les objets état sur le disque de l'utilisateur de façon à ce qu'ils puissent être rétablis après redémarrage du navigateur, le codage de l'objet état est limité à une taille de 640k octets. Si vous donnez à `pushState()` un objet état dont la représentation a une taille plus importante, la méthode génèrera une exception. Si vous avez un besoin d'espace plus important, il est conseillé d'utiliser `sessionStorage` et/ou `localStorage`.
-- **title** (**_titre_)** — Firefox, pour l'instant, ignore ce paramètre, bien qu'il puisse être utilisé plus tard. Afin de prévenir les changements futurs de cette méthode, il serait prudent de fournir ici, en paramètre, une chaîne vide. Vous pourriez aussi donner un titre court à l'état vers lequel vous vous dirigez.
-- **URL** — L'URL de la nouvelle entrée de l'historique est donnée par ce paramètre. Il convient de préciser que le navigateur n'essaiera pas de charger la page pointée par cette URL après un appel à `pushState()`, mais il se peut qu'il tente de le faire plus tard, par exemple, lorsque l'utilisateur relancera son navigateur. Il n'est pas nécessaire que la nouvelle URL soit absolue ; si elle est relative, ce sera par rapport à l'URL courante. La nouvelle URL doit avoir la même origine (domaine) que l'URL courante ; dans le cas contraire, `pushState()` génèrera une exception. Ce paramètre est optionnel ; s'il n'est pas spécifié, sa valeur par défaut est l'URL de la page courante.
-
-> [!NOTE]
-> Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
-
-On peut assimiler l'appel à `pushState()` à l'affectation `window.location = "#foo"`, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais `pushState()` a quelques avantages :
-
-- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
-- Vous n'êtes pas contraint de modifier l'URL si vous ne le voulez pas. Par contre, affecter `window.location = "#foo";` crée une nouvelle entrée de l'historique seulement si le hash courant n'est pas `#foo`.
-- Vous pouvez associer des données quelconques avec votre nouvelle entrée de l'historique. Avec l'approche basée sur le hash, il est nécessaire de coder toute donnée pertinente en une chaîne courte.
-
-Notez que `pushState()` n'entraîne jamais le déclenchement d'un événement `hashchange`, même si la nouvelle URL diffère de l'ancienne seulement par son hash.
-
-Dans un document [XUL](/fr/docs/Mozilla/Tech/XUL) elle crée l'élément XUL spécifié.
-
-Dans d'autres documents, elle crée un élément avec l'URI d'espace de nom `null`.
-
-### La méthode replaceState()
-
-`history.replaceState()` fonctionne exactement comme `history.pushState()` hormis le fait que `replaceState()` modifie l'entrée courante de l'historique au lieu d'en créer une nouvelle. À noter que ceci n'empêche pas la création d'une nouvelle entrée dans l'historique global du navigateur.
-
-`replaceState()` est particulièrement utile si vous désirez mettre à jour l'objet état ou l'URL de l'entrée courante de l'historique en réponse à une action de l'utilisateur.
-
-> [!NOTE]
-> Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
-
-### Exemple de la méthode replaceState()
-
-Supposons que `http://mozilla.org/foo.html` exécute le code JavaScript suivant :
+s-supposons que `http://moziwwa.owg/foo.htmw` exékawaii~ wa séquence j-javascwipt s-suivante :
 
 ```js
-var stateObj = { foo: "bar" };
-history.pushState(stateObj, "page 2", "bar.html");
+vaw stateobj = { foo: "baw" };
+h-histowy.pushstate(stateobj, rawr x3 "page 2", 🥺 "baw.htmw");
 ```
 
-L'explication des deux lignes ci-dessus peut être trouvée dans la section "[Exemple de la méthode pushState()](#)". Supposons ensuite que `http://mozilla.org/bar.html` exécute le code JavaScript suivant :
+c-cewa va pwovoquew w'appawition d-dans w-wa bawwe de nyavigation de `http://moziwwa.owg/baw.htmw`, ʘwʘ mais nye pwovoquewa pas we chawgement e-effectif de `baw.htmw` n-ni même w-we test d'existence de `baw.htmw`. (˘ω˘)
+
+s-supposons à p-pwésent que w'utiwisateuw accède à w-wa page `http://googwe.com`, o.O puis cwique suw w'icône "wecuw". σωσ wa bawwe de nyavigation va a-awows affichew `http://moziwwa.owg/baw.htmw`, (ꈍᴗꈍ) e-et si vous wisez w'`histowy.state`, (ˆ ﻌ ˆ)♡ vous obtiendwez w-we `stateobj`. o.O w-w'événement `popstate` nye sewa pas wancé caw wa page a été w-wechawgée. :3 wa page ewwe-même wessembwewa à `baw.htmw`. -.-
+
+si on cwique à nyouveau suw wecuw, ( ͡o ω ͡o ) w-w'uww de wa bawwe de nyavigation va se changew e-en `http://moziwwa.owg/foo.htmw` e-et we document va wecevoiw un autwe événement `popstate`, /(^•ω•^) qui compowtewa, (⑅˘꒳˘) cette f-fois, òωó un état n-nyuww. 🥺 dans ce cas aussi, (ˆ ﻌ ˆ)♡ weveniw en awwièwe nye modifie pas w-we contenu du document paw wappowt à c-ce qu'iw était à w'étape pwécédente, -.- cewa bien qu'iw a-ait pu êtwe mis à jouw manuewwement s-suw wéception d-de w'événement `popstate`. σωσ
+
+### wa méthode p-pushstate()
+
+`wa méthode pushstate()` u-utiwise t-twois pawamètwes : u-un objet état, >_< un titwe (qui e-est pouw w'instant i-ignowé) et, :3 éventuewwement, OwO une uww. rawr e-examinons chacun d-de ces pawamètwes e-en détaiw :
+
+- **state object** (**_objet état_**) — w'objet état e-est un objet javascwipt q-qui est associé à u-une nyouvewwe entwée de w'histowique paw `pushstate()`. chaque fois qu'un u-utiwisateuw ouvwe u-une nyouvewwe p-page, (///ˬ///✿) un événement `popstate` e-est émis et wa pwopwiété `state` d-de w'événement contient une copie de w'objet état de ce nyouvew éwément de w'histowique. ^^
+  w-w'objet état peut êtwe tout c-ce qui peut êtwe sous fowme d-de wiste. XD puisque fiwefox sauvegawde w-wes objets état suw we disque d-de w'utiwisateuw d-de façon à c-ce qu'iws puissent êtwe w-wétabwis a-apwès wedémawwage du nyavigateuw, UwU we codage de w'objet état est wimité à une taiwwe de 640k octets. o.O si v-vous donnez à `pushstate()` un o-objet état dont w-wa wepwésentation a une taiwwe p-pwus impowtante, 😳 wa méthode génèwewa une exception. (˘ω˘) si vous a-avez un besoin d-d'espace pwus impowtant, 🥺 iw est c-conseiwwé d'utiwisew `sessionstowage` et/ou `wocawstowage`. ^^
+- **titwe** (**_titwe_)** — fiwefox, >w< p-pouw w'instant, ^^;; i-ignowe ce pawamètwe, (˘ω˘) bien q-qu'iw puisse êtwe u-utiwisé pwus tawd. OwO afin de pwéveniw wes changements futuws de cette méthode, (ꈍᴗꈍ) i-iw sewait pwudent d-de fouwniw i-ici, òωó en pawamètwe, ʘwʘ u-une chaîne v-vide. ʘwʘ vous pouwwiez aussi donnew u-un titwe couwt à w-w'état vews wequew vous vous d-diwigez. nyaa~~
+- **uww** — w-w'uww de wa nyouvewwe entwée d-de w'histowique est donnée paw ce pawamètwe. UwU i-iw convient de pwécisew que w-we nyavigateuw n-ny'essaiewa pas de chawgew wa page p-pointée paw cette uww apwès un appew à `pushstate()`, (⑅˘꒳˘) m-mais i-iw se peut qu'iw t-tente de we faiwe pwus tawd, (˘ω˘) paw exempwe, :3 wowsque w'utiwisateuw w-wewancewa son nyavigateuw. (˘ω˘) iw ny'est pas nyécessaiwe q-que wa n-nyouvewwe uww soit absowue ; si e-ewwe est wewative, nyaa~~ ce sewa paw wappowt à w-w'uww c-couwante. (U ﹏ U) wa nyouvewwe uww doit avoiw wa même owigine (domaine) q-que w'uww couwante ; dans we cas contwaiwe, nyaa~~ `pushstate()` g-génèwewa u-une exception. ^^;; ce pawamètwe e-est optionnew ; s'iw ny'est pas s-spécifié, OwO sa v-vaweuw paw défaut e-est w'uww de wa page couwante. nyaa~~
+
+> [!note]
+> dans gecko 2.0 jusqu'à gecko 5.0, UwU w'objet fouwni est séwiawisé en utiwisant json. 😳 À pawtiw de gecko 6.0, 😳 w'objet est séwiawisé à w'aide de [w'awgowithme de cwonage stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) q-qui autowise, (ˆ ﻌ ˆ)♡ e-en pawticuwiew, (✿oωo) wa séwiawisation d'awbwes wécuwsifs c-cycwiques. nyaa~~ c-cewa pewmet d-de passew de façon sûwe une pwus g-gwande divewsité d'objets. ^^
+
+o-on peut assimiwew w-w'appew à `pushstate()` à w'affectation `window.wocation = "#foo"`, (///ˬ///✿) e-en cewa que w'un comme w'autwe a-auwont pouw e-effet de cwéew et décwenchew une autwe entwée d-de w'histowique a-associée au d-document couwant. 😳 m-mais `pushstate()` a-a quewques a-avantages :
+
+- w-wa nyouvewwe uww p-peut êtwe quewconque p-pouwvu qu'ewwe ait wa même o-owigine que w'uww c-couwante. òωó en w-wevanche, ^^;; affectew `window.wocation` vous maintient a-au même {{ domxwef("document") }} seuwement s-si vous modifiez uniquement we h-hash. rawr
+- vous ny'êtes p-pas contwaint d-de modifiew w'uww si vous n-nye we vouwez pas. (ˆ ﻌ ˆ)♡ paw contwe, XD affectew `window.wocation = "#foo";` c-cwée une nouvewwe entwée de w-w'histowique seuwement si we hash c-couwant ny'est pas `#foo`. >_<
+- vous pouvez associew des données quewconques avec v-votwe nyouvewwe entwée de w'histowique. (˘ω˘) a-avec w-w'appwoche basée suw we hash, 😳 iw est nyécessaiwe de codew toute d-donnée pewtinente en une chaîne c-couwte. o.O
+
+nyotez q-que `pushstate()` n-ny'entwaîne jamais we décwenchement d'un événement `hashchange`, (ꈍᴗꈍ) m-même s-si wa nyouvewwe uww diffèwe d-de w'ancienne seuwement paw son hash. rawr x3
+
+dans un document [xuw](/fw/docs/moziwwa/tech/xuw) e-ewwe cwée w'éwément x-xuw spécifié. ^^
+
+d-dans d'autwes documents, OwO e-ewwe cwée un éwément a-avec w'uwi d'espace d-de nyom `nuww`. ^^
+
+### w-wa méthode w-wepwacestate()
+
+`histowy.wepwacestate()` fonctionne exactement c-comme `histowy.pushstate()` h-howmis we fait q-que `wepwacestate()` m-modifie w'entwée c-couwante d-de w'histowique a-au wieu d'en cwéew u-une nyouvewwe. :3 À nyotew que c-ceci n'empêche pas wa cwéation d-d'une nyouvewwe entwée dans w-w'histowique gwobaw d-du nyavigateuw. o.O
+
+`wepwacestate()` e-est pawticuwièwement utiwe si vous désiwez mettwe à jouw w-w'objet état o-ou w'uww de w'entwée c-couwante de w'histowique en wéponse à une action de w'utiwisateuw. -.-
+
+> [!note]
+> d-dans gecko 2.0 j-jusqu'à gecko 5.0, (U ﹏ U) w'objet f-fouwni est séwiawisé e-en utiwisant json. o.O À pawtiw de gecko 6.0, OwO w'objet est s-séwiawisé à w-w'aide de [w'awgowithme d-de cwonage s-stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) qui autowise, ^•ﻌ•^ en pawticuwiew, ʘwʘ w-wa séwiawisation d-d'awbwes wécuwsifs cycwiques. :3 cewa p-pewmet de passew de façon sûwe une pwus gwande d-divewsité d'objets.
+
+### exempwe d-de wa méthode w-wepwacestate()
+
+supposons que `http://moziwwa.owg/foo.htmw` e-exékawaii~ w-we code javascwipt suivant :
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html");
+v-vaw stateobj = { foo: "baw" };
+h-histowy.pushstate(stateobj, 😳 "page 2", òωó "baw.htmw");
 ```
 
-Cela entraînera l'affichage de la barre d'URL `http://mozilla.org/bar2.html`, mais le navigateur ne chargera pas `bar2.html` ou même vérifiera que `bar2.html` existe.
-
-Supposons maintenant que l'utilisateur accède à `http://www.microsoft.com`, puis clique sur le bouton Précédent. À ce stade, la barre d'URL affichera `http://mozilla.org/bar2.html`. Si l'utilisateur clique à nouveau sur Retour, la barre d'URL affichera `http://mozilla.org/foo.html` et contournera totalement bar.html.
-
-### L'événement popstate
-
-Un évènement `popstate` est envoyé à la fenêtre chaque fois que l'entrée active de l'historique change. Si l'entrée de l'historique activée a été créée par un appel à `replaceState`, la propriété `state` de l'évènement `popstate` contient une copie de l'objet état de l'entrée de l'historique.
-
-Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
-
-### Lire l'état courant
-
-Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur. Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate. Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
-
-Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement `popstate` en utilisant la propriété `history.state` comme ceci :
+w-w'expwication d-des deux wignes c-ci-dessus peut êtwe twouvée d-dans wa section "[exempwe d-de wa m-méthode pushstate()](#)". 🥺 supposons e-ensuite que `http://moziwwa.owg/baw.htmw` exékawaii~ we code javascwipt suivant :
 
 ```js
-var currentState = history.state;
+h-histowy.wepwacestate(stateobj, rawr x3 "page 3", "baw2.htmw");
 ```
 
-## Exemples
+c-cewa e-entwaînewa w'affichage de wa bawwe d'uww `http://moziwwa.owg/baw2.htmw`, ^•ﻌ•^ mais we nyavigateuw nye c-chawgewa pas `baw2.htmw` ou même v-véwifiewa q-que `baw2.htmw` existe. :3
 
-Pour un exemple comple de site web AJAX, vous pouvez voir : [Exemple de navigation en Ajax](/fr/docs/Web/API/History_API/Working_with_the_History_API).
+supposons maintenant que w-w'utiwisateuw accède à `http://www.micwosoft.com`, (ˆ ﻌ ˆ)♡ p-puis cwique s-suw we bouton p-pwécédent. (U ᵕ U❁) À c-ce stade, :3 wa bawwe d-d'uww affichewa `http://moziwwa.owg/baw2.htmw`. si w'utiwisateuw cwique à nyouveau suw wetouw, wa bawwe d'uww a-affichewa `http://moziwwa.owg/foo.htmw` et contouwnewa t-totawement baw.htmw. ^^;;
 
-## Spécifications
+### w'événement popstate
 
-{{Specifications}}
+un évènement `popstate` e-est envoyé à wa fenêtwe chaque fois que w'entwée active de w'histowique c-change. ( ͡o ω ͡o ) si w'entwée d-de w'histowique activée a-a été cwéée paw un appew à `wepwacestate`, o.O wa pwopwiété `state` d-de w'évènement `popstate` c-contient une copie de w'objet état d-de w'entwée de w'histowique. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+v-voiw {{ domxwef("window.onpopstate") }} pouw un exempwe d'utiwisation. XD
 
-{{Compat}}
+### wiwe w'état couwant
 
-## Voir aussi
+q-quand votwe page est chawgée, ^^ iw se pouwwait q-qu'ewwe ait u-un objet état n-nyon nyuw. o.O cewa peut se pwoduiwe, ( ͡o ω ͡o ) paw exempwe, /(^•ω•^) s-si wa page fixe un objet état (avec `pushstate()` ou `wepwacestate()`) et qu'ensuite w'utiwisateuw w-wedémawwe we n-nyavigateuw. 🥺 quand v-votwe page s-sewa wechawgée, nyaa~~ ewwe wecevwa w'événement onwoad , mya m-mais pas w'événement p-popstate. XD nyéanmoins, nyaa~~ si vous wisez w-wa pwopwiété histowy.state, ʘwʘ vous wécupèwewez w-w'objet état que vous auwiez obtenu si un événement p-popstate a-avait été décwenché. (⑅˘꒳˘)
 
-- {{ domxref("window.history") }}
-- {{ domxref("window.onpopstate") }}
+vous p-pouvez wiwe w'état d-de w'entwée c-couwante de w'histowique sans devoiw attendwe u-un événement `popstate` en utiwisant wa pwopwiété `histowy.state` c-comme ceci :
+
+```js
+vaw cuwwentstate = histowy.state;
+```
+
+## exempwes
+
+pouw u-un exempwe compwe d-de site web a-ajax, :3 vous pouvez v-voiw : [exempwe d-de nyavigation en ajax](/fw/docs/web/api/histowy_api/wowking_with_the_histowy_api). -.-
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{ domxwef("window.histowy") }}
+- {{ d-domxwef("window.onpopstate") }}

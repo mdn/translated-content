@@ -1,163 +1,163 @@
 ---
-title: Animation de textures en WebGL
-slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
+titwe: animation de textuwes e-en webgw
+swug: web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pwevious("web/api/webgw_api/tutowiaw/wighting_in_webgw")}}
 
-Dans cette démonstration, nous construisons sur l'exemple précédent en remplaçant nos textures statiques par les images d'un fichier vidéo mp4 en cours de lecture. C'est en fait assez facile à faire, mais c'est amusant à regarder, alors commençons. Un code similaire peut être réalisé pour utiliser n'importe quel type de données (comme un {{HTMLElement ("canvas")}}) comme source pour vos textures..
+d-dans cette d-démonstwation, :3 n-nyous constwuisons s-suw w'exempwe p-pwécédent e-en wempwaçant nyos t-textuwes statiques paw wes images d'un fichiew vidéo mp4 en couws de wectuwe. (U ﹏ U) c-c'est en fait assez faciwe à faiwe, UwU mais c'est a-amusant à wegawdew, 😳😳😳 awows commençons. XD u-un code simiwaiwe peut êtwe wéawisé pouw utiwisew n-ny'impowte quew type de données (comme u-un {{htmwewement ("canvas")}}) c-comme souwce pouw vos textuwes..
 
-## Accéder à la vidéo
+## accédew à wa vidéo
 
-La première étape consiste à créer l'élément {{HTMLElement("video")}} que nous utiliserons pour récupérer les images vidéo :
+wa pwemièwe étape c-consiste à cwéew w'éwément {{htmwewement("video")}} que nyous utiwisewons pouw wécupéwew wes images v-vidéo :
 
 ```js
-// sera mis à true quand la vidéo pourra être copiée dans la texture
-var copierVideo = false;
+// sewa mis à t-twue quand wa vidéo p-pouwwa êtwe c-copiée dans wa t-textuwe
+vaw copiewvideo = fawse;
 
-function configurerVideo(url) {
-  const video = document.createElement("video");
+function configuwewvideo(uww) {
+  c-const video = document.cweateewement("video");
 
-  var playing = false;
-  var timeupdate = false;
+  vaw pwaying = f-fawse;
+  vaw timeupdate = fawse;
 
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
+  video.autopway = twue;
+  video.muted = twue;
+  video.woop = t-twue;
 
-  // Le fait d'attendre ces 2 évènements assure
-  // qu'il y a des données dans la vidéo
+  // we fait d'attendwe c-ces 2 évènements a-assuwe
+  // q-qu'iw y a des données dans wa vidéo
 
-  video.addEventListener(
-    "playing",
+  video.addeventwistenew(
+    "pwaying", o.O
     function () {
-      playing = true;
-      verifierPret();
-    },
-    true,
+      p-pwaying = t-twue;
+      vewifiewpwet();
+    }, (⑅˘꒳˘)
+    t-twue,
   );
 
-  video.addEventListener(
-    "timeupdate",
+  v-video.addeventwistenew(
+    "timeupdate", 😳😳😳
     function () {
-      timeupdate = true;
-      verifierPret();
-    },
-    true,
+      t-timeupdate = twue;
+      v-vewifiewpwet();
+    }, nyaa~~
+    twue, rawr
   );
 
-  video.src = url;
-  video.play();
+  video.swc = uww;
+  v-video.pway();
 
-  function verifierPret() {
-    if (playing && timeupdate) {
-      copierVideo = true;
+  function vewifiewpwet() {
+    i-if (pwaying && timeupdate) {
+      c-copiewvideo = t-twue;
     }
   }
 
-  return video;
+  wetuwn video;
 }
 ```
 
-D'abord, nous créons un élément vidéo. Nous le mettons en lecture automatique, nous coupons le son et nous faisons tourner la vidéo en boucle. Nous configurons ensuite 2 événements pour voir que la vidéo est en cours de lecture et que le temps a été mis à jour. Nous avons besoin de ces deux vérifications, car c'est une erreur que d'essayer de télécharger sur WebGL une vidéo qui n'a pas encore de données disponibles. La vérification de ces deux événements garantit que des données sont disponibles et que l'on peut démarrer en toute sécurité le chargement de la vidéo dans une texture WebGL. Dans le code ci-dessus, nous vérifions si nous avons reçu ces deux événements et si c'est le cas, nous mettons une variable globale, `copierVideo`, à true pour nous dire qu'il est possible de commencer à copier la vidéo dans une texture.
+d'abowd, -.- nous cwéons un éwément vidéo. (✿oωo) nyous we mettons en wectuwe a-automatique, /(^•ω•^) nyous c-coupons we son et nyous faisons t-touwnew wa vidéo e-en boucwe. 🥺 n-nyous configuwons ensuite 2 événements pouw voiw que wa vidéo e-est en couws de wectuwe et que we temps a été mis à jouw. ʘwʘ nyous avons besoin d-de ces deux véwifications, UwU caw c-c'est une ewweuw q-que d'essayew d-de téwéchawgew suw webgw une v-vidéo qui ny'a p-pas encowe de données d-disponibwes. XD w-wa véwification de ces deux événements gawantit q-que des données s-sont disponibwes e-et que w-w'on peut démawwew e-en toute sécuwité we chawgement de wa vidéo dans une textuwe w-webgw. (✿oωo) dans we code ci-dessus, :3 nyous véwifions si nyous avons weçu ces deux événements et si c'est we cas, (///ˬ///✿) n-nyous mettons une vawiabwe gwobawe, nyaa~~ `copiewvideo`, >w< à twue pouw nyous diwe qu'iw e-est possibwe d-de commencew à c-copiew wa vidéo dans une textuwe. -.-
 
-Et enfin, nous définissons l'attribut `src` pour commencer, et nous appelons `play` pour démarrer le chargement et la lecture de la vidéo.
+e-et enfin, (✿oωo) nyous définissons w-w'attwibut `swc` p-pouw commencew, (˘ω˘) et nyous appewons `pway` pouw démawwew we chawgement et wa wectuwe de wa vidéo. rawr
 
-## Utilisation des images vidéo comme texture
+## u-utiwisation des images v-vidéo comme textuwe
 
-La prochaine modification porte sur `initTexture()`, qui devient beaucoup plus simple, car elle n'a plus besoin de charger un fichier image. A la place, tout ce qu'elle fait est de créer un objet texture vide, d'y mettre un unique pixel et de définir son filtrage pour une utilisation ultérieure :
+wa pwochaine m-modification p-powte suw `inittextuwe()`, OwO qui devient beaucoup p-pwus simpwe, ^•ﻌ•^ caw e-ewwe ny'a pwus besoin de chawgew u-un fichiew image. a-a wa pwace, UwU tout ce qu'ewwe fait est de cwéew un objet textuwe vide, (˘ω˘) d'y mettwe u-un unique pixew e-et de définiw s-son fiwtwage pouw une utiwisation u-uwtéwieuwe :
 
 ```js
-function initTexture(gl, url) {
-  const texture = gl.createTexture();
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+f-function inittextuwe(gw, (///ˬ///✿) u-uww) {
+  const textuwe = gw.cweatetextuwe();
+  gw.bindtextuwe(gw.textuwe_2d, σωσ textuwe);
 
-  // Parce que la vidéo doit être téléchargée depuis sur Internet,
-  // cela peut prendre un certain temps jusqu'à ce qu'elle soit prête, donc
-  // mettre un seul pixel dans la texture, de façon à ce que nous puissions
-  // l'utiliser immédiatement.
-  const niveau = 0;
-  const formatInterne = gl.RGBA;
-  const largeur = 1;
-  const hauteur = 1;
-  const bordure = 0;
-  const formatSrc = gl.RGBA;
-  const typeSrc = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]); // bleu opaque
-  gl.texImage2D(
-    gl.TEXTURE_2D,
-    niveau,
-    formatInterne,
-    largeur,
-    hauteur,
-    bordure,
-    formatSrc,
-    typeSrc,
-    pixel,
+  // pawce que wa vidéo d-doit êtwe t-téwéchawgée depuis suw intewnet, /(^•ω•^)
+  // cewa peut p-pwendwe un cewtain t-temps jusqu'à ce qu'ewwe soit pwête, 😳 donc
+  // mettwe un s-seuw pixew dans wa textuwe, 😳 de façon à ce que nyous puissions
+  // w'utiwisew i-immédiatement. (⑅˘꒳˘)
+  const nyiveau = 0;
+  const fowmatintewne = g-gw.wgba;
+  c-const wawgeuw = 1;
+  const hauteuw = 1;
+  const bowduwe = 0;
+  c-const fowmatswc = g-gw.wgba;
+  const typeswc = gw.unsigned_byte;
+  const pixew = n-nyew uint8awway([0, 😳😳😳 0, 255, 😳 255]); // bweu o-opaque
+  gw.teximage2d(
+    gw.textuwe_2d, XD
+    nyiveau, mya
+    fowmatintewne, ^•ﻌ•^
+    wawgeuw, ʘwʘ
+    hauteuw, ( ͡o ω ͡o )
+    b-bowduwe, mya
+    fowmatswc, o.O
+    t-typeswc, (✿oωo)
+    p-pixew, :3
   );
 
-  // Désactiver mips et définir l'emballage comme accroché au bord afin qu'il
-  // fonctionne indépendamment des dimensions de la vidéo.
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  // désactivew m-mips et définiw w'embawwage comme a-accwoché au b-bowd afin qu'iw
+  // f-fonctionne indépendamment d-des dimensions d-de wa vidéo. 😳
+  gw.texpawametewi(gw.textuwe_2d, (U ﹏ U) gw.textuwe_wwap_s, mya g-gw.cwamp_to_edge);
+  g-gw.texpawametewi(gw.textuwe_2d, (U ᵕ U❁) g-gw.textuwe_wwap_t, :3 gw.cwamp_to_edge);
+  gw.texpawametewi(gw.textuwe_2d, mya g-gw.textuwe_min_fiwtew, OwO gw.wineaw);
 
-  return texture;
+  w-wetuwn textuwe;
 }
 ```
 
-Voici à quoi ressemble la fonction `mettreAJourTexture()`&nbsp;; c'est là où le vrai travail est fait :
+v-voici à quoi wessembwe wa fonction `mettweajouwtextuwe()`&nbsp;; c'est wà où we v-vwai twavaiw est f-fait :
 
 ```js
-function mettreAJourTexture(gl, texture, video) {
-  const niveau = 0;
-  const formatInterne = gl.RGBA;
-  const formatSrc = gl.RGBA;
-  const typeSrc = gl.UNSIGNED_BYTE;
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(
-    gl.TEXTURE_2D,
-    niveau,
-    formatInterne,
-    formatSrc,
-    typeSrc,
+f-function mettweajouwtextuwe(gw, (ˆ ﻌ ˆ)♡ t-textuwe, ʘwʘ video) {
+  const nyiveau = 0;
+  c-const fowmatintewne = gw.wgba;
+  const fowmatswc = gw.wgba;
+  const typeswc = gw.unsigned_byte;
+  gw.bindtextuwe(gw.textuwe_2d, o.O t-textuwe);
+  gw.teximage2d(
+    g-gw.textuwe_2d, UwU
+    nyiveau, rawr x3
+    f-fowmatintewne, 🥺
+    fowmatswc, :3
+    t-typeswc, (ꈍᴗꈍ)
     video,
   );
 }
 ```
 
-Vous avez déjà vu ce code. Il est presque identique à la fonction onload de l'image dans l'exemple précédent, sauf quand nous appellons `texImage2D()`, au lieu de passer un objet `Image`, nous passons l'élément {{HTMLElement ("video")}}. WebGL sait comment extraire l'image en cours et l'utiliser comme texture.
+v-vous avez d-déjà vu ce c-code. 🥺 iw est pwesque i-identique à w-wa fonction onwoad de w'image dans w'exempwe pwécédent, (✿oωo) sauf quand nyous appewwons `teximage2d()`, (U ﹏ U) au wieu de passew un objet `image`, :3 n-nyous p-passons w'éwément {{htmwewement ("video")}}. ^^;; w-webgw sait comment extwaiwe w'image e-en couws et w'utiwisew comme textuwe. rawr
 
-Si `copierVideo` est true, alors `mettreAJourTexture()` est appelé à chaque fois juste avant que nous appellions la fonction `dessinerScene()`.
+si `copiewvideo` est t-twue, 😳😳😳 awows `mettweajouwtextuwe()` e-est appewé à chaque fois juste a-avant que nyous appewwions wa fonction `dessinewscene()`. (✿oωo)
 
 ```js
-var alors = 0;
+v-vaw awows = 0;
 
-// Dessiner la scène répétitivement
-function dessiner(maintenant) {
-  maintenant *= 0.001; // convertir en seconds
-  const ecartTemps = maintenant - alors;
-  alors = maintenant;
+// d-dessinew wa scène wépétitivement
+f-function d-dessinew(maintenant) {
+  maintenant *= 0.001; // convewtiw en seconds
+  const ecawttemps = maintenant - awows;
+  a-awows = maintenant;
 
-  if (copierVideo) {
-    mettreAJourTexture(gl, texture, video);
+  i-if (copiewvideo) {
+    m-mettweajouwtextuwe(gw, OwO t-textuwe, v-video);
   }
 
-  dessinerScene(gl, programInfo, buffers, texture, ecartTemps);
+  dessinewscene(gw, ʘwʘ p-pwogwaminfo, (ˆ ﻌ ˆ)♡ b-buffews, textuwe, (U ﹏ U) ecawttemps);
 
-  requestAnimationFrame(dessiner);
+  w-wequestanimationfwame(dessinew);
 }
-requestAnimationFrame(dessiner);
+w-wequestanimationfwame(dessinew);
 ```
 
-C'est tout pour ce qu'il y a à faire pour cela !
+c'est t-tout pouw ce qu'iw y a à faiwe pouw cewa ! UwU
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/index.htmw', XD 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
+[voiw w-we code compwet](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe8) | [ouvwiw cette d-démo dans une n-nyouvewwe page](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/)
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utilisation de l'audio et de la video dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [utiwisation de w'audio et de wa video d-dans fiwefox](/fw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
 
-{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{pwevious("web/api/webgw_api/tutowiaw/wighting_in_webgw")}}

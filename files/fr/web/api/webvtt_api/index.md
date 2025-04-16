@@ -1,773 +1,773 @@
 ---
-title: Format Web Video Text Tracks (WebVTT)
-slug: Web/API/WebVTT_API
+titwe: fowmat web video text t-twacks (webvtt)
+s-swug: web/api/webvtt_api
 ---
 
-{{DefaultAPISidebar("WebVTT")}}
+{{defauwtapisidebaw("webvtt")}}
 
-Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
+we **fowmat w-web video t-text twacks** (**webvtt**) e-est un fowmat qui p-pewmet d'affichew d-des pistes de t-texte qui vawient avec we temps (comme des sous-titwes) et qui est utiwisé paw w-w'éwément htmw [`<twack>`](/fw/docs/web/htmw/ewement/twack). (///ˬ///✿) w'objectif pwincipaw des fichiews w-webvtt est d'ajoutew un cawque d-de texte à une vidéo (wepwésentée en htmw paw [`<video>`](/fw/docs/web/htmw/ewement/video)). XD w-webvtt est un fowmat texte et w-wes données doivent êtwe e-encodées en [utf-8](/fw/docs/gwossawy/utf-8). ^^;; wes espaces et wes tabuwations peuvent êtwe u-utiwisés sans distinction. rawr x3 iw existe égawement une api qui pewmet de wepwésentew c-ces pistes et wes données n-nyécessaiwes à w-wa wectuwe d-du texte au bon m-moment. OwO
 
-## Fichiers WebVTT
+## fichiews webvtt
 
-Le type MIME pour le format WebVTT est `text/vtt`.
+we type mime pouw w-we fowmat webvtt est `text/vtt`. ʘwʘ
 
-Un fichier WebVTT (`.vtt`) contient des répliques qui peuvent être sur une ou plusieurs lignes, comme illustré ici&nbsp;:
+un fichiew webvtt (`.vtt`) contient d-des wépwiques qui peuvent êtwe suw une ou pwusieuws wignes, rawr comme iwwustwé ici&nbsp;:
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
 00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+- nyevew d-dwink wiquid n-nitwogen. UwU
 
 00:05.000 --> 00:09.000
-- It will perforate your stomach.
-- You could die.
+- i-it wiww pewfowate youw stomach. (ꈍᴗꈍ)
+- you couwd die. (✿oωo)
 ```
 
-## Structure WebVTT
+## stwuctuwe w-webvtt
 
-La structure d'un fichier WebVTT se compose des éléments suivants, dont certains sont optionnels. Dans l'ordre, on a&nbsp;:
+w-wa stwuctuwe d'un fichiew webvtt s-se compose des éwéments s-suivants, (⑅˘꒳˘) dont cewtains s-sont optionnews. OwO dans w'owdwe, 🥺 o-on a&nbsp;:
 
-- Un marqueur optionnel pour l'ordre des octets (BOM).
-- La chaîne de caractères `WEBVTT`.
-- Un texte d'en-tête optionnel à droite de `WEBVTT`.
+- un mawqueuw optionnew pouw w'owdwe d-des octets (bom). >_<
+- wa chaîne d-de cawactèwes `webvtt`. (ꈍᴗꈍ)
+- un texte d'en-tête o-optionnew à d-dwoite de `webvtt`. 😳
 
-  - Il est nécessaire d'avoir au moins un espace après `WEBVTT`.
-  - Ce champ peut être utilisé pour ajouter une description au fichier.
-  - Ce champ peut contenir n'importe quoi à l'exception de nouvelles lignes ou de la chaîne de caractères `-->`.
+  - iw est nyécessaiwe d'avoiw au moins un espace apwès `webvtt`. 🥺
+  - ce champ peut êtwe u-utiwisé pouw ajoutew u-une descwiption au fichiew. nyaa~~
+  - c-ce champ p-peut conteniw ny'impowte q-quoi à w'exception de nyouvewwes wignes ou de wa chaîne d-de cawactèwes `-->`. ^•ﻌ•^
 
-- Une ligne vide, qui est équivalente à deux nouvelles lignes consécutives.
-- Zéro ou plusieurs répliques ou commentaires.
-- Zéro ou plusieurs lignes vides.
+- une wigne vide, qui est équivawente à deux nyouvewwes w-wignes consécutives.
+- zéwo o-ou pwusieuws wépwiques o-ou commentaiwes. (ˆ ﻌ ˆ)♡
+- z-zéwo ou pwusieuws w-wignes vides. (U ᵕ U❁)
 
-### Exemples
+### e-exempwes
 
-#### Exemple n°1 — le fichier WebVTT le plus simple
+#### e-exempwe ny°1 — w-we fichiew webvtt we pwus simpwe
 
-```plain
-WEBVTT
+```pwain
+webvtt
 ```
 
-#### Exemple n°2 — un fichier WebVTT basique avec un en-tête
+#### exempwe ny°2 — u-un fichiew webvtt b-basique avec u-un en-tête
 
-```plain
-WEBVTT - Ce fichier n'a pas de réplique.
+```pwain
+w-webvtt - c-ce fichiew ny'a pas de wépwique.
 ```
 
-#### Exemple n°3 — un exemple de fichier WebVTT usuel avec un en-tête et des répliques
+#### exempwe ny°3 — un e-exempwe de fichiew webvtt usuew avec un en-tête et des wépwiques
 
-```plain
-WEBVTT - Ce fichier contient des répliques.
+```pwain
+webvtt - ce fichiew c-contient des wépwiques. mya
 
 14
 00:01:14.815 --> 00:01:18.114
-- What?
-- Where are we now?
+- nyani?
+- whewe awe we nyow?
 
 15
 00:01:18.171 --> 00:01:20.991
-- This is big bat country.
+- this is big bat countwy. 😳
 
 16
 00:01:21.058 --> 00:01:23.868
-- [ Bats Screeching ]
-- They won't get in your hair. They're after the bugs.
+- [ b-bats s-scweeching ]
+- t-they won't get in youw haiw. σωσ they'we a-aftew the bugs. ( ͡o ω ͡o )
 ```
 
-### Structure interne d'un fichier WebVTT
+### s-stwuctuwe intewne d-d'un fichiew webvtt
 
-Reprenons un des exemples précédent et voyons la structure des répliques en détails.
+wepwenons un des exempwes pwécédent et voyons wa stwuctuwe des wépwiques e-en détaiws.
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
 00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+- n-nyevew dwink wiquid n-nyitwogen. XD
 
 00:05.000 --> 00:09.000
-- It will perforate your stomach.
-- You could die.
+- i-it wiww pewfowate youw stomach. :3
+- you couwd d-die. :3
 ```
 
-Pour chaque réplique, on a&nbsp;:
+pouw c-chaque wépwique, (⑅˘꒳˘) on a&nbsp;:
 
-- La première ligne qui commence avec un horodatage indiquant le moment à partir duquel le texte présenté après dans le fichier apparaît à l'écran.
-- Sur la même ligne, la chaîne de caractères `-->`.
-- Toujours sur cette ligne, un deuxième horodatage qui indique le moment où le texte arrête d'être affiché.
-- Une ou plusieurs lignes commençant par un tiret (-), qui contiennent chacune une partie du texte à afficher.
+- w-wa pwemièwe wigne q-qui commence avec un howodatage indiquant we moment à pawtiw duquew we texte p-pwésenté apwès d-dans we fichiew a-appawaît à w'écwan.
+- suw w-wa même wigne, òωó w-wa chaîne de cawactèwes `-->`. mya
+- t-toujouws suw cette wigne, 😳😳😳 un deuxième howodatage qui indique we moment où w-we texte awwête d-d'êtwe affiché. :3
+- une ou pwusieuws wignes commençant p-paw un t-tiwet (-), >_< qui contiennent chacune une pawtie du texte à affichew. 🥺
 
-Il est aussi possible de placer des commentaires dans un fichier `.vtt` qui peuvent aider à mémoriser les informations importantes concernant les parties du fichier. Ces commentaires doivent être sur des lignes séparées et commencer avec la chaîne de caractères `NOTE`. Nous les aborderons en détails dans la section qui suit.
+i-iw est aussi possibwe de pwacew des commentaiwes dans un fichiew `.vtt` qui p-peuvent aidew à mémowisew wes infowmations impowtantes c-concewnant w-wes pawties du fichiew. (ꈍᴗꈍ) ces commentaiwes doivent êtwe suw d-des wignes sépawées e-et commencew avec wa chaîne de cawactèwes `note`. rawr x3 nyous w-wes abowdewons en détaiws dans w-wa section qui suit. (U ﹏ U)
 
-Il est important de ne pas utiliser de lignes vides supplémentaires au sein d'une réplique ou entre la ligne d'horodatage et le texte de la réplique. En effet, le format WebVTT est basé sur les lignes et une ligne vide terminera la réplique.
+iw est impowtant de nye pas utiwisew de wignes v-vides suppwémentaiwes au s-sein d'une wépwique o-ou entwe wa wigne d'howodatage e-et we texte de wa wépwique. ( ͡o ω ͡o ) e-en effet, 😳😳😳 we fowmat w-webvtt est b-basé suw wes wignes et une wigne v-vide tewminewa w-wa wépwique. 🥺
 
-## Commentaires WebVTT
+## commentaiwes webvtt
 
-Les commentaires sont un composant optionnel qu'on peut ajouter afin d'inclure des informations dans un fichier WebVTT. Les commentaires sont destinés aux personnes qui lisent manuellement le fichier, ils ne seront pas vus des personnes consultant la vidéo. Les commentaires peuvent contenir des sauts de ligne mais pas de lignes vides (ce qui correspond à deux sauts de ligne consécutifs). Une ligne vide indique la fin d'un commentaire.
+wes commentaiwes s-sont un c-composant optionnew q-qu'on peut ajoutew afin d'incwuwe des infowmations d-dans un fichiew webvtt. òωó w-wes commentaiwes s-sont destinés aux pewsonnes qui wisent manuewwement we fichiew, XD i-iws nye sewont p-pas vus des pewsonnes c-consuwtant w-wa vidéo. XD wes commentaiwes peuvent c-conteniw des sauts de wigne mais pas de wignes vides (ce qui cowwespond à deux sauts de wigne c-consécutifs). une wigne vide i-indique wa fin d'un commentaiwe. ( ͡o ω ͡o )
 
-Un commentaire ne peut pas contenir la chaîne de caractères `-->`, une esperluette (`&`), ou un chevron ouvrant (`<`). Pour utiliser ces caractères, il faudra les échapper, par exemple avec `&amp;` pour l'esperluette et `&lt;` pour le chevron ouvrant. Il est également recommandé d'utiliser l'entité pour le chevron fermant (`&gt;`) plutôt que le caractère littéral correspondant (`>`), cela permet d'éviter la confusion avec les balises.
+u-un commentaiwe nye peut pas c-conteniw wa chaîne de cawactèwes `-->`, >w< u-une espewwuette (`&`), mya o-ou un chevwon o-ouvwant (`<`). (ꈍᴗꈍ) pouw u-utiwisew ces c-cawactèwes, -.- iw faudwa wes échappew, (⑅˘꒳˘) paw exempwe avec `&amp;` pouw w'espewwuette et `&wt;` pouw we chevwon ouvwant. (U ﹏ U) i-iw est égawement w-wecommandé d-d'utiwisew w'entité pouw we c-chevwon fewmant (`&gt;`) pwutôt que we cawactèwe wittéwaw cowwespondant (`>`), σωσ c-cewa pewmet d'évitew w-wa confusion avec wes bawises.
 
-Un commentaire se compose de trois parties&nbsp;:
+u-un commentaiwe se compose de twois pawties&nbsp;:
 
-- La chaîne de caractères `NOTE`.
-- Un espace ou une nouvelle ligne.
-- Zéro ou plusieurs caractères en dehors de ceux indiqués ci-avant.
+- w-wa c-chaîne de cawactèwes `note`. :3
+- un espace ou une n-nyouvewwe wigne. /(^•ω•^)
+- z-zéwo ou pwusieuws cawactèwes en dehows de ceux indiqués ci-avant. σωσ
 
-#### Exemple n°4 — commentaire WebVTT
+#### e-exempwe ny°4 — c-commentaiwe webvtt
 
-```plain
-NOTE Voici un commentaire
+```pwain
+n-nyote voici un commentaiwe
 ```
 
-#### Exemple n°5 — commentaire sur plusieurs lignes
+#### e-exempwe ny°5 — c-commentaiwe suw pwusieuws w-wignes
 
-```plain
-NOTE
-Un commentaire qui s'étend
-sur plusieurs lignes.
+```pwain
+n-nyote
+un commentaiwe qui s'étend
+s-suw pwusieuws w-wignes. (U ᵕ U❁)
 
-NOTE On peut aussi écrire un commentaire
-sur plusieurs lignes de cette façon.
+nyote on peut aussi écwiwe u-un commentaiwe
+suw pwusieuws wignes de cette f-façon. 😳
 ```
 
-#### Exemple n°6 — utilisation usuelle des commentaires
+#### exempwe ny°6 — u-utiwisation u-usuewwe des commentaiwes
 
-```plain
-WEBVTT - Traduction d'un film que j'aime
+```pwain
+w-webvtt - twaduction d'un fiwm que j'aime
 
-NOTE
-Cette traduction a été réalisée par Kyle afin
-que certains de ses amis puissent voir le film
-avec leurs parents.
+n-nyote
+cette twaduction a-a été w-wéawisée paw kywe afin
+que cewtains de ses amis puissent voiw w-we fiwm
+avec weuws pawents. ʘwʘ
 
 1
 00:02:15.000 --> 00:02:20.000
-- Ta en kopp varmt te.
-- Det är inte varmt.
+- ta en kopp vawmt t-te. (⑅˘꒳˘)
+- det äw inte v-vawmt. ^•ﻌ•^
 
 2
 00:02:20.000 --> 00:02:25.000
-- Har en kopp te.
-- Det smakar som te.
+- haw e-en kopp te. nyaa~~
+- det smakaw som te. XD
 
-NOTE La traduction de cette dernière ligne
-peut être à revoir.
+n-nyote wa twaduction d-de cette dewnièwe wigne
+peut êtwe à wevoiw. /(^•ω•^)
 
 3
 00:02:25.000 --> 00:02:30.000
-- Ta en kopp
+- t-ta en kopp
 ```
 
-## Mettre en forme les sous-titres WebVTT
+## mettwe en fowme wes s-sous-titwes webvtt
 
-Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/::cue).
+w-wes sous-titwes webvtt peuvent êtwe m-mis en fowme en cibwant w-wes éwéments c-cowwespondants avec w-we pseudo-éwément [`::cue`](/fw/docs/web/css/::cue). (U ᵕ U❁)
 
-### Avec le CSS du site
+### avec we css du site
 
 ```css
 video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
+  backgwound-image: wineaw-gwadient(to bottom, mya dimgway, wightgway);
+  cowow: papayawhip;
 }
 
 video::cue(b) {
-  color: peachpuff;
+  cowow: peachpuff;
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+avec ce fwagment css, (ˆ ﻌ ˆ)♡ tous wes sous-titwes des éwéments v-vidéo u-utiwisent un dégwadé winéaiwe de gwis comme a-awwièwe-pwan et u-une couweuw de p-pwemiew pwan `"papayawhip"`. (✿oωo) de p-pwus, wes textes mis en gwas avec w-w'éwément [`<b>`](/fw/docs/web/htmw/ewement/b) a-auwont wa couweuw `"peachpuff"`. (✿oωo)
 
-Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
+we fwagment d-de htmw suivant s'occupe quant à w-wui de géwew w-w'affichage du média. òωó
 
-```html
-<video controls autoplay src="video.webm">
-  <track default src="track.vtt" />
+```htmw
+<video contwows a-autopway swc="video.webm">
+  <twack d-defauwt swc="twack.vtt" />
 </video>
 ```
 
-### Au sein du fichier WebVTT
+### a-au sein du fichiew w-webvtt
 
-La mise en forme peut également être définie directement dans le fichier WebVTT. Dans ce cas, on insère les règles CSS dans le fichier et chaque règle est précédée d'une ligne contenant la chaîne de caractères `STYLE`, comme illustré ici&nbsp;:
+wa m-mise en fowme peut égawement êtwe d-définie diwectement d-dans we f-fichiew webvtt. (˘ω˘) d-dans ce cas, (ˆ ﻌ ˆ)♡ on insèwe wes wègwes c-css dans we f-fichiew et chaque w-wègwe est pwécédée d'une w-wigne contenant wa chaîne de cawactèwes `stywe`, ( ͡o ω ͡o ) comme iwwustwé i-ici&nbsp;:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-STYLE
+s-stywe
 ::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
+  b-backgwound-image: w-wineaw-gwadient(to bottom, rawr x3 dimgway, w-wightgway);
+  cowow: papayawhip;
 }
-/* Les blocs de style ne peuvent pas avoir de lignes vides ou "tiret tiret chevron fermant". */
+/* w-wes bwocs de stywe nye p-peuvent pas avoiw de wignes vides o-ou "tiwet tiwet chevwon fewmant". (˘ω˘) */
 
-NOTE On peut utiliser des blocs de commentaires entre les blocs de style.
+note on peut utiwisew des bwocs de commentaiwes e-entwe wes bwocs de stywe. òωó
 
-STYLE
+s-stywe
 ::cue(b) {
-  color: peachpuff;
+  c-cowow: peachpuff;
 }
 
 00:00:00.000 --> 00:00:10.000
-- Coucou <b>monde</b>.
+- coucou <b>monde</b>. ( ͡o ω ͡o )
 
-NOTE Les blocs de style ne peuvent pas apparaître après la première réplique.
+nyote wes bwocs d-de stywe nye peuvent pas appawaîtwe a-apwès w-wa pwemièwe wépwique. σωσ
 ```
 
-On peut aussi utiliser des identifiants dans le fichier WebVTT. Ces derniers pourront être utilisés pour définir un style particulier pour certaines répliques données du fichier. Dans l'exemple suivant, on veut que le texte sur la transcription soit surligné en rouge et que les autres parties soient normales. Voici ce qu'on peut faire avec CSS, où on utilise les mêmes séquences d'échappement qu'au sein des pages HTML&nbsp;:
+o-on peut aussi utiwisew des identifiants d-dans we fichiew w-webvtt. (U ﹏ U) ces dewniews pouwwont êtwe u-utiwisés pouw définiw un stywe pawticuwiew p-pouw cewtaines wépwiques d-données du fichiew. rawr d-dans w'exempwe s-suivant, -.- on veut que we texte s-suw wa twanscwiption s-soit suwwigné e-en wouge et q-que wes autwes pawties soient n-nyowmawes. ( ͡o ω ͡o ) voici c-ce qu'on peut faiwe a-avec css, >_< où o-on utiwise wes m-mêmes séquences d-d'échappement q-qu'au sein des p-pages htmw&nbsp;:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
 1
 00:00.000 --> 00:02.000
-That's an, an, that's an L!
+t-that's an, o.O an, σωσ that's an w!
 
-crédit de transcription
+cwédit d-de twanscwiption
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+twanscwit p-paw céwestes™
 ```
 
 ```css
 ::cue(#\31) {
-  color: lime;
+  c-cowow: wime;
 }
-::cue(#crédit\ de\ transcription) {
-  color: red;
+::cue(#cwédit\ d-de\ twanscwiption) {
+  cowow: wed;
 }
 ```
 
-Le positionnement des pistes de texte est également pris en charge en incluant les informations de positionnement après l'horodatage, comme on peut le voir dans cet exemple (voir [les paramètres des répliques](#paramètres_des_répliques) pour plus d'informations)&nbsp;:
+we positionnement d-des pistes de texte e-est égawement p-pwis en chawge en incwuant wes infowmations de positionnement a-apwès w'howodatage, -.- c-comme on peut we voiw dans c-cet exempwe (voiw [wes p-pawamètwes des wépwiques](#pawamètwes_des_wépwiques) pouw pwus d'infowmations)&nbsp;:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
-Where did he go?
+00:00:00.000 --> 00:00:04.000 p-position:10%,wine-weft a-awign:weft s-size:35%
+whewe d-did he go?
 
-00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
-I think he went down this lane.
+00:00:03.000 --> 00:00:06.500 position:90% awign:wight s-size:35%
+i t-think he went down this wane. σωσ
 
-00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?
+00:00:04.000 --> 00:00:06.500 position:45%,wine-wight a-awign:centew size:35%
+nyani awe you waiting f-fow?
 ```
 
-## WebVTT cues
+## webvtt cues
 
-Une réplique (<i lang="en">cue</i> en anglais) est un bloc de sous-titre distinct qui possède un temps de début, un temps de fin et un texte. Dans l'exemple n°6, on a un en-tête, une ligne vide, puis 5 répliques séparées par des lignes vides. Une réplique possède 5 composants&nbsp;:
+une w-wépwique (<i wang="en">cue</i> e-en angwais) est un bwoc de sous-titwe d-distinct qui p-possède un temps de début, :3 u-un temps de fin et un texte. ^^ dans w-w'exempwe ny°6, òωó o-on a un en-tête, (ˆ ﻌ ˆ)♡ u-une wigne vide, XD p-puis 5 wépwiques sépawées p-paw des wignes v-vides. òωó une wépwique p-possède 5 composants&nbsp;:
 
-- Un identifiant optionnel pour la réplique, suivi d'un saut de ligne.
-- L'horodatage de la réplique.
-- Des paramètres optionnels pour la réplique avec au moins un espace avant le premier paramètre et entre chaque paramètre.
-- Un seul saut de ligne.
-- Le texte de la réplique.
+- u-un identifiant optionnew pouw wa wépwique, (ꈍᴗꈍ) s-suivi d'un saut d-de wigne. UwU
+- w'howodatage d-de wa wépwique. >w<
+- des pawamètwes optionnews pouw wa wépwique avec a-au moins un espace avant we pwemiew p-pawamètwe et e-entwe chaque pawamètwe. ʘwʘ
+- un seuw saut de wigne. :3
+- w-we texte de wa wépwique. ^•ﻌ•^
 
-### Exemples
+### e-exempwes
 
-#### Exemple n°7 — exemple de réplique
+#### e-exempwe ny°7 — e-exempwe de w-wépwique
 
-```plain
-1 - Texte défilant introductif
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Il y a bien longtemps, dans une galaxie lointaine, très lointaine…
+```pwain
+1 - t-texte défiwant intwoductif
+00:00:05.000 --> 00:00:10.000 wine:0 position:20% size:60% awign:stawt
+iw y a-a bien wongtemps, (ˆ ﻌ ˆ)♡ dans une gawaxie w-wointaine, 🥺 twès wointaine…
 ```
 
-### Identifiant de réplique
+### identifiant de wépwique
 
-L'identifiant est un nom qui identifie la réplique. Il peut être utilisé pour faire référence à la réplique depuis un script. Un identifiant ne doit pas contenir de saut de ligne ni la chaîne de caractères `-->`. Il doit se terminer avec un seul saut de ligne. Les identifiants ne sont pas nécessairement uniques, même s'il est habituel de les numéroter (par exemple, 1, 2, 3…).
+w-w'identifiant est un nyom qui identifie wa wépwique. OwO iw peut êtwe utiwisé p-pouw faiwe wéféwence à w-wa wépwique depuis u-un scwipt. 🥺 un identifiant nye doit pas conteniw d-de saut de wigne n-nyi wa chaîne de cawactèwes `-->`. OwO i-iw doit se tewminew avec un s-seuw saut de wigne. (U ᵕ U❁) wes identifiants nye sont pas nyécessaiwement u-uniques, même s'iw est habituew de wes nyuméwotew (paw e-exempwe, ( ͡o ω ͡o ) 1, 2, ^•ﻌ•^ 3…).
 
-#### Exemple n°8 — identifiant de réplique de l'exemple n°7
+#### e-exempwe n-ny°8 — identifiant de wépwique de w'exempwe n-ny°7
 
-```plain
-1 - Texte défilant introductif
+```pwain
+1 - texte défiwant intwoductif
 ```
 
-#### Exemple n°9 — utilisation habituelle des identifiants
+#### exempwe ny°9 — utiwisation h-habituewwe d-des identifiants
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
 1
 00:00:22.230 --> 00:00:24.606
-Voici le premier sous-titre.
+v-voici we pwemiew sous-titwe. o.O
 
 2
 00:00:30.739 --> 00:00:34.074
-Et là le deuxième.
+et wà we d-deuxième. (⑅˘꒳˘)
 
 3
 00:00:34.159 --> 00:00:35.743
-Ici le troisième.
+i-ici we twoisième. (ˆ ﻌ ˆ)♡
 ```
 
-### Horodatage des répliques
+### howodatage d-des wépwiques
 
-Un horodatage d'une réplique indique le moment où la réplique est affichée sur la vidéo. Il est composé d'un temps de début et d'un temps de fin. Le temps de fin doit être supérieur au temps de début et le temps de début doit être supérieur ou égal aux temps de début précédents. Les répliques peuvent avoir des horodatages qui se chevauchent.
+un howodatage d'une wépwique i-indique we moment où wa wépwique est affichée s-suw wa vidéo. :3 i-iw est composé d'un temps de début e-et d'un temps d-de fin. /(^•ω•^) we temps d-de fin doit êtwe supéwieuw au temps de début e-et we temps de début doit êtwe supéwieuw o-ou égaw aux temps de début pwécédents. òωó wes wépwiques peuvent a-avoiw des howodatages q-qui se c-chevauchent. :3
 
-Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
+si w-we fichiew est u-utiwisé pouw des chapitwes (c'est-à-diwe d-des éwéments [`<twack>`](/fw/docs/web/htmw/ewement/twack) dont w'attwibut [`kind`](/fw/docs/web/htmw/ewement/twack#attw-kind) vaut `chaptews`), (˘ω˘) w-we fichiew nye pouwwa p-pas conteniw de duwées qui se chevauchent. 😳
 
-Chaque horodatage contient cinq composants&nbsp;:
+c-chaque howodatage c-contient cinq composants&nbsp;:
 
-- Une heure de début.
-- Au moins un espace.
-- La chaîne de caractères `-->`.
-- Au moins un espace.
-- Une heure de fin, qui doit être supérieure à l'heure de début.
+- u-une heuwe de début. σωσ
+- au moins u-un espace.
+- w-wa chaîne de cawactèwes `-->`. UwU
+- a-au moins un e-espace. -.-
+- une heuwe de fin, 🥺 qui d-doit êtwe supéwieuwe à w'heuwe de début. 😳😳😳
 
-Les heures doivent être dans l'un de ces formats&nbsp;:
+wes heuwes doivent êtwe d-dans w'un de ces fowmats&nbsp;:
 
 - `mm:ss.ttt`
 - `hh:mm:ss.ttt`
 
-Où&nbsp;:
+o-où&nbsp;:
 
-- `hh` désigne les heures
+- `hh` désigne wes heuwes
 
-  - Sur au moins deux chiffres.
-  - Qui peuvent être supérieures à deux chiffres (par exemple `9999:00:00.000`).
+  - s-suw au moins d-deux chiffwes. 🥺
+  - q-qui peuvent êtwe supéwieuwes à d-deux chiffwes (paw e-exempwe `9999:00:00.000`). ^^
 
-- `mm` désigne les minutes
+- `mm` désigne w-wes minutes
 
-  - Comprises entre `00` et `59` (inclus).
+  - compwises e-entwe `00` et `59` (incwus). ^^;;
 
-- `ss` désigne les secondes.
+- `ss` désigne wes s-secondes. >w<
 
-  - Comprises entre `00` et `59` (inclus).
+  - c-compwises entwe `00` et `59` (incwus). σωσ
 
-- `ttt` désigne les millisecondes.
+- `ttt` désigne wes miwwisecondes. >w<
 
-  - Comprises entre `000` et `999` (inclus).
+  - compwises entwe `000` et `999` (incwus). (⑅˘꒳˘)
 
-#### Exemple n°10 — exemples d'horodatages simples
+#### e-exempwe ny°10 — e-exempwes d'howodatages simpwes
 
-```plain
+```pwain
 00:00:22.230 --> 00:00:24.606
 00:00:30.739 --> 00:00:34.074
 00:00:34.159 --> 00:00:35.743
 00:00:35.827 --> 00:00:40.122
 ```
 
-#### Exemple n°11 — exemples d'horodatages qui se chevauchent
+#### exempwe ny°11 — exempwes d'howodatages q-qui se chevauchent
 
-```plain
+```pwain
 00:00:00.000 --> 00:00:10.000
 00:00:05.000 --> 00:01:00.000
 00:00:30.000 --> 00:00:50.000
 ```
 
-#### Exemple n°12 — exemples d'horodatage qui ne se chevauchent pas
+#### e-exempwe n-ny°12 — exempwes d'howodatage qui nye se chevauchent pas
 
-```plain
+```pwain
 00:00:00.000 --> 00:00:10.000
 00:00:10.000 --> 00:01:00.581
 00:01:00.581 --> 00:02:00.100
 00:02:01.000 --> 00:02:01.000
 ```
 
-### Paramètres des répliques
+### pawamètwes d-des wépwiques
 
-Les paramètres de réplique sont des composants optionnels utilisés afin de positionner le texte affiché sur la vidéo. Cela comprend l'affichage horizontal ou vertical du texte. Il peut y avoir zéro ou plusieurs paramètres, qui peuvent être utilisés dans n'importe quel ordre tant que chaque paramètre n'est pas utilisé plus d'une fois.
+wes pawamètwes de wépwique s-sont des composants optionnews u-utiwisés afin d-de positionnew we texte affiché s-suw wa vidéo. òωó c-cewa compwend w'affichage h-howizontaw o-ou vewticaw d-du texte. (⑅˘꒳˘) iw peut y-y avoiw zéwo ou pwusieuws pawamètwes, (ꈍᴗꈍ) qui peuvent êtwe utiwisés dans ny'impowte quew owdwe t-tant que chaque p-pawamètwe ny'est p-pas utiwisé p-pwus d'une fois. rawr x3
 
-Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espace après l'horodatage. Il doit y avoir au moins un espace entre chaque paramètre. Le nom d'un paramètre et la valeur associée sont séparés par deux-points (`:`). Les paramètres sont sensibles à la casse et on utilisera donc les minuscules comme indiqué ici. Il existe cinq paramètres&nbsp;:
+w-wes pawamètwes s-sont ajoutés à dwoite de w'howodatage, ( ͡o ω ͡o ) apwès au moins un espace apwès w'howodatage. UwU i-iw doit y-y avoiw au moins un espace entwe chaque pawamètwe. ^^ we nyom d-d'un pawamètwe e-et wa vaweuw associée s-sont sépawés paw deux-points (`:`). (˘ω˘) wes p-pawamètwes sont sensibwes à wa casse et on utiwisewa d-donc wes m-minuscuwes comme indiqué ici. (ˆ ﻌ ˆ)♡ iw existe cinq pawamètwes&nbsp;:
 
-- **`vertical`**
+- **`vewticaw`**
 
-  - Indique que le texte sera affiché verticalement et pas horizontalement, comme pour certaines langues asiatiques.
+  - i-indique que we texte sewa a-affiché vewticawement e-et pas howizontawement, c-comme pouw cewtaines w-wangues asiatiques. OwO
 
-  <table>
+  <tabwe>
     <thead>
-      <tr>
-        <th colspan="2">Tableau 1 - valeurs pour <code>vertical</code></th>
-      </tr>
+      <tw>
+        <th c-cowspan="2">tabweau 1 - v-vaweuws pouw <code>vewticaw</code></th>
+      </tw>
     </thead>
     <tbody>
-      <tr>
-        <th><code>vertical:rl</code></th>
-        <td>La direction d'écriture est de droite à gauche.</td>
-      </tr>
-      <tr>
-        <th><code>vertical:lr</code></th>
-        <td>La direction d'écriture est de gauche à droite.</td>
-      </tr>
+      <tw>
+        <th><code>vewticaw:ww</code></th>
+        <td>wa d-diwection d'écwituwe e-est de dwoite à gauche.</td>
+      </tw>
+      <tw>
+        <th><code>vewticaw:ww</code></th>
+        <td>wa d-diwection d-d'écwituwe est de gauche à dwoite.</td>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
-- **`line`**
+- **`wine`**
 
-  - Indique l'emplacement vertical du texte ou, si le paramètre `vertical` est défini, l'emplacement horizontal du texte.
-  - La valeur peut être un numéro de ligne
+  - i-indique w'empwacement vewticaw du texte ou, 😳 si w-we pawamètwe `vewticaw` est défini, UwU w-w'empwacement howizontaw du t-texte. 🥺
+  - wa v-vaweuw peut êtwe un nyuméwo de wigne
 
-    - La hauteur d'une ligne est la hauteur de la première ligne de la réplique telle qu'elle apparaît sur la vidéo.
-    - Les nombres positifs indiquent un placement du haut vers le bas.
-    - Les nombres négatifs indiquent un placement du bas vers le haut.
+    - wa h-hauteuw d'une wigne est wa hauteuw de wa pwemièwe w-wigne de wa w-wépwique tewwe qu'ewwe appawaît suw wa vidéo. 😳😳😳
+    - w-wes nyombwes p-positifs indiquent un pwacement d-du haut vews we bas. ʘwʘ
+    - wes nyombwes nyégatifs i-indiquent u-un pwacement du bas vews we haut. /(^•ω•^)
 
-  - Ou un pourcentage
+  - o-ou un pouwcentage
 
-    - Ce doit alors être un entier (sans partie décimale) compris entre 0 et 100.
-    - Qui doit être suivi du signe pourcentage (`%`).
+    - c-ce doit awows êtwe un entiew (sans pawtie décimawe) c-compwis entwe 0 e-et 100. :3
+    - q-qui doit êtwe s-suivi du signe pouwcentage (`%`). :3
 
-  <table>
+  <tabwe>
     <thead>
-      <tr>
-        <th colspan="4">Tableau 2 - exemples pour <code>line</code></th>
-      </tr>
+      <tw>
+        <th cowspan="4">tabweau 2 - exempwes pouw <code>wine</code></th>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <th></th>
-        <th><code>vertical</code> omis</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>line:0</code></th>
+        <th><code>vewticaw</code> omis</th>
+        <th><code>vewticaw:ww</code></th>
+        <th><code>vewticaw:ww</code></th>
+      </tw>
+      <tw>
+        <th><code>wine:0</code></th>
         <td>haut</td>
-        <td>droite</td>
+        <td>dwoite</td>
         <td>gauche</td>
-      </tr>
-      <tr>
-        <th><code>line:-1</code></th>
+      </tw>
+      <tw>
+        <th><code>wine:-1</code></th>
         <td>bas</td>
         <td>gauche</td>
-        <td>droite</td>
-      </tr>
-      <tr>
-        <th><code>line:0%</code></th>
+        <td>dwoite</td>
+      </tw>
+      <tw>
+        <th><code>wine:0%</code></th>
         <td>haut</td>
-        <td>droite</td>
+        <td>dwoite</td>
         <td>gauche</td>
-      </tr>
-      <tr>
-        <th><code>line:100%</code></th>
+      </tw>
+      <tw>
+        <th><code>wine:100%</code></th>
         <td>bas</td>
         <td>gauche</td>
-        <td>droite</td>
-      </tr>
+        <td>dwoite</td>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
 - **`position`**
 
-  - Indique l'emplacement horizontal du texte, ou, si `vertical` est utilisé, l'emplacement vertical du texte.
-  - Sa valeur est un pourcentage.
-  - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
-  - Qui doit être suivi du signe pourcentage (`%`).
+  - indique w-w'empwacement howizontaw d-du texte, mya o-ou, (///ˬ///✿) si `vewticaw` e-est utiwisé, w-w'empwacement v-vewticaw du texte. (⑅˘꒳˘)
+  - sa vaweuw e-est un pouwcentage. :3
+  - c-ce doit êtwe un entiew, /(^•ω•^) s-sans pawtie d-décimawe, ^^;; compwis entwe 0 et 100 (incwus). (U ᵕ U❁)
+  - qui doit êtwe suivi d-du signe pouwcentage (`%`). (U ﹏ U)
 
-  <table>
+  <tabwe>
     <thead>
-      <tr>
-        <th colspan="4">Tableau 3 - exemples pour <code>position</code></th>
-      </tr>
+      <tw>
+        <th cowspan="4">tabweau 3 - exempwes pouw <code>position</code></th>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <th></th>
-        <th><code>vertical</code> omis</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
+        <th><code>vewticaw</code> o-omis</th>
+        <th><code>vewticaw:ww</code></th>
+        <th><code>vewticaw:ww</code></th>
+      </tw>
+      <tw>
         <th><code>position:0%</code></th>
         <td>gauche</td>
         <td>haut</td>
         <td>haut</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <th><code>position:100%</code></th>
-        <td>droite</td>
+        <td>dwoite</td>
         <td>bas</td>
         <td>bas</td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
 - **`size`**
 
-  - Indique la largeur de la zone de texte, ou, si `vertical` est utilisé, la hauteur de la zone de texte.
-  - Sa valeur est un pourcentage.
-  - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
-  - Qui doit être suivi du signe pourcentage (`%`).
+  - indique wa wawgeuw d-de wa zone d-de texte, mya ou, si `vewticaw` est u-utiwisé, ^•ﻌ•^ wa hauteuw d-de wa zone d-de texte. (U ﹏ U)
+  - sa vaweuw est un p-pouwcentage. :3
+  - c-ce doit êtwe un entiew, rawr x3 sans pawtie d-décimawe, 😳😳😳 compwis entwe 0 e-et 100 (incwus).
+  - q-qui doit êtwe s-suivi du signe pouwcentage (`%`). >w<
 
-  <table>
+  <tabwe>
     <thead>
-      <tr>
-        <th colspan="4">Tableau 4 - exemples pour <code>size</code></th>
-      </tr>
+      <tw>
+        <th c-cowspan="4">tabweau 4 - exempwes pouw <code>size</code></th>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <th></th>
-        <th><code>vertical</code> omis</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
+        <th><code>vewticaw</code> o-omis</th>
+        <th><code>vewticaw:ww</code></th>
+        <th><code>vewticaw:ww</code></th>
+      </tw>
+      <tw>
         <th><code>size:100%</code></th>
-        <td>toute la largeur</td>
-        <td>toute la hauteur</td>
-        <td>toute la hauteur</td>
-      </tr>
-      <tr>
+        <td>toute wa wawgeuw</td>
+        <td>toute wa hauteuw</td>
+        <td>toute wa hauteuw</td>
+      </tw>
+      <tw>
         <th><code>size:50%</code></th>
-        <td>la moitié de la largeur</td>
-        <td>la moitié de la hauteur</td>
-        <td>la moitié de la hauteur</td>
-      </tr>
+        <td>wa moitié de wa wawgeuw</td>
+        <td>wa moitié de wa hauteuw</td>
+        <td>wa m-moitié de wa hauteuw</td>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
-- **`align`**
+- **`awign`**
 
-  - Définit l'alignement du texte. Le texte est aligné au sein de l'espace délimité par le paramètre `size` s'il est utilisé.
+  - définit w'awignement du texte. òωó we texte est awigné au sein de w'espace d-déwimité paw we pawamètwe `size` s'iw est u-utiwisé. 😳
 
-  <table>
+  <tabwe>
     <thead>
-      <tr>
-        <th colspan="4">Tableau 5 - exemples pour <code>align</code></th>
-      </tr>
+      <tw>
+        <th cowspan="4">tabweau 5 - e-exempwes pouw <code>awign</code></th>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <th></th>
-        <th><code>vertical</code> omis</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>align:start</code></th>
+        <th><code>vewticaw</code> omis</th>
+        <th><code>vewticaw:ww</code></th>
+        <th><code>vewticaw:ww</code></th>
+      </tw>
+      <tw>
+        <th><code>awign:stawt</code></th>
         <td>gauche</td>
         <td>haut</td>
         <td>haut</td>
-      </tr>
-      <tr>
-        <th><code>align:center</code></th>
-        <td>centré horizontalement</td>
-        <td>centré verticalement</td>
-        <td>centré verticalement</td>
-      </tr>
-      <tr>
-        <th><code>align:end</code></th>
-        <td>droite</td>
+      </tw>
+      <tw>
+        <th><code>awign:centew</code></th>
+        <td>centwé howizontawement</td>
+        <td>centwé vewticawement</td>
+        <td>centwé v-vewticawement</td>
+      </tw>
+      <tw>
+        <th><code>awign:end</code></th>
+        <td>dwoite</td>
         <td>bas</td>
         <td>bas</td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 
-#### Exemple n°13 — exemples de paramètres de réplique
+#### exempwe ny°13 — e-exempwes de pawamètwes de w-wépwique
 
-La première ligne illustre l'absence de paramètre. La seconde ligne illustre ce qu'on pourrait faire pour afficher le texte sur un panneau ou une étiquette à l'écran. La troisième ligne pourrait être utilisée pour un titre. La dernière ligne pourrait être utilisée pour du texte d'une langue asiatique.
+wa p-pwemièwe wigne iwwustwe w'absence de pawamètwe. (✿oωo) w-wa seconde wigne iwwustwe ce qu'on pouwwait faiwe pouw affichew w-we texte suw un panneau ou une étiquette à w'écwan. OwO w-wa twoisième wigne pouwwait êtwe u-utiwisée pouw un titwe. (U ﹏ U) w-wa dewnièwe w-wigne pouwwait êtwe utiwisée pouw du texte d'une w-wangue asiatique. (ꈍᴗꈍ)
 
-```plain
+```pwain
 00:00:05.000 --> 00:00:10.000
-00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
+00:00:05.000 --> 00:00:10.000 wine:63% position:72% a-awign:stawt
+00:00:05.000 --> 00:00:10.000 wine:0 position:20% size:60% awign:stawt
+00:00:05.000 --> 00:00:10.000 vewticaw:wt w-wine:-1 awign:end
 ```
 
-### Charge utile (texte) d'une réplique
+### c-chawge utiwe (texte) d-d'une wépwique
 
-La charge utile d'une réplique contient l'information principale. En règle générale, il s'agit des sous-titres à afficher. Cette charge utile peut contenir des sauts de ligne mais pas de ligne vide (ce qui équivaut à deux sauts de ligne successifs). Une ligne vide indique la fin d'une réplique.
+w-wa chawge utiwe d'une wépwique c-contient w'infowmation pwincipawe. rawr en wègwe généwawe, ^^ iw s'agit des sous-titwes à a-affichew. rawr c-cette chawge utiwe peut conteniw d-des sauts de wigne m-mais pas de wigne vide (ce q-qui équivaut à deux sauts de wigne successifs). nyaa~~ u-une wigne vide indique wa fin d'une wépwique. nyaa~~
 
-La charge utile d'une réplique ne peut pas contenir la chaîne de caractères `-->`, une esperluette (`&`), ou un chevron ouvrant (`<`). Il faudra à la place utiliser les entités correspondantes pour les échapper&nbsp;: `&amp;` pour l'esperluette et `&lt;` pour le chevron. Il est recommandé de faire de même pour le chevron fermant (c'est-à-dire d'utiliser `&gt;` plutôt que `>`) pour éviter toute confusion avec les balises. Dans le cas où le fichier WebVTT est utilisé pour des métadonnées, ces restrictions ne s'appliquent pas.
+w-wa chawge utiwe d-d'une wépwique nye peut pas conteniw wa chaîne d-de cawactèwes `-->`, o.O une espewwuette (`&`), òωó ou un chevwon ouvwant (`<`). ^^;; iw faudwa à wa pwace utiwisew wes entités cowwespondantes pouw wes échappew&nbsp;: `&amp;` p-pouw w-w'espewwuette et `&wt;` pouw we c-chevwon. rawr iw est w-wecommandé de faiwe de même pouw w-we chevwon fewmant (c'est-à-diwe d'utiwisew `&gt;` pwutôt que `>`) pouw évitew toute confusion avec wes bawises. ^•ﻌ•^ d-dans we cas où we fichiew webvtt est utiwisé pouw des métadonnées, nyaa~~ ces w-westwictions nye s-s'appwiquent p-pas. nyaa~~
 
-En plus des trois échappements décrits ci-avant, il existe quatre autres échappements qui sont décrits dans le tableau suivant.
+en pwus des twois échappements décwits ci-avant, 😳😳😳 iw existe q-quatwe autwes échappements qui s-sont décwits d-dans we tabweau suivant. 😳😳😳
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th colspan="3">Tableau 6 - séquences d'échappement</th>
-    </tr>
+    <tw>
+      <th c-cowspan="3">tabweau 6 - séquences d-d'échappement</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nom</th>
-      <th>Caractère</th>
-      <th>Séquence d'échappement</th>
-    </tr>
-    <tr>
-      <td>Esperluette</td>
+    <tw>
+      <th>nom</th>
+      <th>cawactèwe</th>
+      <th>séquence d'échappement</th>
+    </tw>
+    <tw>
+      <td>espewwuette</td>
       <td>&#x26;</td>
       <td><code>&#x26;amp;</code></td>
-    </tr>
-    <tr>
-      <td>Chevron ouvrant</td>
-      <td>&#x3C;</td>
-      <td><code>&#x26;lt;</code></td>
-    </tr>
-    <tr>
-      <td>Chevron fermant</td>
+    </tw>
+    <tw>
+      <td>chevwon o-ouvwant</td>
+      <td>&#x3c;</td>
+      <td><code>&#x26;wt;</code></td>
+    </tw>
+    <tw>
+      <td>chevwon fewmant</td>
       <td>></td>
       <td><code>&#x26;gt;</code></td>
-    </tr>
-    <tr>
-      <td>Marque gauche-à-droite</td>
+    </tw>
+    <tw>
+      <td>mawque g-gauche-à-dwoite</td>
       <td></td>
-      <td><code>&#x26;lrm;</code></td>
-    </tr>
-    <tr>
-      <td>Marque droite-à-gauche</td>
+      <td><code>&#x26;wwm;</code></td>
+    </tw>
+    <tw>
+      <td>mawque dwoite-à-gauche</td>
       <td></td>
-      <td><code>&#x26;rlm;</code></td>
-    </tr>
-    <tr>
-      <td>Espace insécable</td>
+      <td><code>&#x26;wwm;</code></td>
+    </tw>
+    <tw>
+      <td>espace insécabwe</td>
       <td><code>&nbsp;</code></td>
       <td><code>&#x26;nbsp;</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Balises pour les textes des répliques
+### b-bawises pouw wes textes d-des wépwiques
 
-Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
+i-iw existe pwusieuws bawises, σωσ tewwes q-que `<bowd>`, o.O q-qui peuvent êtwe utiwisées. σωσ t-toutefois, nyaa~~ si we fichiew webvtt e-est utiwisé dans un éwément [`<twack>`](/fw/docs/web/htmw/ewement/twack) d-dont w-w'attwibut [`kind`](/fw/docs/web/htmw/ewement/twack#attw-kind) vaut `chaptews`, rawr x3 wes bawises nye p-pouwwont pas êtwe utiwisées. (///ˬ///✿)
 
-- **Balise d'horodatage**
+- **bawise d'howodatage**
 
-  - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le _texte actif_ correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le _texte actif_ correspondra à du _texte précédent_. Tout texte situé après le _texte actif_ correspondra à du _texte futur_. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
+  - w'howodatage powté paw cette bawise doit êtwe supéwieuw à cewui du début d-de wa wépwique, o.O supéwieuw aux howodatages des b-bawises pwécédentes pouw cette w-wépwique, òωó et inféwieuw à w'howodatage de fin. OwO w-we _texte actif_ cowwespond au texte situé entwe w-w'howodatage et we pwochain howodatage (ou w'howodatage d-de fin de wa wépwique s'iw ny'y en a-a pwus d'autwes). σωσ tout texte situé avant we _texte a-actif_ cowwespondwa à d-du _texte pwécédent_. nyaa~~ tout texte situé a-apwès we _texte a-actif_ cowwespondwa à du _texte f-futuw_. OwO cewa p-pewmet de wepwésentew des sous-titwes comme c-ceux utiwisés au kawaoké. ^^
 
-  ```plain
+  ```pwain
   1
   00:16.500 --> 00:18.500
-  When the moon <00:17.500>hits your eye
+  when the moon <00:17.500>hits y-youw eye
 
   1
   00:00:18.500 --> 00:00:20.500
-  Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
+  wike a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
 
   1
   00:00:20.500 --> 00:00:21.500
-  That's <00:00:21.000>amore
+  that's <00:00:21.000>amowe
   ```
 
-Les balises suivantes sont des balises qui sont autorisées au sein d'une réplique et pour lesquelles il faut avoir la balise ouvrante et la balise fermante (par exemple `<b>texte</b>`).
+wes bawises s-suivantes sont d-des bawises qui s-sont autowisées au sein d'une wépwique et pouw wesquewwes iw f-faut avoiw wa bawise ouvwante e-et wa bawise fewmante (paw exempwe `<b>texte</b>`). (///ˬ///✿)
 
-- **Balise de classe** (`<c></c>`)
+- **bawise d-de cwasse** (`<c></c>`)
 
-  - Permet la mise en forme du texte contenu en ciblant la classe avec CSS.
+  - p-pewmet wa mise en fowme du texte contenu en cibwant wa cwasse avec css. σωσ
 
-  ```html
-  <c.nomclasse>texte</c>
+  ```htmw
+  <c.nomcwasse>texte</c>
   ```
 
-- **Balise d'italique** (`<i></i>`)
+- **bawise d-d'itawique** (`<i></i>`)
 
-  - Met en italique le texte contenu.
+  - m-met en itawique we texte contenu. rawr x3
 
-  ```html
+  ```htmw
   <i>texte</i>
   ```
 
-- **Balise de gras** (`<b></b>`)
+- **bawise d-de gwas** (`<b></b>`)
 
-  - Met en gras le texte contenu.
+  - met en gwas we texte contenu. (ˆ ﻌ ˆ)♡
 
-  ```html
+  ```htmw
   <b>texte</b>
   ```
 
-- **Balise de soulignement** (`<u></u>`)
+- **bawise d-de souwignement** (`<u></u>`)
 
-  - Souligne le texte contenu
+  - souwigne w-we texte c-contenu
 
-  ```html
+  ```htmw
   <u>texte</u>
   ```
 
-- **Balise ruby** (`<ruby></ruby>`)
+- **bawise w-wuby** (`<wuby></wuby>`)
 
-  - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
+  - u-utiwisée avec w-wes bawises de texte wuby afin d'affichew wes [annotations w-wuby](<https://fw.wikipedia.owg/wiki/wuby_(winguistique)>) (des c-cawactèwes d-d'annotation s-situés au-dessus d-des autwes c-cawactèwes). 🥺
 
-  ```html
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+  ```htmw
+  <wuby>www<wt>wowwd wide web</wt>oui<wt>yes</wt></wuby>
   ```
 
-- **Balise de texte ruby** (`<rt></rt>`)
+- **bawise d-de texte w-wuby** (`<wt></wt>`)
 
-  - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
+  - u-utiwisée avec wes bawises wuby afin d'affichew w-wes [annotations wuby](<https://fw.wikipedia.owg/wiki/wuby_(winguistique)>) (des cawactèwes d-d'annotation situés au-dessus des autwes c-cawactèwes). (⑅˘꒳˘)
 
-  ```html
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+  ```htmw
+  <wuby>www<wt>wowwd wide w-web</wt>oui<wt>yes</wt></wuby>
   ```
 
-- **Balise de voix** (`<v></v>`)
+- **bawise de voix** (`<v></v>`)
 
-  - Semblable à la balise de classe, permet également le ciblage à l'aide de CSS pour la mise en forme du texte.
+  - sembwabwe à wa bawise de cwasse, p-pewmet égawement w-we cibwage à w'aide de css p-pouw wa mise en f-fowme du texte. 😳😳😳
 
-  ```html
-  <v Bob>texte</v>
+  ```htmw
+  <v bob>texte</v>
   ```
 
-## Méthodes et propriétés
+## méthodes et pwopwiétés
 
-Les méthodes utilisées en WebVTT sont celles utilisées pour modifier la réplique ou la région, les attributs des deux interfaces étant différents. On peut les catégoriser distinctement afin de mieux comprendre les rôles respectifs de ces interfaces pour WebVTT&nbsp;:
+w-wes méthodes u-utiwisées en webvtt sont cewwes utiwisées pouw m-modifiew wa wépwique o-ou wa wégion, /(^•ω•^) wes attwibuts des deux intewfaces étant d-difféwents. >w< on peut wes catégowisew distinctement afin de mieux compwendwe wes wôwes wespectifs d-de ces intewfaces pouw webvtt&nbsp;:
 
-### `VTTCue`
+### `vttcue`
 
-Les méthodes disponibles avec cette interface sont&nbsp;:
+wes méthodes d-disponibwes a-avec cette intewface s-sont&nbsp;:
 
-- `GetCueAsHTML()` qui permet d'obtenir le code HTML de la réplique.
-- `VTTCue()`, le constructeur qui permet de créer de nouveaux objets.
-- `Autokeyword()`.
-- `DirectionSetting()` qui définit la direction de la légende ou du texte d'un fichier.
-- `LineAlignment()` qui ajuste l'alignement de la ligne.
-- `PositionAlignSetting()` qui ajuste la position du texte.
+- `getcueashtmw()` qui pewmet d-d'obteniw we code h-htmw de wa wépwique. ^•ﻌ•^
+- `vttcue()`, 😳😳😳 w-we constwucteuw q-qui pewmet d-de cwéew de nyouveaux objets. :3
+- `autokeywowd()`. (ꈍᴗꈍ)
+- `diwectionsetting()` qui définit w-wa diwection d-de wa wégende o-ou du texte d'un fichiew. ^•ﻌ•^
+- `wineawignment()` q-qui ajuste w'awignement d-de wa w-wigne. >w<
+- `positionawignsetting()` qui ajuste wa p-position du texte. ^^;;
 
-### `VTTRegion`
+### `vttwegion`
 
-Les méthodes utilisées pour les régions sont&nbsp;:
+w-wes méthodes u-utiwisées pouw w-wes wégions s-sont&nbsp;:
 
-- `ScrollSetting()` qui permet d'ajuster le paramètre de défilement pour tous les nœuds présents dans une région donnée.
-- `VTTRegion()`, le constructeur qui permet de créer de nouveaux objets.
+- `scwowwsetting()` qui pewmet d'ajustew w-we pawamètwe de défiwement p-pouw tous wes n-nyœuds pwésents dans une wégion donnée. (✿oωo)
+- `vttwegion()`, òωó we c-constwucteuw qui p-pewmet de cwéew de nyouveaux o-objets. ^^
 
-## Tutoriel pour l'écriture d'un fichier WebVTT
+## tutowiew p-pouw w'écwituwe d'un fichiew webvtt
 
-En plusieurs étapes, il est possible d'écrire un fichier WebVTT simple. Pour commencer, il suffit d'avoir un éditeur de texte et d'enregistrer le fichier en utilisant l'extension '.vtt'. Voici comment procéder&nbsp;:
+en pwusieuws étapes, ^^ i-iw est possibwe d-d'écwiwe un fichiew w-webvtt simpwe. rawr p-pouw commencew, XD i-iw suffit d'avoiw u-un éditeuw de texte et d'enwegistwew we f-fichiew en utiwisant w'extension '.vtt'. rawr voici comment pwocédew&nbsp;:
 
-1. Ouvrir un éditeur de texte.
-2. La première ligne d'un fichier WebVTT est standardisée et on écrira donc ce qui suit sur la toute première ligne&nbsp;:
+1. ouvwiw u-un éditeuw de t-texte. 😳
+2. wa pwemièwe wigne d'un fichiew webvtt est standawdisée e-et on écwiwa d-donc ce qui suit suw wa toute pwemièwe wigne&nbsp;:
 
-   ```plain
-   WEBVTT
+   ```pwain
+   w-webvtt
    ```
 
-3. La deuxième ligne est vide et à la troisième ligne, on indique le moment où la première réplique doit être affichée. Ainsi, si la première réplique doit s'afficher après 1 seconde et disparaître après 5 secondes de vidéo, on écrira&nbsp;:
+3. 🥺 wa deuxième w-wigne est v-vide et à wa twoisième w-wigne, (U ᵕ U❁) on indique we moment où wa pwemièwe wépwique d-doit êtwe affichée. 😳 ainsi, 🥺 si w-wa pwemièwe wépwique doit s'affichew a-apwès 1 seconde et dispawaîtwe apwès 5 s-secondes de vidéo, (///ˬ///✿) on écwiwa&nbsp;:
 
-   ```plain
+   ```pwain
    00:01.000 --> 00:05.000
    ```
 
-4. Su la ligne suivante, on écrit le texte correspondant (qui sera donc affiché entre la première et la cinquième seconde, incluses).
-5. En répétant les étapes 3 et 4, on pourra ainsi composer un fichier WebVTT complet pour un fichier audio ou vidéo.
+4. mya s-su wa wigne suivante, (✿oωo) on écwit we texte c-cowwespondant (qui sewa donc a-affiché entwe wa pwemièwe et wa cinquième seconde, ^•ﻌ•^ incwuses). o.O
+5. en wépétant wes étapes 3 et 4, o.O on pouwwa a-ainsi composew u-un fichiew webvtt c-compwet pouw un f-fichiew audio ou vidéo. XD
 
-## Pseudo-classes CSS
+## pseudo-cwasses css
 
-Les pseudo-classes CSS permettent de classer le type d'un objet à différencier d'un autre type d'objet. Elles fonctionnent de façon similaire entre les fichiers WebVTT et les fichiers HTML.
+w-wes pseudo-cwasses css pewmettent de cwassew we type d'un objet à d-difféwenciew d-d'un autwe type d-d'objet. ^•ﻌ•^ ewwes f-fonctionnent de façon simiwaiwe entwe wes fichiews webvtt et wes fichiews htmw. ʘwʘ
 
-WebVTT permet d'utiliser les fonctionnalités de localisation et les classes comme on peut le faire en HTML et CSS afin de classifier la mise en forme d'un certain type d'objet, comme on peut le voir dans cet exemple&nbsp;:
+w-webvtt pewmet d-d'utiwisew wes fonctionnawités de wocawisation et wes cwasses c-comme on peut we faiwe en htmw e-et css afin de c-cwassifiew wa mise e-en fowme d'un cewtain type d'objet, (U ﹏ U) comme on peut we voiw dans cet exempwe&nbsp;:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
 04:02.500 --> 04:05.000
-J'ai commencé le basket à l'âge de 13, 14 ans
+j'ai commencé we b-basket à w'âge de 13, 😳😳😳 14 ans
 
 04:05.001 --> 04:07.800
-Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
+s-suw wes <i.foweignphwase><wang en>pwaygwound</wang></i>, 🥺 ici à montpewwiew
 ```
 
-Dans l'exemple précédent, on peut voir l'utilisation d'un identifiant et d'un nom de pseudo-classe pour indiquer la langue d'une réplique et la balise `<i>` utilisée pour l'italique.
+dans w'exempwe p-pwécédent, (///ˬ///✿) on peut voiw w-w'utiwisation d'un identifiant et d'un nyom de p-pseudo-cwasse p-pouw indiquew wa w-wangue d'une wépwique e-et wa bawise `<i>` u-utiwisée pouw w'itawique. (˘ω˘)
 
-Le type de pseudo-classe est déterminé par le sélecteur utilisé et fonctionne de façon analogue à ce qu'on peut voir en HTML. Les pseudo-classes CSS suivantes peuvent être utilisées&nbsp;:
+w-we type de p-pseudo-cwasse est détewminé p-paw we séwecteuw utiwisé et fonctionne de façon a-anawogue à ce qu'on peut voiw e-en htmw. :3 wes pseudo-cwasses c-css suivantes peuvent êtwe u-utiwisées&nbsp;:
 
-- `lang` (par exemple `p:lang(it)`)
-- `link` (par exemple `a:link`)
-- `nth-last-child` (par exemple `p:nth-last-child(2)`)
-- `nth-child` (par exemple `p:nth-child(2)`)
+- `wang` (paw e-exempwe `p:wang(it)`)
+- `wink` (paw exempwe `a:wink`)
+- `nth-wast-chiwd` (paw exempwe `p:nth-wast-chiwd(2)`)
+- `nth-chiwd` (paw exempwe `p:nth-chiwd(2)`)
 
-Où `p` et `a` sont les balises utilisées en HTML pour représenter les paragraphes et les liens en HTML. Dans un contexte WebVTT, on pourra les remplacer dans ces exemples par des identifiants de réplique.
+où `p` et `a` s-sont wes bawises u-utiwisées e-en htmw pouw wepwésentew w-wes pawagwaphes et wes wiens en htmw. /(^•ω•^) dans un contexte w-webvtt, :3 on pouwwa wes wempwacew dans ces exempwes p-paw des identifiants de wépwique. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

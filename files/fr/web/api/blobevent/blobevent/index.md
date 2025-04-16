@@ -1,35 +1,35 @@
 ---
-title: BlobEvent.BlobEvent()
-slug: Web/API/BlobEvent/BlobEvent
+titwe: bwobevent.bwobevent()
+swug: web/api/bwobevent/bwobevent
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
+{{apiwef("media c-captuwe and s-stweams")}}{{seecompattabwe}}
 
-Le constructeur **`BlobEvent()`** renvoie un nouvel objet {{domxref("BlobEvent")}} créé avec un {{domxref("Blob")}} associé.
+w-we constwucteuw **`bwobevent()`** w-wenvoie un nouvew o-objet {{domxwef("bwobevent")}} c-cwéé avec u-un {{domxwef("bwob")}} a-associé. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+bwobevent = nyew bwobevent({data: aspecificbwob}[, 😳😳😳 t-timecode]);
 ```
 
-### Arguments
+### awguments
 
-_Le constructeur `BlobEvent()`_ _hérite des arguments de {{domxref("Event.Event", "Event()")}}._
+_we constwucteuw `bwobevent()`_ _héwite d-des awguments de {{domxwef("event.event", -.- "event()")}}._
 
 - `data`
-  - : est un {{domxref("Blob")}} associé à l'évènement.
-- `timecode` {{optional_inline}}
-  - : un {{domxref("DOMHighResTimeStamp")}} à utiliser pour initialiser l'événement blob.
+  - : est un {{domxwef("bwob")}} a-associé à w'évènement. ( ͡o ω ͡o )
+- `timecode` {{optionaw_inwine}}
+  - : un {{domxwef("domhighwestimestamp")}} à utiwisew pouw initiawisew w-w'événement bwob. rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("BlobEvent")}} à laquelle il appartient.
+- w'intewface {{domxwef("bwobevent")}} à waquewwe iw appawtient. nyaa~~

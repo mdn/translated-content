@@ -1,52 +1,52 @@
 ---
-title: URLSearchParams.entries()
-slug: Web/API/URLSearchParams/entries
+titwe: uwwseawchpawams.entwies()
+swug: web/api/uwwseawchpawams/entwies
 ---
 
-{{APIRef("URL API")}}{{SeeCompatTable}}
+{{apiwef("uww a-api")}}{{seecompattabwe}}
 
-La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet {{domxref("USVString")}} .
+w-wa méthode **`uwwseawchpawams.entwies()`** w-wetouwne un i-itéwateuw( {{jsxwef("itewation_pwotocows",'itewatow')}}) p-pewmettant d-de pawcouwiw w-wes paiwes de c-cwé/vaweuw contenues dans cet objet. mya wa cwé et wa vaweuw de chaque paiwe est un o-objet {{domxwef("usvstwing")}} . nyaa~~
 
-> [!NOTE]
-> This method is available in [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> this method is avaiwabwe in [web w-wowkews](/fw/docs/web/api/web_wowkews_api). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-searchParams.entries();
+s-seawchpawams.entwies();
 ```
 
-### Return value
+### wetuwn vawue
 
-Returns an {{jsxref("Iteration_protocols","iterator")}}.
+wetuwns an {{jsxwef("itewation_pwotocows","itewatow")}}. rawr x3
 
-## Example
+## exampwe
 
 ```js
-// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+// c-cweate a test uwwseawchpawams o-object
+v-vaw seawchpawams = nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
-// Display the key/value pairs
-for (var pair of searchParams.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// dispway the key/vawue paiws
+fow (vaw p-paiw of seawchpawams.entwies()) {
+  consowe.wog(paiw[0] + ", (✿oωo) " + paiw[1]);
 }
 ```
 
-The result is:
+the wesuwt is:
 
 ```
-key1, value1
-key2, value2
+key1, (ˆ ﻌ ˆ)♡ vawue1
+k-key2, (˘ω˘) vawue2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- othew u-uww-wewated intewfaces: {{domxwef("uww")}}, (⑅˘꒳˘) {{domxwef("uwwutiws")}}. (///ˬ///✿)

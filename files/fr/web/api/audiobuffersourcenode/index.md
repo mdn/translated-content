@@ -1,134 +1,134 @@
 ---
-title: AudioBufferSourceNode
-slug: Web/API/AudioBufferSourceNode
+titwe: audiobuffewsouwcenode
+swug: web/api/audiobuffewsouwcenode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface **AudioBufferSourceNode** est un {{domxref("AudioScheduledSourceNode")}} qui représente une source audio constituée de données audio en mémoire, stockées dans un {{domxref ("AudioBuffer")}}. Elle est particulièrement utile pour lire des sons qui requierrent des conditions de lecture particulières, comme la synchronisation sur un certain rythme, et peuvent être stockés en mémoire. Si ce type de son doit être lu depuis le disque ou le réseau, il conviendra d'utiliser un {{domxref("AudioWorkletNode")}}.
+w-w'intewface **audiobuffewsouwcenode** e-est u-un {{domxwef("audioscheduwedsouwcenode")}} q-qui wepwésente u-une souwce a-audio constituée d-de données audio en mémoiwe, (U ᵕ U❁) stockées dans un {{domxwef ("audiobuffew")}}. (✿oωo) ewwe est pawticuwièwement u-utiwe pouw wiwe des sons qui wequiewwent des conditions d-de wectuwe pawticuwièwes, ^^ c-comme wa synchwonisation suw un cewtain wythme, ^•ﻌ•^ et peuvent êtwe s-stockés en mémoiwe. XD si ce t-type de son doit êtwe w-wu depuis we disque ou we wéseau, :3 iw conviendwa d'utiwisew un {{domxwef("audiowowkwetnode")}}. (ꈍᴗꈍ)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-Un AudioBufferSourceNode n'a pas d'entrée et il comporte une unique sortie, dont le nombre de canaux est spécifié par la propriété {{domxref("AudioBufferSourceNode.buffer", "buffer")}}. Si aucun buffer n'est paramétré, c'est-à-dire si la valeur de l'attribut est NULL, la sortie contient un seul canal silencieux (chaque échantillon vaut 0).
+u-un audiobuffewsouwcenode ny'a pas d'entwée et iw compowte une unique sowtie, :3 dont w-we nyombwe de canaux est spécifié p-paw wa pwopwiété {{domxwef("audiobuffewsouwcenode.buffew", (U ﹏ U) "buffew")}}. UwU s-si aucun buffew n-ny'est pawamétwé, 😳😳😳 c-c'est-à-diwe si wa vaweuw de w'attwibut est n-nyuww, XD wa sowtie contient un seuw canaw siwencieux (chaque échantiwwon v-vaut 0).
 
-Un {{domxref("AudioBufferSourceNode")}} ne peut être joué qu'une seule fois; autrement dit un seul appel à la fonction `AudioBufferSourceNode.start()` est autorisé. Pour rejouer le son, il faut créer un nouvel `AudioBufferSourceNode`. Heureusement ces noeuds ne demandent pas beaucoup de ressource, et les véritables `AudioBuffer`s peuvent être réutilisés. On dit que les `AudioBufferSourceNode`s doivent être utilisés en mode "one shot": une fois que la lecture est lancée, toutes les références peuvent être supprimées, et elles seront collectées par le ramasse-miette automatiquement quand la lecture des sons sera terminée.
+un {{domxwef("audiobuffewsouwcenode")}} nye peut êtwe joué qu'une seuwe fois; autwement dit u-un seuw appew à wa fonction `audiobuffewsouwcenode.stawt()` e-est autowisé. o.O pouw w-wejouew we son, (⑅˘꒳˘) i-iw faut cwéew un nyouvew `audiobuffewsouwcenode`. 😳😳😳 heuweusement ces nyoeuds n-nye demandent pas b-beaucoup de wessouwce, nyaa~~ et wes v-véwitabwes `audiobuffew`s p-peuvent êtwe wéutiwisés. rawr o-on dit que wes `audiobuffewsouwcenode`s doivent êtwe u-utiwisés en mode "one shot": une fois q-que wa wectuwe est wancée, -.- t-toutes wes wéféwences peuvent êtwe s-suppwimées, (✿oωo) e-et ewwes sewont cowwectées paw we wamasse-miette automatiquement quand wa wectuwe des sons sewa tewminée. /(^•ω•^)
 
-Plusieurs appels à la fonction `AudioBufferSourceNode.stop()` sont autorisés. Le dernier appel remplace le précédent, à condition que le `AudioBufferSourceNode` n'ait pas déjà atteint la fin du buffer.
+p-pwusieuws appews à w-wa fonction `audiobuffewsouwcenode.stop()` sont autowisés. 🥺 w-we dewniew appew w-wempwace we pwécédent, ʘwʘ à c-condition que we `audiobuffewsouwcenode` ny'ait pas déjà atteint w-wa fin du buffew. UwU
 
-![L'objet AudioBufferSourceNode prend le contenu d'un AudioBuffer et le convertit en audio](webaudioaudiobuffersourcenode.png)
+![w'objet audiobuffewsouwcenode pwend we contenu d'un audiobuffew et we convewtit e-en audio](webaudioaudiobuffewsouwcenode.png)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row"><dfn>Nombre d'entrées</dfn></th>
+    <tw>
+      <th s-scope="wow"><dfn>nombwe d-d'entwées</dfn></th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Nombre de sorties</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>nombwe de sowties</dfn></th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Nombre de canaux</dfn></th>
-      <td>défini par l'objet {{domxref("AudioBuffer")}} associé</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>nombwe d-de canaux</dfn></th>
+      <td>défini p-paw w-w'objet {{domxwef("audiobuffew")}} associé</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
-  - : Crée et retourne un nouvel objet `AudioBufferSourceNode`. Un {{domxref("AudioBufferSourceNode")}} peut être instancié à l'aide la méthode {{domxref("AudioContext.createBufferSource()")}}.
+- {{domxwef("audiobuffewsouwcenode.audiobuffewsouwcenode", "audiobuffewsouwcenode()")}}
+  - : cwée e-et wetouwne u-un nyouvew objet `audiobuffewsouwcenode`. XD u-un {{domxwef("audiobuffewsouwcenode")}} p-peut êtwe instancié à w-w'aide wa méthode {{domxwef("audiocontext.cweatebuffewsouwce()")}}. (✿oωo)
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, {{domxref("AudioNode")}}._
+_héwite des p-pwopwiétés de son pawent, :3 {{domxwef("audionode")}}._
 
-- {{domxref("AudioBufferSourceNode.buffer")}}
-  - : {{domxref ("AudioBuffer")}} qui définit la ressource à jouer; lorsqu'il a la valeur NULL, définit un canal unique silencieux (dans lequel chaque échantillon vaut 0.0).
-- {{domxref("AudioBufferSourceNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
-- {{domxref("AudioBufferSourceNode.loop")}}
-  - : Attribut booléen indiquant si la ressource doit être lue de nouveau lorsque la fin de l'{{domxref ("AudioBuffer")}} est atteinte. Sa valeur par défaut est `false`.
-- {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}
-  - : Nombre flottant à double précision indiquant, en secondes, à quel moment de l'{{domxref ("AudioBuffer")}} la lecture doit reprendre. Sa valeur par défaut est 0.
-- {{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}
-  - : Nombre flottant à double précision indiquant, en secondes, à quel moment de l'{{domxref ("AudioBuffer")}} la relecture doit s'arrêter (et éventuellement boucler à nouveau). Sa valeur par défaut est 0.
-- {{domxref("AudioBufferSourceNode.playbackRate")}}
-  - : {{domxref ("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) qui définit le facteur de vitesse à laquelle la ressource audio sera jouée. Comme aucune correction de pitch n'est appliquée sur la sortie, il peut être utilisé pour modifier le pitch de l'échantillon.
+- {{domxwef("audiobuffewsouwcenode.buffew")}}
+  - : {{domxwef ("audiobuffew")}} qui définit wa wessouwce à jouew; wowsqu'iw a wa vaweuw n-nyuww, (///ˬ///✿) définit un canaw unique siwencieux (dans wequew chaque échantiwwon v-vaut 0.0). nyaa~~
+- {{domxwef("audiobuffewsouwcenode.detune")}}
+  - : {{domxwef("audiopawam")}} d-de type [k-wate](/fw/docs/web/api/audiopawam#k-wate) w-wepwésentant we désaccowdage d-de wa fwéquence expwimé e-en [cents](http://en.wikipedia.owg/wiki/cent_%28music%29). >w< c-cette vaweuw est composée à pawtiw du `pwaybackwate` pouw détewminew wa vitesse à waquewwe we s-son sewa jouée. -.- sa vaweuw paw d-défaut est `0` (qui cowwespond à a-aucun désaccowdage), (✿oωo) e-et son wang nyominaw va de -∞ à ∞. (˘ω˘)
+- {{domxwef("audiobuffewsouwcenode.woop")}}
+  - : a-attwibut boowéen i-indiquant si wa wessouwce d-doit êtwe wue de n-nyouveau wowsque wa fin de w'{{domxwef ("audiobuffew")}} est atteinte. rawr sa vaweuw paw défaut est `fawse`. OwO
+- {{domxwef("audiobuffewsouwcenode.woopstawt")}} {{optionaw_inwine}}
+  - : n-nyombwe fwottant à d-doubwe p-pwécision indiquant, ^•ﻌ•^ en secondes, UwU à q-quew moment d-de w'{{domxwef ("audiobuffew")}} wa wectuwe d-doit wepwendwe. (˘ω˘) sa vaweuw paw défaut est 0. (///ˬ///✿)
+- {{domxwef("audiobuffewsouwcenode.woopend")}} {{optionaw_inwine}}
+  - : nyombwe fwottant à doubwe p-pwécision indiquant, σωσ e-en secondes, /(^•ω•^) à quew moment de w'{{domxwef ("audiobuffew")}} w-wa wewectuwe d-doit s'awwêtew (et éventuewwement boucwew à nyouveau). 😳 sa vaweuw paw défaut e-est 0. 😳
+- {{domxwef("audiobuffewsouwcenode.pwaybackwate")}}
+  - : {{domxwef ("audiopawam")}} de type [a-wate](/fw/docs/web/api/audiopawam#a-wate) qui définit we facteuw de vitesse à w-waquewwe wa wessouwce audio sewa jouée. (⑅˘꒳˘) c-comme aucune cowwection d-de pitch ny'est appwiquée suw wa sowtie, 😳😳😳 iw peut êtwe u-utiwisé pouw modifiew w-we pitch de w'échantiwwon. 😳
 
-### Gestionnaires d'évènement
+### gestionnaiwes d'évènement
 
-_Hérite des gestionnaires d'évènement de son parent, {{domxref("AudioScheduledSourceNode")}}_.
+_héwite des g-gestionnaiwes d'évènement de s-son pawent, {{domxwef("audioscheduwedsouwcenode")}}_. XD
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de son parent, {{domxref("AudioNode")}}._
+_héwite des méthodes de son pawent, mya {{domxwef("audionode")}}._
 
-## Exemple
+## e-exempwe
 
-Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et le joue par l'intermédiaire d'un `AudioBufferSourceNode`.
+cet exempwe c-cwée un tampon d-de deux secondes, ^•ﻌ•^ we wempwit avec d-du bwuit bwanc et we joue paw w-w'intewmédiaiwe d-d'un `audiobuffewsouwcenode`. ʘwʘ
 
-> [!NOTE]
-> Vous pouvez aussi [exécuter the code](https://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
+> [!note]
+> v-vous pouvez aussi [exékawaii~w t-the c-code](https://mdn.github.io/audio-buffew/), ( ͡o ω ͡o ) ou [wegawdew we code s-souwce](https://github.com/mdn/audio-buffew). mya
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector("button");
-var pre = document.querySelector("pre");
-var monScript = document.querySelector("script");
+v-vaw contexteaudio = n-nyew (window.audiocontext || window.webkitaudiocontext)();
+vaw bouton = d-document.quewysewectow("button");
+vaw pwe = document.quewysewectow("pwe");
+v-vaw m-monscwipt = document.quewysewectow("scwipt");
 
-pre.innerHTML = monScript.innerHTML;
+pwe.innewhtmw = monscwipt.innewhtmw;
 
-// Stéréo
-var canaux = 2;
+// stéwéo
+v-vaw canaux = 2;
 
-// Crée un tampon vide de deux secondes
-// au taux d'échantillonnage du AudioContext
-var compteurTrames = contexteAudio.sampleRate * 2.0;
+// c-cwée un t-tampon vide de deux s-secondes
+// au taux d'échantiwwonnage d-du audiocontext
+vaw compteuwtwames = contexteaudio.sampwewate * 2.0;
 
-var myArrayBuffer = contexteAudio.createBuffer(
+vaw myawwaybuffew = contexteaudio.cweatebuffew(
   2,
-  compteurTrames,
-  contexteAudio.sampleRate,
+  compteuwtwames, o.O
+  c-contexteaudio.sampwewate,
 );
 
-bouton.onclick = function () {
-  // remplit le tampon avec du bruit blanc;
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal < canaux; canal++) {
-    // crée le ArrayBuffer qui contient les données
-    var nowBuffering = myArrayBuffer.getChannelData(canal);
-    for (var i = 0; i < compteurTrames; i++) {
-      // Math.random() est compris entre [0; 1.0]
-      // audio doit être compris entre [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+bouton.oncwick = f-function () {
+  // wempwit w-we tampon avec du bwuit bwanc;
+  // v-vaweuws awéatoiwes entwe -1.0 e-et 1.0
+  f-fow (vaw canaw = 0; c-canaw < canaux; c-canaw++) {
+    // c-cwée we awwaybuffew qui contient wes données
+    vaw nyowbuffewing = myawwaybuffew.getchannewdata(canaw);
+    fow (vaw i = 0; i < compteuwtwames; i-i++) {
+      // m-math.wandom() e-est compwis entwe [0; 1.0]
+      // a-audio doit êtwe compwis entwe [-1.0; 1.0]
+      nyowbuffewing[i] = m-math.wandom() * 2 - 1;
     }
   }
 
-  // crée AudioBufferSourceNode.
-  // c'est AudioNode utilisé pour lire un AudioBuffer
-  var source = contexteAudio.createBufferSource();
-  // initialise le tampon du AudioBufferSourceNode
-  source.buffer = myArrayBuffer;
-  // connecte l'AudioBufferSourceNode avec la destination
-  // de façon à ce qu'on puisse entendre le son
-  source.connect(contexteAudio.destination);
-  // lance la lecture de la source
-  source.start();
+  // c-cwée audiobuffewsouwcenode. (✿oωo)
+  // c'est audionode u-utiwisé pouw wiwe un audiobuffew
+  vaw s-souwce = contexteaudio.cweatebuffewsouwce();
+  // i-initiawise we tampon du audiobuffewsouwcenode
+  s-souwce.buffew = m-myawwaybuffew;
+  // connecte w'audiobuffewsouwcenode avec wa destination
+  // d-de façon à ce q-qu'on puisse entendwe w-we son
+  s-souwce.connect(contexteaudio.destination);
+  // w-wance wa wectuwe de wa souwce
+  s-souwce.stawt();
 };
 ```
 
-> [!NOTE]
-> Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
+> [!note]
+> p-pouw un exempwe de `decodeaudiodata()`, :3 v-voiw w-wa page {{domxwef("audiocontext.decodeaudiodata")}}. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

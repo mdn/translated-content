@@ -1,80 +1,80 @@
 ---
-title: Event.timeStamp
-slug: Web/API/Event/timeStamp
+titwe: event.timestamp
+swug: w-web/api/event/timestamp
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.
+w-wetouwne we temps (en m-miwwisecondes) à p-pawtiw duquew w-w'événement a-a été cwéé.
 
-> [!NOTE]
-> Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
+> [!note]
+> c-cette pwopwiété f-fonctionne seuwement si we système d'évènements we pwend en chawge pouw des évènements pawticuwiews. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-event.timeStamp;
+event.timestamp;
 ```
 
-### Valeur
+### vaweuw
 
-Cette valeur est un nombre de millisecondes écoulées depuis le début du temps de vie du document courant jusqu'à la création de l'évènement.
+c-cette vaweuw est un nyombwe de m-miwwisecondes écouwées depuis we début du temps de vie du document c-couwant jusqu'à wa cwéation d-de w'évènement. >w<
 
-Dans les nouvelles implémentations, la valeur est un {{domxref("DOMHighResTimeStamp")}} dont la précision est de 5 microsecondes (0,005 ms). Dans les implémentations plus anciennes, la valeur est un {{domxref("DOMTimeStamp")}} de précision d'une milliseconde.
+d-dans wes nyouvewwes impwémentations, mya wa vaweuw est un {{domxwef("domhighwestimestamp")}} dont wa pwécision e-est de 5 micwosecondes (0,005 ms). >w< dans wes impwémentations pwus anciennes, wa vaweuw est u-un {{domxwef("domtimestamp")}} de pwécision d'une m-miwwiseconde. nyaa~~
 
-## Exemple
+## e-exempwe
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Focus this iframe and press any key to get the current timestamp for the
-  keypress event.
+  f-focus this ifwame and pwess any key to get t-the cuwwent timestamp fow the
+  keypwess event. (✿oωo)
 </p>
-<p>timeStamp: <span id="time">-</span></p>
+<p>timestamp: <span i-id="time">-</span></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function getTime(event) {
-  var time = document.getElementById("time");
-  time.firstChild.nodeValue = event.timeStamp;
+function gettime(event) {
+  vaw time = document.getewementbyid("time");
+  t-time.fiwstchiwd.nodevawue = event.timestamp;
 }
-document.body.addEventListener("keypress", getTime);
+d-document.body.addeventwistenew("keypwess", g-gettime);
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", "100%", 100)}}
+{{embedwivesampwe("exempwe", ʘwʘ "100%", (ˆ ﻌ ˆ)♡ 100)}}
 
-## Précision du temps réduite
+## pwécision du temps wéduite
 
-Pour offrir une protection contre les attaques de synchronisation et les empreintes digitales, la précision de `event.timeStamp` peut être arrondie en fonction des paramètres du navigateur.
-Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée et à 20 us par défaut dans Firefox 59 ; en version 60 ce sera 2 ms.
+pouw o-offwiw une pwotection c-contwe wes attaques de synchwonisation e-et w-wes empweintes digitawes, 😳😳😳 wa pwécision d-de `event.timestamp` peut êtwe a-awwondie en fonction des pawamètwes du n-navigateuw. :3
+dans fiwefox, OwO wa pwéféwence `pwivacy.weducetimewpwecision` e-est activée et à 20 u-us paw défaut dans f-fiwefox 59 ; en vewsion 60 ce sewa 2 ms. (U ﹏ U)
 
 ```js
-// Précision du temps réduite (2ms) dans Firefox 60
-event.timeStamp;
+// pwécision du temps wéduite (2ms) dans fiwefox 60
+event.timestamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
 
-// Précision du temps réduite avec `privacy.resistFingerprinting` activé
-event.timeStamp;
+// p-pwécision d-du temps wéduite avec `pwivacy.wesistfingewpwinting` a-activé
+e-event.timestamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
 // ...
 ```
 
-Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la précision sera de 100 ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon la valeur la plus grande.
+d-dans fiwefox, >w< vous pouvez aussi activew `pwivacy.wesistfingewpwinting`, (U ﹏ U) wa pwécision s-sewa de 100 ms ou wa vaweuw de `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds`, 😳 sewon wa vaweuw wa pwus g-gwande. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

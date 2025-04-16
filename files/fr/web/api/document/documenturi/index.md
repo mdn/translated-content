@@ -1,28 +1,28 @@
 ---
-title: Document.documentURI
-slug: Web/API/Document/documentURI
+titwe: document.documentuwi
+swug: web/api/document/documentuwi
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`documentURI`** de l'interface {{domxref("Document")}} renvoie l'emplacement du document sous forme "string" (_chaîne de caractères_).
+w-wa pwopwiété **`documentuwi`** d-de w'intewface {{domxwef("document")}} w-wenvoie w'empwacement d-du document s-sous fowme "stwing" (_chaîne d-de cawactèwes_).
 
-Initialement, la spécification DOM3 définissait cet attribut en lecture/écriture. Dans la norme actuelle DOM, il est en lecture seule.
+i-initiawement, rawr x3 w-wa spécification dom3 définissait cet attwibut en wectuwe/écwituwe. nyaa~~ dans wa n-nyowme actuewwe dom, /(^•ω•^) iw est en wectuwe seuwe. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var string = document.documentURI;
+vaw stwing = d-document.documentuwi;
 ```
 
-## Notes
+## nyotes
 
-Les documents HTML ont une propriété {{domxref("document.URL")}} qui renvoie la même valeur. Contrairement à l'`URL`, `documentURI` est disponible pour tous les types de documents.
+wes documents htmw ont une p-pwopwiété {{domxwef("document.uww")}} qui wenvoie w-wa même vaweuw. c-contwaiwement à w'`uww`, OwO `documentuwi` est disponibwe pouw tous wes types d-de documents. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

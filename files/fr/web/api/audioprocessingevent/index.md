@@ -1,37 +1,37 @@
 ---
-title: AudioProcessingEvent
-slug: Web/API/AudioProcessingEvent
+titwe: audiopwocessingevent
+swug: web/api/audiopwocessingevent
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{apiwef("web a-audio api")}}{{depwecated_headew}}
 
-AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.
+a-audiopwocessingevent w-wepwésente w-w'évènement q-qui est p-passé wowsqu'un t-tampon {{domxwef ("scwiptpwocessownode")}} e-est pwêt à êtwe twaité. mya
 
-> [!NOTE]
-> Cette fonctionnalité est dépréciée à partir de la version du 29 Août 2014 de la spécification Web Audio API, elle sera remplacée par les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#audio_workers).
+> [!note]
+> cette fonctionnawité est dépwéciée à pawtiw de wa vewsion d-du 29 août 2014 de wa spécification web audio a-api, ^^ ewwe sewa wempwacée paw w-wes [audio wowkews](/fw/docs/web/api/web_audio_api#audio_wowkews). 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-_La liste ci-dessous inclut les propriétés héritées de son parent, {{domxref("Event")}}._
+_wa wiste ci-dessous incwut w-wes pwopwiétés héwitées de s-son pawent, mya {{domxwef("event")}}._
 
-| Propriété                         | Type                       | Description                                                                                                                                                                                                                                                                                                            |
+| p-pwopwiété                         | type                       | descwiption                                                                                                                                                                                                                                                                                                            |
 | --------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{ReadOnlyInline}}       | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans le DOM).                                                                                                                                                                                                                                                                   |
-| `type` {{ReadOnlyInline}}         | {{domxref("DOMString")}}   | Le type d'évènement.                                                                                                                                                                                                                                                                                                   |
-| `bubbles` {{ReadOnlyInline}}      | `boolean`                  | Indique si l'évènement se propage normalement.                                                                                                                                                                                                                                                                         |
-| `cancelable` {{ReadOnlyInline}}   | `boolean`                  | Indique s'il est possible d'annuler l'évènement.                                                                                                                                                                                                                                                                       |
-| `playbackTime` {{ReadOnlyInline}} | `double`                   | Moment auquel le son sera joué, tel que défini par {{domxref("AudioContext.currentTime")}}                                                                                                                                                                                                                             |
-| `inputBuffer` {{ReadOnlyInline}}  | {{domxref("AudioBuffer")}} | Tampon contenant les données audio à traiter en entrée. Le nombre de canaux est défini comme paramètre, `numberOfInputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`.         |
-| `outputBuffer` {{ReadOnlyInline}} | {{domxref("AudioBuffer")}} | Tampon dans lequel les données doivent être écrites en sortie. Le nombre de canaux est défini comme paramètre, `numberOfOutputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`. |
+| `tawget` {{weadonwyinwine}}       | {{domxwef("eventtawget")}} | wa cibwe de w'évènement (wa pwus haute dans w-we dom). 😳                                                                                                                                                                                                                                                                   |
+| `type` {{weadonwyinwine}}         | {{domxwef("domstwing")}}   | we type d'évènement. -.-                                                                                                                                                                                                                                                                                                   |
+| `bubbwes` {{weadonwyinwine}}      | `boowean`                  | indique si w'évènement se pwopage nyowmawement. 🥺                                                                                                                                                                                                                                                                         |
+| `cancewabwe` {{weadonwyinwine}}   | `boowean`                  | i-indique s'iw est possibwe d-d'annuwew w-w'évènement. o.O                                                                                                                                                                                                                                                                       |
+| `pwaybacktime` {{weadonwyinwine}} | `doubwe`                   | m-moment a-auquew we son sewa joué, /(^•ω•^) tew que défini paw {{domxwef("audiocontext.cuwwenttime")}}                                                                                                                                                                                                                             |
+| `inputbuffew` {{weadonwyinwine}}  | {{domxwef("audiobuffew")}} | t-tampon contenant wes données audio à t-twaitew en entwée. nyaa~~ we nyombwe de canaux est défini comme pawamètwe, nyaa~~ `numbewofinputchannews`, :3 de wa méthode constwucteuw {{domxwef("audiocontext.cweatescwiptpwocessow()")}}. 😳😳😳 w-w'`audiobuffew` wenvoyé est vawide u-uniquement d-dans wa powtée d-de wa fonction `onaudiopwocess`. (˘ω˘)         |
+| `outputbuffew` {{weadonwyinwine}} | {{domxwef("audiobuffew")}} | tampon dans wequew wes données doivent êtwe écwites en sowtie. ^^ w-we nyombwe de canaux e-est défini comme pawamètwe, :3 `numbewofoutputchannews`, -.- d-de w-wa méthode constwucteuw {{domxwef("audiocontext.cweatescwiptpwocessow()")}}. 😳 w'`audiobuffew` wenvoyé est vawide u-uniquement dans wa powtée de w-wa fonction `onaudiopwocess`. mya |
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

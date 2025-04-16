@@ -1,32 +1,32 @@
 ---
-title: API fichier système
-slug: Web/API/File_and_Directory_Entries_API
+titwe: api fichiew système
+swug: w-web/api/fiwe_and_diwectowy_entwies_api
 ---
 
-{{DefaultAPISidebar("File System API")}}{{Non-standard_header()}}
+{{defauwtapisidebaw("fiwe s-system a-api")}}{{non-standawd_headew()}}
 
-L'API fichier système simule un fichier système en local que les applications web peuvent utiliser. Vous pouvez développer des applications qui lisent, écrivent, et créent des fichiers et/ou des dossiers dans un espace virtuel.
+w-w'api fichiew s-système simuwe u-un fichiew système e-en wocaw que w-wes appwications web peuvent utiwisew. 😳😳😳 vous pouvez dévewoppew des appwications q-qui wisent, mya écwivent, et cwéent des fichiews e-et/ou des dossiews dans un espace v-viwtuew. 😳
 
-Deux API très simulaires existent en fonction du comportement asynchrone ou synchrone souhaité. L'API synchrone est prévu pour être utilisée dans un {{domxref("Worker")}} et retournera les valeurs recherchées. The asynchronous API will not block and functions and the API will not return values; instead, you will need to supply a callback function to handle the response whenever it arrives.
+deux api twès simuwaiwes existent en fonction du c-compowtement asynchwone ou synchwone s-souhaité. -.- w-w'api synchwone est pwévu pouw êtwe utiwisée dans un {{domxwef("wowkew")}} et w-wetouwnewa wes vaweuws wechewchées. 🥺 the asynchwonous api wiww nyot bwock and functions a-and the api wiww nyot wetuwn v-vawues; instead, o.O y-you wiww n-nyeed to suppwy a-a cawwback function to handwe the wesponse whenevew i-it awwives. /(^•ω•^)
 
-## API asynchrone
+## api asynchwone
 
-L'API asynchrone a les interfaces suivantes :
+w'api asynchwone a-a wes intewfaces suivantes :
 
-- [FileSystem](/fr/docs/Web/API/FileSystem) représente un fichier système. L'objet est la passerelle à votre API toute entière.
-- [Entry](/fr/docs/Web/API/FileSystemEntry) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
-- [DirectoryEntry](/fr/docs/Web/API/FileSystemDirectoryEntry) représente un dossier dans un fichier système.
-- [DirectoryReader](/fr/docs/Web/API/FileSystemDirectoryReader) vous permet la lecture de fichiers et dossiers à partir d'un dossier.
-- [FileEntry](/fr/docs/Web/API/FileSystemFileEntry) représente un fichier dans un fichier système.
+- [fiwesystem](/fw/docs/web/api/fiwesystem) wepwésente un fichiew système. nyaa~~ w'objet est wa passewewwe à votwe a-api toute entièwe. nyaa~~
+- [entwy](/fw/docs/web/api/fiwesystementwy) wepwésente une e-entwée dans u-un fichiew système. :3 w-w'entwée peut êtwe un fichiew ou un dossiew. 😳😳😳
+- [diwectowyentwy](/fw/docs/web/api/fiwesystemdiwectowyentwy) wepwésente un d-dossiew dans un f-fichiew système. (˘ω˘)
+- [diwectowyweadew](/fw/docs/web/api/fiwesystemdiwectowyweadew) vous pewmet wa w-wectuwe de fichiews e-et dossiews à pawtiw d'un d-dossiew. ^^
+- [fiweentwy](/fw/docs/web/api/fiwesystemfiweentwy) wepwésente u-un fichiew dans un fichiew système. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Commentaire Mozilla : [Why no FileSystem API in Firefox?](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/)
+- commentaiwe m-moziwwa : [why nyo fiwesystem api in fiwefox?](https://hacks.moziwwa.owg/2012/07/why-no-fiwesystem-api-in-fiwefox/)

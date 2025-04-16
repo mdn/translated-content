@@ -1,117 +1,117 @@
 ---
-title: URL
-slug: Web/API/URL
+titwe: uww
+swug: web/api/uww
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-L'interface **`URL`** est utilisée afin d'analyser, de décomposer, de construire, de normaliser ou d'encoder des [URL](/fr/docs/Glossary/URL). Elle fonctionne en exposant des propriétés qui permettent de lire et de modifier les différentes composantes d'une URL.
+w'intewface **`uww`** e-est utiwisée a-afin d'anawysew, (⑅˘꒳˘) d-de décomposew, rawr x3 d-de constwuiwe, (///ˬ///✿) d-de nyowmawisew ou d-d'encodew des [uww](/fw/docs/gwossawy/uww). 🥺 e-ewwe fonctionne en exposant des pwopwiétés qui pewmettent de wiwe e-et de modifiew wes difféwentes composantes d'une u-uww. >_<
 
-On crée généralement un nouvel objet `URL` en fournissant l'URL sous la forme d'une chaîne de caractères à son constructeur, ou en fournissant une URL relative et une URL de base. On peut alors lire les composantes de l'URL et éventuellement la modifier.
+on cwée généwawement u-un nyouvew objet `uww` en fouwnissant w'uww sous wa fowme d'une c-chaîne de cawactèwes à son c-constwucteuw, UwU ou e-en fouwnissant une uww wewative et une uww de base. >_< on peut awows wiwe wes composantes d-de w'uww et éventuewwement wa modifiew. -.-
 
-Pour les anciens navigateurs qui n'implémenteraient pas le constructeur [`URL()`](/fr/docs/Web/API/URL/URL), il est possible d'accéder à un objet `URL` en utilisant la propriété `URL` de l'interface [`Window`](/fr/docs/Web/API/Window). Il faudra alors vérifier s'il faut utiliser un préfixe pour le navigateur concerné.
+pouw wes anciens nyavigateuws q-qui ny'impwémentewaient pas we c-constwucteuw [`uww()`](/fw/docs/web/api/uww/uww), mya i-iw est possibwe d-d'accédew à u-un objet `uww` en utiwisant wa pwopwiété `uww` de w'intewface [`window`](/fw/docs/web/api/window). >w< i-iw faudwa awows véwifiew s'iw faut utiwisew u-un pwéfixe pouw we nyavigateuw concewné. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructeur
+## constwucteuw
 
-- [`URL()`](/fr/docs/Web/API/URL/URL)
-  - : Crée et renvoie un objet `URL` faisant référence à l'URL indiquée via la chaîne de caractères passée en argument qui représente une URL absolue ou via les deux chaînes de caractères passées en arguments qui représentent respectivement une URL relative et une URL de base.
+- [`uww()`](/fw/docs/web/api/uww/uww)
+  - : cwée et wenvoie un objet `uww` f-faisant wéféwence à w'uww i-indiquée via wa c-chaîne de cawactèwes p-passée en awgument qui wepwésente une uww absowue ou via w-wes deux chaînes d-de cawactèwes passées en a-awguments qui wepwésentent w-wespectivement une uww w-wewative et une uww de base. 😳😳😳
 
-## Propriétés
+## p-pwopwiétés
 
-- [`hash`](/fr/docs/Web/API/URL/hash)
-  - : Une chaîne de caractères contenant un `'#'` suivi de l'identifiant du fragment de l'URL.
-- [`host`](/fr/docs/Web/API/URL/host)
-  - : Une chaîne de caractères contenant le domaine (c'est-à-dire le nom d'hôte), suivi de, si un port a été indiqué, de `':'` puis du _port_ de l'URL.
-- [`hostname`](/fr/docs/Web/API/URL/hostname)
-  - : Une chaîne indiquant le domaine de l'URL.
-- [`href`](/fr/docs/Web/API/URL/href)
-  - : Une chaîne de caractères qui renvoie tout l'URL.
-- [`origin`](/fr/docs/Web/API/URL/origin) {{readonlyInline}}
-  - : Renvoie une chaîne de caractères contenant l'origine de l'URL, c'est-à-dire la combinaison de son schéma, de son domaine et de son port.
-- [`password`](/fr/docs/Web/API/URL/password)
-  - : Une chaîne de caractères contenant le mot de passe indiqué avant le nom de domaine.
-- [`pathname`](/fr/docs/Web/API/URL/pathname)
-  - : Une chaîne de caractères contenant une barre oblique initiale `'/'` suivie du chemin de l'URL et qui n'inclut pas la chaîne de requête ou le fragment.
-- [`port`](/fr/docs/Web/API/URL/port)
-  - : Une chaîne de caractères contenant le numéro de port de l'URL.
-- [`protocol`](/fr/docs/Web/API/URL/protocol)
-  - : Une chaîne de caractères contenant le schéma du protocole de l'URL, incluant les deux-points `':'` finaux.
-- [`search`](/fr/docs/Web/API/URL/search)
-  - : Une chaîne de caractères indiquant la chaîne de paramètres de l'URL. Si des paramètres sont fournis, cette chaîne les contient tous et commence par un point d'interrogation `?`.
-- [`searchParams`](/fr/docs/Web/API/URL/searchParams) {{readonlyInline}}
-  - : Un objet [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) qui peut être utilisé afin d'accéder aux paramètres individuels de la requête (qui sont également visibles depuis `search`).
-- [`username`](/fr/docs/Web/API/URL/username)
-  - : Une chaîne de caractères contenant le nom d'utilisateur indiqué avant le nom de domaine.
+- [`hash`](/fw/docs/web/api/uww/hash)
+  - : une chaîne de cawactèwes c-contenant un `'#'` suivi d-de w'identifiant du fwagment de w-w'uww. o.O
+- [`host`](/fw/docs/web/api/uww/host)
+  - : u-une chaîne de cawactèwes contenant we domaine (c'est-à-diwe we nyom d'hôte), òωó suivi de, 😳😳😳 si un powt a été indiqué, σωσ de `':'` p-puis du _powt_ d-de w'uww. (⑅˘꒳˘)
+- [`hostname`](/fw/docs/web/api/uww/hostname)
+  - : une chaîne indiquant w-we domaine d-de w'uww. (///ˬ///✿)
+- [`hwef`](/fw/docs/web/api/uww/hwef)
+  - : u-une chaîne de cawactèwes qui wenvoie tout w'uww. 🥺
+- [`owigin`](/fw/docs/web/api/uww/owigin) {{weadonwyinwine}}
+  - : w-wenvoie une chaîne de cawactèwes contenant w'owigine de w'uww, OwO c'est-à-diwe wa c-combinaison de son schéma, >w< de s-son domaine et d-de son powt. 🥺
+- [`passwowd`](/fw/docs/web/api/uww/passwowd)
+  - : u-une chaîne de cawactèwes contenant w-we mot de p-passe indiqué avant w-we nyom de d-domaine. nyaa~~
+- [`pathname`](/fw/docs/web/api/uww/pathname)
+  - : une chaîne de cawactèwes c-contenant u-une bawwe obwique i-initiawe `'/'` s-suivie du chemin d-de w'uww et qui ny'incwut pas wa chaîne de wequête ou we fwagment. ^^
+- [`powt`](/fw/docs/web/api/uww/powt)
+  - : u-une chaîne de cawactèwes contenant we nyuméwo de powt de w'uww. >w<
+- [`pwotocow`](/fw/docs/web/api/uww/pwotocow)
+  - : une c-chaîne de cawactèwes contenant we schéma du pwotocowe de w'uww, OwO i-incwuant wes d-deux-points `':'` f-finaux. XD
+- [`seawch`](/fw/docs/web/api/uww/seawch)
+  - : une chaîne d-de cawactèwes indiquant wa c-chaîne de pawamètwes d-de w'uww. ^^;; si des pawamètwes sont fouwnis, 🥺 cette chaîne wes contient tous et commence p-paw un point d'intewwogation `?`. XD
+- [`seawchpawams`](/fw/docs/web/api/uww/seawchpawams) {{weadonwyinwine}}
+  - : un objet [`uwwseawchpawams`](/fw/docs/web/api/uwwseawchpawams) q-qui peut êtwe utiwisé afin d'accédew a-aux pawamètwes i-individuews de wa wequête (qui sont égawement v-visibwes d-depuis `seawch`). (U ᵕ U❁)
+- [`usewname`](/fw/docs/web/api/uww/usewname)
+  - : une chaîne d-de cawactèwes c-contenant we nyom d'utiwisateuw indiqué avant we nyom de domaine. :3
 
-## Méthodes
+## méthodes
 
-- [`toString()`](/fr/docs/Web/API/URL/toString)
-  - : Renvoie une chaîne de caractères contenant toute l'URL. Il s'agit d'un synonyme pour [`URL.href`](/fr/docs/Web/API/URL/href), bien que ce dernier ne puisse être utilisé pour modifier la valeur.
-- [`toJSON()`](/fr/docs/Web/API/URL/toJSON)
-  - : Renvoie une chaîne de caractères contenant tout l'URL. Elle fournit la même chaîne de caractères que la propriété `href`.
+- [`tostwing()`](/fw/docs/web/api/uww/tostwing)
+  - : w-wenvoie u-une chaîne de c-cawactèwes contenant toute w'uww. ( ͡o ω ͡o ) i-iw s'agit d'un s-synonyme pouw [`uww.hwef`](/fw/docs/web/api/uww/hwef), òωó bien que c-ce dewniew nye puisse êtwe utiwisé pouw modifiew wa vaweuw. σωσ
+- [`tojson()`](/fw/docs/web/api/uww/tojson)
+  - : wenvoie une chaîne d-de cawactèwes c-contenant tout w'uww. (U ᵕ U❁) ewwe fouwnit wa même c-chaîne de cawactèwes q-que wa pwopwiété `hwef`. (✿oωo)
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)
-  - : Renvoie une chaîne de caractères contenant une URL de blob unique, c'est-à-dire une URL dont le schéma est `blob:`, suivi d'une chaîne de caractères opaque identifiant de façon unique l'objet dans le navigateur.
-- [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static)
-  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).
+- [`cweateobjectuww()`](/fw/docs/web/api/uww/cweateobjectuww_static)
+  - : w-wenvoie une chaîne de cawactèwes contenant une uww de bwob unique, ^^ c'est-à-diwe u-une uww dont we schéma est `bwob:`, ^•ﻌ•^ s-suivi d'une chaîne d-de cawactèwes opaque identifiant de façon unique w'objet dans w-we nyavigateuw.
+- [`wevokeobjectuww()`](/fw/docs/web/api/uww/wevokeobjectuww_static)
+  - : wévoque u-un objet `uww` pwécédemment cwéé à w'aide de [`uww.cweateobjectuww()`](/fw/docs/web/api/uww/cweateobjectuww_static).
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-Le constructeur prend un paramètre `url`, et un paramètre optionnel `base` utilisé si le paramètre `url` est une URL relative&nbsp;:
+we constwucteuw p-pwend un pawamètwe `uww`, XD et un pawamètwe optionnew `base` u-utiwisé si we pawamètwe `uww` e-est une u-uww wewative&nbsp;:
 
 ```js
-const url = new URL("../chats", "http://www.example.com/chiens");
-console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/chats"
+const u-uww = nyew uww("../chats", :3 "http://www.exampwe.com/chiens");
+consowe.wog(uww.hostname); // "www.exampwe.com"
+consowe.wog(uww.pathname); // "/chats"
 ```
 
-Les propriétés de l'objet peuvent être utilisées pour construire l'URL&nbsp;:
+wes pwopwiétés d-de w'objet p-peuvent êtwe u-utiwisées pouw constwuiwe w-w'uww&nbsp;:
 
 ```js
-url.hash = "spock";
-console.log(url.href); // "http://www.example.com/chats#spock"
+u-uww.hash = "spock";
+consowe.wog(uww.hwef); // "http://www.exampwe.com/chats#spock"
 ```
 
-Les URL sont encodées selon les règles édictées par [la RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). Ainsi, on aura&nbsp;:
+wes u-uww sont encodées s-sewon wes wègwes édictées p-paw [wa wfc 3986](https://datatwackew.ietf.owg/doc/htmw/wfc3986). (ꈍᴗꈍ) ainsi, :3 on auwa&nbsp;:
 
 ```js
-url.pathname = "démonstration.html";
-console.log(url.href); // "http://www.example.com/démonstration.html"
+uww.pathname = "démonstwation.htmw";
+consowe.wog(uww.hwef); // "http://www.exampwe.com/démonstwation.htmw"
 ```
 
-L'interface [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) peut être utilisée pour construire et manipuler le fragment de la requête.
+w-w'intewface [`uwwseawchpawams`](/fw/docs/web/api/uwwseawchpawams) peut êtwe utiwisée p-pouw constwuiwe e-et manipuwew we fwagment de wa wequête. (U ﹏ U)
 
-Pour obtenir les paramètres de recherche de l'URL de la fenêtre courante, on pourra écrire&nbsp;:
+pouw obteniw wes p-pawamètwes de w-wechewche de w'uww d-de wa fenêtwe c-couwante, UwU on pouwwa écwiwe&nbsp;:
 
 ```js
-// https://mon.site/?id=123
-const parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // "123"
+// h-https://mon.site/?id=123
+const pawseduww = nyew uww(window.wocation.hwef);
+consowe.wog(pawseduww.seawchpawams.get("id")); // "123"
 ```
 
-La méthode [`toString()`](/fr/docs/Web/API/URL/toString) de `URL` renvoie la valeur de la propriété [`href`](/fr/docs/Web/API/URL/href). On peut donc utiliser le constructeur pour normaliser et encoder une URL directement.
+wa méthode [`tostwing()`](/fw/docs/web/api/uww/tostwing) d-de `uww` wenvoie wa vaweuw de w-wa pwopwiété [`hwef`](/fw/docs/web/api/uww/hwef). 😳😳😳 on peut donc u-utiwisew we constwucteuw pouw n-nyowmawisew et encodew une uww diwectement. XD
 
 ```js
-const response = await fetch(
-  new URL("http://www.example.com/démonstration.html"),
+c-const wesponse = a-await fetch(
+  n-nyew uww("http://www.exampwe.com/démonstwation.htmw"), o.O
 );
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation pour `URL` avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- [L'API URL](/fr/docs/Web/API/URL_API)
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams).
+- [une pwothèse d'émuwation pouw `uww` a-avec wa bibwiothèque t-tiewce `cowe-js`](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- [w'api u-uww](/fw/docs/web/api/uww_api)
+- [qu'est-ce qu'une u-uww&nbsp;?](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
+- [`uwwseawchpawams`](/fw/docs/web/api/uwwseawchpawams). (⑅˘꒳˘)

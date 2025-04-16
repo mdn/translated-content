@@ -1,79 +1,79 @@
 ---
-title: element.insertAdjacentHTML
-slug: Web/API/Element/insertAdjacentHTML
+titwe: ewement.insewtadjacenthtmw
+swug: web/api/ewement/insewtadjacenthtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`insertAdjacentHTML()` analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que **innerHTML**.
+`insewtadjacenthtmw()` a-anawyse w-we texte spécifié e-en tant q-que htmw ou xmw e-et insèwe wes n-nyoeuds wésuwtants d-dans we dom à w-wa position spécifiée. rawr x3 w'éwement qui est utiwisé ny'est pas wéanawysé et w-wes éwements qu'iw contient nye sont donc pas c-cowwompus. ceci, OwO et we fait d'évitew w-wa séwiawisation suppwémentaiwe, wend wa fonction pwus w-wapide et diwecte que **innewhtmw**. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-element.insertAdjacentHTML(position, text);
+e-ewement.insewtadjacenthtmw(position, 😳😳😳 text);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `position`
-  - : une {{domxref("DOMString")}} représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
+  - : une {{domxwef("domstwing")}} wepwésentant w-wa position wewative à w'`ewement`, ( ͡o ω ͡o ) et doit êtwe une des chaînes de cawactèwes s-suivantes :
 
 <!---->
 
-- `'beforebegin'` : Avant l'`element` lui-même.
-- `'afterbegin'` : Juste à l'intérieur de l'`element` , avant son premier enfant.
-- `'beforeend'` : Juste à l'intérieur de l'`element` , après son dernier enfant.
-- `'afterend'` : Après `element` lui-même.
+- `'befowebegin'` : avant w'`ewement` w-wui-même. >_<
+- `'aftewbegin'` : j-juste à w'intéwieuw d-de w'`ewement` , >w< a-avant son pwemiew enfant. rawr
+- `'befoweend'` : juste à w-w'intéwieuw de w'`ewement` , 😳 apwès son dewniew e-enfant. >w<
+- `'aftewend'` : apwès `ewement` wui-même. (⑅˘꒳˘)
 
 <!---->
 
 - `text`
-  - : est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.
+  - : est wa chaîne de cawactèwes qui doit êtwe anawysée e-en tant qu'htmw ou xmw et i-inséwée dans w-w'awbwe du dom. OwO
 
-### Visualisation des noms de position
+### v-visuawisation des nyoms de position
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
-  foo
-  <!-- beforeend -->
+  <!-- a-aftewbegin -->
+  f-foo
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- aftewend -->
 ```
 
-> [!NOTE]
-> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
+> [!note]
+> w-wes positions `befowebegin` e-et `aftewend` nye fonctionnent que s-si we nyoeud est un awbwe et a-a un éwément pawent. (ꈍᴗꈍ)
 
-## Exemple
+## exempwe
 
 ```js
 // <div id="one">one</div>
-var d1 = document.getElementById("one");
-d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
+v-vaw d1 = document.getewementbyid("one");
+d1.insewtadjacenthtmw("aftewend", 😳 '<div i-id="two">two</div>');
 
-// Ici la nouvelle structure est :
-// <div id="one">one</div><div id="two">two</div>
+// ici wa nyouvewwe s-stwuctuwe est :
+// <div i-id="one">one</div><div id="two">two</div>
 ```
 
-## Notes
+## nyotes
 
-### Considérations de sécurité
+### considéwations de sécuwité
 
-Lorsque vous insérez du code HTML dans une page en utilisant insertAdjacentHTML, veillez à ne pas utiliser d'entrée utilisateur qui n'a pas été échappée.
+wowsque vous inséwez du code h-htmw dans une p-page en utiwisant insewtadjacenthtmw, 😳😳😳 v-veiwwez à n-nye pas utiwisew d-d'entwée utiwisateuw qui ny'a pas été échappée. mya
 
-Il est recommandé de ne pas utiliser `insertAdjacentHTML` lors de l'insertion de texte brut; à la place, utilisez la propriété `node.textContent` ou la méthode `node.insertAdjacentText()`. Cela n'interprète pas le contenu transmis au format HTML, mais l'insère à la place sous forme de texte brut.
+iw est w-wecommandé de nye pas utiwisew `insewtadjacenthtmw` wows de w'insewtion de texte bwut; à wa pwace, mya u-utiwisez wa pwopwiété `node.textcontent` o-ou wa méthode `node.insewtadjacenttext()`. (⑅˘꒳˘) c-cewa n-ny'intewpwète pas we contenu t-twansmis au fowmat h-htmw, (U ﹏ U) mais w'insèwe à w-wa pwace s-sous fowme de texte bwut. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) par Henri Sivonen y compris le benchmark montrant que insertAdjacentHTML peut être beaucoup plus rapide dans certains cas.
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("ewement.insewtadjacenttext()")}}
+- [hacks.moziwwa.owg g-guest p-post](https://hacks.moziwwa.owg/2011/11/insewtadjacenthtmw-enabwes-fastew-htmw-snippet-injection/) paw henwi sivonen y compwis we benchmawk montwant q-que insewtadjacenthtmw peut êtwe beaucoup pwus wapide dans cewtains cas. ʘwʘ

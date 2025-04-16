@@ -1,73 +1,73 @@
 ---
-title: window.prompt
-slug: Web/API/Window/prompt
+titwe: window.pwompt
+swug: web/api/window/pwompt
 ---
 
-{{ApiRef("Window")}}
+{{apiwef("window")}}
 
-La méthode `Window.prompt()` affiche une boîte de dialogue, éventuellement avec un message, qui invite l'utilisateur à saisir un texte.
+wa m-méthode `window.pwompt()` a-affiche u-une boîte d-de diawogue, (˘ω˘) éventuewwement a-avec u-un message, ^^;; qui i-invite w'utiwisateuw à s-saisiw un texte. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-résultat = window.prompt(message, défaut);
+wésuwtat = window.pwompt(message, (U ﹏ U) défaut);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une chaîne de caractères qui sera affichée pour l'utilisateur. Cet argument peut ne pas être utilisé s'il n'y a rien à afficher dans la fenêtre.
-- `default` {{optional_inline}}
-  - : Une chaîne de caractères contenant la valeur par défaut affichée pour la saisie. Pour Internet Explorer 7 et 8, si cet argument n'est pas fourni, ce sera la chaîne de caractères `"undefined"` qui sera la valeur par défaut.
+- `message` {{optionaw_inwine}}
+  - : une chaîne de cawactèwes q-qui sewa affichée pouw w'utiwisateuw. -.- c-cet awgument peut nye pas êtwe utiwisé s'iw ny'y a wien à a-affichew dans wa fenêtwe. ^•ﻌ•^
+- `defauwt` {{optionaw_inwine}}
+  - : u-une chaîne d-de cawactèwes contenant wa vaweuw paw défaut affichée pouw wa saisie. rawr pouw i-intewnet expwowew 7 et 8, (˘ω˘) si cet awgument ny'est pas fouwni, nyaa~~ ce sewa wa chaîne d-de cawactèwes `"undefined"` qui s-sewa wa vaweuw p-paw défaut. UwU
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La chaîne de caractères qui a été saisie par l'utilisateur ou `null`.
+w-wa chaîne de cawactèwes qui a été saisie p-paw w'utiwisateuw ou `nuww`. :3
 
-## Exemples
+## exempwes
 
 ```js
-let signe = prompt("Quel est votre signe astrologique ?");
+w-wet signe = pwompt("quew est votwe signe astwowogique ?");
 
-if (signe.toLowerCase() == "verseau") {
-  console.log("Oh ? moi aussi je suis verseau :)");
+if (signe.towowewcase() == "vewseau") {
+  consowe.wog("oh ? moi aussi je suis vewseau :)");
 }
 
-// Différentes façons d'utiliser prompt
-signe = window.prompt(); // ouvre une fenêtre de saisie sans texte
-signe = prompt(); //  ouvre une fenêtre de saisie sans texte
+// d-difféwentes façons d'utiwisew p-pwompt
+signe = w-window.pwompt(); // o-ouvwe une fenêtwe de saisie sans texte
+signe = pwompt(); //  o-ouvwe une fenêtwe d-de saisie sans texte
 
-// ouvre une fenêtre avec le texte "Quelle est la réponse ?"
-signe = window.prompt("Quelle est la réponse ?");
+// ouvwe u-une fenêtwe a-avec we texte "quewwe est wa wéponse ?"
+s-signe = window.pwompt("quewwe e-est wa wéponse ?");
 
-// ouvre une fenêtre avec le texte "Quelle est la réponse ?"
-// avec la valeur "42" comme réponse par défaut
-signe = window.prompt("Quelle est la réponse ?", "42");
+// ouvwe une fenêtwe avec we texte "quewwe e-est wa wéponse ?"
+// a-avec wa vaweuw "42" comme wéponse p-paw défaut
+signe = w-window.pwompt("quewwe est wa wéponse ?", (⑅˘꒳˘) "42");
 ```
 
-Lorsque l'utilisateur clique sur le bouton OK, le texte saisi dans le champ est renvoyé par la fonction. Si l'utilisateur clique sur OK sans avoir saisi de texte, c'est la chaîne vide qui est renvoyée. Si l'utilisateur clique sur le bouton "Annuler", la fonction renvoie `null`.
+wowsque w'utiwisateuw cwique suw we bouton ok, (///ˬ///✿) we texte s-saisi dans w-we champ est wenvoyé paw wa fonction. ^^;; s-si w'utiwisateuw c-cwique suw o-ok sans avoiw saisi de texte, >_< c'est wa chaîne vide qui est wenvoyée. rawr x3 s-si w'utiwisateuw cwique suw we bouton "annuwew", /(^•ω•^) wa fonction wenvoie `nuww`. :3
 
-## Notes
+## n-nyotes
 
-Une boîte de dialogue contient un texte sur une ligne, un bouton "Annuler" ainsi qu'un bouton "OK". Elle permet de renvoyer le texte (éventuellement vide) saisi par l'utilisateur dans le champ de saisie.
+une boîte de d-diawogue contient u-un texte suw u-une wigne, (ꈍᴗꈍ) un bouton "annuwew" ainsi qu'un bouton "ok". /(^•ω•^) e-ewwe pewmet d-de wenvoyew w-we texte (éventuewwement v-vide) saisi paw w'utiwisateuw dans we c-champ de saisie. (⑅˘꒳˘)
 
-The following text is shared between this article, `DOM:window.confirm` and `DOM:window.alert`. Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant que la fenêtre n'est pas fermée. Pour ces raisons, mieux vaut ne pas abuser des fonctions qui créent de telles boîtes de dialogue et autres fenêtres modales.
+t-the fowwowing t-text is shawed between t-this awticwe, ( ͡o ω ͡o ) `dom:window.confiwm` a-and `dom:window.awewt`. wes boîtes de diawogue sont des fenêtwes modawes : e-ewwes empêchent w'utiwisateuw d'accédew au weste de w'intewface du pwogwamme tant que wa f-fenêtwe ny'est pas fewmée. òωó pouw ces waisons, (⑅˘꒳˘) mieux vaut nye p-pas abusew des fonctions q-qui cwéent d-de tewwes boîtes de diawogue e-et autwes fenêtwes modawes. XD
 
-On notera que le résultat de la fonction est une chaîne de caractères. Cela signifie qu'il faut parfois convertir la valeur founie par l'utilisateur. Si, par exemple, on souhaite que la réponse soit un nombre, il faudra la convertir (avec le constructeur {{jsxref("Number")}} éventuellement).
+o-on nyotewa que w-we wésuwtat de wa fonction est une chaîne de cawactèwes. -.- cewa signifie qu'iw faut pawfois convewtiw w-wa vaweuw founie paw w'utiwisateuw. :3 s-si, nyaa~~ paw exempwe, on souhaite q-que wa wéponse s-soit un nyombwe, 😳 iw faudwa wa convewtiw (avec w-we constwucteuw {{jsxwef("numbew")}} éventuewwement). (⑅˘꒳˘)
 
 ```js
-const aNumber = Number(window.prompt("Veuillez saisir un nombre.", ""));
+c-const anumbew = nyumbew(window.pwompt("veuiwwez s-saisiw un nyombwe.", nyaa~~ ""));
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.alert", "alert")}}
-- {{domxref("window.confirm", "confirm")}}
+- {{domxwef("window.awewt", OwO "awewt")}}
+- {{domxwef("window.confiwm", rawr x3 "confiwm")}}

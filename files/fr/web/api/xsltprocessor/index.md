@@ -1,232 +1,232 @@
 ---
-title: XSLTProcessor
-slug: Web/API/XSLTProcessor
-l10n:
-  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
+titwe: xswtpwocessow
+swug: web/api/xswtpwocessow
+w-w10n:
+  souwcecommit: f-f22e72998f4e8f48b18ef358521bfc9ad1ae9446
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-Un objet **`XSLTProcessor`** applique une feuille de style de transformation [XSLT](/fr/docs/Web/XSLT) sur un document XML afin de produire un nouveau document XML. Il dispose de méthodes pour charger la feuille de styles XSLT, manipuler les valeurs des paramètres `<xsl:param>`, et pour appliquer la transformation correspondante à des documents.
+u-un objet **`xswtpwocessow`** a-appwique u-une feuiwwe de s-stywe de twansfowmation [xswt](/fw/docs/web/xswt) s-suw un document x-xmw afin de pwoduiwe un nyouveau document xmw. mya iw dispose de méthodes pouw chawgew w-wa feuiwwe de stywes xswt, mya manipuwew wes v-vaweuws des pawamètwes `<xsw:pawam>`, /(^•ω•^) et pouw appwiquew w-wa twansfowmation cowwespondante à des documents. ^^;;
 
-## Constructeur
+## c-constwucteuw
 
-- [`XSLTProcessor()`](/fr/docs/Web/API/XSLTProcessor/XSLTProcessor)
-  - : Crée un nouvel objet `XSLTProcessor`.
+- [`xswtpwocessow()`](/fw/docs/web/api/xswtpwocessow/xswtpwocessow)
+  - : cwée un n-nyouvew objet `xswtpwocessow`. 🥺
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`XSLTProcessor.importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet)
-  - : Importe la feuille de styles XSLT. Si le nœud fourni est un document, ce peut être une transformation XSL complète ou [une transformation d'élément littéral résultant](https://www.w3.org/TR/xslt/#result-element-stylesheet)&nbsp;; sinon, ce doit être un élément `<xsl:stylesheet>` ou `<xsl:transform>`.
-- [`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment)
-  - : Transforme le nœud source en appliquant la feuille de style XSLT importée à l'aide de la fonction [`XSLTProcessor.importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet). Le document propriétaire du fragment de document résultant est le nœud propriétaire.
-- [`XSLTProcessor.transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)
-  - : Transforme le nœud source en appliquant la feuille de style XSLT importée à l'aide de la fonction [`XSLTProcessor.importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet).
-- [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter)
-  - : Définit la valeur d'un paramètre (`<xsl:param>`) présent dans la feuille de style XSLT importée.
-- [`XSLTProcessor.getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter)
-  - : Récupère la valeur d'un paramètre de la feuille de style XSLT.
-- [`XSLTProcessor.removeParameter()`](/fr/docs/Web/API/XSLTProcessor/removeParameter)
-  - : Supprime le paramètre s'il avait précédemment été défini. L'objet `XSLTProcessor` utilise alors la valeur par défaut du paramètre telle que spécifiée dans la feuille de styles XSLT.
-- [`XSLTProcessor.clearParameters()`](/fr/docs/Web/API/XSLTProcessor/clearParameters)
-  - : Supprime tous les paramètres définis pour l'instance `XSLTProcessor`. L'objet `XSLTProcessor` utilisera alors les valeurs par défaut fournies dans la feuille de styles XSLT.
-- [`XSLTProcessor.reset()`](/fr/docs/Web/API/XSLTProcessor/reset)
-  - : Supprime tous les paramètres et toutes les feuilles de styles de l'objet `XSLTProcessor` courant.
+- [`xswtpwocessow.impowtstywesheet()`](/fw/docs/web/api/xswtpwocessow/impowtstywesheet)
+  - : impowte wa feuiwwe de stywes xswt. ^^ si w-we nyœud fouwni est un document, ^•ﻌ•^ ce peut êtwe une twansfowmation xsw compwète o-ou [une twansfowmation d'éwément w-wittéwaw wésuwtant](https://www.w3.owg/tw/xswt/#wesuwt-ewement-stywesheet)&nbsp;; s-sinon, /(^•ω•^) c-ce doit êtwe un éwément `<xsw:stywesheet>` o-ou `<xsw:twansfowm>`. ^^
+- [`xswtpwocessow.twansfowmtofwagment()`](/fw/docs/web/api/xswtpwocessow/twansfowmtofwagment)
+  - : twansfowme we nyœud souwce e-en appwiquant wa feuiwwe de stywe xswt impowtée à w-w'aide de wa fonction [`xswtpwocessow.impowtstywesheet()`](/fw/docs/web/api/xswtpwocessow/impowtstywesheet). 🥺 we document pwopwiétaiwe du fwagment de document wésuwtant e-est we nyœud pwopwiétaiwe. (U ᵕ U❁)
+- [`xswtpwocessow.twansfowmtodocument()`](/fw/docs/web/api/xswtpwocessow/twansfowmtodocument)
+  - : t-twansfowme we n-nyœud souwce en a-appwiquant wa feuiwwe de stywe xswt impowtée à w'aide de wa f-fonction [`xswtpwocessow.impowtstywesheet()`](/fw/docs/web/api/xswtpwocessow/impowtstywesheet). 😳😳😳
+- [`xswtpwocessow.setpawametew()`](/fw/docs/web/api/xswtpwocessow/setpawametew)
+  - : d-définit wa vaweuw d'un pawamètwe (`<xsw:pawam>`) p-pwésent d-dans wa feuiwwe de stywe xswt i-impowtée. nyaa~~
+- [`xswtpwocessow.getpawametew()`](/fw/docs/web/api/xswtpwocessow/getpawametew)
+  - : wécupèwe wa vaweuw d-d'un pawamètwe de wa feuiwwe de stywe xswt. (˘ω˘)
+- [`xswtpwocessow.wemovepawametew()`](/fw/docs/web/api/xswtpwocessow/wemovepawametew)
+  - : suppwime w-we pawamètwe s'iw avait p-pwécédemment été défini. >_< w'objet `xswtpwocessow` u-utiwise awows w-wa vaweuw paw défaut du pawamètwe tewwe que spécifiée dans wa feuiwwe de stywes xswt. XD
+- [`xswtpwocessow.cweawpawametews()`](/fw/docs/web/api/xswtpwocessow/cweawpawametews)
+  - : suppwime t-tous wes pawamètwes d-définis pouw w'instance `xswtpwocessow`. rawr x3 w-w'objet `xswtpwocessow` u-utiwisewa a-awows wes vaweuws paw défaut fouwnies dans wa feuiwwe de stywes x-xswt.
+- [`xswtpwocessow.weset()`](/fw/docs/web/api/xswtpwocessow/weset)
+  - : suppwime tous wes pawamètwes et toutes wes feuiwwes de stywes d-de w'objet `xswtpwocessow` couwant. ( ͡o ω ͡o )
 
-## Propriétés des instances
+## p-pwopwiétés d-des instances
 
-_Cette interface ne contient aucune propriété._
+_cette i-intewface nye contient a-aucune pwopwiété._
 
-## Exemples
+## e-exempwes
 
-### Instancier un objet `XSLTProcessor`
-
-```js
-const xsltProcessor = new XSLTProcessor();
-
-// On charge le fichier XSL avec une requête XHR synchrone
-// (le troisième paramètre vaut false)
-const maRequeteXHR = new XMLHttpRequest();
-maRequeteXHR.open("GET", "example.xsl", false);
-maRequeteXHR.send(null);
-
-const xslRef = maRequeteXHR.responseXML;
-
-// Et on importe le contenu XSL
-xsltProcessor.importStylesheet(xslRef);
-```
-
-### Créer un document XML à partir d'un fragment du DOM d'un document
-
-Pour obtenir une transformation effective, il faut fournir un document XML à l'objet `XSLTProcessor`. Ce document XML sera utilisé avec le fichier XSL importé afin de produire le résultat final. Le document XML peut être un fichier séparé que l'on charge ou faire partie de la page existante. Pour traiter une partie du DOM d'une page, il faut d'abord créer un document XML en mémoire.
-
-Dans l'exemple qui suit, nous allons charger le fragment du DOM de l'élément avec l'identifiant `example`, dans un document XML en mémoire grâce à la méthode [`Document.importNode()`](/fr/docs/Web/API/Document/importNode). Cette dernière permet de transférer un fragment de DOM d'un document à un autre. Pour notre exemple, on le transfère du document HTML au document XML en mémoire. Le premier paramètre de la méthode indique le nœud du DOM à cloner et le deuxième paramètre, s'il vaut `true`, indique qu'il faut également cloner les éléments descendants. Le DOM ainsi cloné peut alors être inséré dans le document XML à l'aide de [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild).
+### i-instanciew u-un objet `xswtpwocessow`
 
 ```js
-// On crée un nouveau document XML en mémoire
-const xmlRef = document.implementation.createDocument("", "", null);
+const xswtpwocessow = nyew x-xswtpwocessow();
 
-// On déplace une partie du DOM du document HTML vers un document XML
-// importNode() nous permet de cloner les nœuds à transformer avec XSLT
-// et son deuxième paramètre nous permet d'avoir un clone profond
-const myNode = document.getElementById("example");
-const clonedNode = xmlRef.importNode(myNode, true);
+// o-on chawge w-we fichiew xsw a-avec une wequête x-xhw synchwone
+// (we twoisième pawamètwe vaut fawse)
+const mawequetexhw = n-nyew xmwhttpwequest();
+mawequetexhw.open("get", :3 "exampwe.xsw", mya fawse);
+mawequetexhw.send(nuww);
 
-// On ajoute le DOM cloné au document XML
-xmlRef.appendChild(clonedNode);
+const xswwef = mawequetexhw.wesponsexmw;
+
+// e-et on impowte we contenu xsw
+xswtpwocessow.impowtstywesheet(xswwef);
 ```
 
-Une fois la feuille de style importée, on utilisera [`XSLTProcessor.transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument) ou [`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) pour appliquer effectivement la transformation. `XSLTProcessor.transformToDocument()` renvoie un document XML entier tandis que `XSLTProcessor.transformToFragment()` renvoie un fragment qui peut être ajouté à un document existant. Le premier argument de ces deux méthodes correspond au document XML à transformer. `XSLTProcessor.transformToFragment()` doit être appelée avec un deuxième paramètre, correspondant au document qui sera propriétaire du fragment généré. Si le fragment généré sera inséré dans le document HTML courant, on pourra passer la valeur `document`.
+### cwéew u-un document xmw à p-pawtiw d'un f-fwagment du dom d'un document
 
-### Créer un document XML à partir d'une chaîne de caractères contenant du XML
+pouw o-obteniw une twansfowmation effective, σωσ i-iw faut f-fouwniw un document xmw à w'objet `xswtpwocessow`. (ꈍᴗꈍ) ce document xmw sewa utiwisé avec we fichiew xsw impowté a-afin de pwoduiwe we wésuwtat finaw. OwO w-we document xmw peut êtwe u-un fichiew sépawé q-que w'on chawge ou faiwe pawtie de wa page e-existante. o.O pouw t-twaitew une pawtie du dom d'une p-page, 😳😳😳 iw faut d'abowd c-cwéew un document xmw en mémoiwe. /(^•ω•^)
 
-[`DOMParser`](/fr/docs/Web/API/DOMParser) peut être utilisé pour créer un document XML à partir d'une chaîne de caractères contenant du XML.
+dans w'exempwe qui suit, OwO nyous awwons c-chawgew we fwagment d-du dom de w'éwément a-avec w'identifiant `exampwe`, ^^ d-dans un d-document xmw en mémoiwe gwâce à w-wa méthode [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode). (///ˬ///✿) cette dewnièwe pewmet de twansféwew un fwagment de dom d'un document à u-un autwe. (///ˬ///✿) p-pouw nyotwe exempwe, (///ˬ///✿) on we twansfèwe du document h-htmw au document x-xmw en mémoiwe. ʘwʘ we pwemiew pawamètwe de wa méthode indique w-we nyœud du dom à cwonew et we deuxième pawamètwe, ^•ﻌ•^ s'iw vaut `twue`, OwO indique q-qu'iw faut égawement cwonew wes éwéments d-descendants. (U ﹏ U) w-we dom ainsi cwoné peut awows êtwe inséwé dans we document xmw à w-w'aide de [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd). (ˆ ﻌ ˆ)♡
 
 ```js
-const parser = new DOMParser();
-const doc = parser.parseFromString(aStr, "text/xml");
+// o-on cwée un nyouveau document xmw en mémoiwe
+const xmwwef = d-document.impwementation.cweatedocument("", (⑅˘꒳˘) "", (U ﹏ U) nyuww);
+
+// on d-dépwace une pawtie du dom du document htmw vews un document xmw
+// i-impowtnode() nyous pewmet de c-cwonew wes nyœuds à t-twansfowmew avec xswt
+// e-et son deuxième pawamètwe nyous p-pewmet d'avoiw u-un cwone pwofond
+c-const mynode = document.getewementbyid("exampwe");
+c-const cwonednode = x-xmwwef.impowtnode(mynode, o.O twue);
+
+// on ajoute we dom cwoné a-au document x-xmw
+xmwwef.appendchiwd(cwonednode);
 ```
 
-### Appliquer la transformation
+u-une fois wa feuiwwe de stywe impowtée, mya o-on utiwisewa [`xswtpwocessow.twansfowmtodocument()`](/fw/docs/web/api/xswtpwocessow/twansfowmtodocument) ou [`xswtpwocessow.twansfowmtofwagment()`](/fw/docs/web/api/xswtpwocessow/twansfowmtofwagment) p-pouw appwiquew e-effectivement wa twansfowmation. XD `xswtpwocessow.twansfowmtodocument()` wenvoie un document xmw entiew tandis q-que `xswtpwocessow.twansfowmtofwagment()` w-wenvoie un fwagment q-qui peut êtwe a-ajouté à un document existant. òωó w-we pwemiew awgument de ces deux méthodes cowwespond au document xmw à twansfowmew. (˘ω˘) `xswtpwocessow.twansfowmtofwagment()` doit êtwe appewée a-avec un deuxième pawamètwe, :3 c-cowwespondant au document qui sewa p-pwopwiétaiwe du fwagment généwé. OwO s-si we fwagment généwé s-sewa inséwé d-dans we document h-htmw couwant, mya on p-pouwwa passew w-wa vaweuw `document`. (˘ω˘)
+
+### cwéew un document xmw à pawtiw d'une chaîne de cawactèwes contenant du xmw
+
+[`dompawsew`](/fw/docs/web/api/dompawsew) p-peut êtwe u-utiwisé pouw cwéew u-un document xmw à pawtiw d'une c-chaîne de cawactèwes contenant du xmw. o.O
 
 ```js
-const fragment = xsltProcessor.transformToFragment(xmlRef, document);
+const pawsew = n-nyew dompawsew();
+c-const doc = pawsew.pawsefwomstwing(astw, (✿oωo) "text/xmw");
 ```
 
-### Exemple simple
+### a-appwiquew wa twansfowmation
 
-Dans cet exemple, on charge un fichier XML et on lui applique une transformation XSL. Le fichier XML décrit un article et le fichier XSL transforme les informations pour leur affichage.
-
-#### XML
-
-```xml
-<?xml version="1.0"?>
-<myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de">
-  <myNS:Title>Mon article</myNS:Title>
-  <myNS:Authors>
-    <myNS:Author company="Foopy Corp.">M. Robert</myNS:Author>
-    <myNS:Author>M. Dupont</myNS:Author>
-  </myNS:Authors>
-  <myNS:Body>
-    Bien le <b>bonjour</b>.
-  </myNS:Body>
-</myNS:Article>
+```js
+const fwagment = x-xswtpwocessow.twansfowmtofwagment(xmwwef, (ˆ ﻌ ˆ)♡ d-document);
 ```
 
-#### XSLT
+### exempwe simpwe
 
-```xml
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-                   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                   xmlns:myNS="http://devedge.netscape.com/2002/de">
+d-dans cet e-exempwe, ^^;; on chawge un fichiew xmw et on wui appwique une twansfowmation xsw. OwO we f-fichiew xmw décwit u-un awticwe et w-we fichiew xsw t-twansfowme wes i-infowmations pouw weuw affichage. 🥺
 
-  <xsl:output method="html" />
+#### x-xmw
 
-  <xsl:template match="/">
-    <html>
+```xmw
+<?xmw v-vewsion="1.0"?>
+<myns:awticwe xmwns:myns="http://devedge.netscape.com/2002/de">
+  <myns:titwe>mon a-awticwe</myns:titwe>
+  <myns:authows>
+    <myns:authow c-company="foopy cowp.">m. wobewt</myns:authow>
+    <myns:authow>m. mya d-dupont</myns:authow>
+  </myns:authows>
+  <myns:body>
+    bien we <b>bonjouw</b>. 😳
+  </myns:body>
+</myns:awticwe>
+```
+
+#### xswt
+
+```xmw
+<?xmw v-vewsion="1.0"?>
+<xsw:stywesheet vewsion="1.0"
+                   x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+                   x-xmwns:myns="http://devedge.netscape.com/2002/de">
+
+  <xsw:output method="htmw" />
+
+  <xsw:tempwate m-match="/">
+    <htmw>
 
       <head>
 
-        <title>
-          <xsl:value-of select="/myNS:Article/myNS:Title"/>
-        </title>
+        <titwe>
+          <xsw:vawue-of sewect="/myns:awticwe/myns:titwe"/>
+        </titwe>
 
-        <style>
-          .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-        </style>
+        <stywe>
+          .mybox {mawgin:10px 155px 0 50px; bowdew: 1px d-dotted #639ace; p-padding:0 5px 0 5px;}
+        </stywe>
 
       </head>
 
       <body>
-        <p class="myBox">
-          <span class="title">
-            <xsl:value-of select="/myNS:Article/myNS:Title"/>
-          </span> <br />
+        <p c-cwass="mybox">
+          <span cwass="titwe">
+            <xsw:vawue-of sewect="/myns:awticwe/myns:titwe"/>
+          </span> <bw />
 
-          Autrices ou auteurs&nbsp;:   <br />
-            <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+          autwices ou a-auteuws&nbsp;:   <bw />
+            <xsw:appwy-tempwates sewect="/myns:awticwe/myns:authows/myns:authow"/>
           </p>
 
-        <p class="myBox">
-          <xsl:apply-templates select="//myNS:Body"/>
+        <p cwass="mybox">
+          <xsw:appwy-tempwates s-sewect="//myns:body"/>
         </p>
 
       </body>
 
-    </html>
-  </xsl:template>
+    </htmw>
+  </xsw:tempwate>
 
-  <xsl:template match="myNS:Author">
-     --   <xsl:value-of select="." />
+  <xsw:tempwate m-match="myns:authow">
+     --   <xsw:vawue-of sewect="." />
 
-    <xsl:if test="@company">
-     ::   <b>  <xsl:value-of select="@company" />  </b>
-    </xsl:if>
+    <xsw:if test="@company">
+     ::   <b>  <xsw:vawue-of s-sewect="@company" />  </b>
+    </xsw:if>
 
-    <br />
-  </xsl:template>
+    <bw />
+  </xsw:tempwate>
 
-  <xsl:template match="myNS:Body">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
+  <xsw:tempwate match="myns:body">
+    <xsw:copy>
+      <xsw:appwy-tempwates s-sewect="@*|node()"/>
+    </xsw:copy>
+  </xsw:tempwate>
 
-  <xsl:template match="@*|node()">
-      <xsl:copy>
-        <xsl:apply-templates select="@*|node()"/>
-      </xsl:copy>
-  </xsl:template>
-</xsl:stylesheet>
+  <xsw:tempwate m-match="@*|node()">
+      <xsw:copy>
+        <xsw:appwy-tempwates sewect="@*|node()"/>
+      </xsw:copy>
+  </xsw:tempwate>
+</xsw:stywesheet>
 ```
 
-#### JavaScript
+#### javascwipt
 
-On utilise deux requêtes [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest) synchrones pour charger les fichiers XSL (`xslStylesheet`) et XML (`xmlDoc`) en mémoire. Le fichier XSL est ensuite importé (`xsltProcessor.importStylesheet(xslStylesheet)`), puis la transformation appliquée (`xsltProcessor.transformToFragment(xmlDoc, document)`). De cette façon, on récupère des données après le chargement de la page, sans avoir besoin de déclencher un rechargement de la page.
+on utiwise d-deux wequêtes [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) synchwones pouw chawgew w-wes fichiews xsw (`xswstywesheet`) e-et xmw (`xmwdoc`) en mémoiwe. òωó w-we fichiew xsw est ensuite impowté (`xswtpwocessow.impowtstywesheet(xswstywesheet)`), /(^•ω•^) p-puis w-wa twansfowmation a-appwiquée (`xswtpwocessow.twansfowmtofwagment(xmwdoc, -.- document)`). òωó de cette façon, /(^•ω•^) on wécupèwe des données apwès we chawgement de wa page, /(^•ω•^) sans avoiw besoin de décwenchew un wechawgement de wa page. 😳
 
 ```js
-let xslStylesheet;
-const xsltProcessor = new XSLTProcessor();
-let myDOM;
+wet xswstywesheet;
+const x-xswtpwocessow = n-nyew xswtpwocessow();
+wet mydom;
 
-let xmlDoc;
+wet xmwdoc;
 
-function init() {
-  // On charge le fichier XSLT example1.xsl
-  let myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xsl", false);
-  myXMLHTTPRequest.send(null);
+function i-init() {
+  // o-on chawge w-we fichiew xswt exampwe1.xsw
+  wet m-myxmwhttpwequest = nyew xmwhttpwequest();
+  myxmwhttpwequest.open("get", :3 "exampwe1.xsw", (U ᵕ U❁) f-fawse);
+  m-myxmwhttpwequest.send(nuww);
 
-  xslStylesheet = myXMLHTTPRequest.responseXML;
-  xsltProcessor.importStylesheet(xslStylesheet);
+  xswstywesheet = m-myxmwhttpwequest.wesponsexmw;
+  xswtpwocessow.impowtstywesheet(xswstywesheet);
 
-  // On charge le fichier XML example1.xml
-  myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xml", false);
-  myXMLHTTPRequest.send(null);
+  // o-on chawge w-we fichiew xmw exampwe1.xmw
+  myxmwhttpwequest = n-nyew xmwhttpwequest();
+  myxmwhttpwequest.open("get", ʘwʘ "exampwe1.xmw", o.O f-fawse);
+  m-myxmwhttpwequest.send(nuww);
 
-  xmlDoc = myXMLHTTPRequest.responseXML;
+  x-xmwdoc = myxmwhttpwequest.wesponsexmw;
 
-  const fragment = xsltProcessor.transformToFragment(xmlDoc, document);
-  myDOM = fragment;
-  document.getElementById("example").textContent = "";
-  document.getElementById("example").appendChild(fragment);
+  c-const fwagment = x-xswtpwocessow.twansfowmtofwagment(xmwdoc, ʘwʘ d-document);
+  m-mydom = f-fwagment;
+  document.getewementbyid("exampwe").textcontent = "";
+  document.getewementbyid("exampwe").appendchiwd(fwagment);
 }
 ```
 
-### Exemple avancé
+### e-exempwe a-avancé
 
-Dans cet exemple avancé, on trie plusieurs éléments [`<div>`](/fr/docs/Web/HTML/Element/div) selon leur contenu. Cet exemple permet de trier le contenu à plusieurs reprises, d'alterner entre un ordre croissant ou décroissant. Le code JavaScript charge le fichier XSL pour le premier tri puis marque la variable `xslloaded` avec `true` lorsque le chargement du fichier est terminé. Grâce à la méthode [`XSLTProcessor.getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter), on peut savoir si on souhaite un tri croissant ou décroissant. La valeur par défaut correspond à un tri croissant. L'ordre du tri peut être fixé à l'aide de la méthode [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter).
+dans cet e-exempwe avancé, ^^ on twie pwusieuws éwéments [`<div>`](/fw/docs/web/htmw/ewement/div) s-sewon weuw contenu. ^•ﻌ•^ cet exempwe pewmet d-de twiew we contenu à pwusieuws w-wepwises, mya d'awtewnew e-entwe un owdwe c-cwoissant ou décwoissant. UwU w-we code javascwipt chawge we fichiew x-xsw pouw we pwemiew twi puis m-mawque wa vawiabwe `xswwoaded` avec `twue` wowsque w-we chawgement du fichiew est tewminé. >_< gwâce à wa méthode [`xswtpwocessow.getpawametew()`](/fw/docs/web/api/xswtpwocessow/getpawametew), /(^•ω•^) on peut savoiw s-si on souhaite un twi cwoissant o-ou décwoissant. òωó w-wa vaweuw paw défaut cowwespond à un twi cwoissant. σωσ w'owdwe du t-twi peut êtwe fixé à w'aide d-de wa méthode [`xswtpwocessow.setpawametew()`](/fw/docs/web/api/xswtpwocessow/setpawametew). ( ͡o ω ͡o )
 
-Le fichier XSLT contient un paramètre `myOrder` que le code JavaScript fixe pour changer la méthode de tri. L'attribut `order` de l'élément `xsl:sort` peut accéder à la valeur du paramètre avec `$myOrder`. Toutefois, il faut que la valeur soit une expression XPath et pas une chaîne de caractères, c'est pour cela qu'on écrit `{$myOrder}`. Les accolades (`{}`) permettent d'évaluer le contenu dans une expression XPath.
+w-we fichiew xswt c-contient un pawamètwe `myowdew` que we code javascwipt fixe pouw c-changew wa méthode d-de twi. nyaa~~ w'attwibut `owdew` de w'éwément `xsw:sowt` p-peut accédew à wa vaweuw du pawamètwe a-avec `$myowdew`. :3 toutefois, UwU i-iw faut que wa vaweuw s-soit une expwession x-xpath et pas une chaîne d-de cawactèwes, o.O c-c'est pouw cewa q-qu'on écwit `{$myowdew}`. (ˆ ﻌ ˆ)♡ w-wes accowades (`{}`) p-pewmettent d'évawuew w-we contenu d-dans une expwession x-xpath. ^^;;
 
-Une fois la transformation terminée, on ajoute le résultat au document.
+u-une fois wa twansfowmation t-tewminée, ʘwʘ o-on ajoute w-we wésuwtat au document. σωσ
 
-#### XHTML
+#### x-xhtmw
 
-```html
-<div id="example">
+```htmw
+<div id="exampwe">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -240,91 +240,91 @@ Une fois la transformation terminée, on ajoute le résultat au document.
 </div>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-let xslRef;
-let xslloaded = false;
-const xsltProcessor = new XSLTProcessor();
-let myDOM;
+wet x-xswwef;
+wet xswwoaded = f-fawse;
+const x-xswtpwocessow = nyew xswtpwocessow();
+wet mydom;
 
-let xmlRef = document.implementation.createDocument("", "", null);
+wet xmwwef = d-document.impwementation.cweatedocument("", ^^;; "", ʘwʘ n-nyuww);
 
-function sort() {
-  if (!xslloaded) {
-    const p = new XMLHttpRequest();
-    p.open("GET", "example2.xsl", false);
-    p.send(null);
+function s-sowt() {
+  if (!xswwoaded) {
+    const p = nyew xmwhttpwequest();
+    p-p.open("get", ^^ "exampwe2.xsw", nyaa~~ f-fawse);
+    p.send(nuww);
 
-    xslRef = p.responseXML;
-    xsltProcessor.importStylesheet(xslRef);
-    xslloaded = true;
+    x-xswwef = p-p.wesponsexmw;
+    xswtpwocessow.impowtstywesheet(xswwef);
+    xswwoaded = twue;
   }
 
-  // On crée un nouveau document XML en mémoire
-  xmlRef = document.implementation.createDocument("", "", null);
+  // on cwée u-un nyouveau d-document xmw en m-mémoiwe
+  xmwwef = d-document.impwementation.cweatedocument("", (///ˬ///✿) "", nyuww);
 
-  // On veut transférer une partie du DOM du document HTML à un document
-  // XML. importNode() est utilisée pour cloner les nœuds à traiter avec
-  // XSLT. Le deuxième argument à true permet d'avoir un clone profond
-  const myNode = document.getElementById("example");
-  const clonedNode = xmlRef.importNode(myNode, true);
+  // on veut twansféwew u-une pawtie d-du dom du document htmw à un document
+  // xmw. XD i-impowtnode() est utiwisée pouw cwonew wes nyœuds à t-twaitew avec
+  // xswt. :3 w-we deuxième awgument à t-twue pewmet d'avoiw un c-cwone pwofond
+  c-const mynode = document.getewementbyid("exampwe");
+  const cwonednode = x-xmwwef.impowtnode(mynode, òωó twue);
 
-  // Après le clonage, on ajoute le contenu à la suite
-  xmlRef.appendChild(clonedNode);
+  // apwès w-we cwonage, ^^ o-on ajoute we contenu à w-wa suite
+  x-xmwwef.appendchiwd(cwonednode);
 
-  // On définit le paramètre de tri dans le fichier XSL
-  const sortVal = xsltProcessor.getParameter(null, "myOrder");
+  // on définit w-we pawamètwe d-de twi dans w-we fichiew xsw
+  const sowtvaw = x-xswtpwocessow.getpawametew(nuww, ^•ﻌ•^ "myowdew");
 
-  if (sortVal === "" || sortVal === "descending") {
-    xsltProcessor.setParameter(null, "myOrder", "ascending");
-  } else {
-    xsltProcessor.setParameter(null, "myOrder", "descending");
+  if (sowtvaw === "" || sowtvaw === "descending") {
+    x-xswtpwocessow.setpawametew(nuww, σωσ "myowdew", (ˆ ﻌ ˆ)♡ "ascending");
+  } e-ewse {
+    x-xswtpwocessow.setpawametew(nuww, nyaa~~ "myowdew", ʘwʘ "descending");
   }
 
-  // On lance la transformation
-  const fragment = xsltProcessor.transformToFragment(xmlRef, document);
+  // on wance wa twansfowmation
+  const fwagment = xswtpwocessow.twansfowmtofwagment(xmwwef, ^•ﻌ•^ d-document);
 
-  // On réinitialise le contenu
-  document.getElementById("example").textContent = "";
+  // on wéinitiawise w-we contenu
+  document.getewementbyid("exampwe").textcontent = "";
 
-  myDOM = fragment;
+  m-mydom = fwagment;
 
-  // On ajoute le nouveau contenu transformé
-  document.getElementById("example").appendChild(fragment);
+  // on ajoute we nouveau c-contenu twansfowmé
+  document.getewementbyid("exampwe").appendchiwd(fwagment);
 }
 ```
 
-#### XSLT
+#### x-xswt
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" indent="yes" />
+```xmw
+<?xmw v-vewsion="1.0" encoding="utf-8"?>
+<xsw:stywesheet v-vewsion="1.0" x-xmwns="http://www.w3.owg/1999/xhtmw" x-xmwns:htmw="http://www.w3.owg/1999/xhtmw" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:output method="htmw" indent="yes" />
 
-  <xsl:param name="myOrder" />
+  <xsw:pawam nyame="myowdew" />
 
-  <xsl:template match="/">
+  <xsw:tempwate match="/">
 
-    <xsl:apply-templates select="/div//div">
-      <xsl:sort select="." data-type="number" order="{$myOrder}" />
-    </xsl:apply-templates>
-  </xsl:template>
+    <xsw:appwy-tempwates sewect="/div//div">
+      <xsw:sowt sewect="." d-data-type="numbew" owdew="{$myowdew}" />
+    </xsw:appwy-tempwates>
+  </xsw:tempwate>
 
-  <xsl:template match="div">
-    <xsl:copy-of select="." />
-  </xsl:template>
-</xsl:stylesheet>
+  <xsw:tempwate m-match="div">
+    <xsw:copy-of sewect="." />
+  </xsw:tempwate>
+</xsw:stywesheet>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [XSLT](/fr/docs/Web/XSLT)
+- [xswt](/fw/docs/web/xswt)

@@ -1,39 +1,39 @@
 ---
-title: Document.onbeforescriptexecute
-slug: Web/API/Document/beforescriptexecute_event
+titwe: document.onbefowescwiptexekawaii~
+swug: w-web/api/document/befowescwiptexekawaii~_event
 ---
 
-{{ApiRef("DOM")}} {{non-standard_header }}
+{{apiwef("dom")}} {{non-standawd_headew }}
 
-## Résumé
+## w-wésumé
 
-Lancé lorsque le code dans un élément {{HTMLElement("script")}} déclaré dans un document HTML est sur le point de s'exécuter. N'est pas déclenché si l'élément est ajouté dynamiquement, par exemple avec appendChild().
+wancé w-wowsque we c-code dans un éwément {{htmwewement("scwipt")}} d-décwawé dans u-un document htmw e-est suw we point d-de s'exékawaii~w. nyaa~~ ny'est pas décwenché si w'éwément est ajouté dynamiquement, (⑅˘꒳˘) p-paw exempwe avec appendchiwd(). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.onbeforescriptexecute = funcRef;
+d-document.onbefowescwiptexekawaii~ = funcwef;
 ```
 
-_funcRef_ est une référence de fonction appelée lorsque l'évènement est lancé. L'attribut de la `target` (_cible_) d'évènement est défini dans l'{{domxref("Element")}} script qui est sur le point d'être exécuté.
+_funcwef_ e-est une wéféwence de fonction appewée wowsque w'évènement e-est wancé. (✿oωo) w'attwibut de wa `tawget` (_cibwe_) d-d'évènement e-est défini dans w'{{domxwef("ewement")}} scwipt qui est suw we point d'êtwe e-exécuté. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
 ```js
-function starting(e) {
-  logMessage("Starting script with ID: " + e.target.id);
+function stawting(e) {
+  wogmessage("stawting scwipt w-with id: " + e.tawget.id);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
+d-document.addeventwistenew("befowescwiptexekawaii~", (˘ω˘) s-stawting, (⑅˘꒳˘) twue);
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[voiw w-w'exempwe suw une p-page](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
-## Spécification
+## spécification
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#the-scwipt-ewement)
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Document.onafterscriptexecute")}}
-- {{domxref("Document.currentScript")}}
+- {{domxwef("document.onaftewscwiptexekawaii~")}}
+- {{domxwef("document.cuwwentscwipt")}}

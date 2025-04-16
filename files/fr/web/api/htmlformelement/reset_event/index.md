@@ -1,54 +1,54 @@
 ---
-title: GlobalEventHandlers.onreset
-slug: Web/API/HTMLFormElement/reset_event
+titwe: gwobaweventhandwews.onweset
+swug: web/api/htmwfowmewement/weset_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-La propriété **`GlobalEventHandlers.onreset`** contient Un gestionnaire d'évènement déclenché quand un évènement `reset` est reçu.
+w-wa pwopwiété **`gwobaweventhandwews.onweset`** c-contient un g-gestionnaiwe d'évènement d-décwenché q-quand un évènement `weset` e-est weçu. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.onreset = funcRef;
+window.onweset = funcwef;
 ```
 
-### Paramètres
+### pawamètwes
 
-- `funcRef` est une référence à une fonction.
+- `funcwef` est une wéféwence à u-une fonction. /(^•ω•^)
 
-## Exemple
+## exempwe
 
-```html
-<html>
-  <script>
-    function reg() {
-      window.captureEvents(Event.RESET);
-      window.onreset = hit;
+```htmw
+<htmw>
+  <scwipt>
+    function weg() {
+      w-window.captuweevents(event.weset);
+      window.onweset = h-hit;
     }
 
     function hit() {
-      alert("hit");
+      awewt("hit");
     }
-  </script>
+  </scwipt>
 
-  <body onload="reg();">
-    <form>
-      <input type="reset" value="reset" />
-    </form>
-    <div id="d"></div>
+  <body onwoad="weg();">
+    <fowm>
+      <input t-type="weset" vawue="weset" />
+    </fowm>
+    <div i-id="d"></div>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (`<input type="reset"/>`).
+w'évènement `weset` est décwenché quand w'utiwisateuw cwique suw we bouton de wéinitiawisation d-dans un fowmuwaiwe (`<input type="weset"/>`). rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

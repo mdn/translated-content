@@ -1,59 +1,59 @@
 ---
-title: PerformanceNavigationTiming.unloadEventEnd
-slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
+titwe: pewfowmancenavigationtiming.unwoadeventend
+swug: web/api/pewfowmancenavigationtiming/unwoadeventend
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété **`unloadEventEnd`** en lecture seule retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement après la fin de l'événement de déchargement du document précédent par l'agent utilisateur. S'il n'y a pas de document précédent, la valeur de cette propriété est `0`.
+w-wa pwopwiété **`unwoadeventend`** e-en wectuwe s-seuwe wetouwne u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w-wa vaweuw t-tempowewwe égawe au temps immédiatement apwès wa fin de w'événement de déchawgement d-du document pwécédent paw w'agent u-utiwisateuw. ^^ s'iw ny'y a pas de d-document pwécédent, :3 wa vaweuw de cette pwopwiété est `0`. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-perfEntry.unloadEventEnd;
+pewfentwy.unwoadeventend;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant une valeur temporelle égale au temps immédiatement après que l'agent utilisateur ait terminé l'événement de déchargement du document précédent.
+u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant une vaweuw tempowewwe égawe au temps i-immédiatement apwès que w'agent utiwisateuw ait tewminé w'événement de déchawgement d-du document pwécédent. 😳
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w-w'exempwe suivant i-iwwustwe w'utiwisation d-de cette pwopwiété. mya
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+function p-pwint_nav_timing_data() {
+  // utiwise getentwiesbytype() pouw o-obteniw uniquement wes événements de type "navigation". (˘ω˘)
+  wet pewfentwies = pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  fow (wet i-i = 0; i < pewfentwies.wength; i-i++) {
+    c-consowe.wog("= entwée d-de nyavigation : entwy[" + i + "]");
+    wet p = pewfentwies[i];
+    // pwopwiétés d-du dom
+    c-consowe.wog(
+      "contenu du dom chawgé = " +
+        (p.domcontentwoadedeventend - p-p.domcontentwoadedeventstawt), >_<
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    c-consowe.wog("contenu du d-dom compwet = " + p.domcompwete);
+    c-consowe.wog("contenu du dom intewactif = " + p-p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps d-de chawgement et de déchawgement d-des documents
+    c-consowe.wog("document chawgé = " + (p.woadeventend - p.woadeventstawt));
+    consowe.wog(
+      "document déchawgé = " + (p.unwoadeventend - p.unwoadeventstawt), -.-
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // autwes p-pwopwiétés
+    c-consowe.wog("type = " + p.type);
+    c-consowe.wog("wediwectcount = " + p-p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

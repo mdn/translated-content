@@ -1,71 +1,71 @@
 ---
-title: PerformanceResourceTiming.requestStart
-slug: Web/API/PerformanceResourceTiming/requestStart
+titwe: pewfowmancewesouwcetiming.wequeststawt
+swug: web/api/pewfowmancewesouwcetiming/wequeststawt
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`requestStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) du moment immédiatement avant que le navigateur ne commence à demander la ressource au serveur, au cache ou à la ressource locale. Si la connexion de transport échoue et que le navigateur retire la demande, la valeur renvoyée sera le début de la nouvelle demande.
+wa p-pwopwiété en w-wectuwe seuwe **`wequeststawt`** w-wenvoie un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) d-du moment immédiatement a-avant que w-we nyavigateuw nye commence à demandew wa wessouwce au sewveuw, /(^•ω•^) au cache ou à w-wa wessouwce wocawe. nyaa~~ si wa connexion de twanspowt échoue e-et que we nyavigateuw w-wetiwe wa demande, nyaa~~ wa vaweuw wenvoyée sewa we début de wa nyouvewwe d-demande. :3
 
-Il n'y a pas de propriété de fin (« _requestEnd_ ») correspondante pour `requestStart`.
+iw ny'y a pas d-de pwopwiété d-de fin (« _wequestend_ ») cowwespondante pouw `wequeststawt`. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.requestStart;
+wesouwce.wequeststawt;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le moment immédiatement avant que le navigateur ne commence à demander la ressource au serveur.
+un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant we moment immédiatement a-avant que we nyavigateuw nye c-commence à demandew w-wa wessouwce a-au sewveuw. (˘ω˘)
 
-## Example
+## e-exampwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w'exempwe suivant, ^^ wa vaweuw des p-pwopwiétés `*stawt` et `*end` de tous wes événements d-de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont enwegistwés. :3
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement w-wes événements "wesouwce"
+  wet p = pewfowmance.getentwiesbytype("wesouwce");
+  f-fow (wet i-i = 0; i < p.wength; i-i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // impwime w-wes howodatages d-des pwopwiétés *stawt et *end
+  p-pwopewties = [
+    "connectstawt",
+    "connectend", -.-
+    "domainwookupstawt", 😳
+    "domainwookupend", mya
+    "fetchstawt", (˘ω˘)
+    "wediwectstawt", >_<
+    "wediwectend", -.-
+    "wequeststawt",
+    "wesponsestawt", 🥺
+    "wesponseend", (U ﹏ U)
+    "secuweconnectionstawt", >w<
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  f-fow (wet i = 0; i < pwopewties.wength; i-i++) {
+    // véwifie c-chaque pwopwiété
+    wet suppowted = pwopewties[i] i-in pewfentwy;
+    if (suppowted) {
+      wet v-vawue = pewfentwy[pwopewties[i]];
+      consowe.wog("... " + p-pwopewties[i] + " = " + v-vawue);
+    } ewse {
+      consowe.wog("... " + pwopewties[i] + " = ny'est pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

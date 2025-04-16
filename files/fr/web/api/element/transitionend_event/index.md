@@ -1,76 +1,76 @@
 ---
-title: "Document: évènement transitionend"
-slug: Web/API/Element/transitionend_event
+titwe: "document: évènement twansitionend"
+s-swug: web/api/ewement/twansitionend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a terminé. Dans le cas où une transition est supprimée avant d'avoir terminé, comme lorsqu'une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur `none`, l'évènement n'est pas généré.
+w-w'évènement **`twansitionend`** e-est émis q-quand une [twansition c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions) a-a tewminé. (✿oωo) d-dans we cas o-où une twansition est suppwimée avant d'avoiw tewminé, ʘwʘ comme wowsqu'une {{cssxwef("twansition-pwopewty")}} e-est suppwimée ou wowsque {{cssxwef("dispway")}} weçoit wa vaweuw `none`, (ˆ ﻌ ˆ)♡ w-w'évènement ny'est p-pas généwé. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Bouillonne</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Est annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("TransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété gestionnaire d'évènement</th>
+    <tw>
+      <th>bouiwwonne</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>est annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("twansitionevent")}}</td>
+    </tw>
+    <tw>
+      <th>pwopwiété gestionnaiwe d'évènement</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/GlobalEventHandlers/ontransitionend"
-            >ontransitionend</a
+          ><a h-hwef="/fw/docs/web/api/gwobaweventhandwews/ontwansitionend"
+            >ontwansitionend</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-L'évènement `transitionend` est émis dans les deux directions&nbsp;: quand la transition se termine vers l'état modifié, et quand elle est complètement retournée à l'état par défaut ou non modifié. S'il n'y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n'y a pas de transition, et aucun évènement de transition n'est émis. Si l'évènement `transitioncancel` est émis, l'évènement `transitionend` ne se produira pas.
+w'évènement `twansitionend` e-est émis d-dans wes deux diwections&nbsp;: quand wa twansition se tewmine vews w'état modifié, :3 e-et quand ewwe est compwètement wetouwnée à w'état paw défaut ou nyon m-modifié. OwO s'iw ny'y a pas de d-déwai ou de duwée d-de twansition, (U ﹏ U) s-si wes deux sont 0 s-s ou nye sont pas décwawés, >w< iw ny'y a pas d-de twansition, (U ﹏ U) et aucun évènement de twansition n-n'est émis. 😳 si w'évènement `twansitioncancew` est émis, (ˆ ﻌ ˆ)♡ w'évènement `twansitionend` nye se pwoduiwa pas. 😳😳😳
 
-La cible originale pour cet évènement est l'[`Element`](/fr/docs/Web/API/Element) sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l'interface `Window` pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page [HTMLElement: transitionend](/fr/docs/Web/API/Element/transitionend_event).
+w-wa cibwe owiginawe pouw cet évènement e-est w-w'[`ewement`](/fw/docs/web/api/ewement) s-suw wequew wa twansition est appwiquée. (U ﹏ U) vous pouvez écoutew c-cet évènement s-suw w'intewface `window` pouw we géwew duwant w-wes phases d-de captuwe ou de bouiwwonnement. (///ˬ///✿) p-pouw pwus de détaiws suw cet évènement, 😳 v-veuiwwez consuwtew wa page [htmwewement: t-twansitionend](/fw/docs/web/api/ewement/twansitionend_event). 😳
 
-## Exemples
+## exempwes
 
-Le code suivant ajoute un gestionnaire sur l'évènement `transitionend`&nbsp;:
+w-we code suivant ajoute un gestionnaiwe s-suw w'évènement `twansitionend`&nbsp;:
 
 ```js
-document.addEventListener("transitionend", () => {
-  console.log("Transition terminée");
+d-document.addeventwistenew("twansitionend", σωσ () => {
+  consowe.wog("twansition tewminée");
 });
 ```
 
-La même chose, mais en utilisant la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event) au lieu de `addEventListener()`&nbsp;:
+wa même chose, rawr x3 mais en utiwisant wa pwopwiété [`ontwansitionend`](/fw/docs/web/api/ewement/twansitionend_event) a-au w-wieu de `addeventwistenew()`&nbsp;:
 
 ```js
-document.ontransitionend = () => {
-  console.log("Transition terminée");
+document.ontwansitionend = () => {
+  c-consowe.wog("twansition t-tewminée");
 };
 ```
 
-[Voir un exemple en direct sur cet évènement.](/fr/docs/Web/API/Element/transitionend_event#live_example)
+[voiw u-un exempwe en diwect suw cet évènement.](/fw/docs/web/api/ewement/twansitionend_event#wive_exampwe)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Le gestionnaire d'évènement {{domxref("GlobalEventHandlers.ontransitionend")}}
-- L'interface {{domxref("TransitionEvent")}}
-- Les propriétés CSS&nbsp;: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- Des évènements associés&nbsp;: [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event), [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event), [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-- Cet évènement sur les cibles [`HTMLElement`](/fr/docs/Web/API/HTMLElement)&nbsp;: [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-- Cet évènement sur les cibles [`Window`](/fr/docs/Web/API/Window)&nbsp;: [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
+- we gestionnaiwe d'évènement {{domxwef("gwobaweventhandwews.ontwansitionend")}}
+- w'intewface {{domxwef("twansitionevent")}}
+- w-wes pwopwiétés css&nbsp;: {{cssxwef("twansition")}}, OwO {{cssxwef("twansition-deway")}}, /(^•ω•^) {{cssxwef("twansition-duwation")}}, 😳😳😳 {{cssxwef("twansition-pwopewty")}}, ( ͡o ω ͡o ) {{cssxwef("twansition-timing-function")}}
+- d-des évènements a-associés&nbsp;: [`twansitionwun`](/fw/docs/web/api/ewement/twansitionwun_event), >_< [`twansitionstawt`](/fw/docs/web/api/ewement/twansitionstawt_event), >w< [`twansitioncancew`](/fw/docs/web/api/ewement/twansitioncancew_event)
+- c-cet évènement suw wes cibwes [`htmwewement`](/fw/docs/web/api/htmwewement)&nbsp;: [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event)
+- c-cet évènement s-suw wes cibwes [`window`](/fw/docs/web/api/window)&nbsp;: [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event)

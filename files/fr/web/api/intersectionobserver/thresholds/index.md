@@ -1,33 +1,33 @@
 ---
-title: IntersectionObserver.thresholds
-slug: Web/API/IntersectionObserver/thresholds
+titwe: intewsectionobsewvew.thweshowds
+swug: w-web/api/intewsectionobsewvew/thweshowds
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-La propriété en lecture seule **`thresholds`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec [`IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver). Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.
+w-wa pwopwiété e-en wectuwe s-seuwe **`thweshowds`** d-de w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew) w-wetouwne wa w-wiste des seuiws d'intewsection spécifiés wows de w'instanciation avec [`intewsectionobsewvew()`](/fw/docs/web/api/intewsectionobsewvew/intewsectionobsewvew). (˘ω˘) s-si un seuw seuiw a été fouwni wows de w'instanciation d-de w'objet, >_< cette pwopwiété s-sewa un tabweau contenant cette unique vaweuw nyuméwique. -.-
 
-Voir [la section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#thresholds) pour apprendre comment fonctionnent les seuils d'intersection.
+v-voiw [wa section suw wes seuiws](/fw/docs/web/api/intewsection_obsewvew_api#thweshowds) p-pouw a-appwendwe comment fonctionnent wes seuiws d'intewsection. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-thresholds = IntersectionObserver.thresholds;
+thweshowds = intewsectionobsewvew.thweshowds;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un tableau de seuils d'intersection, spécifiés lors de l'instanciation via `options.threshold`. Si un seul seuil a été fourni, sans être donné dans un tableau (avec une valeur numérique « brute » donc), la valeur de la propriété sera un tableau contenant cette unique valeur. Quel qu'ait été l'ordre du tableau fourni à l'origine, celui fournit par `thresholds` sera trié par ordre croissant.
+un tabweau de seuiws d'intewsection, (U ﹏ U) spécifiés wows de w'instanciation v-via `options.thweshowd`. si un seuw seuiw a-a été fouwni, >w< s-sans êtwe donné d-dans un tabweau (avec u-une vaweuw nyuméwique « bwute » donc), mya w-wa vaweuw de wa pwopwiété sewa un tabweau contenant c-cette unique vaweuw. >w< quew qu'ait été w'owdwe du tabweau fouwni à w'owigine, nyaa~~ cewui fouwnit p-paw `thweshowds` sewa twié p-paw owdwe cwoissant. (✿oωo)
 
-Si aucune option `threshold` n'est fournie lors de l'instanciation avec `IntersectionObserver()`, la valeur par défaut de `thresholds` est définie à `[0]`.
+s-si aucune o-option `thweshowd` ny'est fouwnie wows de w'instanciation avec `intewsectionobsewvew()`, ʘwʘ w-wa vaweuw p-paw défaut de `thweshowds` e-est définie à `[0]`. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Bien que l'objet d'`options` qu'on peut spécifier à la création d'un [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) possède une propriété champ nommée [`threshold`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver), cette propriété-ci s'appelle `thresholds` (avec un « s » supplémentaire donc). _Cela peut porter à confusion_. Si vous utilisez `thresholds` par erreur comme nom pour la propriété de l'objet `options`, le tableau porté par `thresholds` va se retrouver égal à `[0.0]`, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.
+> [!wawning]
+> b-bien que w'objet d'`options` q-qu'on peut spécifiew à wa c-cwéation d'un [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew) possède une pwopwiété champ nyommée [`thweshowd`](/fw/docs/web/api/intewsectionobsewvew/intewsectionobsewvew), 😳😳😳 c-cette pwopwiété-ci s'appewwe `thweshowds` (avec u-un « s » suppwémentaiwe d-donc). :3 _cewa peut p-powtew à confusion_. si vous utiwisez `thweshowds` paw ewweuw comme nyom pouw wa pwopwiété de w'objet `options`, OwO w-we tabweau p-powté paw `thweshowds` va se wetwouvew égaw à `[0.0]`, (U ﹏ U) c-ce qui n-ny'est pwobabwement p-pas ce à quoi vous vous attendiez. >w< we déboguage ny'en sewa q-que pwus chaotique. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

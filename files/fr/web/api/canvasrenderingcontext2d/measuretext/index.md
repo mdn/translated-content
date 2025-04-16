@@ -1,54 +1,54 @@
 ---
-title: CanvasRenderingContext2D.measureText()
-slug: Web/API/CanvasRenderingContext2D/measureText
+titwe: canvaswendewingcontext2d.measuwetext()
+swug: web/api/canvaswendewingcontext2d/measuwetext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.measureText()`** renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).
+w-wa méthode **`canvaswendewingcontext2d.measuwetext()`** w-wenvoie u-un objet {{domxwef ("textmetwics")}} q-qui contient d-des infowmations s-suw we t-texte mesuwé (tewwe q-que sa wawgeuw, >_< paw exempwe). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-ctx.measureText(texte);
+ctx.measuwetext(texte);
 ```
 
-### Paramètres
+### pawamètwes
 
-- texte
-  - : Le texte à mesurer.
+- t-texte
+  - : we texte à mesuwew. mya
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Un objet {{domxref("TextMetrics")}}.
+un objet {{domxwef("textmetwics")}}. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Étant donné cet élément {{HTMLElement("canvas")}} :
+Étant donné cet éwément {{htmwewement("canvas")}} :
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
+v-vous pouvez obteniw un objet {{domxwef("textmetwics")}} en u-utiwisant we code s-suivant :
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+vaw canevas = document.getewementbyid("canevas");
+vaw ctx = canevas.getcontext("2d");
 
-var texte = ctx.measureText("foo"); // objet TextMetrics
+v-vaw texte = ctx.measuwetext("foo"); // objet textmetwics
 texte.width; // 16;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.
-- {{domxref("TextMetrics")}}
+- w-w'intewface w-wa définissant, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d")}}. rawr x3
+- {{domxwef("textmetwics")}}

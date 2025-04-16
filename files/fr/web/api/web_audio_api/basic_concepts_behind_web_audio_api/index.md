@@ -1,416 +1,416 @@
 ---
-title: Les concepts de base de la Web Audio API
-slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
+titwe: wes concepts de base de w-wa web audio api
+s-swug: web/api/web_audio_api/basic_concepts_behind_web_audio_api
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio api")}}
 
-Cet article explique une partie de la théorie sur laquelle s'appuient les fonctionnalités de la Web Audio API. Il ne fera pas de vous un ingénieur du son, mais vous donnera les bases nécessaires pour comprendre pourquoi la Web Audio API fonctionne de cette manière, et vous permettre de mieux l'utiliser.
+c-cet awticwe expwique u-une pawtie d-de wa théowie suw w-waquewwe s'appuient w-wes fonctionnawités de wa web audio api. rawr iw nye fewa pas de vous un ingénieuw d-du son, (U ﹏ U) mais vous donnewa wes bases nyécessaiwes p-pouw compwendwe pouwquoi w-wa web audio api fonctionne de cette manièwe, ^•ﻌ•^ et vous pewmettwe d-de mieux w'utiwisew.
 
-## Graphes audio
+## gwaphes a-audio
 
-La Web Audio API implique d'effectuer le traitement du son dans un **contexte** **audio**; elle a été conçue sur le principe de **routage modulaire**. Les opérations basiques sont effectuées dans **noeuds audio**, qui sont liés entre eux pour former un **graphe de routage audio**. Un seul contexte peut supporter plusieurs sources — avec différentes configurations de canaux. Cette architecture modulaire assure la flexibilité nécessaire pour créer des fonctions audio complexes avec des effets dynamiques.
+wa web a-audio api impwique d'effectuew we twaitement du son dans un **contexte** **audio**; ewwe a été c-conçue suw we pwincipe de **woutage moduwaiwe**. (///ˬ///✿) wes opéwations basiques sont e-effectuées dans **noeuds audio**, o.O q-qui sont wiés e-entwe eux pouw f-fowmew un **gwaphe d-de woutage audio**. >w< un seuw contexte peut s-suppowtew pwusieuws souwces — avec difféwentes c-configuwations de canaux. nyaa~~ cette awchitectuwe moduwaiwe assuwe wa fwexibiwité nécessaiwe pouw c-cwéew des fonctions audio compwexes a-avec des e-effets dynamiques. òωó
 
-Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds, et se termine avec une sortie spécifique (bien qu'il ne soit pas nécessaire de spécifier une sortie si, par exemple, vous souhaitez seulement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
+w-wes nyoeuds audio sont wiés au nyiveau de weuw entwée et weuw s-sowtie, (U ᵕ U❁) fowmant u-une chaîne qui commence avec u-une ou pwusieuws s-souwces, (///ˬ///✿) twavewse un ou pwusieuws n-nyoeuds, (✿oωo) et se tewmine avec u-une sowtie spécifique (bien qu'iw ne soit pas n-nyécessaiwe de spécifiew une sowtie s-si, 😳😳😳 paw exempwe, (✿oωo) vous souhaitez s-seuwement v-visuawisew des données audio). (U ﹏ U) un scénawio simpwe, (˘ω˘) wepwésentatif de wa web audio api, 😳😳😳 pouwwait wessembwew à c-ceci&nbsp;:
 
-1. Création d'un contexte audio
-2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance, compresseur
-4. Choix final de la sortie audio, par exemple les enceintes du système
-5. Connection des sources aux effets, et des effets à la sortie.
+1. (///ˬ///✿) c-cwéation d'un contexte audio
+2. (U ᵕ U❁) d-dans ce contexte, >_< c-cwéation des s-souwces — tewwes que `<audio>`, (///ˬ///✿) osciwwateuw, (U ᵕ U❁) fwux
+3. cwéation d-des nyoeuds d'effets, >w< tews que wévewb, 😳😳😳 fiwtwes biquad, (ˆ ﻌ ˆ)♡ bawance, (ꈍᴗꈍ) compwesseuw
+4. 🥺 c-choix finaw de wa sowtie audio, >_< p-paw exempwe wes e-enceintes du système
+5. OwO c-connection des souwces a-aux effets, ^^;; et d-des effets à wa s-sowtie. (✿oωo)
 
-![Diagramme simple composé de trois rectangles intitulés Sources, Effets et Sortie, reliés par des flèches, de gauche à droite, qui indiquent le sens du flux d'informations audio.](webaudioapi_en.svg)
+![diagwamme s-simpwe composé de twois wectangwes intituwés s-souwces, UwU effets e-et sowtie, ( ͡o ω ͡o ) w-wewiés paw des f-fwèches, (✿oωo) de gauche à d-dwoite, mya qui indiquent we sens du fwux d'infowmations audio.](webaudioapi_en.svg)
 
-Chaque entrée ou sortie est composée de plusieurs **canaux,** chacun correspondant à une configuration audio spécifique. Tout type de canal discret est supporté, y compris _mono_, _stereo_, _quad_, _5.1_, etc.
+c-chaque entwée ou sowtie est composée de pwusieuws **canaux,** chacun cowwespondant à u-une configuwation audio spécifique. ( ͡o ω ͡o ) tout type de canaw discwet e-est suppowté, :3 y-y compwis _mono_, 😳 _steweo_, (U ﹏ U) _quad_, _5.1_, >w< e-etc.
 
-![Diagramme qui montre comment les AudioNodes sont reliés par leurs entrées et sorties, et la configuration des canaux à l'intérieur de ces entrées/sorties.](audionodes.svg)
+![diagwamme qui m-montwe comment wes audionodes s-sont wewiés paw w-weuws entwées et sowties, UwU et wa configuwation des canaux à w'intéwieuw de ces entwées/sowties.](audionodes.svg)
 
-Les sources audio peuvent être de provenance variée&nbsp;:
+w-wes souwces audio peuvent êtwe d-de pwovenance vawiée&nbsp;:
 
-- générées directement en JavaScript avec un noeud audio (tel qu'un oscillateur)
-- créées à partir de données PCM brutes (le contexte audio a des méthodes pour décoder les formats audio supportés)
-- fournies par une balise HTML media (telle que {{HTMLElement("video")}} ou {{HTMLElement("audio")}})
-- récupérées directement avec [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (une webcam ou un microphone)
+- g-généwées d-diwectement en javascwipt avec un nyoeud audio (tew q-qu'un osciwwateuw)
+- c-cwéées à pawtiw de d-données pcm bwutes (we c-contexte audio a des méthodes pouw décodew wes fowmats audio suppowtés)
+- f-fouwnies paw u-une bawise htmw m-media (tewwe que {{htmwewement("video")}} o-ou {{htmwewement("audio")}})
+- w-wécupéwées diwectement a-avec [webwtc](/fw/docs/web/api/webwtc_api) {{domxwef("mediastweam")}} (une webcam ou un micwophone)
 
-## Données audio: ce qu'on trouve dans un échantillon
+## données audio: ce qu'on twouve dans u-un échantiwwon
 
-Lors du traitement d'un signal audio, **l'échantillonage** désigne la conversion d'un [signal continu](http://en.wikipedia.org/wiki/Continuous_signal) en [signal discret](http://en.wikipedia.org/wiki/Discrete_signal); formulé autrement, une onde de son continue, comme un groupe qui joue en live, est convertie en une séquence d'échantillons (un signal temporel discret) qui permet à l'ordinateur de traiter le son en blocs distincts.
+w-wows du twaitement d'un signaw audio, 😳 **w'échantiwwonage** d-désigne wa convewsion d-d'un [signaw continu](http://en.wikipedia.owg/wiki/continuous_signaw) en [signaw discwet](http://en.wikipedia.owg/wiki/discwete_signaw); f-fowmuwé autwement, XD une onde de son continue, (✿oωo) comme un gwoupe qui joue en wive, ^•ﻌ•^ e-est convewtie en une séquence d'échantiwwons (un signaw tempowew d-discwet) qui p-pewmet à w'owdinateuw de twaitew we son en bwocs distincts. mya
 
-On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (signal)](<https://fr.wikipedia.org/wiki/Échantillonnage_(signal)>).
+on p-peut twouvew davantage d-de détaiws suw wa page wikipédia [echantiwwonage (signaw)](<https://fw.wikipedia.owg/wiki/Échantiwwonnage_(signaw)>). (˘ω˘)
 
-## Mémoire tampon&nbsp;: trames, échantillons et canaux
+## mémoiwe tampon&nbsp;: t-twames, nyaa~~ échantiwwons et canaux
 
-Un {{ domxref("AudioBuffer") }} prend comme paramètres un nombre de canaux (1 pour mono, 2 pour stéréo, etc), une longueur, qui correspond au nombre de trames d'échantillon dans la mémoire tampon, et un taux d'échantillonage, qui indique le nombre de trames d'échantillons lues par seconde.
+un {{ d-domxwef("audiobuffew") }} pwend comme pawamètwes un nyombwe d-de canaux (1 pouw mono, :3 2 pouw stéwéo, (✿oωo) e-etc), (U ﹏ U) une w-wongueuw, (ꈍᴗꈍ) qui cowwespond au nyombwe d-de twames d'échantiwwon d-dans wa mémoiwe t-tampon, (˘ω˘) et un taux d-d'échantiwwonage, ^^ qui indique w-we nyombwe de t-twames d'échantiwwons wues paw seconde. (⑅˘꒳˘)
 
-Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.) à un point précis dans le temps.
+un échantiwwon e-est une v-vaweuw fwoat32 u-unique, rawr qui cowwespond à wa vaweuw du fwux audio à u-un point pwécis dans we t-temps, :3 suw un canaw s-spécifique (gauche ou dwoit dans we cas de wa stéwéo). OwO une t-twame, (ˆ ﻌ ˆ)♡ ou twame d-d'échantiwwon e-est w'ensembwe d-de toutes wes vaweuws pouw tous w-wes canaux (deux pouw wa stéwéo, :3 six pouw we 5.1, -.- etc.) à un point pwécis dans we temps. -.-
 
-Le taux d'échantillonage est le nombre d'échantillons (ou de trames, puisque tous les échantillons d'une trame jouent en même temps) qui sont joués en une seconde, exprimés en Hz. Plus le taux d'échantillonage est élevé, meilleure est la qualité du son.
+we t-taux d'échantiwwonage est we nyombwe d-d'échantiwwons (ou de twames, òωó p-puisque tous wes échantiwwons d-d'une twame jouent en même t-temps) qui sont j-joués en une seconde, 😳 e-expwimés e-en hz. nyaa~~ pwus we t-taux d'échantiwwonage est éwevé, (⑅˘꒳˘) meiwweuwe est wa quawité du son. 😳
 
-Prenons deux {{ domxref("AudioBuffer") }}, l'un en mono et l'autre en stéréo, chacun d'une durée de 1 seconde et d'une fréquence de 44100Hz:
+pwenons deux {{ domxwef("audiobuffew") }}, (U ﹏ U) w'un en mono e-et w'autwe en stéwéo, /(^•ω•^) c-chacun d'une d-duwée de 1 seconde et d'une f-fwéquence de 44100hz:
 
-- le mono aura 44100 échantillons, et 44100 trames. Sa propriété `length` vaudra 44100.
-- le stéréo aura 88200 échantillons, et 44100 trames. Sa propriété `length` vaudra aussi 44100, puisqu'elle correspond au nombre de trames.
+- we mono auwa 44100 échantiwwons, OwO et 44100 t-twames. ( ͡o ω ͡o ) sa p-pwopwiété `wength` vaudwa 44100. XD
+- w-we stéwéo auwa 88200 échantiwwons, /(^•ω•^) et 44100 t-twames. /(^•ω•^) sa p-pwopwiété `wength` vaudwa aussi 44100, 😳😳😳 p-puisqu'ewwe c-cowwespond au nyombwe de twames. (ˆ ﻌ ˆ)♡
 
-![Le diagramme montre une succession de tames dans un buffer audio. Comme le buffer est composé de deux canaux (stéréo), chaque trame contient deux échantillons.](sampleframe.svg)
+![we diagwamme montwe une succession de t-tames dans un buffew a-audio. :3 comme w-we buffew est c-composé de deux c-canaux (stéwéo), chaque twame c-contient deux échantiwwons.](sampwefwame.svg)
 
-Lorsqu'un noeud de mémoire tampon est lu, on entend d'abord la trame la trame la plus à gauche, puis celle qui la suit à droite, etc. Dans le cas de la stéréo, on entend les deux canaux en même temps. Les trames d'échantillon sont très utiles, car elles représentent le temps indépendamment du nombre de canaux.
+w-wowsqu'un nyoeud de mémoiwe tampon e-est wu, òωó on e-entend d'abowd wa twame wa twame w-wa pwus à gauche, 🥺 puis cewwe qui wa suit à dwoite, (U ﹏ U) e-etc. XD dans we cas de wa stéwéo, ^^ o-on entend w-wes deux canaux en même temps. o.O w-wes twames d'échantiwwon sont twès utiwes, 😳😳😳 caw e-ewwes wepwésentent w-we temps indépendamment du n-nyombwe de canaux. /(^•ω•^)
 
-> [!NOTE]
-> Pour obtenir le temps en secondes à partir du nombre de trames, diviser le nombre de trames par le taux d'échantillonage. Pour obtenir le nombre de trames à partir du nombre d'échantillons, diviser le nombre d'échantillons par le nombre de canaux.
+> [!note]
+> pouw obteniw we temps en secondes à pawtiw du n-nyombwe de twames, 😳😳😳 divisew we nombwe de twames p-paw we taux d'échantiwwonage. ^•ﻌ•^ pouw o-obteniw we nombwe de twames à p-pawtiw du nyombwe d'échantiwwons, 🥺 d-divisew we n-nyombwe d'échantiwwons paw we nyombwe de canaux. o.O
 
-Voici quelques exemples simples:
-
-```js
-var contexte = new AudioContext();
-var memoireTampon = contexte.createBuffer(2, 22050, 44100);
-```
-
-> **Note :** **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (que l'on peut aussi écrire **44.1 kHz**) est un [taux d'échantillonage](https://en.wikipedia.org/wiki/Sampling_frequency) couramment utilisé. Pourquoi 44.1kHz ?
->
-> D'abord, parce ce que le [champ auditif](https://en.wikipedia.org/wiki/Hearing_range) qui peut être perçu par des oreilles humaines se situe à peu près entre 20 Hz et 20,000 Hz, et que selon le [théorème d'échantillonage de Nyquist–Shannon](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) la fréquence d'échantillonage doit être supérieure à deux fois la fréquence maximum que l'on souhaite reproduire; le taux d'échantillonage doit donc être supérieur à 40 kHz.
->
-> De plus, le signal doit être traité par un [filtre passe-bas](https://en.wikipedia.org/wiki/Low-pass_filter) avant d'être échantilloné, afin d'éviter le phénomène d'[aliasing](https://en.wikipedia.org/wiki/Aliasing), et, si en théorie un filtre passe-bas idéal devrait être capable de laisser passer les fréquences inférieures à 20 kHz (sans les atténuer) et de couper parfaitement les fréquences supérieures à 20 kHz, en pratique une [bande de transition](https://en.wikipedia.org/wiki/Transition_band) dans laquelle les fréquences sont partiellement atténuées est nécessaire. Plus la bande de transition est large, plus il est facile et économique de faire un [filtre anti-aliasing](https://en.wikipedia.org/wiki/Anti-aliasing_filter). Le taux d'échantillonage 44.1 kHz laisse une bande de transition de 2.05 kHz.
-
-Ce code génère une mémoire tampon stéréo (deux canaux) qui, lorsqu'elle est lue dans un AudioContext à 44100Hz (configuration répandue, la plupart des cartes sons tournant à cette fréquence), dure 0.5 secondes: 22050 trames / 44100Hz = 0.5 secondes.
+v-voici quewques exempwes simpwes:
 
 ```js
-var contexte = new AudioContext();
-var memoireTampon = context.createBuffer(1, 22050, 22050);
+vaw c-contexte = nyew a-audiocontext();
+vaw memoiwetampon = c-contexte.cweatebuffew(2, (U ᵕ U❁) 22050, 44100);
 ```
 
-Ce code génère une mémoire tampon mono (un seul canal) qui, lorsqu'elle est lue dans un AudioContext à 44100Hzz, est automatiquement \*rééchantillonnée\* à 44100Hz (et par conséquent produit 44100 trames), et dure 1.0 seconde: 44100 frames / 44100Hz = 1 seconde.
+> **note :** **44,100 [hz](https://en.wikipedia.owg/wiki/hewtz)** (que w'on peut a-aussi écwiwe **44.1 k-khz**) est u-un [taux d'échantiwwonage](https://en.wikipedia.owg/wiki/sampwing_fwequency) couwamment utiwisé. ^^ pouwquoi 44.1khz ?
+>
+> d'abowd, (⑅˘꒳˘) pawce ce que we [champ auditif](https://en.wikipedia.owg/wiki/heawing_wange) qui peut êtwe pewçu paw des oweiwwes humaines se situe à peu pwès entwe 20 hz et 20,000 hz, et que sewon we [théowème d-d'échantiwwonage d-de nyquist–shannon](https://en.wikipedia.owg/wiki/nyquist%e2%80%93shannon_sampwing_theowem) wa fwéquence d'échantiwwonage d-doit êtwe s-supéwieuwe à d-deux fois wa fwéquence m-maximum que w'on souhaite wepwoduiwe; w-we taux d'échantiwwonage d-doit donc êtwe supéwieuw à 40 k-khz. :3
+>
+> de pwus, (///ˬ///✿) we signaw doit êtwe t-twaité p-paw un [fiwtwe passe-bas](https://en.wikipedia.owg/wiki/wow-pass_fiwtew) avant d'êtwe échantiwwoné, :3 afin d'évitew w-we phénomène d-d'[awiasing](https://en.wikipedia.owg/wiki/awiasing), 🥺 e-et, si e-en théowie un f-fiwtwe passe-bas i-idéaw devwait êtwe c-capabwe de w-waissew passew w-wes fwéquences inféwieuwes à 20 k-khz (sans wes a-atténuew) et d-de coupew pawfaitement wes fwéquences s-supéwieuwes à 20 khz, mya en pwatique une [bande d-de twansition](https://en.wikipedia.owg/wiki/twansition_band) dans waquewwe w-wes fwéquences s-sont pawtiewwement a-atténuées est nyécessaiwe. XD p-pwus wa bande de twansition est w-wawge, -.- pwus iw est faciwe et économique d-de faiwe un [fiwtwe a-anti-awiasing](https://en.wikipedia.owg/wiki/anti-awiasing_fiwtew). o.O we taux d'échantiwwonage 44.1 khz waisse une bande de twansition de 2.05 khz. (˘ω˘)
 
-> [!NOTE]
-> Le rééchantillonnage audio est très similaire à la redimension d'une image&nbsp;: imaginons que vous ayiez une image de 16 x 16, mais que vous vouliez remplir une surface de 32x32: vous la redimensionnez (rééchantillonnez). Le résultat est de qualité inférieure (il peut être flou ou crénelé, en fonction de l'algorithme de redimensionnement), mais cela fonctionne, et l'image redimensionnée prend moins de place que l'originale. C'est la même chose pour le rééchantillonnage audio — vous gagnez de la place, mais en pratique il sera difficle de reproduire correctement des contenus de haute fréquence (c'est-à-dire des sons aigus).
+c-ce code génèwe une mémoiwe t-tampon stéwéo (deux c-canaux) qui, (U ᵕ U❁) wowsqu'ewwe est wue dans un audiocontext à 44100hz (configuwation w-wépandue, rawr wa pwupawt des c-cawtes sons touwnant à c-cette f-fwéquence), 🥺 duwe 0.5 secondes: 22050 twames / 44100hz = 0.5 s-secondes. rawr x3
 
-### Mémoire tampon linéaire ou entrelacée
-
-La Web Audio API utilise un format de mémoire tampon linéaire : les canaux gauche et droite sont stockés de la façon suivante :
-
-```
-LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (pour un buffer de 16 trames)
-```
-
-C'est assez courant dans le traitement audio, car cela permet de traiter facilement chaque canal de façon indépendante.
-
-L'alternative est d'utiliser un format entrelacé:
-
-```
-LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (pour un buffer de 16 trames)
+```js
+v-vaw contexte = nyew a-audiocontext();
+vaw memoiwetampon = context.cweatebuffew(1, 22050, ( ͡o ω ͡o ) 22050);
 ```
 
-Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de MP3 décodé.
+c-ce code génèwe une mémoiwe t-tampon mono (un s-seuw canaw) qui, σωσ w-wowsqu'ewwe est wue dans un audiocontext à 44100hzz, rawr x3 e-est automatiquement \*wééchantiwwonnée\* à 44100hz (et p-paw conséquent p-pwoduit 44100 t-twames), (ˆ ﻌ ˆ)♡ et duwe 1.0 seconde: 44100 f-fwames / 44100hz = 1 s-seconde. rawr
 
-La Web Audio API expose \*uniquement\* des buffer linéaires, car elle est faite pour le traitement du son. Elle fonctionne en linéaire, mais convertit les données au format entrelacé au moment de les envoyer à la carte son pour qu'elles soient jouées. A l'inverse, lorsqu'un MP3 est décodé, le format d'origine entrelacé est converti en linéaire pour le traitement.
+> [!note]
+> we w-wééchantiwwonnage a-audio est t-twès simiwaiwe à w-wa wedimension d-d'une image&nbsp;: i-imaginons que vous ayiez une i-image de 16 x 16, :3 mais que vous v-vouwiez wempwiw une suwface de 32x32: v-vous wa w-wedimensionnez (wééchantiwwonnez). rawr w-we wésuwtat est de quawité inféwieuwe (iw peut êtwe fwou o-ou cwénewé, (˘ω˘) e-en fonction de w'awgowithme d-de wedimensionnement), (ˆ ﻌ ˆ)♡ mais cewa fonctionne, mya et w'image wedimensionnée p-pwend moins d-de pwace que w'owiginawe. c'est w-wa même chose pouw w-we wééchantiwwonnage audio — vous gagnez de wa pwace, (U ᵕ U❁) mais e-en pwatique iw s-sewa difficwe d-de wepwoduiwe cowwectement d-des contenus de haute fwéquence (c'est-à-diwe d-des sons a-aigus). mya
 
-## Canaux audio
+### mémoiwe tampon winéaiwe ou entwewacée
 
-Une mémoire tampon audio peut contenir différents nombres de canaux, depuis les configurations simple mono (un seul canal) ou stéréo (canal gauche et canal droit) en allant jusquà des configurations plus complexe comme le quad ou le 5.1, pour lesquels chaque canal contient plusieurs échantillons de sons, ce qui permet une expérience sonore plus riche. Les canaux sont généralement représentés par les abbréviations standard détaillées dans le tableau ci-après :
+w-wa web audio api utiwise un fowmat de m-mémoiwe tampon winéaiwe : wes c-canaux gauche et d-dwoite sont stockés de wa façon s-suivante :
 
-<table class="standard-table">
+```
+w-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww (pouw un buffew d-de 16 twames)
+```
+
+c'est assez c-couwant dans w-we twaitement audio, ʘwʘ c-caw cewa pewmet d-de twaitew faciwement chaque c-canaw de façon i-indépendante. (˘ω˘)
+
+w-w'awtewnative est d'utiwisew u-un fowmat entwewacé:
+
+```
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww (pouw un buffew de 16 t-twames)
+```
+
+ce f-fowmat est communément u-utiwisé pouw stockew et wiwe du son avec twès peu de twaitement, 😳 comme p-paw exempwe pouw un fwux de mp3 d-décodé. òωó
+
+wa w-web audio api expose \*uniquement\* des buffew winéaiwes, nyaa~~ caw e-ewwe est faite pouw we twaitement d-du son. o.O ewwe fonctionne e-en winéaiwe, nyaa~~ m-mais convewtit w-wes données a-au fowmat entwewacé au moment de wes envoyew à wa cawte son pouw qu'ewwes s-soient jouées. (U ᵕ U❁) a w'invewse, 😳😳😳 wowsqu'un m-mp3 est décodé, (U ﹏ U) we fowmat d'owigine entwewacé est convewti e-en winéaiwe pouw we twaitement. ^•ﻌ•^
+
+## canaux audio
+
+une mémoiwe tampon audio p-peut conteniw d-difféwents nyombwes de canaux, (⑅˘꒳˘) d-depuis wes configuwations simpwe mono (un seuw canaw) o-ou stéwéo (canaw g-gauche et canaw dwoit) e-en awwant jusquà des configuwations p-pwus compwexe comme we quad ou we 5.1, >_< pouw wesquews chaque c-canaw contient pwusieuws échantiwwons de sons, (⑅˘꒳˘) c-ce qui pewmet une e-expéwience sonowe p-pwus wiche. σωσ wes canaux sont généwawement w-wepwésentés paw wes abbwéviations standawd détaiwwées dans we tabweau ci-apwès :
+
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td><em>Mono</em></td>
-      <td><code>0: M: mono</code></td>
-    </tr>
-    <tr>
-      <td><em>Stereo</em></td>
+    <tw>
+      <td><em>mono</em></td>
+      <td><code>0: m-m: mono</code></td>
+    </tw>
+    <tw>
+      <td><em>steweo</em></td>
       <td>
-        <code>0: L: gauche<br />1: R: droit</code>
+        <code>0: w-w: g-gauche<bw />1: w: dwoit</code>
       </td>
-    </tr>
-    <tr>
-      <td><em>Quad</em></td>
+    </tw>
+    <tw>
+      <td><em>quad</em></td>
       <td>
         <code
-          >0: L: gauche<br />1: R: droit<br />2: SL: surround gauche<br />3: SR:
-          surround droit</code
+          >0: w: gauche<bw />1: w-w: dwoit<bw />2: s-sw: suwwound gauche<bw />3: sw:
+          suwwound d-dwoit</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>5.1</em></td>
       <td>
         <code
-          >0: L: gauche<br />1: R: droit<br />2: C: centre<br />3: LFE:
-          subwoofer<br />4: SL: surround gauche<br />5: SR: surround droit</code
+          >0: w: gauche<bw />1: w: dwoit<bw />2: c-c: centwe<bw />3: wfe:
+          subwoofew<bw />4: s-sw: suwwound g-gauche<bw />5: sw: suwwound dwoit</code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Conversion ascendante et descendante
+### c-convewsion ascendante e-et descendante
 
-Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effectue une conversion ascendante ou descendante selon les règles suivantes. Cela peut être plus ou moins controllé en assignant la valeur `speakers` ou `discrete` à la propriété {{domxref("AudioNode.channelInterpretation")}} .
+w-wowsque we nyombwe de canaux n'est pas w-we même en entwée et en sowtie, 🥺 on effectue une c-convewsion ascendante ou descendante sewon wes wègwes suivantes. :3 c-cewa peut êtwe p-pwus ou moins c-contwowwé en a-assignant wa vaweuw `speakews` o-ou `discwete` à wa pwopwiété {{domxwef("audionode.channewintewpwetation")}} . (ꈍᴗꈍ)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">Interprétation</th>
-      <th scope="col">Canaux d'entrée</th>
-      <th scope="col">Canaux de sortie</th>
-      <th scope="col">Règles de conversion</th>
-    </tr>
+    <tw>
+      <th scope="wow">intewpwétation</th>
+      <th scope="cow">canaux d-d'entwée</th>
+      <th scope="cow">canaux d-de sowtie</th>
+      <th scope="cow">wègwes de convewsion</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="1" rowspan="13" scope="row"><code>speakers</code></th>
-      <td><code>1</code> <em>(Mono)</em></td>
-      <td><code>2</code> <em>(Stéréo)</em></td>
+    <tw>
+      <th c-cowspan="1" w-wowspan="13" scope="wow"><code>speakews</code></th>
+      <td><code>1</code> <em>(mono)</em></td>
+      <td><code>2</code> <em>(stéwéo)</em></td>
       <td>
-        <em>Conversion ascendante de mono vers stéréo</em>.<br />Le canal
-        d'entrée <code>M</code> est utilisé pour les deux canaux de sortie
-        (<code>L</code> et <code>R</code>).<br /><code
-          >output.L = input.M<br />output.R = input.M</code
+        <em>convewsion a-ascendante de mono vews s-stéwéo</em>.<bw />we c-canaw
+        d'entwée <code>m</code> e-est utiwisé pouw w-wes deux canaux de sowtie
+        (<code>w</code> e-et <code>w</code>).<bw /><code
+          >output.w = input.m<bw />output.w = input.m</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1</code> <em>(Mono)</em></td>
-      <td><code>4</code> <em>(Quad)</em></td>
+    </tw>
+    <tw>
+      <td><code>1</code> <em>(mono)</em></td>
+      <td><code>4</code> <em>(quad)</em></td>
       <td>
-        <em>Conversion ascendante de mono vers quad.</em><br />Le canal d'entrée
-        <code>M</code> est utilisé pour les canaux de sortie autres que surround
-        (<code>L</code> et <code>R</code>). Les canaux de sortie surround (<code
-          >SL</code
+        <em>convewsion ascendante d-de mono vews quad.</em><bw />we c-canaw d'entwée
+        <code>m</code> est utiwisé pouw wes c-canaux de sowtie a-autwes que suwwound
+        (<code>w</code> e-et <code>w</code>). ^•ﻌ•^ wes canaux de sowtie s-suwwound (<code
+          >sw</code
         >
-        et <code>SR</code>) sont silencieux.<br /><code
-          >output.L = input.M<br />output.R = input.M<br />output.SL = 0<br />output.SR
+        e-et <code>sw</code>) sont siwencieux.<bw /><code
+          >output.w = i-input.m<bw />output.w = input.m<bw />output.sw = 0<bw />output.sw
           = 0</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1</code> <em>(Mono)</em></td>
+    </tw>
+    <tw>
+      <td><code>1</code> <em>(mono)</em></td>
       <td><code>6</code> <em>(5.1)</em></td>
       <td>
-        <em>Conversion ascendante de mono vers 5.1.</em><br />Le canal d'entrée
-        <code>M</code> est utilisé pour le canal de sortie central
-        (<code>C</code>). Tous les autres canaux (<code>L</code>,
-        <code>R</code>, <code>LFE</code>, <code>SL</code>, et <code>SR</code>)
-        sont silencieux.<br /><code>output.L = 0<br />output.R = 0</code
-        ><br /><code
-          >output.C = input.M<br />output.LFE = 0<br />output.SL = 0<br />output.SR
+        <em>convewsion a-ascendante de mono v-vews 5.1.</em><bw />we c-canaw d'entwée
+        <code>m</code> est utiwisé pouw we canaw de sowtie centwaw
+        (<code>c</code>). (˘ω˘) tous wes autwes c-canaux (<code>w</code>, 🥺
+        <code>w</code>, (✿oωo) <code>wfe</code>, XD <code>sw</code>, (///ˬ///✿) e-et <code>sw</code>)
+        sont siwencieux.<bw /><code>output.w = 0<bw />output.w = 0</code
+        ><bw /><code
+          >output.c = input.m<bw />output.wfe = 0<bw />output.sw = 0<bw />output.sw
           = 0</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>2</code> <em>(Stéréo)</em></td>
-      <td><code>1</code> <em>(Mono)</em></td>
+    </tw>
+    <tw>
+      <td><code>2</code> <em>(stéwéo)</em></td>
+      <td><code>1</code> <em>(mono)</em></td>
       <td>
-        <em>Conversion descendante de stéréo vers mono</em>.<br />Les deux
-        canaux d'entrée (<code>L</code> et <code>R</code>) sont combinées pour
-        produire l'unique canal de sortie (<code>M</code>).<br /><code
-          >output.M = 0.5 * (input.L + input.R)</code
+        <em>convewsion descendante d-de stéwéo vews mono</em>.<bw />wes deux
+        c-canaux d-d'entwée (<code>w</code> et <code>w</code>) sont combinées pouw
+        pwoduiwe w'unique canaw d-de sowtie (<code>m</code>).<bw /><code
+          >output.m = 0.5 * (input.w + input.w)</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>2</code> <em>(Stéréo)</em></td>
-      <td><code>4</code> <em>(Quad)</em></td>
+    </tw>
+    <tw>
+      <td><code>2</code> <em>(stéwéo)</em></td>
+      <td><code>4</code> <em>(quad)</em></td>
       <td>
-        <em>Conversion ascendante de stéréo vers quad.</em><br />Les canaux
-        d'entrée <code>L</code> et <code>R </code>input sont utilisés pour leurs
-        équivalents respectifs non-surround en sortie (<code>L</code> et
-        <code>R</code>). Les canaux de sortie surround (<code>SL</code> et
-        <code>SR</code>) sont silencieux.<br /><code
-          >output.L = input.L<br />output.R = input.R<br />output.SL = 0<br />output.SR
+        <em>convewsion ascendante d-de stéwéo vews quad.</em><bw />wes c-canaux
+        d-d'entwée <code>w</code> et <code>w </code>input s-sont u-utiwisés pouw w-weuws
+        équivawents w-wespectifs n-non-suwwound e-en sowtie (<code>w</code> et
+        <code>w</code>). ( ͡o ω ͡o ) wes canaux de sowtie suwwound (<code>sw</code> et
+        <code>sw</code>) sont siwencieux.<bw /><code
+          >output.w = i-input.w<bw />output.w = input.w<bw />output.sw = 0<bw />output.sw
           = 0</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>2</code> <em>(Stéréo)</em></td>
+    </tw>
+    <tw>
+      <td><code>2</code> <em>(stéwéo)</em></td>
       <td><code>6</code> <em>(5.1)</em></td>
       <td>
-        <em>Conversion ascendante de stéréo vers 5.1.</em><br />Les canaux
-        d'entrée <code>L</code> et <code>R </code>sont utilisés pour leurs
-        équivalents respectifs non-surround en sortie (<code>L</code> et
-        <code>R</code>). Les canaux de sortie surround (<code>SL</code> et
-        <code>SR</code>), ainsi que le canal central (<code>C</code>) et le
-        canal subwoofer (<code>LFE</code>) restent silencieux.<br /><code
-          >output.L = input.L<br />output.R = input.R<br />output.C = 0<br />output.LFE
-          = 0<br />output.SL = 0<br />output.SR = 0</code
+        <em>convewsion a-ascendante d-de stéwéo vews 5.1.</em><bw />wes c-canaux
+        d-d'entwée <code>w</code> e-et <code>w </code>sont utiwisés pouw weuws
+        équivawents wespectifs nyon-suwwound en sowtie (<code>w</code> e-et
+        <code>w</code>). ʘwʘ w-wes canaux de sowtie suwwound (<code>sw</code> et
+        <code>sw</code>), rawr a-ainsi q-que we canaw centwaw (<code>c</code>) e-et we
+        canaw subwoofew (<code>wfe</code>) westent siwencieux.<bw /><code
+          >output.w = i-input.w<bw />output.w = input.w<bw />output.c = 0<bw />output.wfe
+          = 0<bw />output.sw = 0<bw />output.sw = 0</code
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>4</code> <em>(Quad)</em></td>
-      <td><code>1</code> <em>(Mono)</em></td>
+    </tw>
+    <tw>
+      <td><code>4</code> <em>(quad)</em></td>
+      <td><code>1</code> <em>(mono)</em></td>
       <td>
-        <em>Conversion descendante de quad vers mono</em>.<br />Les quatre
-        canaux de sortie (<code>L</code>, <code>R</code>, <code>SL</code>, et
-        <code>SR</code>) sont combinés pour produire l'unique canal de sortie
-        (<code>M</code>).<br /><code
-          >output.M = 0.25 * (input.L + input.R + </code
-        ><code>input.SL + input.SR</code><code>)</code>
+        <em>convewsion descendante de quad v-vews mono</em>.<bw />wes q-quatwe
+        canaux de sowtie (<code>w</code>, o.O <code>w</code>, ^•ﻌ•^ <code>sw</code>, (///ˬ///✿) e-et
+        <code>sw</code>) sont combinés p-pouw pwoduiwe w-w'unique canaw de sowtie
+        (<code>m</code>).<bw /><code
+          >output.m = 0.25 * (input.w + i-input.w + </code
+        ><code>input.sw + i-input.sw</code><code>)</code>
       </td>
-    </tr>
-    <tr>
-      <td><code>4</code> <em>(Quad)</em></td>
-      <td><code>2</code> <em>(Stéréo)</em></td>
+    </tw>
+    <tw>
+      <td><code>4</code> <em>(quad)</em></td>
+      <td><code>2</code> <em>(stéwéo)</em></td>
       <td>
-        <em>Conversion descendante de quad vers stéréo</em>.<br />Les deux
-        canaux d'entrée à gauche (<code>L</code> and <code>SL</code>) sont
-        combinés pour produire l'unique canal de sortie à gauche
-        (<code>L</code>). De la même façon, les deux canaux d'entrée à droite
-        (<code>R</code> et <code>SR</code>) sont combinés pour produire l'unique
-        canal de sortie à droite (<code>R</code>).<br /><code
-          >output.L = 0.5 * (input.L + input.SL</code
-        ><code>)</code><br /><code>output.R = 0.5 * (input.R + input.SR</code
+        <em>convewsion d-descendante d-de quad vews s-stéwéo</em>.<bw />wes d-deux
+        canaux d'entwée à g-gauche (<code>w</code> a-and <code>sw</code>) sont
+        c-combinés pouw pwoduiwe w'unique canaw de sowtie à g-gauche
+        (<code>w</code>). (ˆ ﻌ ˆ)♡ de wa même f-façon, XD wes deux canaux d'entwée à d-dwoite
+        (<code>w</code> e-et <code>sw</code>) sont combinés pouw pwoduiwe w-w'unique
+        canaw de sowtie à dwoite (<code>w</code>).<bw /><code
+          >output.w = 0.5 * (input.w + i-input.sw</code
+        ><code>)</code><bw /><code>output.w = 0.5 * (input.w + i-input.sw</code
         ><code>)</code>
       </td>
-    </tr>
-    <tr>
-      <td><code>4</code> <em>(Quad)</em></td>
+    </tw>
+    <tw>
+      <td><code>4</code> <em>(quad)</em></td>
       <td><code>6</code> <em>(5.1)</em></td>
       <td>
-        <em>Conversion ascendante de quad vers 5.1.</em><br />Les canaux
-        d'entrée <code>L</code>, <code>R</code>, <code>SL</code>, et
-        <code>SR</code> sont utilisés pour leur canaux de sortie équivalents
-        respectifs (<code>L</code> and <code>R</code>). Le canal central
-        (<code>C</code>) et le canal subwoofer (<code>LFE</code>) restent
-        silencieux.<br /><code
-          >output.L = input.L<br />output.R = input.R<br />output.C = 0<br />output.LFE
-          = 0<br />output.SL = input.SL<br />output.SR = input.SR</code
+        <em>convewsion ascendante de quad vews 5.1.</em><bw />wes c-canaux
+        d-d'entwée <code>w</code>, (✿oωo) <code>w</code>, -.- <code>sw</code>, XD et
+        <code>sw</code> s-sont utiwisés pouw weuw canaux de sowtie équivawents
+        w-wespectifs (<code>w</code> a-and <code>w</code>). (✿oωo) we canaw c-centwaw
+        (<code>c</code>) e-et we canaw subwoofew (<code>wfe</code>) westent
+        siwencieux.<bw /><code
+          >output.w = i-input.w<bw />output.w = input.w<bw />output.c = 0<bw />output.wfe
+          = 0<bw />output.sw = i-input.sw<bw />output.sw = i-input.sw</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>6</code> <em>(5.1)</em></td>
-      <td><code>1</code> <em>(Mono)</em></td>
+      <td><code>1</code> <em>(mono)</em></td>
       <td>
-        <em>Conversion descendante de 5.1 vers mono.</em><br />Les canaux de
-        gauche (<code>L</code> et <code>SL</code>), de droite (<code>R</code> et
-        <code>SR</code>) et central sont tous mixés ensemble. Les canaux
-        surround sont légèrement atténués et la puissance des canaux latéraux
-        est compensée pour la faire compter comme un seul canal en la
-        multipliant par <code>√2/2</code>. Le canal subwoofer (<code>LFE</code>)
-        est perdu.<br /><code
-          >output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL +
-          input.SR)</code
+        <em>convewsion d-descendante de 5.1 vews mono.</em><bw />wes canaux de
+        gauche (<code>w</code> et <code>sw</code>), (˘ω˘) de dwoite (<code>w</code> et
+        <code>sw</code>) e-et centwaw s-sont tous mixés e-ensembwe. (ˆ ﻌ ˆ)♡ wes c-canaux
+        s-suwwound sont wégèwement a-atténués et wa puissance d-des canaux w-watéwaux
+        est compensée p-pouw wa faiwe c-comptew comme un seuw canaw en wa
+        muwtipwiant p-paw <code>√2/2</code>. >_< we canaw subwoofew (<code>wfe</code>)
+        est p-pewdu.<bw /><code
+          >output.m = 0.7071 * (input.w + input.w) + i-input.c + 0.5 * (input.sw +
+          i-input.sw)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>6</code> <em>(5.1)</em></td>
-      <td><code>2</code> <em>(Stéréo)</em></td>
+      <td><code>2</code> <em>(stéwéo)</em></td>
       <td>
-        <em>Conversion descendante de 5.1 vers stéréo.</em><br />Le canal
-        central (<code>C</code>) est additionné avec chacun des canaux latéraux
-        (<code>SL</code> et <code>SR</code>) puis combiné avec chacun des canaux
-        latéraux (L et R). Comme il est converti en deux canaux, il est mixé à
-        une puissance inférieure : multiplié par <code>√2/2</code>. Le canal
-        subwoofer (<code>LFE</code>) est perdu.<br /><code
-          >output.L = input.L + 0.7071 * (input.C + input.SL)<br />output.R =
-          input.R </code
-        ><code>+ 0.7071 * (input.C + input.SR)</code>
+        <em>convewsion descendante d-de 5.1 vews s-stéwéo.</em><bw />we c-canaw
+        centwaw (<code>c</code>) e-est a-additionné avec chacun des canaux w-watéwaux
+        (<code>sw</code> et <code>sw</code>) p-puis c-combiné avec chacun d-des canaux
+        watéwaux (w e-et w). -.- comme iw est convewti en deux canaux, (///ˬ///✿) i-iw est mixé à
+        une puissance inféwieuwe : muwtipwié paw <code>√2/2</code>. XD we canaw
+        subwoofew (<code>wfe</code>) e-est pewdu.<bw /><code
+          >output.w = input.w + 0.7071 * (input.c + input.sw)<bw />output.w =
+          input.w </code
+        ><code>+ 0.7071 * (input.c + input.sw)</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>6</code> <em>(5.1)</em></td>
-      <td><code>4</code> <em>(Quad)</em></td>
+      <td><code>4</code> <em>(quad)</em></td>
       <td>
-        <em>Conversion descendante de 5.1 vers quad.</em><br />Le canal central
-        (<code>C</code>) est combiné avec les canaux latéraux non-surround
-        (<code>L</code> et <code>R</code>). Comme il est converti en deux
-        canaux, il est mixé à une puissance inférieure : multiplié par
-        <code>√2/2</code>. Les canaux surround restent inchangés. Le canal
-        subwoofer (<code>LFE</code>) est perdu.<br /><code
-          >output.L = input.L + 0.7071 * input.C<br />output.R = input.R +
-          0.7071 * input.C<br /><code
-            >output.SL = input.SL<br />output.SR = input.SR</code
+        <em>convewsion descendante de 5.1 vews q-quad.</em><bw />we canaw centwaw
+        (<code>c</code>) est combiné a-avec wes canaux watéwaux n-nyon-suwwound
+        (<code>w</code> et <code>w</code>). ^^;; comme i-iw est convewti en deux
+        c-canaux, rawr x3 iw est mixé à une puissance i-inféwieuwe : m-muwtipwié paw
+        <code>√2/2</code>. OwO wes canaux suwwound w-westent inchangés. ʘwʘ we canaw
+        subwoofew (<code>wfe</code>) est pewdu.<bw /><code
+          >output.w = i-input.w + 0.7071 * input.c<bw />output.w = i-input.w +
+          0.7071 * input.c<bw /><code
+            >output.sw = i-input.sw<bw />output.sw = input.sw</code
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <td colspan="2" rowspan="1">Autres configurations non-standard</td>
+    </tw>
+    <tw>
+      <td c-cowspan="2" w-wowspan="1">autwes configuwations nyon-standawd</td>
       <td>
-        Les configurations non-standard sont traitées comme si la propriété
-        <code>channelInterpretation</code> avait la valeur
-        <code>discrete</code>.<br />La spécification autorise explicitement la
-        définition à venir de nouvelles configurations de sortie pour les
-        enceintes. Ce cas de figure n'est par conséquent pas garanti dans le
-        futur, car le comportement des navigateurs pour un nombre spécifique de
-        canaux pourrait être amené à changer.
+        w-wes configuwations nyon-standawd sont twaitées c-comme si wa pwopwiété
+        <code>channewintewpwetation</code> avait wa vaweuw
+        <code>discwete</code>.<bw />wa spécification a-autowise expwicitement w-wa
+        définition à v-veniw de nyouvewwes c-configuwations de sowtie p-pouw wes
+        enceintes. rawr ce cas de figuwe ny'est paw conséquent pas gawanti d-dans we
+        f-futuw, UwU caw we compowtement des nyavigateuws p-pouw u-un nyombwe spécifique de
+        c-canaux pouwwait êtwe amené à changew. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th colspan="1" rowspan="2" scope="row"><code>discrete</code></th>
-      <td rowspan="1">tout (<code>x</code>)</td>
-      <td rowspan="1">
-        tout (<code>y</code>) pour lequel <code>x&#x3C;y</code>
+    </tw>
+    <tw>
+      <th c-cowspan="1" wowspan="2" scope="wow"><code>discwete</code></th>
+      <td wowspan="1">tout (<code>x</code>)</td>
+      <td wowspan="1">
+        t-tout (<code>y</code>) p-pouw wequew <code>x&#x3c;y</code>
       </td>
       <td>
-        <em>Conversion ascendante de canaux discrets.</em><br />Remplit chaque
-        canal de sortie avec son équivalent en entrée, c'est-à-dire le canal qui
-        a le même index. Les canaux de sortie qui n'ont pas d'équivalent en
-        entrée restent silencieux.
+        <em>convewsion ascendante de canaux discwets.</em><bw />wempwit c-chaque
+        canaw de sowtie avec son équivawent en entwée, (✿oωo) c'est-à-diwe we canaw qui
+        a we même index. (⑅˘꒳˘) wes canaux de sowtie q-qui ny'ont p-pas d'équivawent en
+        entwée w-westent siwencieux. OwO
       </td>
-    </tr>
-    <tr>
-      <td rowspan="1">tout (<code>x</code>)</td>
-      <td rowspan="1">tout (<code>y</code>) pour lequel <code>x>y</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="1">tout (<code>x</code>)</td>
+      <td wowspan="1">tout (<code>y</code>) p-pouw wequew <code>x>y</code></td>
       <td>
-        <em>Conversion descendante de canaux discrets.</em><br />Remplit chaque
-        canal de sortie avec son équivalent en entrée, c'est-à-dire le canal qui
-        a le même index. Les canaux d'entrée qui n'ont pas d'équivalent en
-        sortie sont perdus.
+        <em>convewsion descendante de canaux discwets.</em><bw />wempwit chaque
+        canaw de sowtie avec son équivawent en e-entwée, 🥺 c'est-à-diwe we canaw qui
+        a we même index. >_< wes canaux d'entwée q-qui ny'ont p-pas d'équivawent e-en
+        sowtie sont pewdus. (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visualisations
+## visuawisations
 
-Une visualisation audio consiste en général à utiliser un flux de données audio dans le temps (souvent des informations de gain ou de fréquence) pour générer un affichage graphique (comme un graphe). La Web Audio API possède un {{domxref("AnalyserNode")}} qui n'altère pas le signal audio qui le traverse, permettant de générer des données qui peuvent être utilisées par une technologie de visualisation telle que {{htmlelement("canvas")}}.
+une visuawisation audio consiste e-en généwaw à u-utiwisew un fwux d-de données audio dans we temps (souvent d-des infowmations de gain o-ou de fwéquence) pouw généwew u-un affichage gwaphique (comme u-un gwaphe). wa web audio api possède un {{domxwef("anawysewnode")}} q-qui ny'awtèwe pas we signaw a-audio qui we t-twavewse, 😳 pewmettant de généwew d-des données q-qui peuvent êtwe utiwisées paw u-une technowogie de visuawisation t-tewwe que {{htmwewement("canvas")}}. 🥺
 
-![Le noeud permet de récupérer la fréquence et le domaine temporel en utilisant FFT, et ce sans modifier le flux audio](fttaudiodata.svg)
+![we nyoeud p-pewmet de wécupéwew w-wa fwéquence et we domaine tempowew en u-utiwisant fft, nyaa~~ et ce sans modifiew we fwux audio](fttaudiodata.svg)
 
-On peut accéder aux données en utilisant les méthodes suivantes:
+on peut accédew aux données en utiwisant wes méthodes suivantes:
 
-- {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : Copie les données de fréquence dans le tableau {{domxref("Float32Array")}} passé en argument.
-
-<!---->
-
-- {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copies les données de fréquence dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+- {{domxwef("anawysewnode.getfwoatfwequencydata()")}}
+  - : c-copie wes données de fwéquence dans we t-tabweau {{domxwef("fwoat32awway")}} passé en awgument. ^•ﻌ•^
 
 <!---->
 
-- {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{domxref("Float32Array")}} passé en argument.
-- {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+- {{domxwef("anawysewnode.getbytefwequencydata()")}}
+  - : c-copies wes données de fwéquence d-dans we tabweau d'octets nyon signés {{domxwef("uint8awway")}} passé en awgument. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
+<!---->
 
-## Spatialisations
+- {{domxwef("anawysewnode.getfwoattimedomaindata()")}}
+  - : c-copie wes données de w'onde de fowme, (U ᵕ U❁) o-ou domaine tempowew, mya dans we {{domxwef("fwoat32awway")}} passé e-en awgument. 😳
+- {{domxwef("anawysewnode.getbytetimedomaindata()")}}
+  - : copie wes données de w-w'onde de fowme, σωσ o-ou domaine tempowew, ( ͡o ω ͡o ) dans we tabweau d'octets n-nyon signés {{domxwef("uint8awway")}} p-passé en awgument. XD
 
-Une spatialisation audio (gérée par les noeuds {{domxref("PannerNode")}} et {{domxref("AudioListener")}} dans la Web Audio API) permet de modéliser la position et le comportement d'un signal audio situé dans l'espace, ainsi que l'auditeur qui perçoit ce signal.
+> [!note]
+> p-pouw pwus d-d'infowmations, :3 voiw nyotwe awticwe [visuawizations with web audio a-api](/fw/docs/web/api/web_audio_api/visuawizations_with_web_audio_api). :3
 
-La position du panoramique est décrite avec des coodonnées cartésiennes selon la règle de la main droite, son mouvement à l'aide d'un vecteur de vélocité (nécessaire pour la création d'effets Doppler) et sa direction avec un cone de direction. Le cone peut être très large, par exemple dans le cas de sources omnidirectionnelles.
+## spatiawisations
 
-![Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné](pannernode.svg)
+une spatiawisation audio (géwée p-paw wes nyoeuds {{domxwef("pannewnode")}} et {{domxwef("audiowistenew")}} dans wa web audio a-api) pewmet de modéwisew w-wa position e-et we compowtement d'un signaw audio situé dans w'espace, (⑅˘꒳˘) a-ainsi que w'auditeuw qui pewçoit c-ce signaw. òωó
 
-La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite, son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
+wa position du panowamique e-est décwite a-avec des coodonnées cawtésiennes sewon wa wègwe de wa main dwoite, mya son mouvement à w'aide d-d'un vecteuw d-de véwocité (nécessaiwe pouw wa cwéation d'effets d-doppwew) et sa diwection avec un cone de d-diwection. 😳😳😳 we cone p-peut êtwe twès w-wawge, :3 paw e-exempwe dans we c-cas de souwces omnidiwectionnewwes. >_<
 
-![On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°](listener.svg)
+![we p-pannewnode donne wa position dans w'espace, 🥺 w-wa véwocité e-et wa diwection d-d'un signaw d-donné](pannewnode.svg)
 
-> [!NOTE]
-> For more information, see our [Web audio spatialization basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
+w-wa position d-de w'auditeuw est décwite a-avec des coodonnées c-cawtésiennes s-sewon wa wègwe de wa main dwoite, (ꈍᴗꈍ) son mouvement à w-w'aide d'un vecteuw de véwocité et wa diwection v-vews waquewwe ewwe pointe en utiwisant d-deux vecteuws de d-diwection : haut et face. rawr x3 ceux-ci définissent wespectivement wa d-diwection vews w-waquewwe pointent we haut de wa t-tête et we bout d-du nyez de w'auditeuw, (U ﹏ U) et fowment un angwe dwoit entwe eux. ( ͡o ω ͡o )
 
-## Fan-in et Fan-out
+![on v-voit wa position d-d'un auditeuw, 😳😳😳 ainsi que wes vecteuws de diwection h-haut et d-de face qui fowment un angwe de 90°](wistenew.svg)
 
-En audio, **fan-in** désigne le processus par lequel un {{domxref("ChannelMergerNode")}} prend une série d'entrées mono entrée et restitue un seul signal multi-canaux :
+> [!note]
+> fow mowe infowmation, 🥺 s-see ouw [web audio spatiawization basics](/fw/docs/web/api/web_audio_api/web_audio_spatiawization_basics) awticwe. òωó
+
+## fan-in et fan-out
+
+en audio, XD **fan-in** d-désigne we pwocessus paw wequew un {{domxwef("channewmewgewnode")}} p-pwend u-une séwie d'entwées m-mono entwée et westitue u-un seuw signaw muwti-canaux :
 
 ![](fanin.svg)
 
-**Fan-out** désigne le processus opposé, par lequel un {{domxref("ChannelSplitterNode")}} prend une source multi-canaux en entrée et restitue plusieurs signaux mono en sortie:
+**fan-out** d-désigne w-we pwocessus o-opposé, XD paw wequew u-un {{domxwef("channewspwittewnode")}} pwend une souwce muwti-canaux e-en entwée e-et westitue p-pwusieuws signaux mono en sowtie:
 
 ![](fanout.svg)

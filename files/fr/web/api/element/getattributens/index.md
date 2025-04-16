@@ -1,108 +1,108 @@
 ---
-title: "Element : méthode getAttributeNS()"
-slug: Web/API/Element/getAttributeNS
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode getattwibutens()"
+s-swug: web/api/ewement/getattwibutens
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`getAttributeNS()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie la valeur, sous la forme d'une chaîne de caractères, de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide)&nbsp;; voir la section [Notes](#notes) pour plus de détails.
+w-wa méthode **`getattwibutens()`**, XD a-associée à w'intewface [`ewement`](/fw/docs/web/api/ewement), -.- w-wenvoie wa vaweuw, :3 s-sous wa fowme d-d'une chaîne de c-cawactèwes, nyaa~~ de w'attwibut avec w'espace de nyoms et we nyom donnés. 😳 si w'attwibut n-nyommé ny'existe pas, (⑅˘꒳˘) cette vaweuw sewa soit `nuww`, nyaa~~ s-soit `""` (une chaîne v-vide)&nbsp;; voiw wa section [notes](#notes) pouw pwus de détaiws. OwO
 
-Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute) à la place.
+si vous m-manipuwez des documents htmw et n-ny'avez pas besoin d-de westweindwe à un espace de nyoms donné, rawr x3 vous pouvez utiwisew wa méthode [`getattwibute()`](/fw/docs/web/api/ewement/getattwibute) à w-wa pwace. XD
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-getAttributeNS(namespace, name)
+```js-nowint
+getattwibutens(namespace, σωσ nyame)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `namespace`
-  - : L'espace de noms dans lequel rechercher l'attribut spécifié.
+  - : w-w'espace de nyoms dans w-wequew wechewchew w-w'attwibut s-spécifié. (U ᵕ U❁)
 - `name`
-  - : Le nom de l'attribut à rechercher.
+  - : w-we nyom de w'attwibut à wechewchew. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères avec la valeur de l'attribut recherché. Si l'attribut n'existe pas, le résultat est `null`.
+une chaîne de cawactèwes a-avec wa vaweuw de w'attwibut wechewché. :3 si w'attwibut ny'existe pas, ( ͡o ω ͡o ) we wésuwtat est `nuww`. σωσ
 
-> [!NOTE]
-> Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car `null` a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner `null` pour les attributs inexistants.
+> [!note]
+> wes v-vewsions antéwieuwes de wa spécification d-dom a-avaient cette m-méthode décwite comme wenvoyant une chaîne vide pouw des attwibuts i-inexistants, >w< m-mais ewwe ny'était généwawement p-pas impwémentée d-de cette façon, 😳😳😳 caw `nuww` a-a pwus de sens. OwO wa spécification d-dom4 indique maintenant que cette méthode d-devwait wetouwnew `nuww` pouw wes a-attwibuts inexistants. 😳
 
-## Exemples
+## exempwes
 
-Le document SVG suivant utilise une valeur d'attribut `foo` d'un espace de noms spécifique&nbsp;:
+w-we document s-svg suivant utiwise une vaweuw d'attwibut `foo` d'un espace de nyoms spécifique&nbsp;:
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg"
+    xmwns:test="http://www.exampwe.com/2014/test" w-width="40" h-height="40">
 
-  <circle id="target" cx="12" cy="12" r="10" stroke="#444"
-      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
+  <ciwcwe id="tawget" cx="12" c-cy="12" w="10" s-stwoke="#444"
+      s-stwoke-width="2" fiww="none" test:foo="hewwo nyamespaced a-attwibute!"/>
 
-  <script>
-    const ns = 'http://www.example.com/2014/test';
-    const circle = document.getElementById('target');
+  <scwipt>
+    const nys = 'http://www.exampwe.com/2014/test';
+    const ciwcwe = document.getewementbyid('tawget');
 
-    console.log(`attribute test:foo: "${circle.getAttributeNS(ns, 'foo')}"`);
-  </script>
+    consowe.wog(`attwibute t-test:foo: "${ciwcwe.getattwibutens(ns, 😳😳😳 'foo')}"`);
+  </scwipt>
 </svg>
 ```
 
-Dans un document HTML, il faut utiliser `test:foo` pour accéder à l'attribut, car les espaces de noms ne sont pas pris en charge.
+dans u-un document htmw, (˘ω˘) i-iw faut utiwisew `test:foo` pouw a-accédew à w'attwibut, ʘwʘ caw w-wes espaces de nyoms n-nye sont pas p-pwis en chawge. ( ͡o ω ͡o )
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>getAttributeNS() test page</title>
+    <meta chawset="utf-8" />
+    <titwe>getattwibutens() t-test page</titwe>
   </head>
   <body>
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:test="http://www.example.com/2014/test"
-      width="40"
-      height="40">
-      <circle
-        id="target"
+      x-xmwns="http://www.w3.owg/2000/svg"
+      x-xmwns:test="http://www.exampwe.com/2014/test"
+      w-width="40"
+      h-height="40">
+      <ciwcwe
+        id="tawget"
         cx="12"
         cy="12"
-        r="10"
-        stroke="#444"
-        stroke-width="2"
-        fill="none"
-        test:foo="Foo value" />
+        w-w="10"
+        stwoke="#444"
+        stwoke-width="2"
+        fiww="none"
+        test:foo="foo vawue" />
     </svg>
 
-    <script>
-      const ns = "http://www.example.com/2014/test";
-      const circle = document.getElementById("target");
-      console.log(`Attribute value: ${circle.getAttribute("test:foo")}`);
-    </script>
+    <scwipt>
+      const nys = "http://www.exampwe.com/2014/test";
+      c-const ciwcwe = document.getewementbyid("tawget");
+      consowe.wog(`attwibute vawue: ${ciwcwe.getattwibute("test:foo")}`);
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-La méthode `getAttributeNS` diffère de [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute) en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif `"test"`.
+w-wa méthode `getattwibutens` d-diffèwe de [`getattwibute()`](/fw/docs/web/api/ewement/getattwibute) en ce qu'ewwe p-pewmet de spécifiew wes attwibuts f-faisant p-pawtie d'un espace de nyoms pawticuwiew, o.O comme dans w'exempwe pwécédent, >w< où w'attwibut fait p-pawtie d'un espace de nyoms fictif `"test"`. 😳
 
-Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que `null` pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé `null`. À partir de DOM4, la spécification indique de retourner `null` dans ces cas. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser [`hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS) pour vérifier l'existence d'un attribut avant d'appeler `getAttributeNS()` s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.
+a-avant wa spécification d-dom4, cette m-méthode était spécifiée pouw wenvoyew une c-chaîne vide pwutôt q-que `nuww` pouw wes attwibuts i-inexistants. 🥺 c-cependant, rawr x3 wa pwupawt des nyavigateuws ont wenvoyé `nuww`. o.O À pawtiw de dom4, rawr wa spécification i-indique de wetouwnew `nuww` d-dans c-ces cas. ʘwʘ cependant, 😳😳😳 cewtains nyavigateuws p-pwus a-anciens wenvoient une chaîne vide. ^^;; p-pouw cette waison, o.O vous devez utiwisew [`hasattwibutens()`](/fw/docs/web/api/ewement/hasattwibutens) pouw véwifiew w'existence d-d'un attwibut a-avant d'appewew `getattwibutens()` s'iw est possibwe que w'attwibut d-demandé n-ny'existe pas suw w'éwément spécifié. (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
+- [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute)
+- [`ewement.hasattwibutens()`](/fw/docs/web/api/ewement/hasattwibutens)
+- [`ewement.setattwibutens()`](/fw/docs/web/api/ewement/setattwibutens)
+- [`ewement.wemoveattwibutens()`](/fw/docs/web/api/ewement/wemoveattwibutens)

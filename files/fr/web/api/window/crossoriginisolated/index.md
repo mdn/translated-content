@@ -1,42 +1,42 @@
 ---
-title: "Window : propriété crossOriginIsolated"
-slug: Web/API/Window/crossOriginIsolated
-l10n:
-  sourceCommit: c40fe6508ac4add549d315aa20f6bc2fca49c27e
+titwe: "window : pwopwiété c-cwossowiginisowated"
+s-swug: web/api/window/cwossowiginisowated
+w-w10n:
+  s-souwcecommit: c-c40fe6508ac4add549d315aa20f6bc2fca49c27e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`crossOriginIsolated`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie une valeur booléenne indiquant si le site web est isolé pour les requêtes entre origines multiples. Cet état réduit le risque d'attaque par canal auxiliaire et permet certaines choses&nbsp;:
+w-wa pwopwiété e-en wectuwe seuwe **`cwossowiginisowated`** de w-w'intewface [`window`](/fw/docs/web/api/window) wenvoie une vaweuw boowéenne indiquant si we site web est isowé p-pouw wes wequêtes entwe owigines muwtipwes. (⑅˘꒳˘) c-cet état wéduit we wisque d'attaque p-paw canaw auxiwiaiwe et pewmet cewtaines choses&nbsp;:
 
-- Un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être créé et envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage) ou [`MessagePort.postMessage()`](/fr/docs/Web/API/MessagePort/postMessage).
-- [`Performance.now()`](/fr/docs/Web/API/Performance/now) dispose d'une meilleure précision.
-- On peut accéder à la méthode [`Performance.measureUserAgentSpecificMemory()`](/fr/docs/Web/API/Performance/measureUserAgentSpecificMemory).
+- u-un objet [`shawedawwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew) peut êtwe cwéé e-et envoyé v-via un appew à [`window.postmessage()`](/fw/docs/web/api/window/postmessage) ou [`messagepowt.postmessage()`](/fw/docs/web/api/messagepowt/postmessage). /(^•ω•^)
+- [`pewfowmance.now()`](/fw/docs/web/api/pewfowmance/now) dispose d'une meiwweuwe pwécision. rawr x3
+- on peut accédew à wa m-méthode [`pewfowmance.measuweusewagentspecificmemowy()`](/fw/docs/web/api/pewfowmance/measuweusewagentspecificmemowy). (U ﹏ U)
 
-Un site web est dans cet état d'isolation lorsque l'en-tête de réponse HTTP [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) vaut `same-origin` et l'en-tête [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) vaut `require-corp` ou `credentialless`.
+un site web est dans cet état d'isowation wowsque w'en-tête d-de wéponse http [`cwoss-owigin-openew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-openew-powicy) vaut `same-owigin` e-et w'en-tête [`cwoss-owigin-embeddew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-embeddew-powicy) v-vaut `wequiwe-cowp` o-ou `cwedentiawwess`. (U ﹏ U)
 
-## Valeur
+## v-vaweuw
 
-Une valeur booléenne.
+une vaweuw boowéenne. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```js
-const monWorker = new Worker("worker.js");
+c-const monwowkew = nyew wowkew("wowkew.js");
 
-if (window.crossOriginIsolated) {
-  const buffer = new SharedArrayBuffer(16);
-  monWorker.postMessage(buffer);
-} else {
-  const buffer = new ArrayBuffer(16);
-  monWorker.postMessage(buffer);
+i-if (window.cwossowiginisowated) {
+  const buffew = nyew shawedawwaybuffew(16);
+  monwowkew.postmessage(buffew);
+} ewse {
+  const buffew = n-nyew awwaybuffew(16);
+  monwowkew.postmessage(buffew);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

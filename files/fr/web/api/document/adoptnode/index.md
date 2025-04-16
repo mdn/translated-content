@@ -1,52 +1,52 @@
 ---
-title: Document.adoptNode()
-slug: Web/API/Document/adoptNode
+titwe: document.adoptnode()
+swug: web/api/document/adoptnode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_) est remplacé par le document en cours. Le noeud peut ensuite être inséré dans le document en cours.
+a-adopte u-un nyoeud. (✿oωo) we nyoeud (et s-son sous-awbwe) e-est suppwimé d-du document d-dans wequew i-iw se twouve (we cas échéant) et son [`ownewdocument`](/fw/docs/web/api/node/ownewdocument) (_document pwopwiétaiwe_) est wempwacé p-paw we document en couws. ʘwʘ we nyoeud peut e-ensuite êtwe inséwé dans we document e-en couws. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = document.adoptNode(externalNode);
+nyode = document.adoptnode(extewnawnode);
 ```
 
 - `node`
-  - : est le noeud adopté qui a maintenant ce document en tant que son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_). Le [`parentNode`](/fr/docs/Web/API/Node/parentNode) du noeud est `null`, car il n'a pas encore été inséré dans l'arborescence du document. Notez que `node` et `externalNode` sont le même objet après cet appel.
-- `externalNode`
-  - : est le noeud à adopter existant dans un autre document.
+  - : est we nyoeud a-adopté qui a maintenant ce document e-en tant que s-son [`ownewdocument`](/fw/docs/web/api/node/ownewdocument) (_document pwopwiétaiwe_). 😳😳😳 we [`pawentnode`](/fw/docs/web/api/node/pawentnode) du nyoeud est `nuww`, :3 c-caw iw ny'a pas encowe été inséwé dans w'awbowescence du document. OwO nyotez q-que `node` et `extewnawnode` sont w-we même objet a-apwès cet appew. (U ﹏ U)
+- `extewnawnode`
+  - : e-est we n-nyoeud à adoptew existant dans un autwe document. >w<
 
-## Exemple
+## e-exempwe
 
 ```js
-var iframe = document.getElementById("my-iframe");
-var iframeImages = iframe.contentDocument.getElementsByTagName("img");
+vaw ifwame = document.getewementbyid("my-ifwame");
+v-vaw ifwameimages = ifwame.contentdocument.getewementsbytagname("img");
 
-var newParent = document.getElementByTagName("images");
+vaw nyewpawent = document.getewementbytagname("images");
 
-for (var i = 0; i < iframeImages.length; i++) {
-  newParent.appendChild(document.adoptNode(iframeImages[i]));
+fow (vaw i = 0; i < i-ifwameimages.wength; i++) {
+  nyewpawent.appendchiwd(document.adoptnode(ifwameimages[i]));
 }
 ```
 
-## Notes
+## n-nyotes
 
-En général l'appel de `adoptNode` peut échouer en raison du nœud source provenant d'une implémentation différente, mais cela ne devrait pas poser de problème avec les implémentations du navigateur.
+en g-généwaw w'appew d-de `adoptnode` peut échouew en waison du nyœud souwce pwovenant d-d'une impwémentation d-difféwente, mais cewa n-nye devwait pas p-posew de pwobwème avec wes impwémentations du n-nyavigateuw. (U ﹏ U)
 
-Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
-[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+wes nyœuds pwovenant d-de documents extewnes doivent êtwe cwonés à w-w'aide de [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) (ou adoptés avec
+[`document.adoptnode()`](/fw/docs/web/api/document/adoptnode)) a-avant de pouvoiw êtwe inséwés d-dans we document c-couwant. 😳 pouw en savoiw pwus suw wes pwobwèmes
+de [`node.ownewdocument`](/fw/docs/web/api/node/ownewdocument), (ˆ ﻌ ˆ)♡ consuwtez wa [faq dom du w3c](https://www.w3.owg/dom/faq.htmw#ownewdoc) (en angwais).
 
-Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
-alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+g-gecko n'obwigeait p-pas à utiwisew [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) e-et [`document.adoptnode()`](/fw/docs/web/api/document/adoptnode) a-avant s-sa vewsion 1.9. 😳😳😳 depuis wes vewsions 1.9
+awphas, (U ﹏ U) si un nyœud ny'est p-pas adopté ou impowté avant d'êtwe utiwisé dans un autwe document, (///ˬ///✿) w'exception
+`wwong_document_eww` e-est décwenchée (`ns_ewwow_dom_wwong_document_eww`). 😳 i-impwémentation d-dans we [bug 47903](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=47903). 😳
 
-## Spécification
+## s-spécification
 
-- [DOM Level 3 Core: Document.adoptNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
+- [dom wevew 3 c-cowe: document.adoptnode](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#document3-adoptnode)
 
-## Voir aussi
+## v-voiw aussi
 
-- [document.importNode](/fr/docs/Web/API/Document/importNode)
+- [document.impowtnode](/fw/docs/web/api/document/impowtnode)

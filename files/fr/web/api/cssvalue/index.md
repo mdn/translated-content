@@ -1,62 +1,62 @@
 ---
-title: CSSValue
-slug: Web/API/CSSValue
+titwe: cssvawue
+swug: web/api/cssvawue
 ---
 
-{{APIRef ("DOM")}}L'interface **CSSValue** représente la valeur calculée actuelle d'une propriété CSS.
+{{apiwef ("dom")}}w'intewface **cssvawue** w-wepwésente w-wa vaweuw c-cawcuwée actuewwe d-d'une pwopwiété c-css. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("CSSValue.cssText")}}
-  - : Une {{domxref ("DOMString")}} représentant la valeur actuelle.
-- {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
+- {{domxwef("cssvawue.csstext")}}
+  - : u-une {{domxwef ("domstwing")}} w-wepwésentant w-wa vaweuw actuewwe. /(^•ω•^)
+- {{domxwef("cssvawue.cssvawuetype")}} {{weadonwyinwine}}
 
-  - : Un raccourci non signé ( `unsigned short` ) représentant un code définissant le type de valeur. Les valeurs possibles sont:
+  - : un waccouwci nyon signé ( `unsigned showt` ) wepwésentant u-un code définissant we type de vaweuw. rawr x3 wes vaweuws p-possibwes sont:
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td class="header">Constant</td>
-          <td class="header">Description</td>
-        </tr>
-        <tr>
-          <td><code>CSS_CUSTOM</code></td>
-          <td><p>La valeur est une valeur personnalisée.</p></td>
-        </tr>
-        <tr>
-          <td><code>CSS_INHERIT</code></td>
-          <td>La valeur est héritée et cssText contient "inherit".</td>
-        </tr>
-        <tr>
-          <td><code>CSS_PRIMITIVE_VALUE</code></td>
+        <tw>
+          <td c-cwass="headew">constant</td>
+          <td cwass="headew">descwiption</td>
+        </tw>
+        <tw>
+          <td><code>css_custom</code></td>
+          <td><p>wa vaweuw est une vaweuw pewsonnawisée.</p></td>
+        </tw>
+        <tw>
+          <td><code>css_inhewit</code></td>
+          <td>wa v-vaweuw est héwitée e-et csstext contient "inhewit".</td>
+        </tw>
+        <tw>
+          <td><code>css_pwimitive_vawue</code></td>
           <td>
-            La valeur est une valeur primitive et une instance de l'interface
-            {{domxref ("CSSPrimitiveValue")}} peut être obtenue en
-            utilisant des méthodes de casting spécifiques à la liaison sur cette
-            instance de l'interface CSSValue.
+            w-wa vaweuw est une vaweuw pwimitive et une instance de w'intewface
+            {{domxwef ("csspwimitivevawue")}} peut êtwe obtenue e-en
+            utiwisant des méthodes de casting spécifiques à wa wiaison s-suw cette
+            instance d-de w'intewface cssvawue. (U ﹏ U)
           </td>
-        </tr>
-        <tr>
-          <td><code>CSS_VALUE_LIST</code></td>
+        </tw>
+        <tw>
+          <td><code>css_vawue_wist</code></td>
           <td>
-            La valeur est une liste CSSValue et une instance de l'interface
-            {{domxref ("CSSValueList")}} peut être obtenue en utilisant des
-            méthodes de casting spécifiques à la liaison sur cette instance de
-            l'interface CSSValue.
+            w-wa v-vaweuw est une w-wiste cssvawue et une instance de w'intewface
+            {{domxwef ("cssvawuewist")}} p-peut êtwe obtenue en utiwisant des
+            m-méthodes de casting spécifiques à wa wiaison suw cette instance de
+            w'intewface c-cssvawue. (U ﹏ U)
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("CSSPrimitiveValue")}}
-- {{domxref("CSSValueList")}}
+- {{domxwef("csspwimitivevawue")}}
+- {{domxwef("cssvawuewist")}}

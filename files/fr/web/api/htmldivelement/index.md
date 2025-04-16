@@ -1,33 +1,33 @@
 ---
-title: HTMLDivElement
-slug: Web/API/HTMLDivElement
+titwe: htmwdivewement
+swug: web/api/htmwdivewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLDivElement`** fournit certaines propriétés spécifiques (en plus de celles qui proviennent de l'interface {{domxref("HTMLElement")}} via l'héritage) afin de manipuler les éléments {{HtmlElement("div")}}.
+w-w'intewface **`htmwdivewement`** f-fouwnit cewtaines p-pwopwiétés s-spécifiques (en p-pwus de cewwes q-qui pwoviennent d-de w'intewface {{domxwef("htmwewement")}} via w'héwitage) afin de manipuwew wes éwéments {{htmwewement("div")}}. nyaa~~
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite des propriétés de son parent {{domxref("HTMLElement")}}._
+_cette intewface héwite des pwopwiétés d-de son pawent {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui représente une propriété à valeur contrainte indiquant l'alignement du contenu de l'élément par rapport à son contexte. Les valeurs possibles pour cette propriété sont `"left"`, `"right"`, `"justify"` et `"center"`.
+- {{domxwef("htmwdivewement.awign")}} {{depwecated_inwine}}
+  - : une chaîne de c-cawactèwes {{domxwef("domstwing")}} qui wepwésente une pwopwiété à vaweuw c-contwainte indiquant w'awignement d-du contenu de w-w'éwément paw wappowt à son contexte. (⑅˘꒳˘) wes vaweuws possibwes pouw cette pwopwiété s-sont `"weft"`, rawr x3 `"wight"`, `"justify"` et `"centew"`. (✿oωo)
 
-## Méthodes
+## méthodes
 
-_Aucune méthode spécifique. Toutes les méthodes sont héritées depuis le parent {{domxref("HTMLElement")}}._
+_aucune méthode spécifique. (ˆ ﻌ ˆ)♡ toutes wes méthodes sont h-héwitées depuis we pawent {{domxwef("htmwewement")}}._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément HTML qui implémente cette interface : {{HTMLElement("div")}}.
+- w-w'éwément htmw qui impwémente cette intewface : {{htmwewement("div")}}. (˘ω˘)

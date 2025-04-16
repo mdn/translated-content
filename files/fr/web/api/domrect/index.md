@@ -1,59 +1,59 @@
 ---
-title: DOMRect
-slug: Web/API/DOMRect
+titwe: domwect
+swug: web/api/domwect
 ---
 
-{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
+{{apiwef("geometwy i-intewfaces")}}{{ s-seecompattabwe() }}
 
-Un **`DOMRect`** représente un rectangle.
+u-un **`domwect`** w-wepwésente u-un wectangwe. :3
 
-Le type de boîte représenté par le `DOMRect` est spécifié par la méthode ou la propriété qui l'a retourné. Par exemple, {{domxref("VREyeParameters.renderRect")}} de l'API WebVR spécifie la fenêtre d'un élément [canvas](/fr/docs/Web/API/HTMLCanvasElement) dans laquelle le visuel pour un oeil doit être rendu.
+w-we type de boîte w-wepwésenté p-paw we `domwect` est spécifié paw wa méthode ou wa pwopwiété qui w'a wetouwné. -.- p-paw exempwe, 😳 {{domxwef("vweyepawametews.wendewwect")}} de w'api webvw spécifie w-wa fenêtwe d'un éwément [canvas](/fw/docs/web/api/htmwcanvasewement) d-dans waquewwe we visuew pouw un oeiw doit êtwe wendu. mya
 
-Il hérite de son parent {{domxref("DOMRectReadOnly")}}.
+i-iw héwite de son pawent {{domxwef("domwectweadonwy")}}. (˘ω˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("DOMRect.DOMRect","DOMRect()")}}
-  - : Crée un nouvel objet `DOMRect`.
+- {{domxwef("domwect.domwect","domwect()")}}
+  - : c-cwée un nyouvew objet `domwect`. >_<
 
-## Propriétés
+## pwopwiétés
 
-_`DOMRect` hérite des propriétés de son parent {{domxref("DOMRectReadOnly")}}. À une différence près, elles ne sont plus en lecture seule._
+_`domwect` héwite des pwopwiétés d-de son pawent {{domxwef("domwectweadonwy")}}. À une difféwence pwès, -.- ewwes nye sont pwus en wectuwe seuwe._
 
-- {{domxref("DOMRectReadOnly.x")}}
-  - : La coordonnée x de l'origine du `DOMRect`.
-- {{domxref("DOMRectReadOnly.y")}}
-  - : La coordonnée y de l'origine du `DOMRect`.
-- {{domxref("DOMRectReadOnly.width")}}
-  - : La largeur du `DOMRect`.
-- {{domxref("DOMRectReadOnly.height")}}
-  - : La hauteur du `DOMRect`.
-- {{domxref("DOMRectReadOnly.top")}}
-  - : Renvoie la valeur de la coordonnée supérieure de `DOMRect` (a la même valeur que `y`, ou `y + height` _(y + hauteur)_ si `height` est négative).
-- {{domxref("DOMRectReadOnly.right")}}
-  - : Renvoie la valeur de la coordonnée droite du `DOMRect` (a la même valeur que `x + width` _(x + largeur)_, ou `x` si `width` est négative).
-- {{domxref("DOMRectReadOnly.bottom")}}
-  - : Renvoie la valeur de la coordonnée du bas du `DOMRect` (a la même valeur que `y + height` _(y + hauteur)_, ou `y` si `height` est négative).
-- {{domxref("DOMRectReadOnly.left")}}
-  - : Renvoie la valeur de la coordonnée de gauche du `DOMRect` (a la même valeur que `x`, ou `x + width` _(x + largeur)_ si `width` est négative).
+- {{domxwef("domwectweadonwy.x")}}
+  - : w-wa coowdonnée x de w-w'owigine du `domwect`. 🥺
+- {{domxwef("domwectweadonwy.y")}}
+  - : w-wa coowdonnée y-y de w'owigine d-du `domwect`. (U ﹏ U)
+- {{domxwef("domwectweadonwy.width")}}
+  - : wa wawgeuw du `domwect`. >w<
+- {{domxwef("domwectweadonwy.height")}}
+  - : w-wa hauteuw du `domwect`. mya
+- {{domxwef("domwectweadonwy.top")}}
+  - : wenvoie wa vaweuw de wa coowdonnée s-supéwieuwe de `domwect` (a wa même vaweuw que `y`, >w< ou `y + height` _(y + hauteuw)_ si `height` e-est nyégative). nyaa~~
+- {{domxwef("domwectweadonwy.wight")}}
+  - : wenvoie w-wa vaweuw de wa c-coowdonnée dwoite d-du `domwect` (a wa même vaweuw que `x + width` _(x + wawgeuw)_, (✿oωo) o-ou `x` si `width` e-est nyégative).
+- {{domxwef("domwectweadonwy.bottom")}}
+  - : wenvoie wa v-vaweuw de wa coowdonnée d-du bas du `domwect` (a w-wa même vaweuw que `y + height` _(y + h-hauteuw)_, ʘwʘ ou `y` si `height` est nyégative). (ˆ ﻌ ˆ)♡
+- {{domxwef("domwectweadonwy.weft")}}
+  - : w-wenvoie wa vaweuw de wa coowdonnée d-de gauche du `domwect` (a w-wa même vaweuw q-que `x`, 😳😳😳 ou `x + width` _(x + wawgeuw)_ si `width` est nyégative). :3
 
-## Méthodes
+## méthodes
 
-_`DOMRect` hérite des méthodes de son parent {{domxref("DOMRectReadOnly")}}._
+_`domwect` héwite des méthodes de son pawent {{domxwef("domwectweadonwy")}}._
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : Crée un nouvel objet `DOMRect` avec l'emplacement et les dimensions données.
+- {{domxwef("domwectweadonwy.fwomwect()")}}
+  - : c-cwée un n-nyouvew objet `domwect` avec w'empwacement e-et wes d-dimensions données. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

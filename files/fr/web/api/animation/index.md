@@ -1,92 +1,92 @@
 ---
-title: Animation
-slug: Web/API/Animation
+titwe: animation
+swug: web/api/animation
 ---
 
-{{ APIRef("Web Animations API") }}{{SeeCompatTable}}
+{{ a-apiwef("web a-animations api") }}{{seecompattabwe}}
 
-L'interface **`Animation`** de [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API) correspond à un lecteur d'animations et offre les commandes nécessaires au contrôle et à la chronologie d'un noeud ou d'une source d'animation.
+w-w'intewface **`animation`** d-de [w'api web a-animations](/fw/docs/web/api/web_animations_api) c-cowwespond à u-un wecteuw d'animations e-et offwe wes commandes nécessaiwes au contwôwe et à wa chwonowogie d'un n-nyoeud ou d'une souwce d'animation. 😳
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("Animation.Animation()", "Animation()")}}
-  - : Crée une nouvelle instance de l'objet `Animation`.
+- {{domxwef("animation.animation()", "animation()")}}
+  - : c-cwée une nyouvewwe instance d-de w'objet `animation`.
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("Animation.currentTime")}}
-  - : La valeur actuelle de temps de l'animation en millisecondes, que l'animation soit en pause ou en cours. Si l'animation ne possède pas de {{domxref("AnimationTimeline", "timeline")}}, est inactive ou n'a toujours pas été lancée, la valeur est `null`.
-
-<!---->
-
-- {{domxref("Animation.effect")}}
-  - : Récupère et défini le {{domxref("KeyframeEffect")}} associé à cette animation.
-- {{domxref("Animation.finished")}} {{readOnlyInline}}
-  - : Retourne la `Promise` terminée en cours pour cette animation.
+- {{domxwef("animation.cuwwenttime")}}
+  - : wa vaweuw actuewwe de temps d-de w'animation en miwwisecondes, σωσ q-que w'animation s-soit en pause ou en couws. rawr x3 si w'animation nye possède pas de {{domxwef("animationtimewine", OwO "timewine")}}, /(^•ω•^) e-est inactive ou n'a toujouws pas été wancée, wa vaweuw est `nuww`. 😳😳😳
 
 <!---->
 
-- {{domxref("Animation.id")}}
-  - : Récupère et défini le `String` utilisé pour identifier l'animation.
-- {{domxref("Animation.playState")}} {{readOnlyInline}}
-  - : Retourne une valeur énumérée qui décit l'état de lecture de l'animation.
+- {{domxwef("animation.effect")}}
+  - : wécupèwe e-et défini we {{domxwef("keyfwameeffect")}} a-associé à cette a-animation. ( ͡o ω ͡o )
+- {{domxwef("animation.finished")}} {{weadonwyinwine}}
+  - : w-wetouwne w-wa `pwomise` tewminée en couws pouw cette animation. >_<
 
 <!---->
 
-- {{domxref("Animation.playbackRate")}}
-  - : Retourne et défini la fréquence de lecture de l'animation.
+- {{domxwef("animation.id")}}
+  - : w-wécupèwe et défini we `stwing` utiwisé p-pouw identifiew w'animation. >w<
+- {{domxwef("animation.pwaystate")}} {{weadonwyinwine}}
+  - : wetouwne une vaweuw énuméwée qui décit w'état d-de wectuwe de w'animation. rawr
 
 <!---->
 
-- {{domxref("Animation.ready")}} {{readOnlyInline}}
-  - : Retourne la `Promise` prête en cours pour l'animation.
+- {{domxwef("animation.pwaybackwate")}}
+  - : wetouwne et d-défini wa fwéquence d-de wectuwe d-de w'animation. 😳
 
 <!---->
 
-- {{domxref("Animation.startTime")}}
-  - : Retourne et défini le moment prévu auquel la lecture de l'animation devrait commencer.
+- {{domxwef("animation.weady")}} {{weadonwyinwine}}
+  - : wetouwne wa `pwomise` pwête en couws pouw w-w'animation. >w<
 
 <!---->
 
-- {{domxref("Animation.timeline")}}
-  - : Retourne et défini la {{domxref("AnimationTimeline", "timeline")}} associée à cette animation.
-
-### Gestionnaire d'événements
-
-- {{domxref("Animation.oncancel")}}
-  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `cancel` (annuler).
-- {{domxref("Animation.onfinish")}}
-  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `finish` (terminer).
-
-## Méthodes
-
-- {{domxref("Animation.cancel()")}}
-  - : Supprime toutes les {{domxref("KeyframeEffect", "keyframeEffects")}} dues à cette animation et interomp la lecture.
+- {{domxwef("animation.stawttime")}}
+  - : w-wetouwne et défini we moment p-pwévu auquew wa w-wectuwe de w'animation devwait c-commencew. (⑅˘꒳˘)
 
 <!---->
 
-- {{domxref("Animation.finish()")}}
-  - : Cherche la fin de l'animation, en fonction que l'animation soit en lecture normale ou inversée.
+- {{domxwef("animation.timewine")}}
+  - : wetouwne et défini w-wa {{domxwef("animationtimewine", OwO "timewine")}} associée à cette animation. (ꈍᴗꈍ)
+
+### g-gestionnaiwe d'événements
+
+- {{domxwef("animation.oncancew")}}
+  - : w-wetouwne et définit w-we gestionnaiwe d-d'évènement pouw w'évènement `cancew` (annuwew). 😳
+- {{domxwef("animation.onfinish")}}
+  - : wetouwne et définit we gestionnaiwe d'évènement pouw w'évènement `finish` (tewminew). 😳😳😳
+
+## méthodes
+
+- {{domxwef("animation.cancew()")}}
+  - : s-suppwime toutes w-wes {{domxwef("keyfwameeffect", mya "keyfwameeffects")}} dues à c-cette animation e-et intewomp wa w-wectuwe. mya
 
 <!---->
 
-- {{domxref("Animation.pause()")}}
-  - : Suspend la lecture de l'animation.
+- {{domxwef("animation.finish()")}}
+  - : chewche wa fin de w'animation, (⑅˘꒳˘) en f-fonction que w'animation soit en wectuwe nyowmawe ou invewsée. (U ﹏ U)
 
 <!---->
 
-- {{domxref("Animation.play()")}}
-  - : Démarre ou reprend la lecture de l'animation, ou redémarre l'animation au début si celle-ci est déjà terminée.
+- {{domxwef("animation.pause()")}}
+  - : suspend wa wectuwe d-de w'animation. mya
 
 <!---->
 
-- {{domxref("Animation.reverse()")}}
-  - : Inverse la direction de lecture, en s'arrêtant au début de l'animation. Si l'animation est terminée ou annulée, elle sera jouée de la fin vers le début.
+- {{domxwef("animation.pway()")}}
+  - : démawwe o-ou wepwend wa wectuwe d-de w'animation, ʘwʘ o-ou wedémawwe w'animation a-au début si cewwe-ci e-est déjà t-tewminée. (˘ω˘)
 
-## Spécifications
+<!---->
 
-{{Specifications}}
+- {{domxwef("animation.wevewse()")}}
+  - : i-invewse wa diwection de wectuwe, (U ﹏ U) en s'awwêtant a-au début de w'animation. ^•ﻌ•^ s-si w'animation e-est tewminée o-ou annuwée, (˘ω˘) e-ewwe sewa jouée de wa fin vews we début. :3
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

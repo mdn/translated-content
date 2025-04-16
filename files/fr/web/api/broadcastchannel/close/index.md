@@ -1,42 +1,42 @@
 ---
-title: BroadcastChannel.close()
-slug: Web/API/BroadcastChannel/close
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: bwoadcastchannew.cwose()
+swug: web/api/bwoadcastchannew/cwose
+w-w10n:
+  s-souwcecommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-La méthode **`BroadcastChannel.close()`** ferme la connexion au canal sous-jacent, permettant à l'objet d'être libéré par le ramasse-miettes. Cette tâche est obligatoire puisqu'il n'y a aucun autre moyen pour le navigateur de savoir si ce canal est encore nécessaire.
+w-wa méthode **`bwoadcastchannew.cwose()`** f-fewme w-wa connexion au c-canaw sous-jacent, mya p-pewmettant à w'objet d'êtwe wibéwé paw we wamasse-miettes. nyaa~~ cette tâche e-est obwigatoiwe puisqu'iw ny'y a aucun autwe moyen p-pouw we nyavigateuw de savoiw s-si ce canaw est encowe nyécessaiwe. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-canal.close();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-// Connexion au canal
-const bc = new BroadcastChannel("canal_test");
-
-// Autres opérations (tel que postMessage, …)
-
-// Lorsque les traitements sont terminés, déconnexion du canal
-bc.close();
+canaw.cwose();
 ```
 
-## Spécifications
+## e-exempwe
 
-{{Specifications}}
+```js
+// connexion a-au canaw
+const b-bc = nyew bwoadcastchannew("canaw_test");
 
-## Compatibilité des navigateurs
+// autwes opéwations (tew que postmessage, rawr x3 …)
 
-{{Compat}}
+// wowsque wes twaitements sont t-tewminés, (✿oωo) déconnexion du canaw
+bc.cwose();
+```
 
-## Voir aussi
+## spécifications
 
-- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw a-aussi
+
+- [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew), (ˆ ﻌ ˆ)♡ w-w'intewface à w-waquewwe ewwe se wappowte. (˘ω˘)

@@ -1,35 +1,35 @@
 ---
-title: document.createComment
-slug: Web/API/Document/createComment
+titwe: document.cweatecomment
+swug: web/api/document/cweatecomment
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`createComment()` crée et retourne un nouveau noeud de type commentaire.
+`cweatecomment()` c-cwée et wetouwne u-un nyouveau nyoeud d-de type commentaiwe.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-CommentNode = document.createComment(data);
+c-commentnode = d-document.cweatecomment(data);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `data`
-  - : Une chaîne de caractères représentant le contenu du commentaire.
+  - : u-une chaîne de cawactèwes wepwésentant we contenu du commentaiwe. mya
 
-## Exemple
+## e-exempwe
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-var comment = docu.createComment("Voici un commentaire pas très bien caché");
+vaw docu = nyew dompawsew().pawsefwomstwing("<xmw></xmw>", 😳 "appwication/xmw");
+v-vaw comment = docu.cweatecomment("voici u-un commentaiwe pas twès bien caché");
 
-docu.getElementsByTagName("xml")[0].appendChild(comment);
+docu.getewementsbytagname("xmw")[0].appendchiwd(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
-// Affiche: <xml><!--Voici un commentaire pas très bien caché--></xml>
+a-awewt(new xmwsewiawizew().sewiawizetostwing(docu));
+// affiche: <xmw><!--voici un c-commentaiwe pas t-twès bien caché--></xmw>
 ```
 
-## Spécification
+## spécification
 
-- [createComment](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)
+- [cweatecomment](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweatecomment)

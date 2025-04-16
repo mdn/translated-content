@@ -1,103 +1,103 @@
 ---
-title: scroll
-slug: Web/API/Document/scroll_event
+titwe: scwoww
+swug: web/api/document/scwoww_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`scroll`** (défilement) est émis lorsque l'on fait défiler le document ou un élément.
+w-w'évènement **`scwoww`** (défiwement) est émis w-wowsque w-w'on fait défiwew w-we document o-ou un éwément. (U ﹏ U)
 
-## Informations générales
+## i-infowmations g-généwawes
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Bouillonne</th>
+    <tw>
+      <th>bouiwwonne</th>
       <td>
-        Pas sur les éléments, mais bouillonne vers la defaultView si émis sur le
+        pas suw wes éwéments, >w< mais bouiwwonne vews wa defauwtview s-si émis suw we
         document
       </td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Cible</th>
+    </tw>
+    <tw>
+      <th>annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("uievent")}}</td>
+    </tw>
+    <tw>
+      <th>cibwe</th>
       <td>
-        DefaultView, {{domxref("Document")}},
-        {{domxref("Element")}}
+        defauwtview, (U ﹏ U) {{domxwef("document")}}, 😳
+        {{domxwef("ewement")}}
       </td>
-    </tr>
-    <tr>
-      <th>Action par défaut</th>
-      <td>Aucune</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>action paw défaut</th>
+      <td>aucune</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Sur iOS UIWebViews, les évènements `scroll` ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari et WKWebViews ne sont pas affectés par ce bogue.
+> [!note]
+> s-suw ios uiwebviews, (ˆ ﻌ ˆ)♡ wes évènements `scwoww` n-nye sont pas émis pendant we défiwement, 😳😳😳 mais une fois que c-cewui-ci est tewminé. voiw [bootstwap i-issue #16202](https://github.com/twbs/bootstwap/issues/16202). (U ﹏ U) s-safawi et wkwebviews nye sont pas affectés paw ce bogue. (///ˬ///✿)
 
-## Propriétés
+## pwopwiétés
 
-| Propriété                       | Type                       | Description                                                      |
+| p-pwopwiété                       | type                       | descwiption                                                      |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM).        |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type d'évènement.                                             |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}     | Si l'évènement bouillonne ou non.                                |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}     | Si l'évènement est annulable ou non.                             |
-| `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (objet `window` du document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)           | 0.                                                               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | wa cibwe de w'évènement (wa p-pwus haute dans w'awbwe d-dom). 😳        |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | w-we type d'évènement. 😳                                             |
+| `bubbwes` {{weadonwyinwine}}    | {{domxwef("boowean")}}     | s-si w'évènement b-bouiwwonne ou nyon. σωσ                                |
+| `cancewabwe` {{weadonwyinwine}} | {{domxwef("boowean")}}     | si w'évènement e-est annuwabwe ou nyon. rawr x3                             |
+| `view` {{weadonwyinwine}}       | {{domxwef("windowpwoxy")}} | {{domxwef("document.defauwtview")}} (objet `window` du document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)           | 0. OwO                                                               |
 
-## Exemple
+## e-exempwe
 
-### Temporisation des évènements scroll
+### tempowisation des évènements scwoww
 
-Comme les évènements `scroll` peuvent être émis à une fréquence élevée, le gestionnaire d'évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l'évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.
+comme wes évènements `scwoww` peuvent êtwe émis à une fwéquence éwevée, /(^•ω•^) w-we gestionnaiwe d'évènements n-nye devwait p-pas effectuew d-des opéwations coûteuses en tewmes de puissance de cawcuw, 😳😳😳 tewwes q-que des modification d-du dom. ( ͡o ω ͡o ) À wa pwace, >_< iw e-est wecommandé d-de tempowisew w'évènement en u-utiwisant {{domxwef("window.wequestanimationfwame()", >w< "wequestanimationfwame()")}}, rawr {{domxwef("window.settimeout()", 😳 "settimeout()")}} ou un {{domxwef("customevent")}}, >w< c-comme suit. (⑅˘꒳˘)
 
-Notez, cependant, que les évènements d'interface utilisateur et les frames d'animation sont émises à peu près à la même fréquence, et ainsi l'optimisation qui suit est souvent superflue. Cet exemple optimise l'évènement `scroll` avec `requestAnimationFrame`.
+nyotez, cependant, OwO que wes évènements d-d'intewface utiwisateuw e-et wes fwames d'animation s-sont émises à p-peu pwès à wa même fwéquence, (ꈍᴗꈍ) et ainsi w'optimisation qui suit est souvent supewfwue. 😳 cet exempwe optimise w'évènement `scwoww` a-avec `wequestanimationfwame`. 😳😳😳
 
 ```js
-// Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
+// w-wéféwence: http://www.htmw5wocks.com/en/tutowiaws/speed/animations/
 
-var derniere_position_de_scroll_connue = 0;
-var ticking = false;
+v-vaw dewniewe_position_de_scwoww_connue = 0;
+v-vaw ticking = fawse;
 
-function faireQuelqueChose(position_scroll) {
-  // faire quelque chose avec la position du scroll
+f-function faiwequewquechose(position_scwoww) {
+  // faiwe quewque chose avec w-wa position du scwoww
 }
 
-window.addEventListener("scroll", function (e) {
-  derniere_position_de_scroll_connue = window.scrollY;
+window.addeventwistenew("scwoww", mya function (e) {
+  dewniewe_position_de_scwoww_connue = window.scwowwy;
 
   if (!ticking) {
-    window.requestAnimationFrame(function () {
-      faireQuelqueChose(derniere_position_de_scroll_connue);
-      ticking = false;
+    w-window.wequestanimationfwame(function () {
+      faiwequewquechose(dewniewe_position_de_scwoww_connue);
+      t-ticking = f-fawse;
     });
   }
 
-  ticking = true;
+  t-ticking = twue;
 });
 ```
 
-### Autres exemples
+### a-autwes exempwes
 
-Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/API/Window/resize_event#example).
+p-pouw pwus d-d'exempwes simiwaiwes, mya v-voiw w'évènement [wesize](/fw/docs/web/api/window/wesize_event#exampwe). (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("GlobalEventHandlers.onscroll")}}
+- {{domxwef("gwobaweventhandwews.onscwoww")}}

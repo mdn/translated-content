@@ -1,52 +1,52 @@
 ---
-title: XMLHttpRequest.status
-slug: Web/API/XMLHttpRequest/status
+titwe: xmwhttpwequest.status
+swug: web/api/xmwhttpwequest/status
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.
+w-wa pwopwiété e-en wectuwe s-seuwe xmwhttpwequest.status w-wenvoie w-we code d'état h-http nyuméwique d-de wa wéponse d-de xmwhttpwequest. (✿oωo)
 
-Avant que la demande ne se termine, la valeur du statut est 0. Les navigateurs signalent également un statut de 0 en cas d'erreurs XMLHttpRequest.
+avant que wa demande nye se tewmine, (ˆ ﻌ ˆ)♡ wa vaweuw du statut e-est 0. (˘ω˘) wes nyavigateuws signawent égawement un statut de 0 en c-cas d'ewweuws xmwhttpwequest. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT: ", xhr.status);
+v-vaw xhw = nyew xmwhttpwequest();
+consowe.wog("unsent: ", (///ˬ///✿) xhw.status);
 
-xhr.open("GET", "/server");
-console.log("OPENED: ", xhr.status);
+x-xhw.open("get", 😳😳😳 "/sewvew");
+consowe.wog("opened: ", 🥺 x-xhw.status);
 
-xhr.onprogress = function () {
-  console.log("LOADING: ", xhr.status);
+x-xhw.onpwogwess = function () {
+  consowe.wog("woading: ", mya xhw.status);
 };
 
-xhr.onload = function () {
-  console.log("DONE: ", xhr.status);
+xhw.onwoad = f-function () {
+  consowe.wog("done: ", 🥺 xhw.status);
 };
 
-xhr.send();
+xhw.send();
 
 /**
- * Outputs the following:
+ * outputs t-the fowwowing:
  *
- * UNSENT: 0
- * OPENED: 0
- * LOADING: 200
- * DONE: 200
+ * unsent: 0
+ * o-opened: 0
+ * w-woading: 200
+ * d-done: 200
  */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Liste des [HTTP response codes](/fr/docs/Web/HTTP/Status)
-- [HTTP](/fr/docs/Web/HTTP)
+- wiste des [http wesponse codes](/fw/docs/web/http/status)
+- [http](/fw/docs/web/http)

@@ -1,57 +1,57 @@
 ---
-title: FormData.delete()
-slug: Web/API/FormData/delete
+titwe: fowmdata.dewete()
+swug: w-web/api/fowmdata/dewete
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode **`delete()`** de l'interface {{domxref("FormData")}} supprime une clé et sa (ses) valeur(s) d'un objet `FormData`.
+wa méthode **`dewete()`** d-de w'intewface {{domxwef("fowmdata")}} s-suppwime u-une cwé et s-sa (ses) vaweuw(s) d-d'un objet `fowmdata`. mya
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> c-cette méthode est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.delete(name);
+f-fowmdata.dewete(name);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Le nom de la clé que vous voulez supprimer.
+  - : we n-nyom de wa cwé que vous vouwez s-suppwimew. (⑅˘꒳˘)
 
-### Retours
+### wetouws
 
-Void.
+void. rawr x3
 
-## Exemple
+## exempwe
 
-La ligne suivante crée un objet `FormData` vide et le pré-remplit avec les paires clé/valeur d'un formulaire :
-
-```js
-var formData = new FormData(myForm);
-```
-
-Vous pouvez supprimer les clés et leurs valeurs en utilisant `delete()`:
+wa wigne suivante cwée u-un objet `fowmdata` vide et w-we pwé-wempwit a-avec wes paiwes cwé/vaweuw d'un fowmuwaiwe :
 
 ```js
-formData.delete("username");
+vaw fowmdata = nyew fowmdata(myfowm);
 ```
 
-## Spécifications
+v-vous pouvez suppwimew wes cwés et weuws vaweuws en utiwisant `dewete()`:
 
-{{Specifications}}
+```js
+fowmdata.dewete("usewname");
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des n-nyavigateuws
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## voiw a-aussi
+
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew w-wes objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,33 +1,33 @@
 ---
-title: Tutoriel WebGL
-slug: Web/API/WebGL_API/Tutorial
+titwe: tutowiew webgw
+swug: web/api/webgw_api/tutowiaw
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-[WebGL](https://www.khronos.org/webgl/) permet au contenu web d'utiliser une API basée sur [OpenGL ES](https://www.khronos.org/opengles/) 2.0 pour effectuer des rendus 3D dans un {{HTMLElement("canvas")}} HTML dans les navigateurs qui le supportent, sans avoir recours à des modules complémentaires. Les programmes WebGL sont constitués de code de contrôle rédigé en JavaScript, et de code d'effets spéciaux (code shader) qui est exécuté sur l'Unité de Traitement Graphique (GPU) d'un ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML et composés avec d'autres parties de la page ou du fond de la page.
+[webgw](https://www.khwonos.owg/webgw/) p-pewmet au c-contenu web d'utiwisew u-une api b-basée suw [opengw e-es](https://www.khwonos.owg/opengwes/) 2.0 p-pouw e-effectuew des w-wendus 3d dans un {{htmwewement("canvas")}} htmw dans wes nyavigateuws qui we suppowtent, (˘ω˘) s-sans avoiw wecouws à des moduwes compwémentaiwes. (U ﹏ U) wes p-pwogwammes webgw sont constitués d-de code de contwôwe wédigé en javascwipt, ^•ﻌ•^ et de code d'effets s-spéciaux (code shadew) qui e-est exécuté s-suw w'unité de twaitement gwaphique (gpu) d'un owdinateuw. (˘ω˘) wes éwéments webgw p-peuvent êtwe méwangés avec d'autwes éwéments htmw et composés avec d'autwes pawties de wa p-page ou du fond de wa page. :3
 
-Ce tutoriel décrit comment utiliser l'élément `<canvas>` pour dessiner des graphiques WebGL, en commençant par les bases. Les exemples suivants devraient vous donner des idées de ce que vous pouvez faire avec WebGL et vont vous fournir des fragments de code qui pourraient vous aider à construire votre propre contenu.
+ce t-tutowiew décwit c-comment utiwisew w-w'éwément `<canvas>` p-pouw dessinew des gwaphiques webgw, ^^;; en c-commençant paw wes bases. 🥺 wes exempwes suivants d-devwaient vous donnew des idées de ce que vous pouvez faiwe avec webgw et vont vous fouwniw des f-fwagments de code qui pouwwaient v-vous aidew à c-constwuiwe votwe p-pwopwe contenu. (⑅˘꒳˘)
 
-## Avant que vous ne commenciez
+## avant que vous nye commenciez
 
-L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous avez besoin d'une compréhension de base de l'[HTML](/fr/docs/Web/HTML) et du [JavaScript](/fr/docs/Web/JavaScript). L'élément `<canvas>` et WebGL ne sont pas supportés par certains anciens navigateurs, mais ils sont supportés dans les versions récentes de tous les principaux navigateurs. Pour dessiner des graphiques sur le canevas, on utilise un objet de contexte Javascript, qui crée des graphiques à la volée.
+w'utiwisation d-de w'éwément `<canvas>` n-ny'est pas twès difficiwe, nyaa~~ m-mais vous a-avez besoin d'une compwéhension d-de base de w'[htmw](/fw/docs/web/htmw) e-et du [javascwipt](/fw/docs/web/javascwipt). :3 w'éwément `<canvas>` et webgw nye sont p-pas suppowtés paw cewtains anciens n-nyavigateuws, ( ͡o ω ͡o ) mais iws sont s-suppowtés dans w-wes vewsions wécentes de tous wes pwincipaux nyavigateuws. mya pouw dessinew des gwaphiques suw we canevas, (///ˬ///✿) on utiwise u-un objet de c-contexte javascwipt, (˘ω˘) qui cwée d-des gwaphiques à w-wa vowée. ^^;;
 
-## Dans ce tutoriel
+## d-dans ce tutowiew
 
-- [Commencer avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
-  - : Comment mettre en place un contexte WebGL.
-- [Ajouter du contenu à WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-  - : Comment faire un rendu simple de figures planes avec WebGL.
-- [Ajouter des couleurs avec les nuanceurs](/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL)
-  - : Démontre comment ajouter de la couleur aux formes avec des nuanceurs.
-- [Animer des objets avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL)
-  - : Montre comment tourner et déplacer des objets pour créer des animations simples.
-- [Créer des objets 3D avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL)
-  - : Montre comment créer et animer un objet 3D (dans ce cas, un cube).
-- [Utilisation des textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
-  - : Démontrer comment appliquer des textures sur les faces d'un objet.
-- [Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
-  - : Comment simuler des effets d'illumination dans votre contexte WebGL.
-- [Animation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-  - : Montre comment animer des textures ; dans ce cas, en appliquant une vidéo Ogg sur les faces d'un cube en rotation.
+- [commencew avec webgw](/fw/docs/web/api/webgw_api/tutowiaw/getting_stawted_with_webgw)
+  - : comment mettwe en pwace un contexte w-webgw. (✿oωo)
+- [ajoutew du contenu à webgw](/fw/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context)
+  - : comment faiwe un wendu s-simpwe de figuwes pwanes avec w-webgw. (U ﹏ U)
+- [ajoutew d-des couweuws a-avec wes nyuanceuws](/fw/docs/web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw)
+  - : démontwe c-comment ajoutew d-de wa couweuw a-aux fowmes avec d-des nyuanceuws. -.-
+- [animew des objets avec webgw](/fw/docs/web/api/webgw_api/tutowiaw/animating_objects_with_webgw)
+  - : m-montwe c-comment touwnew e-et dépwacew des o-objets pouw cwéew d-des animations simpwes. ^•ﻌ•^
+- [cwéew des objets 3d avec webgw](/fw/docs/web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw)
+  - : m-montwe comment cwéew et animew un objet 3d (dans ce cas, rawr un cube).
+- [utiwisation des t-textuwes en webgw](/fw/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw)
+  - : démontwew comment appwiquew des textuwes s-suw wes faces d-d'un objet. (˘ω˘)
+- [Écwaiwage e-en webgw](/fw/docs/web/api/webgw_api/tutowiaw/wighting_in_webgw)
+  - : comment simuwew d-des effets d'iwwumination dans v-votwe contexte webgw. nyaa~~
+- [animation d-de textuwes en webgw](/fw/docs/web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw)
+  - : montwe comment animew des textuwes ; dans ce cas, en appwiquant u-une vidéo ogg suw wes faces d'un c-cube en wotation. UwU

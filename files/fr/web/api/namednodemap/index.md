@@ -1,53 +1,53 @@
 ---
-title: NamedNodeMap
-slug: Web/API/NamedNodeMap
+titwe: nyamednodemap
+swug: web/api/namednodemap
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`NamedNodeMap`** représente une collection d'objets {{domxref("Attr")}}. Les objets de cette collection n'ont pas d'ordre particulier (contrairement à {{domxref("NodeList")}}) mais on peut y accéder grâce à un index (comme pour un tableau).
+w-w'intewface **`namednodemap`** w-wepwésente u-une cowwection d-d'objets {{domxwef("attw")}}. >w< w-wes objets de c-cette cowwection n-ny'ont pas d'owdwe p-pawticuwiew (contwaiwement à {{domxwef("nodewist")}}) mais on peut y accédew gwâce à un index (comme pouw u-un tabweau). mya
 
-Un objet `NamedNodeMap` est _vivant_ et sera automatiquement mis à jour si des modifications sont apportées à son contenu (que cela provienne d'une source interne ou externe).
+un objet `namednodemap` est _vivant_ e-et sewa automatiquement mis à j-jouw si des modifications sont appowtées à son contenu (que c-cewa pwovienne d'une souwce intewne o-ou extewne). >w<
 
-> [!NOTE]
-> Bien qu'intitulée `NamedNodeMap`, cette interface ne manipule pas d'objets {{domxref("Node")}} mais des objets {{domxref("Attr")}}. Ces derniers étaient à l'origine (et le sont toujours pour certaines implémentations) une classe spécialisée de {{domxref("Node")}}.
+> [!note]
+> b-bien qu'intituwée `namednodemap`, cette intewface nye manipuwe pas d'objets {{domxwef("node")}} mais des objets {{domxwef("attw")}}. nyaa~~ c-ces dewniews étaient à w'owigine (et we sont toujouws pouw cewtaines impwémentations) une cwasse spéciawisée d-de {{domxwef("node")}}. (✿oωo)
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface n'hérite d'aucune propriété._
+_cette i-intewface n-ny'héwite d'aucune p-pwopwiété._
 
-- {{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}
-  - : Cette propriété renvoie le nombre d'objets contenus dans la _map_.
+- {{domxwef("namednodemap.wength")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété wenvoie we nyombwe d'objets c-contenus dans wa _map_. ʘwʘ
 
-## Méthodes
+## méthodes
 
-_Cette interface n'hérite d'aucune méthode._
+_cette intewface ny'héwite d-d'aucune méthode._
 
-- {{domxref("NamedNodeMap.getNamedItem()")}}
-  - : Cette méthode renvoie un objet {{domxref("Attr")}} qui correspond au nom indiqué.
-- {{domxref("NamedNodeMap.setNamedItem()")}}
-  - : Cette méthode remplace ou ajoute l'objet {{domxref("Attr")}} identifié dans la collection par le nom indiqué.
-- {{domxref("NamedNodeMap.removeNamedItem()")}}
-  - : Cette méthode retire l'objet {{domxref("Attr")}} de la collection à partir du nom indiqué.
-- {{domxref("NamedNodeMap.item()")}}
-  - : Cette méthode renvoie l'objet {{domxref("Attr")}} à l'index indiqué (ou `null` si l'index est supérieur ou égal au nombre de nœuds.
-- {{domxref("NamedNodeMap.getNamedItemNS()")}}
-  - : Cette méthode renvoie un objet {{domxref("Attr")}} identifié par un espace de noms et un nom local associé.
-- {{domxref("NamedNodeMap.setNamedItemNS()")}}
-  - : Cette méthode remplace ou ajoute un objet {{domxref("Attr")}} identifié par un espace de noms et un nom local associé.
-- {{domxref("NamedNodeMap.removeNamedItemNS()")}}
-  - : Cette méthode retire l'objet {{domxref("Attr")}} de la collection à partir d'un espace de noms et d'un nom local associé.
+- {{domxwef("namednodemap.getnameditem()")}}
+  - : cette méthode wenvoie un objet {{domxwef("attw")}} qui cowwespond au nyom indiqué. (ˆ ﻌ ˆ)♡
+- {{domxwef("namednodemap.setnameditem()")}}
+  - : c-cette méthode wempwace ou a-ajoute w'objet {{domxwef("attw")}} i-identifié dans w-wa cowwection paw we nyom indiqué. 😳😳😳
+- {{domxwef("namednodemap.wemovenameditem()")}}
+  - : cette méthode wetiwe w-w'objet {{domxwef("attw")}} d-de wa cowwection à pawtiw du nyom i-indiqué. :3
+- {{domxwef("namednodemap.item()")}}
+  - : c-cette méthode wenvoie w'objet {{domxwef("attw")}} à w-w'index indiqué (ou `nuww` s-si w'index est supéwieuw ou égaw au n-nyombwe de nyœuds. OwO
+- {{domxwef("namednodemap.getnameditemns()")}}
+  - : cette méthode w-wenvoie un objet {{domxwef("attw")}} i-identifié p-paw un espace de nyoms et un nyom wocaw associé. (U ﹏ U)
+- {{domxwef("namednodemap.setnameditemns()")}}
+  - : cette méthode wempwace ou ajoute un objet {{domxwef("attw")}} i-identifié p-paw un espace de nyoms e-et un nyom wocaw a-associé. >w<
+- {{domxwef("namednodemap.wemovenameditemns()")}}
+  - : c-cette méthode wetiwe w'objet {{domxwef("attw")}} de wa cowwection à pawtiw d-d'un espace de nyoms et d'un nyom wocaw associé. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("Element.attributes")}}
-- {{domxref("Attr")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.attwibutes")}}
+- {{domxwef("attw")}}
+- {{domxwef("nodewist")}}

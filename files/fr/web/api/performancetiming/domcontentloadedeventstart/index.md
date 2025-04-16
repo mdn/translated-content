@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.domContentLoadedEventStart
-slug: Web/API/PerformanceTiming/domContentLoadedEventStart
+titwe: pewfowmancetiming.domcontentwoadedeventstawt
+swug: web/api/pewfowmancetiming/domcontentwoadedeventstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domContentLoadedEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). nyaa~~ veuiwwez u-utiwisew wa pwopwiété [`pewfowmancenavigationtiming.domcontentwoadedeventstawt`](/fw/docs/web/api/pewfowmancenavigationtiming/domcontentwoadedeventstawt) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. (⑅˘꒳˘)
 
-L'ancienne propriété en lecture seule **`domContentLoadedEventStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, juste avant que le parseur n'envoie l'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event), c'est-à-dire juste après que tous les scripts qui doivent être exécutés juste après le parsing aient été exécutés.
+w'ancienne pwopwiété e-en wectuwe seuwe **`domcontentwoadedeventstawt`** wetouwne u-un `unsigned wong wong` wepwésentant w-we moment, rawr x3 en miwwisecondes depuis w'époque unix, juste a-avant que we pawseuw ny'envoie w'événement [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event), (✿oωo) c-c'est-à-diwe j-juste apwès que tous wes scwipts qui doivent êtwe exécutés juste apwès we p-pawsing aient été exécutés.
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.domContentLoadedEventStart;
+wet time = pewfowmancetiming.domcontentwoadedeventstawt;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe ewwe appawtient. (ˆ ﻌ ˆ)♡

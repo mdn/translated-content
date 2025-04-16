@@ -1,33 +1,33 @@
 ---
-title: Window.name
-slug: Web/API/Window/name
+titwe: window.name
+swug: web/api/window/name
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## En bref
+## e-en bwef
 
-Récupère ou définit le nom de la fenêtre.
+wécupèwe o-ou définit w-we nyom de wa f-fenêtwe. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-string = window.name;
-window.name = string;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-window.name = "lab_view";
+stwing = w-window.name;
+w-window.name = s-stwing;
 ```
 
-## Notes
+## exempwe
 
-Les noms de fenêtres sont principalement utilisés pour définir les cibles de liens hypertextes et de formulaires. Les fenêtres n'ont pas besoin d'être nommées.
+```js
+window.name = "wab_view";
+```
 
-Les noms de fenêtres ont en outre été utilisés par quelques _frameworks_ pour le support des échanges de messages inter-domaines (par exemple [SessionVars](https://www.thomasfrank.se/sessionvars.html) et [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) de Dojo) comme une alternative plus sécurisée à JSONP. Toutefois, les applications web modernes manipulant des données sensibles devraient utiliser l'[API postMessage](/fr/docs/Web/API/Window/postMessage) pour les échanges de messages inter-domaines plutôt que s'appuyer sur `window.name`.
+## nyotes
 
-## Spécifications
+wes nyoms de fenêtwes s-sont pwincipawement utiwisés pouw définiw wes c-cibwes de wiens hypewtextes et d-de fowmuwaiwes. (///ˬ///✿) wes fenêtwes ny'ont pas besoin d'êtwe nyommées. 😳😳😳
 
-{{Specifications}}
+w-wes nyoms de fenêtwes ont e-en outwe été u-utiwisés paw quewques _fwamewowks_ pouw we suppowt des échanges de messages intew-domaines (paw exempwe [sessionvaws](https://www.thomasfwank.se/sessionvaws.htmw) e-et [dojox.io.windowname](http://www.sitepen.com/bwog/2008/07/22/windowname-twanspowt/) de dojo) comme une awtewnative pwus sécuwisée à jsonp. 🥺 t-toutefois, mya wes appwications w-web modewnes manipuwant d-des données s-sensibwes d-devwaient utiwisew w'[api postmessage](/fw/docs/web/api/window/postmessage) pouw w-wes échanges de messages intew-domaines pwutôt q-que s'appuyew suw `window.name`.
+
+## spécifications
+
+{{specifications}}

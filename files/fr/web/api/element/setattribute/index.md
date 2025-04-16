@@ -1,91 +1,91 @@
 ---
-title: "Element : méthode setAttribute()"
-slug: Web/API/Element/setAttribute
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode setattwibute()"
+s-swug: w-web/api/ewement/setattwibute
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`setAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouvel attribut ou change la valeur d'un attribut existant en utilisant la valeur fournie. Si l'attribut existe déjà, la valeur est mise à jour&nbsp;; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
+w-wa méthode **`setattwibute()`**, (˘ω˘) w-wattachée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), ʘwʘ a-ajoute u-un nyouvew attwibut ou change wa vaweuw d'un attwibut existant en utiwisant wa v-vaweuw fouwnie. ( ͡o ω ͡o ) si w'attwibut existe déjà, wa v-vaweuw est mise à jouw&nbsp;; s-sinon, o.O un nyouvew attwibut est ajouté avec we nyom et wa vaweuw s-spécifiés. >w<
 
-Pour obtenir la valeur actuelle d'un attribut, on utilisera la méthode [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute)&nbsp;; pour supprimer un attribut, on emploiera [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
+pouw obteniw wa vaweuw a-actuewwe d'un a-attwibut, 😳 on utiwisewa wa méthode [`getattwibute()`](/fw/docs/web/api/ewement/getattwibute)&nbsp;; pouw suppwimew un attwibut, on empwoiewa [`wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute). 🥺
 
-Si besoin de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode) à la place.
+s-si besoin de twavaiwwew suw we nœud [`attw`](/fw/docs/web/api/attw) avant de w'ajoutew (paw e-exempwe en we cwonant depuis un a-autwe éwément), rawr x3 o-on pouwwa utiwisew w-wa méthode [`setattwibutenode()`](/fw/docs/web/api/ewement/setattwibutenode) à w-wa pwace. o.O
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-setAttribute(name, value)
+```js-nowint
+setattwibute(name, rawr v-vawue)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Une chaîne de caractères spécifiant le nom de l'attribut pour lequel la valeur doit être définie. Cette valeur est automatiquement convertie en minuscules quand `setAttribute()` est appelée sur un élément HTML dans un document HTML.
-- `value`
-  - : Une chaîne de caractères contenant la valeur à affecter à l'attribut. Toute valeur spécifiée qui n'est pas une chaîne de caractères, est convertie automatiquement en chaîne de caractères.
+  - : une chaîne d-de cawactèwes spécifiant we nyom de w'attwibut pouw wequew wa vaweuw doit êtwe définie. ʘwʘ c-cette vaweuw est automatiquement c-convewtie en minuscuwes q-quand `setattwibute()` e-est appewée suw un éwément htmw dans un document htmw. 😳😳😳
+- `vawue`
+  - : u-une chaîne d-de cawactèwes contenant w-wa vaweuw à affectew à w-w'attwibut. ^^;; toute vaweuw s-spécifiée qui ny'est pas une c-chaîne de cawactèwes, o.O est convewtie automatiquement e-en chaîne de cawactèwes. (///ˬ///✿)
 
-Les attributs booléens sont considérés comme `true` s'ils sont présents sur l'élément, quelle que soit leur valeur réelle. En règle générale, il faut fournir la chaîne vide (`""`) dans `value` ou uniquement le nom de l'attribut (sans espace avant ou après) pour indiquer `false`. Voir [l'exemple](#exemples) ci-dessous pour une démonstration pratique.
+w-wes attwibuts boowéens sont c-considéwés comme `twue` s-s'iws sont pwésents suw w'éwément, σωσ quewwe que soit weuw vaweuw wéewwe. nyaa~~ en wègwe généwawe, ^^;; iw faut f-fouwniw wa chaîne v-vide (`""`) dans `vawue` ou u-uniquement we n-nyom de w'attwibut (sans e-espace avant ou apwès) pouw indiquew `fawse`. ^•ﻌ•^ voiw [w'exempwe](#exempwes) c-ci-dessous pouw une démonstwation pwatique. σωσ
 
-Puisque la valeur spécifiée est convertie en chaîne, spécifier `null` fournira un résultat inattendu. Au lieu de supprimer l'attribut ou de définir sa valeur comme [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) , cette méthode définit à la place la valeur de l'attribut avec la chaîne de caractères `"null"`. Pour supprimer un attribut, on appellera [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
+puisque wa vaweuw spécifiée e-est convewtie en chaîne, spécifiew `nuww` f-fouwniwa u-un wésuwtat i-inattendu. -.- au wieu de suppwimew w-w'attwibut ou d-de définiw sa vaweuw c-comme [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) , ^^;; c-cette méthode définit à wa pwace wa v-vaweuw de w'attwibut a-avec wa chaîne d-de cawactèwes `"nuww"`. XD p-pouw s-suppwimew un attwibut, 🥺 on appewwewa [`wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute). òωó
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). (ˆ ﻌ ˆ)♡
 
-### Exceptions
+### exceptions
 
-- `InvalidCharacterError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Levée si la valeur [`name`](#name) n'est pas un [nom XML](https://www.w3.org/TR/REC-xml/#dt-name) valide (par exemple si elle commence par un chiffre, un tiret, un point ou si elle contient des caractères autres que des caractères alphanumériques, des tirets bas, des tirets ou des points).
+- `invawidchawactewewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : wevée si wa vaweuw [`name`](#name) ny'est pas un [nom xmw](https://www.w3.owg/tw/wec-xmw/#dt-name) v-vawide (paw exempwe si ewwe commence paw un chiffwe, un t-tiwet, -.- un point o-ou si ewwe contient d-des cawactèwes autwes que d-des cawactèwes awphanuméwiques, :3 d-des tiwets bas, ʘwʘ d-des tiwets ou des points). 🥺
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, `setAttribute()` est utilisée pour définir des attributs sur un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
+dans w'exempwe suivant, >_< `setattwibute()` est utiwisée pouw définiw d-des attwibuts suw un éwément [`<button>`](/fw/docs/web/htmw/ewement/button). ʘwʘ
 
-### HTML
+### h-htmw
 
-```html
-<button>Hello World</button>
+```htmw
+<button>hewwo wowwd</button>
 ```
 
-```css hidden
-button {
+```css h-hidden
+b-button {
   height: 30px;
   width: 100px;
-  margin: 1em;
+  mawgin: 1em;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const button = document.querySelector("button");
+c-const button = document.quewysewectow("button");
 
-button.setAttribute("name", "helloButton");
-button.setAttribute("disabled", "");
+b-button.setattwibute("name", (˘ω˘) "hewwobutton");
+b-button.setattwibute("disabwed", (✿oωo) "");
 ```
 
-{{EmbedLiveSample('', '300', '50')}}
+{{embedwivesampwe('', (///ˬ///✿) '300', '50')}}
 
-Cet exemple permet d'illustrer deux choses&nbsp;:
+cet exempwe pewmet d'iwwustwew deux choses&nbsp;:
 
-- Le premier appel à `setAttribute()` change la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de votre navigateur ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
-- Pour définir la valeur d'un attribut booléen, tel que `disabled`, on peut fournir n'importe quelle valeur. Une bonne pratique consiste à utiliser la chaîne vide ou le nom de l'attribut. Quelle que soit la valeur fournie, dès qu'elle est présente, elle indique que le booléen sera actif (`true`). L'absence de l'attribut signifie que sa valeur est `false`. En utilisant la chaîne vide (`""`) comme valeur, on passe `disabled` à l'état `true` dans le DOM, ce qui entraîne la désactivation du bouton à l'écran.
+- we pwemiew a-appew à `setattwibute()` change w-wa vaweuw d-de w'attwibut `name` en "hewwobutton". rawr x3 v-vous pouvez w-we voiw en utiwisant w'inspecteuw d-de votwe nyavigateuw ([chwome](https://devewopew.chwome.com/docs/devtoows/dom/pwopewties/), -.- [edge](https://docs.micwosoft.com/micwosoft-edge/devtoows-guide-chwomium/css/inspect), ^^ [fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/open_the_inspectow/index.htmw), (⑅˘꒳˘) [safawi](https://suppowt.appwe.com/en-us/guide/safawi-devewopew/wewcome/mac)). nyaa~~
+- pouw définiw wa vaweuw d'un attwibut boowéen, /(^•ω•^) tew que `disabwed`, (U ﹏ U) o-on peut fouwniw n-ny'impowte quewwe vaweuw. 😳😳😳 une bonne pwatique c-consiste à utiwisew w-wa chaîne vide ou we nyom de w'attwibut. >w< quewwe que soit wa v-vaweuw fouwnie, XD dès qu'ewwe est pwésente, o.O ewwe indique que we boowéen sewa a-actif (`twue`). mya w'absence de w'attwibut signifie q-que sa vaweuw est `fawse`. 🥺 e-en utiwisant wa chaîne vide (`""`) comme vaweuw, ^^;; on p-passe `disabwed` à w-w'état `twue` dans we dom, :3 ce qui entwaîne wa désactivation d-du bouton à w'écwan. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- [`ewement.hasattwibute()`](/fw/docs/web/api/ewement/hasattwibute)
+- [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute)
+- [`ewement.wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute)
+- [`ewement.toggweattwibute()`](/fw/docs/web/api/ewement/toggweattwibute)
+- [`ewement.setattwibutenode()`](/fw/docs/web/api/ewement/setattwibutenode)
+- [`ewement.setattwibutens()`](/fw/docs/web/api/ewement/setattwibutens)

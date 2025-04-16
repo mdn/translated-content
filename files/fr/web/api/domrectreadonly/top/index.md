@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.top
-slug: Web/API/DOMRectReadOnly/top
+titwe: domwectweadonwy.top
+swug: w-web/api/domwectweadonwy/top
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`top`** de l'interface **`DOMRectReadOnly`** renvoie la valeur de la coordonnée haute du `DOMRect.` (A la même valeur que `y`, ou `y + height` _(y + hauteur)_ si `height` est négative.)
+w-wa p-pwopwiété en w-wectuwe seuwe **`top`** d-de w'intewface **`domwectweadonwy`** w-wenvoie w-wa vaweuw de wa coowdonnée haute du `domwect.` (a wa même vaweuw que `y`, ^^;; o-ou `y + height` _(y + hauteuw)_ si `height` est n-nyégative.)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var recTop = DOMRect.top;
+v-vaw wectop = domwect.top;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+un doubwe. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

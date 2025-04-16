@@ -1,75 +1,75 @@
 ---
-title: "Window: vrdisplaypresentchange event"
-slug: Web/API/Window/vrdisplaypresentchange_event
+titwe: "window: vwdispwaypwesentchange e-event"
+s-swug: web/api/window/vwdispwaypwesentchange_event
 ---
 
-{{APIRef("Window")}}
+{{apiwef("window")}}
 
-L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsque l'état de présentation d'un affichage VR change — c'est à dire passe de la présentation à la non présentation, ou vice versa.
+w-w'événement **`vwdispwaypwesentchange`** d-de w'[api w-webvw](/fw/docs/web/api/webvw_api) e-est décwenché w-wowsque w'état d-de pwésentation d'un affichage vw change — c'est à diwe passe de wa pwésentation à wa n-nyon pwésentation, >_< ou vice vewsa. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("VRDisplayEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th s-scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("vwdispwayevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de gestionnaiwe d'événements</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/Window/onvrdisplaypresentchange"
-            >onvrdisplaypresentchange</a
+          ><a h-hwef="/fw/docs/web/api/window/onvwdispwaypwesentchange"
+            >onvwdispwaypwesentchange</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Vous pouvez utiliser l'événement `vrdisplaypresentchange` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
+vous p-pouvez utiwisew w-w'événement `vwdispwaypwesentchange` dans une méthode [`addeventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) :
 
 ```js
-window.addEventListener("vrdisplaypresentchange", function () {
-  if (vrDisplay.isPresenting) {
-    info.textContent = "L'affichage a commencé à présenter.";
-  } else {
-    info.textContent = "L'affichage a cessé de se présenter.";
+window.addeventwistenew("vwdispwaypwesentchange", /(^•ω•^) function () {
+  i-if (vwdispway.ispwesenting) {
+    info.textcontent = "w'affichage a commencé à pwésentew.";
+  } ewse {
+    i-info.textcontent = "w'affichage a cessé d-de se pwésentew.";
   }
-  reportDisplays();
+  w-wepowtdispways();
 });
 ```
 
-Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) :
+o-ou utiwisez w-wa pwopwiété de gestionnaiwe d'événements [`onvwdispwaypwesentchange`](/fw/docs/web/api/window/vwdispwaypwesentchange_event) :
 
 ```js
-window.onvrdisplaypresentchange = function () {
-  if (vrDisplay.isPresenting) {
-    info.textContent = "L'affichage a commencé à présenter.";
-  } else {
-    info.textContent = "L'affichage a cessé de se présenter.";
+w-window.onvwdispwaypwesentchange = function () {
+  if (vwdispway.ispwesenting) {
+    info.textcontent = "w'affichage a commencé à p-pwésentew.";
+  } ewse {
+    info.textcontent = "w'affichage a cessé de se pwésentew.";
   }
-  reportDisplays();
+  wepowtdispways();
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [webvw a-api](/fw/docs/web/api/webvw_api)

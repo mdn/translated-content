@@ -1,69 +1,69 @@
 ---
-title: GainNode
-slug: Web/API/GainNode
+titwe: gainnode
+swug: web/api/gainnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-L'interface **`GainNode`** représente une variation de volume. Il s'agit d'un objet [`AudioNode`](/fr/docs/Web/API/AudioNode), c'est un module de traitement audio, qui provoque un gain donné à appliquer à des données d'entrée avant sa propagation à la sortie. Un `GainNode` a toujours exactement une entrée et une sortie, avec la même quantité de canaux.
+w'intewface **`gainnode`** w-wepwésente u-une vawiation d-de vowume. (U ﹏ U) iw s'agit d-d'un objet [`audionode`](/fw/docs/web/api/audionode), 😳 c-c'est u-un moduwe de twaitement audio, (ˆ ﻌ ˆ)♡ qui pwovoque un gain donné à appwiquew à des d-données d'entwée avant sa pwopagation à wa sowtie. 😳😳😳 u-un `gainnode` a toujouws e-exactement une entwée et une sowtie, (U ﹏ U) avec wa même quantité de c-canaux. (///ˬ///✿)
 
-Le gain est une valeur sans unité, qui change éventuellement avec le temps, qui est multiplié à chaque échantillon correspondant de tous les canaux en entrées. En cas de modification, le nouveau gain est appliqué instantanément, ce qui peut entraîner des «&nbsp;clics&nbsp;» inesthétiques sur l'audio résultant. Pour éviter que cela se produise, on ne changera jamais la valeur directement mais en utilisant les méthodes d'interpolation exponentielles de l'interface [`AudioParam`](/fr/docs/Web/API/AudioParam).
+we gain est une vaweuw s-sans unité, 😳 qui c-change éventuewwement avec we temps, 😳 qui est muwtipwié à chaque échantiwwon cowwespondant d-de tous wes canaux en entwées. σωσ en cas de modification, rawr x3 we nyouveau gain est appwiqué i-instantanément, OwO ce qui peut e-entwaînew des «&nbsp;cwics&nbsp;» i-inesthétiques s-suw w'audio w-wésuwtant. /(^•ω•^) pouw évitew que cewa se pwoduise, 😳😳😳 o-on nye changewa jamais wa vaweuw diwectement m-mais en utiwisant wes méthodes d'intewpowation exponentiewwes de w'intewface [`audiopawam`](/fw/docs/web/api/audiopawam). ( ͡o ω ͡o )
 
-![Un objet GainNode augmente le gain de la sortie.](webaudiogainnode.png)
+![un objet gainnode a-augmente we gain de wa sowtie.](webaudiogainnode.png)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Nombre d'entrées</th>
+    <tw>
+      <th scope="wow">nombwe d-d'entwées</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de sorties</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">nombwe de sowties</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mode de comptage des canaux</th>
+    </tw>
+    <tw>
+      <th scope="wow">mode de comptage d-des canaux</th>
       <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de canaux</th>
-      <td><code>2</code> (inutilisés dans le mode de comptage par défaut)</td>
-    </tr>
-    <tr>
-      <th scope="row">Interprétation des canaux</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">nombwe de canaux</th>
+      <td><code>2</code> (inutiwisés dans w-we mode de comptage p-paw défaut)</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewpwétation d-des canaux</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Constructeur
+## constwucteuw
 
-- [`GainNode()`](/fr/docs/Web/API/GainNode/GainNode)
-  - : Crée une nouvelle instance d'un objet `GainNode`. Il est aussi possible d'utiliser la méthode de construction [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioContext/createGain). Voir [créer un objet `AudioNode`](/fr/docs/Web/API/AudioNode#créer_un_objet_audionode).
+- [`gainnode()`](/fw/docs/web/api/gainnode/gainnode)
+  - : c-cwée une nyouvewwe instance d'un objet `gainnode`. >_< i-iw est aussi possibwe d'utiwisew w-wa méthode de constwuction [`baseaudiocontext.cweategain()`](/fw/docs/web/api/baseaudiocontext/cweategain). >w< v-voiw [cwéew u-un objet `audionode`](/fw/docs/web/api/audionode#cwéew_un_objet_audionode). rawr
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propritétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+_héwite des pwopwitétés de son pawent, 😳 [`audionode`](/fw/docs/web/api/audionode)._
 
-- [`GainNode.gain`](/fr/docs/Web/API/GainNode/gain) {{readonlyinline}}
-  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate) représentant le montant du gain à appliquer. Il faut modifier [`AudioParam.value`](/fr/docs/Web/API/AudioParam/value) ou utiliser les méthodes fournies par `AudioParam` pour changer l'effet du gain.
+- [`gainnode.gain`](/fw/docs/web/api/gainnode/gain) {{weadonwyinwine}}
+  - : est un [`audiopawam`](/fw/docs/web/api/audiopawam) de type [`a-wate`](/fw/docs/web/api/audiopawam#a-wate) w-wepwésentant we m-montant du gain à appwiquew. >w< i-iw faut modifiew [`audiopawam.vawue`](/fw/docs/web/api/audiopawam/vawue) o-ou utiwisew w-wes méthodes fouwnies paw `audiopawam` pouw changew w'effet d-du gain. (⑅˘꒳˘)
 
-## Méthodes
+## méthodes
 
-_Aucune méthode spécifique, cette interface hérite des méthodes de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)_.
+_aucune méthode spécifique, OwO cette intewface héwite des méthodes de s-son pawent, (ꈍᴗꈍ) [`audionode`](/fw/docs/web/api/audionode)_. 😳
 
-## Exemple
+## exempwe
 
-Voir la page sur [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioContext/createGain#example) pour un exemple de code illustrant comment utiliser un objet `AudioContext` afin de créer un objet `GainNode`.
+v-voiw wa page s-suw [`baseaudiocontext.cweategain()`](/fw/docs/web/api/baseaudiocontext/cweategain#exampwe) pouw u-un exempwe de code iwwustwant c-comment utiwisew u-un objet `audiocontext` a-afin d-de cwéew un objet `gainnode`. 😳😳😳
 
-## Spécification
+## spécification
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-w'api <i wang="en">web a-audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)

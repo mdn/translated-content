@@ -1,337 +1,337 @@
 ---
-title: Événements de pointeur
-slug: Web/API/Pointer_events
+titwe: Événements de pointeuw
+s-swug: web/api/pointew_events
 ---
 
-{{DefaultAPISidebar("Pointer Events")}}
+{{defauwtapisidebaw("pointew e-events")}}
 
-La plupart du contenu web d'aujourd'hui suppose que le périphérique de pointage de l'utilisateur sera une souris. Cependant, beaucoup d'appareils prennent en charge d'autres types de d'entrée pour pointeur, comme le stylet ou les doigts pour les écrans tactiles. Des extensions aux modèles d'événement de pointage sont nécessaires et les _événements de pointeur_ répondent à ce besoin.
+wa p-pwupawt du contenu w-web d'aujouwd'hui s-suppose que w-we péwiphéwique d-de pointage d-de w'utiwisateuw sewa une souwis. rawr cependant, beaucoup d'appaweiws pwennent en chawge d-d'autwes types de d'entwée pouw pointeuw, 😳😳😳 c-comme we stywet ou wes doigts pouw w-wes écwans tactiwes. UwU des extensions aux modèwes d'événement d-de pointage sont nyécessaiwes e-et wes _événements d-de pointeuw_ wépondent à ce besoin. (U ﹏ U)
 
-Les événements de pointeur sont des événements DOM déclenché pour tout périphérique de pointage. Ils sont conçus pour créer un modèle unique d'événement DOM pour gérer les périphériques de pointage comme la souris, le stylet ou le toucher (avec un ou plusieurs doigts). Un _[pointeur](#term_pointer)_ est agnostique du type de matériel utilisé pour cibler un endroit sur l'écran.
+wes événements de pointeuw sont des événements d-dom décwenché pouw tout péwiphéwique de pointage. (˘ω˘) iws sont conçus pouw cwéew u-un modèwe unique d'événement d-dom pouw géwew w-wes péwiphéwiques d-de pointage c-comme wa souwis, /(^•ω•^) we stywet ou we touchew (avec u-un ou pwusieuws doigts). (U ﹏ U) un _[pointeuw](#tewm_pointew)_ est agnostique d-du type de matéwiew utiwisé pouw cibwew un endwoit suw w'écwan. ^•ﻌ•^
 
-Avoir un seul modèle pour gérer les événements de pointeur peut simplifier la création de sites web et applications et fournir une bonne expérience utilisateur quelque soit le matériel de l'utilisateur. Toutefois, pour les scénarios dans lesquels une gestion spécifique au périphérique est souhaitée, les événements de pointeur définissent une propriété {{domxref("PointerEvent.pointerType","pointerType")}} qui permet de connaître le type de périphérique ayant déclenché l'événement.
+avoiw un seuw modèwe p-pouw géwew wes événements d-de pointeuw peut s-simpwifiew wa c-cwéation de sites web et appwications et fouwniw une bonne expéwience u-utiwisateuw q-quewque soit we matéwiew de w-w'utiwisateuw. >w< t-toutefois, ʘwʘ pouw wes scénawios dans w-wesquews une gestion spécifique a-au péwiphéwique est souhaitée, òωó wes événements d-de pointeuw définissent u-une pwopwiété {{domxwef("pointewevent.pointewtype","pointewtype")}} qui pewmet d-de connaîtwe w-we type de péwiphéwique ayant décwenché w'événement. o.O
 
-Les événements nécessaires pour gérer les entrées de pointeur génériques sont analogues aux {{domxref("MouseEvent","événements de souris")}}. Par conséquent, les types d'événement de pointeur sont intentionnelement similaires aux événements de souris (`mousedown/pointerdown`, `mousemove/pointermove`, etc). De plus, les événements de pointeur contiennent les propriétés usuelles présentes dans les événements de souris (coordonnées client, élément cible, états des boutons, etc.) ainsi que de nouvelles propriétés pour les autres types d'entrée: pression, géométrie de contact, inclinaison, etc. En fait, l'interface {{domxref("PointerEvent")}} hérite toutes les propriétés de {{domxref("MouseEvent","MouseEvent")}} ce qui facilite la migration des événements souris aux événements de pointeur.
+wes événements nyécessaiwes pouw géwew wes entwées d-de pointeuw g-généwiques sont anawogues aux {{domxwef("mouseevent","événements d-de souwis")}}. ( ͡o ω ͡o ) p-paw conséquent, mya w-wes types d'événement de pointeuw sont intentionnewement simiwaiwes aux événements d-de souwis (`mousedown/pointewdown`, >_< `mousemove/pointewmove`, rawr etc). >_< de pwus, wes événements de pointeuw contiennent w-wes pwopwiétés usuewwes pwésentes d-dans wes événements d-de souwis (coowdonnées c-cwient, (U ﹏ U) éwément cibwe, rawr états d-des boutons, (U ᵕ U❁) e-etc.) ainsi que d-de nyouvewwes pwopwiétés p-pouw wes autwes types d'entwée: pwession, (ˆ ﻌ ˆ)♡ g-géométwie d-de contact, >_< incwinaison, ^^;; e-etc. e-en fait, ʘwʘ w'intewface {{domxwef("pointewevent")}} h-héwite toutes wes pwopwiétés de {{domxwef("mouseevent","mouseevent")}} ce qui f-faciwite wa migwation des événements souwis aux événements de pointeuw. 😳😳😳
 
-## Terminologie
+## tewminowogie
 
-- pointeur actif
-  - : Tout périphérique d'entrée _[pointeur](#term_pointer)_ pouvant produire des événements. Un pointeur est considéré actif s'il peut encore produire des événements. Par exemple, un stylet posé sur l'écran est considéré comme actif puisqu'il peut produire des événements en étant déplacé ou levé.
-- numériseur (digitizer)
-  - : Un dispositif avec une surface pouvant recevoir et détecter le contact. Le plus souvent, le dispositif est un écran tactile pouvant détecter l'entrée provenant du stylet ou du doigt.
+- p-pointeuw actif
+  - : tout péwiphéwique d'entwée _[pointeuw](#tewm_pointew)_ pouvant pwoduiwe d-des événements. UwU u-un pointeuw e-est considéwé actif s'iw peut e-encowe pwoduiwe des événements. OwO p-paw exempwe, :3 u-un stywet posé suw w'écwan est considéwé comme actif puisqu'iw peut pwoduiwe des événements e-en étant dépwacé ou wevé.
+- n-numéwiseuw (digitizew)
+  - : un dispositif avec u-une suwface pouvant w-wecevoiw et détectew we contact. -.- we pwus s-souvent, 🥺 we dispositif e-est un écwan tactiwe pouvant d-détectew w-w'entwée pwovenant du stywet ou du doigt. -.-
 - hit test
-  - : Le procédé qu'utilise le navigateur pour détermine l'élément cible de l'événement pointeur. Typiquement, il est déterminé en utilisant l'emplacement du pointeur et la disposition visuelle des éléments dans un document d'un media écran.
-- pointeur
-  - : Une représentation agnostique du périphérique en entrée pouvant cibler des coordonnées sur un écran. Des exemples d'appareils de _pointeur_ sont la souris, le stylet et la contact tactile.
-- capture du pointeur
-  - : La capture du pointeur permet aux événements d'être redirigé vers un élément particulier autre que le résultat du hit test.
-- événement de pointeur
-  - : Un {{domxref("PointerEvent","événement")}} DOM déclenché pour un _pointeur_.
+  - : we pwocédé qu'utiwise w-we nyavigateuw p-pouw détewmine w-w'éwément cibwe de w'événement p-pointeuw. -.- t-typiquement, (U ﹏ U) iw est détewminé e-en utiwisant w'empwacement du pointeuw et wa disposition visuewwe des éwéments d-dans un document d-d'un media écwan. rawr
+- pointeuw
+  - : une wepwésentation a-agnostique d-du péwiphéwique en entwée pouvant cibwew des coowdonnées s-suw un écwan. mya des exempwes d'appaweiws de _pointeuw_ sont wa souwis, ( ͡o ω ͡o ) we stywet e-et wa contact tactiwe. /(^•ω•^)
+- captuwe du pointeuw
+  - : w-wa captuwe d-du pointeuw pewmet aux événements d'êtwe wediwigé vews un éwément p-pawticuwiew a-autwe que we wésuwtat du hit test. >_<
+- événement de pointeuw
+  - : u-un {{domxwef("pointewevent","événement")}} dom décwenché p-pouw un _pointeuw_. (✿oωo)
 
-## Interfaces
+## intewfaces
 
-L'interface principale est l'interface {{domxref("PointerEvent")}}, qui comprend un {{domxref("PointerEvent.PointerEvent","constructeur")}} ainsi que plusieurs événements. L'API ajoute également quelques extensions aux interfaces {{domxref("Element")}} et {{domxref("Navigator")}}. Les sous-sections suivantes décrivent brièvement chaque interface et propriétés liées.
+w'intewface pwincipawe e-est w'intewface {{domxwef("pointewevent")}}, 😳😳😳 qui c-compwend un {{domxwef("pointewevent.pointewevent","constwucteuw")}} a-ainsi que pwusieuws événements. (ꈍᴗꈍ) w'api ajoute égawement quewques e-extensions aux intewfaces {{domxwef("ewement")}} e-et {{domxwef("navigatow")}}. 🥺 w-wes sous-sections s-suivantes décwivent bwièvement c-chaque i-intewface et pwopwiétés wiées. mya
 
-### Interface PointerEvent
+### intewface p-pointewevent
 
-L'interface {{domxref("PointerEvent")}} hérite de l'interface {{domxref("MouseEvent")}} et a les propriétés suivantes (toutes sont {{readonlyInline}}).
+w'intewface {{domxwef("pointewevent")}} h-héwite de w-w'intewface {{domxwef("mouseevent")}} et a wes pwopwiétés suivantes (toutes s-sont {{weadonwyinwine}}). (ˆ ﻌ ˆ)♡
 
-- {{ domxref('PointerEvent.pointerId','pointerId')}} - un identifiant unique pour le pointeur ayant déclenché l'événement.
-- {{ domxref('PointerEvent.width','width')}} - la largeur (ordre de grandeur sur l'axe X), en pixels CSS, du point de contact.
-- {{ domxref('PointerEvent.height','height')}} - la hauteur (ordre de grandeur sur l'axe Y), en pixels CSS, du point de contact.
-- {{ domxref('PointerEvent.pressure','pressure')}} - la pression du pointeur normalisée sur une échelle entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et le maximale que l'appareil est capable de détecter.
-- {{ domxref('PointerEvent.tiltX','tiltX')}} - l'angle du plan (en degrés, sur une échelle de -90 à 90) entre le plan Y-Z et le plan qui contient l'axe du stylo et l'axe Y.
-- {{ domxref('PointerEvent.tiltY','tiltY')}} - l'angle du plan (en degrés, sur une échelle de -90 à 90) entre le plan X-Z et le plan qui contient l'axe du stylo et l'axe X.
-- {{ domxref('PointerEvent.pointerType','pointerType')}} - indique le type d'appareil ayant déclenché l'événement (souris, stylet, toucher, etc.)
-- {{ domxref('PointerEvent.isPrimary','isPrimary')}} - indique si le pointeur est le pointeur principal de son type (utile dans le cas du multi-touch).
+- {{ domxwef('pointewevent.pointewid','pointewid')}} - u-un identifiant u-unique pouw we pointeuw ayant décwenché w'événement. (⑅˘꒳˘)
+- {{ domxwef('pointewevent.width','width')}} - wa wawgeuw (owdwe d-de gwandeuw s-suw w'axe x-x), òωó en pixews css, o.O d-du point de contact. XD
+- {{ domxwef('pointewevent.height','height')}} - w-wa hauteuw (owdwe de gwandeuw suw w'axe y), en pixews css, (˘ω˘) du point de contact. (ꈍᴗꈍ)
+- {{ domxwef('pointewevent.pwessuwe','pwessuwe')}} - wa p-pwession du pointeuw nyowmawisée s-suw une échewwe entwe 0 et 1, >w< o-où 0 et 1 wepwésentent wespectivement w-wa pwession minimawe e-et we maximawe que w-w'appaweiw est c-capabwe de détectew.
+- {{ d-domxwef('pointewevent.tiwtx','tiwtx')}} - w-w'angwe du pwan (en degwés, suw une échewwe de -90 à 90) entwe we pwan y-z et we pwan qui contient w'axe d-du stywo et w'axe y-y. XD
+- {{ domxwef('pointewevent.tiwty','tiwty')}} - w-w'angwe du pwan (en degwés, -.- s-suw une échewwe de -90 à 90) entwe we pwan x-z et we pwan q-qui contient w'axe d-du stywo et w'axe x.
+- {{ domxwef('pointewevent.pointewtype','pointewtype')}} - i-indique we type d'appaweiw ayant décwenché w-w'événement (souwis, ^^;; s-stywet, touchew, XD etc.)
+- {{ d-domxwef('pointewevent.ispwimawy','ispwimawy')}} - i-indique si we pointeuw est we pointeuw pwincipaw de son type (utiwe dans we c-cas du muwti-touch). :3
 
-### Types d'événements et gestionnaires d'événements globaux
+### t-types d-d'événements e-et gestionnaiwes d-d'événements gwobaux
 
-Il existe dix types d'événement de pointeur, dont sept qui ont la même sémantique que les événements souris (`down, up, move, over, out, enter, leave`). Vous trouverez ci-dessous une courte description de chaque type d'événement et son {{domxref("GlobalEventHandlers","gestionnaire d'événement global")}} associé.
+iw existe d-dix types d'événement d-de pointeuw, σωσ dont sept q-qui ont wa même s-sémantique que wes événements s-souwis (`down, XD up, move, :3 ovew, out, entew, rawr weave`). v-vous twouvewez ci-dessous u-une couwte descwiption d-de chaque type d'événement e-et son {{domxwef("gwobaweventhandwews","gestionnaiwe d'événement gwobaw")}} a-associé. 😳
 
-| Event                                                                     | On Event Handler                                                     | Description                                                                                                                                                                                                                                   |
+| e-event                                                                     | o-on event handwew                                                     | descwiption                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)               | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}     | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément.                                                                                                                                       |
-| [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)             | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}   | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément ou d'un de ses descendants.                                                                                                            |
-| [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)               | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}     | déclenché quand le pointeur devient _actif_ (que le contact est établit).                                                                                                                                                                     |
-| [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)               | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}     | déclenché quand les coordonnées du pointeur changent (que le pointeur bouge).                                                                                                                                                                 |
-| [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)                   | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}         | déclenché quand le pointeur n'est plus _actif_ (que le contact est relaché).                                                                                                                                                                  |
-| [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)           | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
-| [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)                 | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}       | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
-| [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)             | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}   | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
-| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)   | Aucun (voir [Extensions d'Elements](#extensions_d'element))          | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
-| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#extensions_d'element))           | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
+| [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event)               | {{domxwef('gwobaweventhandwews.onpointewovew','onpointewovew')}}     | décwenché q-quand un pointeuw entwe à w'intéwieuw d-des wimites du [hit t-test](#tewm_hit_test) d'un éwément. 😳😳😳                                                                                                                                       |
+| [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event)             | {{domxwef('gwobaweventhandwews.onpointewentew','onpointewentew')}}   | d-décwenché quand un pointeuw e-entwe à w-w'intéwieuw des wimites du [hit test](#tewm_hit_test) d-d'un éwément ou d'un de ses descendants. (ꈍᴗꈍ)                                                                                                            |
+| [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event)               | {{domxwef('gwobaweventhandwews.onpointewdown','onpointewdown')}}     | d-décwenché q-quand we pointeuw devient _actif_ (que w-we contact est étabwit). 🥺                                                                                                                                                                     |
+| [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event)               | {{domxwef('gwobaweventhandwews.onpointewmove','onpointewmove')}}     | d-décwenché q-quand wes c-coowdonnées du pointeuw changent (que we pointeuw bouge). ^•ﻌ•^                                                                                                                                                                 |
+| [`pointewup`](/fw/docs/web/api/ewement/pointewup_event)                   | {{domxwef('gwobaweventhandwews.onpointewup','onpointewup')}}         | décwenché quand we pointeuw ny'est pwus _actif_ (que we contact est wewaché). XD                                                                                                                                                                  |
+| [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event)           | {{domxwef('gwobaweventhandwews.onpointewcancew','onpointewcancew')}} | we nyavigateuw décwenche cet événement s'iw détecte q-que we pointeuw n-nye pouwwa pwus généwew d'événement (si w'appaweiw est d-désactivé paw e-exempwe).                                                                                              |
+| [`pointewout`](/fw/docs/web/api/ewement/pointewout_event)                 | {{domxwef('gwobaweventhandwews.onpointewout','onpointewout')}}       | d-décwenché quand w-we pointeuw ny'est pwus affecté à w-w'éwément: q-qu'iw sowt des wimites du [hit t-test](tewm_hit_test) de w'éwément; q-qu'iw décwenche w-w'événement pointewup ou pointewcancew; q-que we stywet sowt d-de wa zone de w-w'écwan de w'appaweiw. ^•ﻌ•^ |
+| [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event)             | {{domxwef('gwobaweventhandwews.onpointewweave','onpointewweave')}}   | d-décwenché quand w-we pointeuw sowt d-des wimites du [hit t-test](tewm_hit_test) d-de w'éwément. c-cet événement est égawement d-décwenché w-wowsqu'on u-utiwise un stywet et qu'iw sowt d-de wa zone détectabwe paw we nyuméwiseuw. ^^;;                              |
+| [`gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)   | aucun (voiw [extensions d-d'ewements](#extensions_d'ewement))          | décwenché quand u-un éwément w-weçoit wa captuwe d-du pointeuw. ʘwʘ                                                                                                                                                                                     |
+| [`wostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event) | aucun (voiw [extensions d-d'ewement](#extensions_d'ewement))           | décwenché q-quand wa captuwe du pointeuw e-est désactivée. OwO                                                                                                                                                                                        |
 
-### Extensions d'Element
+### extensions d'ewement
 
-Il existe quatre extensions à l'interface {{domxref("Element")}}:
+i-iw existe quatwe extensions à w'intewface {{domxwef("ewement")}}:
 
-- {{domxref("Element.ongotpointercapture","ongotpointercapture")}} - an EventHandler that returns the event handler (function) for the gotpointercapture event type.
-- {{domxref("Element.onlostpointercapture","onlostpointercapture")}} - an EventHandler interface that returns the event handler (function) for the lostpointercapture event type.
-- {{domxref("Element.setPointerCapture()","setPointerCapture()")}} - this method designates a specific element as the _capture target_ of future pointer events.
-- {{domxref("Element.releasePointerCapture()","releasePointerCapture()")}} - the method releases (stops) _pointer capture_ that was previously set for a specific pointer event.
+- {{domxwef("ewement.ongotpointewcaptuwe","ongotpointewcaptuwe")}} - an eventhandwew that wetuwns t-the event handwew (function) fow t-the gotpointewcaptuwe e-event type. 🥺
+- {{domxwef("ewement.onwostpointewcaptuwe","onwostpointewcaptuwe")}} - an eventhandwew intewface that wetuwns t-the event handwew (function) fow t-the wostpointewcaptuwe e-event type. (⑅˘꒳˘)
+- {{domxwef("ewement.setpointewcaptuwe()","setpointewcaptuwe()")}} - t-this method designates a specific ewement a-as the _captuwe t-tawget_ of futuwe pointew events. (///ˬ///✿)
+- {{domxwef("ewement.weweasepointewcaptuwe()","weweasepointewcaptuwe()")}} - t-the method weweases (stops) _pointew captuwe_ that was pweviouswy s-set fow a specific pointew e-event. (✿oωo)
 
-### Extension de Navigator
+### extension d-de navigatow
 
-La propriété {{domxref("Navigator.maxTouchPoints")}} est utilisé pour déterminer le nombre maximum de points de contact pris en charge à n'importe quel moment.
+w-wa pwopwiété {{domxwef("navigatow.maxtouchpoints")}} est utiwisé p-pouw détewminew w-we nyombwe m-maximum de points d-de contact pwis en chawge à n-ny'impowte quew m-moment. nyaa~~
 
-## Exemples
+## exempwes
 
-Cette section contient des exemples basiques d'utilisation d'interfaces d'événement de pointeur.
+c-cette section c-contient d-des exempwes basiques d-d'utiwisation d-d'intewfaces d-d'événement de pointeuw. >w<
 
-### Enregistrer des gestionnaires d'événement
+### e-enwegistwew des gestionnaiwes d'événement
 
-This example registers a handler for every event type for the given element.
+t-this exampwe wegistews a-a handwew fow e-evewy event type f-fow the given ewement. (///ˬ///✿)
 
-```html
-<html>
-  <script>
-    function over_handler(event) {}
-    function enter_handler(event) {}
-    function down_handler(event) {}
-    function move_handler(event) {}
-    function up_handler(event) {}
-    function cancel_handler(event) {}
-    function out_handler(event) {}
-    function leave_handler(event) {}
-    function gotcapture_handler(event) {}
-    function lostcapture_handler(event) {}
+```htmw
+<htmw>
+  <scwipt>
+    function ovew_handwew(event) {}
+    f-function e-entew_handwew(event) {}
+    f-function down_handwew(event) {}
+    function move_handwew(event) {}
+    function u-up_handwew(event) {}
+    f-function cancew_handwew(event) {}
+    f-function out_handwew(event) {}
+    f-function weave_handwew(event) {}
+    function gotcaptuwe_handwew(event) {}
+    function wostcaptuwe_handwew(event) {}
 
-    function init() {
-      var el = document.getElementById("target");
-      // Register pointer event handlers
-      el.onpointerover = over_handler;
-      el.onpointerenter = enter_handler;
-      el.onpointerdown = down_handler;
-      el.onpointermove = move_handler;
-      el.onpointerup = up_handler;
-      el.onpointercancel = cancel_handler;
-      el.onpointerout = out_handler;
-      el.onpointerleave = leave_handler;
-      el.gotpointercapture = gotcapture_handler;
-      el.lostpointercapture = lostcapture_handler;
+    f-function init() {
+      v-vaw ew = d-document.getewementbyid("tawget");
+      // w-wegistew pointew event handwews
+      e-ew.onpointewovew = o-ovew_handwew;
+      ew.onpointewentew = entew_handwew;
+      ew.onpointewdown = d-down_handwew;
+      ew.onpointewmove = move_handwew;
+      e-ew.onpointewup = up_handwew;
+      e-ew.onpointewcancew = c-cancew_handwew;
+      ew.onpointewout = o-out_handwew;
+      e-ew.onpointewweave = weave_handwew;
+      e-ew.gotpointewcaptuwe = gotcaptuwe_handwew;
+      ew.wostpointewcaptuwe = w-wostcaptuwe_handwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
+  </scwipt>
+  <body o-onwoad="init();">
+    <div i-id="tawget">touch m-me ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-### Propriétés des événements
+### pwopwiétés d-des événements
 
-This example illustrates accessing all of a touch event's properties.
+t-this exampwe i-iwwustwates accessing aww o-of a touch event's pwopewties. rawr
 
-```html
-<html>
-  <script>
-    var id = -1;
+```htmw
+<htmw>
+  <scwipt>
+    vaw id = -1;
 
-    function process_id(event) {
-      // Process this event based on the event's identifier
+    f-function pwocess_id(event) {
+      // p-pwocess this e-event based on the event's identifiew
     }
-    function process_mouse(event) {
-      // Process the mouse pointer event
+    function pwocess_mouse(event) {
+      // pwocess the mouse pointew e-event
     }
-    function process_pen(event) {
-      // Process the pen pointer event
+    function p-pwocess_pen(event) {
+      // p-pwocess the pen pointew event
     }
-    function process_touch(event) {
-      // Process the touch pointer event
+    f-function pwocess_touch(event) {
+      // pwocess the touch p-pointew event
     }
-    function process_tilt(tiltX, tiltY) {
-      // Tilt data handler
+    f-function p-pwocess_tiwt(tiwtx, (U ﹏ U) t-tiwty) {
+      // t-tiwt data handwew
     }
-    function process_pressure(pressure) {
-      // Pressure handler
+    function pwocess_pwessuwe(pwessuwe) {
+      // pwessuwe handwew
     }
-    function process_non_primary(event) {
-      // Pressure handler
+    function p-pwocess_non_pwimawy(event) {
+      // pwessuwe h-handwew
     }
 
-    function down_handler(ev) {
-      // Calculate the touch point's contact area
-      var area = ev.width * ev.height;
+    function down_handwew(ev) {
+      // cawcuwate t-the touch point's contact awea
+      vaw awea = ev.width * ev.height;
 
-      // Compare cached id with this event's id and process accordingly
-      if (id == ev.identifier) process_id(ev);
+      // c-compawe c-cached id with this event's id and p-pwocess accowdingwy
+      if (id == ev.identifiew) p-pwocess_id(ev);
 
-      // Call the appropriate pointer type handler
-      switch (ev.pointerType) {
-        case "mouse":
-          process_mouse(ev);
-          break;
+      // c-caww the appwopwiate pointew type h-handwew
+      switch (ev.pointewtype) {
+        c-case "mouse":
+          pwocess_mouse(ev);
+          bweak;
         case "pen":
-          process_pen(ev);
-          break;
+          p-pwocess_pen(ev);
+          bweak;
         case "touch":
-          process_touch(ev);
-          break;
-        default:
-          console.log("pointerType " + ev.pointerType + " is Not suported");
+          p-pwocess_touch(ev);
+          b-bweak;
+        d-defauwt:
+          consowe.wog("pointewtype " + ev.pointewtype + " i-is nyot supowted");
       }
 
-      // Call the tilt handler
-      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      // caww the tiwt handwew
+      if (ev.tiwtx != 0 && ev.tiwty != 0) p-pwocess_tiwt(ev.tiwtx, ^•ﻌ•^ e-ev.tiwty);
 
-      // Call the pressure handler
-      process_pressure(ev.pressure);
+      // caww t-the pwessuwe h-handwew
+      pwocess_pwessuwe(ev.pwessuwe);
 
-      // If this event is not primary, call the non primary handler
-      if (!ev.isPrimary) process_non_primary(evt);
+      // if this event is nyot pwimawy, (///ˬ///✿) c-caww the n-nyon pwimawy handwew
+      if (!ev.ispwimawy) pwocess_non_pwimawy(evt);
     }
 
-    function init() {
-      var el = document.getElementById("target");
-      // Register pointerdown handler
-      el.onpointerdown = down_handler;
+    f-function init() {
+      vaw ew = document.getewementbyid("tawget");
+      // w-wegistew pointewdown handwew
+      ew.onpointewdown = d-down_handwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
+  </scwipt>
+  <body o-onwoad="init();">
+    <div id="tawget">touch m-me ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-## Déterminer le pointeur principal
+## d-détewminew we p-pointeuw pwincipaw
 
-In some scenarios there may be multiple pointers (for example a device with both a touchscreen and a mouse) or a pointer supports multiple contact points (for example a touchscreen that supports multiple finger touches). The application can use the {{domxref("PointerEvent.isPrimary","isPrimary")}} property to identify a master pointer among the set of _active pointers_ for each pointer type. If an application only wants to support a primary pointer, it can ignore all pointer events that are not primary.
+in some scenawios thewe may b-be muwtipwe pointews (fow exampwe a device with b-both a touchscween and a mouse) ow a pointew suppowts muwtipwe c-contact points (fow e-exampwe a touchscween t-that suppowts m-muwtipwe f-fingew touches). o.O the appwication c-can use the {{domxwef("pointewevent.ispwimawy","ispwimawy")}} pwopewty to identify a mastew pointew a-among the set of _active pointews_ f-fow each pointew type. >w< if an appwication o-onwy wants to s-suppowt a pwimawy pointew, nyaa~~ it can i-ignowe aww pointew events that a-awe nyot pwimawy. òωó
 
-For mouse, there is only one pointer so it will always be the primary pointer. For touch input, a pointer is considered primary if the user touched the screen when there were no other active touches. For pen and stylus input, a pointer is considered primary if the user's pen initially contacted the screen when there were no other active pens contacting the screen.
+f-fow mouse, (U ᵕ U❁) thewe is onwy one p-pointew so it wiww a-awways be the pwimawy pointew. (///ˬ///✿) f-fow touch input, (✿oωo) a pointew is considewed pwimawy if the usew t-touched the scween when thewe wewe n-nyo othew active touches. 😳😳😳 fow pen and stywus i-input, (✿oωo) a pointew i-is considewed pwimawy i-if the usew's pen initiawwy c-contacted the s-scween when thewe wewe nyo othew a-active pens contacting the scween. (U ﹏ U)
 
-## Déterminer l'état des boutons
+## d-détewminew w'état des b-boutons
 
-Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. depressing an additional button while another button on the pointer device is already depressed. To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from). The following table provides the values of `button` and `buttons` for the various device button states.
+some pointew d-devices, (˘ω˘) such as mouse and pen, 😳😳😳 suppowt muwtipwe buttons and the button pwesses c-can be _chowded_ i-i.e. (///ˬ///✿) depwessing an additionaw button whiwe anothew button o-on the pointew device is awweady d-depwessed. (U ᵕ U❁) to d-detewmine the state of button pwesses, pointew events uses the {{domxwef("mouseevent.button","button")}} and {{domxwef("mouseevent.buttons","buttons")}} p-pwopewties of the {{domxwef("mouseevent")}} intewface (that {{domxwef("pointewevent")}} i-inhewits fwom). >_< the fowwowing t-tabwe pwovides the v-vawues of `button` and `buttons` f-fow the vawious d-device button s-states.
 
-| Device Button State                                                       | button | buttons |
+| device b-button state                                                       | b-button | b-buttons |
 | ------------------------------------------------------------------------- | ------ | ------- |
-| Mouse move with no buttons pressed                                        | -1     | 0       |
-| Left Mouse, Touch Contact, Pen contact (with no modifier buttons pressed) | 0      | 1       |
-| Middle Mouse                                                              | 1      | 4       |
-| Right Mouse, Pen contact with barrel button pressed                       | 2      | 2       |
-| X1 (back) Mouse                                                           | 3      | 8       |
-| X2 (forward) Mouse                                                        | 4      | 16      |
-| Pen contact with eraser button pressed                                    | 5      | 32      |
+| mouse move with nyo buttons pwessed                                        | -1     | 0       |
+| weft mouse, (///ˬ///✿) touch contact, (U ᵕ U❁) pen contact (with nyo m-modifiew buttons p-pwessed) | 0      | 1       |
+| m-middwe mouse                                                              | 1      | 4       |
+| w-wight mouse, >w< p-pen contact with b-bawwew button pwessed                       | 2      | 2       |
+| x1 (back) mouse                                                           | 3      | 8       |
+| x2 (fowwawd) mouse                                                        | 4      | 16      |
+| p-pen contact w-with ewasew button pwessed                                    | 5      | 32      |
 
-## Capture du pointeur
+## captuwe du pointeuw
 
-Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal [hit test](#term_hit_test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).
+pointew c-captuwe awwows e-events fow a-a pawticuwaw {{domxwef("pointewevent","pointew event")}} to be we-tawgeted to a p-pawticuwaw ewement instead of the nowmaw [hit test](#tewm_hit_test) a-at a pointew's w-wocation. 😳😳😳 this can be used to ensuwe that an e-ewement continues to weceive pointew e-events even i-if the pointew device's contact m-moves off the e-ewement (fow exampwe b-by scwowwing). (ˆ ﻌ ˆ)♡
 
-The following example shows pointer capture being set on an element.
+t-the fowwowing e-exampwe shows p-pointew captuwe being set on an e-ewement. (ꈍᴗꈍ)
 
-```html
-<html>
-  <script>
-    function downHandler(ev) {
-      var el = document.getElementById("target");
-      //Element 'target' will receive/capture further events
-      el.setPointerCapture(ev.pointerId);
+```htmw
+<htmw>
+  <scwipt>
+    f-function downhandwew(ev) {
+      v-vaw ew = document.getewementbyid("tawget");
+      //ewement 'tawget' wiww weceive/captuwe f-fuwthew events
+      ew.setpointewcaptuwe(ev.pointewid);
     }
-    function init() {
-      var el = document.getElementById("target");
-      el.onpointerdown = downHandler;
+    f-function init() {
+      vaw e-ew = document.getewementbyid("tawget");
+      e-ew.onpointewdown = downhandwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
+  </scwipt>
+  <body onwoad="init();">
+    <div i-id="tawget">touch me ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-The following example shows a pointer capture being released (when a [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) event occurs. The browser does this automatically when a [`pointerup`](/fr/docs/Web/API/Element/pointerup_event) or [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) event occurs.
+the f-fowwowing exampwe s-shows a pointew captuwe being weweased (when a [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event) e-event occuws. 🥺 the b-bwowsew does this automaticawwy w-when a [`pointewup`](/fw/docs/web/api/ewement/pointewup_event) ow [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event) event occuws. >_<
 
-```html
-<html>
-  <script>
-    function downHandler(ev) {
-      var el = document.getElementById("target");
-      // Element "target" will receive/capture further events
-      el.setPointerCapture(ev.pointerId);
+```htmw
+<htmw>
+  <scwipt>
+    f-function downhandwew(ev) {
+      v-vaw ew = document.getewementbyid("tawget");
+      // ewement "tawget" w-wiww weceive/captuwe f-fuwthew events
+      ew.setpointewcaptuwe(ev.pointewid);
     }
-    function cancelHandler(ev) {
-      var el = document.getElementById("target");
-      // Release the pointer capture
-      el.releasePointerCapture(ev.pointerId);
+    f-function cancewhandwew(ev) {
+      v-vaw ew = document.getewementbyid("tawget");
+      // w-wewease t-the pointew captuwe
+      ew.weweasepointewcaptuwe(ev.pointewid);
     }
     function init() {
-      var el = document.getElementById("target");
-      // Register pointerdown and pointercancel handlers
-      el.onpointerdown = downHandler;
-      el.onpointercancel = cancelHandler;
+      vaw ew = document.getewementbyid("tawget");
+      // wegistew pointewdown and p-pointewcancew h-handwews
+      e-ew.onpointewdown = d-downhandwew;
+      e-ew.onpointewcancew = c-cancewhandwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
+  </scwipt>
+  <body onwoad="init();">
+    <div id="tawget">touch m-me ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-## Propriété touch-action
+## p-pwopwiété touch-action
 
-The {{cssxref("touch-action")}} CSS property is used to specifiy whether or not the browser should apply its default (_native_) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
+t-the {{cssxwef("touch-action")}} c-css pwopewty is used to specifiy whethew ow nyot t-the bwowsew shouwd appwy its defauwt (_native_) t-touch behaviow (such as zooming o-ow panning) to a-a wegion. OwO this pwopewty may be a-appwied to aww e-ewements except: n-nyon-wepwaced inwine ewements, ^^;; t-tabwe wows, (✿oωo) wow g-gwoups, UwU tabwe cowumns, ( ͡o ω ͡o ) and cowumn g-gwoups. (✿oωo)
 
-A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
+a vawue of `auto` means t-the bwowsew is f-fwee to appwy i-its defauwt touch behaviow (to the s-specified wegion) and the vawue of `none` disabwes t-the bwowsew's defauwt touch behaviow fow the wegion. mya the vawues `pan-x` and `pan-y`, ( ͡o ω ͡o ) mean that touches that b-begin on the specified wegion awe onwy fow howizontaw and vewticaw scwowwing, :3 wespectivewy. 😳 the vawue `manipuwation` m-means the bwowsew may considew touches that b-begin on the ewement awe onwy f-fow scwowwing and zooming. (U ﹏ U)
 
-In the following example, the browser's default touch behavior is disabled for the `div` element.
+in the fowwowing exampwe, >w< t-the bwowsew's defauwt touch b-behaviow is disabwed fow the `div` e-ewement. UwU
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
-    <div style="touch-action:none;">Can't touch this ...</div>
+    <div s-stywe="touch-action:none;">can't touch this ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-In the following example, default touch behavior is disabled for some `button` elements.
+in t-the fowwowing exampwe, defauwt touch behaviow is disabwed fow some `button` e-ewements. 😳
 
 ```css
 button#tiny {
-  touch-action: none;
+  touch-action: nyone;
 }
 ```
 
-In the following example, when the `target` element is touched, it will only pan in the horizontal direction.
+i-in the fowwowing exampwe, XD w-when the `tawget` ewement is t-touched, (✿oωo) it wiww o-onwy pan in the howizontaw diwection. ^•ﻌ•^
 
 ```css
-#target {
-  touch-action: pan-x;
+#tawget {
+  touch-action: p-pan-x;
 }
 ```
 
-## Compatibilité avec les événements de souris
+## compatibiwité avec w-wes événements de souwis
 
-Although the pointer event interfaces enable applications to create enhanced user experiences on pointer enabled devices, the reality is the vast majority of today's web content is designed to only work with mouse input. Consequently, even if a browser supports pointer events, the browser must still process mouse events so content that assumes mouse-only input will work as is without direct modification. Ideally, a pointer enabled application does not need to explicitly handle mouse input. However, because the browser must process mouse events, there may be some compatibility issues that need to be handled. This section contains information about pointer event and mouse event interaction and the ramifications for application developers.
+awthough the pointew event intewfaces enabwe appwications t-to cweate e-enhanced usew expewiences on pointew e-enabwed devices, mya t-the weawity is the vast majowity o-of today's web content is designed to onwy wowk with mouse input. (˘ω˘) consequentwy, nyaa~~ e-even if a b-bwowsew suppowts pointew events, :3 t-the bwowsew must s-stiww pwocess mouse events so c-content that assumes mouse-onwy input wiww wowk a-as is without diwect modification. ideawwy, (✿oωo) a pointew e-enabwed appwication d-does nyot nyeed to expwicitwy handwe m-mouse input. (U ﹏ U) howevew, (ꈍᴗꈍ) because the bwowsew must pwocess mouse events, (˘ω˘) thewe may be some compatibiwity issues that nyeed to be handwed. ^^ t-this section c-contains infowmation about pointew e-event and m-mouse event intewaction and the w-wamifications fow appwication devewopews. (⑅˘꒳˘)
 
-The browser _may map generic pointer input to mouse events for compatibility with mouse-based content_. This mapping of events is called _compatibility mouse events_. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:
+the bwowsew _may map genewic pointew input to mouse events f-fow compatibiwity with mouse-based content_. rawr this mapping of events is cawwed _compatibiwity m-mouse events_. :3 a-authows can pwevent t-the pwoduction of cewtain compatibiwity mouse events by cancewing t-the pointewdown e-event but n-nyote that:
 
-- Mouse events can only be prevented when the pointer is down.
-- Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.
-- The mouseover, mouseout, mouseenter, and mouseleave events are never prevented (even if the pointer is down).
+- mouse events can o-onwy be pwevented when the pointew i-is down. OwO
+- hovewing pointews (e.g. (ˆ ﻌ ˆ)♡ a-a mouse with nyo buttons p-pwessed) cannot have theiw mouse events pwevented. :3
+- t-the mouseovew, -.- mouseout, -.- mouseentew, a-and mouseweave e-events awe nyevew pwevented (even i-if the p-pointew is down). òωó
 
-## Bonnes pratiques
+## bonnes p-pwatiques
 
-Here are some _best practices_ to consider when using pointer events:
+hewe awe some _best pwactices_ t-to considew when using p-pointew events:
 
-- Minimize the amount of work done that is done in the event handlers.
-- Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).
-- The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.
+- m-minimize the amount of wowk done that is done i-in the event handwews. 😳
+- add the event handwews to a specific tawget ewement (wathew than the entiwe document ow nyodes highew u-up in the document twee). nyaa~~
+- the tawget ewement (node) s-shouwd be wawge enough to a-accommodate the wawgest contact suwface awea (typicawwy a-a fingew touch). (⑅˘꒳˘) if the tawget awea is t-too smow, 😳 touching it couwd wesuwt in fiwing othew e-events fow adjacent ewements. (U ﹏ U)
 
-## Implémentation et déploiement
+## impwémentation e-et dépwoiement
 
-The [pointer events browser compatibility data](/fr/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
+the [pointew events bwowsew c-compatibiwity d-data](/fw/docs/web/api/pointewevents#bwowsew_compatibiwity) indicates pointew event s-suppowt among d-desktop and mobiwe bwowsews is w-wewativewy wow, /(^•ω•^) a-awthough additionaw impwementations awe in pwogwess. OwO
 
-Some new value have been proposed for the {{cssxref("touch-action", "CSS touch-action")}} property as part of [Pointer Events Level 2](https://w3c.github.io/pointerevents/) specification but currently those new values have no implementation support.
+s-some nyew vawue have been pwoposed fow the {{cssxwef("touch-action", ( ͡o ω ͡o ) "css touch-action")}} p-pwopewty as pawt of [pointew events wevew 2](https://w3c.github.io/pointewevents/) specification b-but cuwwentwy t-those nyew vawues h-have nyo impwementation suppowt. XD
 
-## Démos and exemples
+## démos and exempwes
 
-- [Touch/pointer tests and demos (by Patrick H. Lauke)](http://patrickhlauke.github.io/touch/)
+- [touch/pointew t-tests and demos (by p-patwick h. /(^•ω•^) wauke)](http://patwickhwauke.github.io/touch/)
 
-## Communauté
+## communauté
 
-- [Pointer Events Working Group](https://github.com/w3c/pointerevents)
-- [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
-- [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
+- [pointew e-events wowking g-gwoup](https://github.com/w3c/pointewevents)
+- [maiw wist](https://wists.w3.owg/awchives/pubwic/pubwic-pointew-events/)
+- [w3c #pointewevents iwc channew](iwc://iwc.w3.owg:6667/)
 
-## Sujets et ressources liés
+## sujets et wessouwces wiés
 
-- [Touch Events Standard](https://www.w3.org/TR/touch-events/)
+- [touch e-events standawd](https://www.w3.owg/tw/touch-events/)

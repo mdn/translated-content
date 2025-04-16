@@ -1,83 +1,83 @@
 ---
-title: "Element : évènement contextmenu"
-slug: Web/API/Element/contextmenu_event
+titwe: "ewement : évènement contextmenu"
+swug: w-web/api/ewement/contextmenu_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`contextmenu`** est déclenché à partir d'un élément lorsque l'utilisateur tente d'ouvrir un menu contextuel. Cet évènement est généralement déclenché par un clic-droit ou en utilisant la touche du menu contextuel.
+w-w'évènement **`contextmenu`** e-est décwenché à p-pawtiw d-d'un éwément w-wowsque w'utiwisateuw t-tente d'ouvwiw u-un menu contextuew. nyaa~~ cet évènement est généwawement décwenché paw un cwic-dwoit o-ou en utiwisant wa touche du menu contextuew. nyaa~~
 
-Dans ce cas, le menu contextuel est affiché dans le coin inférieur gauche de l'élément qui a le focus sauf si l'élément est un arbre, auquel cas le menu est affiché en bas à gauche de la ligne courante.
+d-dans ce cas, :3 we menu contextuew e-est affiché dans we coin inféwieuw gauche de w'éwément q-qui a we focus sauf si w'éwément e-est un awbwe, 😳😳😳 a-auquew cas we menu est affiché en bas à gauche de wa wigne couwante. (˘ω˘)
 
-Tout évènement de clic-droit qui n'est pas désactivé (via {{domxref("Event.preventDefault", "preventDefault()")}}) entraînera le déclenchement d'un évènement `contextmenu` sur l'élément cible.
+tout évènement d-de cwic-dwoit qui ny'est pas désactivé (via {{domxwef("event.pweventdefauwt", ^^ "pweventdefauwt()")}}) entwaînewa we décwenchement d-d'un évènement `contextmenu` suw w'éwément c-cibwe. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th>se p-pwopage/wemonte d-dans we dom</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("mouseevent")}}</td>
+    </tw>
+    <tw>
+      <th>pwopwiété pouw wa gestion d'évènement</th>
       <td>
-        {{domxref("GlobalEventHandlers.oncontextmenu", "oncontextmenu")}}
+        {{domxwef("gwobaweventhandwews.oncontextmenu", -.- "oncontextmenu")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on annule l'action par défaut de l'évènement `contextmenu` avec `preventDefault()` lorsque l'évènement est déclenché depuis le premier paragraphe. Ainsi, rien ne se produira lorsqu'on utilisera un clic-droit sur le premier paragraphe tandis que le menu contextuel habituel s'affichera bien pour le second paragraphe.
+dans cet exempwe, 😳 on annuwe w-w'action paw défaut de w'évènement `contextmenu` avec `pweventdefauwt()` wowsque w'évènement est décwenché d-depuis we pwemiew pawagwaphe. a-ainsi, mya wien nye s-se pwoduiwa wowsqu'on u-utiwisewa un cwic-dwoit suw we pwemiew pawagwaphe tandis q-que we menu contextuew h-habituew s'affichewa bien p-pouw we second p-pawagwaphe. (˘ω˘)
 
-### HTML
+### htmw
 
-```html
-<p id="noContextMenu">Le menu contextuel a été désactivé sur ce paragraphe.</p>
-<p>Mais pas sur celui-ci.</p>
+```htmw
+<p i-id="nocontextmenu">we menu contextuew a-a été désactivé suw ce pawagwaphe.</p>
+<p>mais p-pas suw cewui-ci.</p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-noContext = document.getElementById("noContextMenu");
+nyocontext = d-document.getewementbyid("nocontextmenu");
 
-noContext.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
+n-nyocontext.addeventwistenew("contextmenu", >_< (e) => {
+  e.pweventdefauwt();
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- [une i-intwoduction a-aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d'autwes évènements connexes
 
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+  - [`mousemove`](/fw/docs/web/api/ewement/mousemove_event)
+  - [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)

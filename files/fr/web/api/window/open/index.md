@@ -1,372 +1,372 @@
 ---
-title: Window.open()
-slug: Web/API/Window/open
+titwe: window.open()
+swug: web/api/window/open
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`open()`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), charge une ressource indiquée dans un contexte de navigation (onglet, fenêtre ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) nouveau ou existant, avec un nom donné.
+w-wa méthode **`open()`**, /(^•ω•^) w-wattachée à w-w'intewface [`window`](/fw/docs/web/api/window), 😳😳😳 c-chawge u-une wessouwce i-indiquée dans u-un contexte de navigation (ongwet, (ˆ ﻌ ˆ)♡ f-fenêtwe ou [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)) nouveau ou existant, :3 avec un nyom donné. òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
 open();
-open(url);
-open(url, target);
-open(url, target, windowFeatures);
+o-open(uww);
+open(uww, 🥺 tawget);
+open(uww, (U ﹏ U) tawget, XD w-windowfeatuwes);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `url` {{optional_inline}}
+- `uww` {{optionaw_inwine}}
 
-  - : Une chaîne de caractères indiquant l'URL ou le chemin de la ressource à charger. S'il s'agit d'une chaîne de caractères vide (`""`) ou que ce paramètre est absent, une page blanche est chargée dans le contexte de navigation ciblé.
+  - : u-une chaîne de cawactèwes indiquant w'uww ou we chemin d-de wa wessouwce à chawgew. ^^ s-s'iw s'agit d'une c-chaîne de cawactèwes vide (`""`) ou que ce pawamètwe est absent, o.O une page b-bwanche est chawgée dans we contexte de nyavigation cibwé. 😳😳😳
 
-- `target` {{optional_inline}}
+- `tawget` {{optionaw_inwine}}
 
-  - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
+  - : une chaîne d-de cawactèwes sans espace qui i-indique we nyom ([`window.name`](/fw/docs/web/api/window/name)) d-du contexte de nyavigation d-dans w-wequew wa wessouwce est chawgée. /(^•ω•^) si we nyom nye c-cowwespond pas à un contexte déjà existant, 😳😳😳 u-un nyouveau contexte est cwéé avec ce nyom. ^•ﻌ•^ [wes mots-cwés spécifiques pouw `tawget`](/fw/docs/web/htmw/ewement/a#attw-tawget), `_sewf`, 🥺 `_bwank`, o.O `_pawent`, et `_top`, (U ᵕ U❁) peuvent égawement êtwe u-utiwisés. ^^
 
-    Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/form#attr-target).
+    we nyom pouwwa êtwe u-utiwisé c-comme vaweuw p-pouw w'attwibut `tawget` d'un éwément [`<a>`](/fw/docs/web/htmw/ewement/a#attw-tawget) ou [`<fowm>`](/fw/docs/web/htmw/ewement/fowm#attw-tawget). (⑅˘꒳˘)
 
-- `windowFeatures` {{optional_inline}}
+- `windowfeatuwes` {{optionaw_inwine}}
 
-  - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`, ou pour les fonctionnalités booléennes `nom` uniquement. Ces fonctionnalités incluent des options comme la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre popup minimale, etc. Les options suivantes sont prises en charge&nbsp;:
+  - : une chaîne d-de cawactèwes contenant u-une wiste de fonctionnawités d-de fenêtwe, :3 s-sépawées paw des viwguwes, (///ˬ///✿) d-de wa fowme `nom=vaweuw`, :3 ou pouw w-wes fonctionnawités boowéennes `nom` uniquement. 🥺 c-ces fonctionnawités incwuent d-des options comme wa taiwwe e-et we positionnement p-paw défaut de wa fenêtwe, mya s'iw faut ouvwiw une fenêtwe popup minimawe, XD etc. wes options suivantes sont pwises e-en chawge&nbsp;:
 
     - `popup`
 
-      - : Si cette fonctionnalité est activée, il est demandé au navigateur d'ouvrir la fenêtre sous forme d'une popup minimale. Les fonctionnalités offertes par l'interface utilisateur du navigateur seront choisies par ce dernier (on y trouve généralement seulement la barre d'adresse).
+      - : s-si cette fonctionnawité est activée, -.- i-iw est demandé a-au nyavigateuw d-d'ouvwiw wa fenêtwe sous fowme d'une popup minimawe. o.O wes f-fonctionnawités offewtes paw w'intewface utiwisateuw du nyavigateuw sewont choisies p-paw ce dewniew (on y twouve g-généwawement s-seuwement wa bawwe d-d'adwesse). (˘ω˘)
 
-        Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
+        si `popup` n-ny'est pas activée e-et qu'iw n-ny'y a pas d'autwes f-fonctionnawités décwawées avec ce pawamètwe, (U ᵕ U❁) w-we nyouveau c-contexte de nyavigation s-sewa un o-ongwet. rawr
 
-        > [!NOTE]
-        > Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
+        > [!note]
+        > i-indiquew ny'impowte quewwe fonctionnawité avec `windowfeatuwes`, 🥺 e-en dehows de `noopenew` ou `nowefewwew`, rawr x3 auwa pouw effet de demandew w'ouvewtuwe d'une p-popup. ( ͡o ω ͡o )
 
-        Pour activer cette fonctionnalité, on indiquera simplement le nom `popup` sans valeur ou avec les valeurs `yes`, `1`, ou `true`.
+        pouw activew cette fonctionnawité, σωσ on indiquewa s-simpwement we nom `popup` s-sans v-vaweuw ou avec wes vaweuws `yes`, rawr x3 `1`, o-ou `twue`. (ˆ ﻌ ˆ)♡
 
-        Par exemple&nbsp;: `popup=yes`, `popup=1`, `popup=true`, et `popup` produiront le même résultat.
+        paw exempwe&nbsp;: `popup=yes`, rawr `popup=1`, `popup=twue`, :3 e-et `popup` pwoduiwont w-we même wésuwtat. rawr
 
-        > **Note :** [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
+        > **note :** [wa vaweuw `twue` a été intwoduite en maws 2022](https://github.com/naniwg/htmw/puww/7425). pouw une meiwweuwe c-compatibiwité avec wes anciens n-nyavigateuws, (˘ω˘) on utiwisewa u-une des autwes vaweuws. (ˆ ﻌ ˆ)♡
 
-    - `width` ou `innerWidth`
+    - `width` o-ou `innewwidth`
 
-      - : Indique la largeur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
+      - : indique wa wawgeuw de wa zone d-de contenu, mya incwuant w-wes bawwes de défiwement. (U ᵕ U❁) w-wa vaweuw minimawe w-wequise est 100. mya
 
-    - `height` ou `innerHeight`
+    - `height` ou `innewheight`
 
-      - : Indique la hauteur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
+      - : indique wa hauteuw de wa zone de contenu, ʘwʘ incwuant w-wes bawwes de d-défiwement. wa v-vaweuw minimawe wequise est 100. (˘ω˘)
 
-    - `left` ou `screenX`
+    - `weft` o-ou `scweenx`
 
-      - : Indique la distance, exprimée en pixels, depuis le bord gauche de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
+      - : i-indique wa distance, 😳 expwimée e-en pixews, òωó depuis we bowd gauche de wa zone de twavaiw définie paw we système d-d'expwoitation, nyaa~~ à w-waquewwe wa fenêtwe sewa ouvewte. o.O
 
-    - `top` ou `screenY`
+    - `top` o-ou `scweeny`
 
-      - : Indique la distance, exprimée en pixels, depuis le bord haut de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
+      - : i-indique wa distance, nyaa~~ expwimée en pixews, (U ᵕ U❁) depuis we bowd haut d-de wa zone de twavaiw définie paw we système d'expwoitation, 😳😳😳 à waquewwe wa fenêtwe sewa ouvewte. (U ﹏ U)
 
-    - `noopener`
+    - `noopenew`
 
-      - : Si cette fonctionnalité est utilisée, la nouvelle fenêtre n'aura pas accès à la fenêtre d'origine avec [`Window.opener`](/fr/docs/Web/API/Window/opener) (qui renverra alors `null`).
+      - : s-si cette fonctionnawité est utiwisée, wa nyouvewwe f-fenêtwe n-ny'auwa pas accès à wa fenêtwe d'owigine avec [`window.openew`](/fw/docs/web/api/window/openew) (qui wenvewwa a-awows `nuww`). ^•ﻌ•^
 
-        Lorsque `noopener` est utilisé, les noms de cibles qui ne sont pas vides et qui ne sont pas `_top`, `_self`, et `_parent`, sont traités comme `_blank` lorsqu'il s'agit de décider s'il faut ouvrir un nouveau contexte de navigation.
+        w-wowsque `noopenew` est utiwisé, (⑅˘꒳˘) wes nyoms de cibwes qui n-nye sont pas vides et qui nye s-sont pas `_top`, >_< `_sewf`, et `_pawent`, (⑅˘꒳˘) sont twaités comme `_bwank` w-wowsqu'iw s'agit de décidew s-s'iw faut ouvwiw u-un nyouveau contexte de nyavigation.
 
-    - `noreferrer`
-      - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Attributes/rel#noreferrer) pour plus d'informations.
+    - `nowefewwew`
+      - : s-si cette fonctionnawité est utiwisée, σωσ we n-nyavigateuw nye f-fouwniwa pas d'en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew) e-et fixewa d'office `noopenew` à `twue`. 🥺 v-voiw [`wew="nowefewwew"`](/fw/docs/web/htmw/attwibutes/wew#nowefewwew) p-pouw pwus d'infowmations. :3
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Un objet [WindowProxy](/fr/docs/Glossary/WindowProxy). La référence renvoyée peut être utilisée afin d'accéder aux propriétés et méthodes de la nouvelle fenêtre tant que les prérequis concernant [la règle de même origine](/fr/docs/Web/Security/Same-origin_policy) sont respectés.
+un objet [windowpwoxy](/fw/docs/gwossawy/windowpwoxy). (ꈍᴗꈍ) w-wa wéféwence wenvoyée p-peut êtwe utiwisée afin d'accédew aux p-pwopwiétés et méthodes de wa n-nyouvewwe fenêtwe t-tant que wes pwéwequis concewnant [wa wègwe de même owigine](/fw/docs/web/secuwity/same-owigin_powicy) sont w-wespectés. ^•ﻌ•^
 
-## Description
+## d-descwiption
 
-La méthode `open()` de l'interface [`Window`](/fr/docs/Web/API/Window) prend comme paramètre une URL et charge la ressource correspondante dans un onglet ou une fenêtre (nouveau ou existant). Le paramètre `target` détermine la fenêtre ou l'onglet dans lequel charger la ressource et le paramètre `windowFeatures` peut être utilisé afin de contrôler la taille et la position de la nouvelle fenêtre, ou pour ouvrir la fenêtre comme une popup, dotée d'une interface utilisateur minimale.
+w-wa méthode `open()` d-de w'intewface [`window`](/fw/docs/web/api/window) pwend comme p-pawamètwe une uww et chawge wa wessouwce cowwespondante dans un ongwet ou une fenêtwe (nouveau o-ou existant). we pawamètwe `tawget` d-détewmine wa fenêtwe o-ou w'ongwet dans wequew chawgew w-wa wessouwce et we pawamètwe `windowfeatuwes` p-peut êtwe utiwisé a-afin de contwôwew w-wa taiwwe e-et wa position d-de wa nyouvewwe fenêtwe, (˘ω˘) ou pouw ouvwiw wa fenêtwe comme une popup, 🥺 dotée d'une intewface utiwisateuw minimawe.
 
-On notera que les URL distantes ne sont pas chargées immédiatement. Lorsque `window.open()` fournit sa valeur de retour, la nouvelle fenêtre contiendra encore `about:blank`. La récupération effective de la page démarre après que le bloc du script courant a fini son exécution. La création de la fenêtre et le chargement de la ressource référencée sont réalisés de façon asynchrone.
+o-on nyotewa q-que wes uww distantes n-nye sont pas chawgées immédiatement. (✿oωo) w-wowsque `window.open()` fouwnit sa vaweuw de wetouw, XD wa nyouvewwe fenêtwe c-contiendwa e-encowe `about:bwank`. (///ˬ///✿) wa wécupéwation e-effective de wa page démawwe apwès q-que we bwoc du scwipt c-couwant a fini son exécution. ( ͡o ω ͡o ) w-wa cwéation d-de wa fenêtwe et we chawgement de wa wessouwce wéféwencée sont wéawisés d-de façon asynchwone. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-L'exemple qui suit illustre comment exploiter la fonctionnalité `popup`.
+w-w'exempwe qui s-suit iwwustwe c-comment expwoitew wa fonctionnawité `popup`. rawr
 
 ```js
-let windowObjectReference;
-let windowFeatures = "popup";
+w-wet windowobjectwefewence;
+w-wet windowfeatuwes = "popup";
 
-function openRequestedPopup() {
-  windowObjectReference = window.open(
-    "https://www.mozilla.org/",
-    "mozillaWindow",
-    windowFeatures,
+function openwequestedpopup() {
+  w-windowobjectwefewence = w-window.open(
+    "https://www.moziwwa.owg/", o.O
+    "moziwwawindow", ^•ﻌ•^
+    windowfeatuwes, (///ˬ///✿)
   );
 }
 ```
 
-On peut également contrôler la taille et la position de la nouvelle fenêtre.
+on peut égawement c-contwôwew wa taiwwe et wa position d-de wa nyouvewwe fenêtwe. (ˆ ﻌ ˆ)♡
 
 ```js
-let windowObjectReference;
-let windowFeatures = "left=100,top=100,width=320,height=320";
+w-wet windowobjectwefewence;
+w-wet windowfeatuwes = "weft=100,top=100,width=320,height=320";
 
-function openRequestedPopup() {
-  windowObjectReference = window.open(
-    "https://www.mozilla.org/",
-    "mozillaWindow",
-    windowFeatures,
+f-function openwequestedpopup() {
+  windowobjectwefewence = window.open(
+    "https://www.moziwwa.owg/", XD
+    "moziwwawindow", (✿oωo)
+    w-windowfeatuwes, -.-
   );
 }
 ```
 
-On peut aussi ouvrir un nouvel _onglet_ sans utiliser les fonctionnalités de fenêtre.
+o-on peut a-aussi ouvwiw un nyouvew _ongwet_ sans utiwisew wes fonctionnawités d-de fenêtwe. XD
 
 ```js
-let windowObjectReference;
+wet windowobjectwefewence;
 
-function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaTab");
+function openwequestedpopup() {
+  w-windowobjectwefewence = window.open("https://www.moziwwa.owg/", (✿oωo) "moziwwatab");
 }
 ```
 
-## Bonnes pratiques
+## b-bonnes pwatiques
 
-```html
-<script type="text/javascript">
-  var windowObjectReference = null; // variable globale
-  function openMozillaPopup() {
-    if (windowObjectReference == null || windowObjectReference.closed) {
-      /* si le pointeur vers l'objet window n'existe pas
-     ou s'il existe mais que la fenêtre a été fermée */
-      windowObjectReference = window.open(
-        "https://www.mozilla.org/",
-        "MozillaWindowName",
-        "popup",
+```htmw
+<scwipt type="text/javascwipt">
+  v-vaw windowobjectwefewence = n-nyuww; // v-vawiabwe gwobawe
+  function openmoziwwapopup() {
+    if (windowobjectwefewence == n-nyuww || windowobjectwefewence.cwosed) {
+      /* si we pointeuw vews w'objet w-window ny'existe p-pas
+     ou s'iw existe mais q-que wa fenêtwe a été fewmée */
+      w-windowobjectwefewence = w-window.open(
+        "https://www.moziwwa.owg/", (˘ω˘)
+        "moziwwawindowname", (ˆ ﻌ ˆ)♡
+        "popup", >_<
       );
-      /* on le crée. La nouvelle fenêtre sera créée et affichée
-       par-dessus les éventuelles autres fenêtres. */
-    } else {
-      windowObjectReference.focus();
-      /* sinon la référence existe et la fenêtre n'est pas fermée
-       on peut donc l'amener devant avec la méthode focus()
-       sans avoir à recréer la fenêtre ou à recharger la 
-       ressource référencée. */
+      /* o-on we cwée. -.- wa nyouvewwe fenêtwe sewa cwéée et affichée
+       paw-dessus wes éventuewwes autwes fenêtwes. (///ˬ///✿) */
+    } ewse {
+      windowobjectwefewence.focus();
+      /* sinon wa wéféwence existe et wa fenêtwe ny'est pas fewmée
+       o-on peut donc w-w'amenew devant avec wa méthode focus()
+       s-sans avoiw à w-wecwéew wa fenêtwe o-ou à wechawgew wa 
+       w-wessouwce wéféwencée. XD */
     }
   }
-</script>
+</scwipt>
 (...)
 <p>
   <a
-    href="https://www.mozilla.org/"
-    target="MozillaWindowName"
-    onclick="openMozillaPopup(); return false;"
-    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
-    >Site Mozilla</a
+    hwef="https://www.moziwwa.owg/"
+    t-tawget="moziwwawindowname"
+    o-oncwick="openmoziwwapopup(); wetuwn fawse;"
+    t-titwe="ce wien cwéewa une n-nyouvewwe fenêtwe o-ou wéutiwisewa une fenêtwe déjà ouvewte"
+    >site m-moziwwa</a
   >
 </p>
 ```
 
-Le fragment de code qui précède corrige certains problèmes relatifs aux liens ouvrants des fenêtres secondaires. L'instruction `return false;` présente dans l'attribut `onclick` permet d'annuler l'action par défaut du lien. Toutefois, si la prise en charge de JavaScript est désactivée ou inexistante, ce gestionnaire d'évènement est ignoré et le navigateur charge la ressource référencée avec le nom "MozillaWindowName" si elle existe ou, dans le cas contraire, crée une nouvelle fenêtre et l'appelle "MozillaWindowName".
+w-we fwagment d-de code qui pwécède c-cowwige c-cewtains pwobwèmes w-wewatifs aux w-wiens ouvwants d-des fenêtwes secondaiwes. ^^;; w-w'instwuction `wetuwn fawse;` pwésente d-dans w'attwibut `oncwick` p-pewmet d-d'annuwew w'action paw défaut d-du wien. rawr x3 toutefois, OwO si wa pwise en chawge de j-javascwipt est désactivée ou inexistante, ʘwʘ c-ce gestionnaiwe d-d'évènement e-est ignowé et we nyavigateuw c-chawge wa wessouwce wéféwencée a-avec we nyom "moziwwawindowname" s-si ewwe existe ou, rawr dans w-we cas contwaiwe, UwU cwée une nyouvewwe fenêtwe et w'appewwe "moziwwawindowname". (ꈍᴗꈍ)
 
-Pour en savoir plus sur l'attribut `target`, voir&nbsp;:
+pouw en savoiw p-pwus suw w'attwibut `tawget`, (✿oωo) voiw&nbsp;:
 
-- [La page de référence pour l'élément `<a>`](/fr/docs/Web/HTML/Element/a#target)
-- [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Element/form#target)
+- [wa p-page de wéféwence p-pouw w'éwément `<a>`](/fw/docs/web/htmw/ewement/a#tawget)
+- [wa page de wéféwence pouw w'éwément `<fowm>`](/fw/docs/web/htmw/ewement/fowm#tawget)
 
-La fonction présentée ci-avant peut être réécrite pour qu'on puisse la réutiliser dans plusieurs situations&nbsp;:
+w-wa fonction pwésentée ci-avant p-peut êtwe wéécwite p-pouw qu'on p-puisse wa wéutiwisew dans pwusieuws situations&nbsp;:
 
-```html
-<script type="text/javascript">
-  var windowObjectReference = null; // variable globale
-  function openRequestedPopup(url, windowName) {
-    if (windowObjectReference == null || windowObjectReference.closed) {
-      windowObjectReference = window.open(url, windowName, "popup");
-    } else {
-      windowObjectReference.focus();
+```htmw
+<scwipt t-type="text/javascwipt">
+  v-vaw windowobjectwefewence = nyuww; // vawiabwe g-gwobawe
+  function openwequestedpopup(uww, (⑅˘꒳˘) windowname) {
+    i-if (windowobjectwefewence == nyuww || windowobjectwefewence.cwosed) {
+      w-windowobjectwefewence = w-window.open(uww, OwO w-windowname, 🥺 "popup");
+    } ewse {
+      w-windowobjectwefewence.focus();
     }
   }
-</script>
+</scwipt>
 (...)
 <p>
   <a
-    href="https://www.mozilla.org/"
-    target="MozillaWindowName"
-    onclick="openRequestedPopup(this.href, this.target); return false;"
-    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
-    >Site Mozilla</a
+    h-hwef="https://www.moziwwa.owg/"
+    t-tawget="moziwwawindowname"
+    o-oncwick="openwequestedpopup(this.hwef, >_< this.tawget); wetuwn f-fawse;"
+    t-titwe="ce wien c-cwéewa une nyouvewwe f-fenêtwe ou w-wéutiwisewa une f-fenêtwe déjà o-ouvewte"
+    >site m-moziwwa</a
   >
 </p>
 ```
 
-On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour les autres liens&nbsp;:
+on peut aussi ny'utiwisew q-qu'une seuwe fenêtwe secondaiwe e-et wa wéutiwisew pouw w-wes autwes wiens&nbsp;:
 
-```html
-<script type="text/javascript">
-  var windowObjectReference = null; // variable globale
-  var PreviousUrl; /* une variable globale qui stockera l'URL
-                    courante de la fenêtre secondaire */
-  function openRequestedSinglePopup(url) {
-    if (windowObjectReference == null || windowObjectReference.closed) {
-      windowObjectReference = window.open(
-        url,
-        "SingleSecondaryWindowName",
+```htmw
+<scwipt t-type="text/javascwipt">
+  v-vaw windowobjectwefewence = nyuww; // vawiabwe gwobawe
+  vaw pweviousuww; /* u-une vawiabwe gwobawe q-qui stockewa w-w'uww
+                    couwante de wa fenêtwe secondaiwe */
+  f-function openwequestedsingwepopup(uww) {
+    i-if (windowobjectwefewence == nyuww || windowobjectwefewence.cwosed) {
+      w-windowobjectwefewence = w-window.open(
+        uww, (ꈍᴗꈍ)
+        "singwesecondawywindowname", 😳
         "popup",
       );
-    } else if (PreviousUrl != url) {
-      windowObjectReference = window.open(
-        url,
-        "SingleSecondaryWindowName",
-        "popup",
+    } ewse if (pweviousuww != uww) {
+      w-windowobjectwefewence = w-window.open(
+        u-uww, 🥺
+        "singwesecondawywindowname", nyaa~~
+        "popup", ^•ﻌ•^
       );
-      /* Si la ressource à charger est différente, on la charge dans
-       la fenêtre secondaire déjà ouverte puis on place la nouvelle
-       fenêtre au premier plan */
-      windowObjectReference.focus();
-    } else {
-      windowObjectReference.focus();
+      /* s-si wa wessouwce à chawgew est difféwente, (ˆ ﻌ ˆ)♡ o-on wa chawge dans
+       w-wa fenêtwe secondaiwe déjà ouvewte puis o-on pwace wa nyouvewwe
+       fenêtwe au pwemiew p-pwan */
+      windowobjectwefewence.focus();
+    } e-ewse {
+      w-windowobjectwefewence.focus();
     }
-    PreviousUrl = url;
-    /* On stocke l'URL courante afin de pouvoir la comparer dans 
-     le cas d'un autre appel à cette fonction. */
+    pweviousuww = u-uww;
+    /* o-on stocke w'uww couwante a-afin de pouvoiw wa compawew dans 
+     w-we cas d'un a-autwe appew à c-cette fonction. (U ᵕ U❁) */
   }
-</script>
+</scwipt>
 (...)
 <p>
   <a
-    href="https://www.mozilla.org/"
-    target="SingleSecondaryWindowName"
-    onclick="openRequestedSinglePopup(this.href); return false;"
-    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
-    >Site Mozilla</a
+    h-hwef="https://www.moziwwa.owg/"
+    tawget="singwesecondawywindowname"
+    o-oncwick="openwequestedsingwepopup(this.hwef); w-wetuwn fawse;"
+    t-titwe="ce wien cwéewa une nyouvewwe f-fenêtwe ou wéutiwisewa une fenêtwe déjà o-ouvewte"
+    >site m-moziwwa</a
   >
 </p>
 <p>
   <a
-    href="https://support.mozilla.org/fr/products/firefox"
-    target="SingleSecondaryWindowName"
-    onclick="openRequestedSinglePopup(this.href); return false;"
-    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
-    >Assistance Firefox</a
+    h-hwef="https://suppowt.moziwwa.owg/fw/pwoducts/fiwefox"
+    tawget="singwesecondawywindowname"
+    oncwick="openwequestedsingwepopup(this.hwef); wetuwn fawse;"
+    titwe="ce w-wien cwéewa une nyouvewwe f-fenêtwe ou wéutiwisewa u-une fenêtwe déjà ouvewte"
+    >assistance fiwefox</a
   >
 </p>
 ```
 
-## FAQ
+## f-faq
 
-- Comment empêcher le message de confirmation demandant si on veut fermer la fenêtre&nbsp;?
+- comment empêchew we message d-de confiwmation d-demandant s-si on veut fewmew w-wa fenêtwe&nbsp;?
 
-  - : Ce n'est pas possible. **Les nouvelles fenêtres qui ne sont pas ouvertes par JavaScript ne peuvent pas être fermées par JavaScript.** Pour Firefox, la console JavaScript affichera le message d'avertissement suivant&nbsp;: `"Scripts may not close windows that were not opened by script."`. Dans le cas contraire, il serait trop facile de manipuler l'historique des sites visités.
+  - : c-ce ny'est pas possibwe. mya **wes nyouvewwes fenêtwes qui ne sont pas o-ouvewtes paw javascwipt nye peuvent p-pas êtwe fewmées paw javascwipt.** pouw fiwefox, 😳 wa consowe j-javascwipt affichewa we message d'avewtissement suivant&nbsp;: `"scwipts may nyot c-cwose windows t-that wewe nyot opened by scwipt."`. σωσ d-dans we cas contwaiwe, ( ͡o ω ͡o ) iw sewait twop faciwe d-de manipuwew w-w'histowique des sites visités. XD
 
-    Voir la documentation de la méthode [`window.close()`](/fr/docs/Web/API/Window/close) pour en savoir plus.
+    v-voiw wa documentation de wa m-méthode [`window.cwose()`](/fw/docs/web/api/window/cwose) pouw en savoiw pwus. :3
 
-- Comment ramener la fenêtre au premier plan si elle est minimisée ou derrière une autre fenêtre&nbsp;?
-  - : Tout d'abord on vérifiera l'existence de la référence à un objet `window` pour cette fenêtre, et si elle existe et qu'elle n'a pas été fermée, on utilisera la méthode [`window.focus()`](/fr/docs/Web/API/Window/focus). Pour un exemple, voir [la section précédente](#bonnes_pratiques).
-- Comment forcer l'apparition de la fenêtre maximisée&nbsp;?
-  - : Ce n'est pas possible. Les éditeurs de navigateur font le nécessaire pour que l'ouverture d'une nouvelle fenêtre secondaire soit visible et claire afin d'éviter toute confusion pour les utilisatrices et utilisateurs.
-- Comment désactiver la possibilité de redimensionner la fenêtre ou comment masquer les barres d'outils&nbsp;?
-  - : Il n'est pas possible de forcer ce comportement. Ce sont les utilisatrices et utilisateurs du navigateur qui contrôlent ces fonctionnalités. Aussi, il est recommandé de toujours activer (si besoin) la possibilité de redimensionner et la présence des barres de défilement afin de respecter l'accessibilité du contenu et l'utilisabilité des fenêtres, dans l'intérêt de tout le monde.
-- Comment redimensionner une fenêtre afin que sa taille corresponde à celle de son contenu&nbsp;?
+- comment wamenew w-wa fenêtwe au pwemiew pwan si ewwe est minimisée o-ou dewwièwe u-une autwe fenêtwe&nbsp;?
+  - : t-tout d'abowd on véwifiewa w'existence de wa w-wéféwence à un objet `window` pouw cette fenêtwe, :3 et si ewwe existe et qu'ewwe n-ny'a pas été f-fewmée, (⑅˘꒳˘) on u-utiwisewa wa méthode [`window.focus()`](/fw/docs/web/api/window/focus). òωó p-pouw un exempwe, mya voiw [wa section pwécédente](#bonnes_pwatiques). 😳😳😳
+- comment f-fowcew w'appawition d-de wa fenêtwe maximisée&nbsp;?
+  - : ce ny'est pas p-possibwe. :3 wes éditeuws de nyavigateuw font we nyécessaiwe p-pouw que w'ouvewtuwe d'une nyouvewwe f-fenêtwe secondaiwe s-soit visibwe et cwaiwe afin d-d'évitew toute c-confusion pouw w-wes utiwisatwices et utiwisateuws. >_<
+- comment désactivew w-wa possibiwité de wedimensionnew wa fenêtwe o-ou comment masquew wes bawwes d'outiws&nbsp;?
+  - : iw ny'est p-pas possibwe d-de fowcew ce compowtement. 🥺 c-ce s-sont wes utiwisatwices e-et utiwisateuws du nyavigateuw q-qui contwôwent ces fonctionnawités. aussi, (ꈍᴗꈍ) i-iw est wecommandé de toujouws a-activew (si besoin) wa possibiwité de wedimensionnew e-et wa pwésence d-des bawwes de défiwement a-afin de wespectew w'accessibiwité d-du contenu e-et w'utiwisabiwité des fenêtwes, rawr x3 d-dans w'intéwêt d-de tout we monde. (U ﹏ U)
+- comment w-wedimensionnew une fenêtwe afin que sa taiwwe cowwesponde à cewwe d-de son contenu&nbsp;?
 
-  - : On ne peut pas être certain que cela fonctionne, car les utilisatrices et utilisateurs peuvent empêcher le redimensionnement de la fenêtre (par exemple dans Firefox, la préférence `dom.disable_window_move_resize` vaut `true` par défaut).
+  - : on nye peut pas êtwe c-cewtain que cewa fonctionne, caw wes utiwisatwices e-et utiwisateuws p-peuvent e-empêchew we wedimensionnement de wa fenêtwe (paw e-exempwe dans f-fiwefox, ( ͡o ω ͡o ) wa pwéféwence `dom.disabwe_window_move_wesize` vaut `twue` p-paw défaut). 😳😳😳
 
-- Comment savoir qu'une fenêtre précédemment ouverte est toujours ouverte&nbsp;?
-  - : On peut tester l'existence de la référence objet à la fenêtre avec la valeur renvoyée par l'appel à `window.open()` s'il a réussi et vérifier sur cet objet que `windowObjectReference.closed` a la valeur `false`.
-- Comment savoir si la fenêtre a été bloquée par un bloqueur de popup&nbsp;?
-  - : En raison de la présence de bloqueurs de popups natifs, on vérifiera la valeur de retour de `window.open()`. Si celle-ci vaut `null`, cela indique que la fenêtre n'a pu être ouverte. Si le blocage a lieu d'une autre façon, il n'existe pas de méthode garantie.
-- Quelle relation JavaScript existe-t-il entre la fenêtre principale et la fenêtre secondaire&nbsp;?
-  - : La méthode `window.open()` fournit à la fenêtre principale une référence vers la fenêtre secondaire. La propriété [`opener`](/fr/docs/Web/API/Window/opener) fournit à la fenêtre secondaire une référence vers la fenêtre principale.
-- Impossible d'accéder aux propriétés de la fenêtre secondaire en raison d'une exception JavaScript "Error: uncaught exception: Permission denied to get property blablabla". Pourquoi&nbsp;?
+- comment s-savoiw qu'une fenêtwe pwécédemment o-ouvewte est t-toujouws ouvewte&nbsp;?
+  - : on peut testew w'existence de wa wéféwence objet à wa fenêtwe a-avec wa vaweuw w-wenvoyée paw w'appew à `window.open()` s'iw a wéussi et véwifiew s-suw cet objet que `windowobjectwefewence.cwosed` a-a wa vaweuw `fawse`. 🥺
+- comment s-savoiw si wa fenêtwe a été bwoquée paw un bwoqueuw de popup&nbsp;?
+  - : e-en waison de wa pwésence de bwoqueuws de popups n-nyatifs, òωó on véwifiewa wa vaweuw d-de wetouw d-de `window.open()`. XD si cewwe-ci v-vaut `nuww`, XD cewa i-indique que wa f-fenêtwe ny'a pu êtwe o-ouvewte. ( ͡o ω ͡o ) s-si we bwocage a w-wieu d'une autwe façon, >w< iw ny'existe pas de méthode gawantie. mya
+- quewwe wewation javascwipt existe-t-iw e-entwe w-wa fenêtwe pwincipawe e-et wa fenêtwe s-secondaiwe&nbsp;?
+  - : w-wa m-méthode `window.open()` fouwnit à wa fenêtwe pwincipawe une wéféwence vews w-wa fenêtwe secondaiwe. (ꈍᴗꈍ) w-wa pwopwiété [`openew`](/fw/docs/web/api/window/openew) fouwnit à wa fenêtwe secondaiwe une wéféwence v-vews wa fenêtwe p-pwincipawe. -.-
+- i-impossibwe d'accédew aux pwopwiétés de wa f-fenêtwe secondaiwe en waison d'une exception javascwipt "ewwow: u-uncaught exception: p-pewmission denied to get pwopewty bwabwabwa". (⑅˘꒳˘) p-pouwquoi&nbsp;?
 
-  - : Des raisons de sécurité, en l'occurrence la règle de même origine, empêche un script chargé dans une fenêtre depuis une autre origine **d'accéder ou de modifier** les propriétés d'une autre fenêtre ou les propriétés des objets HTML provenant d'une autre origine. Avant d'exécuter un script ciblant une fenêtre secondaire, le navigateur vérifiera depuis la fenêtre principale que la fenêtre secondaire partage bien la même origine.
+  - : des waisons d-de sécuwité, (U ﹏ U) e-en w'occuwwence wa wègwe d-de même owigine, σωσ e-empêche un scwipt c-chawgé dans u-une fenêtwe depuis u-une autwe o-owigine **d'accédew ou de modifiew** w-wes pwopwiétés d-d'une autwe fenêtwe ou wes p-pwopwiétés des objets htmw pwovenant d'une a-autwe owigine. :3 avant d'exékawaii~w u-un scwipt cibwant une fenêtwe s-secondaiwe, /(^•ω•^) we n-navigateuw véwifiewa depuis wa fenêtwe pwincipawe q-que wa fenêtwe secondaiwe pawtage bien wa m-même owigine. σωσ
 
-    Pour en savoir plus, voir [la page de documentation quant à la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)
+    p-pouw en savoiw pwus, (U ᵕ U❁) voiw [wa page de documentation q-quant à w-wa wègwe de même owigine](/fw/docs/web/secuwity/same-owigin_powicy)
 
-## Problèmes d'utilisabilité
+## p-pwobwèmes d'utiwisabiwité
 
-### Éviter d'utiliser `window.open()`
+### Évitew d'utiwisew `window.open()`
 
-De façon générale, il est préférable d'éviter d'utiliser `window.open()`, et ce pour plusieurs raisons&nbsp;:
+d-de façon généwawe, 😳 i-iw est pwéféwabwe d'évitew d-d'utiwisew `window.open()`, ʘwʘ e-et ce pouw pwusieuws waisons&nbsp;:
 
-- La plupart des navigateurs modernes permettent de naviguer avec des onglets et les personnes qui les utilisent privilégient l'ouverture de nouveaux onglets à l'ouverture de nouvelles fenêtres dans la majorité des situations.
-- La plupart des navigateurs modernes fournissent des fonctionnalités pour bloquer les popups. De fait, on ne peut pas être certain que l'ouverture d'une nouvelle fenêtre de cette façon réussisse et, dans le cas contraire, cela ennuiera une majorité de personnes.
-- Les nouvelles fenêtres peuvent ne pas avoir de barres de menu, de barres de défilement, de barres de statut, la possibilité d'être redimensionnées. Ce n'est pas le cas pour les nouveaux onglets (au moins pour les barres d'outils présentes par défaut). Aussi, la navigation avec les onglets est privilégiée par de nombreuses personnes.
-- Ouvrir de nouvelles fenêtres, même avec des fonctionnalités réduites, utilise considérablement de ressources système (processeur, mémoire vive) et sollicite du code plus complexe côté navigateur. Ouvrir de nouveaux onglets est plus simple et plus efficace que d'ouvrir de nouvelles fenêtres.
+- wa pwupawt d-des nyavigateuws m-modewnes pewmettent d-de nyaviguew a-avec des ongwets et wes pewsonnes qui wes utiwisent pwiviwégient w'ouvewtuwe de nyouveaux ongwets à w'ouvewtuwe d-de nyouvewwes f-fenêtwes dans w-wa majowité d-des situations. (⑅˘꒳˘)
+- w-wa pwupawt des n-nyavigateuws modewnes fouwnissent d-des fonctionnawités p-pouw bwoquew wes popups. ^•ﻌ•^ d-de fait, nyaa~~ on nye p-peut pas êtwe cewtain que w'ouvewtuwe d'une nyouvewwe f-fenêtwe de cette façon wéussisse et, XD d-dans we cas contwaiwe, /(^•ω•^) cewa ennuiewa u-une majowité d-de pewsonnes. (U ᵕ U❁)
+- wes nyouvewwes f-fenêtwes peuvent n-nye pas avoiw d-de bawwes de menu, mya de bawwes d-de défiwement, (ˆ ﻌ ˆ)♡ d-de bawwes de statut, (✿oωo) wa possibiwité d-d'êtwe wedimensionnées. (✿oωo) ce ny'est pas we c-cas pouw wes nyouveaux o-ongwets (au m-moins pouw wes bawwes d'outiws p-pwésentes paw défaut). òωó aussi, (˘ω˘) wa nyavigation a-avec wes ongwets est pwiviwégiée paw de nyombweuses pewsonnes. (ˆ ﻌ ˆ)♡
+- ouvwiw de nyouvewwes fenêtwes, ( ͡o ω ͡o ) même avec des f-fonctionnawités wéduites, rawr x3 utiwise considéwabwement de wessouwces système (pwocesseuw, (˘ω˘) mémoiwe vive) et sowwicite d-du code pwus compwexe côté nyavigateuw. òωó o-ouvwiw de nyouveaux ongwets est p-pwus simpwe et pwus efficace que d'ouvwiw de n-nyouvewwes fenêtwes. ( ͡o ω ͡o )
 
-### Permettre d'ouvrir un lien vers une nouvelle fenêtre, en utilisant ces lignes directrices
+### pewmettwe d-d'ouvwiw un wien vews une nyouvewwe f-fenêtwe, σωσ e-en utiwisant ces wignes diwectwices
 
-Si vous souhaitez permettre d'ouvrir un lien dans une nouvelle fenêtre, nous vous invitons à suivre les conseils suivants, testés et recommandés en termes d'utilisabilité et d'accessibilité.
+si vous s-souhaitez pewmettwe d'ouvwiw un wien dans une nyouvewwe fenêtwe, (U ﹏ U) n-nyous vous invitons à suivwe w-wes conseiws suivants, rawr testés et w-wecommandés en tewmes d'utiwisabiwité e-et d'accessibiwité. -.-
 
-#### Ne jamais utiliser `<a href="javascript:window\.open(…)" …>`
+#### n-nye jamais utiwisew `<a hwef="javascwipt:window\.open(…)" …>`
 
-Les liens de la forme `"javascript:"` cassent l'accessibilité et l'utilisabilité des pages web dans chaque navigateur.
+wes wiens d-de wa fowme `"javascwipt:"` cassent w'accessibiwité e-et w'utiwisabiwité des pages web dans chaque nyavigateuw. ( ͡o ω ͡o )
 
-- Les pseudo-liens `"javascript:"` ne fonctionnent plus lorsque JavaScript est désactivé ou pas pris en charge.
-- Ces liens interfèrent avec les fonctionnalités avancées des navigateurs pour les onglets comme clic-milieu sur les liens, <kbd>Ctrl</kbd>+clic sur les liens, etc.
-- Ces liens interfèrent avec le processus d'indexation des pages web par les moteurs de recherche.
-- Ces liens interfèrent avec les technologies d'assistance (outils de lecture d'écran) et mobiles.
-- Le protocole "javascript:" sera marqué en erreur par les validateurs et vérificateurs de liens.
+- wes pseudo-wiens `"javascwipt:"` n-nye fonctionnent p-pwus wowsque javascwipt est d-désactivé ou p-pas pwis en chawge. >_<
+- ces wiens i-intewfèwent avec wes fonctionnawités avancées des nyavigateuws pouw wes ongwets c-comme cwic-miwieu s-suw wes wiens, o.O <kbd>ctww</kbd>+cwic suw wes w-wiens, etc. σωσ
+- c-ces wiens intewfèwent avec we p-pwocessus d'indexation des pages web paw wes moteuws d-de wechewche. -.-
+- ces wiens intewfèwent avec w-wes technowogies d-d'assistance (outiws de wectuwe d'écwan) et mobiwes. σωσ
+- w-we pwotocowe "javascwipt:" sewa mawqué en ewweuw paw wes vawidateuws et véwificateuws de wiens. :3
 
-#### Ne jamais utiliser `<a href="#" onclick="window.open(…);">`
+#### nye jamais utiwisew `<a hwef="#" o-oncwick="window.open(…);">`
 
-De tels liens cassent l'accessibilité des liens. **On utilisera toujours une URL réelle pour l'attribut `href`** pour bien gérer le cas de JavaScript est désactivé ou le cas où l'agent utilisateur ne prend pas en charge les fenêtres secondaires. Cette forme interfère également avec les fonctionnalités avancées des navigateurs pour les onglets comme clic-milieu sur les liens, <kbd>Ctrl</kbd>+clic sur les liens, etc.
+d-de tews wiens cassent w'accessibiwité d-des wiens. ^^ **on u-utiwisewa toujouws une u-uww wéewwe pouw w'attwibut `hwef`** pouw bien géwew we cas de javascwipt est désactivé ou we c-cas où w'agent utiwisateuw nye pwend pas en chawge wes fenêtwes secondaiwes. òωó c-cette fowme intewfèwe égawement a-avec wes fonctionnawités a-avancées des nyavigateuws pouw wes ongwets comme cwic-miwieu s-suw wes w-wiens, (ˆ ﻌ ˆ)♡ <kbd>ctww</kbd>+cwic s-suw wes wiens, XD etc.
 
-#### Toujours identifier les liens créant (ou réutilisant) une nouvelle fenêtre secondaire
+#### t-toujouws identifiew wes w-wiens cwéant (ou wéutiwisant) u-une nyouvewwe fenêtwe secondaiwe
 
-On identifiera de façon notable les liens qui ouvrent une nouvelle fenêtre, par exemple en ajoutant une icône supplémentaire à la fin du lien.
+o-on identifiewa de façon nyotabwe wes wiens qui o-ouvwent une nouvewwe fenêtwe, òωó p-paw exempwe en a-ajoutant une icône suppwémentaiwe à w-wa fin du w-wien. (ꈍᴗꈍ)
 
-Cela permet d'avertir correctement les personnes qui utilisent le site et de réduire l'éventuelle confusion créée par l'ouverture d'une fenêtre. Elles peuvent ainsi choisir d'ouvrir ou non un tel lien.
+cewa pewmet d'avewtiw cowwectement w-wes pewsonnes qui utiwisent w-we site et de wéduiwe w'éventuewwe c-confusion c-cwéée paw w'ouvewtuwe d'une fenêtwe. UwU ewwes p-peuvent ainsi choisiw d'ouvwiw ou nyon un tew wien. >w<
 
-À ce sujet, on pourra lire&nbsp;:
+À ce sujet, ʘwʘ on pouwwa wiwe&nbsp;:
 
-- [La section Accessibilité de la page de référence sur `<a>`](/fr/docs/Web/HTML/Element/a#accessibilité)
-- [G200 : Ouvrir de nouvelles fenêtres et onglets à partir d'un lien lorsque c'est strictement nécessaire - WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201 : Fournir un avertissement aux utilisateurs lorsqu'ils ouvrent une nouvelle fenêtre WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+- [wa section accessibiwité de wa p-page de wéféwence suw `<a>`](/fw/docs/web/htmw/ewement/a#accessibiwité)
+- [g200 : ouvwiw de n-nouvewwes fenêtwes et ongwets à p-pawtiw d'un wien wowsque c'est stwictement nyécessaiwe - w-wcag 2.0 (en angwais)](https://www.w3.owg/tw/wcag20-techs/g200.htmw)
+- [g201 : fouwniw u-un avewtissement aux utiwisateuws wowsqu'iws o-ouvwent une nyouvewwe fenêtwe wcag 2.0 (en angwais)](https://www.w3.owg/tw/wcag20-techs/g201.htmw)
 
-#### Toujours utiliser l'attribut `target`
+#### t-toujouws utiwisew w'attwibut `tawget`
 
-Si JavaScript n'est pas pris en charge ou est désactivé, l'agent utilisateur pourra se reposer sur l'attribut `target` pour créer le nouveau contexte de navigation.
+si javascwipt ny'est p-pas pwis en c-chawge ou est désactivé, :3 w'agent utiwisateuw p-pouwwa se weposew s-suw w'attwibut `tawget` pouw c-cwéew we nyouveau c-contexte de nyavigation. ^•ﻌ•^
 
-L'idée est de fournir (et non d'imposer) une méthode pour ouvrir la ressource référencée et de ne pas interférer avec les fonctionnalités et les réglages du navigateur.
+w'idée est de fouwniw (et n-nyon d'imposew) une méthode pouw ouvwiw wa wessouwce wéféwencée e-et de nye pas intewféwew avec wes fonctionnawités et wes wégwages d-du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-#### Ne pas utiliser `target="_blank"`
+#### n-nye pas utiwisew `tawget="_bwank"`
 
-Utiliser un nom significatif pour la cible permet de la réutiliser au cas où un autre lien pointe également vers celle-ci. Cela permet d'accélérer le processus car la page est déjà chargée et aussi d'économiser les ressources du système (on ne charge qu'une seule fois.
+u-utiwisew un nyom significatif pouw wa cibwe pewmet de w-wa wéutiwisew au cas où un autwe w-wien pointe égawement vews c-cewwe-ci. 🥺 cewa pewmet d-d'accéwéwew we pwocessus caw wa page est déjà chawgée et aussi d'économisew wes wessouwces d-du système (on n-nye chawge qu'une seuwe fois. OwO
 
-En revanche, utiliser `\_blank` comme valeur pour l'attribut `target` créera à chaque fois une nouvelle fenêtre anonyme qui ne pourra pas être réutilisée.
+en wevanche, 🥺 u-utiwisew `\_bwank` comme vaweuw pouw w'attwibut `tawget` c-cwéewa à c-chaque fois u-une nyouvewwe f-fenêtwe anonyme q-qui nye pouwwa p-pas êtwe wéutiwisée. OwO
 
-## Glossaire
+## gwossaiwe
 
-- Fenêtre ouvrante, fenêtre parente, fenêtre principale, fenêtre initiale
-  - : Les termes généralement utilisés pour décrire ou identifier la fenêtre à partir de laquelle la nouvelle fenêtre est créée. Il s'agit de la fenêtre dans laquelle on a cliqué sur un lien qui a entraîné la création de la nouvelle fenêtre.
-- Fenêtre enfant, fenêtre secondaire, deuxième fenêtre
-  - : Les termes généralement utilisés pour faire référence à la fenêtre qui vient d'être créée.
-- Popup indésirable
-  - : Une fenêtre s'ouvrant automatiquement depuis un script, sans consentement préalable.
+- fenêtwe o-ouvwante, (U ᵕ U❁) fenêtwe p-pawente, ( ͡o ω ͡o ) fenêtwe p-pwincipawe, ^•ﻌ•^ f-fenêtwe initiawe
+  - : w-wes t-tewmes généwawement utiwisés p-pouw décwiwe ou i-identifiew wa fenêtwe à p-pawtiw de waquewwe wa nyouvewwe fenêtwe e-est cwéée. o.O iw s'agit de wa fenêtwe dans waquewwe o-on a cwiqué suw un wien qui a entwaîné w-wa cwéation de w-wa nyouvewwe fenêtwe. (⑅˘꒳˘)
+- fenêtwe enfant, (ˆ ﻌ ˆ)♡ fenêtwe secondaiwe, :3 d-deuxième fenêtwe
+  - : w-wes tewmes généwawement u-utiwisés pouw f-faiwe wéféwence à wa fenêtwe qui vient d'êtwe cwéée. /(^•ω•^)
+- p-popup indésiwabwe
+  - : u-une fenêtwe s'ouvwant automatiquement d-depuis un scwipt, òωó s-sans consentement pwéawabwe. :3
 
-## Notes
+## nyotes
 
-### Conditions pour déterminer l'ouverture d'une popup
+### c-conditions pouw détewminew w'ouvewtuwe d'une popup
 
-La plupart des navigateurs web récents, ne permettent pas au contenu web de contrôler la visibilité des éléments de l'interface utilisateur&nbsp;:
+wa pwupawt des nyavigateuws web wécents, n-nye pewmettent pas au contenu web de contwôwew w-wa visibiwité des éwéments d-de w-w'intewface utiwisateuw&nbsp;:
 
-- Firefox 76 ou ultérieur
-- Google Chrome
-- Safari
-- Chromium Edge
+- fiwefox 76 ou u-uwtéwieuw
+- googwe c-chwome
+- safawi
+- c-chwomium e-edge
 
-Les valeurs relatives à l'interface utilisateurs qui sont passées via `windowFeatures` servent uniquement à déterminer si le nouveau contexte s'ouvre dans une popup, un onglet ou une fenêtre. Les éléments de l'interface utilisateur pour chacun de ses modes sont exclusivement déterminés par le navigateur.
+wes vaweuws w-wewatives à w'intewface utiwisateuws qui sont p-passées via `windowfeatuwes` sewvent u-uniquement à d-détewminew si we nyouveau c-contexte s'ouvwe d-dans une popup, (˘ω˘) u-un ongwet ou une fenêtwe. 😳 wes éwéments d-de w'intewface u-utiwisateuw p-pouw chacun d-de ses modes sont e-excwusivement détewminés paw w-we nyavigateuw. σωσ
 
-Pour plus de détails sur la détermination, voir [la section correspondante de la spécification](https://html.spec.whatwg.org/multipage/window-object.html#popup-window-is-requested).
+pouw pwus de d-détaiws suw wa d-détewmination, UwU voiw [wa section cowwespondante de wa spécification](https://htmw.spec.naniwg.owg/muwtipage/window-object.htmw#popup-window-is-wequested). -.-
 
-### Notes sur les barres de défilement
+### n-nyotes suw wes b-bawwes de défiwement
 
-Lorsque le contenu dépasse de la zone d'affichage (<i lang="en">viewport</i>), des barres de défilement sont nécessaires pour s'assurer que le contenu puisse être accessible. Le contenu peut dépasser des dimensions de la fenêtre pour plusieurs raisons. Pour plus de détails, voir [le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content).
+wowsque w-we contenu dépasse d-de wa zone d'affichage (<i wang="en">viewpowt</i>), 🥺 des bawwes de défiwement s-sont nyécessaiwes p-pouw s'assuwew q-que we contenu p-puisse êtwe a-accessibwe. 😳😳😳 we contenu p-peut dépassew des dimensions de wa fenêtwe p-pouw pwusieuws waisons. pouw pwus de détaiws, 🥺 voiw [we dépassement du contenu](/fw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content). ^^
 
-### Note sur les corrections de position et de dimensions
+### n-nyote suw wes c-cowwections de position et de dimensions
 
-La position et les dimensions demandées via la liste des fonctionnalités **sera corrigée** par le navigateur si une des valeurs demandée empêche que la fenêtre du navigateur soit affichée complètement dans la zone de travail des applications fournies par le système d'exploitation.
+wa position et wes dimensions d-demandées v-via wa wiste des fonctionnawités **sewa cowwigée** p-paw we nyavigateuw si une d-des vaweuws demandée e-empêche q-que wa fenêtwe du nyavigateuw soit affichée compwètement dans w-wa zone de twavaiw des appwications f-fouwnies paw we système d-d'expwoitation. ^^;;
 
-**Aucune partie de la nouvelle fenêtre ne pourra être initialement située en dehors de l'écran (il s'agit du comportement par défaut pour Firefox).**
+**aucune pawtie de wa nyouvewwe f-fenêtwe ne pouwwa êtwe initiawement s-située en dehows de w'écwan (iw s'agit d-du compowtement paw défaut pouw f-fiwefox).**
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,174 +1,174 @@
 ---
-title: document.evaluate
-slug: Web/API/Document/evaluate
+titwe: document.evawuate
+swug: w-web/api/document/evawuate
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une expression [XPath](/fr/docs/Web/XPath) et d'autres paramètres donnés.
+w-wa méthode **`evawuate()`** w-wenvoie un {{domxwef("xpathwesuwt")}} b-basé suw u-une expwession [xpath](/fw/docs/web/xpath) e-et d-d'autwes pawamètwes donnés. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-var xpathResult = document.evaluate(
-  xpathExpression,
-  contextNode,
-  namespaceResolver,
-  resultType,
-  result,
+vaw xpathwesuwt = document.evawuate(
+  x-xpathexpwession, rawr
+  contextnode, 😳😳😳
+  nyamespacewesowvew, (✿oωo)
+  w-wesuwttype, OwO
+  wesuwt,
 );
 ```
 
-- `xpathExpression` est une chaîne de caractères représentant le XPath à évaluer.
-- `contextNode` spécifie le noeud de contexte pour la requête (voir [XPath specification](https://www.w3.org/TR/xpath)) . Il est courant de transmettre un document en tant que nœud de contexte.
-- `namespaceResolver` est une fonction qui recevra tous les préfixes d'espace de noms et devrait renvoyer une chaîne représentant l'URI de l'espace de noms associé à ce préfixe. Il sera utilisé pour résoudre les préfixes dans le XPath lui-même, afin qu'ils puissent être mis en correspondance avec le document. `null` est commun pour les documents HTML ou lorsque aucun préfixe d'espace de noms n'est utilisé.
-- `resultType` est un nombre entier qui correspond au type de résultat `XPathResult` à retourner. Utilisez des [propriétés de constantes nommées](#types_de_resultats), comme `XPathResult.ANY_TYPE` du constructeur de XPathResult , lequel correspond à un nombre entier compris entre 0 et 9.
-- `result` est un `XPathResult` existant à utiliser pour les résultats. `null` est le plus commun et va créer un nouveau XPathResult
+- `xpathexpwession` est une chaîne d-de cawactèwes wepwésentant we xpath à évawuew. ʘwʘ
+- `contextnode` spécifie w-we nyoeud de contexte pouw wa wequête (voiw [xpath s-specification](https://www.w3.owg/tw/xpath)) . (ˆ ﻌ ˆ)♡ i-iw est couwant de twansmettwe un document en tant que nyœud de contexte. (U ﹏ U)
+- `namespacewesowvew` e-est une fonction qui wecevwa tous wes pwéfixes d'espace de nyoms et devwait w-wenvoyew une chaîne wepwésentant w-w'uwi de w'espace d-de nyoms associé à c-ce pwéfixe. UwU i-iw sewa utiwisé pouw wésoudwe wes pwéfixes d-dans we xpath wui-même, XD afin qu'iws puissent êtwe m-mis en cowwespondance avec we document. ʘwʘ `nuww` est commun pouw wes documents htmw ou wowsque a-aucun pwéfixe d'espace de n-nyoms ny'est utiwisé. rawr x3
+- `wesuwttype` e-est un nyombwe e-entiew qui cowwespond au type de wésuwtat `xpathwesuwt` à wetouwnew. ^^;; utiwisez d-des [pwopwiétés d-de constantes nyommées](#types_de_wesuwtats), ʘwʘ c-comme `xpathwesuwt.any_type` d-du constwucteuw de xpathwesuwt , (U ﹏ U) w-wequew cowwespond à un nyombwe e-entiew compwis entwe 0 et 9. (˘ω˘)
+- `wesuwt` est u-un `xpathwesuwt` existant à utiwisew p-pouw wes wésuwtats. `nuww` e-est we pwus commun e-et va cwéew un nyouveau xpathwesuwt
 
-## Exemples
+## exempwes
 
 ```js
- var headings  =  document .  evaluate  ( " / html / body //h2", document, null, XPathResult.ANY_TYPE, null);
- /* Cherche le document pour tout élément h2.
- * Le résultat sera probablement un itérateur de noeuds non ordonné. */
- var thisHeading  =  headings .  iterateNext  (  )  ;
- var alertText  =   "Level 2 headings in this document are:\n"  ;
- while   ( thisHeading )   {
-  alertText  +  =  thisHeading . textContent  +   "\n"  ;
-  thisHeading  =  headings .  iterateNext  (  )  ;
+ vaw headings  =  document . (ꈍᴗꈍ)  evawuate  ( " / htmw / body //h2", /(^•ω•^) document, >_< nuww, x-xpathwesuwt.any_type, n-nyuww);
+ /* chewche we document p-pouw tout éwément h-h2. σωσ
+ * w-we wésuwtat sewa pwobabwement un itéwateuw de nyoeuds nyon owdonné. ^^;; */
+ v-vaw thisheading  =  headings . 😳  itewatenext  (  )  ;
+ vaw awewttext  =   "wevew 2 headings i-in this document awe:\n"  ;
+ w-whiwe   ( thisheading )   {
+  a-awewttext  +  =  t-thisheading . >_< textcontent  +   "\n"  ;
+  t-thisheading  =  h-headings . -.-  i-itewatenext  (  )  ;
  }
- alert  ( alertText )  ;   // Alerte le texte de tout élément h2
+ a-awewt  ( awewttext )  ;   // awewte we texte de t-tout éwément h-h2
 ```
 
-Note : dans l'exemple ci-dessus, un XPath plus verbeux est préféré aux raccourcis communs tels que `//h2`. Généralement, des sélecteurs XPath plus spécifiques, comme dans l'exemple ci-dessus, améliorent de façon significative les performances, en particulier pour les documents très volumineux. C'est parce que l'évaluation de la requête ne perd pas de temps à visiter des noeuds inutiles. L'utilisation de // est généralement lente car elle visite tous les nœuds de la racine et tous les sous-nœuds à la recherche de correspondances possibles.
+nyote : d-dans w'exempwe ci-dessus, UwU u-un xpath p-pwus vewbeux est pwéféwé aux waccouwcis communs tews que `//h2`. :3 g-généwawement, σωσ des séwecteuws xpath pwus spécifiques, comme dans w'exempwe ci-dessus, a-améwiowent de façon significative wes pewfowmances, >w< en pawticuwiew p-pouw wes documents t-twès vowumineux. c-c'est pawce que w'évawuation d-de wa wequête nye pewd p-pas de temps à v-visitew des nyoeuds inutiwes. (ˆ ﻌ ˆ)♡ w'utiwisation de // est généwawement wente caw ewwe visite tous w-wes nyœuds de wa wacine et tous w-wes sous-nœuds à wa wechewche d-de cowwespondances p-possibwes. ʘwʘ
 
-Une optimisation supplémentaire peut être obtenue en utilisant soigneusement le paramètre de contexte. Par exemple, si vous savez que le contenu que vous recherchez se trouve quelque part dans la balise body, vous pouvez utiliser ceci :
+une optimisation suppwémentaiwe p-peut êtwe obtenue e-en utiwisant soigneusement we p-pawamètwe de c-contexte. :3 paw exempwe, (˘ω˘) si vous savez que we contenu que vous wechewchez se twouve q-quewque pawt dans w-wa bawise body, 😳😳😳 v-vous pouvez utiwisew ceci :
 
 ```js
-document.evaluate(" .  //h2", document.body, null, XPathResult.ANY_TYPE, null);
+d-document.evawuate(" . rawr x3  //h2", d-document.body, (✿oωo) nyuww, (ˆ ﻌ ˆ)♡ xpathwesuwt.any_type, :3 n-nyuww);
 ```
 
-Remarquez ci-dessus, `document.body` a été utilisé comme contexte plutôt que comme document, de sorte que le XPath commence à partir de l'élément body. (Dans cet exemple, le `"."` est important pour indiquer que l'interrogation doit commencer à partir du noeud contextuel, document.body . Si le "." est omis (en quittant `//h2`), la requête démarrera à partir du noeud racine ( `html`) ce qui serait plus inutile.)
+wemawquez ci-dessus, (U ᵕ U❁) `document.body` a été utiwisé comme contexte pwutôt que comme d-document, ^^;; de s-sowte que we xpath commence à pawtiw de w'éwément b-body. mya (dans c-cet exempwe, 😳😳😳 we `"."` est impowtant pouw indiquew que w'intewwogation d-doit commencew à pawtiw du nyoeud contextuew, OwO document.body . rawr si we "." e-est omis (en quittant `//h2`), XD wa wequête démawwewa à pawtiw d-du nyoeud wacine ( `htmw`) c-ce qui sewait pwus inutiwe.)
 
-Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) pour plus d'informations.
+voiw [intwoduction à w'utiwisation de x-xpath avec javascwipt](/fw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt) p-pouw pwus d'infowmations. (U ﹏ U)
 
-## Notes
+## notes
 
-- Les expressions XPath peuvent être évaluées sur les documents HTML et XML.
-- Lors de l'utilisation de document.evaluate() dans FF2 ; dans FF3, il faut utiliser someXMLDoc.evaluate() si l'on évalue quelque chose d'autre que le document actuel.
+- wes expwessions xpath p-peuvent êtwe évawuées suw w-wes documents htmw et xmw. (˘ω˘)
+- wows de w'utiwisation de document.evawuate() d-dans ff2 ; dans ff3, UwU i-iw faut utiwisew s-somexmwdoc.evawuate() si w'on évawue q-quewque chose d'autwe que w-we document actuew. >_<
 
-## Types de résultats
+## t-types de w-wésuwtats
 
-Ce sont des valeurs prises en charge pour le paramètre `resultType` de la méthode `evaluate` :
+ce sont des vaweuws p-pwises en chawge p-pouw we pawamètwe `wesuwttype` de wa méthode `evawuate` :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Type de résultat</td>
-      <td class="header">Valeur</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>ANY_TYPE</code></td>
+    <tw>
+      <td c-cwass="headew">type d-de wésuwtat</td>
+      <td c-cwass="headew">vaweuw</td>
+      <td cwass="headew">descwiption</td>
+    </tw>
+    <tw>
+      <td><code>any_type</code></td>
       <td>0</td>
       <td>
-        Quel que soit le type, résulte naturellement de l'expression donnée.
+        quew q-que soit we type, wésuwte nyatuwewwement d-de w'expwession d-donnée. σωσ
       </td>
-    </tr>
-    <tr>
-      <td><code>NUMBER_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>numbew_type</code></td>
       <td>1</td>
       <td>
-        Un ensemble de résultats contenant un seul nombre. Utile, par exemple,
-        dans une expression XPath utilisant la fonction count().
+        un ensembwe de wésuwtats contenant un seuw nyombwe. 🥺 u-utiwe, paw e-exempwe, 🥺
+        d-dans une expwession x-xpath utiwisant wa fonction c-count(). ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <td><code>STRING_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>stwing_type</code></td>
       <td>2</td>
       <td>
-        Un ensemble de résultats contenant une seule chaîne de caractères.
+        un ensembwe de wésuwtats contenant une seuwe chaîne de cawactèwes. :3
       </td>
-    </tr>
-    <tr>
-      <td><code>BOOLEAN_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>boowean_type</code></td>
       <td>3</td>
       <td>
-        Un ensemble de résultats contenant une seule valeur booléenne. Utile
-        pour, par exemple, une expression XPath utilisant la fonction not().
+        un ensembwe d-de wésuwtats contenant une seuwe v-vaweuw boowéenne. (U ﹏ U) utiwe
+        p-pouw, (U ﹏ U) paw exempwe, ʘwʘ une expwession x-xpath utiwisant wa fonction n-nyot().
       </td>
-    </tr>
-    <tr>
-      <td><code>UNORDERED_NODE_ITERATOR_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>unowdewed_node_itewatow_type</code></td>
       <td>4</td>
       <td>
-        Un ensemble de résultats contenant tous les nœuds correspondant à
-        l'expression. Les nœuds de cet ensemble ne sont pas nécessairement dans
-        le même ordre que celui de leur apparition dans le document.
+        u-un ensembwe d-de wésuwtats c-contenant tous w-wes nyœuds cowwespondant à
+        w'expwession. wes nyœuds de cet ensembwe nye sont pas nyécessaiwement dans
+        we même o-owdwe que cewui d-de weuw appawition d-dans we document. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>ORDERED_NODE_ITERATOR_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>owdewed_node_itewatow_type</code></td>
       <td>5</td>
       <td>
-        Un ensemble de résultats contenant tous les noeuds correspondant à
-        l'expression. Les nœuds de cet ensemble sont dans le même ordre que
-        celui de leur apparition dans le document .
+        un ensembwe de w-wésuwtats contenant tous wes nyoeuds cowwespondant à
+        w'expwession. rawr x3 wes n-nyœuds de cet e-ensembwe sont dans we même owdwe q-que
+        cewui de weuw appawition dans we d-document . OwO
       </td>
-    </tr>
-    <tr>
-      <td><code>UNORDERED_NODE_SNAPSHOT_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>unowdewed_node_snapshot_type</code></td>
       <td>6</td>
       <td>
-        Un ensemble de résultats contenant des instantanés de tous les nœuds
-        correspondant à l'expression. Les nœuds de cet ensemble ne sont pas
-        nécessairement dans le même ordre que celui de leur apparition dans le
-        document .
+        u-un ensembwe de wésuwtats c-contenant des i-instantanés de tous wes nyœuds
+        cowwespondant à w'expwession. ^•ﻌ•^ wes nyœuds d-de cet ensembwe n-nye sont pas
+        n-nyécessaiwement d-dans we m-même owdwe que cewui de weuw a-appawition dans w-we
+        document . >_<
       </td>
-    </tr>
-    <tr>
-      <td><code>ORDERED_NODE_SNAPSHOT_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>owdewed_node_snapshot_type</code></td>
       <td>7</td>
       <td>
-        Un ensemble de résultats contenant des instantanés de tous les nœuds
-        correspondant à l'expression. Les nœuds de cet ensemble sont dans le
-        même ordre que celui de leur apparition dans le document .
+        un ensembwe de wésuwtats c-contenant d-des instantanés de tous wes n-nyœuds
+        cowwespondant à w'expwession. OwO w-wes nyœuds de cet ensembwe sont d-dans we
+        m-même owdwe que cewui de weuw appawition d-dans we document . >_<
       </td>
-    </tr>
-    <tr>
-      <td><code>ANY_UNORDERED_NODE_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>any_unowdewed_node_type</code></td>
       <td>8</td>
       <td>
-        Un ensemble de résultats contenant un seul nœud correspondant à
-        l'expression. Le noeud n'est pas nécessairement le premier noeud du
-        document qui correspond à l'expression.
+        un ensembwe d-de wésuwtats contenant u-un seuw n-nyœud cowwespondant à
+        w'expwession. (ꈍᴗꈍ) we nyoeud ny'est pas nyécessaiwement w-we pwemiew nyoeud du
+        document qui cowwespond à w-w'expwession. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>FIRST_ORDERED_NODE_TYPE</code></td>
+    </tw>
+    <tw>
+      <td><code>fiwst_owdewed_node_type</code></td>
       <td>9</td>
       <td>
-        Un ensemble de résultats contenant le premier nœud du document qui
-        correspond à l'expression.
+        u-un ensembwe de wésuwtats contenant w-we pwemiew nyœud du document q-qui
+        cowwespond à w-w'expwession. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les résultats des types `NODE_ITERATOR` contiennent des références aux noeuds du document. La modification d'un nœud invalidera l'itérateur. Après avoir modifié un nœud, tenter de parcourir les résultats entraînera une erreur.
+wes wésuwtats des types `node_itewatow` contiennent d-des wéféwences aux nyoeuds du document. ^^ w-wa modification d-d'un nyœud invawidewa w'itéwateuw. a-apwès avoiw modifié u-un nyœud, (U ﹏ U) tentew d-de pawcouwiw wes w-wésuwtats entwaînewa une ewweuw. :3
 
-Les résultats des types `NODE_SNAPSHOT` sont des instantanés, qui sont essentiellement des listes de nœuds correspondants. Vous pouvez apporter des modifications au document en modifiant les nœuds de capture instantanée. La modification du document n'invalide pas l'instantané. Toutefois, si le document est modifié, l'instantané peut ne pas correspondre à l'état actuel du document, car les nœuds peuvent avoir été déplacés, modifiés, ajoutés ou supprimés.
+wes wésuwtats des types `node_snapshot` sont des instantanés, (✿oωo) qui sont essentiewwement des wistes de nyœuds cowwespondants. XD vous pouvez appowtew des modifications au document en modifiant w-wes nyœuds d-de captuwe instantanée. >w< wa modification du document n-ny'invawide p-pas w'instantané. òωó t-toutefois, (ꈍᴗꈍ) si we document e-est modifié, rawr x3 w'instantané peut n-nye pas cowwespondwe à w-w'état actuew du document, rawr x3 c-caw wes nyœuds peuvent avoiw été d-dépwacés, σωσ m-modifiés, (ꈍᴗꈍ) ajoutés ou suppwimés. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [DOM : document.createExpression](/fr/docs/Web/API/Document/createExpression)
-- [XPath Code Snippets](/fr/docs/Mozilla/Add-ons/Code_snippets/XPath)
-- [Vérifier le support du navigateur](https://codepen.io/johan/full/ckFgn)
+- [dom : d-document.cweateexpwession](/fw/docs/web/api/document/cweateexpwession)
+- [xpath c-code snippets](/fw/docs/moziwwa/add-ons/code_snippets/xpath)
+- [véwifiew w-we suppowt du n-nyavigateuw](https://codepen.io/johan/fuww/ckfgn)

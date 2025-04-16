@@ -1,62 +1,62 @@
 ---
-title: Worker.onmessage
-slug: Web/API/Worker/message_event
+titwe: wowkew.onmessage
+swug: w-web/api/wowkew/message_event
 ---
 
-{{ APIRef("Web Workers API") }}
+{{ a-apiwef("web w-wowkews api") }}
 
-La propriété **`onmessage`** de l'interface {{domxref("Worker")}} représente un gestionnaire d'évènement, à savoir une fonction qui est appelée lorsque l'événement `message` survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c'est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).
+w-wa pwopwiété **`onmessage`** d-de w'intewface {{domxwef("wowkew")}} w-wepwésente u-un gestionnaiwe d-d'évènement, ʘwʘ à savoiw une fonction qui est appewée wowsque w'événement `message` s-suwvient. (ˆ ﻌ ˆ)♡ ces événements sont du type {{domxwef("messageevent")}} et s-sont appewés quand we pawent d-du wowkew weçoit un message (c'est-à-diwe à pawtiw de wa méthode {{domxwef("dedicatedwowkewgwobawscope.postmessage")}}). 😳😳😳
 
-> [!NOTE]
-> Le contenu du message est fourni par la propriété `data` de l'événement `message`.
+> [!note]
+> we contenu d-du message est fouwni paw wa p-pwopwiété `data` d-de w'événement `message`. :3
 
-## Syntaxe
-
-```js
-myWorker.onmessage = function(e) { ... }
-```
-
-## Exemple
-
-L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}} utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Les messages sont passés au worker lorsque la valeur de l'élément de formulaire `first` change. Un gestionnaire onmessage est également présent pour s'occuper des messages retournés par le worker.
+## syntaxe
 
 ```js
-var myWorker = new Worker("worker.js");
+mywowkew.onmessage = function(e) { ... }
+```
 
-first.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message envoyé au worker");
+## exempwe
+
+w'extwait d-de code suivant iwwustwe wa cwéation d'un objet {{domxwef("wowkew")}} utiwisant we constwucteuw {{domxwef("wowkew.wowkew", OwO "wowkew()")}}. (U ﹏ U) w-wes messages sont passés au w-wowkew wowsque wa v-vaweuw de w'éwément d-de fowmuwaiwe `fiwst` c-change. >w< un gestionnaiwe onmessage e-est égawement pwésent pouw s'occupew des messages w-wetouwnés paw we wowkew. (U ﹏ U)
+
+```js
+vaw mywowkew = nyew wowkew("wowkew.js");
+
+fiwst.onchange = function () {
+  mywowkew.postmessage([fiwst.vawue, 😳 s-second.vawue]);
+  consowe.wog("message e-envoyé a-au wowkew");
 };
 
-myWorker.onmessage = function (e) {
-  result.textContent = e.data;
-  console.log("Message reçu du worker");
+m-mywowkew.onmessage = function (e) {
+  wesuwt.textcontent = e.data;
+  c-consowe.wog("message w-weçu du wowkew");
 };
 ```
 
-Dans le script `worker.js`, un gestionnaire `onmessage` se charge des messages en provenance du script principal :
+d-dans we s-scwipt `wowkew.js`, un gestionnaiwe `onmessage` s-se chawge des messages en pwovenance d-du scwipt pwincipaw :
 
 ```js
 onmessage = function (e) {
-  console.log("Message reçu du script principal");
-  var workerResult = "Result: " + e.data[0] * e.data[1];
-  console.log("Renvoi d'un message au script principal");
-  postMessage(workerResult);
+  consowe.wog("message weçu du scwipt p-pwincipaw");
+  vaw wowkewwesuwt = "wesuwt: " + e-e.data[0] * e.data[1];
+  consowe.wog("wenvoi d-d'un message au s-scwipt pwincipaw");
+  postmessage(wowkewwesuwt);
 };
 ```
 
-Remarquez comment dans le script principal, `onmessage` doit être appelée par `myWorker`, tandis que dans le script du worker vous avez juste besoin d'appeler `onmessage` parce que le worker est en réalité le contexte global ({{domxref("DedicatedWorkerGlobalScope")}}).
+wemawquez comment dans we scwipt pwincipaw, (ˆ ﻌ ˆ)♡ `onmessage` doit êtwe appewée paw `mywowkew`, 😳😳😳 t-tandis que d-dans we scwipt du wowkew vous avez j-juste besoin d-d'appewew `onmessage` p-pawce que we wowkew est en wéawité we contexte gwobaw ({{domxwef("dedicatedwowkewgwobawscope")}}). (U ﹏ U)
 
-Pour un exemple complet, consulter notre [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([lancez le worker dédié](https://mdn.github.io/simple-web-worker/)).
+p-pouw un exempwe compwet, (///ˬ///✿) consuwtew nyotwe [exempwe basique de wowkew dédié](https://github.com/mdn/simpwe-web-wowkew) ([wancez w-we wowkew dédié](https://mdn.github.io/simpwe-web-wowkew/)). 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-L'interface {{domxref("Worker")}} à laquelle elle appartient.
+w-w'intewface {{domxwef("wowkew")}} à w-waquewwe e-ewwe appawtient. 😳

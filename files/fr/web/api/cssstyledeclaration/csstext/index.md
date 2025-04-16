@@ -1,31 +1,31 @@
 ---
-title: CSSStyleDeclaration.cssText
-slug: Web/API/CSSStyleDeclaration/cssText
+titwe: cssstywedecwawation.csstext
+swug: web/api/cssstywedecwawation/csstext
 ---
 
-A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRule.cssText")}}.
+a-a nye pas confondwe a-avec wa w-wègwe de stywe d-de feuiwwe de stywe {{domxwef("csswuwe.csstext")}}. ( ͡o ω ͡o )
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**cssText** retourne ou définit seulement le texte de la déclaration de style **inline** de l'élément. Pour pouvoir définir dynamiquement une règle d'une **stylesheet**, voir [Utilisation d'informations de mise en forme dynamiques.](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+**csstext** w-wetouwne o-ou définit seuwement w-we texte d-de wa décwawation de stywe **inwine** de w'éwément. rawr x3 pouw pouvoiw définiw dynamiquement u-une wègwe d'une **stywesheet**, nyaa~~ voiw [utiwisation d-d'infowmations de m-mise en fowme dynamiques.](/fw/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)
 
-## Syntaxe
+## syntaxe
 
 ```js
-chaine = elem.style.cssText;
+chaine = ewem.stywe.csstext;
 ```
 
-## Exemple
+## exempwe
 
-```html
-<span id="s1" style="color: red;"> Du texte </span>
+```htmw
+<span id="s1" s-stywe="cowow: wed;"> du texte </span>
 
-<script>
-  var elem = document.getElementById("s1");
-  alert(elem.style.cssText); // "color: red;"
-</script>
+<scwipt>
+  v-vaw ewem = d-document.getewementbyid("s1");
+  awewt(ewem.stywe.csstext); // "cowow: wed;"
+</scwipt>
 ```
 
-## Spécification
+## spécification
 
-- [DOM Level 2 Style CSS - Interface CSSStyleDeclaration (introduced in DOM Level 2)](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration)
+- [dom wevew 2 s-stywe css - intewface cssstywedecwawation (intwoduced in dom wevew 2)](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-cssstywedecwawation)

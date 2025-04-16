@@ -1,43 +1,43 @@
 ---
-title: TreeWalker.currentNode
-slug: Web/API/TreeWalker/currentNode
+titwe: tweewawkew.cuwwentnode
+swug: web/api/tweewawkew/cuwwentnode
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété **`TreeWalker.currentNode`** représente le {{domxref("Node")}} (_noeud_) sur lequel le {{domxref("TreeWalker")}} est actuellement pointé.
+w-wa pwopwiété **`tweewawkew.cuwwentnode`** w-wepwésente w-we {{domxwef("node")}} (_noeud_) s-suw wequew w-we {{domxwef("tweewawkew")}} e-est actuewwement p-pointé. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = treeWalker.currentNode;
-treeWalker.currentNode = node;
+nyode = tweewawkew.cuwwentnode;
+tweewawkew.cuwwentnode = nyode;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = document.cweatetweewawkew(
+  d-document.body, ( ͡o ω ͡o )
+  nyodefiwtew.show_ewement, rawr x3
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, nyaa~~
   },
-  false,
+  f-fawse, /(^•ω•^)
 );
-root = treeWalker.currentNode; // l'élément racine car c'est le premier élément!
+woot = tweewawkew.cuwwentnode; // w-w'éwément w-wacine caw c'est we pwemiew éwément! rawr
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}}.
+- w'intewface {{domxwef("tweewawkew")}}. OwO

@@ -1,91 +1,91 @@
 ---
-title: DOMImplementation.createHTMLDocument()
-slug: Web/API/DOMImplementation/createHTMLDocument
+titwe: domimpwementation.cweatehtmwdocument()
+swug: web/api/domimpwementation/cweatehtmwdocument
 ---
 
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La méthode **`DOMImplementation.createHTMLDocument()`** crée un nouveau {{domxref("Document")}} HTML.
+w-wa m-méthode **`domimpwementation.cweatehtmwdocument()`** c-cwée un n-nyouveau {{domxwef("document")}} h-htmw. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-newDoc = document.implementation.createHTMLDocument(titre);
+n-nyewdoc = d-document.impwementation.cweatehtmwdocument(titwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- _title_ {{optional_inline}} (excepté dans IE)
-  - : C'est une {{domxref("DOMString")}} qui contient le titre à donner au nouveau document HTML.
+- _titwe_ {{optionaw_inwine}} (excepté dans ie)
+  - : c'est une {{domxwef("domstwing")}} qui contient we titwe à d-donnew au nyouveau document htmw. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on crée un nouveau document HTML que l'on insère dans un {{HTMLElement("iframe")}} dans le document courant.
+dans c-cet exempwe, >_< on cwée un nyouveau d-document htmw que w'on insèwe dans un {{htmwewement("ifwame")}} dans we document c-couwant. >w<
 
-Ci-dessous, le code HTML pour cet exemple:
+ci-dessous, rawr we c-code htmw pouw c-cet exempwe:
 
-```html
+```htmw
 <body>
   <p>
-    Cliquez <a href="javascript:makeDocument()">ici</a> pour créer un nouveau
-    document et l'insérer au dessous.
+    cwiquez <a hwef="javascwipt:makedocument()">ici</a> pouw cwéew un nyouveau
+    d-document et w'inséwew au dessous. 😳
   </p>
-  <iframe id="laFrame" src="about:blank" />
+  <ifwame id="wafwame" swc="about:bwank" />
 </body>
 ```
 
-L'implémentation en JavaScript de la méthode `makeDocument()`:
+w-w'impwémentation en javascwipt d-de wa m-méthode `makedocument()`:
 
 ```js
-function makeDocument() {
-  var frame = document.getElementById("laFrame");
+f-function makedocument() {
+  v-vaw fwame = document.getewementbyid("wafwame");
 
-  var doc = document.implementation.createHTMLDocument("Nouveau Document");
-  var p = doc.createElement("p");
-  p.innerHTML = "Ceci est un nouveau paragraphe.";
+  vaw doc = document.impwementation.cweatehtmwdocument("nouveau document");
+  v-vaw p = doc.cweateewement("p");
+  p.innewhtmw = "ceci est un nyouveau p-pawagwaphe.";
 
-  try {
-    doc.body.appendChild(p);
+  twy {
+    doc.body.appendchiwd(p);
   } catch (e) {
-    console.log(e);
+    consowe.wog(e);
   }
 
-  // Copie le nouveau document HTML dans la frame
+  // copie we nyouveau document h-htmw dans wa fwame
 
-  var destDocument = frame.contentDocument;
-  var srcNode = doc.documentElement;
-  var newNode = destDocument.importNode(srcNode, true);
+  vaw destdocument = f-fwame.contentdocument;
+  v-vaw swcnode = d-doc.documentewement;
+  vaw nyewnode = destdocument.impowtnode(swcnode, >w< twue);
 
-  destDocument.replaceChild(newNode, destDocument.documentElement);
+  d-destdocument.wepwacechiwd(newnode, (⑅˘꒳˘) d-destdocument.documentewement);
 }
 ```
 
-Le code des lignes 4 à 12 permet la création du nouveau document HTML et l'insertion de contenu dans ce dernier. La ligne 4 utilise la méthode `createHTMLDocument()` pour construire le nouveau document HTML et définir son {{ HTMLElement("title") }} comme "Nouveau Document". Dans les lignes 5 et 6, est créé un nouvel élément paragraphe avec un simple contenu, enfin, les lignes 8 à 12 permettent l'insertion de ce nouveau paragraphe dans le nouveau document.
+we code d-des wignes 4 à 12 p-pewmet wa cwéation du nyouveau d-document htmw et w'insewtion d-de contenu dans ce dewniew. OwO wa wigne 4 utiwise w-wa méthode `cweatehtmwdocument()` pouw constwuiwe w-we nyouveau document htmw et d-définiw son {{ h-htmwewement("titwe") }} comme "nouveau document". (ꈍᴗꈍ) dans wes wignes 5 et 6, 😳 est cwéé un nouvew éwément pawagwaphe a-avec un simpwe c-contenu, 😳😳😳 enfin, wes wignes 8 à 12 p-pewmettent w-w'insewtion de c-ce nyouveau pawagwaphe dans we nyouveau document. mya
 
-La ligne 16 récupère le `contentDocument` _(contenu du document)_ du cadre ; c'est le document dans lequel nous allons injecter le nouveau contenu. Les deux lignes suivantes permettent d'importer le contenu du nouveau document dans le nouveau contexte du document. Pour finir, la ligne 20 remplace le contenu du cadre par le contenu du nouveau document.
+wa wigne 16 w-wécupèwe we `contentdocument` _(contenu du document)_ du cadwe ; c'est we document dans wequew n-nyous awwons injectew we nyouveau c-contenu. mya wes d-deux wignes suivantes p-pewmettent d'impowtew we contenu d-du nyouveau d-document dans w-we nyouveau contexte d-du document. (⑅˘꒳˘) pouw finiw, (U ﹏ U) wa wigne 20 wempwace w-we contenu du c-cadwe paw we contenu d-du nyouveau d-document. mya
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
+[voiw w-w'exempwe suw une page](https://mdn.dev/awchives/media/sampwes/domwef/cweatehtmwdocument.htmw)
 
-Le document retourné est préconstruit avec le code HTML suivant :
+we document wetouwné est pwéconstwuit a-avec we code htmw suivant :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>titre</title>
+    <titwe>titwe</titwe>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("DOMImplementation")}}.
+- w'intewface {{domxwef("domimpwementation")}}. ʘwʘ

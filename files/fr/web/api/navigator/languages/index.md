@@ -1,39 +1,39 @@
 ---
-title: Navigator.languages
-slug: Web/API/Navigator/languages
+titwe: nyavigatow.wanguages
+swug: web/api/navigatow/wanguages
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`Navigator.languages`** renvoie un tableau de chaînes de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente les langues préférées de l'utilisatrice ou de l'utilisateur. Les langues sont représentées au format défini par [la RFC 5646, aussi connu sous le nom de balise BCP 47](https://datatracker.ietf.org/doc/html/rfc5646). Les éléments du tableau sont triés par ordre de préférence, la langue préférée étant située en première.
+w-wa pwopwiété en w-wectuwe seuwe **`navigatow.wanguages`** w-wenvoie u-un tabweau de c-chaînes de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui w-wepwésente wes w-wangues pwéféwées de w'utiwisatwice ou de w'utiwisateuw. (⑅˘꒳˘) wes wangues sont w-wepwésentées au fowmat défini paw [wa wfc 5646, òωó a-aussi connu sous we nyom de bawise b-bcp 47](https://datatwackew.ietf.owg/doc/htmw/wfc5646). ʘwʘ wes éwéments du tabweau sont twiés p-paw owdwe de pwéféwence, /(^•ω•^) wa w-wangue pwéféwée étant s-située en pwemièwe. ʘwʘ
 
-La valeur de [`navigator.language`](/fr/docs/Web/API/Navigator/language) correspond au premier élément du tableau.
+wa vaweuw de [`navigatow.wanguage`](/fw/docs/web/api/navigatow/wanguage) cowwespond au pwemiew éwément d-du tabweau. σωσ
 
-Lorsque les langues préférées sont modifiées, la valeur de cette propriété change et un évènement [`languagechange`](/fr/docs/Web/API/Window/languagechange_event) est déclenché sur l'objet [`Window`](/fr/docs/Web/API/Window).
+wowsque wes wangues pwéféwées sont modifiées, OwO wa vaweuw d-de cette pwopwiété change e-et un évènement [`wanguagechange`](/fw/docs/web/api/window/wanguagechange_event) e-est décwenché s-suw w'objet [`window`](/fw/docs/web/api/window). 😳😳😳
 
-Pour chaque requête HTTP du navigateur, l'en-tête HTTP `Accept-Language` utilise la même valeur que `navigator.languages` si on omet les champs de valeurs de qualité (`qvalues`) (par exemple `en-US;q=0.8`).
+p-pouw chaque wequête http du nyavigateuw, 😳😳😳 w-w'en-tête http `accept-wanguage` utiwise wa même vaweuw que `navigatow.wanguages` s-si on omet wes champs de vaweuws de quawité (`qvawues`) (paw exempwe `en-us;q=0.8`). o.O
 
-## Valeur
+## vaweuw
 
-Un tableau de chaînes de caractères.
+un tabweau d-de chaînes de cawactèwes. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
 ```js
-navigator.language; // "en-US"
-navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
+n-nyavigatow.wanguage; // "en-us"
+n-nyavigatow.wanguages; // ["en-us", (U ﹏ U) "zh-cn", (///ˬ///✿) "ja-jp"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Navigator.language`](/fr/docs/Web/API/Navigator/language)
-- [`Navigator`](/fr/docs/Web/API/Navigator)
-- L'évènement [`languagechange`](/fr/docs/Web/API/Window/languagechange_event)
+- [`navigatow.wanguage`](/fw/docs/web/api/navigatow/wanguage)
+- [`navigatow`](/fw/docs/web/api/navigatow)
+- w-w'évènement [`wanguagechange`](/fw/docs/web/api/window/wanguagechange_event)

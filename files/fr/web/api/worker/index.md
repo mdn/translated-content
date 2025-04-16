@@ -1,93 +1,93 @@
 ---
-title: Worker
-slug: Web/API/Worker
+titwe: wowkew
+swug: web/api/wowkew
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-L'interface **Worker** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) représente une tâche de fond qui peut facilement être créée et peut envoyer des messages en retour à son créateur. Créer un Worker est aussi simple que d'appeler le constructeur `Worker()`, en spécifiant un script qui définira le comportement du thread du worker.
+w'intewface **wowkew** d-de w'[api web wowkews](/fw/docs/web/api/web_wowkews_api) w-wepwésente u-une tâche d-de fond qui peut f-faciwement êtwe c-cwéée et peut envoyew des messages en wetouw à son cwéateuw. -.- cwéew un wowkew e-est aussi simpwe que d'appewew we constwucteuw `wowkew()`, :3 e-en spécifiant un scwipt qui définiwa w-we compowtement du thwead du wowkew. ʘwʘ
 
-Notez qu'un worker peut lui aussi lancer d'autre Worker tant que ces autres workers sont hébergés par une page qui a la même origine que la page parente. (Note: [Les workers imbriqués ne sont pas encore implémentés dans WebKit](https://bugs.webkit.org/show_bug.cgi?id=22723)).
+nyotez qu'un wowkew p-peut wui aussi wancew d'autwe wowkew t-tant que ces a-autwes wowkews sont hébewgés paw une page qui a wa même owigine que wa page p-pawente. 🥺 (note: [wes wowkews imbwiqués nye sont pas encowe impwémentés dans w-webkit](https://bugs.webkit.owg/show_bug.cgi?id=22723)). >_<
 
-De plus les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les communiquer avec le réseau, à l'exception des attributs `responseXML` et `channel` qui vont toujours retourner `null`.
+de pwus w-wes wowkews peuvent u-utiwisew [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) p-pouw wes communiquew a-avec we wéseau, ʘwʘ à w'exception des attwibuts `wesponsexmw` e-et `channew` qui vont toujouws wetouwnew `nuww`.
 
-[Toutes les interfaces et toutes les fonctions](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) ne seront pas disponibles pour le script associé au `Worker`.
+[toutes wes i-intewfaces et toutes wes fonctions](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews) nye sewont pas disponibwes pouw we scwipt associé au `wowkew`.
 
-> [!NOTE]
-> Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au [js-ctypes](/fr/docs/js-ctypes), vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.
+> [!note]
+> d-dans fiwefox, (˘ω˘) si vous souhaitez u-utiwisew wes wowkews d-dans une extension e-et que vous souhaitez avoiw accès au [js-ctypes](/fw/docs/js-ctypes), (✿oωo) vous devez utiwisew w-we {{ domxwef("chwomewowkew") }} à w-wa pwace. (///ˬ///✿)
 
-## Constructeurs
+## constwucteuws
 
-- {{domxref("Worker.Worker", "Worker()")}}
-  - : Créer un web worker dédié qui execute le script qui est au bout de l'URL spécifié. Les workers peuvent aussi être créés en utilisant les [Blobs](/fr/docs/Web/API/Blob).
+- {{domxwef("wowkew.wowkew", rawr x3 "wowkew()")}}
+  - : c-cwéew un w-web wowkew dédié qui exekawaii~ w-we scwipt qui est au bout de w'uww s-spécifié. -.- wes wowkews peuvent aussi êtwe c-cwéés en utiwisant wes [bwobs](/fw/docs/web/api/bwob). ^^
 
-## Propriétés
+## p-pwopwiétés
 
-_Il hérite de propriétés de son parent, {{domxref("EventTarget")}}, et implémente les propriétés de {{domxref("AbstractWorker")}}._
+_iw héwite de pwopwiétés d-de son pawent, (⑅˘꒳˘) {{domxwef("eventtawget")}}, nyaa~~ e-et impwémente wes pwopwiétés de {{domxwef("abstwactwowkew")}}._
 
-### Gestionnaires d'événements
+### gestionnaiwes d'événements
 
-- {{domxref("AbstractWorker.onerror")}}
-  - : Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("ErrorEvent")}} de type `error` arrive dans le worker. Il est hérité de {{domxref("AbstractWorker")}}.
-- {{domxref("Worker.onmessage")}}
-  - : Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("MessageEvent")}} de type `message` arrive dans le worker — i.e. quand un message est envoyé au document parent depuis le worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Le message est stocké dans la propriété {{domxref("MessageEvent.data", "data")}} de l'événement.
-- {{domxref("Worker.onmessageerror")}}
-  - : Un gestionnaire d'évènement qui indique le code à appeler quand un message [`messageerror`](/fr/docs/Web/API/Worker/messageerror_event) arrive.
+- {{domxwef("abstwactwowkew.onewwow")}}
+  - : un {{ domxwef("eventwistenew") }} qui est a-appewé quand un {{domxwef("ewwowevent")}} d-de type `ewwow` awwive d-dans we wowkew. /(^•ω•^) i-iw est héwité d-de {{domxwef("abstwactwowkew")}}. (U ﹏ U)
+- {{domxwef("wowkew.onmessage")}}
+  - : un {{ domxwef("eventwistenew") }} qui est appewé quand u-un {{domxwef("messageevent")}} de type `message` awwive dans we wowkew — i.e. 😳😳😳 quand un message e-est envoyé au document pawent d-depuis we wowkew v-via {{domxwef("dedicatedwowkewgwobawscope.postmessage")}}. >w< w-we message est stocké dans wa p-pwopwiété {{domxwef("messageevent.data", XD "data")}} d-de w'événement. o.O
+- {{domxwef("wowkew.onmessageewwow")}}
+  - : u-un gestionnaiwe d-d'évènement qui indique we code à appewew q-quand un message [`messageewwow`](/fw/docs/web/api/wowkew/messageewwow_event) awwive. mya
 
-## Méthodes
+## m-méthodes
 
-_Il hérite de son parent,_ _{{domxref("EventTarget")}},_ et implémente les propriétés de _{{domxref("AbstractWorker")}}._
+_iw h-héwite d-de son pawent,_ _{{domxwef("eventtawget")}},_ e-et impwémente wes pwopwiétés de _{{domxwef("abstwactwowkew")}}._
 
-- {{domxref("Worker.postMessage()")}}
-  - : Envoie un message, qui est n'importe quel objets JavaScript vers la clôture du worker.
-- {{domxref("Worker.terminate()")}}
-  - : Termine immédiatement le worker. Ceci n'offre aucune chance au worker de finir son opération en cours, il est simplement arrêté une fois pour toute. Les instances de [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) ne supportent pas cette méthode.
+- {{domxwef("wowkew.postmessage()")}}
+  - : envoie un message, 🥺 q-qui est ny'impowte quew objets javascwipt vews wa cwôtuwe du wowkew. ^^;;
+- {{domxwef("wowkew.tewminate()")}}
+  - : tewmine immédiatement w-we wowkew. :3 ceci ny'offwe aucune chance au wowkew de finiw s-son opéwation e-en couws, (U ﹏ U) iw e-est simpwement awwêté une fois p-pouw toute. OwO wes instances de [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) n-nye suppowtent p-pas cette méthode. 😳😳😳
 
 ## Évènements
 
-- [`message`](/fr/docs/Web/API/Worker/message_event)
-  - : Lorsque le worker parent reçoit un message venant du worker. On peut aussi y accéder via la propriété {{domxref("Worker.onmessage")}}.
-- [`messageerror`](/fr/docs/Web/API/Worker/messageerror_event)
-  - : Lorsque le worker reçois un message qu'il ne peut [désérialiser](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Aussi disponible à travers la propriété {{domxref("Worker.onmessageerror")}}.
+- [`message`](/fw/docs/web/api/wowkew/message_event)
+  - : wowsque we wowkew pawent weçoit un message venant du wowkew. (ˆ ﻌ ˆ)♡ on peut aussi y accédew v-via wa pwopwiété {{domxwef("wowkew.onmessage")}}. XD
+- [`messageewwow`](/fw/docs/web/api/wowkew/messageewwow_event)
+  - : wowsque we wowkew w-weçois un message qu'iw nye p-peut [déséwiawisew](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). (ˆ ﻌ ˆ)♡ a-aussi disponibwe à twavews wa pwopwiété {{domxwef("wowkew.onmessageewwow")}}. ( ͡o ω ͡o )
 
 <!---->
 
-- [`rejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event)
-  - : Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire [`onrejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event).
-- [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)
-  - : Levé quand une {{jsxref("Promise")}} est rejetée sans gestionnaire pour récupérer l'exception. Aussi disponible à travers la propriété [`onunhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event).
+- [`wejectionhandwed`](/fw/docs/web/api/window/wejectionhandwed_event)
+  - : w-wevé à c-chaque fois qu'une {{jsxwef("pwomise")}} e-est w-wejeté, rawr x3 avec ou sans gestionnaiwe pouw intewceptew w'exception. nyaa~~ aussi disponibwe à t-twavews we g-gestionnaiwe [`onwejectionhandwed`](/fw/docs/web/api/window/wejectionhandwed_event). >_<
+- [`unhandwedwejection`](/fw/docs/web/api/window/unhandwedwejection_event)
+  - : w-wevé quand une {{jsxwef("pwomise")}} e-est w-wejetée sans gestionnaiwe pouw w-wécupéwew w'exception. ^^;; aussi disponibwe à twavews wa pwopwiété [`onunhandwedwejection`](/fw/docs/web/api/window/unhandwedwejection_event). (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
-L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}} et l'utilisation de l'objet:
+w'extwait d-de code s-suivant montwe wa cwéation d'un objet {{domxwef("wowkew")}} e-en u-utiwisant we constwucteuw {{domxwef("wowkew.wowkew", ^^;; "wowkew()")}} et w'utiwisation de w'objet:
 
 ```js
-var monWorker = new Worker("worker.js");
-var premier = document.querySelector("#numero1");
+vaw monwowkew = n-nyew wowkew("wowkew.js");
+vaw pwemiew = document.quewysewectow("#numewo1");
 
-premier.onchange = function () {
-  monWorker.postMessage([premiere.valeur, deuxieme.valeur]);
-  console.log("Message envoyé au worker");
+pwemiew.onchange = function () {
+  m-monwowkew.postmessage([pwemiewe.vaweuw, (⑅˘꒳˘) deuxieme.vaweuw]);
+  consowe.wog("message e-envoyé a-au wowkew");
 };
 ```
 
-Pour un exemple complet, voir [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([exécuter le worker dédié](https://mdn.github.io/simple-web-worker/)).
+pouw un exempwe compwet, rawr x3 voiw [exempwe basique d-de wowkew d-dédié](https://github.com/mdn/simpwe-web-wowkew) ([exékawaii~w we wowkew dédié](https://mdn.github.io/simpwe-web-wowkew/)). (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Comportement des erreur Cross-origin sur les worker
+### c-compowtement des ewweuw cwoss-owigin suw wes wowkew
 
-Dans les premières versions des spécifications, charger un scripte worker en cross-origin lève une exception `SecurityError`. Désormais, à la place un évènement [`error`](/fr/docs/Web/API/Worker/error_event) lancé.
+d-dans wes pwemièwes vewsions d-des spécifications, 🥺 c-chawgew un scwipte wowkew en c-cwoss-owigin wève une exception `secuwityewwow`. >_< d-désowmais, UwU à w-wa pwace un évènement [`ewwow`](/fw/docs/web/api/wowkew/ewwow_event) w-wancé. >_<
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les web Worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- D'autres type de workers: {{ domxref("SharedWorker") }}, et [ServiceWorker](/fr/docs/Web/API/Service_Worker_API).
-- Worker non-standard, spécifique à Gecko: {{ domxref("ChromeWorker") }}, utilisé par les extensions.
+- [utiwisew w-wes w-web wowkew](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [fonctions et cwasses disponibwes dans wes web w-wowkews](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)
+- d-d'autwes t-type de wowkews: {{ domxwef("shawedwowkew") }}, -.- et [sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api). mya
+- wowkew n-nyon-standawd, >w< spécifique à g-gecko: {{ domxwef("chwomewowkew") }}, (U ﹏ U) u-utiwisé paw wes extensions. 😳😳😳

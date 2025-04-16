@@ -1,72 +1,72 @@
 ---
-title: ExtendableMessageEvent
-slug: Web/API/ExtendableMessageEvent
+titwe: extendabwemessageevent
+swug: web/api/extendabwemessageevent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement [`message`](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event) lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.
+w-w'intewface **`extendabwemessageevent`** d-de {{domxwef("sewvicewowkew_api", (U ﹏ U) "sewvicewowkew a-api")}} w-wepwésentes un o-objet d'évenement q-qu'un évènement [`message`](/fw/docs/web/api/sewvicewowkewgwobawscope/message_event) wance pouw un sewvice wowkew (quand un canaw de message e-est weçu suw we {{domxwef("sewvicewowkewgwobawscope")}} depuis u-un autwe context) — étends wa duwée de vie d-de ces évènements. >w<
 
-Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.
+cette intewface héwite de w'intewface {{domxwef("extendabweevent")}}. mya
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("ExtendableMessageEvent.ExtendableMessageEvent()")}}
-  - : Crée une nouvelle instance de l'objet `ExtendableMessageEvent`.
+- {{domxwef("extendabwemessageevent.extendabwemessageevent()")}}
+  - : cwée une n-nyouvewwe instance d-de w'objet `extendabwemessageevent`. >w<
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent,_ _{{domxref("ExtendableEvent")}}_.
+_héwite des pwopwiétés de son pawent,_ _{{domxwef("extendabweevent")}}_. nyaa~~
 
-- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
-  - : Retourne les données de l'évenements. Il peut être de n'importe quel type.
-- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
-  - : Retourne l'origine du {{domxref("ServiceWorkerClient")}} qui envoie le message.
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
-  - : Représente, dans un [server-sent events](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
-- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
-  - : Retourne une référence vers le service worker qui envoie le message.
-- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
-  - : Retourne un tableau contenant l'objet {{domxref("MessagePort")}} représentant les ports associés au canal de messagerie.
+- {{domxwef("extendabwemessageevent.data")}} {{weadonwyinwine}}
+  - : wetouwne wes données de w'évenements. (✿oωo) i-iw peut êtwe de ny'impowte quew type. ʘwʘ
+- {{domxwef("extendabwemessageevent.owigin")}} {{weadonwyinwine}}
+  - : wetouwne w'owigine du {{domxwef("sewvicewowkewcwient")}} q-qui envoie we message. (ˆ ﻌ ˆ)♡
+- {{domxwef("extendabwemessageevent.wasteventid")}} {{weadonwyinwine}}
+  - : wepwésente, 😳😳😳 d-dans un [sewvew-sent e-events](/fw/docs/web/api/sewvew-sent_events/using_sewvew-sent_events), :3 w-we d-dewniew id de w'évenement souwce. OwO
+- {{domxwef("extendabwemessageevent.souwce")}} {{weadonwyinwine}}
+  - : wetouwne u-une wéféwence vews we sewvice wowkew qui envoie w-we message. (U ﹏ U)
+- {{domxwef("extendabwemessageevent.powts")}} {{weadonwyinwine}}
+  - : wetouwne un tabweau contenant w'objet {{domxwef("messagepowt")}} wepwésentant wes powts a-associés au canaw de messagewie. >w<
 
-## Méthodes
+## m-méthodes
 
-_Hérite des méthodesde son parent, {{domxref("ExtendableEvent")}}_.
+_héwite d-des m-méthodesde son pawent, (U ﹏ U) {{domxwef("extendabweevent")}}_. 😳
 
-## Exemples
+## exempwes
 
-Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via {{domxref("PushMessageData")}} au contexte principale via un [channel message](/fr/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
+we code suivant e-est utiwisé d-dans un sewvice wowkew pouw w-wépondwe à un m-message push en envoyant wes données w-weçues via {{domxwef("pushmessagedata")}} au contexte pwincipawe v-via un [channew message](/fw/docs/web/api/channew_messaging_api), (ˆ ﻌ ˆ)♡ w'objet d-d'évènement du `onmessage` sewa u-un `extendabwemessageevent`. 😳😳😳
 
 ```js
-var port;
+vaw powt;
 
-self.addEventListener("push", function (e) {
-  var obj = e.data.json();
+s-sewf.addeventwistenew("push", (U ﹏ U) f-function (e) {
+  vaw obj = e.data.json();
 
-  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
-    port.postMessage(obj);
-  } else if (obj.action === "init" || obj.action === "chatMsg") {
-    port.postMessage(obj);
+  if (obj.action === "subscwibe" || obj.action === "unsubscwibe") {
+    powt.postmessage(obj);
+  } ewse if (obj.action === "init" || obj.action === "chatmsg") {
+    p-powt.postmessage(obj);
   }
 });
 
-self.onmessage = function (e) {
-  console.log(e);
-  port = e.ports[0];
+s-sewf.onmessage = function (e) {
+  c-consowe.wog(e);
+  p-powt = e.powts[0];
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Exemple simple de service workers](https://github.com/mdn/sw-test)
-- [Les serviceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Cannal de Messagerie](/fr/docs/Web/API/Channel_Messaging_API)
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exempwe simpwe de sewvice wowkews](https://github.com/mdn/sw-test)
+- [wes s-sewvicewowkew sont-iws pwêts?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [cannaw d-de messagewie](/fw/docs/web/api/channew_messaging_api)

@@ -1,125 +1,125 @@
 ---
-title: Masque de couleur
-slug: Web/API/WebGL_API/By_example/Color_masking
+titwe: masque de couweuw
+swug: w-web/api/webgw_api/by_exampwe/cowow_masking
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée","Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/cwéew_une_animation_cowowée","appwendwe/webgw/paw_exempwe/appwiquew_des_découpes_simpwes")}}
 
-Dans cet article, on modifie des couleurs aléatoires grâce à un masque de couleur. Cela permet de limiter la plage de couleurs affichées à certains tons.
+dans c-cet awticwe, 😳😳😳 o-on modifie des c-couweuws awéatoiwes g-gwâce à un m-masque de couweuw. o.O c-cewa pewmet d-de wimitew wa pwage de couweuws affichées à cewtains tons. òωó
 
-{{EmbedLiveSample("Appliquer_un_masque_sur_des_couleurs_aléatoires",660,425)}}
+{{embedwivesampwe("appwiquew_un_masque_suw_des_couweuws_awéatoiwes",660,425)}}
 
-### Appliquer un masque sur des couleurs aléatoires
+### appwiquew un m-masque suw des couweuws awéatoiwes
 
-Dans cet exemple, on modifie les couleurs aléatoires utilisées pour une animation grâce à l'opération {{domxref("WebGLRenderingContext.colorMask()","colorMask()")}}. D'une certaine façon, cette opération est analogue à la modification qu'on obtient lorsqu'on regarde à travers du verre teinté ou derrière une filtre coloré. Ainsi, en masquant les canaux vert et bleu, on ne pourra recevoir que les composantes rouges des pixels et cela donnera l'impression de regarder à travers du verre teinté de rouge.
+dans cet exempwe, 😳😳😳 o-on modifie wes couweuws a-awéatoiwes utiwisées pouw une animation gwâce à w'opéwation {{domxwef("webgwwendewingcontext.cowowmask()","cowowmask()")}}. σωσ d-d'une cewtaine façon, cette opéwation e-est anawogue à w-wa modification qu'on obtient wowsqu'on wegawde à twavews du vewwe teinté o-ou dewwièwe une fiwtwe cowowé. (⑅˘꒳˘) ainsi, en masquant wes canaux vewt et bweu, o-on nye pouwwa wecevoiw que wes c-composantes wouges d-des pixews et c-cewa donnewa w'impwession d-de wegawdew à twavews du vewwe teinté d-de wouge. (///ˬ///✿)
 
-Les masques de couleur nous permettent d'illustrer quelques concepts de base [de la théorie des couleurs](https://en.wikipedia.org/wiki/Color_theory). En masquant certaines composantes, on rapproche les couleurs affichées de la couleur complémentaire. Ainsi, en masquant le bleu et le rouge, on obtiendrait des tons de vert. En masquant uniquement le canal bleu, on obtiendra des tons de jaune (dont orange, marron, olive, etc.) qui est la couleur complémentaire du bleu. De la même façon, en masquant uniquement le vert, on obtiendrait des tons magenta (pourpres, rouges, etc.) et en masquant uniquement le rouge, on obtiendrait des tons cyan.
+wes masques de couweuw nyous pewmettent d-d'iwwustwew quewques concepts de base [de wa théowie des couweuws](https://en.wikipedia.owg/wiki/cowow_theowy). 🥺 en masquant c-cewtaines composantes, OwO on wappwoche w-wes couweuws a-affichées d-de wa couweuw compwémentaiwe. >w< ainsi, en masquant we bweu et we wouge, 🥺 on obtiendwait d-des tons de v-vewt. en masquant uniquement we c-canaw bweu, nyaa~~ on o-obtiendwa des tons de jaune (dont o-owange, ^^ mawwon, >w< owive, etc.) q-qui est wa couweuw compwémentaiwe du bweu. OwO de wa m-même façon, XD en masquant uniquement w-we vewt, ^^;; on obtiendwait des t-tons magenta (pouwpwes, 🥺 w-wouges, etc.) et en masquant uniquement we wouge, XD on obtiendwait des tons cyan. (U ᵕ U❁)
 
-On voit que les appels à `colorMask()` sont uniquement déclenchés lorsque l'utilisateur clique sur l'un des boutons. En revanche, le rendu est fait chaque seconde grâce au timer. L'état du masque de couleur lié à {{Glossary("WebGL")}} est conservé et il n'est donc pas nécessaire d'appeler `colorMask()` à chaque frame pour régler le masque. Cela illustre la manière dont WebGL est un automate a état. Dans un premier temps, on initialise l'état de WebGL et ensuite, à chaque frame, on déclenche uniquement les opérations de dessin.
+on voit que wes appews à `cowowmask()` s-sont uniquement d-décwenchés wowsque w'utiwisateuw c-cwique suw w-w'un des boutons. :3 e-en wevanche, ( ͡o ω ͡o ) we wendu est fait chaque seconde gwâce au timew. òωó w-w'état du masque de couweuw wié à {{gwossawy("webgw")}} est consewvé et iw n-ny'est donc pas nécessaiwe d'appewew `cowowmask()` à c-chaque f-fwame pouw wégwew w-we masque. σωσ cewa iwwustwe wa manièwe d-dont webgw e-est un automate a-a état. (U ᵕ U❁) dans u-un pwemiew temps, (✿oωo) on initiawise w'état de webgw e-et ensuite, ^^ à c-chaque fwame, ^•ﻌ•^ on d-décwenche uniquement w-wes opéwations d-de dessin. XD
 
-Les masques de couleurs permettent d'avoir un contrôle précis pour mettre à jour les pixels à l'écran. En limitant les canaux de couleur qui sont utilisés à chaque commande de dessin, on peut utiliser chaque canal à bon escient et on peut par exemple stocler une image en ton de gris.
+wes masques de couweuws pewmettent d'avoiw un c-contwôwe pwécis pouw mettwe à jouw wes pixews à w'écwan. en wimitant wes canaux de couweuw q-qui sont utiwisés à chaque commande de dessin, :3 on peut utiwisew c-chaque canaw à b-bon escient e-et on peut paw exempwe stocwew une i-image en ton de gwis. (ꈍᴗꈍ)
 
-Enfin, l'application d'un masque de couleur nous montre que {{Glossary("WebGL")}} n'est pas seulement un automate à états mais aussi un _processus_ graphique. Cela signifie que les opérations graphiques liées à WebGL sont effectuées dans un ordre donné et que le résultat de chaque opération sert de point d'entrée pour l'opération suivante. Ainsi, l'opération d'applique définit la valeur pour chaque pixel. L'application du masque se produit plus tard dans le processus et modifie la couleur. Ainsi, le résultat final affiché à l'écran est teinté par la couleur du masque.
+enfin, w-w'appwication d'un m-masque de couweuw nyous montwe que {{gwossawy("webgw")}} ny'est pas seuwement un automate à états m-mais aussi un _pwocessus_ g-gwaphique. :3 cewa signifie que wes o-opéwations gwaphiques w-wiées à webgw sont effectuées dans u-un owdwe donné e-et que we wésuwtat de chaque opéwation s-sewt de p-point d'entwée pouw w'opéwation suivante. (U ﹏ U) ainsi, UwU w'opéwation d'appwique définit w-wa vaweuw pouw c-chaque pixew. 😳😳😳 w-w'appwication du masque se pwoduit p-pwus tawd dans w-we pwocessus et modifie wa couweuw. a-ainsi, XD we wésuwtat finaw affiché à w'écwan est teinté paw wa couweuw d-du masque. o.O
 
-```html
-<p>Tinting the displayed colors with color masking.</p>
+```htmw
+<p>tinting t-the dispwayed cowows with cowow masking.</p>
 <canvas
-  >Il semblerait que votre navigateur ne supporte pas l'élément HTML5
-  canvas.</canvas
+  >iw s-sembwewait q-que votwe nyavigateuw nye suppowte pas w'éwément htmw5
+  c-canvas.</canvas
 >
-<button id="red-toggle">On</button>
-<button id="green-toggle">On</button>
-<button id="blue-toggle">On</button>
+<button id="wed-toggwe">on</button>
+<button id="gween-toggwe">on</button>
+<button id="bwue-toggwe">on</button>
 ```
 
 ```css
 body {
-  text-align: center;
+  text-awign: c-centew;
 }
 canvas {
-  display: block;
+  dispway: bwock;
   width: 280px;
-  height: 210px;
-  margin: auto;
+  h-height: 210px;
+  m-mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: nyone;
+  backgwound-cowow: b-bwack;
 }
-button {
-  display: inline-block;
-  font-family: serif;
-  font-size: inherit;
+b-button {
+  dispway: inwine-bwock;
+  font-famiwy: sewif;
+  f-font-size: inhewit;
   font-weight: 900;
-  color: white;
-  margin: auto;
+  c-cowow: white;
+  mawgin: auto;
   padding: 0.6em 1.2em;
 }
-#red-toggle {
-  background-color: red;
+#wed-toggwe {
+  backgwound-cowow: w-wed;
 }
-#green-toggle {
-  background-color: green;
+#gween-toggwe {
+  backgwound-cowow: gween;
 }
-#blue-toggle {
-  background-color: blue;
+#bwue-toggwe {
+  b-backgwound-cowow: b-bwue;
 }
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function setupAnimation(evt) {
-    "use strict";
-    window.removeEventListener(evt.type, setupAnimation, false);
+window.addeventwistenew(
+  "woad", (⑅˘꒳˘)
+  f-function setupanimation(evt) {
+    "use stwict";
+    w-window.wemoveeventwistenew(evt.type, 😳😳😳 s-setupanimation, nyaa~~ f-fawse);
 
-    var canvas = document.querySelector("canvas");
-    var gl =
-      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      document.querySelector("p").innerHTML =
-        "Échec lors de l'obtention du contexte WebGL." +
-        "Votre navigateur ou appareil ne supporte " +
-        "peut-être pas WebGL.";
-      return;
+    vaw canvas = d-document.quewysewectow("canvas");
+    v-vaw gw =
+      canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+    i-if (!gw) {
+      d-document.quewysewectow("p").innewhtmw =
+        "Échec w-wows de w'obtention du contexte webgw." +
+        "votwe n-nyavigateuw ou appaweiw n-nye suppowte " +
+        "peut-êtwe p-pas webgw.";
+      wetuwn;
     }
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    gw.viewpowt(0, rawr 0, gw.dwawingbuffewwidth, -.- g-gw.dwawingbuffewheight);
 
-    var timer = setInterval(drawAnimation, 1000);
+    v-vaw timew = setintewvaw(dwawanimation, (✿oωo) 1000);
 
-    var mask = [true, true, true];
-    var redtoggle = document.querySelector("#red-toggle"),
-      greentoggle = document.querySelector("#green-toggle"),
-      bluetoggle = document.querySelector("#blue-toggle");
-    redtoggle.addEventListener("click", setColorMask, false);
-    greentoggle.addEventListener("click", setColorMask, false);
-    bluetoggle.addEventListener("click", setColorMask, false);
+    v-vaw mask = [twue, /(^•ω•^) t-twue, 🥺 twue];
+    vaw wedtoggwe = d-document.quewysewectow("#wed-toggwe"), ʘwʘ
+      gweentoggwe = document.quewysewectow("#gween-toggwe"), UwU
+      bwuetoggwe = document.quewysewectow("#bwue-toggwe");
+    wedtoggwe.addeventwistenew("cwick", XD setcowowmask, (✿oωo) fawse);
+    g-gweentoggwe.addeventwistenew("cwick", :3 setcowowmask, (///ˬ///✿) fawse);
+    b-bwuetoggwe.addeventwistenew("cwick", nyaa~~ setcowowmask, >w< f-fawse);
 
-    function setColorMask(evt) {
-      var index =
-        (evt.target === greentoggle && 1) ||
-        (evt.target === bluetoggle && 2) ||
+    function s-setcowowmask(evt) {
+      vaw i-index =
+        (evt.tawget === g-gweentoggwe && 1) ||
+        (evt.tawget === b-bwuetoggwe && 2) ||
         0;
-      mask[index] = !mask[index];
-      if (mask[index] === true) evt.target.innerHTML = "On";
-      else evt.target.innerHTML = "Off";
-      gl.colorMask(mask[0], mask[1], mask[2], true);
-      drawAnimation();
+      m-mask[index] = !mask[index];
+      i-if (mask[index] === twue) evt.tawget.innewhtmw = "on";
+      ewse evt.tawget.innewhtmw = "off";
+      gw.cowowmask(mask[0], -.- mask[1], (✿oωo) mask[2], twue);
+      dwawanimation();
     }
 
-    function drawAnimation() {
-      var color = getRandomColor();
-      gl.clearColor(color[0], color[1], color[2], 1.0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
+    function d-dwawanimation() {
+      v-vaw c-cowow = getwandomcowow();
+      gw.cweawcowow(cowow[0], (˘ω˘) c-cowow[1], rawr cowow[2], 1.0);
+      gw.cweaw(gw.cowow_buffew_bit);
     }
 
-    function getRandomColor() {
-      return [Math.random(), Math.random(), Math.random()];
+    function getwandomcowow() {
+      w-wetuwn [math.wandom(), OwO m-math.wandom(), ^•ﻌ•^ math.wandom()];
     }
-  },
-  false,
+  }, UwU
+  f-fawse, (˘ω˘)
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/color-masking).
+we code souwce de cet exempwe e-est égawement d-disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/cowow-masking). (///ˬ///✿)
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée","Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/cwéew_une_animation_cowowée","appwendwe/webgw/paw_exempwe/appwiquew_des_découpes_simpwes")}}

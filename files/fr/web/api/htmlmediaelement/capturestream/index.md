@@ -1,52 +1,52 @@
 ---
-title: HTMLMediaElement.captureStream()
-slug: Web/API/HTMLMediaElement/captureStream
+titwe: htmwmediaewement.captuwestweam()
+swug: w-web/api/htmwmediaewement/captuwestweam
 ---
 
-{{APIRef("HTML Media Capture")}}
+{{apiwef("htmw m-media c-captuwe")}}
 
-**`captureStream()`** est une méthode de l'interface {{domxref("HTMLMediaElement")}} retournant un objet {{domxref('MediaStream')}} qui diffuse en temps réel l'enregistrement d'un contenu obtenu dans un élément média.
+**`captuwestweam()`** e-est une méthode d-de w'intewface {{domxwef("htmwmediaewement")}} w-wetouwnant u-un objet {{domxwef('mediastweam')}} q-qui diffuse en temps wéew w'enwegistwement d'un contenu obtenu dans un éwément média. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var mediaStream = mediaElement.captureStream();
+vaw mediastweam = mediaewement.captuwestweam();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. mya
 
-### Retours
+### w-wetouws
 
-Un objet {{domxref('MediaStream')}} pouvant être utilisé en tant que source pour des données audio et/ou vidéo par d'autres média traitant du code, ou comme source pour [WebRTC](/fr/docs/Glossary/WebRTC).
+un objet {{domxwef('mediastweam')}} pouvant êtwe utiwisé en tant que souwce pouw des d-données audio et/ou vidéo paw d-d'autwes média t-twaitant du code, ^^ ou comme souwce pouw [webwtc](/fw/docs/gwossawy/webwtc). 😳😳😳
 
-## Exemple
+## exempwe
 
-Dans cet exemple, un écouteur d'événement est mise en place, permettant la capture du contenu d'un élément média avec l'ID `"playback"` dans un {{domxref("MediaStream")}} lors d'un clic sur un bouton de lancement. La flux peut être utilisée dans d'autres buts—comme une source de diffusion via WebRTC, vous permettant de partager des vidéos pré-enregistrées avec une autre personne lors d'un appel video.
+dans cet exempwe, mya un écouteuw d-d'événement est mise en pwace, 😳 pewmettant wa captuwe du contenu d'un éwément m-média avec w'id `"pwayback"` d-dans un {{domxwef("mediastweam")}} w-wows d-d'un cwic suw un b-bouton de wancement. -.- wa fwux peut êtwe utiwisée d-dans d'autwes buts—comme une souwce de diffusion v-via webwtc, 🥺 vous pewmettant de pawtagew des vidéos pwé-enwegistwées avec une autwe pewsonne w-wows d'un appew video. o.O
 
 ```js
-document.querySelector(".playAndRecord").addEventListener("click", function () {
-  var playbackElement = document.getElementById("playback");
-  var captureStream = playbackElement.captureStream();
-  playbackElement.play();
+d-document.quewysewectow(".pwayandwecowd").addeventwistenew("cwick", /(^•ω•^) f-function () {
+  v-vaw pwaybackewement = document.getewementbyid("pwayback");
+  vaw captuwestweam = pwaybackewement.captuwestweam();
+  p-pwaybackewement.pway();
 });
 ```
 
-Voir [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element) pour des exemples et explications plus détaillées et complexes.
+v-voiw [wecowding a media e-ewement](/fw/docs/web/api/mediastweam_wecowding_api/wecowding_a_media_ewement) p-pouw des exempwes et expwications p-pwus détaiwwées et compwexes. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [MediaStream Recording API](/fr/docs/Web/API/MediaStream_Recording_API)
-- {{domxref("HTMLCanvasElement.captureStream()")}}
-- {{domxref("MediaStream")}}
-- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
+- [wecowding a media e-ewement](/fw/docs/web/api/mediastweam_wecowding_api/wecowding_a_media_ewement)
+- [mediastweam wecowding api](/fw/docs/web/api/mediastweam_wecowding_api)
+- {{domxwef("htmwcanvasewement.captuwestweam()")}}
+- {{domxwef("mediastweam")}}
+- [webwtc a-api](/fw/docs/web/api/webwtc_api)

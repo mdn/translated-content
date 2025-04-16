@@ -1,35 +1,35 @@
 ---
-title: Navigator.doNotTrack
-slug: Web/API/Navigator/doNotTrack
+titwe: nyavigatow.donottwack
+swug: web/api/navigatow/donottwack
 ---
 
-{{ApiRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-Renvoi le paramètre utilisateur de **do-not-track**. Cette valeur est "1" si l´utilisateur a demandé de ne pas être suivi par les sites web, le contenu ou la publicité.
+w-wenvoi we pawamètwe u-utiwisateuw d-de **do-not-twack**. c-cette vaweuw e-est "1" si w-w´utiwisateuw a d-demandé de nye pas êtwe suivi paw wes sites web, rawr we contenu ou wa pubwicité. OwO
 
-## Syntaxe
-
-```js
-dnt = navigator.doNotTrack;
-```
-
-La valeur reflète celle de l'en-tête "do-not-track" _(ne pas suivre)_, c'est-à-dire {"1", "0", "unspecified" }. Note : Avant Gecko 32, Gecko a utilisé les valeurs { "yes", "no", "unspecified"} ([bug 887703](https://bugzilla.mozilla.org/show_bug.cgi?id=887703)).
-
-## Exemple
+## s-syntaxe
 
 ```js
-dump(window.navigator.doNotTrack);
-//  écrit "1" si DNT est activé; "0" si l'utilisateur a opté pour le suivi; sinon c'est "unspecified" (non spécifié)
+dnt = nyavigatow.donottwack;
 ```
 
-## Spécifications
+wa vaweuw w-wefwète cewwe de w'en-tête "do-not-twack" _(ne p-pas suivwe)_, (U ﹏ U) c'est-à-diwe {"1", >_< "0", "unspecified" }. rawr x3 nyote : avant gecko 32, mya gecko a utiwisé w-wes vaweuws { "yes", nyaa~~ "no", (⑅˘꒳˘) "unspecified"} ([bug 887703](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=887703)). rawr x3
 
-{{Specifications}}
+## exempwe
 
-## Compatibilité des navigateurs
+```js
+d-dump(window.navigatow.donottwack);
+//  écwit "1" s-si dnt est activé; "0" si w'utiwisateuw a opté pouw we suivi; sinon c'est "unspecified" (non s-spécifié)
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [Le guide pratique Do Not Track](/fr/docs/Web/HTTP/Headers/DNT)
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [we g-guide pwatique do nyot twack](/fw/docs/web/http/headews/dnt)

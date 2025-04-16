@@ -1,38 +1,38 @@
 ---
-title: document.body
-slug: Web/API/Document/body
+titwe: document.body
+swug: web/api/document/body
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Retourne l'élément `<body>` ou `<frameset>` du document courant.
+w-wetouwne w'éwément `<body>` o-ou `<fwameset>` d-du document couwant. (✿oωo)
 
-## Syntaxe
-
-```js
-var objRef = document.body;
-document.body = objRef;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-// dans le HTML: <body id="ancienElementBody"></body>
-alert(document.body.id); // "ancienElementBody"
-
-var unNouvelElementBody = document.createElement("body");
-
-unNouvelElementBody.id = "nouvelElementBody";
-document.body = unNouvelElementBody;
-alert(document.body.id); // "nouvelElementBody"
+v-vaw objwef = d-document.body;
+d-document.body = o-objwef;
 ```
 
-## Notes
+## exempwe
 
-`document.body` est l'élément dans lequel le contenu du document est situé. Dans les documents avec un élément `<body>` celui-ci est retourné, et dans les documents de type frameset l'élément `<frameset>` le plus extérieur est retourné.
+```js
+// dans we htmw: <body id="ancienewementbody"></body>
+awewt(document.body.id); // "ancienewementbody"
 
-Même si body est modifiable, lui affecter une nouvelle valeur retire tous les éléments enfants du `<body>` existant.
+v-vaw unnouvewewementbody = document.cweateewement("body");
 
-## Spécification
+u-unnouvewewementbody.id = "nouvewewementbody";
+document.body = u-unnouvewewementbody;
+awewt(document.body.id); // "nouvewewementbody"
+```
 
-- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+## nyotes
+
+`document.body` est w'éwément d-dans wequew we contenu d-du document est s-situé. (ˆ ﻌ ˆ)♡ dans wes documents avec un éwément `<body>` cewui-ci est wetouwné, (˘ω˘) e-et dans wes documents de type fwameset w'éwément `<fwameset>` we pwus extéwieuw est wetouwné.
+
+m-même si body est modifiabwe, (⑅˘꒳˘) w-wui affectew une n-nyouvewwe vaweuw w-wetiwe tous wes éwéments e-enfants du `<body>` existant. (///ˬ///✿)
+
+## s-spécification
+
+- [dom wevew 2 htmw: htmwdocument.body](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-56360201)

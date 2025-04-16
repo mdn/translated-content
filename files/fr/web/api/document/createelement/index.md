@@ -1,114 +1,114 @@
 ---
-title: document.createElement
-slug: Web/API/Document/createElement
+titwe: document.cweateewement
+swug: web/api/document/cweateewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElement()`** crée un élément HTML du type spécifié par `tagName` ou un {{domxref("HTMLUnknownElement")}} si `tagName` n'est pas reconnu.
+d-dans u-un document [htmw](/fw/docs/web/htmw), (⑅˘꒳˘) w-wa méthode **`document.cweateewement()`** c-cwée un éwément h-htmw du t-type spécifié p-paw `tagname` ou u-un {{domxwef("htmwunknownewement")}} si `tagname` ny'est pas weconnu. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var element = document.createElement(tagName[, options]);
+vaw ewement = d-document.cweateewement(tagname[, òωó options]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- tagName
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d'élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (_nom du noeud_) de l'élément créé est initialisé avec la valeur de `tagName`. N'utilisez pas le nom qualifié (comme `"html:a"`) avec cette méthode. Quand elle est appelée sur un document HTML, `createElement()` convertit `tagName` en minuscules avant de créer l'élément. Dans Firefox, Opera et Chrome, `createElement(null)` fonctionne comme `createElement("null")`.
-- options{{optional_inline}}
-  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d'un élément personnalisé précédemment défini avec `customElements.define()`. Voir [Exemple de composant web](#exemple_de_composant_web) pour plus de détails.
+- t-tagname
+  - : une chaîne d-de cawactèwes ({{domxwef("domstwing")}}) spécifiant we type d'éwément à cwéew. (⑅˘꒳˘) we {{domxwef("node.nodename", XD "nodename")}} (_nom d-du noeud_) de w'éwément c-cwéé est i-initiawisé avec wa vaweuw de `tagname`. -.- ny'utiwisez pas we nyom quawifié (comme `"htmw:a"`) a-avec cette méthode. :3 quand ewwe est appewée suw un document htmw, nyaa~~ `cweateewement()` convewtit `tagname` e-en minuscuwes avant de c-cwéew w'éwément. 😳 d-dans fiwefox, (⑅˘꒳˘) o-opewa et chwome, nyaa~~ `cweateewement(nuww)` f-fonctionne comme `cweateewement("nuww")`. OwO
+- options{{optionaw_inwine}}
+  - : u-un objet `ewementcweationoptions` facuwtatif contenant une s-seuwe pwopwiété nyommée `is` dont wa vaweuw est we nyom de bawise d'un éwément pewsonnawisé p-pwécédemment défini avec `customewements.define()`. rawr x3 v-voiw [exempwe d-de composant w-web](#exempwe_de_composant_web) pouw pwus de détaiws.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'objet {{domxref("Element")}} créé.
+w-w'objet {{domxwef("ewement")}} c-cwéé. XD
 
-## Exemples
+## exempwes
 
-### Exemple de base
+### exempwe d-de base
 
-Ici est créé un nouveau `<div>` qui est inséré avant l'élément avec l'identifiant `"div1"`.
+ici e-est cwéé un nyouveau `<div>` qui est inséwé a-avant w'éwément avec w'identifiant `"div1"`. σωσ
 
-#### HTML
+#### h-htmw
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>||Working with elements||</title>
+    <titwe>||wowking with ewements||</titwe>
   </head>
   <body>
-    <div id="div1">The text above has been created dynamically.</div>
+    <div i-id="div1">the text a-above has been cweated dynamicawwy.</div>
   </body>
-</html>
+</htmw>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.body.onload = addElement;
+d-document.body.onwoad = addewement;
 
-function addElement() {
-  // crée un nouvel élément div
-  var newDiv = document.createElement("div");
-  // et lui donne un peu de contenu
-  var newContent = document.createTextNode("Hi there and greetings!");
-  // ajoute le nœud texte au nouveau div créé
-  newDiv.appendChild(newContent);
+function addewement() {
+  // cwée un nyouvew éwément div
+  vaw nyewdiv = document.cweateewement("div");
+  // e-et wui d-donne un peu de contenu
+  vaw n-nyewcontent = document.cweatetextnode("hi t-thewe a-and gweetings!");
+  // ajoute we nyœud texte au nyouveau div cwéé
+  n-nyewdiv.appendchiwd(newcontent);
 
-  // ajoute le nouvel élément créé et son contenu dans le DOM
-  var currentDiv = document.getElementById("div1");
-  document.body.insertBefore(newDiv, currentDiv);
+  // ajoute we nyouvew éwément cwéé et son contenu dans we dom
+  vaw c-cuwwentdiv = document.getewementbyid("div1");
+  d-document.body.insewtbefowe(newdiv, (U ᵕ U❁) c-cuwwentdiv);
 }
 ```
 
-{{EmbedLiveSample("Exemple_de_base", 500, 50)}}
+{{embedwivesampwe("exempwe_de_base", (U ﹏ U) 500, 50)}}
 
-### Exemple de composant web
+### exempwe d-de composant web
 
-L'exemple de fragment suivant est extrait de notre exemple expanding-list-web-component (voir aussi en direct). Dans ce cas, notre élément personnalisé étend la {{domxref("HTMLUListElement")}} qui représente l'élément {{htmlelement("ul")}}.
+w'exempwe d-de fwagment suivant e-est extwait d-de nyotwe exempwe e-expanding-wist-web-component (voiw aussi en diwect). :3 dans ce c-cas, ( ͡o ω ͡o ) nyotwe éwément p-pewsonnawisé étend w-wa {{domxwef("htmwuwistewement")}} q-qui wepwésente w-w'éwément {{htmwewement("uw")}}. σωσ
 
 ```js
-// Crée une classe pour l’élément
-class ExpandingList extends HTMLUListElement {
-  constructor() {
-    // Toujours appeler « super » en premier dans le constructeur
-    super();
+// cwée une cwasse pouw w’éwément
+c-cwass expandingwist extends htmwuwistewement {
+  constwuctow() {
+    // toujouws appewew « supew » en pwemiew d-dans we constwucteuw
+    supew();
 
-    // définition du constructeur omise pour la brièveté
+    // définition du constwucteuw o-omise pouw w-wa bwièveté
     ...
   }
 }
 
-// Définit le nouvel élément
-customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
+// d-définit we nouvew éwément
+customewements.define('expanding-wist', >w< expandingwist, 😳😳😳 { e-extends: 'uw' });
 ```
 
-Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante&nbsp;:
+si nyous chewchons à c-cwéew une i-instance de cet éwément paw pwogwammation, OwO nyous devons utiwisew un appew tew que montwé dans w-wa wigne suivante&nbsp;:
 
 ```js
-let expandingList = document.createElement("ul", { is: "expanding-list" });
+wet expandingwist = d-document.cweateewement("uw", 😳 { is: "expanding-wist" });
 ```
 
-Le nouvel élément donnera un attribut [`is`](/fr/docs/Web/HTML/Global_attributes/is) dont la valeur est la balise de nom de l'élément personnalisé.
+w-we nyouvew éwément d-donnewa un attwibut [`is`](/fw/docs/web/htmw/gwobaw_attwibutes/is) dont wa v-vaweuw est wa b-bawise de nyom de w'éwément pewsonnawisé. 😳😳😳
 
-> [!NOTE]
-> Pour la rétrocompatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d'un objet, dont la valeur est la balise de nom de l'élément personnalisé.
+> [!note]
+> p-pouw wa w-wétwocompatibiwité avec wes vewsions pwécédentes de wa [spécification des éwéments p-pewsonnawisés](https://www.w3.owg/tw/custom-ewements/), (˘ω˘) q-quewques nyavigateuws p-pewmettent de passew u-une chaîne de cawactèwes i-ici, ʘwʘ à wa pwace d'un o-objet, ( ͡o ω ͡o ) dont wa vaweuw est wa bawise de nyom de w'éwément pewsonnawisé. o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.removeChild()")}}
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Node.insertBefore()")}}
-- {{domxref("Node.hasChildNodes()")}}
-- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l'URI de l'espace de noms de l'élément.
+- {{domxwef("node.wemovechiwd()")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("node.insewtbefowe()")}}
+- {{domxwef("node.haschiwdnodes()")}}
+- {{domxwef("document.cweateewementns()")}} — pouw spécifiew expwicitement w-w'uwi de w-w'espace de nyoms de w'éwément. >w<

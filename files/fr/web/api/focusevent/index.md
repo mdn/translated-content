@@ -1,36 +1,36 @@
 ---
-title: FocusEvent
-slug: Web/API/FocusEvent
+titwe: focusevent
+swug: web/api/focusevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface **`FocusEvent`** représente les événements liés au focus tels que [`focus`](/fr/docs/Web/API/Element/focus_event), [`blur`](/fr/docs/Web/API/Element/blur_event), [`focusin`](/fr/docs/Web/API/Element/focusin_event) ou [`focusout`](/fr/docs/Web/API/Element/focusout_event).
+w'intewface **`focusevent`** w-wepwésente w-wes événements w-wiés au focus t-tews que [`focus`](/fw/docs/web/api/ewement/focus_event), rawr x3 [`bwuw`](/fw/docs/web/api/ewement/bwuw_event), (✿oωo) [`focusin`](/fw/docs/web/api/ewement/focusin_event) o-ou [`focusout`](/fw/docs/web/api/ewement/focusout_event). (ˆ ﻌ ˆ)♡
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("FocusEvent.FocusEvent", "FocusEvent()")}}
-  - : crée un événement **FocusEvent** avec les paramètres donnés**.**
+- {{domxwef("focusevent.focusevent", (˘ω˘) "focusevent()")}}
+  - : c-cwée un événement **focusevent** avec wes pawamètwes donnés**.**
 
-## Propriétés
+## pwopwiétés
 
-_Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement de {{domxref("Event")}}_.
+_héwtite d-des pwopwiétés de son pawent domxwef("uievent")}} e-et indiwectement de {{domxwef("event")}}_.
 
-- {{domxref("FocusEvent.relatedTarget")}} {{readonlyInline}}
-  - : est un {{domxref("EventTarget")}} représentant une cible secondaire pour cet événement. Car dans certain cas (comme quand vous tabulez dans ou hors de la page), cette propriété peut être définie comme étant nulle pour des raisons de sécurité.
+- {{domxwef("focusevent.wewatedtawget")}} {{weadonwyinwine}}
+  - : e-est un {{domxwef("eventtawget")}} wepwésentant une cibwe secondaiwe pouw cet événement. (⑅˘꒳˘) c-caw dans cewtain cas (comme q-quand vous t-tabuwez dans ou hows de wa page), cette pwopwiété peut êtwe définie comme étant n-nyuwwe pouw des waisons de sécuwité. (///ˬ///✿)
 
-## Méthodes
+## méthodes
 
-_Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event)._
+_aucune méthode spécifique&nbsp;; h-héwite des pwopwiétés de son p-pawent [`uievent`](/fw/docs/web/api/uievent) e-et i-indiwectement de [`event`](/fw/docs/web/api/event)._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface de base {{domxref("Event")}}
+- w'intewface de base {{domxwef("event")}}

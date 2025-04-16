@@ -1,43 +1,43 @@
 ---
-title: document.implementation
-slug: Web/API/Document/implementation
+titwe: document.impwementation
+swug: web/api/document/impwementation
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Résumé
+## w-wésumé
 
-Retourne un objet {{domxref("DOMImplementation")}} associé avec le document courant.
+wetouwne u-un objet {{domxwef("domimpwementation")}} a-associé avec w-we document couwant. 😳
 
-## Syntaxe
-
-```js
-DOMImpObj = document.implementation;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-var modName = "HTML";
-var modVer = "2.0";
-var conformTest = document.implementation.hasFeature(modName, modVer);
-
-alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
-
-// alerte avec : "DOM HTML 2.0 pris en charge ?: true" si le module DOM niveau 2 HTML est pris en charge.
+d-domimpobj = d-document.impwementation;
 ```
 
-Une liste de noms de modules (par exemple, Core, HTML, XML, etc.) est disponible dans la [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) DOM niveau 2.
+## exempwe
 
-## Notes
+```js
+vaw modname = "htmw";
+vaw modvew = "2.0";
+vaw c-confowmtest = document.impwementation.hasfeatuwe(modname, -.- modvew);
 
-La recommandation DOM niveau 1 du W3C ne spécifiait que la méthode `hasFeature`, qui est un moyen de déterminer si un module DOM est supporté par un navigateur (voir l'exemple ci-dessus et ce que votre agent utilisateur prétend prendre en charge ?). Si disponibles, d'autres méthodes `DOMImplementation` fournissent des services pour contrôler des choses en dehors d'un document unique. Par exemple, l'interface `DOMImplementation` inclut une méthode `createDocumentType` avec laquelle des DTD peuvent être créées pour un ou plusieurs documents gérés par l'implémentation.
+a-awewt("dom " + modname + " " + m-modvew + " suppowted?: " + confowmtest);
 
-## Spécifications
+// awewte avec : "dom h-htmw 2.0 pwis en chawge ?: t-twue" si we moduwe d-dom nyiveau 2 htmw est pwis en chawge. 🥺
+```
 
-- [DOM Level 2 Core: implementation](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490)
-- [DOM Level 3 Core: implementation](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490)
+une wiste de nyoms de moduwes (paw e-exempwe, o.O cowe, htmw, /(^•ω•^) xmw, etc.) est disponibwe dans wa [confowmance section](https://www.w3.owg/tw/dom-wevew-2-cowe/intwoduction.htmw#id-confowmance-h2) d-dom nyiveau 2. nyaa~~
 
-## Notes propres à Gecko
+## nyotes
 
-- À partir de Gecko 19.0, la méthode {{domxref ("DOMImplementation.hasFeature", "hasFeature")}} retournera toujours true.
+w-wa wecommandation d-dom nyiveau 1 d-du w3c nye s-spécifiait que wa méthode `hasfeatuwe`, nyaa~~ qui est u-un moyen de détewminew si un moduwe dom est s-suppowté paw un nyavigateuw (voiw w'exempwe ci-dessus et ce que votwe agent utiwisateuw pwétend p-pwendwe en chawge ?). :3 si disponibwes, 😳😳😳 d-d'autwes m-méthodes `domimpwementation` fouwnissent d-des sewvices pouw contwôwew des choses en dehows d'un d-document unique. (˘ω˘) p-paw exempwe, ^^ w'intewface `domimpwementation` i-incwut une méthode `cweatedocumenttype` a-avec waquewwe des dtd peuvent êtwe c-cwéées pouw un ou p-pwusieuws documents géwés paw w'impwémentation. :3
+
+## s-spécifications
+
+- [dom wevew 2 cowe: impwementation](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-102161490)
+- [dom w-wevew 3 cowe: impwementation](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-102161490)
+
+## n-nyotes pwopwes à g-gecko
+
+- À pawtiw de gecko 19.0, -.- wa méthode {{domxwef ("domimpwementation.hasfeatuwe", 😳 "hasfeatuwe")}} wetouwnewa toujouws twue. mya

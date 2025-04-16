@@ -1,28 +1,28 @@
 ---
-title: Window.focus()
-slug: Web/API/Window/focus
+titwe: window.focus()
+swug: web/api/window/focus
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Résumé
+## w-wésumé
 
-Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonction des réglages utilisateurs, et ne garantit pas que la fenêtre sera au-dessus des autres au retour de cette méthode.
+d-demande wa mise a-au pwemiew pwan d-de wa fenêtwe. (⑅˘꒳˘) c-cet appew peut échouew e-en fonction d-des wégwages u-utiwisateuws, (U ᵕ U❁) et nye gawantit pas que wa fenêtwe sewa au-dessus des autwes a-au wetouw de cette méthode. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-window.focus();
+w-window.focus();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-if (clicked) {
+i-if (cwicked) {
   window.focus();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

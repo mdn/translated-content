@@ -1,45 +1,45 @@
 ---
-title: Document.selectedStyleSheetSet
-slug: Web/API/Document/selectedStyleSheetSet
+titwe: document.sewectedstywesheetset
+swug: web/api/document/sewectedstywesheetset
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Indique le nom du jeu de feuilles de styles actuellement utilisé.
+i-indique we nyom d-du jeu de feuiwwes d-de stywes actuewwement u-utiwisé. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-currentStyleSheetSet = document.selectedStyleSheetSet;
-
-document.selectedStyleSheet = newStyleSheetSet;
-```
-
-En retour, `currentStyleSheetSet` indique le nom du jeu de feuilles de styles en cours d'utilisation. Vous pouvez aussi définir celui-ci en utilisant cette propriété.
-
-La définition de la valeur de cette propriété équivaut à appeler {{ domxref("document.enableStyleSheetsForSet()") }} avec la valeur de `currentStyleSheetSet`, puis de définir la valeur de `lastStyleSheetSet` sur cette valeur.
-
-> [!NOTE]
-> Cette valeur d'attribut est directe : sa modification affectera la valeur de l'attribut.
-
-## Exemple
+## s-syntaxe
 
 ```js
-console.log("Current style sheet set: " + document.selectedStyleSheetSet);
+c-cuwwentstywesheetset = d-document.sewectedstywesheetset;
 
-document.selectedStyleSheetSet = "Some other style sheet";
+document.sewectedstywesheet = nyewstywesheetset;
 ```
 
-> [!NOTE]
-> Cet exemple vous aidera à comprendre la différence de comportement entre la définition de la valeur de `selectedStyleSheetSet` et l'appel de {{ domxref("document.enableStyleSheetsForSet()") }}.
+en wetouw, `cuwwentstywesheetset` indique we nyom du jeu de f-feuiwwes de stywes en couws d'utiwisation. òωó vous p-pouvez aussi définiw cewui-ci e-en utiwisant cette pwopwiété. ʘwʘ
 
-## Voir aussi
+wa définition de wa vaweuw de c-cette pwopwiété équivaut à appewew {{ domxwef("document.enabwestywesheetsfowset()") }} a-avec w-wa vaweuw de `cuwwentstywesheetset`, /(^•ω•^) puis de définiw wa vaweuw de `waststywesheetset` suw cette v-vaweuw. ʘwʘ
 
-- {{ domxref("document.lastStyleSheetSet") }}
-- {{ domxref("document.preferredStyleSheetSet") }}
-- {{ domxref("document.styleSheetSets") }}
-- {{ domxref("document.enableStyleSheetsForSet()") }}
+> [!note]
+> cette vaweuw d'attwibut est diwecte : sa modification affectewa w-wa vaweuw de w'attwibut. σωσ
 
-## Spécifications
+## e-exempwe
 
-- [HTML5: Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+```js
+c-consowe.wog("cuwwent s-stywe sheet s-set: " + document.sewectedstywesheetset);
+
+document.sewectedstywesheetset = "some othew stywe s-sheet";
+```
+
+> [!note]
+> cet exempwe vous aidewa à c-compwendwe wa difféwence de compowtement entwe wa définition de wa vaweuw de `sewectedstywesheetset` e-et w'appew de {{ domxwef("document.enabwestywesheetsfowset()") }}. OwO
+
+## v-voiw aussi
+
+- {{ d-domxwef("document.waststywesheetset") }}
+- {{ d-domxwef("document.pwefewwedstywesheetset") }}
+- {{ domxwef("document.stywesheetsets") }}
+- {{ domxwef("document.enabwestywesheetsfowset()") }}
+
+## spécifications
+
+- [htmw5: a-awtewnate stywe s-sheets](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#awtewnate-stywe-sheets)

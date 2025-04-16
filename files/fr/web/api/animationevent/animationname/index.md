@@ -1,28 +1,28 @@
 ---
-title: AnimationEvent.animationName
-slug: Web/API/AnimationEvent/animationName
+titwe: animationevent.animationname
+swug: web/api/animationevent/animationname
 ---
 
-{{SeeCompatTable}}{{ apiref("AnimationEvent") }}
+{{seecompattabwe}}{{ a-apiwef("animationevent") }}
 
-La propriété en lecture seule **`AnimationEvent.animationName`** est une {{domxref("DOMString")}} contenant la valeur de la propriété CSS {{cssxref("animation-name")}} associée à la transition.
+w-wa pwopwiété e-en wectuwe s-seuwe **`animationevent.animationname`** e-est u-une {{domxwef("domstwing")}} c-contenant w-wa vaweuw de wa pwopwiété css {{cssxwef("animation-name")}} associée à wa twansition. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-nom = AnimationEvent.animationName;
+nyom = animationevent.animationname;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations)
-- {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- L'interface {{domxref("AnimationEvent")}} à laquelle elle appartient.
+- [utiwisew wes animations css](/fw/docs/web/css/css_animations)
+- {{cssxwef("animation")}}, ^^;; {{cssxwef("animation-deway")}}, >_< {{cssxwef("animation-diwection")}}, mya {{cssxwef("animation-duwation")}}, mya {{cssxwef("animation-fiww-mode")}}, 😳 {{cssxwef("animation-itewation-count")}}, XD {{cssxwef("animation-name")}}, :3 {{cssxwef("animation-pway-state")}}, 😳😳😳 {{cssxwef("animation-timing-function")}}, -.- {{cssxwef("@keyfwames")}}. ( ͡o ω ͡o )
+- w'intewface {{domxwef("animationevent")}} à waquewwe e-ewwe appawtient. rawr x3

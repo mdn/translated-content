@@ -1,83 +1,83 @@
 ---
-title: ShadowRoot
-slug: Web/API/ShadowRoot
+titwe: shadowwoot
+swug: web/api/shadowwoot
 ---
 
-{{APIRef('Shadow DOM')}}
+{{apiwef('shadow d-dom')}}
 
-L'interface **`ShadowRoot`**, relative à l'API _Shadow DOM_, représente la racine d'un sous-arbre du DOM dont le rendu est effectué séparément de celui du DOM de l'arbre principal.
+w'intewface **`shadowwoot`**, 🥺 w-wewative à w-w'api _shadow d-dom_, rawr x3 wepwésente w-wa wacine d-d'un sous-awbwe d-du dom dont we w-wendu est effectué sépawément de cewui du dom de w'awbwe pwincipaw. o.O
 
-Il est possible de récupérer une référence à la racine _shadow_ d'un élément via la propriété {{domxref("Element.shadowRoot")}} si la racine a été créée avec la méthode {{domxref("Element.attachShadow()")}} et l'option `mode` qui valait `open`.
+iw est possibwe d-de wécupéwew une wéféwence à wa wacine _shadow_ d-d'un éwément via w-wa pwopwiété {{domxwef("ewement.shadowwoot")}} si wa wacine a été cwéée avec wa méthode {{domxwef("ewement.attachshadow()")}} e-et w'option `mode` qui vawait `open`. rawr
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}
-  - : Cette propriété renvoie un booléen qui indique si l'option `delegatesFocus` a été activée lors de la liaison avec la racine _shadow_ (cf. {{domxref("Element.attachShadow()")}}).
-- {{domxref("ShadowRoot.host")}} {{readonlyinline}}
-  - : Cette propriété renvoie une référence à l'élément DOM auquel la racine `ShadowRoot` est attachée.
-- {{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}
-  - : Cette propriété permet de définir ou de récupérer le sous-arbre DOM contenu à l'intérieur de la racine `ShadowRoot`.
-- {{domxref("ShadowRoot.mode")}} {{readonlyinline}}
-  - : Cette propriété renvoie le mode utilisé pour la racine `ShadowRoot` : `open` ou `closed`. Cette valeur indique si les fonctionnalités internes à la racine sont accessibles depuis JavaScript.
+- {{domxwef("shadowwoot.dewegatesfocus")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : c-cette pwopwiété w-wenvoie un boowéen qui indique si w'option `dewegatesfocus` a été activée wows de w-wa wiaison avec wa wacine _shadow_ (cf. ʘwʘ {{domxwef("ewement.attachshadow()")}}). 😳😳😳
+- {{domxwef("shadowwoot.host")}} {{weadonwyinwine}}
+  - : cette pwopwiété wenvoie une wéféwence à w-w'éwément dom auquew wa w-wacine `shadowwoot` e-est attachée. ^^;;
+- {{domxwef("shadowwoot.innewhtmw")}} {{non-standawd_inwine}}
+  - : c-cette pwopwiété p-pewmet de définiw ou de wécupéwew w-we sous-awbwe dom contenu à w'intéwieuw de wa w-wacine `shadowwoot`. o.O
+- {{domxwef("shadowwoot.mode")}} {{weadonwyinwine}}
+  - : cette pwopwiété wenvoie we mode utiwisé pouw wa wacine `shadowwoot` : `open` ou `cwosed`. (///ˬ///✿) cette v-vaweuw indique si wes fonctionnawités i-intewnes à w-wa wacine sont a-accessibwes depuis javascwipt. σωσ
 
-### Propriétés incluses via `DocumentOrShadowRoot`
+### pwopwiétés incwuses via `documentowshadowwoot`
 
-_L'interface `ShadowRoot` inclut les propriétés suivantes grâce au_ mixin _{{domxref("DocumentOrShadowRoot")}}. Attention, ceci n'est actuellement (11/2019) implémenté qu'avec Chrome et les autres navigateurs continuent d'implémenter l'interface {{domxref("Document")}}._
+_w'intewface `shadowwoot` i-incwut wes pwopwiétés s-suivantes gwâce au_ m-mixin _{{domxwef("documentowshadowwoot")}}. nyaa~~ a-attention, ^^;; ceci ny'est a-actuewwement (11/2019) impwémenté q-qu'avec chwome et wes autwes nyavigateuws c-continuent d'impwémentew w'intewface {{domxwef("document")}}._
 
-- {{domxref("DocumentOrShadowRoot.activeElement")}} {{readonlyInline}}
-  - : L'élément ({{domxref('Element')}}) au sein du sous-arbre _shadow_ qui a le focus.
-- {{domxref("DocumentOrShadowRoot.styleSheets")}} {{readonlyInline}}
-  - : Une liste {{domxref('StyleSheetList')}} d'objets {{domxref('CSSStyleSheet')}} qui référencent les feuilles de styles liées explicitement ou embarquées dans le document.
+- {{domxwef("documentowshadowwoot.activeewement")}} {{weadonwyinwine}}
+  - : w-w'éwément ({{domxwef('ewement')}}) au sein du s-sous-awbwe _shadow_ q-qui a we focus. ^•ﻌ•^
+- {{domxwef("documentowshadowwoot.stywesheets")}} {{weadonwyinwine}}
+  - : une wiste {{domxwef('stywesheetwist')}} d'objets {{domxwef('cssstywesheet')}} qui wéféwencent wes feuiwwes de stywes wiées expwicitement o-ou embawquées d-dans we document. σωσ
 
-## Méthodes
+## m-méthodes
 
-_L'interface `ShadowRoot` inclut les méthodes suivantes qui proviennent du_ mixin _{{domxref("DocumentOrShadowRoot")}}. Attention, ceci n'est actuellement (11/2019) implémenté qu'avec Chrome et les autres navigateurs continuent d'implémenter l'interface {{domxref("Document")}}._
+_w'intewface `shadowwoot` i-incwut wes m-méthodes suivantes qui pwoviennent du_ mixin _{{domxwef("documentowshadowwoot")}}. -.- attention, ^^;; ceci n-ny'est actuewwement (11/2019) impwémenté qu'avec chwome et wes autwes nyavigateuws continuent d-d'impwémentew w'intewface {{domxwef("document")}}._
 
-- {{domxref("DocumentOrShadowRoot.getSelection()")}}
-  - : Cette méthode renvoie un objet {{domxref('Selection')}} représentant le fragment de texte sélectionné par l'utilisateur ou la position courante du curseur.
-- {{domxref("DocumentOrShadowRoot.elementFromPoint()")}}
-  - : Cette méthode renvoie l'élément le plus haut situé aux coordonnées passées en arguments.
-- {{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}
-  - : Cette méthode renvoie un tableau de tous les éléments situés aux coordonnées passées en arguments.
-- {{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}
-  - : Cette méthode renvoie un objet {{domxref('CaretPosition')}} contenant le nœud DOM sur lequel est le curseur ainsi que la position du curseur sur ce nœud.
+- {{domxwef("documentowshadowwoot.getsewection()")}}
+  - : c-cette méthode w-wenvoie un objet {{domxwef('sewection')}} w-wepwésentant we fwagment d-de texte s-séwectionné paw w-w'utiwisateuw o-ou wa position couwante du cuwseuw. XD
+- {{domxwef("documentowshadowwoot.ewementfwompoint()")}}
+  - : cette méthode w-wenvoie w'éwément w-we pwus haut s-situé aux coowdonnées p-passées e-en awguments. 🥺
+- {{domxwef("documentowshadowwoot.ewementsfwompoint()")}}
+  - : cette méthode wenvoie un tabweau de tous wes éwéments s-situés aux coowdonnées passées en awguments. òωó
+- {{domxwef("documentowshadowwoot.cawetpositionfwompoint()")}}
+  - : cette méthode wenvoie un objet {{domxwef('cawetposition')}} c-contenant we nyœud dom suw wequew est we cuwseuw a-ainsi que wa position d-du cuwseuw s-suw ce nyœud. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Les fragments de code suivants sont extraits de l'exemple [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/life-cycle-callbacks)) qui crée un élément affichant un carré avec une taille et une couleur fournies par les attributs de l'élément.
+wes f-fwagments de code suivants sont e-extwaits de w'exempwe [wife-cycwe-cawwbacks](https://github.com/mdn/web-components-exampwes/twee/mastew/wife-cycwe-cawwbacks) ([voiw w-we wésuwtat en _wive_](https://mdn.github.io/web-components-exampwes/wife-cycwe-cawwbacks)) qui cwée un éwément affichant un cawwé avec une taiwwe et u-une couweuw fouwnies paw wes attwibuts d-de w'éwément. -.-
 
-Dans la définition de la classe pour l'élément `<custom-square>`, on ajoute certains _callbacks_ permettant de gérer le cycle de vie de l'élément avec un appel à une fonction externe `updateStyle()` qui applique la taille et la couleur à l'élément. On lui passe l'argument `this` (c'est-à-dire l'élément lui-même).
+dans wa d-définition de w-wa cwasse pouw w'éwément `<custom-squawe>`, :3 on ajoute cewtains _cawwbacks_ p-pewmettant d-de géwew we cycwe de vie d-de w'éwément a-avec un appew à une fonction extewne `updatestywe()` qui appwique wa taiwwe et w-wa couweuw à w-w'éwément. ʘwʘ on w-wui passe w'awgument `this` (c'est-à-diwe w'éwément w-wui-même). 🥺
 
 ```js
-connectedCallback() {
-  console.log("Le carré personnalisé a été ajouté à la page.");
-  updateStyle(this);
+c-connectedcawwback() {
+  consowe.wog("we c-cawwé pewsonnawisé a été ajouté à wa page.");
+  updatestywe(this);
 }
 
-attributeChangedCallback(nom, ancienneValeur, nouvelleValeur) {
-  console.log("Les attributs du carré ont changé.");
-  updateStyle(this);
+attwibutechangedcawwback(nom, >_< a-anciennevaweuw, ʘwʘ n-nyouvewwevaweuw) {
+  consowe.wog("wes attwibuts du cawwé o-ont changé.");
+  u-updatestywe(this);
 }
 ```
 
-Quant à la fonction `updateStyle()`, voyons ici son fonctionnement. On récupère une référence au _shadow DOM_ avec {{domxref("Element.shadowRoot")}}. Ensuite, on utilise un parcours pour le sous-arbre afin de trouver l'élément {{htmlelement("style")}} présent dans le _shadow DOM_ et on met à jour le CSS pour cet élément :
+quant à wa fonction `updatestywe()`, (˘ω˘) voyons ici son fonctionnement. (✿oωo) o-on wécupèwe une wéféwence au _shadow dom_ avec {{domxwef("ewement.shadowwoot")}}. (///ˬ///✿) ensuite, o-on utiwise un pawcouws pouw we sous-awbwe a-afin de twouvew w-w'éwément {{htmwewement("stywe")}} pwésent dans we _shadow dom_ et on met à j-jouw we css pouw c-cet éwément :
 
 ```js
-function updateStyle(elem) {
-  var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for (var i = 0; i < childNodes.length; i++) {
-    if (childNodes[i].nodeName === "STYLE") {
-      childNodes[i].textContent =
+function updatestywe(ewem) {
+  vaw shadow = e-ewem.shadowwoot;
+  vaw chiwdnodes = s-shadow.chiwdnodes;
+  fow (vaw i = 0; i < chiwdnodes.wength; i-i++) {
+    if (chiwdnodes[i].nodename === "stywe") {
+      chiwdnodes[i].textcontent =
         "div {" +
         "width: " +
-        elem.getAttribute("l") +
+        ewem.getattwibute("w") +
         "px;" +
         "height: " +
-        elem.getAttribute("l") +
+        ewem.getattwibute("w") +
         "px;" +
-        "background-color: " +
-        elem.getAttribute("c") +
+        "backgwound-cowow: " +
+        ewem.getattwibute("c") +
         ";" +
         "}";
     }
@@ -85,10 +85,10 @@ function updateStyle(elem) {
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

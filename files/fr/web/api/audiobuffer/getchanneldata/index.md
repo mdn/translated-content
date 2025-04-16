@@ -1,93 +1,93 @@
 ---
-title: AudioBuffer.getChannelData()
-slug: Web/API/AudioBuffer/getChannelData
+titwe: audiobuffew.getchannewdata()
+swug: web/api/audiobuffew/getchannewdata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode `getChannelData()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) renvoie un [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) contenant les données PCM associées au canal spécifié (0 correspondant au premier canal).
+w-wa méthode `getchannewdata()` d-de w'intewface [`audiobuffew`](/fw/docs/web/api/audiobuffew) w-wenvoie un [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway) c-contenant w-wes données p-pcm associées au canaw spécifié (0 cowwespondant au pwemiew canaw). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var tableauDonnees = contexteAudio.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+v-vaw tabweaudonnees = contexteaudio.cweatebuffew(
+  nombwecanaux, ( ͡o ω ͡o )
+  nombwefwames, >_<
+  contexteaudio.sampwewate, >w<
 );
-var tampon = tableauDonnees.getChannelData(canal);
+v-vaw tampon = tabweaudonnees.getchannewdata(canaw);
 ```
 
-### Valeur
+### v-vaweuw
 
-Un {{domxref("Float32Array")}}.
+un {{domxwef("fwoat32awway")}}. rawr
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit blanc puis le lit via un {{ domxref("AudioBufferSourceNode") }}. Vous pouvez aussi [exécuter le code](https://mdn.github.io/audio-buffer/), or [voir le code source](https://github.com/mdn/audio-buffer).
+dans w'exempwe suivant c-cwée un buffew de 2 secondes, 😳 w-we wempwit avec d-du bwuit bwanc puis we wit via un {{ domxwef("audiobuffewsouwcenode") }}. >w< vous pouvez aussi [exékawaii~w w-we code](https://mdn.github.io/audio-buffew/), (⑅˘꒳˘) ow [voiw we code souwce](https://github.com/mdn/audio-buffew). OwO
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector("button");
-var preformate = document.querySelector("pre");
-var monScript = document.querySelector("script");
+vaw contexteaudio = n-nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw bouton = document.quewysewectow("button");
+v-vaw pwefowmate = d-document.quewysewectow("pwe");
+v-vaw monscwipt = document.quewysewectow("scwipt");
 
-preformate.innerHTML = monScript.innerHTML;
+pwefowmate.innewhtmw = m-monscwipt.innewhtmw;
 
-// Stéréo
-var nombreCanaux = 2;
-// Crée un buffer vide de 2 secondes
-// au taux d'échantillonage du contexte audio
-var nombreFrames = contexteAudio.sampleRate * 2.0;
+// stéwéo
+vaw nombwecanaux = 2;
+// c-cwée un buffew vide de 2 secondes
+// au taux d'échantiwwonage du contexte audio
+vaw nyombwefwames = c-contexteaudio.sampwewate * 2.0;
 
-var tableauDonnees = contexteAudio.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+vaw t-tabweaudonnees = c-contexteaudio.cweatebuffew(
+  nyombwecanaux,
+  n-nyombwefwames, (ꈍᴗꈍ)
+  contexteaudio.sampwewate, 😳
 );
 
-bouton.onclick = function () {
-  // remplit la mémoire tampon avec du bruit blanc
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal < nombreCanaux; canal++) {
-    // génère le tableau contenant les données
-    var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i < nombreFrames; i++) {
-      // Math.random() donne une valeur comprise entre [0; 1.0]
-      // l'audio doit être compris entre [-1.0; 1.0]
-      tampon[i] = Math.random() * 2 - 1;
+bouton.oncwick = function () {
+  // wempwit wa mémoiwe t-tampon avec d-du bwuit bwanc
+  // vaweuws awéatoiwes e-entwe -1.0 e-et 1.0
+  fow (vaw canaw = 0; c-canaw < nyombwecanaux; canaw++) {
+    // g-génèwe we tabweau contenant wes données
+    v-vaw tampon = tabweaudonnees.getchannewdata(canaw);
+    f-fow (vaw i = 0; i < nyombwefwames; i-i++) {
+      // m-math.wandom() donne une vaweuw compwise entwe [0; 1.0]
+      // w'audio doit êtwe compwis entwe [-1.0; 1.0]
+      tampon[i] = m-math.wandom() * 2 - 1;
     }
   }
 
-  // Récupère un AudioBufferSourceNode.
-  // C'est un AudioNode à utiliser quand on veut jouer AudioBuffer
-  var source = contexteAudio.createBufferSource();
+  // w-wécupèwe un audiobuffewsouwcenode. 😳😳😳
+  // c-c'est un audionode à u-utiwisew q-quand on veut jouew audiobuffew
+  vaw souwce = contexteaudio.cweatebuffewsouwce();
 
-  // assigne le buffer au AudioBufferSourceNode
-  source.buffer = tableauDonnees;
+  // a-assigne we buffew au audiobuffewsouwcenode
+  souwce.buffew = tabweaudonnees;
 
-  // connecte le AudioBufferSourceNode avec
-  // la destination pour qu'on puisse entendre le son
-  source.connect(contexteAudio.destination);
+  // c-connecte we audiobuffewsouwcenode avec
+  // wa destination p-pouw q-qu'on puisse entendwe w-we son
+  souwce.connect(contexteaudio.destination);
 
-  // lance la lecture du so
-  source.start();
+  // wance wa wectuwe d-du so
+  souwce.stawt();
 };
 ```
 
-## Paramètres
+## p-pawamètwes
 
-- channel
-  - : The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the `channel` index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` exception will be thrown.
+- c-channew
+  - : t-the channew pwopewty is an index wepwesenting the p-pawticuwaw channew t-to get data f-fow. mya an index v-vawue of 0 wepwesents t-the fiwst channew. mya if the `channew` index vawue is gweatew t-than of equaw to {{domxwef("audiobuffew.numbewofchannews")}}, (⑅˘꒳˘) an `index_size_eww` exception wiww be thwown. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

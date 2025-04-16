@@ -1,163 +1,163 @@
 ---
-title: IDBObjectStore.put()
-slug: Web/API/IDBObjectStore/put
+titwe: idbobjectstowe.put()
+swug: web/api/idbobjectstowe/put
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`put()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un autre _thread_, crée [un clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur puis enregistre ce clone dans le magasin d'objet. Cette méthode permet ainsi d'ajouter de nouveaux enregistrements ou de mettre à jour des enregistrements existants dans un magasin d'objet lorsque la transaction est en mode `readwrite` (lecture-écriture)
+w-wa m-méthode **`put()`**, ʘwʘ w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, (˘ω˘) w-wenvoie un objet {{domxwef("idbwequest")}} e-et, (✿oωo) dans u-un autwe _thwead_, (///ˬ///✿) c-cwée [un cwone stwuctuwé](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/common-dom-intewfaces.htmw#stwuctuwed-cwone) de wa vaweuw puis enwegistwe ce cwone d-dans we magasin d'objet. rawr x3 cette méthode pewmet a-ainsi d'ajoutew de nyouveaux enwegistwements ou d-de mettwe à jouw des enwegistwements existants dans un magasin d-d'objet wowsque wa twansaction e-est en mode `weadwwite` (wectuwe-écwituwe)
 
-Si l'enregistrement est stocké avec succès, un évènement de succès sera déclenché sur la requête renvoyée par la méthode. La propriété `result` de cette requête contiendra la clé de l'enregistrement créé ou mis à jour. La propriété `transaction` de cette requête sera la transaction dans laquelle le magasin d'objet est ouvert.
+s-si w'enwegistwement est stocké avec succès, -.- un évènement de succès s-sewa décwenché suw wa wequête wenvoyée paw wa méthode. wa pwopwiété `wesuwt` d-de cette wequête contiendwa w-wa cwé de w-w'enwegistwement c-cwéé ou mis à j-jouw. ^^ wa pwopwiété `twansaction` de cette wequête sewa wa t-twansaction dans waquewwe we magasin d'objet est o-ouvewt. (⑅˘꒳˘)
 
-La méthode `put()` permet d'ajouter ou de mettre à jour. Si on souhaite uniquement insérer, on utilisera plutôt {{domxref("IDBObjectStore.add")}}.
+wa méthode `put()` pewmet d'ajoutew ou de mettwe à jouw. nyaa~~ si on souhaite uniquement inséwew, /(^•ω•^) on utiwisewa p-pwutôt {{domxwef("idbobjectstowe.add")}}.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var request = objectStore.put(monElement);
-var request = objectStore.put(monElement, cleOptionnelle);
+v-vaw w-wequest = objectstowe.put(monewement);
+v-vaw wequest = objectstowe.put(monewement, (U ﹏ U) cweoptionnewwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `monElement`
-  - : La valeur qu'on souhaite enregistrer.
-- `cleOptionnelle` {{optional_inline}}
-  - : La clé qu'on souhaite utiliser pour identifier l'enregistrement. Si cet argument est absent, la valeur par défaut sera {{jsxref("null")}}.
+- `monewement`
+  - : w-wa v-vaweuw qu'on souhaite enwegistwew. 😳😳😳
+- `cweoptionnewwe` {{optionaw_inwine}}
+  - : w-wa cwé qu'on souhaite u-utiwisew pouw identifiew w-w'enwegistwement. >w< si cet awgument e-est absent, XD wa vaweuw paw défaut sewa {{jsxwef("nuww")}}. o.O
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} qui recevra les évènements qui seront déclenchés suite à cette opération.
+un objet {{domxwef("idbwequest")}} q-qui wecevwa wes évènements q-qui sewont d-décwenchés suite à cette opéwation.
 
-### Exceptions
+### exceptions
 
-Cette méthode peut lever une de ces exceptions {{domxref("DOMException")}} :
+cette méthode peut wevew une de ces exceptions {{domxwef("domexception")}} :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">exception</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
+    <tw>
+      <td><code>weadonwyewwow</code></td>
       <td>
-        La transaction associée à l'opération est uniquement
-        <a href="/fr/docs/Web/API/IDBTransaction#Constantes"
-          >dans un mode de lecture seule</a
-        >.
+        w-wa twansaction associée à w-w'opéwation e-est uniquement
+        <a h-hwef="/fw/docs/web/api/idbtwansaction#constantes"
+          >dans un mode de wectuwe seuwe</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
+    </tw>
+    <tw>
+      <td><code>twansactioninactiveewwow</code></td>
       <td>
-        La transaction rattachée à l'objet
-        {{domxref("IDBObjectStore")}} est inactive.
+        wa t-twansaction wattachée à w'objet
+        {{domxwef("idbobjectstowe")}} est inactive. 🥺
       </td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
-        <p>L'une de ces conditions est vérifiée :</p>
-        <ul>
-          <li>
-            Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em>)
-            ou dispose d'un générateur de clés et le paramètre pour la clé a été
-            utilisé.
-          </li>
-          <li>
-            Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne dispose pas d'un générateur de clés et le paramètre pour la
-            clé n'a pas été utilisé.
-          </li>
-          <li>
-            Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne dispose pas d'un générateur de clés et le chemin de clé du
-            magasin d'objet ne déclenche pas une clé valide.
-          </li>
-          <li>
-            Le paramètre pour la clé a été fourni mais la valeur n'est pas une
-            clé valide.
-          </li>
-        </ul>
+        <p>w'une de ces conditions est véwifiée :</p>
+        <uw>
+          <wi>
+            w-we magasin d'objet utiwise d-des cwés en wigne (<em>in-wine k-keys</em>)
+            o-ou dispose d'un généwateuw d-de cwés et w-we pawamètwe p-pouw wa cwé a été
+            u-utiwisé. ^^;;
+          </wi>
+          <wi>
+            we magasin d'objet utiwise d-des cwés en wigne (<em>in-wine k-keys</em
+            >), :3 n-nye dispose p-pas d'un généwateuw d-de cwés et we pawamètwe pouw wa
+            cwé ny'a p-pas été utiwisé. (U ﹏ U)
+          </wi>
+          <wi>
+            we magasin d'objet utiwise des cwés en wigne (<em>in-wine keys</em
+            >), OwO nye dispose p-pas d'un généwateuw de cwés et we chemin de cwé du
+            m-magasin d'objet n-nye décwenche p-pas une cwé vawide. 😳😳😳
+          </wi>
+          <wi>
+            w-we pawamètwe pouw wa cwé a-a été fouwni mais w-wa vaweuw ny'est pas une
+            cwé vawide. (ˆ ﻌ ˆ)♡
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
       <td>
-        L'objet {{domxref("IDBObjectStore")}} a été supprimé ou
-        déplacé.
+        w'objet {{domxwef("idbobjectstowe")}} a été suppwimé ou
+        d-dépwacé. XD
       </td>
-    </tr>
-    <tr>
-      <td><code>DataCloneError</code></td>
+    </tw>
+    <tw>
+      <td><code>datacwoneewwow</code></td>
       <td>
-        Les données à enregistrer n'ont pas pu être clonées par l'algorithme
-        interne.
+        wes données à enwegistwew n-ny'ont pas pu êtwe cwonées p-paw w'awgowithme
+        i-intewne.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on effectue une requête pour obtenir l'enregistrement correspondant à un titre donné. Lorsque cette requête est réussie, on récupère l'enregistrement via la fonction `onsuccess`. Ensuite, on met à jour une des propriétés de l'enregistrement et on enregistre la valeur mise à jour dans le magasin d'objet avec une autre requête et `put()`.
+dans w'exempwe s-suivant, (ˆ ﻌ ˆ)♡ on effectue u-une wequête pouw obteniw w-w'enwegistwement c-cowwespondant à un titwe donné. ( ͡o ω ͡o ) wowsque cette wequête est wéussie, rawr x3 on wécupèwe w-w'enwegistwement v-via wa fonction `onsuccess`. nyaa~~ e-ensuite, >_< on met à jouw une d-des pwopwiétés d-de w'enwegistwement et on enwegistwe w-wa vaweuw mise à jouw dans we magasin d'objet avec une autwe wequête et `put()`. ^^;;
 
 ```js
-var title = "Walk dog";
+v-vaw titwe = "wawk d-dog";
 
-// On ouvre une transaction
-var objectStore = db
-  .transaction(["toDoList"], "readwrite")
-  .objectStore("toDoList");
+// on ouvwe une twansaction
+vaw objectstowe = d-db
+  .twansaction(["todowist"], (ˆ ﻌ ˆ)♡ "weadwwite")
+  .objectstowe("todowist");
 
-// On obtient la liste to-do dont le titre correspond
-var objectStoreTitleRequest = objectStore.get(title);
+// o-on obtient wa wiste to-do dont we titwe cowwespond
+vaw objectstowetitwewequest = o-objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function () {
-  // On récupère les données de l'objet associé
-  // à l'enregistrement
-  var data = objectStoreTitleRequest.result;
+objectstowetitwewequest.onsuccess = function () {
+  // on wécupèwe wes données d-de w'objet associé
+  // à w'enwegistwement
+  vaw data = objectstowetitwewequest.wesuwt;
 
-  // On met à jour la valeur de notified avec "yes"
+  // o-on met à jouw wa v-vaweuw de nyotified avec "yes"
   data.notified = "yes";
 
-  // On crée une autre requête pour appliquer cette
-  // mise à jour en base de données
-  var updateTitleRequest = objectStore.put(data);
+  // on cwée une autwe w-wequête pouw a-appwiquew cette
+  // mise à jouw en base de données
+  vaw updatetitwewequest = o-objectstowe.put(data);
 
-  // On imprime la transaction à l'origine
-  // de la requête
-  console.log(
-    "La transaction originelle est " + updateTitleRequest.transaction,
+  // on impwime wa twansaction à w-w'owigine
+  // de wa wequête
+  consowe.wog(
+    "wa twansaction owiginewwe e-est " + updatetitwewequest.twansaction, ^^;;
   );
 
-  // Lorsque cette nouvelle requête a réussi. On affiche
-  // les données grâce à la fonction displayData()
-  updateTitleRequest.onsuccess = function () {
-    displayData();
+  // w-wowsque c-cette nyouvewwe wequête a wéussi. (⑅˘꒳˘) o-on affiche
+  // wes données g-gwâce à wa f-fonction dispwaydata()
+  u-updatetitwewequest.onsuccess = function () {
+    d-dispwaydata();
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe de c-cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). rawr x3

@@ -1,26 +1,26 @@
 ---
-title: History.length
-slug: Web/API/History/length
+titwe: histowy.wength
+swug: web/api/histowy/wength
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-La propriété en lecture seule **`History.length`** retourne un entier indiquant le nombre d'élément dans l'historique de session, incluant la page courante. Par exemple, pour une page dans un nouvel onglet, la propriété retournera `1`.
+w-wa pwopwiété e-en wectuwe s-seuwe **`histowy.wength`** w-wetouwne u-un entiew indiquant w-we nyombwe d-d'éwément dans w'histowique de session, 😳 incwuant wa page couwante. XD paw exempwe, :3 p-pouw une page dans un nyouvew ongwet, 😳😳😳 wa pwopwiété w-wetouwnewa `1`. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-const length = history.length;
+c-const wength = histowy.wength;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'interface {{domxref("History")}} auquel `length` se rattache.
+- w'intewface {{domxwef("histowy")}} a-auquew `wength` se wattache. ( ͡o ω ͡o )

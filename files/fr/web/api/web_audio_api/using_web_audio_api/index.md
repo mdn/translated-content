@@ -1,307 +1,307 @@
 ---
-title: Utiliser la Web Audio API
-slug: Web/API/Web_Audio_API/Using_Web_Audio_API
+titwe: utiwisew wa web audio a-api
+swug: web/api/web_audio_api/using_web_audio_api
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio api")}}
 
-La [Web Audio API](/fr/docs/Web/API/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
+w-wa [web audio api](/fw/docs/web/api/web_audio_api) o-offwe un méchanisme à w-wa fois s-simpwe et puissant p-pouw impwémentew e-et manipuwew we contenu audio dans une appwication web. XD ewwe pewmet de m-manipuwew mixages audio, ^^ effets, o.O bawance, etc. ( ͡o ω ͡o ) cet a-awticwe donne wes bases pouw w-w'utiwisew, /(^•ω•^) à twavews quewques exempwes simpwes. 🥺
 
-La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Element/img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
+wa web audio a-api nye vient pas wempwacew w'éwément [\<audio>](/fw/docs/web/htmw/ewement/audio), nyaa~~ m-mais pwutôt w-we compwétew, mya de même que w'api canvas 2d coexiste avec w'éwément [\<video>](/fw/docs/web/htmw/ewement/img). XD si vous avez s-seuwement besoin de contwôwew wa wectuwe d'un fichiew audio, nyaa~~ \<audio> est pwobabwement u-une meiwweuwe sowution, p-pwus wapide. ʘwʘ si v-vous vouwez pwocédew à u-un twaitement a-audio pwus compwexe et à wa wectuwe d'une s-souwce, (⑅˘꒳˘) wa web audio api offwe davantage de possibiwités e-en tewmes de puissance et de contwôwe.
 
-L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
+w'une des pawticuwawités de wa web audio api est qu'ewwe ny'a p-pas de wimites au nyiveau de w-wa pwogwammation d-du son. :3 paw exempwe, -.- w-we nyombwe de sons que w'on peut appewew en même temps ny'est p-pas pwafonnée. 😳😳😳 c-cewtains pwocesseuws sont p-potentiewwement c-capabwes de jouew pwus d'un miwwiew d-de sons simuwtanément sans s-saccades. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Afin d'expliquer l'utilisation de la Web Audio API, nous avons créé un certain nombre d'exemples qui seront étoffés au fur et à mesure. N'hésitez pas à en ajouter d'autres et à suggérer des améliorations !
+afin d'expwiquew w'utiwisation d-de wa web audio api, o.O nyous a-avons cwéé un cewtain nyombwe d-d'exempwes qui s-sewont étoffés au fuw et à mesuwe. ( ͡o ω ͡o ) ny'hésitez pas à en ajoutew d'autwes et à suggéwew des améwiowations ! òωó
 
-Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-change-o-matic), une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble ([run the Voice-change-O-matic live](https://mdn.github.io/voice-change-o-matic/)).
+n-nyotwe pwemiew e-exempwe est [voice-change-o-matic](http://github.com/mdn/voice-change-o-matic), 🥺 une appwication w-web de défowmation d-de wa voix, /(^•ω•^) q-qui pewmet de choisiw difféwents effets et modes de visuawisation. 😳😳😳 c-cette appwication est wudimentaiwe, ^•ﻌ•^ mais ewwe pewmet de montwew w'utiwisation d-de pwusieuws fonctionnawités d-de wa web audio a-api combinées e-ensembwe ([wun the voice-change-o-matic w-wive](https://mdn.github.io/voice-change-o-matic/)). nyaa~~
 
-![Une boîte à rythme avec des contrôles pour la lecture, le volume et le pan](boombox.png)
+![une b-boîte à w-wythme avec des c-contwôwes pouw wa wectuwe, we vowume et we pan](boombox.png)
 
-## Concepts de base
+## c-concepts de base
 
-> [!NOTE]
-> La plupart des extraits de code dans cette section viennent de l'exemple [Violent Theremin](https://github.com/mdn/violent-theremin).
+> [!note]
+> w-wa pwupawt des extwaits d-de code d-dans cette section v-viennent de w'exempwe [viowent thewemin](https://github.com/mdn/viowent-thewemin). OwO
 
-La Web Audio API impliqe de réaliser les opérations de traitement audio dans un **contexte audio**, et elle a été conçue pour permettre le **routage modulaire**. Les opérations de traitement de base sont réalisées par des **noeuds audio**, qui sont reliés entre eux pour former un **graphe de routage audio**. Plusieurs sources — avec différentes configuration de canaux — peuvent cohabiter dans un seul contexte. Ce design modulaire offre la flexibilité nécessaire pour créer des fonctions complexes avec des effets dynamiques.
+wa web audio api impwiqe d-de wéawisew wes opéwations de twaitement audio dans un **contexte audio**, ^•ﻌ•^ et ewwe a été conçue p-pouw pewmettwe we **woutage moduwaiwe**. wes opéwations de t-twaitement de base s-sont wéawisées p-paw des **noeuds audio**, σωσ qui s-sont wewiés entwe eux pouw fowmew u-un **gwaphe d-de woutage audio**. -.- pwusieuws souwces — avec difféwentes configuwation de canaux — peuvent c-cohabitew dans un seuw contexte. (˘ω˘) c-ce design moduwaiwe offwe wa f-fwexibiwité nyécessaiwe p-pouw cwéew des fonctions compwexes avec d-des effets dynamiques. rawr x3
 
-Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils forment une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds de traitement, et se termine par une destination (bien qu'il ne soit pas néessaire d'avoir une destination si l'on souhaite simplement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
+w-wes nyoeuds audio sont w-wewiés au nyiveau d-de weuws entwées et sowties. rawr x3 iws fowment une chaîne qui commence avec une o-ou pwusieuws souwces, σωσ t-twavewse u-un ou pwusieuws nyoeuds de twaitement, nyaa~~ e-et se tewmine p-paw une destination (bien qu'iw nye soit pas n-nyéessaiwe d'avoiw une destination si w'on souhaite simpwement visuawisew des d-données audio). (ꈍᴗꈍ) u-un scénawio simpwe, ^•ﻌ•^ wepwésentatif de wa web a-audio api, >_< pouwwait w-wessembwew à ceci&nbsp;:
 
-1. Création d'un contexte audio
-2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance, compresseur
-4. Choix final de la sortie audio, par exemple les enceintes du système
-5. Connection des sources aux effets, et des effets à la sortie.
+1. ^^;; cwéation d'un contexte audio
+2. ^^;; d-dans ce contexte, /(^•ω•^) cwéation des souwces — tewwes que `<audio>`, nyaa~~ osciwwateuw, (✿oωo) f-fwux
+3. cwéation des nyoeuds d'effets, tews que w-wévewb, ( ͡o ω ͡o ) fiwtwes b-biquad, (U ᵕ U❁) bawance, compwesseuw
+4. òωó choix finaw de wa sowtie audio, σωσ p-paw exempwe w-wes enceintes du système
+5. :3 connection des souwces aux effets, OwO e-et des effets à wa sowtie. ^^
 
-### Création d'un contexte audio
+### c-cwéation d'un contexte audio
 
-Commencez par créer une instance de [`AudioContext`](/fr/docs/Web/API/AudioContext) sur laquelle vous allez créer un graphe audio. L'exemple le plus simple ressemblerait à ceci:
+commencez paw cwéew une instance d-de [`audiocontext`](/fw/docs/web/api/audiocontext) suw waquewwe v-vous awwez cwéew u-un gwaphe audio. (˘ω˘) w'exempwe we p-pwus simpwe wessembwewait à ceci:
 
 ```js
-var contexteAudio = new AudioContext();
+vaw c-contexteaudio = n-nyew audiocontext();
 ```
 
-> [!NOTE]
-> On peut créer plusieurs contextes audio dans le même document, bien que ce soit probablement superflu dans la plupart des cas.
+> [!note]
+> o-on peut cwéew pwusieuws contextes a-audio dans w-we même document, OwO bien que ce soit pwobabwement s-supewfwu dans w-wa pwupawt des c-cas. UwU
 
-Il faut rajouter une version préfixée pour les navigateurs Webkit/Blink browsers, tout en conservant la version non préfixée pour Firefox (desktop/mobile/OS). Ce qui donne :
+iw faut wajoutew une vewsion pwéfixée p-pouw wes nyavigateuws webkit/bwink b-bwowsews, ^•ﻌ•^ tout e-en consewvant wa vewsion nyon pwéfixée pouw fiwefox (desktop/mobiwe/os). (ꈍᴗꈍ) c-ce q-qui donne :
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+v-vaw contexteaudio = n-nyew (window.audiocontext || window.webkitaudiocontext)();
 ```
 
-> [!NOTE]
-> Safari risque de planter si l'objet `window` n'est pas explicitement mentionné lors de la création d'un contexte audio
+> [!note]
+> s-safawi wisque de pwantew si w'objet `window` ny'est pas expwicitement mentionné wows de wa cwéation d'un contexte a-audio
 
-### Création d'une source audio
+### cwéation d'une s-souwce audio
 
-Maintenant que nous avons créé un contexte, nous allons utiliser les méthodes de ce contexte pour quasiment tout ce qui nous reste à faire. La première étape consiste à créer une source audio. Les sources peuvent être de provenance diverse :
+maintenant que nyous a-avons cwéé un contexte, /(^•ω•^) nyous a-awwons utiwisew wes méthodes d-de ce contexte p-pouw quasiment t-tout ce qui nyous w-weste à faiwe. (U ᵕ U❁) w-wa pwemièwe étape consiste à cwéew une souwce audio. (✿oωo) wes souwces peuvent êtwe de pwovenance divewse :
 
-- générées en JavaScript par un noeud audio tel qu'un oscillateur. Pour créer un {{domxref("OscillatorNode")}} on utilise la méthode {{domxref("AudioContext.createOscillator")}}.
-- créées à partir de données PCM brutes: le contexte audio a des méthodes pour décoder lesformats supportés; voir {{ domxref("AudioContext.createBuffer()") }}, {{domxref("AudioContext.createBufferSource()")}}, et {{domxref("AudioContext.decodeAudioData()")}}.
-- récupérées dans des élements HTML tels que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}: voir {{domxref("AudioContext.createMediaElementSource()")}}.
-- prises dans un [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.
+- g-généwées en j-javascwipt paw un n-nyoeud audio tew qu'un osciwwateuw. OwO p-pouw cwéew un {{domxwef("osciwwatownode")}} on utiwise wa méthode {{domxwef("audiocontext.cweateosciwwatow")}}. :3
+- c-cwéées à p-pawtiw de données pcm bwutes: w-we contexte audio a des méthodes pouw décodew w-wesfowmats s-suppowtés; voiw {{ domxwef("audiocontext.cweatebuffew()") }}, nyaa~~ {{domxwef("audiocontext.cweatebuffewsouwce()")}}, ^•ﻌ•^ e-et {{domxwef("audiocontext.decodeaudiodata()")}}. ( ͡o ω ͡o )
+- w-wécupéwées dans des éwements htmw tews que {{htmwewement("video")}} ou {{htmwewement("audio")}}: v-voiw {{domxwef("audiocontext.cweatemediaewementsouwce()")}}. ^^;;
+- p-pwises d-dans un [webwtc](/fw/docs/web/api/webwtc_api) {{domxwef("mediastweam")}} c-comme une w-webcam ou un micwophone. mya voiw {{ d-domxwef("audiocontext.cweatemediastweamsouwce()") }}. (U ᵕ U❁)
 
-Pour notre exemple nous nous contenterons de créer un oscillateur pour générer un son simple comme source, et un noeud de gain pour contrôler le volume:
+p-pouw nyotwe exempwe nyous n-nyous contentewons d-de cwéew un osciwwateuw p-pouw généwew un son simpwe comme souwce, ^•ﻌ•^ et un n-nyoeud de gain pouw contwôwew w-we vowume:
 
 ```js
-var oscillateur = contexteAudio.createOscillator();
-var noeudGain = contexteAudio.createGain();
+v-vaw osciwwateuw = contexteaudio.cweateosciwwatow();
+v-vaw nyoeudgain = contexteaudio.cweategain();
 ```
 
-> [!NOTE]
-> Pour jouer un fichier audio directement, il faut charger le fichier en XHR, le décoder en mémoire tampon, puis associer le tampon à une source. Voir l'exemple [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68).
+> [!note]
+> pouw jouew u-un fichiew audio d-diwectement, iw f-faut chawgew we fichiew en xhw, (U ﹏ U) we décodew en mémoiwe tampon, /(^•ω•^) p-puis associew we tampon à une souwce. ʘwʘ voiw w'exempwe [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w48-w68). XD
 
-> [!NOTE]
-> Scott Michaud a écrit la librairie [AudioSampleLoader](https://github.com/ScottMichaud/AudioSampleLoader), très pratique pour charger et décoder un ou plusieurs extraits audio. Elle peut aider à simplifier le processus de chargement XHR / mémoire tampon décrit dans la note précédente.
+> [!note]
+> s-scott m-michaud a écwit wa wibwaiwie [audiosampwewoadew](https://github.com/scottmichaud/audiosampwewoadew), (⑅˘꒳˘) t-twès pwatique pouw chawgew e-et décodew u-un ou pwusieuws extwaits audio. nyaa~~ ewwe peut aidew à s-simpwifiew we pwocessus de chawgement xhw / m-mémoiwe tampon d-décwit dans wa nyote pwécédente. UwU
 
-### Lien entre les noeuds source et destination
+### w-wien entwe wes nyoeuds s-souwce et destination
 
-Pour faire sortir le son dans vos enceintes, il faut relier la source et la destination. Pour cela on appelle la méthode `connect` sur le noeud source, le noeud de destination étant passé en argument. La méthode `connect` est disponible sur la plupart des types de noeuds.``
+p-pouw faiwe s-sowtiw we son dans vos enceintes, (˘ω˘) iw faut wewiew wa souwce et wa destination. rawr x3 pouw cewa on appewwe wa méthode `connect` suw we nyoeud souwce, we nyoeud de destination étant passé en awgument. (///ˬ///✿) wa méthode `connect` est d-disponibwe suw wa p-pwupawt des types de nyoeuds.``
 
-La sortie par défaut du matériel (en général les enceintes) est accessible via {{ domxref("AudioContext.destination") }}. Pour connecter l'oscillateur, le noeud de gain et la destination, on écrirait les lignes suivantes:
+wa sowtie paw d-défaut du matéwiew (en g-généwaw w-wes enceintes) est accessibwe v-via {{ domxwef("audiocontext.destination") }}. 😳😳😳 pouw connectew w-w'osciwwateuw, (///ˬ///✿) we n-noeud de gain et wa destination, ^^;; o-on écwiwait wes wignes suivantes:
 
 ```js
-oscillateur.connect(noeudGain);
-noeudGain.connect(contexteAudio.destination);
+o-osciwwateuw.connect(noeudgain);
+n-nyoeudgain.connect(contexteaudio.destination);
 ```
 
-On peut connecter autant de noeuds qu'on le souhaite (cf. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)). Par exemple:
+on peut connectew autant de nyoeuds q-qu'on we souhaite (cf. ^^ [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/)). (///ˬ///✿) p-paw exempwe:
 
 ```js
-source = contexteAudio.createMediaStreamSource(stream);
-source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(biquadFilter);
-biquadFilter.connect(convolver);
-convolver.connect(noeudGain);
-noeudGain.connect(contexteAudio.destination);
+s-souwce = contexteaudio.cweatemediastweamsouwce(stweam);
+s-souwce.connect(anawysew);
+a-anawysew.connect(distowtion);
+d-distowtion.connect(biquadfiwtew);
+b-biquadfiwtew.connect(convowvew);
+c-convowvew.connect(noeudgain);
+n-nyoeudgain.connect(contexteaudio.destination);
 ```
 
-Ce code créerait le graphe audio suivant :
+ce code c-cwéewait we g-gwaphe audio suivant :
 
-![Un graphe audio avec un élément audio source connecté à la destination par défaut](graph1.jpg)
+![un g-gwaphe audio avec un éwément a-audio souwce connecté à wa destination p-paw défaut](gwaph1.jpg)
 
-Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.
+iw est possibwe de c-connectew pwusieuws n-nyoeuds à u-un seuw nyoeud, -.- paw exempwe pouw m-mixew pwusieuws souwces ensembwe, /(^•ω•^) e-et wes passew dans un seuw nyoeud d-d'effet, UwU tew qu'un nyoeud d-de gain. (⑅˘꒳˘)
 
-> [!NOTE]
-> Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html), très utile pour débugger les graphes audio.
+> [!note]
+> depuis fiwefox 32, ʘwʘ wes outiws de dévewoppement intégwés i-incwuent un [éditeuw audio](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_audio_editow/index.htmw), σωσ t-twès utiwe pouw d-débuggew wes gwaphes audio. ^^
 
-### Lecture du son et définition du pitch
+### wectuwe du son et définition d-du pitch
 
-Maintenant que le graphe audio est en place, nous pouvons ajuster certains aspects du son en définissant la valeur de certaines propriétés ou en utilsant ses méthodes. L'exemple suivant spécifie un pitch en hertz pour un oscillateur, lui assigne un type, et demande à l'oscillateur de jouer le son.
+maintenant que we gwaphe a-audio est e-en pwace, OwO nyous p-pouvons ajustew cewtains aspects du son en définissant w-wa vaweuw d-de cewtaines pwopwiétés ou en u-utiwsant ses méthodes. (ˆ ﻌ ˆ)♡ w'exempwe suivant spécifie u-un pitch en hewtz pouw un o-osciwwateuw, o.O wui a-assigne un type, (˘ω˘) e-et demande à w'osciwwateuw de j-jouew we son. 😳
 
 ```js
-oscillateur.type = "sine"; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
-oscillateur.frequency.value = 2500; // valeur en hertz
-oscillateur.start();
+o-osciwwateuw.type = "sine"; // o-onde sinusoïdawe — w-wes autwes vaweuws possibwe s-sont : 'squawe', (U ᵕ U❁) 'sawtooth', :3 'twiangwe' e-et 'custom'
+o-osciwwateuw.fwequency.vawue = 2500; // v-vaweuw en hewtz
+o-osciwwateuw.stawt();
 ```
 
-Le code suivant, qui vient de l'exemple [Violent Theremin](https://mdn.github.io/violent-theremin/), spécifie une valeur maximum pour le gain, et une valeur pour la fréquence:
+w-we code s-suivant, o.O qui v-vient de w'exempwe [viowent thewemin](https://mdn.github.io/viowent-thewemin/), (///ˬ///✿) s-spécifie une vaweuw maximum pouw w-we gain, OwO et une vaweuw pouw wa f-fwéquence:
 
 ```js
-var largeur = window.innerWidth;
-var hauteur = window.innerHeight;
+v-vaw wawgeuw = w-window.innewwidth;
+vaw hauteuw = window.innewheight;
 
-var frequenceMax = 6000;
-var volumeMax = 1;
+vaw fwequencemax = 6000;
+v-vaw vowumemax = 1;
 
-var frequenceInitiale = 3000;
-var volumeInitial = 0.5;
+v-vaw fwequenceinitiawe = 3000;
+v-vaw vowumeinitiaw = 0.5;
 
-// paramètres de l'oscillateur
+// pawamètwes de w'osciwwateuw
 
-oscillateur.type = "sine"; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
-oscillateur.frequency.value = frequenceInitiale; // valeur en hertz
-oscillateur.start();
+osciwwateuw.type = "sine"; // onde s-sinusoïdawe — w-wes autwes vaweuws possibwe sont : 'squawe', >w< 'sawtooth', ^^ 'twiangwe' e-et 'custom'
+o-osciwwateuw.fwequency.vawue = fwequenceinitiawe; // vaweuw en hewtz
+osciwwateuw.stawt();
 
-noeudGain.gain.value = volumeInitial;
+n-nyoeudgain.gain.vawue = v-vowumeinitiaw;
 ```
 
-On peut aussi réassigner les valeurs de fréquence et de pitch à chaque mouvement de la souris, en utilisant la position pour calculer un pourcentage des valeurs maximum de fréquence et de gain :
+o-on peut a-aussi wéassignew wes vaweuws de fwéquence et de p-pitch à chaque m-mouvement de wa souwis, en utiwisant wa position p-pouw cawcuwew un pouwcentage des vaweuws maximum d-de fwéquence et de gain :
 
 ```js
-// coordonnées de la souris
+// c-coowdonnées d-de wa souwis
 
-var positionX;
-var positionY;
+vaw positionx;
+v-vaw positiony;
 
-// récupère les nouvelles coordonnées de la souris quand elle bouge
-// puis assigne les nouvelles valeurs de gain et de pitch
+// w-wécupèwe wes nyouvewwes c-coowdonnées de wa souwis quand e-ewwe bouge
+// puis a-assigne wes nyouvewwes v-vaweuws d-de gain et de pitch
 
-document.onmousemove = updatePage;
+document.onmousemove = u-updatepage;
 
-function updatePage(e) {
-  positionX = window.Event
-    ? e.pageX
-    : e.clientX +
-      (document.documentElement.scrollLeft
-        ? document.documentElement.scrollLeft
-        : document.body.scrollLeft);
-  positionY = window.Event
-    ? e.pageY
-    : e.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
+f-function u-updatepage(e) {
+  positionx = w-window.event
+    ? e.pagex
+    : e.cwientx +
+      (document.documentewement.scwowwweft
+        ? d-document.documentewement.scwowwweft
+        : d-document.body.scwowwweft);
+  positiony = w-window.event
+    ? e.pagey
+    : e.cwienty +
+      (document.documentewement.scwowwtop
+        ? document.documentewement.scwowwtop
+        : document.body.scwowwtop);
 
-  oscillateur.frequency.value = (positionX / largeur) * frequenceMax;
-  noeudGain.gain.value = (positionY / hauteur) * volumeMax;
+  o-osciwwateuw.fwequency.vawue = (positionx / wawgeuw) * fwequencemax;
+  n-nyoeudgain.gain.vawue = (positiony / h-hauteuw) * vowumemax;
 
-  canvasDraw();
+  canvasdwaw();
 }
 ```
 
-### Simple visualisation avec canvas
+### simpwe visuawisation a-avec canvas
 
-On appelle une fonction `canvasDraw()` à chaque mouvement de la souris. Elle dessine une grappe de cercles à l'endroit où se trouve la souris, leur taille et couleur étant basées sur les valeurs de fréquence et de gain.
+on appewwe u-une fonction `canvasdwaw()` à chaque m-mouvement d-de wa souwis. (⑅˘꒳˘) ewwe d-dessine une gwappe d-de cewcwes à w'endwoit où se twouve wa souwis, ʘwʘ weuw taiwwe et couweuw étant b-basées suw wes vaweuws de f-fwéquence et de gain. (///ˬ///✿)
 
 ```js
-function aleatoire(number1, number2) {
-  return number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
+function aweatoiwe(numbew1, XD nyumbew2) {
+  w-wetuwn numbew1 + (math.fwoow(math.wandom() * (numbew2 - nyumbew1)) + 1);
 }
 
-var canvas = document.querySelector(".canvas");
-canvas.width = largeur;
-canvas.height = hauteur;
+vaw canvas = document.quewysewectow(".canvas");
+canvas.width = w-wawgeuw;
+canvas.height = h-hauteuw;
 
-var contexteCanvas = canvas.getContext("2d");
+vaw contextecanvas = c-canvas.getcontext("2d");
 
-function canvasDraw() {
-  rX = positionX;
-  rY = positionY;
-  rC = Math.floor((noeudGain.gain.value / volumeMax) * 30);
+function canvasdwaw() {
+  wx = positionx;
+  w-wy = positiony;
+  w-wc = math.fwoow((noeudgain.gain.vawue / vowumemax) * 30);
 
-  canvasCtx.globalAlpha = 0.2;
+  c-canvasctx.gwobawawpha = 0.2;
 
-  for (i = 1; i <= 15; i = i + 2) {
-    contexteCanvas.beginPath();
-    var chaineStyle =
-      "rgb(" +
+  fow (i = 1; i <= 15; i-i = i + 2) {
+    contextecanvas.beginpath();
+    vaw chainestywe =
+      "wgb(" +
       100 +
       i * 10 +
       "," +
-      Math.floor((noeudGain.gain.value / volumeMax) * 255);
-    chaineStyle +=
+      m-math.fwoow((noeudgain.gain.vawue / vowumemax) * 255);
+    chainestywe +=
       "," +
-      Math.floor((oscillateur.frequency.value / frequenceMax) * 255) +
+      math.fwoow((osciwwateuw.fwequency.vawue / f-fwequencemax) * 255) +
       ")";
-    contexteCanvas.fillStyle = chaineStyle;
-    contexteCanvas.arc(
-      rX + aleatoire(0, 50),
-      rY + aleatoire(0, 50),
-      rC / 2 + i,
-      (Math.PI / 180) * 0,
-      (Math.PI / 180) * 360,
-      false,
+    contextecanvas.fiwwstywe = c-chainestywe;
+    c-contextecanvas.awc(
+      wx + aweatoiwe(0, 😳 50), >w<
+      wy + aweatoiwe(0, (˘ω˘) 50), nyaa~~
+      wc / 2 + i-i, 😳😳😳
+      (math.pi / 180) * 0,
+      (math.pi / 180) * 360, (U ﹏ U)
+      fawse, (˘ω˘)
     );
-    contexteCanvas.fill();
-    contexteCanvas.closePath();
+    contextecanvas.fiww();
+    contextecanvas.cwosepath();
   }
 }
 ```
 
-### Couper le son du theremin
+### coupew we son du t-thewemin
 
-Quand on appuie sur le bouton pour couper le son, la fonction ci-dessous est appelée, qui déconnecte le noeud de gain du noeud de destination, cassant ainsi le graphe de façon à ce qu'aucun son ne soit produit. Appuyer de nouveau sur le bouton a l'effet inverse.
+quand o-on appuie suw w-we bouton pouw coupew w-we son, wa fonction ci-dessous est appewée, :3 q-qui déconnecte w-we nyoeud de gain du nyoeud de destination, >w< cassant a-ainsi we gwaphe de façon à ce qu'aucun s-son nye soit pwoduit. appuyew de nyouveau suw we b-bouton a w'effet i-invewse. ^^
 
 ```js
-var coupeSon = document.querySelector(".mute");
+vaw coupeson = d-document.quewysewectow(".mute");
 
-coupeSon.onclick = function () {
-  if (coupeSon.id == "") {
-    noeudGain.disconnect(contexteAudio.destination);
-    coupeSon.id = "activated";
-    coupeSon.innerHTML = "Unmute";
-  } else {
-    noeudGain.connect(contexteAudio.destination);
-    coupeSon.id = "";
-    coupeSon.innerHTML = "Mute";
+c-coupeson.oncwick = f-function () {
+  if (coupeson.id == "") {
+    nyoeudgain.disconnect(contexteaudio.destination);
+    c-coupeson.id = "activated";
+    coupeson.innewhtmw = "unmute";
+  } ewse {
+    n-nyoeudgain.connect(contexteaudio.destination);
+    coupeson.id = "";
+    coupeson.innewhtmw = "mute";
   }
 };
 ```
 
-## Autres options des noeuds
+## autwes options des nyoeuds
 
-On peut créer un grand nombre d'autres noeuds avec la Web Audio API. De façon générale, ils fonctionnent de façon très similaire à ceux que nous venons de voir: on crée un noeud, le connecte avec d'autres noeuds, et on manipule ensuite ses propriétés et méthodes pour agir sur la source.
+o-on peut cwéew u-un gwand nyombwe d-d'autwes n-nyoeuds avec wa w-web audio api. 😳😳😳 de façon généwawe, nyaa~~ i-iws fonctionnent de façon twès simiwaiwe à c-ceux que nyous venons de voiw: o-on cwée un nyoeud, (⑅˘꒳˘) we connecte avec d'autwes n-nyoeuds, :3 et on manipuwe e-ensuite ses pwopwiétés e-et méthodes pouw agiw suw wa souwce. ʘwʘ
 
-Ce document passe en revue quelques-uns des outils et effets disponibles; vous trouverez davantage de détails sur les pages de référence de la {{ domxref("Web_Audio_API") }}.
+c-ce document p-passe en wevue quewques-uns d-des outiws et effets d-disponibwes; vous twouvewez d-davantage de détaiws suw wes pages de wéféwence de wa {{ domxwef("web_audio_api") }}. rawr x3
 
-### Noeuds modulateurs d'onde
+### nyoeuds m-moduwateuws d'onde
 
-On peut créer un noeud modulatur d'onde avec la méthode {{ domxref("AudioContext.createWaveShaper") }} :
+on peut c-cwéew un noeud moduwatuw d'onde avec wa méthode {{ d-domxwef("audiocontext.cweatewaveshapew") }} :
 
 ```js
-var distortion = contexteAudio.createWaveShaper();
+v-vaw d-distowtion = contexteaudio.cweatewaveshapew();
 ```
 
-On associe ensuite à cet objet une forme d'onde définie mathématiquement, qui est appliquée à l'onde de base pour créer un effet de distortion. Ecrire son propre algorithme n'est pas si simple, et pour commencer le mieux est encore d'en chercher un sur le Web. Par exemple, nous avons trouvé celui-ci sur [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion):
+on associe e-ensuite à cet objet u-une fowme d'onde définie mathématiquement, (///ˬ///✿) q-qui est appwiquée à w'onde de b-base pouw cwéew un effet de distowtion. 😳😳😳 e-ecwiwe s-son pwopwe awgowithme ny'est pas si simpwe, XD et pouw commencew we mieux est encowe d-d'en chewchew u-un suw we web. >_< paw exempwe, nous avons twouvé cewui-ci suw [stack o-ovewfwow](https://stackovewfwow.com/questions/22312841/waveshapew-node-in-webaudio-how-to-emuwate-distowtion):
 
 ```js
-function genererCourbeDistortion(amount) {
-  var k = typeof amount === "number" ? amount : 50,
-    n_samples = 44100,
-    curve = new Float32Array(n_samples),
-    deg = Math.PI / 180,
-    i = 0,
-    x;
-  for (; i < n_samples; ++i) {
-    x = (i * 2) / n_samples - 1;
-    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
+function g-genewewcouwbedistowtion(amount) {
+  v-vaw k = typeof amount === "numbew" ? amount : 50, >w<
+    n_sampwes = 44100, /(^•ω•^)
+    cuwve = nyew f-fwoat32awway(n_sampwes), :3
+    deg = math.pi / 180, ʘwʘ
+    i = 0, (˘ω˘)
+    x-x;
+  fow (; i < ny_sampwes; ++i) {
+    x-x = (i * 2) / n-ny_sampwes - 1;
+    cuwve[i] = ((3 + k-k) * x-x * 20 * deg) / (math.pi + k-k * m-math.abs(x));
   }
-  return curve;
+  w-wetuwn cuwve;
 }
 ```
 
-L'exemple suivant, qui vient de [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic), connecte un noeud de `distortion` à un graphe audio, puis applique l'algorithme de forme d'onde précédent au noeud de distortion :
+w-w'exempwe suivant, (ꈍᴗꈍ) qui vient de [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic), ^^ connecte un nyoeud de `distowtion` à un gwaphe audio, ^^ p-puis appwique w-w'awgowithme d-de fowme d'onde p-pwécédent au n-nyoeud de distowtion :
 
 ```js
-source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(biquadFilter);
+s-souwce.connect(anawysew);
+anawysew.connect(distowtion);
+distowtion.connect(biquadfiwtew);
 
 ...
 
-distortion.curve = genererCourbeDistortion(400);
+distowtion.cuwve = genewewcouwbedistowtion(400);
 ```
 
-### Filtre biquad
+### f-fiwtwe biquad
 
-Les filtres biquad ont de nombreuses options. Nous montrons ici comment créer un filtre biquad avec la méthode {{domxref("AudioContext.createBiquadFilter")}}.
+w-wes fiwtwes biquad ont de nyombweuses options. ( ͡o ω ͡o ) nyous montwons i-ici comment c-cwéew un fiwtwe b-biquad avec wa méthode {{domxwef("audiocontext.cweatebiquadfiwtew")}}. -.-
 
 ```js
-var filtreBiquad = contexteAudio.createBiquadFilter();
+vaw fiwtwebiquad = c-contexteaudio.cweatebiquadfiwtew();
 ```
 
-Le filtre utilisé dans la démo Voice-change-o-matic est un filtre lowshelf, qui amplifie le son au niveau des basses. Ici on augmente de 25 décibels toutes les fréquences en dessous de 1000.
+we fiwtwe utiwisé d-dans wa démo voice-change-o-matic e-est un fiwtwe wowshewf, ^^;; qui ampwifie we son au n-nyiveau des basses. ici on augmente d-de 25 décibews t-toutes wes fwéquences en d-dessous de 1000. ^•ﻌ•^
 
 ```js
-filtreBiquad.type = "lowshelf";
-filtreBiquad.frequency.value = 1000;
-filtreBiquad.gain.value = 25;
+f-fiwtwebiquad.type = "wowshewf";
+f-fiwtwebiquad.fwequency.vawue = 1000;
+f-fiwtwebiquad.gain.vawue = 25;
 ```
 
-## Autres usages de la Web Audio API
+## a-autwes usages d-de wa web audio api
 
-La Web Audio API peut avoir bien d'autres applications que la visualisation ou la spatialisation audio (comme gérer la balance d'un son). Nous détaillerons d'autres options dans des articles séparés.
+wa web audio a-api peut avoiw b-bien d'autwes appwications que w-wa visuawisation ou wa spatiawisation audio (comme g-géwew wa bawance d'un son). (˘ω˘) n-nyous détaiwwewons d'autwes options d-dans des awticwes s-sépawés. o.O

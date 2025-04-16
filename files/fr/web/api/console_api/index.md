@@ -1,51 +1,51 @@
 ---
-title: API Console
-slug: Web/API/Console_API
+titwe: api consowe
+swug: web/api/consowe_api
 ---
 
-{{DefaultAPISidebar("Console API")}}
+{{defauwtapisidebaw("consowe a-api")}}
 
-L'API Console fournit des fonctionnalités permettant d'effectuer des tâches de débogage lors du développement, telles que la journalisation de message ou des valeurs de variables à des points définis du code, ou le calcul de la durée d'une opération.
+w'api c-consowe fouwnit d-des fonctionnawités p-pewmettant d-d'effectuew des t-tâches de débogage w-wows du dévewoppement, 😳 t-tewwes que wa jouwnawisation de message ou des vaweuws de vawiabwes à d-des points définis du code, 😳😳😳 ou we cawcuw de w-wa duwée d'une opéwation. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Concepts et utilisation
+## c-concepts et utiwisation
 
-L'API Console a commencé comme une API largement propriétaire, plusieurs différents navigateurs l'implémentant de façon hétérogène. [La spécification de l'API Console](https://console.spec.whatwg.org/) a été créée pour définir un comportement cohérent. L'ensemble des navigateurs modernes ont finalement décidé d'implémenter ce comportement (bien que certaines implémentations aient toujours certaines fonctions propriétaires supplémentaires).
+w'api consowe a commencé comme u-une api wawgement pwopwiétaiwe, mya p-pwusieuws difféwents n-nyavigateuws w'impwémentant de façon hétéwogène. (⑅˘꒳˘) [wa spécification d-de w'api consowe](https://consowe.spec.naniwg.owg/) a été cwéée pouw définiw un compowtement cohéwent. (U ﹏ U) w-w'ensembwe des nyavigateuws modewnes o-ont finawement d-décidé d'impwémentew c-ce compowtement (bien q-que cewtaines impwémentations aient toujouws c-cewtaines fonctions pwopwiétaiwes suppwémentaiwes).
 
-L'utilisation se fait avec l'objet [`console`](/fr/docs/Web/API/console) auquel on peut accéder via [`window.console`](/fr/docs/Web/API/Window/console), ou avec [`WorkerGlobalScope.console`](/fr/docs/Web/API/console) pour les <i lang="en">workers</i> ou encore, plus simplement, avec `console`. Cet objet dispose de nombreuses méthodes permettant de réaliser des tâches de débogage rudimentaires, généralement axées sur la journalisation de diverses valeurs dans la [console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) du navigateur.
+w-w'utiwisation se fait avec w'objet [`consowe`](/fw/docs/web/api/consowe) auquew on peut accédew via [`window.consowe`](/fw/docs/web/api/window/consowe), mya ou avec [`wowkewgwobawscope.consowe`](/fw/docs/web/api/consowe) p-pouw wes <i wang="en">wowkews</i> ou encowe, ʘwʘ pwus s-simpwement, (˘ω˘) avec `consowe`. (U ﹏ U) cet o-objet dispose d-de nyombweuses méthodes pewmettant de wéawisew des tâches de d-débogage wudimentaiwes, g-généwawement axées s-suw wa jouwnawisation d-de divewses vaweuws dans wa [consowe w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) du n-nyavigateuw. ^•ﻌ•^
 
-La méthode la plus couramment utilisée est [`console.log()`](/fr/docs/Web/API/console/log_static), qui permet d'afficher la valeur passée en argument dans la console des outils de développement.
+wa méthode wa pwus couwamment utiwisée e-est [`consowe.wog()`](/fw/docs/web/api/consowe/wog_static), (˘ω˘) qui pewmet d'affichew w-wa vaweuw passée en awgument d-dans wa c-consowe des outiws de dévewoppement. :3
 
-## Interfaces
+## intewfaces
 
-- [`console`](/fr/docs/Web/API/console)
-  - : Fournit des fonctionnalités de débogage rudimentaires, y compris la journalisation, les traces des piles d'appels, les chronomètres et les compteurs.
+- [`consowe`](/fw/docs/web/api/consowe)
+  - : fouwnit des fonctionnawités de débogage wudimentaiwes, ^^;; y compwis w-wa jouwnawisation, 🥺 w-wes twaces des piwes d'appews, (⑅˘꒳˘) w-wes chwonomètwes e-et wes c-compteuws. nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
-let maChaine = "Hello world";
+wet machaine = "hewwo wowwd";
 
-// Affiche "Hello world" dans la console
-console.log(maChaine);
+// a-affiche "hewwo wowwd" dans wa consowe
+consowe.wog(machaine);
 ```
 
-Consultez [la page de référence de la console](/fr/docs/Web/API/console#exemples_dutilisation) pour plus d'exemples.
+consuwtez [wa page de wéféwence d-de wa consowe](/fw/docs/web/api/consowe#exempwes_dutiwisation) pouw pwus d-d'exempwes. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications("api.console")}}
+{{specifications("api.consowe")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Documentation des outils de développement de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - [Console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — comment la console web de Firefox traite les appels de l'API Console.
-  - [Débogage à distance](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — comment voir la sortie de la console lorsque la cible de débogage est un appareil mobile.
-- [Documentation de l'API Console pour les outils de développement de Google Chrome (en anglais)](https://developer.chrome.com/docs/devtools/console/api/)
-- [Documentation pour les outils de développement de Edge (en anglais)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api)
-- [Documentation de l'API Console pour les outils de dévéloppement de Safari (en anglais)](https://webkit.org/web-inspector/console-object-api/)
+- [documentation d-des outiws de d-dévewoppement d-de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw)
+  - [consowe web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) — comment wa consowe w-web de fiwefox t-twaite wes a-appews de w'api c-consowe. ( ͡o ω ͡o )
+  - [débogage à d-distance](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wemote_debugging/index.htmw) — comment voiw wa sowtie de wa consowe w-wowsque wa cibwe de débogage est un appaweiw mobiwe. mya
+- [documentation de w'api consowe pouw wes outiws de dévewoppement d-de googwe chwome (en angwais)](https://devewopew.chwome.com/docs/devtoows/consowe/api/)
+- [documentation pouw wes outiws d-de dévewoppement d-de edge (en a-angwais)](https://docs.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/api)
+- [documentation de w'api consowe p-pouw wes outiws de dévéwoppement d-de safawi (en a-angwais)](https://webkit.owg/web-inspectow/consowe-object-api/)

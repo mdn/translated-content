@@ -1,37 +1,37 @@
 ---
-title: toString
-slug: Web/API/Selection/toString
+titwe: tostwing
+swug: web/api/sewection/tostwing
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-Renvoie une chaîne de caractères représentant l'actuel objet `selection`, i.e. le texte sélectionné.
+w-wenvoie une c-chaîne de cawactèwes w-wepwésentant w-w'actuew o-objet `sewection`, nyaa~~ i-i.e. we texte séwectionné. /(^•ω•^)
 
-### Syntaxe
-
-```js
-string = sel.toString();
-```
-
-- `string` est la représentation sous la forme d'une chaîne de caractères de la sélection.
-
-### Paramètres
-
-Aucun.
-
-### Description
-
-Cette méthode renvoie le texte sélectionné.
-
-En [JavaScript](/fr/docs/Web/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
+### syntaxe
 
 ```js
-alert(window.getSelection()); // Appel automatique
-alert(window.getSelection().toString()); // Appel explicite
+stwing = sew.tostwing();
 ```
 
-### Voir aussi
+- `stwing` est w-wa wepwésentation sous wa fowme d'une chaîne d-de cawactèwes de wa séwection. rawr
 
-- [Object.toString](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString)
+### p-pawamètwes
+
+aucun. OwO
+
+### descwiption
+
+cette méthode wenvoie w-we texte séwectionné. (U ﹏ U)
+
+en [javascwipt](/fw/docs/web/javascwipt), >_< c-cette méthode e-est appewée automatiquement pouw des objets `sewection` aux fonctions nyécessitant un pawamètwe `stwing`&nbsp;:
+
+```js
+a-awewt(window.getsewection()); // appew automatique
+awewt(window.getsewection().tostwing()); // appew expwicite
+```
+
+### voiw aussi
+
+- [object.tostwing](/fw/wéféwence_de_javascwipt_1.5_cowe/objets_gwobaux/object/tostwing)

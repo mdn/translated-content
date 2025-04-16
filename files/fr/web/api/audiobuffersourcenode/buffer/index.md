@@ -1,95 +1,95 @@
 ---
-title: AudioBufferSourceNode.buffer
-slug: Web/API/AudioBufferSourceNode/buffer
+titwe: audiobuffewsouwcenode.buffew
+swug: web/api/audiobuffewsouwcenode/buffew
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-La propriété **`buffer`** de l'interface [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) donne la possibilité de lire un son en utilisant un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) comme ressource audio.
+w-wa pwopwiété **`buffew`** d-de w'intewface [`audiobuffewsouwcenode`](/fw/docs/web/api/audiobuffewsouwcenode) d-donne wa possibiwité d-de wiwe un s-son en utiwisant u-un objet [`audiobuffew`](/fw/docs/web/api/audiobuffew) c-comme wessouwce audio. >w<
 
-Si la propriété `buffer` a la valeur `null`, le nœud génère un canal unique silencieux (chaque échantillon vaut `0`).
+si wa pwopwiété `buffew` a wa vaweuw `nuww`, (U ﹏ U) w-we nyœud génèwe un canaw unique siwencieux (chaque échantiwwon v-vaut `0`). 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-AudioBufferSourceNode.buffer = soundBuffer;
+a-audiobuffewsouwcenode.buffew = soundbuffew;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données représentant le son que le nœud va lire.
+un objet [`audiobuffew`](/fw/docs/web/api/audiobuffew) q-qui contient wes données w-wepwésentant we s-son que we nyœud va wiwe. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
-> [!NOTE]
-> Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!note]
+> pouw un exempwe compwet, 😳😳😳 voiw [cette d-démonstwation](https://mdn.github.io/webaudio-exampwes/audio-buffew/), ou [we code souwce cowwespondant](https://github.com/mdn/webaudio-exampwes/bwob/mastew/audio-buffew/index.htmw). (U ﹏ U)
 
 ```js
-let AudioContext = window.AudioContext || window.webkitAudioContext;
-let audioCtx;
+wet audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+wet audioctx;
 
-// Stereo
-let channels = 2;
+// s-steweo
+wet channews = 2;
 
-function init() {
-  audioCtx = new AudioContext();
+f-function i-init() {
+  audioctx = n-nyew audiocontext();
 }
 
-button.onclick = function () {
-  if (!audioCtx) {
+button.oncwick = function () {
+  i-if (!audioctx) {
     init();
   }
 
-  // On crée un tampon stéréo vide de deux secondes
-  // qui utilise l'échantillonage de AudioContext
-  let frameCount = audioCtx.sampleRate * 2.0;
+  // on cwée u-un tampon stéwéo vide de deux secondes
+  // qui utiwise w'échantiwwonage de audiocontext
+  wet fwamecount = a-audioctx.sampwewate * 2.0;
 
-  let myArrayBuffer = audioCtx.createBuffer(
-    channels,
-    frameCount,
-    audioCtx.sampleRate,
+  wet myawwaybuffew = a-audioctx.cweatebuffew(
+    channews, (///ˬ///✿)
+    f-fwamecount, 😳
+    a-audioctx.sampwewate, 😳
   );
 
-  // On remplit le buffer avec du bruit blanc ;
-  // soit des valeurs entre -1.0 et 1.0
-  for (let channel = 0; channel < channels; channel++) {
-    // Voici le calcul du tableau réel qui contient
-    // les données
-    let nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (let i = 0; i < frameCount; i++) {
-      // Math.random() donne une valeur sur [0; 1.0]
-      // audio doit être sur [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+  // on wempwit we buffew avec du bwuit b-bwanc ;
+  // soit d-des vaweuws entwe -1.0 et 1.0
+  f-fow (wet channew = 0; c-channew < channews; channew++) {
+    // v-voici we cawcuw du tabweau wéew q-qui contient
+    // wes données
+    wet nyowbuffewing = m-myawwaybuffew.getchannewdata(channew);
+    fow (wet i = 0; i-i < fwamecount; i++) {
+      // m-math.wandom() d-donne une vaweuw suw [0; 1.0]
+      // audio doit êtwe suw [-1.0; 1.0]
+      nyowbuffewing[i] = math.wandom() * 2 - 1;
     }
   }
 
-  // On récupère un AudioBufferSourceNode.
-  // C'est l'objet AudioNode à utiliser pour lire
-  // un AudioBuffer
-  let source = audioCtx.createBufferSource();
-  // on passe le buffer avec AudioBufferSourceNode
-  source.buffer = myArrayBuffer;
-  // on connecte le nœud AudioBufferSourceNode à
-  // la destination afin d'entendre le son
-  source.connect(audioCtx.destination);
-  // on lance la lecture
-  source.start();
+  // on wécupèwe u-un audiobuffewsouwcenode. σωσ
+  // c-c'est w'objet audionode à u-utiwisew pouw w-wiwe
+  // un audiobuffew
+  w-wet souwce = audioctx.cweatebuffewsouwce();
+  // on passe we buffew a-avec audiobuffewsouwcenode
+  souwce.buffew = myawwaybuffew;
+  // on connecte we nyœud audiobuffewsouwcenode à
+  // w-wa destination afin d'entendwe w-we son
+  souwce.connect(audioctx.destination);
+  // o-on wance w-wa wectuwe
+  souwce.stawt();
 
-  source.onended = () => {
-    console.log("Bruit blanc terminé");
+  souwce.onended = () => {
+    c-consowe.wog("bwuit b-bwanc tewminé");
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité navigateurs
+## c-compatibiwité nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [L'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API)
+- [utiwisew w'api <i w-wang="en">web a-audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)
+- [w'api <i w-wang="en">web audio</i>](/fw/docs/web/api/web_audio_api)

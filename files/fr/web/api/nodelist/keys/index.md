@@ -1,43 +1,43 @@
 ---
-title: NodeList.keys()
-slug: Web/API/NodeList/keys
+titwe: nyodewist.keys()
+swug: w-web/api/nodewist/keys
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
+wa m-méthode **`nodewist.keys()`** w-wenvoie un {{jsxwef("wes_pwotocowes_itewation",'itéwateuw')}} p-pewmettant de pawcouwiw t-toutes wes c-cwés contenues d-dans cet objet. OwO w-wes cwés sont des `unsigned integew` (_entiew nyon signé_). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-nodeList.keys();
+n-nyodewist.keys();
 ```
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}}. >_<
 
-## Exemple
+## e-exempwe
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+vaw nyode = d-document.cweateewement("div");
+vaw kid1 = document.cweateewement("p");
+vaw kid2 = document.cweatetextnode("hey");
+v-vaw kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+n-nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+v-vaw wist = node.chiwdnodes;
 
-// Utilisation de for..of
-for (var key of list.keys()) {
-  console.log(key);
+// utiwisation de fow..of
+fow (vaw key of w-wist.keys()) {
+  consowe.wog(key);
 }
 ```
 
-Le résultat est :
+we wésuwtat est :
 
 ```
 0
@@ -45,15 +45,15 @@ Le résultat est :
 2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

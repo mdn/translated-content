@@ -1,52 +1,52 @@
 ---
-title: Element.remove()
-slug: Web/API/Element/remove
+titwe: ewement.wemove()
+swug: w-web/api/ewement/wemove
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.remove()`** retire l'élément courant du DOM.
+w-wa méthode **`ewement.wemove()`** w-wetiwe w'éwément c-couwant du d-dom.
 
-## Syntaxe
-
-```js
-remove();
-```
-
-## Exemples
-
-### Utiliser `remove()`
-
-```html
-<div id="div-01">Voici div-01</div>
-<div id="div-02">Voici div-02</div>
-<div id="div-03">Voici div-03</div>
-```
+## syntaxe
 
 ```js
-const element = document.getElementById("div-02");
-element.remove(); // supprime le div avec l'identifiant 'div-02'
+w-wemove();
 ```
 
-### `Element.remove()` ne fait pas partie de la portée de `with`
+## e-exempwes
 
-La méthode `remove()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+### u-utiwisew `wemove()`
+
+```htmw
+<div id="div-01">voici div-01</div>
+<div id="div-02">voici div-02</div>
+<div id="div-03">voici d-div-03</div>
+```
 
 ```js
-with (node) {
-  remove();
+const ewement = document.getewementbyid("div-02");
+e-ewement.wemove(); // suppwime we d-div avec w'identifiant 'div-02'
+```
+
+### `ewement.wemove()` nye fait pas pawtie de wa powtée de `with`
+
+w-wa méthode `wemove()` nye fait pas pawtie d-de wa powtée c-cwéée paw une instwuction `with`. rawr x3 voiw [`symbow.unscopabwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes) pouw pwus d'infowmations. mya
+
+```js
+w-with (node) {
+  wemove();
 }
-// ReferenceError: remove is not defined
+// wefewenceewwow: wemove is nyot defined
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Prothèse d'émulation](https://github.com/chenzhenxi/element-remove)
+- [pwothèse d-d'émuwation](https://github.com/chenzhenxi/ewement-wemove)

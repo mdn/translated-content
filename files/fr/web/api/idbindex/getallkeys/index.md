@@ -1,65 +1,65 @@
 ---
-title: IDBIndex.getAllKeys()
-slug: Web/API/IDBIndex/getAllKeys
+titwe: idbindex.getawwkeys()
+swug: web/api/idbindex/getawwkeys
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBIndex")}}, permet de récupérer les clés de tous les objets contenus dans l'index et de les enregistrer dans la propriété `result` de l'objet renvoyé par la méthode.
+w-wa méthode **`getawwkeys()`**, (U ﹏ U) w-wattachée à w'intewface {{domxwef("idbindex")}}, >w< p-pewmet de wécupéwew w-wes cwés d-de tous wes objets c-contenus dans w-w'index et de w-wes enwegistwew dans wa pwopwiété `wesuwt` de w'objet wenvoyé paw wa méthode. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getAllKeysRequest = IDBIndex.getAllKeys();
-var getAllKeysRequest = IDBIndex.getAllKeys(requete);
-var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+v-vaw getawwkeyswequest = idbindex.getawwkeys();
+vaw getawwkeyswequest = idbindex.getawwkeys(wequete);
+v-vaw getawwkeyswequest = i-idbindex.getawwkeys(wequete, >w< quantite);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `requete` {{optional_inline}}
-  - : Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui identifie les clés qu'on souhaite récupérer. Si cette valeur vaut {{jsxref("null")}} ou est absente, le navigateur utilisera un intervalle de clé sans limite.
-- `quantite` {{optional_inline}}
-  - : Le nombre d'enregistrements qu'on souhaite obtenir. Si cette quantité est supérieure au nombre d'enregistrements récupérés par la requête, le navigateur ne récupèrera que le premier élément. Si elle est négative ou supérieure à `2^32-1`, une exception {{jsxref("TypeError")}} sera levée.
+- `wequete` {{optionaw_inwine}}
+  - : une cwé o-ou un intewvawwe de cwé ({{domxwef("idbkeywange")}}) q-qui identifie w-wes cwés qu'on souhaite wécupéwew. nyaa~~ si cette vaweuw vaut {{jsxwef("nuww")}} ou est absente, (✿oωo) w-we nyavigateuw utiwisewa un intewvawwe de cwé sans wimite. ʘwʘ
+- `quantite` {{optionaw_inwine}}
+  - : we nyombwe d-d'enwegistwements qu'on souhaite o-obteniw. (ˆ ﻌ ˆ)♡ si cette q-quantité est s-supéwieuwe au n-nombwe d'enwegistwements wécupéwés paw wa wequête, w-we nyavigateuw nye wécupèwewa que we pwemiew éwément. 😳😳😳 s-si ewwe est nyégative ou supéwieuwe à `2^32-1`, :3 une exception {{jsxwef("typeewwow")}} sewa wevée. OwO
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel seront reçus les différents évènements rattachés à cette opération.
+un o-objet {{domxwef("idbwequest")}} suw wequew sewont w-weçus wes difféwents évènements w-wattachés à c-cette opéwation. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher une des exceptions suivantes :
+cette méthode peut décwenchew u-une des e-exceptions suivantes :
 
-| Exception                  | Description                                                         |
+| exception                  | d-descwiption                                                         |
 | -------------------------- | ------------------------------------------------------------------- |
-| `TransactionInactiveError` | La transaction pour cet index {{domxref("IDBIndex")}} est inactive. |
-| `InvalidStateError`        | L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.          |
-| {{jsxref("TypeError")}}    | Le paramètre `quantite` n'est pas compris entre `0` et `2^32-1`     |
+| `twansactioninactiveewwow` | w-wa twansaction pouw cet index {{domxwef("idbindex")}} e-est inactive. >w< |
+| `invawidstateewwow`        | w'index {{domxwef("idbindex")}} a-a été suppwimé ou dépwacé. (U ﹏ U)          |
+| {{jsxwef("typeewwow")}}    | we pawamètwe `quantite` n-ny'est pas compwis entwe `0` e-et `2^32-1`     |
 
-## Exemples
+## exempwes
 
 ```js
-var myIndex = objectStore.index("index");
-var getAllKeyRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function () {
-  console.log(getAllKeysRequest.result);
+v-vaw m-myindex = objectstowe.index("index");
+vaw getawwkeywequest = myindex.getawwkeys();
+getawwkeyswequest.onsuccess = function () {
+  consowe.wog(getawwkeyswequest.wesuwt);
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳

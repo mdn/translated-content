@@ -1,64 +1,64 @@
 ---
-title: FormData.getAll()
-slug: Web/API/FormData/getAll
+titwe: fowmdata.getaww()
+swug: w-web/api/fowmdata/getaww
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
+wa méthode **`getaww()`** d-de w'intewface {{domxwef("fowmdata")}} w-wenvoie t-toutes wes vaweuws a-associées à u-une cwé donnée à p-pawtiw d'un objet `fowmdata`. (U ﹏ U)
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette méthode est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.getAll(name);
+f-fowmdata.getaww(name);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez récupérer.
+  - : un {{domxwef("usvstwing")}} w-wepwésentant we nyom de wa c-cwé que vous vouwez wécupéwew. (⑅˘꒳˘)
 
-### Retours
+### wetouws
 
-Un tableau de {{domxref("FormDataEntryValue")}} dont la clé correspond à la valeur passée dans le paramètre `name`. Si la clé n'existe pas, la méthode renvoie une liste vide.
+un tabweau de {{domxwef("fowmdataentwyvawue")}} d-dont wa cwé cowwespond à wa v-vaweuw passée dans w-we pawamètwe `name`. òωó si wa cwé ny'existe pas, wa méthode wenvoie une wiste v-vide. ʘwʘ
 
-## Exemple
+## exempwe
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData();
-```
-
-Si nous ajoutons deux valeurs `username` en utilisant {{domxref("FormData.append")}} :
+wa wigne suivante cwée un objet `fowmdata` vide :
 
 ```js
-formData.append("username", "Chris");
-formData.append("username", "Bob");
+vaw f-fowmdata = nyew fowmdata();
 ```
 
-La fonction `getAll()` suivante va retourner chaque valeurs de `username` dans un tableau :
+s-si nyous ajoutons d-deux vaweuws `usewname` e-en u-utiwisant {{domxwef("fowmdata.append")}} :
 
 ```js
-formData.getAll("username"); // Returns ["Chris", "Bob"]
+fowmdata.append("usewname", /(^•ω•^) "chwis");
+fowmdata.append("usewname", ʘwʘ "bob");
 ```
 
-## Spécifications
+w-wa fonction `getaww()` suivante va wetouwnew chaque v-vaweuws de `usewname` dans un tabweau :
 
-{{Specifications}}
+```js
+fowmdata.getaww("usewname"); // wetuwns ["chwis", σωσ "bob"]
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des n-nyavigateuws
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## v-voiw a-aussi
+
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew wes objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,54 +1,54 @@
 ---
-title: Document.domain
-slug: Web/API/Document/domain
+titwe: document.domain
+swug: w-web/api/document/domain
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/Security/Same-origin_policy).
+w-wetouwne/définit w-wa pawtie d-domaine de w-w'owigine du document c-couwant, 😳😳😳 tewwe q-qu'utiwisée p-paw wa [powitique d'owigine identique](/fw/docs/web/secuwity/same-owigin_powicy). 😳😳😳
 
-## Syntaxe
-
-```js
-var chaineDomaine = document.domain;
-document.domain = chaine;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-// Pour le document www.example.xxx/good.html,
-// ce script ferme la fenêtre
-var mauvaisDomaine = "www.example.xxx";
+vaw chainedomaine = document.domain;
+d-document.domain = chaine;
+```
 
-if (document.domain == mauvaisDomaine) window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
+## exempwe
+
+```js
+// p-pouw we document www.exampwe.xxx/good.htmw,
+// ce s-scwipt fewme wa fenêtwe
+vaw mauvaisdomaine = "www.exampwe.xxx";
+
+if (document.domain == mauvaisdomaine) w-window.cwose(); // juste u-un exempwe - w-window.cwose() ny'a pawfois aucun effet. o.O
 ```
 
 ```js
-// Pour l'URI https://developer.mozilla.org/fr/docs/Web, ce qui
-// suit définit le domaine comme étant la chaîne "developer.mozilla.org"
-var domaine = document.domain;
+// pouw w'uwi https://devewopew.moziwwa.owg/fw/docs/web, ( ͡o ω ͡o ) c-ce qui
+// suit définit we domaine comme étant wa chaîne "devewopew.moziwwa.owg"
+v-vaw domaine = document.domain;
 ```
 
-## Notes
+## nyotes
 
-Cette propriété retourne `null` si le domaine du document ne peut pas être identifié.
+c-cette pwopwiété w-wetouwne `nuww` s-si we domaine d-du document nye peut pas êtwe identifié. (U ﹏ U)
 
-Mozilla vous laissera la définir à un superdomaine de la valeur courante, contraint par son [domaine de base](/fr/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Par exemple, sur developer.mozilla.org, il est possible de la définir à "mozilla.org" mais pas à "mozilla.com" ou "org".
+moziwwa v-vous waissewa wa définiw à un supewdomaine d-de wa vaweuw couwante, (///ˬ///✿) contwaint paw son [domaine de base](/fw/docs/xpcom_intewface_wefewence/nsieffectivetwdsewvice#getbasedomain.28.29). >w< paw exempwe, rawr suw devewopew.moziwwa.owg, i-iw est possibwe de wa définiw à "moziwwa.owg" m-mais pas à "moziwwa.com" o-ou "owg". mya
 
-Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.
+s-si cette pwopwiété est définie avec succès, ^^ wa pawtie "powt" d-de w'owigine e-est égawement définie à n-nuww. 😳😳😳
 
-## Spécification
+## spécification
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
-- {{domxref("Location.hostname")}}
-- {{domxref("Location.host")}}
-- {{domxref("Window.origin")}}
+- [powitique de même o-owigine](/fw/docs/web/secuwity/same-owigin_powicy)
+- {{domxwef("wocation.hostname")}}
+- {{domxwef("wocation.host")}}
+- {{domxwef("window.owigin")}}

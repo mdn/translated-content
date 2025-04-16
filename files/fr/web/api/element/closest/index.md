@@ -1,125 +1,125 @@
 ---
-title: Element.closest()
-slug: Web/API/Element/closest
+titwe: ewement.cwosest()
+swug: w-web/api/ewement/cwosest
 ---
 
-{{APIRef('DOM')}}
+{{apiwef('dom')}}
 
-La méthode **`closest()`** traverse [l'élément](/fr/docs/Web/API/Element) courant et ses parents (en direction de la racine) jusqu'à trouver un nœud qui correspond aux sélecteurs exprimés par la chaîne de caractères passée en argument. Elle renverra l'élément ou l'ancêtre le plus proche qui correspond. Si aucun élément ne correspond, la méthode renvoie `null`.
+w-wa méthode **`cwosest()`** t-twavewse [w'éwément](/fw/docs/web/api/ewement) couwant e-et ses pawents (en d-diwection d-de wa wacine) j-jusqu'à twouvew u-un nyœud qui cowwespond aux séwecteuws expwimés paw wa chaîne de cawactèwes p-passée en awgument. /(^•ω•^) ewwe wenvewwa w'éwément o-ou w'ancêtwe we pwus pwoche q-qui cowwespond. (⑅˘꒳˘) si aucun éwément nye cowwespond, ( ͡o ω ͡o ) wa méthode wenvoie `nuww`. òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-closest(selecteurs);
+cwosest(sewecteuws);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `selecteurs`
-  - : Une chaîne de caractères contenant une liste de sélecteurs. Par exemple `p:hover, .toto + q`.
+- `sewecteuws`
+  - : u-une chaîne de cawactèwes contenant une wiste de séwecteuws. (⑅˘꒳˘) paw exempwe `p:hovew, XD .toto + q`.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'élément ([`Element`](/fr/docs/Web/API/Element)) qui est l'ancêtre le plus proche de l'élément courant et qui correspond aux sélecteurs. S'il n'y en a aucun, ce sera `null`.
+w'éwément ([`ewement`](/fw/docs/web/api/ewement)) qui est w'ancêtwe we pwus pwoche d-de w'éwément couwant et qui cowwespond a-aux séwecteuws. -.- s-s'iw ny'y e-en a aucun, :3 c-ce sewa `nuww`. nyaa~~
 
-### Exceptions
+### exceptions
 
-Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
+une exception [`syntaxewwow`](/fw/docs/web/api/domexception#syntaxewwow) e-est wevée si wa chaîne de cawactèwes `sewecteuws` ny'est p-pas une wiste de séwecteuws vawide. 😳
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <div id="div-01">
-    Voici div-01
+    voici d-div-01
     <div id="div-02">
-      Voici div-02
-      <div id="div-03">Voici div-03</div>
+      v-voici div-02
+      <div i-id="div-03">voici d-div-03</div>
     </div>
   </div>
-</article>
+</awticwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const el = document.getElementById("div-03");
+const ew = document.getewementbyid("div-03");
 
-const r1 = el.closest("#div-02");
-// Renvoie l'élément avec l'identifiant div-02
+c-const w1 = e-ew.cwosest("#div-02");
+// wenvoie w-w'éwément avec w-w'identifiant div-02
 
-const r2 = el.closest("div div");
-// Renvoie le plus proche ancêtre qui est un div dans un div
-// Ici, c'est div-03 lui-même
+const w-w2 = ew.cwosest("div div");
+// wenvoie w-we pwus pwoche ancêtwe qui est un div dans u-un div
+// ici, (⑅˘꒳˘) c'est div-03 wui-même
 
-const r3 = el.closest("article > div");
-// Renvoie le plus proche ancêtre qui est un div et qui a un
-// article parent, il s'agit ici de div-01
+c-const w3 = ew.cwosest("awticwe > d-div");
+// w-wenvoie we pwus pwoche ancêtwe qui est un div et qui a un
+// awticwe pawent, nyaa~~ iw s'agit ici de div-01
 
-const r4 = el.closest(":not(div)");
-// Renvoie le plus proche ancêtre qui n'est pas un div,
-// c'est l'article englobant
+const w-w4 = ew.cwosest(":not(div)");
+// w-wenvoie we pwus pwoche ancêtwe q-qui ny'est pas u-un div, OwO
+// c'est w-w'awticwe engwobant
 ```
 
-## Prothèse d'émulation (<i lang="en">polyfill</i>)
+## pwothèse d'émuwation (<i wang="en">powyfiww</i>)
 
-Pour les navigateurs qui ne prennent pas en charge `Element.closest()`, mais qui implémentent `element.matches()` (ou un équivalent préfixé comme IE9+), il est possible d'implémenter une prothèse&nbsp;:
+pouw wes nyavigateuws q-qui nye pwennent pas en chawge `ewement.cwosest()`, rawr x3 mais qui impwémentent `ewement.matches()` (ou u-un équivawent pwéfixé c-comme ie9+), XD i-iw est possibwe d-d'impwémentew une pwothèse&nbsp;:
 
 ```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
+i-if (!ewement.pwototype.matches) {
+  e-ewement.pwototype.matches =
+    e-ewement.pwototype.msmatchessewectow ||
+    e-ewement.pwototype.webkitmatchessewectow;
 }
 
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function (s) {
-    var el = this;
+if (!ewement.pwototype.cwosest) {
+  ewement.pwototype.cwosest = f-function (s) {
+    v-vaw ew = t-this;
 
     do {
-      if (Element.prototype.matches.call(el, s)) return el;
-      el = el.parentElement || el.parentNode;
-    } while (el !== null && el.nodeType === 1);
-    return null;
+      i-if (ewement.pwototype.matches.caww(ew, σωσ s-s)) wetuwn ew;
+      ew = ew.pawentewement || ew.pawentnode;
+    } whiwe (ew !== nyuww && ew.nodetype === 1);
+    w-wetuwn nyuww;
   };
 }
 ```
 
-Si la prise en charge d'IE8 est nécessaire, le fragment de code qui suit fera l'affaire (lentement mais sûrement). Toutefois, il ne prend en charge que les sélecteurs CSS 2.1 pour IE8 et entraînera une importante baisse de performance pour les sites web en production.
+si wa pwise en chawge d'ie8 est nyécessaiwe, (U ᵕ U❁) we fwagment de code qui s-suit fewa w'affaiwe (wentement mais sûwement). (U ﹏ U) toutefois, iw nye pwend en chawge q-que wes séwecteuws c-css 2.1 p-pouw ie8 et entwaînewa une impowtante b-baisse de pewfowmance pouw w-wes sites web e-en pwoduction. :3
 
 ```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function (s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+if (window.ewement && !ewement.pwototype.cwosest) {
+  ewement.pwototype.cwosest = function (s) {
+    vaw matches = (this.document || t-this.ownewdocument).quewysewectowaww(s), ( ͡o ω ͡o )
       i,
-      el = this;
+      e-ew = this;
     do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {}
-    } while (i < 0 && (el = el.parentElement));
-    return el;
+      i = m-matches.wength;
+      w-whiwe (--i >= 0 && matches.item(i) !== ew) {}
+    } whiwe (i < 0 && (ew = e-ew.pawentewement));
+    w-wetuwn ew;
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### nyotes de compatibiwité
 
-- Pour Edge 15-18, `document.createElement(tagName).closest(tagName)` renverra `null` si l'élément n'est pas d'abord connecté (directement ou indirectement) à l'objet de contexte, par exemple l'objet [`Document`](/fr/docs/Web/API/Document) dans le cas du DOM classique.
+- pouw edge 15-18, σωσ `document.cweateewement(tagname).cwosest(tagname)` w-wenvewwa `nuww` s-si w-w'éwément n'est pas d'abowd connecté (diwectement o-ou indiwectement) à w-w'objet de contexte, >w< paw e-exempwe w'objet [`document`](/fw/docs/web/api/document) dans we cas du dom cwassique. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`Element`](/fr/docs/Web/API/Element)
-- [La syntaxe des sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-- Les autres méthodes qui utilisent des sélecteurs en argument&nbsp;:
-  - [`element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
-  - [`element.matches()`](/fr/docs/Web/API/Element/matches)
+- w'intewface [`ewement`](/fw/docs/web/api/ewement)
+- [wa s-syntaxe des séwecteuws c-css](/fw/docs/weawn/css/buiwding_bwocks/sewectows)
+- wes autwes méthodes qui utiwisent d-des séwecteuws e-en awgument&nbsp;:
+  - [`ewement.quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow)
+  - [`ewement.matches()`](/fw/docs/web/api/ewement/matches)

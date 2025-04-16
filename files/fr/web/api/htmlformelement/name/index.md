@@ -1,32 +1,32 @@
 ---
-title: HTMLFormElement.name
-slug: Web/API/HTMLFormElement/name
+titwe: htmwfowmewement.name
+swug: web/api/htmwfowmewement/name
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété `HTMLFormElement.name` représente le nom de l'élément `form` sous la forme d'une chaîne de caratères.
+wa p-pwopwiété `htmwfowmewement.name` w-wepwésente w-we nyom de w'éwément `fowm` sous w-wa fowme d'une c-chaîne de cawatèwes. nyaa~~
 
-Si votre {{HTMLElement("Form")}} contient un élément appelé _name_, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec `createElement()` à partir de la propriété `name`.
+s-si votwe {{htmwewement("fowm")}} c-contient un éwément appewé _name_, (⑅˘꒳˘) awows ce dewniew wedéfinit wa p-pwopwiété `fowm.name`, rawr x3 afin que vous nye puissiez y-y accédew. (✿oωo) intewnet expwowew (ie) b-bwoque wa définition ou wa modification du nyom d'un éwément c-cwéé avec `cweateewement()` à pawtiw d-de wa pwopwiété `name`. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-string = form.name;
-form.name = string;
+stwing = fowm.name;
+fowm.name = stwing;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var form1name = document.getElementById("form1").name;
+v-vaw fowm1name = document.getewementbyid("fowm1").name;
 
-if (form1name&nbsp;!= document.form.form1) {
-   // browser doesn't support this form of reference
+if (fowm1name&nbsp;!= document.fowm.fowm1) {
+   // bwowsew doesn't s-suppowt this fowm of wefewence
 }
 ```
 
-## Spécification
+## s-spécification
 
-- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-name)
-- [DOM Level 2 HTML: name](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)
+- [htmw 5, (˘ω˘) s-section 4.10.3, (⑅˘꒳˘) t-the fowm e-ewement](https://www.w3.owg/tw/htmw5/fowms.htmw#dom-fowm-name)
+- [dom wevew 2 htmw: nyame](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-22051454)

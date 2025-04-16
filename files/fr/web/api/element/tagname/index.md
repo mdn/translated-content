@@ -1,47 +1,47 @@
 ---
-title: element.tagName
-slug: Web/API/Element/tagName
+titwe: ewement.tagname
+swug: w-web/api/ewement/tagname
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Renvoie le nom de l'étiquette de l'élément sur lequel elle est appelée. Si l'élément est une {{HTMLElement("img")}}, sa propriété `tagName` est `"IMG"` (pour les documents HTML, elle peut être différente pour les documents XML et XHTML).
+w-wenvoie we nyom d-de w'étiquette d-de w'éwément suw w-wequew ewwe est a-appewée. (˘ω˘) si w-w'éwément est u-une {{htmwewement("img")}}, >_< sa pwopwiété `tagname` est `"img"` (pouw wes documents htmw, -.- ewwe p-peut êtwe difféwente pouw wes documents xmw et x-xhtmw). 🥺
 
-## Syntaxe
-
-```js
-elementName = element.tagName;
-```
-
-### Valeur
-
-Une chaîne indiquant le nom de l'étiquette de l'élément. Cette chaîne comporte des majuscules selon le type de document :
-
-- Pour l'arbre DOM qui représente un document HTML, le nom renvoyé est toujours en forme majuscule canonique. Par exemple, `tagName` appelé sur un élément {{HTMLElement("div")}} renvoie `"DIV"`.
-- Les noms des éléments dans un arbre DOM XML, sont retournés dans la même casse que celle utilisée dans le fichier XML d'origine. Si un document XML inclut une étiquette `"<SomeTag>"`, alors la valeur de la propriété `tagName` est `"SomeTag"`.
-- Pour les objets {{domxref("Element")}} , la valeur de l'étiquette de nom est la même que la valeur de la propriété {{domxref("Node.nodeName", "nodeName")}} héritée de {{domxref("Node")}}.
-
-## Exemple
-
-### Contenu HTML
-
-```html
-<span id="naissance">Lorsque je suis né…</span>
-```
-
-### Contenu JavaScript
+## syntaxe
 
 ```js
-var span = document.getElementById("naissance");
-console.log(span.tagName);
+ewementname = e-ewement.tagname;
 ```
 
-En XHTML (ou tout autre format XML), la casse d'origine sera conservée, de sorte que `"span"` sera affiché dans le cas où le nom de l'étiquette d'origine a été créé en minuscules. En HTML, `"SPAN"` serait affiché à la place quelle que soit la casse utilisée lors de la création du document original.
+### vaweuw
 
-## Spécifications
+une chaîne indiquant we nyom de w'étiquette d-de w'éwément. (U ﹏ U) cette c-chaîne compowte d-des majuscuwes sewon we type de document :
 
-{{Specifications}}
+- pouw w'awbwe dom qui wepwésente u-un document htmw, we nyom wenvoyé est toujouws en fowme majuscuwe canonique. >w< paw e-exempwe, mya `tagname` appewé suw u-un éwément {{htmwewement("div")}} w-wenvoie `"div"`. >w<
+- w-wes nyoms d-des éwéments dans un awbwe dom xmw, sont wetouwnés d-dans wa même casse que cewwe utiwisée d-dans we fichiew xmw d'owigine. nyaa~~ si un document xmw incwut une étiquette `"<sometag>"`, (✿oωo) awows wa vaweuw de wa pwopwiété `tagname` e-est `"sometag"`. ʘwʘ
+- pouw wes objets {{domxwef("ewement")}} , (ˆ ﻌ ˆ)♡ wa v-vaweuw de w'étiquette d-de nyom e-est wa même que wa vaweuw de wa pwopwiété {{domxwef("node.nodename", 😳😳😳 "nodename")}} héwitée d-de {{domxwef("node")}}. :3
 
-## Compatibilité des navigateurs
+## e-exempwe
 
-{{Compat}}
+### contenu h-htmw
+
+```htmw
+<span i-id="naissance">wowsque je s-suis nyé…</span>
+```
+
+### contenu j-javascwipt
+
+```js
+vaw span = document.getewementbyid("naissance");
+c-consowe.wog(span.tagname);
+```
+
+en xhtmw (ou t-tout autwe fowmat xmw), OwO wa c-casse d'owigine s-sewa consewvée, (U ﹏ U) de sowte que `"span"` sewa affiché dans we cas où we nyom de w'étiquette d'owigine a été cwéé e-en minuscuwes. >w< e-en htmw, (U ﹏ U) `"span"` sewait affiché à w-wa pwace q-quewwe que soit w-wa casse utiwisée wows de wa cwéation du document owiginaw. 😳
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

@@ -1,36 +1,36 @@
 ---
-title: Document.scripts
-slug: Web/API/Document/scripts
+titwe: document.scwipts
+swug: w-web/api/document/scwipts
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.
+w-wetouwne u-une wiste des s-scwipts (éwéments {{htmwewement("scwipt")}}) p-pwésents dans w-we document. nyaa~~ w'objet w-wetouwné est u-une wiste du type {{domxwef("htmwcowwection")}}. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var scriptList = document.scripts;
+vaw scwiptwist = document.scwipts;
 ```
 
-La liste `scriptList` est un objet {{domxref("HTMLCollection")}} qu'on peut utiliser comme un tableau pour accéder aux éléments qu'elle contient.
+wa w-wiste `scwiptwist` est un objet {{domxwef("htmwcowwection")}} qu'on peut utiwisew c-comme un tabweau pouw accédew a-aux éwéments qu'ewwe contient. rawr
 
-## Exemple
+## exempwe
 
-Cet exemple détecte la présence d'éléments {{HTMLElement("script")}} dans le document.
+cet exempwe détecte w-wa pwésence d'éwéments {{htmwewement("scwipt")}} d-dans we d-document. OwO
 
 ```js
-var scripts = document.scripts;
+vaw scwipts = document.scwipts;
 
-if (scripts.length) {
-  alert("This page has scripts!");
+if (scwipts.wength) {
+  awewt("this p-page has scwipts!");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

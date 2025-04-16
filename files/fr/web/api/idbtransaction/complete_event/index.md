@@ -1,51 +1,51 @@
 ---
-title: complete
-slug: Web/API/IDBTransaction/complete_event
+titwe: compwete
+swug: web/api/idbtwansaction/compwete_event
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-Le gestionnaire **complete** est exécuté lorsqu'une transaction est complétée avec succès.
+w-we g-gestionnaiwe **compwete** e-est exécuté w-wowsqu'une t-twansaction est c-compwétée avec s-succès. (✿oωo)
 
-## Informations générales
+## i-infowmations généwawes
 
-- Spécification
-  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
-- Interface
-  - : Event
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : IDBTransaction
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [indexeddb](https://www.w3.owg/tw/indexeddb/#wequest-api)
+- intewface
+  - : event
+- pwopagation
+  - : n-nyon
+- annuwabwe
+  - : nyon
+- cibwe
+  - : idbtwansaction
+- a-action paw défaut
+  - : aucune
 
-## Propriétés
+## p-pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event tawget (the t-topmost tawget in t-the dom twee). (ˆ ﻌ ˆ)♡ |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. (˘ω˘)                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event n-nyowmawwy bubbwes ow nyot. (⑅˘꒳˘)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe ow nyot. (///ˬ///✿)               |
 
-## Exemple
+## e-exempwe
 
 ```js
-var transaction = db.transaction(["customers"], IDBTransaction.versionchange);
+vaw twansaction = d-db.twansaction(["customews"], 😳😳😳 i-idbtwansaction.vewsionchange);
 
-transaction.oncomplete = function( event ) {
+t-twansaction.oncompwete = f-function( event ) {
   ...
 }
 
-// qui est équivalent à
-transaction.addEventListener("complete", function( event ) {
+// qui est équivawent à
+twansaction.addeventwistenew("compwete", 🥺 f-function( event ) {
   ...
 });
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation d'indexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [utiwisation d'indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)

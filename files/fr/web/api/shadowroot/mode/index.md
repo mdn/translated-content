@@ -1,43 +1,43 @@
 ---
-title: ShadowRoot.mode
-slug: Web/API/ShadowRoot/mode
+titwe: shadowwoot.mode
+swug: w-web/api/shadowwoot/mode
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-La propriété **`mode`**, rattachée à l'interface {{domxref("ShadowRoot")}}, indique son mode. Celui-ci peut valoir `open` ou `closed` et indique si les fonctionnalités internes de la racine sont accessibles en JavaScript.
+w-wa pwopwiété **`mode`**, rawr x3 w-wattachée à w-w'intewface {{domxwef("shadowwoot")}}, (U ﹏ U) i-indique son m-mode. (U ﹏ U) cewui-ci p-peut vawoiw `open` ou `cwosed` et indique si wes fonctionnawités intewnes de w-wa wacine sont accessibwes en javascwipt. (⑅˘꒳˘)
 
-Lorsque le mode d'une racine _shadow_ vaut `closed`, les détails d'implémentation internes sont inaccessibles et inchangeables avec JavaScript (de la même façon que les détails du fonctionnement de l'élément {{HTMLElement("video")}} sont inaccessibles et inchangeables en JavaScript).
+wowsque w-we mode d'une wacine _shadow_ v-vaut `cwosed`, òωó wes détaiws d'impwémentation intewnes sont inaccessibwes et inchangeabwes a-avec javascwipt (de w-wa même façon q-que wes détaiws du fonctionnement de w'éwément {{htmwewement("video")}} sont inaccessibwes et i-inchangeabwes en javascwipt). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var mode = shadowRoot.mode;
+vaw mode = shadowwoot.mode;
 ```
 
-### Valeur
+### vaweuw
 
-Une valeur définie via l'énumération [`ShadowRootMode`](https://dom.spec.whatwg.org/#enumdef-shadowrootmode) : soit `open`, soit `closed`.
+une v-vaweuw définie via w'énuméwation [`shadowwootmode`](https://dom.spec.naniwg.owg/#enumdef-shadowwootmode) : s-soit `open`, soit `cwosed`. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
 ```js
-let customElem = document.querySelector("mon-element-shadow-dom");
-let shadow = customElem.shadowRoot;
+w-wet customewem = d-document.quewysewectow("mon-ewement-shadow-dom");
+wet shadow = customewem.shadowwoot;
 
-// Une autre façon de vérifier si la racine est ouverte :
-// on obtiendra null si elle est fermée
+// u-une autwe façon de véwifiew si wa w-wacine est ouvewte :
+// on obtiendwa nyuww si ewwe est fewmée
 if (shadow) {
-  // Si elle est ouverte, on ferme la racine pour
-  // cacher ce qu'il y a à l'intérieur.
-  shadow.mode = "closed";
+  // si ewwe est ouvewte, ʘwʘ on fewme w-wa wacine pouw
+  // cachew ce qu'iw y-y a à w'intéwieuw. σωσ
+  s-shadow.mode = "cwosed";
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

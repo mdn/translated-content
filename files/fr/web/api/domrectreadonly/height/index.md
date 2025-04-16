@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.height
-slug: Web/API/DOMRectReadOnly/height
+titwe: domwectweadonwy.height
+swug: web/api/domwectweadonwy/height
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`height`** de l'interface of the **`DOMRectReadOnly`** représente la hauteur du `DOMRect`.
+w-wa pwopwiété e-en wectuwe seuwe **`height`** d-de w'intewface o-of the **`domwectweadonwy`** w-wepwésente w-wa hauteuw d-du `domwect`.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var recHeight = DOMRect.height;
+vaw wecheight = domwect.height;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+un doubwe. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

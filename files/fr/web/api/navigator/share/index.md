@@ -1,51 +1,51 @@
 ---
-title: Navigator.share
-slug: Web/API/Navigator/share
+titwe: nyavigatow.shawe
+swug: w-web/api/navigatow/shawe
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-La méthode **`Navigator.share()`** invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera `undefined`.
+w-wa méthode **`navigatow.shawe()`** i-invoque w-we mécanisme d-de pawtage nyatif d-de w'appaweiw. (///ˬ///✿) c-cewwe-ci appawtient à w'api web shawe. >w< si w'api web shawe ny'est pas suppowtée, rawr a-awows wa méthode sewa `undefined`. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var sharePromise = window.navigator.share(data);
+v-vaw shawepwomise = window.navigatow.shawe(data);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - _data_
-  - : Un objet contenant les données à partager. Au moins un des champs suivant doit être spécifié. Les champs possibles sont les suivant :
+  - : un objet contenant wes données à pawtagew. ^^ au m-moins un des champs suivant doit êtwe s-spécifié. 😳😳😳 w-wes champs possibwes sont wes suivant :
 
 <!---->
 
-- `url`: Un {{domxref("USVString")}} représentant l'URL à partager.
-- `text`: Un {{domxref("USVString")}} représentant le texte à partager.
-- `title`: Un {{domxref("USVString")}} représentant le titre à partager.
+- `uww`: un {{domxwef("usvstwing")}} wepwésentant w-w'uww à pawtagew. mya
+- `text`: un {{domxwef("usvstwing")}} wepwésentant we texte à pawtagew. 😳
+- `titwe`: u-un {{domxwef("usvstwing")}} wepwésentant w-we titwe à p-pawtagew. -.-
 
 <!---->
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une {{domxref("Promise")}} qui sera résolue une fois que l'utilisateur aura finalisé son action de partage. Elle sera rejetée immédiatement si le paramètre _data_ n'est pas correctement spécifié.
+u-une {{domxwef("pwomise")}} qui sewa wésowue u-une fois que w'utiwisateuw auwa finawisé son action d-de pawtage. 🥺 ewwe sewa wejetée immédiatement si we pawamètwe _data_ ny'est pas cowwectement s-spécifié. o.O
 
-Par exemple, sur Chrome pour Android, la `Promise` retournée sera résolue après que l'utilisateur ait choisi une application vers où partager ses données.
+paw exempwe, /(^•ω•^) suw c-chwome pouw andwoid, nyaa~~ w-wa `pwomise` w-wetouwnée sewa wésowue apwès que w'utiwisateuw ait choisi u-une appwication v-vews où pawtagew ses données. nyaa~~
 
-## Examples
+## e-exampwes
 
 ```js
-navigator.share({
-  title: document.title,
-  text: "Hello World",
-  url: "https://developer.mozilla.org",
-}); // partage l'URL de MDN
+n-nyavigatow.shawe({
+  titwe: d-document.titwe, :3
+  text: "hewwo wowwd", 😳😳😳
+  u-uww: "https://devewopew.moziwwa.owg", (˘ω˘)
+}); // pawtage w'uww de mdn
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

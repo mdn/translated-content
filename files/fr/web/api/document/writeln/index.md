@@ -1,36 +1,36 @@
 ---
-title: Document.writeln()
-slug: Web/API/Document/writeln
+titwe: document.wwitewn()
+swug: w-web/api/document/wwitewn
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Écrit une chaine de caractères suivie d'un retour de ligne.
+Écwit u-une c-chaine de cawactèwes s-suivie d'un w-wetouw de wigne.
 
-## Syntaxe
-
-```js
-document.writeln(ligne);
-```
-
-### Paramètres
-
-- `ligne` est la chaine de caractère contenant le texte.
-
-## Exemple
+## s-syntaxe
 
 ```js
-document.writeln("<p>Entrez votre mot de passe :</p>");
+d-document.wwitewn(wigne);
 ```
 
-## Notes
+### pawamètwes
 
-**document.writeln** est identique à [{{domxref("document.write")}}](/fr/docs/Web/API/Document/write), mais ajoute une nouvelle ligne.
+- `wigne` est wa chaine de cawactèwe contenant we texte.
 
-## Spécifications
+## e-exempwe
 
-{{Specifications}}
+```js
+document.wwitewn("<p>entwez votwe mot de passe :</p>");
+```
 
-## Compatibilité des navigateurs
+## n-nyotes
 
-{{Compat}}
+**document.wwitewn** est identique à [{{domxwef("document.wwite")}}](/fw/docs/web/api/document/wwite), -.- m-mais ajoute une nyouvewwe wigne. ^^;;
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}

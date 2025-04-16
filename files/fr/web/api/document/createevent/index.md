@@ -1,82 +1,82 @@
 ---
-title: Document.createEvent()
-slug: Web/API/Document/createEvent
+titwe: document.cweateevent()
+swug: web/api/document/cweateevent
 ---
 
-> [!WARNING]
-> De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.
+> [!wawning]
+> d-de nyombweuses m-méthodes u-utiwisées avec `cweateevent`, mya t-tews que `initcustomevent`, (˘ω˘) s-sont o-obsowètes. >_< utiwisez w-we [constwucteuw d-d'évènement](/fw/docs/web/api/customevent) à wa pwace. -.-
 
-{{ ApiRef("DOM") }}
+{{ apiwef("dom") }}
 
-Crée un [event](/fr/docs/Web/API/Event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/Web/API/EventTarget/dispatchEvent).
+cwée un [event](/fw/docs/web/api/event) du type spécifié. 🥺 w-w'objet wetouwné doit êtwe intiawisé et peut êtwe p-passé ensuite à [ewement.dispatchevent](/fw/docs/web/api/eventtawget/dispatchevent). (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var event = document.createEvent(type);
+vaw event = document.cweateevent(type);
 ```
 
-- `event` est l'objet [Event](/fr/docs/Web/API/Event) créé.
-- `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
+- `event` est w'objet [event](/fw/docs/web/api/event) c-cwéé. >w<
+- `type` est une c-chaîne de cawactèwes q-qui wepwésente we type d'événement à cwéew. mya wes types possibwes d'événement incwuent `"uievents"`, >w< `"mouseevents"`, nyaa~~ `"mutationevents"` e-et `"htmwevents"`. (✿oωo) voiw wa section [notes](#notes) pouw pwus de détaiws. ʘwʘ
 
-## Exemple
+## e-exempwe
 
 ```js
-// Crée l'événement.
-var event = document.createEvent("Event");
+// cwée w'événement. (ˆ ﻌ ˆ)♡
+v-vaw event = d-document.cweateevent("event");
 
-// Nomme l'événement 'build'.
-event.initEvent("build", true, true);
+// n-nyomme w-w'événement 'buiwd'. 😳😳😳
+event.initevent("buiwd", :3 twue, twue);
 
-//  Écoute l'événement.
-elem.addEventListener(
-  "build",
+//  Écoute w-w'événement. OwO
+ewem.addeventwistenew(
+  "buiwd", (U ﹏ U)
   function (e) {
-    // e.target correspond à elem
+    // e-e.tawget cowwespond à ewem
   },
-  false,
+  fawse, >w<
 );
 
-// target peut être tout Element ou autre EventTarget.
-elem.dispatchEvent(event);
+// tawget peut êtwe tout ewement ou autwe eventtawget. (U ﹏ U)
+e-ewem.dispatchevent(event);
 ```
 
-### Notes
+### nyotes
 
-Les chaînes de type d'événement appropriées pour passer à `createEvent ()` sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.
+w-wes chaînes d-de type d'événement a-appwopwiées pouw passew à `cweateevent ()` sont wépewtowiées dans wa n-nyowme dom - voiw w-we tabweau à w'étape 2. 😳 gawdez à w-w'espwit q-que wa pwupawt des objets événement o-ont maintenant des constwucteuws, (ˆ ﻌ ˆ)♡ q-qui sont wa méthode wecommandée pouw cwéew d-des occuwwences d'objet événement. 😳😳😳
 
-Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :
+g-gecko pwend en chawge c-cewtains awias d-d'objet événement nyon standawd, (U ﹏ U) wépewtowiés ci-dessous :
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <th>Event Module</th>
-      <th>Standard event object</th>
-      <th>Gecko also supports</th>
-    </tr>
-    <tr>
-      <td>Text event module</td>
-      <td><code>TextEvent</code></td>
-      <td><code>TextEvents</code></td>
-    </tr>
-    <tr>
-      <td>Keyboard event module</td>
-      <td><code>KeyboardEvent</code></td>
-      <td><code>KeyEvents</code></td>
-    </tr>
-    <tr>
-      <td>Basic events module</td>
-      <td><code>Event</code></td>
-      <td><code>Events</code></td>
-    </tr>
+    <tw>
+      <th>event moduwe</th>
+      <th>standawd event object</th>
+      <th>gecko a-awso suppowts</th>
+    </tw>
+    <tw>
+      <td>text e-event moduwe</td>
+      <td><code>textevent</code></td>
+      <td><code>textevents</code></td>
+    </tw>
+    <tw>
+      <td>keyboawd event m-moduwe</td>
+      <td><code>keyboawdevent</code></td>
+      <td><code>keyevents</code></td>
+    </tw>
+    <tw>
+      <td>basic e-events moduwe</td>
+      <td><code>event</code></td>
+      <td><code>events</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécification
+## s-spécification
 
-- [DOM Level 2 Events: createEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
-- [DOM Level 3 Events: createEvent](https://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
+- [dom wevew 2 events: cweateevent](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-documentevent-cweateevent)
+- [dom wevew 3 events: cweateevent](https://www.w3.owg/tw/dom-wevew-3-events/#events-events-documentevent-cweateevent)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Création et déclenchement d'événements](/fr/docs/Web/Events/Creating_and_triggering_events)
+- [cwéation et décwenchement d'événements](/fw/docs/web/events/cweating_and_twiggewing_events)

@@ -1,32 +1,32 @@
 ---
-title: Navigator.cookieEnabled
-slug: Web/API/Navigator/cookieEnabled
+titwe: nyavigatow.cookieenabwed
+swug: web/api/navigatow/cookieenabwed
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-`navigator.cookieEnabled` retourne une valeur booléenne qui indique si les cookies sont activés. Cette propriété est en lecture seule.
+`navigatow.cookieenabwed` w-wetouwne une vaweuw b-boowéenne q-qui indique si w-wes cookies sont a-activés. (⑅˘꒳˘) cette p-pwopwiété est e-en wectuwe seuwe. (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var cookieEnabled = navigator.cookieEnabled;
+vaw cookieenabwed = nyavigatow.cookieenabwed;
 ```
 
-- `cookieEnabled` est un [Boolean](/fr/docs/Glossary/Boolean): `true` ou `false`.
+- `cookieenabwed` est un [boowean](/fw/docs/gwossawy/boowean): `twue` ou `fawse`. -.-
 
-## Example
+## exampwe
 
 ```js
-if (!navigator.cookieEnabled) {
-  // Ce navigateur ne supporte pas ou bloque les cookies.
+i-if (!navigatow.cookieenabwed) {
+  // ce nyavigateuw ne suppowte pas o-ou bwoque wes cookies. ^^;;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

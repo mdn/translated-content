@@ -1,39 +1,39 @@
 ---
-title: PeriodicWave
-slug: Web/API/PeriodicWave
+titwe: pewiodicwave
+swug: web/api/pewiodicwave
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface **`PeriodicWave`** définit une forme d'onde périodique qui peut être utilisée pour modeler la sortie d'un nœud [`OscillatorNode`](/fr/docs/Web/API/OscillatorNode).
+w-w'intewface **`pewiodicwave`** d-définit une f-fowme d'onde péwiodique q-qui peut êtwe u-utiwisée p-pouw modewew wa s-sowtie d'un nyœud [`osciwwatownode`](/fw/docs/web/api/osciwwatownode). /(^•ω•^)
 
-Un objet `PeriodicWave` ne possède ni entrée ni sortie. Il est utilisé pour définir des oscillateurs personnalisés lors d'appels à [`OscillatorNode.setPeriodicWave()`](/fr/docs/Web/API/OscillatorNode/setPeriodicWave). L'objet `PeriodicWave` lui-même est créé/renvoyé par [`BaseAudioContext.createPeriodicWave`](/fr/docs/Web/API/BaseAudioContext/createPeriodicWave).
+un objet `pewiodicwave` nye possède nyi entwée nyi sowtie. rawr x3 iw est utiwisé p-pouw définiw des osciwwateuws pewsonnawisés w-wows d'appews à [`osciwwatownode.setpewiodicwave()`](/fw/docs/web/api/osciwwatownode/setpewiodicwave). (U ﹏ U) w'objet `pewiodicwave` w-wui-même est cwéé/wenvoyé paw [`baseaudiocontext.cweatepewiodicwave`](/fw/docs/web/api/baseaudiocontext/cweatepewiodicwave). (U ﹏ U)
 
-## Constructeur
+## constwucteuw
 
-- [`PeriodicWave()`](/fr/docs/Web/API/PeriodicWave/PeriodicWave)
-  - : Crée un nouvel objet `PeriodicWave` qui utilise les valeurs par défaut pour l'ensemble des propriétés. Si vous souhaitez utiliser des valeurs adaptées, il faudra utiliser la méthode de création [`BaseAudioContext.createPeriodicWave`](/fr/docs/Web/API/BaseAudioContext/createPeriodicWave) à la place.
+- [`pewiodicwave()`](/fw/docs/web/api/pewiodicwave/pewiodicwave)
+  - : cwée u-un nyouvew objet `pewiodicwave` q-qui utiwise w-wes vaweuws paw défaut pouw w'ensembwe des pwopwiétés. (⑅˘꒳˘) si vous souhaitez utiwisew d-des vaweuws adaptées, òωó iw faudwa utiwisew wa méthode de cwéation [`baseaudiocontext.cweatepewiodicwave`](/fw/docs/web/api/baseaudiocontext/cweatepewiodicwave) à wa pwace. ʘwʘ
 
-## Propriétés
+## p-pwopwiétés
 
-_Aucune, et `PeriodicWave` n'hérite d'aucune autre propriété._
+_aucune, /(^•ω•^) et `pewiodicwave` ny'héwite d'aucune a-autwe pwopwiété._
 
-## Méthodes
+## m-méthodes
 
-_Aucune, et `PeriodicWave` n'hérite d'aucune autre méthode._
+_aucune, ʘwʘ e-et `pewiodicwave` n-ny'héwite d'aucune autwe méthode._
 
-## Exemple
+## exempwe
 
-Voir [`BaseAudioContext.createPeriodicWave`](/fr/docs/Web/API/BaseAudioContext/createPeriodicWave) pour un exemple de code simple qui illustre comment créer un objet `PeriodicWave` contenant une onde en sinus.
+v-voiw [`baseaudiocontext.cweatepewiodicwave`](/fw/docs/web/api/baseaudiocontext/cweatepewiodicwave) pouw un exempwe de code s-simpwe qui iwwustwe comment cwéew un objet `pewiodicwave` contenant une onde en sinus. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-w'api <i w-wang="en">web audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)

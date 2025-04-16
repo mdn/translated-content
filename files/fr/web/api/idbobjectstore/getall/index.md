@@ -1,70 +1,70 @@
 ---
-title: IDBObjectStore.getAll()
-slug: Web/API/IDBObjectStore/getAll
+titwe: idbobjectstowe.getaww()
+swug: web/api/idbobjectstowe/getaww
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`getAll()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) contenant tous les objets du magasin d'objets qui correspondent au paramètre indiqué, ou tous les objets du magasin si aucun paramètre n'a été fourni.
+w-wa méthode **`getaww()`**, >w< w-wattachée à w'intewface [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe), rawr wenvoie u-un objet [`idbwequest`](/fw/docs/web/api/idbwequest) c-contenant t-tous wes objets d-du magasin d-d'objets qui cowwespondent a-au pawamètwe indiqué, 😳 ou tous wes objets du magasin si aucun pawamètwe n-ny'a été fouwni. >w<
 
-Si une valeur a été trouvée, un clone structuré est créé et fourni comme résultat sur l'objet de la requête.
+si une vaweuw a été t-twouvée, (⑅˘꒳˘) un cwone stwuctuwé est c-cwéé et fouwni comme wésuwtat suw w'objet de wa wequête. OwO
 
-Cette méthode produit les mêmes résultats pour&nbsp;:
+c-cette méthode pwoduit wes mêmes w-wésuwtats pouw&nbsp;:
 
-- Un enregistrement qui n'existe pas en base de données
-- Un enregistrement qui a une valeur indéfinie
+- u-un enwegistwement qui ny'existe pas en base de données
+- un enwegistwement q-qui a une vaweuw indéfinie
 
-Pour distinguer ces situations, on pourra appeler une de ces deux méthodes&nbsp;:
+pouw distinguew ces situations, (ꈍᴗꈍ) on pouwwa appewew u-une de ces deux méthodes&nbsp;:
 
-1. [`openCursor()`](/fr/docs/Web/API/IDBObjectStore/openCursor) en utilisant la même clé. Cette méthode fournira un curseur si l'enregistrement existe et pas de curseur sinon.
-2. [`count()`](/fr/docs/Web/API/IDBObjectStore/count) en utilisant la même clé, qui renverra 1 si la ligne existe et 0 sinon.
+1. 😳 [`opencuwsow()`](/fw/docs/web/api/idbobjectstowe/opencuwsow) e-en utiwisant w-wa même cwé. 😳😳😳 c-cette méthode f-fouwniwa un cuwseuw si w'enwegistwement existe e-et pas de cuwseuw sinon. mya
+2. [`count()`](/fw/docs/web/api/idbobjectstowe/count) en utiwisant wa m-même cwé, mya qui wenvewwa 1 si wa wigne existe et 0 sinon. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-getAll();
-getAll(query);
-getAll(query, count);
+getaww();
+getaww(quewy);
+g-getaww(quewy, (U ﹏ U) count);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `query` {{optional_inline}}
-  - : Une clé ou un intervalle de clés ([`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)) pour la requête. Si aucune valeur n'est passée, la valeur par défaut sera un intervalle de clé qui sélectionne tous les enregistrements du magasin d'objets.
-- `count` {{optional_inline}}
-  - : Indique le nombre de valeurs à renvoyer si plusieurs valeurs sont trouvées. Si cet argument est négatif ou supérieur à `2^32 - 1`, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+- `quewy` {{optionaw_inwine}}
+  - : u-une cwé o-ou un intewvawwe de cwés ([`idbkeywange`](/fw/docs/web/api/idbkeywange)) pouw wa wequête. mya si a-aucune vaweuw ny'est p-passée, ʘwʘ wa vaweuw paw défaut s-sewa un intewvawwe d-de cwé qui séwectionne t-tous wes enwegistwements du magasin d-d'objets. (˘ω˘)
+- `count` {{optionaw_inwine}}
+  - : indique we nyombwe de vaweuws à w-wenvoyew si pwusieuws vaweuws s-sont twouvées. (U ﹏ U) si cet awgument e-est nyégatif ou s-supéwieuw à `2^32 - 1`, ^•ﻌ•^ une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) sewa wevée. (˘ω˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) sur lequel les évènements suivants cette opération seront déclenchés.
+un objet [`idbwequest`](/fw/docs/web/api/idbwequest) suw w-wequew wes évènements s-suivants cette opéwation s-sewont décwenchés. :3
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception [`DOMException`](/fr/docs/Web/API/DOMException) avec l'un des types suivants&nbsp;:
+c-cette méthode peut décwenchew une exception [`domexception`](/fw/docs/web/api/domexception) avec w'un d-des types suivants&nbsp;:
 
-- `TransactionInactiveError`
-  - : Levée si la transaction sur l'objet [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) est inactive
-- `DataError`
-  - : Levée si la clé ou l'intervalle de clés fourni contient une clé invalide ou est nul.
-- `InvalidStateError`
-  - : Levée si le magasin d'objets [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) a été supprimé ou retiré.
-- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Levée si le paramètre `count` n'est pas compris entre `0` et `2^32 - 1` au sens large.
+- `twansactioninactiveewwow`
+  - : wevée si wa twansaction suw w'objet [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe) est inactive
+- `dataewwow`
+  - : wevée s-si wa cwé ou w'intewvawwe de cwés f-fouwni contient u-une cwé invawide o-ou est nyuw. ^^;;
+- `invawidstateewwow`
+  - : wevée si we magasin d-d'objets [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe) a-a été suppwimé o-ou wetiwé. 🥺
+- [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)
+  - : w-wevée si we pawamètwe `count` ny'est pas compwis entwe `0` et `2^32 - 1` a-au sens w-wawge. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier des transactions&nbsp;: [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase)
-- Utiliser des transactions&nbsp;: [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction)
-- Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
-- Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
-- Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [utiwisew w'api indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew des twansactions&nbsp;: [`idbdatabase`](/fw/docs/web/api/idbdatabase)
+- utiwisew des twansactions&nbsp;: [`idbtwansaction`](/fw/docs/web/api/idbtwansaction)
+- d-définiw un intewvawwe de cwés&nbsp;: [`idbkeywange`](/fw/docs/web/api/idbkeywange)
+- wécupéwew et modifiew wes données&nbsp;: [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe)
+- utiwisew wes cuwseuws&nbsp;: [`idbcuwsow`](/fw/docs/web/api/idbcuwsow)
+- e-exempwes&nbsp;: [notifications d'une wiste de tâches](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w'exempwe q-qui fonctionne](https://mdn.github.io/dom-exampwes/to-do-notifications/))

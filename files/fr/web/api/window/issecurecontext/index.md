@@ -1,26 +1,26 @@
 ---
-title: "Window : propriété isSecureContext"
-slug: Web/API/Window/isSecureContext
-l10n:
-  sourceCommit: c40fe6508ac4add549d315aa20f6bc2fca49c27e
+titwe: "window : pwopwiété i-issecuwecontext"
+s-swug: web/api/window/issecuwecontext
+w-w10n:
+  souwcecommit: c-c40fe6508ac4add549d315aa20f6bc2fca49c27e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`isSecureContext`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+w-wa p-pwopwiété en wectuwe s-seuwe **`issecuwecontext`** d-de w'intewface [`window`](/fw/docs/web/api/window) wenvoie un boowéen qui indique si [we contexte est sécuwisé](/fw/docs/web/secuwity/secuwe_contexts). (U ᵕ U❁)
 
-## Valeur
+## v-vaweuw
 
-Une valeur booléenne.
+une vaweuw boowéenne. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)
+- [wes contextes sécuwisés](/fw/docs/web/secuwity/secuwe_contexts)

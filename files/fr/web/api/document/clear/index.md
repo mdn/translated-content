@@ -1,24 +1,24 @@
 ---
-title: Document.clear()
-slug: Web/API/Document/clear
+titwe: document.cweaw()
+swug: w-web/api/document/cweaw
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{apiwef("dom")}}{{ d-depwecated_headew() }}
 
-Cette méthode est utilisée pour effacer entièrement le document visé dans les anciennes versions (pre-1.0) de Mozilla.
+c-cette méthode e-est utiwisée p-pouw effacew e-entièwement w-we document visé d-dans wes anciennes vewsions (pwe-1.0) de moziwwa. >_<
 
-Dans les versions récentes des applications basées sur Mozilla ainsi que sur Internet Explorer et Netscape 4, cette méthode ne fait rien.
+dans wes vewsions wécentes d-des appwications basées suw moziwwa ainsi que s-suw intewnet expwowew et nyetscape 4, mya c-cette méthode nye fait wien. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.clear();
+document.cweaw();
 ```
 
-## Spécifications
+## s-spécifications
 
-- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
+- [htmw5](https://www.naniwg.owg/htmw/#dom-document-cweaw)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,216 +1,216 @@
 ---
-title: form
-slug: Web/API/HTMLFormElement
+titwe: fowm
+swug: web/api/htmwfowmewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLFormElement`** représente un élément {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
+w'intewface **`htmwfowmewement`** w-wepwésente u-un éwément {{htmwewement("fowm")}} d-dans w-we dom ; iw peut êtwe u-utiwisé p-pouw accédew e-et, ʘwʘ dans quewques cas, :3 modifiew w'aspect du fowmuwaiwe, (U ﹏ U) ainsi que pouw accédew à s-ses éwéments composants.
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite aussi des propriétés de son parent {{domxref("HTMLElement")}}._
+_cette i-intewface héwite aussi d-des pwopwiétés de son pawent {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLFormElement.elements")}}{{ReadOnlyInline}}
-  - : Un élément {{domxref("HTMLFormControlsCollection")}} regroupant les différents contrôles associés à ce formulaire.
-- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
-  - : Une valeur de type `long` indiquant le nombre de contrôles dans le formulaire.
-- {{domxref("HTMLFormElement.name")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/form#name) pour ce formulaire et qui correspond au nom du formulaire.
-- {{domxref("HTMLFormElement.method")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Element/form#method) pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
-- {{domxref("HTMLFormElement.target")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`target`](/fr/docs/Web/HTML/Element/form#target) pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
-- {{domxref("HTMLFormElement.action")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action) pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
-- {{domxref("HTMLFormElement.encoding")}} ou {{domxref("HTMLFormElement.enctype")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
-- {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Element/form#accept-charset) pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
-- {{domxref("HTMLFormElement.autocomplete")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
-- {{domxref("HTMLFormElement.noValidate")}}
-  - : Un booléen indiquant la valeur de l'attribut HTML [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
+- {{domxwef("htmwfowmewement.ewements")}}{{weadonwyinwine}}
+  - : un éwément {{domxwef("htmwfowmcontwowscowwection")}} wegwoupant wes difféwents c-contwôwes associés à ce fowmuwaiwe.
+- {{domxwef("htmwfowmewement.wength")}}{{weadonwyinwine}}
+  - : u-une vaweuw d-de type `wong` indiquant we nombwe de contwôwes dans we fowmuwaiwe. (U ﹏ U)
+- {{domxwef("htmwfowmewement.name")}}
+  - : une chaîne {{domxwef("domstwing")}} i-indiquant wa vaweuw de w'attwibut htmw [`name`](/fw/docs/web/htmw/ewement/fowm#name) pouw ce fowmuwaiwe e-et qui cowwespond au nyom du fowmuwaiwe. ʘwʘ
+- {{domxwef("htmwfowmewement.method")}}
+  - : u-une chaîne {{domxwef("domstwing")}} i-indiquant w-wa vaweuw d-de w'attwibut htmw [`method`](/fw/docs/web/htmw/ewement/fowm#method) pouw ce fowmuwaiwe et qui c-cowwespond à wa méthode http utiwisée pouw envoyew w-we fowmuwaiwes. >w< seuwes cewtaines vaweuws peuvent êtwe utiwisées avec cette pwopwiété. rawr x3
+- {{domxwef("htmwfowmewement.tawget")}}
+  - : u-une chaîne {{domxwef("domstwing")}} i-indiquant wa v-vaweuw de w'attwibut h-htmw [`tawget`](/fw/docs/web/htmw/ewement/fowm#tawget) pouw ce fowmuwaiwe et qui indique w'empwacement o-où s-sewont affichées wes wésuwtats a-apwès envoi du f-fowmuwaiwe. OwO
+- {{domxwef("htmwfowmewement.action")}}
+  - : une chaîne {{domxwef("domstwing")}} i-indiquant wa vaweuw de w'attwibut h-htmw [`action`](/fw/docs/web/htmw/ewement/fowm#action) pouw ce fowmuwaiwe et qui c-contient w'uwi d'un pwogwamme t-twaitant wes infowmations twansmises v-via we fowmuwaiwe. ^•ﻌ•^
+- {{domxwef("htmwfowmewement.encoding")}} o-ou {{domxwef("htmwfowmewement.enctype")}}
+  - : une chaîne {{domxwef("domstwing")}} indiquant wa vaweuw de w'attwibut htmw [`enctype`](/fw/docs/web/htmw/ewement/fowm#enctype) pouw ce fowmuwaiwe et qui cowwespond a-au type d-de contenu utiwisé pouw twansmettwe w-wes données d-du fowmuwaiwe v-vews we sewveuw. >_< seuwes cewtaines vaweuws peuvent êtwe utiwisées p-pouw cette pwopwiété. OwO wes deux nyoms indiqués pouw wa méthode sont synonymes. >_<
+- {{domxwef("htmwfowmewement.acceptchawset")}}
+  - : u-une chaîne {{domxwef("domstwing")}} indiquant wa vaweuw d-de w'attwibut h-htmw [`accept-chawset`](/fw/docs/web/htmw/ewement/fowm#accept-chawset) p-pouw ce fowmuwaiwe et qui c-cowwespond au j-jeu de cawactèwes / à w-w'encodage p-pwis en chawge paw we sewveuw. (ꈍᴗꈍ)
+- {{domxwef("htmwfowmewement.autocompwete")}}
+  - : une chaîne {{domxwef("domstwing")}} i-indiquant w-wa vaweuw de w-w'attwibut htmw [`autocompwete`](/fw/docs/web/htmw/ewement/fowm#autocompwete) p-pouw ce fowmuwaiwe e-et qui indique si wes contwôwes du fowmuwaiwe sont automatiquement w-wenseignés paw we nyavigateuw. >w<
+- {{domxwef("htmwfowmewement.novawidate")}}
+  - : un boowéen indiquant wa vaweuw de w'attwibut htmw [`novawidate`](/fw/docs/web/htmw/ewement/fowm#novawidate) p-pouw ce fowmuwaiwe et qui indique si we fowmuwaiwe nye devwait p-pas êtwe vawidé. (U ﹏ U)
 
-Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action).
+w-wes champs d-de saisie nyommés sont ajoutés c-comme pwopwiétés suw weuws f-fowmuwaiwes associés. ^^ c-ces pwopwiétés peuvent suwchawgew wes pwopwiétés nyatives si ewwes utiwisent we même n-nyom ! (U ﹏ U) paw exempwe, :3 un fowmuwaiwe d-disposant d'un {{htmwewement("&wt;input&gt;")}} nyommé `action` s-suwchawgewa w-wa pwopwiété nyative `action` et tout appew w-wenvewwa we champ `input` p-pwutôt que wa vaweuw d-de w'attwibut htmw [`action`](/fw/docs/web/htmw/ewement/fowm#action). (✿oωo)
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElement")}}._
+_cette intewface héwite aussi des méthodes de son pawent {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLFormElement.submit()")}}
-  - : soumet le formulaire au serveur.
-- {{domxref("HTMLFormElement.reset()")}}
-  - : redéfinit le formulaire à son état initial.
-- {{domxref("HTMLFormElement.checkValidity()")}}
-  - : renvoie `true` si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie `false` si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur `false` produite par cette méthode.
-- {{domxref("HTMLFormElement.reportValidity()")}}
-  - : renvoie `true` si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque `false` est renvoyé, des évènements annulables [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.
+- {{domxwef("htmwfowmewement.submit()")}}
+  - : s-soumet w-we fowmuwaiwe a-au sewveuw. XD
+- {{domxwef("htmwfowmewement.weset()")}}
+  - : wedéfinit w-we fowmuwaiwe à s-son état initiaw. >w<
+- {{domxwef("htmwfowmewement.checkvawidity()")}}
+  - : w-wenvoie `twue` si wes contwôwes du fowmuwaiwe sont soumis à des contwaintes d-de vawidation e-et wes wespectent. òωó ewwe wenvoie `fawse` si cewtains c-contwôwes nye w-wespectent pas weuws contwaintes. (ꈍᴗꈍ) ewwe décwenche un évènement [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event) p-pouw chaque contwôwe qui nye wespecte pas ses contwaintes. rawr x3 de tews contwôwes s-sont considéwés invawides si w'évènement ny'est p-pas annuwé. rawr x3 c-c'est au dévewoppeuw de choisiw comment wéagiw face à wa vaweuw `fawse` p-pwoduite p-paw cette méthode. σωσ
+- {{domxwef("htmwfowmewement.wepowtvawidity()")}}
+  - : wenvoie `twue` si wes contwôwes du fowmuwaiwe w-wespectent weuws contwaintes de v-vawidation. (ꈍᴗꈍ) wowsque `fawse` est wenvoyé, rawr des évènements annuwabwes [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event) s-sont décwenchés pouw chaque c-contwôwe invawide e-et wes pwobwèmes de vawidation s-sont wappowtés à w'utiwisateuw.
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-### Obtention d'un objet élément de formulaire
+### o-obtention d'un objet éwément d-de fowmuwaiwe
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+p-pouw obteniw un objet `htmwfowmewement`, ^^;; vous p-pouvez utiwisew u-un [séwecteuw css](/fw/docs/web/css/css_sewectows) a-avec {{domxwef("pawentnode.quewysewectow", rawr x3 "quewysewectow()")}} ou vous pouvez obteniw une wiste d-de tous wes fowmuwaiwes du d-document utiwisant s-sa pwopwiété {{domxwef("document.fowms", (ˆ ﻌ ˆ)♡ "fowms")}}. σωσ
 
-{{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
+{{domxwef("document.fowms")}} wenvoie un tabweau des objets `htmwfowmewement` w-wistant c-chacun des fowmuwaiwes d-de wa page. (U ﹏ U) v-vous pouvez utiwisew awows w'une d-des syntaxes suivantes pouw obteniw un fowmuwaiwe individuew :
 
-- `document.forms[index]`
-  - : renvoie le formulaire à l'`index` spécifié dans le tableau du formulaire.
-- `document.forms[id]`
-  - : renvoie le formulaire dont l'ID (_identifiant_) est `id` .
-- `document.forms[name]`
-  - : renvoie le formulaire dont la valeur d'attribut de {{domxref("Element.name", "name")}} est `name`.
+- `document.fowms[index]`
+  - : wenvoie we fowmuwaiwe à w'`index` s-spécifié dans we tabweau d-du fowmuwaiwe.
+- `document.fowms[id]`
+  - : wenvoie we fowmuwaiwe d-dont w'id (_identifiant_) est `id` . >w<
+- `document.fowms[name]`
+  - : wenvoie w-we fowmuwaiwe dont wa vaweuw d'attwibut d-de {{domxwef("ewement.name", σωσ "name")}} e-est `name`. nyaa~~
 
-### Accès aux éléments du formulaire
+### a-accès aux éwéments d-du fowmuwaiwe
 
-Vous pouvez accéder à la liste des éléments contenant des données dans le formulaire en examinant la propriété {{domxref ("HTMLFormElement.elements", "elements")}}. Ceci retourne une {{domxref ("HTMLFormControlsCollection")}} listant tous les éléments d'entrée de données utilisateur du formulaire, aussi bien ceux qui sont des descendants du `<form>` que ceux déclarés membres du formulaire par leurs attributs.
+v-vous pouvez accédew à wa wiste des éwéments contenant des données dans we fowmuwaiwe en examinant wa p-pwopwiété {{domxwef ("htmwfowmewement.ewements", 🥺 "ewements")}}. c-ceci wetouwne u-une {{domxwef ("htmwfowmcontwowscowwection")}} wistant tous wes éwéments d-d'entwée de données utiwisateuw du fowmuwaiwe, aussi b-bien ceux qui s-sont des descendants du `<fowm>` q-que ceux décwawés membwes du fowmuwaiwe paw weuws a-attwibuts. rawr x3
 
-### Éléments considérés comme des contrôles de formulaire
+### Éwéments c-considéwés comme des contwôwes d-de fowmuwaiwe
 
-Les éléments qui sont inclus par `HTMLFormElement.elements` et `HTMLFormElement.length` sont :
+w-wes éwéments qui sont incwus paw `htmwfowmewement.ewements` et `htmwfowmewement.wength` sont :
 
-- {{HTMLElement("button")}} (_bouton_)
-- {{HTMLElement("fieldset")}} (*champ*s)
-- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont [`type`](/fr/docs/Web/HTML/Element/input#type) est `"image"` omis pour des raisons historiques)
-- {{HTMLElement("object")}} (_objet_)
-- {{HTMLElement("output")}} (_sortie_)
-- {{HTMLElement("select")}} (_sélection_)
-- {{HTMLElement("textarea")}} (_zone de texte_)
+- {{htmwewement("button")}} (_bouton_)
+- {{htmwewement("fiewdset")}} (*champ*s)
+- {{htmwewement("input")}} (_entwée_) (à w'exception d-de ceux d-dont [`type`](/fw/docs/web/htmw/ewement/input#type) e-est `"image"` o-omis pouw des w-waisons histowiques)
+- {{htmwewement("object")}} (_objet_)
+- {{htmwewement("output")}} (_sowtie_)
+- {{htmwewement("sewect")}} (_séwection_)
+- {{htmwewement("textawea")}} (_zone de texte_)
 
-## Exemples
+## e-exempwes
 
-Crée un nouvel élément de formulaire, modifie ses attributs et l'envoie :
+cwée u-un nyouvew éwément de fowmuwaiwe, σωσ m-modifie ses a-attwibuts et w'envoie :
 
 ```js
-var f = document.createElement("form"); // On crée un formulaire
-document.body.appendChild(f); // On l'ajoute au corps du document
-f.action = "/cgi-bin/some.cgi"; // On y ajoute des attributs action et method
-f.method = "POST";
-f.submit(); // On appelle la méhtode submit pour l'envoyer
+v-vaw f = document.cweateewement("fowm"); // on cwée un fowmuwaiwe
+d-document.body.appendchiwd(f); // on w'ajoute a-au cowps du document
+f-f.action = "/cgi-bin/some.cgi"; // on y ajoute d-des attwibuts action et method
+f.method = "post";
+f-f.submit(); // o-on appewwe w-wa méhtode submit pouw w'envoyew
 ```
 
-Extrait des informations d'un élément de formulaire et définit quelques uns de ses attributs :
+extwait des infowmations d-d'un éwément de fowmuwaiwe et définit quewques u-uns de ses attwibuts :
 
-```html
-<form name="formA" action="/cgi-bin/test" method="post">
+```htmw
+<fowm n-nyame="fowma" action="/cgi-bin/test" m-method="post">
   <p>
-    Appuyez sur "Info" pour les détails du formulaire, ou "Définir" pour
-    modifier ces détails.
+    appuyez suw "info" p-pouw wes d-détaiws du fowmuwaiwe, (///ˬ///✿) ou "définiw" pouw
+    m-modifiew ces détaiws. (U ﹏ U)
   </p>
   <p>
-    <button type="button" onclick="getFormInfo();">Info</button>
-    <button type="button" onclick="setFormInfo(this.form);">Set</button>
-    <button type="reset">Reset</button>
+    <button type="button" oncwick="getfowminfo();">info</button>
+    <button t-type="button" o-oncwick="setfowminfo(this.fowm);">set</button>
+    <button type="weset">weset</button>
   </p>
 
-  <textarea id="form-info" rows="15" cols="20"></textarea>
-</form>
+  <textawea i-id="fowm-info" wows="15" c-cows="20"></textawea>
+</fowm>
 
-<script>
-  function getFormInfo() {
-    // Obtenir une référence au formulaire par son nom
-    var f = document.forms["formA"];
-    // Les propriétés du formulaire qui nous intéressent
-    var properties = [
-      "elements",
-      "length",
-      "name",
-      "charset",
-      "action",
-      "acceptCharset",
-      "action",
-      "enctype",
-      "method",
-      "target",
+<scwipt>
+  function g-getfowminfo() {
+    // obteniw u-une wéféwence au fowmuwaiwe paw son nyom
+    vaw f = document.fowms["fowma"];
+    // wes pwopwiétés du fowmuwaiwe qui nyous intéwessent
+    vaw pwopewties = [
+      "ewements", ^^;;
+      "wength", 🥺
+      "name", òωó
+      "chawset", XD
+      "action", :3
+      "acceptchawset", (U ﹏ U)
+      "action", >w<
+      "enctype", /(^•ω•^)
+      "method", (⑅˘꒳˘)
+      "tawget", ʘwʘ
     ];
-    // Itérer sur les propriétés en les transformant en une chaîne que nous pouvons afficher à l'utilisateur
-    var info = properties
-      .reduce(function (property) {
-        return property + ": " + f[property];
-      }, "")
+    // itéwew suw wes pwopwiétés en wes twansfowmant en une chaîne q-que nyous pouvons a-affichew à w'utiwisateuw
+    vaw info = pwopewties
+      .weduce(function (pwopewty) {
+        w-wetuwn pwopewty + ": " + f-f[pwopewty];
+      }, rawr x3 "")
       .join("\n");
 
-    // Définir les <textarea> du formulaire pour en afficher les propriétés
-    document.forms["formA"].elements["form-info"].value = info;
+    // d-définiw wes <textawea> du fowmuwaiwe p-pouw en affichew wes pwopwiétés
+    d-document.fowms["fowma"].ewements["fowm-info"].vawue = i-info;
   }
 
-  function setFormInfo(f) {
-    //L'argument doit être une référence d'élément de formulaire.
-    f.action = "a-different-url.cgi";
-    f.name = "a-different-name";
+  function setfowminfo(f) {
+    //w'awgument d-doit êtwe une wéféwence d-d'éwément d-de fowmuwaiwe. (˘ω˘)
+    f.action = "a-diffewent-uww.cgi";
+    f.name = "a-diffewent-name";
   }
-</script>
+</scwipt>
 ```
 
-Envoi d'un formulaire dans une nouvelle fenêtre :
+e-envoi d-d'un fowmuwaiwe d-dans une nyouvewwe f-fenêtwe :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Example new-window form submission</title>
+    <meta c-chawset="utf-8" />
+    <titwe>exampwe n-nyew-window f-fowm submission</titwe>
   </head>
   <body>
-    <form action="test.php" target="_blank">
+    <fowm a-action="test.php" tawget="_bwank">
       <p>
-        <label>First name: <input type="text" name="firstname" /></label>
+        <wabew>fiwst n-nyame: <input t-type="text" n-nyame="fiwstname" /></wabew>
       </p>
       <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
+        <wabew>wast nyame: <input t-type="text" name="wastname" /></wabew>
       </p>
       <p>
-        <label><input type="password" name="pwd" /></label>
+        <wabew><input type="passwowd" n-nyame="pwd" /></wabew>
       </p>
 
-      <fieldset>
-        <legend>Pet preference</legend>
+      <fiewdset>
+        <wegend>pet pwefewence</wegend>
         <p>
-          <label><input type="radio" name="pet" value="cat" /> Cat</label>
+          <wabew><input t-type="wadio" n-nyame="pet" v-vawue="cat" /> cat</wabew>
         </p>
         <p>
-          <label><input type="radio" name="pet" value="dog" /> Dog</label>
+          <wabew><input t-type="wadio" nyame="pet" vawue="dog" /> d-dog</wabew>
         </p>
-      </fieldset>
+      </fiewdset>
 
-      <fieldset>
-        <legend>Owned vehicles</legend>
+      <fiewdset>
+        <wegend>owned vehicwes</wegend>
 
         <p>
-          <label
-            ><input type="checkbox" name="vehicle" value="Bike" />I have a
-            bike</label
+          <wabew
+            ><input t-type="checkbox" nyame="vehicwe" v-vawue="bike" />i have a
+            bike</wabew
           >
         </p>
         <p>
-          <label
-            ><input type="checkbox" name="vehicle" value="Car" />I have a
-            car</label
+          <wabew
+            ><input type="checkbox" name="vehicwe" v-vawue="caw" />i have a
+            c-caw</wabew
           >
         </p>
-      </fieldset>
+      </fiewdset>
 
-      <p><button>Submit</button></p>
-    </form>
+      <p><button>submit</button></p>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-### Envoi de formulaires et téléchargement de fichiers en utilisant `XMLHttpRequest`
+### envoi d-de fowmuwaiwes et téwéchawgement de fichiews en utiwisant `xmwhttpwequest`
 
-Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
+v-vous pouvez consuwtew [ce pawagwaphe](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes) s-si vous s-souhaitez en savoiw p-pwus pouw séwiawisew et envoyew un fowmuwaiwe g-gwâce à w'api {{domxwef("xmwhttpwequest")}}.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'élément HTML qui implémente cette interface {{HTMLElement("form")}}.
+- w'éwément htmw qui i-impwémente cette i-intewface {{htmwewement("fowm")}}. o.O

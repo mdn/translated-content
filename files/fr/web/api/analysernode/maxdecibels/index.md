@@ -1,81 +1,81 @@
 ---
-title: AnalyserNode.maxDecibels
-slug: Web/API/AnalyserNode/maxDecibels
+titwe: anawysewnode.maxdecibews
+swug: web/api/anawysewnode/maxdecibews
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur maximum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
+wa p-pwopwiété **`maxdecibews`** de w-w'objet {{ domxwef("anawysewnode") }} e-est un nombwe f-fwottant à d-doubwe pwécision w-wepwésentant wa puissance maximum de w'intewvawwe pouw w'anawyse des données f-fft, >w< pouw une convewsion vews des vaweuws nyon s-signées ou des nyombwes fwottants — e-en d'autwes tewmes, nyaa~~ ewwe spécifie wa vaweuw maximum pouw w-w'intewvawwe de wésuwtats des m-méthodes `getfwoatfwequencydata()` e-et `getbytefwequencydata()`. (✿oωo)
 
-Sa valeur par défaut est `-30`.
+sa vaweuw paw défaut est `-30`. ʘwʘ
 
-> [!NOTE]
-> Si une valeur supérieure à `AnalyserNode.maxDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
+> [!note]
+> si une vaweuw supéwieuwe à `anawysewnode.maxdecibews` e-est indiquée, (ˆ ﻌ ˆ)♡ une ewweuw `index_size_eww` est wevée. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.maxDecibels = -10;
+vaw contexteaudio = n-nyew audiocontext();
+vaw a-anawyseuw = contexteaudio.cweateanawysew();
+a-anawyseuw.maxdecibews = -10;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un nombre flottant à double précision.
+un nyombwe f-fwottant à doubwe pwécision. :3
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w-w'exempwe suivant montwe comment cwéew simpwement u-un `anawysewnode` avec {{domxwef("audiocontext")}}, OwO puis utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} et {{htmwewement("canvas")}} pouw cowwectew wes données t-tempowewwes et dessinew un o-osciwwoscope en s-sowtie. (U ﹏ U) pouw des e-exempwes pwus compwets, >w< voiw nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et en pawticuwiew [app.js w-wignes 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). (U ﹏ U)
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.minDecibels = -90;
-analyseur.maxDecibels = -10;
+v-vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+v-vaw anawyseuw = contexteaudio.cweateanawysew();
+a-anawyseuw.mindecibews = -90;
+anawyseuw.maxdecibews = -10;
 
   ...
 
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(bufferLength);
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 256;
+vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+c-consowe.wog(buffewwength);
+vaw tabweaudonnees = n-nyew uint8awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+c-contextecanvas.cweawwect(0, 😳 0, w-wawgeuw, (ˆ ﻌ ˆ)♡ hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
+function dessinew() {
+  dessin = wequestanimationfwame(dessinew);
 
-  analyseur.getByteFrequencyData(tableauDonnees);
+  anawyseuw.getbytefwequencydata(tabweaudonnees);
 
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  contextecanvas.fiwwstywe = 'wgb(0, 😳😳😳 0, 0)';
+  contextecanvas.fiwwwect(0, (U ﹏ U) 0, w-wawgeuw, (///ˬ///✿) h-hauteuw);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-  var hauteurBarre;
-  var x = 0;
+  vaw wawgeuwbawwe = (wawgeuw / t-taiwwememoiwetampon) * 2.5;
+  v-vaw hauteuwbawwe;
+  v-vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = tableauDonnees[i];
+  fow(vaw i = 0; i < taiwwememoiwetampon; i++) {
+    hauteuwbawwe = t-tabweaudonnees[i];
 
-    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-       contexteCanvas.fillRect(x,HEIGHT-hauteurBarre/2,largeurBarre,hauteurBarre/2);
+    contextecanvas.fiwwstywe = 'wgb(' + (hauteuwbawwe+100) + ',50,50)';
+       contextecanvas.fiwwwect(x,height-hauteuwbawwe/2,wawgeuwbawwe,hauteuwbawwe/2);
 
-    x += largeurBarre + 1;
+    x += wawgeuwbawwe + 1;
   }
 };
 
-dessiner();
+dessinew();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

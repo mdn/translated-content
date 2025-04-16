@@ -1,81 +1,81 @@
 ---
-title: HTMLVideoElement
-slug: Web/API/HTMLVideoElement
+titwe: htmwvideoewement
+swug: w-web/api/htmwvideoewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLVideoElement`** fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Elle hérite également des propriétés et des méthodes de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et de [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+w-w'intewface **`htmwvideoewement`** f-fouwnit d-des pwopwiétés e-et des méthodes s-spéciawes pouw m-manipuwew des objets vidéo. o.O ewwe héwite égawement des pwopwiétés et des m-méthodes de [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement) et de [`htmwewement`](/fw/docs/web/api/htmwewement). (///ˬ///✿)
 
-La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Formats) varie d'un navigateur à l'autre. Vous pouvez fournir votre vidéo dans un format unique que tous les navigateurs pertinents prennent en charge, ou fournir plusieurs sources vidéo dans des formats suffisamment différents couverts par les différents navigateurs que vous ciblez.
+wa wiste d-des [fowmats muwtimédias pwis e-en chawge](/fw/docs/web/media/fowmats) vawie d'un nyavigateuw à w'autwe. σωσ vous p-pouvez fouwniw votwe vidéo dans u-un fowmat unique q-que tous wes nyavigateuws pewtinents pwennent en chawge, nyaa~~ ou fouwniw pwusieuws s-souwces vidéo dans des fowmats suffisamment difféwents couvewts paw wes difféwents n-nyavigateuws que vous cibwez. ^^;;
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, ^•ﻌ•^ 140)}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite des propriétés de ses interfaces ancêtres :_ _{{domxref("HTMLMediaElement")}} et_ _{{domxref("HTMLElement")}}._
+_cette i-intewface héwite d-des pwopwiétés d-de ses intewfaces ancêtwes :_ _{{domxwef("htmwmediaewement")}} et_ _{{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLVideoElement.height")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/video#height) indiquant la hauteur de la zone d'affichage, en pixels.
-- {{domxref("HTMLVideoElement.poster")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut [`poster`](/fr/docs/Web/HTML/Element/video#poster) qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
-- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
-  - : Un entier non signé qui indique la hauteur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
-- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
-  - : Un entier non signé qui indique la largeur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
-- {{domxref("HTMLVideoElement.width")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/video#width) indiquant la largeur de la zone d'affichage, en pixels.
+- {{domxwef("htmwvideoewement.height")}}
+  - : u-une chaîne de cawactèwes {{domxwef("domstwing")}} qui wefwète w-wa vaweuw de w'attwibut htmw [`height`](/fw/docs/web/htmw/ewement/video#height) indiquant wa hauteuw de wa zone d'affichage, σωσ e-en pixews.
+- {{domxwef("htmwvideoewement.postew")}}
+  - : une chaîne de cawactèwes {{domxwef("domstwing")}} q-qui wefwète w-wa vaweuw de w'attwibut [`postew`](/fw/docs/web/htmw/ewement/video#postew) q-qui indique une image à affichew tant qu'aucune donnée v-vidéo ny'est d-disponibwe. -.-
+- {{domxwef("htmwvideoewement.videoheight")}} {{weadonwyinwine}}
+  - : un entiew nyon s-signé qui indique w-wa hauteuw intwinsèque de w-wa wessouwce, ^^;; expwimée en pixews c-css, XD ou 0 tant que we média ny'est pas disponibwe. 🥺
+- {{domxwef("htmwvideoewement.videowidth")}} {{weadonwyinwine}}
+  - : u-un entiew nyon signé q-qui indique wa wawgeuw intwinsèque d-de wa wessouwce, òωó e-expwimée en pixews css, (ˆ ﻌ ˆ)♡ ou 0 tant que we média ny'est pas disponibwe. -.-
+- {{domxwef("htmwvideoewement.width")}}
+  - : une chaîne de cawactèwes {{domxwef("domstwing")}} qui wefwète w-wa vaweuw de w'attwibut h-htmw [`width`](/fw/docs/web/htmw/ewement/video#width) indiquant w-wa wawgeuw d-de wa zone d'affichage, :3 e-en pixews. ʘwʘ
 
-### Propriétés spécifiques à Gecko
+### pwopwiétés spécifiques à gecko
 
-- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ qui ont été analysées (_parsed_) depuis la ressource média.
-- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ qui ont été décodées en images.
-- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ décodées qui ont été présentées au canal de rendu pour l'affichage.
-- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ présentées et qui ont été affichées à l'écran.
-- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un double indiquant le retard, exprimé en secondes, pour l'affichage de la dernière _frame_ affichée.
-- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un booléen indiquant s'il y a de l'audio associé à cette vidéo.
+- {{domxwef("htmwvideoewement.mozpawsedfwames")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : u-un entiew nyon signé indiquant we nyombwe de _fwames_ qui ont été anawysées (_pawsed_) d-depuis wa wessouwce m-média.
+- {{domxwef("htmwvideoewement.mozdecodedfwames")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : u-un entiew n-nyon signé indiquant we nyombwe d-de _fwames_ q-qui ont été d-décodées en images. 🥺
+- {{domxwef("htmwvideoewement.mozpwesentedfwames")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : u-un entiew nyon signé indiquant we nyombwe d-de _fwames_ d-décodées qui o-ont été pwésentées a-au canaw d-de wendu pouw w'affichage. >_<
+- {{domxwef("htmwvideoewement.mozpaintedfwames")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : un entiew nyon signé indiquant we nyombwe de _fwames_ p-pwésentées et qui ont été affichées à w'écwan. ʘwʘ
+- {{domxwef("htmwvideoewement.mozfwamedeway")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : un doubwe indiquant w-we wetawd, (˘ω˘) expwimé en secondes, (✿oωo) pouw w'affichage de wa dewnièwe _fwame_ a-affichée. (///ˬ///✿)
+- {{domxwef("htmwvideoewement.mozhasaudio")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : u-un boowéen indiquant s-s'iw y a de w'audio associé à c-cette vidéo. rawr x3
 
-### Propriétés spécifiques à Microsoft
+### pwopwiétés s-spécifiques à m-micwosoft
 
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
-  - : Permet d'avancer ou de reculer la vidéo d'une _frame_.
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
-  - : Permet d'indiquer ou de définir si la vidéo est inversée horizontalement dans l'affichage.
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
-  - : Ajoute l'effet vidéo indiqué dans le canal de rendu.
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Indique si la vidéo peut être affichée plus efficacement.
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un booléen qui détermine si le système considère que la vidéo chargée est en stéréo 3D. La valeur `true` indique que la source est en stéro 3D.
-- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
-  - : Contrôle si le cadre de la vidéo est réduit pour s'inscrire dans la zone d'affichage de la vidéo (autrement dit : si la vidéo est zoomée/tronquée pour s'inscrire dans la zone correspondante).
+- {{domxwef("htmwvideoewement.msfwamestep()")}} {{non-standawd_inwine}}
+  - : pewmet d'avancew ou de wecuwew wa vidéo d'une _fwame_. -.-
+- {{domxwef("htmwvideoewement.mshowizontawmiwwow")}} {{non-standawd_inwine}}
+  - : pewmet d'indiquew ou d-de définiw si wa vidéo est invewsée h-howizontawement dans w'affichage. ^^
+- {{domxwef("htmwvideoewement.msinsewtvideoeffect()")}} {{non-standawd_inwine}}
+  - : a-ajoute w'effet v-vidéo indiqué dans we canaw de wendu. (⑅˘꒳˘)
+- {{domxwef("htmwvideoewement.msiswayoutoptimawfowpwayback")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : i-indique si w-wa vidéo peut êtwe affichée p-pwus efficacement.
+- {{domxwef("htmwvideoewement.msissteweo3d")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : u-un boowéen qui détewmine si we système considèwe que wa vidéo chawgée est e-en stéwéo 3d. nyaa~~ w-wa vaweuw `twue` i-indique que wa souwce est en s-stéwo 3d. /(^•ω•^)
+- {{domxwef("htmwvideoewement.mszoom")}} {{non-standawd_inwine}}
+  - : c-contwôwe si we cadwe de wa vidéo e-est wéduit pouw s'inscwiwe dans wa zone d'affichage de wa vidéo (autwement d-dit : si wa vidéo e-est zoomée/twonquée pouw s'inscwiwe dans w-wa zone cowwespondante). (U ﹏ U)
 
-## Méthodes
+## m-méthodes
 
-_Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son ancêtre {{domxref("HTMLElement")}}._
+_héwite des méthodes de son pawent {{domxwef("htmwmediaewement")}} et d-de son ancêtwe {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
-  - : Cette méthode renvoie un objet {{domxref("VideoPlaybackQuality")}} contenant les métriques/statistiques sur la lecture actuelle avec des informations comme le nombre d'images sautées ou corrompues ainsi que le nombre total d'images.
+- {{domxwef("htmwvideoewement.getvideopwaybackquawity()")}} {{expewimentaw_inwine}}
+  - : cette méthode wenvoie un objet {{domxwef("videopwaybackquawity")}} contenant w-wes métwiques/statistiques suw wa wectuwe actuewwe avec d-des infowmations c-comme we nyombwe d'images sautées ou cowwompues ainsi que we nyombwe t-totaw d'images. 😳😳😳
 
 ## Évènements
 
-_Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son ancêtre {{domxref("HTMLElement")}}._ Pour écouter ces évènements, on utilisera [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou on affectera un gestionnaire d'évènement avec la propriété `on<NomEvenement>` (ex. `onclick`) de l'interface.
+_héwite d-des méthodes de son pawent {{domxwef("htmwmediaewement")}} et de son ancêtwe {{domxwef("htmwewement")}}._ p-pouw écoutew ces évènements, >w< o-on utiwisewa [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) ou on affectewa un gestionnaiwe d-d'évènement avec wa pwopwiété `on<nomevenement>` (ex. XD `oncwick`) d-de w'intewface. o.O
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML qui implémente cette interface {{HTMLElement("video")}}.
-- [Les formats médias pris en charge](/fr/docs/Web/Media/Formats)
+- w-w'éwément htmw q-qui impwémente c-cette intewface {{htmwewement("video")}}. mya
+- [wes fowmats médias p-pwis en chawge](/fw/docs/web/media/fowmats)

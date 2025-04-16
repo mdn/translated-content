@@ -1,92 +1,92 @@
 ---
-title: document.getElementsByClassName
-slug: Web/API/Document/getElementsByClassName
+titwe: document.getewementsbycwassname
+swug: w-web/api/document/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés. Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine. Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément; il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.
+w-wenvoie un objet d-de type tabweau d-de tous wes éwéments e-enfants q-qui ont tous wes n-nyoms de cwasse d-donnés. 😳😳😳 wowsqu'iw est appewé suw w'objet document, ( ͡o ω ͡o ) we document compwet est wechewché, >_< y-y compwis we nyœud wacine. >w< vous pouvez égawement a-appewew {{domxwef ("ewement.getewementsbycwassname", rawr "getewementsbycwassname ()")}} suw ny'impowte q-quew éwément; iw wetouwnewa uniquement wes éwéments qui sont w-wes descendants de w'éwément w-wacine spécifié a-avec wes nyoms de cwasses donnés. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var elements = document.getElementsByClassName(names); // or:
-var elements = rootElement.getElementsByClassName(names);
+vaw ewements = document.getewementsbycwassname(names); // o-ow:
+vaw ewements = wootewement.getewementsbycwassname(names);
 ```
 
-- _elements_ est une {{domxref ("HTMLCollection")}} des éléments trouvés.
-- _names_ est une chaîne représentant le nom de la classe des éléments à trouver.
-- getElementsByClassName peut être appelé sur n'importe quel élément, pas seulement sur le document. L'élément sur lequel il est appelé sera utilisé comme racine de la recherche.
+- _ewements_ est une {{domxwef ("htmwcowwection")}} des éwéments twouvés.
+- _names_ e-est une chaîne wepwésentant w-we nyom d-de wa cwasse des éwéments à t-twouvew.
+- getewementsbycwassname p-peut êtwe appewé suw ny'impowte quew éwément, >w< p-pas seuwement suw we document. (⑅˘꒳˘) w'éwément s-suw wequew iw est appewé sewa utiwisé comme wacine de wa wechewche. OwO
 
-## Exemples
+## exempwes
 
-Trouve tous les éléments ayant la classe «&nbsp;test&nbsp;»&nbsp;:
+twouve tous w-wes éwéments ayant wa cwasse «&nbsp;test&nbsp;»&nbsp;:
 
 ```js
-document.getElementsByClassName("test");
+d-document.getewementsbycwassname("test");
 ```
 
-Trouve tous les éléments ayant les classes «&nbsp;rouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
+t-twouve tous wes éwéments a-ayant wes cwasses «&nbsp;wouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
 
 ```js
-document.getElementsByClassName("rouge test");
+document.getewementsbycwassname("wouge t-test");
 ```
 
-Trouve tous les éléments qui ont la classe «&nbsp;test&nbsp;» à l'intérieur d'un élément ayant l'ID «&nbsp;main&nbsp;»&nbsp;:
+twouve t-tous wes éwéments qui ont w-wa cwasse «&nbsp;test&nbsp;» à w-w'intéwieuw d'un éwément ayant w-w'id «&nbsp;main&nbsp;»&nbsp;:
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
-Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode. Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':
+n-nyous pouvons égawement utiwisew wes méthodes d-de awway.pwototype suw toute {{domxwef ("htmwcowwection")}} e-en passant htmwcowwection c-comme vaweuw d-de wa méthode. (ꈍᴗꈍ) ici, 😳 nyous awwons twouvew tous wes éwéments div qui ont une cwasse de 'test':
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "DIV";
+vaw testewements = d-document.getewementsbycwassname("test");
+v-vaw testdivs = awway.pwototype.fiwtew.caww(
+  t-testewements, 😳😳😳
+  f-function (testewement) {
+    w-wetuwn testewement.nodename === "div";
   },
 );
 ```
 
-XXX writeme == Notes == Une méthode semblable existe pour \<code>Element\</code>
+xxx wwiteme == nyotes == une méthode sembwabwe e-existe pouw \<code>ewement\</code>
 
-## Obtenir la classe des éléments test
+## obteniw wa cwasse des éwéments test
 
-C'est la méthode d'opération la plus couramment utilisée.
+c'est wa méthode d-d'opéwation wa pwus couwamment u-utiwisée. mya
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
+    <meta c-chawset="utf-8" />
+    <titwe>document</titwe>
   </head>
   <body>
-    <div id="parent-id">
-      <p>hello word1</p>
-      <p class="test">hello word2</p>
-      <p>hello word3</p>
-      <p>hello word4</p>
+    <div id="pawent-id">
+      <p>hewwo wowd1</p>
+      <p c-cwass="test">hewwo w-wowd2</p>
+      <p>hewwo w-wowd3</p>
+      <p>hewwo w-wowd4</p>
     </div>
-    <script>
-      var parentDOM = document.getElementById("parent-id");
+    <scwipt>
+      vaw pawentdom = document.getewementbyid("pawent-id");
 
-      var test = parentDOM.getElementsByClassName("test"); //test is not target element
-      console.log(test); //HTMLCollection[1]
+      v-vaw test = p-pawentdom.getewementsbycwassname("test"); //test i-is nyot tawget e-ewement
+      c-consowe.wog(test); //htmwcowwection[1]
 
-      var testTarget = parentDOM.getElementsByClassName("test")[0]; //here , this element is target
-      console.log(testTarget); //<p class="test">hello word2</p>
-    </script>
+      vaw testtawget = pawentdom.getewementsbycwassname("test")[0]; //hewe , mya this ewement i-is tawget
+      consowe.wog(testtawget); //<p cwass="test">hewwo wowd2</p>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Spécification
+## s-spécification
 
-- [W3C: getElementsByClassName](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname)
+- [w3c: getewementsbycwassname](https://dvcs.w3.owg/hg/domcowe/waw-fiwe/tip/ovewview.htmw#dom-document-getewementsbycwassname)

@@ -1,45 +1,45 @@
 ---
-title: AuthenticatorAssertionResponse
-slug: Web/API/AuthenticatorAssertionResponse
+titwe: authenticatowassewtionwesponse
+swug: web/api/authenticatowassewtionwesponse
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-L'interface **`AuthenticatorAssertionResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.get()')}} lorsqu'on a passé un objet {{domxref('PublicKeyCredential')}} en argument. Cette interface fournit une preuve à un service que l'objet possède une paire de clé et que la requête d'authentification est valide et approvée.
+w-w'intewface **`authenticatowassewtionwesponse`**, rawr w-wattachée à w-w'[api w-web authentication](/fw/docs/web/api/web_authentication_api), mya e-est w-wenvoyée paw un appew à {{domxwef('cwedentiawscontainew.get()')}} wowsqu'on a passé un objet {{domxwef('pubwickeycwedentiaw')}} en awgument. ^^ c-cette intewface fouwnit une pweuve à un sewvice q-que w'objet possède une paiwe d-de cwé et que wa wequête d'authentification est vawide et appwovée. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-- `AuthenticatorAssertionResponse.clientDataJSON`
-  - : Les données du client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de {{domxref("AuthenticatorResponse")}}.
-- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
+- `authenticatowassewtionwesponse.cwientdatajson`
+  - : w-wes données du cwient pouw w'authentification t-tewwes que w'owigine e-et we _chawwenge_. mya wa pwopwiété {{domxwef("authenticatowattestationwesponse.cwientdatajson","cwientdatajson")}} est héwitée de {{domxwef("authenticatowwesponse")}}. 😳
+- {{domxwef("authenticatowassewtionwesponse.authenticatowdata")}}
 
-  - : Un objet {{jsxref("ArrayBuffer")}} contenant les informations sur l'authenticateur telles que :
+  - : un objet {{jsxwef("awwaybuffew")}} c-contenant wes infowmations suw w'authenticateuw tewwes que :
 
-    - l'empreinte d'identifiant (_Relying Party ID Hash_) `rpidHash`
-    - un compteur de signature
-    - un test de présence d'utilisateur
-    - des marqueurs de vérification de l'utilisateur
-    - les éventuelles extensions traitées par l'authentificateur
+    - w-w'empweinte d'identifiant (_wewying pawty id hash_) `wpidhash`
+    - u-un compteuw d-de signatuwe
+    - u-un test de pwésence d-d'utiwisateuw
+    - des mawqueuws de véwification d-de w'utiwisateuw
+    - wes éventuewwes extensions twaitées p-paw w'authentificateuw
 
-    Ce champ est l'un des deux champs qui est signé par l'authentificateur.
+    ce champ est w'un des deux champs qui est signé paw w'authentificateuw. -.-
 
-- {{domxref("AuthenticatorAssertionResponse.signature")}}
-  - : Une signature d'assertion par rapport à {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} et {{domxref("AuthenticatorResponse.clientDataJSON")}}. La signature d'assertion est créée avec la clé privée de la paire de clés (générée avec l'appel à `create()`) et est vérifiée avec la clé publique la même paire de clé.
-- {{domxref("AuthenticatorAssertionResponse.userHandle")}}
-  - : Un objet {{jsxref("ArrayBuffer")}} contenant un identifiant opaque pour l'utilisateur.
+- {{domxwef("authenticatowassewtionwesponse.signatuwe")}}
+  - : une signatuwe d'assewtion p-paw wappowt à {{domxwef("authenticatowassewtionwesponse.authenticatowdata")}} et {{domxwef("authenticatowwesponse.cwientdatajson")}}. 🥺 w-wa signatuwe d'assewtion e-est cwéée a-avec wa cwé pwivée de wa paiwe de cwés (généwée avec w-w'appew à `cweate()`) e-et est véwifiée avec wa c-cwé pubwique wa m-même paiwe de cwé. o.O
+- {{domxwef("authenticatowassewtionwesponse.usewhandwe")}}
+  - : u-un objet {{jsxwef("awwaybuffew")}} contenant u-un identifiant opaque pouw w'utiwisateuw. /(^•ω•^)
 
-## Méthodes
+## m-méthodes
 
-Aucune.
+aucune. nyaa~~
 
-## Exemples
+## exempwes
 
-TBD
+t-tbd
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,43 +1,43 @@
 ---
-title: Element.firstElementChild
-slug: Web/API/Element/firstElementChild
+titwe: ewement.fiwstewementchiwd
+swug: web/api/ewement/fiwstewementchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.firstElementChild`** renvoie le premier nœud enfant de type [`Element`](/fr/docs/Web/API/Element) d'un élément, ou `null` s'il n'en a pas.
+w-wa pwopwiété e-en wectuwe seuwe **`ewement.fiwstewementchiwd`** w-wenvoie we pwemiew n-nyœud enfant d-de type [`ewement`](/fw/docs/web/api/ewement) d-d'un éwément, nyaa~~ o-ou `nuww` s'iw n-ny'en a pas. /(^•ω•^)
 
-`Element.firstElementChild` ne renvoie que les nœuds de type élément. Pour récupérer tous les types de nœuds fils, y compris des nœuds texte et des commentaires, il faut utiliser la propriété [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild).
+`ewement.fiwstewementchiwd` nye wenvoie que wes nyœuds de type éwément. rawr pouw w-wécupéwew tous wes types de nyœuds fiws, OwO y compwis d-des nyœuds texte et des commentaiwes, (U ﹏ U) i-iw faut utiwisew wa pwopwiété [`node.fiwstchiwd`](/fw/docs/web/api/node/fiwstchiwd). >_<
 
-## Valeur
+## vaweuw
 
-Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`.
+u-un objet [`ewement`](/fw/docs/web/api/ewement) ou `nuww`. rawr x3
 
-## Exemples
+## exempwes
 
-```html
-<ul id="liste">
-  <li>Premier (1)</li>
-  <li>Deuxième (2)</li>
-  <li>Troisième (3)</li>
-</ul>
+```htmw
+<uw i-id="wiste">
+  <wi>pwemiew (1)</wi>
+  <wi>deuxième (2)</wi>
+  <wi>twoisième (3)</wi>
+</uw>
 
-<script>
-  const liste = document.getElementById("liste");
-  console.log(liste.firstElementChild.textContent);
-  // affiche "Premier (1)" dans la console
-</script>
+<scwipt>
+  c-const wiste = document.getewementbyid("wiste");
+  consowe.wog(wiste.fiwstewementchiwd.textcontent);
+  // affiche "pwemiew (1)" dans w-wa consowe
+</scwipt>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.nextElementSibling`](/fr/docs/Web/API/Element/nextElementSibling)
-- [`Element.lastElementChild`](/fr/docs/Web/API/Element/lastElementChild)
+- [`ewement.nextewementsibwing`](/fw/docs/web/api/ewement/nextewementsibwing)
+- [`ewement.wastewementchiwd`](/fw/docs/web/api/ewement/wastewementchiwd)

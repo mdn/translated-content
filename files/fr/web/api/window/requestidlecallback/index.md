@@ -1,48 +1,48 @@
 ---
-title: window.requestIdleCallback()
-slug: Web/API/Window/requestIdleCallback
+titwe: window.wequestidwecawwback()
+swug: web/api/window/wequestidwecawwback
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-La méthode **`window.requestIdleCallback()`** mémorise une fonction qui sera appelée lorsque le navigateur n'aura plus aucune autre tâche en cours. Cela offre au développeur la possibilité de réaliser des tâches à basse priorité en arrière-plan sur la boucle d'évènements principale, sans impacter l'expérience utilisateur (ralentissement des animations, etc). L'ordre des appels aux fonctions est généralement premier entré, premier sorti, sauf si le `timeout` défini au moment de l'enregistrement est atteint avant que le navigateur n'ait eu le temps d'appeler la fonction en question.
+w-wa méthode **`window.wequestidwecawwback()`** m-mémowise une f-fonction qui sewa a-appewée wowsque w-we nyavigateuw n-ny'auwa pwus aucune a-autwe tâche e-en couws. (⑅˘꒳˘) cewa offwe au dévewoppeuw wa possibiwité de wéawisew des tâches à b-basse pwiowité en awwièwe-pwan suw wa boucwe d-d'évènements pwincipawe, (U ﹏ U) sans i-impactew w'expéwience utiwisateuw (wawentissement des animations, mya etc). ʘwʘ w'owdwe d-des appews aux fonctions est g-généwawement p-pwemiew entwé, (˘ω˘) pwemiew sowti, (U ﹏ U) sauf si we `timeout` défini au moment de w'enwegistwement e-est atteint avant que we nyavigateuw ny'ait eu we temps d'appewew wa fonction e-en question. ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
 ```js
-var idleCallbackId = window.requestIdleCallback(fonction[, options])
+v-vaw idwecawwbackid = w-window.wequestidwecawwback(fonction[, (˘ω˘) o-options])
 ```
 
-### Retour de l'appel
+### w-wetouw de w'appew
 
-Un entier long non-signé qui peut être utilisé pour annulé l'appel à la fonction via la méthode {{domxref("window.cancelIdleCallback()")}}.
+un entiew wong nyon-signé q-qui peut êtwe utiwisé pouw annuwé w'appew à w-wa fonction via wa méthode {{domxwef("window.cancewidwecawwback()")}}. :3
 
-### Paramètres
+### pawamètwes
 
 - fonction
 
-  - : La référence d'une fonction qui devrait être appellée dans un futur proche. La fonction en question recevra en argument un objet de type temps restant avec les propriétés suivantes :
+  - : wa wéféwence d'une fonction qui d-devwait êtwe appewwée dans un f-futuw pwoche. w-wa fonction en question w-wecevwa en awgument un objet de type temps westant avec w-wes pwopwiétés s-suivantes :
 
-    - `timeRemaining`&nbsp;: fonction qui retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le temps restant estimé par le navigateur pour exécuter la tâche, ayant pour valeur minimale zéro. Les tâches nécessitant un temps d'exécution relativement long sont susceptibles de recourir à plusieurs appels à cette méthode s'il reste du travail à effectuer, rendant la main au navigateur peu avant que le compteur n'atteigne zéro. `timeRemaining()` retournera toujours zéro si `didTimeout` est positionné à `true` (par exemple, la fonction n'a pas été appelée durant la période de repos du navigateur). La limite de temps est limitée à 50ms, même si le navigateur reste n'a pas d'autre tâche à exécuter pendant une durée plus longue.
-    - `didTimeout`&nbsp;: un booléen positionné à `true` si la fonction est appelée car le timeout a été atteint, et `false` si elle a été appelée par le navigateur durant une période de repos.
+    - `timewemaining`&nbsp;: fonction q-qui wetouwne u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-we temps westant estimé paw we n-nyavigateuw pouw exékawaii~w wa tâche, ^^;; ayant pouw v-vaweuw minimawe zéwo. 🥺 wes tâches n-nyécessitant un temps d'exécution w-wewativement w-wong sont susceptibwes de wecouwiw à pwusieuws appews à cette méthode s'iw weste du twavaiw à effectuew, (⑅˘꒳˘) w-wendant wa m-main au nyavigateuw peu avant que w-we compteuw ny'atteigne z-zéwo. nyaa~~ `timewemaining()` w-wetouwnewa toujouws zéwo si `didtimeout` est positionné à `twue` (paw e-exempwe, :3 wa fonction ny'a pas été appewée duwant wa péwiode de wepos d-du nyavigateuw). ( ͡o ω ͡o ) wa wimite d-de temps est wimitée à 50ms, mya même s-si we nyavigateuw w-weste ny'a pas d'autwe tâche à e-exékawaii~w p-pendant une d-duwée pwus wongue. (///ˬ///✿)
+    - `didtimeout`&nbsp;: un b-boowéen positionné à `twue` si wa fonction est appewée caw w-we timeout a été a-atteint, (˘ω˘) et `fawse` s-si ewwe a-a été appewée p-paw we nyavigateuw duwant une péwiode de wepos.
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Objet contenant des paramètres de configuration optionnels. Les propriétés sont les suivantes :
-    - `timeout`&nbsp;: si `timeout` est spécifié et possède une valeur positive, la fonction sera appelée au bout de au moins `timeout` millisecondes si elle n'a pas été appelée par le navigateur au préalable.
+  - : objet c-contenant des pawamètwes de configuwation optionnews. ^^;; wes pwopwiétés sont wes suivantes :
+    - `timeout`&nbsp;: s-si `timeout` est spécifié et possède une vaweuw positive, (✿oωo) w-wa fonction sewa a-appewée au bout d-de au moins `timeout` miwwisecondes s-si ewwe ny'a pas été appewée p-paw we navigateuw a-au pwéawabwe. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.cancelIdleCallback()")}}
-- {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxwef("window.cancewidwecawwback()")}}
+- {{domxwef("idwedeadwine")}}
+- {{domxwef("window.settimeout()")}}
+- {{domxwef("window.setintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame")}}

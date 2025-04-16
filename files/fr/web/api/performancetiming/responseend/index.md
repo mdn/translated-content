@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.responseEnd
-slug: Web/API/PerformanceTiming/responseEnd
+titwe: pewfowmancetiming.wesponseend
+swug: web/api/pewfowmancetiming/wesponseend
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). >_< v-veuiwwez utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. rawr x3
 
-L'ancienne propriété en lecture seule **`responseEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le navigateur a reçu le dernier octet de la réponse, ou lorsque la connexion est fermée si cela s'est produit en premier, depuis le serveur à partir d'un cache ou d'une ressource locale.
+w'ancienne pwopwiété en wectuwe seuwe **`wesponseend`** w-wetouwne un `unsigned wong wong` wepwésentant w-we moment, mya en miwwisecondes d-depuis w'époque unix, nyaa~~ où we nyavigateuw a weçu we dewniew octet d-de wa wéponse, (⑅˘꒳˘) ou wowsque wa c-connexion est fewmée s-si cewa s'est pwoduit en pwemiew, rawr x3 depuis we sewveuw à pawtiw d'un cache o-ou d'une wessouwce wocawe. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.responseEnd;
+wet time = pewfowmancetiming.wesponseend;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w-w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe e-ewwe appawtient. (ˆ ﻌ ˆ)♡

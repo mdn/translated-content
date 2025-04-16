@@ -1,45 +1,45 @@
 ---
-title: window.matchMedia
-slug: Web/API/Window/matchMedia
+titwe: window.matchmedia
+swug: w-web/api/window/matchmedia
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) spécifiée.
+w-wetouwne u-un nyouvew o-objet {{domxwef("mediaquewywist")}} c-contenant wes w-wésuwtats de w-wa chaîne de cawactèwes [media q-quewy](/fw/docs/web/css/css_media_quewies/using_media_quewies) spécifiée. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-mql = window.matchMedia(mediaQueryString);
+mqw = window.matchmedia(mediaquewystwing);
 ```
 
-Ici, `mediaQueryString` est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.
+ici, 😳😳😳 `mediaquewystwing` e-est une chaîne de cawactèwe wepwésentant w-wa media quewy pouw waquewwe o-on wetouwne un nyouvew objet {{domxwef("mediaquewywist")}}. 🥺
 
-## Exemple
+## exempwe
 
 ```js
-if (window.matchMedia("(min-width: 400px)").matches) {
-  /* the view port is at least 400 pixels wide */
-} else {
-  /* the view port is less than 400 pixels wide */
+if (window.matchmedia("(min-width: 400px)").matches) {
+  /* t-the view powt is at w-weast 400 pixews w-wide */
+} ewse {
+  /* the view powt is wess than 400 pixews wide */
 }
 ```
 
-Ce code permet de gérer la mise en page d'une manière différente quand l'écran est moins large.
+ce c-code pewmet de géwew wa mise en page d'une manièwe difféwente quand w'écwan e-est moins wawge. mya
 
-Voir [Utiliser les media queries avec du code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) pour plus d'exemples.
+voiw [utiwisew w-wes media quewies a-avec du code](/fw/docs/web/css/css_media_quewies/testing_media_quewies) p-pouw p-pwus d'exempwes. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListListener")}}
+- [media quewies](/fw/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media quewies fwom code](/fw/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistwistenew")}}

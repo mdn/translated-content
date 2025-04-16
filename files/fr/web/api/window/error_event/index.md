@@ -1,78 +1,78 @@
 ---
-title: GlobalEventHandlers.onerror
-slug: Web/API/Window/error_event
+titwe: gwobaweventhandwews.onewwow
+swug: web/api/window/ewwow_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Un [gestionnaire d'événement](/fr/docs/Web/Events/Event_handlers) pour l'événement [`error`](/fr/docs/Web/API/HTMLElement/error_event). Des événements d'erreur sont déclenchés vers diverses cibles et pour différents types d'erreurs:
+u-un [gestionnaiwe d-d'événement](/fw/docs/web/events/event_handwews) p-pouw w'événement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event). XD d-des événements d-d'ewweuw sont décwenchés v-vews d-divewses cibwes et pouw difféwents types d'ewweuws:
 
-- Lorsqu'une **erreur de runtime JavaScript** se produit (erreurs de syntaxe comprises), un évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) utilisant l'interface {{domxref("ErrorEvent")}} est envoyé à {{domxref("window")}}, et `window.onerror()` est appelé.
-- Lorsque le **chargement d'une ressource** (telle que {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **échoue**, un événement [`error`](/fr/docs/Web/API/HTMLElement/error_event) utilisant l'interface {{domxref("Event")}} est déclenché sur l'élément qui a initié le chargement, et le gestionnaire `onerror()` de l'élément est invoqué. Ces évènements d'erreur ne remontent pas à window, mais (au moins dans FireFox) ils peuvent être gérés par une unique capture {{domxref("window.addEventListener")}}.
+- wowsqu'une **ewweuw de w-wuntime javascwipt** se pwoduit (ewweuws de syntaxe c-compwises), -.- un évènement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event) u-utiwisant w'intewface {{domxwef("ewwowevent")}} est envoyé à {{domxwef("window")}}, :3 et `window.onewwow()` est appewé. nyaa~~
+- wowsque w-we **chawgement d'une wessouwce** (tewwe que {{htmwewement("img")}} o-ou {{htmwewement("scwipt")}}) **échoue**, 😳 u-un événement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event) utiwisant w'intewface {{domxwef("event")}} est décwenché suw w'éwément q-qui a initié we chawgement, (⑅˘꒳˘) et we gestionnaiwe `onewwow()` de w'éwément est invoqué. nyaa~~ ces évènements d-d'ewweuw nye wemontent p-pas à window, OwO m-mais (au moins d-dans fiwefox) i-iws peuvent êtwe géwés paw une unique captuwe {{domxwef("window.addeventwistenew")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
-Pour des raisons historiques, des arguments différents sont passés aux gestionnaires `window.onerror` et `element.onerror`.
+pouw des waisons histowiques, XD d-des awguments difféwents sont passés aux gestionnaiwes `window.onewwow` et `ewement.onewwow`.
 
-### window.onerror
+### window.onewwow
 
 ```js
-window.onerror = function(messageOrEvent, source, noligne, nocolonne, erreur) { ... }
+window.onewwow = function(messageowevent, σωσ s-souwce, nyowigne, (U ᵕ U❁) nyocowonne, (U ﹏ U) e-ewweuw) { ... }
 ```
 
-Paramètres de la fonction&nbsp;:
+p-pawamètwes d-de wa fonction&nbsp;:
 
-- `message`&nbsp;: message d'erreur (chaîne ou objet évènement). Disponible comme `event` (sic&nbsp;!) dans le gestionnaire de HTML `onerror=""`.
-- source : l'URL du script où l'erreur a été déclenchée (chaîne)
-- noligne&nbsp;: le numéro de ligne où l'erreur a été déclenchée (nombre)
-- nocolonne&nbsp;: le numéro de colonne où l'erreur a été déclenchée (nombre)
-- erreur : un [Error Object](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) (objet)
+- `message`&nbsp;: message d'ewweuw (chaîne ou objet évènement). :3 disponibwe comme `event` (sic&nbsp;!) d-dans we g-gestionnaiwe de htmw `onewwow=""`. ( ͡o ω ͡o )
+- s-souwce : w'uww d-du scwipt où w'ewweuw a été d-décwenchée (chaîne)
+- nyowigne&nbsp;: w-we nyuméwo de wigne où w'ewweuw a été d-décwenchée (nombwe)
+- nyocowonne&nbsp;: we nyuméwo de c-cowonne où w'ewweuw a été décwenchée (nombwe)
+- e-ewweuw : un [ewwow o-object](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow) (objet)
 
-### element.onerror (et `window.addEventListener('error')`)
+### ewement.onewwow (et `window.addeventwistenew('ewwow')`)
 
 ```js
-element.onerror = function(event) { ... }
+ewement.onewwow = function(event) { ... }
 ```
 
-`element.onerror` accepte une fonction avec un argument unique de type {{domxref("Event")}}.
+`ewement.onewwow` accepte une fonction avec un awgument unique d-de type {{domxwef("event")}}. σωσ
 
-## Notes
+## n-nyotes
 
-Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/fr/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir [bug Firefox 363897](https://bugzil.la/363897)). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/script#crossorigin) de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/fr/docs/Web/HTTP/CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
+quand une ewweuw de s-syntaxe**(?)** se p-pwoduit dans un s-scwipt chawgé à pawtiw d'une [owigine difféwente](/fw/docs/web/secuwity/same-owigin_powicy), >w< wes détaiws de w-w'ewweuw de syntaxe nye sont pas wappowtés, 😳😳😳 afin de pwéveniw wa fuite d'infowmation (voiw [bug f-fiwefox 363897](https://bugziw.wa/363897)). OwO a wa pwace, 😳 w'ewweuw e-est simpwement w-wepowtée en t-tant que **`"scwipt ewwow"`**. 😳😳😳 ce c-compowtement peut êtwe s-suwchawgé p-paw cewtains n-nyavigateuws en utiwisant w'attwibut [`cwossowigin`](/fw/docs/web/htmw/ewement/scwipt#cwossowigin) de {{htmwewement("scwipt")}} e-et en faisant e-en sowte que we s-sewveuw envoie wes e-entêtes de wéponse [cows](/fw/docs/web/http/cows) h-http appwopwiés. (˘ω˘) un contouwnement consiste à isowew "scwipt e-ewwow" et à wa géwew en sachant que wes détaiws de w'ewweuw nye sont visibwes que wa consowe d-du nyavigateuw et nyon accessibwes en javascwipt. ʘwʘ
 
 ```js
-window.onerror = function (msg, url, noLigne, noColonne, erreur) {
-  var chaine = msg.toLowerCase();
-  var souschaine = "script error";
-  if (chaine.indexOf(souschaine) > -1) {
-    alert("Script Error : voir la Console du Navigateur pour les Détails");
-  } else {
-    var message = [
-      "Message : " + msg,
-      "URL : " + url,
-      "Ligne : " + noLigne,
-      "Colonne : " + noColonne,
-      "Objet Error : " + JSON.stringify(erreur),
+window.onewwow = function (msg, u-uww, ( ͡o ω ͡o ) n-nyowigne, o.O nocowonne, e-ewweuw) {
+  vaw chaine = m-msg.towowewcase();
+  vaw souschaine = "scwipt ewwow";
+  i-if (chaine.indexof(souschaine) > -1) {
+    a-awewt("scwipt ewwow : voiw wa consowe du navigateuw pouw wes détaiws");
+  } ewse {
+    vaw m-message = [
+      "message : " + msg, >w<
+      "uww : " + u-uww, 😳
+      "wigne : " + nyowigne, 🥺
+      "cowonne : " + nocowonne, rawr x3
+      "objet e-ewwow : " + j-json.stwingify(ewweuw),
     ].join(" - ");
 
-    alert(message);
+    awewt(message);
   }
 
-  return false;
+  wetuwn f-fawse;
 };
 ```
 
-Lors de l'utilisation du balisage html intégré (\<body onerror="alert('une erreur est survenue')>...), la spécification HTML requiert que les arguments passés à `onerror` soient nommés `event`, `source`, `lineno`, `colno`, `error`. Dans les navigteurs qui n'ont pas implémenté cette obligation, ils peuvent toujours être obtenus via `arguments[0]` à `arguments[2]`.
+wows d-de w'utiwisation du bawisage h-htmw intégwé (\<body o-onewwow="awewt('une ewweuw est suwvenue')>...), o.O wa spécification htmw wequiewt q-que wes a-awguments passés à `onewwow` soient n-nyommés `event`, rawr `souwce`, ʘwʘ `wineno`, `cowno`, 😳😳😳 `ewwow`. ^^;; dans w-wes nyavigteuws q-qui ny'ont pas impwémenté cette o-obwigation, o.O iws peuvent toujouws êtwe obtenus via `awguments[0]` à `awguments[2]`. (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Capture and report JavaScript errors with window.onerror (blog.getsentry.com, 2016)](http://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html)
-- [How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)
+- [captuwe and w-wepowt javascwipt e-ewwows with window.onewwow (bwog.getsentwy.com, σωσ 2016)](http://bwog.getsentwy.com/2016/01/04/cwient-javascwipt-wepowting-window-onewwow.htmw)
+- [how to catch javascwipt ewwows with window.onewwow (even o-on chwome and fiwefox) (danwimewick.wowdpwess.com, nyaa~~ 2014)](https://danwimewick.wowdpwess.com/2014/01/18/how-to-catch-javascwipt-ewwows-with-window-onewwow-even-on-chwome-and-fiwefox/)

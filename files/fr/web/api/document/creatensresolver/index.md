@@ -1,39 +1,39 @@
 ---
-title: Document.createNSResolver()
-slug: Web/API/Document/createNSResolver
+titwe: document.cweatenswesowvew()
+swug: web/api/document/cweatenswesowvew
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Crée un `XPathNSResolver` qui résout les espaces de noms en respectant les définitions dans la portée pour un noeud spécifié.
+c-cwée un `xpathnswesowvew` q-qui wésout wes e-espaces de nyoms e-en wespectant w-wes définitions d-dans wa powtée p-pouw un nyoeud spécifié. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-nsResolver = document.createNSResolver(node);
+nswesowvew = document.cweatenswesowvew(node);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `node` est un noeud à utiliser comme contexte pour la résolution de l'espace de noms.
+- `node` e-est un nyoeud à utiwisew comme contexte p-pouw wa wésowution de w'espace d-de nyoms. /(^•ω•^)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-- `nsResolver` est un objet XPathNSResolver.
+- `nswesowvew` est un objet xpathnswesowvew. 😳😳😳
 
-## Notes
+## n-nyotes
 
-Adapte n'importe quel noeud DOM pour résoudre les espaces de noms afin qu'une expression [XPath](/fr/docs/Web/XPath) puisse être facilement évaluée par rapport au contexte du nœud et son emplacement dans le document. Cet adaptateur fonctionne comme la méthode `lookupNamespaceURI` du DOM de niveau 3 sur les noeuds lors de la résolution de `namespaceURI` à partir d'un préfixe donné en utilisant l'information disponible dans la hiérarchie des noeuds au moment de l'appel de `lookupNamespaceURI`. Résout aussi correctement le préfixe implicite `xml`.
+adapte ny'impowte q-quew nyoeud d-dom pouw wésoudwe wes espaces de nyoms afin qu'une expwession [xpath](/fw/docs/web/xpath) puisse êtwe f-faciwement évawuée paw wappowt au contexte du nyœud et son empwacement d-dans we document. ( ͡o ω ͡o ) cet adaptateuw f-fonctionne comme w-wa méthode `wookupnamespaceuwi` d-du dom de nyiveau 3 s-suw wes nyoeuds wows de wa wésowution d-de `namespaceuwi` à pawtiw d'un pwéfixe donné e-en utiwisant w'infowmation disponibwe dans wa hiéwawchie des nyoeuds au moment de w'appew de `wookupnamespaceuwi`. >_< w-wésout aussi cowwectement w-we pwéfixe impwicite `xmw`. >w<
 
-Notez que XPath définit QNames sans préfixe pour correspondre uniquement aux éléments d'un espace de noms null. XPath n'a aucun moyen de récupérer l'espace de noms par défaut tel qu'il est appliqué à une référence d'élément régulier (par exemple, `p[@id='_myid'`] pour `xmlns='http://www.w3.org/1999/xhtml'`). Pour faire correspondre les éléments par défaut dans un espace de noms non nul, vous devez soit faire référence à un élément particulier en utilisant un format tel que `*namespace-uri()=http://www.w3.org/1999/xhtml and name()=p[@id='_myid']` ([cette approche](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#using_xpath_functions_to_reference_elements_with_its_default_namespace) fonctionne bien pour les expressions XPath dynamiques dans lesquelles les espaces de noms pourraient ne pas être connus), soit utiliser des tests de noms préfixés et créer un résolveur d'espace de nom mappant le préfixe à l'espace de nom. Pour en savoir plus sur [comment créer un résolveur d'espace de nom défini par l'utilisateur](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#Implémentation_d%27un_résolveur) si vous souhaitez adopter cette dernière approche.
+n-nyotez q-que xpath définit qnames sans pwéfixe pouw cowwespondwe uniquement a-aux éwéments d-d'un espace de nyoms nyuww. rawr x-xpath ny'a a-aucun moyen de wécupéwew w'espace d-de nyoms paw défaut tew qu'iw e-est appwiqué à une wéféwence d'éwément w-wéguwiew (paw exempwe, 😳 `p[@id='_myid'`] pouw `xmwns='http://www.w3.owg/1999/xhtmw'`). >w< p-pouw faiwe cowwespondwe wes éwéments p-paw d-défaut dans un espace de nyoms nyon nyuw, (⑅˘꒳˘) vous devez soit faiwe wéféwence à un éwément pawticuwiew en utiwisant u-un fowmat t-tew que `*namespace-uwi()=http://www.w3.owg/1999/xhtmw and nyame()=p[@id='_myid']` ([cette a-appwoche](/fw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt#using_xpath_functions_to_wefewence_ewements_with_its_defauwt_namespace) f-fonctionne b-bien pouw wes expwessions xpath dynamiques dans wesquewwes w-wes espaces de nyoms pouwwaient nye pas êtwe connus), OwO soit utiwisew des tests d-de nyoms pwéfixés et cwéew un w-wésowveuw d'espace d-de nyom mappant w-we pwéfixe à w'espace de n-nyom. (ꈍᴗꈍ) pouw en savoiw p-pwus suw [comment c-cwéew un w-wésowveuw d'espace de nom défini paw w'utiwisateuw](/fw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt#impwémentation_d%27un_wésowveuw) s-si vous s-souhaitez adoptew c-cette dewnièwe a-appwoche. 😳
 
-`createNSResolver` a été introduit dans DOM Niveau 3.
+`cweatenswesowvew` a-a été intwoduit dans dom nyiveau 3. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
-- [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [`document.evawuate()`](/fw/docs/web/api/document/evawuate)
+- [intwoduction à w'utiwisation d-de xpath avec javascwipt](/fw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt)
 
-## Spécifications
+## spécifications
 
-[DOM Level 3 XPath Specification : createNSResolver](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver)
+[dom wevew 3 xpath specification : cweatenswesowvew](https://www.w3.owg/tw/dom-wevew-3-xpath/xpath.htmw#xpathevawuatow-cweatenswesowvew)

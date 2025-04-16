@@ -1,86 +1,86 @@
 ---
-title: HTMLButtonElement
-slug: Web/API/HTMLButtonElement
+titwe: htmwbuttonewement
+swug: w-web/api/htmwbuttonewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLButtonElement`** fournit des propriétés et méthodes (en plus de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) qui permettent de manipuler les éléments [`<button>`](/fr/docs/Web/HTML/Element/button).
+w'intewface **`htmwbuttonewement`** f-fouwnit d-des pwopwiétés e-et méthodes (en p-pwus de cewwes f-fouwnies paw w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) dont ewwe héwite) qui pewmettent de manipuwew wes éwéments [`<button>`](/fw/docs/web/htmw/ewement/button). (U ᵕ U❁)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_héwite des pwopwiétés de s-son pawent, :3 [`htmwewement`](/fw/docs/web/api/htmwewement)._
 
-- [`HTMLButtonElement.accessKey`](/fr/docs/Web/API/HTMLButtonElement/accessKey)
-  - : Une chaîne de caractères qui indique la touche du clavier (unique) qui donne accès à ce bouton.
-- [`HTMLButtonElement.autofocus`](/fr/docs/Web/API/HTMLButtonElement/autofocus)
-  - : Un booléen qui indique si le contrôle devrait avoir le focus au chargement de la page, à moins que l'utilisatrice ou l'utilisateur passe outre, par exemple en saisissant dans un autre contrôle. Seul un élément du document, associé à un formulaire, peut avoir cet attribut.
-- [`HTMLButtonElement.disabled`](/fr/docs/Web/API/HTMLButtonElement/disabled)
-  - : Un booléen qui indique si le contrôle est désactivé, signifiant alors qu'il n'accepte aucun clic.
-- [`HTMLButtonElement.form`](/fr/docs/Web/API/HTMLButtonElement/form) {{readonlyInline}}
-  - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) qui reflète l'élément de formulaire auquel ce bouton est associé. Si le bouton est un descendant de l'élément du formulaire, cet attribut sera une référence à l'objet `HTMLFormElement` associé à ce formulaire. Si le bouton n'est pas un descendant de l'élément du formulaire, l'attribut peut être une référence à n'importe quel élément `HTMLFormElement` associé du même document, ou la valeur `null` si aucun ne correspond.
-- [`HTMLButtonElement.formAction`](/fr/docs/Web/API/HTMLButtonElement/formAction)
-  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formEnctype`](/fr/docs/Web/API/HTMLButtonElement/formEnctype)
-  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formMethod`](/fr/docs/Web/API/HTMLButtonElement/formMethod)
-  - : Une chaîne de caractères qui reflète la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. S'il est présent, cet attribut surcharge l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formNoValidate`](/fr/docs/Web/API/HTMLButtonElement/formNoValidate)
-  - : Un booléen qui indique que le formulaire ne devrait pas être validé pour l'envoi. S'il est présent, cet attribut surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formTarget`](/fr/docs/Web/API/HTMLButtonElement/formTarget)
-  - : Une chaîne de caractères qui reflète le nom ou un mot-clé de l'emplacement où afficher la réponse reçue après l'envoi du formulaire. S'il est présent, cet attribut surcharge l'attribut [`target`](/fr/docs/Web/HTML/Element/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
-- [`HTMLButtonElement.labels`](/fr/docs/Web/API/HTMLButtonElement/labels) {{readonlyInline}}
-  - : Un objet [`NodeList`](/fr/docs/Web/API/NodeList) qui représente une liste des éléments [`<label>`](/fr/docs/Web/HTML/Element/label) qui sont des libellés pour ce bouton.
-- [`HTMLButtonElement.menu`](/fr/docs/Web/API/HTMLButtonElement/menu) {{experimental_inline}}
-  - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente l'élément de menu à afficher si on clique sur ce bouton et qu'il a `type="menu"`.
-- [`HTMLButtonElement.name`](/fr/docs/Web/API/HTMLButtonElement/name)
-  - : Une chaîne de caractères qui représente le nom de l'objet lorsqu'il est envoyé avec un formulaire. Si cet attribut est présent, sa valeur ne doit pas être la chaîne de caractères.
-- [`HTMLButtonElement.tabIndex`](/fr/docs/Web/API/HTMLButtonElement/tabIndex)
-  - : Une valeur numérique de type `long` qui représente la position de cet élément au sein de l'ordre de tabulation.
-- [`HTMLButtonElement.type`](/fr/docs/Web/API/HTMLButtonElement/type)
+- [`htmwbuttonewement.accesskey`](/fw/docs/web/api/htmwbuttonewement/accesskey)
+  - : une chaîne d-de cawactèwes qui indique wa touche du cwaview (unique) qui donne a-accès à ce bouton. ( ͡o ω ͡o )
+- [`htmwbuttonewement.autofocus`](/fw/docs/web/api/htmwbuttonewement/autofocus)
+  - : un b-boowéen qui indique s-si we contwôwe devwait avoiw we focus au chawgement de wa page, òωó à moins q-que w'utiwisatwice ou w'utiwisateuw passe outwe, paw exempwe en saisissant dans u-un autwe contwôwe. σωσ seuw un éwément d-du document, (U ᵕ U❁) a-associé à u-un fowmuwaiwe, (✿oωo) peut a-avoiw cet attwibut.
+- [`htmwbuttonewement.disabwed`](/fw/docs/web/api/htmwbuttonewement/disabwed)
+  - : un boowéen qui indique s-si we contwôwe est désactivé, ^^ signifiant a-awows qu'iw ny'accepte aucun cwic. ^•ﻌ•^
+- [`htmwbuttonewement.fowm`](/fw/docs/web/api/htmwbuttonewement/fowm) {{weadonwyinwine}}
+  - : un objet [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement) qui wefwète w'éwément de fowmuwaiwe auquew ce b-bouton est associé. XD si we bouton e-est un descendant d-de w'éwément d-du fowmuwaiwe, :3 cet attwibut sewa une wéféwence à w'objet `htmwfowmewement` a-associé à ce f-fowmuwaiwe. (ꈍᴗꈍ) si we bouton ny'est p-pas un descendant d-de w'éwément du fowmuwaiwe, :3 w-w'attwibut peut êtwe une wéféwence à n-ny'impowte quew éwément `htmwfowmewement` associé d-du même document, (U ﹏ U) ou wa vaweuw `nuww` s-si aucun nye cowwespond. UwU
+- [`htmwbuttonewement.fowmaction`](/fw/docs/web/api/htmwbuttonewement/fowmaction)
+  - : u-une chaîne d-de cawactèwes qui wefwète w'uwi d'une wessouwce qui twaite wes infowmations envoyées paw ce bouton. 😳😳😳 s'iw e-est pwésent, XD cet a-attwibut suwchawge w'attwibut [`action`](/fw/docs/web/htmw/ewement/fowm#action) d-de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) a-auquew e-est associé cet éwément. o.O
+- [`htmwbuttonewement.fowmenctype`](/fw/docs/web/api/htmwbuttonewement/fowmenctype)
+  - : une chaîne de cawactèwes q-qui wefwète we type de contenu utiwisé pouw envoyew we fowmuwaiwe au sewveuw. (⑅˘꒳˘) s-s'iw est pwésent, 😳😳😳 cet attwibut s-suwchawge w'attwibut [`enctype`](/fw/docs/web/htmw/ewement/fowm#enctype) d-de w-w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) auquew est a-associé cet éwément. nyaa~~
+- [`htmwbuttonewement.fowmmethod`](/fw/docs/web/api/htmwbuttonewement/fowmmethod)
+  - : u-une chaîne de c-cawactèwes qui w-wefwète wa méthode http utiwisée paw we nyavigateuw p-pouw envoyew w-we fowmuwaiwe. rawr s-s'iw est pwésent, -.- c-cet attwibut s-suwchawge w'attwibut [`method`](/fw/docs/web/htmw/ewement/fowm#attw-method) de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) auquew est associé cet éwément. (✿oωo)
+- [`htmwbuttonewement.fowmnovawidate`](/fw/docs/web/api/htmwbuttonewement/fowmnovawidate)
+  - : u-un boowéen qui indique que we fowmuwaiwe nye devwait pas êtwe vawidé pouw w'envoi. /(^•ω•^) s-s'iw est pwésent, 🥺 cet attwibut suwchawge w'attwibut [`novawidate`](/fw/docs/web/htmw/ewement/fowm#attw-novawidate) de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) a-auquew est associé c-cet éwément. ʘwʘ
+- [`htmwbuttonewement.fowmtawget`](/fw/docs/web/api/htmwbuttonewement/fowmtawget)
+  - : u-une chaîne de cawactèwes q-qui wefwète we nyom ou un m-mot-cwé de w'empwacement o-où affichew wa wéponse weçue apwès w'envoi du fowmuwaiwe. UwU s'iw est pwésent, XD cet a-attwibut suwchawge w'attwibut [`tawget`](/fw/docs/web/htmw/ewement/fowm#attw-tawget) d-de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) auquew est associé c-cet éwément. (✿oωo)
+- [`htmwbuttonewement.wabews`](/fw/docs/web/api/htmwbuttonewement/wabews) {{weadonwyinwine}}
+  - : u-un objet [`nodewist`](/fw/docs/web/api/nodewist) qui wepwésente une wiste d-des éwéments [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) q-qui sont des wibewwés p-pouw ce bouton.
+- [`htmwbuttonewement.menu`](/fw/docs/web/api/htmwbuttonewement/menu) {{expewimentaw_inwine}}
+  - : u-un objet [`htmwmenuewement`](/fw/docs/web/api/htmwmenuewement) qui wepwésente w'éwément de menu à affichew si on cwique s-suw ce bouton e-et qu'iw a `type="menu"`. :3
+- [`htmwbuttonewement.name`](/fw/docs/web/api/htmwbuttonewement/name)
+  - : u-une chaîne de cawactèwes q-qui wepwésente w-we nom de w'objet wowsqu'iw est e-envoyé avec un fowmuwaiwe. (///ˬ///✿) si cet attwibut est pwésent, nyaa~~ sa vaweuw nye doit p-pas êtwe wa chaîne d-de cawactèwes. >w<
+- [`htmwbuttonewement.tabindex`](/fw/docs/web/api/htmwbuttonewement/tabindex)
+  - : une vaweuw nyuméwique d-de type `wong` qui w-wepwésente wa position de cet éwément au sein de w'owdwe de t-tabuwation. -.-
+- [`htmwbuttonewement.type`](/fw/docs/web/api/htmwbuttonewement/type)
 
-  - : Une chaîne de caractères qui indique le comportement du bouton. Il s'agit d'un attribut à valeur contrainte parmi une liste&nbsp;:
+  - : une chaîne de cawactèwes qui indique we compowtement d-du bouton. (✿oωo) iw s'agit d'un attwibut à vaweuw contwainte p-pawmi u-une wiste&nbsp;:
 
     - `submit`
-      - : Le bouton envoi le formulaire. Il s'agit de la valeur par défaut si l'attribut n'est pas indiqué ou s'il a été changé dynamiquement vers une valeur vide ou invalide.
-    - `reset`
-      - : Le bouton réinitialise le formulaire.
+      - : we bouton envoi we fowmuwaiwe. (˘ω˘) iw s'agit d-de wa vaweuw p-paw défaut si w'attwibut ny'est pas indiqué ou s'iw a été changé d-dynamiquement vews une vaweuw v-vide ou invawide. rawr
+    - `weset`
+      - : we bouton wéinitiawise we fowmuwaiwe. OwO
     - `button`
-      - : Le bouton ne fait rien.
+      - : we bouton ne fait w-wien. ^•ﻌ•^
     - `menu`
-      - : Le bouton affiche un menu. {{experimental_inline}}
+      - : we b-bouton affiche u-un menu. UwU {{expewimentaw_inwine}}
 
-- [`HTMLButtonElement.willValidate`](/fr/docs/Web/API/HTMLButtonElement/willValidate) {{readonlyInline}}
-  - : Un booléen qui indique si le bouton est candidat à la validation de contraintes. Il vaut `false` si une condition l'empêche de participer à la validation des contraintes, y compris si sa propriété `type` vaut `reset` ou `button`&nbsp;; s'il a un ancêtre [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)&nbsp;; ou si la propriété `disabled` vaut `true`.
-- [`HTMLButtonElement.validationMessage`](/fr/docs/Web/API/HTMLButtonElement/validationMessage) {{readonlyInline}}
-  - : Une chaîne de caractères représentant le message localisé qui décrit la validation de contrainte lorsque le contrôle ne respecte pas les contraintes éventuelles. Cet attribut vaudra la chaîne vide si le contrôle n'est pas candidat à la validation de contraintes (`willValidate` à `false`), ou s'il respecte les contraintes.
-- [`HTMLButtonElement.validity`](/fr/docs/Web/API/HTMLButtonElement/validity) {{readonlyInline}}
-  - : Un objet [`ValidityState`](/fr/docs/Web/API/ValidityState) représentant l'état de validité du bouton.
-- [`HTMLButtonElement.value`](/fr/docs/Web/API/HTMLButtonElement/value)
-  - : Une chaîne de caractères représentant la valeur de formulaire associé au contrôle du bouton.
+- [`htmwbuttonewement.wiwwvawidate`](/fw/docs/web/api/htmwbuttonewement/wiwwvawidate) {{weadonwyinwine}}
+  - : un boowéen qui i-indique si we bouton est candidat à w-wa vawidation d-de contwaintes. (˘ω˘) i-iw vaut `fawse` si une condition w-w'empêche d-de pawticipew à wa vawidation des contwaintes, (///ˬ///✿) y-y compwis si sa p-pwopwiété `type` v-vaut `weset` ou `button`&nbsp;; s'iw a un ancêtwe [`<datawist>`](/fw/docs/web/htmw/ewement/datawist)&nbsp;; o-ou si wa pwopwiété `disabwed` vaut `twue`. σωσ
+- [`htmwbuttonewement.vawidationmessage`](/fw/docs/web/api/htmwbuttonewement/vawidationmessage) {{weadonwyinwine}}
+  - : u-une chaîne d-de cawactèwes wepwésentant we message wocawisé qui décwit w-wa vawidation de c-contwainte wowsque w-we contwôwe n-nye wespecte pas wes contwaintes éventuewwes. /(^•ω•^) c-cet attwibut vaudwa wa chaîne vide si we contwôwe ny'est pas candidat à wa vawidation de contwaintes (`wiwwvawidate` à `fawse`), 😳 o-ou s'iw wespecte wes contwaintes. 😳
+- [`htmwbuttonewement.vawidity`](/fw/docs/web/api/htmwbuttonewement/vawidity) {{weadonwyinwine}}
+  - : u-un objet [`vawiditystate`](/fw/docs/web/api/vawiditystate) w-wepwésentant w'état de v-vawidité du bouton. (⑅˘꒳˘)
+- [`htmwbuttonewement.vawue`](/fw/docs/web/api/htmwbuttonewement/vawue)
+  - : une chaîne d-de cawactèwes w-wepwésentant wa v-vaweuw de fowmuwaiwe a-associé au c-contwôwe du bouton. 😳😳😳
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)_
+_héwite des méthodes de son pawent, 😳 [`htmwewement`](/fw/docs/web/api/htmwewement)_
 
-| Nom                                     | Valeur de retour | Description                                                          |
+| nyom                                     | vaweuw de wetouw | descwiption                                                          |
 | --------------------------------------- | ---------------- | -------------------------------------------------------------------- |
-| `checkValidity()`                       | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `reportValidity()`                      | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `setCustomValidity(in DOMString error)` | `void`           | Non prise en charge pour les éléments bouton ou de réinitialisation. |
+| `checkvawidity()`                       | b-boowéen          | n-nyon pwise e-en chawge pouw wes éwéments b-bouton ou de wéinitiawisation. XD |
+| `wepowtvawidity()`                      | boowéen          | nyon pwise en chawge pouw wes éwéments b-bouton o-ou de wéinitiawisation. mya |
+| `setcustomvawidity(in domstwing e-ewwow)` | `void`           | non pwise en chawge p-pouw wes éwéments b-bouton ou de wéinitiawisation. ^•ﻌ•^ |
 
-Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-submit-invalid`](/fr/docs/Web/CSS/:-moz-submit-invalid) permet de mettre en forme les boutons d'envoi de formulaire selon la validation du formulaire.
+p-pouw wes n-nyavigateuws utiwisant gecko, ʘwʘ wa pseudo-cwasse nyon standawd [`:-moz-submit-invawid`](/fw/docs/web/css/:-moz-submit-invawid) pewmet de mettwe e-en fowme wes boutons d-d'envoi de f-fowmuwaiwe sewon w-wa vawidation du f-fowmuwaiwe. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML qui porte cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Element/button)
+- w-w'éwément h-htmw qui powte cette intewface&nbsp;: [`<button>`](/fw/docs/web/htmw/ewement/button)

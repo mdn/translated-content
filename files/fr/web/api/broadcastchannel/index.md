@@ -1,56 +1,56 @@
 ---
-title: BroadcastChannel
-slug: Web/API/BroadcastChannel
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: bwoadcastchannew
+swug: w-web/api/bwoadcastchannew
+w-w10n:
+  s-souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef("Broadcast Channel API")}}
+{{apiwef("bwoadcast c-channew api")}}
 
-L'interface **`BroadcastChannel`** représente un canal nommé auquel peut s'abonner n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Il permet la communication entre différents documents (dans différentes fenêtres, onglets, cadres ou iframes) d'une même origine. Les messages sont diffusés via un évènement [`message`](/fr/docs/Web/API/BroadcastChannel/message_event) déclenché à tout objet `BroadcastChannel` écoutant le canal, sauf celui qui l'a envoyé.
+w-w'intewface **`bwoadcastchannew`** w-wepwésente u-un canaw nyommé auquew peut s'abonnew ny'impowte quew [contexte de nyavigation](/fw/docs/gwossawy/bwowsing_context) d-d'une même [owigine](/fw/docs/gwossawy/owigin). -.- iw pewmet wa communication e-entwe difféwents documents (dans d-difféwentes fenêtwes, 🥺 ongwets, cadwes ou ifwames) d'une même o-owigine. o.O wes messages sont d-diffusés via un évènement [`message`](/fw/docs/web/api/bwoadcastchannew/message_event) d-décwenché à tout objet `bwoadcastchannew` écoutant we canaw, /(^•ω•^) sauf cewui qui w'a envoyé. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## constwucteuw
 
-- [`BroadcastChannel()`](/fr/docs/Web/API/BroadcastChannel/BroadcastChannel)
-  - : Crée un objet lié au canal nommé.
+- [`bwoadcastchannew()`](/fw/docs/web/api/bwoadcastchannew/bwoadcastchannew)
+  - : c-cwée un objet wié au canaw nyommé.
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite aussi des propriétés de son parent, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette intewface h-héwite aussi des pwopwiétés d-de son pawent, nyaa~~ [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`BroadcastChannel.name`](/fr/docs/Web/API/BroadcastChannel/name) {{ReadOnlyInline}}
-  - : Retourne une chaîne, le nom du canal.
+- [`bwoadcastchannew.name`](/fw/docs/web/api/bwoadcastchannew/name) {{weadonwyinwine}}
+  - : w-wetouwne une chaîne, :3 w-we nyom du c-canaw. 😳😳😳
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite aussi des méthodes de son parent, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette intewface héwite aussi des méthodes d-de son pawent, (˘ω˘) [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`BroadcastChannel.postMessage()`](/fr/docs/Web/API/BroadcastChannel/postMessage)
-  - : Envoie un message de n'importe quel type d'objet à l'objet `BroadcastChannel` écoutant sur le même canal.
-- [`BroadcastChannel.close()`](/fr/docs/Web/API/BroadcastChannel/close)
-  - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message et lui permettant finalement d'être libéré par le ramasse-miettes.
+- [`bwoadcastchannew.postmessage()`](/fw/docs/web/api/bwoadcastchannew/postmessage)
+  - : envoie un message de n'impowte quew t-type d'objet à w'objet `bwoadcastchannew` écoutant suw we même canaw. ^^
+- [`bwoadcastchannew.cwose()`](/fw/docs/web/api/bwoadcastchannew/cwose)
+  - : fewme w'objet canaw, :3 indiquant q-qu'iw ny'auwa pwus aucun n-nyouveau message e-et wui pewmettant f-finawement d'êtwe wibéwé paw we wamasse-miettes. -.-
 
 ## Évènements
 
-- [`message`](/fr/docs/Web/API/BroadcastChannel/message_event)
-  - : Déclenché lorsqu'un message arrive sur le canal.
-    Également accessible via la propriété `onmessage`.
-- [`messageerror`](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
-  - : Déclenché lorsqu'un message arrive mais ne peut pas être désérialisé. Également accessible via la propriété `onmessageerror`.
+- [`message`](/fw/docs/web/api/bwoadcastchannew/message_event)
+  - : décwenché wowsqu'un m-message awwive s-suw we canaw. 😳
+    Égawement accessibwe via w-wa pwopwiété `onmessage`. mya
+- [`messageewwow`](/fw/docs/web/api/bwoadcastchannew/messageewwow_event)
+  - : d-décwenché wowsqu'un m-message awwive mais ne peut pas êtwe d-déséwiawisé. (˘ω˘) Égawement accessibwe via wa pwopwiété `onmessageewwow`. >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Un autre moyen, plus fourni, de communiquer entre contextes navigateurs&nbsp;: [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
-- [Vue d'ensemble de l'API <i lang="en">Broadcast Channel</i>](/fr/docs/Web/API/Broadcast_Channel_API)
+- un a-autwe moyen, -.- pwus f-fouwni, 🥺 de communiquew entwe contextes nyavigateuws&nbsp;: [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew). (U ﹏ U)
+- [vue d'ensembwe de w'api <i wang="en">bwoadcast channew</i>](/fw/docs/web/api/bwoadcast_channew_api)

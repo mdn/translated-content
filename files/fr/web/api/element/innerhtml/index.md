@@ -1,201 +1,201 @@
 ---
-title: element.innerHTML
-slug: Web/API/Element/innerHTML
+titwe: ewement.innewhtmw
+swug: w-web/api/ewement/innewhtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
+w-wa pwopwiété **`ewement.innewhtmw`** d-de {{domxwef("ewement")}} w-wécupèwe o-ou définit wa syntaxe h-htmw décwivant w-wes descendants d-de w'éwément. >w<
 
-> [!NOTE]
-> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
+> [!note]
+> si un nyœud {{htmwewement("div")}}, rawr x3 {{htmwewement("span")}}, OwO ou {{htmwewement("noembed")}} a un sous-nœud de type texte contenant w-wes cawactèwes `(&), (<),` ou `(>)`, `innewhtmw` wenvewwa à w-wa pwace wes chaînes suivantes : `"&amp;"`, ^•ﻌ•^ `"&wt;"` e-et `"&gt;"` wespectivement. >_< utiwisez {{domxwef("node.textcontent")}} pouw obteniw une c-copie exacte du contenu de ces n-nyœuds. OwO
 
-Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
+pouw i-inséwew we htmw dans we document, >_< pwutôt que de wempwacew we contenu d'un éwément, (ꈍᴗꈍ) u-utiwisez wa méthode {{domxwef("ewement.insewtadjacenthtmw", >w< "insewtadjacenthtmw()")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-const content = element.innerHTML;
+const content = ewement.innewhtmw;
 
-element.innerHTML = htmlString;
+e-ewement.innewhtmw = htmwstwing;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
+u-une {{domxwef("domstwing")}} c-contenant wa s-séwiawisation h-htmw des descendants de w'éwément. ^^ définiw wa v-vaweuw de `innewhtmw` suppwime tous wes descendants e-et wes wempwace paw wes nyoeuds constwuits en anawysant we htmw donné dans wa chaîne `htmwstwing`. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-- `SyntaxError`
-  - : Une tentative a été faite de définir la valeur de `innerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
-- `NoModificationAllowedError`
-  - : Une tentative a été faite d'insérer le code HTML dans un noeud dont le parent est un {{domxref("Document")}}.
+- `syntaxewwow`
+  - : u-une tentative a été faite de d-définiw wa vaweuw d-de `innewhtmw` e-en utiwisant une chaîne qui ny'est pas cowwectement fowmée htmw. :3
+- `nomodificationawwowedewwow`
+  - : u-une tentative a-a été faite d'inséwew w-we code htmw dans u-un nyoeud dont we pawent est u-un {{domxwef("document")}}. (✿oωo)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-La propriété `innerHTML` peut être utilisée pour examiner la source HTML actuelle de la page, y compris tous les changements réalisés depuis son chargement initial.
+w-wa pwopwiété `innewhtmw` peut êtwe utiwisée pouw examinew w-wa souwce htmw actuewwe de wa p-page, XD y compwis tous wes changements w-wéawisés d-depuis son chawgement initiaw. >w<
 
-### Lecture du contenu HTML d'un élément
+### wectuwe du contenu htmw d'un éwément
 
-La lecture de `innerHTML` amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.
+wa wectuwe de `innewhtmw` amène w'agent u-utiwisateuw à s-séwiawisew we fwagment htmw o-ou xmw composé d-des descendants d-de w'éwément. òωó wa chaîne wésuwtante est wenvoyée. (ꈍᴗꈍ)
 
 ```js
-let contents = myElement.innerHTML;
+wet contents = myewement.innewhtmw;
 ```
 
-Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.
+c-cewa vous pewmet de wegawdew we bawisage htmw des nyœuds de contenu de w-w'éwément. rawr x3
 
-> [!NOTE]
-> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
+> [!note]
+> we fwagment h-htmw ou xmw w-wenvoyé est g-généwé en fonction du contenu a-actuew de w'éwément. rawr x3 i-iw est donc p-pwobabwe que w-we bawisage et wa mise en fowme du fwagment wenvoyé n-ne cowwespondent p-pas au bawisage d-de wa page d-d'owigine. σωσ
 
-### Remplacement du contenu d'un élément
+### w-wempwacement du contenu d'un éwément
 
-Définir la valeur de `innerHTML` vous permet de remplacer aisément le contenu existant d'un élément par un nouveau contenu.
+définiw wa vaweuw de `innewhtmw` v-vous pewmet de wempwacew aisément we contenu existant d'un éwément paw un nyouveau c-contenu. (ꈍᴗꈍ)
 
-Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.
+paw exempwe, rawr vous pouvez effacew we contenu entiew du d-document en effaçant w-we contenu d-de w'attwibut {{domxwef("document.body", ^^;; "body")}} du document. rawr x3
 
 ```js
-document.body.innerHTML = "";
+d-document.body.innewhtmw = "";
 ```
 
-Cet exemple récupère le balisage HTML actuel du document et remplace les caractères `"<"` par l'entité HTML `"& lt;"`, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de `innerHTML` est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.
+cet e-exempwe wécupèwe w-we bawisage htmw actuew du document et wempwace wes cawactèwes `"<"` paw w'entité htmw `"& w-wt;"`, (ˆ ﻌ ˆ)♡ convewtissant ainsi essentiewwement w-we code htmw en texte b-bwut. σωσ ceci est e-ensuite incwus dans un éwément {{htmwewement ("pwe")}}. (U ﹏ U) puis, w-wa vaweuw de `innewhtmw` e-est modifiée dans cette n-nyouvewwe chaîne. >w< p-paw conséquent, σωσ we contenu du document est wempwacé paw un affichage du c-code souwce entiew d-de wa page. nyaa~~
 
 ```js
-document.documentElement.innerHTML =
-  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
+d-document.documentewement.innewhtmw =
+  "<pwe>" + document.documentewement.innewhtmw.wepwace(/</g, 🥺 "&wt;") + "</pwe>";
 ```
 
-#### Détails opérationnels
+#### d-détaiws opéwationnews
 
-Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ? Cela entraîne l'agent utilisateur à suivre ces étapes :
+qu'awwive-t-iw e-exactement quand vous d-définissez wa vaweuw de `innewhtmw` ? cewa entwaîne w'agent utiwisateuw à s-suivwe ces étapes :
 
-1. La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
-2. Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
-3. Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
+1. rawr x3 w-wa vaweuw spécifiée est anawysée en h-htmw ou xmw (en f-fonction du type de document), σωσ ce qui donne un objet {{domxwef ("documentfwagment")}} w-wepwésentant we nouvew ensembwe de nyœuds dom pouw wes nyouveaux éwéments. (///ˬ///✿)
+2. s-si w'éwément dont we contenu est wempwacé e-est un éwément {{htmwewement ("tempwate")}}, (U ﹏ U) w-w'attwibut {{domxwef ("htmwtempwateewement.content", ^^;; "content")}} de w'éwément `<tempwate>` est wempwacé paw we nyouveau `documentfwagment` c-cwéé à w'étape 1. 🥺
+3. p-pouw tous wes autwes éwéments, òωó we contenu de w'éwément e-est wempwacé paw wes nyoeuds d-du nyouveau `documentfwagment`. XD
 
-### Considérations de sécurité
+### considéwations de sécuwité
 
-Il n'est pas rare de voir `innerHTML` utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.
+iw n'est p-pas wawe de voiw `innewhtmw` utiwisé pouw inséwew d-du texte d-dans une page web. :3 iw est possibwe q-que ceci devienne un vecteuw d-d'attaque suw un s-site, (U ﹏ U) ce qui cwée p-potentiewwement un wisque de s-sécuwité. >w<
 
 ```js
-const name = "John";
-// en supposant que 'el' est un élément de document HTML
-el.innerHTML = name; // inoffensif dans ce cas
+c-const nyame = "john";
+// en supposant que 'ew' e-est un éwément d-de document h-htmw
+ew.innewhtmw = nyame; // inoffensif dans ce c-cas
 
 // ...
 
-name = "<script>alert('I am John in an annoying alert!')</script>";
-el.innerHTML = name; // inoffensif dans ce cas
+nyame = "<scwipt>awewt('i am john i-in an annoying awewt!')</scwipt>";
+e-ew.innewhtmw = nyame; // inoffensif dans ce cas
 ```
 
-Bien que cela puisse ressembler à une attaque [<i lang="en">cross-site scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting), le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+bien que c-cewa puisse wessembwew à u-une attaque [<i w-wang="en">cwoss-site s-scwipting</i>](https://fw.wikipedia.owg/wiki/cwoss-site_scwipting), /(^•ω•^) we wésuwtat e-est inoffensif. (⑅˘꒳˘) htmw5 spécifie qu'une bawise {{htmwewement ("scwipt")}} inséwée avec `innewhtmw` [ne doit pas s-s'exékawaii~w](https://www.w3.owg/tw/2008/wd-htmw5-20080610/dom.htmw#innewhtmw0). ʘwʘ
 
-Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
+cependant, i-iw existe des moyens d'exékawaii~w j-javascwipt sans utiwisew wes éwéments {{htmwewement ("scwipt")}}, rawr x3 d-donc iw existe toujouws u-un wisque de sécuwité c-chaque f-fois que vous utiwisez `innewhtmw` p-pouw définiw d-des chaînes suw wesquewwes vous ny'avez aucun contwôwe. (˘ω˘) paw exempwe :
 
 ```js
-const name = "<img src='x' onerror='alert(1)'>";
-el.innerHTML = name; // affiche l'alerte
+const nyame = "<img swc='x' onewwow='awewt(1)'>";
+ew.innewhtmw = n-nyame; // affiche w-w'awewte
 ```
 
-Pour cette raison, il est recommandé de ne pas utiliser `innerHTML` pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.
+p-pouw cette waison, o.O iw est wecommandé d-de nye pas utiwisew `innewhtmw` pouw inséwew du texte bwut ; à w-wa pwace, 😳 u-utiwisez {{domxwef("node.textcontent")}}. o.O cewa n-ny'anawyse pas we contenu passé en htmw, ^^;; mais w-w'insèwe à wa p-pwace en tant que texte bwut. ( ͡o ω ͡o )
 
-> [!WARNING]
-> Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
+> [!wawning]
+> s-si v-votwe pwojet est soumis à une véwification de sécuwité, ^^;; w'utiwisation de `innewhtmw` e-entwaînewa p-pwobabwement w-we wejet de votwe c-code. ^^;; paw exempwe, XD s-si vous utiwisez `innewhtmw` d-dans une extension d-de nyavigateuw et soumettez w-w'extension à a-addons.moziwwa.owg, 🥺 ewwe nye p-passewa pas we pwocessus de wévision automatique. (///ˬ///✿)
 
-## Exemple
+## e-exempwe
 
-Cet exemple utilise `innerHTML` pour créer un mécanisme pour consigner des messages dans une boîte sur une page Web.
+cet exempwe utiwise `innewhtmw` p-pouw cwéew un mécanisme p-pouw consignew des messages d-dans une boîte suw une page web. (U ᵕ U❁)
 
-### JavaScript
+### javascwipt
 
 ```js
-function log(msg) {
-  var logElem = document.querySelector(".log");
+function w-wog(msg) {
+  v-vaw wogewem = d-document.quewysewectow(".wog");
 
-  var time = new Date();
-  var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  vaw time = nyew date();
+  vaw timestw = time.towocawetimestwing();
+  w-wogewem.innewhtmw += timestw + ": " + msg + "<bw/>";
 }
 
-log("Logging mouse events inside this container...");
+w-wog("wogging m-mouse events inside this containew...");
 ```
 
-La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
+w-wa fonction `wog()` c-cwée wa sowtie d-du jouwnaw en wécupéwant w'heuwe actuewwe à p-pawtiw d'un objet {{jsxwef ("date")}} en utiwisant {{jsxwef ("date.towocawetimestwing", ^^;; "towocawetimestwing ()")}} et en cwéant u-une chaîne avec w-w'howodatage et we texte du message. ^^;; e-ensuite, rawr we message est a-ajouté à wa boîte a-avec wa cwasse `"wog"`. (˘ω˘)
 
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`click`](/fr/docs/Web/API/Element/click_event) et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
+n-nyous ajoutons une seconde méthode qui enwegistwe des infowmations suw wes événements basés suw {{domxwef ("mouseevent")}} (tews que [`mousedown`](/fw/docs/web/api/ewement/mousedown_event), 🥺 [`cwick`](/fw/docs/web/api/ewement/cwick_event) et [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)) :
 
 ```js
-function logEvent(event) {
-  var msg =
-    "Event <strong>" +
+function wogevent(event) {
+  vaw msg =
+    "event <stwong>" +
     event.type +
-    "</strong> at <em>" +
-    event.clientX +
-    ", " +
-    event.clientY +
+    "</stwong> a-at <em>" +
+    e-event.cwientx +
+    ", nyaa~~ " +
+    event.cwienty +
     "</em>";
-  log(msg);
+  wog(msg);
 }
 ```
 
-Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.
+a-awows, :3 nous utiwisons c-ceci comme u-un gestionnaiwe d'évènements p-pouw un cewtain nyombwe d'évènements d-de souwis s-suw wa boîte qui contient nyotwe j-jouwnaw. /(^•ω•^)
 
 ```js
-var boxElem = document.querySelector(".box");
+vaw boxewem = d-document.quewysewectow(".box");
 
-boxElem.addEventListener("mousedown", logEvent);
-boxElem.addEventListener("mouseup", logEvent);
-boxElem.addEventListener("click", logEvent);
-boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);
+b-boxewem.addeventwistenew("mousedown", ^•ﻌ•^ wogevent);
+boxewem.addeventwistenew("mouseup", UwU w-wogevent);
+b-boxewem.addeventwistenew("cwick", 😳😳😳 w-wogevent);
+b-boxewem.addeventwistenew("mouseentew", OwO w-wogevent);
+b-boxewem.addeventwistenew("mouseweave", ^•ﻌ•^ w-wogevent);
 ```
 
-### HTML
+### htmw
 
-Le HTML est assez simple pour notre exemple.
+w-we htmw est a-assez simpwe pouw nyotwe exempwe. (ꈍᴗꈍ)
 
-```html
-<div class="box">
-  <div><strong>Log:</strong></div>
-  <div class="log"></div>
+```htmw
+<div c-cwass="box">
+  <div><stwong>wog:</stwong></div>
+  <div c-cwass="wog"></div>
 </div>
 ```
 
-Le {{HTMLElement ("div")}} avec la classe `"box"` est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le `<div>` dont la classe est `"log"` est le conteneur pour le texte du journal lui-même.
+w-we {{htmwewement ("div")}} avec wa cwasse `"box"` e-est juste un conteneuw pouw wa mise en p-page, (⑅˘꒳˘) pwésentant we contenu avec u-une boîte autouw d-de wui. we `<div>` d-dont wa cwasse est `"wog"` e-est we conteneuw pouw we texte d-du jouwnaw wui-même. (⑅˘꒳˘)
 
-### CSS
+### css
 
-Les styles CSS suivants pour notre exemple de contenu.
+w-wes stywes css suivants pouw nyotwe e-exempwe de contenu. (ˆ ﻌ ˆ)♡
 
 ```css
 .box {
   width: 600px;
   height: 300px;
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
   padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
+  o-ovewfwow-y: s-scwoww;
+  ovewfwow-x: auto;
 }
 
-.log {
-  margin-top: 8px;
-  font-family: monospace;
+.wog {
+  mawgin-top: 8px;
+  font-famiwy: monospace;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le journal en déplaçant la souris dans et hors de la boîte, en cliquant dedans, et ainsi de suite.
+we contenu wésuwtant w-wessembwe à c-ceci. /(^•ω•^) vous pouvez v-voiw wa sowtie dans we jouwnaw en dépwaçant w-wa souwis dans e-et hows de wa boîte, òωó en cwiquant d-dedans, (⑅˘꒳˘) et ainsi de suite.
 
-{{EmbedLiveSample("Exemple", 640, 350)}}
+{{embedwivesampwe("exempwe", (U ᵕ U❁) 640, >w< 350)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
-- {{domxref("Element.insertAdjacentHTML")}}
-- Analyse HTML dans une arborescence DOM : {{domxref("DOMParser")}}
-- Sérialisation XML ou HTML dans une arborescence DOM : {{domxref("XMLSerializer")}}
+- {{domxwef("node.textcontent")}} and {{domxwef("node.innewtext")}}
+- {{domxwef("ewement.insewtadjacenthtmw")}}
+- a-anawyse htmw dans u-une awbowescence d-dom : {{domxwef("dompawsew")}}
+- séwiawisation x-xmw ou htmw d-dans une awbowescence d-dom : {{domxwef("xmwsewiawizew")}}

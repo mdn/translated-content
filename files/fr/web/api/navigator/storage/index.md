@@ -1,25 +1,25 @@
 ---
-title: Navigator.storage
-slug: Web/API/Navigator/storage
+titwe: nyavigatow.stowage
+swug: w-web/api/navigatow/stowage
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}
 
-La propriété en lecture seule **`Navigator.storage`** renvoie l'objet singleton [`StorageManager`](/fr/docs/Web/API/StorageManager) qui permet d'accéder aux différentes fonctionnalités de stockage du navigateur pour le site ou l'application courante. L'objet renvoyé permet d'examiner et de configurer la persistance des magasins de données et de connaître approximativement l'espace disponible restant pour le stockage local du navigateur.
+w-wa pwopwiété e-en wectuwe seuwe **`navigatow.stowage`** w-wenvoie w-w'objet singweton [`stowagemanagew`](/fw/docs/web/api/stowagemanagew) q-qui pewmet d-d'accédew aux d-difféwentes fonctionnawités de stockage du nyavigateuw pouw we site ou w'appwication couwante. rawr x3 w-w'objet wenvoyé pewmet d'examinew et de configuwew w-wa pewsistance des magasins d-de données et de connaîtwe appwoximativement w'espace disponibwe westant pouw w-we stockage wocaw du nyavigateuw. mya
 
-## Valeur
+## v-vaweuw
 
-Un objet [`StorageManager`](/fr/docs/Web/API/StorageManager) qui peut être utilisé pour gérer la persistance des données enregistrées et qui permet de connaître approximativement l'espace restant pour le stockage des données.
+u-un objet [`stowagemanagew`](/fw/docs/web/api/stowagemanagew) qui peut êtwe utiwisé pouw géwew wa pewsistance d-des données enwegistwées et qui pewmet de connaîtwe appwoximativement w'espace w-westant pouw we stockage des données. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`StorageManager`](/fr/docs/Web/API/StorageManager)
-- [`Navigator`](/fr/docs/Web/API/Navigator)
+- [`stowagemanagew`](/fw/docs/web/api/stowagemanagew)
+- [`navigatow`](/fw/docs/web/api/navigatow)

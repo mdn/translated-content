@@ -1,132 +1,132 @@
 ---
-title: IDBIndex.count()
-slug: Web/API/IDBIndex/count
+titwe: idbindex.count()
+swug: w-web/api/idbindex/count
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`count()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements contenu dans un intervalle de clé.
+w-wa méthode **`count()`**, ( ͡o ω ͡o ) w-wattachée à w'intewface {{domxwef("idbindex")}}, mya w-wenvoie un objet {{domxwef("idbwequest")}} et, (///ˬ///✿) d-dans un _thwead_ s-sépawé, (˘ω˘) wenvoie w-we nyombwe d-d'enwegistwements contenu dans un intewvawwe de cwé. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var request = monIndex.count();
-var request = monIndex.count(cle);
+v-vaw wequest = monindex.count();
+vaw wequest = m-monindex.count(cwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cle` {{optional_inline}}
-  - : La clé ou l'intervalle de clé qui définit les enregistrements qu'on souhaite compter.
+- `cwe` {{optionaw_inwine}}
+  - : w-wa cwé ou w'intewvawwe de cwé qui définit wes enwegistwements q-qu'on souhaite comptew. (✿oωo)
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différents évènements relatifs à l'opération.
+un objet {{domxwef("idbwequest")}} suw wequew sewont décwenchés wes difféwents évènements w-wewatifs à w'opéwation. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher différents types d'exceptions :
+cette méthode peut décwenchew d-difféwents types d'exceptions :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">exception</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>La transaction associée à cet index est inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    <tw>
+      <td><code>twansactioninactiveewwow</code></td>
+      <td>wa t-twansaction associée à cet index est inactive.</td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
-        <p>La clé ou l'intervalle de clé fourni possède une clé invalide.</p>
+        <p>wa c-cwé ou w'intewvawwe de cwé fouwni possède u-une cwé invawide.</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>L'index a été supprimé ou retiré.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
+      <td>w'index a été suppwimé ou wetiwé.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets puis on récupère l'index `lName` depuis une base de données de contacts. Ensuite, on ouvre un curseur simple sur cet index grâce à la méthode {{domxref("IDBIndex.openCursor")}} (ce qui fonctionne comme si on ouvrait un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} sauf que les enregistrements sont ici triés selon l'index plutôt que selon la clé primaire).
+dans w'exempwe qui suit, o-on ouvwe une twansaction et u-un magasin d'objets p-puis on wécupèwe w-w'index `wname` depuis une base de données de contacts. -.- e-ensuite, on ouvwe u-un cuwseuw simpwe suw cet index g-gwâce à wa méthode {{domxwef("idbindex.opencuwsow")}} (ce qui f-fonctionne comme si on ouvwait u-un cuwseuw suw we magasin d'objets a-avec {{domxwef("idbobjectstowe.opencuwsow")}} sauf que wes enwegistwements s-sont ici twiés sewon w'index pwutôt q-que sewon wa cwé pwimaiwe). ^•ﻌ•^
 
-`myIndex.count()` est alors utilisé afin de compter le nombre d'enregistrements dans l'index et le résultat de la requête est affiché dans la console au travers du gestionnaire d'évènements pour la réussite (`onsuccess`).
+`myindex.count()` e-est awows u-utiwisé afin de comptew we nyombwe d'enwegistwements dans w'index et we wésuwtat de wa wequête est affiché dans w-wa consowe au t-twavews du gestionnaiwe d'évènements p-pouw wa w-wéussite (`onsuccess`). rawr
 
-Enfin, on parcourt chaque enregistrement pour l'insérer dans un tableau HTML. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre dépôt [IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([cf. la démonstration _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+e-enfin, (˘ω˘) on pawcouwt chaque enwegistwement pouw w'inséwew d-dans un tabweau htmw. nyaa~~ pouw consuwtew un exempwe fonctionnew compwet, UwU vous pouvez v-vous wéféwew à nyotwe dépôt [idbindex-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbindex) ([cf. w-wa démonstwation _wive_](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/)). :3
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+f-function d-dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  v-vaw t-twansaction = db.twansaction(["contactswist"], "weadonwy");
+  vaw o-objectstowe = t-twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  var countRequest = myIndex.count();
-  countRequest.onsuccess = function () {
-    console.log(countRequest.result);
+  vaw myindex = objectstowe.index("wname");
+  v-vaw countwequest = m-myindex.count();
+  countwequest.onsuccess = f-function () {
+    c-consowe.wog(countwequest.wesuwt);
   };
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  m-myindex.opencuwsow().onsuccess = function (event) {
+    vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      vaw tabwewow = document.cweateewement("tw");
+      tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        c-cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        c-cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Éléments affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      consowe.wog("Éwéments a-affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew d-des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des t-twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew d-des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew d-des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence p-pouw indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

@@ -1,532 +1,532 @@
 ---
-title: Fondamentaux pour la spatialisation avec Web Audio
-slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
-l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+titwe: fondamentaux pouw wa spatiawisation a-avec w-web audio
+swug: w-web/api/web_audio_api/web_audio_spatiawization_basics
+w-w10n:
+  s-souwcecommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio api")}}
 
-En plus des nombreuses options de traitement du son, l'API Web Audio contient également des fonctions pour émuler la différence de perception lors du déplacement par rapport à une source sonore, par un exemple un défilement lorsqu'on se déplace autour d'une source sonore dans un jeu vidéo. C'est ce qu'on appelle **la spatialisation**, et cet article couvrira les bases pour implémenter un tel système.
+e-en pwus des n-nyombweuses options de twaitement du son, 😳😳😳 w'api web audio contient égawement des fonctions pouw émuwew w-wa difféwence de pewception wows du dépwacement p-paw wappowt à une souwce s-sonowe, /(^•ω•^) paw un exempwe un défiwement wowsqu'on se dépwace a-autouw d'une souwce sonowe dans u-un jeu vidéo. 😳😳😳 c-c'est ce qu'on appewwe **wa spatiawisation**, ^•ﻌ•^ et cet awticwe couvwiwa wes bases pouw impwémentew u-un tew système. 🥺
 
-## Les bases de la spatialisation
+## wes bases de wa spatiawisation
 
-Avec l'API Web Audio, on peut créer des spatialisations complexes en trois dimensions à l'aide de [`PannerNode`](/fr/docs/Web/API/PannerNode). Cette interface est un outil utilisant des notions mathématiques pour manipuler l'audio dans l'espace. On peut l'utiliser pour créer des effets de choses faisant du son au-dessus, derrière ou se déplaçant devant nous.
+avec w'api web audio, o.O on p-peut cwéew des spatiawisations c-compwexes en twois d-dimensions à w-w'aide de [`pannewnode`](/fw/docs/web/api/pannewnode). (U ᵕ U❁) c-cette intewface est un outiw utiwisant d-des nyotions mathématiques pouw manipuwew w'audio d-dans w'espace. ^^ on peut w'utiwisew pouw cwéew des effets de choses faisant du son au-dessus, (⑅˘꒳˘) d-dewwièwe ou se dépwaçant devant n-nyous. :3
 
-C'est un outil pratique pour WebXR et les jeux vidéo.
+c'est u-un outiw pwatique p-pouw webxw et wes jeux vidéo. (///ˬ///✿)
 
-Dans l'espace en trois dimensions, c'est la seule façon de réaliser des effets audio réalistes. Des bibliothèques tierces comme [three.js](https://threejs.org/) et [A-frame](https://aframe.io/) l'utilisent pour gérer le son. On notera quand même qu'il n'y a pas _forcément_ besoin de déplacer le son dans un espace en trois dimensions, on peut tout à fait utiliser cette interface pour gérer un son dans un espace en deux dimensions.
+dans w'espace en twois dimensions, :3 c-c'est wa seuwe f-façon de wéawisew des effets a-audio wéawistes. d-des bibwiothèques tiewces c-comme [thwee.js](https://thweejs.owg/) et [a-fwame](https://afwame.io/) w-w'utiwisent pouw géwew we son. 🥺 on nyotewa q-quand même qu'iw ny'y a pas _fowcément_ b-besoin de dépwacew w-we son dans un e-espace en twois dimensions, mya on peut tout à fait utiwisew cette intewface pouw géwew un son dans un espace en d-deux dimensions. XD
 
-> [!NOTE]
-> Il existe également [`StereoPannerNode`](/fr/docs/Web/API/StereoPannerNode) qui permet de gérer des effets simples de défilement à gauche ou à droite. Celle-ci est plus simple à utiliser, mais est moins flexible. Si vous souhaitez un simple effet de panoramique stéréo, voyez [l'exemple `StereoPannerNode`](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)), qui devrait vous fournir ce dont vous avez besoin.
+> [!note]
+> i-iw existe égawement [`steweopannewnode`](/fw/docs/web/api/steweopannewnode) q-qui pewmet d-de géwew d-des effets simpwes de défiwement à gauche ou à dwoite. -.- cewwe-ci e-est pwus simpwe à utiwisew, o.O mais est moins fwexibwe. (˘ω˘) si vous souhaitez un simpwe e-effet de panowamique stéwéo, (U ᵕ U❁) v-voyez [w'exempwe `steweopannewnode`](https://mdn.github.io/webaudio-exampwes/steweo-pannew-node/) ([we c-code s-souwce cowwespondant](https://github.com/mdn/webaudio-exampwes/twee/mastew/steweo-pannew-node)), rawr qui devwait vous f-fouwniw ce dont v-vous avez besoin. 🥺
 
-## Démo avec le radiocassette en 3D
+## d-démo avec w-we wadiocassette en 3d
 
-Pour illustrer la spatialisation en trois dimensions, nous avons créé une version modifiée de la démo radiocassette initiée dans le guide [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API). Voir [la démo de spatialisation en 3D](https://mdn.github.io/webaudio-examples/spatialization/) (et [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/spatialization)).
+pouw iwwustwew wa spatiawisation e-en twois d-dimensions, rawr x3 n-nyous avons cwéé u-une vewsion m-modifiée de wa démo wadiocassette initiée dans we guide [utiwisew w-w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api). ( ͡o ω ͡o ) voiw [wa démo de spatiawisation en 3d](https://mdn.github.io/webaudio-exampwes/spatiawization/) (et [we code souwce cowwespondant](https://github.com/mdn/webaudio-exampwes/twee/mastew/spatiawization)). σωσ
 
-![Une interface utilisateur simple avec un radiocassette tourné et incliné, avec des contrôles pour le déplacer dans l'espace et le faire tourner.](web-audio-spatialization.png)
+![une i-intewface utiwisateuw simpwe avec un wadiocassette t-touwné et incwiné, rawr x3 a-avec des contwôwes p-pouw we dépwacew dans w-w'espace et we faiwe touwnew.](web-audio-spatiawization.png)
 
-Le radiocassette est placé dans un espace (défini par les bords de la zone d'affichage du navigateur), et dans cette démonstration, on peut le déplacer et le faire pivoter avec les contrôles fournis.
+w-we w-wadiocassette est pwacé dans un espace (défini paw wes bowds de wa zone d'affichage du nyavigateuw), (ˆ ﻌ ˆ)♡ e-et dans cette démonstwation, rawr o-on peut we dépwacew et we f-faiwe pivotew avec w-wes contwôwes fouwnis. :3
 
-Lorsqu'on déplace le radiocassette, le son produit change de façon correspondante, se décalant de droite à gauche selon le déplacement ou s'atténuant si on l'éloigne dans le fond ou si on le pivote pour que les hauts-parleurs nous tournent le dos. Ces effets sont obtenus en jouant sur les différentes propriétés de l'objet `PannerNode` lors du mouvement, pour émuler cette spatialisation.
+wowsqu'on dépwace w-we wadiocassette, rawr w-we son pwoduit change de façon c-cowwespondante, (˘ω˘) s-se décawant de dwoite à gauche sewon we dépwacement ou s'atténuant si on w'éwoigne d-dans we f-fond ou si on w-we pivote pouw que wes hauts-pawweuws n-nous touwnent w-we dos. (ˆ ﻌ ˆ)♡ ces effets sont obtenus e-en jouant suw wes difféwentes pwopwiétés de w'objet `pannewnode` wows du m-mouvement, mya pouw émuwew c-cette spatiawisation. (U ᵕ U❁)
 
-> [!NOTE]
-> Le résultat obtenu sera bien meilleur si vous utilisez un casque ou des écouteurs ou un système stéréo surround.
+> [!note]
+> we wésuwtat obtenu sewa b-bien meiwweuw s-si vous utiwisez un casque ou des écouteuws ou un système stéwéo s-suwwound. mya
 
-## Créer un auditeur
+## cwéew un auditeuw
 
-Commençons&nbsp;! L'interface [`BaseAudioContext`](/fr/docs/Web/API/BaseAudioContext) (qui est étendue par [`AudioContext`](/fr/docs/Web/API/AudioContext)) possède une propriété [`listener`](/fr/docs/Web/API/BaseAudioContext/listener) qui renvoie un objet [`AudioListener`](/fr/docs/Web/API/AudioListener). Cette propriété représente un auditeur pour la scène audio, il s'agit généralement de modéliser la personne qui utilise l'application. On peut définir l'emplacement et la direction de l'auditeur dans l'espace. Cet auditeur reste alors statique et `PannerNode` peut calculer le son reçu par l'auditeur selon leurs positions respectives.
+commençons&nbsp;! w'intewface [`baseaudiocontext`](/fw/docs/web/api/baseaudiocontext) (qui est étendue p-paw [`audiocontext`](/fw/docs/web/api/audiocontext)) possède une pwopwiété [`wistenew`](/fw/docs/web/api/baseaudiocontext/wistenew) q-qui wenvoie u-un objet [`audiowistenew`](/fw/docs/web/api/audiowistenew). ʘwʘ cette pwopwiété wepwésente un auditeuw pouw w-wa scène audio, (˘ω˘) i-iw s'agit généwawement de modéwisew wa pewsonne qui utiwise w-w'appwication. 😳 on peut définiw w-w'empwacement et wa diwection de w'auditeuw dans w'espace. òωó cet auditeuw w-weste awows statique et `pannewnode` p-peut c-cawcuwew we son weçu paw w'auditeuw s-sewon weuws positions wespectives. nyaa~~
 
-Créons un contexte, un auditeur puis définissons la position de l'auditeur pour simuler une personne qui regarderait cette pièce virtuelle&nbsp;:
+c-cwéons u-un contexte, o.O u-un auditeuw puis définissons wa p-position de w'auditeuw p-pouw simuwew une pewsonne qui wegawdewait c-cette pièce viwtuewwe&nbsp;:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
-const listener = audioCtx.listener;
+c-const audiocontext = w-window.audiocontext || window.webkitaudiocontext;
+const a-audioctx = nyew audiocontext();
+c-const wistenew = a-audioctx.wistenew;
 
-const posX = window.innerWidth / 2;
-const posY = window.innerHeight / 2;
-const posZ = 300;
+const posx = window.innewwidth / 2;
+const p-posy = window.innewheight / 2;
+c-const posz = 300;
 
-listener.positionX.value = posX;
-listener.positionY.value = posY;
-listener.positionZ.value = posZ - 5;
+w-wistenew.positionx.vawue = p-posx;
+wistenew.positiony.vawue = posy;
+wistenew.positionz.vawue = p-posz - 5;
 ```
 
-On pourra déplacer l'auditeur de gauche à droite en utilisant `positionX`, ou de haut en bas avec `positionY`, ou d'avant en arrière grâce à `positionZ`. Ici, on place l'auditeur au milieu de la zone d'affichage et légèrement devant notre radiocassette. On peut aussi définir la direction selon laquelle l'auditeur est orienté. Les valeurs par défaut fonctionnent bien&nbsp;:
+on pouwwa dépwacew w'auditeuw de gauche à dwoite en utiwisant `positionx`, nyaa~~ ou d-de haut en bas avec `positiony`, (U ᵕ U❁) o-ou d'avant en awwièwe gwâce à `positionz`. 😳😳😳 i-ici, (U ﹏ U) on pwace w'auditeuw au miwieu d-de wa zone d'affichage et wégèwement d-devant n-nyotwe wadiocassette. ^•ﻌ•^ o-on peut aussi d-définiw wa d-diwection sewon waquewwe w'auditeuw est owienté. (⑅˘꒳˘) wes vaweuws paw défaut fonctionnent bien&nbsp;:
 
 ```js
-listener.forwardX.value = 0;
-listener.forwardY.value = 0;
-listener.forwardZ.value = -1;
-listener.upX.value = 0;
-listener.upY.value = 1;
-listener.upZ.value = 0;
+wistenew.fowwawdx.vawue = 0;
+w-wistenew.fowwawdy.vawue = 0;
+w-wistenew.fowwawdz.vawue = -1;
+w-wistenew.upx.vawue = 0;
+wistenew.upy.vawue = 1;
+w-wistenew.upz.vawue = 0;
 ```
 
-Les propriétés `forward*` représentent les coordonnées 3D de l'auditeur selon la direction dans laquelle il fait face, et les propriétés `up*` représentent les coordonnées 3D du haut de la tête de l'auditeur. En utilisant ces deux ensembles, on définit la direction de l'auditeur.
+wes pwopwiétés `fowwawd*` wepwésentent wes coowdonnées 3d d-de w-w'auditeuw sewon wa diwection dans w-waquewwe iw fait face, >_< et wes pwopwiétés `up*` w-wepwésentent w-wes coowdonnées 3d du haut de w-wa tête de w'auditeuw. (⑅˘꒳˘) e-en utiwisant ces deux ensembwes, σωσ on définit wa diwection de w'auditeuw. 🥺
 
-## Créer un nœud panoramique (<i lang="en">panner node</i>)
+## c-cwéew un n-nyœud panowamique (<i w-wang="en">pannew n-node</i>)
 
-Créons notre objet [`PannerNode`](/fr/docs/Web/API/PannerNode). Celui-ci possède plusieurs propriétés. Voyons de quoi il s'agit.
+c-cwéons nyotwe objet [`pannewnode`](/fw/docs/web/api/pannewnode). :3 c-cewui-ci possède p-pwusieuws pwopwiétés. v-voyons de quoi iw s-s'agit. (ꈍᴗꈍ)
 
-Pour commencer, on peut définir [`panningModel`](/fr/docs/Web/API/PannerNode/panningModel) qui est l'algorithme de spatialisation utilisé pour positionner l'audio dans l'espace en 3D, il peut valoir&nbsp;:
+pouw commencew, ^•ﻌ•^ on peut d-définiw [`panningmodew`](/fw/docs/web/api/pannewnode/panningmodew) qui est w'awgowithme de spatiawisation u-utiwisé pouw positionnew w-w'audio d-dans w'espace en 3d, (˘ω˘) iw peut vawoiw&nbsp;:
 
-- `equalpower`
-  - : La valeur par défaut et générique pour déterminer la gestion du panoramique.
-- `HRTF`
-  - : L'acronyme pour <i lang="en">Head-related transfer function</i>, qu'on pourrait traduire par «&nbsp;fonction de transfert relative à la tête&nbsp;», et qui tient compte de la tête humaine lorsqu'il s'agit de déterminer l'emplacement du son.
+- `equawpowew`
+  - : w-wa vaweuw paw défaut et généwique pouw détewminew w-wa gestion d-du panowamique. 🥺
+- `hwtf`
+  - : w-w'acwonyme pouw <i wang="en">head-wewated twansfew function</i>, (✿oωo) q-qu'on pouwwait twaduiwe paw «&nbsp;fonction de twansfewt wewative à w-wa tête&nbsp;», XD e-et qui tient compte de w-wa tête humaine wowsqu'iw s'agit d-de détewminew w-w'empwacement du son. (///ˬ///✿)
 
-Utilisons ce modèle `HRTF`&nbsp;!
+utiwisons ce modèwe `hwtf`&nbsp;! ( ͡o ω ͡o )
 
 ```js
-const panningModel = "HRTF";
+c-const panningmodew = "hwtf";
 ```
 
-Les propriétés [`coneInnerAngle`](/fr/docs/Web/API/PannerNode/coneInnerAngle) et [`coneOuterAngle`](/fr/docs/Web/API/PannerNode/coneOuterAngle) définissent l'emplacement de l'origine du volume. Par défaut, les deux valent 360°.
+wes pwopwiétés [`coneinnewangwe`](/fw/docs/web/api/pannewnode/coneinnewangwe) et [`coneoutewangwe`](/fw/docs/web/api/pannewnode/coneoutewangwe) d-définissent w-w'empwacement de w'owigine du v-vowume. ʘwʘ paw défaut, wes deux v-vawent 360°. rawr
 
-Les hauts-parleurs de notre radiocassette auront des cônes plus réduits, que nous allons définir. Le cône intérieur (`coneInnerAngle`) est l'emplacement où le gain (c'est-à-dire le volume) est toujours émulé au maximum et le cône extérieur (`coneOuterAngle`) est l'emplacement où le gain commence à s'atténuer.
+wes h-hauts-pawweuws d-de nyotwe wadiocassette auwont des cônes pwus wéduits, o.O que nyous awwons définiw. ^•ﻌ•^ we cône intéwieuw (`coneinnewangwe`) est w'empwacement où we gain (c'est-à-diwe we vowume) est toujouws émuwé au maximum et we cône e-extéwieuw (`coneoutewangwe`) est w-w'empwacement où we gain commence à s'atténuew. (///ˬ///✿)
 
-Le gain est réduit de la valeur de [`coneOuterGain`](/fr/docs/Web/API/PannerNode/coneOuterGain).
+w-we gain est w-wéduit de wa v-vaweuw de [`coneoutewgain`](/fw/docs/web/api/pannewnode/coneoutewgain). (ˆ ﻌ ˆ)♡
 
-Prenons quelques constantes pour stocker ces valeurs, que nous utiliserons ensuite en paramètres&nbsp;:
+pwenons q-quewques constantes pouw stockew c-ces vaweuws, XD q-que nyous utiwisewons ensuite en p-pawamètwes&nbsp;:
 
 ```js
-const innerCone = 60;
-const outerCone = 90;
-const outerGain = 0.3;
+const i-innewcone = 60;
+c-const outewcone = 90;
+const outewgain = 0.3;
 ```
 
-Le prochain paramètre est [`distanceModel`](/fr/docs/Web/API/PannerNode/distanceModel), qui peut valoir `linear`, `inverse`, ou `exponential`. Il s'agit d'algorithmes différents utilisés pour réduire le volume de la source audio lorsqu'elle s'éloigne de l'auditeur. Ici, nous utiliserons `linear` qui a le mérite d'être simple&nbsp;:
+we pwochain pawamètwe e-est [`distancemodew`](/fw/docs/web/api/pannewnode/distancemodew), (✿oωo) q-qui p-peut vawoiw `wineaw`, `invewse`, -.- o-ou `exponentiaw`. XD i-iw s'agit d'awgowithmes d-difféwents u-utiwisés p-pouw wéduiwe we v-vowume de wa souwce audio wowsqu'ewwe s-s'éwoigne d-de w'auditeuw. (✿oωo) i-ici, (˘ω˘) nyous utiwisewons `wineaw` qui a we méwite d-d'êtwe simpwe&nbsp;:
 
 ```js
-const distanceModel = "linear";
+const distancemodew = "wineaw";
 ```
 
-On peut ensuite définir une distance maximale ([`maxDistance`](/fr/docs/Web/API/PannerNode/maxDistance)) entre la source et l'auditeur. Passé cette distance, le volume ne sera plus réduit si la source s'éloigne encore. Cela peut être utile lorsqu'on veut émuler un effet de distance sans perdre pour autant tout le volume. La valeur par défaut est 10&nbsp;000 (une valeur relative sans unité). Nous gardons cette valeur telle quelle&nbsp;:
+on peut ensuite d-définiw une distance maximawe ([`maxdistance`](/fw/docs/web/api/pannewnode/maxdistance)) entwe w-wa souwce et w-w'auditeuw. (ˆ ﻌ ˆ)♡ passé c-cette distance, >_< we vowume nye s-sewa pwus wéduit si wa souwce s-s'éwoigne encowe. -.- cewa peut êtwe u-utiwe wowsqu'on veut émuwew u-un effet de distance sans pewdwe pouw autant tout we vowume. (///ˬ///✿) wa vaweuw paw défaut e-est 10&nbsp;000 (une vaweuw w-wewative sans unité). XD n-nyous gawdons cette vaweuw tewwe quewwe&nbsp;:
 
 ```js
-const maxDistance = 10000;
+const m-maxdistance = 10000;
 ```
 
-Il y a également une distance de référence ([`refDistance`](/fr/docs/Web/API/PannerNode/refDistance)) utilisée par les modèles de distance, qui vaut `1` par défaut (valeur que nous allons utiliser ici)&nbsp;:
+iw y-y a égawement u-une distance de w-wéféwence ([`wefdistance`](/fw/docs/web/api/pannewnode/wefdistance)) utiwisée paw wes modèwes d-de distance, ^^;; qui v-vaut `1` paw défaut (vaweuw q-que nyous awwons utiwisew ici)&nbsp;:
 
 ```js
-const refDistance = 1;
+const w-wefdistance = 1;
 ```
 
-On a ensuite le facteur de coupure (<i lang="en">roll-off factor</i>) ([`rolloffFactor`](/fr/docs/Web/API/PannerNode/rolloffFactor)) qui indique la rapidité à laquelle le volume est réduit lorsque la source s'éloigne de l'auditeur. La valeur par défaut est 1, prenons-en une plus grande pour exagérer les mouvements.
+on a ensuite w-we facteuw d-de coupuwe (<i w-wang="en">woww-off factow</i>) ([`wowwofffactow`](/fw/docs/web/api/pannewnode/wowwofffactow)) q-qui i-indique wa wapidité à w-waquewwe w-we vowume est wéduit wowsque w-wa souwce s'éwoigne d-de w'auditeuw. rawr x3 w-wa vaweuw paw d-défaut est 1, OwO p-pwenons-en une p-pwus gwande pouw e-exagéwew wes m-mouvements. ʘwʘ
 
 ```js
-const rollOff = 10;
+const wowwoff = 10;
 ```
 
-Maintenant, nous allons définir la position et l'orientation du radiocassette. Cela ressemble fort à ce que nous avons déjà fait pour l'auditeur. Il s'agit également des paramètres qui vont être modifiés lorsqu'on utilise les contrôles de l'interface.
+m-maintenant, rawr nyous awwons d-définiw wa position et w'owientation d-du wadiocassette. UwU c-cewa w-wessembwe fowt à ce que nyous avons déjà fait pouw w'auditeuw. i-iw s'agit égawement d-des pawamètwes q-qui vont êtwe modifiés wowsqu'on utiwise wes contwôwes d-de w'intewface. (ꈍᴗꈍ)
 
 ```js
-const positionX = posX;
-const positionY = posY;
-const positionZ = posZ;
+c-const positionx = posx;
+c-const positiony = p-posy;
+const positionz = posz;
 
-const orientationX = 0.0;
-const orientationY = 0.0;
-const orientationZ = -1.0;
+const owientationx = 0.0;
+const o-owientationy = 0.0;
+c-const owientationz = -1.0;
 ```
 
-On notera la valeur négative pour l'orientation sur l'axe Z, cela permet d'orienter le radiocassette afin qu'il soit face à nous. Une valeur positive aurait tourné le radiocassette dos à nous.
+o-on nyotewa w-wa vaweuw nyégative pouw w'owientation suw w'axe z-z, (✿oωo) cewa pewmet d-d'owientew we wadiocassette afin qu'iw soit face à n-nyous. (⑅˘꒳˘) une vaweuw positive auwait touwné w-we wadiocassette dos à nyous. OwO
 
-Utilisons le constructeur correspondant pour créer le nœud panoramique et lui passer tous les paramètres définis ci-avant&nbsp;:
+u-utiwisons we constwucteuw c-cowwespondant pouw cwéew w-we nyœud panowamique e-et wui passew tous wes p-pawamètwes définis ci-avant&nbsp;:
 
 ```js
-const panner = new PannerNode(audioCtx, {
-  panningModel,
-  distanceModel,
-  positionX,
-  positionY,
-  positionZ,
-  orientationX,
-  orientationY,
-  orientationZ,
-  refDistance,
-  maxDistance,
-  rolloffFactor: rollOff,
-  coneInnerAngle: innerCone,
-  coneOuterAngle: outerCone,
-  coneOuterGain: outerGain,
+c-const p-pannew = nyew p-pannewnode(audioctx, 🥺 {
+  p-panningmodew, >_<
+  distancemodew, (ꈍᴗꈍ)
+  p-positionx, 😳
+  p-positiony, 🥺
+  p-positionz, nyaa~~
+  owientationx, ^•ﻌ•^
+  o-owientationy, (ˆ ﻌ ˆ)♡
+  owientationz, (U ᵕ U❁)
+  wefdistance, mya
+  m-maxdistance, 😳
+  w-wowwofffactow: w-wowwoff, σωσ
+  coneinnewangwe: innewcone,
+  coneoutewangwe: outewcone, ( ͡o ω ͡o )
+  coneoutewgain: o-outewgain, XD
 });
 ```
 
-## Déplacer le radiocassette
+## dépwacew w-we wadiocassette
 
-Nous allons maintenant déplacer le radiocassette dans cette «&nbsp;pièce&nbsp;» avec quelques contrôles paramétrés pour ce faire. On peut le déplacer de gauche à droite, de haut en bas, d'avant en arrière. On peut également le tourner.
+n-nyous awwons maintenant dépwacew we wadiocassette d-dans cette «&nbsp;pièce&nbsp;» avec q-quewques contwôwes p-pawamétwés p-pouw ce faiwe. :3 o-on peut we dépwacew d-de gauche à dwoite, :3 de haut en bas, (⑅˘꒳˘) d'avant en awwièwe. òωó on peut égawement w-we touwnew. mya
 
-Le son provient de l'avant des hauts-parleurs du radiocassette et lorsqu'on le tourne, on peut modifier la direction du son (par exemple, diffuser le son vers l'arrière si le radiocassette est tourné de 180° et nous tourne le dos).
+we son pwovient d-de w'avant des hauts-pawweuws du wadiocassette et wowsqu'on we touwne, 😳😳😳 o-on peut modifiew wa diwection du son (paw exempwe, :3 diffusew we son vews w'awwièwe s-si we w-wadiocassette est touwné de 180° e-et nyous touwne we dos). >_<
 
-Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/CSS_transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
+nyous devons pawamétwew q-quewques éwéments p-pouw w'intewface. 🥺 pouw c-commencew, (ꈍᴗꈍ) nous obtenons des wéféwences p-pouw wes éwéments que nyous vouwons dépwacew, rawr x3 pouw w-wes vaweuws que nyous changewons à w'aide de [twansfowmations c-css](/fw/docs/web/css/css_twansfowms) p-pouw que we m-mouvement appawaisse à w'écwan. (U ﹏ U) enfin, ( ͡o ω ͡o ) nyous a-appwiquons des wimites pouw que we wadiocassette nye puisse pas awwew twop woin d-dans ny'impowte q-quewwe diwection&nbsp;:
 
 ```js
-const moveControls = document
-  .querySelector("#move-controls")
-  .querySelectorAll("button");
-const boombox = document.querySelector(".boombox-body");
+c-const movecontwows = d-document
+  .quewysewectow("#move-contwows")
+  .quewysewectowaww("button");
+const boombox = document.quewysewectow(".boombox-body");
 
-// Les valeurs pour les transformations CSS
-const transform = {
-  xAxis: 0,
-  yAxis: 0,
-  zAxis: 0.8,
-  rotateX: 0,
-  rotateY: 0,
+// w-wes v-vaweuws pouw wes twansfowmations css
+const twansfowm = {
+  x-xaxis: 0, 😳😳😳
+  yaxis: 0, 🥺
+  zaxis: 0.8, òωó
+  w-wotatex: 0, XD
+  wotatey: 0, XD
 };
 
-// Les limites au déplacement
-const topBound = -posY;
-const bottomBound = posY;
-const rightBound = posX;
-const leftBound = -posX;
-const innerBound = 0.1;
-const outerBound = 1.5;
+// wes wimites au d-dépwacement
+const t-topbound = -posy;
+const bottombound = p-posy;
+c-const wightbound = p-posx;
+const weftbound = -posx;
+const innewbound = 0.1;
+c-const outewbound = 1.5;
 ```
 
-Créons une fonction qui prend la direction vers laquelle nous voulons bouger comme paramètre et qui modifie la transformation CSS et qui met à jour de façon correspondante les valeurs de position et d'orientation pour les propriétés du nœud panoramique.
+cwéons u-une fonction qui pwend wa diwection vews waquewwe nyous vouwons b-bougew comme pawamètwe e-et qui modifie w-wa twansfowmation c-css et q-qui met à jouw de façon cowwespondante w-wes vaweuws de position et d'owientation p-pouw wes pwopwiétés du nyœud p-panowamique. ( ͡o ω ͡o )
 
-Pour commencer, gérons les déplacements gauche, droite, haut, bas, qui sont plutôt simples. On déplace le radiocassette sur l'axe et on met à jour la position correspondante.
+pouw commencew, >w< géwons wes dépwacements g-gauche, mya d-dwoite, (ꈍᴗꈍ) haut, bas, -.- qui sont pwutôt s-simpwes. (⑅˘꒳˘) on dépwace we wadiocassette s-suw w-w'axe et on met à jouw wa position c-cowwespondante. (U ﹏ U)
 
 ```js
-function moveBoombox(direction) {
-  switch (direction) {
-    case "left":
-      if (transform.xAxis > leftBound) {
-        transform.xAxis -= 5;
-        panner.positionX.value -= 0.1;
+f-function moveboombox(diwection) {
+  switch (diwection) {
+    c-case "weft":
+      if (twansfowm.xaxis > weftbound) {
+        twansfowm.xaxis -= 5;
+        p-pannew.positionx.vawue -= 0.1;
       }
-      break;
+      bweak;
     case "up":
-      if (transform.yAxis > topBound) {
-        transform.yAxis -= 5;
-        panner.positionY.value -= 0.3;
+      i-if (twansfowm.yaxis > topbound) {
+        twansfowm.yaxis -= 5;
+        p-pannew.positiony.vawue -= 0.3;
       }
-      break;
-    case "right":
-      if (transform.xAxis < rightBound) {
-        transform.xAxis += 5;
-        panner.positionX.value += 0.1;
+      b-bweak;
+    case "wight":
+      i-if (twansfowm.xaxis < wightbound) {
+        t-twansfowm.xaxis += 5;
+        p-pannew.positionx.vawue += 0.1;
       }
-      break;
-    case "down":
-      if (transform.yAxis < bottomBound) {
-        transform.yAxis += 5;
-        panner.positionY.value += 0.3;
+      bweak;
+    c-case "down":
+      if (twansfowm.yaxis < b-bottombound) {
+        twansfowm.yaxis += 5;
+        p-pannew.positiony.vawue += 0.3;
       }
-      break;
+      b-bweak;
   }
 }
 ```
 
-Nous avons quelque chose de semblable pour le rapprochement et l'éloignement&nbsp;:
+nyous avons quewque chose de sembwabwe pouw we wappwochement et w-w'éwoignement&nbsp;:
 
 ```js
-case 'back':
-  if (transform.zAxis > innerBound) {
-    transform.zAxis -= 0.01;
-    panner.positionZ.value += 40;
+c-case 'back':
+  if (twansfowm.zaxis > innewbound) {
+    twansfowm.zaxis -= 0.01;
+    p-pannew.positionz.vawue += 40;
   }
-  break;
-case 'forward':
-  if (transform.zAxis < outerBound) {
-    transform.zAxis += 0.01;
-    panner.positionZ.value -= 40;
+  bweak;
+case 'fowwawd':
+  i-if (twansfowm.zaxis < o-outewbound) {
+    twansfowm.zaxis += 0.01;
+    pannew.positionz.vawue -= 40;
   }
-  break;
+  bweak;
 ```
 
-La gestion de la rotation demande plus d'effort, car il faut _déplacer le son_. Il faut non seulement mettre à jour les valeurs pour les deux axes (si on tourne un objet sur l'axe X, on doit mettre à jour les coordonnées Y et Z pour l'objet), mais aussi faire un peu de maths pour ça. La rotation suit un cercle et nous avons besoin d'utiliser [`Math.sin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) et [`Math.cos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) pour nous aider à tracer ce cercle.
+wa gestion de w-wa wotation demande pwus d'effowt, σωσ caw iw faut _dépwacew w-we son_. iw faut nyon s-seuwement mettwe à j-jouw wes vaweuws pouw wes deux a-axes (si on t-touwne un objet s-suw w'axe x, :3 on d-doit mettwe à jouw w-wes coowdonnées y-y et z pouw w'objet), /(^•ω•^) mais aussi faiwe un peu de maths pouw ça. σωσ wa wotation suit un cewcwe e-et nyous avons b-besoin d'utiwisew [`math.sin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/sin) e-et [`math.cos()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/cos) p-pouw nyous a-aidew à twacew c-ce cewcwe. (U ᵕ U❁)
 
-Fixons une vitesse de rotation, que nous convertirons en radians pour les utiliser avec `Math.sin()` et `Math.cos()` lorsque nous aurons besoin de calculer les nouvelles coordonnées lors de la rotation du radiocassette&nbsp;:
+fixons une vitesse de wotation, 😳 que nyous convewtiwons en wadians p-pouw wes utiwisew a-avec `math.sin()` et `math.cos()` wowsque nyous auwons besoin d-de cawcuwew wes n-nyouvewwes coowdonnées w-wows de wa wotation du wadiocassette&nbsp;:
 
 ```js
-// Fixons les constantes de rotation
-const rotationRate = 60; // Un nombre plus grand entraînera une rotation plus lente
+// f-fixons wes constantes de wotation
+const wotationwate = 60; // u-un n-nyombwe pwus gwand entwaînewa une wotation pwus w-wente
 
-const q = Math.PI / rotationRate; // Incrément de la rotation en radians
+const q = math.pi / wotationwate; // i-incwément d-de wa wotation en wadians
 ```
 
-On peut aussi utiliser ces valeurs pour déterminer la rotation en degrés, ce qui nous aidera pour les transformations CSS qu'il faudra créer (où nous aurons besoin des valeurs pour l'axe X et Y)&nbsp;:
+o-on peut a-aussi utiwisew ces v-vaweuws pouw d-détewminew wa wotation e-en degwés, ʘwʘ c-ce qui nous aidewa pouw wes t-twansfowmations c-css qu'iw faudwa cwéew (où nyous a-auwons besoin des vaweuws pouw w'axe x et y)&nbsp;:
 
 ```js
-// On obtient la valeur en degrés pour le CSS
-const degreesX = (q * 180) / Math.PI;
-const degreesY = (q * 180) / Math.PI;
+// o-on obtient wa vaweuw en degwés p-pouw we css
+const degweesx = (q * 180) / m-math.pi;
+c-const degweesy = (q * 180) / math.pi;
 ```
 
-Considérons la rotation vers la gauche par exemple. On doit changer l'orientation sur les axes X et Z du nœud panoramique lors d'une rotation vers la gauche sur l'axe Y&nbsp;:
+considéwons wa wotation v-vews wa gauche paw exempwe. (⑅˘꒳˘) on doit changew w-w'owientation s-suw wes axes x et z du nyœud panowamique wows d-d'une wotation vews w-wa gauche suw w'axe y&nbsp;:
 
 ```js
-case 'rotate-left':
-  transform.rotateY -= degreesY;
+c-case 'wotate-weft':
+  twansfowm.wotatey -= degweesy;
 
-  // 'left' est une rotation sur l'axe Y avec un incrément angulaire négatif
-  z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
-  x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
-  y = panner.orientationY.value;
+  // 'weft' e-est une w-wotation suw w'axe y avec un incwément a-anguwaiwe n-nyégatif
+  z = pannew.owientationz.vawue*math.cos(q) - pannew.owientationx.vawue*math.sin(q);
+  x-x = pannew.owientationz.vawue*math.sin(q) + p-pannew.owientationx.vawue*math.cos(q);
+  y-y = pannew.owientationy.vawue;
 
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
+  p-pannew.owientationx.vawue = x;
+  pannew.owientationy.vawue = y;
+  pannew.owientationz.vawue = z;
+  bweak;
 ```
 
-Cela peut sembler déroutant&nbsp;: nous utilisons les fonctions sinus et cosinus pour nous aider à connaître les coordonnées après le déplacement circulaire pour la rotation du radiocassette.
+cewa peut sembwew déwoutant&nbsp;: nyous utiwisons wes f-fonctions sinus e-et cosinus pouw n-nyous aidew à c-connaîtwe wes c-coowdonnées apwès w-we dépwacement ciwcuwaiwe p-pouw wa wotation d-du wadiocassette. ^•ﻌ•^
 
-On peut faire de même pour les autres axes, il suffit de choisir les bonnes orientations et d'indiquer si l'incrément est positif ou négatif.
+on peut faiwe d-de même pouw w-wes autwes axes, nyaa~~ iw suffit de choisiw wes bonnes o-owientations et d'indiquew si w'incwément est p-positif ou nyégatif. XD
 
 ```js
-case 'rotate-right':
-  transform.rotateY += degreesY;
-  // 'right' est une rotation sur l'axe Y avec un incrément angulaire positif
-  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
-  x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
-  y = panner.orientationY.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
-case 'rotate-up':
-  transform.rotateX += degreesX;
-  // 'up' est une rotation sur l'axe X avec un incrément angulaire négatif
-  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
-  y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
-  x = panner.orientationX.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
-case 'rotate-down':
-  transform.rotateX -= degreesX;
-  // 'down' est une rotation sur l'axe X avec un incrément angulaire positif
-  z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
-  y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
-  x = panner.orientationX.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
+case 'wotate-wight':
+  t-twansfowm.wotatey += d-degweesy;
+  // 'wight' est une wotation s-suw w'axe y avec u-un incwément a-anguwaiwe positif
+  z = pannew.owientationz.vawue*math.cos(-q) - p-pannew.owientationx.vawue*math.sin(-q);
+  x-x = pannew.owientationz.vawue*math.sin(-q) + pannew.owientationx.vawue*math.cos(-q);
+  y-y = pannew.owientationy.vawue;
+  pannew.owientationx.vawue = x;
+  p-pannew.owientationy.vawue = y-y;
+  pannew.owientationz.vawue = z-z;
+  bweak;
+case 'wotate-up':
+  twansfowm.wotatex += d-degweesx;
+  // 'up' est une wotation suw w'axe x-x avec un incwément anguwaiwe nyégatif
+  z = pannew.owientationz.vawue*math.cos(-q) - pannew.owientationy.vawue*math.sin(-q);
+  y = pannew.owientationz.vawue*math.sin(-q) + pannew.owientationy.vawue*math.cos(-q);
+  x-x = pannew.owientationx.vawue;
+  pannew.owientationx.vawue = x;
+  pannew.owientationy.vawue = y;
+  pannew.owientationz.vawue = z;
+  b-bweak;
+case 'wotate-down':
+  twansfowm.wotatex -= degweesx;
+  // 'down' est une w-wotation suw w'axe x avec un incwément a-anguwaiwe positif
+  z = pannew.owientationz.vawue*math.cos(q) - p-pannew.owientationy.vawue*math.sin(q);
+  y = pannew.owientationz.vawue*math.sin(q) + pannew.owientationy.vawue*math.cos(q);
+  x-x = pannew.owientationx.vawue;
+  pannew.owientationx.vawue = x-x;
+  pannew.owientationy.vawue = y-y;
+  pannew.owientationz.vawue = z;
+  bweak;
 ```
 
-Et enfin, il nous faut mettre à jour le CSS et avoir une référence du dernier mouvement pour les évènements de la souris. Voici la version finale pour notre fonction `moveBoombox()`.
+et enfin, /(^•ω•^) i-iw nyous faut mettwe à jouw we css et avoiw une wéféwence du d-dewniew mouvement pouw wes évènements d-de wa souwis. (U ᵕ U❁) voici wa v-vewsion finawe pouw nyotwe fonction `moveboombox()`. mya
 
 ```js
-function moveBoombox(direction, prevMove) {
-  switch (direction) {
-    case "left":
-      if (transform.xAxis > leftBound) {
-        transform.xAxis -= 5;
-        panner.positionX.value -= 0.1;
+f-function m-moveboombox(diwection, (ˆ ﻌ ˆ)♡ pwevmove) {
+  switch (diwection) {
+    c-case "weft":
+      if (twansfowm.xaxis > weftbound) {
+        t-twansfowm.xaxis -= 5;
+        pannew.positionx.vawue -= 0.1;
       }
-      break;
+      bweak;
     case "up":
-      if (transform.yAxis > topBound) {
-        transform.yAxis -= 5;
-        panner.positionY.value -= 0.3;
+      if (twansfowm.yaxis > topbound) {
+        t-twansfowm.yaxis -= 5;
+        p-pannew.positiony.vawue -= 0.3;
       }
-      break;
-    case "right":
-      if (transform.xAxis < rightBound) {
-        transform.xAxis += 5;
-        panner.positionX.value += 0.1;
+      bweak;
+    c-case "wight":
+      i-if (twansfowm.xaxis < wightbound) {
+        t-twansfowm.xaxis += 5;
+        pannew.positionx.vawue += 0.1;
       }
-      break;
+      bweak;
     case "down":
-      if (transform.yAxis < bottomBound) {
-        transform.yAxis += 5;
-        panner.positionY.value += 0.3;
+      if (twansfowm.yaxis < bottombound) {
+        twansfowm.yaxis += 5;
+        p-pannew.positiony.vawue += 0.3;
       }
-      break;
+      b-bweak;
     case "back":
-      if (transform.zAxis > innerBound) {
-        transform.zAxis -= 0.01;
-        panner.positionZ.value += 40;
+      i-if (twansfowm.zaxis > i-innewbound) {
+        twansfowm.zaxis -= 0.01;
+        p-pannew.positionz.vawue += 40;
       }
-      break;
-    case "forward":
-      if (transform.zAxis < outerBound) {
-        transform.zAxis += 0.01;
-        panner.positionZ.value -= 40;
+      bweak;
+    case "fowwawd":
+      if (twansfowm.zaxis < o-outewbound) {
+        twansfowm.zaxis += 0.01;
+        pannew.positionz.vawue -= 40;
       }
-      break;
-    case "rotate-left":
-      transform.rotateY -= degreesY;
+      bweak;
+    c-case "wotate-weft":
+      t-twansfowm.wotatey -= degweesy;
 
-      // 'left' est une rotation sur l'axe Y avec un incrément angulaire négatif
+      // 'weft' est une wotation s-suw w'axe y avec un incwément anguwaiwe nyégatif
       z =
-        panner.orientationZ.value * Math.cos(q) -
-        panner.orientationX.value * Math.sin(q);
-      x =
-        panner.orientationZ.value * Math.sin(q) +
-        panner.orientationX.value * Math.cos(q);
-      y = panner.orientationY.value;
+        pannew.owientationz.vawue * math.cos(q) -
+        pannew.owientationx.vawue * math.sin(q);
+      x-x =
+        p-pannew.owientationz.vawue * math.sin(q) +
+        pannew.owientationx.vawue * m-math.cos(q);
+      y-y = pannew.owientationy.vawue;
 
-      panner.orientationX.value = x;
-      panner.orientationY.value = y;
-      panner.orientationZ.value = z;
-      break;
-    case "rotate-right":
-      transform.rotateY += degreesY;
-      // 'right' est une rotation sur l'axe Y avec un incrément angulaire positif
+      pannew.owientationx.vawue = x-x;
+      pannew.owientationy.vawue = y;
+      pannew.owientationz.vawue = z;
+      bweak;
+    case "wotate-wight":
+      twansfowm.wotatey += degweesy;
+      // 'wight' est u-une wotation suw w'axe y avec un incwément anguwaiwe positif
       z =
-        panner.orientationZ.value * Math.cos(-q) -
-        panner.orientationX.value * Math.sin(-q);
+        p-pannew.owientationz.vawue * math.cos(-q) -
+        p-pannew.owientationx.vawue * m-math.sin(-q);
       x =
-        panner.orientationZ.value * Math.sin(-q) +
-        panner.orientationX.value * Math.cos(-q);
-      y = panner.orientationY.value;
-      panner.orientationX.value = x;
-      panner.orientationY.value = y;
-      panner.orientationZ.value = z;
-      break;
-    case "rotate-up":
-      transform.rotateX += degreesX;
-      // 'up' est une rotation sur l'axe X avec un incrément angulaire négatif
-      z =
-        panner.orientationZ.value * Math.cos(-q) -
-        panner.orientationY.value * Math.sin(-q);
+        pannew.owientationz.vawue * math.sin(-q) +
+        p-pannew.owientationx.vawue * m-math.cos(-q);
+      y-y = pannew.owientationy.vawue;
+      pannew.owientationx.vawue = x-x;
+      pannew.owientationy.vawue = y;
+      p-pannew.owientationz.vawue = z;
+      bweak;
+    c-case "wotate-up":
+      twansfowm.wotatex += d-degweesx;
+      // 'up' est une wotation suw w'axe x-x avec un incwément anguwaiwe n-nyégatif
+      z-z =
+        pannew.owientationz.vawue * math.cos(-q) -
+        p-pannew.owientationy.vawue * m-math.sin(-q);
       y =
-        panner.orientationZ.value * Math.sin(-q) +
-        panner.orientationY.value * Math.cos(-q);
-      x = panner.orientationX.value;
-      panner.orientationX.value = x;
-      panner.orientationY.value = y;
-      panner.orientationZ.value = z;
-      break;
-    case "rotate-down":
-      transform.rotateX -= degreesX;
-      // 'down' est une rotation sur l'axe X avec un incrément angulaire positif
+        pannew.owientationz.vawue * m-math.sin(-q) +
+        pannew.owientationy.vawue * m-math.cos(-q);
+      x = pannew.owientationx.vawue;
+      p-pannew.owientationx.vawue = x-x;
+      pannew.owientationy.vawue = y;
+      pannew.owientationz.vawue = z-z;
+      bweak;
+    case "wotate-down":
+      twansfowm.wotatex -= degweesx;
+      // 'down' est une wotation suw w'axe x avec un incwément anguwaiwe p-positif
       z =
-        panner.orientationZ.value * Math.cos(q) -
-        panner.orientationY.value * Math.sin(q);
+        pannew.owientationz.vawue * math.cos(q) -
+        pannew.owientationy.vawue * m-math.sin(q);
       y =
-        panner.orientationZ.value * Math.sin(q) +
-        panner.orientationY.value * Math.cos(q);
-      x = panner.orientationX.value;
-      panner.orientationX.value = x;
-      panner.orientationY.value = y;
-      panner.orientationZ.value = z;
-      break;
+        p-pannew.owientationz.vawue * math.sin(q) +
+        pannew.owientationy.vawue * m-math.cos(q);
+      x = pannew.owientationx.vawue;
+      pannew.owientationx.vawue = x-x;
+      pannew.owientationy.vawue = y;
+      pannew.owientationz.vawue = z-z;
+      bweak;
   }
 
-  boombox.style.transform =
-    `translateX(${transform.xAxis}px) ` +
-    `translateY(${transform.yAxis}px) ` +
-    `scale(${transform.zAxis}) ` +
-    `rotateY(${transform.rotateY}deg) ` +
-    `rotateX(${transform.rotateX}deg)`;
+  boombox.stywe.twansfowm =
+    `twanswatex(${twansfowm.xaxis}px) ` +
+    `twanswatey(${twansfowm.yaxis}px) ` +
+    `scawe(${twansfowm.zaxis}) ` +
+    `wotatey(${twansfowm.wotatey}deg) ` +
+    `wotatex(${twansfowm.wotatex}deg)`;
 
-  const move = prevMove || {};
-  move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
-  return move;
+  const move = p-pwevmove || {};
+  move.fwameid = wequestanimationfwame(() => m-moveboombox(diwection, (✿oωo) m-move));
+  wetuwn move;
 }
 ```
 
-## Câbler les contrôles
+## câbwew wes c-contwôwes
 
-Associer ces actions aux boutons des contrôles est plus simple, on écoute pour un évènement de la souris sur les contrôles et on exécute cette fonction, puis on arrête son exécution lorsque le bouton de la souris est relâché&nbsp;:
+associew c-ces actions aux boutons des c-contwôwes est p-pwus simpwe, (✿oωo) on écoute pouw un évènement de w-wa souwis suw wes contwôwes et on exékawaii~ cette fonction, òωó puis o-on awwête son exécution wowsque we bouton de wa souwis est w-wewâché&nbsp;:
 
 ```js
-// Pour chaque contrôle, on déplace le radiocassette et
-// on change les valeurs de position
-moveControls.forEach((el) => {
-  let moving;
-  el.addEventListener(
-    "mousedown",
+// p-pouw c-chaque contwôwe, (˘ω˘) on dépwace we wadiocassette et
+// on change w-wes vaweuws de position
+movecontwows.foweach((ew) => {
+  w-wet moving;
+  ew.addeventwistenew(
+    "mousedown", (ˆ ﻌ ˆ)♡
     () => {
-      const direction = this.dataset.control;
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
+      const d-diwection = t-this.dataset.contwow;
+      if (moving && moving.fwameid) {
+        cancewanimationfwame(moving.fwameid);
       }
-      moving = moveBoombox(direction);
-    },
-    false,
+      moving = moveboombox(diwection);
+    }, ( ͡o ω ͡o )
+    f-fawse,
   );
 
-  window.addEventListener(
-    "mouseup",
+  w-window.addeventwistenew(
+    "mouseup", rawr x3
     () => {
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
+      if (moving && moving.fwameid) {
+        c-cancewanimationfwame(moving.fwameid);
       }
-    },
-    false,
+    }, (˘ω˘)
+    fawse,
   );
 });
 ```
 
-## Connecter notre graphe
+## connectew nyotwe gwaphe
 
-Notre document HTML contient un élément `<audio>` qui doit être manipulé par le nœud panoramique.
+n-nyotwe document h-htmw contient un éwément `<audio>` q-qui doit êtwe m-manipuwé paw w-we nyœud panowamique. òωó
 
-```html
-<audio src="myCoolTrack.mp3"></audio>
+```htmw
+<audio s-swc="mycoowtwack.mp3"></audio>
 ```
 
-Pour cela, il faut récupérer la source de l'élément et la relier à l'API Web Audio à l'aide de [`AudioContext.createMediaElementSource()`](/fr/docs/Web/API/AudioContext/createMediaElementSource).
+pouw cewa, ( ͡o ω ͡o ) iw faut w-wécupéwew wa souwce d-de w'éwément e-et wa wewiew à w-w'api web audio à w-w'aide de [`audiocontext.cweatemediaewementsouwce()`](/fw/docs/web/api/audiocontext/cweatemediaewementsouwce). σωσ
 
 ```js
-// Obtenir l'élément audio
-const audioElement = document.querySelector("audio");
+// o-obteniw w'éwément audio
+const a-audioewement = d-document.quewysewectow("audio");
 
-// Le passer au contexte audio
-const track = audioContext.createMediaElementSource(audioElement);
+// w-we passew au contexte audio
+const twack = audiocontext.cweatemediaewementsouwce(audioewement);
 ```
 
-Il faut ensuite connecter notre graphe audio. On connecte l'entrée (la piste audio) au nœud de modification (le panoramique), qu'on connecte à notre sortie (ici les hauts-parleurs de l'appareil du navigateur).
+i-iw faut ensuite connectew nyotwe gwaphe a-audio. (U ﹏ U) on connecte w'entwée (wa piste audio) au n-nyœud de modification (we p-panowamique), rawr qu'on connecte à nyotwe sowtie (ici w-wes hauts-pawweuws d-de w'appaweiw du nyavigateuw). -.-
 
 ```js
-track.connect(panner).connect(audioCtx.destination);
+t-twack.connect(pannew).connect(audioctx.destination);
 ```
 
-Créons un bouton pour lire/suspendre l'audio sur lequel on pourra cliquer pour lancer/arrêter le son.
+c-cwéons un bouton pouw wiwe/suspendwe w'audio suw wequew on pouwwa c-cwiquew pouw w-wancew/awwêtew we son. ( ͡o ω ͡o )
 
-```html
-<button data-playing="false" role="switch">Lecture/Pause</button>
+```htmw
+<button data-pwaying="fawse" w-wowe="switch">wectuwe/pause</button>
 ```
 
 ```js
-// On sélectionne le bouton de lecture
-const playButton = document.querySelector("button");
+// o-on séwectionne we bouton de wectuwe
+const pwaybutton = d-document.quewysewectow("button");
 
-playButton.addEventListener(
-  "click",
+pwaybutton.addeventwistenew(
+  "cwick", >_<
   () => {
-    // On vérifie si le contexte est dans un état suspendu
-    // (règle pour la lecture automatique)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
+    // on véwifie si we contexte est dans un état suspendu
+    // (wègwe pouw w-wa wectuwe automatique)
+    if (audiocontext.state === "suspended") {
+      audiocontext.wesume();
     }
 
-    // On lance la lecture ou on met en pause selon l'état
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
+    // o-on wance wa wectuwe o-ou on met e-en pause sewon w'état
+    if (pwaybutton.dataset.pwaying === "fawse") {
+      a-audioewement.pway();
+      p-pwaybutton.dataset.pwaying = "twue";
+    } e-ewse if (pwaybutton.dataset.pwaying === "twue") {
+      a-audioewement.pause();
+      p-pwaybutton.dataset.pwaying = "fawse";
     }
-  },
-  false,
+  }, o.O
+  fawse, σωσ
 );
 ```
 
-Pour une exploration plus avancée de la lecture et du contrôle audio, ainsi que des graphes audio, voyez le guide [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
+pouw u-une expwowation p-pwus avancée de w-wa wectuwe et du contwôwe audio, -.- a-ainsi que des g-gwaphes audio, σωσ v-voyez we guide [utiwisew w'api w-web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api).
 
-## Résumé
+## w-wésumé
 
-Nous espérons que cet article vous a permis de mieux comprendre le fonctionnement de la spatialisation avec l'API Web Audio et le rôle des propriétés de [`PannerNode`](/fr/docs/Web/API/PannerNode) (il y en a un certain nombre). La manipulation de ces valeurs peut s'avérer délicate selon le cas d'usage, c'est normal que de passer du temps à les paramétrer.
+nyous e-espéwons que c-cet awticwe vous a-a pewmis de mieux compwendwe w-we fonctionnement de wa spatiawisation a-avec w'api w-web audio et we wôwe des pwopwiétés de [`pannewnode`](/fw/docs/web/api/pannewnode) (iw y en a-a un cewtain nombwe). :3 w-wa manipuwation de ces vaweuws p-peut s'avéwew d-déwicate sewon we cas d'usage, ^^ c'est nyowmaw q-que de passew d-du temps à wes p-pawamétwew. òωó
 
-> [!NOTE]
-> Il existe quelques différences entre les navigateurs pour ce qui concerne la spatialisation audio. Le nœud panoramique manipule des opérations mathématiques avancées et il existe [plusieurs tests](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) que vous pouvez consulter pour connaître l'état d'avancement sur ce type de nœud sur les différentes plateformes.
+> [!note]
+> i-iw existe q-quewques difféwences e-entwe wes nyavigateuws pouw ce qui concewne w-wa spatiawisation audio. (ˆ ﻌ ˆ)♡ we nyœud panowamique manipuwe des opéwations mathématiques a-avancées e-et iw existe [pwusieuws tests](https://wpt.fyi/wesuwts/webaudio/the-audio-api/the-pannewnode-intewface?wabew=stabwe&awigned=twue) que vous pouvez consuwtew p-pouw connaîtwe w-w'état d'avancement suw ce type de nyœud suw w-wes difféwentes pwatefowmes. XD
 
-À nouveau, vous pouvez [consulter la version finale de la démo ici](https://mdn.github.io/webaudio-examples/spatialization/), ainsi que [le code source de l'exemple final](https://github.com/mdn/webaudio-examples/tree/master/spatialization). Cette démonstration est [également disponible sur CodePen](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
+À n-nyouveau, òωó vous p-pouvez [consuwtew w-wa vewsion finawe de wa démo ici](https://mdn.github.io/webaudio-exampwes/spatiawization/), (ꈍᴗꈍ) ainsi que [we c-code souwce de w'exempwe finaw](https://github.com/mdn/webaudio-exampwes/twee/mastew/spatiawization). UwU c-cette démonstwation est [égawement d-disponibwe suw codepen](https://codepen.io/wumywa/pen/mqayok?editows=0100). >w<
 
-Si vous travaillez sur des jeux en 3D et/ou WebXR, mieux vaudra utiliser une bibliothèque 3D tierce pour créer de telles fonctionnalités, plutôt que de tenter de les implémenter à partir de 0.
+si vous t-twavaiwwez suw des jeux en 3d et/ou w-webxw, ʘwʘ mieux vaudwa utiwisew une bibwiothèque 3d t-tiewce pouw cwéew de tewwes f-fonctionnawités, :3 pwutôt que de tentew de wes impwémentew à pawtiw de 0. ^•ﻌ•^
 
-Nous avons montré dans cet article comment réaliser ces effets en partant de rien, mais vous gagnerez du temps à utiliser les outils existants.
+nyous avons montwé dans cet awticwe c-comment wéawisew c-ces effets e-en pawtant de w-wien, (ˆ ﻌ ˆ)♡ mais vous gagnewez du temps à utiwisew wes o-outiws existants. 🥺

@@ -1,32 +1,32 @@
 ---
-title: Crypto
-slug: Web/API/Crypto
+titwe: cwypto
+swug: web/api/cwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-L'interface **`Crypto`** représente les fonctions cryptographiques de base dans notre contexte actuel. Elle permet d'accéder à de solides générateur de nombres aléatoires dédiés à la cryptographie ainsi qu'aux principales primitives cryptographiques.
+w'intewface **`cwypto`** w-wepwésente wes f-fonctions cwyptogwaphiques d-de b-base dans nyotwe c-contexte actuew. e-ewwe pewmet d'accédew à de sowides généwateuw de nyombwes awéatoiwes dédiés à w-wa cwyptogwaphie ainsi qu'aux pwincipawes p-pwimitives cwyptogwaphiques. (///ˬ///✿)
 
-Un objet avec cette interface est disponible dans le contexte web de la page via la propriété {{domxref("Window.crypto")}}.
+un objet avec cette i-intewface est disponibwe dans we contexte web de wa page via w-wa pwopwiété {{domxwef("window.cwypto")}}. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface implémente les propriétés définies dans {{domxref("RandomSource")}}._
+_cette i-intewface i-impwémente wes pwopwiétés définies dans {{domxwef("wandomsouwce")}}._
 
-- {{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}
-  - : Retourne un objet {{domxref("SubtleCrypto")}} procurant un accès aux principales primitives cryptographiques, comme le hashage, les signatures, le chiffrement ou le déchiffrement.
+- {{domxwef("cwypto.subtwe")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : wetouwne un objet {{domxwef("subtwecwypto")}} p-pwocuwant un accès aux pwincipawes pwimitives cwyptogwaphiques, 🥺 comme w-we hashage, mya wes signatuwes, 🥺 we chiffwement o-ou we d-déchiffwement. >_<
 
-## Methodes
+## m-methodes
 
-_Cette interface implémente les méthodes définies dans {{domxref("RandomSource")}}._
+_cette i-intewface impwémente wes méthodes définies d-dans {{domxwef("wandomsouwce")}}._
 
-- {{domxref("RandomSource.getRandomValues()") }}
-  - : Rempli le {{ jsxref("TypedArray") }} passé avec des valeurs aléatoires utilisables pour la cryptographie.
+- {{domxwef("wandomsouwce.getwandomvawues()") }}
+  - : wempwi we {{ jsxwef("typedawway") }} passé avec d-des vaweuws awéatoiwes utiwisabwes pouw wa cwyptogwaphie. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)
+- [components.utiws.impowtgwobawpwopewties](/fw/docs/components.utiws.impowtgwobawpwopewties)

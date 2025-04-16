@@ -1,43 +1,43 @@
 ---
-title: focusout
-slug: Web/API/Element/focusout_event
+titwe: focusout
+swug: web/api/ewement/focusout_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le point de perdre le focus. La différence principale entre cet évènement et [`blur`](/fr/docs/Web/API/Element/blur_event) est que ce dernier ne se propage pas.
+w-w'évènement `focusout` e-est décwenché w-wowsqu'un éwément d-du dom est s-suw we point de p-pewdwe we focus. (✿oωo) w-wa difféwence p-pwincipawe entwe cet évènement et [`bwuw`](/fw/docs/web/api/ewement/bwuw_event) est que ce dewniew nye se pwopage p-pas. (ˆ ﻌ ˆ)♡
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
-- Interface
-  - : {{domxref("FocusEvent")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-focusout)
+- intewface
+  - : {{domxwef("focusevent")}}
+- p-pwopagation
+  - : oui
+- annuwabwe
+  - : nyon
+- cibwe
+  - : {{domxwef("ewement")}}
+- a-action paw défaut
+  - : a-aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                           | Type                                     | Description                                |
+| p-pwopewty                           | type                                     | descwiption                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}}               | event tawget wosing focus. (˘ω˘)                 |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}                 | t-the type of event. (⑅˘꒳˘)                         |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}                    | whethew the event nyowmawwy bubbwes ow n-nyot. (///ˬ///✿) |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}                    | whethew t-the event is cancewwabwe o-ow nyot. 😳😳😳   |
+| `wewatedtawget` {{weadonwyinwine}} | {{domxwef("eventtawget")}} (dom ewement) | e-event t-tawget weceiving focus.              |
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Evénements liés
+## evénements wiés
 
-- [`focus`](/fr/docs/Web/API/Element/focus_event)
-- [`blur`](/fr/docs/Web/API/Element/blur_event)
-- [`focusin`](/fr/docs/Web/API/Element/focusin_event)
+- [`focus`](/fw/docs/web/api/ewement/focus_event)
+- [`bwuw`](/fw/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/fw/docs/web/api/ewement/focusin_event)

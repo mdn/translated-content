@@ -1,285 +1,285 @@
 ---
-title: Utiliser XMLHttpRequest
-slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-l10n:
-  sourceCommit: 2024a508694208f0316c484fb41e2c5823deae88
+titwe: utiwisew xmwhttpwequest
+s-swug: web/api/xmwhttpwequest_api/using_xmwhttpwequest
+w-w10n:
+  s-souwcecommit: 2024a508694208f0316c484fb41e2c5823deae88
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest a-api")}}
 
-Dans ce guide, nous verrons comment utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) afin d'envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) pour échanger des données entre le site web et un serveur.
+dans ce g-guide, o.O nyous vewwons c-comment utiwisew [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) a-afin d-d'envoyew des wequêtes [http](/fw/docs/web/http) pouw échangew des données entwe we site web et un sewveuw. ^•ﻌ•^
 
-Des exemples d'utilisation seront présentés.
+d-des exempwes d'utiwisation sewont pwésentés. XD
 
-Pour envoyer une requête HTTP, on pourra&nbsp;:
+p-pouw envoyew une wequête http, ^^ o-on pouwwa&nbsp;:
 
-1. Créer un objet `XMLHttpRequest`
-2. Ouvrir une URL
-3. Envoyer la requête
+1. o.O cwéew un objet `xmwhttpwequest`
+2. ( ͡o ω ͡o ) ouvwiw une uww
+3. /(^•ω•^) envoyew w-wa wequête
 
-Lorsque la transaction sera terminée, l'objet `XMLHttpRequest` contiendra les informations de la réponse, comme son corps et le [statut HTTP](/fr/docs/Web/HTTP/Status) résultant.
+wowsque wa twansaction s-sewa tewminée, 🥺 w-w'objet `xmwhttpwequest` contiendwa wes infowmations de wa wéponse, nyaa~~ comme son cowps et we [statut h-http](/fw/docs/web/http/status) wésuwtant. mya
 
 ```js
-function reqListener() {
-  console.log(this.responseText);
+function weqwistenew() {
+  consowe.wog(this.wesponsetext);
 }
 
-const req = new XMLHttpRequest();
-req.addEventListener("load", reqListener);
-req.open("GET", "http://www.example.org/example.txt");
-req.send();
+c-const weq = nyew xmwhttpwequest();
+w-weq.addeventwistenew("woad", XD w-weqwistenew);
+w-weq.open("get", nyaa~~ "http://www.exampwe.owg/exampwe.txt");
+w-weq.send();
 ```
 
-## Types de requêtes
+## types de wequêtes
 
-Une requête envoyée avec `XMLHttpRequest` peut récupérer les données de façon asynchrone ou de façon synchrone. Le comportement obtenu est choisi avec le troisième argument optionnel `async` de la méthode [`XMLHttpRequest.open()`](/fr/docs/Web/API/XMLHttpRequest/open). Lorsque cet argument vaut `true` ou s'il n'est pas fourni, la requête est traitée de façon asynchrone. Sinon, le processus est géré de façon synchrone. Pour en savoir plus sur ces différents types de requêtes, vous pouvez consulter l'article [Requêtes synchrones et asynchrones](/fr/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). Les requêtes synchrones ne peuvent pas être utilisées en dehors des <i lang="en">workers</i>, car elles bloqueraient l'interface principale.
+une wequête e-envoyée avec `xmwhttpwequest` peut wécupéwew wes données d-de façon asynchwone ou de façon synchwone. ʘwʘ we compowtement obtenu est choisi avec we twoisième a-awgument optionnew `async` de wa méthode [`xmwhttpwequest.open()`](/fw/docs/web/api/xmwhttpwequest/open). (⑅˘꒳˘) wowsque c-cet awgument v-vaut `twue` o-ou s'iw ny'est pas fouwni, :3 wa wequête est twaitée de façon asynchwone. -.- s-sinon, 😳😳😳 w-we pwocessus est géwé de façon s-synchwone. (U ﹏ U) pouw e-en savoiw pwus suw ces difféwents t-types de wequêtes, o.O vous pouvez c-consuwtew w'awticwe [wequêtes synchwones e-et asynchwones](/fw/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests). ( ͡o ω ͡o ) wes w-wequêtes synchwones nye peuvent p-pas êtwe utiwisées e-en dehows des <i wang="en">wowkews</i>, òωó caw ewwes bwoquewaient w'intewface pwincipawe. 🥺
 
-> [!NOTE]
-> Le constructeur `XMLHttpRequest` ne se limite pas aux seuls documents XML. Son nom commence par **"XML"**, car il a été créé lorsque le format d'échange principal était XML.
+> [!note]
+> we constwucteuw `xmwhttpwequest` n-nye se w-wimite pas aux seuws documents x-xmw. /(^•ω•^) son nyom commence p-paw **"xmw"**, 😳😳😳 c-caw iw a été cwéé wowsque we fowmat d'échange pwincipaw était x-xmw. ^•ﻌ•^
 
-## Gérer les réponses
+## géwew wes wéponses
 
-Il existe plusieurs types [d'attributs de réponse](https://xhr.spec.whatwg.org/) définis pour le constructeur [`XMLHttpRequest()`](/fr/docs/Web/API/XMLHttpRequest/XMLHttpRequest). Ces attributs indiquent au client qui a émis la requête des informations importantes quant au statut de la réponse. Pour les cas où il faut gérer une réponse qui n'est pas du texte, cela peut nécessiter des manipulations et une analyse que nous allons voir dans les sections suivantes.
+iw existe pwusieuws types [d'attwibuts de wéponse](https://xhw.spec.naniwg.owg/) d-définis pouw we constwucteuw [`xmwhttpwequest()`](/fw/docs/web/api/xmwhttpwequest/xmwhttpwequest). nyaa~~ c-ces attwibuts indiquent a-au cwient q-qui a émis wa wequête des infowmations i-impowtantes q-quant au s-statut de wa wéponse. OwO p-pouw wes cas où iw faut géwew une wéponse q-qui ny'est pas d-du texte, ^•ﻌ•^ cewa p-peut nyécessitew d-des manipuwations e-et une anawyse que nyous awwons voiw dans wes sections suivantes. σωσ
 
-### Analyser et manipuler la propriété `responseXML`
+### a-anawysew et manipuwew wa pwopwiété `wesponsexmw`
 
-Lorsqu'on utilise `XMLHttpRequest` pour obtenir le contenu d'un document XML distant, la propriété [`responseXML`](/fr/docs/Web/API/XMLHttpRequest/responseXML) sera un objet DOM qui contient le document XML analysé. La manipulation et l'analyse d'un tel résultat n'est pas nécessairement simple. Il existe quatre méthodes principales pour analyser un tel document XML&nbsp;:
+wowsqu'on utiwise `xmwhttpwequest` pouw obteniw we contenu d'un d-document xmw distant, -.- wa pwopwiété [`wesponsexmw`](/fw/docs/web/api/xmwhttpwequest/wesponsexmw) sewa un objet dom qui contient w-we document xmw a-anawysé. (˘ω˘) wa manipuwation e-et w'anawyse d'un tew w-wésuwtat ny'est pas nyécessaiwement s-simpwe. rawr x3 i-iw existe quatwe méthodes pwincipawes pouw anawysew un tew document xmw&nbsp;:
 
-1. Utiliser [XPath](/fr/docs/Web/XPath) afin de cibler certains emplacements du document.
-2. [Analyser et sérialiser manuellement le XML](/fr/docs/Web/XML/Parsing_and_serializing_XML) afin d'obtenir des chaînes de caractères ou des objets.
-3. Utiliser [`XMLSerializer`](/fr/docs/Web/API/XMLSerializer) afin de sérialiser **des arbres DOM en chaînes de caractères ou en fichiers**.
-4. [Les expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peuvent être utilisées pour scanner le document si on ne connaît pas son contenu au préalable. On peut ainsi retirer les sauts de ligne par exemple. Attention, cette méthode n'est à utiliser qu'en dernier recours, car si le code XML change légèrement, il faudra revoir la méthode.
+1. rawr x3 utiwisew [xpath](/fw/docs/web/xpath) a-afin de cibwew cewtains e-empwacements du document. σωσ
+2. [anawysew e-et séwiawisew m-manuewwement we xmw](/fw/docs/web/xmw/pawsing_and_sewiawizing_xmw) afin d'obteniw d-des chaînes d-de cawactèwes ou des objets. nyaa~~
+3. (ꈍᴗꈍ) u-utiwisew [`xmwsewiawizew`](/fw/docs/web/api/xmwsewiawizew) a-afin de séwiawisew **des awbwes dom en chaînes de cawactèwes ou en fichiews**. ^•ﻌ•^
+4. [wes e-expwessions w-wationnewwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) peuvent êtwe u-utiwisées pouw scannew w-we document s-si on nye connaît pas son contenu a-au pwéawabwe. >_< on peut ainsi wetiwew wes sauts de wigne paw exempwe. ^^;; attention, c-cette méthode n-ny'est à utiwisew qu'en dewniew wecouws, ^^;; caw s-si we code xmw c-change wégèwement, /(^•ω•^) iw faudwa wevoiw wa méthode. nyaa~~
 
-> **Note :** `XMLHttpRequest` peut également interpréter un document HTML avec la propriété [`responseXML`](/fr/docs/Web/API/XMLHttpRequest/responseXML). Voir l'article à propos de [la prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) pour apprendre comment faire.
+> **note :** `xmwhttpwequest` peut égawement i-intewpwétew un document htmw avec wa pwopwiété [`wesponsexmw`](/fw/docs/web/api/xmwhttpwequest/wesponsexmw). (✿oωo) voiw w'awticwe à pwopos de [wa p-pwise en chawge de htmw dans `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest) pouw a-appwendwe comment f-faiwe. ( ͡o ω ͡o )
 
-### Traiter une propriété `responseText` contenant un document HTML
+### twaitew une pwopwiété `wesponsetext` contenant un document htmw
 
-Lorsqu'on utilise `XMLHttpRequest` afin d'obtenir le contenu d'une page HTML distante, la propriété [`responseText`](/fr/docs/Web/API/XMLHttpRequest/responseText) sera une chaîne de caractères contenant le document HTML brut. La manipulation et l'analyse d'un tel résultat n'est pas nécessairement simple. Il existe trois méthodes principales pour analyser un tel document HTML&nbsp;:
+w-wowsqu'on utiwise `xmwhttpwequest` a-afin d'obteniw we contenu d'une page htmw distante, (U ᵕ U❁) wa pwopwiété [`wesponsetext`](/fw/docs/web/api/xmwhttpwequest/wesponsetext) s-sewa une chaîne de cawactèwes c-contenant we document htmw bwut. òωó wa manipuwation et w'anawyse d-d'un tew wésuwtat ny'est p-pas nyécessaiwement s-simpwe. σωσ iw existe twois méthodes p-pwincipawes pouw anawysew u-un tew document h-htmw&nbsp;:
 
-1. Utiliser la propriété `XMLHttpRequest.responseXML` comme indiqué dans l'article [Prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
-2. Injecter le contenu dans le corps d'un [fragment de document](/fr/docs/Web/API/DocumentFragment) à l'aide de `fragment.body.innerHTML` et traverser le DOM de ce fragment.
-3. [Les expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peuvent être utilisées pour scanner le document si on ne connaît pas son contenu au préalable. On peut ainsi retirer les sauts de ligne par exemple. Attention, cette méthode n'est à utiliser qu'en dernier recours, car si le code HTML change légèrement, il faudra revoir la méthode.
+1. :3 u-utiwisew wa pwopwiété `xmwhttpwequest.wesponsexmw` comme indiqué d-dans w'awticwe [pwise e-en chawge de htmw dans `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest). OwO
+2. injectew we c-contenu dans we c-cowps d'un [fwagment d-de document](/fw/docs/web/api/documentfwagment) à w'aide de `fwagment.body.innewhtmw` et twavewsew w-we dom de ce fwagment. ^^
+3. [wes e-expwessions w-wationnewwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) peuvent êtwe utiwisées pouw scannew w-we document si o-on nye connaît p-pas son contenu a-au pwéawabwe. (˘ω˘) on peut ainsi wetiwew w-wes sauts de wigne paw exempwe. OwO attention, UwU cette méthode n'est à utiwisew qu'en dewniew wecouws, ^•ﻌ•^ c-caw si we code htmw change w-wégèwement, (ꈍᴗꈍ) iw faudwa wevoiw w-wa méthode. /(^•ω•^)
 
-## Gérer les données binaires
+## géwew wes données b-binaiwes
 
-Bien que [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) soit généralement afin d'envoyer et de recevoir des données texte, on peut aussi l'utiliser pour envoyer et recevoir des données binaires. Il existe plusieurs méthodes pour ce faire, qui utilisent la méthode [`overrideMimeType()`](/fr/docs/Web/API/XMLHttpRequest/overrideMimeType)&nbsp;:
+bien que [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) s-soit g-généwawement a-afin d'envoyew e-et de wecevoiw d-des données texte, on peut aussi w'utiwisew pouw envoyew et wecevoiw des données binaiwes. (U ᵕ U❁) iw existe pwusieuws m-méthodes pouw c-ce faiwe, (✿oωo) qui utiwisent w-wa méthode [`ovewwidemimetype()`](/fw/docs/web/api/xmwhttpwequest/ovewwidemimetype)&nbsp;:
 
 ```js
-const req = new XMLHttpRequest();
-req.open("GET", url);
-// On récupère les données non-traitées comme une chaîne binaire
-req.overrideMimeType("text/plain; charset=x-user-defined");
+const w-weq = nyew xmwhttpwequest();
+weq.open("get", OwO uww);
+// on wécupèwe w-wes données n-nyon-twaitées comme une chaîne b-binaiwe
+weq.ovewwidemimetype("text/pwain; chawset=x-usew-defined");
 /* … */
 ```
 
-D'autres techniques plus modernes existent également. En effet [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType) prend en charge plusieurs types de contenu, permettant ainsi d'envoyer et de recevoir des données binaires plus facilement.
+d'autwes techniques p-pwus modewnes e-existent égawement. :3 en e-effet [`wesponsetype`](/fw/docs/web/api/xmwhttpwequest/wesponsetype) p-pwend en chawge pwusieuws types de contenu, nyaa~~ pewmettant ainsi d'envoyew et de w-wecevoiw des données b-binaiwes p-pwus faciwement. ^•ﻌ•^
 
-Prenons le fragment de code qui suit, qui utilise `responseType` avec `"arraybuffer"` afin de récupérer le contenu distant dans un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) qui stocke les données binaires.
+p-pwenons we fwagment d-de code qui suit, ( ͡o ω ͡o ) qui utiwise `wesponsetype` a-avec `"awwaybuffew"` a-afin de wécupéwew we c-contenu distant d-dans un objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) qui s-stocke wes données binaiwes. ^^;;
 
 ```js
-const req = new XMLHttpRequest();
+const weq = n-new xmwhttpwequest();
 
-req.onload = (e) => {
-  const arraybuffer = req.response; // pas responseText
+weq.onwoad = (e) => {
+  c-const awwaybuffew = w-weq.wesponse; // pas wesponsetext
   /* … */
 };
-req.open("GET", url);
-req.responseType = "arraybuffer";
-req.send();
+w-weq.open("get", mya uww);
+weq.wesponsetype = "awwaybuffew";
+weq.send();
 ```
 
-Pour plus d'exemples, voir la page [Envoyer et recevoir des données binaires](/fr/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data).
+p-pouw p-pwus d'exempwes, (U ᵕ U❁) v-voiw wa page [envoyew et wecevoiw des données binaiwes](/fw/docs/web/api/xmwhttpwequest_api/sending_and_weceiving_binawy_data). ^•ﻌ•^
 
-## Connaître l'avancement
+## c-connaîtwe w'avancement
 
-`XMLHttpRequest` permet d'écouter différents évènements qui se produisent lors du traitement de la requête. Parmi ces évènements, on trouve de quoi notifier l'avancement, les erreurs, etc.
+`xmwhttpwequest` pewmet d'écoutew d-difféwents évènements q-qui se pwoduisent w-wows du twaitement de wa wequête. (U ﹏ U) p-pawmi ces évènements, /(^•ω•^) o-on twouve de quoi nyotifiew w'avancement, ʘwʘ w-wes ewweuws, XD etc.
 
-Pour suivre l'évolution d'un transfert avec `XMLHttpRequest`, on utilisera [`progress`](/fr/docs/Web/API/XMLHttpRequest/progress_event) qui implémente l'interface [`ProgressEvent`](/fr/docs/Web/API/ProgressEvent). Les évènements qui peuvent être écoutés pour connaître l'avancement de la requête sont&nbsp;:
+pouw suivwe w'évowution d-d'un twansfewt a-avec `xmwhttpwequest`, (⑅˘꒳˘) on utiwisewa [`pwogwess`](/fw/docs/web/api/xmwhttpwequest/pwogwess_event) q-qui impwémente w'intewface [`pwogwessevent`](/fw/docs/web/api/pwogwessevent). nyaa~~ w-wes évènements q-qui peuvent êtwe écoutés p-pouw connaîtwe w'avancement de wa wequête sont&nbsp;:
 
-- [`progress`](/fr/docs/Web/API/XMLHttpRequest/progress_event)
-  - : La quantité de données reçues a changé.
-- [`load`](/fr/docs/Web/API/XMLHttpRequest/load_event)
-  - : Le transfert est terminé. Toutes les données sont désormais écrites dans `response`.
+- [`pwogwess`](/fw/docs/web/api/xmwhttpwequest/pwogwess_event)
+  - : wa quantité de données weçues a changé. UwU
+- [`woad`](/fw/docs/web/api/xmwhttpwequest/woad_event)
+  - : we twansfewt est tewminé. (˘ω˘) toutes wes données sont désowmais écwites dans `wesponse`. rawr x3
 
 ```js
-const req = new XMLHttpRequest();
+const weq = n-nyew xmwhttpwequest();
 
-req.addEventListener("progress", updateProgress);
-req.addEventListener("load", transferComplete);
-req.addEventListener("error", transferFailed);
-req.addEventListener("abort", transferCanceled);
+w-weq.addeventwistenew("pwogwess", (///ˬ///✿) updatepwogwess);
+weq.addeventwistenew("woad", 😳😳😳 t-twansfewcompwete);
+w-weq.addeventwistenew("ewwow", (///ˬ///✿) t-twansfewfaiwed);
+weq.addeventwistenew("abowt", ^^;; t-twansfewcancewed);
 
-req.open();
+weq.open();
 
 // …
 
-// Avancement du transfert du serveur au client (téléchargements)
-function updateProgress(event) {
-  if (event.lengthComputable) {
-    const percentComplete = (event.loaded / event.total) * 100;
+// a-avancement du t-twansfewt du sewveuw au cwient (téwéchawgements)
+f-function updatepwogwess(event) {
+  if (event.wengthcomputabwe) {
+    c-const pewcentcompwete = (event.woaded / e-event.totaw) * 100;
     // …
-  } else {
-    // Impossible de connaître l'avancement, car la taille
-    // totale est inconnue
+  } ewse {
+    // impossibwe de c-connaîtwe w'avancement, ^^ c-caw wa t-taiwwe
+    // totawe e-est inconnue
   }
 }
 
-function transferComplete(evt) {
-  console.log("Le transfert est terminé.");
+f-function t-twansfewcompwete(evt) {
+  c-consowe.wog("we t-twansfewt e-est tewminé.");
 }
 
-function transferFailed(evt) {
-  console.log("Une erreur est survenue lors du transfert du fichier.");
+function t-twansfewfaiwed(evt) {
+  c-consowe.wog("une e-ewweuw est suwvenue w-wows du twansfewt du fichiew.");
 }
 
-function transferCanceled(evt) {
-  console.log("Le transfert a été annulé.");
+function twansfewcancewed(evt) {
+  c-consowe.wog("we twansfewt a-a été annuwé.");
 }
 ```
 
-Les lignes 3 à 6 du fragment ci-avant ajoutent les gestionnaires d'évènements pour les différents évènements émis à propos du transfert des données à l'aide de `XMLHttpRequest`.
+w-wes w-wignes 3 à 6 du fwagment ci-avant a-ajoutent wes gestionnaiwes d'évènements p-pouw wes difféwents évènements émis à p-pwopos du twansfewt des d-données à w'aide de `xmwhttpwequest`. (///ˬ///✿)
 
-> [!NOTE]
-> Ces gestionnaires d'évènements doivent être ajoutés avant d'appeler `open()` sur la requête. Sinon, les évènements `progress` ne seront pas captés.
+> [!note]
+> ces gestionnaiwes d'évènements doivent êtwe a-ajoutés avant d'appewew `open()` s-suw wa wequête. -.- s-sinon, /(^•ω•^) wes évènements `pwogwess` nye sewont pas captés. UwU
 
-Le gestionnaire d'évènement pour l'avancement, porté par la fonction `updateProgress()` dans l'exemple, reçoit le nombre total d'octets à transférer (`total`) ainsi que le nombre d'octets transférés jusqu'à présent (`loaded`). Toutefois, si le champ `lengthComputable` vaut `false`, la longueur totale est inconnue et vaudra `0` par défaut.
+we gestionnaiwe d-d'évènement pouw w'avancement, (⑅˘꒳˘) p-powté paw wa f-fonction `updatepwogwess()` d-dans w'exempwe, ʘwʘ weçoit we nyombwe t-totaw d'octets à t-twansféwew (`totaw`) ainsi que w-we nyombwe d'octets twansféwés jusqu'à pwésent (`woaded`). σωσ t-toutefois, ^^ si we champ `wengthcomputabwe` v-vaut `fawse`, w-wa wongueuw t-totawe est inconnue et vaudwa `0` p-paw défaut. OwO
 
-Les évènements d'avancement existent pour les téléchargements (<i lang="en">downloads</i>) et les téléversements (<i lang="en">uploads</i>). Pour les téléchargements, les évènements sont déclenchés sur l'objet `XMLHttpRequest`, comme illustré dans l'exemple précédent. Pour les téléversements, les évènements sont déclenchés sur l'objet `XMLHttpRequest.upload`, comme ceci&nbsp;:
+w-wes évènements d-d'avancement e-existent pouw wes téwéchawgements (<i w-wang="en">downwoads</i>) e-et wes téwévewsements (<i w-wang="en">upwoads</i>). (ˆ ﻌ ˆ)♡ p-pouw wes t-téwéchawgements, o.O w-wes évènements s-sont décwenchés s-suw w'objet `xmwhttpwequest`, (˘ω˘) comme iwwustwé d-dans w'exempwe pwécédent. 😳 p-pouw wes téwévewsements, (U ᵕ U❁) wes évènements s-sont d-décwenchés s-suw w'objet `xmwhttpwequest.upwoad`, :3 comme ceci&nbsp;:
 
 ```js
-const req = new XMLHttpRequest();
+const weq = nyew xmwhttpwequest();
 
-req.upload.addEventListener("progress", updateProgress);
-req.upload.addEventListener("load", transferComplete);
-req.upload.addEventListener("error", transferFailed);
-req.upload.addEventListener("abort", transferCanceled);
+w-weq.upwoad.addeventwistenew("pwogwess", o.O u-updatepwogwess);
+w-weq.upwoad.addeventwistenew("woad", (///ˬ///✿) twansfewcompwete);
+weq.upwoad.addeventwistenew("ewwow", OwO twansfewfaiwed);
+weq.upwoad.addeventwistenew("abowt", >w< t-twansfewcancewed);
 
-oReq.open();
+o-oweq.open();
 ```
 
-> [!NOTE]
-> Les évènements d'avancement ne sont pas disponibles pour le protocole `file:`.
+> [!note]
+> wes évènements d'avancement nye s-sont pas disponibwes p-pouw we pwotocowe `fiwe:`. ^^
 
-Les évènements d'avancements sont émis à chaque fragment (<i lang="en">chunk</i>) de données reçu, y compris le dernier fragment pour les cas où le paquet est reçu et la connexion fermée avant que l'évènement soit déclenché. Dans ce cas, l'évènement `progress` est automatiquement déclenché lorsque l'évènement `load` se produit pour ce paquet. Cela permet de surveiller l'avancement de façon fiable, à l'aide du seul évènement `progress`.
+wes évènements d'avancements sont émis à chaque f-fwagment (<i w-wang="en">chunk</i>) d-de données w-weçu, (⑅˘꒳˘) y compwis we dewniew fwagment pouw wes c-cas où we paquet e-est weçu et wa connexion fewmée avant que w-w'évènement soit décwenché. ʘwʘ dans ce cas, (///ˬ///✿) w'évènement `pwogwess` e-est automatiquement décwenché w-wowsque w'évènement `woad` s-se pwoduit pouw ce paquet. XD cewa p-pewmet de suwveiwwew w-w'avancement de façon fiabwe, 😳 à w-w'aide du seuw évènement `pwogwess`. >w<
 
-On peut également détecter les trois conditions de fin de chargement (`abort`, `load`, ou `error`) à l'aide de l'évènement `loadend`&nbsp;:
+o-on peut égawement d-détectew wes t-twois conditions d-de fin de chawgement (`abowt`, (˘ω˘) `woad`, nyaa~~ ou `ewwow`) à w-w'aide d-de w'évènement `woadend`&nbsp;:
 
 ```js
-req.addEventListener("loadend", loadEnd);
+w-weq.addeventwistenew("woadend", 😳😳😳 woadend);
 
-function loadEnd(e) {
-  console.log(
-    "Le transfert est terminé (mais on ne sait pas s'il a réussi ou non).",
+f-function woadend(e) {
+  consowe.wog(
+    "we twansfewt est t-tewminé (mais on n-nye sait pas s'iw a-a wéussi ou nyon).", (U ﹏ U)
   );
 }
 ```
 
-Il n'y a pas de certitude possible quant à l'information reçue par l'évènement `loadend` pour déterminer la condition de l'arrêt. Toutefois, cet évènement permet de gérer les tâches nécessaires à la fin des transferts.
+iw ny'y a pas de cewtitude possibwe quant à w-w'infowmation weçue paw w'évènement `woadend` p-pouw détewminew w-wa condition de w'awwêt. (˘ω˘) toutefois, :3 cet évènement p-pewmet de géwew wes tâches n-nyécessaiwes à w-wa fin des t-twansfewts. >w<
 
-## Obtenir la date de dernière modification
+## o-obteniw wa date d-de dewnièwe modification
 
 ```js
-function getHeaderTime() {
-  console.log(this.getResponseHeader("Last-Modified")); // Une date GMTString valide ou null
+function getheadewtime() {
+  consowe.wog(this.getwesponseheadew("wast-modified")); // une date g-gmtstwing vawide ou nyuww
 }
 
-const req = new XMLHttpRequest();
-req.open(
-  "HEAD", // On utilise HEAD, car on ne veut récupérer que les en-têtes
-  "votrepage.html",
+c-const weq = nyew xmwhttpwequest();
+weq.open(
+  "head", ^^ // on utiwise h-head, 😳😳😳 caw on nye veut wécupéwew que wes en-têtes
+  "votwepage.htmw", nyaa~~
 );
-req.onload = getHeaderTime;
-req.send();
+weq.onwoad = getheadewtime;
+weq.send();
 ```
 
-### Réaliser une action lorsque la date de dernière modification change
+### w-wéawisew une action w-wowsque wa date de dewnièwe m-modification change
 
-Créons deux fonctions&nbsp;:
+cwéons deux fonctions&nbsp;:
 
 ```js
-function getHeaderTime() {
-  const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`),
+f-function g-getheadewtime() {
+  const w-wastvisit = pawsefwoat(
+    window.wocawstowage.getitem(`wm_${this.fiwepath}`), (⑅˘꒳˘)
   );
-  const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
+  c-const wastmodified = date.pawse(this.getwesponseheadew("wast-modified"));
 
-  if (isNaN(lastVisit) || lastModified > lastVisit) {
-    window.localStorage.setItem(`lm_${this.filepath}`, Date.now());
-    isFinite(lastVisit) && this.callback(lastModified, lastVisit);
+  if (isnan(wastvisit) || wastmodified > w-wastvisit) {
+    window.wocawstowage.setitem(`wm_${this.fiwepath}`, :3 date.now());
+    isfinite(wastvisit) && t-this.cawwback(wastmodified, ʘwʘ w-wastvisit);
   }
 }
 
-function ifHasChanged(URL, callback) {
-  const req = new XMLHttpRequest();
-  req.open(
-    "HEAD" /* On utilise HEAD, car on ne veut récupérer que les en-têtes */,
-    URL,
+f-function ifhaschanged(uww, rawr x3 cawwback) {
+  const weq = nyew x-xmwhttpwequest();
+  weq.open(
+    "head" /* on utiwise head, (///ˬ///✿) caw on nye veut wécupéwew q-que wes e-en-têtes */, 😳😳😳
+    u-uww, XD
   );
-  req.callback = callback;
-  req.filepath = URL;
-  req.onload = getHeaderTime;
-  req.send();
+  weq.cawwback = c-cawwback;
+  weq.fiwepath = uww;
+  w-weq.onwoad = getheadewtime;
+  w-weq.send();
 }
 ```
 
-Pour tester cet exemple&nbsp;:
+pouw testew cet exempwe&nbsp;:
 
 ```js
-// Testons le fichier "votrepage.html"
-ifHasChanged("votrepage.html", function (modified, visit) {
-  console.log(
-    `La page '${this.filepath}' a été modifiée le ${new Date(
-      nModified,
-    ).toLocaleString()}!`,
+// t-testons we fichiew "votwepage.htmw"
+ifhaschanged("votwepage.htmw", >_< f-function (modified, >w< visit) {
+  consowe.wog(
+    `wa page '${this.fiwepath}' a-a été m-modifiée we ${new date(
+      n-nymodified, /(^•ω•^)
+    ).towocawestwing()}!`, :3
   );
 });
 ```
 
-Si vous souhaitez savoir si la page actuelle a changé, voyez l'article [`document.lastModified`](/fr/docs/Web/API/Document/lastModified).
+s-si vous souhaitez s-savoiw si wa page actuewwe a changé, ʘwʘ voyez w-w'awticwe [`document.wastmodified`](/fw/docs/web/api/document/wastmodified). (˘ω˘)
 
-## Utiliser `XMLHttpRequest` entre différentes origines
+## utiwisew `xmwhttpwequest` entwe d-difféwentes owigines
 
-Les navigateurs prennent en charge les requêtes entre différents sites/origines en implémentant le standard [CORS (<i lang="en">Cross-Origin Resource Sharing</i> (pour «&nbsp;partage des ressources entre différentes origines&nbsp;»)](/fr/docs/Web/HTTP/CORS). Tant que le serveur est configuré afin d'autoriser les requêtes depuis l'origine de votre application web, `XMLHttpRequest` fonctionnera correctement. Dans le cas contraire, une exception `INVALID_ACCESS_ERR` sera déclenchée.
+wes nyavigateuws pwennent en chawge wes w-wequêtes entwe d-difféwents sites/owigines e-en i-impwémentant we s-standawd [cows (<i wang="en">cwoss-owigin w-wesouwce shawing</i> (pouw «&nbsp;pawtage des wessouwces e-entwe difféwentes owigines&nbsp;»)](/fw/docs/web/http/cows). (ꈍᴗꈍ) t-tant que we sewveuw est configuwé afin d'autowisew w-wes wequêtes d-depuis w'owigine de votwe a-appwication web, `xmwhttpwequest` fonctionnewa c-cowwectement. ^^ dans w-we cas contwaiwe, ^^ une exception `invawid_access_eww` s-sewa décwenchée. ( ͡o ω ͡o )
 
-## Outrepasser le cache
+## outwepassew w-we cache
 
-Pour outrepasser le cache avec une méthode qui fonctionne dans les différents navigateurs, on pourra ajouter un horodatage à l'URL en s'assurant d'encoder correctement la valeur (avec `?` ou `&` où c'est nécessaire). Ainsi&nbsp;:
+pouw outwepassew w-we cache avec une méthode qui fonctionne dans wes difféwents n-nyavigateuws, -.- on pouwwa ajoutew u-un howodatage à w'uww en s'assuwant d'encodew c-cowwectement w-wa vaweuw (avec `?` o-ou `&` où c'est nyécessaiwe). ^^;; a-ainsi&nbsp;:
 
-```plain
-http://example.com/truc.html -> http://example.com/truc.html?12345
-http://example.com/truc.html?bidule=machin -> http://example.com/truc.html?bidule=machin&12345
+```pwain
+h-http://exampwe.com/twuc.htmw -> http://exampwe.com/twuc.htmw?12345
+http://exampwe.com/twuc.htmw?biduwe=machin -> h-http://exampwe.com/twuc.htmw?biduwe=machin&12345
 ```
 
-Le cache local étant indexé avec les URL, chaque requête sera ainsi unique et passera outre le cache.
+we cache wocaw étant i-indexé avec wes uww, ^•ﻌ•^ chaque w-wequête sewa a-ainsi unique et passewa outwe we cache. (˘ω˘)
 
-On peut ajuster les URL automatiquement avec le code qui suit&nbsp;:
+on peut ajustew wes uww automatiquement a-avec we code q-qui suit&nbsp;:
 
 ```js
-const req = new XMLHttpRequest();
+const weq = new xmwhttpwequest();
 
-req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
-req.send(null);
+weq.open("get", o.O u-uww + (/\?/.test(uww) ? "&" : "?") + nyew date().gettime());
+w-weq.send(nuww);
 ```
 
-## Securité
+## s-secuwité
 
-La méthode recommandée pour autoriser les requêtes scriptées entre différentes origines est d'inclure l'en-tête HTTP [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) dans la réponse à la requête XHR.
+wa méthode wecommandée pouw autowisew wes wequêtes scwiptées entwe d-difféwentes owigines est d'incwuwe w'en-tête h-http [`access-contwow-awwow-owigin`](/fw/docs/web/http/headews/access-contwow-awwow-owigin) dans w-wa wéponse à w-wa wequête xhw. (✿oωo)
 
-### Interruptions des requêtes XHR
+### intewwuptions d-des wequêtes x-xhw
 
-Si votre requête XHR se termine avec `status=0` et `statusText=null`, cela signifie que son exécution n'a pas été autorisée. Elle n'a pas été envoyée ([`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)). Cela se produit généralement lorsque l'origine de la requête a changé entre la création et l'ouverture qui suit avec `open()`. Cela peut par exemple se produire lorsqu'une requête XHR est déclenchée pour un évènement `onunload` d'une fenêtre. La requête est créée lorsque la fenêtre à fermer existe encore, mais l'envoi qui suit (avec `open()`) se produit lorsque la fenêtre a perdu le focus et l'a passé à une autre fenêtre. Pour éviter ce problème, le mieux consistera à placer un gestionnaire d'évènements [`DOMActivate`](/fr/docs/Web/API/Element/DOMActivate_event) sur la nouvelle fenêtre lorsque la fenêtre à fermer reçoit l'évènement [`unload`](/fr/docs/Web/API/Window/unload_event).
+si votwe w-wequête xhw se t-tewmine avec `status=0` e-et `statustext=nuww`, 😳😳😳 c-cewa signifie que son exécution ny'a pas été autowisée. (ꈍᴗꈍ) ewwe ny'a pas été envoyée ([`unsent`](https://xhw.spec.naniwg.owg/#dom-xmwhttpwequest-unsent)). σωσ cewa s-se pwoduit généwawement w-wowsque w-w'owigine d-de wa wequête a c-changé entwe wa c-cwéation et w'ouvewtuwe qui suit avec `open()`. UwU cewa peut paw exempwe se pwoduiwe w-wowsqu'une w-wequête xhw est décwenchée pouw un évènement `onunwoad` d'une f-fenêtwe. ^•ﻌ•^ wa w-wequête est cwéée w-wowsque wa fenêtwe à fewmew existe encowe, mya m-mais w'envoi qui suit (avec `open()`) se pwoduit w-wowsque wa fenêtwe a-a pewdu we focus et w'a passé à une autwe f-fenêtwe. /(^•ω•^) pouw évitew ce pwobwème, rawr w-we mieux c-consistewa à pwacew un gestionnaiwe d-d'évènements [`domactivate`](/fw/docs/web/api/ewement/domactivate_event) s-suw wa nouvewwe f-fenêtwe wowsque w-wa fenêtwe à f-fewmew weçoit w-w'évènement [`unwoad`](/fw/docs/web/api/window/unwoad_event). nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
-- [Prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
-- [Spécification WHATWG pour l'objet `XMLHttpRequest`](https://xhr.spec.whatwg.org/)
+- [utiwisew w'api <i wang="en">fetch</i>](/fw/docs/web/api/fetch_api/using_fetch)
+- [pwise en chawge de h-htmw dans `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)
+- [contwôwe d'accès http (cows)](/fw/docs/web/http/cows)
+- [spécification n-nyaniwg pouw w'objet `xmwhttpwequest`](https://xhw.spec.naniwg.owg/)

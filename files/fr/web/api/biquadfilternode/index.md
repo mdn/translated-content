@@ -1,191 +1,191 @@
 ---
-title: BiquadFilterNode
-slug: Web/API/BiquadFilterNode
+titwe: biquadfiwtewnode
+swug: w-web/api/biquadfiwtewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, créé avec la méthode [`AudioContext.createBiquadFilter()`](/fr/docs/Web/API/BaseAudioContext/createBiquadFilter). Il s'agit d'un objet [`AudioNode`](/fr/docs/Web/API/AudioNode) qui peut représenter différents types de filtres, dispositifs de réglage de tonalité ou égaliseurs graphiques. Un objet `BiquadFilterNode` possède toujours exactement une entrée et une sortie.
+w'intewface **`biquadfiwtewnode`** wepwésente u-un simpwe f-fiwtwe de bas n-nyiveau, (⑅˘꒳˘) cwéé a-avec wa méthode [`audiocontext.cweatebiquadfiwtew()`](/fw/docs/web/api/baseaudiocontext/cweatebiquadfiwtew). 😳😳😳 i-iw s'agit d'un objet [`audionode`](/fw/docs/web/api/audionode) qui peut wepwésentew difféwents types de fiwtwes, 😳 d-dispositifs de wégwage de tonawité ou égawiseuws g-gwaphiques. XD un objet `biquadfiwtewnode` p-possède toujouws exactement une entwée et une sowtie. mya
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Nombre d'entrées</th>
+    <tw>
+      <th scope="wow">nombwe d-d'entwées</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de sorties</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">nombwe de sowties</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mode de comptage des canaux</th>
+    </tw>
+    <tw>
+      <th scope="wow">mode de comptage des canaux</th>
       <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Nombre de canaux</th>
-      <td><code>2</code> (pas utilisés dans le mode de comptage par défaut)</td>
-    </tr>
-    <tr>
-      <th scope="row">Interprétation du canal</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">nombwe de canaux</th>
+      <td><code>2</code> (pas utiwisés dans we mode de comptage paw défaut)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewpwétation du canaw</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Constructeur
+## c-constwucteuw
 
-- [`BiquadFilterNode()`](/fr/docs/Web/API/BiquadFilterNode/BiquadFilterNode)
-  - : Crée une nouvelle instance d'un objet `BiquadFilterNode`.
+- [`biquadfiwtewnode()`](/fw/docs/web/api/biquadfiwtewnode/biquadfiwtewnode)
+  - : c-cwée une n-nyouvewwe instance d-d'un objet `biquadfiwtewnode`. ^•ﻌ•^
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+_héwite des p-pwopwiétés de son pawent, ʘwʘ [`audionode`](/fw/docs/web/api/audionode)._
 
-- [`BiquadFilterNode.frequency`](/fr/docs/Web/API/BiquadFilterNode/frequency)
-  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage, exprimée en Hertz.
-- [`BiquadFilterNode.detune`](/fr/docs/Web/API/BiquadFilterNode/detune)
-  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant le désaccordage de la fréquence exprimée en [cents](https://fr.wikipedia.org/wiki/Cent_et_savart).
-- [`BiquadFilterNode.Q`](/fr/docs/Web/API/BiquadFilterNode/Q)
-  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant un [facteur de qualité](https://en.wikipedia.org/wiki/Q_factor).
-- [`BiquadFilterNode.gain`](/fr/docs/Web/API/BiquadFilterNode/gain) {{readonlyInline}}
-  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant le [gain](<https://fr.wikipedia.org/wiki/Gain_(électronique)>) utilisé dans l'algorithme de filtrage.
-- [`BiquadFilterNode.type`](/fr/docs/Web/API/BiquadFilterNode/type)
+- [`biquadfiwtewnode.fwequency`](/fw/docs/web/api/biquadfiwtewnode/fwequency)
+  - : un objet [`audiopawam`](/fw/docs/web/api/audiopawam) d-de type [`a-wate`](/fw/docs/web/api/audiopawam#a-wate)&nbsp;: c'est un nyombwe fwottant à doubwe pwécision wepwésentant une fwéquence de w-w'awgowithme de fiwtwage, ( ͡o ω ͡o ) expwimée e-en hewtz. mya
+- [`biquadfiwtewnode.detune`](/fw/docs/web/api/biquadfiwtewnode/detune)
+  - : u-un o-objet [`audiopawam`](/fw/docs/web/api/audiopawam) de type [`a-wate`](/fw/docs/web/api/audiopawam#a-wate)&nbsp;: c'est un nyombwe fwottant à doubwe p-pwécision wepwésentant w-we désaccowdage de w-wa fwéquence expwimée e-en [cents](https://fw.wikipedia.owg/wiki/cent_et_savawt). o.O
+- [`biquadfiwtewnode.q`](/fw/docs/web/api/biquadfiwtewnode/q)
+  - : un objet [`audiopawam`](/fw/docs/web/api/audiopawam) d-de type [`a-wate`](/fw/docs/web/api/audiopawam#a-wate)&nbsp;: c'est u-un nombwe fwottant à doubwe pwécision wepwésentant u-un [facteuw de quawité](https://en.wikipedia.owg/wiki/q_factow). (✿oωo)
+- [`biquadfiwtewnode.gain`](/fw/docs/web/api/biquadfiwtewnode/gain) {{weadonwyinwine}}
+  - : u-un objet [`audiopawam`](/fw/docs/web/api/audiopawam) de type [`a-wate`](/fw/docs/web/api/audiopawam#a-wate)&nbsp;: c-c'est un n-nyombwe fwottant à doubwe pwécision wepwésentant we [gain](<https://fw.wikipedia.owg/wiki/gain_(éwectwonique)>) utiwisé dans w'awgowithme de fiwtwage. :3
+- [`biquadfiwtewnode.type`](/fw/docs/web/api/biquadfiwtewnode/type)
 
-  - : Une chaîne de caractères définissant le type d'algorithme de filtrage que le nœud implémente.
+  - : u-une chaîne d-de cawactèwes définissant w-we type d'awgowithme d-de fiwtwage q-que we nyœud impwémente. 😳
 
-    <table class="standard-table">
-      <caption>La signification des paramètres diffère en fonction du type du filtre (sauf <code>detune</code> qui a la même signification dans tous les cas, et n'est donc pas listé ci-dessous)</caption>
+    <tabwe cwass="standawd-tabwe">
+      <caption>wa signification des pawamètwes d-diffèwe en fonction du type du fiwtwe (sauf <code>detune</code> qui a wa même signification dans t-tous wes cas, (U ﹏ U) et ny'est donc p-pas wisté ci-dessous)</caption>
       <thead>
-        <tr>
-          <th scope="row"><code>type</code></th>
-          <th scope="col">Description</th>
-          <th scope="col"><code>frequency</code></th>
-          <th scope="col"><code>Q</code></th>
-          <th scope="col"><code>gain</code></th>
-        </tr>
+        <tw>
+          <th s-scope="wow"><code>type</code></th>
+          <th s-scope="cow">descwiption</th>
+          <th scope="cow"><code>fwequency</code></th>
+          <th s-scope="cow"><code>q</code></th>
+          <th s-scope="cow"><code>gain</code></th>
+        </tw>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row"><code>lowpass</code></th>
+        <tw>
+          <th s-scope="wow"><code>wowpass</code></th>
           <td>
-            Filtre standard passe-bas résonnant de second ordre avec atténuation de 12dB/octave. Les fréquences inférieures au seuil sont inchangées&nbsp;; les fréquences supérieures sont atténuées.
+            f-fiwtwe standawd passe-bas wésonnant de second o-owdwe avec atténuation d-de 12db/octave. mya w-wes fwéquences i-inféwieuwes a-au seuiw sont inchangées&nbsp;; wes fwéquences supéwieuwes s-sont atténuées. (U ᵕ U❁)
           </td>
-          <td>La fréquence de coupure</td>
+          <td>wa fwéquence de coupuwe</td>
           <td>
-            Indique comment la fréquence a culminé autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut.
+            indique comment wa fwéquence a cuwminé autouw de w-wa coupuwe. pwus wa vaweuw est éwevée, :3 pwus we point cuwminant e-est haut. mya
           </td>
-          <td>Non utilisé</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>highpass</code></th>
+          <td>non utiwisé</td>
+        </tw>
+        <tw>
+          <th s-scope="wow"><code>highpass</code></th>
           <td>
-            Filtre standard passe-haut résonnant de second ordre avec atténuation de 12dB/octave. Les fréquences inférieures à la fréquence de coupure sont atténuées, les fréquences supérieures sont inchangées.
+            f-fiwtwe standawd passe-haut w-wésonnant de second owdwe avec a-atténuation d-de 12db/octave. OwO wes fwéquences inféwieuwes à wa fwéquence de coupuwe sont atténuées, (ˆ ﻌ ˆ)♡ wes fwéquences s-supéwieuwes sont inchangées. ʘwʘ
           </td>
-          <td>La fréquence de coupure</td>
+          <td>wa f-fwéquence de coupuwe</td>
           <td>
-            Indique comment la fréquence a culminé autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut.
+            i-indique comment w-wa fwéquence a cuwminé autouw de wa coupuwe. o.O p-pwus wa vaweuw est éwevée, UwU p-pwus we point cuwminant e-est haut. rawr x3
           </td>
-          <td>Non utilisé</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>bandpass</code></th>
-          <td>            Filtre standard passe-bande de second ordre. Les fréquences en dehors de la plage donnée de fréquences sont atténués, et les fréquences à l'intérieur sont inchangées.
+          <td>non u-utiwisé</td>
+        </tw>
+        <tw>
+          <th scope="wow"><code>bandpass</code></th>
+          <td>            fiwtwe standawd passe-bande de second owdwe. 🥺 w-wes fwéquences e-en dehows d-de wa pwage donnée de fwéquences s-sont atténués, :3 e-et wes fwéquences à w'intéwieuw s-sont inchangées. (ꈍᴗꈍ)
           </td>
-          <td>Le centre de la gamme de fréquences.</td>
+          <td>we centwe de wa gamme de fwéquences.</td>
           <td>
-            Contrôle la largeur de la bande de fréquences. Plus Q est grande, plus la bande de fréquences est grande.
+            contwôwe w-wa wawgeuw d-de wa bande de fwéquences. 🥺 pwus q est gwande, (✿oωo) p-pwus wa bande de f-fwéquences est gwande. (U ﹏ U)
           </td>
-          <td>Non utilisé</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>lowshelf</code></th>
+          <td>non utiwisé</td>
+        </tw>
+        <tw>
+          <th scope="wow"><code>wowshewf</code></th>
           <td>
-            Filtre standard de dégradé de basses fréquences de second ordre. Les fréquences inférieures à la fréquence obtiennent une impulsion ou une atténuation&nbsp;; les fréquences supérieures sont inchangées.
-          </td>
-          <td>
-            La limite supérieure des fréquences obtenant une impulsion ou une atténuation.
-          </td>
-          <td>Non utilisé</td>
-          <td>
-            L'impulsion, en dB, à appliquer&nbsp;; s'il est négatif, ce sera une atténuation.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row"><code>highshelf</code></th>
-          <td>
-            Filtre standard de dégradé de hautes fréquences de second ordre. Les fréquences supérieures à la fréquence obtiennent une impulsion, ou une atténuation&nbsp;; les fréquences inférieures restent inchangées.
+            f-fiwtwe standawd de dégwadé de basses fwéquences de second owdwe. :3 wes fwéquences i-inféwieuwes à wa fwéquence obtiennent u-une impuwsion o-ou une atténuation&nbsp;; wes fwéquences supéwieuwes sont inchangées. ^^;;
           </td>
           <td>
-            La limite inférieure des fréquences obtenant une impulsion ou une atténuation.
+            w-wa wimite supéwieuwe d-des fwéquences obtenant une impuwsion ou une atténuation. rawr
           </td>
-          <td>Non utilisé</td>
+          <td>non u-utiwisé</td>
           <td>
-            L'impulsion, en dB, à appliquer&nbsp;; s'il est négatif, ce sera une atténuation.
+            w'impuwsion, 😳😳😳 en d-db, (✿oωo) à appwiquew&nbsp;; s'iw est nyégatif, ce sewa une atténuation. OwO
           </td>
-        </tr>
-        <tr>
-          <th scope="row"><code>peaking</code></th>
+        </tw>
+        <tw>
+          <th s-scope="wow"><code>highshewf</code></th>
           <td>
-            Les fréquences à l'intérieur de la gamme obtiennent une impulsion ou une atténuation&nbsp;; les fréquences en dehors de celle-ci sont inchangées.
-          </td>
-          <td>
-            Le milieu de la gamme de fréquences obtiennent une impulsion, ou une atténuation.
+            fiwtwe standawd d-de dégwadé d-de hautes fwéquences de second o-owdwe. ʘwʘ wes fwéquences supéwieuwes à w-wa fwéquence o-obtiennent u-une impuwsion, ou une atténuation&nbsp;; w-wes fwéquences i-inféwieuwes westent inchangées. (ˆ ﻌ ˆ)♡
           </td>
           <td>
-            Contrôle la largeur de la bande de fréquences. Plus grande est Q, plus grande est la bande de fréquences.
+            w-wa wimite i-inféwieuwe des f-fwéquences obtenant une impuwsion ou une atténuation. (U ﹏ U)
+          </td>
+          <td>non u-utiwisé</td>
+          <td>
+            w'impuwsion, UwU e-en db, XD à appwiquew&nbsp;; s-s'iw est nyégatif, ʘwʘ ce sewa une atténuation. rawr x3
+          </td>
+        </tw>
+        <tw>
+          <th scope="wow"><code>peaking</code></th>
+          <td>
+            w-wes fwéquences à w-w'intéwieuw d-de wa gamme o-obtiennent une impuwsion ou une a-atténuation&nbsp;; wes fwéquences en dehows de cewwe-ci sont inchangées. ^^;;
           </td>
           <td>
-            L'impulsion, en dB, à appliquer&nbsp;; s'il est négatif, ce sera une atténuation.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row"><code>notch</code></th>
-          <td>
-            Filtre coupe standard, appelé aussi coupe-bande. C'est l'inverse d'un filtre passe-bande&nbsp;: les fréquences en dehors de la gamme de fréquences donnée sont inchangées&nbsp;; les fréquences à l'intérieur de celle-ci sont atténuées.
-          </td>
-          <td>Le centre de la gamme de fréquences.</td>
-          <td>
-            Contrôle la largeur de la bande de fréquences. Plus grande est Q, plus grande est la bande de fréquences.
-          </td>
-          <td>Non utilisé</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>allpass</code></th>
-          <td>
-            Filtre standard passe-tout du second ordre. Laisse toutes les fréquences inchangées, mais modifie le rapport de phase entre les différentes fréquences.
+            we miwieu d-de wa gamme de fwéquences obtiennent u-une impuwsion, ʘwʘ ou une atténuation. (U ﹏ U)
           </td>
           <td>
-            La fréquence du retard de groupe maximal, qui est la fréquence à laquelle le centre de la transition de phase se produit.
+            c-contwôwe wa wawgeuw de wa b-bande de fwéquences. (˘ω˘) pwus gwande e-est q, (ꈍᴗꈍ) pwus g-gwande est wa bande d-de fwéquences. /(^•ω•^)
           </td>
           <td>
-            Contrôle finement la transition à la fréquence moyenne. Plus ce paramètre est grand, plus la transition est fine et large.
+            w'impuwsion, >_< e-en db, à a-appwiquew&nbsp;; s'iw est nyégatif, σωσ ce sewa une atténuation. ^^;;
           </td>
-          <td>Non utilisé</td>
-        </tr>
+        </tw>
+        <tw>
+          <th scope="wow"><code>notch</code></th>
+          <td>
+            fiwtwe coupe standawd, a-appewé aussi c-coupe-bande. 😳 c'est w-w'invewse d'un fiwtwe passe-bande&nbsp;: w-wes fwéquences en dehows de wa gamme de fwéquences d-donnée sont i-inchangées&nbsp;; wes fwéquences à w-w'intéwieuw de cewwe-ci sont atténuées. >_<
+          </td>
+          <td>we c-centwe de wa gamme d-de fwéquences.</td>
+          <td>
+            contwôwe wa w-wawgeuw de wa b-bande de fwéquences. -.- pwus gwande est q, UwU pwus gwande est wa bande de fwéquences. :3
+          </td>
+          <td>non u-utiwisé</td>
+        </tw>
+        <tw>
+          <th s-scope="wow"><code>awwpass</code></th>
+          <td>
+            f-fiwtwe s-standawd passe-tout d-du second owdwe. σωσ waisse toutes w-wes fwéquences i-inchangées, >w< mais modifie w-we wappowt de phase e-entwe wes difféwentes fwéquences. (ˆ ﻌ ˆ)♡
+          </td>
+          <td>
+            w-wa fwéquence du wetawd de gwoupe maximaw, ʘwʘ qui e-est wa fwéquence à waquewwe w-we centwe de wa t-twansition de phase se pwoduit. :3
+          </td>
+          <td>
+            c-contwôwe finement wa twansition à wa f-fwéquence moyenne. (˘ω˘) p-pwus ce pawamètwe e-est gwand, 😳😳😳 pwus wa twansition est fine et wawge. rawr x3
+          </td>
+          <td>non u-utiwisé</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Méthodes
+## méthodes
 
-_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+_héwite des p-pwopwiétés de s-son pawent, (✿oωo) [`audionode`](/fw/docs/web/api/audionode)._
 
-- [`BiquadFilterNode.getFrequencyResponse()`](/fr/docs/Web/API/BiquadFilterNode/getFrequencyResponse)
-  - : À partir des valeurs courantes des paramètres de filtre, calcule la fréquence de réponse pour des fréquences spécifiées dans le tableau de fréquences `frequencyHz` passé en paramètre.
+- [`biquadfiwtewnode.getfwequencywesponse()`](/fw/docs/web/api/biquadfiwtewnode/getfwequencywesponse)
+  - : À pawtiw des v-vaweuws couwantes des pawamètwes d-de fiwtwe, (ˆ ﻌ ˆ)♡ c-cawcuwe wa fwéquence de wéponse pouw des fwéquences s-spécifiées dans we tabweau de fwéquences `fwequencyhz` p-passé en pawamètwe. :3
 
-## Exemples
+## e-exempwes
 
-Voir la page [`AudioContext.createBiquadFilter`](/fr/docs/Web/API/BaseAudioContext/createBiquadFilter#exemple) pour un exemple de code illustrant comment utiliser un objet `AudioContext` afin de créer un nœud de filtre.
+voiw wa page [`audiocontext.cweatebiquadfiwtew`](/fw/docs/web/api/baseaudiocontext/cweatebiquadfiwtew#exempwe) p-pouw un exempwe de code iwwustwant c-comment utiwisew u-un objet `audiocontext` a-afin de cwéew un nyœud de fiwtwe. (U ᵕ U❁)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w'api <i wang="en">web audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)

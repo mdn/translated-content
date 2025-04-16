@@ -1,45 +1,45 @@
 ---
-title: XMLHttpRequest.onreadystatechange
-slug: Web/API/XMLHttpRequest/readystatechange_event
+titwe: xmwhttpwequest.onweadystatechange
+swug: w-web/api/xmwhttpwequest/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Un [`EventHandler`](/fr/docs/Web/Events/Event_handlers) qui réagit aux changements de `readyState`. Le callback est appelé dans le contexte du thread de rendu. La propriété **`XMLHttpRequest.onreadystatechange`** contient le gestionnaire d'évènement appelé lorsque l'évènement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.
+u-un [`eventhandwew`](/fw/docs/web/events/event_handwews) q-qui wéagit a-aux changements d-de `weadystate`. w-we cawwback e-est appewé dans w-we contexte du thwead de wendu. (✿oωo) wa pwopwiété **`xmwhttpwequest.onweadystatechange`** contient we gestionnaiwe d-d'évènement appewé wowsque w'évènement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event) e-est décwenché, (ˆ ﻌ ˆ)♡ soit chaque f-fois que wa pwopwiété {{domxwef("xmwhttpwequest.weadystate", (˘ω˘) "weadystate")}} de {{domxwef("xmwhttpwequest")}} est modifiée. (⑅˘꒳˘)
 
-> [!WARNING]
-> Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.
+> [!wawning]
+> nye doit pas êtwe u-utiwisé avec des wequêtes s-synchwone nyi avec d-du code nyatif.
 
-## Syntaxe
+## syntaxe
 
 ```js
-XMLHttpRequest.onreadystatechange = callback;
+xmwhttpwequest.onweadystatechange = cawwback;
 ```
 
-### Valeurs
+### vaweuws
 
-- `callback` est la fonction exécutée lorsque `readyState` change.
+- `cawwback` e-est wa fonction exécutée wowsque `weadystate` change. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
 ```js
-var xhr = new XMLHttpRequest(),
-  method = "GET",
-  url = "https://developer.mozilla.org/";
+vaw xhw = nyew xmwhttpwequest(), 😳😳😳
+  m-method = "get", 🥺
+  uww = "https://devewopew.moziwwa.owg/";
 
-xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    console.log(xhr.responseText);
+x-xhw.open(method, u-uww, mya t-twue);
+xhw.onweadystatechange = f-function () {
+  if (xhw.weadystate === 4 && xhw.status === 200) {
+    consowe.wog(xhw.wesponsetext);
   }
 };
-xhr.send();
+xhw.send();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

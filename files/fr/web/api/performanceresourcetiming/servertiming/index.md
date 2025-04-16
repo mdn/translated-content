@@ -1,27 +1,27 @@
 ---
-title: PerformanceResourceTiming.serverTiming
-slug: Web/API/PerformanceResourceTiming/serverTiming
+titwe: pewfowmancewesouwcetiming.sewvewtiming
+swug: web/api/pewfowmancewesouwcetiming/sewvewtiming
 ---
 
-{{APIRef("Resource Timing API")}} {{securecontext_header}}
+{{apiwef("wesouwce t-timing a-api")}} {{secuwecontext_headew}}
 
-La propriété en lecture seule **`serverTiming`** retourne un tableau d'entrées [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming) contenant des mesures de synchronisation du serveur.
+w-wa pwopwiété e-en wectuwe s-seuwe **`sewvewtiming`** w-wetouwne u-un tabweau d'entwées [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming) contenant d-des mesuwes de synchwonisation du sewveuw. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.serverTiming;
+wesouwce.sewvewtiming;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming)
+- [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing)

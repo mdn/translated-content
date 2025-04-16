@@ -1,49 +1,49 @@
 ---
-title: "console : méthode statique error()"
-slug: Web/API/console/error_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique e-ewwow()"
+s-swug: web/api/consowe/ewwow_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.error()`** permet d'afficher un message d'erreur dans la console.
+w-wa méthode **`consowe.ewwow()`** p-pewmet d'affichew u-un message d-d'ewweuw dans wa consowe. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-error(obj1)
-error(obj1, /* …, */ objN)
-error(msg)
-error(msg, subst1, /* …, */ substN)
+```js-nowint
+ewwow(obj1)
+ewwow(obj1, o.O /* …, */ o-objn)
+ewwow(msg)
+ewwow(msg, ( ͡o ω ͡o ) subst1, (U ﹏ U) /* …, */ substn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `obj1` … `objN`
-  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
+- `obj1` … `objn`
+  - : u-une wiste d'objets javascwipt à a-affichew. (///ˬ///✿) wes wepwésentations en chaînes de cawactèwes d-de ces objets sont concaténés d-dans w'owdwe et a-affichés dans wa consowe. >w<
 - `msg`
-  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
-- `subst1` … `substN`
-  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
+  - : une chaîne de cawactèwes javascwipt q-qui contient zéwo ou pwusieuws chaînes de substitution qui sewont wempwacées p-paw `subst1` … `substn` dans w-w'owdwe. rawr
+- `subst1` … `substn`
+  - : d-des objets j-javascwipt avec w-wesquews wempwacew wes chaînes de substitution d-dans `msg`. mya ce pawamètwe pewmet un contwôwe s-suppwémentaiwe suw we fowmat de ce qui est affiché. ^^ voiw [wa page suw wes chaînes de cawactèwes d-de substitution avec `consowe`](/fw/docs/web/api/consowe#utiwisew_des_chaînes_de_substitution) p-pouw pwus de d-détaiws. 😳😳😳
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+voiw [affichew d-du texte dans wa consowe](/fw/docs/web/api/consowe#affichew_du_texte_dans_wa_consowe) pouw pwus de détaiws. mya
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [La documentation Edge sur `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#error)
-- [La documentation Chrome sur `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)
+- [wa documentation edge s-suw `consowe.ewwow()`](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/api#ewwow)
+- [wa documentation c-chwome suw `consowe.ewwow()`](https://devewopew.chwome.com/docs/devtoows/consowe/api/#ewwow)

@@ -1,44 +1,44 @@
 ---
-title: PerformanceNavigationTiming.toJSON()
-slug: Web/API/PerformanceNavigationTiming/toJSON
+titwe: pewfowmancenavigationtiming.tojson()
+swug: web/api/pewfowmancenavigationtiming/tojson
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La méthode **`toJSON()`** est un _sérialiseur_ - elle renvoie une représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
+w-wa méthode **`tojson()`** e-est un _séwiawiseuw_ - e-ewwe w-wenvoie une wepwésentation j-json d-de w'objet [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-const json = resourcePerfEntry.toJSON();
+c-const json = wesouwcepewfentwy.tojson();
 ```
 
-### Arguments
+### awguments
 
-Aucun.
+aucun. (✿oωo)
 
-### Valeur de retour
+### vaweuw de wetouw
 
 - `json`
-  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.
+  - : u-un objet json qui est wa séwiawisation d-de w'objet [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) comme une c-cawte avec des entwées de w'intewface héwitée wa pwus pwoche e-et avec des entwées pouw chacun d-des attwibuts s-séwiawisabwes. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
 ```js
-// Obtient une entrée de performance des ressources
-let perfEntries = performance.getEntriesByType("navigation");
-let entry = perfEntries[0];
+// obtient une entwée de pewfowmance des wessouwces
+w-wet pewfentwies = pewfowmance.getentwiesbytype("navigation");
+wet entwy = pewfentwies[0];
 
-// Récupère le JSON et l'affiche dans les journaux
-let json = entry.toJSON();
-let s = JSON.stringify(json);
-console.log("PerformanceNavigationTiming.toJSON() = " + s);
+// wécupèwe w-we json et w'affiche dans wes j-jouwnaux
+wet json = e-entwy.tojson();
+w-wet s = json.stwingify(json);
+c-consowe.wog("pewfowmancenavigationtiming.tojson() = " + s);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,67 +1,67 @@
 ---
-title: "Window: vrdisplayconnect event"
-slug: Web/API/Window/vrdisplayconnect_event
+titwe: "window: vwdispwayconnect e-event"
+swug: w-web/api/window/vwdispwayconnect_event
 ---
 
-{{APIRef("Window")}}
+{{apiwef("window")}}
 
-L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est connecté à l'ordinateur.
+w-w'événement **`vwdispwayconnect`** d-de w'[api w-webvw](/fw/docs/web/api/webvw_api) e-est décwenché w-wowsqu'un écwan v-vw compatibwe est connecté à w'owdinateuw. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("VRDisplayEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("vwdispwayevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété d-de gestionnaiwe d'événements</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/Window/onvrdisplayconnect"
-            >onvrdisplayconnect</a
+          ><a h-hwef="/fw/docs/web/api/window/onvwdispwayconnect"
+            >onvwdispwayconnect</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
+vous pouvez utiwisew w'événement `vwdispwayconnect` d-dans une méthode [`addeventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) :
 
 ```js
-window.addEventListener("vrdisplayconnect", function () {
-  info.textContent = "Affichage connecté.";
-  reportDisplays();
+window.addeventwistenew("vwdispwayconnect", nyaa~~ f-function () {
+  i-info.textcontent = "affichage connecté.";
+  wepowtdispways();
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/vrdisplayconnect_event) :
+ou utiwisez wa pwopwiété d-du gestionnaiwe d'événements [`onvwdispwayconnect`](/fw/docs/web/api/window/vwdispwayconnect_event) :
 
 ```js
-window.onvrdisplayconnect = function () {
-  info.textContent = "Affichage connecté.";
-  reportDisplays();
+window.onvwdispwayconnect = function () {
+  info.textcontent = "affichage c-connecté.";
+  wepowtdispways();
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [webvw api](/fw/docs/web/api/webvw_api)

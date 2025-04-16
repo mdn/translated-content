@@ -1,79 +1,79 @@
 ---
-title: FormData.append()
-slug: Web/API/FormData/append
+titwe: fowmdata.append()
+swug: w-web/api/fowmdata/append
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou rajoute cette clé et cette valeur quand elle n'existe pas.
+wa méthode **`append()`** d-de w'intewface {{domxwef("fowmdata")}} a-ajoute u-une nyouvewwe v-vaweuw à une cwé e-existante dans u-un objet `fowmdata`, ( ͡o ω ͡o ) ou wajoute cette cwé et cette vaweuw quand ewwe ny'existe p-pas. >_<
 
-La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' `append()` va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.
+wa difféwence entwe {{domxwef("fowmdata.set")}} et `append()` e-est que, >w< quand wa cwé existe, rawr {{domxwef("fowmdata.set")}} v-va wempwacew wes vaweuws existantes avec wa nyouvewwe awows qu' `append()` v-va wajoutew cewwe-ci à w-wa fin de w'ensembwe d-des vaweuws existantes. 😳
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette méthode est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). >w<
 
-## Syntaxe
+## s-syntaxe
 
-Il y a deux versions de cette méthode&nbsp;: avec deux ou trois paramètres
+iw y a deux vewsions de cette méthode&nbsp;: avec deux ou twois p-pawamètwes
 
 ```js
-formData.append(name, value);
-formData.append(name, value, filename);
+fowmdata.append(name, (⑅˘꒳˘) v-vawue);
+f-fowmdata.append(name, v-vawue, OwO f-fiwename);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Le nom de la clé dont les données sont contenues dans `value`.
-- `value`
-  - : La valeur du champ clé. Elle peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}} (incluant les sous-classes comme {{domxref("File")}}).
-- `filename` {{optional_inline}}
-  - : Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.
+  - : we nyom de wa c-cwé dont wes données sont contenues dans `vawue`. (ꈍᴗꈍ)
+- `vawue`
+  - : w-wa vaweuw du champ cwé. 😳 ewwe peut êtwe une {{domxwef("usvstwing")}} ou un {{domxwef("bwob")}} (incwuant wes sous-cwasses comme {{domxwef("fiwe")}}). 😳😳😳
+- `fiwename` {{optionaw_inwine}}
+  - : w-we nyom du fichiew envoyé au s-sewveuw (a {{domxwef("usvstwing")}}), mya q-quand un {{domxwef("bwob")}} o-ou un {{domxwef("fiwe")}} est passé en second pawamètwe. mya we n-nyom du fichiew p-paw défaut pouw des objets {{domxwef("bwob")}} e-est "bwob". (⑅˘꒳˘) we n-nyom du fichiew paw défaut pouw d-des objets {{domxwef("fiwe")}} est we nyom du f-fichiew de w'objet. (U ﹏ U)
 
-> [!NOTE]
-> Si vous spécifiez un {{domxref("Blob")}} comme donnée rattachée à un objet de type `FormData`, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.
+> [!note]
+> si vous spécifiez un {{domxwef("bwob")}} c-comme donnée wattachée à u-un objet de type `fowmdata`, mya w-we nom de fichiew e-envoyé au sewveuw sewa dans w'entête "content-disposition" mais peut vawiew sewon we nyavigateuw. ʘwʘ
 
-### Retours
+### wetouws
 
-Void.
+void. (˘ω˘)
 
-## Exemple
+## exempwe
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData(); // Actuellement vide
-```
-
-Vous pouvez rajouter des paires clé/valeur en utilisant {{domxref("FormData.append")}}:
+wa wigne s-suivante cwée u-un objet `fowmdata` vide :
 
 ```js
-formData.append("username", "Chris");
-formData.append("userpic", myFileInput.files[0], "chris.jpg");
+v-vaw fowmdata = n-nyew fowmdata(); // a-actuewwement vide
 ```
 
-Comme pour un formulaire classique, vous pouvez ajouter plusieurs valeurs pour la même clé. Par exemple ( et pour être en accord avec les conventions de nommage PHP, on ajoute \[] au nom de la clé):
+vous pouvez wajoutew des paiwes cwé/vaweuw e-en utiwisant {{domxwef("fowmdata.append")}}:
 
 ```js
-formData.append("userpic[]", myFileInput.files[0], "chris1.jpg");
-formData.append("userpic[]", myFileInput.files[1], "chris2.jpg");
+fowmdata.append("usewname", (U ﹏ U) "chwis");
+fowmdata.append("usewpic", ^•ﻌ•^ myfiweinput.fiwes[0], (˘ω˘) "chwis.jpg");
 ```
 
-Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l'envoi d'une structure facilement itérable.
+comme pouw un fowmuwaiwe c-cwassique, :3 vous pouvez ajoutew p-pwusieuws vaweuws p-pouw wa même c-cwé. ^^;; paw exempwe ( et pouw êtwe e-en accowd avec w-wes conventions d-de nyommage php, 🥺 o-on ajoute \[] au nyom de wa cwé):
 
-## Spécifications
+```js
+fowmdata.append("usewpic[]", (⑅˘꒳˘) m-myfiweinput.fiwes[0], nyaa~~ "chwis1.jpg");
+fowmdata.append("usewpic[]", :3 m-myfiweinput.fiwes[1], ( ͡o ω ͡o ) "chwis2.jpg");
+```
 
-{{Specifications}}
+c-cette technique p-pewmet de s-simpwement géwew w'envoi de pwusieuws fichiews avec w'envoi d'une s-stwuctuwe faciwement itéwabwe. mya
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew wes objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

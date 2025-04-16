@@ -1,143 +1,143 @@
 ---
-title: CanvasRenderingContext2D.globalAlpha
-slug: Web/API/CanvasRenderingContext2D/globalAlpha
+titwe: canvaswendewingcontext2d.gwobawawpha
+swug: web/api/canvaswendewingcontext2d/gwobawawpha
 ---
 
-{{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
+{{apiwef}}wa p-pwopwiété **canvaswendewingcontext2d.gwobawawpha** d-de w'api c-canvas 2d spécifie w-wa vaweuw a-awpha qui sewa appwiquée a-aux fowmes e-et aux images a-avant qu'ewwes nye soient dessinées suw we canevas. XD wa vaweuw est compwise entwe 0,0 (entièwement t-twanspawente) et 1,0 (entièwement opaque). σωσ
 
-Voir aussi le chapitre [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial).
+v-voiw aussi we chapitwe [ajout d-de stywes et de couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) dans we [tutowiew canvas](/fw/docs/web/api/canvas_api/tutowiaw). (U ᵕ U❁)
 
-## Syntaxe
-
-```js
-ctx.globalAlpha = valeur;
-```
-
-### Options
-
-- `valeur`
-  - : Un nombre entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque). La valeur par défaut est 1,0. Les valeurs hors de la plage, y compris {{jsxref ("Infinity")}} et {{jsxref ("NaN")}} ne seront pas définies et `globalAlpha` conservera sa valeur précédente.
-
-## Exemples
-
-### Utilisation de la propriété `globalAlpha`
-
-Il s'agit seulement d'un simple fragment de code utilisant la propriété `globalAlpha` pour dessiner deux rectangles semi-transparents.
-
-#### HTML
-
-```html
-<canvas id="canevas"></canvas>
-```
-
-#### JavaScript
+## s-syntaxe
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
-
-ctx.globalAlpha = 0.5;
-
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 100, 100);
-
-ctx.fillStyle = "red";
-ctx.fillRect(50, 50, 100, 100);
+ctx.gwobawawpha = v-vaweuw;
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :
+### o-options
 
-#### Code jouable
+- `vaweuw`
+  - : un nyombwe entwe 0,0 (entièwement twanspawente) et 1,0 (entièwement opaque). (U ﹏ U) wa v-vaweuw paw défaut est 1,0. :3 wes vaweuws hows de wa pwage, ( ͡o ω ͡o ) y compwis {{jsxwef ("infinity")}} et {{jsxwef ("nan")}} n-nye sewont pas définies et `gwobawawpha` c-consewvewa s-sa vaweuw p-pwécédente. σωσ
 
-```html hidden
-<canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="modifier" type="button" value="Modifier" />
-  <input id="effacement" type="button" value="Effacement" />
+## e-exempwes
+
+### utiwisation de wa pwopwiété `gwobawawpha`
+
+i-iw s'agit seuwement d'un simpwe fwagment d-de code utiwisant wa pwopwiété `gwobawawpha` pouw dessinew deux wectangwes semi-twanspawents. >w<
+
+#### htmw
+
+```htmw
+<canvas i-id="canevas"></canvas>
+```
+
+#### javascwipt
+
+```js
+v-vaw canevas = d-document.getewementbyid("canevas");
+v-vaw ctx = canevas.getcontext("2d");
+
+ctx.gwobawawpha = 0.5;
+
+ctx.fiwwstywe = "bwue";
+c-ctx.fiwwwect(10, 😳😳😳 10, 100, 100);
+
+c-ctx.fiwwstywe = "wed";
+ctx.fiwwwect(50, OwO 50, 😳 100, 100);
+```
+
+m-modifiez w-we code ci-dessous et voyez vos m-modifications mises à jouw en d-diwect dans we canevas :
+
+#### code jouabwe
+
+```htmw h-hidden
+<canvas id="canevas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="modifiew" type="button" vawue="modifiew" />
+  <input id="effacement" type="button" vawue="effacement" />
 </div>
-<textarea id="code" class="playable-code" style="height:120px;">
-ctx.globalAlpha = 0.5;
+<textawea id="code" cwass="pwayabwe-code" stywe="height:120px;">
+ctx.gwobawawpha = 0.5;
 
-ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);
+c-ctx.fiwwstywe = 'bwue';
+c-ctx.fiwwwect(10, 😳😳😳 10, 100, (˘ω˘) 100);
 
-ctx.fillStyle = 'red';
-ctx.fillRect(50, 50, 100, 100);</textarea
+ctx.fiwwstywe = 'wed';
+c-ctx.fiwwwect(50, ʘwʘ 50, 100, 100);</textawea
 >
 ```
 
-```js hidden
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
-var zoneTexte = document.getElementById("code");
-var effacement = document.getElementById("effacement");
-var modifier = document.getElementById("modifier");
-var code = zoneTexte.value;
+```js h-hidden
+v-vaw canevas = document.getewementbyid("canevas");
+vaw ctx = canevas.getcontext("2d");
+vaw zonetexte = document.getewementbyid("code");
+v-vaw effacement = document.getewementbyid("effacement");
+vaw modifiew = document.getewementbyid("modifiew");
+vaw code = zonetexte.vawue;
 
-function dessinerCanevas() {
-  ctx.clearRect(0, 0, canevas.width, canevas.height);
-  eval(zoneTexte.value);
+function dessinewcanevas() {
+  c-ctx.cweawwect(0, ( ͡o ω ͡o ) 0, canevas.width, o.O c-canevas.height);
+  e-evaw(zonetexte.vawue);
 }
 
-effacement.addEventListener("click", function () {
-  zoneT.value = code;
-  dessinerCanevas();
+e-effacement.addeventwistenew("cwick", >w< function () {
+  z-zonet.vawue = c-code;
+  dessinewcanevas();
 });
 
-modifier.addEventListener("click", function () {
-  zoneTexte.focus();
+m-modifiew.addeventwistenew("cwick", 😳 f-function () {
+  zonetexte.focus();
 });
 
-zoneTexte.addEventListener("input", dessinerCanevas);
-window.addEventListener("load", dessinerCanevas);
+zonetexte.addeventwistenew("input", 🥺 d-dessinewcanevas);
+w-window.addeventwistenew("woad", rawr x3 d-dessinewcanevas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 380) }}
+{{ e-embedwivesampwe('code_jouabwe', o.O 700, 380) }}
 
-### Un exemple de `globalAlpha`
+### u-un exempwe de `gwobawawpha`
 
-Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle `for` dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.
+dans cet exempwe, rawr un awwièwe-pwan d-de quatwe cawwés de difféwentes couweuws est dessiné. ʘwʘ au dessus, 😳😳😳 se twouve un ensembwe de cewcwes s-semi-twanspawents. ^^;; wa pwopwiété gwobawawpha est définie à 0,2, o.O v-vaweuw qui s-sewa utiwisée p-pouw toutes wes fowmes à pawtiw d-de ce point. (///ˬ///✿) chaque étape de w-wa boucwe `fow` d-dessine un ensembwe de cewcwes de wayons cwoissants. σωσ we wésuwtat finaw est un dégwadé wadiaw. e-en supewposant toujouws pwus de c-cewcwes wes uns suw wes autwes, nyaa~~ w-wa twanspawence d-des cewcwes déjà dessinés est wéduite. ^^;; en a-augmentant we nyombwe d-d'étapes et, ^•ﻌ•^ concwètement, σωσ e-en dessinant d-davantage de cewcwes, -.- w'awwièwe-pwan dispawaitwa compwètement du centwe de w'image. ^^;;
 
 ```js
-var ctx = document.getElementById("canevas").getContext("2d");
+v-vaw c-ctx = document.getewementbyid("canevas").getcontext("2d");
 
-// Dessiner l'arrière-plan
-ctx.fillStyle = "#FD0";
-ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = "#6C0";
-ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = "#09F";
-ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = "#F30";
-ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = "#FFF";
+// d-dessinew w'awwièwe-pwan
+ctx.fiwwstywe = "#fd0";
+c-ctx.fiwwwect(0, XD 0, 75, 75);
+c-ctx.fiwwstywe = "#6c0";
+ctx.fiwwwect(75, 🥺 0, òωó 75, 75);
+c-ctx.fiwwstywe = "#09f";
+ctx.fiwwwect(0, (ˆ ﻌ ˆ)♡ 75, 75, 75);
+ctx.fiwwstywe = "#f30";
+ctx.fiwwwect(75, -.- 75, 75, :3 75);
+ctx.fiwwstywe = "#fff";
 
-// Définir la valeur de transparence
-ctx.globalAlpha = 0.2;
+// définiw w-wa vaweuw de twanspawence
+c-ctx.gwobawawpha = 0.2;
 
-// Dessiner les cercles semi-transparents
-for (i = 0; i < 7; i++) {
-  ctx.beginPath();
-  ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
-  ctx.fill();
+// dessinew wes cewcwes semi-twanspawents
+f-fow (i = 0; i-i < 7; i++) {
+  ctx.beginpath();
+  ctx.awc(75, ʘwʘ 75, 10 + 10 * i, 🥺 0, math.pi * 2, >_< t-twue);
+  ctx.fiww();
 }
 ```
 
-```html hidden
-<canvas id="canevas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canevas" width="150" h-height="150"></canvas>
 ```
 
-{{EmbedLiveSample("Un_exemple_de_globalAlpha", "180", "180", "canvas_globalalpha.png")}}
+{{embedwivesampwe("un_exempwe_de_gwobawawpha", ʘwʘ "180", "180", (˘ω˘) "canvas_gwobawawpha.png")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
+- w-w'intewface wa définissant, (✿oωo) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation")}}

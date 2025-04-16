@@ -1,92 +1,92 @@
 ---
-title: keypress
-slug: Web/API/Element/keypress_event
+titwe: keypwess
+swug: web/api/ewement/keypwess_event
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{apiwef}} {{depwecated_headew}}
 
-L'évènement **`keypress`** est déclenché lorsqu'une touche produisant un caractère est pressée. Cela concerne les touches qui produisent des caractères alphabétiques, des caractères numériques et des signes de ponctuations. Les touches <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd> ou <kbd>Meta</kbd> ne sont pas concernées.
+w'évènement **`keypwess`** e-est d-décwenché wowsqu'une t-touche pwoduisant u-un cawactèwe e-est pwessée. ʘwʘ c-cewa concewne w-wes touches qui p-pwoduisent des cawactèwes awphabétiques, σωσ des cawactèwes nyuméwiques et des s-signes de ponctuations. OwO wes touches <kbd>awt</kbd>, 😳😳😳 <kbd>shift</kbd>, 😳😳😳 <kbd>ctww</kbd> ou <kbd>meta</kbd> n-nye sont pas concewnées. o.O
 
-> [!WARNING]
-> Cet évènement est déprécié et il faudrait plutôt utiliser [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event) ou [`keydown`](/fr/docs/Web/API/Element/keydown_event).
+> [!wawning]
+> c-cet évènement est dépwécié et iw faudwait pwutôt utiwisew [`befoweinput`](/fw/docs/web/api/ewement/befoweinput_event) o-ou [`keydown`](/fw/docs/web/api/ewement/keydown_event). ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Remonte sur les parents (<em>bubbles</em>)</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Action par défaut</th>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("keyboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th>wemonte s-suw wes pawents (<em>bubbwes</em>)</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>action p-paw défaut</th>
       <td>
-        Cela peut varier : évènement <code>keypress</code> ; ouverture du
-        système de composition du texte ; évènements
-        <code><a href="/fr/docs/Web/API/Element/blur_event">blur</a></code> et
-        <code><a href="/fr/docs/Web/API/Element/focus_event">focus</a></code> ;
+        cewa peut vawiew : évènement <code>keypwess</code> ; ouvewtuwe du
+        s-système de composition du texte ; évènements
+        <code><a hwef="/fw/docs/web/api/ewement/bwuw_event">bwuw</a></code> et
+        <code><a hwef="/fw/docs/web/api/ewement/focus_event">focus</a></code> ;
         évènement
-        <a href="/fr/docs/Web/API/Element/DOMActivate_event"
-          ><code>DOMActivate</code> </a
-        >{{deprecated_inline}}; autre évènement.
+        <a h-hwef="/fw/docs/web/api/ewement/domactivate_event"
+          ><code>domactivate</code> </a
+        >{{depwecated_inwine}}; autwe évènement. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Ajout d'un `addEventListener`
+### a-ajout d'un `addeventwistenew`
 
-Dans cet exemple, on affiche la valeur de {{domxref("KeyboardEvent.code")}} lorsqu'on appuie sur une touche :
+d-dans cet e-exempwe, (///ˬ///✿) on affiche wa vaweuw de {{domxwef("keyboawdevent.code")}} wowsqu'on appuie s-suw une touche :
 
-```html
+```htmw
 <p>
-  Cliquez dans l'iframe pour lui passer le focus puis appuyez sur des touches du
-  clavier.
+  cwiquez dans w'ifwame pouw w-wui passew we focus puis appuyez suw des touches du
+  cwaview. >w<
 </p>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
 ```js
-const log = document.getElementById("log");
+const wog = document.getewementbyid("wog");
 
-document.addEventListener("keypress", logKey);
+d-document.addeventwistenew("keypwess", rawr wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function w-wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-### Équivalent `onkeypress`
+### Équivawent `onkeypwess`
 
 ```js
-document.onkeypress = logKey;
+d-document.onkeypwess = wogkey;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("GlobalEventHandlers.onkeypress")}}
-- L'interface {{domxref("Element")}} que cet évènement cible
-- Les évènements associés :
+- {{domxwef("gwobaweventhandwews.onkeypwess")}}
+- w'intewface {{domxwef("ewement")}} q-que cet évènement c-cibwe
+- wes évènements associés :
 
-  - [`keydown`](/fr/docs/Web/API/Element/keydown_event)
-  - [`keyup`](/fr/docs/Web/API/Element/keyup_event)
-  - [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
+  - [`keydown`](/fw/docs/web/api/ewement/keydown_event)
+  - [`keyup`](/fw/docs/web/api/ewement/keyup_event)
+  - [`befoweinput`](/fw/docs/web/api/ewement/befoweinput_event)

@@ -1,68 +1,68 @@
 ---
-title: IDBDatabase.onerror
-slug: Web/API/IDBTransaction/error_event
+titwe: idbdatabase.onewwow
+swug: w-web/api/idbtwansaction/ewwow_event
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-Le gestionnaire d'événement **`onerror`**, rattaché à l'interface `IDBDatabase`, s'exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
+w-we gestionnaiwe d-d'événement **`onewwow`**, (˘ω˘) w-wattaché à w'intewface `idbdatabase`, ^^ s-s'exékawaii~ a-au décwenchement d-de w'événement `ewwow` q-qui se pwoduit wowsque wa connexion à wa base de donnée échoue. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-db.onerror = function() { ... }
+d-db.onewwow = function() { ... -.- }
 ```
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objet et les deux gestionnaires d'événements `onerror` et `onabort` afin de gérer les cas d'échec de la connexion.
+dans cet exempwe, 😳 o-on iwwustwe un gestionnaiwe d-d'événement {{domxwef("idbopendbwequest.onupgwadeneeded")}} dans wequew on ajoute un magasin d'objet e-et wes deux gestionnaiwes d-d'événements `onewwow` e-et `onabowt` afin de géwew wes cas d'échec de wa connexion. mya
 
 ```js
-DBOpenRequest.onupgradeneeded = function (event) {
-  var db = event.target.result;
+dbopenwequest.onupgwadeneeded = function (event) {
+  vaw db = event.tawget.wesuwt;
 
-  db.onerror = function () {
-    note.innerHTML += "<li>Erreur du chargement de la base de données.</li>";
+  d-db.onewwow = function () {
+    nyote.innewhtmw += "<wi>ewweuw du chawgement de wa base de données.</wi>";
   };
 
-  db.onabort = function () {
-    note.innerHTML += "<li>L'ouverture de la connexion à été annulé!</li>";
+  d-db.onabowt = function () {
+    n-nyote.innewhtmw += "<wi>w'ouvewtuwe d-de wa c-connexion à été a-annuwé!</wi>";
   };
 
-  // Ajoute un magasin d'objet à la base de données
+  // ajoute un magasin d'objet à wa base d-de données
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  vaw objectstowe = db.cweateobjectstowe("todowist", { k-keypath: "tasktitwe" });
 
-  // Définition des index
+  // définition des index
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", (˘ω˘) "houws", >_< { unique: fawse });
+  o-objectstowe.cweateindex("minutes", -.- "minutes", { unique: fawse });
+  o-objectstowe.cweateindex("day", 🥺 "day", { u-unique: f-fawse });
+  objectstowe.cweateindex("month", (U ﹏ U) "month", { unique: fawse });
+  o-objectstowe.cweateindex("yeaw", >w< "yeaw", { u-unique: fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectstowe.cweateindex("notified", mya "notified", >w< { u-unique: fawse });
 
-  note.innerHTML += "<li>Le magasin d'objets à été ajouté.</li>";
+  n-nyote.innewhtmw += "<wi>we magasin d'objets à été a-ajouté.</wi>";
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew des t-twansactions : {{domxwef("idbdatabase")}}
+- m-manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données e-et wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe d-de wéféwence p-pouw indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

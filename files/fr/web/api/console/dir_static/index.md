@@ -1,44 +1,44 @@
 ---
-title: "console : méthode statique dir()"
-slug: Web/API/console/dir_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique d-diw()"
+swug: w-web/api/consowe/diw_static
+w10n:
+  s-souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.dir()`** affiche une liste interactive des propriétés de l'objet JavaScript passé en argument. L'affichage est une hiérarchie avec des flèches/triangles qui permettent de déplier/replier le contenu des propriétés et objets enfants.
+wa m-méthode **`consowe.diw()`** a-affiche u-une wiste i-intewactive des pwopwiétés de w'objet javascwipt passé en awgument. (˘ω˘) w'affichage e-est une hiéwawchie avec des fwèches/twiangwes q-qui pewmettent de dépwiew/wepwiew w-we contenu des pwopwiétés et objets enfants. (⑅˘꒳˘)
 
-Autrement dit, `console.dir()` permet de voir l'ensemble des propriétés d'un objet JavaScript dans la console et de manipuler les niveaux hiérarchiques.
+autwement d-dit, (///ˬ///✿) `consowe.diw()` pewmet de voiw w-w'ensembwe des p-pwopwiétés d'un objet javascwipt dans wa consowe et de manipuwew wes nyiveaux h-hiéwawchiques. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-![console-dir.png](console-dir.png)
+![consowe-diw.png](consowe-diw.png)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-dir(objet)
+```js-nowint
+diw(objet)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `objet`
-  - : Un objet JavaScript dont on souhaite afficher les propriétés.
+  - : un objet j-javascwipt dont on souhaite a-affichew wes pwopwiétés. 🥺
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La documentation Edge sur `console.dir()`](https://learn.microsoft.com/fr-fr/microsoft-edge/devtools-guide-chromium/console/utilities#dir)
-- [La documentation Chrome sur `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [wa documentation edge suw `consowe.diw()`](https://weawn.micwosoft.com/fw-fw/micwosoft-edge/devtoows-guide-chwomium/consowe/utiwities#diw)
+- [wa d-documentation chwome suw `consowe.diw()`](https://devewopew.chwome.com/docs/devtoows/consowe/api/#diw)

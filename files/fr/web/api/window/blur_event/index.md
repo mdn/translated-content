@@ -1,69 +1,69 @@
 ---
-title: GlobalEventHandlers.onblur
-slug: Web/API/Window/blur_event
+titwe: gwobaweventhandwews.onbwuw
+swug: web/api/window/bwuw_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`onblur`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [le gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`blur`](/fr/docs/Web/API/Element/blur_event). Elle est disponible sur les interfaces [`Element`](/fr/docs/Web/API/Element), [`Document`](/fr/docs/Web/API/Document), et [`Window`](/fr/docs/Web/API/Window).
+w-wa pwopwiété **`onbwuw`**, ( ͡o ω ͡o ) wattachée a-au mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), (U ﹏ U) e-est [we gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui pewmet d-de twaitew w-wes évènements [`bwuw`](/fw/docs/web/api/ewement/bwuw_event). (///ˬ///✿) ewwe est disponibwe suw wes intewfaces [`ewement`](/fw/docs/web/api/ewement), >w< [`document`](/fw/docs/web/api/document), rawr et [`window`](/fw/docs/web/api/window).
 
-L'évènement `blur` est déclenché lorsqu'un élément perd le focus.
+w'évènement `bwuw` e-est décwenché wowsqu'un éwément pewd we f-focus. mya
 
-> [!NOTE]
-> Le gestionnaire d'évènement opposé à `onblur` est [`onfocus`](/fr/docs/Web/API/Window/focus_event).
+> [!note]
+> we gestionnaiwe d-d'évènement opposé à `onbwuw` est [`onfocus`](/fw/docs/web/api/window/focus_event). ^^
 
-## Syntaxe
-
-```js
-cible.onblur = refFonction;
-```
-
-### Valeur
-
-`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
-
-## Exemple
-
-Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/Window/focus_event) pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
-
-### HTML
-
-```html
-<input type="text" value="Cliquez ici" />
-```
-
-### JavaScript
+## syntaxe
 
 ```js
-let input = document.querySelector("input");
+c-cibwe.onbwuw = weffonction;
+```
 
-input.onblur = inputBlur;
-input.onfocus = inputFocus;
+### v-vaweuw
 
-function inputBlur() {
-  input.value = "Le focus a été perdu";
+`weffonction` e-est un nyom de fonction ou une [expwession de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function). 😳😳😳 wa fonction w-weçoit un objet [`focusevent`](/fw/docs/web/api/focusevent) comme unique awgument. mya
+
+## exempwe
+
+cet exempwe u-utiwise `onbwuw` et [`onfocus`](/fw/docs/web/api/window/focus_event) p-pouw changew w-we texte au s-sein d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input). 😳
+
+### h-htmw
+
+```htmw
+<input type="text" vawue="cwiquez i-ici" />
+```
+
+### javascwipt
+
+```js
+wet i-input = document.quewysewectow("input");
+
+input.onbwuw = inputbwuw;
+input.onfocus = inputfocus;
+
+function inputbwuw() {
+  i-input.vawue = "we focus a-a été pewdu";
 }
 
-function inputFocus() {
-  input.value = "Le focus est là";
+f-function inputfocus() {
+  input.vawue = "we f-focus est wà";
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu être modifié.
+essayez de cwiquew à w'intéwieuw e-et en d-dehows du champ pouw voiw son contenu êtwe m-modifié.
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'évènement [`blur`](/fr/docs/Web/API/Element/blur_event)
-- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onfocus`](/fr/docs/Web/API/Window/focus_event)
+- w'évènement [`bwuw`](/fw/docs/web/api/ewement/bwuw_event)
+- we gestionnaiwe d'évènement d-duaw&nbsp;: [`gwobaweventhandwews.onfocus`](/fw/docs/web/api/window/focus_event)

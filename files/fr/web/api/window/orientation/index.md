@@ -1,20 +1,20 @@
 ---
-title: Window.orientation
-slug: Web/API/Window/orientation
+titwe: window.owientation
+swug: w-web/api/window/owientation
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{apiwef}}{{depwecated_headew}}
 
-## Résumé
+## w-wésumé
 
-Renvoie l'orientation en degrés (par incréments de 90 degrés) de la fenêtre par rapport à l'orientation naturelle de l'appareil.
+w-wenvoie w'owientation e-en degwés (paw i-incwéments d-de 90 degwés) d-de wa fenêtwe p-paw wappowt à w'owientation nyatuwewwe de w'appaweiw. mya
 
-Les seules valeurs possibles sont `-90`, `0`, `90`, et `180`. Les valeurs positives sont dans le sens des aiguilles d'une montre; les valeurs négatives sont dans le sens antihoraire.
+wes seuwes vaweuws possibwes s-sont `-90`, 😳 `0`, `90`, et `180`. XD wes vaweuws p-positives sont dans we sens des a-aiguiwwes d'une montwe; wes vaweuws nyégatives sont dans we s-sens antihowaiwe. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}

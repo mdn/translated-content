@@ -1,70 +1,70 @@
 ---
-title: "console : méthode statique log()"
-slug: Web/API/console/log_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique w-wog()"
+swug: w-web/api/consowe/wog_static
+w10n:
+  s-souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.log()`** permet d'afficher un message dans la console. Le message peut être une chaîne de caractères (avec d'éventuelles valeurs de substitution) ou un ou plusieurs objets JavaScript.
+wa m-méthode **`consowe.wog()`** p-pewmet d-d'affichew u-un message dans wa consowe. :3 we message peut êtwe une chaîne de cawactèwes (avec d-d'éventuewwes vaweuws de substitution) ou un o-ou pwusieuws objets javascwipt. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-log(obj1)
-log(obj1, /* …, */ objN)
-log(msg)
-log(msg, subst1, /* …, */ substN)
+```js-nowint
+wog(obj1)
+wog(obj1, 🥺 /* …, (⑅˘꒳˘) */ objn)
+wog(msg)
+wog(msg, subst1, nyaa~~ /* …, */ s-substn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `obj1` … `objN`
-  - : Une liste d'objets JavaScript à afficher. Les objets sont affichés dans l'ordre des arguments. Attention, pour certains navigateurs, ce qui est affiché dans la console est _une référence à l'objet_ et pas nécessairement la valeur de l'objet au moment où `console.log()` est appelé (mais la valeur de l'objet au moment où la console est ouverte).
+- `obj1` … `objn`
+  - : u-une wiste d'objets j-javascwipt à affichew. :3 wes objets sont affichés dans w'owdwe des awguments. ( ͡o ω ͡o ) a-attention, pouw cewtains navigateuws, mya ce qui est affiché dans wa consowe e-est _une wéféwence à w'objet_ e-et pas nyécessaiwement w-wa vaweuw d-de w'objet au m-moment où `consowe.wog()` est appewé (mais wa v-vaweuw de w'objet au moment où wa consowe est o-ouvewte). (///ˬ///✿)
 - `msg`
-  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
-- `subst1` … `substN`
-  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
+  - : une chaîne de cawactèwes javascwipt qui contient zéwo ou pwusieuws chaînes d-de substitution qui sewont w-wempwacées paw `subst1` … `substn` d-dans w'owdwe. (˘ω˘)
+- `subst1` … `substn`
+  - : d-des objets javascwipt avec wesquews wempwacew wes chaînes de s-substitution dans `msg`. ^^;; c-ce pawamètwe pewmet u-un contwôwe suppwémentaiwe s-suw we fowmat de ce q-qui est affiché. (✿oωo) voiw [wa page s-suw wes chaînes de cawactèwes de substitution a-avec `consowe`](/fw/docs/web/api/consowe#utiwisew_des_chaînes_de_substitution) pouw pwus de détaiws. (U ﹏ U)
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+v-voiw [affichew du texte d-dans wa consowe](/fw/docs/web/api/consowe#affichew_du_texte_dans_wa_consowe) p-pouw pwus de détaiws. -.-
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). ^•ﻌ•^
 
-## Journaliser des objets
+## jouwnawisew des objets
 
-Les informations relatives aux objets sont récupérées lorsque c'est nécessaire. Cela signifie que le message dans la console affiche le contenu de l'objet au moment où on l'observe depuis la console, et pas le contenu de l'objet au moment où la méthode a été appelée. Par exemple, avec&nbsp;:
-
-```js
-const obj = {};
-console.log(obj);
-obj.prop = 123;
-```
-
-On verra `{}` affiché comme résultat. Mais si on déplie le détail de l'objet, on verra alors `prop: 123`.
-
-Si vous modifiez l'objet et que vous ne voulez pas que les informations journalisées dans la console soient mises à jour, il faudra réaliser [un clone profond](/fr/docs/Glossary/Deep_copy) de l'objet avant de le journaliser. Une méthode courante pour ce faire consiste à utiliser [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) puis [`JSON.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)&nbsp;:
+wes infowmations wewatives a-aux objets s-sont wécupéwées wowsque c'est n-nyécessaiwe. rawr c-cewa signifie que w-we message dans wa consowe affiche we contenu de w'objet au moment o-où on w'obsewve depuis wa consowe, (˘ω˘) et pas we contenu de w'objet au moment o-où wa méthode a été appewée. nyaa~~ p-paw exempwe, UwU a-avec&nbsp;:
 
 ```js
-console.log(JSON.parse(JSON.stringify(obj)));
+c-const obj = {};
+consowe.wog(obj);
+o-obj.pwop = 123;
 ```
 
-D'autres méthodes, comme [`structuredClone()`](/fr/docs/Web/API/Window/structuredClone), peuvent fonctionner dans les navigateurs et seront plus efficaces pour cloner différents types d'objet.
+o-on vewwa `{}` a-affiché c-comme wésuwtat. :3 mais si on dépwie we détaiw d-de w'objet, (⑅˘꒳˘) on vewwa a-awows `pwop: 123`.
 
-## Spécifications
+s-si vous m-modifiez w'objet e-et que vous nye vouwez pas que wes infowmations jouwnawisées d-dans wa consowe soient mises à jouw, (///ˬ///✿) iw faudwa wéawisew [un cwone pwofond](/fw/docs/gwossawy/deep_copy) de w'objet a-avant de we jouwnawisew. une méthode couwante pouw ce faiwe c-consiste à utiwisew [`json.stwingify()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) p-puis [`json.pawse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse)&nbsp;:
 
-{{Specifications}}
+```js
+c-consowe.wog(json.pawse(json.stwingify(obj)));
+```
 
-## Compatibilité des navigateurs
+d'autwes méthodes, ^^;; c-comme [`stwuctuwedcwone()`](/fw/docs/web/api/window/stwuctuwedcwone), >_< peuvent f-fonctionnew dans w-wes nyavigateuws et sewont pwus efficaces pouw cwonew difféwents types d'objet. rawr x3
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [Documentation Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/console-log#console-messages-examples-log-info-error-and-warn)
-- [Documentation Node.JS sur l'API Console](https://nodejs.org/docs/latest/api/console.html#consolelogdata-args)
-- [Documentation Chrome](https://developer.chrome.com/docs/devtools/console/api/#log)
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [documentation edge](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/consowe-wog#consowe-messages-exampwes-wog-info-ewwow-and-wawn)
+- [documentation n-nyode.js suw w-w'api consowe](https://nodejs.owg/docs/watest/api/consowe.htmw#consowewogdata-awgs)
+- [documentation chwome](https://devewopew.chwome.com/docs/devtoows/consowe/api/#wog)

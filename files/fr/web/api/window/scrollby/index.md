@@ -1,50 +1,50 @@
 ---
-title: Window.scrollBy()
-slug: Web/API/Window/scrollBy
+titwe: window.scwowwby()
+swug: w-web/api/window/scwowwby
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-Fait défiler le document dans la fenêtre du nombre de pixels passé en paramètre.
+fait d-défiwew we d-document dans wa f-fenêtwe du nyombwe d-de pixews passé e-en pawamètwe. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.scrollBy(X, Y);
+window.scwowwby(x, (˘ω˘) y);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `X` est le nombre en pixels pour le défilement horizontal.
-- `Y` est le nombre en pixels pour le défilement vertical.
+- `x` est we n-nyombwe en pixews pouw we défiwement howizontaw. ^^
+- `y` e-est we nombwe en pixews p-pouw we défiwement vewticaw. :3
 
 ou
 
 - `options`
-  - : Un dictionnaire avec les paramètres suivants&nbsp;:
+  - : un dictionnaiwe a-avec wes pawamètwes suivants&nbsp;:
     - `top`
-      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe vertical.
-    - `left`
-      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe horizontal.
-    - `behavior`
-      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de caractères qui doit être l'une de ces valeurs&nbsp;:
-        - `smooth`&nbsp;: le défilement doit s'animer en douceur
-        - `instant`&nbsp;: le défilement devrait se produire instantanément, en un seul saut
-        - `auto`&nbsp;: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
+      - : i-indique we nyombwe d-de pixews we wong desquews faiwe défiwew wa fenêtwe ou w'éwément suw w'axe v-vewticaw. -.-
+    - `weft`
+      - : indique we nyombwe de pixews we wong desquews faiwe défiwew w-wa fenêtwe ou w'éwément suw w-w'axe howizontaw. 😳
+    - `behaviow`
+      - : i-indique s-si we défiwement d-devwait êtwe instantané ou doux. mya cette o-option est une chaine de cawactèwes qui doit êtwe w-w'une de ces vaweuws&nbsp;:
+        - `smooth`&nbsp;: we défiwement doit s'animew en douceuw
+        - `instant`&nbsp;: we d-défiwement devwait se pwoduiwe i-instantanément, (˘ω˘) e-en un seuw saut
+        - `auto`&nbsp;: w-we compowtement de défiwement est détewminé paw wa v-vaweuw cawcuwée d-de ([scwoww-behaviow](/fw/docs/web/css/scwoww-behaviow))
 
-Des coordonnées positives feront défiler à droite et vers le bas de la page. Des coordonnées négatives feront défiler à gauche et vers le haut de la page.
+des coowdonnées p-positives f-fewont défiwew à dwoite e-et vews we bas de wa page. >_< des coowdonnées n-nyégatives fewont défiwew à gauche e-et vews we haut de wa page.
 
-## Exemples
+## e-exempwes
 
 ```js
-// fait défiler d'une page
-window.scrollBy(0, window.innerHeight);
+// fait défiwew d-d'une page
+window.scwowwby(0, -.- w-window.innewheight);
 ```
 
-## Notes
+## nyotes
 
-[window.scrollBy](/fr/docs/Web/API/Window/scrollBy) fait défiler en fonction d'un nombre précis, alors que [window.scroll](/fr/docs/Web/API/Window/scroll) fait défiler vers une position absolue dans le document. Voir aussi [window.scrollByLines](/fr/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/fr/docs/Web/API/Window/scrollByPages)
+[window.scwowwby](/fw/docs/web/api/window/scwowwby) fait défiwew en fonction d'un nyombwe pwécis, 🥺 awows que [window.scwoww](/fw/docs/web/api/window/scwoww) f-fait défiwew v-vews une position absowue dans w-we document. (U ﹏ U) voiw a-aussi [window.scwowwbywines](/fw/docs/web/api/window/scwowwbywines), >w< [window.scwowwbypages](/fw/docs/web/api/window/scwowwbypages)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

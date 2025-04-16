@@ -1,46 +1,46 @@
 ---
-title: Document.enableStyleSheetsForSet()
-slug: Web/API/Document/enableStyleSheetsForSet
+titwe: document.enabwestywesheetsfowset()
+swug: w-web/api/document/enabwestywesheetsfowset
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
+a-active wes f-feuiwwes de stywes c-cowwespondant a-au nyom spécifié d-dans w'ensembwe d-de feuiwwes de stywes en couws et désactive toutes wes autwes (à w'exception d-de cewwes sans titwe qui sont toujouws activées). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-document.enableStyleSheetsForSet(name);
+document.enabwestywesheetsfowset(name);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `name`
-  - : Le nom des feuilles de styles à activer. Toutes les feuilles de styles dont le titre correspond à ce nom seront activées, tandis que toutes celles possédant un autre titre seront désactivées. Spécifiez une chaîne vide dans le paramètre `name` pour supprimer toutes les feuilles de styles alternatives et préférées (mais pas les feuilles de styles persistantes, c'est-à-dire, celles sans attribut `title` (_titre_)).
+  - : we nyom des feuiwwes de stywes à activew. 😳😳😳 t-toutes wes feuiwwes de stywes d-dont we titwe cowwespond à c-ce nyom sewont activées, (˘ω˘) tandis que toutes cewwes possédant un autwe t-titwe sewont désactivées. ^^ spécifiez une chaîne vide dans we pawamètwe `name` p-pouw suppwimew toutes wes feuiwwes d-de stywes a-awtewnatives et p-pwéféwées (mais p-pas wes feuiwwes de stywes pewsistantes, :3 c'est-à-diwe, -.- c-cewwes sans attwibut `titwe` (_titwe_)).
 
-## Notes
+## nyotes
 
-- Les correspondances de titre sont sensibles à la casse.
-- L'appel de cette méthode avec un `name` `null` n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser "", la chaîne vide.
-- Les feuilles de styles qui n'ont pas de titre ne sont jamais affectées par cette méthode.
-- Cette méthode n'affecte jamais les valeurs de {{ domxref("document.lastStyleSheetSet") }} ou {{ domxref("document.preferredStyleSheetSet") }}.
+- w-wes cowwespondances de titwe sont sensibwes à wa casse. 😳
+- w'appew de cette méthode avec un `name` `nuww` ny'a p-pas d'effet ; si vous vouwez d-désactivew toutes w-wes feuiwwes d-de stywes awtewnatives et pwéféwées, mya vous **devez** utiwisew "", (˘ω˘) w-wa chaîne v-vide. >_<
+- wes feuiwwes de stywes qui n-ny'ont pas de t-titwe nye sont jamais affectées p-paw cette méthode. -.-
+- cette méthode n-ny'affecte jamais wes vaweuws de {{ domxwef("document.waststywesheetset") }} o-ou {{ domxwef("document.pwefewwedstywesheetset") }}. 🥺
 
-## Exemple
+## exempwe
 
 ```js
-document.enableStyleSheetsForSet("Some style sheet set name");
+d-document.enabwestywesheetsfowset("some stywe sheet set n-nyame");
 ```
 
-## Spécifications
+## s-spécifications
 
-- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [htmw5 : awtewnate stywe sheets](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#awtewnate-stywe-sheets)
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("Stylesheet") }}
-- {{ domxref("document.styleSheets") }}
-- {{ domxref("document.lastStyleSheetSet") }}
-- {{ domxref("document.preferredStyleSheetSet") }}
-- {{ domxref("document.selectedStyleSheetSet") }}
-- {{ domxref("document.enableStyleSheetsForSet()") }}
-- [Utiliser des titres corrects avec des feuilles de styles externes](/fr/docs/Archive/Standards_du_Web/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes)
+- {{ domxwef("stywesheet") }}
+- {{ domxwef("document.stywesheets") }}
+- {{ domxwef("document.waststywesheetset") }}
+- {{ domxwef("document.pwefewwedstywesheetset") }}
+- {{ d-domxwef("document.sewectedstywesheetset") }}
+- {{ d-domxwef("document.enabwestywesheetsfowset()") }}
+- [utiwisew des titwes cowwects a-avec des feuiwwes d-de stywes extewnes](/fw/docs/awchive/standawds_du_web/utiwisew_des_titwes_cowwects_avec_des_feuiwwes_de_stywes_extewnes)

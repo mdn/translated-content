@@ -1,92 +1,92 @@
 ---
-title: Element.append()
-slug: Web/API/Element/append
+titwe: ewement.append()
+swug: w-web/api/ewement/append
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.append()`** ajoute un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères après le dernier enfant d'`Element`. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+w-wa méthode **`ewement.append()`** a-ajoute un ensembwe d-d'objets [`node`](/fw/docs/web/api/node) ou d-de chaînes de c-cawactèwes apwès w-we dewniew enfant d-d'`ewement`. ʘwʘ wes chaînes de cawactèwes sont inséwées comme des nyœuds [`text`](/fw/docs/web/api/text). (ˆ ﻌ ˆ)♡
 
-Voici les différences entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
+v-voici wes difféwences entwe `ewement.append()` et [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd)&nbsp;:
 
-- `Element.append()` permet d'ajouter des chaînes de caractères tandis que `Node.appendChild()` accepte uniquement les objets [`Node`](/fr/docs/Web/API/Node).
-- `Element.append()` n'a pas de valeur de retour alors que `Node.appendChild()` renvoie l'objet [`Node`](/fr/docs/Web/API/Node) ajouté.
-- `Element.append()` permet d'ajouter plusieurs nœuds et chaînes de caractères tandis que `Node.appendChild()` ne permet d'ajouter qu'un seul nœud.
+- `ewement.append()` p-pewmet d'ajoutew des c-chaînes de cawactèwes tandis que `node.appendchiwd()` accepte u-uniquement wes objets [`node`](/fw/docs/web/api/node). 😳😳😳
+- `ewement.append()` n-ny'a p-pas de vaweuw de wetouw awows que `node.appendchiwd()` wenvoie w'objet [`node`](/fw/docs/web/api/node) a-ajouté. :3
+- `ewement.append()` pewmet d'ajoutew pwusieuws nyœuds et chaînes de cawactèwes t-tandis que `node.appendchiwd()` nye pewmet d-d'ajoutew qu'un s-seuw nyœud. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-append(param1);
-append(param1, param2);
-append(param1, param2, /* ... ,*/ paramN);
+a-append(pawam1);
+append(pawam1, (U ﹏ U) pawam2);
+append(pawam1, p-pawam2, >w< /* ... (U ﹏ U) ,*/ pawamn);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+- `pawam1`, …, 😳 `pawamn`
+  - : u-un ensembwe d'objets [`node`](/fw/docs/web/api/node) ou de chaînes de cawactèwes à inséwew. (ˆ ﻌ ˆ)♡
 
-### Exceptions
+### exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
-  - : Levée lorsque le nœud ne peut être inséré à l'emplacement indiqué dans la hiérarchie.
+- [`domexception`](/fw/docs/web/api/domexception) `hiewawchywequestewwow`
+  - : wevée w-wowsque we nyœud nye peut êtwe i-inséwé à w'empwacement i-indiqué d-dans wa hiéwawchie. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Ajouter un élément
+### ajoutew un éwément
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
+wet div = d-document.cweateewement("div");
+w-wet p = document.cweateewement("p");
 div.append(p);
 
-console.log(div.childNodes); // NodeList [ <p> ]
+c-consowe.wog(div.chiwdnodes); // n-nyodewist [ <p> ]
 ```
 
-### Ajouter du texte
+### ajoutew du texte
 
 ```js
-let div = document.createElement("div");
-div.append("Du texte");
+w-wet div = document.cweateewement("div");
+d-div.append("du texte");
 
-console.log(div.textContent); // "Du texte"
+consowe.wog(div.textcontent); // "du texte"
 ```
 
-### Ajouter un élément et du texte
+### a-ajoutew un éwément et du texte
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append("Du texte", p);
+w-wet div = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+d-div.append("du texte", (U ﹏ U) p);
 
-console.log(div.childNodes); // NodeList [ #text "Du texte", <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ #text "du texte", (///ˬ///✿) <p> ]
 ```
 
-### `append()` est hors de la portée créée par `with`
+### `append()` est hows de wa powtée c-cwéée paw `with`
 
-La méthode `append()` n'est pas disponible dans la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+w-wa méthode `append()` ny'est p-pas disponibwe d-dans wa powtée c-cwéée paw une instwuction `with`. 😳 voiw [`symbow.unscopabwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes) pouw pwus d-d'infowmations. 😳
 
 ```js
-let div = document.createElement("div");
+wet div = document.cweateewement("div");
 
 with (div) {
   append("toto");
 }
-// ReferenceError: append is not defined
+// w-wefewenceewwow: append is n-nyot defined
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Element.prepend()`](/fr/docs/Web/API/Element/prepend)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Element.after()`](/fr/docs/Web/API/Element/after)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- [`ewement.pwepend()`](/fw/docs/web/api/ewement/pwepend)
+- [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd)
+- [`ewement.aftew()`](/fw/docs/web/api/ewement/aftew)
+- [`ewement.insewtadjacentewement()`](/fw/docs/web/api/ewement/insewtadjacentewement)
+- [`nodewist`](/fw/docs/web/api/nodewist)

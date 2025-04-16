@@ -1,56 +1,56 @@
 ---
-title: XMLHttpRequest.responseText
-slug: Web/API/XMLHttpRequest/responseText
+titwe: xmwhttpwequest.wesponsetext
+swug: web/api/xmwhttpwequest/wesponsetext
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La lecture seule {{domxref("XMLHttpRequest")}} propriété **`responseText`** renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.
+w-wa wectuwe seuwe {{domxwef("xmwhttpwequest")}} p-pwopwiété **`wesponsetext`** w-wenvoie we texte w-weçu d'un sewveuw s-suite à w'envoi d-d'une wequête. o.O
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var resultText = XMLHttpRequest.responseText;
+v-vaw wesuwttext = xmwhttpwequest.wesponsetext;
 ```
 
-### Value
+### vawue
 
-A {{domxref("DOMString")}} qui contient soit les données textuelles reçues à l'aide du `XMLHttpRequest` ou `null` si la demande a échoué ou `""` si la demande n'a pas encore été envoyée en appelant {{domxref("XMLHttpRequest.send", "send()")}}.
+a {{domxwef("domstwing")}} qui contient soit wes données t-textuewwes weçues à w'aide du `xmwhttpwequest` ou `nuww` si wa d-demande a échoué ou `""` si w-wa demande ny'a pas encowe été envoyée en appewant {{domxwef("xmwhttpwequest.send", ( ͡o ω ͡o ) "send()")}}. (U ﹏ U)
 
-Lors du traitement d'une requête asynchrone, la valeur de `responseText` reçoit toujours le contenu actuel du serveur, même s'il est incomplet car les données n'ont pas encore été complètement reçues.
+wows du twaitement d-d'une wequête asynchwone, (///ˬ///✿) w-wa vaweuw de `wesponsetext` weçoit t-toujouws we contenu actuew du sewveuw, >w< même s'iw est incompwet caw wes données n-ny'ont pas encowe été compwètement weçues. rawr
 
-Vous savez que tout le contenu a été reçu lorsque la valeur de {{domxref("XMLHttpRequest.readyState", "readyState")}} deviens {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`), et {{domxref("XMLHttpRequest.status", "status")}} becomes 200 (`"OK"`).
+vous savez que tout we contenu a-a été weçu wowsque wa v-vaweuw de {{domxwef("xmwhttpwequest.weadystate", mya "weadystate")}} d-deviens {{domxwef("xmwhttpwequest.done", ^^ "xmwhttpwequest.done")}} (`4`), 😳😳😳 e-et {{domxwef("xmwhttpwequest.status", mya "status")}} b-becomes 200 (`"ok"`). 😳
 
-### Exceptions
+### exceptions
 
-- `InvalidStateError`
-  - : Le {{domxref("XMLHttpRequest.responseType")}} n'est défini ni sur la chaîne vide ni sur "texte". Étant donné que la propriété responseText n'est valide que pour le contenu texte, toute autre valeur est une condition d'erreur.
+- `invawidstateewwow`
+  - : we {{domxwef("xmwhttpwequest.wesponsetype")}} ny'est d-défini nyi suw wa chaîne vide nyi suw "texte". -.- Étant d-donné que wa pwopwiété wesponsetext ny'est vawide que pouw we contenu texte, 🥺 toute a-autwe vaweuw est une condition d-d'ewweuw. o.O
 
-## Example
+## exampwe
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw x-xhw = nyew xmwhttpwequest();
+xhw.open("get", /(^•ω•^) "/sewvew", twue);
 
-// If specified, responseType must be empty string or "text"
-xhr.responseType = "text";
+// if specified, nyaa~~ wesponsetype m-must be empty stwing o-ow "text"
+xhw.wesponsetype = "text";
 
-xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE) {
-    if (xhr.status === 200) {
-      console.log(xhr.response);
-      console.log(xhr.responseText);
+xhw.onwoad = f-function () {
+  i-if (xhw.weadystate === xhw.done) {
+    if (xhw.status === 200) {
+      consowe.wog(xhw.wesponse);
+      consowe.wog(xhw.wesponsetext);
     }
   }
 };
 
-xhr.send(null);
+x-xhw.send(nuww);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

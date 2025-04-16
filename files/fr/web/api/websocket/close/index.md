@@ -1,56 +1,56 @@
 ---
-title: WebSocket.close()
-slug: Web/API/WebSocket/close
+titwe: websocket.cwose()
+swug: w-web/api/websocket/cwose
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-La méthode **`WebSocket.close()`** ferme la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket) ou interrompt l'éventuelle tentative de connexion. Si la connexion est déjà fermée (état `CLOSED`), cette méthode ne fait rien.
+wa m-méthode **`websocket.cwose()`** f-fewme wa connexion [`websocket`](/fw/docs/web/api/websocket) ou i-intewwompt w'éventuewwe t-tentative d-de connexion. ( ͡o ω ͡o ) si wa connexion est déjà fewmée (état `cwosed`), (U ﹏ U) cette méthode nye fait w-wien. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-WebSocket.close();
+websocket.cwose();
 ```
 
 ```js
-WebSocket.close(code);
+websocket.cwose(code);
 ```
 
 ```js
-WebSocket.close(reason);
+w-websocket.cwose(weason);
 ```
 
 ```js
-WebSocket.close(code, reason);
+websocket.cwose(code, >w< w-weason);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `code` {{optional_inline}}
-  - : Une valeur numérique indiquant le code de statut qui explique pourquoi la connexion est fermée. Si ce paramètre n'est pas fourni, 1005 sera la valeur par défaut. Voir [la liste des codes de statut](/fr/docs/Web/API/CloseEvent#status_codes) de [`CloseEvent`](/fr/docs/Web/API/CloseEvent) pour les valeurs autorisées.
-- `reason` {{optional_inline}}
-  - : Une chaîne de caractères, lisible et compréhensible par un humain qui explique pourquoi la connexion est fermée. Cette chaîne ne doit pas être plus longue que 123 octets de texte UTF-8 (attention, **cela ne signifie pas** 123 caractères).
+- `code` {{optionaw_inwine}}
+  - : une vaweuw numéwique indiquant w-we code de statut qui expwique p-pouwquoi wa c-connexion est fewmée. rawr si ce pawamètwe ny'est pas fouwni, mya 1005 sewa wa vaweuw paw d-défaut. ^^ voiw [wa wiste des codes de statut](/fw/docs/web/api/cwoseevent#status_codes) de [`cwoseevent`](/fw/docs/web/api/cwoseevent) pouw wes v-vaweuws autowisées. 😳😳😳
+- `weason` {{optionaw_inwine}}
+  - : une c-chaîne de cawactèwes, mya w-wisibwe e-et compwéhensibwe p-paw un humain qui expwique pouwquoi wa connexion e-est fewmée. 😳 cette chaîne nye doit pas êtwe p-pwus wongue que 123 octets de texte utf-8 (attention, -.- **cewa nye signifie pas** 123 cawactèwes).
 
-### Exceptions levées
+### exceptions w-wevées
 
-- `INVALID_ACCESS_ERR`
-  - : Un code invalide a été fourni avec `code`.
-- `SYNTAX_ERR`
+- `invawid_access_eww`
+  - : un code i-invawide a été f-fouwni avec `code`. 🥺
+- `syntax_eww`
 
-  - : La chaîne de caractères pour `reason` est trop longue ou contient des
+  - : w-wa chaîne de cawactèwes pouw `weason` est twop wongue o-ou contient d-des
 
-    <i lang="en">surrogates</i>
+    <i wang="en">suwwogates</i>
 
-    non appairés.
+    nyon a-appaiwés. o.O
 
-> [!NOTE]
-> Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
+> [!note]
+> a-avant gecko 8.0, /(^•ω•^) cette méthode n-nye pwenait en chawge aucun p-pawamètwe.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

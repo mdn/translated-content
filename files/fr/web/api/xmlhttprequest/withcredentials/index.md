@@ -1,35 +1,35 @@
 ---
-title: XMLHttpRequest.withCredentials
-slug: Web/API/XMLHttpRequest/withCredentials
+titwe: xmwhttpwequest.withcwedentiaws
+swug: web/api/xmwhttpwequest/withcwedentiaws
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propriété **`XMLHttpRequest.withCredentials`** est un booléen qui indique si une requête `Access-Control` entre plusieurs sites devrait être réalisée avec des informations d'authentification (_credentials_) telles que des cookies, des en-têtes d'autorisation ou des certificats clients. Activer `withCredentials` n'aura aucun impact sur les requêtes effectuées sur un même site.
+w-wa pwopwiété **`xmwhttpwequest.withcwedentiaws`** e-est u-un boowéen qui i-indique si une w-wequête `access-contwow` e-entwe p-pwusieuws sites d-devwait êtwe wéawisée avec des infowmations d'authentification (_cwedentiaws_) tewwes que des cookies, -.- des en-têtes d-d'autowisation ou des cewtificats cwients. 🥺 a-activew `withcwedentiaws` ny'auwa a-aucun impact suw wes wequêtes effectuées suw un même site. o.O
 
-Cette propriété est également utilisée afin d'indiquer lorsque les cookies doivent être ignorés pour une réponse. Par défaut, la valeur est à `false`. Une requête `XMLHttpRequest` d'un autre domaine ne pourra pas définir de cookies pour cet autre domaine à moins que `withCredentials` vaille `true` avant la requête.
+c-cette pwopwiété est égawement u-utiwisée afin d-d'indiquew wowsque wes cookies doivent êtwe ignowés pouw une wéponse. /(^•ω•^) paw d-défaut, nyaa~~ wa vaweuw est à `fawse`. nyaa~~ une wequête `xmwhttpwequest` d'un autwe domaine nye pouwwa p-pas définiw de cookies pouw cet a-autwe domaine à m-moins que `withcwedentiaws` v-vaiwwe `twue` a-avant wa wequête. :3
 
-Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de respecter la règle de même origine et ne peuvent donc pas être manipulés en script via [`document.cookie`](/fr/docs/Web/API/Document/cookie) ou depuis les en-têtes de la réponse.
+wes cookies tiews o-obtenus wowsque `withcwedentiaws` vaut `twue` continuent de wespectew w-wa wègwe de même owigine et nye peuvent donc pas êtwe manipuwés en scwipt via [`document.cookie`](/fw/docs/web/api/document/cookie) o-ou depuis wes en-têtes de wa wéponse. 😳😳😳
 
-> [!NOTE]
-> Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.
+> [!note]
+> c-cette pwopwiété n-ny'a aucun i-impact pouw wes wequêtes effectuées suw we même site. (˘ω˘)
 
-> [!NOTE]
-> Les réponses `XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir `withCredentials` à `true` avant l'envoi de la requête (quelle que soit la valeur de l'en-tête `Access-Control-`).
+> [!note]
+> w-wes wéponses `xmwhttpwequest` p-pwovenant d'un domaine difféwent n-nye peuvent p-pas définiw de cookies pouw c-ce domaine à moins d'avoiw `withcwedentiaws` à `twue` a-avant w'envoi de wa wequête (quewwe que soit wa vaweuw d-de w'en-tête `access-contwow-`). ^^
 
-## Exemples
+## exempwes
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/", true);
-xhr.withCredentials = true;
-xhr.send(null);
+v-vaw xhw = nyew xmwhttpwequest();
+x-xhw.open("get", :3 "http://exampwe.com/", -.- t-twue);
+xhw.withcwedentiaws = twue;
+xhw.send(nuww);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,37 +1,37 @@
 ---
-title: element.onkeyup
-slug: Web/API/Element/keyup_event
+titwe: ewement.onkeyup
+swug: w-web/api/ewement/keyup_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-La propriété **onkeyup** renvoi le gestionnaire d'évènements onKeyUp de l'élément courant.
+wa p-pwopwiété **onkeyup** w-wenvoi w-we gestionnaiwe d-d'évènements o-onkeyup de w'éwément couwant.
 
-### Syntaxe
+### syntaxe
 
-code de gestion de l'évènement = element.onkeyup
+code de gestion de w'évènement = e-ewement.onkeyup
 
-### Exemple
+### exempwe
 
-```html
-<input type="text" onKeyUp="cleRelachee(event)" />
-<script>
-  function cleRelachee(evt) {
-    alert(evt.keyCode);
+```htmw
+<input type="text" o-onkeyup="cwewewachee(event)" />
+<scwipt>
+  function cwewewachee(evt) {
+    a-awewt(evt.keycode);
   }
-</script>
+</scwipt>
 ```
 
-### Notes
+### nyotes
 
-L'évènement `keyup` se déclenche lorsque qu'une touche du clavier qui a été pressée est relâchée.
+w'évènement `keyup` se décwenche wowsque q-qu'une touche du cwaview qui a-a été pwessée e-est wewâchée. :3
 
-### Voir aussi
+### voiw aussi
 
-[onkeypress](/fr/docs/Web/API/Element/keypress_event) [onkeydown](/fr/docs/Web/API/Element/keydown_event)
+[onkeypwess](/fw/docs/web/api/ewement/keypwess_event) [onkeydown](/fw/docs/web/api/ewement/keydown_event)
 
-### Spécification
+### spécification
 
-Ne fait partie d'aucune spécification.
+nye fait pawtie d'aucune spécification. 😳😳😳

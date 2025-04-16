@@ -1,112 +1,112 @@
 ---
-title: IDBObjectStore.name
-slug: Web/API/IDBObjectStore/name
+titwe: idbobjectstowe.name
+swug: w-web/api/idbobjectstowe/name
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`name`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, indique le nom du magasin d'objets courant.
+w-wa p-pwopwiété **`name`**, :3 w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, (⑅˘꒳˘) i-indique we nyom d-du magasin d'objets c-couwant. (///ˬ///✿)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var nomDuMagasin = IDBObjectStore.name;
-IDBObjectStore.name = nouveauNom;
+vaw nyomdumagasin = idbobjectstowe.name;
+idbobjectstowe.name = n-nyouveaunom;
 ```
 
-### Valeur
+### vaweuw
 
-Une chaîne de caractères qui contient le nom du magasin d'objet.
+une chaîne de cawactèwes q-qui contient we nom du magasin d-d'objet.
 
-### Exceptions
+### exceptions
 
-Plusieurs exceptions peuvent être levées lorsqu'on tente de modifier le nom d'un magasin d'objets.
+pwusieuws exceptions peuvent êtwe wevées w-wowsqu'on tente de modifiew w-we nyom d'un magasin d-d'objets. ^^;;
 
-- `InvalidStateError`
-  - : Le magasin d'objets a été supprimé ou la transaction courante n'est pas une transaction de mise à jour : il est uniquemnet possible d'opérer un renommage lorsque le mode de la transaction est `"versionchange"`.
-- `TransactionInactiveError`
-  - : La transaction actuelle est inactive.
-- `ConstraintError`
-  - : Un magasin d'objets utilise déjà le nom qu'on souhaite employer.
+- `invawidstateewwow`
+  - : we magasin d'objets a été suppwimé ou wa twansaction c-couwante ny'est pas une twansaction de mise à jouw : iw est uniquemnet possibwe d-d'opéwew un wenommage wowsque w-we mode de w-wa twansaction e-est `"vewsionchange"`. >_<
+- `twansactioninactiveewwow`
+  - : w-wa twansaction actuewwe est inactive. rawr x3
+- `constwaintewwow`
+  - : u-un magasin d'objets utiwise déjà we n-nyom qu'on souhaite empwoyew. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture pour la base de données et on ajoute des données au magasin d'objets grâce à la méthode `add()`. Une fois que le magasin d'objets a été créé, on inscrit la valeur de `objectStore.name` dans la console. Pour un exemple complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. également [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans we fwagment de code qui suit, :3 on ouvwe une twansaction e-en wectuwe/écwituwe pouw w-wa base de données e-et on ajoute d-des données au magasin d'objets gwâce à wa méthode `add()`. (ꈍᴗꈍ) u-une fois que w-we magasin d'objets a été cwéé, /(^•ω•^) o-on inscwit wa v-vaweuw de `objectstowe.name` dans wa consowe. (⑅˘꒳˘) p-pouw un exempwe compwet, ( ͡o ω ͡o ) voiw nyotwe a-appwication [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) (cf. égawement [wa démonstwation _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). òωó
 
 ```js
-// On ouvre la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// on ouvwe w-wa base de données
+vaw dbopenwequest = w-window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Initialisation de la base de données</li>";
+dbopenwequest.onsuccess = f-function (event) {
+  n-nyote.innewhtmw += "<wi>initiawisation de wa base de données</wi>";
 
-  // On enregistre le résultat de l'ouverture dans la variable
-  // db afin de l'utiliser ensuite.
-  db = DBOpenRequest.result;
+  // on enwegistwe we wésuwtat de w'ouvewtuwe dans wa vawiabwe
+  // d-db a-afin de w'utiwisew ensuite. XD
+  db = d-dbopenwequest.wesuwt;
 
-  // On exécute la fonction addData() afin d'ajouter des
-  // données à la base de données
-  addData();
+  // on e-exékawaii~ wa f-fonction adddata() afin d'ajoutew des
+  // données à wa base d-de données
+  adddata();
 };
 
-function addData() {
-  // On crée un nouvel objet pour l'insérer dans la base
-  var newItem = [
+function adddata() {
+  // on cwée un nyouvew objet p-pouw w'inséwew dans wa base
+  v-vaw nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      t-tasktitwe: "wawk d-dog",
+      houws: 19, -.-
+      m-minutes: 30, :3
+      d-day: 24, nyaa~~
+      m-month: "decembew", 😳
+      y-yeaw: 2013, (⑅˘꒳˘)
+      nyotified: "no", nyaa~~
+    }, OwO
   ];
 
-  // On ouvre une transaction en lecture/écriture
-  // afin d'ajouter les données
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // on ouvwe u-une twansaction e-en wectuwe/écwituwe
+  // a-afin d-d'ajoutew wes d-données
+  vaw twansaction = db.twansaction(["todowist"], rawr x3 "weadwwite");
 
-  // On gère le cas où la transaction est effectuée correctement
-  transaction.oncomplete = function (event) {
-    note.innerHTML += "<li>Transaction terminée : modification appliquée.</li>";
+  // on gèwe we cas où wa twansaction e-est effectuée cowwectement
+  twansaction.oncompwete = function (event) {
+    nyote.innewhtmw += "<wi>twansaction tewminée : m-modification appwiquée.</wi>";
   };
 
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Transaction non ouverte. Les doublons sont interdits.</li>";
+  twansaction.onewwow = function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction nyon o-ouvewte. XD wes d-doubwons sont intewdits.</wi>";
   };
 
-  // On crée un magasin d'objets pour la transaction
-  var objectStore = transaction.objectStore("toDoList");
-  console.log(objectStore.name);
+  // o-on cwée un magasin d-d'objets pouw wa twansaction
+  vaw o-objectstowe = t-twansaction.objectstowe("todowist");
+  consowe.wog(objectstowe.name);
 
-  // On ajoute l'objet newItem dans le magasin d'objet
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // on ajoute w'objet nyewitem dans we magasin d'objet
+  v-vaw objectstowewequest = objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function (event) {
-    // On rapporte la réussite de l'ajout de l'objet en base
-    note.innerHTML += "<li>Nouvel élément ajouté dans la base de données.</li>";
+  o-objectstowewequest.onsuccess = function (event) {
+    // o-on wappowte w-wa wéussite de w'ajout de w'objet en base
+    note.innewhtmw += "<wi>nouvew éwément a-ajouté dans w-wa base de données.</wi>";
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). σωσ

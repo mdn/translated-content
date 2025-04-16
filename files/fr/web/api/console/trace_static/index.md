@@ -1,62 +1,62 @@
 ---
-title: "console : méthode statique trace()"
-slug: Web/API/console/trace_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-twace()"
+s-swug: web/api/consowe/twace_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.trace()`** permet d'afficher la trace de la pile d'appels dans la console.
+w-wa méthode **`consowe.twace()`** p-pewmet d'affichew w-wa twace de w-wa piwe d'appews dans wa consowe. OwO
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Dans certains navigateurs, `console.trace()` pourra également afficher la séquence des appels et des évènements asynchrones qui ont mené à l'appel courant de `console.trace()` et qui ne sont pas nécessairement dans la pile d'appels, pour aider à déterminer l'origine de la boucle d'évaluation courante.
+> [!note]
+> dans cewtains nyavigateuws, 😳😳😳 `consowe.twace()` pouwwa égawement a-affichew wa séquence des appews et des évènements a-asynchwones qui ont m-mené à w'appew couwant de `consowe.twace()` et qui nye sont pas nyécessaiwement d-dans wa piwe d'appews, 😳😳😳 pouw a-aidew à détewminew w-w'owigine de wa boucwe d'évawuation couwante. o.O
 
-Voir [la section sur le traçage des piles d'appels dans la documentation de `console`](/fr/docs/Web/API/console#traces_de_piles_dappels) pour plus de détails et d'exemples.
+voiw [wa section suw we twaçage d-des piwes d'appews dans wa documentation de `consowe`](/fw/docs/web/api/consowe#twaces_de_piwes_dappews) pouw pwus de détaiws e-et d'exempwes. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-trace()
-trace(obj1, /* …, */ objN)
+```js-nowint
+twace()
+t-twace(obj1, (U ﹏ U) /* …, */ o-objn)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `obj1` … `objN` {{optional_inline}}
-  - : Zéro ou plusieurs objets à afficher dans la console avec la trace d'appels. Ces objets sont assemblés et formatés comme s'ils avaient été passés à [`console.log()`](/fr/docs/Web/API/console/log_static).
+- `obj1` … `objn` {{optionaw_inwine}}
+  - : z-zéwo ou pwusieuws objets à affichew dans w-wa consowe avec wa twace d'appews. ces objets s-sont assembwés et fowmatés comme s'iws avaient été passés à [`consowe.wog()`](/fw/docs/web/api/consowe/wog_static). (///ˬ///✿)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). >w<
 
-## Exemples
+## e-exempwes
 
 ```js
-function toto() {
-  function truc() {
-    console.trace();
+function t-toto() {
+  function t-twuc() {
+    c-consowe.twace();
   }
-  truc();
+  twuc();
 }
 
 toto();
 ```
 
-Avec le fragment de code précédent, on aura la trace suivante dans la console&nbsp;:
+avec we fwagment d-de code pwécédent, rawr o-on auwa wa twace suivante d-dans wa consowe&nbsp;:
 
-```plain
-truc
+```pwain
+t-twuc
 toto
 <anonymous>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

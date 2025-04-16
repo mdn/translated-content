@@ -1,40 +1,40 @@
 ---
-title: fullscreenerror
-slug: Web/API/Document/fullscreenerror_event
+titwe: fuwwscweenewwow
+swug: w-web/api/document/fuwwscweenewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`fullscreenerror`** est déclenché lorsque le navigateur ne peut pas entrer en mode plein écran.
+w-w'évènement **`fuwwscweenewwow`** e-est d-décwenché wowsque w-we nyavigateuw n-nye peut pas e-entwew en mode pwein écwan. rawr
 
-## Informations générales
+## i-infowmations généwawes
 
-- Spécification
-  - : [Fullscreen](https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api)
-- Interface
-  - : {{domxref("Event")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Document")}}
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [fuwwscween](https://dvcs.w3.owg/hg/fuwwscween/waw-fiwe/tip/ovewview.htmw#api)
+- intewface
+  - : {{domxwef("event")}}
+- pwopagation
+  - : oui
+- a-annuwabwe
+  - : nyon
+- cibwe
+  - : {{domxwef("document")}}
+- action paw défaut
+  - : a-aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                            |
+| p-pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event t-tawget (the topmost tawget in the d-dom twee). OwO |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | t-the type of event. (U ﹏ U)                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event nyowmawwy bubbwes ow nyot. >_<             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe ow nyot. rawr x3               |
 
-## Evénements liés
+## evénements wiés
 
-- [`fullscreenchange`](/fr/docs/Web/API/Document/fullscreenchange_event)
+- [`fuwwscweenchange`](/fw/docs/web/api/document/fuwwscweenchange_event)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)
+- [utiwisation du mode pwein écwan](/fw/docs/web/api/fuwwscween_api)

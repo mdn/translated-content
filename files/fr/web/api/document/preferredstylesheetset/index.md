@@ -1,41 +1,41 @@
 ---
-title: Document.preferredStyleSheetSet
-slug: Web/API/Document/preferredStyleSheetSet
+titwe: document.pwefewwedstywesheetset
+swug: w-web/api/document/pwefewwedstywesheetset
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne la feuille de style préférée, telle que définie par l'auteur de la page.
+w-wetouwne wa feuiwwe d-de stywe pwéféwée, t-tewwe q-que définie paw w-w'auteuw de wa p-page. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-preferredStyleSheetSet = document.preferredStyleSheetSet;
+p-pwefewwedstywesheetset = document.pwefewwedstywesheetset;
 ```
 
-Au retour, `preferredStyleSheetSet` indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
+au wetouw, nyaa~~ `pwefewwedstywesheetset` indique wa feuiwwe de s-stywe pwéféwée paw w'auteuw. (⑅˘꒳˘) ceci est détewminé p-paw w'owdwe des décwawations d-des feuiwwes de stywe et paw w'entête http intituwé `defauwt-stywe`. rawr x3
 
-En l'absence de feuille de style préférée, une chaine vide ("") est retournée.
+e-en w'absence de feuiwwe d-de stywe pwéféwée, (✿oωo) u-une chaine vide ("") est wetouwnée. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
 ```js
-if (document.preferredStyleSheetSet) {
-  console.log(
-    "La feuille de style préférée est : " + document.preferredStyleSheetSet,
+if (document.pwefewwedstywesheetset) {
+  c-consowe.wog(
+    "wa feuiwwe de stywe pwéféwée est : " + document.pwefewwedstywesheetset, (˘ω˘)
   );
-} else {
-  console.log("Il n'y a pas de feuille de style préférée.");
+} ewse {
+  consowe.wog("iw n-ny'y a pas de feuiwwe de s-stywe pwéféwée.");
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-- [HTML5: Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [htmw5: a-awtewnate s-stywe sheets](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#awtewnate-stywe-sheets)
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("document.lastStyleSheetSet")}}
-- {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.styleSheetSets")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
+- {{domxwef("document.waststywesheetset")}}
+- {{domxwef("document.sewectedstywesheetset")}}
+- {{domxwef("document.stywesheetsets")}}
+- {{domxwef("document.enabwestywesheetsfowset()")}}

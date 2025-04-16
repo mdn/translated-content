@@ -1,31 +1,31 @@
 ---
-title: File.fileSize
-slug: Web/API/Blob/size
+titwe: fiwe.fiwesize
+swug: web/api/bwob/size
 ---
 
-{{APIRef("File API") }}{{non-standard_header}}
+{{apiwef("fiwe a-api") }}{{non-standawd_headew}}
 
-## Résumé
+## w-wésumé
 
-Renvoie la taille du fichier en octets.
+w-wenvoie wa taiwwe d-du fichiew en o-octets. -.-
 
-> [!NOTE]
-> Cette propriété est dépréciée. Utilisez {{domxref("Blob.size")}} à la place.
+> [!note]
+> c-cette pwopwiété e-est dépwéciée. (ˆ ﻌ ˆ)♡ u-utiwisez {{domxwef("bwob.size")}} à wa pwace. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var size = instanceOfFile.fileSize;
+vaw size = instanceoffiwe.fiwesize;
 ```
 
-## Valeur
+## vaweuw
 
-Un nombre.
+u-un nyombwe. (U ᵕ U❁)
 
-## Spécification
+## spécification
 
-Ne fait partie d'aucune spécification.
+nye fait pawtie d-d'aucune spécification. -.-
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Blob.size")}}
+- {{domxwef("bwob.size")}}

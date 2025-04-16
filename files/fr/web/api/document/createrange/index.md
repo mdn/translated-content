@@ -1,33 +1,33 @@
 ---
-title: Document.createRange
-slug: Web/API/Document/createRange
+titwe: document.cweatewange
+swug: web/api/document/cweatewange
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne un objet {{domxref("Range")}}.
+w-wetouwne u-un objet {{domxwef("wange")}}. ^^;;
 
-## Syntaxe
-
-```js
-range = document.createRange();
-```
-
-`range` devient un objet {{domxref("Range")}}.
-
-## Exemple
+## s-syntaxe
 
 ```js
-var range = document.createRange();
-
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
+w-wange = document.cweatewange();
 ```
 
-## Notes
+`wange` d-devient un objet {{domxwef("wange")}}. >_<
 
-Une fois un objet `Range` créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
+## e-exempwe
 
-## Spécification
+```js
+v-vaw w-wange = document.cweatewange();
 
-- [DOM Level 2 Range: DocumentRange.createRange](https://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#Level-2-DocumentRange-idl)
+wange.setstawt(stawtnode, mya stawtoffset);
+wange.setend(endnode, mya endoffset);
+```
+
+## nyotes
+
+une fois u-un objet `wange` cwéé, 😳 iw est nyécessaiwe d-de spécifiew wes wimites de dépawt e-et de fin avant de pouvoiw utiwisew wa pwupawt des méthodes. XD
+
+## s-spécification
+
+- [dom wevew 2 wange: documentwange.cweatewange](https://www.w3.owg/tw/2000/wec-dom-wevew-2-twavewsaw-wange-20001113/wanges.htmw#wevew-2-documentwange-idw)

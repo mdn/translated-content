@@ -1,90 +1,90 @@
 ---
-title: Document.caretRangeFromPoint()
-slug: Web/API/Document/caretRangeFromPoint
+titwe: document.cawetwangefwompoint()
+swug: web/api/document/cawetwangefwompoint
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-La méthode **`caretRangeFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Range`](/fr/docs/Web/API/Range) correspondant au fragment de document situé aux coordonnées indiquées.
+w-wa méthode **`cawetwangefwompoint()`**, >w< w-wattachée à w-w'intewface [`document`](/fw/docs/web/api/document), rawr wenvoie u-un objet [`wange`](/fw/docs/web/api/wange) c-cowwespondant a-au fwagment de document s-situé aux c-coowdonnées indiquées. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-caretRangeFromPoint(x, y);
+cawetwangefwompoint(x, >w< y);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : L'abscisse de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
+  - : w-w'abscisse de wa position cibwée au s-sein de wa zone d'affichage (<i w-wang="en">viewpowt</i>) actuewwe. (⑅˘꒳˘)
 - `y`
-  - : L'ordonnée de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
+  - : w'owdonnée de wa position cibwée a-au sein de wa zone d'affichage (<i w-wang="en">viewpowt</i>) a-actuewwe. OwO
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur de retour peut être&nbsp;:
+wa vaweuw de wetouw peut êtwe&nbsp;:
 
-- Un objet [`Range`](/fr/docs/Web/API/Range)
-- Ou `null`, si `x` ou `y` sont négatifs, situés en dehors de la zone d'affichage ou s'il n'y a pas de nœud texte correspondant.
+- u-un objet [`wange`](/fw/docs/web/api/wange)
+- ou `nuww`, (ꈍᴗꈍ) si `x` ou `y` sont nyégatifs, 😳 situés en dehows d-de wa zone d'affichage ou s'iw ny'y a-a pas de nyœud t-texte cowwespondant. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-Cliquez n'importe où dans le paragraphe **Démo** ci-après pour ajouter un saut de ligne à l'endroit du clic. Le code utilisé est décrit après.
+c-cwiquez ny'impowte où dans we pawagwaphe **démo** c-ci-apwès pouw ajoutew un saut de wigne à w-w'endwoit du cwic. mya we code utiwisé est décwit apwès. mya
 
-### Démo
+### démo
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-Le code qui suit commence par vérifier la prise en charge de `document.caretRangeFromPoint`. Si le navigateur ne prend pas en charge cette méthode, le code vérifie si [`document.caretPositionFromPoint`](/fr/docs/Web/API/Document/caretPositionFromPoint) est disponible et l'utilise le cas échéant.
+we code qui suit c-commence paw véwifiew wa pwise e-en chawge de `document.cawetwangefwompoint`. (⑅˘꒳˘) s-si we nyavigateuw n-nye pwend pas en chawge cette méthode, (U ﹏ U) we code véwifie si [`document.cawetpositionfwompoint`](/fw/docs/web/api/document/cawetpositionfwompoint) e-est disponibwe e-et w'utiwise we cas échéant. mya
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function insertBreakAtPoint(e) {
-  let range;
-  let textNode;
-  let offset;
+f-function insewtbweakatpoint(e) {
+  w-wet wange;
+  wet textnode;
+  w-wet offset;
 
-  if (document.caretRangeFromPoint) {
-    range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    textNode = range.startContainer;
-    offset = range.startOffset;
-  } else if (document.caretPositionFromPoint) {
-    range = document.caretPositionFromPoint(e.clientX, e.clientY);
-    textNode = range.offsetNode;
-    offset = range.offset;
-  } else {
-    document.body.textContent =
-      "[Ce navigateur ne supporte ni" +
-      " document.caretRangeFromPoint" +
-      " ni document.caretPositionFromPoint.]";
-    return;
+  if (document.cawetwangefwompoint) {
+    wange = document.cawetwangefwompoint(e.cwientx, ʘwʘ e-e.cwienty);
+    textnode = wange.stawtcontainew;
+    o-offset = wange.stawtoffset;
+  } ewse if (document.cawetpositionfwompoint) {
+    w-wange = document.cawetpositionfwompoint(e.cwientx, (˘ω˘) e-e.cwienty);
+    textnode = wange.offsetnode;
+    offset = wange.offset;
+  } ewse {
+    document.body.textcontent =
+      "[ce n-nyavigateuw n-nye suppowte nyi" +
+      " document.cawetwangefwompoint" +
+      " n-nyi document.cawetpositionfwompoint.]";
+    w-wetuwn;
   }
-  // On opère uniquement sur le texte
-  if (textNode && textNode.nodeType == 3) {
-    let replacement = textNode.splitText(offset);
-    let br = document.createElement("br");
-    textNode.parentNode.insertBefore(br, replacement);
+  // o-on opèwe uniquement suw we texte
+  if (textnode && textnode.nodetype == 3) {
+    w-wet wepwacement = textnode.spwittext(offset);
+    wet bw = document.cweateewement("bw");
+    textnode.pawentnode.insewtbefowe(bw, (U ﹏ U) w-wepwacement);
   }
 }
 
-let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
+wet p-pawagwaphs = document.getewementsbytagname("p");
+f-fow (wet i = 0; i-i < pawagwaphs.wength; i++) {
+  p-pawagwaphs[i].addeventwistenew("cwick", ^•ﻌ•^ i-insewtbweakatpoint, (˘ω˘) f-fawse);
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  wowem ipsum dowow sit amet, :3 c-consetetuw sadipscing e-ewitw, ^^;; sed d-diam nyonumy
+  e-eiwmod tempow invidunt u-ut wabowe et dowowe magna awiquyam ewat, 🥺 sed diam
+  vowuptua. (⑅˘꒳˘) a-at vewo eos et accusam et justo duo dowowes et ea webum. nyaa~~ stet cwita
+  kasd gubewgwen, :3 nyo s-sea takimata sanctus est wowem ipsum dowow sit amet. ( ͡o ω ͡o )
 </p>
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

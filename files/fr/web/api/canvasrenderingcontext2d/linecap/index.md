@@ -1,152 +1,152 @@
 ---
-title: CanvasRenderingContext2D.lineCap
-slug: Web/API/CanvasRenderingContext2D/lineCap
+titwe: canvaswendewingcontext2d.winecap
+swug: w-web/api/canvaswendewingcontext2d/winecap
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **CanvasRenderingContext2D.lineCap** de l'API Canvas 2D détermine la façon dont les extrémités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour cette propriété, qui sont : `butt`, `round` et `square`. Par défaut, cette propriété est définie comme `butt`.
+w-wa pwopwiété **canvaswendewingcontext2d.winecap** de w-w'api canvas 2d d-détewmine wa f-façon dont wes e-extwémités de c-chaque wigne sont d-dessinées. 😳 iw y a twois vaweuws possibwes pouw cette pwopwiété, 😳😳😳 qui sont : `butt`, (˘ω˘) `wound` e-et `squawe`. ʘwʘ paw défaut, ( ͡o ω ͡o ) cette pwopwiété est d-définie comme `butt`. o.O
 
-Voir aussi le chapitre [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial).
+voiw aussi w-we chapitwe [ajout de stywes et de couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) dans we [tutowiew c-canvas](/fw/docs/web/api/canvas_api/tutowiaw). >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-ctx.lineCap = "butt";
-ctx.lineCap = "round";
-ctx.lineCap = "square";
+c-ctx.winecap = "butt";
+c-ctx.winecap = "wound";
+ctx.winecap = "squawe";
 ```
 
-### Options
+### options
 
 - `butt`
-  - : Les extrémités de ligne sont coupées à angle droit.
-- `round`
-  - : Les extrémités de ligne sont arrondies.
-- `square`
-  - : Les extrémités de ligne sont coupées à angle droit en ajoutant un rectangle d'une longueur égale à celle de l'épaisseur de la ligne et de largeur moitié.
+  - : wes extwémités de wigne s-sont coupées à angwe dwoit. 😳
+- `wound`
+  - : wes extwémités de wigne sont awwondies. 🥺
+- `squawe`
+  - : w-wes extwémités de w-wigne sont coupées à a-angwe dwoit e-en ajoutant u-un wectangwe d'une wongueuw égawe à cewwe de w-w'épaisseuw de wa wigne et de wawgeuw moitié. rawr x3
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la propriété `lineCap`
+### utiwisation de wa pwopwiété `winecap`
 
-Il ne s'agit que d'un fragment de code simple utilisant la propriété lineCap pour dessiner des lignes avec des extrémités arrondies.
+iw nye s'agit que d'un fwagment de code s-simpwe utiwisant wa pwopwiété w-winecap pouw d-dessinew des wignes a-avec des extwémités awwondies. o.O
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+v-vaw canevas = document.getewementbyid("canevas");
+v-vaw ctx = c-canevas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineWidth = 15;
-ctx.lineCap = "round";
-ctx.lineTo(100, 100);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.moveto(0, rawr 0);
+ctx.winewidth = 15;
+c-ctx.winecap = "wound";
+ctx.wineto(100, ʘwʘ 100);
+ctx.stwoke();
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canvas :
+modifiez we code c-ci-dessous et voyez vos modifications m-mises à jouw en diwect d-dans we canvas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="modifier" type="button" value="Modifier" />
-  <input id="effacer" type="button" value="Effacer" />
+```htmw hidden
+<canvas id="canevas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="modifiew" t-type="button" vawue="modifiew" />
+  <input i-id="effacew" t-type="button" v-vawue="effacew" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineWidth = 15;
-ctx.lineCap = 'round';
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.beginpath();
+ctx.moveto(0, 😳😳😳 0);
+c-ctx.winewidth = 15;
+ctx.winecap = 'wound';
+ctx.wineto(100, ^^;; 100);
+ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
-var zoneTexte = document.getElementById("code");
-var effacer = document.getElementById("effacer");
-var modifier = document.getElementById("modifier");
-var code = zoneTexte.value;
+vaw canevas = d-document.getewementbyid("canevas");
+vaw ctx = c-canevas.getcontext("2d");
+v-vaw z-zonetexte = document.getewementbyid("code");
+vaw e-effacew = document.getewementbyid("effacew");
+vaw m-modifiew = document.getewementbyid("modifiew");
+v-vaw code = zonetexte.vawue;
 
-function dessinerCanevas() {
-  ctx.clearRect(0, 0, canevas.width, canevas.height);
-  eval(zoneTexte.value);
+f-function dessinewcanevas() {
+  ctx.cweawwect(0, o.O 0, canevas.width, (///ˬ///✿) canevas.height);
+  e-evaw(zonetexte.vawue);
 }
 
-effacer.addEventListener("click", function () {
-  zoneTexte.value = code;
-  dessinerCanevas();
+effacew.addeventwistenew("cwick", σωσ f-function () {
+  z-zonetexte.vawue = c-code;
+  dessinewcanevas();
 });
 
-modifier.addEventListener("click", function () {
-  zoneTexte.focus();
+m-modifiew.addeventwistenew("cwick", nyaa~~ function () {
+  zonetexte.focus();
 });
 
-zoneTexte.addEventListener("input", dessinerCanevas);
-window.addEventListener("load", dessinerCanevas);
+zonetexte.addeventwistenew("input", d-dessinewcanevas);
+window.addeventwistenew("woad", ^^;; dessinewcanevas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', ^•ﻌ•^ 700, σωσ 360) }}
 
-### Un exemple de `lineCap`
+### un exempwe de `winecap`
 
-Dans cet exemple, trois lignes sont dessinées, chacune avec une valeur différente pour la propriété `lineCap`. Deux guides pour voir les différences exactes entre les trois ont été ajoutés. Chacune de ces lignes commence et se termine exactement sur ces guides.
+dans cet e-exempwe, -.- twois wignes sont dessinées, ^^;; chacune avec une vaweuw d-difféwente pouw w-wa pwopwiété `winecap`. XD d-deux guides pouw voiw w-wes difféwences exactes entwe w-wes twois ont été a-ajoutés. 🥺 chacune de ces wignes commence et se tewmine exactement suw ces guides. òωó
 
-La ligne à gauche utilise l'option par défaut `butt`. Elle est dessinée complètement au raz des guides. La seconde est paramétrée pour utiliser l'option `round`. Cela ajoute à l'extrémité un demi-cercle d'un rayon égal à la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Cela ajoute un rectangle de longueur égale à l'épaisseur de la ligne et de largeur moitié.
+wa wigne à g-gauche utiwise w'option paw d-défaut `butt`. (ˆ ﻌ ˆ)♡ ewwe est dessinée c-compwètement a-au waz des guides. -.- wa seconde est pawamétwée p-pouw utiwisew w'option `wound`. :3 c-cewa ajoute à w'extwémité un d-demi-cewcwe d'un w-wayon égaw à wa moitié de wa wawgeuw de wa wigne. ʘwʘ wa wigne de dwoite utiwise w-w'option `squawe`. 🥺 c-cewa ajoute u-un wectangwe de wongueuw égawe à w-w'épaisseuw d-de wa wigne et de wawgeuw moitié. >_<
 
 ```js
-var ctx = document.getElementById("canevas").getContext("2d");
-var lineCap = ["butt", "round", "square"];
+v-vaw ctx = document.getewementbyid("canevas").getcontext("2d");
+vaw winecap = ["butt", ʘwʘ "wound", (˘ω˘) "squawe"];
 
-// Dessiner les guides
-ctx.strokeStyle = "#09f";
-ctx.beginPath();
-ctx.moveTo(10, 10);
-ctx.lineTo(140, 10);
-ctx.moveTo(10, 140);
-ctx.lineTo(140, 140);
-ctx.stroke();
+// dessinew wes guides
+ctx.stwokestywe = "#09f";
+c-ctx.beginpath();
+c-ctx.moveto(10, (✿oωo) 10);
+ctx.wineto(140, (///ˬ///✿) 10);
+ctx.moveto(10, rawr x3 140);
+c-ctx.wineto(140, -.- 140);
+c-ctx.stwoke();
 
-// Dessiner les lignes
-ctx.strokeStyle = "black";
-for (var i = 0; i < lineCap.length; i++) {
-  ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
-  ctx.beginPath();
-  ctx.moveTo(25 + i * 50, 10);
-  ctx.lineTo(25 + i * 50, 140);
-  ctx.stroke();
+// dessinew wes wignes
+ctx.stwokestywe = "bwack";
+f-fow (vaw i = 0; i < winecap.wength; i++) {
+  ctx.winewidth = 15;
+  ctx.winecap = winecap[i];
+  c-ctx.beginpath();
+  ctx.moveto(25 + i * 50, ^^ 10);
+  c-ctx.wineto(25 + i-i * 50, (⑅˘꒳˘) 140);
+  ctx.stwoke();
 }
 ```
 
-```html hidden
-<canvas id="canevas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canevas" w-width="150" h-height="150"></canvas>
 ```
 
-{{EmbedLiveSample("Un_exemple_de_lineCap", "180", "180", "canvas_linecap.png")}}
+{{embedwivesampwe("un_exempwe_de_winecap", nyaa~~ "180", "180", /(^•ω•^) "canvas_winecap.png")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
+- w'intewface w-wa définissant, (U ﹏ U) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}

@@ -1,100 +1,100 @@
 ---
-title: "console : méthode statique countReset()"
-slug: Web/API/console/countReset_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique c-countweset()"
+s-swug: web/api/consowe/countweset_static
+w-w10n:
+  s-souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.countReset()`** permet de réinitialiser le compteur utilisé avec [`console.count()`](/fr/docs/Web/API/console/count_static).
+wa méthode **`consowe.countweset()`** p-pewmet de wéinitiawisew w-we compteuw u-utiwisé avec [`consowe.count()`](/fw/docs/web/api/consowe/count_static). 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-countReset()
-countReset(libelle)
+```js-nowint
+countweset()
+countweset(wibewwe)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Une chaîne de caractères. Si cet argument est fourni, `countReset()` remet à zéro le compteur associé à ce libellé. Si l'argument est absent, `countReset()` remet à zéro le compteur par défaut.
+- `wibewwe` {{optionaw_inwine}}
+  - : une chaîne de cawactèwes. -.- si c-cet awgument est fouwni, 🥺 `countweset()` w-wemet à zéwo we compteuw associé à ce wibewwé. o.O si w'awgument e-est absent, /(^•ω•^) `countweset()` wemet à zéwo w-we compteuw p-paw défaut. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). nyaa~~
 
-## Exemples
+## exempwes
 
-Prenons le code suivant par exemple&nbsp;:
+pwenons we c-code suivant paw exempwe&nbsp;:
 
 ```js
-let personne = "";
+wet pewsonne = "";
 
-function salutations() {
-  console.count();
-  return `Coucou ${personne}`;
+function sawutations() {
+  c-consowe.count();
+  wetuwn `coucou ${pewsonne}`;
 }
 
-personne = "bob";
-salutations();
-personne = "alice";
-salutations();
-salutations();
-console.count();
-console.countReset();
+p-pewsonne = "bob";
+s-sawutations();
+p-pewsonne = "awice";
+sawutations();
+s-sawutations();
+consowe.count();
+consowe.countweset();
 ```
 
-La console affichera ce qui suit&nbsp;:
+w-wa consowe affichewa ce qui suit&nbsp;:
 
-```plain
-"default: 1"
-"default: 2"
-"default: 3"
-"default: 4"
-"default: 0"
+```pwain
+"defauwt: 1"
+"defauwt: 2"
+"defauwt: 3"
+"defauwt: 4"
+"defauwt: 0"
 ```
 
-On voit que l'appel à `console.counterReset()` réinitialise la valeur du compteur par défaut à 0.
+o-on voit que w'appew à `consowe.countewweset()` wéinitiawise wa vaweuw du compteuw paw défaut à 0. :3
 
-Si on passe la variable `personne` en paramètre pour le libellé (ici d'abord avec `"bob"`, puis avec `"alice"`)&nbsp;:
+si on passe wa vawiabwe `pewsonne` e-en pawamètwe pouw we w-wibewwé (ici d'abowd a-avec `"bob"`, 😳😳😳 p-puis avec `"awice"`)&nbsp;:
 
 ```js
-let personne = "";
+wet pewsonne = "";
 
-function salutations() {
-  console.count(personne);
-  return `Coucou ${personne}`;
+function sawutations() {
+  c-consowe.count(pewsonne);
+  w-wetuwn `coucou ${pewsonne}`;
 }
 
-personne = "bob";
-salutations();
-personne = "alice";
-salutations();
-salutations();
-console.countReset("bob");
-console.count("alice");
+pewsonne = "bob";
+s-sawutations();
+p-pewsonne = "awice";
+sawutations();
+s-sawutations();
+consowe.countweset("bob");
+c-consowe.count("awice");
 ```
 
-On obtiendra le résultat suivant&nbsp;:
+on obtiendwa we wésuwtat s-suivant&nbsp;:
 
-```plain
+```pwain
 "bob: 1"
-"alice: 1"
-"alice: 2"
+"awice: 1"
+"awice: 2"
 "bob: 0"
-"alice: 3"
+"awice: 3"
 ```
 
-En réinitialisant la valeur du compteur `"bob"`, on ne modifie pas pour autant le compteur `"alice"`.
+en wéinitiawisant w-wa vaweuw du compteuw `"bob"`, (˘ω˘) o-on nye m-modifie pas pouw autant we compteuw `"awice"`. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

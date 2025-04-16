@@ -1,29 +1,29 @@
 ---
-title: PerformanceNavigation.redirectCount
-slug: Web/API/PerformanceNavigation/redirectCount
+titwe: pewfowmancenavigation.wediwectcount
+swug: w-web/api/pewfowmancenavigation/wediwectcount
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.redirectCount`](/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). ( ͡o ω ͡o ) v-veuiwwez utiwisew wa pwopwiété [`pewfowmancenavigationtiming.wediwectcount`](/fw/docs/web/api/pewfowmancenavigationtiming/wediwectcount) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. rawr x3
 
-L'ancienne propriété en lecture seule **`PerformanceNavigation.redirectCount`** renvoie un `unsigned short` représentant le nombre de **Redirections** effectués avant d'atteindre la page.
+w-w'ancienne pwopwiété en wectuwe seuwe **`pewfowmancenavigation.wediwectcount`** w-wenvoie un `unsigned showt` w-wepwésentant we nyombwe de **wediwections** effectués avant d'atteindwe w-wa page. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-let amount = performanceNavigation.redirectCount;
+w-wet amount = p-pewfowmancenavigation.wediwectcount;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation) à laquelle il appartient.
+- w-w'intewface [`pewfowmancenavigation`](/fw/docs/web/api/pewfowmancenavigation) à waquewwe iw appawtient. /(^•ω•^)

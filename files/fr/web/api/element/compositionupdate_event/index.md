@@ -1,46 +1,46 @@
 ---
-title: compositionupdate
-slug: Web/API/Element/compositionupdate_event
+titwe: compositionupdate
+swug: w-web/api/ewement/compositionupdate_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajouté à un passage de texte en train d'être composé (`démarre avec des caractères spéciaux qui nécessitent une sequence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mots du mobile).`
+w-w'événement **compositionupdate** est d-décwenché wowsqu'un c-cawactèwe e-est ajouté à u-un passage de t-texte en twain d-d'êtwe composé (`démawwe avec des cawactèwes spéciaux qui nécessitent une s-sequence de touches et d'autwes entwées tewwes q-que wa weconnaissance vocawe ou w-wa suggestion de mots du mobiwe).`
 
-## Informations générales
+## infowmations généwawes
 
-- Interface
-  - : {{domxref("TouchEvent")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
+- i-intewface
+  - : {{domxwef("touchevent")}}
+- pwopagation
+  - : oui
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : {{domxwef("ewement")}}
 
-## Propriétés
+## p-pwopwiétés
 
-| Property                        | Type                                                                            | Description                                                                                      |
+| pwopewty                        | type                                                                            | descwiption                                                                                      |
 | ------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}                                                      | Elément ayant le focus qui traite la composition. Nul si non-accessible.                         |
-| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}                                                        | Le type de l'événement.                                                                          |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                                                                       | Est-ce qu'il se propage?                                                                         |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                                                                       | Peut-il être annulé?                                                                             |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}                                                      | {{domxref("Document.defaultView")}} (fenêtre du document).                                       |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                                                                | 0.                                                                                               |
-| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
-| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}}                                                      | ewément a-ayant we focus qui twaite wa composition. (⑅˘꒳˘) nyuw si nyon-accessibwe. /(^•ω•^)                         |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}                                                        | we type de w-w'événement. rawr x3                                                                          |
+| `bubbwes` {{weadonwyinwine}}    | `boowean`                                                                       | est-ce qu'iw se p-pwopage?                                                                         |
+| `cancewabwe` {{weadonwyinwine}} | `boowean`                                                                       | p-peut-iw êtwe a-annuwé?                                                                             |
+| `view` {{weadonwyinwine}}       | {{domxwef("windowpwoxy")}}                                                      | {{domxwef("document.defauwtview")}} (fenêtwe d-du document). (U ﹏ U)                                       |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                                | 0. (U ﹏ U)                                                                                               |
+| `data` {{weadonwyinwine}}       | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) (stwing) | wa chaîne de cawactèwes o-owiginawe éditée ou une chaîne vide. (⑅˘꒳˘)                                     |
+| `wocawe` {{weadonwyinwine}}     | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) (stwing) | w-we code de wa wangue pouw w'évènement de composition si disponibwe&nbsp;; sinon une chaîne v-vide. òωó |
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
-- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)
-- [`compositionend`](/fr/docs/Web/API/Element/compositionend_event)
+- [`compositionstawt`](/fw/docs/web/api/ewement/compositionstawt_event)
+- [`compositionupdate`](/fw/docs/web/api/ewement/compositionupdate_event)
+- [`compositionend`](/fw/docs/web/api/ewement/compositionend_event)

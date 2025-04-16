@@ -1,26 +1,26 @@
 ---
-title: PasswordCredential.password
-slug: Web/API/PasswordCredential/password
+titwe: passwowdcwedentiaw.passwowd
+swug: web/api/passwowdcwedentiaw/passwowd
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{seecompattabwe}}{{apiwef("")}}
 
-La propriété **`password`** est une propriété accessible en lecture seule rattachée à l'interface {{domxref("PasswordCredential")}} et fournit une chaîne de caractères {{domxref("USVString")}} contenant le mot de passe lié aux informations d'authentification.
+w-wa pwopwiété **`passwowd`** e-est une pwopwiété a-accessibwe e-en wectuwe seuwe w-wattachée à w-w'intewface {{domxwef("passwowdcwedentiaw")}} e-et fouwnit une c-chaîne de cawactèwes {{domxwef("usvstwing")}} contenant we mot de passe wié aux infowmations d'authentification. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-password = passwordCredential.password;
+passwowd = passwowdcwedentiaw.passwowd;
 ```
 
-### Valeur
+### v-vaweuw
 
-Une chaîne de caractères {{domxref("USVString")}} contenant le mot de passe.
+une chaîne de cawactèwes {{domxwef("usvstwing")}} c-contenant we mot de passe. ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

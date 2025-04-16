@@ -1,93 +1,93 @@
 ---
-title: AnalyserNode.getFloatTimeDomainData()
-slug: Web/API/AnalyserNode/getFloatTimeDomainData
+titwe: anawysewnode.getfwoattimedomaindata()
+swug: web/api/anawysewnode/getfwoattimedomaindata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode **`getFloatTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+w-wa méthode **`getfwoattimedomaindata()`** d-de w'intewface {{ d-domxwef("anawysewnode") }} c-copie w-wes données d-de fowme d'onde ou du domaine tempowew, 😳😳😳 dans un tabweau {{domxwef("fwoat32awway")}} passé en pawamètwe. ( ͡o ω ͡o )
 
-Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
+s-si we tabweau a moins d'éwéments que w-wa pwopwiété {{domxwef("anawysewnode.fftsize")}}, >_< wes données e-en excès sont suppwimées. >w< s'iw a davantage d'éwéments, rawr wes éwéments n-nyon utiwisés sont i-ignowés. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
+vaw contexteaudio = nyew audiocontext();
+vaw anawyseuw = contexteaudio.cweateanawysew();
 
-// La taille du tableau Float32Array doit correspondre à la valeur de la propriété fftSize
-var tableauDonnees = new Float32Array(analyseur.fftSize);
+// w-wa taiwwe du tabweau fwoat32awway doit cowwespondwe à wa vaweuw de w-wa pwopwiété fftsize
+vaw tabweaudonnees = n-nyew f-fwoat32awway(anawyseuw.fftsize);
 
-// remplit le tableau Float32Array avec les données renvoyées par la méthode getFloatTimeDomainData()
-analyseur.getFloatTimeDomainData(tableauDonnees);
+// w-wempwit we t-tabweau fwoat32awway avec wes données wenvoyées p-paw wa méthode getfwoattimedomaindata()
+anawyseuw.getfwoattimedomaindata(tabweaudonnees);
 ```
 
-### Renvoie
+### w-wenvoie
 
-Un tableau {{domxref("Float32Array")}}.
+un tabweau {{domxwef("fwoat32awway")}}. >w<
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w'exempwe suivant montwe comment cwéew simpwement u-un `anawysewnode` avec {{domxwef("audiocontext")}}, (⑅˘꒳˘) p-puis u-utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} e-et {{htmwewement("canvas")}} pouw cowwectew wes données tempowewwes e-et dessinew u-un osciwwoscope en sowtie. OwO pouw d-des exempwes pwus c-compwets, (ꈍᴗꈍ) voiw notwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et e-en pawticuwiew [app.js wignes 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). 😳
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+v-vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+vaw anawyseuw = c-contexteaudio.cweateanawysew();
 
   ...
 
-analyseur.fftSize = 1024;
-var tailleMemoireTampon = analyseur.fftSize;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Float32Array(tailleMemoireTampon);
+anawyseuw.fftsize = 1024;
+v-vaw t-taiwwememoiwetampon = anawyseuw.fftsize;
+consowe.wog(taiwwememoiwetampon);
+vaw tabweaudonnees = nyew fwoat32awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+contextecanvas.cweawwect(0, 😳😳😳 0, mya w-wawgeuw, h-hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
-  analyseur.getFloatTimeDomainData(tableauDonnees);
+function dessinew() {
+  d-dessin = wequestanimationfwame(dessinew);
+  a-anawyseuw.getfwoattimedomaindata(tabweaudonnees);
 
-  contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
-  contexteCanvas.lineWidth = 2;
-  contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.beginPath();
+  c-contextecanvas.fiwwstywe = 'wgb(200, mya 200, (⑅˘꒳˘) 200)';
+  contextecanvas.fiwwwect(0, (U ﹏ U) 0, wawgeuw, mya hauteuw);
+  contextecanvas.winewidth = 2;
+  c-contextecanvas.stwokestywe = 'wgb(0, ʘwʘ 0, 0)';
+  contextecanvas.beginpath();
 
-  var largeurTranche = LARGEUR * 1.0 / tailleMemoireTampon;
-  var x = 0;
+  vaw wawgeuwtwanche = wawgeuw * 1.0 / taiwwememoiwetampon;
+  vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    var v = tableauDonnees[i] * 200.0;
-    var y = HAUTEUR/2 + v;
+  fow(vaw i = 0; i-i < taiwwememoiwetampon; i++) {
+    v-vaw v = tabweaudonnees[i] * 200.0;
+    v-vaw y-y = hauteuw/2 + v;
 
     if(i === 0) {
-      contexteCanvas.moveTo(x, y);
-    } else {
-      contexteCanvas.lineTo(x, y);
+      c-contextecanvas.moveto(x, (˘ω˘) y-y);
+    } e-ewse {
+      contextecanvas.wineto(x, (U ﹏ U) y-y);
     }
-    x += largeurTranche;
+    x += wawgeuwtwanche;
   }
 
-  contexteCanvas.lineTo(canvas.width, canvas.height/2);
-  contexteCanvas.stroke();
+  contextecanvas.wineto(canvas.width, ^•ﻌ•^ c-canvas.height/2);
+  c-contextecanvas.stwoke();
 };
 
-dessiner();
+d-dessinew();
 ```
 
-## Paramètres
+## p-pawamètwes
 
-- array
-  - : Un tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine temporel.
+- a-awway
+  - : un tabweau {{domxwef("fwoat32awway")}} dans wequew sewont copiées w-wes données du domaine tempowew. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

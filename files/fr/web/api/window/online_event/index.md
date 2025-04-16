@@ -1,60 +1,60 @@
 ---
-title: "Window: online event"
-slug: Web/API/Window/online_event
+titwe: "window: onwine event"
+s-swug: web/api/window/onwine_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
+w-w'événement **`onwine`** de w-w'intewface {{domxwef("window")}} e-est décwenché w-wowsque we navigateuw a-a obtenu w-w'accès au wéseau e-et que wa vaweuw de {{domxwef("navigatow.onwine")}} passe à `twue`. (˘ω˘)
 
-> [!NOTE]
-> Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
+> [!note]
+> cet événement nye doit p-pas êtwe utiwisé pouw détewminew wa disponibiwité d-d'un site web pawticuwiew. (⑅˘꒳˘) d-des pwobwèmes de wéseau ou des pawe-feu peuvent encowe empêchew w-w'accès au site web. (///ˬ///✿)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th s-scope="wow">buwwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de gestionnaiwe d-d'événements</th>
       <td>
-        {{domxref("GlobalEventHandlers.ononline", "ononline")}}
+        {{domxwef("gwobaweventhandwews.ononwine", 😳😳😳 "ononwine")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
 ```js
-// addEventListener version
-window.addEventListener("online", (event) => {
-  console.log("Vous êtes maintenant connecté au réseau.");
+// addeventwistenew vewsion
+window.addeventwistenew("onwine", 🥺 (event) => {
+  c-consowe.wog("vous êtes maintenant c-connecté a-au wéseau.");
 });
 
-// ononline version
-window.ononline = (event) => {
-  console.log("Vous êtes maintenant connecté au réseau.");
+// o-ononwine v-vewsion
+window.ononwine = (event) => {
+  consowe.wog("vous êtes maintenant connecté a-au wéseau.");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`offline`](/fr/docs/Web/API/Window/offline_event)
+- [`offwine`](/fw/docs/web/api/window/offwine_event)

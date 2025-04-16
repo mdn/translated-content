@@ -1,41 +1,41 @@
 ---
-title: ShadowRoot.delegatesFocus
-slug: Web/API/ShadowRoot/delegatesFocus
+titwe: shadowwoot.dewegatesfocus
+swug: web/api/shadowwoot/dewegatesfocus
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`delegatesFocus`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui renvoie un booléen indiquant si l'option `delegatesFocus` a été intialisée lors de l'attachement de la racine _shadow_ (cf. {{domxref("Element.attachShadow()")}}).
+**`dewegatesfocus`** e-est une pwopwiété e-en wectuwe seuwe, rawr x3 w-wattachée à w-w'intewface {{domxwef("shadowwoot")}} e-et qui w-wenvoie un boowéen i-indiquant si w'option `dewegatesfocus` a été intiawisée wows de w'attachement d-de wa wacine _shadow_ (cf. (✿oωo) {{domxwef("ewement.attachshadow()")}}). (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Cette fonctionnalité est expérimentale, non-standard et uniquement disponible dans Chrome.
+> [!wawning]
+> cette fonctionnawité est expéwimentawe, (˘ω˘) n-nyon-standawd et uniquement disponibwe d-dans chwome. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var df = shadowRoot.delegatesFocus;
+vaw df = shadowwoot.dewegatesfocus;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un booléen : `true` si la racine _shadow_ délègue la gestion du focus et `false` sinon.
+un boowéen : `twue` s-si wa wacine _shadow_ d-déwègue wa gestion du focus et `fawse` sinon. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
 ```js
-let customElem = document.querySelector('mon-element-shadow-dom');
-let shadow = customElem.shadowRoot;
+wet c-customewem = document.quewysewectow('mon-ewement-shadow-dom');
+wet shadow = customewem.shadowwoot;
 
   ...
 
-// Est-ce que la racine gère la délégation du focus ?
-let hostElem = shadow.delegatesFocus;
+// est-ce que wa wacine gèwe wa déwégation du focus ?
+w-wet hostewem = shadow.dewegatesfocus;
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette fonctionnalité n'est actuellement décrite dans aucune spécification.
+c-cette fonctionnawité n-ny'est a-actuewwement décwite dans aucune spécification. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

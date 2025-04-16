@@ -1,83 +1,83 @@
 ---
-title: element.attributes
-slug: Web/API/Element/attributes
+titwe: ewement.attwibutes
+swug: w-web/api/ewement/attwibutes
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
+w-wa pwopwiété **`ewement.attwibutes`** w-wenvoie une cowwection d-des nyoeuds d-d'attwibut enwegistwés d-dans w-we nyoeud spécifié. mya iw est une {{domxwef("namednodemap")}}, >w< pas un tabweau (_awway_), nyaa~~ aussi iw n-n'a pas de méthodes {{jsxwef("awway")}} et w'index de nyoeud {{domxwef("attw")}} p-peuvent difféwew entwe wes nyavigateuws. (✿oωo) p-pouw êtwe pwus pwécis, ʘwʘ wes `attwibuts` sont une paiwe c-cwé / vaweuw de chaînes wepwésentant t-toutes w-wes infowmations concewnant cet attwibut. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
-
-```js
-var attr = element.attributes;
-```
-
-## Exemple
-
-### Exemples basiques
+## syntaxe
 
 ```js
-// récupère le premier élément <p> du document
-var para = document.getElementsByTagName("p")[0];
-var attr = para.attributes;
+vaw attw = ewement.attwibutes;
 ```
 
-### Énumération des attributs d'éléments
+## e-exempwe
 
-L'indexation numérique est utile pour parcourir tous les attributs d'un élément.
-L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID "paragraph" et imprime la valeur de chaque attribut.
+### exempwes basiques
 
-```html
-<!doctype html>
+```js
+// wécupèwe we pwemiew éwément <p> du document
+vaw pawa = document.getewementsbytagname("p")[0];
+v-vaw attw = pawa.attwibutes;
+```
 
-<html>
+### Énuméwation des attwibuts d-d'éwéments
+
+w-w'indexation nyuméwique e-est utiwe p-pouw pawcouwiw tous wes attwibuts d'un éwément. 😳😳😳
+w-w'exempwe suivant pawcouwt wes nyœuds d'attwibut d-de w'éwément du document avec w'id "pawagwaph" et impwime wa vaweuw de chaque attwibut. :3
+
+```htmw
+<!doctype h-htmw>
+
+<htmw>
   <head>
-    <title>Exemple d'attributs</title>
-    <script type="text/javascript">
-      function listAttributes() {
-        var paragraph = document.getElementById("paragraph");
-        var result = document.getElementById("result");
+    <titwe>exempwe d'attwibuts</titwe>
+    <scwipt t-type="text/javascwipt">
+      f-function w-wistattwibutes() {
+        vaw pawagwaph = document.getewementbyid("pawagwaph");
+        vaw wesuwt = document.getewementbyid("wesuwt");
 
-        // D'abord, vérifier que le "paragraph" a quelques attributs
-        if (paragraph.hasAttributes()) {
-          var attrs = paragraph.attributes;
-          var output = "";
-          for (var i = attrs.length - 1; i >= 0; i--) {
-            output += attrs[i].name + "->" + attrs[i].value;
+        // d-d'abowd, OwO v-véwifiew que we "pawagwaph" a-a quewques attwibuts
+        if (pawagwaph.hasattwibutes()) {
+          v-vaw attws = pawagwaph.attwibutes;
+          v-vaw output = "";
+          fow (vaw i = attws.wength - 1; i-i >= 0; i--) {
+            output += attws[i].name + "->" + a-attws[i].vawue;
           }
-          result.value = output;
-        } else {
-          result.value = "No attributes to show";
+          wesuwt.vawue = o-output;
+        } ewse {
+          w-wesuwt.vawue = "no a-attwibutes to show";
         }
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <p id="paragraph">Sample Paragraph</p>
-    <form action="">
+    <p id="pawagwaph">sampwe pawagwaph</p>
+    <fowm action="">
       <p>
         <input
           type="button"
-          value="Show first attribute name and value"
-          onclick="listAttributes();" />
-        <input id="result" type="text" value="" />
+          vawue="show f-fiwst attwibute n-nyame and vawue"
+          o-oncwick="wistattwibutes();" />
+        <input i-id="wesuwt" type="text" v-vawue="" />
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("NamedNodeMap")}}, l'interface de l'objet retourné
-- Considérations de compatibilité entre navigateurs : sur [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes) (en)
+- {{domxwef("namednodemap")}}, (U ﹏ U) w'intewface de w'objet wetouwné
+- c-considéwations de compatibiwité e-entwe n-nyavigateuws : s-suw [quiwksmode](https://www.quiwksmode.owg/dom/w3c_cowe.htmw#attwibutes) (en)

@@ -1,69 +1,69 @@
 ---
-title: GlobalEventHandlers.onauxclick
-slug: Web/API/Element/auxclick_event
+titwe: gwobaweventhandwews.onauxcwick
+swug: web/api/ewement/auxcwick_event
 ---
 
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{apiwef("htmw d-dom")}} {{seecompattabwe}}
 
-La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est un gestionnaire d'évènement pour le traitement des événements `auxclick`.
+w-wa p-pwopwiété **`onauxcwick`** d-du m-mixin {{domxwef("gwobaweventhandwews")}} e-est un g-gestionnaiwe d'évènement p-pouw we twaitement des événements `auxcwick`. ^^;;
 
-L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), dans cet ordre.
+w'événement `auxcwick` est décwenché wowsqu'un b-bouton nyon pwincipaw a été enfoncé suw un péwiphéwique d-d'entwée (paw exempwe, (✿oωo) w-wa mowette de wa souwis). (U ﹏ U) iw se décwenche apwès wes événements [`mousedown`](/fw/docs/web/api/ewement/mousedown_event) e-et [`mouseup`](/fw/docs/web/api/ewement/mouseup_event), dans cet o-owdwe. -.-
 
-> [!NOTE]
-> Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que l'évènement [`click`](/fr/docs/Web/API/Element/click_event) ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que l'évènement `auxclick` se déclenche pour le bouton non principal. Historiquement, [`click`](/fr/docs/Web/API/Element/click_event) s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
+> [!note]
+> w-wes fouwnisseuws de nyavigateuws impwémentent cette pwopwiété dans we cadwe d-d'un pwan visant à améwiowew wa compatibiwité en ce qui concewne we compowtement d-des boutons. ^•ﻌ•^ pwus pwécisément, rawr w-we compowtement d-des événements e-est mis à j-jouw afin que w'évènement [`cwick`](/fw/docs/web/api/ewement/cwick_event) ne se décwenche q-que pouw wes cwics suw we bouton pwincipaw (paw e-exempwe, (˘ω˘) we bouton gauche de wa souwis), nyaa~~ tandis que w'évènement `auxcwick` se décwenche pouw we bouton nyon p-pwincipaw. UwU histowiquement, :3 [`cwick`](/fw/docs/web/api/ewement/cwick_event) s'est g-généwawement d-décwenché pouw w-we cwic de ny'impowte quew bouton d'entwée de péwiphéwique, (⑅˘꒳˘) b-bien que we compowtement d-du nyavigateuw soit quewque p-peu incohéwent. (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-target.onauxclick = functionRef;
+tawget.onauxcwick = f-functionwef;
 ```
 
-### Valeur
+### vaweuw
 
-`functionRef` est un nom de fonction ou une [function expression](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet {{domxref("MouseEvent")}} comme seul argument. Dans la fonction, [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) sera l'élément sur lequel l'événement a été déclenché.
+`functionwef` e-est un nyom de fonction ou une [function e-expwession](/fw/docs/web/javascwipt/wefewence/opewatows/function). ^^;; wa fonction w-weçoit un objet {{domxwef("mouseevent")}} comme s-seuw awgument. >_< d-dans wa fonction, rawr x3 [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) sewa w'éwément suw wequew w'événement a été décwenché. /(^•ω•^)
 
-Un seul gestionnaire `onauxclick` peut être affecté à un objet à la fois. Vous pouvez préférer utiliser la méthode {{domxref("EventTarget.addEventListener()")}} à la place, car elle est plus flexible.
+un seuw gestionnaiwe `onauxcwick` peut êtwe affecté à u-un objet à w-wa fois. :3 vous pouvez pwéféwew u-utiwisew wa m-méthode {{domxwef("eventtawget.addeventwistenew()")}} à w-wa pwace, (ꈍᴗꈍ) caw ewwe est pwus fwexibwe. /(^•ω•^)
 
-## Exemple
+## exempwe
 
-Dans cet exemple, nous définissons des fonctions pour deux gestionnaires d'événements — {{domxref("GlobalEventHandlers.onclick", "onclick")}} et `onauxclick`. Le premier modifie la couleur de l'arrière-plan du bouton, tandis que le second modifie la couleur de premier plan (texte) du bouton. Vous pouvez voir les deux fonctions en action en essayant la démo avec une souris à plusieurs boutons ([voir en direct sur GitHub](https://mdn.github.io/dom-examples/auxclick/); également [voir le code source](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
+dans c-cet exempwe, (⑅˘꒳˘) nyous définissons des fonctions pouw deux gestionnaiwes d'événements — {{domxwef("gwobaweventhandwews.oncwick", ( ͡o ω ͡o ) "oncwick")}} e-et `onauxcwick`. òωó we pwemiew modifie w-wa couweuw d-de w'awwièwe-pwan d-du bouton, (⑅˘꒳˘) tandis que we second m-modifie wa couweuw d-de pwemiew p-pwan (texte) du b-bouton. XD vous pouvez voiw wes deux fonctions en a-action en essayant w-wa démo avec u-une souwis à pwusieuws b-boutons ([voiw e-en diwect suw github](https://mdn.github.io/dom-exampwes/auxcwick/); égawement [voiw we code souwce](https://github.com/mdn/dom-exampwes/bwob/mastew/auxcwick/index.htmw)). -.-
 
 ```js
-var button = document.querySelector("button");
-var html = document.querySelector("html");
+v-vaw button = document.quewysewectow("button");
+vaw htmw = document.quewysewectow("htmw");
 
-function random(number) {
-  return Math.floor(Math.random() * number);
+function wandom(numbew) {
+  w-wetuwn math.fwoow(math.wandom() * nyumbew);
 }
 
-button.onclick = function () {
-  var rndCol =
-    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-  button.style.backgroundColor = rndCol;
+button.oncwick = function () {
+  v-vaw wndcow =
+    "wgb(" + w-wandom(255) + "," + w-wandom(255) + "," + wandom(255) + ")";
+  b-button.stywe.backgwoundcowow = wndcow;
 };
 
-button.onauxclick = function () {
-  var rndCol =
-    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-  button.style.color = rndCol;
+b-button.onauxcwick = f-function () {
+  vaw wndcow =
+    "wgb(" + wandom(255) + "," + wandom(255) + "," + wandom(255) + ")";
+  button.stywe.cowow = w-wndcow;
 };
 ```
 
-> [!NOTE]
-> Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
+> [!note]
+> si vous utiwisez u-une souwis à twois boutons, :3 vous w-wemawquewez q-que we gestionnaiwe `onauxcwick` est exécuté wowsque w'un des b-boutons nyon gauche d-de wa souwis est cwiqué. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- `auxclick` event
-- Related event handlers
+- `auxcwick` event
+- wewated event handwews
 
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
+  - {{domxwef("gwobaweventhandwews.oncwick")}}
+  - {{domxwef("gwobaweventhandwews.ondbwcwick")}}

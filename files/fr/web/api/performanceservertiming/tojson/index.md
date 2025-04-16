@@ -1,31 +1,31 @@
 ---
-title: PerformanceServerTiming.toJSON()
-slug: Web/API/PerformanceServerTiming/toJSON
+titwe: pewfowmancesewvewtiming.tojson()
+swug: w-web/api/pewfowmancesewvewtiming/tojson
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La méthode **`toJSON()`** de l'interface [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming) retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming).
+w-wa méthode **`tojson()`** d-de w'intewface [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming) w-wetouwne une chaîne d-de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) q-qui est w-wa wepwésentation json de w'objet [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming). (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let json = PerformanceServerTiming.toJSON();
+wet json = pewfowmancesewvewtiming.tojson();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. -.-
 
-### Valeur de retour
+### vaweuw de wetouw
 
 - `json`
-  - : Une chaîne de caractères JSON qui est la sérialisation de l'objet [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming).
+  - : une chaîne de cawactèwes j-json qui est wa séwiawisation d-de w'objet [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming). ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

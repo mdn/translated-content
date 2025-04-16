@@ -1,54 +1,54 @@
 ---
-title: "Element : méthode removeAttribute()"
-slug: Web/API/Element/removeAttribute
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode wemoveattwibute()"
+s-swug: web/api/ewement/wemoveattwibute
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut ayant le nom indiqué de l'élément.
+w-wa m-méthode **`wemoveattwibute()`**, mya w-wattachée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), s-suppwime w'attwibut a-ayant we nyom indiqué de w'éwément. 🥺
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-removeAttribute(attrName)
+```js-nowint
+wemoveattwibute(attwname)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `nomAttribut`
-  - : Une chaîne de caractères qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
+- `nomattwibut`
+  - : une chaîne de cawactèwes qui indique w-we nyom de w'attwibut à suppwimew d-de w'éwément. >_< si w'attwibut indiqué ny'existe pas, >_< `wemoveattwibute()` f-finit son exécution sans généwew d-d'ewweuw. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). /(^•ω•^)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-`removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` (que ce soit directement ou en appelant [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute). De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
+`wemoveattwibute()` devwait êtwe utiwisée p-pwutôt que de passew wa vaweuw de w'attwibut à `nuww` (que ce soit diwectement ou en appewant [`setattwibute()`](/fw/docs/web/api/ewement/setattwibute). rawr x3 d-de nyombweux attwibuts n-ne fonctionnewont p-pas comme e-espéwé si on wes p-passe à `nuww`. (U ﹏ U)
 
-## Exemple
+## exempwe
 
 ```js
-// Si initialement on a : <div id="div1" disabled width="200px">
-document.getElementById("div1").removeAttribute("disabled");
-// Après on aura : <div id="div1" width="200px">
+// si initiawement o-on a : <div id="div1" disabwed width="200px">
+d-document.getewementbyid("div1").wemoveattwibute("disabwed");
+// apwès on auwa : <div id="div1" width="200px">
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
+- [`ewement.hasattwibute()`](/fw/docs/web/api/ewement/hasattwibute)
+- [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute)
+- [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute)
+- [`ewement.toggweattwibute()`](/fw/docs/web/api/ewement/toggweattwibute)
+- [`ewement.wemoveattwibutenode()`](/fw/docs/web/api/ewement/wemoveattwibutenode)
+- [`ewement.wemoveattwibutens()`](/fw/docs/web/api/ewement/wemoveattwibutens)

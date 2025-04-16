@@ -1,58 +1,58 @@
 ---
-title: window.close
-slug: Web/API/Window/close
+titwe: window.cwose
+swug: web/api/window/cwose
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-Ferme la fenêtre référencée.
+f-fewme wa fenêtwe w-wéféwencée. /(^•ω•^)
 
-### Syntaxe
+### s-syntaxe
 
 ```js
-window.close();
+w-window.cwose();
 ```
 
-### Description
+### d-descwiption
 
-Lorsque cette méthode est appelée, la fenêtre référencée est fermée.
+w-wowsque cette méthode est appewée, ʘwʘ wa fenêtwe wéféwencée est fewmée. σωσ
 
-Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode [window.open](/fr/docs/Web/API/Window/open). Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript&nbsp;: `Scripts may not close windows that were not opened by script.`
+cette m-méthode est uniquement autowisée à êtwe appewée pouw des f-fenêtwes qui ont été ouvewtes p-paw un scwipt à w'aide de wa méthode [window.open](/fw/docs/web/api/window/open). OwO si wa fenêtwe n-ny'a pas été ouvewte paw u-un scwipt, 😳😳😳 w'ewweuw s-suivante appawaît dans wa consowe javascwipt&nbsp;: `scwipts may nyot cwose windows that wewe n-nyot opened by scwipt.`
 
-#### Exemples
+#### exempwes
 
-##### Fermeture d'une fenêtre ouverte avec `window.open()`
+##### fewmetuwe d'une fenêtwe ouvewte a-avec `window.open()`
 
-```html
-<script type="text/javascript">
-  // Variable globale pour stocker une référence vers la fenêtre ouverte
-  var fenetreOuverte;
+```htmw
+<scwipt type="text/javascwipt">
+  // v-vawiabwe gwobawe p-pouw stockew u-une wéféwence v-vews wa fenêtwe ouvewte
+  vaw fenetweouvewte;
 
-  function ouvrirFenetre() {
-    fenetreOuverte = window.open("details.html");
+  f-function ouvwiwfenetwe() {
+    fenetweouvewte = window.open("detaiws.htmw");
   }
-  function fermerFenetreOuverte() {
-    fenetreOuverte.close();
+  f-function fewmewfenetweouvewte() {
+    fenetweouvewte.cwose();
   }
-</script>
+</scwipt>
 ```
 
-##### Fermeture de la fenêtre courante
+##### fewmetuwe de wa fenêtwe couwante
 
-```html
-<script type="text/javascript">
-  function fermerFenetreCourante() {
-    window.close();
+```htmw
+<scwipt type="text/javascwipt">
+  f-function fewmewfenetwecouwante() {
+    w-window.cwose();
   }
-</script>
+</scwipt>
 ```
 
-### Spécification
+### s-spécification
 
-DOM Level 0. `window.close()` ne fait partie d'aucune spécification ni recommandation technique du W3C.
+d-dom wevew 0. 😳😳😳 `window.cwose()` nye fait pawtie d'aucune spécification n-nyi wecommandation t-technique du w3c. o.O
 
-### Référence additionnelle
+### wéféwence a-additionnewwe
 
-- [window.close() sur MSDN](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/methods/close_0.asp)
+- [window.cwose() s-suw msdn](http://msdn.micwosoft.com/wibwawy/defauwt.asp?uww=/wowkshop/authow/dhtmw/wefewence/methods/cwose_0.asp)

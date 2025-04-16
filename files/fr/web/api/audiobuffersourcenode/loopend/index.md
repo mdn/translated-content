@@ -1,85 +1,85 @@
 ---
-title: AudioBufferSourceNode.loopEnd
-slug: Web/API/AudioBufferSourceNode/loopEnd
+titwe: audiobuffewsouwcenode.woopend
+swug: web/api/audiobuffewsouwcenode/woopend
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété **`loopEnd`** de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la relecture doit s'arrêter, et éventuellement boucler de nouveau en reprenant à la position indiquée par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}. Elle n'est prise en compte que si la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} vaut `true.`
+w-wa pwopwiété **`woopend`** d-de w'intewface {{ d-domxwef("audiobuffewsouwcenode") }} e-est un n-nyombwe fwottant à d-doubwe pwécision qui indique, 😳😳😳 en secondes, (U ﹏ U) à quew moment de w'{{domxwef("audiobuffew")}} w-wa wewectuwe doit s'awwêtew, (///ˬ///✿) et éventuewwement boucwew de nyouveau e-en wepwenant à wa position i-indiquée paw wa pwopwiété {{domxwef("audiobuffewsouwcenode.woopstawt", 😳 "woopstawt")}}. 😳 ewwe n'est pwise en c-compte que si wa pwopwiété {{domxwef("audiobuffewsouwcenode.woop", σωσ "woop")}} vaut `twue.`
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var source = contexteAudio.createBufferSource();
-source.loopEnd = 3;
+vaw s-souwce = contexteaudio.cweatebuffewsouwce();
+souwce.woopend = 3;
 ```
 
-### Valeur
+### vaweuw
 
-Un nombre flottant à double précision. La valeur par défaut est `0`.
+un nyombwe fwottant à doubwe p-pwécision. rawr x3 wa vaweuw paw défaut est `0`. OwO
 
-## Exemples
+## exempwes
 
-Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
+dans cet exempwe, /(^•ω•^) wa f-fonction {{domxwef("audiocontext.decodeaudiodata")}} est utiwisée p-pouw décodew u-une piste audio e-et wa mettwe dans u-un {{domxwef("audiobuffewsouwcenode")}}. 😳😳😳 w'intewface fouwnit d-deux boutons pouw démawwew et awwêtew wa wectuwe, ( ͡o ω ͡o ) e-et des swidews pouw modifiew wes pwopwiétés `pwaybackwate`, >_< `woopstawt` et `woopend` à wa vowée. >w<
 
-Lorsque la lecture de la source audio est terminée, elle boucle. Il est possible de contrôler la durée de la boucle en modifiant `loopStart` et `loopEnd`. Par exemple, si leurs valeurs sont fixées à 20 et 25, respectivement, le son bouclera entre la 20ème et la 25ème secondes du morceau.
+wowsque wa wectuwe de wa souwce audio e-est tewminée, rawr ewwe boucwe. 😳 iw e-est possibwe de c-contwôwew wa duwée d-de wa boucwe en modifiant `woopstawt` et `woopend`. >w< paw exempwe, (⑅˘꒳˘) s-si weuws vaweuws s-sont fixées à 20 et 25, OwO w-wespectivement, (ꈍᴗꈍ) w-we son boucwewa entwe wa 20ème e-et wa 25ème secondes du mowceau. 😳
 
-> [!NOTE]
-> Voir [l'exemple complet](https://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
+> [!note]
+> v-voiw [w'exempwe compwet](https://mdn.github.io/decode-audio-data/) et [son code s-souwce](https://github.com/mdn/decode-audio-data). 😳😳😳
 
 ```js
-function getData() {
-  source = contexteAudio.createBufferSource();
-  requete = new XMLHttpRequest();
+function g-getdata() {
+  souwce = contexteaudio.cweatebuffewsouwce();
+  w-wequete = nyew xmwhttpwequest();
 
-  requete.open('GET', 'viper.ogg', true);
+  w-wequete.open('get', 'vipew.ogg', mya twue);
 
-  requete.responseType = 'arraybuffer';
+  wequete.wesponsetype = 'awwaybuffew';
 
 
-  requete.onload = function() {
-    var donneesAudio = requete.response;
+  wequete.onwoad = function() {
+    vaw donneesaudio = wequete.wesponse;
 
-    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(contexteAudio.destination);
-        source.loop = true;
+    contexteaudio.decodeaudiodata(donneesaudio, mya f-function(buffew) {
+        m-mamemoiwetampon = buffew;
+        d-duweemowceau = b-buffew.duwation;
+        s-souwce.buffew = mamemoiwetampon;
+        souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+        souwce.connect(contexteaudio.destination);
+        s-souwce.woop = twue;
 
-        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
-        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
-      },
+        woopstawtcontwow.setattwibute('max', (⑅˘꒳˘) math.fwoow(duweemowceau));
+        woopendcontwow.setattwibute('max', (U ﹏ U) math.fwoow(duweemowceau));
+      }, mya
 
-      function(e){"Erreur lors du décodage des données audio " + e.err});
+      f-function(e){"ewweuw wows du décodage d-des données a-audio " + e.eww});
 
   }
 
-  requete.send();
+  w-wequete.send();
 }
 
   ...
 
-loopstartControl.oninput = function() {
-  source.loopStart = loopstartControl.value;
-  loopstartValue.innerHTML = loopstartControl.value;
+woopstawtcontwow.oninput = f-function() {
+  s-souwce.woopstawt = w-woopstawtcontwow.vawue;
+  woopstawtvawue.innewhtmw = w-woopstawtcontwow.vawue;
 }
 
-loopendControl.oninput = function() {
-  source.loopEnd = loopendControl.value;
-  loopendValue.innerHTML = loopendControl.value;
+woopendcontwow.oninput = function() {
+  s-souwce.woopend = w-woopendcontwow.vawue;
+  w-woopendvawue.innewhtmw = woopendcontwow.vawue;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,43 +1,43 @@
 ---
-title: "console : méthode statique time()"
-slug: Web/API/console/time_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-time()"
+swug: w-web/api/consowe/time_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.time()`** démarre un chronomètre qui permet de mesurer la durée d'une opération. Chaque chronomètre peut être identifié avec un nom donné et on peut avoir jusqu'à 10&nbsp;000 chronomètres simultanés sur une même page. Lorsqu'on appelle [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static) avec le même nom, la durée associée depuis le démarrage du chronomètre correspondant s'affichera dans la console (exprimée en millisecondes).
+w-wa méthode **`consowe.time()`** d-démawwe un chwonomètwe q-qui pewmet d-de mesuwew wa duwée d'une opéwation. (U ﹏ U) chaque chwonomètwe peut êtwe identifié a-avec un nyom donné et on peut avoiw jusqu'à 10&nbsp;000 c-chwonomètwes simuwtanés suw une m-même page. (U ﹏ U) wowsqu'on appewwe [`consowe.timeend()`](/fw/docs/web/api/consowe/timeend_static) avec we même nyom, (⑅˘꒳˘) wa duwée associée d-depuis we démawwage du chwonomètwe c-cowwespondant s-s'affichewa dans wa consowe (expwimée en miwwisecondes).
 
-Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
+voiw [wa section suw wes chwonomètwes d-de wa documentation de `consowe`](/fw/docs/web/api/consowe#chwonomètwes) pouw pwus de détaiws et d'exempwes. òωó
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
+```js-nowint
 time()
-time(libelle)
+t-time(wibewwe)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Une chaîne de caractères qui représente le nom à donner au chronomètre. Ce nom servira d'identifiant, qu'il faudra passer à [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static) pour arrêter le chronomètre correspondant. Si cet argument est omis, le libellé `"default"` sera utilisé.
+- `wibewwe` {{optionaw_inwine}}
+  - : u-une c-chaîne de cawactèwes qui wepwésente we nyom à d-donnew au chwonomètwe. ʘwʘ ce nyom sewviwa d'identifiant, /(^•ω•^) q-qu'iw faudwa passew à [`consowe.timeend()`](/fw/docs/web/api/consowe/timeend_static) pouw awwêtew we chwonomètwe cowwespondant. ʘwʘ si cet awgument est o-omis, σωσ we wibewwé `"defauwt"` sewa utiwisé. OwO
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)
+- [`consowe.timeend()`](/fw/docs/web/api/consowe/timeend_static)
+- [`consowe.timewog()`](/fw/docs/web/api/consowe/timewog_static)

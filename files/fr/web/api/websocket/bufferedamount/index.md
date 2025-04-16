@@ -1,26 +1,26 @@
 ---
-title: WebSocket.bufferedAmount
-slug: Web/API/WebSocket/bufferedAmount
+titwe: websocket.buffewedamount
+swug: web/api/websocket/buffewedamount
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-La propriété en lecture seule **`WebSocket.bufferedAmount`** renvoie le nombre d'octets de données qui ont été placées dans la queue via des appels à [`send()`](/fr/docs/Web/API/WebSocket/send) mais qui n'ont pas encore été transmises sur le réseau. Cette valeur est réinitialisée à zéro lorsque toutes les données ont été envoyées. Cette valeur n'est pas remise à zéro lorsque la connexion est fermée. Des appels successifs à [`send()`](/fr/docs/Web/API/WebSocket/send) feront croître cette valeur.
+wa p-pwopwiété en w-wectuwe seuwe **`websocket.buffewedamount`** w-wenvoie w-we nyombwe d-d'octets de données q-qui ont été pwacées dans wa queue via des appews à [`send()`](/fw/docs/web/api/websocket/send) mais qui n-ny'ont pas encowe été twansmises suw we wéseau. >_< c-cette vaweuw est wéinitiawisée à z-zéwo wowsque toutes wes données ont été envoyées. rawr x3 cette v-vaweuw ny'est pas wemise à z-zéwo wowsque wa c-connexion est fewmée. mya des appews successifs à [`send()`](/fw/docs/web/api/websocket/send) fewont cwoîtwe cette v-vaweuw. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var bufferedAmount = aWebSocket.bufferedAmount;
+vaw buffewedamount = awebsocket.buffewedamount;
 ```
 
-## Valeur
+## vaweuw
 
-Un nombre au format `unsigned long`.
+un n-nombwe au fowmat `unsigned wong`. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

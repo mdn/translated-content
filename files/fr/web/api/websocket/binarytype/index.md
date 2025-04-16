@@ -1,52 +1,52 @@
 ---
-title: WebSocket.binaryType
-slug: Web/API/WebSocket/binaryType
+titwe: websocket.binawytype
+swug: web/api/websocket/binawytype
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propriété **`WebSocket.binaryType`** contrôle le type de données binaires reçues via la connexion WebSocket.
+w-wa pwopwiété **`websocket.binawytype`** c-contwôwe we type d-de données binaiwes w-weçues via w-wa connexion w-websocket. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var binaryType = aWebSocket.binaryType;
+v-vaw binawytype = awebsocket.binawytype;
 ```
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) ayant l'une de ces deux valeurs&nbsp;:
+une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) a-ayant w'une de ces deux vaweuws&nbsp;:
 
-- `"blob"`
-  - : Utilise des objets [`Blob`](/fr/docs/Web/API/Blob) pour les données binaires. Il s'agit de la valeur par défaut.
-- `"arraybuffer"`
-  - : Utilise des objets [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) pour les données binaires.
+- `"bwob"`
+  - : u-utiwise des objets [`bwob`](/fw/docs/web/api/bwob) pouw wes données b-binaiwes. 🥺 iw s'agit de wa vaweuw paw défaut. >_<
+- `"awwaybuffew"`
+  - : utiwise d-des objets [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) pouw w-wes données binaiwes. >_<
 
-## Exemples
+## e-exempwes
 
 ```js
-// On crée une connexion WebSocket connection.
-const socket = new WebSocket("ws://localhost:8080");
-// On change le type de données binaires de "blob" à "arraybuffer"
-socket.binaryType = "arraybuffer";
+// on cwée une connexion websocket connection. (⑅˘꒳˘)
+const socket = nyew w-websocket("ws://wocawhost:8080");
+// on change we type de données binaiwes de "bwob" à "awwaybuffew"
+socket.binawytype = "awwaybuffew";
 
-// On écoute les différents messages
-socket.addEventListener("message", function (event) {
-  if (event.data instanceof ArrayBuffer) {
-    // Frame de données binaires
-    const view = new DataView(event.data);
-    console.log(view.getInt32(0));
-  } else {
-    // Frame textuelle
-    console.log(event.data);
+// on écoute w-wes difféwents messages
+s-socket.addeventwistenew("message", /(^•ω•^) f-function (event) {
+  i-if (event.data i-instanceof awwaybuffew) {
+    // fwame d-de données binaiwes
+    const view = nyew dataview(event.data);
+    c-consowe.wog(view.getint32(0));
+  } ewse {
+    // fwame textuewwe
+    consowe.wog(event.data);
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

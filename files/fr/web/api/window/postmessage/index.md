@@ -1,150 +1,150 @@
 ---
-title: Window.postMessage
-slug: Web/API/Window/postMessage
+titwe: window.postmessage
+swug: w-web/api/window/postmessage
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/fr/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour `http`), et le même nom d'hôte (à condition que [document.domain](/fr/docs/Web/API/Document/domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
+w-wa méthode **`window.postmessage`** p-pewmet une c-communication i-intew-domaine en t-toute sécuwité. òωó n-nyowmawement, /(^•ω•^) wes scwipts de difféwentes pages sont autowisés à accédew w-wes uns aux autwes si et seuwement si wes pages d-depuis wesquewwes iws sont exécutés o-ont des uww de même [owigine](/fw/docs/gwossawy/owigin), -.- c'est-à-diwe avec we même pwotocowe (généwawement `http` o-ou `https`), òωó we même n-nyuméwo de powt (`80` étant w-we powt paw défaut pouw `http`), /(^•ω•^) et we même nyom d'hôte (à condition que [document.domain](/fw/docs/web/api/document/domain) s-soit initiawisé à wa même vaweuw paw wes deux pages). /(^•ω•^) `window.postmessage` fouwnit un mécanisme c-contwôwé pouw contouwnew c-cette westwiction d-d'une manièwe s-sécuwisée si b-bien utiwisée. 😳
 
-La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un [`MessageEvent`](/fr/docs/Web/API/MessageEvent) à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si `window.postMessage` est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le [`MessageEvent`](/fr/docs/Web/API/MessageEvent) est de type `message`, a une propriété `data` qui est initialisée à la valeur du premier argument passé à `window.postMessage`, une propriété `origin` correspondant à l'origine du document principal de la fenêtre appelant `window.postMessage` au moment où `window.postMessage` a été appelée, et une propriété `source` qui est la fenêtre depuis laquelle `window.postMessage` est appelée (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).
+wa méthode `window.postmessage`, :3 quand ewwe est a-appewée, (U ᵕ U❁) pwovoque w'envoi d'un [`messageevent`](/fw/docs/web/api/messageevent) à wa fenêtwe c-cibwée une fois que tout scwipt en attente a tewminé son exécution (paw exempwe, ʘwʘ wes gestionnaiwes d-d'évènements westants s-si `window.postmessage` e-est appewée d-depuis un gestionnaiwe d'évènement, o.O des timeouts en attente e-enwegistwées a-aupawavant, ʘwʘ etc.) we [`messageevent`](/fw/docs/web/api/messageevent) e-est de type `message`, ^^ a-a une pwopwiété `data` q-qui est initiawisée à wa v-vaweuw du pwemiew awgument passé à `window.postmessage`, ^•ﻌ•^ une p-pwopwiété `owigin` cowwespondant à w-w'owigine du document pwincipaw d-de wa fenêtwe a-appewant `window.postmessage` au moment où `window.postmessage` a été appewée, et une pwopwiété `souwce` qui est wa fenêtwe depuis waquewwe `window.postmessage` est a-appewée (wes autwes p-pwopwiétés standawd d'évènement s-sont pwésentes a-avec weuws v-vaweuws attendues). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-otherWindow.postMessage(message, targetOrigin, [transfer]);
+othewwindow.postmessage(message, UwU tawgetowigin, >_< [twansfew]);
 ```
 
-- `otherWindow`
-  - : Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, _via_ la propriété `contentWindow` d'un élément `iframe`, l'objet retourné par [window.open](/fr/docs/Web/API/Window/open), ou par index nommé ou numérique de [window.frames](/fr/docs/Web/API/Window/frames).
+- `othewwindow`
+  - : u-une wéféwence à une autwe fenêtwe ; une tewwe wéféwence peut êtwe obtenue, /(^•ω•^) p-paw exempwe, òωó _via_ wa pwopwiété `contentwindow` d-d'un éwément `ifwame`, σωσ w-w'objet wetouwné p-paw [window.open](/fw/docs/web/api/window/open), ( ͡o ω ͡o ) ou paw index n-nyommé ou nyuméwique d-de [window.fwames](/fw/docs/web/api/window/fwames). nyaa~~
 - `message`
-  - : La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant [l'algorithme de clônage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. \[1]
-- `targetOrigin`
-  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`, l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
-- `transfer` {{optional_Inline}}
-  - : Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.
+  - : w-wa d-donnée à envoyew à w'autwe fenêtwe. :3 ewwe est s-séwiawisée en u-utiwisant [w'awgowithme d-de cwônage s-stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). UwU cewa s-signifie que vous pouvez passew seweinement une wawge vawiété d-d'objets de données à wa fenêtwe de destination sans avoiw à wes séwiawisew vous-mêmes. o.O \[1]
+- `tawgetowigin`
+  - : i-indique quewwe doit êtwe w'owigine de `othewwindow` p-pouw w'évènement à e-envoyew, (ˆ ﻌ ˆ)♡ s-soit comme wa chaîne wittéwawe `"*"` (signifiant p-pas de pwéféwence) soit comme u-une uwi. ^^;; si, a-au moment où w'évènement est inscwit pouw êtwe envoyé, ʘwʘ we pwotocowe, σωσ we nyom d'hôte ou we p-powt du document de `othewwindow` n-nye cowwespond pas à ceux contenus d-dans `tawgetowigin`, ^^;; w-w'évènement nye sewa pas envoyé ; i-iw nye we sewa q-que si wes twois cowwespondent. ʘwʘ c-ce mécanisme pewmet d-de contwôwew où wes messages sont envoyés ; paw exempwe, si `postmessage` était u-utiwisé p-pouw twansmettwe u-un mot de passe, ^^ iw sewait absowument v-vitaw q-que cet awgument soit une uwi dont w-w'owigine est wa même que we wécepteuw pwévu du message contenant we mot de p-passe, nyaa~~ afin de p-pwéveniw w'intewception du mot de passe paw une t-tiewce-pawtie m-mawicieuse. (///ˬ///✿) **fouwnissez toujouws une `tawgetowigin` spécifique, XD j-jamais `*`, :3 si vous savez où we document de w'autwe fenêtwe est censé se twouvew. òωó n-nye pas fouwniw une cibwe spécifique expose w-wes données q-que vous envoyez à tout site mawicieux à w'écoute.**
+- `twansfew` {{optionaw_inwine}}
+  - : séquence d'objets {{domxwef("twansfewabwe")}} qui s-sewa twansmise a-avec we message. ^^ wa possession de ces objets est cédée à wa d-destination et iws nye sont pwus u-utiwisabwes du côté de w'expéditeuw. ^•ﻌ•^
 
-## L'évènement envoyé
+## w'évènement envoyé
 
-`otherWindow` peut surveiller les messages envoyés en exécutant le JavaScript suivant :
+`othewwindow` p-peut suwveiwwew wes messages e-envoyés en exécutant w-we javascwipt suivant :
 
 ```js
-window.addEventListener("message", receiveMessage, false);
+w-window.addeventwistenew("message", σωσ weceivemessage, (ˆ ﻌ ˆ)♡ f-fawse);
 
-function receiveMessage(event) {
-  if (event.origin !== "http://example.org:8080") return;
+f-function weceivemessage(event) {
+  i-if (event.owigin !== "http://exampwe.owg:8080") wetuwn;
 
   // ...
 }
 ```
 
-Les propriétés du message envoyé sont :
+w-wes p-pwopwiétés du message envoyé sont :
 
 - `data`
-  - : L'objet passé depuis l'autre fenêtre.
-- `origin`
-  - : L'[origine](/fr/docs/Origin) de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Des exemples typiques d'origines sont `https://example.org` (sous-entendu port `443`), `http://example.net` (sous-entendu port `80`), et `http://example.com:8080`. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à `postMessage`.
-- `source`
-  - : Une référence à l'objet [`window`](/fr/docs/Web/API/Window) qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.
+  - : w-w'objet p-passé depuis w'autwe f-fenêtwe. nyaa~~
+- `owigin`
+  - : w'[owigine](/fw/docs/owigin) de wa fenêtwe qui a-a envoyé we message au moment o-où `postmessage` a-a été appewée. ʘwʘ des exempwes typiques d'owigines sont `https://exampwe.owg` (sous-entendu powt `443`), ^•ﻌ•^ `http://exampwe.net` (sous-entendu powt `80`), rawr x3 e-et `http://exampwe.com:8080`. 🥺 n-nyotez q-qu'iw ny'est pas g-gawanti que cette owigine soit w-w'owigine actuewwe ou futuwe de cette fenêtwe, ʘwʘ qui peut avoiw été nyaviguée vews une adwesse d-difféwente depuis w'appew à `postmessage`. (˘ω˘)
+- `souwce`
+  - : une w-wéféwence à w'objet [`window`](/fw/docs/web/api/window) q-qui a envoyé we message ; v-vous pouvez utiwisew ceci p-pouw étabwiw u-une communication d-dans wes deux s-sens entwe deux f-fenêtwes ayant difféwentes owigines. o.O
 
 <!---->
 
-## Précautions de sécurité
+## pwécautions de sécuwité
 
-**Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements `message`.** C'est un moyen sûr d'éviter les problèmes de sécurité.
+**si vous nye pwévoyez pas de wecevoiw de messages d-depuis d'autwes s-sites, σωσ ny'ajoutez p-pas de gestionnaiwe d'évènement p-pouw wes évènements `message`.** c'est un moyen sûw d'évitew wes pwobwèmes d-de sécuwité. (ꈍᴗꈍ)
 
-Si vous prévoyez de recevoir des messages depuis d'autres sites, **vérifiez toujours l'identité de l'expéditeur** à l'aide des propriétés `origin` et si possible `source`. Toute fenêtre (y compris, par exemple, `http://evil.example.com`) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un expéditeur inconnu ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez **toujours vérifier la syntaxe du message reçu**. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.
+s-si vous pwévoyez de wecevoiw d-des messages depuis d'autwes sites, (ˆ ﻌ ˆ)♡ **véwifiez t-toujouws w-w'identité de w'expéditeuw** à w'aide des pwopwiétés `owigin` e-et si possibwe `souwce`. o.O t-toute fenêtwe (y compwis, :3 paw exempwe, -.- `http://eviw.exampwe.com`) peut envoyew un message à toute a-autwe fenêtwe, ( ͡o ω ͡o ) e-et vous ny'avez a-aucune gawantie q-qu'un expéditeuw i-inconnu nye va pas envoyew de m-message mawicieux. /(^•ω•^) c-cependant, même si vous véwifiez w-w'identité, (⑅˘꒳˘) v-vous devwiez **toujouws véwifiew w-wa syntaxe du message weçu**. òωó dans we cas c-contwaiwe, 🥺 une faiwwe de sécuwité d-dans we site a-auquew vous faites confiance peut o-ouvwiw une vuwnéwabiwité xss dans votwe pwopwe s-site. (ˆ ﻌ ˆ)♡
 
-**Spécifiez toujours explicitement une origine de destination, jamais `*`, quand vous utilisez `postMessage` pour envoyer des données à d'autres fenêtres.** Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de `postMessage`.
+**spécifiez t-toujouws e-expwicitement une owigine de destination, -.- jamais `*`, σωσ quand vous u-utiwisez `postmessage` pouw envoyew des données à d-d'autwes fenêtwes.** u-un site mawicieux peut c-changew w'adwesse de wa fenêtwe à v-votwe insu, >_< e-et ainsi intewceptew wes données envoyées à w-w'aide de `postmessage`. :3
 
-## Exemple
+## exempwe
 
 ```js
 /*
- * Dans les scripts de la fenêtre A, avec A sur <http://example.com:8080>:
+ * dans wes scwipts de wa fenêtwe a-a, OwO avec a suw <http://exampwe.com:8080>:
  */
 
-var popup = window.open(...popup details...);
+v-vaw popup = window.open(...popup detaiws...);
 
-// Quand la popup est chargée, si pas bloquée par un bloqueur de popups:
+// q-quand wa popup est chawgée, rawr s-si pas bwoquée p-paw un bwoqueuw d-de popups:
 
-// Ceci ne fait rien, en supposant que la fenêtre n'a pas changé d'adresse.
-popup.postMessage("The user is 'bob' and the password is 'secret'",
-                  "https://secure.example.net");
+// ceci nye fait wien, (///ˬ///✿) en supposant que wa fenêtwe ny'a pas changé d'adwesse. ^^
+popup.postmessage("the usew is 'bob' and the passwowd is 'secwet'", XD
+                  "https://secuwe.exampwe.net");
 
-// Ceci va planifier l'envoi d'un message à la popup, en supposant que
-// la fenêtre n'a pas changé d'adresse.
-popup.postMessage("hello there!", "http://example.org");
+// ceci va pwanifiew w'envoi d'un message à wa popup, UwU en supposant q-que
+// wa f-fenêtwe ny'a pas changé d'adwesse. o.O
+popup.postmessage("hewwo thewe!", 😳 "http://exampwe.owg");
 
-function receiveMessage(event)
+f-function weceivemessage(event)
 {
-  // Faisons-nous confiance à l'expéditeur de ce message ?  (il pourrait être
-  // différent de la fenêtre que nous avons ouverte au départ, par exemple).
-  if (event.origin !== "http://example.org")
-    return;
+  // f-faisons-nous c-confiance à w'expéditeuw de c-ce message ?  (iw pouwwait êtwe
+  // d-difféwent d-de wa fenêtwe que nyous avons o-ouvewte au dépawt, (˘ω˘) paw exempwe). 🥺
+  i-if (event.owigin !== "http://exampwe.owg")
+    w-wetuwn;
 
-  // event.source est la popup
-  // event.data est "hi there yourself!  the secret response is: rheeeeet!"
+  // event.souwce est wa popup
+  // e-event.data est "hi t-thewe youwsewf! ^^  t-the secwet w-wesponse is: wheeeeet!"
 }
-window.addEventListener("message", receiveMessage, false);
+w-window.addeventwistenew("message", >w< w-weceivemessage, ^^;; f-fawse);
 ```
 
 ```js
 /*
- * Dans les scripts de la popup, sur <http://example.org>:
+ * d-dans wes scwipts d-de wa popup, (˘ω˘) suw <http://exampwe.owg>:
  */
 
-// Appelée quelques instants après que postMessage a été appelée
-function receiveMessage(event) {
-  // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin !== "http://example.com:8080") return;
+// a-appewée quewques i-instants a-apwès que postmessage a été a-appewée
+function weceivemessage(event) {
+  // faisons-nous confiance à w-w'expéditeuw de ce message ?
+  i-if (event.owigin !== "http://exampwe.com:8080") w-wetuwn;
 
-  // event.source est window.opener
-  // event.data est "hello there!"
+  // e-event.souwce est window.openew
+  // e-event.data est "hewwo t-thewe!"
 
-  // Supposant que vous avez vérifié l'origine du message reçu
-  // (ce que vous devriez faire en toutes circonstances),
-  // un moyen pratique de répondre à un message est d'appeler postMessage
-  // sur event.source et fournir event.origin comme targetOrigin.
-  event.source.postMessage(
-    "hi there yourself!  the secret response " + "is: rheeeeet!",
-    event.origin,
+  // supposant que vous a-avez véwifié w'owigine du message w-weçu
+  // (ce que vous devwiez faiwe en toutes ciwconstances), OwO
+  // un moyen p-pwatique de wépondwe à un m-message est d'appewew p-postmessage
+  // suw event.souwce et fouwniw event.owigin c-comme tawgetowigin. (ꈍᴗꈍ)
+  event.souwce.postmessage(
+    "hi t-thewe youwsewf!  t-the secwet w-wesponse " + "is: wheeeeet!", òωó
+    event.owigin,
   );
 }
 
-window.addEventListener("message", receiveMessage, false);
+w-window.addeventwistenew("message", ʘwʘ weceivemessage, ʘwʘ fawse);
 ```
 
-### Notes
+### n-nyotes
 
-Toute fenêtre peut accéder à cette méthode sur toute autre fenêtre, à tout moment, peu importe l'adresse du document dans la fenêtre, pour y envoyer un message. Par conséquent, tout gestionnaire d'évènement utilisé pour recevoir des messages **doit** d'abord vérifier l'identité de l'expéditeur du message, en utilisant les propriétés `origin` et si possible `source`. Cela ne peut pas être minimisé : **ne pas vérifier les propriétés `origin` et si possible `source` permet des attaques inter-site.**
+toute fenêtwe peut accédew à c-cette méthode suw toute autwe fenêtwe, nyaa~~ à t-tout moment, UwU peu impowte w'adwesse d-du document d-dans wa fenêtwe, (⑅˘꒳˘) p-pouw y envoyew un message. (˘ω˘) p-paw conséquent, :3 t-tout gestionnaiwe d-d'évènement u-utiwisé pouw wecevoiw des messages **doit** d-d'abowd v-véwifiew w-w'identité de w'expéditeuw d-du m-message, (˘ω˘) en utiwisant w-wes pwopwiétés `owigin` e-et si possibwe `souwce`. nyaa~~ c-cewa nye peut pas êtwe m-minimisé : **ne pas véwifiew w-wes pwopwiétés `owigin` et si p-possibwe `souwce` p-pewmet des attaques i-intew-site.**
 
-De même qu'avec les scripts exécutés de manière asynchrone (timeouts, evènements générés par l'utilisateur), il n'est pas possible pour l'appelant à `postMessage` de détecter quand un gestionnaire d'évènement écoutant des évènements envoyés par `postMessage` lance une exception.
+de même qu'avec wes scwipts exécutés de m-manièwe asynchwone (timeouts, (U ﹏ U) evènements g-généwés p-paw w'utiwisateuw), nyaa~~ iw ny'est pas possibwe pouw w'appewant à `postmessage` d-de détectew quand u-un gestionnaiwe d'évènement écoutant d-des évènements e-envoyés paw `postmessage` wance une exception. ^^;;
 
-La valeur de la propriété `origin` de l'évènement envoyé n'est pas affectée par la valeur actuelle de `document.domain` dans la fenêtre appelante.
+wa v-vaweuw de wa pwopwiété `owigin` d-de w'évènement e-envoyé ny'est p-pas affectée paw wa vaweuw actuewwe de `document.domain` d-dans w-wa fenêtwe appewante.
 
-Pour les noms d'hôte IDN uniquement, la valeur de la propriété `origin` n'est pas systématiquement Unicode ou punycode ; pour la plus grande compatibilité, testez à la fois les valeurs IDN et punycode quand vous utilisez cette propriété si vous attendez des messages de sites IDN. Cette valeur sera systématiquement IDN à l'avenir, mais pour l'instant vous devriez gérer à la fois les formes IDN et punycode.
+pouw wes nyoms d'hôte i-idn uniquement, OwO wa vaweuw de wa pwopwiété `owigin` n-ny'est pas systématiquement u-unicode ou punycode ; p-pouw wa pwus gwande compatibiwité, nyaa~~ t-testez à w-wa fois wes vaweuws idn e-et punycode quand vous utiwisez c-cette pwopwiété s-si vous attendez d-des messages d-de sites idn. UwU cette vaweuw sewa s-systématiquement i-idn à w'aveniw, 😳 m-mais pouw w'instant vous devwiez g-géwew à wa fois wes fowmes idn et punycode. 😳
 
-La valeur de la propriété `origin` quand la fenêtre expéditrice contient une URL `javascript:` ou `data:` est l'origin du script qui a chargé cette URL.
+w-wa vaweuw de w-wa pwopwiété `owigin` q-quand wa fenêtwe expéditwice contient une uww `javascwipt:` ou `data:` e-est w'owigin du scwipt qui a chawgé c-cette uww. (ˆ ﻌ ˆ)♡
 
-### Utiliser window\.postMessage dans les extensions {{Non-standard_inline}}
+### u-utiwisew window\.postmessage dans wes extensions {{non-standawd_inwine}}
 
-`window.postMessage` est disponible depuis le JavaScript exécuté en code chrome (par exemple, dans les extensions et le code privilégié), mais la propriété `source` de l'évènement envoyé est toujours `null` par mesure de sécurité. (Les autres propriétés ont leurs valeurs usuelles.)
+`window.postmessage` est disponibwe d-depuis we javascwipt exécuté e-en code chwome (paw e-exempwe, (✿oωo) d-dans wes extensions e-et we code pwiviwégié), nyaa~~ m-mais wa pwopwiété `souwce` de w'évènement envoyé est toujouws `nuww` p-paw mesuwe de sécuwité. (wes a-autwes pwopwiétés ont weuws vaweuws usuewwes.)
 
-L'argument `targetOrigin` pour un message envoyé à une fenêtre située à une URL `chrome:` est actuellement mal interprété, si bien que la seule valeur qui conduit à l'envoi d'un message est `"*"`. Comme cette valeur n'est pas sûre quand la fenêtre ciblée peut être naviguée n'importe où par un site malicieux, il est recommandé de ne pas utiliser `postMessage` pour communiquer avec des pages `chrome:` pour l'instant&nbsp;; utilisez une méthode différente (comme une chaîne de requête quand la fenêtre est ouverte) pour communiquer avec des fenêtres chrome.
+w'awgument `tawgetowigin` p-pouw un message envoyé à une fenêtwe située à une uww `chwome:` est actuewwement m-maw intewpwété, ^^ s-si bien que wa seuwe v-vaweuw qui conduit à w'envoi d'un message est `"*"`. (///ˬ///✿) c-comme cette v-vaweuw ny'est pas sûwe quand w-wa fenêtwe cibwée peut êtwe nyaviguée n-ny'impowte où paw un site mawicieux, iw est wecommandé d-de nye pas utiwisew `postmessage` pouw communiquew avec des pages `chwome:` pouw w-w'instant&nbsp;; u-utiwisez une m-méthode difféwente (comme une chaîne de wequête q-quand wa fenêtwe est ouvewte) pouw communiquew avec des fenêtwes chwome. 😳
 
-Enfin, poster un message à une page à une URL `file:` requiert actuellement que l'argument `targetOrigin` soit `"*"`. `file://` ne peut pas être utilisé comme restriction de sécurité&nbsp;; cette restriction pourrait être modifiée à l'avenir.
+e-enfin, òωó postew u-un message à une p-page à une uww `fiwe:` w-wequiewt actuewwement que w'awgument `tawgetowigin` s-soit `"*"`. ^^;; `fiwe://` n-nye peut pas êtwe utiwisé comme westwiction d-de sécuwité&nbsp;; cette westwiction pouwwait êtwe m-modifiée à w'aveniw. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Document.domain](/fr/docs/Web/API/Document/domain)
-- [CustomEvent](/fr/docs/Web/API/CustomEvent)
-- [Interaction entre les pages privilégiées et non privilégiées](/fr/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages)
+- [document.domain](/fw/docs/web/api/document/domain)
+- [customevent](/fw/docs/web/api/customevent)
+- [intewaction e-entwe w-wes pages pwiviwégiées et nyon pwiviwégiées](/fw/docs/code_snippets/intewaction_between_pwiviweged_and_non-pwiviweged_pages)

@@ -1,46 +1,46 @@
 ---
-title: HTMLFormElement.reportValidity()
-slug: Web/API/HTMLFormElement/reportValidity
+titwe: htmwfowmewement.wepowtvawidity()
+swug: w-web/api/htmwfowmewement/wepowtvawidity
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, , les événements [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
+w-wa méthode **`htmwfowmewement.wepowtvawidity()`** w-wenvoie t-twue si wes contwôwes e-enfants de w-w'éwément wépondent à w-weuws contwaintes de vawidation. OwO wowsque wa vaweuw `fawse` est wenvoyée, (U ﹏ U) , w-wes événements [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event) annuwabwes sont décwenchés p-pouw chaque enfant nyon vawide e-et wes pwobwèmes de vawidation sont signawés à w'utiwisateuw. >_< .
 
-## Syntaxe
-
-```js
-HTMLFormElement.reportValidity();
-```
-
-### Valeur de retour
-
-{{domxref("Boolean")}}
-
-## Exemple
+## s-syntaxe
 
 ```js
-document.forms["myform"].addEventListener(
-  "invalid",
+htmwfowmewement.wepowtvawidity();
+```
+
+### v-vaweuw de wetouw
+
+{{domxwef("boowean")}}
+
+## e-exempwe
+
+```js
+document.fowms["myfowm"].addeventwistenew(
+  "invawid", rawr x3
   function () {
-    // Optional response here
-  },
-  false,
+    // optionaw wesponse hewe
+  }, mya
+  fawse,
 );
 
-document.forms["myform"].addEventListener(
-  "submit",
+d-document.fowms["myfowm"].addeventwistenew(
+  "submit", nyaa~~
   function () {
-    document.forms["myform"].reportValidity();
+    document.fowms["myfowm"].wepowtvawidity();
   },
-  false,
+  fawse, (⑅˘꒳˘)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

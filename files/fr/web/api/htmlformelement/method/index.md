@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.method
-slug: Web/API/HTMLFormElement/method
+titwe: htmwfowmewement.method
+swug: web/api/htmwfowmewement/method
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
+w-wa pwopwiété **`htmwfowmewement.method`** wepwésente w-wa méthode h-http utiwisée p-pouw soumettwe u-un fowmuwaiwe.
 
-## Syntaxe
-
-```js
-string = form.method;
-form.method = string;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-document.forms["myform"].method = "post";
+s-stwing = fowm.method;
+fowm.method = stwing;
 ```
 
-## Spécification
+## exempwe
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+```js
+document.fowms["myfowm"].method = "post";
+```
 
-[DOM Level 2 HTML: method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539)
+## s-spécification
+
+[htmw 5, :3 section 4.10.19.6, (U ﹏ U) fowm submission](https://www.w3.owg/tw/htmw5/association-of-contwows-and-fowms.htmw#dom-fs-method)
+
+[dom w-wevew 2 htmw: method](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-82545539)

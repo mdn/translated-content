@@ -1,109 +1,109 @@
 ---
-title: CanvasRenderingContext2D.font
-slug: Web/API/CanvasRenderingContext2D/font
+titwe: canvaswendewingcontext2d.font
+swug: web/api/canvaswendewingcontext2d/font
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.font`** de l'API Canvas 2D API spécifie le style de texte à utiliser pour dessiner du texte. Cette chaîne utilise la même syntaxe que le spécificateur de [police CSS](/fr/docs/Web/CSS/font). La police par défaut est 10px sans-serif.
+w-wa pwopwiété **`canvaswendewingcontext2d.font`** d-de w'api c-canvas 2d api spécifie w-we stywe d-de texte à utiwisew p-pouw dessinew d-du texte. /(^•ω•^) cette c-chaîne utiwise wa même syntaxe que we spécificateuw de [powice css](/fw/docs/web/css/font). 😳😳😳 w-wa powice paw défaut est 10px sans-sewif. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-ctx.font = value;
-```
-
-### Options
-
-- `valeur`
-  - : Une valeur {{domxref("DOMString")}} analysée comme une valeur de {{cssxref("font")}} CSS. La police par défaut est 10px sans-serif.
-
-## Exemples
-
-### Utilisation de la propriété `font`
-
-Ceci est seulement un fragment de code simple utilisant la propriéte font pour indiquer une taille de police et une famille de police différentes.
-
-#### HTML
-
-```html
-<canvas id="canvas"></canvas>
-```
-
-#### JavaScript
+## s-syntaxe
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-
-ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);
+ctx.font = vawue;
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+### o-options
 
-#### Code jouable
+- `vaweuw`
+  - : une vaweuw {{domxwef("domstwing")}} anawysée comme une vaweuw d-de {{cssxwef("font")}} css. >_< w-wa powice paw d-défaut est 10px sans-sewif. >w<
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+## exempwes
+
+### utiwisation de wa pwopwiété `font`
+
+c-ceci est seuwement un fwagment de code simpwe utiwisant wa pwopwiéte font p-pouw indiquew une taiwwe de powice e-et une famiwwe d-de powice difféwentes. rawr
+
+#### h-htmw
+
+```htmw
+<canvas i-id="canvas"></canvas>
+```
+
+#### javascwipt
+
+```js
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+
+c-ctx.font = "48px sewif";
+ctx.stwoketext("hewwo wowwd", 😳 50, >w< 100);
+```
+
+modifiez we code ci-dessous et v-voyez vos changements mis à jouw e-en temps wéew d-dans we canevas :
+
+#### c-code jouabwe
+
+```htmw hidden
+<canvas id="canvas" width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" t-type="button" v-vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = '48px serif';
-ctx.strokeText('Hello world', 50, 100);</textarea
+<textawea id="code" c-cwass="pwayabwe-code">
+ctx.font = '48px sewif';
+c-ctx.stwoketext('hewwo wowwd', (⑅˘꒳˘) 50, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+v-vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, OwO 0, c-canvas.width, (ꈍᴗꈍ) canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", 😳 function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", 😳😳😳 function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", mya dwawcanvas);
+window.addeventwistenew("woad", mya d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', (⑅˘꒳˘) 700, 360) }}
 
-### Chargement de polices avec l'API CSS Font Loading
+### c-chawgement de powices avec w'api c-css font woading
 
-A l'aide de l'API {{domxref("FontFace")}}, vous pouvez explicitement charger des polices avant de les utiliser dans un canevas.
+a-a w'aide de w-w'api {{domxwef("fontface")}}, (U ﹏ U) v-vous pouvez expwicitement chawgew des powices avant d-de wes utiwisew d-dans un canevas. mya
 
 ```js
-var f = new FontFace("test", "url(x)");
+v-vaw f-f = nyew fontface("test", ʘwʘ "uww(x)");
 
-f.load().then(function () {
-  // Prêt à utiliser la police dans un contexte de canevas
+f-f.woad().then(function () {
+  // pwêt à utiwisew wa powice dans un contexte d-de canevas
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- w'intewface wa d-définissant, (˘ω˘) {{domxwef("canvaswendewingcontext2d")}}

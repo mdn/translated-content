@@ -1,59 +1,59 @@
 ---
-title: PerformanceNavigationTiming.loadEventEnd
-slug: Web/API/PerformanceNavigationTiming/loadEventEnd
+titwe: pewfowmancenavigationtiming.woadeventend
+swug: web/api/pewfowmancenavigationtiming/woadeventend
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`loadEventEnd`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui est égal à l'heure à laquelle l'événement de chargement du document actuel est terminé.
+w-wa pwopwiété e-en wectuwe seuwe **`woadeventend`** w-wenvoie un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) q-qui est égaw à w-w'heuwe à w-waquewwe w'événement d-de chawgement du document actuew est tewminé. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-perfEntry.loadEventEnd;
+pewfentwy.woadeventend;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le moment où l'événement de chargement du document actuel est terminé.
+un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-we moment où w'événement de c-chawgement du document actuew est tewminé. σωσ
 
-## Exemple
+## exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w'exempwe s-suivant iwwustwe w'utiwisation d-de cette pwopwiété. OwO
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+function p-pwint_nav_timing_data() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement wes événements de type "navigation". 😳😳😳
+  w-wet pewfentwies = pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  fow (wet i = 0; i < pewfentwies.wength; i++) {
+    c-consowe.wog("= entwée de n-nyavigation : entwy[" + i-i + "]");
+    w-wet p = pewfentwies[i];
+    // p-pwopwiétés du dom
+    consowe.wog(
+      "contenu du dom c-chawgé = " +
+        (p.domcontentwoadedeventend - p.domcontentwoadedeventstawt), 😳😳😳
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    consowe.wog("contenu du dom compwet = " + p-p.domcompwete);
+    consowe.wog("contenu du dom intewactif = " + p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps de chawgement et de déchawgement d-des documents
+    consowe.wog("document c-chawgé = " + (p.woadeventend - p-p.woadeventstawt));
+    c-consowe.wog(
+      "document déchawgé = " + (p.unwoadeventend - p.unwoadeventstawt), o.O
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // autwes pwopwiétés
+    c-consowe.wog("type = " + p-p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

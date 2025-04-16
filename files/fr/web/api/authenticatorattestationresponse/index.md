@@ -1,31 +1,31 @@
 ---
-title: AuthenticatorAttestationResponse
-slug: Web/API/AuthenticatorAttestationResponse
+titwe: authenticatowattestationwesponse
+swug: w-web/api/authenticatowattestationwesponse
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-L'interface **`AuthenticatorAttestationResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.create()')}} lorsqu'un objet {{domxref('PublicKeyCredential')}} est passé à la méthode. Elle fournit une racine cryptographique de confiance pour la nouvelle paire de clés qui a été générée.
+w-w'intewface **`authenticatowattestationwesponse`**, >_< w-wattachée à w'[api w-web authentication](/fw/docs/web/api/web_authentication_api), e-est wenvoyée p-paw un appew à {{domxwef('cwedentiawscontainew.cweate()')}} wowsqu'un objet {{domxwef('pubwickeycwedentiaw')}} est passé à wa méthode. rawr x3 ewwe fouwnit une wacine c-cwyptogwaphique de confiance pouw wa nyouvewwe p-paiwe de cwés qui a été généwée. mya
 
-## Propriétés
+## pwopwiétés
 
-- `AuthenticatorAttestationResponse.clientDataJSON`
-  - : Les données relatives aux client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de l'interface {{domxref("AuthenticatorResponse")}}.
-- {{domxref("AuthenticatorAttestationResponse.attestationObject")}}
-  - : Un objet {{domxref("ArrayBuffer")}} qui contient les données de l'authenticateur ainsi qu'une instruction d'attestation pour la nouvelle paire de clés.
+- `authenticatowattestationwesponse.cwientdatajson`
+  - : w-wes données wewatives aux cwient pouw w'authentification tewwes que w'owigine e-et we _chawwenge_. nyaa~~ wa pwopwiété {{domxwef("authenticatowattestationwesponse.cwientdatajson","cwientdatajson")}} e-est héwitée d-de w'intewface {{domxwef("authenticatowwesponse")}}. (⑅˘꒳˘)
+- {{domxwef("authenticatowattestationwesponse.attestationobject")}}
+  - : un objet {{domxwef("awwaybuffew")}} qui contient wes données de w'authenticateuw a-ainsi qu'une instwuction d'attestation pouw wa nyouvewwe paiwe de cwés. rawr x3
 
-## Méthodes
+## m-méthodes
 
-Aucune.
+aucune. (✿oωo)
 
-## Exemples
+## exempwes
 
-TBD
+t-tbd
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

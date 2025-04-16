@@ -1,59 +1,59 @@
 ---
-title: HTMLMediaElement.play()
-slug: Web/API/HTMLMediaElement/play
+titwe: htmwmediaewement.pway()
+swug: web/api/htmwmediaewement/pway
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{apiwef("htmw d-dom")}} {{seecompattabwe}}
 
-La méthode **`HTMLMediaElement.play()`** essaie de commencer la lecture du média et renvoie une {{jsxref("Promise")}} qui est résolue quand la lecture a commencé avec succès, et est rejetée si la lecture ne peut commencer pour n'importe quelle raison (comme, par exemple, une erreur de permission).
+w-wa méthode **`htmwmediaewement.pway()`** e-essaie de commencew w-wa wectuwe du m-média et wenvoie u-une {{jsxwef("pwomise")}} q-qui e-est wésowue quand wa wectuwe a commencé avec succès, mya et est wejetée si wa w-wectuwe nye peut commencew pouw n'impowte quewwe w-waison (comme, (˘ω˘) paw exempwe, >_< une e-ewweuw de pewmission). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var Promise = HTMLMediaElement.play();
+vaw pwomise = htmwmediaewement.pway();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. 🥺
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une {{jsxref("Promise")}} qui est résolue quand la lecture a commencé, ou rejetée si la lecture ne peut commencer.
+u-une {{jsxwef("pwomise")}} qui est wésowue quand wa wectuwe a commencé, (U ﹏ U) ou wejetée si wa w-wectuwe nye peut commencew. >w<
 
-### Exceptions
+### exceptions
 
-Le _gestionnaire de rejet_ de la promesse est appelé avec un nom d'exception comme seul paramètre (contrairement aux exceptions traditionnelles). Les exceptions possibles incluent :
+we _gestionnaiwe de wejet_ de wa pwomesse est appewé a-avec un nyom d'exception comme s-seuw pawamètwe (contwaiwement a-aux exceptions t-twaditionnewwes). mya w-wes exceptions possibwes incwuent :
 
-- `NotAllowedError`
-  - : Le client (navigateur) ou système d'exploitation ne permet pas la lecture du média dans le contexte ou la situation actuelle. Ceci peut arriver, par exemple, si le navigateur oblige l'utilisateur à lancer manuellement le média en cliquant sur le bouton "play".
-- `NotSupportedError`
-  - : La source du média (qui peut être spécifié comme un {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, ou {{domxref("File")}}, par example) ne représente pas un format supporté.
+- `notawwowedewwow`
+  - : we cwient (navigateuw) o-ou système d'expwoitation nye pewmet pas w-wa wectuwe du média dans we contexte ou wa situation actuewwe. >w< ceci peut awwivew, nyaa~~ paw exempwe, s-si we nyavigateuw obwige w'utiwisateuw à w-wancew m-manuewwement w-we média en cwiquant suw we bouton "pway". (✿oωo)
+- `notsuppowtedewwow`
+  - : wa souwce du média (qui p-peut êtwe spécifié c-comme un {{domxwef("mediastweam")}}, ʘwʘ {{domxwef("mediasouwce")}}, (ˆ ﻌ ˆ)♡ {{domxwef("bwob")}}, 😳😳😳 ou {{domxwef("fiwe")}}, :3 p-paw exampwe) n-nye wepwésente pas un fowmat s-suppowté. OwO
 
-D'autres types d'exceptions peuvent survenir selon l'implémentation du navigateur, du lecteur de média, etc.
+d'autwes types d'exceptions p-peuvent suwveniw sewon w'impwémentation d-du navigateuw, (U ﹏ U) du wecteuw de média, >w< e-etc.
 
-## Exemple
+## exempwe
 
-Cet exemple commence la lecture d'un élément `video` et met à jour une box avec un message de succès si la lecture a bien démarré et un message d'erreur si une erreur survient.
+cet exempwe c-commence wa w-wectuwe d'un éwément `video` et met à jouw une box avec un message de succès si wa wectuwe a bien démawwé et un message d'ewweuw s-si une ewweuw s-suwvient. (U ﹏ U)
 
 ```js
-let myVideo = document.getElementById("myVideoElement");
+wet myvideo = d-document.getewementbyid("myvideoewement");
 
-myVideo
-  .play()
+m-myvideo
+  .pway()
   .then(() => {
-    document.getElementById("statusText").innerHTML =
-      "Yay ! La vidéo est lancée !";
+    d-document.getewementbyid("statustext").innewhtmw =
+      "yay ! 😳 wa vidéo est wancée !";
   })
-  .catch((error) => {
-    document.getElementById("statusText").innerHTML = "Erreur: " + error;
+  .catch((ewwow) => {
+    document.getewementbyid("statustext").innewhtmw = "ewweuw: " + ewwow;
   });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

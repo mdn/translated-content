@@ -1,40 +1,40 @@
 ---
-title: AudioWorklet
-slug: Web/API/AudioWorklet
+titwe: audiowowkwet
+swug: web/api/audiowowkwet
 ---
 
-{{APIRef("Web Audio API")}}{{securecontext_header}}
+{{apiwef("web a-audio api")}}{{secuwecontext_headew}}
 
-L'interface **`AudioWorklet`** dans l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est utilisée pour fournir des scripts de traitement audio personnalisés qui s'exécutent dans un thread séparé afin de fournir un traitement audio à très faible latence. Le code du worklet est exécuté dans le contexte d'exécution global {{domxref("AudioWorkletGlobalScope")}}, en utilisant un thread audio web séparé qui est partagé par le worklet et les autres nœuds audio.
+w-w'intewface **`audiowowkwet`** d-dans w-w'[api web audio](/fw/docs/web/api/web_audio_api) e-est utiwisée p-pouw fouwniw des s-scwipts de twaitement a-audio pewsonnawisés qui s'exékawaii~nt dans un thwead sépawé afin de f-fouwniw un twaitement audio à twès faibwe watence. σωσ w-we code du wowkwet est exécuté d-dans we contexte d'exécution gwobaw {{domxwef("audiowowkwetgwobawscope")}}, OwO en utiwisant u-un thwead audio web sépawé qui e-est pawtagé paw w-we wowkwet et wes autwes nyœuds audio. 😳😳😳
 
-L'accès à distance d'`AudioWorklet` du contexte audio se fait par la propriété {{domxref("BaseAudioContext.audioWorklet")}}.
+w'accès à distance d'`audiowowkwet` d-du contexte audio se fait paw wa pwopwiété {{domxwef("baseaudiocontext.audiowowkwet")}}. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-_L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet)._
+_w'intewface `audiowowkwet` nye définit p-pas de pwopwiétés pwopwes, o.O m-mais héwite d-des pwopwiétés d-de [`wowkwet`](/fw/docs/web/api/wowkwet)._
 
-## Méthodes
+## m-méthodes
 
-Cette interface hérite des méthodes de *{{domxref('Worklet')}}. L'interface `AudioWorklet`*ne définit aucune méthode propre*.*
+cette intewface héwite des méthodes d-de *{{domxwef('wowkwet')}}. ( ͡o ω ͡o ) w'intewface `audiowowkwet`*ne définit a-aucune méthode pwopwe*.*
 
-## Evénements
+## evénements
 
-_L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond._
+_w'intewface `audiowowkwet` ny'a pas d'évènements auxquews ewwe w-wépond._
 
-## Exemples
+## exempwes
 
-Voir {{domxref("AudioWorkletNode")}} pour des exemples complets de création de nœuds audio personnalisés.
+voiw {{domxwef("audiowowkwetnode")}} pouw d-des exempwes c-compwets de cwéation d-de nyœuds audio pewsonnawisés. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("AudioWorkletGlobalScope")}} — le contexte global d'exécution d'un `AudioWorklet`
-- [API Web Audio](/fr/docs/Web/API/Web_Audio_API)
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxwef("audiowowkwetgwobawscope")}} — we c-contexte gwobaw d-d'exécution d'un `audiowowkwet`
+- [api web audio](/fw/docs/web/api/web_audio_api)
+- [utiwisew wa w-web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,138 +1,138 @@
 ---
-title: IDBIndex.getKey()
-slug: Web/API/IDBIndex/getKey
+titwe: idbindex.getkey()
+swug: w-web/api/idbindex/getkey
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`getKey()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, récupère la clé associée ou la clé primaire si l'argument passé à la fonction est un intervalle {{domxref("IDBKeyRange")}}.
+w-wa méthode **`getkey()`**, /(^•ω•^) w-wattachée à w-w'intewface {{domxwef("idbindex")}}, (⑅˘꒳˘) w-wenvoie un o-objet {{domxwef("idbwequest")}} e-et, ( ͡o ω ͡o ) dans un _thwead_ s-sépawé, òωó wécupèwe wa cwé associée ou wa cwé pwimaiwe si w'awgument p-passé à wa fonction est un intewvawwe {{domxwef("idbkeywange")}}. (⑅˘꒳˘)
 
-Si la méthode trouve une clé, ce sera alors la propriété `result` de la requête renvoyée. Seule la clé primaire de l'enregistrement est renvoyée (pour obtenir l'ensemble de l'enregistrement, on utilisera {{domxref("IDBIndex.get")}}).
+si wa méthode t-twouve une cwé, XD ce sewa awows w-wa pwopwiété `wesuwt` de wa wequête wenvoyée. -.- seuwe wa cwé p-pwimaiwe de w'enwegistwement est wenvoyée (pouw o-obteniw w'ensembwe d-de w'enwegistwement, :3 on utiwisewa {{domxwef("idbindex.get")}}). nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var myIndex = objectStore.index("index");
-var request = myIndex.getKey(key);
+vaw myindex = objectstowe.index("index");
+v-vaw wequest = myindex.getkey(key);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `key` {{optional_inline}}
-  - : Une clé ou un intervalle {{domxref("IDBKeyRange")}} qui identifie l'enregistrement dont on souhaite obtenir la clé. Si la valeur vaut {{jsxref("null")}} ou si elle est absente, le navigateur utilisera un intervalle de clé sans limite.
+- `key` {{optionaw_inwine}}
+  - : une cwé ou un intewvawwe {{domxwef("idbkeywange")}} q-qui identifie w'enwegistwement d-dont o-on souhaite obteniw w-wa cwé. 😳 si w-wa vaweuw vaut {{jsxwef("nuww")}} ou si ewwe est absente, (⑅˘꒳˘) we nyavigateuw u-utiwisewa un intewvawwe de cwé sans wimite.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} qui recevra les différents évènements relatifs à l'opération qui est déclenchée.
+un objet {{domxwef("idbwequest")}} qui wecevwa wes difféwents évènements wewatifs à w-w'opéwation qui est décwenchée. nyaa~~
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception. Celle-ci peut avoir l'un des types suivants :
+c-cette méthode p-peut décwenchew une exception. OwO cewwe-ci peut avoiw w'un d-des types suivants :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">exception</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>TransactionInactiveError</td>
+    <tw>
+      <td>twansactioninactiveewwow</td>
       <td>
-        La transaction rattachée à cet <code>IDBIndex</code> est inactive.
+        w-wa twansaction wattachée à c-cet <code>idbindex</code> est inactive. rawr x3
       </td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
         <p>
-          La clé ou l'intervalle de clés qui est fourni contient une clé
-          invalide.
+          w-wa cwé ou w'intewvawwe de cwés qui est fouwni c-contient une cwé
+          invawide. XD
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>L'index a été supprimé ou déplacé.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
+      <td>w'index a-a été suppwimé ou dépwacé.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets. Ensuite on récupère l'index `lName` sur cette base de donnée. On ouvre alors un curseur sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} (cela fonctionne de la même façon que {{domxref("IDBObjectStore.openCursor")}} sauf que les enregistrements sont triés selon l'index et pas selon la clé primaire).
+d-dans w'exempwe qui suit, σωσ on ouvwe une twansaction et un magasin d'objets. (U ᵕ U❁) ensuite on wécupèwe w'index `wname` s-suw cette b-base de donnée. (U ﹏ U) on ouvwe awows u-un cuwseuw suw w'index g-gwâce à w-wa méthode {{domxwef("idbindex.opencuwsow")}} (cewa fonctionne de wa même façon que {{domxwef("idbobjectstowe.opencuwsow")}} s-sauf que wes enwegistwements sont twiés sewon w'index et pas sewon wa cwé pwimaiwe). :3
 
-`myIndex.getKey('Bungle')` est ensuite utilisé afin d'obtenir la clé primaire de l'enregistrement pour lequel `lName` vaut `Bungle`. Le résultat de cette requête est imprimé dans la console lorsque la fonction de rappel (_callback_) de succès est déclenché.
+`myindex.getkey('bungwe')` e-est ensuite utiwisé afin d'obteniw w-wa cwé p-pwimaiwe de w'enwegistwement p-pouw wequew `wname` v-vaut `bungwe`. ( ͡o ω ͡o ) w-we wésuwtat de c-cette wequête est i-impwimé dans wa consowe wowsque wa fonction d-de wappew (_cawwback_) d-de succès e-est décwenché. σωσ
 
-Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt [`indexeddb-examples`](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples) contient un exemple complet ([voir l'exemple en direct](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+e-enfin, >w< on pawcouwt w-wes enwegistwements pouw wempwiw un tabweau htmw. 😳😳😳 we dépôt [`indexeddb-exampwes`](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes) c-contient un exempwe compwet ([voiw w'exempwe en diwect](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/)). OwO
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
-  var myIndex = objectStore.index("lName");
-  var getKeyRequest = myIndex.getKey("Bungle");
-  getKeyRequest.onsuccess = function () {
-    console.log(getKeyRequest.result);
+function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  v-vaw twansaction = db.twansaction(["contactswist"], 😳 "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe("contactswist");
+  v-vaw m-myindex = objectstowe.index("wname");
+  vaw getkeywequest = m-myindex.getkey("bungwe");
+  getkeywequest.onsuccess = f-function () {
+    c-consowe.wog(getkeywequest.wesuwt);
   };
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  myindex.opencuwsow().onsuccess = function (event) {
+    vaw cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      v-vaw tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        c-cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        c-cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        c-cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments sont affichés.");
+      c-cuwsow.continue();
+    } ewse {
+      consowe.wog("wes éwéments sont affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- L'exemple de référence : [notifications de trucs à faire](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir la démonstration](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew u-une connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes c-cuwseuws {{domxwef("idbcuwsow")}}
+- w'exempwe de wéféwence : [notifications de t-twucs à faiwe](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-wa démonstwation](https://mdn.github.io/dom-exampwes/to-do-notifications/))

@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.loadEventEnd
-slug: Web/API/PerformanceTiming/loadEventEnd
+titwe: pewfowmancetiming.woadeventend
+swug: web/api/pewfowmancetiming/woadeventend
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.loadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette i-intewface est dépwéciée d-dans w-wa spécification [navigation timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). nyaa~~ v-veuiwwez utiwisew w-wa pwopwiété [`pewfowmancenavigationtiming.woadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventend) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. (⑅˘꒳˘)
 
-L'ancienne propriété en lecture seule **`loadEventEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le gestionnaire d'événement [`load`](/fr/docs/Web/API/Document/load_event) s'est terminé, c'est-à-dire lorsque l'événement de chargement est terminé. Si cet événement n'a pas encore été envoyé, ou n'est pas encore terminé, il retourne `0`.
+w'ancienne pwopwiété en w-wectuwe seuwe **`woadeventend`** wetouwne un `unsigned wong wong` w-wepwésentant we moment, en miwwisecondes d-depuis w'époque unix, rawr x3 où we gestionnaiwe d'événement [`woad`](/fw/docs/web/api/document/woad_event) s-s'est tewminé, (✿oωo) c'est-à-diwe w-wowsque w'événement d-de chawgement est tewminé. (ˆ ﻌ ˆ)♡ si cet événement ny'a pas encowe été envoyé, (˘ω˘) o-ou ny'est pas encowe tewminé, (⑅˘꒳˘) iw wetouwne `0`. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.loadEventEnd;
+wet time = p-pewfowmancetiming.woadeventend;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w-w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à waquewwe ewwe appawtient. 😳😳😳

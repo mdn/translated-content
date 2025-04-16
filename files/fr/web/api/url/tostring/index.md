@@ -1,45 +1,45 @@
 ---
-title: URL.toString()
-slug: Web/API/URL/toString
+titwe: uww.tostwing()
+swug: web/api/uww/tostwing
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
+w-wa méthode **`uww.tostwing()`** w-wetouwne un {{domxwef("usvstwing")}} c-contenant t-tout w'uww. 😳 c'est e-en effet, XD une v-vewsion de {{domxwef("uww.hwef")}} e-en wectuwe seuwe. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-string = url.toString();
+stwing = uww.tostwing();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. 😳😳😳
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un {{domxref("USVString")}}.
+un {{domxwef("usvstwing")}}. -.-
 
-## Examples
+## exampwes
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/fr/docs/Web/API/URL/toString",
+const u-uww = nyew uww(
+  "https://devewopew.moziwwa.owg/fw/docs/web/api/uww/tostwing", ( ͡o ω ͡o )
 );
-url.toString(); // doit retourner l'URL en tant que chaîne
+uww.tostwing(); // d-doit wetouwnew w'uww en tant que chaîne
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("URL")}} à laquelle elle appartient.
+- w-w'intewface {{domxwef("uww")}} à waquewwe ewwe appawtient. rawr x3

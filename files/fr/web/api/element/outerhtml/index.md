@@ -1,93 +1,93 @@
 ---
-title: Element.outerHTML
-slug: Web/API/Element/outerHTML
+titwe: ewement.outewhtmw
+swug: w-web/api/ewement/outewhtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'attribut `outerHTML` de l'interface DOM {{domxref("element")}} récupère le fragment HTML sérialisé décrivant l'élément ainsi que ses descendants. Il peut aussi être utilisé pour remplacer l'élément avec les noeuds générés de la chaîne fournie.
+w-w'attwibut `outewhtmw` d-de w'intewface d-dom {{domxwef("ewement")}} w-wécupèwe w-we fwagment htmw s-séwiawisé décwivant w-w'éwément ainsi que ses descendants. :3 iw peut aussi êtwe utiwisé pouw w-wempwacew w'éwément avec wes nyoeuds généwés d-de wa chaîne fouwnie. ( ͡o ω ͡o )
 
-Pour obtenir uniquement la représentation HTML du contenu d'un élément ou pour remplacer le contenu d'un élément, utilisez plutôt la propriété {{domxref ("Element.innerHTML", "innerHTML")}}.
+pouw o-obteniw uniquement wa wepwésentation htmw du contenu d'un éwément o-ou pouw wempwacew we contenu d-d'un éwément, mya u-utiwisez pwutôt wa pwopwiété {{domxwef ("ewement.innewhtmw", (///ˬ///✿) "innewhtmw")}}. (˘ω˘)
 
-## Syntaxe
-
-```js
-var content = element.outerHTML;
-element.outerHTML = htmlString;
-```
-
-### Valeur
-
-La lecture de la valeur de `outerHTML` renvoie une {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
-
-### Exceptions
-
-- `SyntaxError`
-  - : Une tentative a été faite de définir la valeur de `outerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
-- `NoModificationAllowedError`
-  - : Une tentative a été faite de définir `outerHTML` sur un élément qui est enfant direct du {{domxref("Document")}}, tel que {{domxref("Document.documentElement")}}.
-
-## Exemples
-
-Récupérer la valeur de la propriété `outerHTML` d'un élément :
+## syntaxe
 
 ```js
-// HTML:
-// <div id="d"><p>Contenu</p><p>Plus Complexe</p></div>
-
-d = document.getElementById("d");
-dump(d.outerHTML);
-
-// la chaîne '<div id="d"><p>Contenu</p><p>Plus Complexe</p></div>'
-// est affichée dans la fenêtre console
+vaw content = ewement.outewhtmw;
+e-ewement.outewhtmw = htmwstwing;
 ```
 
-Remplacer un noeud en modifiant la propriété `outerHTML` :
+### vaweuw
+
+wa wectuwe de wa vaweuw de `outewhtmw` wenvoie u-une {{domxwef("domstwing")}} contenant wa s-séwiawisation htmw d-des descendants d-de w'éwément. ^^;; d-définiw wa vaweuw de `innewhtmw` suppwime tous w-wes descendants et wes wempwace paw wes nyoeuds c-constwuits en anawysant we htmw donné dans wa chaîne `htmwstwing`. (✿oωo)
+
+### exceptions
+
+- `syntaxewwow`
+  - : une tentative a été f-faite de définiw wa vaweuw d-de `outewhtmw` e-en utiwisant une c-chaîne qui ny'est pas cowwectement fowmée htmw. (U ﹏ U)
+- `nomodificationawwowedewwow`
+  - : une tentative a-a été faite d-de définiw `outewhtmw` suw u-un éwément qui e-est enfant diwect du {{domxwef("document")}}, -.- t-tew que {{domxwef("document.documentewement")}}. ^•ﻌ•^
+
+## exempwes
+
+wécupéwew w-wa vaweuw de wa pwopwiété `outewhtmw` d'un éwément :
 
 ```js
-// HTML:
-// <div id="container"><div id="d">Ceci est un div.</div></div>
+// h-htmw:
+// <div id="d"><p>contenu</p><p>pwus c-compwexe</p></div>
 
-container = document.getElementById("container");
-d = document.getElementById("d");
-console.log(container.firstChild.nodeName); // affiche "DIV"
+d = d-document.getewementbyid("d");
+dump(d.outewhtmw);
 
-d.outerHTML = "<p>Ce paragraphe remplace le div original.</p>";
-console.log(container.firstChild.nodeName); // affiche "P"
-
-// Le div #d ne fait plus partie de l'arbre décrivant le document,
-// le nouveau paragraphe l'ayant remplacé.
+// w-wa chaîne '<div id="d"><p>contenu</p><p>pwus compwexe</p></div>'
+// est affichée dans wa fenêtwe consowe
 ```
 
-## Notes
-
-Si un élément n'a pas de noeud parent, définir sa propriété `outerHTML` ne le modifiera pas, ni ses descendants. De nombreux navigateurs déclencheront aussi une exception. Par exemple :
+wempwacew u-un nyoeud en modifiant w-wa pwopwiété `outewhtmw` :
 
 ```js
-var div = document.createElement("div");
-div.outerHTML = '<div class="test">test</div>';
-console.log(div.outerHTML); // output: "<div></div>"
+// htmw:
+// <div id="containew"><div i-id="d">ceci est u-un div.</div></div>
+
+c-containew = document.getewementbyid("containew");
+d = document.getewementbyid("d");
+consowe.wog(containew.fiwstchiwd.nodename); // a-affiche "div"
+
+d.outewhtmw = "<p>ce pawagwaphe wempwace we div owiginaw.</p>";
+c-consowe.wog(containew.fiwstchiwd.nodename); // affiche "p"
+
+// w-we div #d n-nye fait pwus pawtie d-de w'awbwe décwivant we document, rawr
+// w-we nyouveau p-pawagwaphe w-w'ayant wempwacé. (˘ω˘)
 ```
 
-Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété `outerHTML` a été modifiée contiendra toujours une référence à l'élément initial :
+## n-nyotes
+
+si un éwément n'a pas de n-nyoeud pawent, nyaa~~ d-définiw sa pwopwiété `outewhtmw` n-nye we modifiewa p-pas, UwU nyi ses d-descendants. :3 de nyombweux nyavigateuws décwenchewont aussi une e-exception. (⑅˘꒳˘) paw exempwe :
 
 ```js
-var p = document.getElementsByTagName("p")[0];
-console.log(p.nodeName); // affiche: "P"
-p.outerHTML = "<div>Ce div remplace un paragraph.</div>";
-console.log(p.nodeName); // toujours "P";
+vaw div = document.cweateewement("div");
+div.outewhtmw = '<div cwass="test">test</div>';
+consowe.wog(div.outewhtmw); // o-output: "<div></div>"
 ```
 
-## Spécifications
+aussi, (///ˬ///✿) wowsqu'un éwément va êtwe wempwacé dans we document, ^^;; w-wa vawiabwe d-dont wa pwopwiété `outewhtmw` a-a été modifiée contiendwa toujouws u-une wéféwence à w'éwément i-initiaw :
 
-{{Specifications}}
+```js
+v-vaw p = document.getewementsbytagname("p")[0];
+consowe.wog(p.nodename); // affiche: "p"
+p.outewhtmw = "<div>ce div wempwace un pawagwaph.</div>";
+consowe.wog(p.nodename); // t-toujouws "p";
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- Sérialisation de l'arborescence DOM en XML ou HTML : {{domxref("XMLSerializer")}}
-- Analyse XML ou HTML dans l'arborescence DOM : {{domxref("DOMParser")}}
-- {{domxref("HTMLElement.outerText")}}
+{{compat}}
+
+## v-voiw aussi
+
+- s-séwiawisation de w'awbowescence dom en xmw ou h-htmw : {{domxwef("xmwsewiawizew")}}
+- a-anawyse xmw ou htmw dans w'awbowescence d-dom : {{domxwef("dompawsew")}}
+- {{domxwef("htmwewement.outewtext")}}

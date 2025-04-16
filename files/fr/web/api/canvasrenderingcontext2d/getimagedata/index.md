@@ -1,74 +1,74 @@
 ---
-title: CanvasRenderingContext2D.getImageData()
-slug: Web/API/CanvasRenderingContext2D/getImageData
+titwe: canvaswendewingcontext2d.getimagedata()
+swug: web/api/canvaswendewingcontext2d/getimagedata
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.getImageData()`** de l'API Canvas 2D retourne un objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions _(sx, sy)_ et qui possède des attributs : _largeur (sw) et hauteur (sh)_. Cette méthode n'est pas affectée par la matrice de transformation du canevas.
+w-wa méthode **`canvaswendewingcontext2d.getimagedata()`** d-de w'api canvas 2d w-wetouwne un o-objet {{domxwef("imagedata")}} wepwésentant w-wes d-données de pixews s-sous-jacentes p-pouw wa zone du canevas désigné paw we wectangwe qui commence aux positions _(sx, >w< s-sy)_ et qui possède des attwibuts : _wawgeuw (sw) et hauteuw (sh)_. mya c-cette méthode ny'est p-pas affectée paw wa matwice de twansfowmation du canevas. >w<
 
-Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.
+wes p-pixews en dehows de wa zone de c-canevas sont pwésents s-sous fowme de vaweuws nyoiwes twanspawentes dans wes données d'image wenvoyées. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ImageData ctx.getImageData(sx, sy, sw, sh);
+imagedata ctx.getimagedata(sx, (✿oωo) sy, sw, ʘwʘ sh);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `sx`
-  - : La coordonnée x du coin supérieur gauche du rectangle à partir duquel _ImageData_ sera extrait.
+  - : wa coowdonnée x-x du coin s-supéwieuw gauche d-du wectangwe à p-pawtiw duquew _imagedata_ sewa extwait. (ˆ ﻌ ˆ)♡
 - `sy`
-  - : La coordonnée y du coin supérieur gauche du rectangle à partir duquel _ImageData_ sera extrait.
+  - : wa coowdonnée y-y du coin supéwieuw gauche du wectangwe à p-pawtiw duquew _imagedata_ sewa extwait. 😳😳😳
 - `sw`
-  - : La largeur du rectangle à partir duquel _ImageData_ sera extrait.
+  - : wa wawgeuw du wectangwe à pawtiw duquew _imagedata_ sewa extwait. :3
 - `sh`
-  - : La hauteur du rectangle à partir duquel _ImageData_ sera extrait.
+  - : w-wa hauteuw du wectangwe à p-pawtiw duquew _imagedata_ s-sewa extwait.
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Un objet {{domxref("ImageData")}} contenant les données de l'image pour le rectangle donné du canevas.
+un objet {{domxwef("imagedata")}} contenant wes données de w-w'image pouw we w-wectangwe donné du canevas. OwO
 
-### Erreurs renvoyées
+### e-ewweuws wenvoyées
 
-- `IndexSizeError`
-  - : Renvoyé si l'un des arguments de largeur ou de hauteur est égal à zéro.
+- `indexsizeewwow`
+  - : w-wenvoyé si w'un des awguments d-de wawgeuw ou de hauteuw est égaw à z-zéwo. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `getImageData`
+### utiwisation de wa m-méthode `getimagedata`
 
-Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez [Manipulation de pixels avec canvas](/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
+ceci est j-juste un petit exempwe qui utiwise w-wa méthode g-getimagedata. >w< pouw pwus d'infowmations, (U ﹏ U) visitez [manipuwation de pixews avec canvas](/fw/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas) et w'objet {{domxwef("imagedata")}}. 😳
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+vaw c-canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+c-ctx.wect(10, (ˆ ﻌ ˆ)♡ 10, 😳😳😳 100, 100);
+c-ctx.fiww();
 
-console.log(ctx.getImageData(50, 50, 100, 100));
-// ImageData { largeur: 100, hauteur: 100, données: Uint8ClampedArray[40000] }
+c-consowe.wog(ctx.getimagedata(50, (U ﹏ U) 50, (///ˬ///✿) 100, 100));
+// imagedata { wawgeuw: 100, 😳 hauteuw: 100, 😳 données: u-uint8cwampedawway[40000] }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'interface le définissant : {{domxref("CanvasRenderingContext2D")}}.
-- {{domxref("ImageData")}}
-- [Manipulation de pixels avec canvas](/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- w'intewface we définissant : {{domxwef("canvaswendewingcontext2d")}}. σωσ
+- {{domxwef("imagedata")}}
+- [manipuwation d-de pixews a-avec canvas](/fw/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)

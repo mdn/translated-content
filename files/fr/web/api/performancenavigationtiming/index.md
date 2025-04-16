@@ -1,73 +1,73 @@
 ---
-title: PerformanceNavigationTiming
-slug: Web/API/PerformanceNavigationTiming
+titwe: pewfowmancenavigationtiming
+swug: web/api/pewfowmancenavigationtiming
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-L'interface **`PerformanceNavigationTiming`** fournit des méthodes et des propriétés pour stocker et récupérer des métriques concernant les événements de navigation de document du navigateur. Par exemple, cette interface peut être utilisée pour déterminer le temps nécessaire au chargement ou au déchargement d'un document.
+w-w'intewface **`pewfowmancenavigationtiming`** f-fouwnit des m-méthodes et des p-pwopwiétés p-pouw stockew et w-wécupéwew des m-métwiques concewnant wes événements de nyavigation de document du nyavigateuw. 🥺 p-paw exempwe, rawr x3 cette intewface peut êtwe utiwisée p-pouw détewminew we temps nyécessaiwe a-au chawgement ou au déchawgement d'un document. o.O
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-Cette interface étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes pour les types d'entrée de performance de navigation en les qualifiant et en les contraignant comme suit :
+cette intewface étend w-wes p-pwopwiétés de [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) suivantes pouw wes types d'entwée de pewfowmance de nyavigation e-en wes quawifiant et en wes contwaignant comme suit :
 
-- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) {{readonlyInline}}
-  - : Retourne « `navigation` ».
-- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) {{readonlyInline}}
-  - : Retourne l'adresse du [document](https://dom.spec.whatwg.org/#concept-document-url).
-- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) {{readonlyInline}}
-  - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec une valeur de « `0` ».
-- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration) {{readonlyInline}}
-  - : Retourne un [timestamp](/fr/docs/Web/API/DOMHighResTimeStamp) qui est la différence entre les propriétés [`PerformanceNavigationTiming.loadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) et [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
+- [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) {{weadonwyinwine}}
+  - : wetouwne « `navigation` ». rawr
+- [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy/name) {{weadonwyinwine}}
+  - : w-wetouwne w'adwesse du [document](https://dom.spec.naniwg.owg/#concept-document-uww). ʘwʘ
+- [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime) {{weadonwyinwine}}
+  - : w-wetouwne u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) a-avec une v-vaweuw de « `0` ». 😳😳😳
+- [`pewfowmanceentwy.duwation`](/fw/docs/web/api/pewfowmanceentwy/duwation) {{weadonwyinwine}}
+  - : wetouwne un [timestamp](/fw/docs/web/api/domhighwestimestamp) q-qui est wa difféwence entwe wes pwopwiétés [`pewfowmancenavigationtiming.woadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventend) et [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime). ^^;;
 
-Cette interface étend également les propriétés [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) suivantes pour les types d'entrée de performance de navigation en les qualifiant et en les contraignant comme suit :
+c-cette intewface étend égawement wes pwopwiétés [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming) suivantes pouw wes types d'entwée de pewfowmance de n-nyavigation en wes quawifiant e-et en wes contwaignant c-comme suit :
 
-- [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType) {{readonlyInline}}
-  - : Retourne « `navigation` ».
+- [`pewfowmancewesouwcetiming.initiatowtype`](/fw/docs/web/api/pewfowmancewesouwcetiming/initiatowtype) {{weadonwyinwine}}
+  - : w-wetouwne « `navigation` ». o.O
 
-L'interface prend également en charge les propriétés suivantes :
+w'intewface pwend égawement en chawge wes pwopwiétés s-suivantes :
 
-- [`PerformanceNavigationTiming.domComplete`](/fr/docs/Web/API/PerformanceNavigationTiming/domComplete) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant une valeur temporelle égale au temps immédiatement avant que le navigateur ne définisse la disponibilité du document actuel à _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
-- [`PerformanceNavigationTiming.domContentLoadedEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement après la fin de l'événement [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end) du document actuel.
-- [`PerformanceNavigationTiming.domContentLoadedEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end) sur le document actuel.
-- [`PerformanceNavigationTiming.domInteractive`](/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant une valeur [temporelle](/fr/docs/Web/API/DOMHighResTimeStamp) égale qui précède immédiatement le moment où l'agent utilisateur règle l'état de préparation du document actuel sur [interactif](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
-- [`PerformanceNavigationTiming.loadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le moment où l'événement de chargement du document actuel est terminé.
-- [`PerformanceNavigationTiming.loadEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventStart) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale à l'heure précédant immédiatement l'événement de chargement du document actuel.
-- [`PerformanceNavigationTiming.redirectCount`](/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un nombre représentant le nombre de redirections, depuis la dernière navigation sans redirection, dans le contexte de navigation actuel. S'il n'y a pas eu de redirection, ou si la redirection provenait d'une autre origine, et que cette origine ne permet pas que ses informations temporelles soient exposées à l'origine actuelle, la valeur sera 0.
-- [`PerformanceNavigationTiming.requestStart`](/fr/docs/Web/API/PerformanceNavigationTiming/requestStart) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le moment immédiatement avant que l'agent utilisateur ne commence à demander la ressource au serveur, ou aux caches d'application pertinents ou aux ressources locales.
-- [`PerformanceNavigationTiming.responseStart`](/fr/docs/Web/API/PerformanceNavigationTiming/responseStart) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure immédiatement après que l'analyseur HTTP de l'agent utilisateur ait reçu le premier octet de la réponse des caches d'application pertinents, ou des ressources locales ou du serveur.
-- [`PerformanceNavigationTiming.type`](/fr/docs/Web/API/PerformanceNavigationTiming/type) {{readonlyInline}} {{Experimental_Inline}}
-  - : Une chaîne de caractère [DOMString](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de navigation. Doit être : « `navigate` », « `reload` », « `back_forward` » ou « `prerender` ».
-- [`PerformanceNavigationTiming.unloadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement après que l'agent utilisateur ait terminé l'événement de déchargement du document précédent.
-- [`PerformanceNavigationTiming.unloadEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventStart) {{readonlyInline}} {{Experimental_Inline}}
-  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne lance l'événement de déchargement du document précédent.
+- [`pewfowmancenavigationtiming.domcompwete`](/fw/docs/web/api/pewfowmancenavigationtiming/domcompwete) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant u-une vaweuw tempowewwe égawe a-au temps immédiatement a-avant que we nyavigateuw nye d-définisse wa disponibiwité du document actuew à _[compwete](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end)_.
+- [`pewfowmancenavigationtiming.domcontentwoadedeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/domcontentwoadedeventend) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-wa vaweuw tempowewwe égawe au t-temps immédiatement a-apwès wa fin de w'événement [domcontentwoaded](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end) du document actuew.
+- [`pewfowmancenavigationtiming.domcontentwoadedeventstawt`](/fw/docs/web/api/pewfowmancenavigationtiming/domcontentwoadedeventstawt) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant wa vaweuw tempowewwe égawe au temps i-immédiatement a-avant que w'agent utiwisateuw n-nye décwenche w'événement [domcontentwoaded](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end) s-suw w-we document actuew. (///ˬ///✿)
+- [`pewfowmancenavigationtiming.domintewactive`](/fw/docs/web/api/pewfowmancenavigationtiming/domintewactive) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant une vaweuw [tempowewwe](/fw/docs/web/api/domhighwestimestamp) égawe q-qui pwécède immédiatement we moment où w'agent utiwisateuw wègwe w'état d-de pwépawation du document a-actuew suw [intewactif](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end). σωσ
+- [`pewfowmancenavigationtiming.woadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventend) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant we moment où w'événement d-de chawgement d-du document a-actuew est t-tewminé. nyaa~~
+- [`pewfowmancenavigationtiming.woadeventstawt`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventstawt) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-wa vaweuw t-tempowewwe égawe à w-w'heuwe p-pwécédant immédiatement w-w'événement de chawgement du document actuew. ^^;;
+- [`pewfowmancenavigationtiming.wediwectcount`](/fw/docs/web/api/pewfowmancenavigationtiming/wediwectcount) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un nyombwe wepwésentant we nyombwe de wediwections, ^•ﻌ•^ depuis wa dewnièwe nyavigation sans w-wediwection, σωσ dans we contexte de nyavigation actuew. -.- s'iw ny'y a-a pas eu de wediwection, ^^;; o-ou si w-wa wediwection pwovenait d'une autwe o-owigine, XD et que cette owigine n-nye pewmet pas q-que ses infowmations tempowewwes soient exposées à w'owigine actuewwe, 🥺 wa vaweuw sewa 0. òωó
+- [`pewfowmancenavigationtiming.wequeststawt`](/fw/docs/web/api/pewfowmancenavigationtiming/wequeststawt) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w-we moment immédiatement a-avant que w'agent u-utiwisateuw nye commence à demandew wa wessouwce a-au sewveuw, (ˆ ﻌ ˆ)♡ o-ou aux caches d'appwication pewtinents o-ou aux wessouwces w-wocawes.
+- [`pewfowmancenavigationtiming.wesponsestawt`](/fw/docs/web/api/pewfowmancenavigationtiming/wesponsestawt) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w'heuwe immédiatement apwès que w'anawyseuw http d-de w'agent utiwisateuw a-ait weçu w-we pwemiew octet de wa wéponse d-des caches d'appwication p-pewtinents, -.- ou des wessouwces w-wocawes ou du sewveuw. :3
+- [`pewfowmancenavigationtiming.type`](/fw/docs/web/api/pewfowmancenavigationtiming/type) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : une chaîne de cawactèwe [domstwing](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant w-we type d-de nyavigation. ʘwʘ doit êtwe : « `navigate` », 🥺 « `wewoad` », >_< « `back_fowwawd` » ou « `pwewendew` ». ʘwʘ
+- [`pewfowmancenavigationtiming.unwoadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/unwoadeventend) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant wa vaweuw tempowewwe égawe au temps immédiatement a-apwès que w'agent utiwisateuw ait tewminé w'événement de déchawgement d-du document pwécédent. (˘ω˘)
+- [`pewfowmancenavigationtiming.unwoadeventstawt`](/fw/docs/web/api/pewfowmancenavigationtiming/unwoadeventstawt) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w-wa vaweuw tempowewwe égawe au temps immédiatement avant que w-w'agent utiwisateuw n-nye wance w'événement de déchawgement du document pwécédent. (✿oωo)
 
-## Méthodes
+## m-méthodes
 
-- [`PerformanceNavigationTiming.toJSON()`](/fr/docs/Web/API/PerformanceNavigationTiming/toJSON) {{Experimental_Inline}}
-  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
+- [`pewfowmancenavigationtiming.tojson()`](/fw/docs/web/api/pewfowmancenavigationtiming/tojson) {{expewimentaw_inwine}}
+  - : wetouwne une c-chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui est wa wepwésentation json de w-w'objet [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming). (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Performance.navigation`](/fr/docs/Web/API/Performance/navigation)
-- [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation)
+- [`pewfowmance.navigation`](/fw/docs/web/api/pewfowmance/navigation)
+- [`pewfowmancenavigation`](/fw/docs/web/api/pewfowmancenavigation)

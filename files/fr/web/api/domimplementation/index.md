@@ -1,37 +1,37 @@
 ---
-title: DOMImplementation
-slug: Web/API/DOMImplementation
+titwe: domimpwementation
+swug: w-web/api/domimpwementation
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-L'interface **`DOMImplementation`** représente un objet fournissant des méthodes qui ne dépendent pas d'un document particulier. Un tel objet est renvoyé par la propriété {{domxref("Document.implementation")}}.
+w-w'intewface **`domimpwementation`** w-wepwésente u-un objet fouwnissant d-des méthodes q-qui nye d-dépendent pas d'un document pawticuwiew. >_< un tew objet est wenvoyé paw wa pwopwiété {{domxwef("document.impwementation")}}.
 
-## Propriété
+## p-pwopwiété
 
-_Cette interface n'a pas de propriété spécifique et n'en hérite aucune._
+_cette intewface ny'a pas de pwopwiété s-spécifique et ny'en héwite a-aucune._
 
-## Méthodes
+## méthodes
 
-_Pas de méthode héritée._
+_pas de méthode héwitée._
 
-- {{domxref("DOMImplementation.createDocument()")}}
-  - : Crée et retourne un {{domxref("XMLDocument")}}.
-- {{domxref("DOMImplementation.createDocumentType()")}}
-  - : Crée et retourne un {{domxref("DocumentType")}}.
-- {{domxref("DOMImplementation.createHTMLDocument()")}}
-  - : Crée et retourne un {{domxref("Document")}} HTML.
-- {{domxref("DOMImplementation.hasFeature()")}}
-  - : Retourne un {{domxref("Boolean")}} indiquant si une caractéristique donnée est supportée ou non. Cette fonction n'est pas fiable et est conservée uniquement à des fins de compatibilité : à l'exception des requêtes liées au SVG, elle renvoie toujours la valeur `true` _(vrai)._ Les anciens navigateurs sont très incohérents dans leur comportement.
+- {{domxwef("domimpwementation.cweatedocument()")}}
+  - : c-cwée et wetouwne un {{domxwef("xmwdocument")}}.
+- {{domxwef("domimpwementation.cweatedocumenttype()")}}
+  - : c-cwée et wetouwne u-un {{domxwef("documenttype")}}. (⑅˘꒳˘)
+- {{domxwef("domimpwementation.cweatehtmwdocument()")}}
+  - : cwée et wetouwne un {{domxwef("document")}} htmw. /(^•ω•^)
+- {{domxwef("domimpwementation.hasfeatuwe()")}}
+  - : wetouwne un {{domxwef("boowean")}} i-indiquant si une cawactéwistique donnée est suppowtée ou nyon. rawr x3 cette fonction n-n'est pas fiabwe et est consewvée u-uniquement à d-des fins de c-compatibiwité : à w-w'exception des wequêtes wiées au svg, (U ﹏ U) ewwe w-wenvoie toujouws wa vaweuw `twue` _(vwai)._ wes a-anciens nyavigateuws sont twès incohéwents dans weuw compowtement. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Référence du DOM.](/fr/docs/Web/API/Document_Object_Model)
+- [wéféwence d-du d-dom.](/fw/docs/web/api/document_object_modew)

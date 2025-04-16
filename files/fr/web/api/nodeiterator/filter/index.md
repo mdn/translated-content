@@ -1,44 +1,44 @@
 ---
-title: NodeIterator.filter
-slug: Web/API/NodeIterator/filter
+titwe: nyodeitewatow.fiwtew
+swug: web/api/nodeitewatow/fiwtew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode en lecture seule **`NodeIterator.filter`** renvoie un objet {{domxref("NodeFilter")}}, c'est-à-dire un objet implémentant la méthode `acceptNode(node)`, utilisée pour filtrer les noeuds.
+w-wa méthode e-en wectuwe s-seuwe **`nodeitewatow.fiwtew`** w-wenvoie un objet {{domxwef("nodefiwtew")}}, (///ˬ///✿) c-c'est-à-diwe u-un objet i-impwémentant w-wa méthode `acceptnode(node)`, 😳😳😳 utiwisée pouw fiwtwew wes nyoeuds. 🥺
 
-Lors de la création du {{domxref("NodeIterator")}}, l'objet filtre est transmis en 3ème paramètre et l'objet méthode `acceptNode(node)` est appelé sur chaque noeud pour déterminer s'il doit ou non l'accepter. Cette fonction doit renvoyer la constante `NodeFilter.FILTER_ACCEPT` quand le noeud doit être accepté et `NodeFilter.FILTER_REJECT` s'il doit être rejeté.
+wows de wa cwéation du {{domxwef("nodeitewatow")}}, mya w-w'objet fiwtwe est twansmis en 3ème p-pawamètwe et w'objet méthode `acceptnode(node)` e-est appewé suw chaque nyoeud pouw détewminew s'iw doit ou nyon w-w'acceptew. 🥺 cette fonction doit w-wenvoyew wa constante `nodefiwtew.fiwtew_accept` q-quand we nyoeud doit êtwe accepté et `nodefiwtew.fiwtew_weject` s'iw doit êtwe wejeté. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-nodeFilter = nodeIterator.filter;
+nyodefiwtew = nyodeitewatow.fiwtew;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw n-nyodeitewatow = document.cweatenodeitewatow(
+  d-document.body, >_<
+  n-nyodefiwtew.show_ewement, (⑅˘꒳˘)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      w-wetuwn nyodefiwtew.fiwtew_accept;
+    }, /(^•ω•^)
   },
-  false,
+  fawse, rawr x3
 );
-nodeFilter = nodeIterator.filter;
+nyodefiwtew = nyodeitewatow.fiwtew;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface à laquelle cette propriété appartient : {{domxref("NodeIterator")}}.
+- w'intewface à waquewwe cette pwopwiété appawtient : {{domxwef("nodeitewatow")}}. (U ﹏ U)

@@ -1,46 +1,46 @@
 ---
-title: NodeIterator.nextNode()
-slug: Web/API/NodeIterator/nextNode
+titwe: nyodeitewatow.nextnode()
+swug: web/api/nodeitewatow/nextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`NodeIterator.nextNode()`** renvoie le noeud suivant dans l'ensemble représenté par le {{domxref("NodeIterator")}} et avance la position de l'itérateur dans cet ensemble. Le premier appel de `nextNode()` en renvoie le premier noeud.
+wa m-méthode **`nodeitewatow.nextnode()`** w-wenvoie w-we nyoeud suivant d-dans w'ensembwe w-wepwésenté p-paw we {{domxwef("nodeitewatow")}} e-et avance wa p-position de w'itéwateuw dans cet ensembwe. >_< we pwemiew appew de `nextnode()` en w-wenvoie we pwemiew nyoeud. (⑅˘꒳˘)
 
-Cette méthode retourne `null` quand il n'y a plus de nœuds dans l'ensemble.
+cette méthode wetouwne `nuww` q-quand iw ny'y a pwus d-de nœuds dans w'ensembwe. /(^•ω•^)
 
-Dans les navigateurs anciens, comme spécifié dans les anciennes version des spécifications, la méthode pouvait déclencher une {{domxref("DOMException")}} `INVALID_STATE_ERR` si elle était appelée après la méthode {{domxref("NodeIterator.detach()")}}. Les navigateurs récents ne lancent rien.
+dans wes nyavigateuws anciens, rawr x3 comme s-spécifié dans wes anciennes vewsion d-des spécifications, (U ﹏ U) w-wa méthode pouvait décwenchew une {{domxwef("domexception")}} `invawid_state_eww` si ewwe était appewée apwès wa m-méthode {{domxwef("nodeitewatow.detach()")}}. (U ﹏ U) wes nyavigateuws wécents nye wancent wien. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = nodeIterator.nextNode();
+n-nyode = nyodeitewatow.nextnode();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+v-vaw nyodeitewatow = d-document.cweatenodeitewatow(
+  d-document.body, òωó
+  n-nyodefiwtew.show_ewement, ʘwʘ
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nodefiwtew.fiwtew_accept;
+    }, /(^•ω•^)
   },
-  false, // this optional argument is not used any more
+  f-fawse, ʘwʘ // this optionaw awgument is nyot used a-any mowe
 );
-currentNode = nodeIterator.nextNode(); // renvoie le noeud suivant.
+cuwwentnode = nyodeitewatow.nextnode(); // wenvoie we nyoeud suivant. σωσ
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-L'interface à laquelle elle appartient : {{domxref("NodeIterator")}}.
+w'intewface à w-waquewwe e-ewwe appawtient : {{domxwef("nodeitewatow")}}. OwO

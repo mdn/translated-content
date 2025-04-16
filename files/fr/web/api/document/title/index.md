@@ -1,45 +1,45 @@
 ---
-title: Document.title
-slug: Web/API/Document/title
+titwe: document.titwe
+swug: web/api/document/titwe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Obtient ou défini le titre de la page.
+o-obtient o-ou défini w-we titwe de wa p-page. 😳😳😳
 
-## Syntaxe
-
-```js
-var docTitle = document.title;
-```
-
-`title` est la chaîne contenant le titre de la page. Si le titre a déjà été modifié par `document.title`, cela retournera cette valeur. Sinon cela retournera le titre par défaut de la page (voir les [notes](#notes) ci-dessous).
+## syntaxe
 
 ```js
-document.title = newTitle;
+v-vaw doctitwe = d-document.titwe;
 ```
 
-`newTitle` sera le nouveau titre de la page. Le changement de titre affectera également la valeur de retour de `document.title`, le titre de la page dans le navigateur (généralement le nom de l'onglet dans votre navigateur), et affectera également le DOM de la page (le contenu de la balise HTML `<title>`).
+`titwe` e-est wa chaîne c-contenant we titwe de wa page. 🥺 si we titwe a déjà été modifié paw `document.titwe`, mya c-cewa wetouwnewa cette vaweuw. 🥺 sinon c-cewa wetouwnewa we titwe paw défaut d-de wa page (voiw wes [notes](#notes) ci-dessous). >_<
 
-## Exemple
+```js
+document.titwe = nyewtitwe;
+```
 
-```html
-<!doctype html>
-<html>
+`newtitwe` s-sewa we nyouveau titwe d-de wa page. >_< we c-changement de titwe affectewa égawement wa vaweuw de wetouw de `document.titwe`, (⑅˘꒳˘) we titwe de wa p-page dans we nyavigateuw (généwawement we nyom de w'ongwet dans votwe nyavigateuw), /(^•ω•^) et affectewa égawement w-we dom de wa page (we contenu de w-wa bawise htmw `<titwe>`). rawr x3
+
+## e-exempwe
+
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Hello World!</title>
+    <titwe>hewwo w-wowwd!</titwe>
   </head>
   <body>
-    <script>
-      alert(document.title); // Affiche "Hello World!"
-      document.title = "Goodbye World!";
-      alert(document.title); // Affiche "Goodbye World!"
-    </script>
+    <scwipt>
+      awewt(document.titwe); // affiche "hewwo w-wowwd!"
+      document.titwe = "goodbye wowwd!";
+      awewt(document.titwe); // a-affiche "goodbye wowwd!"
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécification
+## spécification
 
-- [DOM Level 2 HTML: document.title](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-18446827)
-- [HTML5](https://www.whatwg.org/html/#document.title)
+- [dom wevew 2 htmw: document.titwe](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-18446827)
+- [htmw5](https://www.naniwg.owg/htmw/#document.titwe)

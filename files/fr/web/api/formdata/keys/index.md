@@ -1,59 +1,59 @@
 ---
-title: FormData.keys()
-slug: Web/API/FormData/keys
+titwe: fowmdata.keys()
+swug: w-web/api/fowmdata/keys
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.
+w-wa méthode `fowmdata.keys()` w-wenvoie une {{jsxwef("wes_pwotocowes_itewation", (U ﹏ U) "itéwation")}} p-pewmettant de p-pawcouwiw toutes w-wes cwés contenues d-dans cet objet. >_< wes cwés sont des objets {{domxwef("usvstwing")}}. rawr x3
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette méthode est disponibwe d-dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.keys();
+f-fowmdata.keys();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Retourne une {{jsxref("Les_protocoles_iteration", "itération")}}.
+wetouwne une {{jsxwef("wes_pwotocowes_itewation", nyaa~~ "itéwation")}}. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-// Créer un object FormData test
-var formData = new FormData();
-formData.append("cle1", "valeur1");
-formData.append("cle2", "valeur2");
+// cwéew un o-object fowmdata test
+vaw fowmdata = n-nyew fowmdata();
+f-fowmdata.append("cwe1", rawr x3 "vaweuw1");
+fowmdata.append("cwe2", (✿oωo) "vaweuw2");
 
-// Affiche les clés
-for (var key of formData.keys()) {
-  console.log(key);
+// affiche wes cwés
+fow (vaw key of fowmdata.keys()) {
+  c-consowe.wog(key);
 }
 ```
 
-Le résultat est :
+we wésuwtat est :
 
 ```
-cle1
-cle2
+cwe1
+cwe2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew w-wes objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

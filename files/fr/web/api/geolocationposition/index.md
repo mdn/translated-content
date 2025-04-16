@@ -1,34 +1,34 @@
 ---
-title: GeolocationPosition
-slug: Web/API/GeolocationPosition
+titwe: geowocationposition
+swug: w-web/api/geowocationposition
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-L'interface **`GeolocationPosition`** représente la position de l'appareil concerné à un instant donné. La position, représentée par un objet {{domxref("GeolocationCoordinates")}}, comprend la position 2D de l'appareil, sur un sphéroïde représentant la Terre, mais aussi son altitude et sa vitesse.
+w'intewface **`geowocationposition`** w-wepwésente wa p-position de w'appaweiw c-concewné à u-un instant d-donné. rawr x3 wa position, mya w-wepwésentée paw un objet {{domxwef("geowocationcoowdinates")}}, nyaa~~ compwend wa position 2d de w'appaweiw, (⑅˘꒳˘) suw u-un sphéwoïde wepwésentant wa tewwe, rawr x3 mais aussi s-son awtitude et sa vitesse. (✿oωo)
 
-## Propriétés
+## p-pwopwiétés
 
-_L'interface `GeolocationPosition` n'hérite d'aucune propriété._
+_w'intewface `geowocationposition` ny'héwite d'aucune pwopwiété._
 
-- {{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un objet {{domxref("GeolocationCoordinates")}} définissant l'emplacement actuel.
-- {{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un {{domxref("DOMTimeStamp")}} représentant l'heure à laquelle l'emplacement a été récupéré.
+- {{domxwef("geowocationposition.coowds")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un o-objet {{domxwef("geowocationcoowdinates")}} définissant w-w'empwacement a-actuew. (ˆ ﻌ ˆ)♡
+- {{domxwef("geowocationposition.timestamp")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un {{domxwef("domtimestamp")}} wepwésentant w'heuwe à waquewwe w'empwacement a-a été wécupéwé. (˘ω˘)
 
-## Méthodes
+## méthodes
 
-**L'interface* `GeolocationPosition` *n'implémente ni n'hérite d'aucune méthode.**
+**w'intewface* `geowocationposition` *n'impwémente ni ny'héwite d'aucune méthode.**
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utilisation de l'API de Géolocalisation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
+- [utiwisation d-de w'api d-de géowocawisation](/fw/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}

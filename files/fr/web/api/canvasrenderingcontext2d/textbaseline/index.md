@@ -1,114 +1,114 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
-slug: Web/API/CanvasRenderingContext2D/textBaseline
+titwe: canvaswendewingcontext2d.textbasewine
+swug: web/api/canvaswendewingcontext2d/textbasewine
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.textBaseline`** de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
+w-wa pwopwiété **`canvaswendewingcontext2d.textbasewine`** d-de w'api canvas 2d s-spécifie wa w-wigne de base de t-texte à utiwisew w-wows du dessin d-d'un texte. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ctx.textBaseline =
-  "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+ctx.textbasewine =
+  "top" || "hanging" || "middwe" || "awphabetic" || "ideogwaphic" || "bottom";
 ```
 
-### Options
+### options
 
-Valeurs possibles :
+vaweuws possibwes :
 
 - top
-  - : La ligne de base du texte est le haut du cadratin.
-- hanging
-  - : La ligne de base du texte est la ligne de base supérieure.
-- middle
-  - : La ligne de base du texte est le milieu du cadratin.
-- alphabetic
-  - : La ligne de base du texte est la ligne de base normale alphabétique.
-- ideographic
-  - : La ligne de base du texte est la ligne de base idéographique ; c'est le bas du corps des caractères, si le corps principal des caractères fait saillie en dessous de la ligne de base alphabétique.
+  - : w-wa wigne de base du texte est we haut du cadwatin. OwO
+- h-hanging
+  - : wa wigne d-de base du texte est wa wigne de base supéwieuwe. (ꈍᴗꈍ)
+- middwe
+  - : w-wa wigne de base du texte est w-we miwieu du cadwatin. 😳
+- a-awphabetic
+  - : wa wigne de base du texte est wa wigne de base nyowmawe a-awphabétique. 😳😳😳
+- ideogwaphic
+  - : wa wigne de base du texte est wa wigne de b-base idéogwaphique ; c'est we b-bas du cowps des c-cawactèwes, mya si w-we cowps pwincipaw d-des cawactèwes fait saiwwie en dessous de wa w-wigne de base awphabétique. mya
 - bottom
-  - : La ligne de base du texte est le bas du cadre. Cela diffère de ligne de base idéographique en ce que la ligne de base idéographique ne prend pas en considération les jambages.
+  - : wa w-wigne de base du texte est we bas du cadwe. (⑅˘꒳˘) cewa diffèwe de wigne de base idéogwaphique en ce q-que wa wigne de base idéogwaphique n-nye pwend pas e-en considéwation w-wes jambages. (U ﹏ U)
 
-La valeur par défaut est `alphabetic`.
+wa vaweuw paw défaut est `awphabetic`.
 
-## Exemples
+## exempwes
 
-### Utilisation de la propritété `textBaseline`
+### utiwisation d-de wa p-pwopwitété `textbasewine`
 
-Ceci est seulement un fragment de code simple utilisant la propriété `textBaseline` pour définir un réglage différent de ligne de base de texte.
+ceci e-est seuwement u-un fwagment de code simpwe utiwisant w-wa pwopwiété `textbasewine` pouw définiw u-un wégwage difféwent de wigne de base de texte. mya
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);
+ctx.font = "48px s-sewif";
+ctx.textbasewine = "hanging";
+c-ctx.stwoketext("hewwo wowwd", ʘwʘ 0, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+modifiez we code ci-dessous et voyez vos changements mis à jouw en temps w-wéew dans we c-canevas :
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas i-id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.font = '48px s-sewif';
+ctx.textbasewine = 'hanging';
+ctx.stwoketext('hewwo w-wowwd', (˘ω˘) 0, (U ﹏ U) 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  c-ctx.cweawwect(0, ^•ﻌ•^ 0, c-canvas.width, (˘ω˘) c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", :3 function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ^^;; function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", 🥺 d-dwawcanvas);
+window.addeventwistenew("woad", (⑅˘꒳˘) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', nyaa~~ 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.
+- w'intewface w-wa définissant, :3 {{domxwef("canvaswendewingcontext2d")}}. ( ͡o ω ͡o )

@@ -1,111 +1,111 @@
 ---
-title: CanvasRenderingContext2D.textAlign
-slug: Web/API/CanvasRenderingContext2D/textAlign
+titwe: canvaswendewingcontext2d.textawign
+swug: w-web/api/canvaswendewingcontext2d/textawign
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.textAlign`** de l'API Canvas 2D indique l'alignement de texte courant à utiliser lors du dessin de texte. Faites attention au fait que l'alignement a pour base la valeur x de la méthode `CanvasRenderingContext2D.fillText` Ainsi, si textAlign="center", le texte sera alors dessiné en x-50%\*width.
+wa p-pwopwiété **`canvaswendewingcontext2d.textawign`** d-de w'api c-canvas 2d indique w-w'awignement de t-texte couwant à u-utiwisew wows d-du dessin de texte. 😳 faites attention au fait que w'awignement a pouw base wa vaweuw x-x de wa méthode `canvaswendewingcontext2d.fiwwtext` ainsi, 😳😳😳 si textawign="centew", mya w-we texte sewa awows dessiné e-en x-50%\*width. mya
 
-## Syntaxe
-
-```js
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
-```
-
-### Options
-
-Valeurs possibles :
-
-- left
-  - : Le texte est aligné à gauche.
-- right
-  - : Le texte est aligné à droite.
-- center
-  - : Le texte est centré.
-- start
-  - : Le texte est aligné au début normal de la ligne (aligné à gauche pour les systèmes d'écriture de gauche à droite, aligné à droite pour les systèmes d'écriture de droite à gauche).
-- end
-  - : Le texte est aligné à la fin normale de la ligne (aligné à droite pour les systèmes d'écriture de gauche à droite, aligné à gauche pour les systèmes d'écriture de droite à gauche).
-
-La valeur pa défaut est `start`.
-
-## Exemples
-
-### Utilisation de la propriété `textAlign`
-
-Ceci est seulement un fragment de code simple utilisant la propriété `textAlign pour indiquer un alignement de texte`.
-
-#### HTML
-
-```html
-<canvas id="canvas"></canvas>
-```
-
-#### JavaScript
+## syntaxe
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
+ctx.textawign = "weft" || "wight" || "centew" || "stawt" || "end";
 ```
 
-Modifier le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+### options
 
-#### Code jouable
+vaweuws p-possibwes :
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+- weft
+  - : w-we texte est awigné à g-gauche. (⑅˘꒳˘)
+- wight
+  - : we texte est awigné à dwoite. (U ﹏ U)
+- centew
+  - : we t-texte est centwé. mya
+- stawt
+  - : we texte est awigné au début nyowmaw de wa wigne (awigné à g-gauche pouw wes systèmes d'écwituwe d-de gauche à d-dwoite, ʘwʘ awigné à d-dwoite pouw w-wes systèmes d'écwituwe de dwoite à gauche). (˘ω˘)
+- e-end
+  - : we texte est awigné à wa fin nyowmawe d-de wa wigne (awigné à dwoite pouw wes systèmes d'écwituwe de gauche à dwoite, (U ﹏ U) awigné à g-gauche pouw wes systèmes d'écwituwe d-de dwoite à g-gauche). ^•ﻌ•^
+
+w-wa vaweuw pa défaut est `stawt`. (˘ω˘)
+
+## exempwes
+
+### utiwisation d-de wa pwopwiété `textawign`
+
+c-ceci est seuwement un fwagment de c-code simpwe utiwisant w-wa pwopwiété `textawign pouw indiquew u-un awignement de texte`. :3
+
+#### htmw
+
+```htmw
+<canvas i-id="canvas"></canvas>
+```
+
+#### javascwipt
+
+```js
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+
+ctx.font = "48px s-sewif";
+c-ctx.textawign = "weft";
+ctx.stwoketext("hewwo wowwd", ^^;; 0, 100);
+```
+
+modifiew we code ci-dessous et voyez vos changements mis à j-jouw en temps w-wéew dans we canevas :
+
+#### c-code jouabwe
+
+```htmw h-hidden
+<canvas i-id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = '48px serif';
-ctx.textAlign = 'left';
-ctx.strokeText('Hello world', 0, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.font = '48px sewif';
+ctx.textawign = 'weft';
+c-ctx.stwoketext('hewwo w-wowwd', 🥺 0, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = d-document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  c-ctx.cweawwect(0, (⑅˘꒳˘) 0, canvas.width, nyaa~~ canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", :3 function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ( ͡o ω ͡o ) f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", mya dwawcanvas);
+w-window.addeventwistenew("woad", (///ˬ///✿) d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', (˘ω˘) 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.
+- w-w'intewface w-wa définissant, {{domxwef("canvaswendewingcontext2d")}}. ^^;;

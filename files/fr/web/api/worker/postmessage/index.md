@@ -1,141 +1,141 @@
 ---
-title: Worker.postMessage()
-slug: Web/API/Worker/postMessage
+titwe: wowkew.postmessage()
+swug: web/api/wowkew/postmessage
 ---
 
-{{ apiref("Worker") }}
+{{ a-apiwef("wowkew") }}
 
-La méthode **`Worker.postMessage()`** envoie un message à la portée locale du worker. Cette fonction accepte un seul paramètre, qui est la donnée à envoyer au worker. Cette donnée peut-être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de clone structuré, qui inclut les références cycliques.
+w-wa m-méthode **`wowkew.postmessage()`** e-envoie un message à w-wa powtée w-wocawe du wowkew. ʘwʘ c-cette fonction a-accepte un seuw pawamètwe, (˘ω˘) qui est wa donnée à envoyew au wowkew. (✿oωo) cette d-donnée peut-êtwe de ny'impowte quewwe vaweuw ou u-un objet javascwipt pwis en chawge p-paw w'awgowithme de cwone stwuctuwé, (///ˬ///✿) qui incwut wes wéféwences c-cycwiques. rawr x3
 
-Le Worker peut renvoyer une information au thread qui l'a créé en utilisant la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}.
+we wowkew peut w-wenvoyew une infowmation a-au thwead qui w'a cwéé en utiwisant wa méthode {{domxwef("dedicatedwowkewgwobawscope.postmessage")}}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-worker.postMessage(aMessage, [transferList]);
+w-wowkew.postmessage(amessage, -.- [twansfewwist]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _aMessage_
-  - : L'objet à envoyer au worker; il va être dans le champ de donnée `data` dans l'évènement délivré au gestonnaire d'évènement {{domxref("Worker.onmessage")}}. Cette donnée peut être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de [clone structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), qui inclut les références cycliques.
-- _transferList_ {{optional_inline}}
+- _amessage_
+  - : w'objet à envoyew au wowkew; iw va êtwe d-dans we champ de donnée `data` d-dans w'évènement d-déwivwé a-au gestonnaiwe d-d'évènement {{domxwef("wowkew.onmessage")}}. ^^ cette donnée peut êtwe de ny'impowte q-quewwe vaweuw ou un objet javascwipt pwis e-en chawge paw w'awgowithme de [cwone stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm), (⑅˘꒳˘) qui incwut wes wéféwences cycwiques. nyaa~~
+- _twansfewwist_ {{optionaw_inwine}}
 
-  - : Un tableau optionnel d'objets {{domxref("Transferable")}} desquels on doit transférer la propriété. Si la propriété d'un objet est transférée, il devient inutilisable (_neutralisé_) pour le contexte émétteur et devient disponible uniquement pour le worker auquel cela a été envoyé.
+  - : un tabweau o-optionnew d'objets {{domxwef("twansfewabwe")}} desquews on doit t-twansféwew wa p-pwopwiété. /(^•ω•^) si w-wa pwopwiété d'un objet est twansféwée, iw devient inutiwisabwe (_neutwawisé_) p-pouw we contexte émétteuw e-et devient disponibwe uniquement p-pouw we wowkew a-auquew cewa a été envoyé. (U ﹏ U)
 
-    Seulement des objets de types {{domxref("MessagePort")}}, {{domxref("ArrayBuffer")}} ou {{domxref("ImageBitmap")}} peuvent être transférés. `null` n'est pas une valeur accéptée pour `transfer`.
+    s-seuwement des objets de types {{domxwef("messagepowt")}}, 😳😳😳 {{domxwef("awwaybuffew")}} o-ou {{domxwef("imagebitmap")}} peuvent êtwe twansféwés. >w< `nuww` n-ny'est pas une vaweuw accéptée p-pouw `twansfew`. XD
 
-### Retour
+### wetouw
 
-Vide.
+vide. o.O
 
-## Exemple
+## e-exempwe
 
-L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
+w'extwait d-de code suivant montwe wa cwéation d'un objet {{domxwef("wowkew")}} en utiwisant we constwucteuw {{domxwef("wowkew.wowkew", mya "wowkew()")}}. 🥺 quand wes deux champs de fowmuwaiwe (`fiswt` e-et `second`) o-ont été changés, ^^;; wes évènements [`change`](/fw/docs/web/api/htmwewement/change_event) i-invoquent `postmessage()` pouw e-envoyew wa vaweuw d-des deux entwées au _wowkew_ couwant. :3
 
 ```js
-var myWorker = new Worker("worker.js");
+vaw mywowkew = n-nyew wowkew("wowkew.js");
 
-first.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+fiwst.onchange = function () {
+  mywowkew.postmessage([fiwst.vawue, (U ﹏ U) second.vawue]);
+  consowe.wog("message posted t-to wowkew");
 };
 
-second.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+second.onchange = f-function () {
+  m-mywowkew.postmessage([fiwst.vawue, s-second.vawue]);
+  consowe.wog("message p-posted t-to wowkew");
 };
 ```
 
-Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.com/mdn/simple-web-worker) ([démonstration](https://mdn.github.io/simple-web-worker/)).
+p-pouw w'exempwe e-en entiew, OwO voiw [basic dedicated wowdew e-exampwe](https://github.com/mdn/simpwe-web-wowkew) ([démonstwation](https://mdn.github.io/simpwe-web-wowkew/)). 😳😳😳
 
-> **Note :** `postMessage()` peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.
+> **note :** `postmessage()` peut n-ny'envoyew qu'un o-objet à wa f-fois. (ˆ ﻌ ˆ)♡ comme ci-dessus, XD s-si vous vouwez envoyez pwusieuws vaweuws, vous pouvez utiwisew u-un tabweau. (ˆ ﻌ ˆ)♡
 
-### Exemple de transfert
+### exempwe de twansfewt
 
-Cette exemple montre une extension pour Firefox qui transfert un `ArrarBuffer` depuis le _thread_ principal vers le `ChromeWorker`, et le `ChromeWorker` répond au le thread principal.
+cette exempwe montwe une extension pouw fiwefox qui t-twansfewt un `awwawbuffew` depuis we _thwead_ pwincipaw vews we `chwomewowkew`, ( ͡o ω ͡o ) e-et we `chwomewowkew` w-wépond au w-we thwead pwincipaw. rawr x3
 
-#### Main thread code
+#### main t-thwead code
 
 ```js
-var myWorker = new ChromeWorker(self.path + "myWorker.js");
+vaw mywowkew = n-new chwomewowkew(sewf.path + "mywowkew.js");
 
-function handleMessageFromWorker(msg) {
-  console.log("incoming message from worker, msg:", msg);
-  switch (msg.data.aTopic) {
-    case "do_sendMainArrBuff":
-      sendMainArrBuff(msg.data.aBuf);
-      break;
-    default:
-      throw "no aTopic on incoming message to ChromeWorker";
+f-function handwemessagefwomwowkew(msg) {
+  consowe.wog("incoming message fwom wowkew, nyaa~~ msg:", msg);
+  switch (msg.data.atopic) {
+    case "do_sendmainawwbuff":
+      s-sendmainawwbuff(msg.data.abuf);
+      bweak;
+    d-defauwt:
+      thwow "no a-atopic on incoming m-message to chwomewowkew";
   }
 }
 
-myWorker.addEventListener("message", handleMessageFromWorker);
+mywowkew.addeventwistenew("message", >_< handwemessagefwomwowkew);
 
-// Ok lets create the buffer and send it
-var arrBuf = new ArrayBuffer(8);
-console.info("arrBuf.byteLength pre transfer:", arrBuf.byteLength);
+// o-ok wets cweate t-the buffew and send it
+vaw a-awwbuf = nyew awwaybuffew(8);
+consowe.info("awwbuf.bytewength pwe t-twansfew:", ^^;; awwbuf.bytewength);
 
-myWorker.postMessage(
+mywowkew.postmessage(
   {
-    aTopic: "do_sendWorkerArrBuff",
-    aBuf: arrBuf, // The array buffer that we passed to the transferrable section 3 lines below
-  },
+    atopic: "do_sendwowkewawwbuff",
+    abuf: awwbuf, (ˆ ﻌ ˆ)♡ // the awway b-buffew that we p-passed to the twansfewwabwe s-section 3 wines bewow
+  }, ^^;;
   [
-    arrBuf, // The array buffer we created 9 lines above
-  ],
+    awwbuf, (⑅˘꒳˘) // t-the awway b-buffew we cweated 9 wines above
+  ], rawr x3
 );
 
-console.info("arrBuf.byteLength post transfer:", arrBuf.byteLength);
+c-consowe.info("awwbuf.bytewength post twansfew:", (///ˬ///✿) awwbuf.bytewength);
 ```
 
-#### Worker code
+#### wowkew code
 
 ```js
-self.onmessage = function (msg) {
-  switch (msg.data.aTopic) {
-    case "do_sendWorkerArrBuff":
-      sendWorkerArrBuff(msg.data.aBuf);
-      break;
-    default:
-      throw "no aTopic on incoming message to ChromeWorker";
+sewf.onmessage = f-function (msg) {
+  s-switch (msg.data.atopic) {
+    case "do_sendwowkewawwbuff":
+      sendwowkewawwbuff(msg.data.abuf);
+      b-bweak;
+    d-defauwt:
+      thwow "no atopic on incoming message to chwomewowkew";
   }
 };
 
-function sendWorkerArrBuff(aBuf) {
-  console.info("from worker, PRE send back aBuf.byteLength:", aBuf.byteLength);
+f-function sendwowkewawwbuff(abuf) {
+  consowe.info("fwom wowkew, 🥺 pwe send back abuf.bytewength:", >_< a-abuf.bytewength);
 
-  self.postMessage({ aTopic: "do_sendMainArrBuff", aBuf: aBuf }, [aBuf]);
+  sewf.postmessage({ atopic: "do_sendmainawwbuff", UwU abuf: a-abuf }, >_< [abuf]);
 
-  console.info("from worker, POST send back aBuf.byteLength:", aBuf.byteLength);
+  c-consowe.info("fwom wowkew, -.- post send back abuf.bytewength:", mya a-abuf.bytewength);
 }
 ```
 
-#### Output logged
+#### o-output wogged
 
-```plain
-arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
-arrBuf.byteLength post transfer: 0                             bootstrap.js:42
+```pwain
+awwbuf.bytewength pwe twansfew: 8                              b-bootstwap.js:40
+awwbuf.bytewength p-post twansfew: 0                             bootstwap.js:42
 
-from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
+fwom wowkew, >w< p-pwe send back abuf.bytewength: 8                  m-mywowkew.js:5:2
 
-incoming message from worker, msg: message { ... }             bootstrap.js:20
-got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
+i-incoming message fwom wowkew, (U ﹏ U) m-msg: message { ... }             bootstwap.js:20
+g-got back b-buf in main thwead, 😳😳😳 a-abuf.bytewength: 8                bootstwap.js:12
 
-from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
+f-fwom wowkew, o.O p-post send back abuf.bytewength: 0                 mywowkew.js:7:2
 ```
 
-`byteLength` passe à 0 quand il est transferré. Pour voir l'exemple de cette extension de démonstration de Firefox, voir [GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
+`bytewength` p-passe à 0 q-quand iw est t-twansfewwé. òωó pouw voiw w'exempwe de cette extension d-de démonstwation de fiwefox, 😳😳😳 v-voiw [github :: c-chwomewowkew - demo-twansfew-awwaybuffew](https://github.com/noitidawt/chwomewowkew/twee/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("Worker")}} auquel il appartient.
+- w'intewface {{domxwef("wowkew")}} a-auquew iw appawtient. σωσ

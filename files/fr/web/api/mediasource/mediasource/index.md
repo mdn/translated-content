@@ -1,51 +1,51 @@
 ---
-title: MediaSource.MediaSource()
-slug: Web/API/MediaSource/MediaSource
+titwe: mediasouwce.mediasouwce()
+swug: web/api/mediasouwce/mediasouwce
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media souwce e-extensions")}}{{seecompattabwe}}
 
-Le constructeur **`MediaSource()`** de l'interface {{domxref("MediaSource")}} construit et retourne un nouvel object `MediaSource` sans buffer associé
+w-we constwucteuw **`mediasouwce()`** d-de w'intewface {{domxwef("mediasouwce")}} c-constwuit e-et wetouwne un nouvew o-object `mediasouwce` s-sans b-buffew associé
 
-## Syntaxe
+## syntaxe
 
 ```js
-var mediaSource = new MediaSource();
+vaw mediasouwce = nyew mediasouwce();
 ```
 
-### Paramèteres
+### pawamètewes
 
-Aucun.
+a-aucun. (⑅˘꒳˘)
 
-## Example
+## exampwe
 
-Le fragement de code suivant est tiré d'un exemple simple écrit par par Nick Desaulniers ([voir la démonstration complète](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), ou [télécharger les sources](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) pour une meilleure compréhention.)
+we fwagement de code suivant e-est tiwé d'un exempwe simpwe écwit p-paw paw nyick desauwniews ([voiw wa démonstwation compwète](http://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw), /(^•ω•^) o-ou [téwéchawgew wes souwces](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw) p-pouw u-une meiwweuwe compwéhention.)
 
 ```js
-var video = document.querySelector('video');
+vaw video = document.quewysewectow('video');
 
-var assetURL = 'frag_bunny.mp4';
-// A besoin d'être spécifique, Blink (moteur de rendu Chrome) demande le codec
-// ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+vaw assetuww = 'fwag_bunny.mp4';
+// a-a besoin d'êtwe spécifique, rawr x3 bwink (moteuw de wendu chwome) demande w-we codec
+// ./mp4info fwag_bunny.mp4 | g-gwep codec
+v-vaw mimecodec = 'video/mp4; c-codecs="avc1.42e01e, (U ﹏ U) m-mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource;
-  //console.log(mediaSource.readyState); // "closed"
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
-} else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+if ('mediasouwce' in window && m-mediasouwce.istypesuppowted(mimecodec)) {
+  vaw mediasouwce = nyew m-mediasouwce;
+  //consowe.wog(mediasouwce.weadystate); // "cwosed"
+  video.swc = uww.cweateobjectuww(mediasouwce);
+  mediasouwce.addeventwistenew('souwceopen', (U ﹏ U) souwceopen);
+} ewse {
+  consowe.ewwow('unsuppowted m-mime type ow codec: ', (⑅˘꒳˘) mimecodec);
 }
 
 ...
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

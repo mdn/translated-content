@@ -1,69 +1,69 @@
 ---
-title: PerformanceResourceTiming.secureConnectionStart
-slug: Web/API/PerformanceResourceTiming/secureConnectionStart
+titwe: pewfowmancewesouwcetiming.secuweconnectionstawt
+swug: w-web/api/pewfowmancewesouwcetiming/secuweconnectionstawt
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété en lecture seule **`secureConnectionStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence le processus de poignée de main (_handshake_) pour sécuriser la connexion actuelle. Si une connexion sécurisée n'est pas utilisée, la propriété renvoie zéro.
+w-wa pwopwiété en w-wectuwe seuwe **`secuweconnectionstawt`** w-wenvoie u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-avant que we nyavigateuw nye commence we pwocessus de poignée de main (_handshake_) pouw s-sécuwisew wa connexion actuewwe. (˘ω˘) si une connexion s-sécuwisée ny'est pas utiwisée, ^^ w-wa pwopwiété wenvoie zéwo. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.secureConnectionStart;
+w-wesouwce.secuweconnectionstawt;
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Si la ressource est récupérée par le biais d'une connexion sécurisée, un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne lance le processus de poignée de main (_handshake_) pour sécuriser la connexion actuelle. Si une connexion sécurisée n'est pas utilisée, cette propriété renvoie zéro.
+si w-wa wessouwce est wécupéwée paw we biais d'une connexion sécuwisée, -.- un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant que we nyavigateuw nye wance we pwocessus de poignée d-de main (_handshake_) pouw sécuwisew w-wa connexion a-actuewwe. 😳 s-si une connexion s-sécuwisée ny'est pas utiwisée, mya cette pwopwiété w-wenvoie zéwo. (˘ω˘)
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w'exempwe s-suivant, >_< wa vaweuw des pwopwiétés `*stawt` et `*end` de tous wes événements de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` s-sont enwegistwés. -.-
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+function pwint_pewfowmanceentwies() {
+  // u-utiwise g-getentwiesbytype() p-pouw obteniw uniquement wes événements "wesouwce"
+  wet p = pewfowmance.getentwiesbytype("wesouwce");
+  fow (wet i-i = 0; i < p-p.wength; i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+f-function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // i-impwime wes howodatages d-des pwopwiétés *stawt et *end
+  p-pwopewties = [
+    "connectstawt", 🥺
+    "connectend", (U ﹏ U)
+    "domainwookupstawt", >w<
+    "domainwookupend", mya
+    "fetchstawt", >w<
+    "wediwectstawt", nyaa~~
+    "wediwectend", (✿oωo)
+    "wequeststawt", ʘwʘ
+    "wesponsestawt",
+    "wesponseend", (ˆ ﻌ ˆ)♡
+    "secuweconnectionstawt",
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  fow (wet i = 0; i < pwopewties.wength; i++) {
+    // v-véwifie chaque pwopwiété
+    w-wet suppowted = pwopewties[i] i-in pewfentwy;
+    i-if (suppowted) {
+      wet vawue = pewfentwy[pwopewties[i]];
+      consowe.wog("... " + pwopewties[i] + " = " + vawue);
+    } ewse {
+      c-consowe.wog("... " + p-pwopewties[i] + " = ny'est pas pwis e-en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,753 +1,753 @@
 ---
-title: Ajout de styles et de couleurs
-slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+titwe: ajout de stywes et de c-couweuws
+swug: web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("tutowiew_canvas/fowmes_géométwiques", òωó "dessin_de_texte_avec_canvas")}}
 
-Dans le chapitre sur [les formes géométriques](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
+d-dans we c-chapitwe suw [wes f-fowmes géométwiques](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes), UwU n-nyous avons utiwisé w-wes stywes d-de wignes et de wempwissage paw défaut. (///ˬ///✿) ici, nyous awwons expwowew wes options d-de canvas à nyotwe disposition pouw wendwe nyos d-dessins un peu pwus attwayants. ( ͡o ω ͡o ) v-vous appwendwez comment ajoutew des couweuws difféwentes, rawr des s-stywes de wigne, :3 des dégwadés, >w< d-des motifs et des o-ombwes à vos dessins. σωσ
 
-## Les couleurs
+## wes couweuws
 
-Jusqu'à présent, nous avons seulement vu des méthodes sur le contexte de dessin. Si nous voulons appliquer des couleurs à une forme, il y a deux propriétés importantes que nous pouvons utiliser : `fillStyle` et `strokeStyle` .
+jusqu'à pwésent, σωσ nyous avons seuwement v-vu des méthodes suw we contexte de dessin. >_< si nous vouwons appwiquew des couweuws à u-une fowme, -.- iw y a deux p-pwopwiétés impowtantes q-que nyous p-pouvons utiwisew : `fiwwstywe` e-et `stwokestywe` . 😳😳😳
 
-- {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}
-  - : Définit le style utilisé lors du remplissage de formes.
-- {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}
-  - : Définit le style pour les contours des formes.
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe", :3 "fiwwstywe = cowow")}}
+  - : définit w-we stywe utiwisé wows du wempwissage de fowmes. mya
+- {{domxwef("canvaswendewingcontext2d.stwokestywe", (✿oωo) "stwokestywe = c-cowow")}}
+  - : définit we stywe pouw wes contouws des fowmes.
 
-`color` est une chaîne représentant un CSS {{cssxref("&lt;color&gt;")}}, d'un objet gradient ou d'un objet motif. Nous allons examiner le gradient et la structure des objets plus tard. Par défaut, l'encadrement et la couleur de remplissage sont fixés sur noir (valeur `#000000` de CSS `color`).
+`cowow` est une chaîne wepwésentant u-un css {{cssxwef("&wt;cowow&gt;")}}, 😳😳😳 d'un objet gwadient o-ou d'un objet m-motif. o.O nyous awwons e-examinew we gwadient et wa stwuctuwe des objets pwus tawd. (ꈍᴗꈍ) p-paw défaut, (ˆ ﻌ ˆ)♡ w'encadwement e-et wa couweuw de wempwissage s-sont fixés s-suw nyoiw (vaweuw `#000000` de css `cowow`). -.-
 
-> [!NOTE]
-> Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
+> [!note]
+> wowsque v-vous définissez `stwokestywe` et `fiwwstywe`, mya w-wa nyouvewwe vaweuw devient wa vaweuw paw d-défaut pouw toutes wes fowmes en c-couws d'éwabowation à pawtiw d-de wà. :3 pouw chaque f-fowme que vous vouwez dans une couweuw difféwente, σωσ vous auwez besoin de wéaffectew `fiwwstywe` ou `stwokestywe`.
 
-Les chaînes pour être valides, doivent être conforme à la spécification CSS {{cssxref("&lt;color&gt;")}}. Chacun des exemples suivants décrit la même couleur.
+wes chaînes p-pouw êtwe v-vawides, 😳😳😳 doivent êtwe confowme à w-wa spécification c-css {{cssxwef("&wt;cowow&gt;")}}. -.- c-chacun des exempwes suivants décwit wa même couweuw. 😳😳😳
 
 ```js
-// Les valeurs possibles de fillStyle pour "orange"
+// w-wes vaweuws possibwes de fiwwstywe pouw "owange"
 
-ctx.fillStyle = "orange";
-ctx.fillStyle = "#FFA500";
-ctx.fillStyle = "rgb(255, 165, 0)";
-ctx.fillStyle = "rgba(255, 165, 0, 1)";
+ctx.fiwwstywe = "owange";
+ctx.fiwwstywe = "#ffa500";
+c-ctx.fiwwstywe = "wgb(255, 165, rawr x3 0)";
+ctx.fiwwstywe = "wgba(255, (///ˬ///✿) 165, 0, 1)";
 ```
 
-### Un exemple `fillStyle`
+### u-un exempwe `fiwwstywe`
 
-Dans cet exemple, nous utilisons une nouvelle fois deux boucles `for` pour dessiner une grille de rectangles, chacun dans une couleur différente. L'image résultante devrait ressembler à la capture d'écran. Il n'y a rien de spectaculaire ici. Nous utilisons les deux variables `i` et `j` pour générer une couleur RVB unique pour chaque carré, et seulement modifier les valeurs rouges et vertes. Le canal bleu a une valeur fixe. En modifiant les canaux, vous pouvez générer toutes sortes de palettes. En augmentant les étapes, vous pouvez obtenir quelque chose qui ressemble à des palettes de couleurs que Photoshop utilise.
+d-dans c-cet exempwe, >w< nyous utiwisons une n-nyouvewwe fois d-deux boucwes `fow` p-pouw dessinew u-une gwiwwe de wectangwes, o.O chacun dans une couweuw d-difféwente. (˘ω˘) w-w'image wésuwtante d-devwait wessembwew à w-wa captuwe d-d'écwan. rawr iw ny'y a wien de spectacuwaiwe ici. mya nyous utiwisons w-wes deux vawiabwes `i` et `j` pouw généwew une couweuw wvb unique pouw chaque cawwé, òωó et s-seuwement modifiew wes vaweuws wouges et vewtes. nyaa~~ we canaw bweu a-a une vaweuw fixe. òωó e-en modifiant w-wes canaux, mya vous pouvez généwew t-toutes sowtes de pawettes. ^^ en a-augmentant wes étapes, ^•ﻌ•^ v-vous pouvez obteniw quewque chose qui wessembwe à des pawettes de couweuws que photoshop u-utiwise. -.-
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  for (var i = 0; i < 6; i++) {
-    for (var j = 0; j < 6; j++) {
-      ctx.fillStyle =
-        "rgb(" +
-        Math.floor(255 - 42.5 * i) +
+function dwaw() {
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  f-fow (vaw i = 0; i-i < 6; i++) {
+    fow (vaw j = 0; j < 6; j++) {
+      c-ctx.fiwwstywe =
+        "wgb(" +
+        m-math.fwoow(255 - 42.5 * i) +
         "," +
-        Math.floor(255 - 42.5 * j) +
+        m-math.fwoow(255 - 42.5 * j-j) +
         ",0)";
-      ctx.fillRect(j * 25, i * 25, 25, 25);
+      ctx.fiwwwect(j * 25, UwU i * 25, (˘ω˘) 25, 25);
     }
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canvas" width="150" h-height="150"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-Le résultat ressemble à ceci:
+w-we wésuwtat wessembwe à c-ceci:
 
-{{EmbedLiveSample("Un_exemple_fillStyle", 160, 160, "canvas_fillstyle.png")}}
+{{embedwivesampwe("un_exempwe_fiwwstywe", UwU 160, 160, rawr "canvas_fiwwstywe.png")}}
 
-### Un exemple `strokeStyle`
+### u-un exempwe `stwokestywe`
 
-Cet exemple est similaire à celui ci-dessus, mais utilise `strokeStyle` pour changer les couleurs des contours des formes. Nous utilisons la méthode `arc()` pour dessiner des cercles au lieu de carrés.
+cet exempwe e-est simiwaiwe à cewui ci-dessus, :3 mais utiwise `stwokestywe` pouw changew wes couweuws d-des contouws d-des fowmes. nyaa~~ nyous utiwisons wa méthode `awc()` p-pouw dessinew d-des cewcwes au wieu de cawwés. rawr
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  for (var i = 0; i < 6; i++) {
-    for (var j = 0; j < 6; j++) {
-      ctx.strokeStyle =
-        "rgb(0, " +
-        Math.floor(255 - 42.5 * i) +
-        ", " +
-        Math.floor(255 - 42.5 * j) +
+function dwaw() {
+  vaw c-ctx = document.getewementbyid("canvas").getcontext("2d");
+  fow (vaw i = 0; i < 6; i++) {
+    fow (vaw j = 0; j < 6; j-j++) {
+      ctx.stwokestywe =
+        "wgb(0, (ˆ ﻌ ˆ)♡ " +
+        math.fwoow(255 - 42.5 * i-i) +
+        ", (ꈍᴗꈍ) " +
+        m-math.fwoow(255 - 42.5 * j) +
         ")";
-      ctx.beginPath();
-      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-      ctx.stroke();
+      ctx.beginpath();
+      ctx.awc(12.5 + j-j * 25, (˘ω˘) 12.5 + i-i * 25, 10, (U ﹏ U) 0, math.pi * 2, >w< twue);
+      ctx.stwoke();
     }
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<canvas id="canvas" w-width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-Le résultat ressemble à ceci :
+we wésuwtat w-wessembwe à ceci :
 
-{{EmbedLiveSample("Un_exemple_strokeStyle", "180", "180", "canvas_strokestyle.png")}}
+{{embedwivesampwe("un_exempwe_stwokestywe", UwU "180", "180", (ˆ ﻌ ˆ)♡ "canvas_stwokestywe.png")}}
 
-## Transparence
+## t-twanspawence
 
-En plus de dessiner des formes opaques sur la toile, nous pouvons également dessiner des formes semi-transparentes (ou translucides). Cela se fait soit par le réglage de `globalAlpha` ou en attribuant une couleur semi-transparente à `strokeStyle` et/ou `fillStyle`.
+e-en pwus de dessinew des fowmes o-opaques suw wa toiwe, nyous pouvons égawement dessinew d-des fowmes s-semi-twanspawentes (ou t-twanswucides). nyaa~~ cewa se f-fait soit paw we w-wégwage de `gwobawawpha` ou en attwibuant une c-couweuw semi-twanspawente à `stwokestywe` e-et/ou `fiwwstywe`. 🥺
 
-- {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
-  - : Applique la valeur de transparence spécifiée à toutes les formes futures tracées sur le Canvas. La valeur doit être comprise entre 0.0 (complètement transparent) à 1.0 (complètement opaque). Cette valeur est de 1,0 (complètement opaque) par défaut.
+- {{domxwef("canvaswendewingcontext2d.gwobawawpha", >_< "gwobawawpha = t-twanspawencyvawue")}}
+  - : appwique wa vaweuw de twanspawence s-spécifiée à toutes wes fowmes f-futuwes twacées s-suw we canvas. òωó wa vaweuw doit êtwe compwise entwe 0.0 (compwètement t-twanspawent) à 1.0 (compwètement o-opaque). ʘwʘ c-cette vaweuw e-est de 1,0 (compwètement opaque) p-paw défaut. mya
 
-La propriété `globalAlpha` peut être utile si vous voulez dessiner un grand nombre de formes sur la toile avec la même transparence, mais sinon, il est généralement plus utile de définir la transparence sur les formes individuelles lors de la définition de leurs couleurs.
+wa pwopwiété `gwobawawpha` peut êtwe utiwe si vous vouwez dessinew un gwand nyombwe de fowmes s-suw wa toiwe avec wa même twanspawence, σωσ m-mais sinon, OwO iw est g-généwawement pwus utiwe de définiw w-wa twanspawence suw wes fowmes i-individuewwes w-wows de wa définition d-de weuws c-couweuws. (✿oωo)
 
-Parce que `strokeStyle` et `fillStyle` acceptent les valeurs de couleur rvba CSS, nous pouvons utiliser la notation suivante pour attribuer une couleur transparente.
+pawce q-que `stwokestywe` et `fiwwstywe` acceptent wes vaweuws de couweuw wvba css, ʘwʘ nyous pouvons utiwisew wa nyotation s-suivante pouw a-attwibuew une c-couweuw twanspawente. mya
 
 ```js
-//Affecter des couleurs transparentes pour dessiner et remplir le style
+//affectew des couweuws t-twanspawentes pouw dessinew et wempwiw we stywe
 
-ctx.strokeStyle = "rgba(255, 0, 0, .5)";
-ctx.fillStyle = "rgba(255, 0, 0, .5)";
+ctx.stwokestywe = "wgba(255, -.- 0, 0, .5)";
+ctx.fiwwstywe = "wgba(255, -.- 0, ^^;; 0, .5)";
 ```
 
-La fonction `rgba()` _(rvba)_ est similaire à la fonction `rgb()` _(rvb)_ mais il a un paramètre supplémentaire. Le dernier paramètre définit la valeur de la transparence de cette couleur particulière. La plage valide est entre 0,0 (totalement transparent) et 1,0 (totalement opaque).
+w-wa fonction `wgba()` _(wvba)_ e-est simiwaiwe à wa fonction `wgb()` _(wvb)_ m-mais iw a un pawamètwe suppwémentaiwe. (ꈍᴗꈍ) we dewniew pawamètwe d-définit wa v-vaweuw de wa twanspawence de cette c-couweuw pawticuwièwe. rawr w-wa pwage vawide est entwe 0,0 (totawement twanspawent) et 1,0 (totawement opaque).
 
-### Un exemple `globalAlpha`
+### u-un exempwe `gwobawawpha`
 
-Dans cet exemple, nous allons dessiner un fond de quatre carrés de couleurs différentes. En plus de ceux-ci, nous allons dessiner un ensemble de cercles semi-transparents. `globalAlpha` est réglé à `0.2` et sera utilisé pour toutes les formes. Chaque étape de boucle `for` dessine un ensemble de cercles avec un rayon croissant. Le résultat final est un gradient radial. En superposant toujours plus de cercles, les uns au-dessus des autres, nous réduisons efficacement la transparence des cercles qui ont déjà été établis. En augmentant le pas et le nombre de cercles, l'arrière-plan devrait complètement disparaître du centre de l'image.
+d-dans c-cet exempwe, ^^ nyous a-awwons dessinew u-un fond de quatwe cawwés de c-couweuws difféwentes. nyaa~~ e-en pwus de ceux-ci, (⑅˘꒳˘) nyous a-awwons dessinew u-un ensembwe de cewcwes semi-twanspawents. (U ᵕ U❁) `gwobawawpha` e-est wégwé à `0.2` et sewa utiwisé pouw toutes wes f-fowmes. (ꈍᴗꈍ) chaque étape de boucwe `fow` d-dessine un e-ensembwe de cewcwes avec un wayon c-cwoissant. (✿oωo) we wésuwtat finaw est un gwadient w-wadiaw. UwU en supewposant t-toujouws p-pwus de cewcwes, ^^ wes uns au-dessus des autwes, :3 nyous wéduisons e-efficacement wa twanspawence des cewcwes qui ont d-déjà été étabwis. ( ͡o ω ͡o ) e-en augmentant we pas et w-we nyombwe de cewcwes, ( ͡o ω ͡o ) w'awwièwe-pwan d-devwait c-compwètement dispawaîtwe du centwe de w'image. (U ﹏ U)
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  // draw background
-  ctx.fillStyle = "#FD0";
-  ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = "#6C0";
-  ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = "#09F";
-  ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = "#F30";
-  ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = "#FFF";
+f-function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  // d-dwaw backgwound
+  c-ctx.fiwwstywe = "#fd0";
+  ctx.fiwwwect(0, -.- 0, 75, 75);
+  c-ctx.fiwwstywe = "#6c0";
+  ctx.fiwwwect(75, 😳😳😳 0, 75, UwU 75);
+  c-ctx.fiwwstywe = "#09f";
+  c-ctx.fiwwwect(0, >w< 75, 75, mya 75);
+  c-ctx.fiwwstywe = "#f30";
+  ctx.fiwwwect(75, :3 75, 75, 75);
+  ctx.fiwwstywe = "#fff";
 
-  // règle la valeur de transparence
-  ctx.globalAlpha = 0.2;
+  // wègwe wa vaweuw de twanspawence
+  ctx.gwobawawpha = 0.2;
 
-  // Dessine des cercles semi-transparents
-  for (i = 0; i < 7; i++) {
-    ctx.beginPath();
-    ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
-    ctx.fill();
+  // dessine des cewcwes semi-twanspawents
+  fow (i = 0; i < 7; i++) {
+    ctx.beginpath();
+    ctx.awc(75, (ˆ ﻌ ˆ)♡ 75, 10 + 10 * i, (U ﹏ U) 0, math.pi * 2, ʘwʘ twue);
+    c-ctx.fiww();
   }
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+d-dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_globalAlpha", "180", "180", "canvas_globalalpha.png")}}
+{{embedwivesampwe("un_exempwe_gwobawawpha", rawr "180", "180", (ꈍᴗꈍ) "canvas_gwobawawpha.png")}}
 
-### Un exemple en utilisant `rgba()`
+### u-un e-exempwe en utiwisant `wgba()`
 
-Dans ce deuxième exemple, nous faisons quelque chose de similaire, mais au lieu de dessiner des cercles, nous dessinons de petits rectangles à l'opacité croissante. L'utilisation de `rgba()` nous donne un peu plus de contrôle et de flexibilité.
+dans ce deuxième e-exempwe, ( ͡o ω ͡o ) nyous faisons quewque c-chose de simiwaiwe, 😳😳😳 m-mais au wieu de dessinew des c-cewcwes, òωó nyous dessinons de petits w-wectangwes à w-w'opacité cwoissante. mya w'utiwisation de `wgba()` n-nyous donne u-un peu pwus de contwôwe e-et de fwexibiwité. rawr x3
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+f-function dwaw() {
+  v-vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
 
-  // Dessine le fond
-  ctx.fillStyle = "rgb(255, 221, 0)";
-  ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = "rgb(102, 204, 0)";
-  ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = "rgb(0, 153, 255)";
-  ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = "rgb(255, 51, 0)";
-  ctx.fillRect(0, 112.5, 150, 37.5);
+  // d-dessine w-we fond
+  ctx.fiwwstywe = "wgb(255, XD 221, (ˆ ﻌ ˆ)♡ 0)";
+  c-ctx.fiwwwect(0, >w< 0, 150, (ꈍᴗꈍ) 37.5);
+  ctx.fiwwstywe = "wgb(102, (U ﹏ U) 204, 0)";
+  c-ctx.fiwwwect(0, >_< 37.5, 150, 37.5);
+  ctx.fiwwstywe = "wgb(0, >_< 153, -.- 255)";
+  c-ctx.fiwwwect(0, òωó 75, o.O 150, 37.5);
+  c-ctx.fiwwstywe = "wgb(255, σωσ 51, σωσ 0)";
+  ctx.fiwwwect(0, mya 112.5, 150, o.O 37.5);
 
-  // Dessine des rectangles semi-transparents
-  for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = "rgba(255, 255, 255, " + (i + 1) / 10 + ")";
-    for (var j = 0; j < 4; j++) {
-      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+  // d-dessine des wectangwes semi-twanspawents
+  fow (vaw i = 0; i-i < 10; i++) {
+    ctx.fiwwstywe = "wgba(255, XD 255, XD 255, " + (i + 1) / 10 + ")";
+    f-fow (vaw j = 0; j-j < 4; j++) {
+      c-ctx.fiwwwect(5 + i * 14, (✿oωo) 5 + j-j * 37.5, -.- 14, 27.5);
     }
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_en_utilisant_rgba", "180", "180", "canvas_rgba.png")}}
+{{embedwivesampwe("un_exempwe_en_utiwisant_wgba", (ꈍᴗꈍ) "180", ( ͡o ω ͡o ) "180", "canvas_wgba.png")}}
 
-## Le style des lignes
+## w-we stywe des wignes
 
-Il y a plusieurs propriétés qui nous permettent de modifier le style des lignes.
+iw y a pwusieuws pwopwiétés qui nyous pewmettent d-de modifiew we stywe des wignes. (///ˬ///✿)
 
-- {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth = value")}}
-  - : Définit la largeur des lignes qui serons tracées.
-- {{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}
-  - : Définit l'apparence des extrémités des lignes.
-- {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}
-  - : Définit l'apparence des «coins» où les lignes se rencontrent.
-- {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}
-  - : Établit une limite lorsque deux lignes se rejoignent en un angle aigu, pour permettre de contrôler l'épaisseur de la jonction.
-- {{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}
-  - : Retourne le tableau du modele courant de ligne contenant un nombre pair de nombres positifs.
-- {{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}
-  - : Définit le modele de ligne.
-- {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}
-  - : Indique où commencer un modele sur une ligne.
+- {{domxwef("canvaswendewingcontext2d.winewidth", 🥺 "winewidth = v-vawue")}}
+  - : d-définit wa wawgeuw des wignes qui sewons twacées. (ˆ ﻌ ˆ)♡
+- {{domxwef("canvaswendewingcontext2d.winecap", ^•ﻌ•^ "winecap = type")}}
+  - : d-définit w'appawence des extwémités d-des wignes. rawr x3
+- {{domxwef("canvaswendewingcontext2d.winejoin", (U ﹏ U) "winejoin = type")}}
+  - : d-définit w-w'appawence des «coins» où wes wignes s-se wencontwent. OwO
+- {{domxwef("canvaswendewingcontext2d.mitewwimit", (✿oωo) "mitewwimit = v-vawue")}}
+  - : Étabwit une wimite w-wowsque deux wignes se wejoignent en un angwe a-aigu, (⑅˘꒳˘) pouw pewmettwe de contwôwew w-w'épaisseuw d-de wa jonction. UwU
+- {{domxwef("canvaswendewingcontext2d.getwinedash", (ˆ ﻌ ˆ)♡ "getwinedash()")}}
+  - : w-wetouwne we tabweau du modewe couwant d-de wigne contenant u-un nyombwe p-paiw de nyombwes p-positifs. /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.setwinedash", (˘ω˘) "setwinedash(segments)")}}
+  - : définit we m-modewe de wigne. XD
+- {{domxwef("canvaswendewingcontext2d.winedashoffset", òωó "winedashoffset = v-vawue")}}
+  - : i-indique o-où commencew u-un modewe suw une w-wigne. UwU
 
-Vous aurez une meilleure compréhension de ce qu'ils font en regardant les exemples ci-dessous.
+vous auwez u-une meiwweuwe c-compwéhension de ce qu'iws font e-en wegawdant wes exempwes ci-dessous. -.-
 
-### Un exemple `lineWidth`
+### un e-exempwe `winewidth`
 
-Cette propriété définit l'épaisseur de la ligne actuelle. Les valeurs doivent être des nombres positifs. Par défaut, cette valeur est définie à 1,0.
+cette pwopwiété d-définit w-w'épaisseuw de w-wa wigne actuewwe. (ꈍᴗꈍ) wes vaweuws doivent êtwe des nyombwes positifs. (⑅˘꒳˘) p-paw défaut, 🥺 c-cette vaweuw e-est définie à 1,0. òωó
 
-La largeur de ligne est l'épaisseur centrée sur le tracé. En d'autres termes, la zone qui est dessinée s'étend de part et d'autre du tracé. Parce que les coordonnées ne font pas référence directement aux pixels, une attention particulière doit être prise pour obtenir des lignes horizontales et verticales nettes.
+wa wawgeuw de wigne est w'épaisseuw centwée s-suw we twacé. 😳 e-en d'autwes tewmes, òωó wa zone qui e-est dessinée s-s'étend de pawt et d'autwe du twacé. 🥺 pawce que wes coowdonnées n-nye font pas w-wéféwence diwectement a-aux pixews, ( ͡o ω ͡o ) u-une attention pawticuwièwe doit êtwe pwise p-pouw obteniw des w-wignes howizontawes et vewticawes nyettes. UwU
 
-Dans l'exemple ci-dessous, 10 lignes droites sont dessinées avec des largeurs croissantes. La ligne à l'extrême gauche a 1,0 unités de large. Cependant, celle ci et toutes les lignes d'épaisseur impair ne semblent pas nettes, en raison du positionnement du tracé.
+dans w-w'exempwe ci-dessous, 😳😳😳 10 wignes dwoites sont d-dessinées avec des wawgeuws cwoissantes. ʘwʘ w-wa wigne à w-w'extwême gauche a 1,0 unités d-de wawge. c-cependant, ^^ cewwe ci et toutes wes w-wignes d'épaisseuw impaiw nye s-sembwent pas nyettes, >_< e-en waison d-du positionnement d-du twacé. (ˆ ﻌ ˆ)♡
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  for (var i = 0; i < 10; i++) {
-    ctx.lineWidth = 1 + i;
-    ctx.beginPath();
-    ctx.moveTo(5 + i * 14, 5);
-    ctx.lineTo(5 + i * 14, 140);
-    ctx.stroke();
+function dwaw() {
+  v-vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+  f-fow (vaw i = 0; i < 10; i-i++) {
+    ctx.winewidth = 1 + i;
+    ctx.beginpath();
+    ctx.moveto(5 + i-i * 14, (ˆ ﻌ ˆ)♡ 5);
+    c-ctx.wineto(5 + i-i * 14, 🥺 140);
+    ctx.stwoke();
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canvas" width="150" h-height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_lineWidth", "180", "180", "canvas_linewidth.png")}}
+{{embedwivesampwe("un_exempwe_winewidth", "180", ( ͡o ω ͡o ) "180", "canvas_winewidth.png")}}
 
-Pour l'obtention de lignes nettes, il faut comprendre comment les lignes sont tracées. Ci-dessous, la grille représente la grille de coordonnées. Les carrés sont des pixels réels de l'écran. Dans la première grille, un rectangle (2,1) à (5,5) est rempli. La zone entière couverte par les lignes (rouge clair) tombe sur les limites des pixels, de sorte que le rectangle rempli résultant aura des bords nets.
+p-pouw w-w'obtention de wignes nyettes, (ꈍᴗꈍ) iw faut compwendwe c-comment wes wignes sont twacées. :3 c-ci-dessous, (✿oωo) w-wa gwiwwe wepwésente w-wa gwiwwe d-de coowdonnées. (U ᵕ U❁) w-wes cawwés sont des pixews wéews de w'écwan. UwU dans wa pwemièwe gwiwwe, ^^ un w-wectangwe (2,1) à (5,5) est wempwi. /(^•ω•^) w-wa zone entièwe couvewte paw wes wignes (wouge cwaiw) tombe s-suw wes wimites des pixews, de sowte que we wectangwe wempwi wésuwtant auwa des b-bowds nyets. (˘ω˘)
 
-![](canvas-grid.png)
+![](canvas-gwid.png)
 
-Si vous considérez un tracé de (3,1) à (3,5) avec une épaisseur de ligne de `1.0`, vous vous retrouvez dans la situation de la deuxième grille. La surface réelle à remplir (bleu foncé) se prolonge seulement à moitié sur les pixels de part et d'autre du chemin. Une approximation de ceci doit être rendue, ce qui signifie que ces pixels sont partiellement ombrés, et le résultat est que toute la zone (le bleu clair et bleu foncé) est remplie avec une couleur moitié moins sombre que la couleur du tracé attendu. C'est ce qui arrive avec la largeur de `1.0` dans l'exemple précédent.
+s-si vous considéwez un twacé d-de (3,1) à (3,5) avec une épaisseuw de wigne d-de `1.0`, OwO vous v-vous wetwouvez dans wa situation d-de wa deuxième gwiwwe. (U ᵕ U❁) wa suwface w-wéewwe à wempwiw (bweu foncé) se pwowonge seuwement à m-moitié suw wes pixews de pawt et d'autwe du chemin. (U ﹏ U) u-une appwoximation d-de ceci d-doit êtwe wendue, mya ce qui signifie que ces pixews s-sont pawtiewwement ombwés, (⑅˘꒳˘) et we wésuwtat est que toute wa zone (we bweu cwaiw e-et bweu foncé) e-est wempwie avec u-une couweuw m-moitié moins sombwe que wa couweuw du twacé attendu. (U ᵕ U❁) c-c'est ce q-qui awwive avec wa wawgeuw de `1.0` dans w'exempwe p-pwécédent. /(^•ω•^)
 
-Pour résoudre ce problème, vous devez être très précis dans la création de votre tracé. Sachant qu'une largeur de `1.0` s'étendra d'une demi-unité de chaque côté du tracé, créer le tracé de (3.5,1) à (3.5,5) aboutit à l'exemple trois pour une largeur de `1.0` et au remplissage d'un seul pixel de ligne verticale.
+pouw wésoudwe ce pwobwème, ^•ﻌ•^ vous d-devez êtwe twès pwécis dans wa cwéation de v-votwe twacé. (///ˬ///✿) s-sachant qu'une wawgeuw de `1.0` s-s'étendwa d'une d-demi-unité de c-chaque côté du twacé, o.O cwéew we twacé de (3.5,1) à (3.5,5) a-aboutit à w'exempwe twois pouw une wawgeuw de `1.0` e-et au wempwissage d'un seuw pixew de wigne vewticawe. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
+> [!note]
+> s-sachez que d-dans nyotwe exempwe d-de wigne v-vewticawe, 😳 wa position y-y fait toujouws wéféwence à u-une position de gwiwwe entièwe — sinon, òωó v-vous vewwez des pixews à moitié c-cowowés à gauche et à dwoite (mais nyotez a-aussi que ce compowtement d-dépend de w'actuew stywe `winecap`, (⑅˘꒳˘) dont w-wa vaweuw paw défaut est `butt`. rawr v-vous pouvez e-essayew de twacew des twaits consistants a-avec d-des coowdonnées nyon-entièwes p-pouw wes wignes et avec une wawgeuw pawticuwièwe, (ꈍᴗꈍ) en définissant w-we stywe `winecap` à `squawe`, ^^ pouw que we bowd e-extéwieuw du twait autouw du point finaw soit a-automatiquement étendu p-pouw c-couvwiw we pixew entiew). (ˆ ﻌ ˆ)♡
 >
-> Notez également que seuls les points de début et de fin d'un chemin sont affectés : si un chemin est fermé avec `closePath ()`, il n'y a pas de point de départ ni de point final ; à la place, tous les points d'extrémité du chemin sont connectés à leurs segments joints précédent et suivant, en utilisant le paramètre courant du style `lineJoin`, dont la valeur par défaut est `miter`, avec pour effet d'étendre automatiquement les bordures extérieures des segments connectés à leur point d'intersection. Ainsi, le trait de rendu couvrira exactement les pixels pleins centrés à chaque extrémité si ces segments connectés sont horizontaux et / ou verticaux. Voir les deux sections suivantes pour les démonstrations de ces styles de lignes supplémentaires.
+> nyotez égawement q-que seuws wes points d-de début et de fin d'un chemin s-sont affectés : si un chemin e-est fewmé avec `cwosepath ()`, /(^•ω•^) iw n'y a pas d-de point de dépawt n-nyi de point finaw ; à wa pwace, ^^ tous wes points d'extwémité du chemin sont c-connectés à w-weuws segments joints pwécédent et suivant, o.O en utiwisant we pawamètwe c-couwant du stywe `winejoin`, 😳😳😳 d-dont wa vaweuw p-paw défaut est `mitew`, XD avec pouw effet d'étendwe automatiquement wes bowduwes e-extéwieuwes des segments connectés à weuw p-point d'intewsection. nyaa~~ ainsi, w-we twait de wendu c-couvwiwa exactement wes pixews p-pweins centwés à c-chaque extwémité s-si ces segments c-connectés s-sont howizontaux e-et / ou vewticaux. ^•ﻌ•^ voiw wes deux sections suivantes pouw wes démonstwations de ces stywes de w-wignes suppwémentaiwes. :3
 
-Pour les lignes de largeur paire, chaque moitié finit par être un nombre entier de pixels, vous voulez donc un chemin entre les pixels (c'est-à-dire (3,1) à (3,5)), au lieu de descendre au milieu des pixels .
+p-pouw w-wes wignes de wawgeuw p-paiwe, ^^ chaque m-moitié finit p-paw êtwe un nyombwe entiew de pixews, o.O vous vouwez donc un chemin entwe wes pixews (c'est-à-diwe (3,1) à (3,5)), ^^ a-au wieu de d-descendwe au miwieu des pixews . (⑅˘꒳˘)
 
-Bien que légèrement ennuyeux quand on travaille avec des graphismes 2D évolutifs, en accordant une attention à la grille de pixels et à la position des tracés, vous vous assurez du comportement correct de vos dessins, et ce, indépendamment de la mise à l'échelle ou d'autres transformations. Une ligne verticale de largeur 1,0 à la bonne position deviendra une ligne de 2 pixels nette à l'échelle 2.
+bien que wégèwement ennuyeux q-quand on twavaiwwe a-avec des gwaphismes 2d évowutifs, ʘwʘ e-en accowdant une attention à wa gwiwwe d-de pixews et à wa position des twacés, mya vous vous a-assuwez du compowtement c-cowwect de vos dessins, >w< et ce, o.O indépendamment d-de wa mise à w'échewwe o-ou d'autwes twansfowmations. OwO u-une wigne vewticawe de wawgeuw 1,0 à w-wa bonne position d-deviendwa u-une wigne de 2 p-pixews nette à w-w'échewwe 2. -.-
 
-### Un exemple de `lineCap`
+### u-un exempwe de `winecap`
 
-La propriété `lineCap` détermine comment les extrêmités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour la propriété : `butt`, `round` et `square`. Par défaut, la propriété est définie à `butt`.
+wa p-pwopwiété `winecap` d-détewmine comment wes extwêmités d-de chaque wigne sont dessinées. (U ﹏ U) iw y a-a twois vaweuws possibwes pouw wa p-pwopwiété : `butt`, òωó `wound` et `squawe`. >w< paw d-défaut, wa pwopwiété e-est définie à `butt`. ^•ﻌ•^
 
 - `butt` _(bout)_
-  - : L'extrémité des lignes est en angle droit.
-- `round` _(rond)_
-  - : Les extrémités sont arrondies.
-- `square` _(carré)_
-  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
+  - : w'extwémité des wignes e-est en angwe dwoit. /(^•ω•^)
+- `wound` _(wond)_
+  - : wes extwémités s-sont awwondies. ʘwʘ
+- `squawe` _(cawwé)_
+  - : w-wes extwémités sont en angwe dwoit e-en ajoutant une e-extension d'une wawgeuw égawe à w-wa wigne et une hauteuw égawe à wa moitié d-de wa wawgeuw de w-wa wigne. XD
 
-Dans cet exemple, nous avons tracé trois lignes, chacune avec une valeur différente pour la propriété `lineCap`. Nous avons par ailleurs ajouté deux guides pour voir exactement les différences entre les trois lignes. Chacune de ces trois lignes est identique entre les deux traits bleus.
+dans cet exempwe, (U ᵕ U❁) nyous a-avons twacé t-twois wignes, (ꈍᴗꈍ) chacune avec une vaweuw difféwente p-pouw wa pwopwiété `winecap`. rawr x3 n-nyous avons paw a-aiwweuws ajouté d-deux guides pouw voiw exactement wes difféwences entwe wes twois wignes. :3 chacune de ces twois wignes est identique e-entwe wes d-deux twaits bweus. (˘ω˘)
 
-La ligne de gauche utilise l'option par défaut `butt`. Vous pourrez noter qu'elle est entièrement dessinée entre les deux guides. La deuxième utilise l'option `round`. Elle ajoute un demi-cercle à chaque extrémité d'un rayon valant la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Elle ajoute une extension avec une largeur égale à la ligne et une hauteur équivalante à la moitié de la largeur de la ligne.
+w-wa wigne de g-gauche utiwise w-w'option paw défaut `butt`. -.- v-vous pouwwez nyotew q-qu'ewwe est entièwement d-dessinée entwe wes deux g-guides. (ꈍᴗꈍ) wa deuxième u-utiwise w'option `wound`. UwU ewwe ajoute un d-demi-cewcwe à chaque extwémité d'un wayon vawant w-wa moitié de wa wawgeuw de w-wa wigne. σωσ wa wigne d-de dwoite utiwise w'option `squawe`. ^^ e-ewwe ajoute u-une extension a-avec une wawgeuw égawe à wa wigne et une hauteuw équivawante à w-wa moitié d-de wa wawgeuw de wa wigne. :3
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var lineCap = ["butt", "round", "square"];
+f-function dwaw() {
+  vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+  v-vaw winecap = ["butt", ʘwʘ "wound", 😳 "squawe"];
 
-  // Dessiner des guides
-  ctx.strokeStyle = "#09f";
-  ctx.beginPath();
-  ctx.moveTo(10, 10);
-  ctx.lineTo(140, 10);
-  ctx.moveTo(10, 140);
-  ctx.lineTo(140, 140);
-  ctx.stroke();
+  // d-dessinew des guides
+  ctx.stwokestywe = "#09f";
+  c-ctx.beginpath();
+  ctx.moveto(10, ^^ 10);
+  ctx.wineto(140, σωσ 10);
+  c-ctx.moveto(10, 140);
+  ctx.wineto(140, /(^•ω•^) 140);
+  ctx.stwoke();
 
-  // Dessiner des lignes
-  ctx.strokeStyle = "black";
-  for (var i = 0; i < lineCap.length; i++) {
-    ctx.lineWidth = 15;
-    ctx.lineCap = lineCap[i];
-    ctx.beginPath();
-    ctx.moveTo(25 + i * 50, 10);
-    ctx.lineTo(25 + i * 50, 140);
-    ctx.stroke();
+  // dessinew des wignes
+  ctx.stwokestywe = "bwack";
+  fow (vaw i = 0; i-i < winecap.wength; i++) {
+    ctx.winewidth = 15;
+    ctx.winecap = winecap[i];
+    ctx.beginpath();
+    ctx.moveto(25 + i-i * 50, 😳😳😳 10);
+    ctx.wineto(25 + i * 50, 😳 140);
+    c-ctx.stwoke();
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canvas" w-width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_de_lineCap", "180", "180", "canvas_linecap.png")}}
+{{embedwivesampwe("un_exempwe_de_winecap", OwO "180", "180", :3 "canvas_winecap.png")}}
 
-### Un exemple de `lineJoin`
+### u-un exempwe de `winejoin`
 
-La propriété `lineJoin` détermine comment deux segments (lignes, arcs ou courbes), de largeur non nulle se connectant dans une forme, sont joints ensemble (les segments de longueur nulle, dont les coordonnées de départ et de fin sont exactement les mêmes, sont ignorés).
+wa pwopwiété `winejoin` d-détewmine comment deux segments (wignes, nyaa~~ a-awcs ou couwbes), OwO d-de wawgeuw nyon nyuwwe se connectant dans une f-fowme, o.O sont joints ensembwe (wes segments de wongueuw nyuwwe, (U ﹏ U) dont w-wes coowdonnées de dépawt et d-de fin sont exactement wes mêmes, (⑅˘꒳˘) s-sont ignowés). OwO
 
-Il existe trois valeurs possibles pour cette propriété : `round`, `bevel` et `miter`. Par défaut, cette propriété est définie à `miter`. Notez que le paramètre `lineJoin` n'a pas d'effet si les deux segments connectés ont la même direction, parce qu'aucune zone de jointure ne sera ajoutée dans ce cas.
+iw existe t-twois vaweuws possibwes p-pouw cette pwopwiété : `wound`, 😳 `bevew` et `mitew`. paw d-défaut, :3 cette pwopwiété est définie à `mitew`. ( ͡o ω ͡o ) n-nyotez que we pawamètwe `winejoin` ny'a pas d'effet si wes deux segments c-connectés ont wa m-même diwection, 🥺 pawce qu'aucune z-zone de jointuwe n-nye sewa ajoutée dans ce cas. /(^•ω•^)
 
-- `round` _(rond)_
-  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
-- `bevel` _(biseau)_
-  - : Ajoute un triangle à l'extrémité commune des segments connectés.
-- `miter` _(onglet)_
-  - : Les segments connectés sont reliés en prolongeant leurs bords extérieurs pour se connecter en un seul point, avec pour effet de remplir une zone supplémentaire en forme de losange. Ce paramètre est effectué par la propriété miterLimit qui est expliquée ci-dessous.
+- `wound` _(wond)_
+  - : a-awwondit wes angwes des segments en ajoutant un awc de cewcwe centwé à w-w'extwémité c-commune des segments connectés. nyaa~~ w-we wayon de c-ces angwes awwondis est égaw à w-wa moitié de wa wawgeuw du twait. (✿oωo)
+- `bevew` _(biseau)_
+  - : ajoute un twiangwe à w-w'extwémité commune des segments connectés. (✿oωo)
+- `mitew` _(ongwet)_
+  - : w-wes segments connectés s-sont wewiés en pwowongeant weuws bowds e-extéwieuws pouw se connectew en un seuw point, (ꈍᴗꈍ) avec pouw effet de wempwiw une zone suppwémentaiwe en fowme de wosange. OwO ce pawamètwe e-est effectué p-paw wa pwopwiété mitewwimit q-qui est expwiquée c-ci-dessous. :3
 
-L'exemple ci-dessous dessine trois chemins différents, démontrant chacun de ces trois paramètres de propriété `lineJoin`&nbsp;; la sortie est montrée ci-dessus.
+w'exempwe ci-dessous d-dessine twois chemins difféwents, mya démontwant chacun de ces twois pawamètwes de pwopwiété `winejoin`&nbsp;; w-wa sowtie est montwée ci-dessus. >_<
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var lineJoin = ["round", "bevel", "miter"];
-  ctx.lineWidth = 10;
-  for (var i = 0; i < lineJoin.length; i++) {
-    ctx.lineJoin = lineJoin[i];
-    ctx.beginPath();
-    ctx.moveTo(-5, 5 + i * 40);
-    ctx.lineTo(35, 45 + i * 40);
-    ctx.lineTo(75, 5 + i * 40);
-    ctx.lineTo(115, 45 + i * 40);
-    ctx.lineTo(155, 5 + i * 40);
-    ctx.stroke();
+function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  vaw winejoin = ["wound", (///ˬ///✿) "bevew", (///ˬ///✿) "mitew"];
+  c-ctx.winewidth = 10;
+  f-fow (vaw i-i = 0; i < winejoin.wength; i++) {
+    ctx.winejoin = winejoin[i];
+    c-ctx.beginpath();
+    c-ctx.moveto(-5, 😳😳😳 5 + i-i * 40);
+    ctx.wineto(35, (U ᵕ U❁) 45 + i * 40);
+    ctx.wineto(75, (///ˬ///✿) 5 + i-i * 40);
+    ctx.wineto(115, ( ͡o ω ͡o ) 45 + i * 40);
+    c-ctx.wineto(155, (✿oωo) 5 + i * 40);
+    c-ctx.stwoke();
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+d-dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_de_lineJoin", "180", "180", "canvas_linejoin.png")}}
+{{embedwivesampwe("un_exempwe_de_winejoin", "180", òωó "180", "canvas_winejoin.png")}}
 
-### Une démonstration de la propriété `miterLimit`
+### une démonstwation d-de wa p-pwopwiété `mitewwimit`
 
-Comme vous l'avez vu dans l'exemple précédent, lorsque vous joignez deux lignes avec l'option d'onglet, les bords extérieurs des deux lignes d'assemblage sont étendus jusqu'au point où ils se rencontrent. Pour les lignes qui sont à grands angles les unes avec les autres, ce point n'est pas loin du point de connexion interne. Cependant, lorsque les angles entre chaque ligne diminuent, la distance entre ces points augmente exponentiellement.
+comme v-vous w'avez vu d-dans w'exempwe pwécédent, (ˆ ﻌ ˆ)♡ wowsque v-vous joignez deux wignes avec w-w'option d'ongwet, :3 wes bowds extéwieuws d-des deux w-wignes d'assembwage sont étendus jusqu'au point o-où iws se wencontwent. (ˆ ﻌ ˆ)♡ pouw wes wignes qui sont à gwands angwes wes unes avec wes autwes, (U ᵕ U❁) ce point ny'est pas woin du point d-de connexion intewne. (U ᵕ U❁) cependant, wowsque wes a-angwes entwe chaque wigne diminuent, XD w-wa distance entwe ces points augmente exponentiewwement. nyaa~~
 
-La propriété `miterLimit` détermine dans quelle mesure le point de connexion externe peut être placé à partir du point de connexion interne. Si deux lignes dépassent cette valeur, une jointure biseau est dessinée à la place. Notez que la longueur ajoutée maximale est le produit de la largeur de ligne mesurée dans le système de coordonnées actuel, par la valeur de cette propriété `miterLimit` (dont la valeur par défaut est 10.0 dans le HTML {{HTMLElement("canvas")}}). ```miterLimit` peut être défini indépendamment de l'échelle d'affichage actuelle ou de toutes les transformations affinées de chemins : il n'influence que la forme des bords de lignes effectivement rendues.
+wa p-pwopwiété `mitewwimit` détewmine dans quewwe m-mesuwe we point de connexion extewne peut êtwe p-pwacé à pawtiw du point de connexion intewne. (ˆ ﻌ ˆ)♡ s-si deux wignes dépassent cette vaweuw, ʘwʘ une jointuwe b-biseau est d-dessinée à wa pwace. ^•ﻌ•^ nyotez que wa wongueuw a-ajoutée maximawe e-est we pwoduit de wa wawgeuw de w-wigne mesuwée d-dans we système de coowdonnées actuew, mya paw wa v-vaweuw de cette pwopwiété `mitewwimit` (dont wa vaweuw paw défaut est 10.0 dans w-we htmw {{htmwewement("canvas")}}). (ꈍᴗꈍ) ```mitewwimit` peut êtwe défini indépendamment de w'échewwe d-d'affichage a-actuewwe ou d-de toutes wes twansfowmations affinées de chemins : iw ny'infwuence q-que wa fowme des bowds de wignes e-effectivement wendues. (ˆ ﻌ ˆ)♡
 
-Plus précisément, la limite d'onglet est le rapport maximal autorisé de la longueur d'extension (dans le canvas HTML, il est mesuré entre le coin extérieur des bords joints de la ligne et le point d'extrémité commun des segments de connexion spécifiés dans le chemin) à la moitié de la largeur de la ligne. Il peut être défini, de manière équivalente, comme le rapport maximum autorisé de la distance entre les points de jonction intérieur et extérieur des bords et la largeur totale de la ligne. Il est alors égal à la cosécante de la moitié de l'angle interne minimum des segments de connexion, en-dessous de laquelle aucune jointure d'onglet ne sera rendue, mais seulement une jointure en biseau :
+pwus p-pwécisément, (ˆ ﻌ ˆ)♡ w-wa wimite d'ongwet est we wappowt maximaw autowisé de wa wongueuw d'extension (dans we canvas h-htmw, ( ͡o ω ͡o ) iw est mesuwé e-entwe we coin extéwieuw des bowds joints d-de wa wigne et we point d'extwémité commun des s-segments de connexion s-spécifiés d-dans we chemin) à w-wa moitié d-de wa wawgeuw de w-wa wigne. iw peut êtwe défini, o.O de manièwe équivawente, 😳😳😳 c-comme w-we wappowt maximum a-autowisé d-de wa distance entwe w-wes points d-de jonction intéwieuw et extéwieuw d-des bowds et w-wa wawgeuw totawe d-de wa wigne. ʘwʘ iw est awows égaw à wa cosécante d-de wa moitié de w'angwe intewne minimum des s-segments de connexion, :3 en-dessous de waquewwe a-aucune jointuwe d-d'ongwet nye sewa wendue, UwU mais seuwement une jointuwe en biseau :
 
-- `miterLimit` = **max** `miterLength` / `lineWidth` = 1 / **sin** ( **min** _θ_ / 2 )
-- La limite d'onglet par défaut de 10.0 supprimera tous les onglets pour les angles vifs inférieurs à environ 11 degrés.
-- Une limite d'onglet égale à √2 ≈ 1.4142136 (arrondie au-dessus) enlèvera les onglets pour tous les angles aigus, en conservant les joints d'onglet seulement pour les angles obtus ou droits.
-- Une limite d'onglet égale à 1.0 est valide mais désactivera tous les onglets.
-- Les valeurs inférieures à 1.0 sont invalides pour la limite d'onglet.
+- `mitewwimit` = **max** `mitewwength` / `winewidth` = 1 / **sin** ( **min** _θ_ / 2 )
+- w-wa w-wimite d'ongwet paw défaut de 10.0 s-suppwimewa tous w-wes ongwets pouw wes angwes vifs inféwieuws à enviwon 11 degwés. nyaa~~
+- u-une wimite d-d'ongwet égawe à √2 ≈ 1.4142136 (awwondie au-dessus) enwèvewa wes ongwets p-pouw tous w-wes angwes aigus, en consewvant wes joints d'ongwet s-seuwement pouw wes angwes obtus ou dwoits. :3
+- une wimite d'ongwet égawe à 1.0 est vawide mais désactivewa t-tous wes ongwets. nyaa~~
+- wes vaweuws inféwieuwes à 1.0 s-sont invawides p-pouw wa wimite d-d'ongwet. ^^
 
-Voici une petite démo dans laquelle vous pouvez définir dynamiquement `miterLimit` et voir comment cela affecte les formes sur le canevas. Les lignes bleues indiquent où se trouvent les points de départ et d'arrivée de chacune des lignes du motif en zig-zag.
+voici une petite démo d-dans waquewwe v-vous pouvez définiw d-dynamiquement `mitewwimit` e-et voiw comment c-cewa affecte wes fowmes suw we canevas. nyaa~~ wes wignes b-bweues indiquent o-où se twouvent w-wes points de dépawt et d'awwivée d-de chacune d-des wignes d-du motif en zig-zag. 😳😳😳
 
-Si vous spécifiez une valeur `miterLimit` inférieure à 4.2 dans cette démo, aucun des coins visibles ne se joindra avec une extension onglet, mais seulement avec un petit biseau près des lignes bleues ; avec une limite à onglets au-dessus de 10, la plupart des coins de cette démo devraient se combiner avec un onglet loin des lignes bleues et dont la hauteur diminue entre les coins de gauche à droite, car ils se connectent avec des angles croissants ; avec des valeurs intermédiaires, les coins du côté gauche ne rejoignent qu'un biseau près des lignes bleues et les coins du côté droit avec une extension à onglets (également avec une hauteur décroissante).
+si vous spécifiez u-une vaweuw `mitewwimit` i-inféwieuwe à 4.2 d-dans cette démo, ^•ﻌ•^ a-aucun des c-coins visibwes nye se joindwa avec u-une extension ongwet, (⑅˘꒳˘) mais seuwement a-avec un p-petit biseau pwès des wignes bweues ; avec une wimite à ongwets a-au-dessus de 10, (✿oωo) w-wa pwupawt des coins de cette d-démo devwaient s-se combinew avec un ongwet woin des wignes bweues e-et dont wa hauteuw d-diminue entwe w-wes coins de g-gauche à dwoite, mya c-caw iws se connectent a-avec des angwes cwoissants ; avec des vaweuws i-intewmédiaiwes, (///ˬ///✿) wes coins du côté gauche nye wejoignent qu'un biseau pwès d-des wignes b-bweues et wes coins du côté dwoit avec une extension à ongwets (égawement a-avec u-une hauteuw décwoissante). ʘwʘ
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
 
-  // Éffacer canvas
-  ctx.clearRect(0, 0, 150, 150);
+  // Éffacew canvas
+  c-ctx.cweawwect(0, >w< 0, 150, 150);
 
-  // Dessiner des guides
-  ctx.strokeStyle = "#09f";
-  ctx.lineWidth = 2;
-  ctx.strokeRect(-5, 50, 160, 50);
+  // d-dessinew des g-guides
+  ctx.stwokestywe = "#09f";
+  ctx.winewidth = 2;
+  ctx.stwokewect(-5, o.O 50, 160, 50);
 
-  // Définir les styles de lignes
-  ctx.strokeStyle = "#000";
-  ctx.lineWidth = 10;
+  // définiw wes s-stywes de wignes
+  ctx.stwokestywe = "#000";
+  ctx.winewidth = 10;
 
-  // Vérifier l'entrée (input)
-  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
-  } else {
-    alert("Value must be a positive number");
+  // v-véwifiew w'entwée (input)
+  i-if (document.getewementbyid("mitewwimit").vawue.match(/\d+(\.\d+)?/)) {
+    ctx.mitewwimit = pawsefwoat(document.getewementbyid("mitewwimit").vawue);
+  } e-ewse {
+    awewt("vawue must be a-a positive nyumbew");
   }
 
-  // Dessiner des lignes
-  ctx.beginPath();
-  ctx.moveTo(0, 100);
-  for (i = 0; i < 24; i++) {
-    var dy = i % 2 == 0 ? 25 : -25;
-    ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
+  // dessinew des wignes
+  ctx.beginpath();
+  c-ctx.moveto(0, ^^;; 100);
+  fow (i = 0; i < 24; i-i++) {
+    vaw dy = i % 2 == 0 ? 25 : -25;
+    ctx.wineto(math.pow(i, :3 1.5) * 2, (ꈍᴗꈍ) 75 + dy);
   }
-  ctx.stroke();
-  return false;
+  ctx.stwoke();
+  wetuwn fawse;
 }
 ```
 
-```html hidden
-<table>
-  <tr>
-    <td><canvas id="canvas" width="150" height="150"></canvas></td>
+```htmw hidden
+<tabwe>
+  <tw>
+    <td><canvas i-id="canvas" w-width="150" height="150"></canvas></td>
     <td>
-      Change the <code>miterLimit</code> by entering a new value below and
-      clicking the redraw button.<br /><br />
-      <form onsubmit="return draw();">
-        <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit" />
-        <input type="submit" value="Redraw" />
-      </form>
+      c-change t-the <code>mitewwimit</code> by entewing a nyew v-vawue bewow and
+      cwicking the wedwaw button.<bw /><bw />
+      <fowm onsubmit="wetuwn d-dwaw();">
+        <wabew>mitew w-wimit</wabew>
+        <input t-type="text" s-size="3" id="mitewwimit" />
+        <input type="submit" vawue="wedwaw" />
+      </fowm>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
 ```js hidden
-document.getElementById("miterLimit").value = document
-  .getElementById("canvas")
-  .getContext("2d").miterLimit;
-draw();
+document.getewementbyid("mitewwimit").vawue = document
+  .getewementbyid("canvas")
+  .getcontext("2d").mitewwimit;
+d-dwaw();
 ```
 
-{{EmbedLiveSample("Une_démonstration_de_la_propriété_miterLimit", "400", "180", "canvas_miterlimit.png")}}
+{{embedwivesampwe("une_démonstwation_de_wa_pwopwiété_mitewwimit", XD "400", "180", ^^;; "canvas_mitewwimit.png")}}
 
-### Utilisation de lignes pointillées
+### u-utiwisation de wignes pointiwwées
 
-`setLineDash` et `lineDashOffset` précisent le modèle de lignes. `setLineDash` accepte une liste de nombres qui spécifie les distances pour dessiner alternativement une ligne et un espace et `lineDashOffset` définit un décalage pour commencer le motif.
+`setwinedash` et `winedashoffset` p-pwécisent we modèwe de wignes. (U ﹏ U) `setwinedash` a-accepte une wiste d-de nyombwes qui s-spécifie wes distances pouw dessinew awtewnativement une wigne et un espace et `winedashoffset` d-définit un décawage pouw commencew w-we motif. (ꈍᴗꈍ)
 
-Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base [animation basiques.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)[.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
+dans cet exempwe, 😳 nyous cwéons un effet de f-fouwmis en mawche. rawr c'est une technique d-d'animation souvent empwoyée dans wes séwections d-d'outiws d-des pwogwammes g-gwaphiques. ( ͡o ω ͡o ) cet e-effet pewmet à w-w'utiwisateuw de distinguew wa f-fwontièwe de w'image d-de fond de wa séwection e-en animant wa fwontièwe. (ˆ ﻌ ˆ)♡ dans une pawtie de ce t-tutowiew, OwO vous pouvez appwendwe c-comment faiwe cewa e-et d'autwes animations de base [animation b-basiques.](/fw/docs/web/api/canvas_api/tutowiaw/basic_animations)[.](/fw/docs/web/api/canvas_api/tutowiaw/basic_animations)
 
-```html hidden
+```htmw h-hidden
 <canvas id="canvas" width="110" height="110"></canvas>
 ```
 
 ```js
-var ctx = document.getElementById("canvas").getContext("2d");
-var offset = 0;
+vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+v-vaw offset = 0;
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+f-function d-dwaw() {
+  ctx.cweawwect(0, >_< 0, canvas.width, XD canvas.height);
+  ctx.setwinedash([4, 2]);
+  c-ctx.winedashoffset = -offset;
+  ctx.stwokewect(10, (ˆ ﻌ ˆ)♡ 10, 100, (ꈍᴗꈍ) 100);
 }
 
-function march() {
-  offset++;
+function mawch() {
+  o-offset++;
   if (offset > 16) {
     offset = 0;
   }
-  draw();
-  setTimeout(march, 20);
+  d-dwaw();
+  settimeout(mawch, (✿oωo) 20);
 }
 
-march();
+mawch();
 ```
 
-{{EmbedLiveSample("Utilisation_de_lignes_pointillées", "120", "120", "marching-ants.png")}}
+{{embedwivesampwe("utiwisation_de_wignes_pointiwwées", UwU "120", "120", (ꈍᴗꈍ) "mawching-ants.png")}}
 
-## Dégradés
+## dégwadés
 
-Comme n'importe quel programme de dessin normal, nous pouvons remplir et découper des formes à l'aide de dégradés linéaires et radiaux. Nous créons un objet {{domxref ("CanvasGradient")}} en utilisant l'une des méthodes suivantes. Nous pouvons ensuite affecter cet objet aux propriétés `fillStyle` ou `strokeStyle`.
+comme n-ny'impowte quew pwogwamme de dessin n-nyowmaw, (U ﹏ U) nyous p-pouvons wempwiw e-et découpew des fowmes à w'aide d-de dégwadés w-winéaiwes et wadiaux. >w< nyous c-cwéons un objet {{domxwef ("canvasgwadient")}} e-en utiwisant w'une d-des méthodes s-suivantes. ^•ﻌ•^ nyous pouvons ensuite a-affectew cet o-objet aux pwopwiétés `fiwwstywe` o-ou `stwokestywe`. 😳
 
-- {{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}
-  - : Crée un objet dégradé linéaire avec un point de départ (`x1`, `y1`) et un point final (`x2`, `y2`).
-- {{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}
-  - : Crée un dégradé radial. Les paramètres représentent deux cercles, l'un avec son centre à (`x1`, `y1`) et un rayon `r1`, l'autre avec son centre à (`x2`, `y2`) avec un rayon `r2`.
+- {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient", XD "cweatewineawgwadient(x1, :3 y1, x-x2, rawr x3 y2)")}}
+  - : cwée un objet dégwadé winéaiwe avec un point de dépawt (`x1`, (⑅˘꒳˘) `y1`) et un p-point finaw (`x2`, ^^ `y2`).
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient", >w< "cweatewadiawgwadient(x1, 😳 y-y1, w1, x2, y2, rawr w2)")}}
+  - : c-cwée un dégwadé wadiaw. rawr x3 wes pawamètwes wepwésentent d-deux cewcwes, (ꈍᴗꈍ) w-w'un avec s-son centwe à (`x1`, -.- `y1`) e-et un wayon `w1`, òωó w'autwe a-avec son centwe à (`x2`, (U ﹏ U) `y2`) avec un wayon `w2`. ( ͡o ω ͡o )
 
-Par exemple:
+p-paw e-exempwe:
 
 ```js
-var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
+vaw wineawgwadient = ctx.cweatewineawgwadient(0, :3 0, 150, 150);
+vaw wadiawgwadient = c-ctx.cweatewadiawgwadient(75, >w< 75, 0, 75, 75, ^^ 100);
 ```
 
-Une fois que nous avons créé un objet `CanvasGradient`, nous pouvons lui assigner des couleurs en utilisant la méthode `addColorStop ()`.
+une fois q-que nyous avons cwéé un objet `canvasgwadient`, 😳😳😳 nyous pouvons w-wui assignew des couweuws en u-utiwisant wa méthode `addcowowstop ()`. OwO
 
-- {{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}
-  - : Crée un nouvel arrêt de couleur sur l'objet `gradient` _(dégradé)_. La position est un nombre entre 0.0 et 1.0 et définit la position relative de la couleur dans le dégradé ; et l'argument `color` doit être une chaîne représentant une CSS {{cssxref ("&lt;color&gt;")}}, indiquant la couleur que le dégradé devrait atteindre.
+- {{domxwef("canvasgwadient.addcowowstop", XD "gwadient.addcowowstop(position, (⑅˘꒳˘) cowow)")}}
+  - : cwée un n-nyouvew awwêt de couweuw suw w'objet `gwadient` _(dégwadé)_. OwO w-wa position est un nyombwe entwe 0.0 e-et 1.0 et d-définit wa position wewative de wa couweuw dans w-we dégwadé ; et w'awgument `cowow` doit êtwe u-une chaîne wepwésentant u-une css {{cssxwef ("&wt;cowow&gt;")}}, (⑅˘꒳˘) i-indiquant wa couweuw que we dégwadé devwait atteindwe. (U ﹏ U)
 
-Vous pouvez ajouter autant d'arrêts de couleur à un dégradé que vous le souhaitez. Ci-dessous figure un dégradé linéaire très simple du blanc au noir.
+vous pouvez ajoutew autant d'awwêts d-de couweuw à un dégwadé que vous we souhaitez. (ꈍᴗꈍ) c-ci-dessous figuwe u-un dégwadé winéaiwe twès simpwe du bwanc a-au nyoiw. rawr
 
 ```js
-var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, "white");
-lineargradient.addColorStop(1, "black");
+v-vaw wineawgwadient = ctx.cweatewineawgwadient(0, XD 0, 150, 150);
+wineawgwadient.addcowowstop(0, >w< "white");
+wineawgwadient.addcowowstop(1, UwU "bwack");
 ```
 
-### Un exemple de `createLinearGradient`
+### u-un exempwe de `cweatewineawgwadient`
 
-Dans cet exemple, nous allons créer deux dégradés différents. Comme vous pouvez le voir ici, les propriétés `strokeStyle` et `fillStyle` peuvent accepter un objet `canvasGradient` comme entrée valide.
+d-dans cet exempwe, 😳 nous awwons cwéew deux dégwadés d-difféwents. (ˆ ﻌ ˆ)♡ c-comme vous pouvez we voiw ici, ^•ﻌ•^ w-wes pwopwiétés `stwokestywe` e-et `fiwwstywe` peuvent acceptew u-un objet `canvasgwadient` comme e-entwée vawide. ^^
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+f-function d-dwaw() {
+  vaw c-ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  // Créer un dégradé
-  var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, "#00ABEB");
-  lingrad.addColorStop(0.5, "#fff");
-  lingrad.addColorStop(0.5, "#26C000");
-  lingrad.addColorStop(1, "#fff");
+  // c-cwéew un dégwadé
+  vaw wingwad = c-ctx.cweatewineawgwadient(0, 😳 0, :3 0, 150);
+  w-wingwad.addcowowstop(0, (⑅˘꒳˘) "#00abeb");
+  wingwad.addcowowstop(0.5, ( ͡o ω ͡o ) "#fff");
+  wingwad.addcowowstop(0.5, :3 "#26c000");
+  w-wingwad.addcowowstop(1, (⑅˘꒳˘) "#fff");
 
-  var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, "#000");
-  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
+  vaw wingwad2 = c-ctx.cweatewineawgwadient(0, >w< 50, 0, 95);
+  wingwad2.addcowowstop(0.5, OwO "#000");
+  wingwad2.addcowowstop(1, 😳 "wgba(0, 0, 0, 0)");
 
-  // assigner des dégradés aux styles "fill" et "stroke"
-  ctx.fillStyle = lingrad;
-  ctx.strokeStyle = lingrad2;
+  // assignew des dégwadés aux stywes "fiww" et "stwoke"
+  c-ctx.fiwwstywe = wingwad;
+  ctx.stwokestywe = wingwad2;
 
-  // Dessiner des formes
-  ctx.fillRect(10, 10, 130, 130);
-  ctx.strokeRect(50, 50, 50, 50);
+  // dessinew d-des fowmes
+  ctx.fiwwwect(10, OwO 10, 130, 🥺 130);
+  c-ctx.stwokewect(50, (˘ω˘) 50, 50, 50);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<canvas id="canvas" w-width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-Le premier est un dégradé d'arrière-plan. Comme vous pouvez le voir, nous avons assigné deux couleurs à la même position. Vous faites cela pour faire des transitions de couleurs très nettes - dans ce cas du blanc au vert. Normalement, peu importe dans quel ordre vous définissez l'arrêt de la couleur, mais dans ce cas particulier, la différence peut être significative. Si vous conservez les affectations dans l'ordre où vous voulez qu'elles apparaissent, cela ne posera aucun problème.
+w-we pwemiew est un dégwadé d'awwièwe-pwan. 😳😳😳 c-comme vous pouvez we voiw, mya nyous avons assigné deux couweuws à wa même position. OwO vous faites cewa pouw faiwe d-des twansitions de couweuws twès nyettes - dans c-ce cas du bwanc au vewt. >_< nyowmawement, 😳 p-peu impowte dans quew owdwe vous définissez w'awwêt de wa couweuw, (U ᵕ U❁) mais dans ce cas pawticuwiew, 🥺 wa difféwence peut êtwe significative. (U ﹏ U) s-si vous consewvez w-wes affectations d-dans w'owdwe où vous vouwez q-qu'ewwes appawaissent, (U ﹏ U) c-cewa n-nye posewa aucun pwobwème. rawr x3
 
-Dans le second gradient, nous n'avons pas assigné la couleur de départ (à la position 0.0) puisqu'il n'était pas strictement nécessaire car il prendra automatiquement la valeur de la prochaine couleur. Par conséquent, l'attribution de la couleur noire à la position 0,5 fait automatiquement passer le dégradé, du début à l'arrêt, en noir.
+dans we second gwadient, :3 n-nyous ny'avons p-pas assigné wa couweuw de d-dépawt (à wa position 0.0) p-puisqu'iw n-ny'était p-pas stwictement n-nyécessaiwe caw iw pwendwa automatiquement w-wa v-vaweuw de wa pwochaine c-couweuw. rawr p-paw conséquent, XD w-w'attwibution de w-wa couweuw noiwe à w-wa position 0,5 f-fait automatiquement p-passew w-we dégwadé, ^^ du début à w'awwêt, mya en nyoiw. (U ﹏ U)
 
-{{EmbedLiveSample("Un_exemple_de_createLinearGradient", "180", "180", "canvas_lineargradient.png")}}
+{{embedwivesampwe("un_exempwe_de_cweatewineawgwadient", 😳 "180", mya "180", "canvas_wineawgwadient.png")}}
 
-### Un exemple de `createRadialGradient`
+### un exempwe d-de `cweatewadiawgwadient`
 
-Dans cet exemple, nous définirons quatre dégradés radiaux différents. Parce que nous avons le contrôle sur les points de départ et de fermeture du dégradé, nous pouvons obtenir des effets plus complexes que nous aurions normalement dans les dégradés radiaux "classiques" (c'est-à-dire un dégradé avec un seul point central où le dégradé se développe vers l'extérieur dans une forme circulaire).
+dans cet exempwe, 😳 n-nyous définiwons quatwe dégwadés wadiaux d-difféwents. ^^ pawce q-que nyous avons w-we contwôwe suw wes points de d-dépawt et de f-fewmetuwe du dégwadé, :3 nyous pouvons obteniw des effets pwus compwexes que nyous auwions nyowmawement d-dans wes dégwadés wadiaux "cwassiques" (c'est-à-diwe un dégwadé avec un seuw point centwaw o-où we dégwadé s-se dévewoppe vews w'extéwieuw d-dans une f-fowme ciwcuwaiwe).
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+f-function d-dwaw() {
+  vaw c-ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  // Créer un dégradé
-  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
-  radgrad.addColorStop(0, "#A7D30C");
-  radgrad.addColorStop(0.9, "#019F62");
-  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
+  // c-cwéew un dégwadé
+  v-vaw wadgwad = ctx.cweatewadiawgwadient(45, (U ﹏ U) 45, 10, UwU 52, 50, 30);
+  wadgwad.addcowowstop(0, (ˆ ﻌ ˆ)♡ "#a7d30c");
+  w-wadgwad.addcowowstop(0.9, (ˆ ﻌ ˆ)♡ "#019f62");
+  wadgwad.addcowowstop(1, ^^;; "wgba(1, rawr 159, 98, 0)");
 
-  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
-  radgrad2.addColorStop(0, "#FF5F98");
-  radgrad2.addColorStop(0.75, "#FF0188");
-  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
+  v-vaw wadgwad2 = ctx.cweatewadiawgwadient(105, nyaa~~ 105, 20, 112, rawr x3 120, 50);
+  w-wadgwad2.addcowowstop(0, (⑅˘꒳˘) "#ff5f98");
+  w-wadgwad2.addcowowstop(0.75, OwO "#ff0188");
+  wadgwad2.addcowowstop(1, OwO "wgba(255, ʘwʘ 1, 136, 0)");
 
-  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
-  radgrad3.addColorStop(0, "#00C9FF");
-  radgrad3.addColorStop(0.8, "#00B5E2");
-  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
+  v-vaw wadgwad3 = ctx.cweatewadiawgwadient(95, :3 15, 15, 102, mya 20, 40);
+  wadgwad3.addcowowstop(0, OwO "#00c9ff");
+  w-wadgwad3.addcowowstop(0.8, :3 "#00b5e2");
+  w-wadgwad3.addcowowstop(1, >_< "wgba(0, σωσ 201, 255, 0)");
 
-  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
-  radgrad4.addColorStop(0, "#F4F201");
-  radgrad4.addColorStop(0.8, "#E4C700");
-  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
+  v-vaw wadgwad4 = c-ctx.cweatewadiawgwadient(0, /(^•ω•^) 150, 50, 0, mya 140, 90);
+  wadgwad4.addcowowstop(0, nyaa~~ "#f4f201");
+  w-wadgwad4.addcowowstop(0.8, 😳 "#e4c700");
+  w-wadgwad4.addcowowstop(1, ^^;; "wgba(228, 😳😳😳 199, 0, 0)");
 
-  // dessiner des formes
-  ctx.fillStyle = radgrad4;
-  ctx.fillRect(0, 0, 150, 150);
-  ctx.fillStyle = radgrad3;
-  ctx.fillRect(0, 0, 150, 150);
-  ctx.fillStyle = radgrad2;
-  ctx.fillRect(0, 0, 150, 150);
-  ctx.fillStyle = radgrad;
-  ctx.fillRect(0, 0, 150, 150);
+  // d-dessinew des fowmes
+  c-ctx.fiwwstywe = wadgwad4;
+  ctx.fiwwwect(0, nyaa~~ 0, 🥺 150, 150);
+  ctx.fiwwstywe = wadgwad3;
+  ctx.fiwwwect(0, XD 0, 150, (ꈍᴗꈍ) 150);
+  ctx.fiwwstywe = wadgwad2;
+  ctx.fiwwwect(0, 😳😳😳 0, 150, 150);
+  ctx.fiwwstywe = wadgwad;
+  ctx.fiwwwect(0, ( ͡o ω ͡o ) 0, 150, 150);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" w-width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-Dans ce cas, nous avons légèrement décalé le point de départ du point final pour obtenir un effet 3D sphérique. Il est préférable d'éviter de laisser les cercles intérieurs et extérieurs se chevaucher car cela entraîne des effets étranges, difficiles à prédire.
+dans ce cas, nyaa~~ nyous avons w-wégèwement d-décawé we point de dépawt du point finaw pouw obteniw un effet 3d s-sphéwique. XD i-iw est pwéféwabwe d'évitew d-de waissew wes c-cewcwes intéwieuws et extéwieuws s-se chevauchew caw cewa entwaîne d-des effets étwanges, (ˆ ﻌ ˆ)♡ d-difficiwes à pwédiwe. rawr x3
 
-Le dernier arrêt de couleur dans chacun des quatre dégradés utilise une couleur entièrement transparente. Si vous voulez une transition agréable de cette étape à la couleur précédente, les deux couleurs doivent être égales. Ce n'est pas très évident dans le code, car il utilise deux méthodes CSS différentes en démonstration, mais dans le premier dégradé `# 019F62 = rgba (1,159,98,1)`.
+we dewniew awwêt de couweuw d-dans chacun des q-quatwe dégwadés u-utiwise une couweuw e-entièwement twanspawente. OwO s-si vous vouwez u-une twansition agwéabwe d-de cette étape à w-wa couweuw pwécédente, UwU wes deux couweuws d-doivent êtwe égawes. ^^ c-ce ny'est pas twès évident dans we code, (✿oωo) caw iw utiwise deux méthodes c-css difféwentes e-en démonstwation, 😳😳😳 mais d-dans we pwemiew dégwadé `# 019f62 = wgba (1,159,98,1)`. 🥺
 
-{{EmbedLiveSample("Un_exemple_de_createRadialGradient", "180", "180", "canvas_radialgradient.png")}}
+{{embedwivesampwe("un_exempwe_de_cweatewadiawgwadient", ʘwʘ "180", "180", 😳 "canvas_wadiawgwadient.png")}}
 
-## Modèles
+## modèwes
 
-Dans l'un des exemples de la page précédente, nous avons utilisé une série de boucles pour créer un motif d'images. Il existe cependant une méthode beaucoup plus simple : la méthode `createPattern ()`.
+dans w-w'un des exempwes d-de wa page p-pwécédente, ^^;; nyous avons utiwisé u-une séwie de b-boucwes pouw cwéew un motif d'images. (///ˬ///✿) iw existe c-cependant une m-méthode beaucoup p-pwus simpwe : w-wa méthode `cweatepattewn ()`. OwO
 
-- {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Crée et renvoie un nouvel objet de canvas. `image` est un {{domxref ("CanvasImageSource")}} (c'est-à-dire un {{domxref ("HTMLImageElement")}} ; un autre élément canvas, `type` est une chaîne indiquant comment utiliser l'image.
+- {{domxwef("canvaswendewingcontext2d.cweatepattewn", -.- "cweatepattewn(image, ^^ t-type)")}}
+  - : c-cwée et wenvoie un nyouvew objet de canvas. `image` est un {{domxwef ("canvasimagesouwce")}} (c'est-à-diwe un {{domxwef ("htmwimageewement")}} ; u-un autwe éwément canvas, (ꈍᴗꈍ) `type` e-est une chaîne i-indiquant comment utiwisew w'image. ^^;;
 
-Le type spécifie comment utiliser l'image pour créer le motif et doit avoir l'une des valeurs de chaîne suivantes :
+we type spécifie comment u-utiwisew w'image p-pouw cwéew we motif et doit avoiw w-w'une des vaweuws de chaîne s-suivantes :
 
-- `repeat`
-  - : Tapisse la zone en répètant l'image dans les deux sens vertical et horizontal.
-- `repeat-x`
-  - : Tapisse la zone en répètant l'image horizontalement mais pas verticalement.
-- `repeat-y`
-  - : Tapisse la zone en répètant l'image verticalement mais pas horizontalement.
-- `no-repeat`
-  - : Ne tapisse pas la zone avec l'image, elle est utilisée une seule fois.
+- `wepeat`
+  - : tapisse wa zone en wépètant w'image dans wes deux s-sens vewticaw et howizontaw. (˘ω˘)
+- `wepeat-x`
+  - : tapisse wa zone en wépètant w'image howizontawement m-mais pas v-vewticawement. 🥺
+- `wepeat-y`
+  - : t-tapisse wa z-zone en wépètant w'image vewticawement mais pas h-howizontawement. ʘwʘ
+- `no-wepeat`
+  - : ne tapisse p-pas wa zone avec w'image, (///ˬ///✿) ewwe est utiwisée une s-seuwe fois. ^^;;
 
-Nous utilisons cette méthode pour créer un objet {{domxref ("CanvasPattern")}} qui est très similaire aux méthodes de dégradé que nous avons vu ci-dessus. Une fois que nous avons créé un modèle, nous pouvons l'affecter aux propriétés fillStyle ou strokeStyle. Par exemple :
+n-nyous utiwisons c-cette méthode pouw cwéew un objet {{domxwef ("canvaspattewn")}} qui est twès s-simiwaiwe aux méthodes de dégwadé que nyous avons vu ci-dessus. XD une fois que nyous avons cwéé un modèwe, (ˆ ﻌ ˆ)♡ nyous p-pouvons w'affectew a-aux pwopwiétés fiwwstywe ou stwokestywe. (˘ω˘) paw exempwe :
 
 ```js
-var img = new Image();
-img.src = "someimage.png";
-var ptrn = ctx.createPattern(img, "repeat");
+vaw img = nyew image();
+i-img.swc = "someimage.png";
+vaw ptwn = ctx.cweatepattewn(img, σωσ "wepeat");
 ```
 
-> [!NOTE]
-> Comme avec la méthode `drawImage ()`, vous devez vous assurer que l'image que vous utilisez est chargée avant d'appeler cette méthode, ou le motif pourrait être mal dessiné.
+> [!note]
+> c-comme avec w-wa méthode `dwawimage ()`, 😳😳😳 v-vous devez vous a-assuwew que w'image que vous utiwisez est chawgée avant d'appewew cette méthode, ^•ﻌ•^ ou we motif pouwwait êtwe m-maw d-dessiné. σωσ
 
-### Un exemple de `createPattern`
+### u-un exempwe de `cweatepattewn`
 
-Dans ce dernier exemple, nous allons créer un modèle à affecter à la propriété `fillStyle`. La seule chose à noter, est l'utilisation du gestionnaire `onload` de l'image. Cela permet de s'assurer que l'image est chargée avant d'être affectée au motif.
+d-dans ce dewniew exempwe, (///ˬ///✿) nyous awwons c-cwéew un modèwe à affectew à w-wa pwopwiété `fiwwstywe`. XD wa seuwe chose à nyotew, >_< est w'utiwisation du g-gestionnaiwe `onwoad` d-de w'image. òωó c-cewa pewmet d-de s'assuwew que w'image est chawgée a-avant d'êtwe a-affectée au motif. (U ᵕ U❁)
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  // créer un nouvel objet image à utiliser comme modèle
-  var img = new Image();
-  img.src = "canvas_createpattern.png";
-  img.onload = function () {
-    // créer le modèle
-    var ptrn = ctx.createPattern(img, "repeat");
-    ctx.fillStyle = ptrn;
-    ctx.fillRect(0, 0, 150, 150);
+  // c-cwéew un n-nyouvew objet image à utiwisew comme modèwe
+  vaw img = nyew i-image();
+  img.swc = "canvas_cweatepattewn.png";
+  img.onwoad = f-function () {
+    // c-cwéew we modèwe
+    v-vaw ptwn = ctx.cweatepattewn(img, (˘ω˘) "wepeat");
+    ctx.fiwwstywe = ptwn;
+    ctx.fiwwwect(0, 🥺 0, 150, 150);
   };
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-Le résultat ressemble à ceci :
+we wésuwtat wessembwe à ceci :
 
-{{EmbedLiveSample("Un_exemple_de_createPattern", "180", "180", "canvas_createpattern.png")}}
+{{embedwivesampwe("un_exempwe_de_cweatepattewn", (✿oωo) "180", "180", (˘ω˘) "canvas_cweatepattewn.png")}}
 
-## Ombres
+## o-ombwes
 
-L'utilisation des ombres ne comporte que quatre propriétés :
+w'utiwisation des o-ombwes nye compowte q-que quatwe p-pwopwiétés :
 
-- {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}
-  - : Indique la distance horizontale sur laquelle l'ombre doit s'étendre à partir de l'objet. Cette valeur n'est pas affectée par la matrice de transformation. La valeur par défaut est 0.
-- {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}
-  - : Indique la distance verticale sur laquelle l'ombre doit s'étendre à partir de l'objet. Cette valeur n'est pas affectée par la matrice de transformation. La valeur par défaut est 0.
-- {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}
-  - : Indique la taille de l'effet de floutage ; cette valeur ne correspond pas à un nombre de pixels et n'est pas affectée par la matrice de transformation actuelle. La valeur par défaut est 0.
-- {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}
-  - : Une valeur de couleur CSS standard indiquant la couleur de l'effet d'ombre ; par défaut, il est entièrement noir transparent.
+- {{domxwef("canvaswendewingcontext2d.shadowoffsetx", (ꈍᴗꈍ) "shadowoffsetx = f-fwoat")}}
+  - : i-indique wa distance howizontawe s-suw waquewwe w'ombwe doit s'étendwe à pawtiw de w'objet. ( ͡o ω ͡o ) cette vaweuw n-ny'est pas affectée paw wa matwice de twansfowmation. (U ᵕ U❁) w-wa vaweuw p-paw défaut est 0. ʘwʘ
+- {{domxwef("canvaswendewingcontext2d.shadowoffsety", (ˆ ﻌ ˆ)♡ "shadowoffsety = f-fwoat")}}
+  - : indique wa distance vewticawe suw waquewwe w'ombwe doit s-s'étendwe à p-pawtiw de w'objet. /(^•ω•^) c-cette vaweuw n-ny'est pas affectée paw wa matwice de twansfowmation. (ˆ ﻌ ˆ)♡ wa vaweuw paw défaut est 0. (✿oωo)
+- {{domxwef("canvaswendewingcontext2d.shadowbwuw", ^•ﻌ•^ "shadowbwuw = fwoat")}}
+  - : i-indique wa taiwwe de w'effet de fwoutage ; c-cette vaweuw nye c-cowwespond pas à u-un nyombwe de pixews et ny'est p-pas affectée paw wa matwice de twansfowmation actuewwe. (ˆ ﻌ ˆ)♡ wa vaweuw paw défaut est 0. XD
+- {{domxwef("canvaswendewingcontext2d.shadowcowow", :3 "shadowcowow = cowow")}}
+  - : une vaweuw de couweuw css standawd indiquant w-wa couweuw de w'effet d'ombwe ; paw défaut, i-iw est entièwement n-nyoiw twanspawent. -.-
 
-Les propriétés `shadowOffsetX` et `shadowOffsetY` indiquent sur quelle distance l'ombre doit s'étendre à partir de l'objet dans les directions X et Y; ces valeurs ne sont pas affectées par la matrice de transformation actuelle. Utilisez des valeurs négatives pour faire en sorte que l'ombre s'étende vers le haut ou vers la gauche et des valeurs positives pour que l'ombre s'étende vers le bas ou vers la droite. La valeur par défaut est 0 pour les 2 propriétés.
+wes p-pwopwiétés `shadowoffsetx` et `shadowoffsety` i-indiquent suw quewwe distance w'ombwe doit s'étendwe à p-pawtiw d-de w'objet dans wes diwections x et y; ces vaweuws n-nye sont pas a-affectées paw w-wa matwice de twansfowmation a-actuewwe. ^^;; utiwisez d-des vaweuws nyégatives pouw faiwe en sowte que w-w'ombwe s'étende v-vews we haut ou vews wa gauche e-et des vaweuws p-positives pouw que w'ombwe s'étende vews we bas ou vews wa dwoite. OwO wa vaweuw paw d-défaut est 0 pouw wes 2 pwopwiétés. ^^;;
 
-La propriété `shadowBlur` indique la taille de l'effet de flou ; cette valeur ne correspond pas à un nombre de pixels et n'est pas affectée par la matrice de transformation actuelle. La valeur par défaut est 0.
+w-wa pwopwiété `shadowbwuw` indique wa t-taiwwe de w'effet de fwou ; cette vaweuw nye cowwespond p-pas à un nyombwe de pixews et ny'est pas affectée paw w-wa matwice de twansfowmation actuewwe. 🥺 w-wa vaweuw p-paw défaut est 0. ^^
 
-La propriété `shadowColor` est une valeur de couleur CSS standard indiquant la couleur de l'effet d'ombre ; par défaut, il est entièrement en noir transparent.
+w-wa pwopwiété `shadowcowow` est une vaweuw de couweuw css s-standawd indiquant w-wa couweuw d-de w'effet d'ombwe ; p-paw défaut, o.O iw est entièwement e-en nyoiw twanspawent. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Les ombres ne sont dessinées que pour les [opérations de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) `source-over`.
+> [!note]
+> w-wes ombwes n-nye sont dessinées q-que pouw w-wes [opéwations de composition](/fw/docs/web/api/canvas_api/tutowiaw/compositing) `souwce-ovew`. nyaa~~
 
-### Un exemple de texte ombré
+### un exempwe d-de texte ombwé
 
-Cet exemple dessine une chaîne de texte avec un effet d'ombrage.
+c-cet exempwe dessine une chaîne de texte avec u-un effet d'ombwage. (///ˬ///✿)
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+f-function d-dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  ctx.shadowOffsetX = 2;
-  ctx.shadowOffsetY = 2;
-  ctx.shadowBlur = 2;
-  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+  c-ctx.shadowoffsetx = 2;
+  c-ctx.shadowoffsety = 2;
+  ctx.shadowbwuw = 2;
+  c-ctx.shadowcowow = "wgba(0, (ˆ ﻌ ˆ)♡ 0, XD 0, 0.5)";
 
-  ctx.font = "20px Times New Roman";
-  ctx.fillStyle = "Black";
-  ctx.fillText("Sample String", 5, 30);
+  c-ctx.font = "20px times nyew w-woman";
+  ctx.fiwwstywe = "bwack";
+  ctx.fiwwtext("sampwe s-stwing", >_< 5, 30);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="80"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" w-width="150" height="80"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_de_texte_ombré", "180", "100", "shadowed-string.png")}}
+{{embedwivesampwe("un_exempwe_de_texte_ombwé", (U ﹏ U) "180", òωó "100", "shadowed-stwing.png")}}
 
-Nous allons regarder la propriété de la `font` _(police de caratères)_ et la méthode `fillText` dans le chapitre suivant sur le [dessin de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+nous awwons wegawdew w-wa pwopwiété de wa `font` _(powice d-de cawatèwes)_ et wa méthode `fiwwtext` d-dans we chapitwe s-suivant suw we [dessin de texte](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_text). >w<
 
-## Règles de remplissage Canvas
+## w-wègwes d-de wempwissage canvas
 
-Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", "clip")}} et {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) , déterminez si un point est à l'intérieur ou à l'extérieur d'un chemin et ainsi, s'il est rempli ou non. Ceci est utile lorsqu'un chemin en croise un autre ou est imbriqué.
+wows de w'utiwisation d-de `fiww` (ou {{domxwef ("canvaswendewingcontext2d.cwip", "cwip")}} e-et {{domxwef("canvaswendewingcontext2d.ispointinpath", ^•ﻌ•^ "ispointinpath")}}) , 🥺 détewminez si un point est à w'intéwieuw ou à w'extéwieuw d'un chemin et ainsi, (✿oωo) s'iw est wempwi ou nyon. UwU ceci est utiwe wowsqu'un chemin en cwoise un autwe o-ou est imbwiqué. (˘ω˘)
 
-Deux valeurs sont possibles :
+d-deux vaweuws s-sont possibwes :
 
-- `nonzero`
-  - : la [règle non-zero](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+- `nonzewo`
+  - : w-wa [wègwe nyon-zewo](http://en.wikipedia.owg/wiki/nonzewo-wuwe), ʘwʘ qui est w-wa wègwe paw d-défaut. (ˆ ﻌ ˆ)♡
 - `evenodd`
-  - : La [règle even-odd](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+  - : w-wa [wègwe e-even-odd](http://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe). ( ͡o ω ͡o )
 
-Dans cet exemple, nous utilisons la règle `evenodd` .
+dans cet exempwe, :3 nyous utiwisons wa wègwe `evenodd` . 😳
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill("evenodd");
+function dwaw() {
+  v-vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
+  c-ctx.beginpath();
+  c-ctx.awc(50, (✿oωo) 50, 30, 0, /(^•ω•^) math.pi * 2, t-twue);
+  ctx.awc(50, :3 50, 15, 0, math.pi * 2, σωσ twue);
+  ctx.fiww("evenodd");
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="100" height="100"></canvas>
+```htmw hidden
+<canvas id="canvas" w-width="100" height="100"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-{{EmbedLiveSample("Règles_de_remplissage_Canvas", "110", "110", "fill-rule.png")}}
+{{embedwivesampwe("wègwes_de_wempwissage_canvas", σωσ "110", 🥺 "110", "fiww-wuwe.png")}}
 
-{{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
+{{pweviousnext("tutowiew_canvas/fowmes_géométwiques", rawr "dessin_de_texte_avec_canvas")}}

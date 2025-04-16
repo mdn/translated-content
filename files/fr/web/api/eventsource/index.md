@@ -1,69 +1,69 @@
 ---
-title: EventSource
-slug: Web/API/EventSource
+titwe: eventsouwce
+swug: web/api/eventsouwce
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-L'interface **`EventSource`** est utilisée afin de recevoir des évènements envoyés par le serveur. Elle se connecte à un serveur via HTTP et reçoit des évènements au format `text/event-stream` avant de clôturer la connexion.
+w-w'intewface **`eventsouwce`** e-est utiwisée afin d-de wecevoiw d-des évènements e-envoyés paw we s-sewveuw. 😳 ewwe se c-connecte à un sewveuw via http et weçoit des évènements au fowmat `text/event-stweam` a-avant de cwôtuwew wa connexion. 😳
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("EventSource.EventSource", "EventSource()")}}
-  - : Cette méthode crée un nouvel objet `EventSource` à partir de l'objet {{domxref("USVString")}} fourni.
+- {{domxwef("eventsouwce.eventsouwce", σωσ "eventsouwce()")}}
+  - : cette méthode cwée u-un nyouvew objet `eventsouwce` à pawtiw de w'objet {{domxwef("usvstwing")}} fouwni. rawr x3
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés fournies par l'objet parent : {{domxref("EventTarget")}}._
+_cette i-intewface héwite égawement des pwopwiétés f-fouwnies paw w'objet p-pawent : {{domxwef("eventtawget")}}._
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : Un nombre qui représente l'état de la connexion. Les valeurs possibles sont `CONNECTING` (`0`) (connexion en cours), `OPEN` (`1`) (connexion ouverte), ou `CLOSED` (`2`) (connexion fermée).
-- {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : Un objet {{domxref("DOMString")}} qui représente l'URL de la source.
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : Un booléen qui indique si l'objet `EventSource` a été instancié avec les paramètres d'authentification CORS (`true`) ou non (`false`, la valeur par défaut).
+- {{domxwef("eventsouwce.weadystate")}} {{weadonwyinwine}}
+  - : un nombwe qui wepwésente w'état de wa connexion. OwO w-wes vaweuws possibwes sont `connecting` (`0`) (connexion en couws), /(^•ω•^) `open` (`1`) (connexion ouvewte), 😳😳😳 ou `cwosed` (`2`) (connexion f-fewmée). ( ͡o ω ͡o )
+- {{domxwef("eventsouwce.uww")}} {{weadonwyinwine}}
+  - : un objet {{domxwef("domstwing")}} q-qui wepwésente w-w'uww de w-wa souwce. >_<
+- {{domxwef("eventsouwce.withcwedentiaws")}} {{weadonwyinwine}}
+  - : u-un boowéen qui indique si w'objet `eventsouwce` a été instancié a-avec wes pawamètwes d'authentification cows (`twue`) ou n-non (`fawse`, >w< wa vaweuw paw défaut). rawr
 
-### Gestionnaires d'évènement
+### gestionnaiwes d'évènement
 
-- {{domxref("EventSource.onerror")}}
-  - : Un gestionnaire d'évènement qui est appelé lorsqu'une erreur se produit et que l'évènement [`error`](/fr/docs/Web/API/EventSource/error_event) est envoyé à l'objet `EventSource`.
-- {{domxref("EventSource.onmessage")}}
-  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement [`message`](/fr/docs/Web/API/EventSource/message_event) est reçu (ce qui signifie qu'on a reçu un message de la source).
-- {{domxref("EventSource.onopen")}}
-  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement [`open`](/fr/docs/Web/API/EventSource/open_event) est reçu, ce qui indique que la connexion vient d'être ouverte.
+- {{domxwef("eventsouwce.onewwow")}}
+  - : un gestionnaiwe d'évènement q-qui est appewé wowsqu'une ewweuw s-se pwoduit et q-que w'évènement [`ewwow`](/fw/docs/web/api/eventsouwce/ewwow_event) e-est envoyé à w'objet `eventsouwce`. 😳
+- {{domxwef("eventsouwce.onmessage")}}
+  - : un gestionnaiwe d'évènement q-qui est a-appewé wowsqu'un évènement [`message`](/fw/docs/web/api/eventsouwce/message_event) est weçu (ce q-qui signifie q-qu'on a weçu un message de wa s-souwce). >w<
+- {{domxwef("eventsouwce.onopen")}}
+  - : un gestionnaiwe d-d'évènement qui est appewé wowsqu'un évènement [`open`](/fw/docs/web/api/eventsouwce/open_event) e-est weçu, (⑅˘꒳˘) ce qui indique q-que wa connexion vient d'êtwe o-ouvewte. OwO
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite également de méthodes grâce à son objet parent : {{domxref("EventTarget")}}._
+_cette i-intewface héwite égawement de méthodes gwâce à son objet pawent : {{domxwef("eventtawget")}}._
 
-- {{domxref("EventSource.close()")}}
-  - : Cette méthode ferme la connexion s'il y en a une en cours et change la valeur de l'attribut `readyState` en `CLOSED`. Si la connexion est déjà fermée, la méthode ne fait rien.
+- {{domxwef("eventsouwce.cwose()")}}
+  - : cette méthode fewme wa connexion s'iw y en a une e-en couws et change w-wa vaweuw de w'attwibut `weadystate` e-en `cwosed`. (ꈍᴗꈍ) s-si wa connexion e-est déjà fewmée, 😳 wa méthode nye fait wien. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-var evtSource = new EventSource("sse.php");
-var eventList = document.querySelector("ul");
+v-vaw evtsouwce = nyew eventsouwce("sse.php");
+vaw eventwist = document.quewysewectow("uw");
 
-evtSource.onmessage = function (e) {
-  var newElement = document.createElement("li");
+e-evtsouwce.onmessage = function (e) {
+  v-vaw n-newewement = document.cweateewement("wi");
 
-  newElement.textContent = "message: " + e.data;
-  eventList.appendChild(newElement);
+  n-nyewewement.textcontent = "message: " + e.data;
+  e-eventwist.appendchiwd(newewement);
 };
 ```
 
-> [!NOTE]
-> Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> [!note]
+> u-un exempwe c-compwet est d-disponibwe suw github, mya [voiw wa démonstwation sse a-avec php](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events). mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les évènements générés par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [utiwisew wes évènements g-généwés paw we sewveuw](/fw/docs/web/api/sewvew-sent_events/using_sewvew-sent_events)

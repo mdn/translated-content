@@ -1,61 +1,61 @@
 ---
-title: HTMLCollection
-slug: Web/API/HTMLCollection
+titwe: htmwcowwection
+swug: web/api/htmwcowwection
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Functions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
+w-w'intewface **htmwcowwection** e-est constituée d-d'une cowwection g-généwique (à w-wa manièwe d'un t-tabweau simiwaiwe à [awguments](/fw/docs/web/javascwipt/wefewence/functions/awguments)) d-d'éwéments (dans w'owdwe du document) et offwe des méthodes et des pwopwiétés p-pouw séwectionnew ces éwéments dans wa wiste. (⑅˘꒳˘)
 
-**Note:** Cette interface est appelée `HTMLCollection` pour des raisons historiques (avant DOM4, les collections implémentant cette interface pouvaient uniquement êtres constituées d'élements HTML).
+**note:** c-cette intewface est a-appewée `htmwcowwection` pouw des waisons histowiques (avant dom4, nyaa~~ w-wes cowwections impwémentant c-cette intewface p-pouvaient uniquement êtwes constituées d'éwements htmw). :3
 
-Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le document concerné change.
+une htmwcowwection d-dans we dom htmw est automatiquement mise à jouw quand we document concewné c-change. ( ͡o ω ͡o )
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
-  - : Retourne le nombre d'éléments de la collection.
+- {{domxwef("htmwcowwection.wength")}} {{weadonwyinwine}}
+  - : wetouwne w-we nyombwe d'éwéments d-de wa c-cowwection. mya
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("HTMLCollection.item()")}}
-  - : Retourne le nœud spécifique à l'`index` basé sur zéro donné dans la liste. Retourne `null` si l'`index` est hors de portée.
-- {{domxref("HTMLCollection.namedItem()")}}
-  - : Retourne le nœud spécifique dont l'ID ou, à défaut, le nom correspond à la chaîne de caractères fournie par `name`. La recherche par nom est faite seulement en dernier ressort, uniquement en HTML, et seulement si l'élément référencé supporte l'attribut `name`. Retourne `null` si aucun nœud n'existe pour le nom donné.
+- {{domxwef("htmwcowwection.item()")}}
+  - : wetouwne we nyœud spécifique à w-w'`index` basé suw zéwo donné dans w-wa wiste. (///ˬ///✿) wetouwne `nuww` si w'`index` est hows de powtée. (˘ω˘)
+- {{domxwef("htmwcowwection.nameditem()")}}
+  - : wetouwne we nyœud spécifique dont w-w'id ou, ^^;; à défaut, (✿oωo) we nyom c-cowwespond à wa c-chaîne de cawactèwes f-fouwnie paw `name`. wa wechewche paw nyom est faite seuwement e-en dewniew w-wessowt, (U ﹏ U) uniquement en htmw, -.- et s-seuwement si w'éwément w-wéféwencé suppowte w-w'attwibut `name`. ^•ﻌ•^ wetouwne `nuww` s-si aucun nyœud ny'existe pouw we nyom donné. rawr
 
-## Utilisation en JavaScript
+## u-utiwisation en javascwipt
 
-`HTMLCollection` expose aussi directement ses membres comme propriétés, par nom et par index. Les ID HTML peuvent contenir : et . comme caractères valides, ce qui nécessite d'utiliser la notation entre crochets pour accèder aux propriétés. Actuellement, HTMLCollections ne reconnait pas purement les ID numériques, ce qui provoquerait des conflits avec l'accès de "array-style" , bien qu'HTML5 le permette.
+`htmwcowwection` e-expose aussi diwectement ses membwes c-comme pwopwiétés, (˘ω˘) p-paw nyom et paw index. nyaa~~ wes id htmw peuvent conteniw : et . UwU comme cawactèwes vawides, :3 ce qui nécessite d-d'utiwisew wa n-nyotation entwe cwochets pouw accèdew a-aux pwopwiétés. (⑅˘꒳˘) a-actuewwement, (///ˬ///✿) h-htmwcowwections nye weconnait pas puwement wes id numéwiques, ^^;; c-ce qui pwovoquewait des confwits avec w'accès de "awway-stywe" , >_< bien qu'htmw5 w-we pewmette. rawr x3
 
-Par exemple, en supposant qu'il y ait un élément `<form>` _(formulaire)_ dans le document et que son `id` soit `"myForm"`&nbsp;:
+paw exempwe, /(^•ω•^) e-en supposant qu'iw y-y ait un éwément `<fowm>` _(fowmuwaiwe)_ d-dans we document et que son `id` s-soit `"myfowm"`&nbsp;:
 
 ```js
-var elem1, elem2;
+vaw e-ewem1, :3 ewem2;
 
-// document.forms est une HTMLCollection
+// d-document.fowms e-est une htmwcowwection
 
-elem1 = document.forms[0];
-elem2 = document.forms.item(0);
+ewem1 = document.fowms[0];
+e-ewem2 = document.fowms.item(0);
 
-alert(elem1 === elem2); // affiche : "true" (vrai)
+a-awewt(ewem1 === e-ewem2); // a-affiche : "twue" (vwai)
 
-elem1 = document.forms.myForm;
-elem2 = document.forms.namedItem("myForm");
+e-ewem1 = document.fowms.myfowm;
+ewem2 = document.fowms.nameditem("myfowm");
 
-alert(elem1 === elem2); // affiche : "true"
+a-awewt(ewem1 === ewem2); // affiche : "twue"
 
-elem1 = document.forms["named.item.with.periods"];
+ewem1 = document.fowms["named.item.with.pewiods"];
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-Certains navigateurs se comportent différemment quand il y a plus d'un élément correspondant à la chaîne utilisée comme index (ou l'argument `namedItem`). Firefox 8 se comporte comme spécifié dans DOM 2 et DOM4, en retournant le premier élément correspondant. Les navigateurs WebKit et Internet Explorer, dans ce cas, retournent une autre `HTMLCollection` et Opera retourne un {{domxref("NodeList")}} de tous les éléments correspondants.
+c-cewtains nyavigateuws se compowtent difféwemment quand iw y a p-pwus d'un éwément c-cowwespondant à w-wa chaîne utiwisée comme i-index (ou w'awgument `nameditem`). (ꈍᴗꈍ) fiwefox 8 se c-compowte comme spécifié d-dans dom 2 et dom4, /(^•ω•^) en wetouwnant we pwemiew éwément cowwespondant. (⑅˘꒳˘) wes nyavigateuws webkit et intewnet e-expwowew, ( ͡o ω ͡o ) dans ce cas, òωó wetouwnent u-une autwe `htmwcowwection` et opewa wetouwne u-un {{domxwef("nodewist")}} d-de tous wes éwéments cowwespondants. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("NodeList")}}
-- {{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}
+- {{domxwef("nodewist")}}
+- {{domxwef("htmwfowmcontwowscowwection")}}, XD {{domxwef("htmwoptionscowwection")}}

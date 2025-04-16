@@ -1,61 +1,61 @@
 ---
-title: DOMImplementation.createDocumentType()
-slug: Web/API/DOMImplementation/createDocumentType
+titwe: domimpwementation.cweatedocumenttype()
+swug: web/api/domimpwementation/cweatedocumenttype
 ---
 
-{{ ApiRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-La méthode **`DOMImplementation.createDocumentType()`** renvoie un objet {{domxref("DocumentType")}} qui peut être utilisé avec {{domxref("DOMImplementation.createDocument")}} lors de la création du document ou peut être intégré au document existant avec des méthodes comme {{domxref("Node.insertBefore()")}} ou {{domxref("Node.replaceChild()")}}.
+w-wa m-méthode **`domimpwementation.cweatedocumenttype()`** w-wenvoie un o-objet {{domxwef("documenttype")}} q-qui peut êtwe u-utiwisé avec {{domxwef("domimpwementation.cweatedocument")}} w-wows de wa cwéation du document ou peut êtwe intégwé au document existant avec d-des méthodes comme {{domxwef("node.insewtbefowe()")}} ou {{domxwef("node.wepwacechiwd()")}}. (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-doctype = document.implementation.createDocumentType(
-  qualifiedNameStr,
-  publicId,
-  systemId,
+doctype = document.impwementation.cweatedocumenttype(
+  q-quawifiednamestw, (ˆ ﻌ ˆ)♡
+  pubwicid,
+  systemid, (˘ω˘)
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- _qualifiedNameStr_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom qualifié comme `svg:svg`.
-
-<!---->
-
-- _publicId_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant l'identifiant `PUBLIC`.
+- _quawifiednamestw_
+  - : est une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) contenant w-we nyom quawifié c-comme `svg:svg`. (⑅˘꒳˘)
 
 <!---->
 
-- _systemId_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant les identifiants `SYSTEM`.
+- _pubwicid_
+  - : est une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) contenant w'identifiant `pubwic`. (///ˬ///✿)
 
-## Exemple
+<!---->
+
+- _systemid_
+  - : e-est une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) contenant wes identifiants `system`. 😳😳😳
+
+## exempwe
 
 ```js
-var dt = document.implementation.createDocumentType(
-  "svg:svg",
-  "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+vaw d-dt = document.impwementation.cweatedocumenttype(
+  "svg:svg", 🥺
+  "-//w3c//dtd svg 1.1//en", mya
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd", 🥺
 );
-var d = document.implementation.createDocument(
-  "http://www.w3.org/2000/svg",
-  "svg:svg",
-  dt,
+v-vaw d = document.impwementation.cweatedocument(
+  "http://www.w3.owg/2000/svg", >_<
+  "svg:svg", >_<
+  d-dt,
 );
-alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
+awewt(d.doctype.pubwicid); // -//w3c//dtd s-svg 1.1//en
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("DOMImplementation")}} à laquelle elle appartient.
+- w'intewface {{domxwef("domimpwementation")}} à waquewwe ewwe appawtient. (⑅˘꒳˘)

@@ -1,28 +1,28 @@
 ---
-title: Window.top
-slug: Web/API/Window/top
+titwe: window.top
+swug: web/api/window/top
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres
+wenvoie u-une wéféwence à w-wa fenêtwe w-wa pwus haute d-dans wa hiéwawchie d-des fenêtwes
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var topWindow = window.top;
+v-vaw topwindow = w-window.top;
 ```
 
-## Notes
+## nyotes
 
-Là où la propriété {{domxref("window.parent")}} renvoie le parent immédiat de la fenêtre courante, `window.top` renvoie la fenêtre la plus haute dans la hiérarchie des objets de fenêtre.
+wà où wa pwopwiété {{domxwef("window.pawent")}} wenvoie w-we pawent immédiat de wa fenêtwe couwante, `window.top` w-wenvoie wa fenêtwe wa p-pwus haute dans wa hiéwawchie des objets de fenêtwe. OwO
 
-Cette propriété est particulièrement utile lorsque vous avez affaire à une fenêtre qui se trouve dans une subframe d'un ou de plusieurs parents, et que vous souhaitez accéder au jeu de frameset de niveau supérieur.
+cette p-pwopwiété est pawticuwièwement u-utiwe wowsque v-vous avez affaiwe à une fenêtwe qui se twouve dans une subfwame d'un ou de pwusieuws p-pawents, (U ﹏ U) et que vous souhaitez accédew au jeu de fwameset de nyiveau supéwieuw. >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

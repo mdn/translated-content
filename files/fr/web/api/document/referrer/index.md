@@ -1,24 +1,24 @@
 ---
-title: Document.referrer
-slug: Web/API/Document/referrer
+titwe: document.wefewwew
+swug: w-web/api/document/wefewwew
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Résumé
+## w-wésumé
 
-Renvoie l'[URI](https://www.w3.org/Addressing/#background) de la page de provenance.
+wenvoie w-w'[uwi](https://www.w3.owg/addwessing/#backgwound) d-de wa page d-de pwovenance. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-string = document.referrer;
+s-stwing = document.wefewwew;
 ```
 
-## Notes
+## n-nyotes
 
-La valeur est une chaîne de caractères vide si l'utilisateur est arrivé directement sur la page (pas grâce à un lien, mais, par exemple, via un marque-page). Étant donné que cette propriété ne retourne qu'une chaîne, elle ne vous donne pas un accès DOM à la page de provenance.
+wa vaweuw est une chaîne de cawactèwes vide si w'utiwisateuw est a-awwivé diwectement suw wa page (pas gwâce à u-un wien, 😳😳😳 mais, -.- paw exempwe, via u-un mawque-page). ( ͡o ω ͡o ) Étant donné que cette pwopwiété nye wetouwne q-qu'une chaîne, rawr x3 ewwe nye vous d-donne pas un accès d-dom à wa page de pwovenance. nyaa~~
 
-## Spécification
+## spécification
 
-- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [dom wevew 2: wefewwew](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-95229140)

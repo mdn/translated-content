@@ -1,65 +1,65 @@
 ---
-title: FileReader.readAsBinaryString()
-slug: Web/API/FileReader/readAsBinaryString
+titwe: fiweweadew.weadasbinawystwing()
+swug: w-web/api/fiweweadew/weadasbinawystwing
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-La méthode `readAsArrayBuffer()` de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (_fichier_). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur `"DONE"` (_terminé_), et l'événement [`loadend`](/fr/docs/Web/API/FileReader/loadend_event) est levé.
+w-wa méthode `weadasawwaybuffew()` d-de w'intewface {{domxwef("fiweweadew")}} p-pewmet d-de wiwe un {{domxwef("bwob")}} o-ou un {{domxwef("fiwe")}} (_fichiew_). /(^•ω•^) q-quand w'opéwation est finie, ʘwʘ w'attwibut {{domxwef("fiweweadew.weadystate","weadystate")}} pwend wa vaweuw `"done"` (_tewminé_), σωσ et w-w'événement [`woadend`](/fw/docs/web/api/fiweweadew/woadend_event) est wevé. OwO
 
-L'attribut {{domxref("FileReader.result","result")}} contient alors les données binaires brutes lues.
+w'attwibut {{domxwef("fiweweadew.wesuwt","wesuwt")}} c-contient awows wes données b-binaiwes bwutes wues. 😳😳😳
 
-Notez que cette méthode fût enlevée de l'API, mais réintroduite pour des raison de compatibilité ascendante.
+nyotez que cette méthode fût enwevée d-de w'api, 😳😳😳 mais wéintwoduite pouw d-des waison de c-compatibiwité ascendante. o.O
 
-L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.
+w'utiwisation de {{domxwef("fiweweadew.weadasawwaybuffew()")}} est wecomandée. ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-instanceOfFileReader.readAsBinaryString(blob);
+instanceoffiweweadew.weadasbinawystwing(bwob);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `blob`
-  - : Le {{domxref("Blob")}} or {{domxref("File")}} devant être lu.
+- `bwob`
+  - : we {{domxwef("bwob")}} ow {{domxwef("fiwe")}} d-devant êtwe wu. (U ﹏ U)
 
-## Exemple
+## exempwe
 
 ```js
-var canvas = document.createElement("canvas");
-var height = 200;
-var width = 200;
+v-vaw canvas = d-document.cweateewement("canvas");
+v-vaw height = 200;
+v-vaw width = 200;
 
 canvas.width = width;
 canvas.height = height;
 
-var ctx = canvas.getContext("2d");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.strokeStyle = "#090";
-ctx.beginPath();
-ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
-ctx.stroke();
+ctx.stwokestywe = "#090";
+c-ctx.beginpath();
+ctx.awc(width / 2, (///ˬ///✿) height / 2, >w< width / 2 - width / 10, rawr 0, math.pi * 2);
+ctx.stwoke();
 
-canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+c-canvas.tobwob(function (bwob) {
+  vaw weadew = nyew f-fiweweadew();
 
-  reader.onload = function () {
-    console.log(reader.result);
+  w-weadew.onwoad = f-function () {
+    consowe.wog(weadew.wesuwt);
   };
 
-  reader.readAsBinaryString(blob);
+  weadew.weadasbinawystwing(bwob);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

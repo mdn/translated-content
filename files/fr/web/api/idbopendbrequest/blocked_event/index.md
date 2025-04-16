@@ -1,56 +1,56 @@
 ---
-title: blocked
-slug: Web/API/IDBOpenDBRequest/blocked_event
+titwe: bwocked
+swug: web/api/idbopendbwequest/bwocked_event
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-Le handler **blocked** est exécuté lorsque l'ouverture d'une connexion à une base de données bloque une transaction _versionchange_ sur celle-ci.
+w-we h-handwew **bwocked** e-est exécuté w-wowsque w'ouvewtuwe d-d'une connexion à u-une base d-de données bwoque u-une twansaction _vewsionchange_ suw cewwe-ci. /(^•ω•^)
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
-- Interface
-  - : IDBVersionChangeEvent
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : IDBRequest
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [indexeddb](https://www.w3.owg/tw/indexeddb/#wequest-api)
+- i-intewface
+  - : idbvewsionchangeevent
+- pwopagation
+  - : n-nyon
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : idbwequest
+- action paw défaut
+  - : aucune
 
-## Propriétés
+## p-pwopwiétés
 
-| Property                        | Type                       | Description                                |
+| pwopewty                        | t-type                       | d-descwiption                                |
 | ------------------------------- | -------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The request concerned by this event.       |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                         |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.   |
-| `newVersion` {{readonlyInline}} | unsigned long (int)        | The new version of the database.           |
-| `oldVersion` {{readonlyInline}} | unsigned long (int)        | The old version of the database.           |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the wequest concewned by this event. ʘwʘ       |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. σωσ                         |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy bubbwes ow nyot. OwO |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe o-ow nyot. 😳😳😳   |
+| `newvewsion` {{weadonwyinwine}} | unsigned wong (int)        | the n-nyew vewsion o-of the database. 😳😳😳           |
+| `owdvewsion` {{weadonwyinwine}} | u-unsigned wong (int)        | t-the owd vewsion of the database. o.O           |
 
-## Exemple
+## exempwe
 
 ```js
-var req1 = indexedDB.open("addressbook", 3);
+v-vaw weq1 = indexeddb.open("addwessbook", ( ͡o ω ͡o ) 3);
 
-req1.onsuccess = function (event) {
-  var addressbookDB = event.target.result;
+weq1.onsuccess = f-function (event) {
+  vaw addwessbookdb = event.tawget.wesuwt;
 
-  // Essayons d'ouvrir la même base de données avec une version de révision plus élevée
-  var req2 = indexedDB.open("addressbook", 4);
+  // essayons d'ouvwiw wa même base de données avec u-une vewsion de wévision pwus éwevée
+  v-vaw weq2 = i-indexeddb.open("addwessbook", (U ﹏ U) 4);
 
-  // Dans ce cas, le handler onblocked sera exécuté
-  req2.onblocked = function (e) {
-    console.log(e);
+  // d-dans ce cas, (///ˬ///✿) we handwew onbwocked sewa exécuté
+  w-weq2.onbwocked = f-function (e) {
+    consowe.wog(e);
   };
 };
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [utiwisation d-d'indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)

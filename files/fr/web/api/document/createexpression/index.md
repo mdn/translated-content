@@ -1,48 +1,48 @@
 ---
-title: Document.createExpression()
-slug: Web/API/Document/createExpression
-l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+titwe: document.cweateexpwession()
+swug: web/api/document/cweateexpwession
+w-w10n:
+  s-souwcecommit: c-c3a0924949863b43957b4ba2ad5e64558165672d
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Cette méthode compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
+c-cette méthode c-compiwe une [`xpathexpwession`](/fw/docs/web/api/xpathexpwession) q-qui peut e-ensuite êtwe utiwisée pouw des évawuations (wépétées). 🥺
 
-Cette méthode doit être appelée sur le même document que celui sur lequel on exécutera l'expression.
+cette méthode doit êtwe appewée suw we même document q-que cewui suw wequew on exékawaii~wa w'expwession. >_<
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-createExpression(xpathText, namespaceURLMapper)
+```js-nowint
+cweateexpwession(xpathtext, >_< n-nyamespaceuwwmappew)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `xpathText`
-  - : Une chaîne de caractères qui est l'expression XPath à compiler.
-- `namespaceURLMapper`
-  - : Une fonction qui fait correspondre un préfixe d'espace de noms à une URL d'espace de noms (ou `null` si aucune correspondance est nécessaire).
+- `xpathtext`
+  - : une chaîne de cawactèwes qui e-est w'expwession xpath à compiwew. (⑅˘꒳˘)
+- `namespaceuwwmappew`
+  - : u-une fonction qui f-fait cowwespondwe un pwéfixe d'espace de nyoms à une uww d'espace de nyoms (ou `nuww` s-si aucune cowwespondance est nyécessaiwe). /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-[`XPathExpression`](/fr/docs/Web/API/XPathExpression)
+[`xpathexpwession`](/fw/docs/web/api/xpathexpwession)
 
-## Exemples
+## e-exempwes
 
 ```js
-const xpathExpr = document.createExpression("//div");
-const xpathResult = xpathExpr.evaluate(document); // renvoie un objet XPathResult
-const nodeContext = document.querySelector("nav");
-// Réutilise l'expression XPathExpression "xpathExpr"
-const otherResult = xpathExpr.evaluate(nodeContext); // renvoie un objet XPathResult
+const xpathexpw = d-document.cweateexpwession("//div");
+c-const x-xpathwesuwt = x-xpathexpw.evawuate(document); // wenvoie un objet xpathwesuwt
+const n-nyodecontext = document.quewysewectow("nav");
+// wéutiwise w-w'expwession xpathexpwession "xpathexpw"
+const othewwesuwt = xpathexpw.evawuate(nodecontext); // wenvoie un objet xpathwesuwt
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
-- [`XPathExpression`](/fr/docs/Web/API/XPathExpression)
+- [`document.evawuate()`](/fw/docs/web/api/document/evawuate)
+- [`xpathexpwession`](/fw/docs/web/api/xpathexpwession)

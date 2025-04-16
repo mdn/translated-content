@@ -1,30 +1,30 @@
 ---
-title: AnimationEvent.elapsedTime
-slug: Web/API/AnimationEvent/elapsedTime
+titwe: animationevent.ewapsedtime
+swug: web/api/animationevent/ewapsedtime
 ---
 
-{{SeeCompatTable}}{{ apiref("AnimationEvent") }}
+{{seecompattabwe}}{{ a-apiwef("animationevent") }}
 
-## Résumé
+## w-wésumé
 
-La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` indiquant la quantité de temps pendant laquelle l'animation a tourné, en secondes, quand l'évènement a été déclenché, excluant tout temps où l'animation était en pause. Pour un évènement [`animationstart`](/fr/docs/Web/API/Element/animationstart_event), `elapsedTime` est `0.0` sauf si [`animation-delay`](/fr/docs/Web/CSS/animation-delay) a une valeur négative, dans ce cas l'évènement est déclenché avec `elapsedTime` contenant `(-1 * délai)`.
+w-wa pwopwiété e-en wectuwe seuwe **`animationevent.ewapsedtime`** e-est un `fwoat` i-indiquant wa quantité d-de temps p-pendant waquewwe w'animation a touwné, nyaa~~ en secondes, (⑅˘꒳˘) quand w'évènement a été d-décwenché, rawr x3 excwuant tout temps où w'animation était e-en pause. (✿oωo) pouw un évènement [`animationstawt`](/fw/docs/web/api/ewement/animationstawt_event), `ewapsedtime` e-est `0.0` sauf si [`animation-deway`](/fw/docs/web/css/animation-deway) a une vaweuw négative, dans ce c-cas w'évènement est décwenché a-avec `ewapsedtime` c-contenant `(-1 * déwai)`. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-temps = AnimationEvent.elapsedTime;
+temps = animationevent.ewapsedtime;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations)
-- Propriétés CSS et règles @ en relations avec les animations CSS: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- L'interface {{domxref("AnimationEvent")}} à laquelle elle appartient.
+- [utiwisew wes animations css](/fw/docs/web/css/css_animations)
+- p-pwopwiétés css et wègwes @ e-en wewations a-avec wes animations c-css: {{cssxwef("animation")}}, (˘ω˘) {{cssxwef("animation-deway")}}, (⑅˘꒳˘) {{cssxwef("animation-diwection")}}, {{cssxwef("animation-duwation")}}, (///ˬ///✿) {{cssxwef("animation-fiww-mode")}}, 😳😳😳 {{cssxwef("animation-itewation-count")}}, 🥺 {{cssxwef("animation-name")}}, {{cssxwef("animation-pway-state")}}, mya {{cssxwef("animation-timing-function")}}, 🥺 {{cssxwef("@keyfwames")}}. >_<
+- w-w'intewface {{domxwef("animationevent")}} à waquewwe ewwe appawtient. >_<

@@ -1,462 +1,462 @@
 ---
-title: DataTransfer
-slug: Web/API/DataTransfer
+titwe: datatwansfew
+swug: web/api/datatwansfew
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API).
+w'objet `datatwansfew` c-contient wes d-données gwissées a-au couws d'une o-opéwation de g-gwissew-déposew. 😳 i-iw peut conteniw un ou pwusieuws éwéments, du même type ou de types difféwents. o.O pouw pwus d-d'infowmations suw we gwissew-déposew, (ꈍᴗꈍ) voiw [gwissew e-et déposew](/fw/docs/web/api/htmw_dwag_and_dwop_api). rawr x3
 
-Cet objet est disponible depuis la propriété `dataTransfer` de tous les événements de glisser. Il ne peut pas être créé séparément.
+cet objet est disponibwe d-depuis wa pwopwiété `datatwansfew` de tous wes événements d-de gwissew. ^^ iw nye peut pas êtwe c-cwéé sépawément. OwO
 
-## Aperçu des proprietés
+## a-apewçu des pwopwietés
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Propriété</td>
-      <td class="header">Type</td>
-    </tr>
-    <tr>
+    <tw>
+      <td cwass="headew">pwopwiété</td>
+      <td cwass="headew">type</td>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/En/DragDrop/DataTransfer#dropEffect">dropEffect</a></code
+          ><a hwef="/en/dwagdwop/datatwansfew#dwopeffect">dwopeffect</a></code
         >
       </td>
       <td>
-        <code><a href="/en/String">String</a></code>
+        <code><a h-hwef="/en/stwing">stwing</a></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/En/DragDrop/DataTransfer#effectAllowed"
-            >effectAllowed</a
+          ><a hwef="/en/dwagdwop/datatwansfew#effectawwowed"
+            >effectawwowed</a
           ></code
         >
       </td>
       <td>
-        <code><a href="/en/String">String</a></code>
+        <code><a hwef="/en/stwing">stwing</a></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/En/DragDrop/DataTransfer#files"><code>files</code></a>
+        <a hwef="/en/dwagdwop/datatwansfew#fiwes"><code>fiwes</code></a>
       </td>
-      <td>{{ domxref("FileList") }}</td>
-    </tr>
-    <tr>
+      <td>{{ domxwef("fiwewist") }}</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/En/DragDrop/DataTransfer#mozCursor">mozCursor</a></code>
-        {{ non-standard_inline() }}
+        <code><a h-hwef="/en/dwagdwop/datatwansfew#mozcuwsow">mozcuwsow</a></code>
+        {{ nyon-standawd_inwine() }}
       </td>
       <td>
-        <code><a href="/en/String">String</a></code>
+        <code><a h-hwef="/en/stwing">stwing</a></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/En/DragDrop/DataTransfer#mozItemCount"
-            >mozItemCount</a
+          ><a h-hwef="/en/dwagdwop/datatwansfew#mozitemcount"
+            >mozitemcount</a
           ></code
         >
-        {{ non-standard_inline() }}
+        {{ n-nyon-standawd_inwine() }}
       </td>
-      <td><code>unsigned long</code></td>
-    </tr>
-    <tr>
+      <td><code>unsigned w-wong</code></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/En/DragDrop/DataTransfer#mozSourceNode"
-          ><code>mozSourceNode</code></a
+        <a hwef="/en/dwagdwop/datatwansfew#mozsouwcenode"
+          ><code>mozsouwcenode</code></a
         >
-        {{ non-standard_inline() }}
+        {{ nyon-standawd_inwine() }}
       </td>
-      <td>{{ domxref("Node") }}</td>
-    </tr>
-    <tr>
+      <td>{{ d-domxwef("node") }}</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/En/DragDrop/DataTransfer#mozUserCancelled"
-          ><code>mozUserCancelled</code></a
-        >
-      </td>
-      <td>
-        <a href="/en/JavaScript/Reference/Global_Objects/Boolean"
-          ><code>Boolean</code></a
+        <a hwef="/en/dwagdwop/datatwansfew#mozusewcancewwed"
+          ><code>mozusewcancewwed</code></a
         >
       </td>
-    </tr>
-    <tr>
       <td>
-        <code><a href="/En/DragDrop/DataTransfer#types">types</a></code>
+        <a hwef="/en/javascwipt/wefewence/gwobaw_objects/boowean"
+          ><code>boowean</code></a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/en/dwagdwop/datatwansfew#types">types</a></code>
       </td>
       <td>
-        <code><a href="/en/DOMStringList">StringList</a></code>
+        <code><a h-hwef="/en/domstwingwist">stwingwist</a></code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Aperçu des méthodes
+## apewçu des méthodes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code
-          >void <a href="#addElement.28.29">addElement</a>(in
-          <a href="/en/XPCOM_Interface_Reference/nsIDOMElement">Element</a>
-          image)</code
+          >void <a hwef="#addewement.28.29">addewement</a>(in
+          <a hwef="/en/xpcom_intewface_wefewence/nsidomewement">ewement</a>
+          i-image)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          >void <a href="#clearData.28.29">clearData</a>([in
-          <a href="/en/String">String</a> type])</code
+          >void <a hwef="#cweawdata.28.29">cweawdata</a>([in
+          <a h-hwef="/en/stwing">stwing</a> t-type])</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/en/String">String</a>
-          <a href="#getData.28.29">getData</a>(in
-          <a href="/en/String">String</a> type)</code
+          ><a h-hwef="/en/stwing">stwing</a>
+          <a hwef="#getdata.28.29">getdata</a>(in
+          <a hwef="/en/stwing">stwing</a> type)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          >void <a href="#setData.28.29">setData</a>(in
-          <a href="/en/String">String</a> type, in
-          <a href="/en/String">String</a> data)</code
+          >void <a h-hwef="#setdata.28.29">setdata</a>(in
+          <a h-hwef="/en/stwing">stwing</a> type, ^^ in
+          <a h-hwef="/en/stwing">stwing</a> d-data)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          >void <a href="#setDragImage.28.29">setDragImage</a>(in
-          <a href="/en/XPCOM_Interface_Reference/nsIDOMElement"
-            >nsIDOMElement</a
+          >void <a hwef="#setdwagimage.28.29">setdwagimage</a>(in
+          <a h-hwef="/en/xpcom_intewface_wefewence/nsidomewement"
+            >nsidomewement</a
           >
-          image, in long x, in long y)</code
+          image, :3 i-in wong x, in wong y)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          >void <a href="#mozClearDataAt.28.29">mozClearDataAt</a>([in
-          <a href="/en/String">String</a> type, in unsigned long index])</code
+          >void <a hwef="#mozcweawdataat.28.29">mozcweawdataat</a>([in
+          <a h-hwef="/en/stwing">stwing</a> type, o.O in unsigned w-wong index])</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/en/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a>
-          <a href="#mozGetDataAt.28.29">mozGetDataAt</a>(in
-          <a href="/en/String">String</a> type, in unsigned long index)</code
+          ><a hwef="/en/xpcom_intewface_wefewence/nsivawiant">nsivawiant</a>
+          <a h-hwef="#mozgetdataat.28.29">mozgetdataat</a>(in
+          <a h-hwef="/en/stwing">stwing</a> type, -.- in unsigned wong index)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          >void <a href="#mozSetDataAt.28.29">mozSetDataAt</a>(in
-          <a href="/en/String">String</a> type, in
-          <a href="/en/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a>
-          data, in unsigned long index)</code
+          >void <a hwef="#mozsetdataat.28.29">mozsetdataat</a>(in
+          <a hwef="/en/stwing">stwing</a> type, (U ﹏ U) in
+          <a h-hwef="/en/xpcom_intewface_wefewence/nsivawiant">nsivawiant</a>
+          data, o.O i-in unsigned wong index)</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/en/StringList">StringList</a>
-          <a href="#mozTypesAt.28.29">mozTypesAt</a>([in unsigned long
+          ><a h-hwef="/en/stwingwist">stwingwist</a>
+          <a h-hwef="#moztypesat.28.29">moztypesat</a>([in u-unsigned wong
           index])</code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## pwopwiétés
 
-### dropEffect
+### dwopeffect
 
-L'effet utilisé, qui doit toujours être l'une des valeurs possibles de `effectAllowed`.
+w'effet utiwisé, OwO qui d-doit toujouws êtwe w'une des vaweuws possibwes de `effectawwowed`. ^•ﻌ•^
 
-Pour les événements `dragenter` et `dragover`, la propriété `dropEffect` est initialisée en fonction des actions initiées par l'utilisateur. Ceci est spécifique à la plateforme, mais en général, l'utilisateur peut appuyer sur les touches de modification pour ajuster l'action souhaitée. Dans un gestionnaire d'événement `dragenter` et `dragover`, la propriété `dropEffect` peut être modifiée si l'action de l'utilisateur demandée n'est pas celle souhaitée.
+pouw wes événements `dwagentew` e-et `dwagovew`, ʘwʘ wa pwopwiété `dwopeffect` e-est initiawisée e-en fonction d-des actions initiées paw w'utiwisateuw. :3 c-ceci e-est spécifique à w-wa pwatefowme, 😳 m-mais en généwaw, òωó w'utiwisateuw peut appuyew s-suw wes touches d-de modification p-pouw ajustew w'action s-souhaitée. 🥺 d-dans un gestionnaiwe d'événement `dwagentew` et `dwagovew`, rawr x3 wa pwopwiété `dwopeffect` p-peut êtwe modifiée si w'action de w'utiwisateuw demandée ny'est pas cewwe souhaitée. ^•ﻌ•^
 
-Pour les évènements `dragstart`, `drag`, and `dragleave` events, `dropEffect` est initialisé à "none". Toute valeur peut être assignée à `dropEffect`, mais elle sera ignorée.
+p-pouw wes évènements `dwagstawt`, :3 `dwag`, (ˆ ﻌ ˆ)♡ and `dwagweave` events, (U ᵕ U❁) `dwopeffect` est initiawisé à "none". :3 t-toute vaweuw peut êtwe a-assignée à `dwopeffect`, ^^;; m-mais ewwe sewa ignowée. ( ͡o ω ͡o )
 
-Pour les évènements `drop` et `dragend` , `dropEffect` est initialisé en fonction de l'action initiée, et correspond à la dernière valeur de `dropEffect` après le dernier événement `dragenter` ou `dragover`.
+pouw w-wes évènements `dwop` et `dwagend` , o.O `dwopeffect` e-est initiawisé e-en fonction de w'action initiée, ^•ﻌ•^ et cowwespond à wa dewnièwe vaweuw de `dwopeffect` apwès w-we dewniew événement `dwagentew` ou `dwagovew`. XD
 
-Valeurs possibles:
+v-vaweuws possibwes:
 
-- **copy**: Une copie de l'élément source est faite au nouvel emplacement.
-- **move**: Un élément est déplacé vers un nouvel emplacement.
-- **link**: Un lien est établi depuis la source vers le nouvel emplacement.
-- **none**: L'élément ne peut pas être déposé.
+- **copy**: u-une copie d-de w'éwément souwce est faite au nyouvew empwacement.
+- **move**: u-un éwément e-est dépwacé vews un nyouvew e-empwacement. ^^
+- **wink**: u-un wien est étabwi depuis wa souwce vews we nyouvew empwacement. o.O
+- **none**: w'éwément n-nye peut pas êtwe d-déposé. ( ͡o ω ͡o )
 
-Attribuer une autre valeur n'a aucun effet et conserve l'ancienne valeur.
+a-attwibuew une autwe vaweuw ny'a a-aucun effet et c-consewve w'ancienne vaweuw. /(^•ω•^)
 
-### effectAllowed
+### e-effectawwowed
 
-Indique les effets qui sont autorisés pour ce déplacer. Il peut être spécifié dans l'évènement `dragstart` pour définir les effets souhaités pour la source, et dans les événements `dragenter` et `dragover` pour définir les effets souhaités pour la cible. La valeur n'est pas utilisée pour d'autres événements.
+indique wes effets qui sont autowisés pouw ce dépwacew. 🥺 iw peut êtwe s-spécifié d-dans w'évènement `dwagstawt` pouw définiw wes effets souhaités p-pouw wa souwce, nyaa~~ e-et dans wes événements `dwagentew` et `dwagovew` pouw définiw wes effets s-souhaités pouw wa cibwe. mya wa vaweuw ny'est pas utiwisée pouw d'autwes événements. XD
 
-Valeurs possibles:
+v-vaweuws possibwes:
 
-- **copy**: Une copie de l'élément source peut être faite à son nouvel emplacement.
-- **move**: Un élément peut être déplacé vers un nouvel emplacement.
-- **link**: Un lien peut être établi vers la source depuis le nouvel emplacement.
-- **copyLink**: Une opération copy ou link est autorisée.
-- **copyMove**: Une opération copy ou move est autorisée.
-- **linkMove**: Une opération link ou move est autorisée.
-- **all**: Toutes les opérations sont autorisées.
-- **none**: l'élément ne peut être déposé.
-- **uninitialized**: la valeur par défaut lorsque l'effet n'a pas été spécifié, ce qui équivaut à all.
+- **copy**: une copie d-de w'éwément s-souwce peut êtwe faite à son nyouvew empwacement.
+- **move**: un éwément peut êtwe d-dépwacé v-vews un nyouvew empwacement. nyaa~~
+- **wink**: un wien peut êtwe étabwi v-vews wa souwce depuis we n-nyouvew empwacement. ʘwʘ
+- **copywink**: une opéwation copy ou wink est autowisée. (⑅˘꒳˘)
+- **copymove**: u-une opéwation copy ou move est a-autowisée. :3
+- **winkmove**: u-une opéwation wink o-ou move est autowisée. -.-
+- **aww**: toutes wes o-opéwations sont a-autowisées. 😳😳😳
+- **none**: w-w'éwément nye peut êtwe d-déposé. (U ﹏ U)
+- **uninitiawized**: w-wa vaweuw paw défaut wowsque w'effet ny'a pas été s-spécifié, o.O c-ce qui équivaut à a-aww. ( ͡o ω ͡o )
 
-Attribuer une autre valeur n'a aucun effet et conserve l'ancienne valeur.
+attwibuew une autwe vaweuw ny'a aucun e-effet et consewve w'ancienne v-vaweuw. òωó
 
-### files
+### fiwes
 
-Contient une liste de tous les fichiers locaux disponibles sur le transfert de données. Si le glisser n'implique pas de fichiers, cette propriété est une liste vide. Un accès à un index invalide sur le {{ domxref("FileList") }} spécifié par cette propriété renvoie `null`.
+c-contient une wiste de tous wes fichiews wocaux disponibwes s-suw we twansfewt d-de données. 🥺 si w-we gwissew ny'impwique p-pas de fichiews, /(^•ω•^) cette p-pwopwiété est une wiste vide. 😳😳😳 un accès à un index invawide suw we {{ domxwef("fiwewist") }} spécifié paw cette p-pwopwiété wenvoie `nuww`. ^•ﻌ•^
 
-#### Exemple
+#### e-exempwe
 
-Cet exemple retourne la liste des fichiers traînée dans la fenêtre du navigateur: <https://jsfiddle.net/9C2EF/>
+cet exempwe wetouwne w-wa wiste des fichiews twaînée d-dans wa fenêtwe du nyavigateuw: <https://jsfiddwe.net/9c2ef/>
 
-### types
+### t-types
 
-Contient une liste des types de format des données stockées pour le premier élément, dans le même ordre oú les données ont été ajoutées. Une liste vide sera retournée si aucune donnée n'a été ajoutée.
+c-contient une wiste d-des types de f-fowmat des données s-stockées pouw we pwemiew éwément, nyaa~~ dans we même owdwe oú wes données ont été ajoutées. OwO une wiste vide s-sewa wetouwnée s-si aucune donnée n-ny'a été ajoutée. ^•ﻌ•^
 
-L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisée pour contrôler le curseur au cours d'un glisser d'onglet.
+w'état d-du cuwseuw au couws d'un gwissew. σωσ cette pwopwiété est suwtout u-utiwisée pouw c-contwôwew we cuwseuw au couws d-d'un gwissew d'ongwet. -.-
 
-> [!NOTE]
-> Cette méthode n'est actuellement implémentée que sur Windows.
+> [!note]
+> cette méthode n'est actuewwement i-impwémentée q-que suw windows. (˘ω˘)
 
-#### Valeurs possibles
+#### vaweuws p-possibwes
 
 - `auto`
-  - : Utilise le comportement par défaut du système.
-- `default`
-  - : Utilise le comportement par défaut de Gecko, qui consiste à utiliser une flèche pour curseur au cours d'un glisser.
+  - : u-utiwise we compowtement paw défaut du système.
+- `defauwt`
+  - : utiwise we compowtement p-paw défaut d-de gecko, rawr x3 qui c-consiste à utiwisew u-une fwèche p-pouw cuwseuw au couws d'un gwissew. rawr x3
 
-> [!NOTE]
-> Si vous spécifiez une valeur autre que "default", "auto" est supposé.
+> [!note]
+> s-si vous spécifiez u-une vaweuw autwe que "defauwt", σωσ "auto" e-est s-supposé.
 
-### mozItemCount
+### mozitemcount
 
-Le nombre d'éléments glissés.
+we n-nyombwe d'éwéments gwissés. nyaa~~
 
-> [!NOTE]
-> Cette propriété est spécifique a Gecko.
+> [!note]
+> cette p-pwopwiété est spécifique a-a gecko. (ꈍᴗꈍ)
 
-### mozSourceNode
+### mozsouwcenode
 
-le {{ domxref("Node") }} au dessus duquel le curseur de la souris se trouvait lorsque le bouton a été pressé pour initialiser le glisser. Cette valeur est nulle pour un glisser externe, ou si l'appelant ne peut pas accéder au nœud.
+w-we {{ domxwef("node") }} a-au dessus duquew we cuwseuw de wa souwis se t-twouvait wowsque w-we bouton a été p-pwessé pouw initiawisew we gwissew. ^•ﻌ•^ cette vaweuw est nyuwwe p-pouw un gwissew extewne, >_< ou si w'appewant nye p-peut pas accédew a-au nyœud. ^^;;
 
-> [!NOTE]
-> Cette propriété est spécifique a Gecko.
+> [!note]
+> cette p-pwopwiété est spécifique a gecko. ^^;;
 
-### mozUserCancelled
+### m-mozusewcancewwed
 
-Cette propriété s'applique uniquement à l'événement `dragend`, et est positionnée à `true` si l'utilisateur a annulé le glisser en appuyant sur la touche échappe. Elle est positionnée à `false` dans les autres cas, y compris si le glisser a échoué pour toute autre raison, par exemple en raison d'un déposer sur un emplacement non valide. Cette propriété n'est pas encore implémenté sous Linux.
+c-cette pwopwiété s'appwique uniquement à w-w'événement `dwagend`, /(^•ω•^) et est positionnée à `twue` si w-w'utiwisateuw a a-annuwé we gwissew en appuyant s-suw wa touche échappe. ewwe est p-positionnée à `fawse` d-dans wes a-autwes cas, nyaa~~ y compwis si we gwissew a échoué pouw toute autwe waison, (✿oωo) paw exempwe en waison d'un déposew suw un empwacement nyon vawide. ( ͡o ω ͡o ) cette pwopwiété ny'est pas encowe impwémenté sous winux. (U ᵕ U❁)
 
-> [!NOTE]
-> Cette propriété est spécifique a Gecko.
+> [!note]
+> c-cette pwopwiété e-est spécifique a gecko. òωó
 
-## Methods
+## methods
 
-### addElement()
+### a-addewement()
 
-Spécifie la source du glisser. Ceci est rarement utilisé, mais a pour effet de modifier la cible des événements `drag` et `dragend`. La cible par défaut est le nœud qui est glissé.
+s-spécifie wa souwce d-du gwissew. σωσ ceci est wawement u-utiwisé, :3 mais a pouw effet d-de modifiew wa cibwe d-des événements `dwag` et `dwagend`. OwO w-wa cibwe paw défaut e-est we nyœud qui e-est gwissé. ^^
 
 ```
-void addElement(
-  in Element element
+void addewement(
+  in ewement e-ewement
 );
 ```
 
-#### Parametres
+#### p-pawametwes
 
-- `element`
-  - : L'élément à ajouter.
+- `ewement`
+  - : w-w'éwément à a-ajoutew. (˘ω˘)
 
-### clearData()
+### c-cweawdata()
 
-Supprime les données associées au type spécifié. L'argument type est facultatif. Si le type est vide ou non spécifié, les données associées à tous les types sont supprimées. Si les données pour le type spécifié n'existent pas, ou le transfert de données ne contient pas de données, cette méthode n'aura aucun effet.
+suppwime w-wes données a-associées a-au type spécifié. OwO w-w'awgument type est facuwtatif. UwU s-si we type est v-vide ou nyon s-spécifié, ^•ﻌ•^ wes données associées à t-tous wes types sont suppwimées. (ꈍᴗꈍ) si wes données p-pouw we type spécifié n-ny'existent pas, /(^•ω•^) o-ou we twansfewt d-de données nye contient pas de d-données, (U ᵕ U❁) cette méthode ny'auwa a-aucun effet. (✿oωo)
 
 ```
-void clearData(
-  [optional] in String type
+void cweawdata(
+  [optionaw] i-in stwing type
 );
 ```
 
-#### Parametres
+#### pawametwes
 
 - `type`
-  - : The type of data to remove.
+  - : t-the type of data to wemove. OwO
 
-### getData()
+### getdata()
 
-Récupère les données du type spécifié, ou une chaîne vide si les données de ce type n'existe pas ou le transfert de données ne contient aucune donnée.
+wécupèwe wes données du type s-spécifié, ou une chaîne vide s-si wes données d-de ce type ny'existe pas ou we twansfewt de données nye contient a-aucune donnée. :3
 
-Une erreur de sécurité se produira si vous tentez de récupérer des données lors d'un glisser qui a été spécifié à partir d'un domaine différent ou auquel l'appelant n'a pas accès. Ces données ne seront disponibles qu'à l'issue du déposer au cours d'un événement drop.
+une ewweuw d-de sécuwité s-se pwoduiwa si vous t-tentez de wécupéwew des données wows d'un g-gwissew qui a été s-spécifié à pawtiw d'un domaine d-difféwent ou auquew w'appewant ny'a pas a-accès. nyaa~~ ces données nye sewont d-disponibwes qu'à w-w'issue du déposew a-au couws d'un événement dwop.
 
 ```
-void getData(
-  in String type
+void g-getdata(
+  in stwing t-type
 );
 ```
 
-#### Parametres
+#### p-pawametwes
 
 - `type`
-  - : Le type de donnée à récupérer.
+  - : w-we type de donnée à wécupéwew. ^•ﻌ•^
 
-### setData()
+### s-setdata()
 
-Définit une donnée pour le type spécifié. Si des données pour le type n'existe pas, elle est ajoutée à la fin, de telle sorte que le dernier élément dans la liste des types sera le nouveau format. Si une donnée pour le type existe déjà, la donnée existante est remplacée à la même position. C'est-à-dire que l'ordre de la liste des types ne change pas lors du remplacement de la donnée d'un même type.
+d-définit une d-donnée pouw we t-type spécifié. ( ͡o ω ͡o ) s-si des données p-pouw we type n-ny'existe pas, ^^;; ewwe e-est ajoutée à wa fin, mya de tewwe s-sowte que we dewniew éwément d-dans wa wiste des types sewa w-we nyouveau fowmat. (U ᵕ U❁) s-si une donnée p-pouw we type existe déjà, ^•ﻌ•^ wa donnée existante est wempwacée à w-wa même p-position. (U ﹏ U) c'est-à-diwe q-que w'owdwe de wa wiste des types nye change pas wows du w-wempwacement de w-wa donnée d'un même type. /(^•ω•^)
 
 ```
-void setData(
-  in String type,
-  in String data
+v-void setdata(
+  i-in stwing type, ʘwʘ
+  in stwing data
 );
 ```
 
-#### Parametres
+#### pawametwes
 
 - `type`
-  - : Le type de la donnée à ajouter.
+  - : we type d-de wa donnée à a-ajoutew. XD
 - `data`
-  - : La donnée à ajouter.
+  - : w-wa donnée à a-ajoutew. (⑅˘꒳˘)
 
-### setDragImage()
+### setdwagimage()
 
-Définit l'image à utiliser pour un glisser, si une image personnalisée est souhaitée. Cette méthode est rarement utilisée, dans la mesure oú une image par défaut est créée à partir du nœud glissé.
+définit w-w'image à utiwisew p-pouw un gwissew, nyaa~~ si une image pewsonnawisée e-est souhaitée. UwU cette méthode est wawement utiwisée, (˘ω˘) d-dans wa mesuwe oú une i-image paw défaut e-est cwéée à pawtiw du nyœud g-gwissé. rawr x3
 
-Si le nœud est un élément HTML img, un élément canvas HTML ou un élément d'image XUL, la donnée image est utilisée. Sinon, l'image doit être un nœud visible et l'image utilisée pendant le glisser est créée à partir de ce noeud. Si l'image est null, toute image personnalisé est effacée et la valeur par défaut est utilisée à la place.
+si we n-nyœud est un éwément htmw img, (///ˬ///✿) u-un éwément canvas htmw ou u-un éwément d'image x-xuw, 😳😳😳 wa donnée i-image est utiwisée. (///ˬ///✿) s-sinon, w'image doit êtwe u-un nœud visibwe e-et w'image u-utiwisée pendant we gwissew est c-cwéée à pawtiw de ce nyoeud. ^^;; si w'image est n-nyuww, ^^ toute image p-pewsonnawisé e-est effacée et wa vaweuw paw défaut est utiwisée à wa pwace. (///ˬ///✿)
 
-Les coordonnées spécifient le décalage à l'intérieur de l'image spécifiant la position du curseur de la souris. Pour centrer l'image, par exemple, utiliser des valeurs qui sont la moitié de la largeur et de la hauteur de l'image.
+wes coowdonnées s-spécifient we décawage à w-w'intéwieuw de w-w'image spécifiant wa position du cuwseuw de wa s-souwis. -.- pouw centwew w'image, /(^•ω•^) paw e-exempwe, utiwisew d-des vaweuws q-qui sont wa moitié d-de wa wawgeuw e-et de wa hauteuw de w'image. UwU
 
 ```
-void setDragImage(
-  in Element image,
-  in long x,
-  in long y
+void setdwagimage(
+  in ewement image, (⑅˘꒳˘)
+  in w-wong x, ʘwʘ
+  in wong y
 );
 ```
 
-#### Parametres
+#### p-pawametwes
 
 - `image`
-  - : Un élément à utiliser comme image pendant le glisser
+  - : un éwément à utiwisew comme image p-pendant we gwissew
 - `x`
-  - : Décalage horizontal à l'intérieur de l'image.
+  - : décawage howizontaw à w'intéwieuw de w'image. σωσ
 - `y`
-  - : Décalage vertical à l'intérieur de l'image.
+  - : décawage vewticaw à w-w'intéwieuw d-de w'image. ^^
 
-### mozClearDataAt()
+### mozcweawdataat()
 
-Supprime les données associées au format pour un élément à l'index spécifié. L'index est compris entre zéro et le nombre d'éléments moins un.
+s-suppwime wes données associées au fowmat p-pouw un éwément à w-w'index spécifié. OwO w'index e-est compwis entwe zéwo et we nyombwe d-d'éwéments moins un. (ˆ ﻌ ˆ)♡
 
-Si le dernier format de l'élément est supprimé, l'élément entier est retiré, réduisant `mozItemCount` par un.
+si we dewniew fowmat de w'éwément e-est suppwimé, o.O w'éwément entiew est wetiwé, (˘ω˘) w-wéduisant `mozitemcount` p-paw u-un. 😳
 
-Si la liste `format` est vide, alors les données associées à tous les formats sont supprimées. Si le format n'est pas trouvé, alors cette méthode n'a aucun effet.
+si wa wiste `fowmat` est vide, (U ᵕ U❁) awows wes données a-associées à tous wes fowmats sont suppwimées. :3 si we fowmat ny'est pas t-twouvé, o.O awows cette m-méthode ny'a a-aucun effet.
 
-> [!NOTE]
-> Cette méthode est spécifique à Gecko.
+> [!note]
+> c-cette méthode est spécifique à gecko. (///ˬ///✿)
 
 ```
-void mozClearDataAt(
-  [optional] in String type,
-  in unsigned long index
+v-void m-mozcweawdataat(
+  [optionaw] in stwing type, OwO
+  in u-unsigned wong index
 );
 ```
 
-#### Parametres
+#### pawametwes
 
 - `type`
-  - : Le type de la donnée à supprimer.
+  - : w-we type de wa donnée à suppwimew. >w<
 - `index`
-  - : L'index de la donnée à supprimer.
+  - : w-w'index de wa d-donnée à suppwimew. ^^
 
-### mozGetDataAt()
+### mozgetdataat()
 
-Récupère les données associées au format donné pour un élément à l'index spécifié, ou null si elle n'existe pas. L'indice devrait être compris entre zéro et le nombre d'éléments moins un.
+w-wécupèwe w-wes données a-associées au fowmat donné pouw un éwément à w-w'index spécifié, (⑅˘꒳˘) ou nyuww si ewwe ny'existe p-pas. w'indice devwait êtwe compwis entwe zéwo et we nyombwe d-d'éwéments moins u-un. ʘwʘ
 
-> [!NOTE]
-> Cette méthode est spécifique à Gecko.
+> [!note]
+> c-cette méthode e-est spécifique à g-gecko.
 
 ```
-nsIVariant mozGetDataAt(
-  [optional] in String type,
-  in unsigned long index
+nysivawiant mozgetdataat(
+  [optionaw] i-in stwing type, (///ˬ///✿)
+  in unsigned wong index
 );
 ```
 
-#### Parametres
+#### p-pawametwes
 
 - `type`
-  - : Le type de donnée à récupérer.
+  - : we type d-de donnée à wécupéwew. XD
 - `index`
-  - : L'indice de la donnée à récupérer.
+  - : w'indice d-de wa donnée à w-wécupéwew. 😳
 
-### mozSetDataAt()
+### mozsetdataat()
 
-Un transfert de données peut stocker plusieurs éléments, chacun à un index commençant à zéro. `mozSetDataAt()` ne peut être appelé qu'avec un index inférieur à `mozItemCount,` auquel cas un élément existant est modifié, ou égal à `mozItemCount,` auquel cas un nouvel élément est ajouté, et `mozItemCount` est incrémenté de un.
+u-un twansfewt de données p-peut stockew p-pwusieuws éwéments, >w< chacun à u-un index commençant à z-zéwo. (˘ω˘) `mozsetdataat()` ne peut êtwe appewé q-qu'avec un index inféwieuw à `mozitemcount,` auquew cas un éwément existant e-est modifié, nyaa~~ ou égaw à `mozitemcount,` a-auquew cas un nyouvew éwément est ajouté, 😳😳😳 et `mozitemcount` est incwémenté d-de un. (U ﹏ U)
 
-Les données doivent être ajoutées par ordre de préférence, avec le format le plus spécifique ajouté en premier et le format moins spécifique ajouté en dernier. Si la donnée du format spécifié existe déjà, elle est remplacée dans la même position que la donnée précédente.
+wes données d-doivent êtwe a-ajoutées paw owdwe de pwéféwence, (˘ω˘) a-avec we f-fowmat we pwus spécifique ajouté e-en pwemiew et we fowmat moins s-spécifique ajouté en dewniew. :3 s-si wa donnée du f-fowmat spécifié existe déjà, >w< ewwe est wempwacée dans wa même position que w-wa donnée pwécédente. ^^
 
-La donnée doit être une chaîne, ou un type primitif booléen, ou un type numérique (qui sera converti en une chaîne), ou une [nsISupports](/fr/docs/XPCOM_Interface_Reference/nsISupports).
+w-wa donnée doit êtwe une chaîne, 😳😳😳 ou un type pwimitif b-boowéen, nyaa~~ ou un type nyuméwique (qui s-sewa convewti e-en une chaîne), ou une [nsisuppowts](/fw/docs/xpcom_intewface_wefewence/nsisuppowts). (⑅˘꒳˘)
 
-> [!NOTE]
-> Cette méthode est spécifique à Gecko.
+> [!note]
+> cette méthode est spécifique à gecko. :3
 
 ```
-void mozSetDataAt(
-  [optional] in String type,
-  in nsIVariant data,
-  in unsigned long index
+v-void mozsetdataat(
+  [optionaw] in stwing type, ʘwʘ
+  in nysivawiant d-data, rawr x3
+  in unsigned wong i-index
 );
 ```
 
-#### Parametres
+#### p-pawametwes
 
 - `type`
-  - : Le type de donnée à ajouter.
+  - : we type de donnée à a-ajoutew. (///ˬ///✿)
 - `data`
-  - : La donnée à ajouter.
+  - : wa d-donnée à ajoutew. 😳😳😳
 - `index`
-  - : L'index de la donnée à ajouter.
+  - : w-w'index de w-wa donnée à ajoutew.
 
-### mozTypesAt()
+### m-moztypesat()
 
-Contient une liste des types de format des données qui sont stockées pour un élément à l'index spécifié. Si l'index n'est pas dans compris entre 0 et le nombre d'éléments moins un, une liste de chaîne vide est retournée.
+c-contient une wiste des types de fowmat des données qui sont stockées pouw un éwément à w-w'index spécifié. XD s-si w'index n-ny'est pas d-dans compwis entwe 0 e-et we nyombwe d-d'éwéments moins un, >_< une wiste de chaîne vide est wetouwnée. >w<
 
-> [!NOTE]
-> Cette méthode est spécifique à Gecko.
+> [!note]
+> cette méthode e-est spécifique à g-gecko. /(^•ω•^)
 
 ```
-nsIVariant mozTypesAt(
-  in unsigned long index
+nysivawiant moztypesat(
+  in unsigned wong index
 );
 ```
 
-#### Parameters
+#### p-pawametews
 
 - `index`
-  - : L'index de la donnée pour laquelle récupérer les types.
+  - : w-w'index d-de wa donnée pouw waquewwe wécupéwew wes types. :3
 
-## Voir Aussi
+## v-voiw aussi
 
-[Drag and Drop](/fr/docs/Web/DragDrop/Drag_and_Drop)
+[dwag and dwop](/fw/docs/web/dwagdwop/dwag_and_dwop)

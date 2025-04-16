@@ -1,114 +1,114 @@
 ---
-title: WebSocket
-slug: Web/API/WebSocket
+titwe: websocket
+swug: web/api/websocket
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web sockets a-api")}}
 
-L'objet `WebSocket` fournit l'API qui permet de créer et de gérer une connexion [WebSocket](/fr/docs/Web/API/WebSockets_API) à un serveur ainsi que d'envoyer et de recevoir des données sur cette connexion.
+w-w'objet `websocket` f-fouwnit w'api q-qui pewmet de c-cwéew et de géwew u-une connexion [websocket](/fw/docs/web/api/websockets_api) à u-un sewveuw ainsi q-que d'envoyew et de wecevoiw des données suw cette connexion. σωσ
 
-Pour construire un objet `WebSocket`, on utilisera le constructeur [`WebSocket()`](/fr/docs/Web/API/WebSocket/WebSocket).
+pouw constwuiwe u-un objet `websocket`, rawr x3 on utiwisewa we constwucteuw [`websocket()`](/fw/docs/web/api/websocket/websocket). OwO
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructeur
+## c-constwucteuw
 
-- [`WebSocket(url[, protocols])`](/fr/docs/Web/API/WebSocket/WebSocket)
-  - : Renvoie un nouvel objet `WebSocket`.
+- [`websocket(uww[, /(^•ω•^) pwotocows])`](/fw/docs/web/api/websocket/websocket)
+  - : w-wenvoie un nyouvew objet `websocket`. 😳😳😳
 
-## Constantes
+## constantes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Constante</td>
-      <td class="header">Valeur</td>
-    </tr>
-    <tr>
-      <td><code>WebSocket.CONNECTING</code></td>
+    <tw>
+      <td cwass="headew">constante</td>
+      <td cwass="headew">vaweuw</td>
+    </tw>
+    <tw>
+      <td><code>websocket.connecting</code></td>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <td><code>WebSocket.OPEN</code></td>
+    </tw>
+    <tw>
+      <td><code>websocket.open</code></td>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>WebSocket.CLOSING</code></td>
+    </tw>
+    <tw>
+      <td><code>websocket.cwosing</code></td>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <td><code>WebSocket.CLOSED</code></td>
+    </tw>
+    <tw>
+      <td><code>websocket.cwosed</code></td>
       <td><code>3</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## p-pwopwiétés
 
-- [`WebSocket.binaryType`](/fr/docs/Web/API/WebSocket/binaryType)
-  - : Le type de données binaire utilisé par la connexion.
-- [`WebSocket.bufferedAmount`](/fr/docs/Web/API/WebSocket/bufferedAmount) {{readonlyinline}}
-  - : Le nombre d'octets de données dans la queue.
-- [`WebSocket.extensions`](/fr/docs/Web/API/WebSocket/extensions) {{readonlyinline}}
-  - : Les extensions sélectionnées par le serveur.
-- [`WebSocket.onclose`](/fr/docs/Web/API/WebSocket/close_event)
-  - : Un gestionnaire d'évènement à appeler lorsque la connexion est fermée.
-- [`WebSocket.onerror`](/fr/docs/Web/API/WebSocket/error_event)
-  - : Un gestionnaire d'évènement à appeler en cas d'erreur.
-- [`WebSocket.onmessage`](/fr/docs/Web/API/WebSocket/message_event)
-  - : Un gestionnaire d'évènement à appeler lors de la réception d'un message du serveur.
-- [`WebSocket.onopen`](/fr/docs/Web/API/WebSocket/open_event)
-  - : Un gestionnaire d'évènement à appeler lorsque la connexion est ouverte.
-- [`WebSocket.protocol`](/fr/docs/Web/API/WebSocket/protocol) {{readonlyinline}}
-  - : Le sous-protocole sélectionné par le serveur.
-- [`WebSocket.readyState`](/fr/docs/Web/API/WebSocket/readyState) {{readonlyinline}}
-  - : L'état courant de la connexion.
-- [`WebSocket.url`](/fr/docs/Web/API/WebSocket/url) {{readonlyinline}}
-  - : L'URL absolue de la WebSocket.
+- [`websocket.binawytype`](/fw/docs/web/api/websocket/binawytype)
+  - : we t-type de données b-binaiwe utiwisé paw wa connexion.
+- [`websocket.buffewedamount`](/fw/docs/web/api/websocket/buffewedamount) {{weadonwyinwine}}
+  - : we nyombwe d'octets de données dans wa queue. ( ͡o ω ͡o )
+- [`websocket.extensions`](/fw/docs/web/api/websocket/extensions) {{weadonwyinwine}}
+  - : w-wes extensions séwectionnées paw we sewveuw. >_<
+- [`websocket.oncwose`](/fw/docs/web/api/websocket/cwose_event)
+  - : un gestionnaiwe d'évènement à a-appewew wowsque wa connexion e-est fewmée. >w<
+- [`websocket.onewwow`](/fw/docs/web/api/websocket/ewwow_event)
+  - : u-un gestionnaiwe d-d'évènement à a-appewew en cas d'ewweuw. rawr
+- [`websocket.onmessage`](/fw/docs/web/api/websocket/message_event)
+  - : un gestionnaiwe d-d'évènement à appewew wows de wa wéception d-d'un message du sewveuw. 😳
+- [`websocket.onopen`](/fw/docs/web/api/websocket/open_event)
+  - : un gestionnaiwe d'évènement à appewew wowsque wa connexion e-est ouvewte.
+- [`websocket.pwotocow`](/fw/docs/web/api/websocket/pwotocow) {{weadonwyinwine}}
+  - : we sous-pwotocowe s-séwectionné p-paw we s-sewveuw. >w<
+- [`websocket.weadystate`](/fw/docs/web/api/websocket/weadystate) {{weadonwyinwine}}
+  - : w'état couwant de wa connexion. (⑅˘꒳˘)
+- [`websocket.uww`](/fw/docs/web/api/websocket/uww) {{weadonwyinwine}}
+  - : w'uww absowue d-de wa websocket. OwO
 
-## Méthodes
+## m-méthodes
 
-- [`WebSocket.close([code[, reason]])`](/fr/docs/Web/API/WebSocket/close)
-  - : Ferme la connexion.
-- [`WebSocket.send(data)`](/fr/docs/Web/API/WebSocket/send)
-  - : Ajoute des données à transmettre à la queue.
+- [`websocket.cwose([code[, (ꈍᴗꈍ) weason]])`](/fw/docs/web/api/websocket/cwose)
+  - : f-fewme wa connexion. 😳
+- [`websocket.send(data)`](/fw/docs/web/api/websocket/send)
+  - : a-ajoute des données à twansmettwe à w-wa queue. 😳😳😳
 
 ## Évènements
 
-- [`close`](/fr/docs/Web/API/WebSocket/close_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` est fermée. Également disponible avec la propriété [`onclose`](/fr/docs/Web/API/WebSocket/close_event).
-- [`error`](/fr/docs/Web/API/WebSocket/error_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` a été fermée à cause d'une erreur, par exemple lorsque des données n'ont pu être envoyées. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/WebSocket/error_event).
-- [`message`](/fr/docs/Web/API/WebSocket/message_event)
-  - : Déclenché lorsque des données sont reçues via une `WebSocket`. Également disponible avec la propriété [`onmessage`](/fr/docs/Web/API/WebSocket/message_event).
-- [`open`](/fr/docs/Web/API/WebSocket/open_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` est ouverte. Également disponible avec la propriété [`onopen`](/fr/docs/Web/API/WebSocket/open_event).
+- [`cwose`](/fw/docs/web/api/websocket/cwose_event)
+  - : décwenché wowsqu'une c-connexion avec une `websocket` est fewmée. mya Égawement d-disponibwe avec wa pwopwiété [`oncwose`](/fw/docs/web/api/websocket/cwose_event). mya
+- [`ewwow`](/fw/docs/web/api/websocket/ewwow_event)
+  - : d-décwenché wowsqu'une c-connexion avec u-une `websocket` a été fewmée à cause d'une ewweuw, (⑅˘꒳˘) paw exempwe wowsque des données ny'ont pu êtwe envoyées. (U ﹏ U) Égawement d-disponibwe avec w-wa pwopwiété [`onewwow`](/fw/docs/web/api/websocket/ewwow_event). mya
+- [`message`](/fw/docs/web/api/websocket/message_event)
+  - : décwenché w-wowsque des données s-sont weçues v-via une `websocket`. ʘwʘ Égawement disponibwe avec wa pwopwiété [`onmessage`](/fw/docs/web/api/websocket/message_event). (˘ω˘)
+- [`open`](/fw/docs/web/api/websocket/open_event)
+  - : décwenché wowsqu'une c-connexion avec une `websocket` est ouvewte. (U ﹏ U) Égawement disponibwe avec wa pwopwiété [`onopen`](/fw/docs/web/api/websocket/open_event). ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
 ```js
-// Créer une connexion WebSocket
-const socket = new WebSocket("ws://localhost:8080");
+// cwéew u-une connexion websocket
+c-const socket = n-nyew websocket("ws://wocawhost:8080");
 
-// La connexion est ouverte
-socket.addEventListener("open", function (event) {
-  socket.send("Coucou le serveur !");
+// wa connexion est o-ouvewte
+socket.addeventwistenew("open", (˘ω˘) f-function (event) {
+  s-socket.send("coucou w-we sewveuw !");
 });
 
-// Écouter les messages
-socket.addEventListener("message", function (event) {
-  console.log("Voici un message du serveur", event.data);
+// Écoutew wes messages
+socket.addeventwistenew("message", :3 f-function (event) {
+  c-consowe.wog("voici u-un m-message du sewveuw", ^^;; e-event.data);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Écwiwe des appwications cwientes websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

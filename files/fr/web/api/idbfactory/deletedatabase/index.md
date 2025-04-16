@@ -1,73 +1,73 @@
 ---
-title: IDBFactory.deleteDatabase()
-slug: Web/API/IDBFactory/deleteDatabase
+titwe: idbfactowy.dewetedatabase()
+swug: web/api/idbfactowy/dewetedatabase
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`deleteDatabase()`**, rattachée à l'interface {{domxref("IDBFactory")}}, permet de demander la suppression d'une base de données. La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération de suppression de façon asynchrone.
+w-wa méthode **`dewetedatabase()`**, OwO w-wattachée à w'intewface {{domxwef("idbfactowy")}}, (ꈍᴗꈍ) p-pewmet de demandew w-wa suppwession d-d'une base d-de données. 😳 wa m-méthode wenvoie i-immédiatement un objet {{domxwef("idbopendbwequest")}} puis effectue w'opéwation de suppwession d-de façon asynchwone. 😳😳😳
 
-Si la base de données est bien supprimée, un évènement `success` est déclenché sur l'objet `IDBOpenDBRequest` renvoyé et la propriété `result` vaut alors `undefined`. Si une erreur se produit lors de la suppression, ce sera un évènement `error` qui sera déclenché sur l'objet renvoyé par la méthode.
+si wa base de données e-est bien suppwimée, mya un évènement `success` e-est décwenché suw w'objet `idbopendbwequest` wenvoyé et wa pwopwiété `wesuwt` vaut awows `undefined`. mya s-si une ewweuw se pwoduit w-wows de wa s-suppwession, (⑅˘꒳˘) ce sewa un évènement `ewwow` qui sewa décwenché suw w'objet wenvoyé p-paw wa méthode. (U ﹏ U)
 
-Lorsque la méthode `deleteDatabase()` est invoquée, toutes les autres connexions qui sont ouvertes sur cette base de données recevront un évènement [`versionchange`](/fr/docs/Web/API/IDBDatabase/versionchange_event).
+wowsque wa méthode `dewetedatabase()` est invoquée, mya toutes wes autwes c-connexions qui sont ouvewtes suw c-cette base de données w-wecevwont u-un évènement [`vewsionchange`](/fw/docs/web/api/idbdatabase/vewsionchange_event). ʘwʘ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-La syntaxe actuellement standard est :
-
-```js
-var request = indexedDB.deleteDatabase(nom);
-```
-
-Une version expérimentale permet de gérer des options (cf. ci-après) :
+wa syntaxe actuewwement standawd est :
 
 ```js
-var request = indexedDB.deleteDatabase(nom, options);
+v-vaw wequest = indexeddb.dewetedatabase(nom);
 ```
 
-### Paramètres
+une vewsion e-expéwimentawe pewmet de géwew des options (cf. (˘ω˘) ci-apwès) :
+
+```js
+vaw wequest = indexeddb.dewetedatabase(nom, (U ﹏ U) o-options);
+```
+
+### pawamètwes
 
 - `nom`
-  - : Le nom de la base de données qu'on souhaite supprimer. Tenter de supprimer une base de données qui n'existe pas ne déclenchera pas d'exception (contrairement à la tentative de suppression d'un magasin d'objets inexistant avec {{domxref("IDBDatabase.deleteObjectStore()")}} qui déclenchera bien une exception).
-- `options` {{NonStandardBadge}}
-  - : Dans Gecko, à partir de [la version 26](/fr/docs/Mozilla/Firefox/Releases/26), il est possible d'inclure un paramètre pour indiquer le stockage de la base. La valeur peut être `permanent` (la valeur par défaut) ou `temporary` si on souhaite supprimer une base de données qui fait partie d'une mémoire partagée.
+  - : w-we nyom de w-wa base de données q-qu'on souhaite suppwimew. ^•ﻌ•^ tentew de suppwimew une base de données q-qui ny'existe p-pas nye décwenchewa pas d'exception (contwaiwement à w-wa t-tentative de suppwession d'un magasin d-d'objets inexistant avec {{domxwef("idbdatabase.deweteobjectstowe()")}} q-qui décwenchewa bien une exception). (˘ω˘)
+- `options` {{nonstandawdbadge}}
+  - : d-dans gecko, :3 à pawtiw d-de [wa vewsion 26](/fw/docs/moziwwa/fiwefox/weweases/26), ^^;; iw est p-possibwe d'incwuwe u-un pawamètwe pouw indiquew we stockage de wa base. 🥺 wa vaweuw peut êtwe `pewmanent` (wa vaweuw paw défaut) o-ou `tempowawy` s-si on souhaite suppwimew une base d-de données qui f-fait pawtie d'une m-mémoiwe pawtagée. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Cette méthode renvoie un objet {{domxref("IDBOpenDBRequest")}} sur lequel seront déclenchés les évènements relatifs à la requête.
+cette méthode wenvoie u-un objet {{domxwef("idbopendbwequest")}} suw wequew sewont décwenchés wes évènements wewatifs à wa wequête. nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+v-vaw dbdewetewequest = w-window.indexeddb.dewetedatabase("todowist");
 
-DBDeleteRequest.onerror = function (event) {
-  console.log("Erreur lors de la suppression de la base");
+d-dbdewetewequest.onewwow = f-function (event) {
+  consowe.wog("ewweuw w-wows de wa suppwession d-de wa b-base");
 };
 
-DBDeleteRequest.onsuccess = function (event) {
-  console.log("Suppression de la base réussie");
+dbdewetewequest.onsuccess = f-function (event) {
+  consowe.wog("suppwession de wa base w-wéussie");
 
-  console.log(event.result); // undefined
+  c-consowe.wog(event.wesuwt); // undefined
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des c-cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence pouw i-indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

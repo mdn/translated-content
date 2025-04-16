@@ -1,35 +1,35 @@
 ---
-title: DataTransfer.files
-slug: Web/API/DataTransfer/files
+titwe: datatwansfew.fiwes
+swug: w-web/api/datatwansfew/fiwes
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-La propriété **`DataTransfer.files`** est une {{domxref("FileList","liste de fichier")}} issue d'une manipulation de glisser-déposer. Si l'opération n'inclut pas de fichier, alors la liste est vide.
+wa pwopwiété **`datatwansfew.fiwes`** e-est une {{domxwef("fiwewist","wiste d-de fichiew")}} i-issue d'une m-manipuwation de g-gwissew-déposew. nyaa~~ si w'opéwation ny'incwut pas de fichiew, (⑅˘꒳˘) awows wa wiste est vide. rawr x3
 
-Cette fonctionnalité peut être utilisée pour glisser des fichiers du bureau utilisateur au navigateur.
+c-cette fonctionnawité peut êtwe utiwisée p-pouw gwissew des fichiews du buweau u-utiwisateuw au nyavigateuw. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataTransfer.files;
+datatwansfew.fiwes;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une {{domxref("FileList","liste")}} de fichiers associés au "glisser", un élément de liste pour chaque fichier dans l'opération. Si l'opération de "glisser" ne contient aucun fichier alors la liste est vide.
+une {{domxwef("fiwewist","wiste")}} d-de fichiews a-associés au "gwissew", (ˆ ﻌ ˆ)♡ un éwément de wiste pouw chaque fichiew dans w'opéwation. (˘ω˘) s-si w'opéwation de "gwissew" nye contient aucun fichiew awows wa wiste est v-vide. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Voici deux exemples :
+voici deux e-exempwes :
 
-- Seulement Firefox : <https://jsfiddle.net/9C2EF/>
-- Tous les navigateurs : [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
+- seuwement f-fiwefox : <https://jsfiddwe.net/9c2ef/>
+- t-tous wes nyavigateuws : [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?htmw,js,output)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

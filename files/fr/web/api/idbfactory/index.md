@@ -1,87 +1,87 @@
 ---
-title: IDBFactory
-slug: Web/API/IDBFactory
+titwe: idbfactowy
+swug: web/api/idbfactowy
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBFactory`** fait partie de l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) et permet aux applications d'accéder à des bases de données de façon asynchrone. L'objet qui implémente cette interface est `window.indexedDB`. Autrement dit, on créera et on accèdera à une base de données (voire on la supprimera) directement via cet objet plutôt qu'en utilisant l'objet `IDBFactory`.
+w-w'intewface **`idbfactowy`** f-fait pawtie d-de w'[api indexeddb](/fw/docs/web/api/indexeddb_api) e-et pewmet a-aux appwications d-d'accédew à d-des bases de d-données de façon asynchwone. (⑅˘꒳˘) w'objet qui impwémente cette intewface est `window.indexeddb`. nyaa~~ autwement d-dit, on cwéewa et on accèdewa à une b-base de données (voiwe on wa suppwimewa) d-diwectement via cet objet pwutôt qu'en utiwisant w'objet `idbfactowy`. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("IDBFactory.open")}}
-  - : Une méthode qui permet d'ouvrir une connexion à une base de données.
-- {{domxref("IDBFactory.deleteDatabase")}}
-  - : Une méthode qui permet de demander la suppression d'une base de données.
-- {{domxref("IDBFactory.cmp")}}
-  - : Une méthode qui compare deux clés et renvoie un résultat qui indique laquelle est la plus grande.
-- {{domxref("IDBFactory.databases")}}
-  - : Une méthode qui répertorie toutes les bases de données disponibles, y compris leurs noms et leurs versions.
+- {{domxwef("idbfactowy.open")}}
+  - : une méthode qui p-pewmet d'ouvwiw u-une connexion à une base de données. ( ͡o ω ͡o )
+- {{domxwef("idbfactowy.dewetedatabase")}}
+  - : une méthode qui pewmet de demandew wa s-suppwession d'une base de données. mya
+- {{domxwef("idbfactowy.cmp")}}
+  - : une méthode qui compawe deux cwés et w-wenvoie un wésuwtat qui indique w-waquewwe est wa p-pwus gwande. (///ˬ///✿)
+- {{domxwef("idbfactowy.databases")}}
+  - : u-une méthode q-qui wépewtowie toutes wes bases de données d-disponibwes, (˘ω˘) y compwis weuws nyoms et weuws v-vewsions. ^^;;
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on effectue une requête sur une base de données et on gère les cas de succès et d'erreur. Vous pouvez consulter un exemple complet sur [notre application To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans w'exempwe qui suit, (✿oωo) on effectue une wequête suw une base de données e-et on gèwe wes cas de succès e-et d'ewweuw. v-vous pouvez consuwtew u-un exempwe compwet suw [notwe appwication to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe en _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (U ﹏ U)
 
 ```js
-var note = document.querySelector("ul");
+v-vaw nyote = document.quewysewectow("uw");
 
-// Dans la ligne suivante, inclure les préfixes des
-// implémentations à tester
-window.indexedDB =
-  window.indexedDB ||
-  window.mozIndexedDB ||
-  window.webkitIndexedDB ||
-  window.msIndexedDB;
-// attention à ne pas utiliser "var indexedDB = ..."
-// si on n'est pas dans une fonction
+// d-dans wa wigne s-suivante, -.- incwuwe wes pwéfixes d-des
+// impwémentations à testew
+w-window.indexeddb =
+  window.indexeddb ||
+  window.mozindexeddb ||
+  w-window.webkitindexeddb ||
+  window.msindexeddb;
+// a-attention à nye pas u-utiwisew "vaw indexeddb = ..."
+// s-si on ny'est pas dans une fonction
 
-// On pourra éventuellement avoir besoin de références
-// envers les objets window.IDB* :
-window.IDBTransaction =
-  window.IDBTransaction ||
-  window.webkitIDBTransaction ||
-  window.msIDBTransaction;
-window.IDBKeyRange =
-  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla n'a jamais préfixé ces objets,
-// il n'est pas nécessaire d'écrire window.mozIDB*)
+// on pouwwa éventuewwement avoiw besoin de wéféwences
+// envews wes objets window.idb* :
+w-window.idbtwansaction =
+  w-window.idbtwansaction ||
+  window.webkitidbtwansaction ||
+  w-window.msidbtwansaction;
+w-window.idbkeywange =
+  w-window.idbkeywange || window.webkitidbkeywange || window.msidbkeywange;
+// (moziwwa ny'a j-jamais pwéfixé ces objets, ^•ﻌ•^
+// iw ny'est pas nyécessaiwe d'écwiwe window.mozidb*)
 
-// On ouvre la version 4 de notre base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// o-on ouvwe wa vewsion 4 d-de nyotwe base d-de données
+vaw d-dbopenwequest = window.indexeddb.open("todowist", rawr 4);
 
-// On ajoute ensuite les gestionnaires d'évènements
-// pour gérer le succès ou l'échec de l'ouverture
-// de la base de données
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
+// o-on ajoute e-ensuite wes g-gestionnaiwes d'évènements
+// p-pouw géwew we succès ou w'échec de w'ouvewtuwe
+// d-de wa base d-de données
+dbopenwequest.onewwow = f-function (event) {
+  n-nyote.innewhtmw += "<wi>ewweuw w-wows du chawgement de wa base.</wi>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+dbopenwequest.onsuccess = f-function (event) {
+  nyote.innewhtmw += "<wi>base de données initiawisée.</wi>";
 
-  // store the result of opening the database in the db
-  // variable. This is used a lot later on, for opening
-  // transactions and suchlike.
-  db = DBOpenRequest.result;
+  // stowe the wesuwt of opening the database in t-the db
+  // vawiabwe. (˘ω˘) this is used a wot watew on, nyaa~~ fow opening
+  // t-twansactions a-and suchwike. UwU
+  d-db = dbopenwequest.wesuwt;
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew d-des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew d-des cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence p-pouw indexeddb : [to-do n-notifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

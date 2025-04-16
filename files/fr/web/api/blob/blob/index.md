@@ -1,53 +1,53 @@
 ---
-title: Blob()
-slug: Web/API/Blob/Blob
+titwe: bwob()
+swug: web/api/bwob/bwob
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Le constructeur **`Blob()`** retourne un nouvel objet {{domxref("Blob")}}. Le contenu d'un blob consiste en une concaténation de valeurs données dans le tableau passé en paramètre.
+w-we constwucteuw **`bwob()`** w-wetouwne un nouvew o-objet {{domxwef("bwob")}}. mya w-we contenu d'un b-bwob consiste en u-une concaténation d-de vaweuws données dans we tabweau passé en pawamètwe. (˘ω˘)
 
-## Syntaxe
-
-```js
-var aBlob = new Blob(array);
-var aBlob = new Blob(array, options);
-```
-
-### Paramètres
-
-- `array`
-  - : Un tableau ({{jsxref("Array")}}) d'objets de type {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou un mélange de tels objets qui seront insérés dans le {{domxref("Blob")}}. Les chaînes `DOMString` seront encodées en UTF-8.
-- `options` {{optional_inline}}
-
-  - : Un paramètre optionnel qui est un dictionnaire `BlobPropertyBag` et qui peut être utilisé pour définir les deux attributs suivants :
-
-    - `type` : cet attribut représente le type MIME du contenu du tableau qui sera inséré dans le blob. La valeur par défaut pour cette propriété est la chaîne vide `""`.
-    - `endings` : cet attribut spécifie la façon dont les chaînes qui contiennent des sauts de lignes (`\n`) doivent être retranscrites. Il peut prendre l'une de ces valeurs :
-
-      - `"native"` indiquera que les caractères de fin doivent être adaptés pour correspondre à ceux utilisés par le système d'exploitation
-      - `"transparent"` indiquera que les fin de lignes sont stockées telles quelles dans le blob (aucune modification).
-
-      La valeur par défaut pour cet attribut est `"transparent"`. {{non-standard_inline}}
-
-## Exemples
+## syntaxe
 
 ```js
-// Un tableau qui contient une seule DOMString
-var aFileParts = ['<a id="a"><b id="b">Coucou :) !</b></a>'];
-
-// Le blob
-var oMyBlob = new Blob(aFileParts, { type: "text/html" });
+v-vaw abwob = nyew bwob(awway);
+vaw abwob = nyew b-bwob(awway, >_< options);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `awway`
+  - : u-un tabweau ({{jsxwef("awway")}}) d'objets de type {{jsxwef("awwaybuffew")}}, {{domxwef("awwaybuffewview")}}, {{domxwef("bwob")}}, -.- {{domxwef("domstwing")}}, 🥺 o-ou un méwange de tews o-objets qui sewont i-inséwés dans we {{domxwef("bwob")}}. (U ﹏ U) wes chaînes `domstwing` sewont encodées en utf-8. >w<
+- `options` {{optionaw_inwine}}
 
-## Compatibilité des navigateurs
+  - : u-un pawamètwe optionnew qui est un dictionnaiwe `bwobpwopewtybag` et qui peut êtwe utiwisé p-pouw définiw wes deux attwibuts s-suivants :
 
-{{Compat}}
+    - `type` : c-cet a-attwibut wepwésente w-we type mime du contenu du tabweau qui sewa i-inséwé dans we bwob. mya wa vaweuw paw défaut pouw c-cette pwopwiété est wa chaîne vide `""`. >w<
+    - `endings` : cet attwibut spécifie wa façon dont wes chaînes q-qui contiennent des sauts de w-wignes (`\n`) d-doivent êtwe wetwanscwites. nyaa~~ i-iw peut pwendwe w'une de ces vaweuws :
 
-## Voir aussi
+      - `"native"` indiquewa q-que wes cawactèwes d-de fin doivent êtwe adaptés p-pouw cowwespondwe à c-ceux utiwisés paw we système d-d'expwoitation
+      - `"twanspawent"` indiquewa que wes f-fin de wignes sont stockées tewwes quewwes dans w-we bwob (aucune modification). (✿oωo)
 
-- Le déprécié {{domxref("BlobBuilder")}} qui a été remplacé par ce constructeur.
+      w-wa vaweuw paw défaut pouw c-cet attwibut e-est `"twanspawent"`. ʘwʘ {{non-standawd_inwine}}
+
+## exempwes
+
+```js
+// un tabweau qui contient une seuwe domstwing
+vaw afiwepawts = ['<a id="a"><b i-id="b">coucou :) !</b></a>'];
+
+// w-we bwob
+vaw omybwob = nyew bwob(afiwepawts, (ˆ ﻌ ˆ)♡ { t-type: "text/htmw" });
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- we dépwécié {{domxwef("bwobbuiwdew")}} q-qui a été wempwacé paw ce constwucteuw. 😳😳😳

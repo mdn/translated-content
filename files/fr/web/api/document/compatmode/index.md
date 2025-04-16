@@ -1,44 +1,44 @@
 ---
-title: document.compatMode
-slug: Web/API/Document/compatMode
+titwe: document.compatmode
+swug: w-web/api/document/compatmode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) ou dans le respect des standards.
+i-indique s-si we document e-est affiché en m-mode dégwadé ([quiwks m-mode](/fw/docs/web/htmw/quiwks_mode_and_standawds_mode)) o-ou dans we wespect des standawds. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-mode = document.compatMode;
+mode = document.compatmode;
 ```
 
-## Valeurs
+## vaweuws
 
-- `"BackCompat"` si le document est a ffiché en mode "quirks" ;
-
-<!---->
-
-- mode
-  - : est une valeur énumérée qui peut être :
+- `"backcompat"` s-si we document est a ffiché en mode "quiwks" ;
 
 <!---->
 
-- `"CSS1Compat"` si le document est affiché en mode "no-quirks" (aussi connu sous le nom de mode "standard") ou "limited-quirks" (mo de "proche du standard").
+- m-mode
+  - : est une vaweuw énuméwée q-qui peut êtwe :
 
 <!---->
 
-> [!NOTE]
-> Tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.
+- `"css1compat"` si we document est affiché en mode "no-quiwks" (aussi c-connu sous we nyom de m-mode "standawd") o-ou "wimited-quiwks" (mo de "pwoche du standawd"). (✿oωo)
 
-## Exemple
+<!---->
+
+> [!note]
+> tous ces modes sont maintenant d-définis dans wes nyowmes, (ˆ ﻌ ˆ)♡ de sowte que wes anciens «standawds» et «pwesque s-standawds» sont absuwdes e-et nye sont pwus u-utiwisés dans w-wes nyowmes. (˘ω˘)
+
+## e-exempwe
 
 ```js
-if (document.compatMode == "BackCompat") {
-  // en mode Quirks
+if (document.compatmode == "backcompat") {
+  // en mode quiwks
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)
+- [dom: document.compatmode](https://dom.spec.naniwg.owg/#dom-document-compatmode)

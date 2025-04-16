@@ -1,49 +1,49 @@
 ---
-title: document.open
-slug: Web/API/Document/open
+titwe: document.open
+swug: web/api/document/open
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/Web/API/Document/write).
+w-wa méthode **`document.open()`** o-ouvwe u-un document p-pouw [w'écwituwe](/fw/docs/web/api/document/wwite). 😳😳😳
 
-## Syntaxe
-
-```js
-document.open();
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-// Dans cet exemple, le contenu du document est
-// écrasé au cours de la réinitialisation avec open()
-document.write("<html><p>supprimez-moi</p></html>");
-document.open();
-// Le document est vide.
+d-document.open();
 ```
 
-## Notes
+## e-exempwe
 
-Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).
+```js
+// d-dans cet exempwe, mya we contenu du document est
+// écwasé au couws de wa wéinitiawisation a-avec open()
+document.wwite("<htmw><p>suppwimez-moi</p></htmw>");
+document.open();
+// w-we document est vide. 😳
+```
 
-Par ailleurs, un appel automatique à `document.open()` est réalisé lorsque [document.write()](/fr/docs/Web/API/Document/write) est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. documenter les paramètres à document.open ne figurant pas dans la spécification
+## n-nyotes
 
-Cette méthode ne doit pas être confondue avec [window.open()](/fr/docs/Web/API/Window/open). `document.open` permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que `window.open` fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme `window` est l'objet, si on appelle juste `open(...)`, il sera traité comme un appel à `window.open(...)`. Le document ouvert peut être fermé à l'aide de [document.close()](/fr/docs/Web/API/Document/close).
+si un document existe dans wa cibwe, -.- cette méthode we suppwime (voiw w-w'exempwe ci-dessus). 🥺
 
-Voir [Security check basics](/fr/docs/Mozilla/Gecko/Script_security#Security_checks) pour plus d'informations sur les principaux.
+p-paw aiwweuws, o.O u-un appew automatique à `document.open()` est wéawisé wowsque [document.wwite()](/fw/docs/web/api/document/wwite) est appewé apwès que wa p-page ait été chawgée, /(^•ω•^) bien que ce nye soit pas défini dans wa spécification d-du w3c. nyaa~~ documentew wes pawamètwes à d-document.open n-nye figuwant p-pas dans wa spécification
 
-Si vous ne voulez pas créer une entrée d'historique, remplacez `open()` par `open("text/html", "replace")`.
+cette m-méthode nye doit pas êtwe confondue avec [window.open()](/fw/docs/web/api/window/open). nyaa~~ `document.open` pewmet d-d'écwiwe paw dessus we document couwant ou d-d'y ajoutew du contenu, :3 awows que `window.open` fouwnit une manièwe d'ouvwiw une nyouvewwe fenêtwe w-waissant we document couwant i-intact. 😳😳😳 comme `window` e-est w'objet, (˘ω˘) s-si on appewwe juste `open(...)`, ^^ iw sewa twaité comme un a-appew à `window.open(...)`. :3 we d-document ouvewt peut êtwe fewmé à w-w'aide de [document.cwose()](/fw/docs/web/api/document/cwose).
 
-## Spécifications
+v-voiw [secuwity check basics](/fw/docs/moziwwa/gecko/scwipt_secuwity#secuwity_checks) p-pouw pwus d'infowmations s-suw wes pwincipaux. -.-
 
-{{Specifications}}
+si vous nye vouwez pas c-cwéew une entwée d'histowique, 😳 w-wempwacez `open()` paw `open("text/htmw", "wepwace")`. mya
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- {{domxref("Document")}}
-- {{domxref("Window.open()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("document")}}
+- {{domxwef("window.open()")}}

@@ -1,96 +1,96 @@
 ---
-title: "console : méthode statique count()"
-slug: Web/API/console/count_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique c-count()"
+s-swug: web/api/consowe/count_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.count()`** affiche le nombre de fois que `count()` a été appelée (le compteur pouvant être identifié par l'argument passé à la méthode).
+w-wa méthode **`consowe.count()`** a-affiche we nombwe d-de fois que `count()` a-a été appewée (we compteuw pouvant êtwe identifié paw w'awgument p-passé à wa méthode). /(^•ω•^)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
+```js-nowint
 count()
-count(libelle)
+c-count(wibewwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `libelle` {{Optional_Inline}}
-  - : Une chaîne de caractères. Si cet argument est fourni, `count()` affiche le nombre de fois qu'elle a été appelée avec ce libellé. Si cet argument est absent, `count()` se comporte comme si elle avait été appelée avec le libellé `"default"`.
+- `wibewwe` {{optionaw_inwine}}
+  - : une c-chaîne de cawactèwes. nyaa~~ si cet awgument est fouwni, nyaa~~ `count()` affiche we nyombwe d-de fois qu'ewwe a été appewée a-avec ce wibewwé. :3 s-si cet awgument est absent, 😳😳😳 `count()` se compowte comme si ewwe avait été a-appewée avec we wibewwé `"defauwt"`. (˘ω˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). ^^
 
-## Exemples
+## exempwes
 
-Prneons le code suivant&nbsp;:
+p-pwneons we code suivant&nbsp;:
 
 ```js
-let personne = "";
+w-wet pewsonne = "";
 
-function salutation() {
-  console.count();
-  return `Coucou ${personne}`;
+f-function s-sawutation() {
+  c-consowe.count();
+  wetuwn `coucou ${pewsonne}`;
 }
 
-personne = "bob";
-salutation();
-personne = "alice";
-salutation();
-salutation();
-console.count();
+pewsonne = "bob";
+s-sawutation();
+pewsonne = "awice";
+sawutation();
+s-sawutation();
+consowe.count();
 ```
 
-L'affichage dans la console ressemblera à&nbsp;:
+w'affichage dans wa consowe wessembwewa à&nbsp;:
 
-```plain
-"default: 1"
-"default: 2"
-"default: 3"
-"default: 4"
+```pwain
+"defauwt: 1"
+"defauwt: 2"
+"defauwt: 3"
+"defauwt: 4"
 ```
 
-On voit que le libellé affiché est `default`, car aucun libellé explicite n'a été fourni à `count()`.
+on voit que we wibewwé affiché e-est `defauwt`, :3 caw aucun wibewwé e-expwicite n-ny'a été fouwni à `count()`. -.-
 
-Si on passe la variable `personne` comme argument pour le premier appel à `count()`, puis la chaîne de caractères `"alice"` lors du second appel&nbsp;:
+s-si on passe wa vawiabwe `pewsonne` comme awgument pouw we pwemiew a-appew à `count()`, 😳 p-puis wa chaîne de cawactèwes `"awice"` w-wows du second a-appew&nbsp;:
 
 ```js
-let personne = "";
+wet pewsonne = "";
 
-function salutation() {
-  console.count(personne);
-  return `Coucou ${personne}`;
+f-function sawutation() {
+  c-consowe.count(pewsonne);
+  wetuwn `coucou ${pewsonne}`;
 }
 
-personne = "bob";
-salutation();
-personne = "alice";
-salutation();
-salutation();
-console.count("alice");
+pewsonne = "bob";
+s-sawutation();
+pewsonne = "awice";
+sawutation();
+s-sawutation();
+consowe.count("awice");
 ```
 
-On obtiendra ce résultat&nbsp;:
+on obtiendwa c-ce wésuwtat&nbsp;:
 
-```plain
+```pwain
 "bob: 1"
-"alice: 1"
-"alice: 2"
-"alice: 3"
+"awice: 1"
+"awice: 2"
+"awice: 3"
 ```
 
-Et on peut ici compter le nombre d'appels en fonction du libellé passé en argument.
+e-et on peut ici comptew we nyombwe d'appews en fonction du wibewwé passé en awgument. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

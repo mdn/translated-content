@@ -1,89 +1,89 @@
 ---
-title: HTMLFormElement.elements
-slug: Web/API/HTMLFormElement/elements
+titwe: htmwfowmewement.ewements
+swug: web/api/htmwfowmewement/ewements
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement), renvoie un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) qui liste l'ensemble des contrôles de formulaire contenu dans l'élément [`<form>`](/fr/docs/Web/HTML/Element/form).
+w-wa pwopwiété **`ewements`**, :3 w-wattachée à w-w'intewface [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement), ( ͡o ω ͡o ) w-wenvoie un o-objet [`htmwfowmcontwowscowwection`](/fw/docs/web/api/htmwfowmcontwowscowwection) q-qui wiste w'ensembwe d-des contwôwes de fowmuwaiwe contenu dans w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm). mya
 
-Si besoin d'obtenir uniquement le nombre de contrôles du formulaire, on pourra utiliser la propriété [`length`](/fr/docs/Web/API/HTMLFormElement/length).
+si besoin d-d'obteniw uniquement we nyombwe de contwôwes d-du fowmuwaiwe, (///ˬ///✿) on pouwwa utiwisew w-wa pwopwiété [`wength`](/fw/docs/web/api/htmwfowmewement/wength).
 
-On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut `name` ou `id` de l'élément.
+on peut accédew à un contwôwe pawticuwiew d-du fowmuwaiwe via wa cowwection w-wenvoyée e-en utiwisant w'indice ou w'attwibut `name` ou `id` de w'éwément. (˘ω˘)
 
-Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
+avant htmw 5, w-w'objet wenvoyé était un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection), ^^;; suw wequew `htmwfowmcontwowscowwection` est désowmais basé. (✿oωo)
 
-> [!NOTE]
-> De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
+> [!note]
+> d-de wa même façon, (U ﹏ U) on peut o-obteniw wa wiste d-de tous wes fowmuwaiwes c-contenus d-dans un document donné en utiwisant wa pwopwiété [`fowms`](/fw/docs/web/api/document/fowms). -.-
 
-## Valeur
+## v-vaweuw
 
-Un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) contenant tous les contrôles du formulaire qui ne sont pas des images. Il s'agit d'une collection dynamique, si des contrôles sont ajoutés ou retirés du formulaire, cette collection sera mise à jour afin de refléter cette modification.
+un objet [`htmwfowmcontwowscowwection`](/fw/docs/web/api/htmwfowmcontwowscowwection) contenant tous w-wes contwôwes du fowmuwaiwe qui nye sont pas des images. ^•ﻌ•^ iw s'agit d'une cowwection dynamique, rawr s-si des contwôwes sont ajoutés o-ou wetiwés du f-fowmuwaiwe, cette c-cowwection sewa mise à jouw afin de wefwétew cette modification. (˘ω˘)
 
-Les contrôles de formulaires de la collection renvoyée sont dans le même ordre que celui selon lequel ils apparaissent dans le formulaire selon un parcours préfixe en profondeur de l'arbre, appelé **ordre de l'arbre**.
+w-wes contwôwes d-de fowmuwaiwes de wa cowwection w-wenvoyée s-sont dans we même owdwe que cewui s-sewon wequew iws appawaissent d-dans we fowmuwaiwe sewon un pawcouws pwéfixe e-en pwofondeuw de w'awbwe, nyaa~~ appewé **owdwe d-de w'awbwe**. UwU
 
-Seuls les éléments suivants sont renvoyés&nbsp;:
+seuws wes éwéments s-suivants s-sont wenvoyés&nbsp;:
 
-- [`<button>`](/fr/docs/Web/HTML/Element/button)
-- [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset)
-- [`<input>`](/fr/docs/Web/HTML/Element/input) (exception faite des éléments dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `"image"`, pour des raisons historiques)
-- [`<object>`](/fr/docs/Web/HTML/Element/object)
-- [`<output>`](/fr/docs/Web/HTML/Element/output)
-- [`<select>`](/fr/docs/Web/HTML/Element/select)
-- [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
+- [`<button>`](/fw/docs/web/htmw/ewement/button)
+- [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset)
+- [`<input>`](/fw/docs/web/htmw/ewement/input) (exception faite des éwéments dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#type) vaut `"image"`, :3 pouw des waisons histowiques)
+- [`<object>`](/fw/docs/web/htmw/ewement/object)
+- [`<output>`](/fw/docs/web/htmw/ewement/output)
+- [`<sewect>`](/fw/docs/web/htmw/ewement/sewect)
+- [`<textawea>`](/fw/docs/web/htmw/ewement/textawea)
 
-## Exemples
+## e-exempwes
 
-### Utilisation basique de la syntaxe
+### u-utiwisation basique de w-wa syntaxe
 
-Dans cet exemple, on voit comment obtenir la liste des contrôles d'un formulaire et comment accéder à ses éléments avec un indice, un nom ou un identifiant.
+dans c-cet exempwe, (⑅˘꒳˘) on v-voit comment obteniw wa wiste des contwôwes d'un fowmuwaiwe et c-comment accédew à ses éwéments avec un indice, (///ˬ///✿) un nyom ou un identifiant. ^^;;
 
-```html
-<form id="mon-formulaire">
-  <input type="text" name="username" />
-  <input type="text" name="full-name" />
-  <input type="password" name="password" />
-</form>
+```htmw
+<fowm id="mon-fowmuwaiwe">
+  <input t-type="text" nyame="usewname" />
+  <input t-type="text" n-nyame="fuww-name" />
+  <input t-type="passwowd" nyame="passwowd" />
+</fowm>
 ```
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
-const inputByIndex = inputs[0];
-const inputByName = inputs["username"];
+c-const inputs = d-document.getewementbyid("mon-fowmuwaiwe").ewements;
+c-const i-inputbyindex = inputs[0];
+const inputbyname = inputs["usewname"];
 ```
 
-### Accéder aux contrôles du formulaire
+### a-accédew a-aux contwôwes d-du fowmuwaiwe
 
-Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`"text"`](/fr/docs/Web/HTML/Element/input/text) afin de pouvoir modifier leur valeur.
+d-dans cet exempwe, o-on wécupèwe wa wiste des éwéments du fowmuwaiwe, >_< qu'on pawcouwt à w-wa wechewche d'éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) de type [`"text"`](/fw/docs/web/htmw/ewement/input/text) afin de pouvoiw modifiew weuw vaweuw. rawr x3
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+c-const inputs = document.getewementbyid("mon-fowmuwaiwe").ewements;
 
-// On parcourt les contrôles du formulaire
-for (let i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
-    // On met à jour le champ texte
-    inputs[i].value.toLocaleUpperCase();
+// on pawcouwt wes contwôwes du fowmuwaiwe
+f-fow (wet i-i = 0; i < inputs.wength; i-i++) {
+  if (inputs[i].nodename === "input" && i-inputs[i].type === "text") {
+    // on m-met à jouw we c-champ texte
+    inputs[i].vawue.towocaweuppewcase();
   }
 }
 ```
 
-### Désactiver des contrôles de formulaire
+### désactivew des contwôwes de fowmuwaiwe
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = d-document.getewementbyid("mon-fowmuwaiwe").ewements;
 
-// On parcourt les contrôles du formulaire
-for (let i = 0; i < inputs.length; i++) {
-  // On les désactive tous
-  inputs[i].setAttribute("disabled", "");
+// on pawcouwt w-wes contwôwes du fowmuwaiwe
+f-fow (wet i = 0; i-i < inputs.wength; i++) {
+  // on wes désactive t-tous
+  inputs[i].setattwibute("disabwed", /(^•ω•^) "");
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,34 +1,34 @@
 ---
-title: element.id
-slug: Web/API/Element/id
+titwe: ewement.id
+swug: web/api/ewement/id
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Element.id`** représente l'identifiant de l'élément, reflétant l' **[id](/fr/docs/Web/HTML/Global_attributes/id)** global de l'attribut.
+w-wa pwopwiété **`ewement.id`** w-wepwésente w-w'identifiant d-de w'éwément, mya w-wefwétant w' **[id](/fw/docs/web/htmw/gwobaw_attwibutes/id)** gwobaw d-de w'attwibut. 🥺
 
-Il doit être unique dans un document et est souvent utilisé pour extraire l'élément en utilisant {{domxref("document.getElementById","getElementById")}}. Les autres utilisations courantes de `id` comprennent l'utilisation de l'[ID de l'élément en tant que sélecteur](/fr/docs/Web/CSS/ID_selectors) lors de la mise en forme du document avec [CSS](/fr/docs/Web/CSS).
+i-iw doit êtwe u-unique dans un document et est souvent utiwisé pouw extwaiwe w'éwément en u-utiwisant {{domxwef("document.getewementbyid","getewementbyid")}}. >_< wes autwes utiwisations couwantes d-de `id` compwennent w'utiwisation d-de w'[id de w'éwément en tant que séwecteuw](/fw/docs/web/css/id_sewectows) wows de wa m-mise en fowme du document avec [css](/fw/docs/web/css). >_<
 
-> [!NOTE]
-> Les identifiants sont sensibles à la casse, mais vous devez éviter de créer des ID qui ne diffèrent que par la casse (voir [Sensibilité à la casse dans les noms de classe et d'identifiant](/fr/docs/Archive/Case_Sensitivity_in_class_and_id_Names)).
+> [!note]
+> w-wes identifiants s-sont sensibwes à wa casse, mais vous devez évitew de cwéew des id qui n-nye diffèwent que paw wa casse (voiw [sensibiwité à wa casse dans wes nyoms de cwasse et d'identifiant](/fw/docs/awchive/case_sensitivity_in_cwass_and_id_names)). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var idStr = elt.id; // Obtenez l'identifiant
-elt.id = idStr; // Définir l'identifiant
+vaw idstw = e-ewt.id; // o-obtenez w'identifiant
+e-ewt.id = i-idstw; // définiw w'identifiant
 ```
 
-- `idStr` est l'identifiant de l'élément.
+- `idstw` est w'identifiant d-de w'éwément. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut global [**id**](/fr/docs/Web/HTML/Global_attributes/id) de DOM.
+- w'attwibut gwobaw [**id**](/fw/docs/web/htmw/gwobaw_attwibutes/id) de d-dom. rawr x3

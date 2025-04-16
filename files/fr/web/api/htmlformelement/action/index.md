@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.action
-slug: Web/API/HTMLFormElement/action
+titwe: htmwfowmewement.action
+swug: web/api/htmwfowmewement/action
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
+w-wa pwopwiété **`htmwfowmewement.action`** wepwésente w-w'action a-associée à w-w'éwément {{htmwewement("fowm")}}.
 
-L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être récupérée ou définie.
+w-w'action d-d'un fowmuwaiwe e-est we pwogwamme exécuté suw we sewveuw wowsque we fowmuwaiwe est soumis. mya cette p-pwopwiété peut êtwe wécupéwée ou définie. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-string = form.action;
-form.action = string;
+stwing = fowm.action;
+f-fowm.action = stwing;
 ```
 
-## Exemple
+## exempwe
 
-form.action = "/cgi-bin/publish";
+fowm.action = "/cgi-bin/pubwish";
 
-## Spécification
+## s-spécification
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+[htmw 5, XD section 4.10.19.6, :3 f-fowm submission](https://www.w3.owg/tw/htmw5/association-of-contwows-and-fowms.htmw#dom-fs-method)
 
-[DOM Level 2 HTML: action](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)
+[dom w-wevew 2 htmw: action](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-74049184)

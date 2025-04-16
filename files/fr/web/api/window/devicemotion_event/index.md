@@ -1,56 +1,56 @@
 ---
-title: "Window: devicemotion event"
-slug: Web/API/Window/devicemotion_event
+titwe: "window: devicemotion e-event"
+swug: web/api/window/devicemotion_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `devicemotion` est déclenché à intervalles réguliers et indique la quantité de force physique d'accélération que le périphérique reçoit à ce moment. Il fournit également des informations sur le taux de rotation, si disponible.
+w-w'évènement `devicemotion` e-est d-décwenché à i-intewvawwes wéguwiews e-et indique w-wa quantité de f-fowce physique d'accéwéwation que we péwiphéwique weçoit à ce moment. rawr x3 iw f-fouwnit égawement des infowmations suw we taux d-de wotation, (✿oωo) si disponibwe. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/DeviceMotionEvent"><code>DeviceMotionEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété gestionnaire d'évènement</th>
-      <td><a href="/fr/docs/Web/API/Window/ondevicemotion"><code>Window.ondevicemotion</code></a></td>
-    </tr>
+    <tw>
+      <th scope="wow">bouiwwonne</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td><a h-hwef="/fw/docs/web/api/devicemotionevent"><code>devicemotionevent</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété g-gestionnaiwe d-d'évènement</th>
+      <td><a hwef="/fw/docs/web/api/window/ondevicemotion"><code>window.ondevicemotion</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
 ```js
-function handleMotionEvent(event) {
-  var x = event.accelerationIncludingGravity.x;
-  var y = event.accelerationIncludingGravity.y;
-  var z = event.accelerationIncludingGravity.z;
+function handwemotionevent(event) {
+  vaw x = e-event.accewewationincwudinggwavity.x;
+  vaw y = event.accewewationincwudinggwavity.y;
+  vaw z = event.accewewationincwudinggwavity.z;
 
-  // Faire quelque chose de génial.
+  // faiwe q-quewque chose de géniaw. (˘ω˘)
 }
 
-window.addEventListener("devicemotion", handleMotionEvent, true);
+w-window.addeventwistenew("devicemotion", (⑅˘꒳˘) h-handwemotionevent, (///ˬ///✿) t-twue);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientation Event` (en anglais)](https://www.w3.org/TR/orientation-event/#devicemotion)
+- [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientation event` (en angwais)](https://www.w3.owg/tw/owientation-event/#devicemotion)

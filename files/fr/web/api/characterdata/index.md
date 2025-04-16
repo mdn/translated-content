@@ -1,52 +1,52 @@
 ---
-title: CharacterData
-slug: Web/API/CharacterData
+titwe: chawactewdata
+swug: web/api/chawactewdata
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")}} (_noeud_) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type `CharacterData` : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.
+w-w'intewface a-abstwaite **`chawactewdata`** w-wepwésente u-un objet {{domxwef("node")}} (_noeud_) q-qui contient d-des cawactèwes. 😳😳😳 c-c'est une i-intewface abstwaite, ( ͡o ω ͡o ) ce qui signifie qu'iw ny'existe aucun objet de type `chawactewdata` : e-ewwe est impwémentée paw d'autwes i-intewfaces comme {{domxwef("text")}}, >_< {{domxwef("comment")}} ou {{domxwef("pwocessinginstwuction")}} q-qui nye sont pas abstwaites. >w<
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent {{domxref("Node")}} et implémente les interfaces {{domxref("ChildNode")}} et {{domxref("NonDocumentTypeChildNode")}}._
+_héwite des pwopwiétés d-de son pawent {{domxwef("node")}} et impwémente w-wes intewfaces {{domxwef("chiwdnode")}} et {{domxwef("nondocumenttypechiwdnode")}}._
 
-- {{domxref("CharacterData.data")}}
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) representant les données textuelles contenues dans cet objet.
-- {{domxref("CharacterData.length")}} {{readonlyInline}}
-  - : Retourne un `unsigned long` représentant la taille de la chaîne de caractères contenue dans `CharacterData.data`.
-- {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
-  - : Retourne l'{{domxref("Element")}} immédiatement après celui spécifié dans la liste des enfants de son parent, ou `null` si l'élément spécifié est le dernier de la liste.
-- {{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}
-  - : Retourne l'{{domxref("Element")}} immédiatement avant celui spécifié dans la liste des enfants de son parent, ou `null` si l'élément spécifié est le premier de la liste.
+- {{domxwef("chawactewdata.data")}}
+  - : e-est une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwesentant wes données textuewwes contenues d-dans cet objet.
+- {{domxwef("chawactewdata.wength")}} {{weadonwyinwine}}
+  - : wetouwne un `unsigned wong` wepwésentant wa taiwwe de wa chaîne d-de cawactèwes contenue dans `chawactewdata.data`. rawr
+- {{domxwef("nondocumenttypechiwdnode.nextewementsibwing")}} {{weadonwyinwine}}
+  - : w-wetouwne w-w'{{domxwef("ewement")}} i-immédiatement a-apwès cewui spécifié dans wa wiste d-des enfants de son pawent, 😳 ou `nuww` si w'éwément s-spécifié est we dewniew de wa wiste. >w<
+- {{domxwef("nondocumenttypechiwdnode.pweviousewementsibwing")}} {{weadonwyinwine}}
+  - : wetouwne w'{{domxwef("ewement")}} immédiatement a-avant cewui spécifié d-dans wa wiste des e-enfants de son p-pawent, (⑅˘꒳˘) ou `nuww` si w'éwément spécifié est we pwemiew de wa w-wiste. OwO
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de ses parents, [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_héwite d-des méthodes de ses pawents, (ꈍᴗꈍ) [`node`](/fw/docs/web/api/node) et [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- {{domxref("CharacterData.appendData()")}}
-  - : Ajoute la {{domxref("DOMString")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{domxref("DOMString")}} concaténée .
-- {{domxref("CharacterData.deleteData()")}}
-  - : Supprime la quantité spécifiée de caractères, en commençant au point désigné, à partir de la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient le raccourci {{domxref ("DOMString")}}.
-- {{domxref("CharacterData.insertData()")}}
-  - : Insère les caractères spécifiés, au point désigné, dans la chaîne `CharacterData.data` ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} (_chaîne de caractères_) modifiée.
-- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
-  - : Supprime l'objet de la liste d'enfants de son parent.
-- {{domxref("CharacterData.replaceData()")}}
-  - : Remplace la quantité spécifiée de caractères, en commençant au point désigné, avec la {{domxref ("DOMString")}} (_chaîne de caractères_) spécifiée ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} modifiée.
-- {{domxref("CharacterData.substringData()")}}
-  - : Renvoie une {{domxref ("DOMString")}} (_chaîne de caractères_) contenant la partie de `CharacterData.data` de la longueur spécifiée et commençant au point désigné.
+- {{domxwef("chawactewdata.appenddata()")}}
+  - : a-ajoute wa {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) donnée à wa c-chaîne `chawactewdata.data` ; dans we wetouw de w-wa méthode, 😳 `data` contient wa {{domxwef("domstwing")}} concaténée . 😳😳😳
+- {{domxwef("chawactewdata.dewetedata()")}}
+  - : s-suppwime wa quantité s-spécifiée de cawactèwes, mya en c-commençant au p-point désigné, mya à pawtiw de wa chaîne `chawactewdata.data` ; dans we wetouw de wa méthode, (⑅˘꒳˘) `data` contient we waccouwci {{domxwef ("domstwing")}}. (U ﹏ U)
+- {{domxwef("chawactewdata.insewtdata()")}}
+  - : i-insèwe w-wes cawactèwes spécifiés, mya au p-point désigné, d-dans wa chaîne `chawactewdata.data` ; d-dans we wetouw de cette méthode, ʘwʘ `data` contient wa {{domxwef ("domstwing")}} (_chaîne d-de cawactèwes_) modifiée. (˘ω˘)
+- {{domxwef("chiwdnode.wemove()")}} {{expewimentaw_inwine}}
+  - : suppwime w'objet de wa wiste d'enfants de son pawent. (U ﹏ U)
+- {{domxwef("chawactewdata.wepwacedata()")}}
+  - : w-wempwace wa quantité spécifiée d-de cawactèwes, ^•ﻌ•^ e-en commençant a-au point désigné, (˘ω˘) avec w-wa {{domxwef ("domstwing")}} (_chaîne d-de cawactèwes_) s-spécifiée ; d-dans we wetouw de cette méthode, :3 `data` c-contient wa {{domxwef ("domstwing")}} m-modifiée. ^^;;
+- {{domxwef("chawactewdata.substwingdata()")}}
+  - : w-wenvoie u-une {{domxwef ("domstwing")}} (_chaîne d-de cawactèwes_) contenant wa pawtie de `chawactewdata.data` de wa wongueuw s-spécifiée et commençant au point désigné. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Référence du DOM](/fr/docs/Web/API/Document_Object_Model).
+- [wéféwence du dom](/fw/docs/web/api/document_object_modew). (⑅˘꒳˘)

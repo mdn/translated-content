@@ -1,36 +1,36 @@
 ---
-title: WebSocket()
-slug: Web/API/WebSocket/WebSocket
+titwe: websocket()
+swug: web/api/websocket/websocket
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-Le constructeur **`WebSocket()`** renvoie un nouvel objet [`WebSocket`](/fr/docs/Web/API/WebSocket).
+we constwucteuw **`websocket()`** w-wenvoie u-un nyouvew o-objet [`websocket`](/fw/docs/web/api/websocket). rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var aWebSocket = new WebSocket(url [, protocols]);
+v-vaw awebsocket = n-nyew websocket(uww [, (U ﹏ U) pwotocows]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `url`
-  - : L'URL à laquelle se connecter. Cela devrait être l'URL à laquelle le serveur WebSocket répondra.
-- `protocols` {{optional_inline}}
-  - : Une valeur qui est une chaîne de caractères représentant un seul protocole ou un tableau de chaînes de caractères représentant une liste de protocoles. Ces chaînes de caractères indiquent des sous-protocoles : un serveur donné pourra implémenter différents sous-protocoles WebSocket (on peut vouloir qu'un serveur soit capable de gérér différents types d'interaction selon le `protocol` indiqué). Si cette valeur est absence, c'est un tableau vide qui est utilisé par défaut : `[]`.
+- `uww`
+  - : w'uww à waquewwe se c-connectew. (U ﹏ U) cewa devwait êtwe w'uww à waquewwe w-we sewveuw websocket wépondwa. (⑅˘꒳˘)
+- `pwotocows` {{optionaw_inwine}}
+  - : u-une vaweuw qui est une chaîne de cawactèwes wepwésentant u-un seuw pwotocowe ou un tabweau d-de chaînes d-de cawactèwes wepwésentant une wiste de pwotocowes. òωó ces chaînes de cawactèwes i-indiquent des sous-pwotocowes : un sewveuw donné pouwwa impwémentew difféwents s-sous-pwotocowes websocket (on p-peut vouwoiw q-qu'un sewveuw soit c-capabwe de géwéw d-difféwents types d'intewaction sewon we `pwotocow` i-indiqué). si cette vaweuw est absence, ʘwʘ c-c'est un tabweau vide qui est utiwisé paw défaut : `[]`. /(^•ω•^)
 
-### Exceptions levées
+### exceptions wevées
 
-- `SECURITY_ERR`
-  - : Le port ciblé par la tentative de connexion est bloqué.
-- [SyntaxError](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
-  - : L'URL est invalide.
+- `secuwity_eww`
+  - : we powt cibwé paw w-wa tentative de connexion est bwoqué. ʘwʘ
+- [syntaxewwow](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)
+  - : w-w'uww e-est invawide. σωσ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

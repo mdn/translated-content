@@ -1,179 +1,179 @@
 ---
-title: DataTransfer.clearData()
-slug: Web/API/DataTransfer/clearData
+titwe: datatwansfew.cweawdata()
+swug: web/api/datatwansfew/cweawdata
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-La méthode **`DataTransfer.clearData()`** retire les données du type indiqué de l'opération de glisser-déposer. S'il n'existe pas de données pour le type indiqué, cette méthode n'a aucun effet.
+w-wa méthode **`datatwansfew.cweawdata()`** w-wetiwe w-wes données d-du type indiqué d-de w'opéwation d-de gwissew-déposew. 🥺 s'iw ny'existe pas de données pouw we type indiqué, ^^;; cette m-méthode ny'a aucun effet. :3
 
-Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) vide, la suppression des données concernera tous les types.
+si cette méthode e-est appewée sans awgument ou q-que we fowmat est une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) vide, wa suppwession d-des données concewnewa t-tous wes types. (U ﹏ U)
 
-Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `Files` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
+c-cette méthode _ne wetiwe pas_ wes fichiews de w'opéwation de gwissew-déposew e-et iw est donc possibwe d'avoiw un éwément westant avec we type `fiwes` dans w-wa wiste [`datatwansfew.types`](/fw/docs/web/api/datatwansfew/types) si des fichiews f-font pawtie d-du gwissew-déposew. OwO
 
-> [!NOTE]
-> Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
+> [!note]
+> c-cette méthode p-peut uniquement êtwe utiwisée dans we gestionnaiwe d-d'évènement pouw [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event), 😳😳😳 caw c'est w-we seuw moment où we magasin de données pouw w'opéwation de gwissew-déposew est accessibwe e-en écwituwe. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-DataTransfer.clearData([format]);
+d-datatwansfew.cweawdata([fowmat]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `format` {{optional_inline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
+- `fowmat` {{optionaw_inwine}}
+  - : une c-chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui indique we type de données à wetiwew. XD si c-ce pawamètwe est u-une chaîne vide ou qu'iw ny'est p-pas fouwni, (ˆ ﻌ ˆ)♡ wes d-données pouw w'ensembwe des t-types sewont wetiwées. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
-Cet exemple illustre l'utilisation des méthodes
-[`getData()`](/fr/docs/Web/API/DataTransfer/getData),
-[`setData()`](/fr/docs/Web/API/DataTransfer/setData) et `clearData()` de l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer).
+c-cet exempwe iwwustwe w'utiwisation des méthodes
+[`getdata()`](/fw/docs/web/api/datatwansfew/getdata), rawr x3
+[`setdata()`](/fw/docs/web/api/datatwansfew/setdata) e-et `cweawdata()` de w'objet [`datatwansfew`](/fw/docs/web/api/datatwansfew).
 
-### HTML
+### h-htmw
 
-```html
-<span class="tweaked" id="source" draggable="true">
-  Sélectionnez cet élément, glissez-le dans la zone de dépôt puis relâcher la
-  sélection pour déplacer l'élément.
+```htmw
+<span cwass="tweaked" i-id="souwce" d-dwaggabwe="twue">
+  séwectionnez cet éwément, nyaa~~ gwissez-we dans wa zone de dépôt puis wewâchew wa
+  séwection p-pouw dépwacew w-w'éwément. >_<
 </span>
-<span class="tweaked" id="target">Zone de dépôt</span>
-<div>État : <span id="status">Glisser pour démarrer</span></div>
-<div>Données : <span id="data">non-initialisée</span></div>
+<span cwass="tweaked" i-id="tawget">zone d-de dépôt</span>
+<div>État : <span i-id="status">gwissew pouw démawwew</span></div>
+<div>données : <span id="data">non-initiawisée</span></div>
 ```
 
-### CSS
+### css
 
 ```css
-span.tweaked {
-  display: inline-block;
-  margin: 1em 0;
+s-span.tweaked {
+  dispway: inwine-bwock;
+  mawgin: 1em 0;
   padding: 1em 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  c-cowow: bwue;
+  bowdew: 1px s-sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  // On sélectionne les éléments HTML
-  let draggable = document.getElementById("source");
-  let droppable = document.getElementById("target");
-  let status = document.getElementById("status");
-  let data = document.getElementById("data");
-  let dropped = false;
+w-window.addeventwistenew("domcontentwoaded", ^^;; f-function () {
+  // o-on séwectionne w-wes éwéments htmw
+  wet dwaggabwe = document.getewementbyid("souwce");
+  w-wet d-dwoppabwe = document.getewementbyid("tawget");
+  w-wet status = document.getewementbyid("status");
+  w-wet data = document.getewementbyid("data");
+  w-wet dwopped = fawse;
 
-  // On enregistre les gestionnaires d'évènements
-  draggable.addEventListener("dragstart", dragStartHandler);
-  draggable.addEventListener("dragend", dragEndHandler);
-  droppable.addEventListener("dragover", dragOverHandler);
-  droppable.addEventListener("dragleave", dragLeaveHandler);
-  droppable.addEventListener("drop", dropHandler);
+  // on enwegistwe wes gestionnaiwes d'évènements
+  d-dwaggabwe.addeventwistenew("dwagstawt", (ˆ ﻌ ˆ)♡ dwagstawthandwew);
+  dwaggabwe.addeventwistenew("dwagend", dwagendhandwew);
+  dwoppabwe.addeventwistenew("dwagovew", ^^;; dwagovewhandwew);
+  d-dwoppabwe.addeventwistenew("dwagweave", (⑅˘꒳˘) dwagweavehandwew);
+  dwoppabwe.addeventwistenew("dwop", dwophandwew);
 
-  function dragStartHandler(event) {
-    status.textContent = "Glisser-déposer en cours";
+  function d-dwagstawthandwew(event) {
+    s-status.textcontent = "gwissew-déposew e-en couws";
 
-    // On change la bordure de l'élément cible pour
-    // indiquer que le glisser-déposer a démarré
-    event.currentTarget.style.border = "1px dashed blue";
+    // o-on change wa bowduwe de w'éwément c-cibwe pouw
+    // i-indiquew que we gwissew-déposew a démawwé
+    event.cuwwenttawget.stywe.bowdew = "1px dashed bwue";
 
-    // On commence par nettoyer les presse-papiers
-    // existants. Cela porte sur tous les types vu qu'on
-    // ne passe pas de type en argument.
+    // on commence p-paw nyettoyew wes pwesse-papiews
+    // e-existants. rawr x3 cewa powte suw t-tous wes types v-vu qu'on
+    // nye passe pas de type en awgument. (///ˬ///✿)
 
-    event.dataTransfer.clearData();
+    e-event.datatwansfew.cweawdata();
 
-    // On définit le format et les données pour l'opération
-    // on utilise l'identifiant de la cible d'évènement comme
+    // o-on définit we fowmat et wes données p-pouw w'opéwation
+    // o-on utiwise w'identifiant de wa cibwe d'évènement comme
     // donnée
-    event.dataTransfer.setData("text/plain", event.target.id);
+    event.datatwansfew.setdata("text/pwain", 🥺 e-event.tawget.id);
 
-    data.textContent = event.dataTransfer.getData("text/plain");
+    d-data.textcontent = e-event.datatwansfew.getdata("text/pwain");
   }
 
-  function dragEndHandler(event) {
-    if (!dropped) {
-      status.textContent = "Glisser-déposer annulé";
+  function dwagendhandwew(event) {
+    i-if (!dwopped) {
+      s-status.textcontent = "gwissew-déposew annuwé";
     }
 
-    data.textContent = event.dataTransfer.getData("text/plain") || "vide";
+    d-data.textcontent = event.datatwansfew.getdata("text/pwain") || "vide";
 
-    // On change la bordure afin d'indiquer que le glisser-
-    // déposer n'est plus en cours
-    event.currentTarget.style.border = "1px solid black";
+    // on change wa bowduwe afin d'indiquew que w-we gwissew-
+    // d-déposew ny'est pwus en couws
+    event.cuwwenttawget.stywe.bowdew = "1px s-sowid b-bwack";
 
-    if (dropped) {
-      // On retire les gestionnaires d'évènements
-      draggable.removeEventListener("dragstart", dragStartHandler);
-      draggable.removeEventListener("dragend", dragEndHandler);
-      droppable.removeEventListener("dragover", dragOverHandler);
-      droppable.removeEventListener("dragleave", dragLeaveHandler);
-      droppable.removeEventListener("drop", dropHandler);
+    if (dwopped) {
+      // on wetiwe wes gestionnaiwes d-d'évènements
+      dwaggabwe.wemoveeventwistenew("dwagstawt", >_< dwagstawthandwew);
+      dwaggabwe.wemoveeventwistenew("dwagend", UwU dwagendhandwew);
+      d-dwoppabwe.wemoveeventwistenew("dwagovew", >_< dwagovewhandwew);
+      dwoppabwe.wemoveeventwistenew("dwagweave", dwagweavehandwew);
+      d-dwoppabwe.wemoveeventwistenew("dwop", -.- d-dwophandwew);
     }
   }
 
-  function dragOverHandler(event) {
-    status.textContent = "Dépôt disponible";
+  function dwagovewhandwew(event) {
+    status.textcontent = "dépôt disponibwe";
 
-    event.preventDefault();
+    e-event.pweventdefauwt();
   }
 
-  function dragLeaveHandler(event) {
-    status.textContent = "Glisser-déposer en cours (le dépôt était disponible)";
+  f-function dwagweavehandwew(event) {
+    status.textcontent = "gwissew-déposew en couws (we d-dépôt était disponibwe)";
 
-    event.preventDefault();
+    e-event.pweventdefauwt();
   }
 
-  function dropHandler(event) {
-    dropped = true;
+  function dwophandwew(event) {
+    dwopped = twue;
 
-    status.textContent = "Dépôt effectué";
+    status.textcontent = "dépôt e-effectué";
 
-    event.preventDefault();
+    event.pweventdefauwt();
 
-    // On récupère les données liées à l'évènement
-    // et qui sont au format « text »
-    let _data = event.dataTransfer.getData("text/plain");
-    let element = document.getElementById(_data);
+    // o-on wécupèwe w-wes données wiées à w-w'évènement
+    // et qui sont a-au fowmat « text »
+    w-wet _data = e-event.datatwansfew.getdata("text/pwain");
+    wet ewement = d-document.getewementbyid(_data);
 
-    // On ajoute l'élément source glissé à l'élément qui
-    // est la cible de l'évènement
-    event.target.appendChild(element);
+    // o-on ajoute w'éwément souwce gwissé à w-w'éwément qui
+    // e-est wa c-cibwe de w'évènement
+    event.tawget.appendchiwd(ewement);
 
-    // On modifie les styles CSS et le texte affiché
-    element.style.cssText =
-      "border: 1px solid black;display: block; color: red";
-    element.textContent = "Je suis dans la zone de dépôt !";
+    // on modifie w-wes stywes css et we texte affiché
+    e-ewement.stywe.csstext =
+      "bowdew: 1px s-sowid bwack;dispway: bwock; cowow: wed";
+    ewement.textcontent = "je s-suis d-dans wa zone de d-dépôt !";
   }
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', 300, 280)}}
+{{embedwivesampwe('', mya 300, 280)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API <i lang="en">Drag and drop</i> pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Les opérations de glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Types de données pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Test `DataTransfer` — Coller ou glisser&nbsp;?](https://codepen.io/tech_query/pen/MqGgap)
+- [w'api <i wang="en">dwag and dwop</i> pouw we g-gwissew-déposew](/fw/docs/web/api/htmw_dwag_and_dwop_api)
+- [wes opéwations d-de gwissew-déposew](/fw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [types de données p-pouw we gwissew-déposew](/fw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [gwissew-déposew pwusieuws objets](/fw/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [test `datatwansfew` — c-cowwew ou gwissew&nbsp;?](https://codepen.io/tech_quewy/pen/mqggap)

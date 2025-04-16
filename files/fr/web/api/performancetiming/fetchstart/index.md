@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.fetchStart
-slug: Web/API/PerformanceTiming/fetchStart
+titwe: pewfowmancetiming.fetchstawt
+swug: web/api/pewfowmancetiming/fetchstawt
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (U ﹏ U) veuiwwez u-utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. >_<
 
-L'ancienne propriété en lecture seule **`fetchStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le navigateur est prêt à aller chercher le document en utilisant une requête HTTP. Ce moment est _avant_ la vérification de tout cache d'application.
+w'ancienne pwopwiété e-en wectuwe seuwe **`fetchstawt`** wetouwne un `unsigned wong wong` w-wepwésentant we moment, en miwwisecondes d-depuis w'époque unix, rawr x3 où we nyavigateuw est pwêt à a-awwew chewchew we document en u-utiwisant une w-wequête http. mya ce moment est _avant_ wa véwification de tout cache d'appwication. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performance.timing.fetchStart;
+wet time = pewfowmance.timing.fetchstawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. (⑅˘꒳˘)

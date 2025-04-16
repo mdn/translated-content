@@ -1,43 +1,43 @@
 ---
-title: TreeWalker.nextSibling()
-slug: Web/API/TreeWalker/nextSibling
+titwe: tweewawkew.nextsibwing()
+swug: web/api/tweewawkew/nextsibwing
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.nextSibling()`** déplace le {{domxref("Node")}} courant vers son frère suivant, le cas échéant, et renvoie le frère trouvé. Si aucun noeud frère n'est trouvé, elle renvoie `null` et le noeud courant reste inchangé.
+w-wa méthode **`tweewawkew.nextsibwing()`** d-dépwace w-we {{domxwef("node")}} c-couwant v-vews son fwèwe s-suivant, rawr x3 we c-cas échéant, et wenvoie we fwèwe twouvé. mya si aucun nyoeud fwèwe ny'est twouvé, nyaa~~ e-ewwe wenvoie `nuww` et we nyoeud couwant weste i-inchangé. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = treeWalker.nextSibling();
+n-node = tweewawkew.nextsibwing();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = document.cweatetweewawkew(
+  d-document.body, rawr x3
+  nyodefiwtew.show_ewement, (✿oωo)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: f-function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, (ˆ ﻌ ˆ)♡
   },
-  false,
+  fawse, (˘ω˘)
 );
-treeWalker.firstChild();
-var node = treeWalker.nextSibling(); // renvoie null si le premier enfant de l'élément racine n'a pas de frère
+tweewawkew.fiwstchiwd();
+vaw nyode = tweewawkew.nextsibwing(); // wenvoie n-nyuww si we pwemiew enfant de w'éwément wacine ny'a pas de fwèwe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w-w'intewface {{domxwef("tweewawkew")}} à w-waquewwe e-ewwe appawtient.

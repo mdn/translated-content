@@ -1,59 +1,59 @@
 ---
-title: PerformanceResourceTiming.encodedBodySize
-slug: Web/API/PerformanceResourceTiming/encodedBodySize
+titwe: pewfowmancewesouwcetiming.encodedbodysize
+swug: web/api/pewfowmancewesouwcetiming/encodedbodysize
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété **`encodedBodySize`** en lecture seule représente la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
+w-wa pwopwiété **`encodedbodysize`** e-en wectuwe s-seuwe wepwésente w-wa taiwwe (en o-octets) weçue d-de wa wécupéwation (http o-ou cache), ^^ du _cowps de wa donnée utiwe_, :3 avant de suppwimew tout c-codage de contenu appwiqué.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Si la ressource est extraite d'un cache d'application ou d'une ressource locale, elle doit renvoyer la taille du corps de la charge utile avant de supprimer tout codage de contenu appliqué.
+si wa wessouwce e-est extwaite d'un cache d'appwication o-ou d'une wessouwce wocawe, -.- ewwe doit wenvoyew wa taiwwe d-du cowps de wa chawge utiwe a-avant de suppwimew t-tout codage de contenu appwiqué. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.encodedBodySize;
+wesouwce.encodedbodysize;
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un `number` représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
+un `numbew` wepwésentant wa taiwwe (en octets) weçue de wa wécupéwation (http o-ou cache), mya du _cowps de wa donnée u-utiwe_, (˘ω˘) avant d-de suppwimew tout c-codage de contenu a-appwiqué. >_<
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, la valeur des propriétés de taille de tous les [types](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrées.
+dans w'exempwe suivant, -.- w-wa vaweuw des pwopwiétés de taiwwe de tous w-wes [types](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont enwegistwées. 🥺
 
 ```js
-function log_sizes(perfEntry) {
-  // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
-  // si elles sont prises en charge
-  if ("decodedBodySize" in perfEntry)
-    console.log("decodedBodySize = " + perfEntry.decodedBodySize);
-  else console.log("decodedBodySize = N'EST PAS pris en charge");
+function wog_sizes(pewfentwy) {
+  // véwifie wa pwise en chawge des pwopwiétés p-pewfowmanceentwy.*size et impwime w-weuws vaweuws
+  // s-si ewwes s-sont pwises en chawge
+  if ("decodedbodysize" in pewfentwy)
+    consowe.wog("decodedbodysize = " + p-pewfentwy.decodedbodysize);
+  e-ewse consowe.wog("decodedbodysize = ny'est pas p-pwis en chawge");
 
-  if ("encodedBodySize" in perfEntry)
-    console.log("encodedBodySize = " + perfEntry.encodedBodySize);
-  else console.log("encodedBodySize = N'EST PAS pris en charge");
+  i-if ("encodedbodysize" in p-pewfentwy)
+    consowe.wog("encodedbodysize = " + p-pewfentwy.encodedbodysize);
+  ewse consowe.wog("encodedbodysize = ny'est pas p-pwis en chawge");
 
-  if ("transferSize" in perfEntry)
-    console.log("transferSize = " + perfEntry.transferSize);
-  else console.log("transferSize = N'EST PAS pris en charge");
+  if ("twansfewsize" i-in pewfentwy)
+    consowe.wog("twansfewsize = " + p-pewfentwy.twansfewsize);
+  e-ewse consowe.wog("twansfewsize = ny'est pas pwis en chawge");
 }
-function check_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    log_sizes(p[i]);
+function check_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement w-wes événements "wesouwce"
+  w-wet p = pewfowmance.getentwiesbytype("wesouwce");
+  fow (wet i = 0; i-i < p.wength; i-i++) {
+    wog_sizes(p[i]);
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

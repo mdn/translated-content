@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.requestStart
-slug: Web/API/PerformanceTiming/requestStart
+titwe: pewfowmancetiming.wequeststawt
+swug: web/api/pewfowmancetiming/wequeststawt
 ---
 
-{{ APIRef("PerformanceTiming") }}
+{{ a-apiwef("pewfowmancetiming") }}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette i-intewface est d-dépwéciée dans w-wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (˘ω˘) v-veuiwwez utiwisew w-w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. (⑅˘꒳˘)
 
-L'ancienne propriété en lecture seule **`requestStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le navigateur a envoyé la requête pour obtenir le document actuel, depuis le serveur ou depuis un cache. Si la couche de transport échoue après le début de la requête et que la connexion est rouverte, cette propriété sera définie sur le temps correspondant à la nouvelle requête.
+w'ancienne pwopwiété en wectuwe seuwe **`wequeststawt`** w-wetouwne un `unsigned wong wong` wepwésentant w-we moment, (///ˬ///✿) en miwwisecondes d-depuis w'époque unix, 😳😳😳 où we nyavigateuw a envoyé wa wequête p-pouw obteniw we document actuew, 🥺 d-depuis we s-sewveuw ou depuis un cache. mya si wa couche de twanspowt échoue apwès we début de w-wa wequête et que wa connexion est wouvewte, 🥺 cette pwopwiété sewa définie s-suw we temps cowwespondant à wa n-nyouvewwe wequête. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performanceTiming.requestStart;
+w-wet time = p-pewfowmancetiming.wequeststawt;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe ewwe appawtient.

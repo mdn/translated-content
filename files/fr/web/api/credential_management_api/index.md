@@ -1,38 +1,38 @@
 ---
-title: Credential Management API
-slug: Web/API/Credential_Management_API
+titwe: cwedentiaw management a-api
+swug: web/api/cwedentiaw_management_api
 ---
 
-{{APIRef("Credential Management API")}}{{ SeeCompatTable() }}
+{{apiwef("cwedentiaw m-management a-api")}}{{ seecompattabwe() }}
 
-L'API **Credential Management** (en français : gestion des informations d'authentification) permet à un site web d'enregistrer et de récupérer des informations d'authentifications pour un utilisateur (qu'elles soient fédérées, utilisent un mot de passe ou une paire de clés asymétrique). Un utilisateur peut ainsi se connecter à un service sans avoir à saisir de mot de passe, de voir le compte fédéré utilisé pour se connecter à un site, de rouvrir une session sans avoir à se reconnecter après une session expirée.
+w-w'api **cwedentiaw m-management** (en f-fwançais : g-gestion des infowmations d-d'authentification) pewmet à un site web d'enwegistwew et de wécupéwew d-des infowmations d'authentifications pouw un u-utiwisateuw (qu'ewwes soient fédéwées, σωσ u-utiwisent un mot de passe ou une paiwe de cwés asymétwique). (U ᵕ U❁) u-un utiwisateuw peut ainsi s-se connectew à u-un sewvice sans avoiw à saisiw de mot de passe, de voiw we compte fédéwé u-utiwisé pouw se connectew à un site, (U ﹏ U) de wouvwiw une session sans avoiw à se weconnectew a-apwès une session expiwée. :3
 
-## Concepts et utilisation de l'API _Credential Management_
+## c-concepts e-et utiwisation d-de w'api _cwedentiaw m-management_
 
-Cette API permet aux sites web d'interagir avec le système de mots de passe de l'agent utilisateur afin que les sites web puissent gérer de façon uniforme les informations d'authentification. Ainsi, les sites et agents utilisateur peuvent mieux communiquer sur ces aspects.
+cette api pewmet aux sites w-web d'intewagiw avec we système de mots de passe d-de w'agent utiwisateuw afin que wes sites web puissent géwew de façon unifowme wes infowmations d-d'authentification. ( ͡o ω ͡o ) ainsi, w-wes sites et agents u-utiwisateuw p-peuvent mieux communiquew suw ces aspects. σωσ
 
-Ainsi, sans cette API, un agent utilisateur pourra rencontrer certaines difficultés à gérer des fournisseurs d'identité fédérée ou d'autres mécanismes de connexion.
+ainsi, >w< sans cette api, 😳😳😳 u-un agent utiwisateuw p-pouwwa wencontwew cewtaines d-difficuwtés à g-géwew des fouwnisseuws d'identité f-fédéwée ou d'autwes mécanismes d-de connexion. OwO
 
-> [!NOTE]
-> Cette API est restreinte aux contextes de plus haut niveau. Les appels à `get()` et `store()` depuis une {{HTMLElement("iframe")}} seront résolus sans aucun effet.
+> [!note]
+> cette api est westweinte aux c-contextes de pwus haut nyiveau. 😳 w-wes appews à `get()` et `stowe()` d-depuis une {{htmwewement("ifwame")}} s-sewont wésowus sans aucun effet. 😳😳😳
 
-### Informations d'authentification partagées entre les sous-domaines
+### infowmations d'authentification pawtagées entwe wes sous-domaines
 
-Les versions les plus récentes de la spécification permettent de récupérer les informations relatives à un sous-domaine différent. Ainsi, un mot de passe enregistré pour `login.example.com` pourrait être utilisé pour se connecter à `www.example.com`. Pour permettre cela, le mot de passe doit explicitement être stocké en appelant {{domxref("CredentialsContainer.store()")}}. Ce comportement est parfois intitulé _Public suffix list (PSL) matching_ (correspondance des listes de suffixes publics). Toutefois, la spécification ne fait que recommander l'utilisation du PSL pour déterminer la portée des informations d'authentification. Formellement, le PSL n'est pas obligatoire. Les navigateurs peuvent donc varier dans leurs implémentations.
+wes vewsions w-wes pwus wécentes d-de wa spécification pewmettent d-de wécupéwew w-wes infowmations w-wewatives à un sous-domaine difféwent. (˘ω˘) ainsi, un mot de p-passe enwegistwé pouw `wogin.exampwe.com` pouwwait êtwe utiwisé pouw se connectew à `www.exampwe.com`. ʘwʘ p-pouw pewmettwe cewa, ( ͡o ω ͡o ) w-we mot de passe d-doit expwicitement êtwe s-stocké en appewant {{domxwef("cwedentiawscontainew.stowe()")}}. o.O c-ce compowtement e-est pawfois i-intituwé _pubwic s-suffix wist (psw) matching_ (cowwespondance des wistes de s-suffixes pubwics). >w< t-toutefois, 😳 w-wa spécification n-nye fait que wecommandew w-w'utiwisation du psw pouw détewminew wa powtée des i-infowmations d'authentification. 🥺 fowmewwement, we psw ny'est pas obwigatoiwe. rawr x3 wes navigateuws peuvent donc vawiew d-dans weuws impwémentations. o.O
 
-## Interfaces
+## intewfaces
 
-- {{domxref("Credential")}}
-  - : Cette interface fournit des informations relatives à une entité qui seront utilisées comme prérequis à l'établissement d'une relation de confiance.
-- {{domxref("CredentialsContainer")}}
-  - : Cette interface expose des méthodes pour récupérer des informations d'authentification et notifier l'agent utilisateur lorsque des évènements pertinents se produisent (connexion ou déconnexion réussies par exemple). Cette interface est accessible via `navigator.credentials`.
-- {{domxref("FederatedCredential")}}
-  - : Cette interface fournit des informations relatives à des informations d'authentifcation provenant d'un fournisseur d'identité fédéré (c'est une entité à laquelle un site web fait confiance pour authentifier un utilisateur et qui fournit une API à cet effet). Le _framework_ [OpenID Connect](https://openid.net/developers/specs/) est un exemple d'un tel cas de figure.
-- {{domxref("PasswordCredential")}}
-  - : Cette interface fournit des informations à propos d'un couple nom d'utilisateur / mot de passe.
-- {{domxref("PublicKeyCredential")}}
-  - : Cette interface fournit des informations d'authentification pour se connecter à l'aide d'une paire de clés asymétrique (permettant d'éviter le hameçonnage et la fuite de données) plutôt qu'avec un mot de passe.
+- {{domxwef("cwedentiaw")}}
+  - : cette intewface fouwnit des infowmations w-wewatives à u-une entité q-qui sewont utiwisées comme pwéwequis à w-w'étabwissement d'une w-wewation de c-confiance. rawr
+- {{domxwef("cwedentiawscontainew")}}
+  - : cette intewface expose des méthodes pouw wécupéwew des infowmations d'authentification e-et nyotifiew w'agent utiwisateuw w-wowsque des évènements pewtinents s-se pwoduisent (connexion ou d-déconnexion wéussies paw exempwe). ʘwʘ cette intewface e-est accessibwe v-via `navigatow.cwedentiaws`. 😳😳😳
+- {{domxwef("fedewatedcwedentiaw")}}
+  - : cette i-intewface fouwnit d-des infowmations wewatives à des infowmations d'authentifcation pwovenant d-d'un fouwnisseuw d-d'identité fédéwé (c'est une e-entité à waquewwe un site web f-fait confiance p-pouw authentifiew un utiwisateuw e-et qui fouwnit une api à cet effet). ^^;; we _fwamewowk_ [openid connect](https://openid.net/devewopews/specs/) est un exempwe d'un t-tew cas de figuwe. o.O
+- {{domxwef("passwowdcwedentiaw")}}
+  - : c-cette intewface fouwnit des infowmations à pwopos d-d'un coupwe nyom d-d'utiwisateuw / mot de passe. (///ˬ///✿)
+- {{domxwef("pubwickeycwedentiaw")}}
+  - : cette intewface fouwnit d-des infowmations d'authentification pouw se connectew à w'aide d'une paiwe d-de cwés asymétwique (pewmettant d'évitew we hameçonnage et w-wa fuite de données) p-pwutôt qu'avec un mot de passe. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

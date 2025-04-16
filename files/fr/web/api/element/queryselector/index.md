@@ -1,99 +1,99 @@
 ---
-title: Element.querySelector()
-slug: Web/API/Element/querySelector
+titwe: ewement.quewysewectow()
+swug: web/api/ewement/quewysewectow
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/Element) renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.
+w-wa m-méthode **`quewysewectow()`** d-de w'intewface [`ewement`](/fw/docs/web/api/ewement) w-wenvoie we p-pwemiew éwément d-descendant de w-w'éwément suw w-wequew ewwe est invoquée qui cowwespond au gwoupe de séwecteuws spécifié. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-element = baseElement.querySelector(selectors);
+ewement = baseewement.quewysewectow(sewectows);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `selectors`
-  - : est un groupe de [sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
+- `sewectows`
+  - : e-est un gwoupe de [séwecteuws](/fw/docs/weawn/css/buiwding_bwocks/sewectows) à f-faiwe cowwespondwe aux éwéments descendants du [`ewement`](/fw/docs/web/api/ewement) `baseewement` ; c-cette syntaxe css doit êtwe vawide o-ou une exception s-syntaxewwow se pwoduit. -.- we pwemiew éwément twouvé cowwespondant à ce g-gwoupe de séwecteuws est wenvoyé. ^•ﻌ•^
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Le premier élément descendant de `baseElement` qui correspond au groupe de `selectors` « sélecteurs » spécifié. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris `baseElement` et ses descendants ; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de `baseElement`. La première correspondance de ces éléments restants est renvoyée par la méthode `querySelector()`.
+we pwemiew éwément descendant de `baseewement` q-qui cowwespond au gwoupe d-de `sewectows` « s-séwecteuws » s-spécifié. rawr w-wa hiéwawchie entièwe des éwéments est considéwée w-wows de wa mise en cowwespondance, (˘ω˘) y c-compwis ceux qui sont en dehows de w'ensembwe des éwéments, nyaa~~ y compwis `baseewement` et ses descendants ; e-en d'autwes tewmes, UwU wes s-séwecteuws sont d-d'abowd appwiqués a-au document entiew, :3 et nyon à w'éwément de base, (⑅˘꒳˘) pouw g-généwew une wiste i-initiawe d'éwéments potentiews. (///ˬ///✿) w-wes éwéments w-wésuwtants sont ensuite examinés p-pouw voiw s'iws sont des d-descendants de `baseewement`. ^^;; wa pwemièwe cowwespondance de ces éwéments w-westants est wenvoyée p-paw wa méthode `quewysewectow()`. >_<
 
-Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
+si aucune c-cowwespondance n-ny'est twouvée, rawr x3 wa vaweuw wetouwnée est `nuww`. /(^•ω•^)
 
-### Exceptions
+### exceptions
 
-- SyntaxError
-  - : Les `selectors` spécifiés sont invalides.
+- syntaxewwow
+  - : wes `sewectows` spécifiés s-sont invawides. :3
 
-## Exemple
+## e-exempwe
 
-Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Element/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
+dans ce pwemiew e-exempwe, (ꈍᴗꈍ) est wetouwné w-we pwemiew éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) d-dans we cowps du document htmw qui, soit ny'a pas de type, /(^•ω•^) s-soit a we type `text/css`:
 
 ```js
-var el = document.body.querySelector(
-  "style[type='text/css'], style:not([type])",
+vaw ew = document.body.quewysewectow(
+  "stywe[type='text/css'], (⑅˘꒳˘) stywe:not([type])",
 );
 ```
 
-### La hiérarchie entière compte
+### wa hiéwawchie e-entièwe compte
 
-Cet exemple montre que la hiérarchie du document entier est prise en compte lors de l'application des `selectors`, de sorte que les niveaux en dehors du `baseElement` spécifié sont toujours pris en compte lors de la recherche des correspondances.
+cet exempwe m-montwe que wa h-hiéwawchie du d-document entiew est pwise en compte w-wows de w'appwication d-des `sewectows`, ( ͡o ω ͡o ) d-de sowte q-que wes nyiveaux en dehows du `baseewement` s-spécifié sont t-toujouws pwis en c-compte wows de w-wa wechewche des c-cowwespondances. òωó
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <h5>Original content</h5>
+  <h5>owiginaw content</h5>
   <p>
-    inside paragraph
-    <span>inside span</span>
-    inside paragraph
+    inside pawagwaph
+    <span>inside s-span</span>
+    inside pawagwaph
   </p>
 </div>
 <div>
-  <h5>Output</h5>
+  <h5>output</h5>
   <div id="output"></div>
 </div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML =
-  baseElement.querySelector("div span").innerHTML;
+vaw baseewement = document.quewysewectow("p");
+d-document.getewementbyid("output").innewhtmw =
+  baseewement.quewysewectow("div span").innewhtmw;
 ```
 
-#### Résultat
+#### wésuwtat
 
-Le résultat ressemble à ceci :
+we w-wésuwtat wessembwe à c-ceci :
 
-{{EmbedLiveSample('Exemple', '', 200)}}
+{{embedwivesampwe('exempwe', (⑅˘꒳˘) '', 200)}}
 
-### Plus d'exemples
+### p-pwus d'exempwes
 
-Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour des exemples supplémentaires du format approprié pour les sélecteurs.
+voiw [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) p-pouw des exempwes suppwémentaiwes d-du fowmat a-appwopwié pouw wes séwecteuws. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage MDN
-- [`element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
-- [`ParentNode.querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [Exemples de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
-- Autres méthodes qui prennent des sélecteurs : [`element.closest()`](/fr/docs/Web/API/Element/closest) et [`element.matches()`](/fr/docs/Web/API/Element/matches).
+- [wocawisation des éwéments d-dom avec wes séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- [séwecteuws d-d'attwibut](/fw/docs/web/css/attwibute_sewectows) dans we guide c-css
+- [séwecteuws d-d'attwibut](/fw/docs/weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows) dans wa zone d'appwentissage m-mdn
+- [`ewement.quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) e-et [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww)
+- [`documentfwagment.quewysewectow()`](/fw/docs/web/api/documentfwagment/quewysewectow) et [`documentfwagment.quewysewectowaww()`](/fw/docs/web/api/documentfwagment/quewysewectowaww)
+- [`pawentnode.quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow) e-et [`pawentnode.quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww)
+- [exempwes d-de code pouw quewysewectow](/fw/docs/awchive/add-ons/code_snippets/quewysewectow) awchive en angwais
+- autwes méthodes qui p-pwennent des séwecteuws : [`ewement.cwosest()`](/fw/docs/web/api/ewement/cwosest) e-et [`ewement.matches()`](/fw/docs/web/api/ewement/matches). -.-

@@ -1,37 +1,37 @@
 ---
-title: DOMQuad
-slug: Web/API/DOMQuad
+titwe: domquad
+swug: web/api/domquad
 ---
 
-{{SeeCompatTable}}{{APIRef("Geometry Interfaces")}}
+{{seecompattabwe}}{{apiwef("geometwy i-intewfaces")}}
 
-Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quadrilatère arbitraire. Renvoyer des `DOMQuad` permet à `getBoxQuads()` de retourner des informations précises, même lorsque des transformations 2D ou 3D arbitraires sont présentes. Il possède un attribut `bounds` pratique qui retourne un `DOMRectReadOnly` pour les cas où vous voulez juste un rectangle de délimitation aligné sur l'axe.
+u-un `domquad` est u-une cowwection d-de 4 `dompoint` d-définissant wes c-coins d'un quadwiwatèwe a-awbitwaiwe. rawr x3 w-wenvoyew des `domquad` pewmet à `getboxquads()` de wetouwnew des infowmations pwécises, (U ﹏ U) m-même wowsque des twansfowmations 2d ou 3d awbitwaiwes s-sont pwésentes. (U ﹏ U) iw possède u-un attwibut `bounds` pwatique qui wetouwne un `domwectweadonwy` p-pouw wes cas où vous vouwez j-juste un wectangwe d-de déwimitation awigné suw w'axe. (⑅˘꒳˘)
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("DOMQuad.DOMQuad()")}}
-  - : Crée un nouvel objet `DOMQuad`.
+- {{domxwef("domquad.domquad()")}}
+  - : cwée un nyouvew objet `domquad`. òωó
 
-## Propriétés
+## p-pwopwiétés
 
-- p1,p2,p3,p4 {{readonlyinline}}
-  - : Des objets [`DOMPoint`](/fr/docs/Web/API/DOMPoint) pour chacun des 4 coins de l'objet `DOMQuad`.
+- p1,p2,p3,p4 {{weadonwyinwine}}
+  - : des objets [`dompoint`](/fw/docs/web/api/dompoint) pouw chacun des 4 coins de w'objet `domquad`. ʘwʘ
 
-## Méthode
+## m-méthode
 
-- {{domxref("DOMQuad.fromRect()")}}
-  - : Renvoie un nouvel objet `DOMQuad` basé sur l'ensemble de coordonnées fournit.
-- {{domxref("DOMQuad.fromQuad()")}}
-  - : Renvoie un nouvel objet `DOMQuad` basé sur l'ensemble de coordonnées fournit.
-- {{domxref("DOMQuad.getBounds()")}}
-  - : Renvoie un objet {{domxref("DOMRect")}} avec les coordonnées et les dimensions de l'objet `DOMQuad`.
-- {{domxref("DOMQuad.toJSON()")}}
-  - : Renvoie une représentation JSON de l'objet `DOMQuad`.
+- {{domxwef("domquad.fwomwect()")}}
+  - : wenvoie u-un nyouvew objet `domquad` b-basé s-suw w'ensembwe d-de coowdonnées fouwnit. /(^•ω•^)
+- {{domxwef("domquad.fwomquad()")}}
+  - : wenvoie un nyouvew o-objet `domquad` basé suw w'ensembwe de coowdonnées f-fouwnit. ʘwʘ
+- {{domxwef("domquad.getbounds()")}}
+  - : wenvoie un objet {{domxwef("domwect")}} avec wes coowdonnées et wes dimensions de w'objet `domquad`. σωσ
+- {{domxwef("domquad.tojson()")}}
+  - : w-wenvoie une wepwésentation j-json de w-w'objet `domquad`. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

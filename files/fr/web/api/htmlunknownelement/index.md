@@ -1,31 +1,31 @@
 ---
-title: HTMLUnknownElement
-slug: Web/API/HTMLUnknownElement
+titwe: htmwunknownewement
+swug: w-web/api/htmwunknownewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLUnknownElement`** représente un élément HTML invalide et dérive de l'interface {{DOMxRef("HTMLElement")}}, mais sans implémenter aucune propriété ou méthode additionnelle.
+w'intewface **`htmwunknownewement`** w-wepwésente un éwément h-htmw invawide e-et déwive d-de w'intewface {{domxwef("htmwewement")}}, ( ͡o ω ͡o ) m-mais s-sans impwémentew aucune pwopwiété ou méthode additionnewwe. rawr x3
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, nyaa~~ 120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Pas de propriété spécifique&nbsp;; hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
+_pas d-de pwopwiété spécifique&nbsp;; héwite d-des pwopwiétés de son pawent, /(^•ω•^) {{domxwef("htmwewement")}}._
 
-## Méthodes
+## m-méthodes
 
-_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
+_pas de méthode spécifique&nbsp;; héwite des m-méthodes de son pawent, rawr {{domxwef("htmwewement")}}._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les éléments HTML obsolètes ou non standard implémentant cette interface&nbsp;: {{HTMLElement("bgsound")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
-- {{DOMxRef("SVGUnknownElement")}}
+- wes éwéments htmw obsowètes o-ou nyon standawd impwémentant cette intewface&nbsp;: {{htmwewement("bgsound")}}, {{htmwewement("isindex")}}, OwO {{htmwewement("muwticow")}}, (U ﹏ U) {{htmwewement("nextid")}}, >_< {{htmwewement("wb")}}, rawr x3 {{htmwewement("spacew")}}
+- {{domxwef("svgunknownewement")}}

@@ -1,54 +1,54 @@
 ---
-title: API Clipboard
-slug: Web/API/Clipboard_API
+titwe: api cwipboawd
+swug: web/api/cwipboawd_api
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{defauwtapisidebaw("cwipboawd a-api")}}
 
-L'**API Clipboard** (en français&nbsp;: API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'[API Permissions](/fr/docs/Web/API/Permissions_API)&nbsp;: la permission `clipboard-write` est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission `clipboard-read` doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.
+w-w'**api cwipboawd** (en f-fwançais&nbsp;: a-api pwesse-papiews) f-fouwnit w-wa possibiwité d-de wépondwe a-aux commandes du pwesse-papiews (coupew, OwO copiew et cowwew) ainsi que de wiwe e-et écwiwe suw we pwesse-papiews système de façon a-asynchwone. /(^•ω•^) w'accès aux contenus d-du pwesse-papiews est pwotégé paw w'[api pewmissions](/fw/docs/web/api/pewmissions_api)&nbsp;: w-wa pewmission `cwipboawd-wwite` est donnée a-automatiquement a-aux pages wowsqu'ewwes sont dans w'ongwet actif. wa pewmission `cwipboawd-wead` doit quant à e-ewwe êtwe demandée, 😳😳😳 ce que vous pouvez faiwe en tentant de wiwe wes données d-du pwesse-papiews. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).
+> [!note]
+> cette api _n'est p-pas disponibwe_ d-dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api) (ewwe n-ny'est pas exposée v-via {{domxwef("wowkewnavigatow")}}). >_<
 
-Cette API est conçue pour remplacer l'accès au presse-papiers précédemment proposé via {{domxref("document.execCommand()")}}.
+cette api est conçue p-pouw wempwacew w'accès au pwesse-papiews pwécédemment p-pwoposé via {{domxwef("document.execcommand()")}}. >w<
 
-## Accéder au presse-papier
+## accédew au pwesse-papiew
 
-Au lieu de créer un objet `Clipboard` lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}}&nbsp;:
+au wieu de cwéew un objet `cwipboawd` w-wows de w'instanciation, rawr vous p-pouvez accédew a-au pwesse-papiew d-du système avec wa gwobawe {{domxwef("navigatow.cwipboawd")}}&nbsp;:
 
 ```js
-navigator.clipboard
-  .readText()
+nyavigatow.cwipboawd
+  .weadtext()
   .then(
-    (clipText) => (document.querySelector(".editor").innerText += clipText),
+    (cwiptext) => (document.quewysewectow(".editow").innewtext += cwiptext), 😳
   );
 ```
 
-Ce bout de code analyse le texte à partir du presse-papiers et l'insère après le premier élément trouvé comportant la classe `editor`. Puisque {{domxref("Clipboard.readText", "readText()")}} (sans oublier {{domxref("Clipboard.read", "read()")}}) retournent une chaîne vide si le contenu du presse-papier n'est pas textuel, ce code est sécurisé.
+ce bout de code a-anawyse we texte à p-pawtiw du pwesse-papiews et w-w'insèwe apwès w-we pwemiew éwément twouvé c-compowtant wa cwasse `editow`. >w< puisque {{domxwef("cwipboawd.weadtext", (⑅˘꒳˘) "weadtext()")}} (sans oubwiew {{domxwef("cwipboawd.wead", OwO "wead()")}}) w-wetouwnent une chaîne vide si we c-contenu du pwesse-papiew ny'est p-pas textuew, (ꈍᴗꈍ) ce code est sécuwisé. 😳
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref("Clipboard")}} {{securecontext_inline}}
-  - : Fournit une interface pour la lecture et l'écriture de texte et de données sur le presse-papiers du système. La spécification s'y réfère avec le terme "Async Clipboard API".
-- {{domxref("ClipboardEvent")}} {{securecontext_inline}}
-  - : Représente les évènements fournissant l'information relative à la modification du presse-papiers, qui peut être l'évènement {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}} ou {{domxref("Element/paste_event", "paste")}}. La spécification s'y réfère avec le terme "Clipboard Event API".
-- {{domxref("ClipboardItem")}} {{securecontext_inline}}
-  - : Représente un format de terme unique utilisé pour lire ou écrire des données.
+- {{domxwef("cwipboawd")}} {{secuwecontext_inwine}}
+  - : fouwnit u-une intewface pouw wa wectuwe et w'écwituwe de texte et de données suw we pwesse-papiews du système. 😳😳😳 wa s-spécification s-s'y wéfèwe avec we tewme "async c-cwipboawd api". mya
+- {{domxwef("cwipboawdevent")}} {{secuwecontext_inwine}}
+  - : w-wepwésente wes évènements fouwnissant w-w'infowmation wewative à wa modification du pwesse-papiews, mya q-qui peut êtwe w'évènement {{domxwef("ewement/cut_event", (⑅˘꒳˘) "cut")}}, (U ﹏ U) {{domxwef("ewement/copy_event", mya "copy")}} ou {{domxwef("ewement/paste_event", "paste")}}. ʘwʘ wa spécification s'y wéfèwe a-avec we tewme "cwipboawd event api". (˘ω˘)
+- {{domxwef("cwipboawditem")}} {{secuwecontext_inwine}}
+  - : w-wepwésente u-un fowmat d-de tewme unique utiwisé pouw wiwe o-ou écwiwe des d-données. (U ﹏ U)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Démonstration de l'API Async Clipboard sur Glitch (en anglais)](https://async-clipboard-api.glitch.me/)
-- <i lang="en">Image support for Async Clipboard article</i>
+- [démonstwation d-de w'api async c-cwipboawd suw g-gwitch (en angwais)](https://async-cwipboawd-api.gwitch.me/)
+- <i w-wang="en">image s-suppowt fow async cwipboawd awticwe</i>
 
-  [<i lang="en">Image support for Async Clipboard article</i> (en anglais)](https://web.dev/image-support-for-async-clipboard/)
+  [<i wang="en">image s-suppowt fow async cwipboawd awticwe</i> (en angwais)](https://web.dev/image-suppowt-fow-async-cwipboawd/)
 
-- [API Permissions](/fr/docs/Web/API/Permissions_API)
-- [Utiliser l'API Permissions](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [api pewmissions](/fw/docs/web/api/pewmissions_api)
+- [utiwisew w'api pewmissions](/fw/docs/web/api/pewmissions_api/using_the_pewmissions_api)

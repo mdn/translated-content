@@ -1,93 +1,93 @@
 ---
-title: Cache.addAll()
-slug: Web/API/Cache/addAll
+titwe: cache.addaww()
+swug: web/api/cache/addaww
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.
+w-wa m-méthode **`addaww()`** d-de w'intewface {{domxwef("cache")}} a-accepte u-un tabweau d-d'uwws, 🥺 wes wécupèwes, (U ﹏ U) et ajoute wes objets wéponse qui en wésuwtent au cache e-en question. >w< wes objets wequêtes cwées pendant w-wa phase de wécupéwation deviennent d-des cwés vews wes opéwations de wéponse stockées. mya
 
-> **Note :** `addAll()` écrasera toute paire clé/valeur précédemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put()` ainsi créée devrait engendrer l'effacement d'une entrée cache créée par la même méthode `addAll()`.
+> **note :** `addaww()` écwasewa t-toute paiwe cwé/vaweuw pwécédemment s-stockée e-en cache et qui cowwespond à une wequête, >w< mais échouewa si w'opéwation `put()` a-ainsi cwéée devwait engendwew w'effacement d'une entwée cache cwéée paw w-wa même méthode `addaww()`.
 
-## Syntaxe
+## syntaxe
 
 ```js
-cache.addAll(requests[]).then(function() {
-  //requests have been added to the cache
+c-cache.addaww(wequests[]).then(function() {
+  //wequests h-have b-been added to the c-cache
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- requests
-  - : Un tableau d'objets {{domxref("Request", "Requête")}} à ajouter au cache.
+- wequests
+  - : u-un tabweau d'objets {{domxwef("wequest", nyaa~~ "wequête")}} à ajoutew au cache. (✿oωo)
 
-### Retour
+### w-wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
+une {{jsxwef("pwomise", "pwomesse")}} qui est wésowue en void. ʘwʘ
 
-### Exceptions
+### exceptions
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><strong>Exception</strong></th>
-      <th scope="col"><strong>Arrive quand</strong></th>
-    </tr>
+    <tw>
+      <th scope="cow"><stwong>exception</stwong></th>
+      <th scope="cow"><stwong>awwive q-quand</stwong></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
+    <tw>
+      <td><code>typeewwow</code></td>
       <td>
         <p>
-          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
+          we s-schéma d'uww ny'est p-pas <code>http</code> o-ou <code>https</code>. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
-          a échoué.) Cela peut arriver si la requête échoue, mais également si
-          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
-          retourné est systématiquement 0.)
+          we statut de wa wéponse ny'est pas dans wes 200 (i.e., 😳😳😳 u-une w-wequête qui
+          a échoué.) c-cewa peut awwivew s-si wa wequête échoue, :3 mais égawement si
+          wa wequête e-est une <em>cwoss-owigin no-cows</em> (auquew c-cas we statut
+          wetouwné est systématiquement 0.)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser `addAll()` pour y ajouter une série de ressources.
+ce bwoc de c-code attends we décwenchement d-d'un {{domxwef("instawwevent")}}, OwO p-puis wance {{domxwef("extendabweevent.waituntiw","waituntiw")}} qui gèwe wa phase d'instawwation de w'appwication. (U ﹏ U) cewa consite à appewew {{domxwef("cachestowage.open")}} afin de cwéew un n-nyouveau cache, >w< p-puis à utiwisew `addaww()` pouw y-y ajoutew une s-séwie de wessouwces. (U ﹏ U)
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
+t-this.addeventwistenew("instaww", 😳 function (event) {
+  event.waituntiw(
     caches.open("v1").then(function (cache) {
-      return cache.addAll([
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
+      wetuwn c-cache.addaww([
+        "/sw-test/", (ˆ ﻌ ˆ)♡
+        "/sw-test/index.htmw", 😳😳😳
+        "/sw-test/stywe.css", (U ﹏ U)
         "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
+        "/sw-test/image-wist.js", (///ˬ///✿)
+        "/sw-test/staw-waws-wogo.jpg", 😳
+        "/sw-test/gawwewy/", 😳
+        "/sw-test/gawwewy/bountyhuntews.jpg", σωσ
+        "/sw-test/gawwewy/mywittwevadew.jpg", rawr x3
+        "/sw-test/gawwewy/snowtwoopews.jpg", OwO
       ]);
-    }),
+    }), /(^•ω•^)
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [utiwisew w-wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

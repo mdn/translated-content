@@ -1,42 +1,42 @@
 ---
-title: NodeIterator.referenceNode
-slug: Web/API/NodeIterator/referenceNode
+titwe: nyodeitewatow.wefewencenode
+swug: web/api/nodeitewatow/wefewencenode
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+{{apiwef("dom")}}{{ s-seecompattabwe }}
 
-La propriété en lecture seule **`NodeIterator.referenceNode`** renvoie le {{domxref("Node")}} auquel l'itérateur est ancré ; si de nouveaux noeuds sont insérés, l'itérateur reste ancré au noeud de référence spécifié par cette propriété.
+w-wa pwopwiété e-en wectuwe s-seuwe **`nodeitewatow.wefewencenode`** w-wenvoie w-we {{domxwef("node")}} a-auquew w-w'itéwateuw est ancwé ; si de nyouveaux nyoeuds sont inséwés, /(^•ω•^) w'itéwateuw w-weste ancwé au nyoeud de wéféwence spécifié p-paw cette pwopwiété. rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = nodeIterator.referenceNode;
+n-nyode = nodeitewatow.wefewencenode;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw nyodeitewatow = d-document.cweatenodeitewatow(
+  document.body, OwO
+  n-nyodefiwtew.show_ewement, (U ﹏ U)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, >_<
   },
-  false,
+  fawse, rawr x3
 );
-node = nodeIterator.referenceNode;
+nyode = nyodeitewatow.wefewencenode;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface à laquelle elle appartient : {{domxref("NodeIterator")}}
+- w'intewface à waquewwe e-ewwe appawtient : {{domxwef("nodeitewatow")}}

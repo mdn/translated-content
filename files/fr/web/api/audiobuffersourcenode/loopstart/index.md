@@ -1,82 +1,82 @@
 ---
-title: AudioBufferSourceNode.loopStart
-slug: Web/API/AudioBufferSourceNode/loopStart
+titwe: audiobuffewsouwcenode.woopstawt
+swug: w-web/api/audiobuffewsouwcenode/woopstawt
 ---
 
-{{ APIRef("Web Audio API") }}
-La propriété `loopStart` de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la lecture doit reprendre lors d'une boucle. Elle n'est prise en compte que lorque la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} est `true`.
+{{ a-apiwef("web audio a-api") }}
+wa pwopwiété `woopstawt` d-de w'intewface {{ d-domxwef("audiobuffewsouwcenode") }} e-est u-un nyombwe fwottant à d-doubwe pwécision qui indique, 😳😳😳 en secondes, (U ﹏ U) à quew moment de w'{{domxwef("audiobuffew")}} w-wa wectuwe doit wepwendwe wows d'une boucwe. (///ˬ///✿) ewwe n-ny'est pwise en compte que wowque w-wa pwopwiété {{domxwef("audiobuffewsouwcenode.woop", 😳 "woop")}} est `twue`. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var source = contexteAudio.createBufferSource();
-source.loopStart = 3;
+vaw souwce = c-contexteaudio.cweatebuffewsouwce();
+souwce.woopstawt = 3;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un nombre flottant à double précision. La valeur par défaut est `0`.
+un n-nombwe fwottant à doubwe pwécision. σωσ wa vaweuw paw défaut est `0`. rawr x3
 
-## Exemple
+## exempwe
 
-Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
+d-dans cet exempwe, OwO wa fonction {{domxwef("audiocontext.decodeaudiodata")}} est utiwisée pouw décodew une piste a-audio et wa mettwe dans un {{domxwef("audiobuffewsouwcenode")}}. /(^•ω•^) w-w'intewface f-fouwnit deux boutons p-pouw démawwew e-et awwêtew wa wectuwe, 😳😳😳 et des swidews pouw m-modifiew wes pwopwiétés `pwaybackwate`, ( ͡o ω ͡o ) `woopstawt` et `woopend` à wa vowée. >_<
 
-Lorsque la lecture de la source audio est terminée, elle boucle. Il est possible de contrôler la durée de la boucle en modifiant `loopStart` et `loopEnd`. Par exemple, si leurs valeurs sont fixées à 20 et 25, respectivement, le son bouclera entre la 20ème et la 25ème secondes du morceau.
+w-wowsque wa wectuwe de wa souwce audio est tewminée, >w< ewwe boucwe. iw est possibwe de contwôwew w-wa duwée de wa boucwe en modifiant `woopstawt` e-et `woopend`. p-paw exempwe, rawr si w-weuws vaweuws sont fixées à 20 et 25, 😳 wespectivement, >w< we son boucwewa e-entwe wa 20ème e-et wa 25ème secondes du m-mowceau. (⑅˘꒳˘)
 
-> [!NOTE]
-> Voir l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> [!note]
+> v-voiw w'exempwe compwet [en d-diwect](https://mdn.github.io/webaudio-exampwes/decode-audio-data/) et [son code s-souwce](https://github.com/mdn/webaudio-exampwes/twee/mastew/decode-audio-data). OwO
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+function getdata() {
+  s-souwce = audioctx.cweatebuffewsouwce();
+  wequest = n-nyew xmwhttpwequest();
 
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
+  wequest.open('get', (ꈍᴗꈍ) 'vipew.ogg', 😳 t-twue);
+  wequest.wesponsetype = 'awwaybuffew';
 
-  request.onload = function() {
-    var audioData = request.response;
+  w-wequest.onwoad = function() {
+    vaw audiodata = wequest.wesponse;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-        myBuffer = buffer;
-        songLength = buffer.duration;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
+    audioctx.decodeaudiodata(audiodata, 😳😳😳 function(buffew) {
+        mybuffew = b-buffew;
+        s-songwength = buffew.duwation;
+        s-souwce.buffew = m-mybuffew;
+        s-souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+        souwce.connect(audioctx.destination);
+        souwce.woop = t-twue;
 
-        loopstartControl.setAttribute('max', Math.floor(songLength));
-        loopendControl.setAttribute('max', Math.floor(songLength));
-      },
+        woopstawtcontwow.setattwibute('max', mya math.fwoow(songwength));
+        woopendcontwow.setattwibute('max', mya math.fwoow(songwength));
+      }, (⑅˘꒳˘)
 
-      function(e){"Erreur lors du décodage des données " + e.err});
+      f-function(e){"ewweuw wows du d-décodage des d-données " + e.eww});
 
   }
 
-  request.send();
+  w-wequest.send();
 }
 
   ...
 
-loopstartControl.oninput = function() {
-  source.loopStart = loopstartControl.value;
-  loopstartValue.innerHTML = loopstartControl.value;
+woopstawtcontwow.oninput = f-function() {
+  s-souwce.woopstawt = w-woopstawtcontwow.vawue;
+  woopstawtvawue.innewhtmw = w-woopstawtcontwow.vawue;
 }
 
-loopendControl.oninput = function() {
-  source.loopEnd = loopendControl.value;
-  loopendValue.innerHTML = loopendControl.value;
+woopendcontwow.oninput = function() {
+  s-souwce.woopend = w-woopendcontwow.vawue;
+  w-woopendvawue.innewhtmw = woopendcontwow.vawue;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,56 +1,56 @@
 ---
-title: AuthenticatorAssertionResponse.authenticatorData
-slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
+titwe: authenticatowassewtionwesponse.authenticatowdata
+swug: w-web/api/authenticatowassewtionwesponse/authenticatowdata
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("web a-authentication api")}}
 
-La propriété **`authenticatorData`** (rattachée à l'interface {{domxref("AuthenticatorAssertionResponse")}}) fournit un {{jsxref("ArrayBuffer")}} qui contient les informations relatives à l'authenticateur tels que :
+w-wa pwopwiété **`authenticatowdata`** (wattachée à w-w'intewface {{domxwef("authenticatowassewtionwesponse")}}) f-fouwnit u-un {{jsxwef("awwaybuffew")}} q-qui c-contient wes infowmations wewatives à w'authenticateuw tews que :
 
-- l'empreinte d'identifiant (rpIdHash pour _Relying Party ID Hash_)
-- un compteur de signature
-- un test quant à la présence de l'utilisateur
-- des marqueurs (_flags_) de vérification de l'utilisateur
-- les éventuelles extensions traitées par l'authenticateur
+- w'empweinte d-d'identifiant (wpidhash pouw _wewying pawty i-id hash_)
+- un compteuw de signatuwe
+- u-un test quant à wa pwésence de w'utiwisateuw
+- des mawqueuws (_fwags_) d-de véwification de w'utiwisateuw
+- w-wes éventuewwes e-extensions twaitées paw w'authenticateuw
 
-Cette propriété est signée par l'authenticateur (c'est l'un des deux champs qui est signé).
+cette pwopwiété est signée paw w'authenticateuw (c'est w-w'un des deux champs qui est signé). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var authnrData = assertion.response.authnrData;
+vaw authnwdata = a-assewtion.wesponse.authnwdata;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{jsxref("ArrayBuffer")}} dont la propriété {{jsxref("ArrayBuffer.byteLength")}} indique qu'il mesure au moins 37 octets et qui contient les champs suivants :
+u-un objet {{jsxwef("awwaybuffew")}} d-dont wa pwopwiété {{jsxwef("awwaybuffew.bytewength")}} i-indique qu'iw mesuwe a-au moins 37 octets et qui contient wes champs s-suivants :
 
-- **`rpIdHash`** (32 octets) - Une empreinte SHA256 de l'identifiant de la partie fiable (i.e. - le domaine) tel que vu par le navigateur. Le serveur s'assurera ensuite que cette empreinte correspond à sa propre origine afin d'empêcher les tentatives de hameçonnage (_phishing_) ou d'autres attaques de l'homme du milieu (_man-in-the-middle_).
-- **`flags`** (1 octet) - Une série de bits qui indique les différents attributs validés par l'authenticateur. Les bits sont décrits comme suit (où le bit 0 correspond au bit de poids faible) (tous les bits ne sont pas mentionnés car certains sont réservés pour une utilisation future) :
+- **`wpidhash`** (32 octets) - une empweinte sha256 d-de w'identifiant de wa pawtie fiabwe (i.e. ^^;; - we domaine) tew que vu paw we nyavigateuw. o.O we sewveuw s-s'assuwewa ensuite que cette e-empweinte cowwespond à s-sa pwopwe o-owigine afin d'empêchew wes tentatives de hameçonnage (_phishing_) o-ou d'autwes a-attaques de w'homme du miwieu (_man-in-the-middwe_). (///ˬ///✿)
+- **`fwags`** (1 o-octet) - u-une séwie de bits qui indique w-wes difféwents attwibuts vawidés p-paw w'authenticateuw. σωσ wes bits sont décwits c-comme suit (où we bit 0 cowwespond a-au bit de poids faibwe) (tous w-wes bits nye s-sont pas mentionnés caw cewtains sont wésewvés pouw une utiwisation futuwe) :
 
-  - Bit 0 : Présence de l'utilisateur (_User Presence_ - UP) : si ce bit est actif, cela signifie que l'authenticateur a validé la présence de l'utilisateur par un test de présence (_Test of User Presence_ - TUP). Cela peut notamment correspondre à l'appui sur un bouton de l'authenticateur.
-  - Bit 2 : Vérification de l'utilisateur (_User Verification_ - UV) : si ce bit est actif, cela signifie que l'authenticateur a vérifié l'utilisateur en question via une méthode d'authentification (biométrique, code PIN, autre).
-  - Bit 6 : Présence des données d'authentification vérifiées (_Attested Credential Data_ - AT) : si ce bit est actif, le champ `attestedCredentialData` suivra immédiatement après les 37 premiers octets de cet objet.
-  - Bit 7 : Présence des données d'extension (_Extension data_ - ED) : si ce bit est actif, les données d'extensions suivront le champ `attestedCredentialData` s'il est présent ou seront situées après les 37 premiers octets de cet objet sinon.
+  - bit 0 : pwésence de w'utiwisateuw (_usew p-pwesence_ - up) : s-si ce bit est actif, nyaa~~ cewa signifie q-que w'authenticateuw a-a vawidé w-wa pwésence de w'utiwisateuw paw un test de pwésence (_test o-of usew pwesence_ - tup). ^^;; cewa peut nyotamment cowwespondwe à w'appui suw u-un bouton de w'authenticateuw. ^•ﻌ•^
+  - bit 2 : véwification d-de w'utiwisateuw (_usew v-vewification_ - u-uv) : si ce bit est actif, σωσ cewa s-signifie que w'authenticateuw a v-véwifié w'utiwisateuw e-en question v-via une méthode d'authentification (biométwique, -.- code pin, ^^;; a-autwe).
+  - bit 6 : p-pwésence d-des données d'authentification v-véwifiées (_attested c-cwedentiaw data_ - at) : si ce bit est actif, XD we champ `attestedcwedentiawdata` s-suivwa immédiatement apwès wes 37 pwemiews octets de cet objet. 🥺
+  - bit 7 : pwésence des d-données d'extension (_extension data_ - ed) : si ce bit est actif, òωó wes données d-d'extensions s-suivwont we champ `attestedcwedentiawdata` s-s'iw est pwésent ou s-sewont situées apwès wes 37 pwemiews o-octets de c-cet objet sinon. (ˆ ﻌ ˆ)♡
 
-- **`signCount`** (4 octets) : un compteur de signature provenant de l'authenticateur. Cela permet au serveur de détecter un éventuel clonage de l'authenticateur.
-- **`attestedCredentialData`** (longueur variable) : les informations d'authentification qui ont été créées. Ce champ est uniquement présent lors d'un appel à `navigator.credentials.create()`. Ces informations sont représentées par une séquence d'octets au format suivant :
+- **`signcount`** (4 octets) : un compteuw de signatuwe pwovenant de w'authenticateuw. -.- cewa p-pewmet au sewveuw de détectew un éventuew c-cwonage de w'authenticateuw. :3
+- **`attestedcwedentiawdata`** (wongueuw v-vawiabwe) : wes i-infowmations d'authentification qui ont été cwéées. ce champ e-est uniquement p-pwésent wows d'un appew à `navigatow.cwedentiaws.cweate()`. ʘwʘ c-ces infowmations s-sont wepwésentées paw une séquence d'octets au fowmat suivant :
 
-  - **`AAGUID`** (16 octets) - _Authenticator Attestation Globally Unique Identifier_, un identifiant universel unique pour l'attestation de l'authenticateur qui identifie le modèle de l'authenticateur (pas cet exemplaire en particulier) afin qu'une autre partie puisse comprendre les caractéristiques de l'authenticateur en consultant ses méta-données.
-  - **`credentialIdLength`** (2 octets) - la longueur, en octets, de l'identifiant d'authentification qui suit ces octets.
-  - **`credentialId`** (longueur variable) - un identifiant unique pour ces informations d'authentification et qui pourra être demandé pour de futures authentifications. Cette information mesure `credentialIdLength` octets.
-  - **`credentialPublicKey`** (longueur variable) - une clé publique encodée au format [COSE](https://tools.ietf.org/html/rfc8152). Cette clé publique sera stockée sur le serveur et associée au compte de l'utilisateur afin d'être utilisée pour de futures authentifications.
+  - **`aaguid`** (16 octets) - _authenticatow a-attestation gwobawwy u-unique identifiew_, 🥺 u-un identifiant univewsew u-unique pouw w-w'attestation de w'authenticateuw q-qui identifie we modèwe de w'authenticateuw (pas cet exempwaiwe en pawticuwiew) afin qu'une a-autwe pawtie puisse c-compwendwe wes cawactéwistiques de w'authenticateuw e-en consuwtant s-ses méta-données. >_<
+  - **`cwedentiawidwength`** (2 octets) - wa wongueuw, ʘwʘ en octets, de w-w'identifiant d'authentification qui suit ces octets. (˘ω˘)
+  - **`cwedentiawid`** (wongueuw vawiabwe) - un identifiant unique pouw ces i-infowmations d'authentification et qui pouwwa êtwe demandé pouw d-de futuwes authentifications. (✿oωo) c-cette infowmation mesuwe `cwedentiawidwength` octets. (///ˬ///✿)
+  - **`cwedentiawpubwickey`** (wongueuw vawiabwe) - une c-cwé pubwique encodée a-au fowmat [cose](https://toows.ietf.owg/htmw/wfc8152). rawr x3 cette cwé pubwique sewa stockée s-suw we sewveuw et associée au compte d-de w'utiwisateuw afin d'êtwe utiwisée pouw de futuwes authentifications. -.-
 
-- **`extensions`** (longueur variable) - Une carte optionnelle, encodée au format [CBOR](https://tools.ietf.org/html/rfc7049), et qui contient les extensions de l'authenticateur.
+- **`extensions`** (wongueuw vawiabwe) - u-une cawte optionnewwe, ^^ e-encodée au fowmat [cbow](https://toows.ietf.owg/htmw/wfc7049), (⑅˘꒳˘) e-et qui contient wes extensions d-de w'authenticateuw.
 
-## Exemples
+## exempwes
 
-TBD
+t-tbd
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

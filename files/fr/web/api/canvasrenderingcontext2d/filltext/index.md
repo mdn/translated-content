@@ -1,109 +1,109 @@
 ---
-title: CanvasRenderingContext2D.fillText()
-slug: Web/API/CanvasRenderingContext2D/fillText
+titwe: canvaswendewingcontext2d.fiwwtext()
+swug: w-web/api/canvaswendewingcontext2d/fiwwtext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.fillText()`** de l'API Canvas 2D écrit un texte donné à la position _(x, y)_ donnée. Si le quatrième paramètre optionnel donnant une largeur maximum est fourni, le texte sera mis à l'échelle pour s'adapter à cette largeur.
+wa m-méthode **`canvaswendewingcontext2d.fiwwtext()`** d-de w'api canvas 2d écwit un t-texte donné à w-wa position _(x, (⑅˘꒳˘) y-y)_ donnée. OwO s-si we quatwième p-pawamètwe optionnew donnant une wawgeuw maximum est fouwni, (ꈍᴗꈍ) we texte sewa mis à w-w'échewwe pouw s'adaptew à cette wawgeuw. 😳
 
-Voir aussi la méthode {{domxref("CanvasRenderingContext2D.strokeText()")}} pour dessiner un texte mis en forme.
+v-voiw aussi wa méthode {{domxwef("canvaswendewingcontext2d.stwoketext()")}} pouw d-dessinew un texte mis en fowme. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-void ctx.fillText(texte, x, y [, largeurMax]);
+void ctx.fiwwtext(texte, mya x-x, y [, wawgeuwmax]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `texte`
-  - : Le texte à représenter en utilisant les valeurs en cours de {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, et de {{domxref("CanvasRenderingContext2D.direction","direction")}}.
+  - : w-we texte à wepwésentew en utiwisant wes vaweuws en couws de {{domxwef("canvaswendewingcontext2d.font","font")}}, mya {{domxwef("canvaswendewingcontext2d.textawign","textawign")}}, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d.textbasewine","textbasewine")}}, (U ﹏ U) e-et de {{domxwef("canvaswendewingcontext2d.diwection","diwection")}}. mya
 
 <!---->
 
 - `x`
-  - : La valeur de la coordonnée sur l'axe des x du point de début du texte.
+  - : wa vaweuw de wa coowdonnée suw w'axe des x du point d-de début du texte. ʘwʘ
 - `y`
-  - : La valeur de la coordonnée sur l'axe des y du point de fin du texte.
-- `largeurMax` {{optional_inline}}
-  - : La largeur maximum à dessiner. Si spécifiée, et si la longueur calculée de la chaîne est supérieure à cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (s'il en existe une ou s'il peut en être synthétisée une raisonnablement lisible en mettant à l'échelle horizontalement la police en cours) ou une plus petite police.
+  - : wa vaweuw de wa c-coowdonnée suw w-w'axe des y du point d-de fin du texte. (˘ω˘)
+- `wawgeuwmax` {{optionaw_inwine}}
+  - : wa w-wawgeuw maximum à dessinew. (U ﹏ U) si spécifiée, ^•ﻌ•^ et s-si wa wongueuw cawcuwée de wa chaîne est supéwieuwe à c-cette wawgeuw, (˘ω˘) wa powice est ajustée pouw utiwisew une powice pwus condensée howizontawement (s'iw e-en existe une ou s'iw peut en êtwe s-synthétisée u-une waisonnabwement w-wisibwe en mettant à w'échewwe howizontawement wa powice e-en couws) ou une p-pwus petite powice. :3
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `fillText`
+### u-utiwisation d-de wa méthode `fiwwtext`
 
-Ceci est seulement un fragment de code simple utilisant la méthode `fillText`.
+ceci est seuwement u-un fwagment de code simpwe utiwisant w-wa méthode `fiwwtext`.
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);
+c-ctx.font = "48px sewif";
+ctx.fiwwtext("hewwo wowwd", ^^;; 50, 🥺 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements être mis à jour en temps réel dans le canevas :
+modifiez we code ci-dessous et voyez vos changements êtwe mis à jouw en temps wéew dans w-we canevas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.font = "48px sewif";
+ctx.fiwwtext("hewwo w-wowwd", (⑅˘꒳˘) 50, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, 0, nyaa~~ c-canvas.width, :3 c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ( ͡o ω ͡o ) function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", mya d-dwawcanvas);
+window.addeventwistenew("woad", (///ˬ///✿) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', (˘ω˘) 700, 360) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.strokeText()")}}
+- w-w'intewface wa définissant, ^^;; {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.stwoketext()")}}

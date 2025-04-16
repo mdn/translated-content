@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.length
-slug: Web/API/HTMLFormElement/length
+titwe: htmwfowmewement.wength
+swug: web/api/htmwfowmewement/wength
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre de contrôles présents dans l'élément {{HTMLElement("Form")}}.
+w-wa pwopwiété e-en wectuwe seuwe **`htmwfowmewement.wength`** w-wetouwne we nyombwe d-de contwôwes p-pwésents dans w-w'éwément {{htmwewement("fowm")}}. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-integer = form.length;
+integew = fowm.wength;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-if (document.getElementById("form1").length > 1) {
-  // more than one form control here
+if (document.getewementbyid("fowm1").wength > 1) {
+  // mowe t-than one fowm contwow hewe
 }
 ```
 
-## Spécifications
+## spécifications
 
-- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-length)
-- [DOM Level 2: length](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)
+- [htmw 5, (ˆ ﻌ ˆ)♡ s-section 4.10.3, (⑅˘꒳˘) the fowm ewement](https://www.w3.owg/tw/htmw5/fowms.htmw#dom-fowm-wength)
+- [dom w-wevew 2: wength](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#htmw-htmwfowmewement-wength)

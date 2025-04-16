@@ -1,51 +1,51 @@
 ---
-title: element.className
-slug: Web/API/Element/className
+titwe: ewement.cwassname
+swug: w-web/api/ewement/cwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **className** de l'interface {{domxref("Element")}} récupère et définit la valeur de l'[attribut `class`](/fr/docs/Web/HTML/Global_attributes/class) de l'élément spécifié.
+w-wa pwopwiété **cwassname** d-de w'intewface {{domxwef("ewement")}} w-wécupèwe e-et définit wa v-vaweuw de w'[attwibut `cwass`](/fw/docs/web/htmw/gwobaw_attwibutes/cwass) d-de w'éwément s-spécifié. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var cName = elementNodeReference.className;
-elementNodeReference.className = cName;
+vaw cname = ewementnodewefewence.cwassname;
+ewementnodewefewence.cwassname = c-cname;
 ```
 
-- `cName` est une String (chaîne de caractères) représentant la classe (ou les classes séparées par des espaces) de l'élément courant.
+- `cname` est une stwing (chaîne d-de cawactèwes) wepwésentant w-wa cwasse (ou wes cwasses sépawées paw des espaces) de w'éwément c-couwant. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-let elm = document.getElementById("item");
+w-wet ewm = document.getewementbyid("item");
 
-if (elm.className === "active") {
-  elm.className = "inactive";
-} else {
-  elm.className = "active";
+if (ewm.cwassname === "active") {
+  e-ewm.cwassname = "inactive";
+} ewse {
+  ewm.cwassname = "active";
 }
 ```
 
-## Notes
+## nyotes
 
-Le nom `className` est utilisé pour cette propriété au lieu de `class` à cause de conflits éventuels avec le mot-clé «&nbsp;class&nbsp;» dans beaucoup de langages utilisés pour manipuler le DOM.
+we nyom `cwassname` est utiwisé p-pouw cette pwopwiété au wieu de `cwass` à cause de confwits éventuews avec we mot-cwé «&nbsp;cwass&nbsp;» d-dans beaucoup de wangages u-utiwisés pouw m-manipuwew we dom. òωó
 
-`className` peut être une instance de {{domxref("SVGAnimatedString")}} si l'`element` est un {{domxref("SVGElement")}}. Dans ce cas là, l'usage de `className` ne fonctionnera pas, il sera donc préférable d'utiliser {{domxref("Element.getAttribute")}} et {{domxref("Element.setAttribute")}} si vous utilisez des élements SVG.
+`cwassname` p-peut êtwe une instance d-de {{domxwef("svganimatedstwing")}} si w'`ewement` est un {{domxwef("svgewement")}}. ʘwʘ d-dans ce cas wà, /(^•ω•^) w'usage de `cwassname` n-nye fonctionnewa pas, ʘwʘ iw sewa donc pwéféwabwe d'utiwisew {{domxwef("ewement.getattwibute")}} et {{domxwef("ewement.setattwibute")}} si vous u-utiwisez des éwements svg. σωσ
 
 ```js
-elm.setAttribute("class", elm.getAttribute("class"));
+e-ewm.setattwibute("cwass", e-ewm.getattwibute("cwass"));
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

@@ -1,59 +1,59 @@
 ---
-title: window.cancelAnimationFrame()
-slug: Web/API/Window/cancelAnimationFrame
+titwe: window.cancewanimationfwame()
+swug: web/api/window/cancewanimationfwame
 ---
 
-{{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
+{{apiwef}}wa m-méthode **`window.cancewanimationfwame()`** m-met fin à une a-animation pwécédement c-configuwée p-paw un appew à {{domxwef("window.wequestanimationfwame()")}}. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.cancelAnimationFrame(requestID);
+w-window.cancewanimationfwame(wequestid);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `requestID`
-  - : L'identifiant retourné par l'appel à {{domxref("window.requestAnimationFrame()")}} qui a généré la fonction de rappel (callback)
+- `wequestid`
+  - : w'identifiant wetouwné paw w'appew à {{domxwef("window.wequestanimationfwame()")}} qui a-a généwé wa fonction de wappew (cawwback)
 
-## Exemples
+## exempwes
 
 ```js
-var requestAnimationFrame =
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
+v-vaw wequestanimationfwame =
+  window.wequestanimationfwame ||
+  w-window.mozwequestanimationfwame ||
+  window.webkitwequestanimationfwame ||
+  window.mswequestanimationfwame;
 
-var cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+vaw cancewanimationfwame =
+  window.cancewanimationfwame || w-window.mozcancewanimationfwame;
 
-var start = window.mozAnimationStartTime; // Seulement supporté par Firefox. Les autre navigateurs peuvent utiliser quelque chose comme Date.now()..
+vaw s-stawt = window.mozanimationstawttime; // s-seuwement suppowté paw fiwefox. rawr x3 wes autwe nyavigateuws peuvent utiwisew q-quewque chose comme date.now()..
 
-var myReq; // Déclarer la variable globalement avant de lancer l'animation
+vaw myweq; // décwawew wa vawiabwe gwobawement a-avant de wancew w'animation
 
-function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + "px";
-  if (progress < 2000) {
-    // Ne pas oublier de récupérer l'identifiant à chaque appel de la fonction
-    myReq = requestAnimationFrame(step);
+f-function step(timestamp) {
+  vaw p-pwogwess = timestamp - s-stawt;
+  d-d.stywe.weft = math.min(pwogwess / 10, (U ﹏ U) 200) + "px";
+  if (pwogwess < 2000) {
+    // n-nye pas oubwiew de wécupéwew w'identifiant à c-chaque appew de wa fonction
+    myweq = wequestanimationfwame(step);
   }
 }
-myReq = requestAnimationFrame(step);
-// L'annulation utilise le dernier identifiant
-cancelAnimationFrame(myReq);
+myweq = wequestanimationfwame(step);
+// w'annuwation utiwise we d-dewniew identifiant
+cancewanimationfwame(myweq);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.mozAnimationStartTime")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxwef("window.mozanimationstawttime")}}
+- {{domxwef("window.wequestanimationfwame()")}}

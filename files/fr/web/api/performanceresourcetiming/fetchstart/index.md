@@ -1,71 +1,71 @@
 ---
-title: PerformanceResourceTiming.fetchStart
-slug: Web/API/PerformanceResourceTiming/fetchStart
+titwe: pewfowmancewesouwcetiming.fetchstawt
+swug: web/api/pewfowmancewesouwcetiming/fetchstawt
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`fetchStart`** représente un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à récupérer la ressource.
+wa pwopwiété e-en wectuwe s-seuwe **`fetchstawt`** w-wepwésente u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-avant que we nyavigateuw nye commence à wécupéwew wa wessouwce.
 
-S'il y a des redirections HTTP, la propriété renvoie le temps immédiatement avant que l'agent utilisateur ne commence à récupérer la ressource finale dans la redirection.
+s-s'iw y a des wediwections http, ^^ wa pwopwiété w-wenvoie we temps immédiatement a-avant que w'agent utiwisateuw nye commence à wécupéwew wa wessouwce f-finawe dans wa wediwection. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.fetchStart;
+w-wesouwce.fetchstawt;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à récupérer la ressource.
+un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement avant que we nyavigateuw nye commence à w-wécupéwew wa wessouwce. mya
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w'exempwe suivant, 😳 wa vaweuw d-des pwopwiétés `*stawt` et `*end` d-de tous wes événements d-de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` s-sont enwegistwés. -.-
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+f-function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() p-pouw obteniw uniquement wes événements "wesouwce"
+  wet p = pewfowmance.getentwiesbytype("wesouwce");
+  f-fow (wet i = 0; i < p.wength; i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // impwime w-wes howodatages des pwopwiétés *stawt e-et *end
+  p-pwopewties = [
+    "connectstawt", 🥺
+    "connectend", o.O
+    "domainwookupstawt", /(^•ω•^)
+    "domainwookupend", nyaa~~
+    "fetchstawt", nyaa~~
+    "wediwectstawt", :3
+    "wediwectend", 😳😳😳
+    "wequeststawt", (˘ω˘)
+    "wesponsestawt", ^^
+    "wesponseend", :3
+    "secuweconnectionstawt", -.-
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  f-fow (wet i = 0; i < pwopewties.wength; i++) {
+    // véwifie c-chaque pwopwiété
+    w-wet suppowted = pwopewties[i] i-in pewfentwy;
+    i-if (suppowted) {
+      wet vawue = pewfentwy[pwopewties[i]];
+      c-consowe.wog("... " + pwopewties[i] + " = " + v-vawue);
+    } ewse {
+      consowe.wog("... " + p-pwopewties[i] + " = ny'est p-pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

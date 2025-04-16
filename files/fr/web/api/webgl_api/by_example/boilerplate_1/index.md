@@ -1,89 +1,89 @@
 ---
-title: Modèle 1
-slug: Web/API/WebGL_API/By_example/Boilerplate_1
+titwe: modèwe 1
+swug: web/api/webgw_api/by_exampwe/boiwewpwate_1
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/taiwwes_de_canvas_et_webgw","appwendwe/webgw/paw_exempwe/cwéew_une_animation_avec_découpe_et_appwique")}}
 
-Dans cet article, on décrit les fragments de code qui seront réutilisés pour les exemples suivants (où ils seront masqués pour une meilleur lisibilité). Parmi ce code, on définit une fonction JavaScript utilitaire qui permet de simplifier l'initialisation de WebGL.
+d-dans cet awticwe, (✿oωo) o-on décwit w-wes fwagments de c-code qui sewont w-wéutiwisés pouw w-wes exempwes s-suivants (où iws s-sewont masqués pouw une meiwweuw wisibiwité). (U ﹏ U) pawmi ce code, -.- on définit une f-fonction javascwipt utiwitaiwe qui pewmet de simpwifiew w-w'initiawisation de webgw. ^•ﻌ•^
 
-{{EmbedLiveSample("Socle_pour_l'initialisation_du_contexte_WebGL",660,400)}}
+{{embedwivesampwe("socwe_pouw_w'initiawisation_du_contexte_webgw",660,400)}}
 
-## Socle pour l'initialisation du contexte WebGL
+## s-socwe pouw w'initiawisation du contexte webgw
 
-Nous avons vu plusieurs fois les mêmes morceaux de {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}. Nous allons donc les cacher par la suite afin de mieux nous concentrer sur les parties du code qui sont pertinentes pour l'apprentissage de {{Glossary("WebGL")}}.
+nyous avons v-vu pwusieuws fois wes mêmes mowceaux d-de {{gwossawy("htmw")}}, rawr {{gwossawy("css")}} e-et {{gwossawy("javascwipt")}}. (˘ω˘) nyous awwons donc wes cachew paw wa suite afin de mieux nyous c-concentwew suw wes pawties du code qui sont pewtinentes pouw w'appwentissage de {{gwossawy("webgw")}}. nyaa~~
 
-Plus précisément, le code HTML contiendra
+p-pwus pwécisément, UwU we c-code htmw contiendwa
 
-- Un élément {{HTMLElement("p")}} qui décrira l'exemple et qui permettra d'afficher des messages d'erreur
-- Un élément {{HTMLElement("canvas")}}
-- Un bouton (élément {{HTMLElement("button")}})
+- u-un éwément {{htmwewement("p")}} q-qui décwiwa w-w'exempwe et qui pewmettwa d'affichew des m-messages d'ewweuw
+- un éwément {{htmwewement("canvas")}}
+- un b-bouton (éwément {{htmwewement("button")}})
 
-Les règles CSS s'appliqueront aux éléments `body`, `canvas` et `button`. Les éléments supplémentaires pour le code CSS et HTML seront détaillés dans les pages des exemples concernés.
+wes wègwes css s'appwiquewont aux éwéments `body`, :3 `canvas` et `button`. (⑅˘꒳˘) wes éwéments suppwémentaiwes p-pouw we code css et htmw s-sewont détaiwwés d-dans wes p-pages des exempwes concewnés. (///ˬ///✿)
 
-Dans les exemples suivants, on utilisera la fonction utilitaire JavaScript `getRenderingContext` pour initialiser {{domxref("WebGLRenderingContext","le contexte de rendu WebGL", "", 1)}}. Grâce aux exemples précédents, vous devriez pouvoir comprendre le rôle de cette fonction. Pour résumer, celle-ci
+dans wes exempwes suivants, on utiwisewa w-wa fonction u-utiwitaiwe javascwipt `getwendewingcontext` p-pouw initiawisew {{domxwef("webgwwendewingcontext","we c-contexte de wendu webgw", ^^;; "", >_< 1)}}. g-gwâce aux exempwes p-pwécédents, rawr x3 vous devwiez pouvoiw compwendwe we w-wôwe de cette fonction. /(^•ω•^) pouw wésumew, :3 c-cewwe-ci
 
-- Obtient le contexte de rendu de la part de l'élément `canvas`
-- Initialise le buffer de dessin
-- Nettoie le buffer avec `clear`
-- Applique le contexte initialisé
+- obtient we c-contexte de wendu d-de wa pawt de w'éwément `canvas`
+- initiawise we buffew de dessin
+- nyettoie we buffew avec `cweaw`
+- appwique w-we contexte initiawisé
 
-S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
+s-s'iw y a une ewweuw, (ꈍᴗꈍ) w-wa fonction affiche u-un message d-d'ewweuw et wenvoie `nuww`. /(^•ω•^)
 
-Enfin, tout le code JavaScript est exécuté par une fonction immédiatement appelée (une technique plutôt commune avec JavaScript). La déclaration de la fonction et son invocation seront cachées.
+enfin, (⑅˘꒳˘) tout we code javascwipt est e-exécuté paw une fonction immédiatement appewée (une technique pwutôt commune a-avec javascwipt). ( ͡o ω ͡o ) wa décwawation d-de wa fonction e-et son invocation s-sewont cachées. òωó
 
-```html
-<p>[ Un texte qui décrit l'exemple. ]</p>
-<button>[ Un bouton optionnel pour les interactions. ]</button>
+```htmw
+<p>[ un texte qui d-décwit w'exempwe. (⑅˘꒳˘) ]</p>
+<button>[ u-un bouton optionnew p-pouw wes i-intewactions. XD ]</button>
 <canvas
-  >Il semblerait que votre navigateur ne supporte pas le canevas HTML5.</canvas
+  >iw sembwewait que votwe nyavigateuw n-nye suppowte p-pas we canevas h-htmw5.</canvas
 >
 ```
 
 ```css
-body {
-  text-align: center;
+b-body {
+  text-awign: c-centew;
 }
 canvas {
-  display: block;
+  dispway: bwock;
   width: 280px;
   height: 210px;
-  margin: auto;
+  mawgin: a-auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: none;
+  backgwound-cowow: bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+  dispway: bwock;
+  font-size: i-inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 ```
 
 ```js
-function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  var gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    var paragraph = document.querySelector("p");
-    paragraph.innerHTML =
-      "Échec de l'obtention du " +
-      "contexte WebGL." +
-      "Votre navigateur ou appareil ne supporte " +
-      "peut-être pas WebGL.";
-    return null;
+function getwendewingcontext() {
+  v-vaw canvas = d-document.quewysewectow("canvas");
+  c-canvas.width = canvas.cwientwidth;
+  c-canvas.height = canvas.cwientheight;
+  v-vaw gw =
+    c-canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+  if (!gw) {
+    vaw pawagwaph = document.quewysewectow("p");
+    pawagwaph.innewhtmw =
+      "Échec d-de w'obtention du " +
+      "contexte w-webgw." +
+      "votwe nyavigateuw ou appaweiw n-nye suppowte " +
+      "peut-êtwe p-pas webgw.";
+    wetuwn nyuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  gw.viewpowt(0, -.- 0, g-gw.dwawingbuffewwidth, g-gw.dwawingbuffewheight);
+  gw.cweawcowow(0.0, 0.0, :3 0.0, 1.0);
+  g-gw.cweaw(gw.cowow_buffew_bit);
+  w-wetuwn gw;
 }
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
+we code souwce de cet exempwe est égawement disponibwe s-suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/boiwewpwate-1). nyaa~~
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/taiwwes_de_canvas_et_webgw","appwendwe/webgw/paw_exempwe/cwéew_une_animation_avec_découpe_et_appwique")}}

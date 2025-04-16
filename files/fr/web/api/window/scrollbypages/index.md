@@ -1,37 +1,37 @@
 ---
-title: Window.scrollByPages()
-slug: Web/API/Window/scrollByPages
+titwe: window.scwowwbypages()
+swug: web/api/window/scwowwbypages
 ---
 
-{{ ApiRef() }}{{Non-standard_header}}
+{{ a-apiwef() }}{{non-standawd_headew}}
 
-Fait défiler le document du nombre de pages spécifié.
+f-fait défiwew we d-document du nyombwe d-de pages spécifié. XD
 
-### Syntaxe
-
-```js
-window.scrollByPages(pages);
-```
-
-### Paramètres
-
-- `pages` est le nombre de pages à faire défiler.
-- `pages` peut être un entier positif ou négatif.
-
-### Exemples
+### syntaxe
 
 ```js
-// fait défiler le document d'une page vers le bas
-window.scrollByPages(1);
-
-// fait défiler le document d'une page vers le haut
-window.scrollByPages(-1);
+w-window.scwowwbypages(pages);
 ```
 
-### Notes
+### p-pawamètwes
 
-Voir aussi [window.scrollBy](/fr/docs/Web/API/Window/scrollByPages), [window.scrollByLines](/fr/docs/Web/API/Window/scrollByPages), [window.scroll](/fr/docs/Web/API/Window/scroll), [window.scrollTo](/fr/docs/Web/API/Window/scrollTo).
+- `pages` e-est we n-nyombwe de pages à faiwe défiwew. :3
+- `pages` peut êtwe un entiew positif ou nyégatif. 😳😳😳
 
-### Spécification
+### e-exempwes
 
-DOM Niveau 0. Ne fait pas partie de la spécification.
+```js
+// fait défiwew we document d'une p-page vews we bas
+window.scwowwbypages(1);
+
+// f-fait défiwew we document d'une page vews we haut
+window.scwowwbypages(-1);
+```
+
+### n-nyotes
+
+voiw aussi [window.scwowwby](/fw/docs/web/api/window/scwowwbypages), -.- [window.scwowwbywines](/fw/docs/web/api/window/scwowwbypages), ( ͡o ω ͡o ) [window.scwoww](/fw/docs/web/api/window/scwoww), rawr x3 [window.scwowwto](/fw/docs/web/api/window/scwowwto).
+
+### s-spécification
+
+d-dom nyiveau 0. nyaa~~ nye fait pas pawtie de wa spécification. /(^•ω•^)

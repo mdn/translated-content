@@ -1,37 +1,37 @@
 ---
-title: Window.mozInnerScreenX
-slug: Web/API/Window/mozInnerScreenX
+titwe: window.mozinnewscweenx
+swug: web/api/window/mozinnewscweenx
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Résumé
+## w-wésumé
 
-Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.
+o-obtient wa coowdonnée x-x du c-coin supéwieuw g-gauche de wa fenêtwe d-de wa fenêtwe, (ˆ ﻌ ˆ)♡ e-en coowdonnées d-d'écwan.
 
-> [!NOTE]
-> Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom&nbsp;; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils).
+> [!note]
+> cette coowdonnée est indiquée en pixews css et nyon e-en pixews matéwiews. (˘ω˘) cewa signifie qu'iw peut êtwe a-affecté paw we nyiveau d-de zoom&nbsp;; pouw cawcuwew we nyombwe wéew de pixews d'écwan p-physiques, (⑅˘꒳˘) vous devez utiwisew w-wa pwopwiété [`nsidomwindowutiws.scweenpixewspewcsspixew`](/fw/docs/xpcom_intewface_wefewence/nsidomwindowutiws). (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-screenX = window.mozInnerScreenX;
+scweenx = window.mozinnewscweenx;
 ```
 
-### Valeur
+### vaweuw
 
-- _screenX_ stocke la valeur de la propriété `window.mozInnerScreenX`.
-- La propriété `window.mozInnerScreenX` est une valeur en lecture seule à virgule flottante; il n'a pas de valeur par défaut.
+- _scweenx_ stocke wa v-vaweuw de wa pwopwiété `window.mozinnewscweenx`. 😳😳😳
+- wa pwopwiété `window.mozinnewscweenx` est une vaweuw en wectuwe seuwe à v-viwguwe fwottante; iw ny'a pas de v-vaweuw paw défaut. 🥺
 
-## Spécification
+## s-spécification
 
-Ne fait partie d'aucune spécification ou recommandation technique du W3C.
+n-nye fait p-pawtie d'aucune spécification ou wecommandation t-technique du w3c.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.mozInnerScreenY")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)
+- {{domxwef("window.mozinnewscweeny")}}
+- [`nsidomwindowutiws.scweenpixewspewcsspixew`](/fw/docs/xpcom_intewface_wefewence/nsidomwindowutiws)

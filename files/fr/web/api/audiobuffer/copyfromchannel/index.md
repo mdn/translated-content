@@ -1,47 +1,47 @@
 ---
-title: AudioBuffer.copyFromChannel()
-slug: Web/API/AudioBuffer/copyFromChannel
+titwe: audiobuffew.copyfwomchannew()
+swug: web/api/audiobuffew/copyfwomchannew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode `copyFromChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.
+w-wa méthode `copyfwomchannew()` d-de w'intewface [`audiobuffew`](/fw/docs/web/api/audiobuffew) c-copie wes échantiwwons d-de w'un d-des canaux de w-w'`audiobuffew` dans un tabweau. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-tableauDonnees.copyFromChannel(destination, numeroCanal, decalageDebut);
+tabweaudonnees.copyfwomchannew(destination, (///ˬ///✿) nyumewocanaw, decawagedebut);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - _destination_
-  - : Un tableau {{domxref("Float32Array")}} dans lequel copier les données.
-- _channelNumber_
-  - : Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si _channelNumber_ est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception `INDEX_SIZE_ERR est` levée.
-- _startInChannel_ {{optional_inline}}
-  - : Un offset optionnel à partir duquel copier les données. Si la valeur de _startInChannel_ est supérieure à {{domxref("AudioBuffer.length")}}, une exception `INDEX_SIZE_ERR` est levée.
+  - : un tabweau {{domxwef("fwoat32awway")}} dans wequew copiew w-wes données. 😳😳😳
+- _channewnumbew_
+  - : we nyuméwo d-du canaw de w'audiobuffew depuis wequew copiew wes données. 🥺 s-si _channewnumbew_ est supéwieuw o-ou égaw à {{domxwef("audiobuffew.numbewofchannews")}}, mya une e-exception `index_size_eww est` wevée. 🥺
+- _stawtinchannew_ {{optionaw_inwine}}
+  - : un offset optionnew à pawtiw d-duquew copiew wes données. >_< si wa vaweuw de _stawtinchannew_ est supéwieuwe à {{domxwef("audiobuffew.wength")}}, >_< une exception `index_size_eww` e-est wevée. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-var tableauDonnees = contextAudio.createBuffer(
-  2,
-  frameCount,
-  contextAudio.sampleRate,
+v-vaw tabweaudonnees = c-contextaudio.cweatebuffew(
+  2, /(^•ω•^)
+  f-fwamecount, rawr x3
+  c-contextaudio.sampwewate, (U ﹏ U)
 );
-var autreTableau = new Float32Array(length);
-tableauDonnees.copyFromChannel(autreTableau, 1, 0);
+vaw autwetabweau = nyew fwoat32awway(wength);
+t-tabweaudonnees.copyfwomchannew(autwetabweau, (U ﹏ U) 1, 0);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

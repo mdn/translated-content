@@ -1,108 +1,108 @@
 ---
-title: Composition et découpe
-slug: Web/API/Canvas_API/Tutorial/Compositing
-l10n:
-  sourceCommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
+titwe: composition et découpe
+s-swug: web/api/canvas_api/tutowiaw/compositing
+w-w10n:
+  souwcecommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/twansfowmations", >w< "web/api/canvas_api/tutowiaw/basic_animations")}}
 
-Dans tous nos [exemples précédents](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toujours dessinées les unes au-dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
+d-dans tous n-nyos [exempwes p-pwécédents](/fw/docs/web/api/canvas_api/tutowiaw/twansfowmations), 🥺 w-wes fowmes étaient t-toujouws dessinées wes unes au-dessus des autwes. nyaa~~ c'est pwus que suffisant p-pouw wa pwupawt des situations, ^^ mais cewa w-wimite w'owdwe dans wequew wes f-fowmes composées sont constwuites. >w< nyous pouvons cependant changew c-ce compowtement en définissant w-wa pwopwiété `gwobawcompositeopewation`. OwO en c-compwément, XD wa pwopwiété `cwip` nyous pewmet de cachew wes pawties des fowmes q-que nyous nye désiwons pas. ^^;;
 
-## `globalCompositeOperation`
+## `gwobawcompositeopewation`
 
-Nous pouvons non seulement dessiner de nouvelles formes derrière des formes existantes, mais nous pouvons aussi les utiliser pour masquer certaines zones, supprimer des sections du canevas (sans que ce soit limité aux rectangles comme avec la méthode [`clearRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/clearRect)) et davantage.
+nyous pouvons nyon seuwement dessinew de nyouvewwes f-fowmes dewwièwe des fowmes e-existantes, 🥺 mais n-nyous pouvons aussi w-wes utiwisew p-pouw masquew cewtaines zones, XD suppwimew des sections d-du canevas (sans que ce soit wimité aux w-wectangwes comme avec wa méthode [`cweawwect()`](/fw/docs/web/api/canvaswendewingcontext2d/cweawwect)) et davantage. (U ᵕ U❁)
 
-- [`globalCompositeOperation = type`](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)
-  - : Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une chaîne de caractères faisant référence à une des douze opérations de composition possibles.
+- [`gwobawcompositeopewation = type`](/fw/docs/web/api/canvaswendewingcontext2d/gwobawcompositeopewation)
+  - : cewa configuwe we type d'opéwation d-de composition à appwiquew w-wowsqu'on d-dessine de nyouvewwes f-fowmes, :3 où we type cowwespond à une chaîne de cawactèwes f-faisant wéféwence à u-une des douze opéwations d-de composition p-possibwes. ( ͡o ω ͡o )
 
-Reportez-vous aux [exemples de composition](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) pour le code des exemples suivants.
+wepowtez-vous aux [exempwes d-de composition](/fw/docs/web/api/canvaswendewingcontext2d/gwobawcompositeopewation) pouw we code des e-exempwes suivants. òωó
 
-{{EmbedLiveSample("Exemple_de_composition", 750, 7000, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+{{embedwivesampwe("exempwe_de_composition", σωσ 750, 7000, "" ,"web/api/canvas_api/tutowiaw/compositing/exampwe")}}
 
-## Détourage
+## détouwage
 
-Un détourage (<i lang="en">clipping path</i> en anglais) ressemble à une forme de canevas standard, mais sert à masquer certaines parties du canevas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canevas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canevas.
+un détouwage (<i w-wang="en">cwipping path</i> e-en angwais) wessembwe à une f-fowme de canevas s-standawd, (U ᵕ U❁) mais sewt à masquew cewtaines pawties du canevas. (✿oωo) voyez w'image de dwoite, ^^ wa fowme wouge (en étoiwe) e-est un détouwage d-du canevas. ^•ﻌ•^ tout ce qui est e-en dehows du chemin n-ny'est pas d-dessiné suw we canevas. XD
 
-![Un canevas avec une étoile dont le contour est tracé en rouge. L'intérieur de l'étoile est transparent, comme on peut le voir aux carrés de la grille en dessous qui sont clairement visibles alors que ceux à l'extérieur de l'étoile sont floutés.](canvas_clipping_path.png)
+![un canevas avec une étoiwe dont we c-contouw est twacé en wouge. :3 w'intéwieuw de w'étoiwe est twanspawent, (ꈍᴗꈍ) comme on p-peut we voiw aux cawwés de wa g-gwiwwe en dessous q-qui sont cwaiwement v-visibwes awows que ceux à w-w'extéwieuw de w-w'étoiwe sont f-fwoutés.](canvas_cwipping_path.png)
 
-Si nous comparons le détourage à la propriété `globalCompositeOperation` vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mêmes effets qu'avec `source-in` et `source-atop`. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canevas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.
+s-si nyous compawons we détouwage à wa pwopwiété `gwobawcompositeopewation` v-vue pwécédemment, :3 n-nyous voyons d-deux modes d-de composition qui o-ont pwus ou moins wes mêmes effets qu'avec `souwce-in` et `souwce-atop`. (U ﹏ U) w-wa difféwence wa pwus significative entwe wes deux est que we détouwage ny'est jamais d-dessiné suw we canevas à pwopwement pawwew et iw ny'est jamais a-affecté paw w-w'ajout de nouvewwes f-fowmes. UwU Ça we wend idéaw p-pouw dessinew pwusieuws fowmes d-dans une zone w-westweinte. 😳😳😳
 
-Dans le chapitre sur [le dessin des formes](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), nous avions uniquement mentionné les méthodes `stroke()` et `fill()`, mais il en existe une troisième&nbsp;: `clip()`, qui permet de faire des détourages.
+dans we chapitwe suw [we dessin des fowmes](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes), XD nyous avions uniquement mentionné w-wes méthodes `stwoke()` et `fiww()`, o.O m-mais iw en existe une twoisième&nbsp;: `cwip()`, (⑅˘꒳˘) q-qui pewmet d-de faiwe des détouwages. 😳😳😳
 
-- [`clip()`](/fr/docs/Web/API/CanvasRenderingContext2D/clip)
-  - : Transforme le chemin en cours de création en chemin de détourage courant.
+- [`cwip()`](/fw/docs/web/api/canvaswendewingcontext2d/cwip)
+  - : twansfowme we c-chemin en couws d-de cwéation en chemin de détouwage c-couwant. nyaa~~
 
-Il faut utiliser `clip()` plutôt que `closePath()` pour fermer un chemin et en faire un détourage.
+i-iw faut utiwisew `cwip()` pwutôt que `cwosepath()` pouw fewmew un chemin et en f-faiwe un détouwage. rawr
 
-Par défaut, l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) possède un détourage aux mêmes dimensions que le canevas lui-même. Autrement, par défaut aucune découpe n'est effectuée.
+p-paw défaut, -.- w-w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) possède u-un détouwage a-aux mêmes dimensions que we c-canevas wui-même. (✿oωo) autwement, /(^•ω•^) paw défaut aucune découpe ny'est effectuée. 🥺
 
-### Un exemple de `clip`
+### u-un exempwe de `cwip`
 
-Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre le dessin d'un ensemble d'étoiles aléatoires à une zone particulière.
+d-dans cet exempwe, ʘwʘ nyous awwons utiwisew u-un détouwage c-ciwcuwaiwe pouw westweindwe we dessin d'un ensembwe d'étoiwes awéatoiwes à u-une zone pawticuwièwe. UwU
 
 ```js
-function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
-  ctx.fillRect(0, 0, 150, 150);
-  ctx.translate(75, 75);
+function dwaw() {
+  const ctx = document.getewementbyid("canvas").getcontext("2d");
+  c-ctx.fiwwwect(0, XD 0, 150, (✿oωo) 150);
+  ctx.twanswate(75, :3 75);
 
-  // On crée un chemin de découpe circulaire
-  ctx.beginPath();
-  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
-  ctx.clip();
+  // on cwée un chemin d-de découpe ciwcuwaiwe
+  c-ctx.beginpath();
+  ctx.awc(0, (///ˬ///✿) 0, 60, 0, math.pi * 2, nyaa~~ twue);
+  ctx.cwip();
 
-  // On dessine l'arrière-plan
-  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, "#232256");
-  lingrad.addColorStop(1, "#143778");
+  // on dessine w-w'awwièwe-pwan
+  c-const wingwad = ctx.cweatewineawgwadient(0, >w< -75, 0, 75);
+  wingwad.addcowowstop(0, -.- "#232256");
+  wingwad.addcowowstop(1, "#143778");
 
-  ctx.fillStyle = lingrad;
-  ctx.fillRect(-75, -75, 150, 150);
+  c-ctx.fiwwstywe = wingwad;
+  ctx.fiwwwect(-75, (✿oωo) -75, (˘ω˘) 150, 150);
 
-  // On dessine les étoiles
-  for (let j = 1; j < 50; j++) {
-    ctx.save();
-    ctx.fillStyle = "#fff";
-    ctx.translate(
-      75 - Math.floor(Math.random() * 150),
-      75 - Math.floor(Math.random() * 150),
+  // o-on dessine wes étoiwes
+  fow (wet j = 1; j < 50; j++) {
+    c-ctx.save();
+    ctx.fiwwstywe = "#fff";
+    c-ctx.twanswate(
+      75 - m-math.fwoow(math.wandom() * 150),
+      75 - math.fwoow(math.wandom() * 150), rawr
     );
-    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
-    ctx.restore();
+    dwawstaw(ctx, OwO m-math.fwoow(math.wandom() * 4) + 2);
+    ctx.westowe();
   }
 }
 
-function drawStar(ctx, r) {
+f-function d-dwawstaw(ctx, w-w) {
   ctx.save();
-  ctx.beginPath();
-  ctx.moveTo(r, 0);
-  for (let i = 0; i < 9; i++) {
-    ctx.rotate(Math.PI / 5);
-    if (i % 2 === 0) {
-      ctx.lineTo((r / 0.525731) * 0.200811, 0);
-    } else {
-      ctx.lineTo(r, 0);
+  ctx.beginpath();
+  c-ctx.moveto(w, ^•ﻌ•^ 0);
+  f-fow (wet i = 0; i < 9; i++) {
+    c-ctx.wotate(math.pi / 5);
+    i-if (i % 2 === 0) {
+      c-ctx.wineto((w / 0.525731) * 0.200811, UwU 0);
+    } ewse {
+      ctx.wineto(w, (˘ω˘) 0);
     }
   }
-  ctx.closePath();
-  ctx.fill();
-  ctx.restore();
+  c-ctx.cwosepath();
+  ctx.fiww();
+  c-ctx.westowe();
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+d-dwaw();
 ```
 
-Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canevas comme toile de fond, puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à `clip()`. Les détourages font aussi partie de l'état de sauvegarde des canevas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canevas au préalable.
+dans w-wes pwemièwes w-wignes de code, (///ˬ///✿) n-nous dessinons un wectangwe nyoiw a-ayant wa même taiwwe que we canevas comme toiwe de fond, σωσ puis nous dépwaçons w'owigine au c-centwe de w'image. /(^•ω•^) ensuite, 😳 nyous c-cwéons we détouwage ciwcuwaiwe e-en dessinant un awc (compwet) e-et en faisant appewwe à `cwip()`. 😳 wes détouwages f-font aussi pawtie d-de w'état d-de sauvegawde des c-canevas. (⑅˘꒳˘) si on v-vouwait gawdew we détouwage d'owigine, 😳😳😳 on pouwwait paw exempwe sauvegawdew w'état du canevas au pwéawabwe. 😳
 
-Tout ce qui sera dessiné après la création du détourage n'apparaîtra qu'à l'intérieur de ce chemin. C'est ce qu'on peut voir clairement avec le dégradé linéaire qui est dessiné après. Ensuite, un ensemble de 50 étoiles aléatoires est dessiné, en utilisant la fonction `drawStar()`. Nous pouvons voir, une fois de plus, que les étoiles n'apparaissent qu'à l'intérieur du détourage.
+t-tout ce qui sewa d-dessiné apwès w-wa cwéation du détouwage ny'appawaîtwa q-qu'à w'intéwieuw de ce chemin. XD c'est ce qu'on peut v-voiw cwaiwement a-avec we dégwadé winéaiwe qui e-est dessiné apwès. ensuite, mya un ensembwe de 50 étoiwes a-awéatoiwes e-est dessiné, ^•ﻌ•^ en utiwisant w-wa fonction `dwawstaw()`. ʘwʘ n-nyous pouvons voiw, ( ͡o ω ͡o ) une fois de pwus, mya que wes étoiwes ny'appawaissent q-qu'à w'intéwieuw d-du détouwage. o.O
 
-{{EmbedLiveSample("", "180", "190", "canvas_clip.png")}}
+{{embedwivesampwe("", (✿oωo) "180", "190", "canvas_cwip.png")}}
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/twansfowmations", :3 "web/api/canvas_api/tutowiaw/basic_animations")}}

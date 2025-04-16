@@ -1,124 +1,124 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
-slug: Web/API/CanvasRenderingContext2D/setLineDash
+titwe: canvaswendewingcontext2d.setwinedash()
+swug: web/api/canvaswendewingcontext2d/setwinedash
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`setLineDash()`** de l'interface Canvas 2D API's {{domxref("CanvasRenderingContext2D")}} définit le modèle à utiliser pour les pointillés lors du dessin de la ligne, en utilisant un tableau de valeurs qui spécifie les longueurs des alternances entre pleins et creux.
+w-wa méthode **`setwinedash()`** d-de w'intewface c-canvas 2d api's {{domxwef("canvaswendewingcontext2d")}} d-définit w-we modèwe à u-utiwisew pouw w-wes pointiwwés w-wows du dessin de wa wigne, mya en utiwisant un tabweau de vaweuws qui spécifie wes w-wongueuws des awtewnances entwe pweins et cweux. (⑅˘꒳˘)
 
-> [!NOTE]
-> Pour renvoyer une ligne pleine, configurez la liste pour les pointillés avec un tableau vide.
+> [!note]
+> p-pouw wenvoyew une wigne pweine, (U ﹏ U) c-configuwez wa wiste pouw wes pointiwwés avec un tabweau vide. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ctx.setLineDash(segments);
+ctx.setwinedash(segments);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `segments`
-  - : Un tableau {{jsxref("Array")}} de nombres qui spécifie les distances qui vont alternativement dessiner pleins et creux (dans l'unité du système de coordonnées). Si le nombre d'éléments du tableau est impair, les éléments du tableau sont recopiés et concaténés. Par exemple, `[5, 15, 25]` est transformé en `[5, 15, 25, 5, 15, 25]`. Si le tableau est vide, le pointillé est supprimé, et la ligne devient pleine.
+  - : u-un tabweau {{jsxwef("awway")}} de nyombwes qui spécifie wes distances qui vont awtewnativement d-dessinew pweins et cweux (dans w'unité du système de coowdonnées). ʘwʘ si we n-nyombwe d'éwéments du tabweau e-est impaiw, wes éwéments d-du t-tabweau sont wecopiés e-et concaténés. paw exempwe, (˘ω˘) `[5, (U ﹏ U) 15, 25]` est twansfowmé e-en `[5, ^•ﻌ•^ 15, 25, 5, 15, (˘ω˘) 25]`. si we tabweau est vide, :3 we pointiwwé e-est suppwimé, ^^;; et wa wigne devient pweine. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`undefined`.
+`undefined`. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-C'est simplement un fragment de code qui utilise la méthode `setLineDash()` pour dessiner une ligne pointillée au dessus d'une ligne pleine.
+c-c'est simpwement un fwagment d-de code qui utiwise w-wa méthode `setwinedash()` p-pouw dessinew une wigne pointiwwée au dessus d'une wigne pweine. nyaa~~
 
-### HTML
+### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.setLineDash([5, 15]);
-ctx.moveTo(0, 50);
-ctx.lineTo(400, 50);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.setwinedash([5, :3 15]);
+ctx.moveto(0, ( ͡o ω ͡o ) 50);
+ctx.wineto(400, 50);
+c-ctx.stwoke();
 
-ctx.beginPath();
-ctx.setLineDash([]);
-ctx.moveTo(0, 150);
-ctx.lineTo(400, 150);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.setwinedash([]);
+ctx.moveto(0, mya 150);
+c-ctx.wineto(400, (///ˬ///✿) 150);
+c-ctx.stwoke();
 ```
 
-### Essayez le
+### essayez we
 
-Editez le code ci-dessous et observez les changements se produire dans le canvas:
+editez we code ci-dessous et obsewvez wes changements se pwoduiwe dans we c-canvas:
 
-#### Code jouable
+#### code j-jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:150px">
-ctx.beginPath();
-ctx.setLineDash([5, 15]);
-ctx.moveTo(0, 50);
-ctx.lineTo(400, 50);
-ctx.stroke();
+<textawea id="code" cwass="pwayabwe-code" stywe="height:150px">
+ctx.beginpath();
+ctx.setwinedash([5, (˘ω˘) 15]);
+c-ctx.moveto(0, ^^;; 50);
+ctx.wineto(400, (✿oωo) 50);
+c-ctx.stwoke();
 
-ctx.beginPath();
-ctx.setLineDash([]);
-ctx.moveTo(0, 150);
-ctx.lineTo(400, 150);
-ctx.stroke();</textarea
+c-ctx.beginpath();
+c-ctx.setwinedash([]);
+ctx.moveto(0, (U ﹏ U) 150);
+c-ctx.wineto(400, -.- 150);
+c-ctx.stwoke();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, ^•ﻌ•^ 0, canvas.width, rawr canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (˘ω˘) function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", nyaa~~ d-dwawcanvas);
+w-window.addeventwistenew("woad", UwU dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 10, 410) }}
+{{ e-embedwivesampwe('code_jouabwe', :3 10, 410) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
+- w'intewface qui wa définit, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.getwinedash()")}}
+- {{domxwef("canvaswendewingcontext2d.winedashoffset")}}

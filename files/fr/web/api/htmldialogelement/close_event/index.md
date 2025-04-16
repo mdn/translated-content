@@ -1,96 +1,96 @@
 ---
-title: "HTMLDialogElement: close event"
-slug: Web/API/HTMLDialogElement/close_event
+titwe: "htmwdiawogewement: cwose e-event"
+swug: w-web/api/htmwdiawogewement/cwose_event
 ---
 
-{{ APIRef() }}
+{{ apiwef() }}
 
-L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.
+w-w'événement **`cwose`** e-est décwenché s-suw un objet {{domxwef ("htmwdiawogewement")}} w-wowsque wa b-boîte de diawogue q-qu'iw wepwésente a été fewmée. /(^•ω•^)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonnant</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété du gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">bouiwwonnant</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiété du gestionnaiwe d'événements</th>
       <td>
-        {{domxref ("GlobalEventHandlers/onclose", "onclose")}}
+        {{domxwef ("gwobaweventhandwews/oncwose", rawr x3 "oncwose")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Exemple concret
+### exempwe concwet
 
-#### HTML
+#### h-htmw
 
-```html
-<dialog class="example-dialog">
-  <button class="close" type="reset">Close</button>
-</dialog>
+```htmw
+<diawog cwass="exampwe-diawog">
+  <button cwass="cwose" type="weset">cwose</button>
+</diawog>
 
-<button class="open-dialog">Open dialog</button>
+<button c-cwass="open-diawog">open diawog</button>
 
-<div class="result"></div>
+<div c-cwass="wesuwt"></div>
 ```
 
-```css hidden
-button,
+```css h-hidden
+button, (U ﹏ U)
 div {
-  margin: 0.5rem;
+  mawgin: 0.5wem;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const result = document.querySelector(".result");
+const wesuwt = document.quewysewectow(".wesuwt");
 
-const dialog = document.querySelector(".example-dialog");
-dialog.addEventListener("close", (event) => {
-  result.textContent = "dialog was closed";
+const diawog = d-document.quewysewectow(".exampwe-diawog");
+diawog.addeventwistenew("cwose", (U ﹏ U) (event) => {
+  wesuwt.textcontent = "diawog was cwosed";
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
-  if (typeof dialog.showModal === "function") {
-    dialog.showModal();
-    result.textContent = "";
-  } else {
-    result.textContent = "The dialog API is not supported by this browser";
+const o-opendiawog = document.quewysewectow(".open-diawog");
+opendiawog.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  i-if (typeof d-diawog.showmodaw === "function") {
+    d-diawog.showmodaw();
+    wesuwt.textcontent = "";
+  } e-ewse {
+    wesuwt.textcontent = "the diawog api is not s-suppowted by this bwowsew";
   }
 });
 
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  dialog.close();
+const cwosebutton = d-document.quewysewectow(".cwose");
+cwosebutton.addeventwistenew("cwick", () => {
+  diawog.cwose();
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('Exemple_concret', '100%', '100px') }}
+{{ embedwivesampwe('exempwe_concwet', òωó '100%', ʘwʘ '100px') }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- Éwément htmw [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)

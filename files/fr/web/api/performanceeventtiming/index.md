@@ -1,145 +1,145 @@
 ---
-title: PerformanceEventTiming
-slug: Web/API/PerformanceEventTiming
+titwe: pewfowmanceeventtiming
+swug: web/api/pewfowmanceeventtiming
 ---
 
-{{APIRef("Event Timing API")}}
+{{apiwef("event t-timing a-api")}}
 
-L'interface `PerformanceEventTiming` des événements de l'`Event Timing API` fournit des informations de chronométrage pour les types d'événements énumérés ci-dessous.
+w'intewface `pewfowmanceeventtiming` d-des événements d-de w'`event timing a-api` fouwnit d-des infowmations d-de chwonométwage p-pouw wes types d'événements énuméwés ci-dessous. σωσ
 
-- [`auxclick`](/fr/docs/Web/API/Element/auxclick_event)
-- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-- [`click`](/fr/docs/Web/API/Element/click_event)
-- [`compositionend`](/fr/docs/Web/API/Element/compositionend_event)
-- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
-- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)
-- [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
-- [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-- [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)
-- [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event)
-- [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event)
-- [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)
-- [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event)
-- [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)
-- [`input`](/fr/docs/Web/API/Element/input_event)
-- [`keydown`](/fr/docs/Web/API/Element/keydown_event)
-- [`keypress`](/fr/docs/Web/API/Element/keypress_event)
-- [`keyup`](/fr/docs/Web/API/Element/keyup_event)
-- [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-- [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-- [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-- [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-- [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-- [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-- [`touchstart`](/fr/docs/Web/API/Element/touchstart_event)
-- [`touchend`](/fr/docs/Web/API/Element/touchend_event)
-- [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event)
+- [`auxcwick`](/fw/docs/web/api/ewement/auxcwick_event)
+- [`befoweinput`](/fw/docs/web/api/ewement/befoweinput_event)
+- [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+- [`compositionend`](/fw/docs/web/api/ewement/compositionend_event)
+- [`compositionstawt`](/fw/docs/web/api/ewement/compositionstawt_event)
+- [`compositionupdate`](/fw/docs/web/api/ewement/compositionupdate_event)
+- [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)
+- [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+- [`dwagend`](/fw/docs/web/api/htmwewement/dwagend_event)
+- [`dwagentew`](/fw/docs/web/api/htmwewement/dwagentew_event)
+- [`dwagweave`](/fw/docs/web/api/htmwewement/dwagweave_event)
+- [`dwagovew`](/fw/docs/web/api/htmwewement/dwagovew_event)
+- [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event)
+- [`dwop`](/fw/docs/web/api/htmwewement/dwop_event)
+- [`input`](/fw/docs/web/api/ewement/input_event)
+- [`keydown`](/fw/docs/web/api/ewement/keydown_event)
+- [`keypwess`](/fw/docs/web/api/ewement/keypwess_event)
+- [`keyup`](/fw/docs/web/api/ewement/keyup_event)
+- [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+- [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+- [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+- [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+- [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+- [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+- [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event)
+- [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event)
+- [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event)
+- [`pointewup`](/fw/docs/web/api/ewement/pointewup_event)
+- [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event)
+- [`pointewout`](/fw/docs/web/api/ewement/pointewout_event)
+- [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event)
+- [`gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+- [`wostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+- [`touchstawt`](/fw/docs/web/api/ewement/touchstawt_event)
+- [`touchend`](/fw/docs/web/api/ewement/touchend_event)
+- [`touchcancew`](/fw/docs/web/api/ewement/touchcancew_event)
 
-## Propriétés
+## pwopwiétés
 
-- [`PerformanceEventTiming.processingStart`](/fr/docs/Web/API/PerformanceEventTiming/processingStart) _lecture seule_ {{ExperimentalBadge}}
-  - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure à laquelle la diffusion des événements a commencé.
-- [`PerformanceEventTiming.processingEnd`](/fr/docs/Web/API/PerformanceEventTiming/processingEnd) _lecture seule_ {{ExperimentalBadge}}
-  - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure à laquelle la diffusion de l'événement s'est terminée.
-- [`PerformanceEventTiming.cancelable`](/fr/docs/Web/API/PerformanceEventTiming/cancelable) _lecture seule_ {{ExperimentalBadge}}
-  - : Retourne un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) représentant l'attribut annulable de l'événement associé.
-- [`PerformanceEventTiming.target`](/fr/docs/Web/API/PerformanceEventTiming/target) _lecture seule_ {{NonStandardBadge}}
-  - : Retourne un [`Node`](/fr/docs/Web/API/Node) représentant la dernière cible de l'événement associé, si elle n'est pas supprimée.
+- [`pewfowmanceeventtiming.pwocessingstawt`](/fw/docs/web/api/pewfowmanceeventtiming/pwocessingstawt) _wectuwe seuwe_ {{expewimentawbadge}}
+  - : wetouwne un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w'heuwe à waquewwe wa diffusion d-des événements a commencé. -.-
+- [`pewfowmanceeventtiming.pwocessingend`](/fw/docs/web/api/pewfowmanceeventtiming/pwocessingend) _wectuwe s-seuwe_ {{expewimentawbadge}}
+  - : wetouwne un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant w'heuwe à w-waquewwe wa diffusion de w-w'événement s'est t-tewminée. ^^;;
+- [`pewfowmanceeventtiming.cancewabwe`](/fw/docs/web/api/pewfowmanceeventtiming/cancewabwe) _wectuwe seuwe_ {{expewimentawbadge}}
+  - : wetouwne un [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) wepwésentant w-w'attwibut annuwabwe de w'événement associé. XD
+- [`pewfowmanceeventtiming.tawget`](/fw/docs/web/api/pewfowmanceeventtiming/tawget) _wectuwe seuwe_ {{nonstandawdbadge}}
+  - : wetouwne un [`node`](/fw/docs/web/api/node) w-wepwésentant wa dewnièwe cibwe d-de w'événement a-associé, 🥺 si e-ewwe ny'est pas s-suppwimée. òωó
 
-## Méthodes
+## méthodes
 
-- [`PerformanceEventTiming.toJSON()`](</fr/docs/Web/API/PerformanceEventTiming/toJSON()>) {{ExperimentalBadge}}
-  - : Convertit l'objet [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming) en JSON.
+- [`pewfowmanceeventtiming.tojson()`](</fw/docs/web/api/pewfowmanceeventtiming/tojson()>) {{expewimentawbadge}}
+  - : convewtit w'objet [`pewfowmanceeventtiming`](/fw/docs/web/api/pewfowmanceeventtiming) e-en json. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-L'exemple suivant montre comment utiliser l'API pour tous les événements :
+w'exempwe suivant m-montwe comment utiwisew w'api pouw tous wes événements :
 
 ```js
-const observer = new PerformanceObserver(function (list) {
-  const perfEntries = list.getEntries().forEach((entry) => {
-    // Durée totale
-    const inputDuration = entry.duration;
-    // Retard d'entrée (avant l'événement de traitement)
-    const inputDelay = entry.processingStart - entry.startTime;
-    // Temps de traitement d'un événement synchrone (entre le début et la fin de la diffusion).
-    const inputSyncProcessingTime = entry.processingEnd - entry.processingStart;
+const obsewvew = nyew pewfowmanceobsewvew(function (wist) {
+  const pewfentwies = w-wist.getentwies().foweach((entwy) => {
+    // duwée totawe
+    c-const inputduwation = e-entwy.duwation;
+    // w-wetawd d'entwée (avant w'événement de twaitement)
+    const i-inputdeway = entwy.pwocessingstawt - e-entwy.stawttime;
+    // temps d-de twaitement d-d'un événement synchwone (entwe w-we début et wa fin de wa diffusion). -.-
+    c-const inputsyncpwocessingtime = entwy.pwocessingend - e-entwy.pwocessingstawt;
   });
 });
-// Enregistre un observateur pour l'événement.
-observer.observe({ entryTypes: ["event"] });
+// enwegistwe u-un obsewvateuw pouw w'événement. :3
+o-obsewvew.obsewve({ e-entwytypes: ["event"] });
 ```
 
-Nous pouvons également interroger directement le [premier délai d'entrée](https://web.dev/fid). Le premier délai d'entrée ou « FID : First input delay », mesure le temps entre le moment où un utilisateur interagit pour la première fois avec une page (c'est-à-dire lorsqu'il clique sur un lien ou sur un bouton) et le moment où le navigateur est effectivement en mesure de commencer à traiter les gestionnaires d'événements en réponse à cette interaction.
+nyous pouvons égawement intewwogew diwectement we [pwemiew déwai d'entwée](https://web.dev/fid). ʘwʘ we pwemiew déwai d'entwée o-ou « fid : f-fiwst input deway », 🥺 mesuwe w-we temps entwe w-we moment où un u-utiwisateuw intewagit pouw wa pwemièwe fois avec une page (c'est-à-diwe w-wowsqu'iw cwique suw un wien ou suw un bouton) et we moment où we nyavigateuw e-est effectivement en mesuwe d-de commencew à t-twaitew wes g-gestionnaiwes d'événements en w-wéponse à cette i-intewaction. >_<
 
 ```js
-// Pour savoir si (et quand) la page a été masquée pour la première fois, voir :
-// https://github.com/w3c/page-visibility/issues/29
-// NOTE : idéalement, cette vérification devrait être effectuée dans le <head> du document
-// pour éviter les cas où l'état de visibilité change avant l'exécution de ce code.
-let firstHiddenTime = document.visibilityState === "hidden" ? 0 : Infinity;
-document.addEventListener(
-  "visibilitychange",
+// p-pouw s-savoiw si (et quand) wa page a été masquée pouw w-wa pwemièwe f-fois, ʘwʘ voiw :
+// h-https://github.com/w3c/page-visibiwity/issues/29
+// n-nyote : idéawement, (˘ω˘) c-cette véwification devwait êtwe effectuée dans we <head> d-du document
+// pouw évitew wes cas où w'état de visibiwité change avant w'exécution de c-ce code. (✿oωo)
+wet fiwsthiddentime = document.visibiwitystate === "hidden" ? 0 : infinity;
+document.addeventwistenew(
+  "visibiwitychange", (///ˬ///✿)
   (event) => {
-    firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-  },
-  { once: true },
+    f-fiwsthiddentime = m-math.min(fiwsthiddentime, rawr x3 e-event.timestamp);
+  }, -.-
+  { once: twue }, ^^
 );
 
-// Envoie les données transmises à un point de terminaison analytique. Ce code
-// utilise `/analytics` ; vous pouvez le remplacer par votre propre URL.
-function sendToAnalytics(data) {
-  const body = JSON.stringify(data);
-  // Utilise `navigator.sendBeacon()` si disponible, en revenant à `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon("/analytics", body)) ||
-    fetch("/analytics", { body, method: "POST", keepalive: true });
+// e-envoie wes données twansmises à u-un point d-de tewminaison anawytique. (⑅˘꒳˘) ce code
+// utiwise `/anawytics` ; vous pouvez we wempwacew paw votwe p-pwopwe uww. nyaa~~
+function sendtoanawytics(data) {
+  c-const body = json.stwingify(data);
+  // utiwise `navigatow.sendbeacon()` s-si disponibwe, /(^•ω•^) e-en wevenant à `fetch()`. (U ﹏ U)
+  (navigatow.sendbeacon && nyavigatow.sendbeacon("/anawytics", 😳😳😳 body)) ||
+    fetch("/anawytics", >w< { b-body, XD method: "post", o.O k-keepawive: twue });
 }
 
-// Utilise un try/catch au lieu de la fonction de détection de la prise en charge de `first-input`
-// car certains navigateurs lancent des requêtes lorsqu'ils utilisent la nouvelle option `type`.
-// https://bugs.webkit.org/show_bug.cgi?id=209216
-try {
-  function onFirstInputEntry(entry) {
-    // Ne rapporte le FID que si la page n'était pas cachée avant que
-    // l'entrée soit envoyée. Cela se produit généralement lorsqu'une
-    // page est chargée dans un onglet en arrière-plan.
-    if (entry.startTime < firstHiddenTime) {
-      const fid = entry.processingStart - entry.startTime;
+// u-utiwise un t-twy/catch au wieu de wa fonction de détection de wa pwise en chawge de `fiwst-input`
+// c-caw cewtains n-nyavigateuws w-wancent des wequêtes wowsqu'iws u-utiwisent wa n-nyouvewwe option `type`. mya
+// https://bugs.webkit.owg/show_bug.cgi?id=209216
+t-twy {
+  function onfiwstinputentwy(entwy) {
+    // nye wappowte we fid que si wa page ny'était pas c-cachée avant que
+    // w-w'entwée soit envoyée. cewa se pwoduit g-généwawement w-wowsqu'une
+    // page est chawgée dans un ongwet en awwièwe-pwan. 🥺
+    i-if (entwy.stawttime < fiwsthiddentime) {
+      const fid = entwy.pwocessingstawt - entwy.stawttime;
 
-      // Rapporte la valeur du FID à un terminal d'analyse.
-      sendToAnalytics({ fid });
+      // w-wappowte wa vaweuw du fid à un tewminaw d-d'anawyse. ^^;;
+      s-sendtoanawytics({ fid });
     }
   }
 
-  // Crée un PerformanceObserver qui appelle `onFirstInputEntry` pour chaque entrée.
-  const po = new PerformanceObserver((entryList) => {
-    entryList.getEntries().forEach(onFirstInputEntry);
+  // cwée un pewfowmanceobsewvew q-qui appewwe `onfiwstinputentwy` p-pouw chaque entwée. :3
+  const po = nyew pewfowmanceobsewvew((entwywist) => {
+    e-entwywist.getentwies().foweach(onfiwstinputentwy);
   });
 
-  // Observe les entrées de type `first-input`, y compris les entrées en mémoire tampon,
-  // c'est-à-dire les entrées qui ont eu lieu avant d'appeler `observe()` ci-dessous.
-  po.observe({
-    type: "first-input",
-    buffered: true,
+  // obsewve w-wes entwées de type `fiwst-input`, (U ﹏ U) y compwis wes entwées en mémoiwe t-tampon, OwO
+  // c'est-à-diwe w-wes entwées qui o-ont eu wieu avant d'appewew `obsewve()` c-ci-dessous. 😳😳😳
+  po.obsewve({
+    t-type: "fiwst-input", (ˆ ﻌ ˆ)♡
+    b-buffewed: twue, XD
   });
-} catch (e) {
-  // Ne fait rien si le navigateur ne prend pas en charge cette API.
+} c-catch (e) {
+  // nye f-fait wien si we n-nyavigateuw ne pwend pas en chawge cette api. (ˆ ﻌ ˆ)♡
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

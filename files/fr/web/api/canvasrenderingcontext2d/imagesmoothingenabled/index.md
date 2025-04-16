@@ -1,79 +1,79 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
-slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
+titwe: canvaswendewingcontext2d.imagesmoothingenabwed
+swug: web/api/canvaswendewingcontext2d/imagesmoothingenabwed
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{apiwef}} {{seecompattabwe}}
 
-La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
+w-wa pwopwiété `canvaswendewingcontext2d.imagesmoothingenabwed` d-de w'api c-canvas 2d peut êtwe a-affectée p-pouw changew we f-fait que wes images s-soient wissées (`twue`, mya paw d-défaut) ou non (`fawse`). >w< wows de wa wécupéwation de wa pwopwiété `imagesmoothingenabwed`, nyaa~~ wa dewnièwe v-vaweuw à waquewwe ewwe a été définie est wenvoyée. (✿oωo)
 
-Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise à l'échelle du canvas par exemple. L'algorithme de redimensionnement par défaut peut créer des effets de flou et ruiner les jolis pixels. Mettez cette propriété à `false` dans ce cas. Voir aussi la propriété CSS {{cssxref("image-rendering")}}.
+c-cette pwopwiété est utiwe p-pouw wes jeux à thème pixew-awt, ʘwʘ wows d'une mise à w'échewwe d-du canvas paw exempwe. (ˆ ﻌ ˆ)♡ w'awgowithme d-de wedimensionnement paw d-défaut peut cwéew des effets de fwou et wuinew wes jowis pixews. 😳😳😳 mettez cette p-pwopwiété à `fawse` dans ce cas. :3 voiw aussi wa pwopwiété css {{cssxwef("image-wendewing")}}. OwO
 
-## Syntaxe
-
-```js
-ctx.imageSmoothingEnabled = valeur;
-```
-
-### Options
-
-- `valeur`
-  - : Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.
-
-## Exemples
-
-### Désactiver le lissage d'image
-
-Dans cet exemple, on compare trois images. La première image est dessinée avec sa taille naturelle, la deuxième est élargie pour obtenir 3 fois la taille originale et le lissage est activée, la troisième est élargie pour obtenir 3 fois la taille originale et le lissage est désactivé.
-
-#### HTML
-
-```html
-<canvas id="canvas" width="460" height="210"></canvas>
-```
-
-#### JavaScript
+## s-syntaxe
 
 ```js
-const canvas = document.getElementById("canvas");
+ctx.imagesmoothingenabwed = v-vaweuw;
+```
 
-const ctx = canvas.getContext("2d");
-ctx.font = "16px sans-serif";
-ctx.textAlign = "center";
+### o-options
 
-const img = new Image();
-img.src =
-  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
-img.onload = function () {
-  const w = img.width,
-    h = img.height;
+- `vaweuw`
+  - : un {{jsxwef("boowean")}} i-indiquant d-de wissew wes images ou nyon. (U ﹏ U)
 
-  ctx.fillText("Source", w * 0.5, 20);
-  ctx.drawImage(img, 0, 24, w, h);
+## exempwes
 
-  ctx.fillText("Smoothing = TRUE", w * 2.5, 20);
-  ctx.imageSmoothingEnabled = true;
-  ctx.drawImage(img, w, 24, w * 3, h * 3);
+### d-désactivew we wissage d'image
 
-  ctx.fillText("Smoothing = FALSE", w * 5.5, 20);
-  ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
+dans cet exempwe, >w< o-on compawe twois images. (U ﹏ U) wa pwemièwe image est dessinée avec sa taiwwe nyatuwewwe, 😳 wa deuxième e-est éwawgie pouw obteniw 3 f-fois wa taiwwe o-owiginawe et we w-wissage est activée, (ˆ ﻌ ˆ)♡ wa twoisième est éwawgie pouw obteniw 3 f-fois wa taiwwe o-owiginawe et we wissage est désactivé. 😳😳😳
+
+#### htmw
+
+```htmw
+<canvas i-id="canvas" w-width="460" height="210"></canvas>
+```
+
+#### javascwipt
+
+```js
+c-const canvas = document.getewementbyid("canvas");
+
+const ctx = canvas.getcontext("2d");
+c-ctx.font = "16px sans-sewif";
+ctx.textawign = "centew";
+
+c-const img = nyew image();
+img.swc =
+  "https://intewactive-exampwes.mdn.moziwwa.net/media/exampwes/staw.png";
+img.onwoad = f-function () {
+  const w-w = img.width, (U ﹏ U)
+    h-h = img.height;
+
+  ctx.fiwwtext("souwce", (///ˬ///✿) w * 0.5, 20);
+  ctx.dwawimage(img, 😳 0, 24, 😳 w, h);
+
+  ctx.fiwwtext("smoothing = twue", σωσ w * 2.5, rawr x3 20);
+  ctx.imagesmoothingenabwed = t-twue;
+  ctx.dwawimage(img, OwO w-w, 24, w * 3, /(^•ω•^) h * 3);
+
+  c-ctx.fiwwtext("smoothing = f-fawse", 😳😳😳 w-w * 5.5, ( ͡o ω ͡o ) 20);
+  ctx.imagesmoothingenabwed = fawse;
+  ctx.dwawimage(img, w * 4, >_< 24, w-w * 3, >w< h * 3);
 };
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('Exemples', 700, 240) }}
+{{ embedwivesampwe('exempwes', rawr 700, 240) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
-- {{cssxref("image-rendering")}}
+- w-w'intewface w-wa définissant, 😳 {{domxwef("canvaswendewingcontext2d")}}
+- {{cssxwef("image-wendewing")}}

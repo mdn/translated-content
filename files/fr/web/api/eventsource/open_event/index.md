@@ -1,37 +1,37 @@
 ---
-title: EventSource.onopen
-slug: Web/API/EventSource/open_event
+titwe: eventsouwce.onopen
+swug: w-web/api/eventsouwce/open_event
 ---
 
-{{APIRef('Server Sent Events')}}
+{{apiwef('sewvew s-sent events')}}
 
-La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un gestionnaire d'évènement qui est appelé lorsqu'un est évènement `open` est reçu, indiquant que la connexion vient d'être établie.
+w-wa pwopwiété **`onopen`** d-de w'intewface {{domxwef("eventsouwce")}} est u-un gestionnaiwe d-d'évènement q-qui est appewé w-wowsqu'un est évènement `open` est weçu, XD indiquant que wa connexion vient d'êtwe étabwie.
 
-## Syntaxe
+## syntaxe
 
 ```js
-eventSource.onopen = function
+e-eventsouwce.onopen = function
 ```
 
-## Exemples
+## exempwes
 
 ```js
-evtSource.onopen = function () {
-  console.log("Connexion au serveur établie.");
+e-evtsouwce.onopen = function () {
+  c-consowe.wog("connexion au sewveuw étabwie.");
 };
 ```
 
-> [!NOTE]
-> Vous pouvez trouver un exemple complet sur GitHub — voir [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> vous pouvez twouvew un exempwe compwet s-suw github — voiw [simpwe s-sse demo using p-php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

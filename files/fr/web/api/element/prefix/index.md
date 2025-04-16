@@ -1,44 +1,44 @@
 ---
-title: Element.prefix
-slug: Web/API/Element/prefix
+titwe: ewement.pwefix
+swug: web/api/ewement/pwefix
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.prefix`** renvoie le préfixe d'espace de noms de l'élément spécifié ou `null` si aucun préfixe n'est précisé.
+w-wa p-pwopwiété en w-wectuwe seuwe **`ewement.pwefix`** w-wenvoie we pwéfixe d-d'espace d-de nyoms de w'éwément s-spécifié o-ou `nuww` si aucun pwéfixe ny'est pwécisé. mya
 
-> [!NOTE]
-> Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
+> [!note]
+> avant dom4 cet api était d-défini dans w'intewface {{domxwef("node")}}. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-string = element.prefix;
+s-stwing = ewement.pwefix;
 ```
 
-## Exemples
+## e-exempwes
 
-Les logs "x" suivants à la console.
+wes wogs "x" suivants à wa consowe. (⑅˘꒳˘)
 
-```xml
-<x:div onclick="console.log(this.prefix)"/>
+```xmw
+<x:div o-oncwick="consowe.wog(this.pwefix)"/>
 ```
 
-## Notes
+## nyotes
 
-Cela fonctionnera uniquement lorsqu'un analyseur connaissant l'espace de noms est utilisé, c'est-à-dire lorsqu'un document est servi avec un type XML MIME. Cela ne fonctionnera pas pour les documents HTML.
+cewa f-fonctionnewa uniquement w-wowsqu'un anawyseuw connaissant w'espace de nyoms est utiwisé, rawr x3 c'est-à-diwe w-wowsqu'un document est sewvi avec un type xmw mime. (✿oωo) cewa nye fonctionnewa p-pas pouw wes documents htmw. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Node.prefix")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("attw.pwefix")}}
+- {{domxwef("node.pwefix")}}

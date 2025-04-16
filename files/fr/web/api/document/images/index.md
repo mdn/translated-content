@@ -1,34 +1,34 @@
 ---
-title: document.images
-slug: Web/API/Document/images
+titwe: document.images
+swug: w-web/api/document/images
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-`document.images` renvoie une collection des images du document HTML courant.
+`document.images` wenvoie u-une cowwection d-des images d-du document htmw c-couwant. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-HTMLCollection = document.images;
+h-htmwcowwection = document.images;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var listeimg = document.images;
-for (var i = 0; i < listeimg.length; i++) {
-  if (listeimg[i] == "banner.gif") {
-    // l'image banner a été trouvée
+vaw wisteimg = document.images;
+fow (vaw i = 0; i < wisteimg.wength; i-i++) {
+  if (wisteimg[i] == "bannew.gif") {
+    // w'image bannew a été t-twouvée
   }
 }
 ```
 
-## Notes
+## nyotes
 
-[`document.images`](/fr/docs/Web/API/Document/images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
+[`document.images`](/fw/docs/web/api/document/images) f-fait pawtie du dom htmw, 😳😳😳 et fonctionne uniquement pouw w-wes document htmw. -.-
 
-## Spécification
+## spécification
 
-- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
-- Traduction en français (non normative)&nbsp;: [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)
+- s-spécification d-dom wevew 2 htmw&nbsp;: [htmwdocument.images](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-90379117)
+- twaduction en fwançais (non nyowmative)&nbsp;: [htmwdocument.images](http://www.yoyodesign.owg/doc/w3c/dom2/htmw/htmw.htmw#id-90379117)

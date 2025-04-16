@@ -1,126 +1,126 @@
 ---
-title: Cache
-slug: Web/API/Cache
+titwe: cache
+swug: web/api/cache
 ---
 
-{{APIRef("Service Workers API")}} {{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}} {{seecompattabwe}}
 
-L'interface `Cache` fournit un mécanisme de stockage pour les paires d'objets [`Request`](http://fetch.spec.whatwg.org/#request)/[`Response`](http://fetch.spec.whatwg.org/#response) qui sont mises en cache, par exemple dans le cadre du cycle de vie {{domxref("ServiceWorker")}}. Il est à noter que l'interface `Cache` est exposée à des portées fenêtrées ainsi qu'à des service workers. Vous n'êtes pas obligé de l'utiliser avec des services workers, même si elle est définie dans la spécification relative aux services workers.
+w'intewface `cache` f-fouwnit un mécanisme d-de stockage p-pouw wes paiwes d-d'objets [`wequest`](http://fetch.spec.naniwg.owg/#wequest)/[`wesponse`](http://fetch.spec.naniwg.owg/#wesponse) q-qui sont mises e-en cache, (ꈍᴗꈍ) paw exempwe dans we cadwe du cycwe de vie {{domxwef("sewvicewowkew")}}. 🥺 iw est à n-nyotew que w'intewface `cache` est exposée à des powtées fenêtwées a-ainsi qu'à des sewvice w-wowkews. vous ny'êtes pas obwigé de w'utiwisew avec des sewvices w-wowkews, (✿oωo) même si ewwe est définie d-dans wa s-spécification wewative aux sewvices wowkews. (U ﹏ U)
 
-Une origine peut avoir plusieurs objets nommés `Cache`. Vous êtes responsable de l'implémentation de la manière dont votre script (par exemple dans un {{domxref("ServiceWorker")}}) gère les mises à jour du cache. Les éléments d'un cache ne sont pas mis à jour, sauf demande explicite ; ils n'expirent pas, sauf s'ils sont supprimés. Utilisez {{domxref("CacheStorage.open", "CacheStorage.open()")}} pour ouvrir un objet `Cache` spécifique et appelez ensuite l'une des méthodes `Cache` pour maintenir le `Cache`.
+une owigine peut avoiw pwusieuws o-objets nyommés `cache`. :3 vous êtes wesponsabwe de w'impwémentation de wa manièwe d-dont votwe scwipt (paw exempwe d-dans un {{domxwef("sewvicewowkew")}}) g-gèwe wes m-mises à jouw d-du cache. ^^;; wes éwéments d'un cache nye sont pas m-mis à jouw, rawr sauf demande expwicite ; iws ny'expiwent p-pas, 😳😳😳 sauf s'iws sont suppwimés. (✿oωo) utiwisez {{domxwef("cachestowage.open", OwO "cachestowage.open()")}} pouw ouvwiw un objet `cache` spécifique e-et appewez ensuite w'une des m-méthodes `cache` p-pouw mainteniw w-we `cache`. ʘwʘ
 
-Vous êtes également responsable de la purge périodique des entrées du cache. Chaque navigateur a une limite stricte sur la quantité de mémoire cache qu'une origine donnée peut utiliser. Les estimations de l'utilisation du quota de cache sont disponibles via le lien {{domxref("StorageEstimate")}} API. Le navigateur fait de son mieux pour gérer l'espace disque, mais il peut supprimer le stockage en cache d'une origine. Le navigateur supprime généralement toutes les données d'une origine ou aucune des données d'une origine. Veillez à nommer les caches et à n'utiliser les caches qu'à partir de la version du script sur laquelle ils peuvent fonctionner en toute sécurité. Pour plus d'informations, voir [Suppression des anciens caches](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#supprimer_les_anciens_caches).
+vous êtes égawement wesponsabwe de wa puwge péwiodique des entwées d-du cache. (ˆ ﻌ ˆ)♡ chaque n-nyavigateuw a une wimite stwicte s-suw wa quantité d-de mémoiwe cache qu'une o-owigine donnée peut utiwisew. (U ﹏ U) w-wes estimations de w'utiwisation du quota de cache s-sont disponibwes via we wien {{domxwef("stowageestimate")}} api. UwU w-we nyavigateuw fait de son mieux p-pouw géwew w-w'espace disque, XD mais iw peut suppwimew we stockage en cache d'une owigine. ʘwʘ we nyavigateuw suppwime généwawement t-toutes wes données d-d'une owigine ou aucune d-des données d'une o-owigine. rawr x3 veiwwez à n-nommew wes caches et à ny'utiwisew wes caches qu'à pawtiw d-de wa vewsion du scwipt suw waquewwe iws peuvent fonctionnew en toute sécuwité. ^^;; p-pouw pwus d'infowmations, ʘwʘ voiw [suppwession des anciens caches](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews#suppwimew_wes_anciens_caches). (U ﹏ U)
 
-> [!NOTE]
-> Les implémentations initiales du cache (dans Blink et Gecko) résolvent les engagements {{domxref("Cache.add()")}}, {{domxref("Cache.addAll()")}}, et {{domxref("Cache.put()")}} lorsque le corps de la réponse est entièrement écrit sur le stockage. Des versions plus récentes de la spécification précisent que le navigateur peut résoudre la promesse dès que l'entrée est enregistrée dans la base de données, même si le corps de réponse est encore en cours d'écriture.
+> [!note]
+> w-wes impwémentations i-initiawes du cache (dans b-bwink et gecko) wésowvent w-wes engagements {{domxwef("cache.add()")}}, (˘ω˘) {{domxwef("cache.addaww()")}}, (ꈍᴗꈍ) et {{domxwef("cache.put()")}} w-wowsque w-we cowps de w-wa wéponse est entièwement écwit suw we stockage. /(^•ω•^) d-des vewsions p-pwus wécentes d-de wa spécification p-pwécisent q-que we nyavigateuw peut wésoudwe wa pwomesse dès que w'entwée e-est enwegistwée dans wa base de données, >_< même si we cowps de wéponse est encowe en couws d-d'écwituwe. σωσ
 
-> [!NOTE]
-> L'algorithme des correspondances de clés est dépendant de la valeur de l'[en-tête VARY](https://www.fastly.com/blog/best-practices-using-vary-header). Ainsi, pour faire correspondre une nouvelle clé, il faut examiner à la fois la clé et la valeur des entrées dans le Cache.
+> [!note]
+> w'awgowithme des cowwespondances de cwés e-est dépendant d-de wa vaweuw d-de w'[en-tête vawy](https://www.fastwy.com/bwog/best-pwactices-using-vawy-headew). ^^;; ainsi, 😳 pouw f-faiwe cowwespondwe une nyouvewwe c-cwé, >_< iw faut examinew à w-wa fois wa cwé et wa vaweuw des entwées dans we cache. -.-
 
-> [!NOTE]
-> L'API de mise en cache n'honore pas les en-têtes de mise en cache HTTP.
+> [!note]
+> w'api de mise en cache ny'honowe p-pas wes en-têtes de mise en cache h-http. UwU
 
-## Méthodes
+## méthodes
 
-- {{domxref("Cache.match", "Cache.match(request, options)")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise" , "Promesse" )}} qui se résout en une réponse associée à la première requête correspondante dans l'objet {{domxref("Cache")}}.
-- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise" , "Promesse" )}} qui se résout en un tableau de toutes les requêtes correspondantes dans l'objet {{domxref("Cache")}}.
-- {{domxref("Cache.add", "Cache.add(request)")}} {{experimental_inline}}
-  - : Prend une URL, la récupère et ajoute l'objet réponse associé au cache donné. C'est une fonctionnalité équivalente à l'appel de fetch(), puis à l'utilisation de Cache.put() pour ajouter les résultats au cache.
-- {{domxref("Cache.addAll", "Cache.addAll(requests)")}} {{experimental_inline}}
-  - : Prend un tableau d'URLs, les récupère, et ajoute les objets réponses associés au cache donné.
-- {{domxref("Cache.put", "Cache.put(request, response)")}} {{experimental_inline}}
-  - : Prend à la fois une requête et sa réponse et l'ajoute au cache donné.
-- {{domxref("Cache.delete", "Cache.delete(request, options)")}} {{experimental_inline}}
-  - : Trouve l'entrée {{domxref("Cache")}} dont la clé est la requête, et le cas échéant, supprime l'entrée {{domxref("Cache")}} et retourne une {{jsxref("Promise" , "Promesse" )}} qui se résout à `true`. Si aucune entrée {{domxref("Cache")}} n'est trouvée, elle retourne `false`.
-- {{domxref("Cache.keys", "Cache.keys(request, options)")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise" , "Promesse" )}} qui se résout en un tableau clés {{domxref("Cache")}}.
+- {{domxwef("cache.match", :3 "cache.match(wequest, σωσ options)")}} {{expewimentaw_inwine}}
+  - : w-wetouwne une {{jsxwef("pwomise" , >w< "pwomesse" )}} q-qui se wésout en une wéponse associée à w-wa pwemièwe w-wequête cowwespondante dans w'objet {{domxwef("cache")}}. (ˆ ﻌ ˆ)♡
+- {{domxwef("cache.matchaww", ʘwʘ "cache.matchaww(wequest, :3 o-options)")}} {{expewimentaw_inwine}}
+  - : w-wetouwne une {{jsxwef("pwomise" , (˘ω˘) "pwomesse" )}} qui se wésout en un tabweau de toutes w-wes wequêtes c-cowwespondantes d-dans w'objet {{domxwef("cache")}}. 😳😳😳
+- {{domxwef("cache.add", rawr x3 "cache.add(wequest)")}} {{expewimentaw_inwine}}
+  - : pwend une uww, (✿oωo) w-wa wécupèwe e-et ajoute w'objet wéponse associé a-au cache donné. (ˆ ﻌ ˆ)♡ c'est une fonctionnawité équivawente à w'appew de fetch(), :3 puis à w'utiwisation d-de cache.put() p-pouw ajoutew wes wésuwtats au cache. (U ᵕ U❁)
+- {{domxwef("cache.addaww", ^^;; "cache.addaww(wequests)")}} {{expewimentaw_inwine}}
+  - : p-pwend un tabweau d-d'uwws, mya wes wécupèwe, 😳😳😳 et ajoute wes objets wéponses associés a-au cache donné. OwO
+- {{domxwef("cache.put", rawr "cache.put(wequest, XD wesponse)")}} {{expewimentaw_inwine}}
+  - : pwend à wa fois une wequête e-et sa wéponse et w'ajoute au cache donné. (U ﹏ U)
+- {{domxwef("cache.dewete", (˘ω˘) "cache.dewete(wequest, UwU options)")}} {{expewimentaw_inwine}}
+  - : t-twouve w-w'entwée {{domxwef("cache")}} dont wa cwé est wa wequête, >_< et we cas échéant, σωσ s-suppwime w'entwée {{domxwef("cache")}} e-et wetouwne une {{jsxwef("pwomise" , 🥺 "pwomesse" )}} qui se wésout à `twue`. 🥺 si aucune e-entwée {{domxwef("cache")}} ny'est twouvée, ʘwʘ e-ewwe wetouwne `fawse`. :3
+- {{domxwef("cache.keys", (U ﹏ U) "cache.keys(wequest, (U ﹏ U) options)")}} {{expewimentaw_inwine}}
+  - : wetouwne une {{jsxwef("pwomise" , ʘwʘ "pwomesse" )}} qui se wésout e-en un tabweau cwés {{domxwef("cache")}}.
 
-## Exemples
+## e-exempwes
 
-Cet extrait de code provient de [l'exemple de mise en cache sélective](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (voir [selective caching live](https://googlechrome.github.io/samples/service-worker/selective-caching/)) Le code utilise {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} pour ouvrir tous les objets {{domxref("Cache")}} avec un en-tête Content-Type qui débute par `font/`.
+cet extwait d-de code pwovient de [w'exempwe d-de mise en cache séwective](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/sewective-caching/sewvice-wowkew.js). >w< (voiw [sewective c-caching w-wive](https://googwechwome.github.io/sampwes/sewvice-wowkew/sewective-caching/)) w-we code utiwise {{domxwef("cachestowage.open", rawr x3 "cachestowage.open(cachename)")}} pouw ouvwiw t-tous wes objets {{domxwef("cache")}} a-avec un en-tête content-type qui débute p-paw `font/`. OwO
 
-Le code utilise alors {{domxref("Cache.match", "Cache.match(request, options)")}} pour voir s'il y a déjà une fonte correspondante dans le cache, et le cas échéant, la retourne. S'il n'y a pas de correspondance, le code récupère la fonte à partir du réseau et utilise {{domxref("Cache.put","Cache.put(request, response)")}} pour mettre en cache la ressource récupérée.
+w-we code utiwise a-awows {{domxwef("cache.match", ^•ﻌ•^ "cache.match(wequest, options)")}} pouw voiw s'iw y-y a déjà une fonte cowwespondante d-dans we cache, >_< e-et we cas échéant, OwO wa wetouwne. >_< s'iw n'y a pas de cowwespondance, (ꈍᴗꈍ) w-we code w-wécupèwe wa fonte à p-pawtiw du w-wéseau et utiwise {{domxwef("cache.put","cache.put(wequest, >w< wesponse)")}} pouw m-mettwe en cache wa wessouwce wécupéwée. (U ﹏ U)
 
-Le code gère les exceptions déclenchées par l'opération de {{domxref("Globalfetch.fetch","fetch()")}}. A noter qu'une réponse HTTP en erreur (e.g., 404) ne déclenchera pas une exception. Elle retournera un objet de réponse normal qui dispose du code d'erreur approprié.
+we code gèwe wes exceptions décwenchées paw w'opéwation d-de {{domxwef("gwobawfetch.fetch","fetch()")}}. ^^ a nyotew q-qu'une wéponse http en ewweuw (e.g., 404) n-ne décwenchewa pas u-une exception. (U ﹏ U) ewwe wetouwnewa u-un objet de wéponse n-nyowmaw qui d-dispose du code d-d'ewweuw appwopwié.
 
-Cet extrait de code illustre également une bonne pratique pour versionner les caches utilisés par le service worker. Bien qu'il y ait seulement un cache dans cet exemple, la même approche peut être utilisée pour des caches multiples. Il associe un identifiant court avec un nom de cache versionné et spécifique. Le code supprime aussi tous les caches qui ne sont pas nommés dans `CURRENT_CACHES`.
+c-cet extwait de code iwwustwe égawement une bonne pwatique pouw vewsionnew wes caches utiwisés paw we sewvice wowkew. :3 bien q-qu'iw y ait seuwement u-un cache d-dans cet exempwe, (✿oωo) wa même appwoche p-peut êtwe utiwisée pouw des caches muwtipwes. XD iw associe u-un identifiant c-couwt avec un nom de cache vewsionné e-et spécifique. we code suppwime aussi tous w-wes caches qui n-nye sont pas nyommés dans `cuwwent_caches`. >w<
 
-> [!NOTE]
-> In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
+> [!note]
+> i-in chwome, òωó v-visit chwome://inspect/#sewvice-wowkews and cwick on the "inspect" wink bewow the wegistewed s-sewvice wowkew t-to view wogging s-statements fow t-the vawious actions t-the [sewvice-wowkew.js](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/sewective-caching/sewvice-wowkew.js) scwipt is p-pewfowming. (ꈍᴗꈍ)
 
 ```js
-var CACHE_VERSION = 1;
+v-vaw cache_vewsion = 1;
 
-// Shorthand identifier mapped to specific versioned cache.
-var CURRENT_CACHES = {
-  font: "font-cache-v" + CACHE_VERSION,
+// showthand identifiew m-mapped to specific v-vewsioned cache. rawr x3
+vaw cuwwent_caches = {
+  f-font: "font-cache-v" + cache_vewsion, rawr x3
 };
 
-self.addEventListener("activate", function (event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
-    return CURRENT_CACHES[key];
+sewf.addeventwistenew("activate", σωσ f-function (event) {
+  vaw expectedcachenames = o-object.keys(cuwwent_caches).map(function (key) {
+    w-wetuwn cuwwent_caches[key];
   });
 
-  // Active worker won't be treated as activated until promise resolves successfully.
-  event.waitUntil(
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(
-        cacheNames.map(function (cacheName) {
-          if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log("Deleting out of date cache:", cacheName);
+  // active wowkew w-won't be tweated as activated untiw pwomise w-wesowves successfuwwy. (ꈍᴗꈍ)
+  e-event.waituntiw(
+    c-caches.keys().then(function (cachenames) {
+      wetuwn pwomise.aww(
+        cachenames.map(function (cachename) {
+          if (expectedcachenames.indexof(cachename) == -1) {
+            c-consowe.wog("deweting out of date cache:", rawr cachename);
 
-            return caches.delete(cacheName);
+            w-wetuwn caches.dewete(cachename);
           }
-        }),
+        }), ^^;;
       );
-    }),
+    }), rawr x3
   );
 });
 
-self.addEventListener("fetch", function (event) {
-  console.log("Handling fetch event for", event.request.url);
+s-sewf.addeventwistenew("fetch", (ˆ ﻌ ˆ)♡ function (event) {
+  c-consowe.wog("handwing fetch e-event fow", σωσ e-event.wequest.uww);
 
-  event.respondWith(
-    // Opens Cache objects that start with 'font'.
-    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
-      return cache
-        .match(event.request)
-        .then(function (response) {
-          if (response) {
-            console.log(" Found response in cache:", response);
+  event.wespondwith(
+    // opens cache objects t-that stawt with 'font'. (U ﹏ U)
+    caches.open(cuwwent_caches["font"]).then(function (cache) {
+      w-wetuwn cache
+        .match(event.wequest)
+        .then(function (wesponse) {
+          i-if (wesponse) {
+            consowe.wog(" f-found wesponse in cache:", >w< w-wesponse);
 
-            return response;
+            w-wetuwn w-wesponse;
           }
         })
-        .catch(function (error) {
-          // Handles exceptions that arise from match() or fetch().
-          console.error("  Error in fetch handler:", error);
+        .catch(function (ewwow) {
+          // handwes exceptions that awise fwom match() ow fetch(). σωσ
+          consowe.ewwow("  ewwow in fetch handwew:", nyaa~~ ewwow);
 
-          throw error;
+          thwow ewwow;
         });
-    }),
+    }), 🥺
   );
 });
 ```
 
-### Storing cookies in Caches
+### stowing cookies in caches
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de [`fetch()`](/fr/docs/Web/API/Window/fetch). Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
+w'[api fetch](/fw/docs/web/api/fetch_api) exige que wes en-têtes {{httpheadew("set-cookie")}} s-soient s-suppwimés avant de wenvoyew un objet {{domxwef("wesponse")}} à p-pawtiw de [`fetch()`](/fw/docs/web/api/window/fetch). rawr x3 a-ainsi, σωσ u-une wéponse stockée dans un cache n-nye contiendwa pas d'en-têtes. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Code d'exemple basique de Service workers](https://github.com/mdn/sw-test)
-- [Le ServiceWorker est prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise" , "Promesse" )}}
-- [Utilisation des Web Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisew wes sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [code d-d'exempwe basique de sewvice wowkews](https://github.com/mdn/sw-test)
+- [we sewvicewowkew e-est pwêt ?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise" , (U ﹏ U) "pwomesse" )}}
+- [utiwisation d-des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

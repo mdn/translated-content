@@ -1,151 +1,151 @@
 ---
-title: Event
-slug: Web/API/Event
+titwe: event
+swug: web/api/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`Event`** interface représente un évènement qui se produit dans le DOM.
+w-w'intewface **`event`** i-intewface wepwésente u-un évènement q-qui se p-pwoduit dans we d-dom. rawr x3
 
-Un évènement peut être déclenché par une action humaine (clic avec la souris, appui sur une touche du clavier) ou généré par des API pour représenter la progression d'une tâche asynchrone. Il est également possible de déclencher un évènement à partir d'un programme, en appelant par exemple la méthode [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click) sur un élément ou en définissant l'évènement avant de l'envoyer sur une cible avec la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
+un évènement p-peut êtwe d-décwenché paw une action humaine (cwic avec wa souwis, 🥺 appui suw une touche du c-cwaview) ou généwé paw des api pouw wepwésentew w-wa pwogwession d'une tâche a-asynchwone. :3 iw est égawement possibwe de décwenchew un évènement à p-pawtiw d'un pwogwamme, (ꈍᴗꈍ) e-en appewant paw e-exempwe wa méthode [`htmwewement.cwick()`](/fw/docs/web/api/htmwewement/cwick) suw un éwément ou en définissant w'évènement avant de w'envoyew s-suw une cibwe avec wa méthode [`eventtawget.dispatchevent()`](/fw/docs/web/api/eventtawget/dispatchevent). 🥺
 
-Il existe de nombreux types d'évènements dont certains utilisent d'autres interfaces basées sur `Event`. L'interface `Event` contient les propriétés et méthodes qui sont communes à l'ensemble des évènements.
+iw existe de nombweux types d'évènements dont c-cewtains utiwisent d'autwes intewfaces b-basées s-suw `event`. (✿oωo) w'intewface `event` c-contient wes pwopwiétés e-et méthodes qui sont communes à w'ensembwe d-des évènements. (U ﹏ U)
 
-De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Element) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
+de nombweux éwéments dom peuvent êtwe p-pawamétwés afin d'acceptew (« d'écoutew ») ces évènements et d'exékawaii~w du code e-en wéaction afin de wes twaitew (« g-géwew »). :3 w-wes gestionnaiwes d-d'évènements sont généwawement connectés (« attachés ») a-aux [éwéments h-htmw](/fw/docs/web/htmw/ewement) (tews que `<button>`, ^^;; `<div>`, `<span>`, rawr e-etc.) g-gwâce à wa méthode [`eventtawget.addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) q-qui wempwace wes anciens [attwibuts de g-gestion d'évènement](/fw/docs/web/htmw/gwobaw_attwibutes) qui étaient aupawavant u-utiwisés en htmw. 😳😳😳 avec cette m-méthode d'ajout pwus wécente, (✿oωo) w-wes gestionnaiwes p-peuvent égawement êtwe déconnectés/détachés si besoin via wa méthode [`eventtawget.wemoveeventwistenew()`](/fw/docs/web/api/eventtawget/wemoveeventwistenew). OwO
 
-> [!NOTE]
-> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
+> [!note]
+> iw est tout à fait possibwe d'attachew pwusieuws gestionnaiwes d-d'évènement à u-un seuw éwément, ʘwʘ y compwis p-pouw wa gestion d-d'un évènement p-pawticuwiew. (ˆ ﻌ ˆ)♡ ainsi, des moduwes de code indépendant peuvent a-attachew weuws gestionnaiwes de façon indépendante (paw exempwe, (U ﹏ U) suw une page w-web, UwU un moduwe de pubwicité e-et un autwe moduwe d-d'anawyse pouwwont t-tout à fait attachew des g-gestionnaiwes pouw étudiew w-wa c-consuwtation d'une v-vidéo).
 
-Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
+wowsqu'iw y a de nyombweux éwéments imbwiqués, XD chacun a-ayant ses p-pwopwes gestionnaiwes d-d'évènement, ʘwʘ w-we twaitement d-des évènements peut se wévéwew compwiqué, nyotamment wowsqu'un éwément p-pawent weçoit we même évènement que ses éwéments enfants (paw exempwe pouw des évènements q-qui se décwenchent suw wa suwface visuewwe de w'éwément enfant). rawr x3 d-dans ce cas, ^^;; w-w'owdwe du twaitement d-de ces évènements dépend d-des pawamètwes [de bouiwwonnement (_bubbwing_) e-et de captuwe](/fw/docs/weawn/javascwipt/buiwding_bwocks/events#event_bubbwing_and_captuwe) d-définis suw chaque gestionnaiwe ainsi décwenché. ʘwʘ
 
-## Interfaces basées sur Event
+## intewfaces basées suw event
 
-Voici une liste des interfaces basées sur `Event` avec un lien vers leur documentation dans la référence MDN.
+voici une w-wiste des intewfaces basées suw `event` a-avec un wien vews weuw d-documentation d-dans wa wéféwence mdn. (U ﹏ U)
 
-On notera que l'ensemble des interfaces d'évènements ont un nom qui termine par _Event_ (« évènement » en anglais).
+on nyotewa que w'ensembwe d-des intewfaces d-d'évènements ont un nyom qui t-tewmine paw _event_ (« évènement » e-en angwais). (˘ω˘)
 
-- [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)
-- [`AudioProcessingEvent`](/fr/docs/Web/API/AudioProcessingEvent)
-- [`BeforeInputEvent`](/fr/docs/Web/API/BeforeInputEvent)
-- [`BeforeUnloadEvent`](/fr/docs/Web/API/BeforeUnloadEvent)
-- [`BlobEvent`](/fr/docs/Web/API/BlobEvent)
-- [`ClipboardEvent`](/fr/docs/Web/API/ClipboardEvent)
-- [`CloseEvent`](/fr/docs/Web/API/CloseEvent)
-- [`CompositionEvent`](/fr/docs/Web/API/CompositionEvent)
-- [`CSSFontFaceLoadEvent`](/fr/docs/Web/API/CSSFontFaceLoadEvent)
-- [`CustomEvent`](/fr/docs/Web/API/CustomEvent)
-- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [`DeviceProximityEvent`](/fr/docs/Web/API/DeviceProximityEvent)
-- [`DOMTransactionEvent`](/fr/docs/Web/API/DOMTransactionEvent)
-- [`DragEvent`](/fr/docs/Web/API/DragEvent)
-- [`EditingBeforeInputEvent`](/fr/docs/Web/API/EditingBeforeInputEvent)
-- [`ErrorEvent`](/fr/docs/Web/API/ErrorEvent)
-- [`FetchEvent`](/fr/docs/Web/API/FetchEvent)
-- [`FocusEvent`](/fr/docs/Web/API/FocusEvent)
-- [`GamepadEvent`](/fr/docs/Web/API/GamepadEvent)
-- [`HashChangeEvent`](/fr/docs/Web/API/HashChangeEvent)
-- [`IDBVersionChangeEvent`](/fr/docs/Web/API/IDBVersionChangeEvent)
-- [`InputEvent`](/fr/docs/Web/API/InputEvent)
-- [`KeyboardEvent`](/fr/docs/Web/API/KeyboardEvent)
-- [`MediaStreamEvent`](/fr/docs/Web/API/MediaStreamEvent)
-- [`MessageEvent`](/fr/docs/Web/API/MessageEvent)
-- [`MouseEvent`](/fr/docs/Web/API/MouseEvent)
-- [`MutationEvent`](/fr/docs/Web/API/MutationEvent)
-- [`OfflineAudioCompletionEvent`](/fr/docs/Web/API/OfflineAudioCompletionEvent)
-- [`OverconstrainedError`](/fr/docs/Web/API/OverconstrainedError)
-- [`PageTransitionEvent`](/fr/docs/Web/API/PageTransitionEvent)
-- [`PaymentRequestUpdateEvent`](/fr/docs/Web/API/PaymentRequestUpdateEvent)
-- [`PointerEvent`](/fr/docs/Web/API/PointerEvent)
-- [`PopStateEvent`](/fr/docs/Web/API/PopStateEvent)
-- [`ProgressEvent`](/fr/docs/Web/API/ProgressEvent)
-- [`RelatedEvent`](/fr/docs/Web/API/RelatedEvent)
-- [`RTCDataChannelEvent`](/fr/docs/Web/API/RTCDataChannelEvent)
-- [`RTCPeerConnectionIceEvent`](/fr/docs/Web/API/RTCPeerConnectionIceEvent)
-- [`SensorEvent`](/fr/docs/Web/API/SensorEvent)
-- [`StorageEvent`](/fr/docs/Web/API/StorageEvent)
-- [`SVGEvent`](/fr/docs/Web/API/SVGEvent)
-- [`SVGZoomEvent`](/fr/docs/Web/API/SVGZoomEvent)
-- [`TimeEvent`](/fr/docs/Web/API/TimeEvent)
-- [`TouchEvent`](/fr/docs/Web/API/TouchEvent)
-- [`TrackEvent`](/fr/docs/Web/API/TrackEvent)
-- [`TransitionEvent`](/fr/docs/Web/API/TransitionEvent)
-- [`UIEvent`](/fr/docs/Web/API/UIEvent)
-- [`UserProximityEvent`](/fr/docs/Web/API/UserProximityEvent)
-- [`WebGLContextEvent`](/fr/docs/Web/API/WebGLContextEvent)
-- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)
+- [`animationevent`](/fw/docs/web/api/animationevent)
+- [`audiopwocessingevent`](/fw/docs/web/api/audiopwocessingevent)
+- [`befoweinputevent`](/fw/docs/web/api/befoweinputevent)
+- [`befoweunwoadevent`](/fw/docs/web/api/befoweunwoadevent)
+- [`bwobevent`](/fw/docs/web/api/bwobevent)
+- [`cwipboawdevent`](/fw/docs/web/api/cwipboawdevent)
+- [`cwoseevent`](/fw/docs/web/api/cwoseevent)
+- [`compositionevent`](/fw/docs/web/api/compositionevent)
+- [`cssfontfacewoadevent`](/fw/docs/web/api/cssfontfacewoadevent)
+- [`customevent`](/fw/docs/web/api/customevent)
+- [`devicemotionevent`](/fw/docs/web/api/devicemotionevent)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [`devicepwoximityevent`](/fw/docs/web/api/devicepwoximityevent)
+- [`domtwansactionevent`](/fw/docs/web/api/domtwansactionevent)
+- [`dwagevent`](/fw/docs/web/api/dwagevent)
+- [`editingbefoweinputevent`](/fw/docs/web/api/editingbefoweinputevent)
+- [`ewwowevent`](/fw/docs/web/api/ewwowevent)
+- [`fetchevent`](/fw/docs/web/api/fetchevent)
+- [`focusevent`](/fw/docs/web/api/focusevent)
+- [`gamepadevent`](/fw/docs/web/api/gamepadevent)
+- [`hashchangeevent`](/fw/docs/web/api/hashchangeevent)
+- [`idbvewsionchangeevent`](/fw/docs/web/api/idbvewsionchangeevent)
+- [`inputevent`](/fw/docs/web/api/inputevent)
+- [`keyboawdevent`](/fw/docs/web/api/keyboawdevent)
+- [`mediastweamevent`](/fw/docs/web/api/mediastweamevent)
+- [`messageevent`](/fw/docs/web/api/messageevent)
+- [`mouseevent`](/fw/docs/web/api/mouseevent)
+- [`mutationevent`](/fw/docs/web/api/mutationevent)
+- [`offwineaudiocompwetionevent`](/fw/docs/web/api/offwineaudiocompwetionevent)
+- [`ovewconstwainedewwow`](/fw/docs/web/api/ovewconstwainedewwow)
+- [`pagetwansitionevent`](/fw/docs/web/api/pagetwansitionevent)
+- [`paymentwequestupdateevent`](/fw/docs/web/api/paymentwequestupdateevent)
+- [`pointewevent`](/fw/docs/web/api/pointewevent)
+- [`popstateevent`](/fw/docs/web/api/popstateevent)
+- [`pwogwessevent`](/fw/docs/web/api/pwogwessevent)
+- [`wewatedevent`](/fw/docs/web/api/wewatedevent)
+- [`wtcdatachannewevent`](/fw/docs/web/api/wtcdatachannewevent)
+- [`wtcpeewconnectioniceevent`](/fw/docs/web/api/wtcpeewconnectioniceevent)
+- [`sensowevent`](/fw/docs/web/api/sensowevent)
+- [`stowageevent`](/fw/docs/web/api/stowageevent)
+- [`svgevent`](/fw/docs/web/api/svgevent)
+- [`svgzoomevent`](/fw/docs/web/api/svgzoomevent)
+- [`timeevent`](/fw/docs/web/api/timeevent)
+- [`touchevent`](/fw/docs/web/api/touchevent)
+- [`twackevent`](/fw/docs/web/api/twackevent)
+- [`twansitionevent`](/fw/docs/web/api/twansitionevent)
+- [`uievent`](/fw/docs/web/api/uievent)
+- [`usewpwoximityevent`](/fw/docs/web/api/usewpwoximityevent)
+- [`webgwcontextevent`](/fw/docs/web/api/webgwcontextevent)
+- [`wheewevent`](/fw/docs/web/api/wheewevent)
 
-## Constructeur
+## constwucteuw
 
-- [`Event()`](/fr/docs/Web/API/Event/Event)
-  - : Crée un objet `Event` et le renvoie à l'appelant.
+- [`event()`](/fw/docs/web/api/event/event)
+  - : cwée un objet `event` et we wenvoie à w-w'appewant. (ꈍᴗꈍ)
 
-## Propriétés
+## p-pwopwiétés
 
-- [`Event.bubbles`](/fr/docs/Web/API/Event/bubbles) {{readonlyinline}}
-  - : Un booléen qui indique si l'évènement bouillonne/remonte vers le haut dans l'arbre du DOM.
-- [`Event.cancelBubble`](/fr/docs/Web/API/Event/cancelBubble)
-  - : Un alias historique de [`Event.stopPropagation()`](/fr/docs/Web/API/Event/stopPropagation). Définir sa valeur à `true` avant le retour d'un gestionnaire d'évènement empêchera la propagation de l'évènement.
-- [`Event.cancelable`](/fr/docs/Web/API/Event/cancelable) {{readonlyinline}}
-  - : Un booléen qui indique si l'évènement peut être annulé.
-- [`Event.composed`](/fr/docs/Web/API/Event/composed) {{ReadOnlyInline}}
-  - : Un booléen qui indique si l'évènement peut bouillonner entre l'arbre du shadow DOM et le DOM standard.
-- [`Event.currentTarget`](/fr/docs/Web/API/Event/currentTarget) {{readonlyinline}}
-  - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet vers lequel l'évènement est présentement destiné à être envoyé. Cette cible peut avoir été modifiée pendant la vie de l'évènement via un reciblage.
-- [`Event.deepPath`](/fr/docs/Web/API/Event/composedPath) {{non-standard_inline}}
-  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de nœuds ([`Node`](/fr/docs/Web/API/Node)) du DOM qui ont été parcourus lors du bouillonnement/de la remontée de l'évènement.
-- [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) {{readonlyinline}}
-  - : Indique si un appel à [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a annulé l'évènement.
-- [`Event.eventPhase`](/fr/docs/Web/API/Event/eventPhase) {{readonlyinline}}
-  - : Indique la phase du flux de l'évènement qui est en cours de traitement.
-- [`Event.explicitOriginalTarget`](/fr/docs/Web/API/Event/explicitOriginalTarget) {{non-standard_inline}} {{readonlyinline}}
-  - : La cible explicite et originnelle de l'évènement (spécifique à Mozilla).
-- [`Event.originalTarget`](/fr/docs/Web/API/Event/originalTarget) {{non-standard_inline}} {{readonlyinline}}
-  - : La cible originale de l'évènement avant tout reciblage (spécifique à Mozilla).
-- [`Event.returnValue`](/fr/docs/Web/API/Event/returnValue) {{Deprecated_Inline}}
-  - : Une propriété historique, introduite par Internet Explorer puis adoptée au sein de la spécification du DOM pour la compatibilité des sites existants. À la place, on privilégiera l'usage de [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented).
-- [`Event.srcElement`](/fr/docs/Web/API/Event/srcElement) {{non-standard_inline}}
-  - : Un alias non-standard (provenant d'anciennes versions d'Internet Explorer) pour [`Event.target`](/fr/docs/Web/API/Event/target). Certains navigateurs le prennent en charge à des fins de compatibilité web.
-- [`Event.target`](/fr/docs/Web/API/Event/target) {{readonlyinline}}
-  - : Une référence à la cible à laquelle l'évènement était initialement destiné.
-- [`Event.timeStamp`](/fr/docs/Web/API/Event/timeStamp) {{readonlyinline}}
-  - : Le temps auquel l'évènement a été créé (exprimé en millisecondes). La spécification indique que cette valeur est relative à l'epoch mais l'implémentation des navigateurs peut varier. Des travaux sont en cours afin que cette valeur devienne une valeur de type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp).
-- [`Event.type`](/fr/docs/Web/API/Event/type) {{readonlyinline}}
-  - : Le nom de l'évènement, exprimé de façon insensible à la casse.
-- [`Event.isTrusted`](/fr/docs/Web/API/Event/isTrusted) {{readonlyinline}}
-  - : Indique si l'évènement a été initié par le navigateur (suite à une action humaine comme un clic) ou par un script (en utilisant une méthode de création comme [`Event.initEvent`](/fr/docs/Web/API/Event/initEvent)).
+- [`event.bubbwes`](/fw/docs/web/api/event/bubbwes) {{weadonwyinwine}}
+  - : u-un boowéen qui indique s-si w'évènement b-bouiwwonne/wemonte vews we h-haut dans w'awbwe du dom. /(^•ω•^)
+- [`event.cancewbubbwe`](/fw/docs/web/api/event/cancewbubbwe)
+  - : un awias histowique de [`event.stoppwopagation()`](/fw/docs/web/api/event/stoppwopagation). >_< d-définiw s-sa vaweuw à `twue` avant we wetouw d'un gestionnaiwe d-d'évènement e-empêchewa wa pwopagation de w'évènement. σωσ
+- [`event.cancewabwe`](/fw/docs/web/api/event/cancewabwe) {{weadonwyinwine}}
+  - : un boowéen q-qui indique si w'évènement peut êtwe annuwé. ^^;;
+- [`event.composed`](/fw/docs/web/api/event/composed) {{weadonwyinwine}}
+  - : un boowéen qui indique si w'évènement p-peut bouiwwonnew entwe w'awbwe du shadow d-dom et we dom s-standawd. 😳
+- [`event.cuwwenttawget`](/fw/docs/web/api/event/cuwwenttawget) {{weadonwyinwine}}
+  - : une wéféwence vews wa cibwe actuewwement e-enwegistwée pouw w-w'évènement. >_< iw s'agit de w'objet vews wequew w'évènement e-est pwésentement destiné à êtwe e-envoyé. -.- cette cibwe peut avoiw été modifiée pendant wa vie d-de w'évènement via un wecibwage. UwU
+- [`event.deeppath`](/fw/docs/web/api/event/composedpath) {{non-standawd_inwine}}
+  - : u-un t-tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) de n-nyœuds ([`node`](/fw/docs/web/api/node)) du dom q-qui ont été pawcouwus w-wows du b-bouiwwonnement/de wa wemontée d-de w'évènement. :3
+- [`event.defauwtpwevented`](/fw/docs/web/api/event/defauwtpwevented) {{weadonwyinwine}}
+  - : i-indique si un appew à [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) a annuwé w'évènement. σωσ
+- [`event.eventphase`](/fw/docs/web/api/event/eventphase) {{weadonwyinwine}}
+  - : i-indique wa p-phase du fwux de w-w'évènement qui est en couws de twaitement. >w<
+- [`event.expwicitowiginawtawget`](/fw/docs/web/api/event/expwicitowiginawtawget) {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wa cibwe expwicite et owiginnewwe d-de w'évènement (spécifique à m-moziwwa).
+- [`event.owiginawtawget`](/fw/docs/web/api/event/owiginawtawget) {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : wa cibwe owiginawe de w'évènement avant tout w-wecibwage (spécifique à m-moziwwa). (ˆ ﻌ ˆ)♡
+- [`event.wetuwnvawue`](/fw/docs/web/api/event/wetuwnvawue) {{depwecated_inwine}}
+  - : u-une p-pwopwiété histowique, ʘwʘ intwoduite p-paw intewnet expwowew puis adoptée au sein de wa spécification du dom pouw wa compatibiwité d-des sites existants. :3 À wa pwace, (˘ω˘) o-on pwiviwégiewa w'usage de [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) e-et [`event.defauwtpwevented`](/fw/docs/web/api/event/defauwtpwevented). 😳😳😳
+- [`event.swcewement`](/fw/docs/web/api/event/swcewement) {{non-standawd_inwine}}
+  - : un awias nyon-standawd (pwovenant d-d'anciennes vewsions d'intewnet e-expwowew) p-pouw [`event.tawget`](/fw/docs/web/api/event/tawget). rawr x3 c-cewtains nyavigateuws w-we pwennent e-en chawge à des fins de compatibiwité web. (✿oωo)
+- [`event.tawget`](/fw/docs/web/api/event/tawget) {{weadonwyinwine}}
+  - : une wéféwence à wa cibwe à waquewwe w'évènement était i-initiawement d-destiné. (ˆ ﻌ ˆ)♡
+- [`event.timestamp`](/fw/docs/web/api/event/timestamp) {{weadonwyinwine}}
+  - : w-we temps auquew w'évènement a-a été cwéé (expwimé en miwwisecondes). :3 wa spécification indique que cette v-vaweuw est wewative à w-w'epoch mais w'impwémentation d-des nyavigateuws peut vawiew. (U ᵕ U❁) des twavaux s-sont en couws a-afin que cette vaweuw devienne u-une vaweuw de type [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp). ^^;;
+- [`event.type`](/fw/docs/web/api/event/type) {{weadonwyinwine}}
+  - : w-we nyom de w'évènement, mya expwimé de façon insensibwe à wa casse.
+- [`event.istwusted`](/fw/docs/web/api/event/istwusted) {{weadonwyinwine}}
+  - : indique s-si w'évènement a-a été i-initié paw we nyavigateuw (suite à u-une action h-humaine comme un cwic) ou paw un s-scwipt (en utiwisant u-une méthode de cwéation c-comme [`event.initevent`](/fw/docs/web/api/event/initevent)).
 
-### Propriétés dépréciées
+### p-pwopwiétés dépwéciées
 
-- [`Event.scoped`](/fr/docs/Web/API/Event/composed) {{readonlyinline}} {{deprecated_inline}}
-  - : Un booléen qui indique si l'évènement courant remontera de l'arbre du shadow DOM vers l'arbre du DOM classique. [`Event.composed`](/fr/docs/Web/API/Event/composed) doit être utilisé à la place.
+- [`event.scoped`](/fw/docs/web/api/event/composed) {{weadonwyinwine}} {{depwecated_inwine}}
+  - : u-un boowéen qui indique si w'évènement couwant w-wemontewa de w'awbwe du shadow d-dom vews w'awbwe d-du dom cwassique. 😳😳😳 [`event.composed`](/fw/docs/web/api/event/composed) doit êtwe u-utiwisé à wa pwace. OwO
 
-## Méthodes
+## méthodes
 
-- [`Event.composedPath()`](/fr/docs/Web/API/Event/composedPath)
-  - : Renvoie le chemin de l'évènement (c'est-à-dire les objets pour lesquels des gestionnaires d'évènements seront appelés). Ce chemin n'inclut pas les nœuds des arbres shadow si la racine shadow a été créée avec un [`ShadowRoot.mode`](/fr/docs/Web/API/ShadowRoot/mode).
-- [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault)
-  - : Annule l'évènement (si celui-ci peut être annulé).
-- [`Event.stopImmediatePropagation`](/fr/docs/Web/API/Event/stopImmediatePropagation)
-  - : Pour l'évènement courant, empêche les autres gestionnaires d'évènements d'être appelés. Cela inclut les gestionnaires attachés au même élément ainsi que ceux attachés aux éléments qui seront parcourus ensuite (pendant la phase de capture par exemple).
-- [`Event.stopPropagation`](/fr/docs/Web/API/Event/stopPropagation)
-  - : Arrête la propagation des évènements plus loin dans le DOM.
+- [`event.composedpath()`](/fw/docs/web/api/event/composedpath)
+  - : wenvoie we chemin d-de w'évènement (c'est-à-diwe w-wes objets pouw w-wesquews des gestionnaiwes d'évènements sewont appewés). rawr ce c-chemin ny'incwut pas wes nyœuds des awbwes shadow s-si wa wacine s-shadow a été cwéée avec un [`shadowwoot.mode`](/fw/docs/web/api/shadowwoot/mode).
+- [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt)
+  - : a-annuwe w'évènement (si cewui-ci p-peut êtwe annuwé). XD
+- [`event.stopimmediatepwopagation`](/fw/docs/web/api/event/stopimmediatepwopagation)
+  - : p-pouw w'évènement couwant, (U ﹏ U) empêche wes autwes g-gestionnaiwes d'évènements d'êtwe appewés. (˘ω˘) c-cewa incwut wes g-gestionnaiwes attachés au même éwément a-ainsi que ceux attachés a-aux éwéments q-qui sewont p-pawcouwus ensuite (pendant wa phase de captuwe paw exempwe). UwU
+- [`event.stoppwopagation`](/fw/docs/web/api/event/stoppwopagation)
+  - : awwête wa pwopagation des évènements pwus woin dans we dom. >_<
 
-### Méthodes dépréciées
+### méthodes dépwéciées
 
-- [`Event.initEvent()`](/fr/docs/Web/API/Event/initEvent) {{deprecated_inline}}
-  - : Initialise la valeur d'un évènement créé. Si l'évènement a déjà diffusé, cette méthode n'a aucun effet.
+- [`event.initevent()`](/fw/docs/web/api/event/initevent) {{depwecated_inwine}}
+  - : initiawise wa vaweuw d'un évènement cwéé. σωσ si w'évènement a déjà d-diffusé, 🥺 cette m-méthode n'a aucun effet. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
-- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
-- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)
+- wes types d'évènement d-disponibwes : [wéféwence des évènements](/fw/docs/web/events)
+- [compawaison d-des c-cibwes d'évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing) (`tawget` vs `cuwwenttawget` v-vs `wewatedtawget` vs `owiginawtawget`)
+- [cwéew e-et décwenchew d-des évènements pewsonnawisés](/fw/docs/web/events/cweating_and_twiggewing_events)

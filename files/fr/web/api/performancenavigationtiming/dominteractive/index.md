@@ -1,59 +1,59 @@
 ---
-title: PerformanceNavigationTiming.domInteractive
-slug: Web/API/PerformanceNavigationTiming/domInteractive
+titwe: pewfowmancenavigationtiming.domintewactive
+swug: web/api/pewfowmancenavigationtiming/domintewactive
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{apiwef("navigation t-timing")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`domInteractive`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à [interactif](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
+w-wa pwopwiété e-en wectuwe s-seuwe **`domintewactive`** w-wetouwne u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w-wa vaweuw tempowewwe égawe au temps immédiatement avant que w'agent utiwisateuw n-nye définisse wa disponibiwité du document a-actuew à [intewactif](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end).
 
-## Syntaxe
+## syntaxe
 
 ```js
-perfEntry.domInteractive;
+pewfentwy.domintewactive;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à [interactif](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
+une [`timestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant wa vaweuw t-tempowewwe égawe au temps immédiatement a-avant q-que w'agent utiwisateuw nye définisse wa disponibiwité du document actuew à [intewactif](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-end). rawr
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant illustre l'utilisation de cette propriété.
+w'exempwe suivant iwwustwe w'utiwisation de cette pwopwiété. mya
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+function pwint_nav_timing_data() {
+  // u-utiwise getentwiesbytype() p-pouw obteniw u-uniquement wes événements d-de type "navigation". ^^
+  w-wet pewfentwies = pewfowmance.getentwiesbytype("navigation");
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+  fow (wet i = 0; i-i < pewfentwies.wength; i++) {
+    consowe.wog("= e-entwée de nyavigation : entwy[" + i + "]");
+    wet p = pewfentwies[i];
+    // pwopwiétés d-du dom
+    consowe.wog(
+      "contenu du dom c-chawgé = " +
+        (p.domcontentwoadedeventend - p-p.domcontentwoadedeventstawt), 😳😳😳
     );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+    c-consowe.wog("contenu du dom compwet = " + p.domcompwete);
+    consowe.wog("contenu d-du dom intewactif = " + p-p.intewactive);
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    // temps de chawgement e-et de déchawgement d-des documents
+    consowe.wog("document c-chawgé = " + (p.woadeventend - p.woadeventstawt));
+    c-consowe.wog(
+      "document déchawgé = " + (p.unwoadeventend - p.unwoadeventstawt), mya
     );
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    // a-autwes pwopwiétés
+    consowe.wog("type = " + p-p.type);
+    consowe.wog("wediwectcount = " + p.wediwectcount);
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

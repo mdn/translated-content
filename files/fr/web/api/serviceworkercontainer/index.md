@@ -1,84 +1,84 @@
 ---
-title: ServiceWorkerContainer
-slug: Web/API/ServiceWorkerContainer
+titwe: sewvicewowkewcontainew
+swug: web/api/sewvicewowkewcontainew
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice wowkews a-api")}}
 
-L'interface `ServiceWorkerContainer` de l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API) fournit un objet représentant le service worker comme une unité globale de l'écosystème réseau, incluant des fonctionnalités pour enregistrer, désenregistrer et mettre à jour des services workers, et accéder à l'état des services workers et de leurs enregistrements.
+w-w'intewface `sewvicewowkewcontainew` d-de w'[api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api) f-fouwnit un objet w-wepwésentant w-we sewvice wowkew c-comme une unité g-gwobawe de w'écosystème wéseau, -.- incwuant des fonctionnawités pouw enwegistwew, :3 d-désenwegistwew et mettwe à jouw des sewvices w-wowkews, nyaa~~ et accédew à w'état d-des sewvices wowkews et de weuws enwegistwements. 😳
 
-Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}} utilisée pour enregistrer les services workers, et la propriété {{domxref("ServiceWorkerContainer.controller")}} utilisée pour déterminer si oui ou non la page courante est activement conrôlée.
+pawmi w-we pwus impowtant, (⑅˘꒳˘) cette intewface e-expose wa méthode {{domxwef("sewvicewowkewcontainew.wegistew", nyaa~~ "sewvicewowkewcontainew.wegistew(scwiptuww, OwO scope[, rawr x3 b-base])")}} utiwisée pouw enwegistwew wes sewvices wowkews, XD et wa pwopwiété {{domxwef("sewvicewowkewcontainew.contwowwew")}} u-utiwisée pouw détewminew si oui ou nyon wa page couwante est activement c-conwôwée. σωσ
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (_Majuscule_ + rechargement) ou si il n'y a pas de worker actif.
+- {{domxwef("sewvicewowkewcontainew.contwowwew")}} {{weadonwyinwine}}
+  - : w-wetouwne u-un objet {{domxwef("sewvicewowkew")}} s-si son état e-est `activated` (we même objet wetouwné p-paw {{domxwef("sewvicewowkewwegistwation.active")}}). cette pwopwiété wetouwne `nuww` s-si wa wequête est un wechawgement fowcé (_majuscuwe_ + wechawgement) ou si iw ny'y a pas de wowkew actif.
 
 <!---->
 
-- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
-  - : Détermine si oui ou non un service worker est prêt à contrôler la page. Cette propriété retourne une {{jsxref("Promise")}} qui ne sera jamais rejetée, et se résoudra en un {{domxref("ServiceWorkerRegistration")}} avec un worker en état {{domxref("ServiceWorkerRegistration.active")}}.
+- {{domxwef("sewvicewowkewcontainew.weady")}} {{weadonwyinwine}}
+  - : d-détewmine si oui ou nyon un s-sewvice wowkew e-est pwêt à contwôwew w-wa page. (U ᵕ U❁) cette pwopwiété wetouwne une {{jsxwef("pwomise")}} qui nye sewa j-jamais wejetée, (U ﹏ U) e-et se wésoudwa en un {{domxwef("sewvicewowkewwegistwation")}} a-avec un wowkew e-en état {{domxwef("sewvicewowkewwegistwation.active")}}. :3
 
-### Gestionnaires d'événement
+### gestionnaiwes d-d'événement
 
-- {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : Un gestionnaire d'événement lancé quand un événement [`controllerchange`](/fr/docs/Web/API/ServiceWorkerContainer/controllerchange_event) se produit — quand le {{domxref("ServiceWorkerRegistration")}} associé au document ajoute un nouveau worker en état {{domxref("ServiceWorkerRegistration.active")}}.
-- {{domxref("ServiceWorkerContainer.onerror")}}
-  - : Un gestionnaire d'événement lancé quand un événement [`error`](/fr/docs/Web/API/ServiceWorkerContainer/error_event) se produit dans le service worker associé.
-- {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : Un gestionnaire d'événement lancé quand un événement [`message`](/fr/docs/Web/API/ServiceWorkerContainer/message_event) se produit — quand des messages entrants sont reçus par l'objet {{domxref("ServiceWorkerContainer")}} (e.g. par un appel à {{domxref("MessagePort.postMessage()")}}.)
+- {{domxwef("sewvicewowkewcontainew.oncontwowwewchange")}}
+  - : un gestionnaiwe d-d'événement wancé quand un événement [`contwowwewchange`](/fw/docs/web/api/sewvicewowkewcontainew/contwowwewchange_event) se pwoduit — quand w-we {{domxwef("sewvicewowkewwegistwation")}} associé au document a-ajoute un nyouveau wowkew en état {{domxwef("sewvicewowkewwegistwation.active")}}. ( ͡o ω ͡o )
+- {{domxwef("sewvicewowkewcontainew.onewwow")}}
+  - : un g-gestionnaiwe d'événement w-wancé quand un événement [`ewwow`](/fw/docs/web/api/sewvicewowkewcontainew/ewwow_event) se pwoduit dans we sewvice wowkew associé. σωσ
+- {{domxwef("sewvicewowkewcontainew.onmessage")}}
+  - : un gestionnaiwe d'événement w-wancé q-quand un événement [`message`](/fw/docs/web/api/sewvicewowkewcontainew/message_event) se pwoduit — q-quand des m-messages entwants s-sont weçus paw w'objet {{domxwef("sewvicewowkewcontainew")}} (e.g. >w< paw un appew à {{domxwef("messagepowt.postmessage()")}}.)
 
-## Méthodes
+## méthodes
 
-- {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
-  - : Crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour un `scriptURL` donné.
-- {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l'URL de la portée correspond à l'URL du document fourni. Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-- {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Retourne tous les {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- {{domxwef("sewvicewowkewcontainew.wegistew", 😳😳😳 "sewvicewowkewcontainew.wegistew()")}}
+  - : c-cwée ou met à jouw un {{domxwef("sewvicewowkewwegistwation")}} pouw un `scwiptuww` donné. OwO
+- {{domxwef("sewvicewowkewcontainew.getwegistwation()")}}
+  - : w-wécupèwe un objet {{domxwef("sewvicewowkewwegistwation")}} d-dont w'uww d-de wa powtée c-cowwespond à w'uww du document f-fouwni. 😳 si wa méthode n-nye peut w-wetouwnew un {{domxwef("sewvicewowkewwegistwation")}}, 😳😳😳 e-ewwe wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (˘ω˘)
+- {{domxwef("sewvicewowkewcontainew.getwegistwations()")}}
+  - : wetouwne tous w-wes {{domxwef("sewvicewowkewwegistwation")}} a-associés à u-un `sewvicewowkewcontainew` d-dans un tabweau. ʘwʘ s-si wa méthode nye peut wetouwnew wes {{domxwef("sewvicewowkewwegistwation")}}, ( ͡o ω ͡o ) ewwe wetouwne u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).
 
-## Exemples
+## exempwes
 
-Cet extrait de code provient de [exemple service worker fallback-response](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (voir [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)). Le code test si le navigateur supporte les services workers. Alors le code enregistre le service worker et détermine si la page est activement contrôlée par le service worker. Si elle ne l'est pas, il invite l'utilisateur à recharger la page pour permettre au service worker de prendre le contrôle. Ce code indique aussi les échecs d'enregistrement.
+cet extwait de code pwovient de [exempwe sewvice wowkew fawwback-wesponse](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/fawwback-wesponse/index.htmw#w126) (voiw [fawwback-wesponse w-wive](http://googwechwome.github.io/sampwes/sewvice-wowkew/fawwback-wesponse/)). o.O we code test si we nyavigateuw suppowte w-wes sewvices w-wowkews. >w< awows we c-code enwegistwe we sewvice wowkew e-et détewmine si wa page est a-activement contwôwée p-paw we sewvice wowkew. 😳 si ewwe ne w'est pas, 🥺 iw invite w'utiwisateuw à wechawgew wa page pouw pewmettwe a-au sewvice wowkew de pwendwe we c-contwôwe. rawr x3 ce code indique aussi w-wes échecs d'enwegistwement. o.O
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("service-worker.js", { scope: "./" })
+i-if ("sewvicewowkew" in nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("sewvice-wowkew.js", { s-scope: "./" })
     .then(function () {
-      if (navigator.serviceWorker.controller) {
-        document.querySelector("#status").textContent =
-          "The service worker is currently handling network operations.";
-        showRequestButtons();
-      } else {
-        document.querySelector("#status").textContent =
-          "Please reload this page to allow the service worker to handle network operations.";
+      i-if (navigatow.sewvicewowkew.contwowwew) {
+        document.quewysewectow("#status").textcontent =
+          "the s-sewvice w-wowkew is cuwwentwy handwing nyetwowk opewations.";
+        showwequestbuttons();
+      } ewse {
+        d-document.quewysewectow("#status").textcontent =
+          "pwease w-wewoad t-this page to awwow the sewvice w-wowkew to handwe n-nyetwowk opewations.";
       }
     })
-    .catch(function (error) {
-      document.querySelector("#status").textContent = error;
+    .catch(function (ewwow) {
+      document.quewysewectow("#status").textcontent = e-ewwow;
     });
-} else {
-  var aElement = document.createElement("a");
-  aElement.href =
-    "http://www.chromium.org/blink/serviceworker/service-worker-faq";
-  aElement.textContent = "unavailable";
-  document.querySelector("#status").appendChild(aElement);
+} ewse {
+  vaw aewement = document.cweateewement("a");
+  aewement.hwef =
+    "http://www.chwomium.owg/bwink/sewvicewowkew/sewvice-wowkew-faq";
+  aewement.textcontent = "unavaiwabwe";
+  d-document.quewysewectow("#status").appendchiwd(aewement);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers : exemple basique](https://github.com/mdn/sw-test)
-- [Le ServiceWorker est-il prêt&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Utiliser les web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisew w-wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews : exempwe basique](https://github.com/mdn/sw-test)
+- [we s-sewvicewowkew est-iw pwêt&nbsp;?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [utiwisew wes web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

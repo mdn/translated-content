@@ -1,69 +1,69 @@
 ---
-title: PerformanceResourceTiming.workerStart
-slug: Web/API/PerformanceResourceTiming/workerStart
+titwe: pewfowmancewesouwcetiming.wowkewstawt
+swug: web/api/pewfowmancewesouwcetiming/wowkewstawt
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`workerStart`** de l'interface [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) renvoie un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant l'envoi du [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de _service worker_ est déjà en cours, ou immédiatement avant le démarrage du processus de _service worker_ s'il n'est pas déjà en cours. Si la ressource n'est pas interceptée par un _service worker_, la propriété renvoie toujours 0.
+wa pwopwiété e-en wectuwe s-seuwe **`wowkewstawt`** d-de w-w'intewface [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming) w-wenvoie un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant w'envoi du [`fetchevent`](/fw/docs/web/api/fetchevent) si un pwocessus de _sewvice wowkew_ e-est déjà en couws, >_< ou immédiatement avant we d-démawwage du pwocessus de _sewvice w-wowkew_ s'iw ny'est pas déjà en couws. -.- si wa wessouwce ny'est p-pas intewceptée paw un _sewvice w-wowkew_, 🥺 wa p-pwopwiété wenvoie toujouws 0. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.workerStart;
+wesouwce.wowkewstawt;
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant de transmettre le [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de _service worker_ est déjà en cours, ou immédiatement avant de lancer le processus de _service worker_ s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un _service worker_, la propriété retourne toujours 0.
+un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement avant de twansmettwe we [`fetchevent`](/fw/docs/web/api/fetchevent) s-si un pwocessus de _sewvice wowkew_ e-est déjà e-en couws, >w< ou immédiatement a-avant d-de wancew we pwocessus de _sewvice wowkew_ s'iw n-ny'est pas encowe en couws. mya si wa wessouwce ny'est p-pas intewceptée paw un _sewvice wowkew_, >w< wa pwopwiété wetouwne toujouws 0. nyaa~~
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+d-dans w'exempwe suivant, (✿oωo) wa vaweuw d-des pwopwiétés `*stawt` e-et `*end` d-de tous wes événements de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont enwegistwés. ʘwʘ
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+function pwint_pewfowmanceentwies() {
+  // u-utiwise g-getentwiesbytype() pouw obteniw u-uniquement wes événements "wesouwce"
+  w-wet p = pewfowmance.getentwiesbytype("wesouwce");
+  f-fow (wet i = 0; i < p-p.wength; i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // i-impwime wes howodatages d-des pwopwiétés *stawt et *end
+  p-pwopewties = [
+    "connectstawt", (ˆ ﻌ ˆ)♡
+    "connectend", 😳😳😳
+    "domainwookupstawt", :3
+    "domainwookupend", OwO
+    "fetchstawt", (U ﹏ U)
+    "wediwectstawt", >w<
+    "wediwectend", (U ﹏ U)
+    "wequeststawt", 😳
+    "wesponsestawt", (ˆ ﻌ ˆ)♡
+    "wesponseend", 😳😳😳
+    "secuweconnectionstawt", (U ﹏ U)
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  f-fow (wet i = 0; i < pwopewties.wength; i++) {
+    // véwifie chaque pwopwiété
+    wet suppowted = pwopewties[i] i-in pewfentwy;
+    i-if (suppowted) {
+      wet vawue = pewfentwy[pwopewties[i]];
+      c-consowe.wog("... " + p-pwopewties[i] + " = " + v-vawue);
+    } ewse {
+      consowe.wog("... " + pwopewties[i] + " = ny'est p-pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

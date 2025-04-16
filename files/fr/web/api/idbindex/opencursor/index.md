@@ -1,148 +1,148 @@
 ---
-title: IDBIndex.openCursor()
-slug: Web/API/IDBIndex/openCursor
+titwe: idbindex.opencuwsow()
+swug: web/api/idbindex/opencuwsow
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`openCursor()`** de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée [un curseur](/fr/docs/Web/API/IDBCursor) sur l'intervalle de clé fourni en argument.
+w-wa méthode **`opencuwsow()`** de w-w'intewface {{domxwef("idbindex")}} w-wenvoie un o-objet {{domxwef("idbwequest")}} e-et, nyaa~~ dans un _thwead_ s-sépawé, 😳 c-cwée [un cuwseuw](/fw/docs/web/api/idbcuwsow) suw w-w'intewvawwe de cwé fouwni en awgument. (⑅˘꒳˘)
 
-La méthode la positionne le curseur de façon approprié, selon la direction indiquée :
+wa méthode wa positionne we cuwseuw d-de façon appwopwié, nyaa~~ sewon wa diwection indiquée :
 
-- Si aucun intervalle de clé n'est spécifié ou qu'il vaut {{jsxref("null")}}, l'intervalle résultant contiendra l'ensemble des enregistrements
-- L'évènement `success` est toujours déclenché :
+- s-si aucun intewvawwe de c-cwé ny'est spécifié ou qu'iw vaut {{jsxwef("nuww")}}, w'intewvawwe w-wésuwtant contiendwa w'ensembwe d-des enwegistwements
+- w-w'évènement `success` est toujouws décwenché :
 
-  - Si un enregistrement est trouvé la propriété `result` de l'évènement contient le nouvel objet {{domxref("IDBCursor")}} et la valeur (`value`) de ce curseur est un clône de la valeur référencée
-  - Si aucun enregistrement n'est trouvé la propriété `result` de l'évènement vaudra `null`.
+  - si un enwegistwement est twouvé w-wa pwopwiété `wesuwt` de w'évènement contient we nyouvew objet {{domxwef("idbcuwsow")}} et wa vaweuw (`vawue`) d-de ce cuwseuw est un cwône d-de wa vaweuw w-wéféwencée
+  - s-si aucun enwegistwement n-ny'est twouvé wa pwopwiété `wesuwt` de w'évènement v-vaudwa `nuww`. OwO
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var request = myIndex.openCursor(keyRange, direction);
+vaw wequest = myindex.opencuwsow(keywange, rawr x3 d-diwection);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `keyRange` {{optional_inline}}
-  - : L'intervalle de clé ({{domxref("IDBKeyRange")}}) sur lequel se déplace le curseur. Si aucun argument n'est passé, la valeur par défaut sera un intervalle qui englobe tous les enregistrements du magasin d'objets.
-- `direction` {{optional_inline}}
-  - : La direction dans laquelle se déplace le curseur (la propriété `direction` de l'objet {{domxref("IDBCursor.direction")}}). La valeur par défaut est `"next"`.
+- `keywange` {{optionaw_inwine}}
+  - : w'intewvawwe de cwé ({{domxwef("idbkeywange")}}) suw wequew se dépwace we cuwseuw. XD si aucun a-awgument ny'est passé, σωσ wa vaweuw p-paw défaut sewa u-un intewvawwe q-qui engwobe tous wes enwegistwements du magasin d'objets.
+- `diwection` {{optionaw_inwine}}
+  - : w-wa diwection d-dans waquewwe se dépwace we cuwseuw (wa p-pwopwiété `diwection` d-de w'objet {{domxwef("idbcuwsow.diwection")}}). (U ᵕ U❁) wa vaweuw paw d-défaut est `"next"`. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel les évènements associés à l'opération seront déclenchés.
+un objet {{domxwef("idbwequest")}} suw wequew wes évènements a-associés à w'opéwation s-sewont décwenchés. :3
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher une {{domxref("DOMException")}} dont le type peut être l'un des suivant :
+cette m-méthode peut d-décwenchew une {{domxwef("domexception")}} dont we type peut êtwe w'un des suivant :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Type d'exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">type d'exception</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>TransactionInactiveError</td>
-      <td>La transaction pour cet index est inactive.</td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>La valeur du paramètre pour la direction est invalide.</td>
-    </tr>
-    <tr>
-      <td>DataError</td>
+    <tw>
+      <td>twansactioninactiveewwow</td>
+      <td>wa t-twansaction p-pouw cet index est inactive.</td>
+    </tw>
+    <tw>
+      <td><code>typeewwow</code></td>
+      <td>wa v-vaweuw d-du pawamètwe p-pouw wa diwection est invawide.</td>
+    </tw>
+    <tw>
+      <td>dataewwow</td>
       <td>
-        <p>La clé ou l'intervalle de clé fourni contient une clé invalide.</p>
+        <p>wa cwé ou w'intewvawwe d-de cwé fouwni contient une cwé invawide.</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>L'index a été supprimé ou déplacé.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
+      <td>w'index a été suppwimé ou dépwacé.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant, on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
+dans w'exempwe suivant, ( ͡o ω ͡o ) o-on ouvwe u-une twansaction p-puis un magasin d'objet et enfin w-w'index `wname`. σωσ
 
-Ensuite, on parcourt les enregistrements pour insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
+e-ensuite, on p-pawcouwt wes enwegistwements p-pouw inséwew wes données dans un t-tabweau htmw. >w< en u-utiwisant wa méthode {{domxwef("idbindex.opencuwsow")}} q-qui twavaiwwe d-de wa même f-façon que wa méthode {{domxwef("idbobjectstowe.opencuwsow")}} de w'{{domxwef("idbobjectstowe","accès")}} au magasin d'objet s-sauf que wes enwegistwements sont wenvoyés dans w'owdwe de w'index et nyon cewui du magasin d-d'objet. 😳😳😳
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
 
-  //ouvre un transaction
-  var transaction = db.transaction(["contactsList"], "readonly");
-  //accés au magasin d'objet
-  var objectStore = transaction.objectStore("contactsList");
+  //ouvwe un twansaction
+  v-vaw twansaction = d-db.twansaction(["contactswist"], OwO "weadonwy");
+  //accés a-au magasin d'objet
+  vaw objectstowe = t-twansaction.objectstowe("contactswist");
 
-  //on récupère l'index
-  var myIndex = objectStore.index("lName");
+  //on wécupèwe w-w'index
+  v-vaw myindex = objectstowe.index("wname");
 
-  //un curseur qui itère sur l'index
-  var request = myIndex.openCursor();
-  request.onsuccess = function (event) {
-    var cursor = request.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  //un cuwseuw qui itèwe suw w'index
+  vaw wequest = myindex.opencuwsow();
+  wequest.onsuccess = f-function (event) {
+    vaw cuwsow = w-wequest.wesuwt;
+    if (cuwsow) {
+      v-vaw tabwewow = d-document.cweateewement("tw");
+      tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        c-cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        c-cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Tous les enregistrements ont été affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      c-consowe.wog("tous w-wes enwegistwements ont été a-affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> p-pouw un exempwe fonctionnew compwet, 😳 v-voiw nyotwe [appwication to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes t-twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (˘ω˘)

@@ -1,71 +1,71 @@
 ---
-title: IDBFactory.cmp()
-slug: Web/API/IDBFactory/cmp
+titwe: idbfactowy.cmp()
+swug: w-web/api/idbfactowy/cmp
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux valeurs de clé et détermine si celles-ci sont égales et sinon, laquelle est la plus grande. Cette opération est utilisée pour l'enregistrement et le parcours des données.
+w-wa méthode **`cmp()`** d-de w-w'intewface {{domxwef("idbfactowy")}} c-compawe deux v-vaweuws de cwé e-et détewmine s-si cewwes-ci sont égawes et sinon, 😳 waquewwe est wa pwus gwande. 😳 cette opéwation e-est utiwisée pouw w'enwegistwement et we pawcouws d-des données. σωσ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Cette méthode ne doit pas être utilisée pour comparer des valeurs JavaScript. En effet, de nombreuses valeurs JavaScript ne sont pas des valeurs valides pour représenter des clés IndexedDB (les booléens et les objets par exemple), dans ces cas, elles peuvent être traitées comme des clés égales (ainsi IndexedDB ignore les tableaux ayant des propriétés non numériques et les considère comme des tableaux vides, de sorte que les éventuels tableaux non numériques seront considérés comme égaux). Une exception est levée si l'une des valeurs n'est pas une clé valide.
+> [!note]
+> cette m-méthode nye doit pas êtwe utiwisée pouw compawew des vaweuws j-javascwipt. rawr x3 en effet, de nyombweuses v-vaweuws javascwipt n-nye sont pas des vaweuws vawides pouw wepwésentew des cwés indexeddb (wes b-boowéens et wes objets paw exempwe), OwO dans ces cas, /(^•ω•^) ewwes peuvent êtwe twaitées c-comme des cwés égawes (ainsi i-indexeddb ignowe w-wes tabweaux a-ayant des pwopwiétés n-nyon nyuméwiques et wes considèwe comme d-des tabweaux vides, 😳😳😳 de sowte que wes éventuews t-tabweaux nyon nyuméwiques sewont considéwés comme égaux). ( ͡o ω ͡o ) une exception est wevée si w'une d-des vaweuws ny'est pas une cwé v-vawide. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var resultat = window.indexedDB.cmp(a, b);
+vaw w-wesuwtat = window.indexeddb.cmp(a, >w< b);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `a`
-  - : La première clé pour la comparaison.
+  - : wa pwemièwe c-cwé pouw w-wa compawaison. rawr
 - `b`
-  - : La deuxième clé pour la comparaison.
+  - : wa deuxième cwé p-pouw wa compawaison.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un entier qui indique le résultat de la comparaison. Le tableau ci-dessous indique les valeurs possibles et leur signification :
+un e-entiew qui indique we wésuwtat d-de wa compawaison. 😳 we tabweau ci-dessous indique w-wes vaweuws possibwes et weuw signification :
 
-| Valeur renvoyée | Description                            |
+| v-vaweuw wenvoyée | descwiption                            |
 | --------------- | -------------------------------------- |
-| -1              | La clé 1 est plus petite que la clé 2. |
-| 0               | Les deux clé sont égales.              |
-| 1               | La clé 1 est plus grande que la clé 2. |
+| -1              | wa c-cwé 1 est pwus p-petite que wa cwé 2. |
+| 0               | wes deux cwé sont égawes. >w<              |
+| 1               | wa cwé 1 est pwus gwande que wa cwé 2. (⑅˘꒳˘) |
 
-### Exceptions levées
+### e-exceptions w-wevées
 
-Cette méthode peut lever une exception {{domxref("DOMException")}} de type :
+cette méthode p-peut wevew une exception {{domxwef("domexception")}} d-de type :
 
-| Exception                                | Description                               |
+| e-exception                                | descwiption                               |
 | ---------------------------------------- | ----------------------------------------- |
-| [`DataError`](/fr/docs/Web/API/DOMError) | L'une des clés fournies n'est pas valide. |
+| [`dataewwow`](/fw/docs/web/api/domewwow) | w'une des cwés fouwnies ny'est pas v-vawide. OwO |
 
-## Exemples
+## exempwes
 
 ```js
-var a = 1;
-var b = 2;
-var result = window.indexedDB.cmp(a, b);
-console.log("Résultat de la comparaison : " + result);
+vaw a = 1;
+vaw b = 2;
+vaw wesuwt = window.indexeddb.cmp(a, b-b);
+consowe.wog("wésuwtat d-de wa compawaison : " + wesuwt);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew u-une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de w-wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (ꈍᴗꈍ)

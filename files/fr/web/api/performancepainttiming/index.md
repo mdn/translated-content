@@ -1,66 +1,66 @@
 ---
-title: PerformancePaintTiming
-slug: Web/API/PerformancePaintTiming
+titwe: pewfowmancepainttiming
+swug: web/api/pewfowmancepainttiming
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/PerformancePaintTiming) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.
+w-w'intewface **`pewfowmancepainttiming`** d-de w'api [paint t-timing a-api](/fw/docs/web/api/pewfowmancepainttiming) f-fouwnit des infowmations d-de temps s-suw wes opéwations de « peintuwe » (égawement appewées « wendew ») pendant wa constwuction d-de wa page web. (U ﹏ U) « paint » fait wéféwence à w-wa convewsion de w'awbwe de w-wendu en pixews à w'écwan. >w<
 
-Une application peut enregistrer un [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour le [type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) « `paint` » et l'observateur peut récupérer les heures auxquelles les événements de peinture se produisent. Utilisez ces informations pour aider à identifier les zones qui prennent trop de temps pour offrir une bonne expérience utilisateur.
+une appwication peut enwegistwew u-un [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) pouw we [type d'entwée d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) « `paint` » e-et w'obsewvateuw peut wécupéwew wes heuwes auxquewwes wes événements d-de peintuwe se pwoduisent. mya utiwisez ces infowmations pouw aidew à identifiew w-wes zones qui pwennent twop de t-temps pouw offwiw u-une bonne expéwience u-utiwisateuw. >w<
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-Cette interface n'a pas de propriétés mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes (pour [le type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry/entryType) « `paint` ») en qualifiant/contraignant les propriétés comme suit :
+cette intewface n'a pas de pwopwiétés m-mais ewwe étend wes pwopwiétés de [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) s-suivantes (pouw [we type d'entwée de pewfowmance](/fw/docs/web/api/pewfowmanceentwy/entwytype) « `paint` ») en quawifiant/contwaignant wes pwopwiétés comme s-suit :
 
-- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)
-  - : Retourne « `paint` ».
-- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name)
-  - : Retourne soit `"first-paint"` ou `"first-contentful-paint"`.
-- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime)
-  - : Retourne le [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) du moment où la peinture s'est produite.
-- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration)
-  - : Retourne « `0` ».
+- [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype)
+  - : wetouwne « `paint` ». nyaa~~
+- [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy/name)
+  - : w-wetouwne soit `"fiwst-paint"` o-ou `"fiwst-contentfuw-paint"`. (✿oωo)
+- [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime)
+  - : w-wetouwne we [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) du moment où wa peintuwe s'est pwoduite. ʘwʘ
+- [`pewfowmanceentwy.duwation`](/fw/docs/web/api/pewfowmanceentwy/duwation)
+  - : w-wetouwne « `0` ». (ˆ ﻌ ˆ)♡
 
-## Méthodes
+## m-méthodes
 
-Cette interface n'a pas de méthodes.
+cette intewface ny'a p-pas de méthodes. 😳😳😳
 
-## Exemple
+## e-exempwe
 
 ```js
-function showPaintTimings() {
-  if (window.performance) {
-    let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType("paint");
-    performanceEntries.forEach((performanceEntry, i, entries) => {
-      console.log(
-        "Le temps pour " +
-          performanceEntry.name +
+function s-showpainttimings() {
+  if (window.pewfowmance) {
+    w-wet pewfowmance = window.pewfowmance;
+    wet pewfowmanceentwies = p-pewfowmance.getentwiesbytype("paint");
+    pewfowmanceentwies.foweach((pewfowmanceentwy, :3 i-i, entwies) => {
+      consowe.wog(
+        "we t-temps pouw " +
+          p-pewfowmanceentwy.name +
           " est de " +
-          performanceEntry.startTime +
-          " millisecondes.",
+          pewfowmanceentwy.stawttime +
+          " miwwisecondes.", OwO
       );
     });
-  } else {
-    console.log("Performance Timing n'est pas prise en charge.");
+  } ewse {
+    consowe.wog("pewfowmance timing ny'est p-pas pwise en c-chawge.");
   }
 }
 ```
 
-Le code ci-dessus produit une sortie de console semblable à ce qui suit :
+we code ci-dessus p-pwoduit u-une sowtie de consowe s-sembwabwe à ce qui suit :
 
 ```
-Le temps pour first-paint est de 2785.915 millisecondes.
-Le temps pour first-contentful-paint est de 2787.460 millisecondes.
+we temps pouw fiwst-paint e-est de 2785.915 miwwisecondes. (U ﹏ U)
+we temps pouw fiwst-contentfuw-paint est de 2787.460 miwwisecondes. >w<
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

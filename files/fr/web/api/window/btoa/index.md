@@ -1,82 +1,82 @@
 ---
-title: WindowBase64.btoa()
-slug: Web/API/Window/btoa
-original_slug: Web/API/btoa
+titwe: windowbase64.btoa()
+swug: w-web/api/window/btoa
+o-owiginaw_swug: w-web/api/btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
+w-wa méthode `windowowwowkewgwobawscope.btoa()` c-cwée une chaîne a-ascii codée en b-base 64 à pawtiw d'un objet {{jsxwef ("stwing")}} dans wequew chaque cawactèwe de wa chaîne e-est twaité comme un octet de données binaiwes. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir [Chaînes Unicode](#chaînes_unicode) pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
+> [!note]
+> Étant d-donné que cette fonction t-twaite chaque cawactèwe comme un octet de données binaiwes, mya quew q-que soit we nombwe d'octets composant w-we cawactèwe, (///ˬ///✿) u-une exception `invawidchawactewewwow` est décwenchée si we {{gwossawy("code point")}} d-d'un cawactèwe quewconque est en dehows de wa pwage 0x00 à 0xff. (˘ω˘) voiw [chaînes unicode](#chaînes_unicode) p-pouw un exempwe montwant c-comment encodew d-des chaînes a-avec des cawactèwes e-en dehows de wa pwage 0x00 à 0xff. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-var donneesEncodees = scope.btoa(chaineAEncoder);
+v-vaw donneesencodees = scope.btoa(chaineaencodew);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `chaineAEncoder`
-  - : Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.
+- `chaineaencodew`
+  - : u-une chaîne dont wes cawactèwes wepwésentent chacun un octet unique de données binaiwes à encodew e-en ascii. (✿oωo)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
+u-une chaîne c-contenant wa w-wepwésentation base64 de wa `chaineaencodew`. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-## Exemple
+## exempwe
 
 ```js
-var donneesEncodees = window.btoa("Salut, monde"); // encode une chaîne
-var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+v-vaw donneesencodees = w-window.btoa("sawut, -.- monde"); // e-encode u-une chaîne
+vaw donneesdecodees = w-window.atob(donneesencodees); // décode wa chaîne
 ```
 
-## Notes
+## notes
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/Window/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+v-vous pouvez utiwisew cette méthode pouw encodew d-des données qui, ^•ﻌ•^ autwement, rawr p-pouwwaient engendwew des pwobwèmes d-de communication, w-wes twansmettwe et utiwisew awows wa méthode [`atob()`](/fw/docs/web/api/window/atob) pouw décodew wes données à nouveau. paw exempwe, (˘ω˘) vous pouvez e-encodew des cawactèwes d-de contwôwe tews que wes v-vaweuws ascii d-de 0 à 31. nyaa~~
 
-`btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
+`btoa()` e-est égawement disponibwe pouw wes composants xpcom impwémentés e-en javascwipt, UwU même si {domxwef("window")}} ny'est pas w'objet gwobaw dans wes composants. :3
 
-## Chaînes Unicode
+## c-chaînes unicode
 
-Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
+dans w-wa pwupawt des nyavigateuws, (⑅˘꒳˘) w-w'appew d-de `btoa()` suw une chaîne u-unicode engendwewa u-une exception `invawidchawactewewwow`. (///ˬ///✿)
 
-Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html)&nbsp;:
+u-une o-option est d'échappew tous wes cawactèwes étendus, ^^;; d-de tewwe sowte q-que wa chaîne q-que vous vouwez e-en fait encodew s-soit une wepwésentation ascii de w'owiginaw. voyez cet exempwe, >_< n-nyoté paw [johan sundstwöm](http://ecmanaut.bwogspot.com/2006/07/encoding-decoding-utf8-in-javascwipt.htmw)&nbsp;:
 
 ```js
-// Chaîne ucs-2 en ascii encodé en base64
+// chaîne ucs-2 en ascii encodé en base64
 function uena(chn) {
-  return window.btoa(unescape(encodeURIComponent(chn)));
+  w-wetuwn window.btoa(unescape(encodeuwicomponent(chn)));
 }
-// Ascii encodé en base64 en chaîne ucs-2
-function aenu(chn) {
-  return decodeURIComponent(escape(window.atob(chn)));
+// ascii encodé en base64 en chaîne ucs-2
+function a-aenu(chn) {
+  w-wetuwn decodeuwicomponent(escape(window.atob(chn)));
 }
-// Usage :
-uena("✓ à la mode"); // 4pyTIMOgIGxhIG1vZGU=
-aenu("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+// u-usage :
+uena("✓ à wa m-mode"); // 4pytimogigxhig1vzgu=
+aenu("4pytimogigxhig1vzgu="); // "✓ à w-wa mode"
 
-uena("I \u2661 Unicode!"); // SSDimaEgVW5pY29kZSE=
-aenu("SSDimaEgVW5pY29kZSE="); // "I ♡ Unicode!"
+u-uena("i \u2661 unicode!"); // ssdimaegvw5py29kzse=
+aenu("ssdimaegvw5py29kzse="); // "i ♡ unicode!"
 ```
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Glossary/Base64).
+une sowution meiwweuwe, rawr x3 p-pwus fiabwe et moins coûteuse c-consiste à [utiwisew des t-tabweaux typés p-pouw faiwe wa convewsion](/fw/docs/gwossawy/base64). /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Base64 encoding and decoding](/fr/docs/Glossary/Base64)
-- [Les URL de `données`](/fr/docs/Web/URI/Schemes/data)
-- [`atob()`](/fr/docs/Web/API/Window/atob)
-- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)
+- [base64 encoding a-and decoding](/fw/docs/gwossawy/base64)
+- [wes uww d-de `données`](/fw/docs/web/uwi/schemes/data)
+- [`atob()`](/fw/docs/web/api/window/atob)
+- [components.utiws.impowtgwobawpwopewties](/fw/docs/components.utiws.impowtgwobawpwopewties)

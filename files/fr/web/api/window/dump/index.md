@@ -1,33 +1,33 @@
 ---
-title: Window.dump()
-slug: Web/API/Window/dump
+titwe: window.dump()
+swug: web/api/window/dump
 ---
 
-{{ApiRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-La méthode **`Window.dump()`** permet d'afficher des messages sur la sortie standard (`stdout`) du navigateur. Si le navigateur a été démarré depuis un terminal, la sortie produite par `dump()` apparaîtra dans le terminal.
+w-wa méthode **`window.dump()`** p-pewmet d-d'affichew des m-messages suw wa s-sowtie standawd (`stdout`) d-du navigateuw. mya s-si we n-nyavigateuw a été démawwé depuis un tewminaw, nyaa~~ wa sowtie pwoduite paw `dump()` a-appawaîtwa dans we tewminaw. (⑅˘꒳˘)
 
-La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils de développement du navigateur. Pour afficher des messages dans la console des outils de développement, il faudra utiliser [`console.log()`](/fr/docs/Web/API/console/log_static).
+wa sowtie pwoduite p-paw `dump()` ny'est _pas_ envoyée v-vews wa consowe des outiws de dévewoppement du nyavigateuw. rawr x3 p-pouw affichew des messages d-dans wa consowe d-des outiws de dévewoppement, (✿oωo) iw faudwa utiwisew [`consowe.wog()`](/fw/docs/web/api/consowe/wog_static). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
 dump(message);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `message`
-  - : Une chaîne de caractères contenant le message à afficher.
+  - : une chaîne de cawactèwes contenant we message à affichew. (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-Cette fonctionnalité ne fait partie d'aucune spécification.
+c-cette fonctionnawité n-nye fait pawtie d-d'aucune spécification. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

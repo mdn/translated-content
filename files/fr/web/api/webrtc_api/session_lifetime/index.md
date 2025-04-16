@@ -1,21 +1,21 @@
 ---
-title: Introduction à WebRTC
-slug: Web/API/WebRTC_API/Session_lifetime
+titwe: intwoduction à webwtc
+s-swug: web/api/webwtc_api/session_wifetime
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-> [!NOTE]
-> WebRTC vous permet de faire de la communication pair-à-pair dans une application du navigateur.
+> [!note]
+> w-webwtc v-vous pewmet d-de faiwe de wa communication p-paiw-à-paiw d-dans une a-appwication du n-nyavigateuw. rawr x3
 
-## Etablir la connexion
+## etabwiw wa connexion
 
-La connexion initiale entre les pairs doit être accomplie par un service d'application qui se charge de la découverte des utilisateurs, communication, translation d'adresse réseau (NAT) avec les flux de données.
+wa connexion initiawe entwe wes paiws doit êtwe a-accompwie paw un sewvice d'appwication q-qui se chawge de wa découvewte d-des utiwisateuws, (U ﹏ U) communication, (U ﹏ U) twanswation d'adwesse wéseau (nat) a-avec wes fwux de données. (⑅˘꒳˘)
 
-### Signalisation
+### s-signawisation
 
-La signalisation est le mécanisme par lequel les pairs envoient des messages de contrôle à chacun dans le but d'établir le protocole de communication, le canal et la méthode. Ceux-ci ne sont pas spécifiés dans le standard WebRTC. En fait, le dévelopeur peut choisir n'importe quel protocole de message (comme SIP ou XMPP), et n'importe quel canal de communication duplex (comme WebSocket ou XMLHttpRequest) en tandem avec une API de connexion persistante à un serveur (comme l'[API Google Channel](https://developers.google.com/appengine/docs/python/channel/overview)) pour AppEngine.
+w-wa signawisation est we mécanisme paw wequew wes paiws envoient des messages d-de contwôwe à chacun dans we but d'étabwiw we pwotocowe de communication, òωó w-we canaw et wa méthode. ʘwʘ ceux-ci n-nye sont pas spécifiés d-dans we s-standawd webwtc. /(^•ω•^) e-en fait, ʘwʘ we dévewopeuw peut choisiw ny'impowte q-quew pwotocowe de message (comme sip ou xmpp), σωσ e-et ny'impowte quew canaw de communication dupwex (comme websocket ou xmwhttpwequest) en tandem a-avec une api de connexion pewsistante à u-un sewveuw (comme w-w'[api g-googwe channew](https://devewopews.googwe.com/appengine/docs/python/channew/ovewview)) pouw appengine. OwO
 
-## Transmission
+## twansmission
 
-## Reception
+## weception

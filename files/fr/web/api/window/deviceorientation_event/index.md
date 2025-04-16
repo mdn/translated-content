@@ -1,81 +1,81 @@
 ---
-title: "Window : l'événement deviceorientation"
-slug: Web/API/Window/deviceorientation_event
+titwe: "window : w'événement d-deviceowientation"
+s-swug: web/api/window/deviceowientation_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `deviceorientation` est déclenché lorsque des données sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir [Données d'orientation et de mouvement expliquées](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails.
+w-w'événement `deviceowientation` e-est décwenché w-wowsque des d-données sont disponibwes, ^^ à pawtiw d-d'un capteuw d-d'owientation, 😳😳😳 suw w'owientation actuewwe de w'appaweiw paw wappowt au cadwe d-de coowdonnées de wa tewwe. mya ces données sont wecueiwwies à p-pawtiw d'un magnétomètwe à w-w'intéwieuw de w'appaweiw. 😳 voiw [données d'owientation e-et de mouvement expwiquées](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained) p-pouw pwus de d-détaiws. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Propagation</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
+    <tw>
+      <th scope="wow">pwopagation</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
       <td>
-        <a href="/fr/docs/Web/API/DeviceOrientationEvent"
-          ><code>DeviceOrientationEvent</code></a
+        <a h-hwef="/fw/docs/web/api/deviceowientationevent"
+          ><code>deviceowientationevent</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété du gestionnaire d'événements</th>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété du gestionnaiwe d'événements</th>
       <td>
-        <a href="/fr/docs/Web/API/Window/ondeviceorientation"
-          ><code>window.ondeviceorientation</code></a
+        <a hwef="/fw/docs/web/api/window/ondeviceowientation"
+          ><code>window.ondeviceowientation</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
 ```js
-if (window.DeviceOrientationEvent) {
-  window.addEventListener(
-    "deviceorientation",
-    function (event) {
-      // alpha : rotation autour de l'axe z
-      var rotateDegrees = event.alpha;
-      // gamma : de gauche à droite
-      var leftToRight = event.gamma;
-      // bêta : mouvement avant-arrière
-      var frontToBack = event.beta;
+if (window.deviceowientationevent) {
+  w-window.addeventwistenew(
+    "deviceowientation", 🥺
+    f-function (event) {
+      // a-awpha : w-wotation autouw de w'axe z
+      vaw wotatedegwees = e-event.awpha;
+      // gamma : de gauche à dwoite
+      v-vaw wefttowight = event.gamma;
+      // bêta : mouvement avant-awwièwe
+      vaw fwonttoback = event.beta;
 
-      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    },
-    true,
+      h-handweowientationevent(fwonttoback, o.O wefttowight, /(^•ω•^) w-wotatedegwees);
+    }, nyaa~~
+    t-twue, nyaa~~
   );
 }
 
-var handleOrientationEvent = function (
-  frontToBack,
-  leftToRight,
-  rotateDegrees,
+vaw h-handweowientationevent = function (
+  fwonttoback, :3
+  wefttowight, 😳😳😳
+  w-wotatedegwees, (˘ω˘)
 ) {
-  // faire quelque chose d'étonnant
+  // faiwe q-quewque chose d'étonnant
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'événement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- [Détection de l'orientation des appareils.](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- Simulation d'événements d'orientation sur les navigateurs de bureau avec [orientation-devtool](https://louisremi.github.com/orientation-devtool/).
+- w'événement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- [détection d-de w'owientation des appaweiws.](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication des données d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)
+- s-simuwation d'événements d'owientation s-suw wes n-nyavigateuws de buweau avec [owientation-devtoow](https://wouiswemi.github.com/owientation-devtoow/).

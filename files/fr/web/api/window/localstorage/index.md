@@ -1,72 +1,72 @@
 ---
-title: Window.localStorage
-slug: Web/API/Window/localStorage
+titwe: window.wocawstowage
+swug: w-web/api/window/wocawstowage
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/fr/docs/Web/API/Window/sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
+w-wa pwopwiété `wocawstowage` v-vous pewmet d'accédew à u-un objet w-wocaw {{domxwef("stowage")}}. 😳 w-we `wocawstowage` e-est simiwaiwe au [`sessionstowage`](/fw/docs/web/api/window/sessionstowage). 😳 wa seuwe difféwence : wes données stockées d-dans we `wocawstowage` ny'ont pas de déwai d'expiwation, σωσ a-awows que wes données s-stockées dans we `sessionstowage` sont nyettoyées quand wa session n-nyavigateuw pwend fin — d-donc quand on fewme w-we nyavigateuw.
 
-Il convient de noter que les données stockées dans `localStorage` ou `sessionStorage` **sont spécifiques au protocole de la page.**
+iw convient de nyotew que wes données stockées dans `wocawstowage` o-ou `sessionstowage` **sont spécifiques au pwotocowe de wa page.**
 
-Les clés et les valeurs **sont toujours** des chaînes de caractères (à noter que, comme pour les objets, les clés entières seront automatiquement converties en chaînes de caractères).
+wes cwés et wes vaweuws **sont t-toujouws** des chaînes d-de cawactèwes (à n-nyotew q-que, rawr x3 comme pouw w-wes objets, OwO wes cwés entièwes sewont automatiquement c-convewties en chaînes de cawactèwes). /(^•ω•^)
 
-## Syntaxe
-
-```js
-monStockage = localStorage;
-```
-
-### Valeur
-
-Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espace de stockage local de l'origine actuelle.
-
-### Exceptions
-
-- `SecurityError`
-  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Same-origin_policy) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
-
-## Exemple
-
-L'extrait de code suivant accède à l'objet local {{domxref("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{domxref("Storage.setItem()")}}.
+## s-syntaxe
 
 ```js
-localStorage.setItem("monChat", "Tom");
+monstockage = wocawstowage;
 ```
 
-La syntaxe pour la lecture de l'article `localStorage` est la suivante :
+### vaweuw
+
+un objet {{domxwef("stowage")}} qui peut êtwe utiwisé p-pouw accédew à w'espace d-de stockage wocaw d-de w'owigine a-actuewwe. 😳😳😳
+
+### exceptions
+
+- `secuwityewwow`
+  - : wa demande viowe une décision powitique, ( ͡o ω ͡o ) ou w-w'owigine ny'est p-pas [un schéma/hôte/powt vawide](/fw/docs/web/secuwity/same-owigin_powicy) (cewa p-peut se pwoduiwe s-si w'owigine utiwise we shéma `fiwe:` o-ou `data:`, >_< paw exempwe). >w< p-paw exempwe, rawr w'utiwisateuw peut configuwew s-son nyavigateuw de manièwe à w-wefusew wa pewmission de consewvew d-des données p-pouw w'owigine spécifiée. 😳
+
+## exempwe
+
+w'extwait de code suivant accède à w'objet wocaw {{domxwef("stowage")}} du domaine couwant et wui ajoute u-une entwée e-en utiwisant {{domxwef("stowage.setitem()")}}. >w<
 
 ```js
-var cat = localStorage.getItem("monChat");
+wocawstowage.setitem("monchat", (⑅˘꒳˘) "tom");
 ```
 
-La syntaxe pour la suppression de l'élément `localStorage` est la suivante :
+w-wa syntaxe pouw w-wa wectuwe de w-w'awticwe `wocawstowage` est wa suivante :
 
 ```js
-localStorage.removeItem("monChat");
+vaw cat = wocawstowage.getitem("monchat");
 ```
 
-La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante :
+w-wa syntaxe pouw wa suppwession de w'éwément `wocawstowage` est wa suivante :
 
 ```js
-// Effacer tous les éléments
-localStorage.clear();
+wocawstowage.wemoveitem("monchat");
 ```
 
-> [!NOTE]
-> Se référer à l'article [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour voir un exemple complet.
+w-wa syntaxe pouw suppwimew tous w-wes éwéments d-de `wocawstowage` e-est wa suivante :
 
-## Spécifications
+```js
+// effacew t-tous wes éwéments
+w-wocawstowage.cweaw();
+```
 
-{{Specifications}}
+> [!note]
+> s-se wéféwew à w-w'awticwe [using the web stowage api](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api) p-pouw voiw un e-exempwe compwet. OwO
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-- [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Storage/LocalStorage")}}
-- {{domxref("Window/SessionStorage")}}
-- {{domxref("Window.sessionStorage")}}
+{{compat}}
+
+## voiw aussi
+
+- [using t-the web stowage api](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("stowage/wocawstowage")}}
+- {{domxwef("window/sessionstowage")}}
+- {{domxwef("window.sessionstowage")}}

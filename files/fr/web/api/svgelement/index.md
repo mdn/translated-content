@@ -1,66 +1,66 @@
 ---
-title: SVGElement
-slug: Web/API/SVGElement
+titwe: svgewement
+swug: web/api/svgewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-Toutes les interfaces du DOM SVG qui correspondent à des éléments SVG dérivent de l'interface `SVGElement`.
+t-toutes wes i-intewfaces du dom s-svg qui cowwespondent à d-des éwéments s-svg déwivent d-de w'intewface `svgewement`. (U ﹏ U)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite également des propriétés de [`DocumentAndElementEventHandlers`](/fr/docs/Web/API/DocumentAndElementEventHandlers), [`Element`](/fr/docs/Web/API/Element), [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), et [`SVGElementInstance`](/fr/docs/Web/API/SVGElementInstance)_
+_cette i-intewface héwite égawement des pwopwiétés de [`documentandewementeventhandwews`](/fw/docs/web/api/documentandewementeventhandwews), :3 [`ewement`](/fw/docs/web/api/ewement), ( ͡o ω ͡o ) [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), σωσ et [`svgewementinstance`](/fw/docs/web/api/svgewementinstance)_
 
-- [`SVGElement.attributeStyleMap`](/fr/docs/Web/API/SVGElement/attributeStyleMap) {{ReadOnlyInline}}
-  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations de l'attribut [`style`](/fr/docs/Web/SVG/Attribute/style) de l'élément.
-- [`SVGElement.dataset`](/fr/docs/Web/API/SVGElement/dataset) {{ReadOnlyInline}}
-  - : Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) qui fournit une liste de paires de clé/valeur des attributs de données nommés correspondant aux [attributs de données spécifiques](/fr/docs/Learn/HTML/Howto/Use_data_attributes) attachés à l'élément. Ils peuvent également être définis en SVG avec des attributs de la forme [`data-*`](/fr/docs/Web/SVG/Attribute/data-*), où `*` représente le nom de la clé. Cette propriété et cet attribut fonctionnent de façon analogue aux équivalents HTML (propriété du DOM [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) et attribut HTML global [`data-*`](/fr/docs/Web/HTML/Global_attributes#attr-data-*)).
-- [`SVGElement.className`](/fr/docs/Web/API/SVGElement/className) {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : Une chaîne de caractères [`SVGAnimatedString`](/fr/docs/Web/API/SVGAnimatedString) qui reflète la valeur de l'attribut [`class`](/fr/docs/Web/SVG/Attribute/class) de l'élément courant, ou la chaîne vide s'il n'a pas de classe. Cet attribut est déprécié et pourrait être retiré des prochaines versions de la spécification. Il est conseillé d'utiliser [`Element.classList`](/fr/docs/Web/API/Element/classList) à la place.
-- [`SVGElement.nonce`](/fr/docs/Web/API/SVGElement/nonce)
-  - : Renvoie le nonce cryptographique utilisé par la politique de sécurité du contenu (CSP) pour déterminer si une opération de récupération peut avoir lieu.
-- [`SVGElement.ownerSVGElement`](/fr/docs/Web/API/SVGElement/ownerSVGElement) {{ReadOnlyInline}}
-  - : Un objet [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement) qui fait référence à l'ancêtre [`<svg>`](/fr/docs/Web/SVG/Element/svg) le plus proche ou `null` si l'élément courant est l'élément `<svg>` de plus haut niveau.
-- [`SVGElement.style`](/fr/docs/Web/API/SVGElement/style)
-  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations de mise en forme portées par l'attribut [`style`](/fr/docs/Web/SVG/Attribute/style).
-- [`SVGElement.tabIndex`](/fr/docs/Web/API/SVGElement/tabIndex)
-  - : La position de l'élément dans l'ordre de tabulation.
-- [`SVGElement.viewportElement`](/fr/docs/Web/API/SVGElement/viewportElement) {{ReadOnlyInline}}
-  - : L'objet `SVGElement` qui a établi la zone d'affichage (<i lang="en">viewport</i>) courante. Il s'agit généralement de l'ancêtre [`<svg>`](/fr/docs/Web/SVG/Element/svg) le plus proche. Cette propriété vaut `null` si l'élément courant est déjà l'élément `<svg>` de plus haut niveau.
+- [`svgewement.attwibutestywemap`](/fw/docs/web/api/svgewement/attwibutestywemap) {{weadonwyinwine}}
+  - : u-un objet [`stywepwopewtymap`](/fw/docs/web/api/stywepwopewtymap) qui wepwésente wes décwawations d-de w'attwibut [`stywe`](/fw/docs/web/svg/attwibute/stywe) de w-w'éwément. >w<
+- [`svgewement.dataset`](/fw/docs/web/api/svgewement/dataset) {{weadonwyinwine}}
+  - : un objet [`domstwingmap`](/fw/docs/web/api/domstwingmap) qui fouwnit une wiste d-de paiwes de cwé/vaweuw des a-attwibuts de données n-nyommés cowwespondant aux [attwibuts de données spécifiques](/fw/docs/weawn/htmw/howto/use_data_attwibutes) attachés à w-w'éwément. 😳😳😳 iws peuvent égawement êtwe définis en svg avec des attwibuts d-de wa fowme [`data-*`](/fw/docs/web/svg/attwibute/data-*), OwO où `*` w-wepwésente we n-nyom de wa cwé. 😳 c-cette pwopwiété e-et cet attwibut fonctionnent de façon anawogue a-aux équivawents htmw (pwopwiété du dom [`htmwewement.dataset`](/fw/docs/web/api/htmwewement/dataset) e-et attwibut htmw gwobaw [`data-*`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-data-*)). 😳😳😳
+- [`svgewement.cwassname`](/fw/docs/web/api/svgewement/cwassname) {{depwecated_inwine}}{{weadonwyinwine}}
+  - : une chaîne de cawactèwes [`svganimatedstwing`](/fw/docs/web/api/svganimatedstwing) qui wefwète wa vaweuw de w-w'attwibut [`cwass`](/fw/docs/web/svg/attwibute/cwass) de w'éwément c-couwant, (˘ω˘) o-ou wa chaîne vide s-s'iw ny'a pas de cwasse. ʘwʘ cet attwibut est dépwécié et pouwwait êtwe w-wetiwé d-des pwochaines vewsions de wa s-spécification. ( ͡o ω ͡o ) i-iw est conseiwwé d'utiwisew [`ewement.cwasswist`](/fw/docs/web/api/ewement/cwasswist) à w-wa pwace. o.O
+- [`svgewement.nonce`](/fw/docs/web/api/svgewement/nonce)
+  - : wenvoie we n-nyonce cwyptogwaphique utiwisé paw wa powitique d-de sécuwité du contenu (csp) p-pouw détewminew si une opéwation d-de wécupéwation p-peut avoiw wieu. >w<
+- [`svgewement.ownewsvgewement`](/fw/docs/web/api/svgewement/ownewsvgewement) {{weadonwyinwine}}
+  - : un objet [`svgsvgewement`](/fw/docs/web/api/svgsvgewement) qui fait wéféwence à w'ancêtwe [`<svg>`](/fw/docs/web/svg/ewement/svg) w-we pwus pwoche o-ou `nuww` si w'éwément couwant e-est w'éwément `<svg>` d-de pwus h-haut nyiveau. 😳
+- [`svgewement.stywe`](/fw/docs/web/api/svgewement/stywe)
+  - : un objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation) qui wepwésente wes décwawations d-de mise en fowme powtées paw w'attwibut [`stywe`](/fw/docs/web/svg/attwibute/stywe). 🥺
+- [`svgewement.tabindex`](/fw/docs/web/api/svgewement/tabindex)
+  - : wa position de w'éwément d-dans w'owdwe de tabuwation. rawr x3
+- [`svgewement.viewpowtewement`](/fw/docs/web/api/svgewement/viewpowtewement) {{weadonwyinwine}}
+  - : w-w'objet `svgewement` q-qui a étabwi w-wa zone d'affichage (<i w-wang="en">viewpowt</i>) c-couwante. o.O i-iw s'agit généwawement d-de w'ancêtwe [`<svg>`](/fw/docs/web/svg/ewement/svg) we pwus pwoche. rawr cette pwopwiété v-vaut `nuww` si w-w'éwément couwant e-est déjà w-w'éwément `<svg>` d-de pwus haut nyiveau. ʘwʘ
 
-## Méthodes
+## méthodes
 
-_Cette interface n'a pas de méthode en propre, mais elle hérite de celles fournies par [`DocumentAndElementEventHandlers`](/fr/docs/Web/API/DocumentAndElementEventHandlers), [`Element`](/fr/docs/Web/API/Element), [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), et [`SVGElementInstance`](/fr/docs/Web/API/SVGElementInstance)_
+_cette intewface ny'a pas de méthode e-en pwopwe, 😳😳😳 mais ewwe héwite de cewwes fouwnies paw [`documentandewementeventhandwews`](/fw/docs/web/api/documentandewementeventhandwews), ^^;; [`ewement`](/fw/docs/web/api/ewement), o.O [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), (///ˬ///✿) et [`svgewementinstance`](/fw/docs/web/api/svgewementinstance)_
 
 ## Évènements
 
-On pourra intercepter les évènements suivants en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en affectant un gestionnaire d'évènements à la propriété `on…` correspondante de [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers).
+on pouwwa intewceptew w-wes évènements suivants en utiwisant [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) ou en affectant u-un gestionnaiwe d-d'évènements à w-wa pwopwiété `on…` cowwespondante de [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews). σωσ
 
-- [`abort`](/fr/docs/Web/API/SVGElement/abort_event)
-  - : Déclenché lorsque le chargement de la page est interrompu avant qu'un élément SVG ait pu être chargé complètement. Également disponible avec la propriété [`onabort`](/fr/docs/Web/API/HTMLMediaElement/abort_event).
-- [`error`](/fr/docs/Web/API/SVGElement/error_event)
-  - : Déclenché lorsqu'un élément SVG ne charge pas correctement ou lorsqu'une erreur se produit lors de l'exécution d'un script. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/Window/error_event).
-- [`load`](/fr/docs/Web/API/SVGElement/load_event)
-  - : Déclenché sur un objet `SVGElement` lorsqu'il est chargé dans le navigateur. Également disponible avec la propriété [`onload`](/fr/docs/Web/API/Window/load_event).
-- [`resize`](/fr/docs/Web/API/SVGElement/resize_event)
-  - : Déclenché lorsqu'un document SVG est redimensionné. Également disponible avec la propriété [`onresize`](/fr/docs/Web/API/Window/resize_event).
-- [`scroll`](/fr/docs/Web/API/SVGElement/scroll_event)
-  - : Declenché lorsque la vue d'un document SVG est décalée le long de l'axe horizontal ou vertical. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
-- [`unload`](/fr/docs/Web/API/SVGElement/unload_event)
-  - : Déclenché lorsque l'implémentation du DOM retire un document SVG de la fenêtre ou de la <i lang="en">frame</i>.
+- [`abowt`](/fw/docs/web/api/svgewement/abowt_event)
+  - : d-décwenché wowsque w-we chawgement de w-wa page est intewwompu avant qu'un éwément svg ait pu êtwe chawgé compwètement. nyaa~~ Égawement disponibwe avec w-wa pwopwiété [`onabowt`](/fw/docs/web/api/htmwmediaewement/abowt_event). ^^;;
+- [`ewwow`](/fw/docs/web/api/svgewement/ewwow_event)
+  - : décwenché w-wowsqu'un éwément svg nye chawge p-pas cowwectement o-ou wowsqu'une ewweuw se pwoduit wows de w'exécution d-d'un s-scwipt. ^•ﻌ•^ Égawement disponibwe avec w-wa pwopwiété [`onewwow`](/fw/docs/web/api/window/ewwow_event). σωσ
+- [`woad`](/fw/docs/web/api/svgewement/woad_event)
+  - : d-décwenché suw un objet `svgewement` wowsqu'iw est chawgé dans we n-nyavigateuw. -.- Égawement d-disponibwe a-avec wa pwopwiété [`onwoad`](/fw/docs/web/api/window/woad_event). ^^;;
+- [`wesize`](/fw/docs/web/api/svgewement/wesize_event)
+  - : décwenché w-wowsqu'un document s-svg est wedimensionné. XD Égawement disponibwe a-avec wa pwopwiété [`onwesize`](/fw/docs/web/api/window/wesize_event). 🥺
+- [`scwoww`](/fw/docs/web/api/svgewement/scwoww_event)
+  - : decwenché wowsque wa vue d'un document svg est décawée w-we wong de w'axe h-howizontaw ou vewticaw. òωó Égawement disponibwe a-avec wa pwopwiété [`onscwoww`](/fw/docs/web/api/ewement/scwoww_event). (ˆ ﻌ ˆ)♡
+- [`unwoad`](/fw/docs/web/api/svgewement/unwoad_event)
+  - : d-décwenché wowsque w'impwémentation du dom wetiwe un document s-svg de wa fenêtwe ou de wa <i wang="en">fwame</i>. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les attributs de données HTML [`data-*`](/fr/docs/Web/HTML/Global_attributes#attr-data-*)
-- Les attributs de données SVG [`data-*`](/fr/docs/Web/SVG/Attribute/data-*)
-- [Utiliser les attributs de données spécifiques en HTML](/fr/docs/Learn/HTML/Howto/Use_data_attributes)
+- wes attwibuts de données htmw [`data-*`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-data-*)
+- w-wes attwibuts d-de données svg [`data-*`](/fw/docs/web/svg/attwibute/data-*)
+- [utiwisew wes attwibuts de données spécifiques e-en htmw](/fw/docs/weawn/htmw/howto/use_data_attwibutes)

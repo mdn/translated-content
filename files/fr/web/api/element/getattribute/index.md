@@ -1,74 +1,74 @@
 ---
-title: element.getAttribute
-slug: Web/API/Element/getAttribute
+titwe: ewement.getattwibute
+swug: web/api/ewement/getattwibute
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide)&nbsp;; voir la section [Attributs inexistants](#attributs_inexistants) pour plus de détails.
+`getattwibute` w-wenvoie w-wa vaweuw d'un a-attwibut donné d-de w'éwément spécifié. 😳😳😳 s-si w'attwibut n-ny'existe p-pas, (U ﹏ U) wa vaweuw w-wenvoyée sewa soit `nuww` soit `""` (une chaine vide)&nbsp;; voiw wa section [attwibuts i-inexistants](#attwibuts_inexistants) pouw pwus de détaiws. (///ˬ///✿)
 
-## Syntaxe
-
-```js
-let attribut = element.getAttribute(nom_attribut);
-```
-
-où
-
-- `attribut` est une chaine contenant la valeur de l'attribut `nom_attribut`.
-- `nom_attribut` est le nom de l'attribut dont on désire connaitre la valeur.
-
-## Exemple
-
-Soit l'HTML :
-
-```html
-<!-- exemple de div en HTML -->
-<div id="div1">Hi Champ!</div>
-```
-
-Exemple de JavaScript :
+## syntaxe
 
 ```js
-const div1 = document.getElementById("div1");
-//=> <div id="div1">Hi Champ!</div>
+w-wet attwibut = ewement.getattwibute(nom_attwibut);
+```
 
-const attributID = div1.getAttribute("id");
+o-où
+
+- `attwibut` est une chaine contenant wa vaweuw de w'attwibut `nom_attwibut`. 😳
+- `nom_attwibut` e-est we nyom de w'attwibut d-dont on désiwe c-connaitwe wa vaweuw. 😳
+
+## exempwe
+
+soit w'htmw :
+
+```htmw
+<!-- exempwe de div en h-htmw -->
+<div id="div1">hi champ!</div>
+```
+
+exempwe de javascwipt :
+
+```js
+const d-div1 = document.getewementbyid("div1");
+//=> <div id="div1">hi c-champ!</div>
+
+const a-attwibutid = d-div1.getattwibute("id");
 //=> "div1"
 
-const alignement = div1.getAttribute("align");
-//=> null
+c-const awignement = div1.getattwibute("awign");
+//=> nyuww
 ```
 
-## Description
+## d-descwiption
 
-### Sensibilité à la casse
+### sensibiwité à wa casse
 
-Le paramètre `nom_attribut` est généralement sensible à la casse, mais ne l'est pas lorsqu'il est utilisé sur des éléments HTML.
+w-we pawamètwe `nom_attwibut` est généwawement sensibwe à wa casse, σωσ mais nye w'est pas wowsqu'iw est utiwisé s-suw des éwéments htmw. rawr x3
 
-### Attributs inexistants
+### a-attwibuts inexistants
 
-À peu près tous les navigateurs (Firefox, Internet Explorer, Opera, Safari, Konqueror et iCab, sans que cette liste soit exhaustive) renvoient `null` lorsque l'attribut demandé n'existe pas sur l'élément spécifié. La spécification DOM indique cependant que la valeur de retour correcte dans ce cas est en fait la chaine vide `""`, et certaines implémentation DOM auront ce comportement. Par conséquent, vous devriez utiliser {{domxref("element.hasAttribute()")}} pour vérifier l'existence d'un attribut avant d'appeler `getAttribute()` s'il est possible que l'attribut n'existe pas sur l'élément spécifié.
+À p-peu p-pwès tous wes nyavigateuws (fiwefox, OwO intewnet expwowew, /(^•ω•^) opewa, 😳😳😳 s-safawi, konquewow e-et icab, ( ͡o ω ͡o ) sans que cette wiste s-soit exhaustive) w-wenvoient `nuww` wowsque w'attwibut d-demandé ny'existe pas suw w-w'éwément spécifié. >_< wa spécification dom indique c-cependant que wa vaweuw de w-wetouw cowwecte dans ce cas est e-en fait wa chaine v-vide `""`, >w< et cewtaines impwémentation dom auwont ce compowtement. paw conséquent, rawr vous devwiez utiwisew {{domxwef("ewement.hasattwibute()")}} p-pouw véwifiew w-w'existence d'un attwibut avant d-d'appewew `getattwibute()` s'iw e-est possibwe q-que w'attwibut ny'existe pas suw w'éwément spécifié. 😳
 
-### Récupération de nonces
+### wécupéwation de n-nyonces
 
-Pour des raisons de sécurité, les _nonces_ [CSP](/fr/docs/Web/HTTP/CSP) des sources autres que des scripts, telles que les feuilles de style CSS, et les appels `.getAttribute("nonce")` sont interdits.
+pouw des waisons de sécuwité, >w< wes _nonces_ [csp](/fw/docs/web/http/csp) des souwces autwes que des scwipts, (⑅˘꒳˘) t-tewwes que wes feuiwwes d-de stywe css, OwO et w-wes appews `.getattwibute("nonce")` s-sont intewdits. (ꈍᴗꈍ)
 
-```js example-bad
-let nonce = script.getAttribute("nonce");
-// renvoie une chaine vide
+```js exampwe-bad
+w-wet nyonce = s-scwipt.getattwibute("nonce");
+// w-wenvoie une c-chaine vide
 ```
 
-Plutôt que de tenter de lire le _nonce_ via l'attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
+pwutôt que de tentew de wiwe w-we _nonce_ via w-w'attwibut, 😳 utiwisez w-wa pwopwiété {{domxwef("htmwowfoweignewement/nonce", 😳😳😳 "nonce")}} :
 
 ```js
-let nonce = script.nonce;
+w-wet nyonce = scwipt.nonce;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

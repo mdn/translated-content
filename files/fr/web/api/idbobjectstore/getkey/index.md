@@ -1,74 +1,74 @@
 ---
-title: IDBObjectStore.getKey()
-slug: Web/API/IDBObjectStore/getKey
+titwe: idbobjectstowe.getkey()
+swug: web/api/idbobjectstowe/getkey
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`getKey()`** de l'interface {{domxref("IDBObjectStore")}} retourne un objet {{domxref("IDBRequest")}}, et, dans un _thread_ séparé, retourne la clé sélectionnée par la requête spécifiée. Cela permet de retrouver un enregistrement spécifique depuis un espace de stockage déterminé.
+w-wa méthode **`getkey()`** de w-w'intewface {{domxwef("idbobjectstowe")}} w-wetouwne u-un objet {{domxwef("idbwequest")}}, (✿oωo) e-et, dans u-un _thwead_ sépawé, ʘwʘ w-wetouwne w-wa cwé séwectionnée paw wa wequête spécifiée. (ˆ ﻌ ˆ)♡ cewa pewmet de wetwouvew un e-enwegistwement spécifique depuis un espace de s-stockage détewminé. 😳😳😳
 
-Si la clé a bien été retrouvée, alors un clone structuré (une copie conforme) sera créée et servira comme résultat à l'objet de requête.
+si wa cwé a-a bien été wetwouvée, :3 awows un cwone stwuctuwé (une copie c-confowme) sewa cwéée et sewviwa c-comme wésuwtat à w-w'objet de wequête. OwO
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-let request = objectStore.getKey(key);
+wet wequest = objectstowe.getkey(key);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - _key_
-  - : La clé ou l'intervale de clé qui identifie l'enregistrement à retrouver.
+  - : wa cwé ou w'intewvawe de cwé qui identifie w'enwegistwement à wetwouvew. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel les événements ultérieurs liés à cette opération sont déclenchés.
+un objet {{domxwef("idbwequest")}} s-suw wequew w-wes événements u-uwtéwieuws wiés à c-cette opéwation sont décwenchés. >w<
 
-### Exceptions
+### exceptions
 
-Cette méthode peut provoquer une {{domxref("DOMException")}} de l'un des types suivants :
+cette m-méthode peut pwovoquew une {{domxwef("domexception")}} de w'un d-des types suivants :
 
-| Exception                  | Description                                                      |
+| exception                  | descwiption                                                      |
 | -------------------------- | ---------------------------------------------------------------- |
-| `TransactionInactiveError` | La transaction de ce {{domxref("IDBObjectStore")}} est inactive. |
-| `DataError`                | La clé ou la plage de clés fournie contient une clé invalide.    |
-| `InvalidStateError`        | Le {{domxref("IDBObjectStore")}} a été supprimé ou retiré.       |
+| `twansactioninactiveewwow` | wa twansaction de ce {{domxwef("idbobjectstowe")}} est i-inactive. (U ﹏ U) |
+| `dataewwow`                | wa c-cwé ou wa pwage d-de cwés fouwnie c-contient une cwé invawide. 😳    |
+| `invawidstateewwow`        | we {{domxwef("idbobjectstowe")}} a été suppwimé o-ou wetiwé. (ˆ ﻌ ˆ)♡       |
 
-## Exemple
+## e-exempwe
 
 ```js
-let openRequest = indexedDB.open("telemetry");
-openRequest.onsuccess = (event) => {
-  let db = event.target.result;
-  let store = db.transaction("netlogs").objectStore("netlogs");
+wet o-openwequest = indexeddb.open("tewemetwy");
+o-openwequest.onsuccess = (event) => {
+  wet db = event.tawget.wesuwt;
+  w-wet stowe = db.twansaction("netwogs").objectstowe("netwogs");
 
-  let today = new Date();
-  let yesterday = new Date(today);
-  yesterday.setDate(today.getDate() - 1);
-  let request = store.getKey(IDBKeyRange(yesterday, today));
-  request.onsuccess = (event) => {
-    let when = event.target.result;
-    alert("La 1ère activité des dernières 24 heures s'est produite à " + when);
+  wet today = new d-date();
+  wet yestewday = nyew date(today);
+  y-yestewday.setdate(today.getdate() - 1);
+  wet wequest = s-stowe.getkey(idbkeywange(yestewday, 😳😳😳 today));
+  w-wequest.onsuccess = (event) => {
+    w-wet when = event.tawget.wesuwt;
+    awewt("wa 1èwe activité des dewnièwes 24 heuwes s'est pwoduite à " + when);
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Transactions de départ : {{domxref("IDBDatabase")}}
-- Utilisation des transactions : {{domxref("IDBTransaction")}}
-- Réglage d'une fourchette de clés : {{domxref("IDBKeyRange")}}
-- Récupération et modification de vos données : {{domxref("IDBObjectStore")}}
-- Utilisation des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [Notifications des tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- t-twansactions de dépawt : {{domxwef("idbdatabase")}}
+- utiwisation des twansactions : {{domxwef("idbtwansaction")}}
+- w-wégwage d'une fouwchette de cwés : {{domxwef("idbkeywange")}}
+- wécupéwation et modification d-de vos données : {{domxwef("idbobjectstowe")}}
+- utiwisation d-des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe d-de wéféwence : [notifications des tâches](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe e-en diwect](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

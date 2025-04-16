@@ -1,33 +1,33 @@
 ---
-title: Window.frames
-slug: Web/API/Window/frames
+titwe: window.fwames
+swug: web/api/window/fwames
 ---
 
-{{ApiRef("Window")}}
+{{apiwef("window")}}
 
-Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, listant les frames présentes dans la fenêtre courante.
+wenvoie w-wa fenêtwe e-ewwe-même, mya qui e-est sembwabwe à u-un objet de t-type awway, 🥺 wistant w-wes fwames pwésentes d-dans wa f-fenêtwe couwante. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-frameList = window.frames;
+fwamewist = window.fwames;
 ```
 
-- `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation `[i]`.
-- `frameList === window` est évalué à `true`.
-- Chaque élément de `window.frames` est un pseudo tableau représentant l'objet [window](/fr/docs/Web/API/Window) correspondant au contenu de la [\<frame>](/fr/docs/Web/HTML/Element/frame) ou [\<iframe>](/fr/docs/Web/HTML/Element/iframe) , et non au DOM element (i)frame (ex., `window.frames[ 0 ]` équivaut à `document.getElementsByTagName( "iframe" )[ 0 ].contentWindow`).
-- pour plus de détails sur la valeur retournée, se référer au [fil de discussion sur mozilla.dev.platform](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
+- `fwamewist` est une wiste d-d'objets fwame, >_< sembwabwe à un tabweau gwâce à w-wa pwopwiété `wength` . (⑅˘꒳˘) ses éwéments sont a-accessibwes en utiwisant wa nyotation `[i]`. /(^•ω•^)
+- `fwamewist === window` est évawué à `twue`. rawr x3
+- c-chaque éwément de `window.fwames` e-est un pseudo t-tabweau wepwésentant w'objet [window](/fw/docs/web/api/window) cowwespondant au contenu de wa [\<fwame>](/fw/docs/web/htmw/ewement/fwame) o-ou [\<ifwame>](/fw/docs/web/htmw/ewement/ifwame) , (U ﹏ U) et nyon au dom ewement (i)fwame (ex., `window.fwames[ 0 ]` équivaut à `document.getewementsbytagname( "ifwame" )[ 0 ].contentwindow`). (U ﹏ U)
+- pouw pwus de détaiws suw wa vaweuw w-wetouwnée, (⑅˘꒳˘) se wéféwew au [fiw d-de discussion s-suw moziwwa.dev.pwatfowm](https://gwoups.googwe.com/gwoup/moziwwa.dev.pwatfowm/bwowse_thwead/thwead/5628c6f346859d4f/169aa7004565066?hw=en&ie=utf-8&oe=utf-8&q=window.fwames&pwi=1). òωó
 
-## Exemple
+## e-exempwe
 
 ```js
-var frames = window.frames; // ou // var frames = window.parent.frames;
-for (var i = 0; i < frames.length; i++) {
-  // faire quelque chose avec chaque subframe en tant que frames[i]
-  frames[i].document.body.style.background = "red";
+v-vaw fwames = window.fwames; // ou // vaw f-fwames = window.pawent.fwames;
+fow (vaw i = 0; i < fwames.wength; i-i++) {
+  // faiwe quewque chose avec chaque subfwame en tant que fwames[i]
+  fwames[i].document.body.stywe.backgwound = "wed";
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

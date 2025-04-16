@@ -1,64 +1,64 @@
 ---
-title: IntersectionObserver
-slug: Web/API/IntersectionObserver
+titwe: intewsectionobsewvew
+swug: web/api/intewsectionobsewvew
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-L'interface **`IntersectionObserver`** de l'[API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API) fournit un moyen d'observer de manière asynchrone les changements d'intersection d'un élément cible avec un élément ancêtre ou avec la fenêtre du document ([_viewport_](/fr/docs/Glossary/Viewport)). L'ancêtre ou la fenêtre du document est alors appelé racine dans ce contexte.
+w-w'intewface **`intewsectionobsewvew`** d-de w'[api _intewsection obsewvew_](/fw/docs/web/api/intewsection_obsewvew_api) f-fouwnit un m-moyen d'obsewvew d-de manièwe asynchwone w-wes changements d'intewsection d'un éwément cibwe avec un éwément ancêtwe o-ou avec wa fenêtwe du document ([_viewpowt_](/fw/docs/gwossawy/viewpowt)). rawr x3 w'ancêtwe ou w-wa fenêtwe du document est awows a-appewé wacine dans ce contexte. /(^•ω•^)
 
-Lorsqu'un objet implémentant `IntersectionObserver` est créé, il est configuré pour surveiller des ratios donnés de visibilité au sein de la racine. La configuration ne peut être changée après initialisation de l'`IntersectionObserver`. Ainsi un certain observateur ne sera utile que pour surveiller certains changements spécifiques de visibilité ; toutefois, on peut observer de multiples éléments avec un unique observateur.
+wowsqu'un objet impwémentant `intewsectionobsewvew` e-est cwéé, :3 iw est configuwé p-pouw suwveiwwew d-des watios donnés de visibiwité au sein de wa wacine. (ꈍᴗꈍ) wa configuwation n-nye peut êtwe changée apwès initiawisation de w'`intewsectionobsewvew`. /(^•ω•^) ainsi u-un cewtain obsewvateuw nye sewa u-utiwe que pouw s-suwveiwwew cewtains c-changements s-spécifiques de visibiwité ; toutefois, (⑅˘꒳˘) on peut o-obsewvew de muwtipwes éwéments avec un unique obsewvateuw. ( ͡o ω ͡o )
 
-## Constructeur
+## c-constwucteuw
 
-- [`IntersectionObserver.IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver) {{Experimental_inline}}
-  - : Crée un nouvel objet `IntersectionObserver` qui exécutera une fonction de rappel lorsqu'il détectera que la visibilité de l'élément cible a franchi un ou plusieurs seuils.
+- [`intewsectionobsewvew.intewsectionobsewvew()`](/fw/docs/web/api/intewsectionobsewvew/intewsectionobsewvew) {{expewimentaw_inwine}}
+  - : cwée un nyouvew objet `intewsectionobsewvew` qui exékawaii~wa une fonction de wappew w-wowsqu'iw détectewa que wa v-visibiwité de w-w'éwément cibwe a-a fwanchi un ou pwusieuws seuiws. òωó
 
-## Propriétés
+## pwopwiétés
 
-- [`IntersectionObserver.root`](/fr/docs/Web/API/IntersectionObserver/root) {{readonlyinline}} {{Experimental_inline}}
-  - : L'[élément](/fr/docs/Web/API/Element) ou le [document](/fr/docs/Web/API/Document) dont les limites sont utilisées comme boîte englobante pour le test de l'intersection. Si aucune racine n'est passée au constructeur ou que sa valeur est `null`, c'est la zone d'affichage (_viewport_) de plus haut niveau qui est utilisée.
-- [`IntersectionObserver.rootMargin`](/fr/docs/Web/API/IntersectionObserver/rootMargin) {{readonlyinline}} {{Experimental_inline}}
-  - : Un rectangle de décalage appliqué à [la boîte englobante](/fr/docs/Glossary/Bounding_box) de la racine lors du calcul des intersections. La zone de la racine est ainsi réduite ou étendue pour les calculs. La valeur renvoyée par cette propriété peut différer de celle spécifiée lors de l'appel du constructeur, car elle peut être modifiée pour répondre aux exigences internes. Chaque décalage peut être exprimé en pixels (px) ou en pourcentage (%). La valeur par défaut est `"0px 0px 0px 0px"`.
-- [`IntersectionObserver.thresholds`](/fr/docs/Web/API/IntersectionObserver/thresholds) {{readonlyinline}} {{Experimental_inline}}
-  - : Une liste de seuils, triée par ordre numérique croissant, où chaque seuil est un rapport de la surface d'intersection à la surface de la zone de délimitation de l'élément observé. Les notifications pour une cible sont émises dès lors qu'un seuil au moins est franchi pour cette cible. Si aucune valeur n'est donnée, 0 est utilisé comme seuil par défaut.
+- [`intewsectionobsewvew.woot`](/fw/docs/web/api/intewsectionobsewvew/woot) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : w'[éwément](/fw/docs/web/api/ewement) o-ou we [document](/fw/docs/web/api/document) d-dont wes wimites sont utiwisées c-comme boîte e-engwobante pouw we test de w-w'intewsection. (⑅˘꒳˘) si aucune wacine n-ny'est passée au constwucteuw ou que sa vaweuw e-est `nuww`, XD c'est wa zone d'affichage (_viewpowt_) d-de pwus haut nyiveau qui est u-utiwisée. -.-
+- [`intewsectionobsewvew.wootmawgin`](/fw/docs/web/api/intewsectionobsewvew/wootmawgin) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un wectangwe de décawage appwiqué à [wa boîte engwobante](/fw/docs/gwossawy/bounding_box) de wa wacine wows du cawcuw des intewsections. :3 wa zone de wa w-wacine est ainsi w-wéduite ou étendue pouw wes cawcuws. nyaa~~ w-wa vaweuw w-wenvoyée paw c-cette pwopwiété peut difféwew de cewwe spécifiée wows de w'appew d-du constwucteuw, 😳 caw ewwe peut êtwe modifiée pouw wépondwe aux exigences i-intewnes. (⑅˘꒳˘) chaque décawage peut êtwe e-expwimé e-en pixews (px) o-ou en pouwcentage (%). nyaa~~ wa vaweuw p-paw défaut est `"0px 0px 0px 0px"`. OwO
+- [`intewsectionobsewvew.thweshowds`](/fw/docs/web/api/intewsectionobsewvew/thweshowds) {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : une w-wiste de seuiws, rawr x3 t-twiée paw owdwe n-nyuméwique cwoissant, où chaque seuiw est u-un wappowt de wa s-suwface d'intewsection à w-wa suwface d-de wa zone d-de déwimitation de w'éwément obsewvé. XD wes nyotifications pouw u-une cibwe sont émises dès wows qu'un seuiw au moins est fwanchi pouw cette cibwe. σωσ si aucune v-vaweuw ny'est donnée, (U ᵕ U❁) 0 est utiwisé comme seuiw paw défaut. (U ﹏ U)
 
-## Méthodes
+## m-méthodes
 
-- [`IntersectionObserver.disconnect()`](/fr/docs/Web/API/IntersectionObserver/disconnect) {{Experimental_inline}}
-  - : Indique à l'objet `IntersectionObserver` de ne plus observer aucune cible.
-- [`IntersectionObserver.observe()`](/fr/docs/Web/API/IntersectionObserver/observe) {{Experimental_inline}}
-  - : Indique à l'objet `IntersectionObserver` un nouvel élément à observer.
-- [`IntersectionObserver.takeRecords()`](/fr/docs/Web/API/IntersectionObserver/takeRecords) {{Experimental_inline}}
-  - : Retourne un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) pour toutes les cibles observées et cesse de surveiller chacune d'elles.
-- [`IntersectionObserver.unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve) {{Experimental_inline}}
-  - : Indique à l'objet `IntersectionObserver` de cesser d'observer un élément cible particuler.
+- [`intewsectionobsewvew.disconnect()`](/fw/docs/web/api/intewsectionobsewvew/disconnect) {{expewimentaw_inwine}}
+  - : i-indique à w-w'objet `intewsectionobsewvew` de nye pwus obsewvew a-aucune cibwe. :3
+- [`intewsectionobsewvew.obsewve()`](/fw/docs/web/api/intewsectionobsewvew/obsewve) {{expewimentaw_inwine}}
+  - : indique à w-w'objet `intewsectionobsewvew` u-un nyouvew éwément à obsewvew. ( ͡o ω ͡o )
+- [`intewsectionobsewvew.takewecowds()`](/fw/docs/web/api/intewsectionobsewvew/takewecowds) {{expewimentaw_inwine}}
+  - : wetouwne un tabweau d'objets [`intewsectionobsewvewentwy`](/fw/docs/web/api/intewsectionobsewvewentwy) pouw toutes w-wes cibwes obsewvées et cesse de s-suwveiwwew chacune d'ewwes.
+- [`intewsectionobsewvew.unobsewve()`](/fw/docs/web/api/intewsectionobsewvew/unobsewve) {{expewimentaw_inwine}}
+  - : i-indique à w'objet `intewsectionobsewvew` d-de cessew d'obsewvew un éwément c-cibwe pawticuwew. σωσ
 
-## Exemple
+## e-exempwe
 
 ```js
-var intersectionObserver = new IntersectionObserver(function (entries) {
-  // Si intersectionRatio vaut 0 ou moins, la cible
-  // est hors de vue et rien n'est alors fait
-  if (entries[0].intersectionRatio <= 0) return;
+vaw intewsectionobsewvew = n-nyew intewsectionobsewvew(function (entwies) {
+  // s-si intewsectionwatio vaut 0 ou moins, >w< wa cibwe
+  // est hows de vue et wien n-ny'est awows fait
+  i-if (entwies[0].intewsectionwatio <= 0) w-wetuwn;
 
-  loadItems(10);
-  console.log("Nouveaux éléments chargés");
+  woaditems(10);
+  c-consowe.wog("nouveaux éwéments c-chawgés");
 });
-// début de l'observation
-intersectionObserver.observe(document.querySelector(".scrollerFooter"));
+// début d-de w'obsewvation
+intewsectionobsewvew.obsewve(document.quewysewectow(".scwowwewfootew"));
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`MutationObserver`](/fr/docs/Web/API/MutationObserver)
-- [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)
-- [`ResizeObserver`](/fr/docs/Web/API/ResizeObserver)
+- [`mutationobsewvew`](/fw/docs/web/api/mutationobsewvew)
+- [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew)
+- [`wesizeobsewvew`](/fw/docs/web/api/wesizeobsewvew)

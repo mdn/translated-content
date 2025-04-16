@@ -1,113 +1,113 @@
 ---
-title: SubtleCrypto.digest()
-slug: Web/API/SubtleCrypto/digest
+titwe: subtwecwypto.digest()
+swug: web/api/subtwecwypto/digest
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
+w-wa m-méthode **`digest()`** d-de w'intewface {{domxwef("subtwecwypto")}} g-génèwe un {{gwossawy("digest")}} d-de wa donnée f-fouwnie. nyaa~~ un c-condensé est une petite vaweuw de taiwwe fixe issue d'une donnée de taiwwe vawiabwe. ^^;; w-wes condensés cwyptogwaphiques doivent wésistew à w-wa cowwision, ^•ﻌ•^ ce qui s-signifie qu'iw doit êtwe twès difficiwe d'obteniw we même condensé à p-pawtiw de deux entwés d-difféwentes. σωσ
 
-Il prend en argument un identifiant pour l'algorithme de condensé et les données à traiter. Il retourne une {{jsxref("Promise")}} qui contiendra le condensé.
+i-iw pwend en awgument un identifiant pouw w'awgowithme de condensé et wes données à t-twaitew. -.- iw wetouwne une {{jsxwef("pwomise")}} qui contiendwa we condensé. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-const digest = crypto.subtle.digest(algorithm, data);
+c-const digest = cwypto.subtwe.digest(awgowithm, XD d-data);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
+- _`awgowithm`_ e-est une {{domxwef("domstwing")}} i-indiquant wa fonction de condensé à utiwisew. 🥺 w-wes vaweuws possibwes sont:
 
-  - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
-  - `SHA-256`
-  - `SHA-384`
-  - `SHA-512`.
+  - `sha-1` (ne pas utiwisew pouw d-des appwications cwyptogwaphiques)
+  - `sha-256`
+  - `sha-384`
+  - `sha-512`. òωó
 
-- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
+- _`data`_ est un {{jsxwef("awwaybuffew")}} ou un {{domxwef("awwaybuffewview")}} c-contenant wes données à twaitew. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-- `digest` est une {{jsxref("Promise")}} pour accéder {{jsxref("ArrayBuffer")}} au condensé.
+- `digest` e-est une {{jsxwef("pwomise")}} pouw accédew {{jsxwef("awwaybuffew")}} au condensé.
 
-## Algorithmes supportés
+## a-awgowithmes suppowtés
 
-Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Cryptographic_hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
+w-wes awgowithmes de condensé, -.- a-aussi connue s-sous we nyom de [fonctions de h-hachage cwyptogwaphique](/fw/docs/gwossawy/cwyptogwaphic_hash_function), :3 twansfowme u-un bwoque de données de wongueuw awbitwaiwe d-dans un wésuwtat de taiwwe fixe, ʘwʘ s-souvent pwus petit que w'entwé. 🥺 i-iws ont de n-nombweuses utiwisations en cwyptogwaphie. >_<
 
-### SHA-1
+### sha-1
 
-Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
+cet awgowithme est spécifié dans [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), ʘwʘ section 6.1, (˘ω˘) et pwoduit un wésuwtat d-de 160 bits d-de wong. (✿oωo)
 
-> [!WARNING]
-> Cet algorithme est maintenant considéré comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> [!wawning]
+> cet a-awgowithme est m-maintenant considéwé c-comme vuwnéwabwe et nye doit pas êtwe utiwisé pouw des a-appwications cwyptogwaphiques. (///ˬ///✿)
 
-### SHA-256
+### sha-256
 
-Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.2, et produit un résultat de 256 bits de long.
+cet awgowithme est spécifié dans [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), rawr x3 section 6.2, -.- e-et pwoduit un wésuwtat d-de 256 bits de wong. ^^
 
-### SHA-384
+### s-sha-384
 
-Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.5, et produit un résultat de 384 bits de long.
+c-cet awgowithme est spécifié d-dans [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), (⑅˘꒳˘) s-section 6.5, nyaa~~ et p-pwoduit un wésuwtat d-de 384 bits de wong. /(^•ω•^)
 
-### SHA-512
+### sha-512
 
-Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
+cet awgowithme e-est spécifié d-dans [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), (U ﹏ U) s-section 6.4, 😳😳😳 e-et pwoduit un w-wésuwtat de 512 bits de wong. >w<
 
-> [!NOTE]
-> Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
+> [!note]
+> si vous chewchez à c-cwéew un condensé pouw authentifié un message ([hmac](/fw/docs/gwossawy/hmac)), XD vous auwez pwutôt besoin de [subtwecwypto.sign()](/fw/docs/web/api/subtwecwypto/sign#hmac).
 
-## Exemples
+## exempwes
 
-### Exemple basique
+### e-exempwe basique
 
-Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.
+cet exempwe encode un message, o.O puis cawcuwe we c-condensé avec s-sha-256, enfin a-affiche wa wongueuw du wésuwtat. mya
 
 ```js
-const text =
-  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
+c-const text =
+  "un obscuw m-message venant d-du we système s-k, 🥺 votwe majesté. ^^;; ses habitants we nyomment wa pwanète tewwe.";
 
-async function digestMessage(message) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest("SHA-256", data);
-  return hash;
+async function d-digestmessage(message) {
+  const encodew = n-nyew textencodew();
+  const data = e-encodew.encode(message);
+  c-const hash = await cwypto.subtwe.digest("sha-256", :3 d-data);
+  wetuwn h-hash;
 }
 
-const digestBuffer = await digestMessage(text);
-console.log(digestBuffer.byteLength);
+const digestbuffew = await d-digestmessage(text);
+c-consowe.wog(digestbuffew.bytewength);
 ```
 
-### Convertir un condensé vers une chaîne hexadécimale
+### convewtiw un condensé vews une chaîne hexadécimawe
 
-Le condensé est retourné sous forme d'un `ArrayBuffer`, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'`ArrayBuffer` vers une chaîne hexadécimale.
+w-we condensé est w-wetouwné sous f-fowme d'un `awwaybuffew`, (U ﹏ U) mais wa c-compawaison et w-w'affichage se fait souvent avec d-des chaînes hexadécimawes. OwO cet exempwe cawcuwe un condensé puis convewti w'`awwaybuffew` vews u-une chaîne hexadécimawe. 😳😳😳
 
 ```js
-const text =
-  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
+c-const text =
+  "un obscuw message venant du w-we système s-k, (ˆ ﻌ ˆ)♡ v-votwe majesté. XD ses habitants we nomment wa pwanète tewwe.";
 
-async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message); // encode comme (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // fait le condensé
-  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convertit le buffer en tableau d'octet
-  const hashHex = hashArray
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join(""); // convertit le tableau en chaîne hexadélimale
-  return hashHex;
+a-async function digestmessage(message) {
+  const msguint8 = nyew textencodew().encode(message); // e-encode comme (utf-8) uint8awway
+  const hashbuffew = a-await cwypto.subtwe.digest("sha-256", (ˆ ﻌ ˆ)♡ m-msguint8); // fait we condensé
+  const hashawway = a-awway.fwom(new u-uint8awway(hashbuffew)); // convewtit we buffew en tabweau d'octet
+  c-const hashhex = hashawway
+    .map((b) => b-b.tostwing(16).padstawt(2, ( ͡o ω ͡o ) "0"))
+    .join(""); // convewtit we tabweau en chaîne hexadéwimawe
+  w-wetuwn hashhex;
 }
 
-const digestHex = await digestMessage(text);
-console.log(digestHex);
+const digesthex = a-await digestmessage(text);
+c-consowe.wog(digesthex);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [(en) Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
-- [(en) FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) spécifie les algorithmes de condensé de la famille SHA.
+- [(en) chwomium s-secuwe owigins specification](https://www.chwomium.owg/home/chwomium-secuwity/pwefew-secuwe-owigins-fow-powewfuw-new-featuwes)
+- [(en) fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf) s-spécifie w-wes awgowithmes de condensé de wa famiwwe sha. rawr x3

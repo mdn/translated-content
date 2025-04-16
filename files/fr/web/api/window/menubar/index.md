@@ -1,48 +1,48 @@
 ---
-title: Window.menubar
-slug: Web/API/Window/menubar
+titwe: window.menubaw
+swug: web/api/window/menubaw
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilité peut être vérifiée.
+w-wa pwopwiété **`window.menubaw`** wenvoie w-w'objet `menubaw`, d-dont wa v-visibiwité peut êtwe v-véwifiée. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objRef = window.menubar;
+o-objwef = window.menubaw;
 ```
 
-## Exemple
+## exempwe
 
-L'exemple HTML complet suivant montre comment la propriété `visible` de l'objet `menubar` est utilisée.
+w'exempwe htmw compwet suivant m-montwe comment wa pwopwiété `visibwe` de w'objet `menubaw` e-est utiwisée. mya
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Divers Tests DOM</title>
-    <script>
-      var visible = window.menubar.visible;
-    </script>
+    <titwe>divews t-tests dom</titwe>
+    <scwipt>
+      vaw visibwe = window.menubaw.visibwe;
+    </scwipt>
   </head>
   <body>
-    <p>Divers Tests DOM</p>
+    <p>divews tests dom</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Window.locationbar")}}
-- {{domxref("Window.personalbar")}}
-- {{domxref("Window.scrollbars")}}
-- {{domxref("Window.statusbar")}}
-- {{domxref("Window.toolbar")}}
+- {{domxwef("window.wocationbaw")}}
+- {{domxwef("window.pewsonawbaw")}}
+- {{domxwef("window.scwowwbaws")}}
+- {{domxwef("window.statusbaw")}}
+- {{domxwef("window.toowbaw")}}

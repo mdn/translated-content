@@ -1,43 +1,43 @@
 ---
-title: NodeList.values()
-slug: Web/API/NodeList/values
+titwe: nyodewist.vawues()
+swug: w-web/api/nodewist/vawues
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("Node")}} (_noeud_).
+w-wa méthode **`nodewist.vawues()`** w-wenvoie un {{jsxwef("wes_pwotocowes_itewation",'itéwateuw')}} p-pewmettant d-de pawcouwiw toutes w-wes vaweuws c-contenues dans c-cet objet. /(^•ω•^) wes vaweuws sont des objets {{domxwef("node")}} (_noeud_). rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-nodeList.values();
+nyodewist.vawues();
 ```
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}}. OwO
 
-## Exemple
+## e-exempwe
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+vaw n-nyode = document.cweateewement("div");
+vaw kid1 = document.cweateewement("p");
+vaw kid2 = document.cweatetextnode("hey");
+v-vaw kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+n-nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+n-nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+vaw wist = nyode.chiwdnodes;
 
-// Utilisation de for..of
-for (var value of list.values()) {
-  console.log(value);
+// utiwisation de fow..of
+fow (vaw vawue of wist.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
-Le résultat est :
+w-we wésuwtat est :
 
 ```
 <p>
@@ -45,15 +45,15 @@ Le résultat est :
 <span>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

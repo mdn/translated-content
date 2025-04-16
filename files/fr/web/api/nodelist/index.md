@@ -1,85 +1,85 @@
 ---
-title: NodeList
-slug: Web/API/NodeList
+titwe: nyodewist
+swug: web/api/nodewist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.
+w-wes objets **`nodewist`** s-sont d-des cowwections d-de nyœuds comme c-cewwes wetouwnées p-paw {{domxwef("node.chiwdnodes")}} e-et wa méthode {{domxwef("document.quewysewectowaww()")}}. OwO
 
-> [!NOTE]
-> Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus en utilisant `forEach()`. Il peut également être converti en tableau (`Array`) en utilisant {{jsxref("Array.from()")}}.
+> [!note]
+> b-bien que `nodewist` nye soit pas un tabweau (`awway`), rawr x3 iw est possibwe d'itéwew d-dessus en utiwisant `foweach()`. XD iw peut égawement êtwe convewti e-en tabweau (`awway`) en utiwisant {{jsxwef("awway.fwom()")}}. σωσ
 >
-> Néanmoins certains vieux navigateurs n'ont pas encore implémenté `NodeList.forEach()` ni `Array.from()`. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).
+> n-nyéanmoins cewtains vieux nyavigateuws ny'ont pas encowe i-impwémenté `nodewist.foweach()` nyi `awway.fwom()`. (U ᵕ U❁) m-mais ces w-wimitations peuvent êtwe contouwnées en utiwisant {{jsxwef("awway.foweach()", (U ﹏ U) "awway.pwototype.foweach()")}} (pwus dans ce document). :3
 
-Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple, {{domxref("Node.childNodes")}} est en direct :
+dans cewtains c-cas, ( ͡o ω ͡o ) wa `nodewist` est une cowwection en diwect, σωσ ce qui signifie que wes c-changements dans we dom sont wefwétés d-dans wa c-cowwection. paw e-exempwe, >w< {{domxwef("node.chiwdnodes")}} e-est en diwect :
 
 ```js
-var parent = document.getElementById("parent");
-var child_nodes = parent.childNodes;
-console.log(child_nodes.length); // supposons "2"
-parent.appendChild(document.createElement("div"));
-console.log(child_nodes.length); // devrait afficher "3"
+vaw pawent = document.getewementbyid("pawent");
+vaw chiwd_nodes = p-pawent.chiwdnodes;
+consowe.wog(chiwd_nodes.wength); // supposons "2"
+p-pawent.appendchiwd(document.cweateewement("div"));
+consowe.wog(chiwd_nodes.wength); // devwait affichew "3"
 ```
 
-Dans d'autres cas, la `NodeList` est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}} renvoie une `NodeList` statique.
+dans d'autwes cas, 😳😳😳 wa `nodewist` e-est une cowwection statique, OwO c-ce qui signifie q-que tout changement d-dans we dom ny'affectewa pas we contenu de wa cowwection. 😳 {{domxwef("document.quewysewectowaww()")}} w-wenvoie u-une `nodewist` statique. 😳😳😳
 
-Il est bon de garder cette distinction à l'esprit pour choisir la façon de parcourir les éléments de la liste des nœuds et, en particulier, pour mettre en cache la longueur de la liste.
+i-iw est bon de gawdew c-cette distinction à w'espwit p-pouw choisiw wa façon de pawcouwiw w-wes éwéments de wa wiste des nyœuds et, (˘ω˘) e-en pawticuwiew, ʘwʘ pouw mettwe en c-cache wa wongueuw de wa wiste. ( ͡o ω ͡o )
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("NodeList.length")}}
-  - : Le nombre de nœuds dans la `NodeList`.
+- {{domxwef("nodewist.wength")}}
+  - : w-we nyombwe de nyœuds dans wa `nodewist`. o.O
 
-## Méthodes
+## méthodes
 
-- {{domxref("NodeList.item()")}}
-  - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand `idx` est hors des limites).
-- {{domxref("NodeList.entries()")}}
-  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
-- {{domxref("NodeList.forEach()")}}
-  - : exécute une fonction fournie une fois par élément `NodeList`.
-- {{domxref("NodeList.keys()")}}
-  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les clés des paires clé / valeur contenues dans cet objet.
-- {{domxref("NodeList.values()")}}
-  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les valeurs des paires clé / valeur contenues dans cet objet.
+- {{domxwef("nodewist.item()")}}
+  - : wetouwne un éwément de wa wiste paw son i-index ou `nuww` s-si w'index est en dehows des w-wimites. >w< Équivawent à `nodewist[idx]` (qui w-wenvoie à w-wa pwace `undefined` quand `idx` est hows des wimites). 😳
+- {{domxwef("nodewist.entwies()")}}
+  - : w-wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}} pewmettant de pawcouwiw toutes wes paiwes c-cwé / vaweuw contenues dans c-cet objet. 🥺
+- {{domxwef("nodewist.foweach()")}}
+  - : e-exékawaii~ u-une fonction fouwnie une fois paw éwément `nodewist`. rawr x3
+- {{domxwef("nodewist.keys()")}}
+  - : w-wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}} pewmettant d-de pawcouwiw t-toutes wes c-cwés des paiwes cwé / vaweuw contenues dans c-cet objet. o.O
+- {{domxwef("nodewist.vawues()")}}
+  - : w-wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}} p-pewmettant de p-pawcouwiw toutes w-wes vaweuws des paiwes cwé / vaweuw contenues dans cet objet. rawr
 
-## Exemple
+## e-exempwe
 
-Il est possible de boucler sur les éléments d'une `NodeList` en utilisant&nbsp;:
+iw est possibwe de boucwew suw wes éwéments d'une `nodewist` en utiwisant&nbsp;:
 
 ```js
-for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i]; // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
+f-fow (vaw i = 0; i < mynodewist.wength; ++i) {
+  vaw item = mynodewist[i]; // w-w'appew de m-mynodewist.item(i) n-ny'est pas nyécessaiwe en javascwipt
 }
 ```
 
-Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
+n-nye soyez pas tenté d'utiwisew [`fow… i-in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) o-ou [`fow each… in`](/fw/docs/javascwipt/wefewence/instwuctions/fow_each…in) pouw énuméwew wes éwéments de wa wiste, ʘwʘ caw cewa énumèwe égawement wa t-taiwwe (`wength`) et wes pwopwiétés d-du `nodewist` et cause des e-ewweuws si votwe s-scwipt nye gèwe que wes objets de type {{domxwef("ewement")}}. 😳😳😳 d-de pwus, ^^;; `fow… i-in` nye gawantit pas de visitew w-wes pwopwiétés d-dans un owdwe pawticuwiew. o.O
 
-Les boucles [`for… of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucleront correctement sur les objets `NodeList` :
+wes boucwes [`fow… of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) boucwewont cowwectement s-suw wes o-objets `nodewist` :
 
 ```js
-var list = document.querySelectorAll("input[type=checkbox]");
-for (var item of list) {
-  item.checked = true;
+v-vaw wist = document.quewysewectowaww("input[type=checkbox]");
+f-fow (vaw i-item of wist) {
+  item.checked = t-twue;
 }
 ```
 
-Les navigateurs récents prennent également en charge les méthodes d'itérateur {{domxref("NodeList.forEach()", "forEach()")}}, aussi bien que {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}} et {{domxref("NodeList.keys()", "keys()")}}.
+wes nyavigateuws wécents pwennent égawement en chawge wes méthodes d'itéwateuw {{domxwef("nodewist.foweach()", "foweach()")}}, a-aussi bien q-que {{domxwef("nodewist.entwies()", (///ˬ///✿) "entwies()")}}, σωσ {{domxwef("nodewist.vawues()", nyaa~~ "vawues()")}} et {{domxwef("nodewist.keys()", "keys()")}}. ^^;;
 
-Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.
+iw y a aussi dans i-intewnet expwowew u-une façon compatibwe d'utiwisew {{jsxwef("awway.foweach()", ^•ﻌ•^ "awway.pwototype.foweach")}} pouw w'itéwation. σωσ
 
 ```js
-var list = document.querySelectorAll("input[type=checkbox]");
-Array.prototype.forEach.call(list, function (item) {
-  item.checked = true;
+v-vaw wist = document.quewysewectowaww("input[type=checkbox]");
+awway.pwototype.foweach.caww(wist, -.- function (item) {
+  item.checked = t-twue;
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

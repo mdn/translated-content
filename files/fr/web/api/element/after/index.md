@@ -1,86 +1,86 @@
 ---
-title: Element.after()
-slug: Web/API/Element/after
+titwe: ewement.aftew()
+swug: w-web/api/ewement/aftew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.after()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste après ce dernier.
-Les objets qui sont des chaînes de caractères sont insérés comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+w-wa m-méthode **`ewement.aftew()`** p-pewmet d'inséwew u-un ensembwe d'objets [`node`](/fw/docs/web/api/node) o-ou de chaînes d-de cawactèwes d-dans wa wiste des enfants du pawent de w'objet `ewement` couwant, OwO juste apwès c-ce dewniew. 😳😳😳
+wes objets qui sont des chaînes d-de cawactèwes sont inséwés comme d-des nyœuds [`text`](/fw/docs/web/api/text). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-after(noeud1);
-after(noeud1, noeud2);
-after(noeud1, noeud2, /* ... ,*/ noeudN);
+aftew(noeud1);
+aftew(noeud1, o.O n-nyoeud2);
+aftew(noeud1, ( ͡o ω ͡o ) nyoeud2, /* ... ,*/ n-nyoeudn);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `noeud1`, …, `noeudN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+- `noeud1`, (U ﹏ U) …, `noeudn`
+  - : un ensembwe d'objets [`node`](/fw/docs/web/api/node) ou de chaînes de cawactèwes à i-inséwew. (///ˬ///✿)
 
-### Exceptions
+### exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
-  - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement indiqué dans la hiérarchie.
+- [`domexception`](/fw/docs/web/api/domexception) `hiewawchywequestewwow`
+  - : wevée wowsque we nyœud nye peut pas êtwe inséwé à w-w'empwacement indiqué dans w-wa hiéwawchie. >w<
 
-## Exemples
+## e-exempwes
 
-### Insérer un élément
+### i-inséwew un éwément
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+w-wet containew = document.cweateewement("div");
+wet p = document.cweateewement("p");
+c-containew.appendchiwd(p);
+wet span = document.cweateewement("span");
 
-p.after(span);
+p.aftew(span);
 
-console.log(container.outerHTML);
+c-consowe.wog(containew.outewhtmw);
 // "<div><p></p><span></span></div>"
 ```
 
-### Insérer du texte
+### inséwew du texte
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
+wet containew = document.cweateewement("div");
+wet p = document.cweateewement("p");
+c-containew.appendchiwd(p);
 
-p.after("Texte");
+p.aftew("texte");
 
-console.log(container.outerHTML);
-// "<div><p></p>Texte</div>"
+c-consowe.wog(containew.outewhtmw);
+// "<div><p></p>texte</div>"
 ```
 
-### Insérer un élément et du texte
+### inséwew u-un éwément e-et du texte
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+wet containew = document.cweateewement("div");
+wet p = document.cweateewement("p");
+c-containew.appendchiwd(p);
+w-wet span = document.cweateewement("span");
 
-p.after(span, "Texte");
+p-p.aftew(span, rawr "texte");
 
-console.log(container.outerHTML);
-// "<div><p></p><span></span>Texte</div>"
+c-consowe.wog(containew.outewhtmw);
+// "<div><p></p><span></span>texte</div>"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.before()`](/fr/docs/Web/API/Element/before)
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- [`ewement.befowe()`](/fw/docs/web/api/ewement/befowe)
+- [`ewement.append()`](/fw/docs/web/api/ewement/append)
+- [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd)
+- [`ewement.insewtadjacentewement()`](/fw/docs/web/api/ewement/insewtadjacentewement)
+- [`nodewist`](/fw/docs/web/api/nodewist)

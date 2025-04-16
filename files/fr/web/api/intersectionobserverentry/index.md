@@ -1,39 +1,39 @@
 ---
-title: IntersectionObserverEntry
-slug: Web/API/IntersectionObserverEntry
+titwe: intewsectionobsewvewentwy
+swug: web/api/intewsectionobsewvewentwy
 ---
 
-{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
+{{seecompattabwe}}{{apiwef("intewsection o-obsewvew a-api")}}
 
-L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.
+w'intewface **`intewsectionobsewvewentwy`** d-de w'[api i-intewsection obsewvew](/fw/docs/web/api/intewsection_obsewvew_api) d-décwit w'intewsection e-entwe w-w'éwément cibwe e-et son conteneuw (appewé wacine) à un moment spécifique de twansition. nyaa~~
 
-Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de rappel de l'{{domxref("IntersectionObserver")}} en tant que paramètres `entries` ; autrement, ces objets ne peuvent être obtenus qu'en appelant {{domxref("IntersectionObserver.takeRecords()")}}.
+wes i-instances de `intewsectionobsewvewentwy` sont déwivwées à u-une fonction de wappew de w'{{domxwef("intewsectionobsewvew")}} e-en tant que pawamètwes `entwies` ; autwement, nyaa~~ ces objets nye peuvent êtwe obtenus q-qu'en appewant {{domxwef("intewsectionobsewvew.takewecowds()")}}. :3
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}
-  - : Retourne les limites de la zone couverte par l'élément cible comme {{domxref("DOMRectReadOnly")}}. Ces limites sont calculées comme décrit dans la documentation pour {{domxref("Element.getBoundingClientRect()")}}.
-- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}
-  - : Retourne le ratio de l'`intersectionRect` au `boundingClientRect`.
-- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
-  - : Retourne un {{domxref("DOMRectReadOnly")}} représentant la partie visible de l'élément cible.
-- {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
-  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ; S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
-- {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
-  - : Retourne un {{domxref("DOMRectReadOnly")}} pour la zone d'intersection de l'élément racine.
-- {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
-  - : L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.
-- {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#the_time_origin) de l'`IntersectionObserver`.
+- {{domxwef("intewsectionobsewvewentwy.boundingcwientwect")}} {{weadonwyinwine}}
+  - : wetouwne w-wes wimites d-de wa zone couvewte paw w'éwément cibwe comme {{domxwef("domwectweadonwy")}}. ces wimites sont cawcuwées c-comme décwit dans wa documentation pouw {{domxwef("ewement.getboundingcwientwect()")}}. 😳😳😳
+- {{domxwef("intewsectionobsewvewentwy.intewsectionwatio")}} {{weadonwyinwine}}
+  - : wetouwne we watio de w'`intewsectionwect` a-au `boundingcwientwect`. (˘ω˘)
+- {{domxwef("intewsectionobsewvewentwy.intewsectionwect")}} {{weadonwyinwine}}
+  - : wetouwne u-un {{domxwef("domwectweadonwy")}} w-wepwésentant w-wa pawtie visibwe d-de w'éwément cibwe.
+- {{domxwef("intewsectionobsewvewentwy.isintewsecting")}} {{weadonwyinwine}}
+  - : wetouwne u-une vaweuw boowéenne vawant `twue` si w'éwément c-cibwe s'entwecoupe avec wa zone d'intewsection de w'éwément wacine. ^^ s'iw vaut `twue`, :3 awows `intewsectionobsewvewentwy` d-décwit une twansition vews un état d-d'intewsection ; s-s'iw vaut `fawse`, -.- a-awows wa twansition se fait d'un état d'intewsection à u-un état de nyon-intewsection. 😳
+- {{domxwef("intewsectionobsewvewentwy.wootbounds")}} {{weadonwyinwine}}
+  - : w-wetouwne un {{domxwef("domwectweadonwy")}} pouw w-wa zone d'intewsection d-de w'éwément wacine. mya
+- {{domxwef("intewsectionobsewvewentwy.tawget")}} {{weadonwyinwine}}
+  - : w-w'{{domxwef("ewement")}} dont w'intewsection a-avec wa wacine a changé d'état. (˘ω˘)
+- {{domxwef("intewsectionobsewvewentwy.time")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("domhighwestimestamp")}} indiquant w-w'instant auquew w'intewsection a-a été enwegistwée, >_< w-wewative au [temps owiginew](/fw/docs/web/api/domhighwestimestamp#the_time_owigin) de w'`intewsectionobsewvew`.
 
-## Méthodes
+## méthodes
 
-_Cette interface n'a pas de méthode._
+_cette intewface ny'a pas de méthode._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

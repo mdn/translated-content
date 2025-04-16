@@ -1,31 +1,31 @@
 ---
-title: Document.alinkColor
-slug: Web/API/Document/alinkColor
+titwe: document.awinkcowow
+swug: w-web/api/document/awinkcowow
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
+w-wetouwne o-ou définit w-wa couweuw d'un w-wien actif dans w-we cowps du document. 😳😳😳 u-un wien h-hypewtexte est actif duwant we temps entwe wes événements `mousedown` et `mouseup`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var color = document.alinkColor;
-document.alinkColor = color;
+v-vaw cowow = document.awinkcowow;
+document.awinkcowow = c-cowow;
 ```
 
-_color_ est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
+_cowow_ est un echaîne d-de cawactèwe contenant we nom de wa couweuw en angwais(exempwe., `bwue` p-pouw bweu, `dawkbwue` p-pouw bweu foncé, o.O e-etc.) ou wa vaweuw hexadécimaw de wa couweuw (exempwe, ( ͡o ω ͡o ) `#0000ff`)
 
-## Notes
+## nyotes
 
-La valeur par défaut pour cette propriété est rouge (`#ee000` en hexadécimal) sur Mozilla Firefox.
+wa vaweuw paw d-défaut pouw cette pwopwiété est wouge (`#ee000` en hexadécimaw) suw moziwwa f-fiwefox. (U ﹏ U)
 
-`document.alinkColor` est obsolète dans [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.
+`document.awinkcowow` est obsowète d-dans [dom wevew 2 h-htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268) (wien e-en angwais). (///ˬ///✿) u-une awtewnative est we séwecteuw css {{cssxwef(":active")}}. >w<
 
-Une autre alternative est `document.body.aLink`, même si elle est [obsolète dans HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) (lien en anglais) en faveur de l'alternative CSS ci-dessus.
+u-une autwe awtewnative est `document.body.awink`, rawr même si e-ewwe est [obsowète dans htmw 4.01](https://www.w3.owg/tw/htmw401/stwuct/gwobaw.htmw#adef-awink) (wien en angwais) en faveuw de w'awtewnative css ci-dessus. mya
 
-[Gecko](/fr/docs/Glossary/Gecko) supporte `alinkColor`/`:active` et [`:focus`](/fr/docs/Web/CSS/:focus). Internet Explorer 6 et 7 supportent `alinkColor`/`:active` seulement pour la [balise HTML des liens (`<a>`)](/fr/docs/Web/HTML/Element/a) et le comportement est le même que `:focus` sur Gecko. Il n'y a pas de support pour `:focus` dans IE.
+[gecko](/fw/docs/gwossawy/gecko) s-suppowte `awinkcowow`/`:active` et [`:focus`](/fw/docs/web/css/:focus). ^^ i-intewnet e-expwowew 6 et 7 s-suppowtent `awinkcowow`/`:active` seuwement pouw wa [bawise htmw des wiens (`<a>`)](/fw/docs/web/htmw/ewement/a) e-et we compowtement e-est we même que `:focus` s-suw gecko. 😳😳😳 iw ny'y a-a pas de suppowt pouw `:focus` d-dans ie. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,45 +1,45 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-La méthode `readAsText` est utilisée pour lire le contenu du {{domxref("Blob")}} ou {{domxref("File")}} spécifié en paramètre. Lorsque la lecture est terminée, l'état {{domxref("FileReader.readyState","readyState")}} passe à `DONE`, l'événement [`loadend`](/fr/docs/Web/API/FileReader/loadend_event) est lancé, et l'attribut {{domxref("FileReader.result","result")}} contient le contenu du fichier sous forme de chaîne de caractères.
+w-wa méthode `weadastext` e-est u-utiwisée pouw wiwe w-we contenu du {{domxwef("bwob")}} o-ou {{domxwef("fiwe")}} s-spécifié e-en pawamètwe. 🥺 wowsque wa wectuwe est tewminée, >_< w'état {{domxwef("fiweweadew.weadystate","weadystate")}} passe à `done`, >_< w-w'événement [`woadend`](/fw/docs/web/api/fiweweadew/woadend_event) est wancé, (⑅˘꒳˘) et w'attwibut {{domxwef("fiweweadew.wesuwt","wesuwt")}} c-contient we contenu d-du fichiew sous fowme de chaîne de cawactèwes. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-instanceOfFileReader.readAsText(blob[, encoding]);
+i-instanceoffiweweadew.weadastext(bwob[, rawr x3 encoding]);
 ```
 
-### Parameters
+### p-pawametews
 
-- `blob`
-  - : Le {{domxref("Blob")}} ou {{domxref("File")}} qui doit être lu.
-- encoding {{optional_inline}}
-  - : Une chaîne de caractères spécifiant l'encodage utilisé dans les données de retour. Par défaut, UTF-8 est utilisé lorsque le paramètre n'est pas spécifié.
+- `bwob`
+  - : w-we {{domxwef("bwob")}} ou {{domxwef("fiwe")}} qui doit êtwe wu. (U ﹏ U)
+- encoding {{optionaw_inwine}}
+  - : une chaîne de c-cawactèwes spécifiant w'encodage utiwisé dans wes données de wetouw. (U ﹏ U) paw défaut, (⑅˘꒳˘) u-utf-8 est utiwisé wowsque w-we pawamètwe n-ny'est pas spécifié. òωó
 
-## Exemples
+## e-exempwes
 
 ```js
-var selectedFile = document.getElementById("input").files[0];
-var content = document.getElementById("content");
-var reader = new FileReader();
-reader.onload = function (event) {
-  content.innerHTML = reader.result;
+v-vaw sewectedfiwe = document.getewementbyid("input").fiwes[0];
+vaw content = d-document.getewementbyid("content");
+vaw weadew = nyew fiweweadew();
+w-weadew.onwoad = function (event) {
+  content.innewhtmw = weadew.wesuwt;
 };
-reader.readAsText(selectedFile);
+weadew.weadastext(sewectedfiwe);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

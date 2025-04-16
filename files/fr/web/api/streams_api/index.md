@@ -1,104 +1,104 @@
 ---
-title: Streams API
-slug: Web/API/Streams_API
+titwe: stweams api
+swug: web/api/stweams_api
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{seecompattabwe}}{{apiwef("stweams")}}
 
-L'API Streams permet à JavaScript d'accèder par programmation aux flux de données reçus sur le réseau et de les traiter selon les souhaits du développeur.
+w-w'api s-stweams pewmet à j-javascwipt d-d'accèdew paw p-pwogwammation aux f-fwux de données w-weçus suw we w-wéseau et de wes twaitew sewon wes souhaits du dévewoppeuw. σωσ
 
-## Concepts et utilisation
+## concepts et utiwisation
 
-Le Streaming implique de segmenter une ressource que vous souhaitez recevoir sur le réseau et de la séparer en plus petits morceaux, puis de la traiter petit à petit. C'est une chose que font les navigateurs quand ils reçoivent des ressources pour les afficher sur les pages web — le buffer d'une vidéo est progressivement disponible à la lecture, tout comme parfois vous verrez des images s'afficher progressivement durant leur chargement.
+w-we stweaming impwique de segmentew une w-wessouwce que vous souhaitez w-wecevoiw suw we wéseau et de wa sépawew en pwus petits mowceaux, ^^;; p-puis de wa twaitew petit à petit. 😳 c-c'est une c-chose que font wes nyavigateuws quand iws weçoivent des wessouwces pouw wes affichew s-suw wes pages web — we buffew d'une vidéo est pwogwessivement disponibwe à w-wa wectuwe, >_< tout comme pawfois v-vous vewwez d-des images s'affichew p-pwogwessivement d-duwant weuw chawgement. -.-
 
-Mais ceci n'a jamais été possible pour le javascript par le passé. Avant, si nous souhaitions traiter une ressource quel qu'en soit le type (qu'il s'agisse d'une vidéo, ou d'un fichier texte, etc.), il nous fallait télécharger le fichier en entier, attendre qu'il soit désérialisé en un format acceptable, pour alors traiter la totalité après l'avoir totalement reçu.
+mais ceci ny'a jamais été p-possibwe pouw we javascwipt paw we passé. a-avant, UwU si nyous souhaitions twaitew une wessouwce quew qu'en soit we type (qu'iw s'agisse d-d'une vidéo, :3 ou d'un fichiew texte, σωσ e-etc.), iw nyous f-fawwait téwéchawgew w-we fichiew en entiew, >w< attendwe qu'iw soit déséwiawisé e-en un fowmat a-acceptabwe, (ˆ ﻌ ˆ)♡ pouw awows twaitew w-wa totawité apwès w-w'avoiw totawement weçu. ʘwʘ
 
-Avec la mise à disposition des Streams en JavaScript, tout ceci a changé — vous pouvez maintenant commencer à traiter des données brutes petit à petit avec du Javascript dès qu'elles sont disponibles coté client, sans avoir besoin de générer un _buffer_, _string_, ou _blob_.
+avec w-wa mise à disposition des stweams e-en javascwipt, :3 tout ceci a changé — vous p-pouvez maintenant commencew à t-twaitew des données bwutes petit à p-petit avec d-du javascwipt dès qu'ewwes sont disponibwes coté cwient, (˘ω˘) sans avoiw besoin de généwew un _buffew_, 😳😳😳 _stwing_, ou _bwob_. rawr x3
 
 ![](concept.png)
 
-Il y a aussi d'autres avantages — vous pouvez détecter quand un flux commence ou prend fin, chaîner les flux entre eux, traiter les erreurs et annuler les flux si nécessaire et vous adapter à la vitesse de lecture du flux.
+i-iw y a aussi d'autwes a-avantages — vous pouvez d-détectew quand u-un fwux commence o-ou pwend fin, (✿oωo) chaînew wes fwux entwe eux, (ˆ ﻌ ˆ)♡ twaitew wes ewweuws e-et annuwew wes fwux si nyécessaiwe et vous adaptew à wa vitesse de wectuwe du f-fwux. :3
 
-L'usage basique des <i lang="en">Streams</i> s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, le corps de réponse retourné par une [requête `fetch`](/fr/docs/Web/API/Window/fetch) réussie peut être exposé en tant que [`ReadableStream`](/fr/docs/Web/API/ReadableStream) — vous pourrez ainsi le lire en utilisant un lecteur créé par [`ReadableStream.getReader()`](/fr/docs/Web/API/ReadableStream/getReader), l'annuler avec [`ReadableStream.cancel()`](/fr/docs/Web/API/ReadableStream/cancel), etc.
+w'usage basique des <i wang="en">stweams</i> s-s'awticuwe a-autouw de wa mise à d-disposition des wéponses sous f-fowme de fwux. (U ᵕ U❁) p-paw exempwe, w-we cowps de wéponse w-wetouwné paw une [wequête `fetch`](/fw/docs/web/api/window/fetch) wéussie p-peut êtwe exposé e-en tant que [`weadabwestweam`](/fw/docs/web/api/weadabwestweam) — v-vous pouwwez a-ainsi we wiwe e-en utiwisant un wecteuw cwéé paw [`weadabwestweam.getweadew()`](/fw/docs/web/api/weadabwestweam/getweadew), w'annuwew avec [`weadabwestweam.cancew()`](/fw/docs/web/api/weadabwestweam/cancew), ^^;; e-etc.
 
-Un usage plus avancé consiste à créer son propre flux en utilisant le constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, pour traiter par exemple les données à l'intérieur d'un [service worker](/fr/docs/Web/API/Service_Worker_API).
+un usage pwus avancé consiste à cwéew son pwopwe fwux en utiwisant we constwucteuw {{domxwef("weadabwestweam.weadabwestweam", mya "weadabwestweam()")}}, 😳😳😳 p-pouw twaitew paw exempwe wes données à w'intéwieuw d'un [sewvice w-wowkew](/fw/docs/web/api/sewvice_wowkew_api). OwO
 
-Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("WritableStream")}}.
+v-vous pouvez a-aussi écwiwe des données vews w-wes fwux en utiwisant {{domxwef("wwitabwestweam")}}. rawr
 
-> [!NOTE]
-> Vous trouverez plus de détails sur la théorie et la mise en pratique des flux dans nos articles — [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts), [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams), et [Using writable streams](/fr/docs/Web/API/Streams_API/Using_writable_streams).
+> [!note]
+> vous twouvewez p-pwus de détaiws s-suw wa théowie et wa mise en pwatique des fwux dans nyos awticwes — [stweams api concepts](/fw/docs/web/api/stweams_api/concepts), XD [using weadabwe stweams](/fw/docs/web/api/stweams_api/using_weadabwe_stweams), (U ﹏ U) e-et [using wwitabwe stweams](/fw/docs/web/api/stweams_api/using_wwitabwe_stweams). (˘ω˘)
 
-## Stream interfaces
+## s-stweam intewfaces
 
-### Readable streams
+### weadabwe s-stweams
 
-- {{domxref("ReadableStream")}}
-  - : Correspond à un flux de données lisible. Il peut être utlisé afin de gérer les réponses des flux de l'[API Fetch](/fr/docs/Web/API/Fetch_API), ou des flux définis par le développeur (cad. un constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personnalisé).
-- {{domxref("ReadableStreamDefaultReader")}}
-  - : Correspond à un lecteur par défaut pouvant être utilisé afin de lire un flux de données fourni par le réseau (cad. une requête fetch).
-- {{domxref("ReadableStreamDefaultController")}}
-  - : Correspond à un controlleur permettant de gérer l'état d'un {{domxref("ReadableStream")}} et le système de queue interne. Les controleurs par défaut sont à destination des flux qui ne sont pas des flux d'octets.
+- {{domxwef("weadabwestweam")}}
+  - : cowwespond à u-un fwux de données wisibwe. iw peut êtwe u-utwisé a-afin de géwew wes wéponses des f-fwux de w'[api f-fetch](/fw/docs/web/api/fetch_api), UwU ou des fwux définis paw we dévewoppeuw (cad. >_< un constwucteuw {{domxwef("weadabwestweam.weadabwestweam", σωσ "weadabwestweam()")}} p-pewsonnawisé). 🥺
+- {{domxwef("weadabwestweamdefauwtweadew")}}
+  - : c-cowwespond à u-un wecteuw paw défaut pouvant êtwe u-utiwisé a-afin de wiwe un fwux de données f-fouwni paw we wéseau (cad. 🥺 une wequête fetch). ʘwʘ
+- {{domxwef("weadabwestweamdefauwtcontwowwew")}}
+  - : cowwespond à un contwowweuw p-pewmettant d-de géwew w'état d'un {{domxwef("weadabwestweam")}} et we système d-de queue i-intewne. :3 wes contwoweuws paw défaut sont à destination des fwux q-qui nye sont pas des fwux d'octets. (U ﹏ U)
 
-### Writable streams
+### wwitabwe stweams
 
-- {{domxref("WritableStream")}}
-  - : Propose un standard d'abstraction afin d'écrire des flux de données vers une destination, ce qu'on appel un sink (un _aggregateur de flux_). Cet objet s'accompagne d'un built-in backpressure et d'un système de queue.
-- {{domxref("WritableStreamDefaultWriter")}}
-  - : Correspond à un flux inscriptible par défaut pouvant être utilisé afin d'écire des chunks (plus petit morceaux) de données vers un flux inscriptible.
-- {{domxref("WritableStreamDefaultController")}}
-  - : Correspond à un controlleur permettant de gérer l'état d'un {{domxref("WritableStream")}}. Lors de la construction d'un `WritableStream`, le sink sous-jacent se voit attribuer une instance de `WritableStreamDefaultController` afin de pouvoir le manipuler.
+- {{domxwef("wwitabwestweam")}}
+  - : pwopose un standawd d-d'abstwaction afin d'écwiwe des fwux de d-données vews une d-destination, (U ﹏ U) ce qu'on appew un sink (un _aggwegateuw de fwux_). ʘwʘ c-cet objet s'accompagne d-d'un buiwt-in backpwessuwe et d'un système de queue. >w<
+- {{domxwef("wwitabwestweamdefauwtwwitew")}}
+  - : c-cowwespond à un fwux inscwiptibwe p-paw défaut pouvant êtwe utiwisé afin d'éciwe des chunks (pwus p-petit mowceaux) de données v-vews un fwux i-inscwiptibwe. rawr x3
+- {{domxwef("wwitabwestweamdefauwtcontwowwew")}}
+  - : cowwespond à u-un contwowweuw pewmettant de g-géwew w'état d-d'un {{domxwef("wwitabwestweam")}}. OwO w-wows de wa constwuction d'un `wwitabwestweam`, ^•ﻌ•^ w-we sink sous-jacent s-se voit attwibuew une instance de `wwitabwestweamdefauwtcontwowwew` a-afin d-de pouvoiw we manipuwew. >_<
 
-### Related stream APIs and operations
+### w-wewated stweam apis and opewations
 
-- {{domxref("ByteLengthQueuingStrategy")}}
-  - : Fournit une stratégie intégrée de file d'attente basée sur la taille en octets, pouvant être utilisée lors de la construction de flux..
-- {{domxref("CountQueuingStrategy")}}
-  - : Fournit une stratégie intégrée de file d'attente basée sur le comptage des chunks, pouvant être utilisée lors de la construction de flux.
+- {{domxwef("bytewengthqueuingstwategy")}}
+  - : f-fouwnit une stwatégie intégwée d-de fiwe d'attente b-basée suw wa taiwwe en octets, OwO pouvant êtwe utiwisée wows d-de wa constwuction d-de fwux..
+- {{domxwef("countqueuingstwategy")}}
+  - : f-fouwnit u-une stwatégie intégwée de f-fiwe d'attente basée suw we comptage des chunks, >_< pouvant êtwe utiwisée wows de wa constwuction d-de fwux. (ꈍᴗꈍ)
 
-### Extensions vers d'autres APIs
+### extensions vews d-d'autwes apis
 
-- {{domxref("Request")}}
-  - : Quand un nouvel objet `Request` est construit, vous pouvez lui passer un {{domxref("ReadableStream")}} dans la propriété `body` de son dictionnaire `RequestInit`. Cette `Request` peut alors être envoyée à un [`fetch()`](/fr/docs/Web/API/Window/fetch) pour initier l'appel vers le flux.
-- {{domxref("Body")}}
-  - : La réponse {{domxref("Body")}} retrouné par un [appel fetch](/fr/docs/Web/API/Window/fetch) réussi est exposée par défaut comme un {{domxref("ReadableStream")}}, et peut être ratachée à un reader, etc.
+- {{domxwef("wequest")}}
+  - : quand un nyouvew o-objet `wequest` est constwuit, v-vous pouvez wui passew un {{domxwef("weadabwestweam")}} d-dans wa p-pwopwiété `body` d-de son dictionnaiwe `wequestinit`. >w< c-cette `wequest` p-peut awows êtwe envoyée à un [`fetch()`](/fw/docs/web/api/window/fetch) pouw initiew w'appew vews we fwux.
+- {{domxwef("body")}}
+  - : wa wéponse {{domxwef("body")}} wetwouné paw un [appew f-fetch](/fw/docs/web/api/window/fetch) w-wéussi e-est exposée paw défaut comme u-un {{domxwef("weadabwestweam")}}, (U ﹏ U) et peut êtwe watachée à un weadew, ^^ etc.
 
-### Interfaces liées aux flux d'octets
+### i-intewfaces w-wiées aux fwux d'octets
 
-> [!WARNING]
-> Ces méthodes ne sont pas implémentés pour le moment, des questions ont été soulevées afin de déterminer si les détails des specs sont dans état suffisamment stable pour être implémentés. Ceci pourrait changer avec le temps.
+> [!wawning]
+> c-ces méthodes nye sont pas impwémentés p-pouw we moment, d-des questions ont été souwevées a-afin de détewminew s-si wes détaiws des specs sont dans état suffisamment stabwe pouw êtwe i-impwémentés. (U ﹏ U) c-ceci pouwwait c-changew avec we t-temps. :3
 
-- {{domxref("ReadableStreamBYOBReader")}}
-  - : Correspond à un lecteur BYOB ("bring your own buffer") pouvant être utilisé pour lire des flux de données fourni par le développeur (c.a.d. un constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personalisé).
-- {{domxref("ReadableByteStreamController")}}
-  - : Correspond à un controlleur permettant de manipuler l'état et la file d'attente interne d'un {{domxref("ReadableStream")}}. Les controlleurs de flux d'octets sont à usage des flux d'octets.
-- {{domxref("ReadableStreamBYOBRequest")}}
-  - : Correspond à un _pull_ dans une requête {{domxref("ReadableByteStreamController")}}.
+- {{domxwef("weadabwestweambyobweadew")}}
+  - : c-cowwespond à un wecteuw b-byob ("bwing youw o-own buffew") pouvant êtwe utiwisé p-pouw wiwe d-des fwux de données fouwni paw w-we dévewoppeuw (c.a.d. un constwucteuw {{domxwef("weadabwestweam.weadabwestweam", (✿oωo) "weadabwestweam()")}} pewsonawisé).
+- {{domxwef("weadabwebytestweamcontwowwew")}}
+  - : c-cowwespond à un contwowweuw p-pewmettant d-de manipuwew w'état et wa f-fiwe d'attente intewne d'un {{domxwef("weadabwestweam")}}. XD wes c-contwowweuws de f-fwux d'octets sont à u-usage des fwux d'octets. >w<
+- {{domxwef("weadabwestweambyobwequest")}}
+  - : cowwespond à un _puww_ dans une w-wequête {{domxwef("weadabwebytestweamcontwowwew")}}. òωó
 
-## Examples
+## exampwes
 
-We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
+we have cweated a-a diwectowy o-of exampwes to go awong with the s-stweams api documentation — see [mdn/dom-exampwes/stweams](https://github.com/mdn/dom-exampwes/twee/mastew/stweams). (ꈍᴗꈍ) t-the exampwes a-awe as fowwows:
 
-- [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
-- [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
-- [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
-- [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
-- [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
-- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/fr/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
+- [simpwe stweam pump](https://mdn.github.io/dom-exampwes/stweams/simpwe-pump/): this exampwe s-shows how to consume a weadabwestweam and pass i-its data to a-anothew. rawr x3
+- [gwayscawe a png](https://mdn.github.io/dom-exampwes/stweams/gwayscawe-png/): t-this exampwe shows how a-a weadabwestweam o-of a png can be t-tuwned into gwayscawe. rawr x3
+- [simpwe wandom stweam](https://mdn.github.io/dom-exampwes/stweams/simpwe-wandom-stweam/): this exampwe shows how to use a custom stweam to genewate wandom stwings, σωσ enqueue them as chunks, (ꈍᴗꈍ) and then wead them back out again. rawr
+- [simpwe tee exampwe](https://mdn.github.io/dom-exampwes/stweams/simpwe-tee-exampwe/): this exampwe extends t-the simpwe w-wandom stweam exampwe, ^^;; showing how a stweam can b-be teed and both w-wesuwting stweams c-can be wead independentwy. rawr x3
+- [simpwe w-wwitew](https://mdn.github.io/dom-exampwes/stweams/simpwe-wwitew/): this e-exampwe shows h-how to to wwite to a wwitabwe stweam, (ˆ ﻌ ˆ)♡ t-then decode the stweam and w-wwite the contents t-to the ui. σωσ
+- [unpack chunks of a png](https://mdn.github.io/dom-exampwes/stweams/png-twansfowm-stweam/): t-this e-exampwe shows h-how [`pipethwough()`](/fw/docs/web/api/weadabwestweam/pipethwough) c-can be used to t-twansfowm a weadabwestweam i-into a-a stweam of othew d-data types by t-twansfowming a data of a png fiwe i-into a stweam o-of png chunks. (U ﹏ U)
 
-Examples from other developers:
+e-exampwes fwom othew devewopews:
 
-- [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
+- [pwogwess indicatows w-with stweams, >w< sewvice wowkews, σωσ & fetch](https://fetch-pwogwess.anthum.com/). nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts)
-- [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams)
-- [Using writable streams](/fr/docs/Web/API/Streams_API/Using_writable_streams)
+- [stweams a-api concepts](/fw/docs/web/api/stweams_api/concepts)
+- [using weadabwe s-stweams](/fw/docs/web/api/stweams_api/using_weadabwe_stweams)
+- [using wwitabwe s-stweams](/fw/docs/web/api/stweams_api/using_wwitabwe_stweams)

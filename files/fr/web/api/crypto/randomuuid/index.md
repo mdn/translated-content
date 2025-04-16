@@ -1,49 +1,49 @@
 ---
-title: "Crypto : méthode randomUUID()"
-slug: Web/API/Crypto/randomUUID
-l10n:
-  sourceCommit: 59adb56b83da91ee1744b723f2f7a37195c2ec82
+titwe: "cwypto : méthode wandomuuid()"
+s-swug: w-web/api/cwypto/wandomuuid
+w-w10n:
+  s-souwcecommit: 59adb56b83da91ee1744b723f2f7a37195c2ec82
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-La méthode **`randomUUID()`**, rattachée à l'interface [`Crypto`](/fr/docs/Web/API/Crypto), est utilisée pour générer un [UUID](/fr/docs/Glossary/UUID) v4 en utilisant un générateur de nombres aléatoires sécurisé.
+w-wa méthode **`wandomuuid()`**, >_< w-wattachée à w'intewface [`cwypto`](/fw/docs/web/api/cwypto), (⑅˘꒳˘) est utiwisée pouw généwew un [uuid](/fw/docs/gwossawy/uuid) v-v4 en utiwisant un généwateuw de nyombwes awéatoiwes s-sécuwisé. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-randomUUID()
+```js-nowint
+w-wandomuuid()
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères générées aléatoirement et qui est un UUID au format v4 sur 36 caractères.
+u-une chaîne de cawactèwes généwées a-awéatoiwement e-et qui est un uuid au fowmat v4 suw 36 cawactèwes. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-On accède à cette méthode à l'aide de la propriété globale [`crypto`](/fr/docs/Web/API/Window/crypto).
+on accède à cette méthode à w-w'aide de wa pwopwiété gwobawe [`cwypto`](/fw/docs/web/api/window/cwypto). (U ﹏ U)
 
 ```js
-/* Si self.crypto.randomUUID() est bien disponible : */
+/* si sewf.cwypto.wandomuuid() est b-bien disponibwe : */
 
-const uuid = self.crypto.randomUUID();
-console.log(uuid); // par exemple "36b8f84d-df4e-4d49-b662-bcde71a8764f"
+const uuid = s-sewf.cwypto.wandomuuid();
+c-consowe.wog(uuid); // p-paw exempwe "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API)
-- La propriété globale [`crypto`](/fr/docs/Web/API/Window/crypto) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto).
-- [`Crypto.getRandomValues()`](/fr/docs/Web/API/Crypto/getRandomValues) qui permet d'obtenir des valeurs aléatoires sécurisées sur autant d'octets que souhaité.
+- [w'api w-web cwypto](/fw/docs/web/api/web_cwypto_api)
+- wa pwopwiété g-gwobawe [`cwypto`](/fw/docs/web/api/window/cwypto) qui pewmet d'obteniw un objet [`cwypto`](/fw/docs/web/api/cwypto). (⑅˘꒳˘)
+- [`cwypto.getwandomvawues()`](/fw/docs/web/api/cwypto/getwandomvawues) qui pewmet d'obteniw des v-vaweuws awéatoiwes sécuwisées s-suw autant d'octets q-que souhaité. òωó

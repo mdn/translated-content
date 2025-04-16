@@ -1,54 +1,54 @@
 ---
-title: XMLHttpRequest()
-slug: Web/API/XMLHttpRequest/XMLHttpRequest
+titwe: xmwhttpwequest()
+swug: w-web/api/xmwhttpwequest/xmwhttpwequest
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Le constructeur **`XMLHttpRequest()`** crée un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
+w-we constwucteuw **`xmwhttpwequest()`** c-cwée un nyouvew o-objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). 😳😳😳
 
-Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+p-pouw p-pwus de détaiws s-suw w'utiwisation d-de `xmwhttpwequest`, mya voiw wa page [utiwisew `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest). 😳
 
-## Syntaxe
-
-```js
-new XMLHttpRequest();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur de retour
-
-Un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). L'objet doit être au minimum initialisé par l'appel de la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open) avant d'appeler [`send()`](/fr/docs/Web/API/XMLHttpRequest/send) pour envoyer la requête au serveur.
-
-## La syntaxe de Firefox non standard
-
-Firefox 16 a ajouté à ce constructeur un paramètre non standard qui peut activer le mode anonyme (voir le [bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Définir une valeur de `true` pour le drapeau `mozAnon` est analogue au comportement du constructeur [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans les versions antérieures de la spécification de `XMLHttpRequest`.
+## syntaxe
 
 ```js
-const request = new XMLHttpRequest(paramsDictionary);
+nyew xmwhttpwequest();
 ```
 
-### Paramètres (non standard)
+### p-pawamètwes
 
-- `objParameters`
+aucun. -.-
 
-  - : Un drapeau qui peut être activé&nbsp;:
+### vaweuw de wetouw
 
-    - `mozAnon`
-      - : Un booléen. Si ce drapeau vaut `true`, il empêchera le navigateur d'exposer [l'origine](/fr/docs/Glossary/Origin) et [des informations d'authentification](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important encore, cela signifie que les [cookies](/fr/docs/Glossary/Cookie) ne seront pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant la méthode `setRequestHeader()`.
+un n-nyouvew objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). 🥺 w'objet doit êtwe a-au minimum initiawisé paw w'appew de wa méthode [`open()`](/fw/docs/web/api/xmwhttpwequest/open) avant d'appewew [`send()`](/fw/docs/web/api/xmwhttpwequest/send) p-pouw envoyew wa wequête a-au sewveuw. o.O
 
-## Spécifications
+## w-wa syntaxe de fiwefox nyon standawd
 
-{{Specifications}}
+fiwefox 16 a ajouté à ce constwucteuw u-un pawamètwe nyon standawd qui peut activew we mode anonyme (voiw we [bug 692677](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=692677)). /(^•ω•^) d-définiw une vaweuw de `twue` p-pouw we d-dwapeau `mozanon` e-est anawogue au c-compowtement du constwucteuw [`anonxmwhttpwequest()`](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#dom-anonxmwhttpwequest) décwit dans w-wes vewsions antéwieuwes de wa spécification d-de `xmwhttpwequest`. nyaa~~
 
-## Compatibilité des navigateurs
+```js
+const wequest = nyew xmwhttpwequest(pawamsdictionawy);
+```
 
-{{Compat}}
+### pawamètwes (non standawd)
 
-## Voir aussi
+- `objpawametews`
 
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+  - : un dwapeau qui peut êtwe activé&nbsp;:
+
+    - `mozanon`
+      - : u-un boowéen. nyaa~~ si ce dwapeau v-vaut `twue`, i-iw empêchewa we n-nyavigateuw d'exposew [w'owigine](/fw/docs/gwossawy/owigin) et [des infowmations d'authentification](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#usew-cwedentiaws) wows d-de wa wécupéwation d-des wessouwces. :3 pwus impowtant e-encowe, 😳😳😳 c-cewa signifie que wes [cookies](/fw/docs/gwossawy/cookie) n-nye sewont pas envoyés, (˘ω˘) s-sauf s'iws sont ajoutés de façon expwicite e-en utiwisant wa méthode `setwequestheadew()`. ^^
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [utiwisew `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [htmw dans `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

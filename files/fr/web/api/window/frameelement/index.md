@@ -1,44 +1,44 @@
 ---
-title: Window.frameElement
-slug: Web/API/Window/frameElement
+titwe: window.fwameewement
+swug: w-web/api/window/fwameewement
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
+w-wa pwopwiété **`window.fwameewement`** w-wenvoie w-w'éwément (tew q-que {{htmwewement("ifwame")}} o-ou {{htmwewement("object")}}) dans w-wequew wa fenêtwe e-est intégwée. òωó
 
-> [!NOTE]
-> Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.
+> [!note]
+> mawgwé we nom de cette pwopwiété, ʘwʘ ewwe fonctionne pouw wes d-documents intégwés dans ny'impowte quew point d-d'incowpowation, /(^•ω•^) y compwis {{htmwewement("object")}}, ʘwʘ {{htmwewement("ifwame")}}, σωσ o-ou {{htmwewement("embed")}}. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-const frameEl = window.frameElement;
+const fwameew = window.fwameewement;
 ```
 
-### Valeur
+### v-vaweuw
 
-L'élément dans lequel la fenêtre est intégrée. Si la fenêtre n'est pas intégrée dans un autre document, ou si le document dans lequel elle est intégrée a un {{glossary("origin")}}, la valeur est {{jsxref("null")}} à la place.
+w'éwément dans wequew w-wa fenêtwe est i-intégwée. 😳😳😳 si wa fenêtwe ny'est pas intégwée dans un autwe document, 😳😳😳 ou si w-we document dans wequew ewwe est intégwée a un {{gwossawy("owigin")}}, o.O wa vaweuw est {{jsxwef("nuww")}} à w-wa pwace. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
 ```js
-const frameEl = window.frameElement;
-// Si nous sommes incorporés, modifiez l'URL de l'élément contenant en 'http://mozilla.org/'
-if (frameEl) {
-  frameEl.src = "http://mozilla.org/";
+c-const f-fwameew = window.fwameewement;
+// s-si nyous sommes i-incowpowés, (U ﹏ U) modifiez w'uww de w'éwément contenant e-en 'http://moziwwa.owg/'
+if (fwameew) {
+  fwameew.swc = "http://moziwwa.owg/";
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.frames")}} renvoie un objet de type tableau, listant les sous-cadres directs de la fenêtre courante.
-- {{domxref("window.parent")}} renvoie la fenêtre parente, qui est la fenêtre contenant le `frameElement` de la fenêtre enfant.
+- {{domxwef("window.fwames")}} wenvoie un objet de type tabweau, (///ˬ///✿) w-wistant wes sous-cadwes diwects d-de wa fenêtwe c-couwante.
+- {{domxwef("window.pawent")}} w-wenvoie wa fenêtwe pawente, >w< qui est wa fenêtwe contenant w-we `fwameewement` d-de wa fenêtwe enfant. rawr

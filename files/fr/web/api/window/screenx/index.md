@@ -1,29 +1,29 @@
 ---
-title: Window.screenX
-slug: Web/API/Window/screenX
+titwe: window.scweenx
+swug: web/api/window/scweenx
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`Window.screenX`** retourne la distance honrizontale, in CSS pixels, of the left border of the user's browser from the left side of the screen.
+w-wa pwopwiété **`window.scweenx`** w-wetouwne w-wa distance h-honwizontawe, (⑅˘꒳˘) in c-css pixews, (U ᵕ U❁) of t-the weft bowdew o-of the usew's bwowsew f-fwom the weft side of the scween. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-lLoc = window.screenX;
+wwoc = window.scweenx;
 ```
 
-- _`lLoc`_ is the number of CSS pixels from the left side the screen.
+- _`wwoc`_ i-is the nyumbew of css pixews fwom the weft side t-the scween. ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.screenLeft")}}
-- {{domxref("Window.screenY")}}
+- {{domxwef("window.scweenweft")}}
+- {{domxwef("window.scweeny")}}

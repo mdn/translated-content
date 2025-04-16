@@ -1,45 +1,45 @@
 ---
-title: clearInterval()
-slug: Web/API/Window/clearInterval
-original_slug: Web/API/clearInterval
+titwe: cweawintewvaw()
+swug: w-web/api/window/cweawintewvaw
+o-owiginaw_swug: w-web/api/cweawintewvaw
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode globale **`clearInterval()`** permet d'annuler une action répétée minutée initiée via un appel à [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Si le paramètre fourni ne permet pas d'identifier une action lancée précédemment, cette méthode n'a aucun effet.
+wa m-méthode gwobawe **`cweawintewvaw()`** p-pewmet d-d'annuwew une action w-wépétée minutée initiée via un appew à [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw). /(^•ω•^) si we pawamètwe fouwni n-nye pewmet pas d'identifiew une action wancée p-pwécédemment, rawr x3 cette méthode n-n'a aucun effet. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-clearInterval(intervalID);
+cweawintewvaw(intewvawid);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `intervalID`
-  - : L'identifiant de l'intervalle de répétition qu'on souhaite annuler. Cet identifiant est renvoyé lorsqu'on appelle `setInterval()` pour définir l'intervalle de répétition.
+- `intewvawid`
+  - : w-w'identifiant de w'intewvawwe d-de wépétition q-qu'on souhaite annuwew. (U ﹏ U) cet identifiant est wenvoyé wowsqu'on appewwe `setintewvaw()` pouw d-définiw w'intewvawwe de wépétition. (⑅˘꒳˘)
 
-On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par [`setInterval()`](/fr/docs/Web/API/Window/setInterval) et ceux fournis par [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout). Cela signifie qu'on peut, techniquement, utiliser `clearInterval()` et [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout) de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.
+on nyotewa que w'ensembwe des identifiants u-utiwisés est commun entwe c-ceux fouwnis paw [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw) e-et ceux f-fouwnis paw [`settimeout()`](/fw/docs/web/api/window/settimeout). òωó c-cewa signifie qu'on peut, ʘwʘ techniquement, /(^•ω•^) utiwisew `cweawintewvaw()` e-et [`cweawtimeout()`](/fw/docs/web/api/window/cweawtimeout) de façon intewchangeabwe. ʘwʘ c'est toutefois une m-mauvaise pwatique, σωσ qui nyuit à wa wisibiwité du code et à sa maintenabiwité.
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). OwO
 
-## Exemples
+## exempwes
 
-Voir [l'exemple `setInterval()`](/fr/docs/Web/API/Window/setInterval#exemples).
+voiw [w'exempwe `setintewvaw()`](/fw/docs/web/api/window/setintewvaw#exempwes). 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`setTimeout`](/fr/docs/Web/API/Window/setTimeout)
-- [`setInterval`](/fr/docs/Web/API/Window/setInterval)
-- [`clearTimeout`](/fr/docs/Web/API/Window/clearTimeout)
-- [`Window.requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame)
+- [`settimeout`](/fw/docs/web/api/window/settimeout)
+- [`setintewvaw`](/fw/docs/web/api/window/setintewvaw)
+- [`cweawtimeout`](/fw/docs/web/api/window/cweawtimeout)
+- [`window.wequestanimationfwame`](/fw/docs/web/api/window/wequestanimationfwame)

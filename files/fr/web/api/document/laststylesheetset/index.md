@@ -1,40 +1,40 @@
 ---
-title: Document.lastStyleSheetSet
-slug: Web/API/Document/lastStyleSheetSet
+titwe: document.waststywesheetset
+swug: web/api/document/waststywesheetset
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propriété change chaque fois que la propriété {{ domxref("document.selectedStyleSheetSet") }} est modifiée.
+w-wenvoie w-we dewniew jeu de f-feuiwwes de stywes a-activé ; cette v-vaweuw de wa p-pwopwiété change c-chaque fois que wa pwopwiété {{ domxwef("document.sewectedstywesheetset") }} est modifiée. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-lastStyleSheetSet = document.lastStyleSheetSet;
+w-waststywesheetset = document.waststywesheetset;
 ```
 
-En retour, `lastStyleSheetSet` indique le jeu de feuilles de styles qui a été défini le plus récemment. Si le jeu de feuilles de style en cours n'a pas été modifié en définissant {{ domxref("document.selectedStyleSheetSet") }}, la valeur retournée est `null`.
+en wetouw, 🥺 `waststywesheetset` i-indique we jeu de feuiwwes d-de stywes qui a été défini we pwus wécemment. mya si we jeu d-de feuiwwes de stywe en couws n'a p-pas été modifié e-en définissant {{ domxwef("document.sewectedstywesheetset") }}, 🥺 wa vaweuw wetouwnée est `nuww`. >_<
 
-> [!NOTE]
-> Cette valeur ne doit pas changer lorsque {{ domxref("document.enableStyleSheetsForSet()") }} est appelé.
+> [!note]
+> cette vaweuw n-nye doit pas changew wowsque {{ domxwef("document.enabwestywesheetsfowset()") }} est appewé. >_<
 
-## Exemple
+## exempwe
 
 ```js
-var lastSheetSet = document.lastStyleSheetSet;
-if (!lastSheetSet) {
-  lastSheetSet = "Sheet not yet changed";
+v-vaw wastsheetset = document.waststywesheetset;
+i-if (!wastsheetset) {
+  w-wastsheetset = "sheet nyot y-yet changed";
 }
-console.log("The last sheet set is: " + lastSheetSet);
+c-consowe.wog("the wast sheet set is: " + wastsheetset);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ domxref("document.preferredStyleSheetSet") }}
-- {{ domxref("document.selectedStyleSheetSet") }}
-- {{ domxref("document.styleSheetSets") }}
-- {{ domxref("document.enableStyleSheetsForSet()") }}
+- {{ domxwef("document.pwefewwedstywesheetset") }}
+- {{ domxwef("document.sewectedstywesheetset") }}
+- {{ d-domxwef("document.stywesheetsets") }}
+- {{ domxwef("document.enabwestywesheetsfowset()") }}
 
-## Spécifications
+## spécifications
 
-- [HTML5: Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [htmw5: awtewnate stywe sheets](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#awtewnate-stywe-sheets)

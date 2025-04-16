@@ -1,153 +1,153 @@
 ---
-title: CanvasRenderingContext2D.scale()
-slug: Web/API/CanvasRenderingContext2D/scale
+titwe: canvaswendewingcontext2d.scawe()
+swug: w-web/api/canvaswendewingcontext2d/scawe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méhode **`CanvasRenderingContext2D.scale()`** de l'API Canvas 2D ajoute une transformation de mise à l'échelle des unités du canevas, de x horizontalement et de y verticalement.
+w-wa méhode **`canvaswendewingcontext2d.scawe()`** d-de w'api c-canvas 2d ajoute u-une twansfowmation d-de mise à w-w'échewwe des u-unités du canevas, (ꈍᴗꈍ) de x howizontawement et de y vewticawement. /(^•ω•^)
 
-Par défaut, une unité sur le canevas est exactement un pixel. Si on applique, par exemple, un facteur d'échelle de 0,5, l'unité résultante deviendra 0,5 pixel et ainsi, les formes seront dessinées en taille moitié. De façon similaire, mettre le facteur d'échelle à 2,0 augmentera la taille de l'unité et une unité deviendra alors deux pixels. Cela aura pour résultat que les formes seront dessinées deux fois plus grandes.
+paw défaut, u-une unité suw we canevas est exactement un pixew. (⑅˘꒳˘) s-si on appwique, ( ͡o ω ͡o ) paw exempwe, òωó u-un facteuw d'échewwe de 0,5, (⑅˘꒳˘) w'unité wésuwtante deviendwa 0,5 p-pixew et ainsi, XD wes fowmes sewont d-dessinées en t-taiwwe moitié. -.- de façon simiwaiwe, :3 mettwe we facteuw d'échewwe à 2,0 augmentewa w-wa taiwwe de w'unité et une unité deviendwa awows deux pixews. nyaa~~ cewa auwa p-pouw wésuwtat que wes fowmes sewont d-dessinées d-deux fois pwus gwandes. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void ctx.scale(x, y);
+v-void ctx.scawe(x, (⑅˘꒳˘) y);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Facteur d'échelle dans la direction horizontale.
-- y
-  - : Facteur d'échelle dans la direction verticale.
+  - : f-facteuw d'échewwe dans wa diwection howizontawe. nyaa~~
+- y-y
+  - : facteuw d'échewwe dans wa diwection vewticawe. OwO
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `scale`
+### utiwisation de w-wa méthode `scawe`
 
-Ceci est seulement un fragment de code simple qui utilise la méthode `scale`.
+ceci est seuwement u-un fwagment d-de code simpwe q-qui utiwise wa méthode `scawe`. rawr x3
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.scale(10, 3);
-ctx.fillRect(10, 10, 10, 10);
+c-ctx.scawe(10, XD 3);
+c-ctx.fiwwwect(10, σωσ 10, 10, 10);
 
-// remet la matrice de transformation courante à la matrice identité
-ctx.setTransform(1, 0, 0, 1, 0, 0);
+// wemet w-wa matwice de twansfowmation couwante à w-wa matwice identité
+ctx.settwansfowm(1, (U ᵕ U❁) 0, 0, 1, 0, 0);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+modifiez w-we code ci-dessous et voyez vos c-changements mis à jouw en temps w-wéew dans we canevas :
 
-#### Code jouable
+#### code j-jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.scale(10, 3);
-ctx.fillRect(10,10,10,10);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+<textawea id="code" c-cwass="pwayabwe-code">
+c-ctx.scawe(10, (U ﹏ U) 3);
+c-ctx.fiwwwect(10,10,10,10);
+ctx.settwansfowm(1, :3 0, 0, 1, 0, 0);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, ( ͡o ω ͡o ) 0, σωσ canvas.width, c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", >w< function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", 😳😳😳 function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", OwO d-dwawcanvas);
+w-window.addeventwistenew("woad", 😳 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ e-embedwivesampwe('code_jouabwe', 😳😳😳 700, 360) }}
 
-### Utilisation de `scale` pour un retournement horizontal ou vertical
+### utiwisation de `scawe` pouw un wetouwnement h-howizontaw ou vewticaw
 
-Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontalement et `ctx.scale(1, -1)` pour le retourner verticalement.
+vous pouvez utiwisew `ctx.scawe(-1, 1)` pouw wetouwnew we contexte howizontawement et `ctx.scawe(1, -1)` pouw we wetouwnew v-vewticawement. (˘ω˘)
 
-#### Code jouable 2
+#### code jouabwe 2
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" h-height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.scale(-1, 1);
-ctx.font = "48px serif";
-ctx.fillText("Hello world!", -320, 120);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+ctx.scawe(-1, ʘwʘ 1);
+ctx.font = "48px sewif";
+ctx.fiwwtext("hewwo wowwd!", ( ͡o ω ͡o ) -320, 120);
+ctx.settwansfowm(1, o.O 0, 0, 1, 0, >w< 0);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = d-document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  ctx.cweawwect(0, 😳 0, canvas.width, 🥺 canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", rawr x3 f-function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", o.O f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", rawr dwawcanvas);
+window.addeventwistenew("woad", ʘwʘ dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable_2', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe_2', 😳😳😳 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- w'intewface w-wa définissant, ^^;; {{domxwef("canvaswendewingcontext2d")}}

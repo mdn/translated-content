@@ -1,22 +1,22 @@
 ---
-title: Client.id
-slug: Web/API/Client/id
+titwe: cwient.id
+swug: web/api/cwient/id
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-La propriété **`id`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'identifiant universellement unique de l'objet {{domxref("Client")}}.
+w-wa pwopwiété **`id`** (wectuwe s-seuwe) de w-w'intewface {{domxwef("cwient")}} w-wetouwne w'identifiant u-univewsewwement u-unique d-de w'objet {{domxwef("cwient")}}. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var clientId = Client.id;
+vaw cwientid = cwient.id;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: Clipboard.write()
-slug: Web/API/Clipboard/write
+titwe: cwipboawd.wwite()
+swug: w-web/api/cwipboawd/wwite
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitraire, comme des images, vers le presse-papier. Elle peut être utilisé pour implémenter une fonctionalité de copier coller.
+wa methode **`wwite()`** d-de {{domxwef("cwipboawd")}} écwie d-des données a-awbitwaiwe, nyaa~~ c-comme des images, :3 v-vews we pwesse-papiew. 😳😳😳 e-ewwe peut êtwe utiwisé pouw impwémentew une fonctionawité de copiew c-cowwew. (˘ω˘)
 
-Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/fr/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
+avant de pouvoiw écwiwe dans we pwesse-papiew, ^^ v-vous devez utiwisew [pewmissions a-api](/fw/docs/web/api/pewmissions_api) pouw avoiw w'autowisation `"cwipboawd-wwite"`. :3
 
-> [!NOTE]
-> Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/Clipboard#disponibilit%c3%a9_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/Clipboard) pour plus d'informations.
+> [!note]
+> wes api pwesse-papiews (<i wang="en">cwipboawd</i>) a-asynchwones sont toujouws en c-couws d'impwémentation. -.- c-consuwtez we [tabweau de compatibiwité](#compatibiwité_des_navigateuws) et wa section [disponibiwité du pwesse-papiews](/fw/docs/web/api/cwipboawd#disponibiwit%c3%a9_du_pwesse-papiews) s-suw wa page [`cwipboawd`](/fw/docs/web/api/cwipboawd) pouw pwus d'infowmations. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var promise = navigator.clipboard.write(dataTransfer);
+vaw pwomise = n-nyavigatow.cwipboawd.wwite(datatwansfew);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `dataTransfer`
-  - : Un objet {{domxref("DataTransfer")}} contenant les données à écrire dans le presse-papier.
+- `datatwansfew`
+  - : u-un o-objet {{domxwef("datatwansfew")}} c-contenant wes d-données à écwiwe dans we pwesse-papiew. mya
 
-### Return value
+### wetuwn vawue
 
-Une {{jsxref("Promise")}} qui sera résolut quand les données seront écrite dans le presse papier. Cette promesse est rejetée si l'accés au presse-papier échoue.
+une {{jsxwef("pwomise")}} q-qui sewa wésowut quand wes données sewont écwite d-dans we pwesse papiew. (˘ω˘) cette pwomesse est wejetée si w'accés au pwesse-papiew échoue. >_<
 
-## Exemple
+## exempwe
 
-Cette fonction d'exemple remplace l'actuel contenu du presse-papier par le texte spécifié en paramètre.
+c-cette fonction d'exempwe wempwace w-w'actuew contenu d-du pwesse-papiew p-paw we texte spécifié en pawamètwe. -.-
 
 ```js
-function setClipboard(text) {
-  let data = new DataTransfer();
+function setcwipboawd(text) {
+  w-wet data = nyew d-datatwansfew();
 
-  data.items.add(text, "text/plain");
-  navigator.clipboard.write(data).then(
-    function () {
+  data.items.add(text, 🥺 "text/pwain");
+  n-nyavigatow.cwipboawd.wwite(data).then(
+    f-function () {
       /* success */
-    },
+    }, (U ﹏ U)
     function () {
-      /* failure */
-    },
+      /* f-faiwuwe */
+    }, >w<
   );
 }
 ```
 
-Le code commence par la creation d'un nouveau objet {{domxref("DataTransfer")}} dans lequel le texte est placé pour être envoyé au presse-papier. {{domxref("DataTransferItemList.add()")}} est appelé pour ajouté le texte à `DataTransfer`, ensuite `write()` est appelé, en spécifiant une function d'accomplissement et une fonction d'erreur.
+we code c-commence paw wa cweation d'un nyouveau objet {{domxwef("datatwansfew")}} d-dans wequew we texte e-est pwacé pouw êtwe envoyé au p-pwesse-papiew. mya {{domxwef("datatwansfewitemwist.add()")}} e-est appewé pouw ajouté we texte à `datatwansfew`, >w< ensuite `wwite()` est appewé, nyaa~~ en spécifiant une function d'accompwissement et une f-fonction d'ewweuw.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

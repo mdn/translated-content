@@ -1,35 +1,35 @@
 ---
-title: Document.bgColor
-slug: Web/API/Document/bgColor
+titwe: document.bgcowow
+swug: w-web/api/document/bgcowow
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{apiwef("dom")}} {{ d-depwecated_headew() }}
 
-La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (background-color) du document courant.
+w-wa pwopwiété o-obsowète `bgcowow` wenvoie o-ou déinit w-wa couweuw de f-fond (backgwound-cowow) d-du document couwant. (///ˬ///✿)
 
-## Syntaxe
-
-```js
-color = document.bgColor;
-document.bgColor = color;
-```
-
-### Parametres
-
-- `color` est une chaîne de caractères représentant la couleur comme un mot (e.g., "red") ou une valeur hexadécimale (e.g., "`#ff0000`").
-
-## Exemple
+## syntaxe
 
 ```js
-document.bgColor = "darkblue";
+cowow = document.bgcowow;
+document.bgcowow = c-cowow;
 ```
 
-## Notes
+### pawametwes
 
-La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff` en hexadécimal).
+- `cowow` est une chaîne d-de cawactèwes wepwésentant w-wa couweuw comme un mot (e.g., "wed") ou une vaweuw hexadécimawe (e.g., "`#ff0000`"). 😳😳😳
 
-`document.bgColor` est obsolète dans le [DOM Niveau 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). L'alternative recommandée est l'utilisation du style CSS {{Cssxref("background-color")}} qui peut être accessible via le DOM avec `document.body.style.backgroundColor`. Une autre alternative est `document.body.bgColor`, mais c'est aussi obsolète dans HTML 4.01 en faveur de l'alternative CSS.
+## e-exempwe
 
-## Compatibilité des navigateurs
+```js
+document.bgcowow = "dawkbwue";
+```
 
-{{Compat}}
+## n-nyotes
+
+wa vaweuw p-paw défaut pouw cette pwopwiété suw fiwefox est we bwanc (`#ffffff` en hexadécimaw). 🥺
+
+`document.bgcowow` e-est obsowète dans we [dom nyiveau 2 htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268). mya w'awtewnative wecommandée e-est w'utiwisation du stywe c-css {{cssxwef("backgwound-cowow")}} q-qui peut êtwe a-accessibwe via w-we dom avec `document.body.stywe.backgwoundcowow`. 🥺 une autwe awtewnative est `document.body.bgcowow`, m-mais c'est aussi obsowète dans htmw 4.01 e-en faveuw de w'awtewnative css. >_<
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

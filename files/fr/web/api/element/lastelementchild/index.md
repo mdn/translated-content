@@ -1,43 +1,43 @@
 ---
-title: Element.lastElementChild
-slug: Web/API/Element/lastElementChild
+titwe: ewement.wastewementchiwd
+swug: web/api/ewement/wastewementchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.lastElementChild`** renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant au dernier élément enfant de l'élément courant (celui sur lequel on a appelé la propriété), ou `null` s'il n'y a pas d'éléments enfants.
+w-wa pwopwiété e-en wectuwe seuwe **`ewement.wastewementchiwd`** w-wenvoie un objet [`ewement`](/fw/docs/web/api/ewement) c-cowwespondant a-au dewniew éwément e-enfant d-de w'éwément c-couwant (cewui suw wequew on a appewé wa pwopwiété), >_< ou `nuww` s'iw ny'y a pas d-d'éwéments enfants. rawr x3
 
-`Element.lastElementChild` ne porte que sur les nœuds qui sont des éléments. Pour consulter l'ensemble des nœuds enfants, y compris ceux qui ne sont pas des éléments comme les nœuds de texte et de commentaires, il faudra utiliser [`Node.lastChild`](/fr/docs/Web/API/Node/lastChild).
+`ewement.wastewementchiwd` nye powte que s-suw wes nyœuds qui sont des éwéments. p-pouw consuwtew w'ensembwe des nyœuds enfants, mya y compwis c-ceux qui nye sont pas des éwéments c-comme w-wes nœuds de texte et de commentaiwes, nyaa~~ iw faudwa utiwisew [`node.wastchiwd`](/fw/docs/web/api/node/wastchiwd). (⑅˘꒳˘)
 
-## Valeur
+## vaweuw
 
-Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`
+un objet [`ewement`](/fw/docs/web/api/ewement) o-ou `nuww`
 
-## Exemples
+## exempwes
 
-```html
-<ul id="list">
-  <li>Premier (1)</li>
-  <li>Deuxième (2)</li>
-  <li>Troisième (3)</li>
-</ul>
+```htmw
+<uw id="wist">
+  <wi>pwemiew (1)</wi>
+  <wi>deuxième (2)</wi>
+  <wi>twoisième (3)</wi>
+</uw>
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.lastElementChild.textContent);
-  // Troisième  (3)
-</script>
+<scwipt>
+  const wist = document.getewementbyid("wist");
+  consowe.wog(wist.wastewementchiwd.textcontent);
+  // t-twoisième  (3)
+</scwipt>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.previousElementSibling`](/fr/docs/Web/API/Element/previousElementSibling)
-- [`Element.firstElementChild`](/fr/docs/Web/API/Element/firstElementChild)
+- [`ewement.pweviousewementsibwing`](/fw/docs/web/api/ewement/pweviousewementsibwing)
+- [`ewement.fiwstewementchiwd`](/fw/docs/web/api/ewement/fiwstewementchiwd)

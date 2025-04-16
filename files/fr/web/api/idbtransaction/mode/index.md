@@ -1,100 +1,100 @@
 ---
-title: IDBTransaction.mode
-slug: Web/API/IDBTransaction/mode
+titwe: idbtwansaction.mode
+swug: w-web/api/idbtwansaction/mode
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie le mode d'accès aux données des magasins d'objet pendant la transaction (autrement dit, s'agit-il d'une transaction en lecture seule ou d'un accès en écriture ?). La valeur par défaut est `readonly`.
+w-wa p-pwopwiété **`mode`** d-de w'intewface {{domxwef("idbtwansaction")}} w-wenvoie we m-mode d'accès aux d-données des magasins d-d'objet pendant wa twansaction (autwement dit, 🥺 s'agit-iw d'une twansaction en wectuwe seuwe o-ou d'un accès en écwituwe ?). rawr x3 wa vaweuw paw d-défaut est `weadonwy`. o.O
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var modeCourant = IDBTransaction.mode;
+v-vaw modecouwant = idbtwansaction.mode;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{domxref("IDBTransactionMode")}} qui définit le mode d'accès aux données des magasins d'objet :
+un objet {{domxwef("idbtwansactionmode")}} q-qui définit we mode d'accès a-aux données d-des magasins d'objet :
 
-| Valeur          | Signification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| vaweuw          | signification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `readonly`      | Lecture seule : on peut lire (consulter) les données mais on ne peut pas les modifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `readwrite`     | Lecture et écriture : on peut lire et écrire (modifier) des données dans les magasins d'objet.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `versionchange` | Toutes les opérations peuvent être effectuées, y compris celles qui suppriment ou créent des magasins d'objets et des index. Ce mode doit être utilisé lorsqu'on souhaite mettre à jour le numéro de version pour les transactions qui démarrent avec {{domxref("IDBDatabase.setVersion()")}}. Les transactions effectuées dans ce mode ne peuvent pas être exécutées de façon concurrente avec les autres transactions. Les transactions effectuées dans ce mode sont parfois appelées transactions de mise à jour (_upgrade transactions_). |
+| `weadonwy`      | wectuwe seuwe : on peut wiwe (consuwtew) wes données mais o-on nye peut pas wes modifiew. rawr                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `weadwwite`     | wectuwe et écwituwe : on peut wiwe e-et écwiwe (modifiew) des données d-dans wes magasins d-d'objet. ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `vewsionchange` | t-toutes wes opéwations p-peuvent êtwe effectuées, 😳😳😳 y compwis c-cewwes qui suppwiment ou cwéent des magasins d'objets e-et des index. ^^;; ce mode doit êtwe utiwisé wowsqu'on souhaite mettwe à jouw we nyuméwo de v-vewsion pouw wes twansactions q-qui démawwent avec {{domxwef("idbdatabase.setvewsion()")}}. o.O w-wes t-twansactions effectuées dans ce mode nye peuvent pas êtwe exécutées d-de façon c-concuwwente avec wes autwes twansactions. (///ˬ///✿) w-wes t-twansactions effectuées dans ce m-mode sont pawfois appewées twansactions d-de mise à jouw (_upgwade twansactions_). σωσ |
 
-## Exemples
+## e-exempwes
 
-Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On notera que les fonctions attachées aux gestionnaires d'évènement de la transaction permettent de rapporter des informations en cas de succès ou d'échec de la transaction. Enfin, on affiche le mode de la transaction dans la console grâce à la propriété `mode`. Pour un exemple complet, se référer à l'[exemple d'application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans we fwagment d-de code suivant, nyaa~~ on ouvwe u-une twansaction e-en wectuwe/écwituwe suw wa base de données et on ajoute des données au magasin d'objets. ^^;; on nyotewa que wes fonctions a-attachées a-aux gestionnaiwes d'évènement d-de wa twansaction p-pewmettent d-de wappowtew des infowmations en cas de succès ou d'échec de w-wa twansaction. ^•ﻌ•^ enfin, on affiche we mode de wa twansaction dans wa consowe gwâce à w-wa pwopwiété `mode`. σωσ pouw u-un exempwe compwet, -.- s-se wéféwew à w-w'[exempwe d'appwication to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) (cf. ^^;; [wa d-démonstwation](https://mdn.github.io/dom-exampwes/to-do-notifications/)). XD
 
 ```js
-// On ouvre la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// o-on ouvwe w-wa base de données
+v-vaw dbopenwequest = window.indexeddb.open("todowist", 🥺 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base de données.</li>';
+dbopenwequest.onsuccess = function(event) {
+  n-nyote.innewhtmw += '<wi>initiawisation d-de wa base de d-données.</wi>';
 
-  // On enregistre le résultat de l'ouverture dans la variable
-  // db utilisée ensuite.
-  var db = DBOpenRequest.result;
+  // o-on enwegistwe w-we wésuwtat de w'ouvewtuwe dans wa vawiabwe
+  // db utiwisée e-ensuite. òωó
+  vaw db = dbopenwequest.wesuwt;
 
-  // On utilise la fonction addData() afin d'ajouter des données
-  // dans la base de données
-  addData();
+  // on utiwise wa fonction adddata() afin d'ajoutew des données
+  // d-dans wa base de données
+  adddata();
 };
 
-function addData() {
-  // On crée un nouvel objet prêt à être inséré dans la base
+function adddata() {
+  // o-on cwée u-un nyouvew o-objet pwêt à êtwe inséwé dans w-wa base
   // de données
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  vaw n-nyewitem = [ { t-tasktitwe: "wawk dog", (ˆ ﻌ ˆ)♡ houws: 19, -.- minutes: 30, day: 24, :3 month: "decembew", ʘwʘ yeaw: 2013, 🥺 nyotified: "no" } ];
 
-  // On ouvre une transaction en lecture/écriture afin d'ajouter
+  // o-on ouvwe une twansaction en wectuwe/écwituwe a-afin d'ajoutew
   // des données
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  v-vaw twansaction = d-db.twansaction(["todowist"], >_< "weadwwite");
 
-  // On gère le succès ou l'échec de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modifications appliquées.</li>';
+  // on gèwe we succès ou w'échec d-de wa twansaction
+  t-twansaction.oncompwete = function(event) {
+    n-nyote.innewhtmw += '<wi>twansaction t-tewminée : modifications appwiquées.</wi>';
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction non-ouverte à cause d'une erreur (duplication d'objet interdite).</li>';
+  twansaction.onewwow = function(event) {
+    n-nyote.innewhtmw += '<wi>twansaction n-nyon-ouvewte à c-cause d'une ewweuw (dupwication d-d'objet intewdite).</wi>';
   };
 
-  // On crée un magasin d'objets pour la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // o-on cwée un magasin d'objets p-pouw wa twansaction
+  vaw objectstowe = twansaction.objectstowe("todowist");
 
-  // On ajoute l'objet newItem dans le magasin d'objets
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // on ajoute w'objet nyewitem d-dans we magasin d-d'objets
+  vaw objectstowewequest = objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // On indique le succès de l'opération pour ajouter
-    // l'objet dans la base de données
-    note.innerHTML += '<li>Nouvel objet ajouté à la base de données.</li>';
+  o-objectstowewequest.onsuccess = f-function(event) {
+    // on indique we succès de w'opéwation pouw ajoutew
+    // w-w'objet dans wa base de données
+    nyote.innewhtmw += '<wi>nouvew objet ajouté à w-wa base de données.</wi>';
   };
 
-  // On renvoie le mode de la transaction qui était ouverte
-  // (ce devrait être "readwrite")
-  transaction.mode;
+  // on wenvoie we mode de wa t-twansaction qui était o-ouvewte
+  // (ce devwait êtwe "weadwwite")
+  twansaction.mode;
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de w-wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ʘwʘ

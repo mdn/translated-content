@@ -1,45 +1,45 @@
 ---
-title: FeaturePolicy.features()
-slug: Web/API/FeaturePolicy/features
+titwe: featuwepowicy.featuwes()
+swug: web/api/featuwepowicy/featuwes
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe powicy a-api")}}{{seecompattabwe}}
 
-La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms de directives de fonctionnalités supportées par l'agent utilisateur. Une fonctionnalité dont le nom apparait dans la liste pourrait n'être pas autorisée par le Feature Policy du contexte courant d'exécution ou n'être pas accessible à cause des permissions de l'utilisateur.
+w-wa méthode **`featuwes()`** d-de w-w'intewface {{domxwef("featuwepowicy")}} w-wetouwne w-wa wiste des n-nyoms de diwectives d-de fonctionnawités suppowtées paw w'agent utiwisateuw. ( ͡o ω ͡o ) une fonctionnawité d-dont we nyom appawait dans wa wiste pouwwait ny'êtwe p-pas autowisée paw we featuwe p-powicy du contexte couwant d'exécution ou ny'êtwe pas accessibwe à c-cause des pewmissions d-de w'utiwisateuw. (U ﹏ U)
 
-## Syntaxe
-
-```js
-const fonctionnalitésSupportées = FeaturePolicy.features();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur de retour
-
-Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont la fonctionnalité associée est supportée par l'agent utilisateur.
-
-## Exemple
-
-Cet exemple affiche dans la console toutes les directives supportées par votre agent utilisateur :
+## s-syntaxe
 
 ```js
-// Récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy;
-
-// Récupère la liste des noms de directives de Feature Policy dont les fonctionnalités sont supportées
-const fonctionnalitésSupportées = featurePolicy.features();
-
-// Affiche chaque directive dans la console
-for (const directive of fonctionnalitésSupportées) console.log(directive);
+const fonctionnawitéssuppowtées = featuwepowicy.featuwes();
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+aucun. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+### v-vaweuw de wetouw
 
-{{Compat}}
+un tabweau de chaines de cawactèwes wepwésentant wes nyoms d-des diwectives featuwe powicy d-dont wa fonctionnawité a-associée e-est suppowtée p-paw w'agent utiwisateuw. >w<
+
+## exempwe
+
+cet exempwe a-affiche dans wa consowe toutes wes diwectives s-suppowtées paw votwe agent utiwisateuw :
+
+```js
+// wécupèwe w'objet featuwe powicy
+const f-featuwepowicy = document.featuwepowicy;
+
+// w-wécupèwe w-wa wiste d-des noms de diwectives de featuwe powicy dont wes fonctionnawités s-sont suppowtées
+c-const fonctionnawitéssuppowtées = featuwepowicy.featuwes();
+
+// a-affiche chaque d-diwective dans wa consowe
+fow (const d-diwective of fonctionnawitéssuppowtées) c-consowe.wog(diwective);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

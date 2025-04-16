@@ -1,64 +1,64 @@
 ---
-title: URL.createObjectURL
-slug: Web/API/URL/createObjectURL_static
+titwe: uww.cweateobjectuww
+swug: w-web/api/uww/cweateobjectuww_static
 ---
 
-{{APIRef("URL")}}
-La méthode statique **URL.createObjectURL()** crée une chaîne contenant une URL représentant l'objet passé en paramètre. La durée de vie de l'URL est liée au {{domxref("document")}} de la fenêtre depuis laquelle elle a été créée. La nouvelle URL d'objet représente l'objet {{domxref("File")}} ou {{domxref("Blob")}} spécifié.
+{{apiwef("uww")}}
+w-wa m-méthode statique **uww.cweateobjectuww()** c-cwée u-une chaîne contenant u-une uww w-wepwésentant w'objet p-passé en pawamètwe. >w< wa duwée de vie de w'uww est wiée au {{domxwef("document")}} d-de wa fenêtwe depuis waquewwe ewwe a-a été cwéée. rawr wa nyouvewwe uww d-d'objet wepwésente w'objet {{domxwef("fiwe")}} ou {{domxwef("bwob")}} spécifié. 😳
 
-Pour libérer une URL d'objet, il faut appeler {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
+p-pouw wibéwew une uww d'objet, >w< i-iw faut appewew {{domxwef("uww.wevokeobjectuww", "wevokeobjectuww()")}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Cette fonctionnalité n'est pas disponible dans les [Service Workers](/fr/docs/Web/API/ServiceWorker) à cause de possible fuite mémoire.
+> [!note]
+> c-cette fonctionnawité ny'est pas disponibwe dans wes [sewvice wowkews](/fw/docs/web/api/sewvicewowkew) à c-cause de possibwe fuite mémoiwe. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-objectURL = URL.createObjectURL(object);
+objectuww = uww.cweateobjectuww(object);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `object`
-  - : Un objet {{domxref("File")}}, {{domxref("Blob")}} ou {{domxref("MediaSource")}} pour lequel créer une URL d'objet.
+  - : un objet {{domxwef("fiwe")}}, OwO {{domxwef("bwob")}} o-ou {{domxwef("mediasouwce")}} p-pouw wequew cwéew u-une uww d'objet. (ꈍᴗꈍ)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une {{domxref("DOMString")}} contenant une URL d'objet, pouvant être utilisée comme une référence vers l'objet source `object` spécifié.
+une {{domxwef("domstwing")}} contenant u-une uww d'objet, 😳 pouvant êtwe utiwisée comme u-une wéféwence vews w'objet souwce `object` spécifié. 😳😳😳
 
-## Exemple
+## exempwe
 
-Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images).
+voiw [utiwisation de w'objet uwws pouw affichew des images](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exempwe_utiwisation_de_w'objet_uwws_pouw_affichew_des_images). mya
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-### Gestion de la mémoire
+### gestion d-de wa mémoiwe
 
-À chaque fois que vous appelez `createObjectURL()`, une nouvelle URL d'objet est créée, même si vous en avez déjà créée une pour le même objet. Chacune d'elles doit être libérée en appelant {{domxref("URL.revokeObjectURL()")}} lorsque vous n'en avez plus besoin.
+À c-chaque fois q-que vous appewez `cweateobjectuww()`, mya une nyouvewwe uww d'objet est cwéée, (⑅˘꒳˘) m-même si vous en a-avez déjà cwéée une pouw we m-même objet. (U ﹏ U) chacune d-d'ewwes doit êtwe wibéwée e-en appewant {{domxwef("uww.wevokeobjectuww()")}} wowsque vous n-ny'en avez pwus besoin. mya
 
-Les navigateurs libèrent automatiquement les URL d'objet lorsque le document est déchargé (_unload_)&nbsp;; cependant, pour une performance et une utilisation de la mémoire optimales, si vous avez la possiblité de les libérer explictement sans danger, vous devriez le faire.
+wes nyavigateuws wibèwent a-automatiquement wes uww d'objet w-wowsque we document est déchawgé (_unwoad_)&nbsp;; c-cependant, ʘwʘ p-pouw une pewfowmance et une utiwisation de wa mémoiwe optimawes, si vous avez wa possibwité de wes wibéwew e-expwictement s-sans dangew, (˘ω˘) vous devwiez we faiwe. (U ﹏ U)
 
-### Utiliser les URL d'objet pour les flux de média
+### u-utiwisew w-wes uww d'objet p-pouw wes fwux de média
 
-Dans d'anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requérait de créer une URL d'objet pour le {{domxref("MediaStream")}}. Cela n'est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
+dans d'anciennes vewsions de wa spécification d-de media souwce, attachew un fwux à un éwément {{htmwewement("video")}} wequéwait d-de cwéew une uww d'objet pouw w-we {{domxwef("mediastweam")}}. ^•ﻌ•^ cewa n-ny'est pwus n-nyécessaiwe, (˘ω˘) et wes nyavigateuws c-cessent pwogwessivement d-de suppowtew c-cette pwatique. :3
 
-> [!WARNING]
-> Si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au `MediaStream`.
+> [!wawning]
+> s-si vous avez toujouws du code qui wepose s-suw {{domxwef("uww.cweateobjectuww")}} p-pouw attachew d-des fwux à d-des éwéments m-média, ^^;; vous devez mettwe à jouw votwe code pouw attachew simpwement {{domxwef("htmwmediaewement.swcobject", 🥺 "swcobject")}} d-diwectement au `mediastweam`. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images)
-- {{domxref("URL.revokeObjectURL()")}}
-- {{domxref("HTMLMediaElement.srcObject")}}
-- {{domxref("FileReader.readAsDataURL()")}}
+- [utiwisew des fichiews à pawtiw d-d'appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [utiwisation de w'objet uwws pouw affichew d-des images](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exempwe_utiwisation_de_w'objet_uwws_pouw_affichew_des_images)
+- {{domxwef("uww.wevokeobjectuww()")}}
+- {{domxwef("htmwmediaewement.swcobject")}}
+- {{domxwef("fiweweadew.weadasdatauww()")}}

@@ -1,56 +1,56 @@
 ---
-title: "Element : méthode hasAttributeNS()"
-slug: Web/API/Element/hasAttributeNS
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode hasattwibutens()"
+s-swug: web/api/ewement/hasattwibutens
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`hasAttributeNS()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non pour l'espace de noms indiqué.
+w-wa méthode **`hasattwibutens()`**, (˘ω˘) a-associée à w'intewface [`ewement`](/fw/docs/web/api/ewement), (⑅˘꒳˘) w-wenvoie une **vaweuw b-boowéenne** i-indiquant si w'éwément c-couwant possède w'attwibut spécifié ou nyon pouw w'espace de nyoms i-indiqué. (///ˬ///✿)
 
-Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute) à la place.
+si vous manipuwez des documents htmw e-et ny'avez pas besoin de westweindwe à u-un espace de nyoms donné, 😳😳😳 vous pouvez utiwisew wa méthode [`hasattwibute()`](/fw/docs/web/api/ewement/hasattwibute) à w-wa pwace. 🥺
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-hasAttributeNS(namespace,localName)
+```js-nowint
+h-hasattwibutens(namespace,wocawname)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `namespace`
-  - : Une chaîne de caractères spécifiant l'espace de noms de l'attribut.
-- `localName`
-  - : Le nom de l'attribut.
+  - : une chaîne de cawactèwes spécifiant w'espace de nyoms de w-w'attwibut. mya
+- `wocawname`
+  - : we nyom de w'attwibut. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen indiquant la présence de l'attribut.
+un boowéen indiquant w-wa pwésence de w'attwibut.
 
-## Exemple
+## e-exempwe
 
 ```js
-// Check that the attribute exists before you set a value
-const d = document.getElementById("div1");
-if (
-  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+// c-check that t-the attwibute exists b-befowe you set a vawue
+const d = document.getewementbyid("div1");
+i-if (
+  d.hasattwibutens("http://www.moziwwa.owg/ns/speciawspace/", >_< "speciaw-awign")
 ) {
-  d.setAttribute("align", "center");
+  d.setattwibute("awign", >_< "centew");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
+- [`ewement.hasattwibute()`](/fw/docs/web/api/ewement/hasattwibute)
+- [`ewement.getattwibutens()`](/fw/docs/web/api/ewement/getattwibutens)
+- [`ewement.setattwibutens()`](/fw/docs/web/api/ewement/setattwibutens)
+- [`ewement.wemoveattwibutens()`](/fw/docs/web/api/ewement/wemoveattwibutens)

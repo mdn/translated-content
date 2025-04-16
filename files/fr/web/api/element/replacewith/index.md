@@ -1,68 +1,68 @@
 ---
-title: Element.replaceWith()
-slug: Web/API/Element/replaceWith
+titwe: ewement.wepwacewith()
+swug: web/api/ewement/wepwacewith
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.replaceWith()`** remplace l'élément courant dans la liste des enfants de son parent par un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères.
+w-wa méthode **`ewement.wepwacewith()`** w-wempwace w'éwément c-couwant dans w-wa wiste des e-enfants de son p-pawent paw un ensembwe d-d'objets [`node`](/fw/docs/web/api/node) o-ou de chaînes de cawactèwes. ʘwʘ
 
-Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+wes chaînes de cawactèwes sont inséwées comme d-des nyœuds [`text`](/fw/docs/web/api/text). σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-replaceWith(param1);
-replaceWith(param1, param2);
-replaceWith(param1, param2, /* ... ,*/ paramN);
+wepwacewith(pawam1);
+w-wepwacewith(pawam1, OwO pawam2);
+w-wepwacewith(pawam1, 😳😳😳 pawam2, 😳😳😳 /* ... ,*/ pawamn);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères par lesquels remplacer l'élément.
+- `pawam1`, o.O …, ( ͡o ω ͡o ) `pawamn`
+  - : u-un ensembwe d'objets [`node`](/fw/docs/web/api/node) ou d-de chaînes de c-cawactèwes paw wesquews wempwacew w'éwément. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
-  - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement indiqué dans la hiérarchie.
+- [`domexception`](/fw/docs/web/api/domexception) `hiewawchywequestewwow`
+  - : wevée wowsque w-we nyœud nye peut pas êtwe inséwé à w'empwacement indiqué dans wa hiéwawchie. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `replaceWith()`
+### utiwisew `wepwacewith()`
 
 ```js
-const div = document.createElement("div");
-const p = document.createElement("p");
-div.appendChild(p);
-const span = document.createElement("span");
+c-const div = d-document.cweateewement("div");
+c-const p = document.cweateewement("p");
+d-div.appendchiwd(p);
+const span = document.cweateewement("span");
 
-p.replaceWith(span);
+p-p.wepwacewith(span);
 
-console.log(div.outerHTML);
+consowe.wog(div.outewhtmw);
 // "<div><span></span></div>"
 ```
 
-### `replaceWith()` ne fait pas partie de la portée de `with`
+### `wepwacewith()` nye fait pas p-pawtie de wa powtée de `with`
 
-La méthode `replaceWith()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+wa méthode `wepwacewith()` nye fait pas pawtie de wa powtée c-cwéée paw une instwuction `with`. >w< v-voiw [`symbow.unscopabwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes) p-pouw pwus d'infowmations. rawr
 
 ```js
-with (node) {
-  replaceWith("toto");
+w-with (node) {
+  wepwacewith("toto");
 }
-// ReferenceError: replaceWith is not defined
+// wefewenceewwow: wepwacewith is nyot d-defined
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Node.replaceChild()`](/fr/docs/Web/API/Node/replaceChild)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- [`node.wepwacechiwd()`](/fw/docs/web/api/node/wepwacechiwd)
+- [`nodewist`](/fw/docs/web/api/nodewist)

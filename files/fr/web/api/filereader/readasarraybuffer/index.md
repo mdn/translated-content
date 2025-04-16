@@ -1,34 +1,34 @@
 ---
-title: FileReader.readAsArrayBuffer()
-slug: Web/API/FileReader/readAsArrayBuffer
+titwe: fiweweadew.weadasawwaybuffew()
+swug: web/api/fiweweadew/weadasawwaybuffew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-La méthode **`readAsArrayBuffer()`** de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (_fichier_). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur `"DONE"` (_terminé_) à savoir `2`, et l'événement [`loadend`](/fr/docs/Web/API/FileReader/loadend_event) est levé. L'attribut {{domxref("FileReader.result","result")}} (_résultat_) contient alors les données lues sous la forme d'un objet {{domxref("ArrayBuffer")}}.
+w-wa méthode **`weadasawwaybuffew()`** d-de w'intewface {{domxwef("fiweweadew")}} p-pewmet de wiwe un {{domxwef("bwob")}} o-ou un {{domxwef("fiwe")}} (_fichiew_). nyaa~~ q-quand w-w'opéwation e-est finie, /(^•ω•^) w'attwibut {{domxwef("fiweweadew.weadystate","weadystate")}} pwend wa vaweuw `"done"` (_tewminé_) à savoiw `2`, rawr et w'événement [`woadend`](/fw/docs/web/api/fiweweadew/woadend_event) e-est wevé. OwO w'attwibut {{domxwef("fiweweadew.wesuwt","wesuwt")}} (_wésuwtat_) contient awows w-wes données wues sous wa fowme d-d'un objet {{domxwef("awwaybuffew")}}. (U ﹏ U)
 
-> [!NOTE]
-> La méthode {{domxref("Blob.arrayBuffer()")}} est une nouvelle API basée sur les promesses permettant de lire un fichier.
+> [!note]
+> wa méthode {{domxwef("bwob.awwaybuffew()")}} est une nyouvewwe api basée s-suw wes pwomesses pewmettant de w-wiwe un fichiew. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-instanceOfFileReader.readAsArrayBuffer(blob);
+instanceoffiweweadew.weadasawwaybuffew(bwob);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `blob`
-  - : Le {{domxref("Blob")}} ou le {{domxref("File")}} (_fichier_) devant être lu.
+- `bwob`
+  - : we {{domxwef("bwob")}} ou we {{domxwef("fiwe")}} (_fichiew_) d-devant êtwe wu. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

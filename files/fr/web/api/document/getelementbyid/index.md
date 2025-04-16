@@ -1,120 +1,120 @@
 ---
-title: "Document : La méthode getElementById()"
-short-title: getElementById()
-slug: Web/API/Document/getElementById
-l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+titwe: "document : wa méthode g-getewementbyid()"
+s-showt-titwe: g-getewementbyid()
+s-swug: web/api/document/getewementbyid
+w-w10n:
+  s-souwcecommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{ ApiRef("DOM") }}
+{{ apiwef("dom") }}
 
-La méthode **`getElementById()`** de l'interface [`Document`](/fr/docs/Web/API/Document) renvoie un objet [`Element`](/fr/docs/Web/API/Element) représentant l'élément dont la propriété [`id`](/fr/docs/Web/API/Element/id) correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
+w-wa méthode **`getewementbyid()`** d-de w'intewface [`document`](/fw/docs/web/api/document) wenvoie un objet [`ewement`](/fw/docs/web/api/ewement) wepwésentant w'éwément dont w-wa pwopwiété [`id`](/fw/docs/web/api/ewement/id) cowwespond à wa chaîne de c-cawactèwes spécifiée. nyaa~~ Étant donné que wes id d-d'éwément doivent êtwe uniques, /(^•ω•^) s'iws sont spécifiés, (U ﹏ U) iws c-constituent un moyen utiwe d'accédew w-wapidement à u-un éwément spécifique. 😳😳😳
 
-Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez utiliser [`querySelector()`](/fr/docs/Web/API/Document/querySelector) pour trouver l'élément en utilisant un [sélecteur](/fr/docs/Glossary/CSS_Selector).
+si vous avez besoin d'accédew à un éwément qui n-ny'a pas d'id, vous pouvez utiwisew [`quewysewectow()`](/fw/docs/web/api/document/quewysewectow) pouw twouvew w'éwément en utiwisant un [séwecteuw](/fw/docs/gwossawy/css_sewectow). >w<
 
-> [!NOTE]
-> Les identifiants doivent être uniques à l'intérieur d'un document. Si deux éléments ou plus — d'un document — ont le même ID, cette méthode renvoie le premier élément trouvé.
+> [!note]
+> w-wes identifiants doivent êtwe u-uniques à w-w'intéwieuw d'un d-document. XD si d-deux éwéments ou pwus — d'un document — ont w-we même id, o.O cette méthode wenvoie we pwemiew éwément t-twouvé. mya
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-getElementById(id)
+```js-nowint
+getewementbyid(id)
 ```
 
-> [!NOTE]
-> La capitalisation de `"Id"` dans le nom de cette méthode _doit_ être correcte pour que le code fonctionne&nbsp;; `getElementByID()` n'est _pas_ valide et ne fonctionnera pas, aussi naturel que cela puisse paraître.
+> [!note]
+> wa capitawisation de `"id"` dans we nyom de cette méthode _doit_ êtwe c-cowwecte pouw que we c-code fonctionne&nbsp;; `getewementbyid()` n-ny'est _pas_ v-vawide et nye fonctionnewa pas, 🥺 aussi nyatuwew que cewa puisse p-pawaîtwe. ^^;;
 
-### Paramètres
+### p-pawamètwes
 
 - `id`
-  - : L'identifiant (_ID_) de l'élément à localiser. Il est une chaîne de caractères sensible à la casse qui est unique&nbsp;; un seul élément peut avoir un ID donné.
+  - : w'identifiant (_id_) d-de w'éwément à w-wocawisew. :3 iw est une chaîne d-de cawactèwes sensibwe à w-wa casse qui est unique&nbsp;; un seuw éwément p-peut avoiw un id donné. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un objet [`Element`](/fr/docs/Web/API/Element) décrivant l'objet élément du DOM correspondant à l'identifiant (_ID_) spécifié ou `null` si aucun n'a été trouvé dans le document.
+un objet [`ewement`](/fw/docs/web/api/ewement) d-décwivant w'objet éwément d-du dom cowwespondant à w'identifiant (_id_) spécifié ou `nuww` si aucun ny'a été twouvé dans w-we document. OwO
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<html lang="fr">
+```htmw
+<htmw wang="fw">
   <head>
-    <title>exemple de getElementById</title>
+    <titwe>exempwe d-de getewementbyid</titwe>
   </head>
   <body>
-    <p id="para">Un peu de texte ici</p>
-    <button onclick="changerCouleur('blue');">bleu</button>
-    <button onclick="changerCouleur('red');">rouge</button>
+    <p i-id="pawa">un p-peu de texte ici</p>
+    <button oncwick="changewcouweuw('bwue');">bweu</button>
+    <button oncwick="changewcouweuw('wed');">wouge</button>
   </body>
-</html>
+</htmw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function changerCouleur(nouvelleCouleur) {
-  const paragraphe = document.getElementById("para");
-  paragraphe.style.color = nouvelleCouleur;
+function changewcouweuw(nouvewwecouweuw) {
+  const pawagwaphe = document.getewementbyid("pawa");
+  pawagwaphe.stywe.cowow = n-nyouvewwecouweuw;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{ EmbedLiveSample('Exemples', 250, 120) }}
+{{ e-embedwivesampwe('exempwes', 250, 😳😳😳 120) }}
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-Contrairement à d'autres méthodes de recherche d'éléments, comme [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll), `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y a pas besoin d'avoir une version «&nbsp;locale&nbsp;» de la fonction.
+contwaiwement à d'autwes méthodes d-de wechewche d-d'éwéments, (ˆ ﻌ ˆ)♡ comme [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) e-et [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww), XD `getewementbyid` e-est uniquement disponibwe comme méthode d-de w'objet gwobaw `document` e-et _n'est pas_ d-disponibwe suw tous w-wes objets du d-dom. (ˆ ﻌ ˆ)♡ pawce que wes vaweuws d'id doivent êtwe uniques dans w'ensembwe d-du document, ( ͡o ω ͡o ) iw ny'y a pas besoin d'avoiw une vewsion «&nbsp;wocawe&nbsp;» de wa fonction. rawr x3
 
-### Exemple
+### exempwe
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype h-htmw>
+<htmw wang="fw">
   <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
+    <meta chawset="utf-8" />
+    <titwe>document</titwe>
   </head>
   <body>
-    <div id="parent-id">
-      <p>bonjour tout le monde1</p>
-      <p id="test1">bonjour tout le monde2</p>
-      <p>bonjour tout le monde3</p>
-      <p>bonjour tout le monde4</p>
+    <div id="pawent-id">
+      <p>bonjouw tout w-we monde1</p>
+      <p i-id="test1">bonjouw t-tout we monde2</p>
+      <p>bonjouw t-tout we monde3</p>
+      <p>bonjouw t-tout we monde4</p>
     </div>
-    <script>
-      const parentDOM = document.getElementById("parent-id");
-      const test1 = parentDOM.getElementById("test1");
-      // erreur de lancement
-      // TypeError inattendu : parentDOM.getElementById n'est pas une fonction
-    </script>
+    <scwipt>
+      c-const pawentdom = document.getewementbyid("pawent-id");
+      const test1 = pawentdom.getewementbyid("test1");
+      // ewweuw de wancement
+      // typeewwow i-inattendu : pawentdom.getewementbyid ny'est pas u-une fonction
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-S'il n'y a pas d'élément avec l'identifiant (`id`) fourni, cette fonction retourne `null`. À noter que le paramètre `id` est sensible à la casse, ainsi `document.getElementById("Main")` retournera `null` au lieu de l'élément `<div id="main">` étant donné que «&nbsp;M&nbsp;» et «&nbsp;m&nbsp;» sont différents pour cette méthode.
+s'iw n'y a pas d-d'éwément avec w-w'identifiant (`id`) fouwni, nyaa~~ cette fonction w-wetouwne `nuww`. >_< À n-nyotew que we pawamètwe `id` e-est sensibwe à w-wa casse, ^^;; ainsi `document.getewementbyid("main")` wetouwnewa `nuww` au wieu de w'éwément `<div id="main">` étant d-donné que «&nbsp;m&nbsp;» e-et «&nbsp;m&nbsp;» s-sont difféwents pouw cette m-méthode. (ˆ ﻌ ˆ)♡
 
-Les éléments absents du document ne sont pas cherchés par `getElementById()`. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec [`Node.insertBefore()`](/fr/docs/Web/API/Node/insertBefore) ou une méthode similaire avant de pouvoir y accéder avec `getElementById()`&nbsp;:
+wes éwéments a-absents du document n-nye sont pas chewchés paw `getewementbyid()`. ^^;; quand vous cwéez un éwément et y assignez un i-id, (⑅˘꒳˘) vous devez i-inséwew w'éwément dans w'awbwe du document avec [`node.insewtbefowe()`](/fw/docs/web/api/node/insewtbefowe) ou u-une méthode simiwaiwe a-avant de pouvoiw y accédew avec `getewementbyid()`&nbsp;:
 
 ```js
-const element = document.createElement("div");
-element.id = "testqq";
-const el = document.getElementById("testqq"); // el vaudra null !
+const e-ewement = document.cweateewement("div");
+ewement.id = "testqq";
+const ew = document.getewementbyid("testqq"); // ew vaudwa nyuww ! rawr x3
 ```
 
-Dans des documents non-HTML, les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom «&nbsp;id&nbsp;» n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut `id` est défini comme étant de type ID dans les langages courants comme [XHTML](/fr/docs/Glossary/XHTML), XUL, et d'autres. Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer `null`.
+dans des d-documents non-htmw, (///ˬ///✿) wes impwémentations du dom d-doivent avoiw u-une infowmation qui pwécise quews attwibuts sont de type id. 🥺 un a-attwibut powtant w-we nyom «&nbsp;id&nbsp;» n'est pas de type id tant qu'iw n'a p-pas été expwicitement défini a-ainsi (dans wa dtd du document). >_< w'attwibut `id` est défini comme étant d-de type id dans wes wangages c-couwants c-comme [xhtmw](/fw/docs/gwossawy/xhtmw), UwU xuw, et d-d'autwes. >_< wes impwémentations nye sachant pas d-détewminew si wes a-attwibuts sont d-de type id ou nyon sont supposées w-wenvoyew `nuww`. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`Document`](/fr/docs/Web/API/Document) référence pour d'autres méthodes et propriétés que vous pouvez utiliser pour obtenir la référence vers des éléments du document.
-- La méthode [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour utiliser des sélecteurs avec des requêtes comme `'div.myclass'`.
-- La méthode [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate) qui dispose d'une méthode utilitaire pour sélectionner par `xml:id` dans les documents [XHTML](/fr/docs/Glossary/XHTML).
+- w-w'intewface [`document`](/fw/docs/web/api/document) w-wéféwence pouw d'autwes méthodes et pwopwiétés q-que vous pouvez utiwisew p-pouw obteniw wa w-wéféwence vews des éwéments du document. mya
+- wa méthode [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) p-pouw utiwisew d-des séwecteuws a-avec des wequêtes c-comme `'div.mycwass'`. >w<
+- wa méthode [`document.evawuate()`](/fw/docs/web/api/document/evawuate) q-qui dispose d'une méthode utiwitaiwe pouw séwectionnew paw `xmw:id` dans wes documents [xhtmw](/fw/docs/gwossawy/xhtmw). (U ﹏ U)

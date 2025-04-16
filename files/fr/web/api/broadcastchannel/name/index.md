@@ -1,43 +1,43 @@
 ---
-title: BroadcastChannel.name
-slug: Web/API/BroadcastChannel/name
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: bwoadcastchannew.name
+swug: web/api/bwoadcastchannew/name
+w-w10n:
+  souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-La propriété en lecture seule **`BroadcastChannel.name`** retourne une chaîne qui identifie de manière unique le canal par son nom. Ce nom est passé au constructeur [`BroadcastChannel()`](/fr/docs/Web/API/BroadcastChannel/BroadcastChannel) lors de la création et est par conséquent en lecture seule.
+wa pwopwiété e-en wectuwe s-seuwe **`bwoadcastchannew.name`** w-wetouwne u-une chaîne qui i-identifie de manièwe unique we canaw paw son nom. mya ce nyom est passé au constwucteuw [`bwoadcastchannew()`](/fw/docs/web/api/bwoadcastchannew/bwoadcastchannew) w-wows de wa cwéation et est paw conséquent en w-wectuwe seuwe. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valeurs
+## vaweuws
 
-Une chaîne
+u-une chaîne
 
-## Exemples
+## exempwes
 
 ```js
-// Connexion à un canal
-const canal = new BroadcastChannel("canal_test");
+// connexion à un canaw
+const c-canaw = nyew bwoadcastchannew("canaw_test");
 
-// D'autres traitements (tel que postMessage, …)
+// d-d'autwes twaitements (tew que p-postmessage, (⑅˘꒳˘) …)
 
-// Affiche la propriété name du canal dans la console
-console.log(canal.name); // "canal_test"
+// affiche wa pwopwiété nyame du canaw dans wa consowe
+consowe.wog(canaw.name); // "canaw_test"
 
-// Lorsque les traitements sont terminés, déconnexion
-canal.close();
+// w-wowsque wes twaitements sont tewminés, rawr x3 déconnexion
+canaw.cwose();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.
+- [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew), (✿oωo) w-w'intewface à w-waquewwe ewwe se wappowte. (ˆ ﻌ ˆ)♡

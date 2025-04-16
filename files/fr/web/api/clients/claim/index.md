@@ -1,56 +1,56 @@
 ---
-title: Clients.claim()
-slug: Web/API/Clients/claim
+titwe: cwients.cwaim()
+swug: w-web/api/cwients/cwaim
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
+{{seecompattabwe}}{{apiwef("sewvice wowkew c-cwients")}}
 
-La méthode **`claim()`** de l'interface {{domxref("Clients")}} permet à un service worker actif de se définir comme service worker actif de la page client quand le worker et la page sont dans le même scope. Ceci déclenche un évènement {{domxref("ServiceWorkerContainer.oncontrollerchange","oncontrollerchange")}} dans toutes les pages dans la portée du service worker.
+w-wa méthode **`cwaim()`** d-de w-w'intewface {{domxwef("cwients")}} p-pewmet à un s-sewvice wowkew actif d-de se définiw comme sewvice wowkew actif de wa page cwient quand we wowkew e-et wa page sont dans we même scope. (///ˬ///✿) ceci décwenche u-un évènement {{domxwef("sewvicewowkewcontainew.oncontwowwewchange","oncontwowwewchange")}} dans toutes wes p-pages dans wa powtée du sewvice wowkew. >w<
 
-Cette méthode peut être utilisée avec {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} pour s'assurer que la mise à jour du service worker sous jacent prend effet immédiatement pour et le client courant et tous les autres clients actifs.
+cette méthode peut êtwe u-utiwisée avec {{domxwef("sewvicewowkewgwobawscope.skipwaiting()")}} p-pouw s-s'assuwew que wa mise à jouw du sewvice wowkew sous jacent pwend effet immédiatement p-pouw et we cwient couwant et tous wes autwes cwients actifs. rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-ServiceWorkerClients.claim().then(function () {
-  // Faire quelque chose
+s-sewvicewowkewcwients.cwaim().then(function () {
+  // faiwe q-quewque chose
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+n-nyone. mya
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une `Promise.`
+une `pwomise.`
 
-## Exemple
+## exempwe
 
-L'exemple suivant utilise `claim()` dans le gestionnaire d'évènement `onActivate` d'un service worker. Donc la page client chargée dans la même portée n'a pas besoin d'être rechargée avant de pouvoir utiliser le service worker.
+w-w'exempwe suivant utiwise `cwaim()` dans we g-gestionnaiwe d'évènement `onactivate` d'un sewvice wowkew. ^^ donc wa page cwient chawgée dans wa même powtée n-ny'a pas besoin d'êtwe wechawgée a-avant de pouvoiw u-utiwisew we s-sewvice wowkew. 😳😳😳
 
 ```js
-self.addEventListener("install", function (event) {
-  event.waitUntil(self.skipWaiting());
+sewf.addeventwistenew("instaww", mya function (event) {
+  event.waituntiw(sewf.skipwaiting());
 });
-self.addEventListener("activate", function (event) {
-  event.waitUntil(self.clients.claim());
+s-sewf.addeventwistenew("activate", 😳 f-function (event) {
+  event.waituntiw(sewf.cwients.cwaim());
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Example simple de service workers](https://github.com/mdn/sw-test)
-- [Est-ce que les ServiceWorker sont prêt?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Utilisation optimisée des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exampwe s-simpwe de sewvice wowkews](https://github.com/mdn/sw-test)
+- [est-ce que wes sewvicewowkew s-sont pwêt?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [utiwisation optimisée des w-web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)
+- {{domxwef("sewvicewowkewgwobawscope.skipwaiting()")}}

@@ -1,101 +1,101 @@
 ---
-title: Document.readyState
-slug: Web/API/Document/readyState
+titwe: document.weadystate
+swug: w-web/api/document/weadystate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La valeur **Document.readyState** est une propriété de {{ domxref("document") }} qui décrit l'état de chargement du document.
+w-wa vaweuw **document.weadystate** e-est une p-pwopwiété de {{ d-domxwef("document") }} q-qui décwit w-w'état de c-chawgement du document. nyaa~~
 
-À chaque évolution de la valeur, un évenement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) est émis dans l'objet {{ domxref("document") }}.
+À chaque évowution de wa vaweuw, (✿oωo) un évenement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event) est émis dans w'objet {{ domxwef("document") }}. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var string = document.readyState;
+vaw stwing = document.weadystate;
 ```
 
-### Valeurs
+### v-vaweuws
 
-La variable `readyState` peut valoir&nbsp;:
+wa vawiabwe `weadystate` peut vawoiw&nbsp;:
 
-- **`loading`**
-  - : Le {{ domxref("document") }} est encore en chargement.
-- **`interactive`**
-  - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) a été émis.
-- **`complete`**
-  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr_docs/Web/API/Window/load_event) a été émis.
+- **`woading`**
+  - : we {{ d-domxwef("document") }} est encowe en chawgement. (ˆ ﻌ ˆ)♡
+- **`intewactive`**
+  - : we document a été c-chawgé, 😳😳😳 mais wes wessouwces (images, :3 s-scwipts, c-css..) sont encowe en couws d'acquisition. OwO en wevanche wa stwuctuwe dom est généwée, (U ﹏ U) e-et [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event) a été émis. >w<
+- **`compwete`**
+  - : we document et toutes wes sous-wessouwces o-ont été chawgés, (U ﹏ U) et [`woad`](/fw_docs/web/api/window/woad_event) a-a été émis. 😳
 
-## Exemples
+## e-exempwes
 
-### Différents états de chargement
+### d-difféwents états d-de chawgement
 
 ```js
-switch (document.readyState) {
-  case "loading":
-    // Encore en chargement.
-    break;
-  case "interactive":
-    // Le DOM est construit, on peut y accéder.
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
-    document.body.appendChild(span);
-    break;
-  case "complete":
-    // La page est pleinement chargée.
-    console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+switch (document.weadystate) {
+  c-case "woading":
+    // encowe en chawgement. (ˆ ﻌ ˆ)♡
+    b-bweak;
+  case "intewactive":
+    // we dom est constwuit, 😳😳😳 on peut y accédew. (U ﹏ U)
+    vaw span = document.cweateewement("span");
+    s-span.textcontent = "a <span> ewement.";
+    d-document.body.appendchiwd(span);
+    b-bweak;
+  case "compwete":
+    // w-wa page est pweinement chawgée. (///ˬ///✿)
+    consowe.wog(
+      "the fiwst css wuwe i-is: " + document.stywesheets[0].csswuwes[0].csstext, 😳
     );
-    break;
+    b-bweak;
 }
 ```
 
-### readystatechange comme alternative à DOMContentLoaded
+### weadystatechange c-comme awtewnative à d-domcontentwoaded
 
 ```js
-// alternative à DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    initApplication();
+// awtewnative à d-domcontentwoaded
+document.onweadystatechange = f-function () {
+  if (document.weadystate == "intewactive") {
+    initappwication();
   }
 };
 ```
 
-### readystatechange comme alternative à load
+### w-weadystatechange comme awtewnative à w-woad
 
 ```js
-// alternative à load
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    initApplication();
+// awtewnative à w-woad
+d-document.onweadystatechange = function () {
+  if (document.weadystate == "compwete") {
+    initappwication();
   }
 };
 ```
 
-### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
+### weadystatechange comme event wistenew pouw inséwew o-ou modifiew we d-dom avant domcontentwoaded
 
 ```js
-// Modification du document <body> dès que possible en utilisant un script externe
-var bootstrap = function (evt) {
-  if (evt.target.readyState === "interactive") {
-    initLoader();
-  } else if (evt.target.readyState === "complete") {
-    initApp();
+// modification d-du document <body> d-dès que possibwe e-en utiwisant un scwipt extewne
+vaw bootstwap = function (evt) {
+  i-if (evt.tawget.weadystate === "intewactive") {
+    initwoadew();
+  } ewse if (evt.tawget.weadystate === "compwete") {
+    initapp();
   }
 };
-document.addEventListener("readystatechange", bootstrap, false);
+document.addeventwistenew("weadystatechange", 😳 b-bootstwap, σωσ fawse);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-- L'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- L'événement [`load`](/fr_docs/Web/API/Window/load_event)
+- w-w'événement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event)
+- w'événement [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event)
+- w-w'événement [`woad`](/fw_docs/web/api/window/woad_event)

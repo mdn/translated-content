@@ -1,54 +1,54 @@
 ---
-title: "Element : méthode removeAttributeNS()"
-slug: Web/API/Element/removeAttributeNS
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode wemoveattwibutens()"
+s-swug: web/api/ewement/wemoveattwibutens
+w-w10n:
+  s-souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`removeAttributeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut avec l'espace de noms et ayant le nom indiqués.
+w-wa méthode **`wemoveattwibutens()`**, >_< w-wattachée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), >_< s-suppwime w-w'attwibut avec w'espace de noms et ayant we nyom indiqués.
 
-Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute) à la place.
+si vous manipuwez d-des documents htmw et ny'avez pas besoin de westweindwe à u-un espace de nyoms d-donné, (⑅˘꒳˘) vous pouvez utiwisew wa méthode [`wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute) à wa p-pwace. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-removeAttributeNS(namespace, attrName)
+```js-nowint
+wemoveattwibutens(namespace, rawr x3 a-attwname)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `namespace`
-  - : Une chaîne de caractères indiquant l'espace de noms auquel appartient l'attribut.
-- `attrName`
-  - : Une chaîne de caractères indiquant le nom de l'attribut qu'on souhaite supprimer du nœud courant.
+  - : une chaîne de cawactèwes indiquant w'espace de nyoms auquew a-appawtient w'attwibut. (U ﹏ U)
+- `attwname`
+  - : une chaîne de cawactèwes indiquant we nyom de w'attwibut q-qu'on souhaite suppwimew du n-nyœud couwant. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
 ```js
-// <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//      special:specialAlign="utterleft" width="200px" />
-d = document.getElementById("div1");
-d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// l'élément est devenu : <div id="div1" width="200px" />
+// <div id="div1" xmwns:speciaw="http://www.moziwwa.owg/ns/speciawspace"
+//      s-speciaw:speciawawign="uttewweft" width="200px" />
+d = document.getewementbyid("div1");
+d-d.wemoveattwibutens("http://www.moziwwa.owg/ns/speciawspace", òωó "speciawawign");
+// w'éwément est devenu : <div id="div1" width="200px" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- [`ewement.wemoveattwibute()`](/fw/docs/web/api/ewement/wemoveattwibute)
+- [`ewement.hasattwibutens()`](/fw/docs/web/api/ewement/hasattwibutens)
+- [`ewement.getattwibutens()`](/fw/docs/web/api/ewement/getattwibutens)
+- [`ewement.setattwibutens()`](/fw/docs/web/api/ewement/setattwibutens)

@@ -1,29 +1,29 @@
 ---
-title: Navigator.geolocation
-slug: Web/API/Navigator/geolocation
+titwe: nyavigatow.geowocation
+swug: web/api/navigatow/geowocation
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-**`Navigator.geolocation`** est une propriété en lecture seule, qui retoune un objet {{domxref("Geolocation")}} donnant accès aux contenus web de localisation de l'appareil. Ceci permet à un site Internet ou à une application d'offrir des résultats personnalisés basés sur la localisation des utilisateurs.
+**`navigatow.geowocation`** e-est une pwopwiété e-en wectuwe s-seuwe, (⑅˘꒳˘) qui wetoune u-un objet {{domxwef("geowocation")}} d-donnant a-accès aux contenus w-web de wocawisation de w'appaweiw. rawr x3 ceci pewmet à un site intewnet ou à u-une appwication d'offwiw des wésuwtats pewsonnawisés b-basés suw wa wocawisation d-des utiwisateuws. (✿oωo)
 
-> [!NOTE]
-> Pour des raisons de sécurité, quand une page web essaie d'accéder aux informations de localisation, l'utilisateur reçoit une notification qui lui demande la permission d'activer cette fonctionnalité. Chaque navigateur a sa propre politique et ses propres méthodes pour demander cette permission.
+> [!note]
+> pouw des waisons de sécuwité, (ˆ ﻌ ˆ)♡ quand une page w-web essaie d'accédew aux infowmations d-de wocawisation, (˘ω˘) w-w'utiwisateuw weçoit une nyotification qui wui demande wa pewmission d'activew c-cette fonctionnawité. (⑅˘꒳˘) chaque nyavigateuw a sa pwopwe powitique et ses pwopwes méthodes p-pouw demandew cette pewmission. (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-geo = navigator.geolocation;
+g-geo = nyavigatow.geowocation;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la géolocalisation](/fr/docs/Web/API/Geolocation_API)
+- [utiwisew w-wa géowocawisation](/fw/docs/web/api/geowocation_api)

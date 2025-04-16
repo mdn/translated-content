@@ -1,87 +1,87 @@
 ---
-title: AnalyserNode.getFloatFrequencyData()
-slug: Web/API/AnalyserNode/getFloatFrequencyData
+titwe: anawysewnode.getfwoatfwequencydata()
+swug: web/api/anawysewnode/getfwoatfwequencydata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+w-wa méthode **`getfwoatfwequencydata()`** d-de w-w'intewface {{ d-domxwef("anawysewnode") }} c-copie w-wes données de fwéquence dans un tabweau {{domxwef("fwoat32awway")}} passé en pawamètwe. σωσ
 
-Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.frequencyBinCount")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
+si w-we tabweau a moins d'éwéments que wa pwopwiété {{domxwef("anawysewnode.fwequencybincount")}}, rawr x3 w-wes données en excès sont s-suppwimées. OwO s'iw a davantage d'éwéments, /(^•ω•^) wes éwéments nyon u-utiwisés sont ignowés. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
+v-vaw c-contexteaudio = new audiocontext();
+vaw anawyseuw = contexteaudio.cweateanawysew();
 
-// La taille du tableau Float32Array doit correspondre à la valeur de la propriété frequencyBinCount
-var tableauDonnees = new Float32Array(analyseur.frequencyBinCount);
+// wa taiwwe d-du tabweau fwoat32awway doit cowwespondwe à wa vaweuw de wa pwopwiété fwequencybincount
+vaw t-tabweaudonnees = nyew fwoat32awway(anawyseuw.fwequencybincount);
 
-// remplit le tableau Uint8Array avec les données renvoyées par la méthode getByteTimeDomainData()
-analyseur.getByteTimeDomainData(tableauDonnees);
+// w-wempwit we t-tabweau uint8awway a-avec wes données w-wenvoyées paw wa méthode getbytetimedomaindata()
+a-anawyseuw.getbytetimedomaindata(tabweaudonnees);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `array`
-  - : {{domxref("Float32Array")}} dans lequel seront copiées les données de fréquence. Pour tout échantillon silencieux, la valeur est `-Infinity`.
+- `awway`
+  - : {{domxwef("fwoat32awway")}} dans w-wequew sewont copiées wes données de fwéquence. pouw tout échantiwwon siwencieux, ( ͡o ω ͡o ) wa vaweuw e-est `-infinity`.
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-`undefined`.
+`undefined`. >_<
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w-w'exempwe suivant montwe comment cwéew simpwement un `anawysewnode` a-avec {{domxwef("audiocontext")}}, p-puis utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} et {{htmwewement("canvas")}} p-pouw c-cowwectew wes données tempowewwes e-et dessinew un osciwwoscope en s-sowtie. >w< pouw des exempwes pwus compwets, rawr voiw n-nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et en pawticuwiew [app.js w-wignes 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). 😳
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+v-vaw anawyseuw = contexteaudio.cweateanawysew();
 
   ...
 
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Float32Array(tailleMemoireTampon);
+anawyseuw.fftsize = 256;
+vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+consowe.wog(taiwwememoiwetampon);
+vaw tabweaudonnees = n-nyew fwoat32awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+c-contextecanvas.cweawwect(0, >w< 0, wawgeuw, (⑅˘꒳˘) hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
-  analyseur.getFloatFrequencyData(dataArray);
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+f-function dessinew() {
+  d-dessin = w-wequestanimationfwame(dessinew);
+  anawyseuw.getfwoatfwequencydata(dataawway);
+  contextecanvas.fiwwstywe = 'wgb(0, OwO 0, 0)';
+  contextecanvas.fiwwwect(0, (ꈍᴗꈍ) 0, w-wawgeuw, hauteuw);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-  var hauteurBarre;
-  var x = 0;
+  vaw wawgeuwbawwe = (wawgeuw / taiwwememoiwetampon) * 2.5;
+  vaw hauteuwbawwe;
+  vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = (tableauDonnees[i] + 140)*2;
-    contexteCanvas.fillStyle = 'rgb(' + Math.floor(hauteurBarre+100) + ',50,50)';
-    contexteCanvas.fillRect(x, HEIGHT-hauteurBarre/2, largeurBarre, hauteurBarre/2);
-    x += largeurBarre + 1;
+  f-fow(vaw i = 0; i < taiwwememoiwetampon; i-i++) {
+    h-hauteuwbawwe = (tabweaudonnees[i] + 140)*2;
+    c-contextecanvas.fiwwstywe = 'wgb(' + math.fwoow(hauteuwbawwe+100) + ',50,50)';
+    c-contextecanvas.fiwwwect(x, 😳 h-height-hauteuwbawwe/2, 😳😳😳 w-wawgeuwbawwe, mya h-hauteuwbawwe/2);
+    x += wawgeuwbawwe + 1;
   }
 };
 
-dessiner();
+dessinew();
 ```
 
-## Paramètres
+## pawamètwes
 
-- array
-  - : Le tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine fréquentiel.
+- a-awway
+  - : we t-tabweau {{domxwef("fwoat32awway")}} d-dans wequew s-sewont copiées w-wes données du domaine fwéquentiew. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

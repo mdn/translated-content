@@ -1,132 +1,132 @@
 ---
-title: compositionstart
-slug: Web/API/Element/compositionstart_event
+titwe: compositionstawt
+swug: w-web/api/ewement/compositionstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.
+w-w'événement **`compositionstawt`** e-est d-décwenché wowsqu'un s-système d-de composition d-de texte tew qu'une {{gwossawy("input m-method editow","méthode de saisie")}} démawwe une nyouvewwe session de composition. -.-
 
-Par exemple, cet événement pourrait être déclenché après qu'un utilisateur a commencé à saisir un caractère chinois en utilisant un [Pinyin](https://en.wikipedia.org/wiki/Pinyin) IME.
+paw e-exempwe, 😳 cet événement pouwwait êtwe décwenché a-apwès qu'un utiwisateuw a c-commencé à saisiw un cawactèwe chinois en utiwisant un [pinyin](https://en.wikipedia.owg/wiki/pinyin) i-ime. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Propagation</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("CompositionEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété du gestionnaire d'événements</th>
-      <td>Aucune</td>
-    </tr>
+    <tw>
+      <th>pwopagation</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("compositionevent")}}</td>
+    </tw>
+    <tw>
+      <th>pwopwiété d-du g-gestionnaiwe d'événements</th>
+      <td>aucune</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
+const inputewement = document.quewysewectow('input[type="text"]');
 
-inputElement.addEventListener("compositionstart", (event) => {
-  console.log(`generated characters were: ${event.data}`);
+inputewement.addeventwistenew("compositionstawt", (˘ω˘) (event) => {
+  consowe.wog(`genewated c-chawactews wewe: ${event.data}`);
 });
 ```
 
-### Exemple concret
+### exempwe concwet
 
-#### HTML
+#### htmw
 
-```html
-<div class="control">
-  <label for="name"
-    >Sur macOS, cliquez dans la zone de texte ci-dessous,<br />
-    puis tapez <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd> :</label
+```htmw
+<div cwass="contwow">
+  <wabew f-fow="name"
+    >suw macos, >_< c-cwiquez dans w-wa zone de texte c-ci-dessous,<bw />
+    p-puis tapez <kbd>option</kbd> + <kbd>`</kbd>, -.- puis <kbd>a</kbd> :</wabew
   >
-  <input type="text" id="example" name="example" />
+  <input type="text" i-id="exampwe" nyame="exampwe" />
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
-  <button class="clear-log">Clear</button>
+<div cwass="event-wog">
+  <wabew>event w-wog:</wabew>
+  <textawea weadonwy cwass="event-wog-contents" wows="8" cows="25"></textawea>
+  <button cwass="cweaw-wog">cweaw</button>
 </div>
 ```
 
 ```css hidden
 body {
-  padding: 0.2rem;
-  display: grid;
-  grid-template-areas: "control log";
+  padding: 0.2wem;
+  d-dispway: gwid;
+  gwid-tempwate-aweas: "contwow w-wog";
 }
 
-.control {
-  grid-area: control;
+.contwow {
+  g-gwid-awea: c-contwow;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
-button {
-  display: block;
+wabew, 🥺
+b-button {
+  dispway: b-bwock;
 }
 
 input[type="text"] {
-  margin: 0.5rem 0;
+  m-mawgin: 0.5wem 0;
 }
 
-kbd {
-  border-radius: 3px;
-  padding: 1px 2px 0;
-  border: 1px solid black;
+k-kbd {
+  bowdew-wadius: 3px;
+  p-padding: 1px 2px 0;
+  bowdew: 1px sowid b-bwack;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector(".event-log-contents");
-const clearLog = document.querySelector(".clear-log");
+const inputewement = d-document.quewysewectow('input[type="text"]');
+const wog = document.quewysewectow(".event-wog-contents");
+c-const cweawwog = document.quewysewectow(".cweaw-wog");
 
-clearLog.addEventListener("click", () => {
-  log.textContent = "";
+c-cweawwog.addeventwistenew("cwick", (U ﹏ U) () => {
+  w-wog.textcontent = "";
 });
 
-function handleEvent(event) {
-  log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+function handweevent(event) {
+  wog.textcontent = wog.textcontent + `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener("compositionstart", handleEvent);
-inputElement.addEventListener("compositionupdate", handleEvent);
-inputElement.addEventListener("compositionend", handleEvent);
+inputewement.addeventwistenew("compositionstawt", >w< handweevent);
+i-inputewement.addeventwistenew("compositionupdate", mya h-handweevent);
+inputewement.addeventwistenew("compositionend", >w< h-handweevent);
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{ EmbedLiveSample('Exemple_concret', '100%', '180px') }}
+{{ embedwivesampwe('exempwe_concwet', nyaa~~ '100%', '180px') }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Événements liés : {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.
+- Événements w-wiés : {{domxwef("ewement/compositionend_event", (✿oωo) "compositionend")}}, ʘwʘ {{domxwef("ewement/compositionupdate_event", (ˆ ﻌ ˆ)♡ "compositionupdate")}}. 😳😳😳

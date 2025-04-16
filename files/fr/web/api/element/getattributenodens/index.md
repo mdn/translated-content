@@ -1,51 +1,51 @@
 ---
-title: "Element : méthode getAttributeNodeNS()"
-slug: Web/API/Element/getAttributeNodeNS
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode getattwibutenodens()"
+s-swug: web/api/ewement/getattwibutenodens
+w-w10n:
+  s-souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`getAttributeNodeNS()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie le nœud [`Attr`](/fr/docs/Web/API/Attr) de l'élément courant avec l'espace de noms et le nom donnés.
+w-wa méthode **`getattwibutenodens()`**, 😳😳😳 a-associée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), o.O w-wenvoie w-we nyœud [`attw`](/fw/docs/web/api/attw) de w'éwément couwant avec w'espace de nyoms et we n-nyom donnés. ( ͡o ω ͡o )
 
-Cette méthode est utile pour obtenir les [propriétés d'instance](/fr/docs/Web/API/Attr#propriétés) de l'attribut. Si on souhaite seulement obtenir la valeur de l'attribut de l'espace de noms, on pourra plutôt utiliser la méthode [`getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS).
+cette méthode est utiwe pouw obteniw w-wes [pwopwiétés d'instance](/fw/docs/web/api/attw#pwopwiétés) d-de w'attwibut. (U ﹏ U) si on souhaite seuwement obteniw wa vaweuw d-de w'attwibut de w'espace de n-nyoms, (///ˬ///✿) on pouwwa p-pwutôt utiwisew wa méthode [`getattwibutens()`](/fw/docs/web/api/ewement/getattwibutens). >w<
 
-Si on souhaite obtenir le nœud [`Attr`](/fr/docs/Web/API/Attr) d'un élément HTML et que cet attribut n'est pas dans un espace de noms, on utilisera plutôt la méthode
-[`getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode).
+si on souhaite obteniw we nyœud [`attw`](/fw/docs/web/api/attw) d'un éwément h-htmw et que cet attwibut ny'est pas dans un espace de nyoms, rawr on utiwisewa p-pwutôt wa méthode
+[`getattwibutenode()`](/fw/docs/web/api/ewement/getattwibutenode). mya
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-getAttributeNodeNS(namespace, nodeName)
+```js-nowint
+g-getattwibutenodens(namespace, ^^ n-nyodename)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `namespace`
-  - : Une chaîne spécifiant l'espace de noms de l'attribut.
-- `nodeName`
-  - : Une chaîne spécifiant le nom de l'attribut.
+  - : une chaîne spécifiant w-w'espace de nyoms de w'attwibut. 😳😳😳
+- `nodename`
+  - : une chaîne s-spécifiant we nyom de w'attwibut. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le nœud [`Attr`](/fr/docs/Web/API/Attr) pour l'attribut spécifié.
+we nyœud [`attw`](/fw/docs/web/api/attw) pouw w'attwibut s-spécifié. 😳
 
-## Notes
+## nyotes
 
-`getAttributeNodeNS()` est plus spécifique que [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode), car il permet de spécifier les attributs faisant partie d'un espace de noms donné. Le mutateur correspondant à cet accesseur est [`Element.setAttributeNodeNS()`](/fr/docs/Web/API/Element/setAttributeNodeNS).
+`getattwibutenodens()` e-est pwus s-spécifique que [`ewement.getattwibutenode()`](/fw/docs/web/api/ewement/getattwibutenode), -.- c-caw iw pewmet de spécifiew wes attwibuts faisant pawtie d-d'un espace d-de nyoms donné. 🥺 we mutateuw cowwespondant à c-cet a-accesseuw est [`ewement.setattwibutenodens()`](/fw/docs/web/api/ewement/setattwibutenodens). o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
-- [`Element.setAttributeNodeNS()`](/fr/docs/Web/API/Element/setAttributeNodeNS)
+- [`ewement.getattwibutenode()`](/fw/docs/web/api/ewement/getattwibutenode)
+- [`document.cweateattwibute()`](/fw/docs/web/api/document/cweateattwibute)
+- [`document.cweateattwibutens()`](/fw/docs/web/api/document/cweateattwibutens)
+- [`ewement.setattwibutenodens()`](/fw/docs/web/api/ewement/setattwibutenodens)

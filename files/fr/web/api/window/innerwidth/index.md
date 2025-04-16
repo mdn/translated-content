@@ -1,54 +1,54 @@
 ---
-title: window.innerWidth
-slug: Web/API/Window/innerWidth
+titwe: window.innewwidth
+swug: w-web/api/window/innewwidth
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Résumé
+## w-wésumé
 
-Récupère la largeur du contenu visible de la fenêtre de navigation en incluant, s'il est visible, l'ascenseur vertical.
-Permet également de fixer une largeur pour le domaine d'affichage de la fenêtre.
+wécupèwe w-wa wawgeuw d-du contenu visibwe d-de wa fenêtwe d-de nyavigation e-en incwuant, /(^•ω•^) s'iw est visibwe, ʘwʘ w'ascenseuw vewticaw. σωσ
+pewmet égawement de fixew u-une wawgeuw pouw we domaine d'affichage de w-wa fenêtwe. OwO
 
-## Syntaxe
-
-```js
-var largeur = window.innerWidth;
-```
-
-Voir aussi&nbsp;: [window.innerHeight](/fr/docs/Web/API/Window/innerHeight), [window.outerHeight](/fr/docs/Web/API/Window/outerHeight) and [window.outerWidth](/fr/docs/Web/API/Window/outerWidth).
-
-## Valeur renvoyée
-
-- `innerWidth`
-  - : un entier (nombre de pixels);
-
-## Notes
-
-La propriété `innerWidth` est supportée par tous les objet "window" comme par exemple une fenêtre, une frame, un frameset, ou une fenêtre secondaire.
-
-## Example
+## syntaxe
 
 ```js
-// Retourne la largeur de la fenêtre
-var largeur = window.innerWidth;
-
-// Retourn la largeur de la fenêtre à l'intérieur d'une "frameset"
-var largeur = self.innerWidth;
-
-// Retourne la largeur de la fenêtre du "frameset" parent
-var largeurDeLaFrame = parent.innerWidth;
-
-// Retourne la largeur de la fenêtre du "frameset" principal
-var largeurDuFrameset = top.innerWidth;
+v-vaw wawgeuw = window.innewwidth;
 ```
 
-Pour changer la taille de la fenêtre, voir {{domxref("window.resizeBy")}} and {{domxref("window.resizeTo")}}.
+voiw aussi&nbsp;: [window.innewheight](/fw/docs/web/api/window/innewheight), 😳😳😳 [window.outewheight](/fw/docs/web/api/window/outewheight) and [window.outewwidth](/fw/docs/web/api/window/outewwidth).
 
-## Spécifications
+## vaweuw w-wenvoyée
 
-{{Specifications}}
+- `innewwidth`
+  - : un entiew (nombwe d-de pixews);
 
-## Compatibilité des navigateurs
+## n-nyotes
 
-{{Compat}}
+wa pwopwiété `innewwidth` est suppowtée paw tous wes objet "window" c-comme paw exempwe une fenêtwe, 😳😳😳 une fwame, un fwameset, o.O ou une fenêtwe secondaiwe. ( ͡o ω ͡o )
+
+## e-exampwe
+
+```js
+// wetouwne wa wawgeuw d-de wa fenêtwe
+v-vaw wawgeuw = w-window.innewwidth;
+
+// w-wetouwn wa wawgeuw de wa fenêtwe à w'intéwieuw d-d'une "fwameset"
+vaw wawgeuw = sewf.innewwidth;
+
+// w-wetouwne wa wawgeuw de wa fenêtwe du "fwameset" pawent
+vaw wawgeuwdewafwame = pawent.innewwidth;
+
+// w-wetouwne wa wawgeuw de wa fenêtwe d-du "fwameset" p-pwincipaw
+vaw w-wawgeuwdufwameset = top.innewwidth;
+```
+
+pouw changew wa taiwwe d-de wa fenêtwe, (U ﹏ U) v-voiw {{domxwef("window.wesizeby")}} and {{domxwef("window.wesizeto")}}. (///ˬ///✿)
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}

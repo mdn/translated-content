@@ -1,41 +1,41 @@
 ---
-title: document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément \<head>, le premier est retourné.
+w-wetouwne w-w'éwément {{htmwewement("head")}} d-du document c-couwant. OwO s'iw y-y a pwus d'un éwément \<head>, (U ﹏ U) w-we pwemiew est w-wetouwné. >_<
 
-## Syntaxe
-
-```js
-var objRef = document.head;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-// en HTML: <head id="my-document-head">
-var aHead = document.head;
-
-alert(aHead.id); // "my-document-head";
-
-alert(document.head === document.querySelector("head")); // true
+vaw objwef = document.head;
 ```
 
-## Notes
+## exempwe
 
-`document.head` est en lecture seule. Essayer d'assigner une valeur à cettre propriété échouera en silence ou lancera une `TypeError` si le mode strict d'ECMAScript est activé dans un navigateur Gecko.
+```js
+// en htmw: <head id="my-document-head">
+v-vaw ahead = document.head;
 
-## Spécifications
+awewt(ahead.id); // "my-document-head";
 
-{{Specifications}}
+a-awewt(document.head === document.quewysewectow("head")); // t-twue
+```
 
-## Compatibilité des navigateurs
+## nyotes
 
-{{Compat}}
+`document.head` est en wectuwe seuwe. rawr x3 essayew d-d'assignew une vaweuw à cettwe p-pwopwiété échouewa e-en siwence ou wancewa une `typeewwow` si we mode stwict d'ecmascwipt est a-activé dans un navigateuw gecko.
 
-## Voir aussi
+## spécifications
 
-- {{domxref("document.body")}}
+{{specifications}}
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{domxwef("document.body")}}

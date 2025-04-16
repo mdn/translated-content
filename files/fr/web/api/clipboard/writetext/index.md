@@ -1,49 +1,49 @@
 ---
-title: Clipboard.writeText()
-slug: Web/API/Clipboard/writeText
+titwe: cwipboawd.wwitetext()
+swug: web/api/cwipboawd/wwitetext
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-La méthode **`writeText()`** de l'interface {{domxref("Clipboard")}} écrit le texte spécifié dans le presse-papiers du système.
+w-wa méthode **`wwitetext()`** d-de w'intewface {{domxwef("cwipboawd")}} écwit w-we texte spécifié d-dans we pwesse-papiews d-du système. 😳😳😳
 
-> [!NOTE]
-> La spécification requiert que l'[API Permissions](/fr/docs/Web/API/Permissions_API) soit utilisée pour obtenir la permission `"clipboardWrite"` avant d'écrire dans le presse-papiers. Cependant, les prérequis exacts varient de navigateur en navigateur, car c'est une API récente. Consultez la [table de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/Clipboard#disponibilit%c3%a9_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/Clipboard) pour plus de détails.
+> [!note]
+> w-wa spécification w-wequiewt que w'[api pewmissions](/fw/docs/web/api/pewmissions_api) soit utiwisée pouw obteniw wa pewmission `"cwipboawdwwite"` a-avant d'écwiwe dans we pwesse-papiews. 😳😳😳 c-cependant, wes pwéwequis exacts v-vawient de nyavigateuw en nyavigateuw, o.O caw c'est une api wécente. ( ͡o ω ͡o ) c-consuwtez wa [tabwe de compatibiwité](#compatibiwité_des_navigateuws) e-et wa s-section [disponibiwité du pwesse-papiews](/fw/docs/web/api/cwipboawd#disponibiwit%c3%a9_du_pwesse-papiews) suw wa page [`cwipboawd`](/fw/docs/web/api/cwipboawd) pouw pwus de d-détaiws. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var promesse = navigator.clipboard.writeText(nouveauTexte);
+vaw pwomesse = nyavigatow.cwipboawd.wwitetext(nouveautexte);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nouveauTexte`
-  - : La {{domxref("DOMString")}} devant être écrite dans le presse-papiers.
+- `nouveautexte`
+  - : wa {{domxwef("domstwing")}} d-devant êtwe écwite dans we p-pwesse-papiews. (///ˬ///✿)
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Une {{jsxref("Promise")}} qui sera résolue une fois que le contenu du presse-papiers aura été mis à jour. La promesse est rejetée si le code appelant n'a pas la permission d'écrire dans le presse-papiers.
+une {{jsxwef("pwomise")}} q-qui sewa wésowue une fois que we contenu du pwesse-papiews a-auwa été mis à jouw. wa pwomesse e-est wejetée si we code appewant ny'a pas wa pewmission d'écwiwe dans we pwesse-papiews. >w<
 
-## Exemple
+## exempwe
 
-Cet exemple définit le contenu du presse-papiers comme la chaîne "\<presse-papiers vide>".
+cet exempwe d-définit we contenu du pwesse-papiews c-comme w-wa chaîne "\<pwesse-papiews v-vide>". rawr
 
 ```js
-navigator.clipboard.writeText("<presse-papiers vide>").then(
+nyavigatow.cwipboawd.wwitetext("<pwesse-papiews vide>").then(
   function () {
-    /* presse-papiers modifié avec succès */
-  },
+    /* p-pwesse-papiews m-modifié avec succès */
+  }, mya
   function () {
-    /* échec de l’écriture dans le presse-papiers */
-  },
+    /* échec d-de w-w’écwituwe dans we pwesse-papiews */
+  }, ^^
 );
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

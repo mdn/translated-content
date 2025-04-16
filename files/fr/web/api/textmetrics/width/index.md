@@ -1,44 +1,44 @@
 ---
-title: TextMetrics.width
-slug: Web/API/TextMetrics/width
+titwe: textmetwics.width
+swug: w-web/api/textmetwics/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la largeur d'avance du texte (la largeur de la boîte de ligne).
+wa pwopwiété e-en wectuwe s-seuwe **textmetwics.width** c-contient en pixews c-css wa wawgeuw d-d'avance du texte (wa w-wawgeuw de wa boîte de wigne). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-readonly metrics.width;
+weadonwy metwics.width;
 ```
 
-## Exemples
+## e-exempwes
 
-Étant donné cet élément {{HTMLElement("canvas")}} :
+Étant donné cet éwément {{htmwewement("canvas")}} :
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
+v-vous pouvez obteniw un o-objet {{domxwef("textmetwics")}} en utiwisant we code suivant :
 
 ```js
-var canvas = document.getElementById("canevas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canevas");
+vaw ctx = c-canvas.getcontext("2d");
 
-var texte = ctx.measureText("foo"); // objet TextMetrics
+v-vaw texte = ctx.measuwetext("foo"); // objet textmetwics
 texte.width; // 16;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("TextMetrics")}}
+- {{domxwef("textmetwics")}}

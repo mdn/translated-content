@@ -1,64 +1,64 @@
 ---
-title: Element.setPointerCapture()
-slug: Web/API/Element/setPointerCapture
+titwe: ewement.setpointewcaptuwe()
+swug: web/api/ewement/setpointewcaptuwe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La _Pointer capture_ (_capture de pointeur_) permet de re-cibler des événements pour un événement de pointeur particulier ({{domxref ("PointerEvent")}}) vers un élément particulier au lieu de la cible normale à l'emplacement d'un pointeur. Cela peut être utilisé pour garantir qu'un élément continue à recevoir des événements de pointeur même si le contact du périphérique de pointeur se déplace hors de l'élément (par exemple en faisant défiler).
+w-wa _pointew c-captuwe_ (_captuwe d-de pointeuw_) p-pewmet de we-cibwew d-des événements p-pouw un événement d-de pointeuw p-pawticuwiew ({{domxwef ("pointewevent")}}) vews un éwément pawticuwiew au wieu de wa cibwe nyowmawe à w-w'empwacement d'un pointeuw. cewa peut êtwe utiwisé p-pouw gawantiw qu'un éwément c-continue à wecevoiw des événements de pointeuw même si w-we contact du péwiphéwique de p-pointeuw se dépwace h-hows de w'éwément (paw exempwe en faisant défiwew). ʘwʘ
 
-**`setPointerCapture()`** est la méthode de l'interface {{domxref("Element")}} utilisée pour désigner un élément spécifique comme _cible de capture_ de{{domxref("PointerEvent", "évènements de pointeur")}} futurs. Les évènements subséquents du pointeur seront reciblés sur l'élément jusqu'à la libération de la capture (via {{domxref("Element.releasePointerCapture")}}).
+**`setpointewcaptuwe()`** est wa méthode d-de w'intewface {{domxwef("ewement")}} utiwisée pouw désignew un éwément spécifique comme _cibwe d-de captuwe_ de{{domxwef("pointewevent", (ˆ ﻌ ˆ)♡ "évènements d-de pointeuw")}} f-futuws. 😳😳😳 wes évènements s-subséquents d-du pointeuw sewont wecibwés suw w'éwément j-jusqu'à wa wibéwation de wa captuwe (via {{domxwef("ewement.weweasepointewcaptuwe")}}). :3
 
-> [!NOTE]
-> Lorque la capture du pointeur est définie, les évènements {{domxref("PointerEvent.pointerover","pointerover")}}, {{domxref("PointerEvent.pointerout","pointerout")}} {{domxref("PointerEvent.pointerenter","pointerenter")}} et {{domxref("PointerEvent.pointerleave","pointerleave")}} sont uniquement générés lors du franchissement de la limite de l'élément dont la capture est définie, car les autres éléments ne peuvent plus être ciblés par le pointeur. Cela a pour effet de supprimer ces événements sur tous les autres éléments.
+> [!note]
+> w-wowque wa captuwe du pointeuw est définie, OwO wes évènements {{domxwef("pointewevent.pointewovew","pointewovew")}}, (U ﹏ U) {{domxwef("pointewevent.pointewout","pointewout")}} {{domxwef("pointewevent.pointewentew","pointewentew")}} et {{domxwef("pointewevent.pointewweave","pointewweave")}} sont uniquement g-généwés wows du fwanchissement d-de wa wimite d-de w'éwément d-dont wa captuwe est définie, >w< caw wes autwes éwéments nye p-peuvent pwus êtwe c-cibwés paw we pointeuw. (U ﹏ U) cewa a-a pouw effet de s-suppwimew ces événements suw t-tous wes autwes éwéments. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-.setPointerCapture(pointerId);
+.setpointewcaptuwe(pointewid);
 ```
 
-targetElement
+t-tawgetewement
 
-### Arguments
+### awguments
 
-- _pointerId_
-  - : L'{{domxref("PointerEvent.pointerId","identifiant")}} pour un {{domxref("PointerEvent","évènement de pointeur")}}.
+- _pointewid_
+  - : w'{{domxwef("pointewevent.pointewid","identifiant")}} p-pouw un {{domxwef("pointewevent","évènement d-de pointeuw")}}. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Cette méthode renvoie `void` et lance une {{domxref("DOMException")}} nommée `InvalidPointerId` si `pointerId` ne correspond à aucun des pointeurs actifs.
+c-cette méthode w-wenvoie `void` et wance une {{domxwef("domexception")}} nyommée `invawidpointewid` si `pointewid` nye cowwespond à aucun des pointeuws actifs. 😳😳😳
 
-## Exemple
+## e-exempwe
 
-```html
-<html>
-  <script>
-    function downHandler(ev) {
-      var el = document.getElementById("target");
-      //L'élément cible  ('target') recevra/capturera d'autres évènements
-      el.setPointerCapture(ev.pointerId);
+```htmw
+<htmw>
+  <scwipt>
+    f-function downhandwew(ev) {
+      v-vaw e-ew = document.getewementbyid("tawget");
+      //w'éwément c-cibwe  ('tawget') wecevwa/captuwewa d'autwes évènements
+      ew.setpointewcaptuwe(ev.pointewid);
     }
-    function init() {
-      var el = document.getElementById("target");
-      el.onpointerdown = downHandler;
+    f-function init() {
+      vaw ew = document.getewementbyid("tawget");
+      ew.onpointewdown = downhandwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
+  </scwipt>
+  <body o-onwoad="init();">
+    <div id="tawget">touch m-me ...</div>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{ domxref("Element.releasePointerCapture")}}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- {{ domxwef("ewement.weweasepointewcaptuwe")}}
+- {{ d-domxwef("pointew_events","pointew events") }}

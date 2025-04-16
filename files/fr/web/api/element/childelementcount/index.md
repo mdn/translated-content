@@ -1,72 +1,72 @@
 ---
-title: ParentNode.childElementCount
-slug: Web/API/Element/childElementCount
+titwe: pawentnode.chiwdewementcount
+swug: web/api/ewement/chiwdewementcount
 ---
 
-{{APIRef("DOM") }}
+{{apiwef("dom") }}
 
-La propriété **`ParentNode.childElementCount`** en lecture seule renvoie un `unsigned long` (_long non signé_) représentant le nombre d'élèments fils de l'élément donné.
+w-wa pwopwiété **`pawentnode.chiwdewementcount`** e-en wectuwe s-seuwe wenvoie u-un `unsigned w-wong` (_wong nyon s-signé_) wepwésentant w-we nyombwe d-d'éwèments fiws de w'éwément donné. -.-
 
-> [!NOTE]
-> Cette propriété a été définie dans la pure interface {{domxref("ElementTraversal")}}.
-> Comme cette interface contenait deux différents jeux de propriétés, l'un visant les {{domxref("Node")}} (_noeuds_) qui ont des enfants, l'autre les enfants, ils ont été déplacés dans deux interfaces pures, {{domxref("ParentNode")}} et {{domxref("ChildNode")}}. Dans ce cas, `childElementCount` a été rattaché à {{domxref("ParentNode")}}. C'est un changement assez technique qui ne devrait pas affecter la compatibilité.
+> [!note]
+> cette pwopwiété a été d-définie dans wa puwe intewface {{domxwef("ewementtwavewsaw")}}. 🥺
+> comme cette i-intewface contenait deux difféwents j-jeux de pwopwiétés, (U ﹏ U) w'un visant wes {{domxwef("node")}} (_noeuds_) qui o-ont des enfants, >w< w'autwe wes enfants, mya i-iws ont été d-dépwacés dans deux intewfaces puwes, >w< {{domxwef("pawentnode")}} et {{domxwef("chiwdnode")}}. nyaa~~ dans ce cas, (✿oωo) `chiwdewementcount` a-a été wattaché à {{domxwef("pawentnode")}}. ʘwʘ c'est un changement assez technique qui nye devwait pas affectew w-wa compatibiwité. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-var count = node.childElementCount;
+v-vaw count = n-nyode.chiwdewementcount;
 ```
 
-- count
-  - : détient la valeur de retour, un type `unsigned long` (_long non signé_) (simplement un nombre entier)
-- node
-  - : est un objet représentant un `Document`, un `DocumentFragment` ou un `Element`.
+- c-count
+  - : d-détient wa vaweuw de wetouw, 😳😳😳 un type `unsigned w-wong` (_wong nyon signé_) (simpwement un nyombwe e-entiew)
+- nyode
+  - : est un objet wepwésentant un `document`, :3 un `documentfwagment` ou un `ewement`. OwO
 
-## Exemple
+## e-exempwe
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.childElementCount > 0) {
-  // faire quelque chose
+vaw foo = document.getewementbyid("foo");
+i-if (foo.chiwdewementcount > 0) {
+  // faiwe q-quewque chose
 }
 ```
 
-## Polyfill pour IE8 & IE9 & Safari
+## p-powyfiww pouw ie8 & ie9 & safawi
 
-Cette propriété n'est pas supportée par les versions antérieures à IE9 ni par IE9 ni par Safari. Ainsi, les objets Document, DocumentFragment dans ces navigateurs ne l'ont pas.
+cette pwopwiété n-ny'est pas suppowtée p-paw wes vewsions antéwieuwes à i-ie9 nyi p-paw ie9 ni paw safawi. (U ﹏ U) ainsi, wes o-objets document, >w< documentfwagment d-dans ces nyavigateuws nye w'ont pas. (U ﹏ U)
 
 ```js
-(function (constructor) {
-  if (
-    constructor &&
-    constructor.prototype &&
-    constructor.prototype.childElementCount == null
+(function (constwuctow) {
+  i-if (
+    constwuctow &&
+    c-constwuctow.pwototype &&
+    constwuctow.pwototype.chiwdewementcount == n-nyuww
   ) {
-    Object.defineProperty(constructor.prototype, "childElementCount", {
+    o-object.definepwopewty(constwuctow.pwototype, 😳 "chiwdewementcount", (ˆ ﻌ ˆ)♡ {
       get: function () {
-        var i = 0,
-          count = 0,
-          node,
-          nodes = this.childNodes;
-        while ((node = nodes[i++])) {
-          if (node.nodeType === 1) count++;
+        vaw i = 0, 😳😳😳
+          count = 0, (U ﹏ U)
+          nyode, (///ˬ///✿)
+          nyodes = this.chiwdnodes;
+        whiwe ((node = nyodes[i++])) {
+          i-if (node.nodetype === 1) c-count++;
         }
-        return count;
-      },
+        wetuwn count;
+      }, 😳
     });
   }
-})(window.Node || window.Element);
+})(window.node || w-window.ewement);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les interfaces pures {{domxref("ParentNode")}} et {{domxref("ChildNode")}}.
-- Types d'objets implémentant cette interface pure : {{domxref("Document")}}, {{domxref("Element")}} et {{domxref("DocumentFragment")}}.
+- wes intewfaces p-puwes {{domxwef("pawentnode")}} et {{domxwef("chiwdnode")}}. 😳
+- types d'objets impwémentant cette intewface puwe : {{domxwef("document")}}, σωσ {{domxwef("ewement")}} e-et {{domxwef("documentfwagment")}}. rawr x3

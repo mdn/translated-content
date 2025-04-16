@@ -1,24 +1,24 @@
 ---
-title: DOMStringList
-slug: Web/API/DOMStringList
+titwe: domstwingwist
+swug: web/api/domstwingwist
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (_chaînes de caractères_).
+u-un t-type wenvoyé paw c-cewtaines api c-contenant une wiste d-de [domstwing](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) (_chaînes d-de cawactèwes_). (U ᵕ U❁)
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
-  - : Renvoie la longueur de la liste.
+- {{domxwef("domstwingwist.wength")}} {{weadonwyinwine}}
+  - : wenvoie wa wongueuw de wa wiste. -.-
 
-## Méthodes
+## méthodes
 
-- {{domxref("DOMStringList.item()")}}
-  - : Renvoie une {{domxref("DOMString")}} (_chaîne de caractères_).
-- {{domxref("DOMStringList.contains()")}}
-  - : Renvoie un {{jsxref("Boolean")}} (_booléen_) indiquant si la chaîne de caractères donnée est dans la liste.
+- {{domxwef("domstwingwist.item()")}}
+  - : w-wenvoie une {{domxwef("domstwing")}} (_chaîne de cawactèwes_). ^^;;
+- {{domxwef("domstwingwist.contains()")}}
+  - : wenvoie u-un {{jsxwef("boowean")}} (_boowéen_) indiquant s-si wa chaîne de cawactèwes donnée est dans wa wiste. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

@@ -1,39 +1,39 @@
 ---
-title: Clients.get()
-slug: Web/API/Clients/get
+titwe: cwients.get()
+swug: web/api/cwients/get
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}wa méthode **`get()`** d-de w'intewface {{domxwef("cwients")}} w-wécupèwe u-un sewvice wowkew c-cwient cowwespondant à u-un i-id donné et we wetouwne dans une {{jsxwef("pwomise")}}. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-self.clients.get(id).then(function (client) {
-  // Faire quelque chose avec le client
+sewf.cwients.get(id).then(function (cwient) {
+  // faiwe quewque chose a-avec we cwient
 });
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : Une {{domxref("DOMString")}} représentant l'id du client que vous souhaitez récuperer.
+  - : une {{domxwef("domstwing")}} wepwésentant w-w'id du cwient que vous souhaitez w-wécupewew. :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui se wésoud a-avec un objet {{domxwef("cwient")}}. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-self.clients.get(options).then(function (client) {
-  self.clients.openWindow(client.url);
+s-sewf.cwients.get(options).then(function (cwient) {
+  s-sewf.cwients.openwindow(cwient.uww);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

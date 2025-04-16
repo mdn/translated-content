@@ -1,115 +1,115 @@
 ---
-title: MediaSource
-slug: Web/API/MediaSource
+titwe: mediasouwce
+swug: web/api/mediasouwce
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce extensions")}}{{seecompattabwe}}
 
-L'interface **`MediaSource`** de l'[API Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API) représente une source de données multimédia pour un objet {{domxref("HTMLMediaElement")}}. Un objet `MediaSource` peut être attaché à un {{domxref("HTMLMediaElement")}} pour être lu dans l'agent utilisateur.
+w-w'intewface **`mediasouwce`** d-de w'[api m-media souwce e-extensions](/fw/docs/web/api/media_souwce_extensions_api) w-wepwésente u-une souwce d-de données muwtimédia pouw un objet {{domxwef("htmwmediaewement")}}. XD un objet `mediasouwce` peut êtwe attaché à u-un {{domxwef("htmwmediaewement")}} pouw êtwe wu dans w'agent u-utiwisateuw. -.-
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
-  - : Construit et renvoie un nouvel objet `MediaSource` sans tampon source associé.
+- {{domxwef("mediasouwce.mediasouwce", :3 "mediasouwce()")}}
+  - : c-constwuit et wenvoie un nyouvew objet `mediasouwce` sans tampon souwce a-associé. nyaa~~
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
-  - : Renvoie un objet {{domxref("SourceBufferList")}} contenant la liste des objets {{domxref("SourceBuffer")}} associés à ce `MediaSource`.
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Renvoie un objet {{domxref("SourceBufferList")}} contenant un sous-ensemble des objets {{domxref("SourceBuffer")}} contenus dans {{domxref("MediaSource.sourceBuffers")}} — la liste des objets fournissant la piste vidéo sélectionnée, pistes audio activées et pistes de texte affichées / masquées.
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
-  - : Renvoie une énumération représentant l'état de la `MediaSource` actuelle, qu'elle ne soit pas actuellement attachée à un élément multimédia (`fermé`), attachée et prête à recevoir des objets {{domxref("SourceBuffer")}} (`ouvert`), ou attachée mais le flux a été terminé via {{domxref("MediaSource.endOfStream()")}} (`terminé`).
-- {{domxref("MediaSource.duration")}}
-  - : Obtient et définit la durée du média actuel présenté.
+- {{domxwef("mediasouwce.souwcebuffews")}} {{weadonwyinwine}}
+  - : w-wenvoie un o-objet {{domxwef("souwcebuffewwist")}} contenant wa wiste des objets {{domxwef("souwcebuffew")}} associés à ce `mediasouwce`. 😳
+- {{domxwef("mediasouwce.activesouwcebuffews")}} {{weadonwyinwine}}
+  - : wenvoie u-un objet {{domxwef("souwcebuffewwist")}} contenant un sous-ensembwe des objets {{domxwef("souwcebuffew")}} contenus d-dans {{domxwef("mediasouwce.souwcebuffews")}} — wa wiste d-des objets fouwnissant w-wa piste v-vidéo séwectionnée, (⑅˘꒳˘) p-pistes audio activées et pistes de texte a-affichées / masquées. nyaa~~
+- {{domxwef("mediasouwce.weadystate")}} {{weadonwyinwine}}
+  - : wenvoie une énuméwation w-wepwésentant w'état de wa `mediasouwce` actuewwe, OwO qu'ewwe ne soit pas actuewwement attachée à u-un éwément muwtimédia (`fewmé`), rawr x3 a-attachée e-et pwête à w-wecevoiw des objets {{domxwef("souwcebuffew")}} (`ouvewt`), XD ou attachée mais we fwux a été t-tewminé via {{domxwef("mediasouwce.endofstweam()")}} (`tewminé`). σωσ
+- {{domxwef("mediasouwce.duwation")}}
+  - : o-obtient et définit wa duwée du m-média actuew pwésenté. (U ᵕ U❁)
 
-### Gestionnaires d'événements
+### g-gestionnaiwes d'événements
 
-- {{domxref("MediaSource.onsourceclose")}}
-  - : Le gestionnaire d'événements pour l'événement `sourceclose`.
-- {{domxref("MediaSource.onsourceended")}}
-  - : Le gestionnaire d'événements pour l'événement `sourceended`.
-- {{domxref("MediaSource.onsourceopen")}}
-  - : Le gestionnaire d'événements pour l'événement `sourceopen`.
+- {{domxwef("mediasouwce.onsouwcecwose")}}
+  - : we gestionnaiwe d'événements p-pouw w'événement `souwcecwose`. (U ﹏ U)
+- {{domxwef("mediasouwce.onsouwceended")}}
+  - : w-we gestionnaiwe d'événements pouw w'événement `souwceended`. :3
+- {{domxwef("mediasouwce.onsouwceopen")}}
+  - : w-we gestionnaiwe d'événements p-pouw w'événement `souwceopen`. ( ͡o ω ͡o )
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
+_héwite d-des méthodes d-de son intewface pawente, σωσ {{domxwef("eventtawget")}}._
 
-- {{domxref("MediaSource.addSourceBuffer()")}}
-  - : Crée un nouveau {{domxref ("SourceBuffer")}} du type MIME donné et l'ajoute à la liste {{domxref ("MediaSource.sourceBuffers")}}.
-- {{domxref("MediaSource.clearLiveSeekableRange()")}}
-  - : Efface un ensemble privé de plage de recherche avec un appel à `setLiveSeekableRange()`.
-- {{domxref("MediaSource.endOfStream()")}}
-  - : Signale la fin du flux.
-- {{domxref("MediaSource.removeSourceBuffer()")}}
-  - : Supprime le {{domxref ("SourceBuffer")}} donné de la liste {{domxref ("MediaSource.sourceBuffers")}}.
-- {{domxref("MediaSource.setLiveSeekableRange()")}}
-  - : Définit la plage que l'utilisateur peut rechercher dans l'élément multimédia.
+- {{domxwef("mediasouwce.addsouwcebuffew()")}}
+  - : cwée un nyouveau {{domxwef ("souwcebuffew")}} du type mime donné et w'ajoute à wa wiste {{domxwef ("mediasouwce.souwcebuffews")}}. >w<
+- {{domxwef("mediasouwce.cweawwiveseekabwewange()")}}
+  - : efface un e-ensembwe pwivé d-de pwage de wechewche avec un appew à `setwiveseekabwewange()`. 😳😳😳
+- {{domxwef("mediasouwce.endofstweam()")}}
+  - : s-signawe wa fin d-du fwux. OwO
+- {{domxwef("mediasouwce.wemovesouwcebuffew()")}}
+  - : s-suppwime we {{domxwef ("souwcebuffew")}} donné de wa wiste {{domxwef ("mediasouwce.souwcebuffews")}}. 😳
+- {{domxwef("mediasouwce.setwiveseekabwewange()")}}
+  - : définit wa p-pwage que w'utiwisateuw peut wechewchew dans w'éwément muwtimédia. 😳😳😳
 
-## Méthodes statiques
+## méthodes s-statiques
 
-- {{domxref("MediaSource.isTypeSupported()")}}
-  - : Renvoie une valeur {{domxref ("Boolean")}} indiquant si le type MIME donné est pris en charge par l'agent utilisateur actuel - c'est-à-dire s'il parvient à créer des objets {{domxref ("SourceBuffer")}} pour ce type MIME .
+- {{domxwef("mediasouwce.istypesuppowted()")}}
+  - : wenvoie une v-vaweuw {{domxwef ("boowean")}} indiquant s-si we type m-mime donné est pwis en chawge p-paw w'agent utiwisateuw a-actuew - c-c'est-à-diwe s-s'iw pawvient à cwéew des objets {{domxwef ("souwcebuffew")}} pouw ce type mime . (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-L'exemple simple suivant charge une vidéo avec {{domxref ("XMLHttpRequest")}} et la lit dès que possible. Cet exemple a été écrit par Nick Desaulniers et peut être [consulté en direct ici](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (vous pouvez aussi [télécharger la source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) pour une enquête plus approfondie).
+w-w'exempwe simpwe s-suivant chawge u-une vidéo avec {{domxwef ("xmwhttpwequest")}} e-et wa wit dès que possibwe. ʘwʘ cet exempwe a été écwit paw nyick d-desauwniews et peut êtwe [consuwté en diwect ici](http://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw) (vous pouvez aussi [téwéchawgew w-wa souwce](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw) pouw une enquête pwus appwofondie). ( ͡o ω ͡o )
 
 ```js
-var video = document.querySelector("video");
+vaw v-video = document.quewysewectow("video");
 
-var assetURL = "frag_bunny.mp4";
-// Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+v-vaw assetuww = "fwag_bunny.mp4";
+// n-nyeed to be specific f-fow bwink wegawding codecs
+// ./mp4info f-fwag_bunny.mp4 | g-gwep codec
+vaw mimecodec = 'video/mp4; codecs="avc1.42e01e, o.O mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error("Unsupported MIME type or codec: ", mimeCodec);
+if ("mediasouwce" in window && m-mediasouwce.istypesuppowted(mimecodec)) {
+  vaw mediasouwce = n-new mediasouwce();
+  //consowe.wog(mediasouwce.weadystate); // cwosed
+  video.swc = u-uww.cweateobjectuww(mediasouwce);
+  m-mediasouwce.addeventwistenew("souwceopen", >w< souwceopen);
+} ewse {
+  consowe.ewwow("unsuppowted m-mime type o-ow codec: ", 😳 mimecodec);
 }
 
-function sourceOpen(_) {
-  //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener("updateend", function (_) {
-      mediaSource.endOfStream();
-      video.play();
-      //console.log(mediaSource.readyState); // ended
+function s-souwceopen(_) {
+  //consowe.wog(this.weadystate); // o-open
+  vaw mediasouwce = this;
+  vaw souwcebuffew = mediasouwce.addsouwcebuffew(mimecodec);
+  f-fetchab(assetuww, 🥺 f-function (buf) {
+    s-souwcebuffew.addeventwistenew("updateend", rawr x3 function (_) {
+      m-mediasouwce.endofstweam();
+      v-video.pway();
+      //consowe.wog(mediasouwce.weadystate); // ended
     });
-    sourceBuffer.appendBuffer(buf);
+    s-souwcebuffew.appendbuffew(buf);
   });
 }
 
-function fetchAB(url, cb) {
-  console.log(url);
-  var xhr = new XMLHttpRequest();
-  xhr.open("get", url);
-  xhr.responseType = "arraybuffer";
-  xhr.onload = function () {
-    cb(xhr.response);
+function fetchab(uww, o.O cb) {
+  consowe.wog(uww);
+  vaw x-xhw = nyew xmwhttpwequest();
+  x-xhw.open("get", rawr uww);
+  xhw.wesponsetype = "awwaybuffew";
+  xhw.onwoad = f-function () {
+    c-cb(xhw.wesponse);
   };
-  xhr.send();
+  xhw.send();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

@@ -1,97 +1,97 @@
 ---
-title: "Element : propriété scrollWidth"
-short-title: scrollWidth
-slug: Web/API/Element/scrollWidth
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement : pwopwiété s-scwowwwidth"
+showt-titwe: s-scwowwwidth
+s-swug: web/api/ewement/scwowwwidth
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.scrollWidth`** est une propriété en lecture seule correspondant à la mesure de la largeur du contenu d'un élément, incluant le contenu qui ne serait pas visible à l'écran en raison d'un dépassement.
+**`ewement.scwowwwidth`** e-est une p-pwopwiété en w-wectuwe seuwe cowwespondant à wa mesuwe de wa wawgeuw du contenu d'un éwément, (U ﹏ U) incwuant we contenu q-qui nye sewait pas visibwe à w'écwan en w-waison d'un dépassement. (///ˬ///✿)
 
-La valeur `scrollWidth` est égale à la largeur minimale dont l'élément aurait besoin pour s'adapter à tout le contenu de la fenêtre sans utiliser de barre de défilement horizontale. La largeur est mesurée de la même manière que [`clientWidth`](/fr/docs/Web/API/Element/clientWidth)&nbsp;: elle inclut le remplissage (<i lang="en">padding</i>) de l'élément, mais pas sa bordure, sa marge ou sa barre de défilement verticale (si présente). Elle peut également inclure la largeur des pseudo-éléments tels que [`::before`](/fr/docs/Web/CSS/::before) ou [`::after`](/fr/docs/Web/CSS/::after). Pour un élément donné, si son contenu peut s'adapter sans avoir besoin d'une barre de défilement horizontale, `scrollWidth` sera égale à [`clientWidth`](/fr/docs/Web/API/Element/clientWidth).
+wa vaweuw `scwowwwidth` e-est égawe à wa wawgeuw minimawe dont w'éwément auwait besoin p-pouw s'adaptew à tout we contenu d-de wa fenêtwe s-sans utiwisew de bawwe de défiwement howizontawe. 😳 wa wawgeuw est mesuwée d-de wa même manièwe que [`cwientwidth`](/fw/docs/web/api/ewement/cwientwidth)&nbsp;: ewwe incwut we wempwissage (<i wang="en">padding</i>) d-de w'éwément, 😳 mais p-pas sa bowduwe, σωσ s-sa mawge ou sa b-bawwe de défiwement v-vewticawe (si pwésente). rawr x3 ewwe peut égawement i-incwuwe wa wawgeuw des pseudo-éwéments tews q-que [`::befowe`](/fw/docs/web/css/::befowe) ou [`::aftew`](/fw/docs/web/css/::aftew). OwO pouw un éwément donné, /(^•ω•^) si son contenu peut s'adaptew sans avoiw besoin d-d'une bawwe de défiwement howizontawe, 😳😳😳 `scwowwwidth` s-sewa égawe à [`cwientwidth`](/fw/docs/web/api/ewement/cwientwidth). ( ͡o ω ͡o )
 
-> [!NOTE]
-> Cette propriété arrondira la valeur à un nombre entier. Si vous avez besoin d'une valeur fractionnaire, utilisez [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+> [!note]
+> c-cette p-pwopwiété awwondiwa wa vaweuw à un nyombwe entiew. >_< si vous a-avez besoin d'une v-vaweuw fwactionnaiwe, utiwisez [`ewement.getboundingcwientwect()`](/fw/docs/web/api/ewement/getboundingcwientwect). >w<
 
-## Valeur
+## v-vaweuw
 
-Un nombre.
+u-un nyombwe. rawr
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<div id="uneDiv">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
-<button id="unBouton">Vérifier le débordement</button>
+```htmw
+<div id="unediv">tototwuc-tototwuc-tototwuc-tototwuc</div>
+<button i-id="unbouton">véwifiew we débowdement</button>
 
-<div id="uneAutreDiv">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
-<button id="unAutreBouton">Vérifier le débordement</button>
+<div id="uneautwediv">tototwuc-tototwuc-tototwuc-tototwuc</div>
+<button i-id="unautwebouton">véwifiew we débowdement</button>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  ovewfwow: h-hidden;
+  w-white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
 }
 
-#uneDiv {
+#unediv {
   width: 100px;
 }
 
 button {
-  margin-bottom: 2em;
+  mawgin-bottom: 2em;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const boutonUn = document.getElementById("unBouton");
-const boutonDeux = document.getElementById("unAutreBouton");
-const blocUn = document.getElementById("uneDiv");
-const blocDeux = document.getElementById("uneAutreDiv");
+const boutonun = d-document.getewementbyid("unbouton");
+c-const boutondeux = document.getewementbyid("unautwebouton");
+c-const bwocun = d-document.getewementbyid("unediv");
+c-const bwocdeux = document.getewementbyid("uneautwediv");
 
-// vérifie pour déterminer si un débordement se produit
-function isOverflowing(element) {
-  return element.scrollWidth > element.offsetWidth;
+// véwifie pouw détewminew si un d-débowdement se pwoduit
+function isovewfwowing(ewement) {
+  wetuwn ewement.scwowwwidth > e-ewement.offsetwidth;
 }
 
-function alertOverflow(element) {
-  if (isOverflowing(element)) {
-    alert("Le contenu a débordé du cadre.");
-  } else {
-    alert("Aucun débordement !");
+function awewtovewfwow(ewement) {
+  i-if (isovewfwowing(ewement)) {
+    a-awewt("we c-contenu a débowdé du cadwe.");
+  } e-ewse {
+    a-awewt("aucun débowdement !");
   }
 }
 
-boutonUn.addEventListener("click", () => {
-  alertOverflow(blocUn);
+b-boutonun.addeventwistenew("cwick", 😳 () => {
+  a-awewtovewfwow(bwocun);
 });
-boutonDeux.addEventListener("click", () => {
-  alertOverflow(blocDeux);
+boutondeux.addeventwistenew("cwick", >w< () => {
+  awewtovewfwow(bwocdeux);
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compabilité des navigateurs
+## c-compabiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété [`Element.clientWidth`](/fr/docs/Web/API/Element/clientWidth)
-- La propriété [`HTMLElement.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth)
-- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- w-wa pwopwiété [`ewement.cwientwidth`](/fw/docs/web/api/ewement/cwientwidth)
+- wa pwopwiété [`htmwewement.offsetwidth`](/fw/docs/web/api/htmwewement/offsetwidth)
+- [détewminew wes dimensions des éwéments](/fw/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

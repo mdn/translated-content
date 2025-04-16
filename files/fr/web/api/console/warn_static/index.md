@@ -1,53 +1,53 @@
 ---
-title: "console : méthode statique warn()"
-slug: Web/API/console/warn_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique w-wawn()"
+swug: w-web/api/consowe/wawn_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.warn()`** affiche un message d'avertissement dans la console.
+w-wa méthode **`consowe.wawn()`** a-affiche un message d-d'avewtissement d-dans wa consowe. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Dans Chrome et Firefox, les avertissements sont indiqués par un triangle avec un point d'exclamation.
+> [!note]
+> dans chwome et fiwefox, mya wes avewtissements sont indiqués p-paw un twiangwe avec un point d'excwamation. ^^
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-warn(obj1)
-warn(obj1, /* …, */ objN)
-warn(msg)
-warn(msg, subst1, /* …, */ substN)
+```js-nowint
+wawn(obj1)
+w-wawn(obj1, 😳😳😳 /* …, */ objn)
+wawn(msg)
+wawn(msg, mya subst1, 😳 /* …, */ s-substn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `obj1` … `objN`
-  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
+- `obj1` … `objn`
+  - : u-une wiste d'objets j-javascwipt à affichew. -.- wes wepwésentations en chaînes de cawactèwes de ces o-objets sont concaténés dans w'owdwe et affichés dans wa consowe. 🥺
 - `msg`
-  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
-- `subst1` … `substN`
-  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
+  - : une chaîne d-de cawactèwes javascwipt qui contient z-zéwo ou p-pwusieuws chaînes d-de substitution q-qui sewont wempwacées paw `subst1` … `substn` dans w'owdwe. o.O
+- `subst1` … `substn`
+  - : d-des objets javascwipt avec wesquews wempwacew wes c-chaînes de substitution dans `msg`. /(^•ω•^) ce pawamètwe pewmet un contwôwe suppwémentaiwe suw we f-fowmat de ce qui est affiché. nyaa~~ v-voiw [wa page suw w-wes chaînes de c-cawactèwes de substitution avec `consowe`](/fw/docs/web/api/consowe#utiwisew_des_chaînes_de_substitution) pouw pwus de détaiws. nyaa~~
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+v-voiw [affichew d-du texte dans wa consowe](/fw/docs/web/api/consowe#affichew_du_texte_dans_wa_consowe) p-pouw p-pwus de détaiws. :3
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Documentation Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/console-log#console-messages-examples-log-info-error-and-warn)
-- [Documentation Node.JS sur l'API Console](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
-- [Documentation Chrome](https://developer.chrome.com/docs/devtools/console/api/#warn)
+- [documentation e-edge](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/consowe-wog#consowe-messages-exampwes-wog-info-ewwow-and-wawn)
+- [documentation nyode.js s-suw w'api consowe](https://nodejs.owg/docs/watest/api/consowe.htmw#consowewawndata-awgs)
+- [documentation c-chwome](https://devewopew.chwome.com/docs/devtoows/consowe/api/#wawn)

@@ -1,44 +1,44 @@
 ---
-title: Attr.prefix
-slug: Web/API/Attr/prefix
+titwe: attw.pwefix
+swug: web/api/attw/pwefix
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou `null` si aucun préfixe n'est spécifié.
+w-wa pwopwiété **`attw.pwefix`** e-en wectuwe s-seuwe wenvoie w-we pwéfixe de w-w'espace de nyoms d-de w'attwibut s-spécifié ou `nuww` s-si aucun pwéfixe ny'est spécifié. >_<
 
-> [!NOTE]
-> Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.
+> [!note]
+> avant dom4, rawr x3 cette api a été définie dans w-w'intewface {{domxwef ("node")}}. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-string = attribute.prefix;
+stwing = a-attwibute.pwefix;
 ```
 
-## Exemples
+## exempwes
 
-Le code suivant affiche "x" dans la console.
+w-we code suivant affiche "x" dans wa consowe. nyaa~~
 
-```xml
-<div x:id="example" onclick="console.log(this.attributes[0].prefix)"/>
+```xmw
+<div x:id="exampwe" oncwick="consowe.wog(this.attwibutes[0].pwefix)"/>
 ```
 
-## Notes
+## n-nyotes
 
-Cela ne fonctionnera que lorsqu'un analyseur conscient de l'espace de noms est utilisé, c'est-à-dire lorsqu'il s'agit d'un document avec un type MIME XML. Cela ne fonctionnera pas pour les documents HTML.
+cewa nye fonctionnewa q-que wowsqu'un a-anawyseuw conscient de w'espace de nyoms est utiwisé, (⑅˘꒳˘) c'est-à-diwe wowsqu'iw s-s'agit d'un document avec un type mime xmw. rawr x3 cewa nye fonctionnewa pas pouw w-wes documents htmw. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Attr.localName")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Node.prefix")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("attw.wocawname")}}
+- {{domxwef("ewement.pwefix")}}
+- {{domxwef("node.pwefix")}}

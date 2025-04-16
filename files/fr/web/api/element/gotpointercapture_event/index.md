@@ -1,44 +1,44 @@
 ---
-title: GlobalEventHandlers.ongotpointercapture
-slug: Web/API/Element/gotpointercapture_event
+titwe: gwobaweventhandwews.ongotpointewcaptuwe
+swug: web/api/ewement/gotpointewcaptuwe_event
 ---
 
-{{ApiRef("HTML DOM")}}La propriété **`ongotpointercapture`** du mixin {{domxref("GlobalEventHandlers")}} est un gestionnaire d'évènement qui traite les évènements de type `gotpointercapture`.
+{{apiwef("htmw d-dom")}}wa pwopwiété **`ongotpointewcaptuwe`** d-du mixin {{domxwef("gwobaweventhandwews")}} e-est un gestionnaiwe d-d'évènement q-qui twaite wes évènements d-de t-type `gotpointewcaptuwe`. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-target.ongotpointercapture = functionRef;
+t-tawget.ongotpointewcaptuwe = functionwef;
 ```
 
-### Valeur
+### vaweuw
 
-`functionRef` est un nom de fonction ou une [expression fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction accepte un objet {{domxref("FocusEvent")}} en tant qu'unique argument.
+`functionwef` est un nyom de fonction ou u-une [expwession fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function). rawr x3 wa fonction accepte u-un objet {{domxwef("focusevent")}} en tant q-qu'unique awgument. mya
 
-## Example
+## exampwe
 
 ```js
-function overHandler(event) {
-  // Obtient le gestionnaire de type "gotpointercapture" de la cible de l'événement
-  let gotCaptureHandler = event.target.ongotpointercapture;
+function ovewhandwew(event) {
+  // o-obtient we gestionnaiwe d-de type "gotpointewcaptuwe" d-de wa cibwe de w'événement
+  wet gotcaptuwehandwew = event.tawget.ongotpointewcaptuwe;
 }
 
 function init() {
-  let el = document.getElementById("target");
-  el.ongotpointercapture = overHandler;
+  w-wet ew = document.getewementbyid("tawget");
+  ew.ongotpointewcaptuwe = ovewhandwew;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'évènement [`Document: gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-- L'évènement [`Element: gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-- {{domxref("Element.setPointerCapture()")}}
+- w-w'évènement [`document: g-gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+- w-w'évènement [`ewement: gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+- {{domxwef("ewement.setpointewcaptuwe()")}}

@@ -1,96 +1,96 @@
 ---
-title: IDBObjectStore.keyPath
-slug: Web/API/IDBObjectStore/keyPath
+titwe: idbobjectstowe.keypath
+swug: web/api/idbobjectstowe/keypath
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`keyPath`** de l'interface {{domxref("IDBObjectStore")}} renvoie le [chemin de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) de ce magasin d'objet.
+w-wa pwopwiété **`keypath`** d-de w'intewface {{domxwef("idbobjectstowe")}} w-wenvoie w-we [chemin d-de wa cwé](/fw/docs/web/api/indexeddb_api/basic_tewminowogy#gwoss_keypath) d-de c-ce magasin d'objet. :3
 
-Si cette propriété vaut `null` l'application doit fournir une clé pour chaque opération de modification.
+s-si cette pwopwiété vaut `nuww` w'appwication doit fouwniw une cwé pouw chaque o-opéwation de modification. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var mykeyPath = objectStore.keyPath;
+v-vaw mykeypath = objectstowe.keypath;
 ```
 
-### Valeur
+### v-vaweuw
 
-N'importe quel type de valeur.
+ny'impowte quew type de vaweuw. 🥺
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.keyPath` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([tester la démo](https://mdn.github.io/dom-examples/to-do-notifications/)).
+d-dans w'exempwe suivant, on initiawise u-une twansaction d-de wectuwe/écwituwe suw une base de données en ajoutant des données dans u-un magasin d'objets via wa méthode `add()`. (⑅˘꒳˘) une fois w'objet cwéé, nyaa~~ on affiche `objectstowe.keypath` en sowtie d-de wa consowe. :3 pouw un exempwe c-compwet et fonctionnew, ( ͡o ω ͡o ) v-vous pouvez u-utiwisew nyotwe a-appwication [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([testew wa démo](https://mdn.github.io/dom-exampwes/to-do-notifications/)). mya
 
 ```js
-// On commence par ouvrir la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// o-on commence paw ouvwiw wa base de données
+vaw d-dbopenwequest = window.indexeddb.open("todowist", (///ˬ///✿) 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base.</li>';
+dbopenwequest.onsuccess = function(event) {
+  nyote.innewhtmw += '<wi>initiawisation de wa base.</wi>';
 
-  // On enregistre le résultat de l'ouverture
-  // dans la variable db afin de l'utiliser
+  // o-on enwegistwe we wésuwtat d-de w'ouvewtuwe
+  // d-dans wa vawiabwe d-db afin de w'utiwisew
   // ensuite
-  var db = DBOpenRequest.result;
+  vaw db = dbopenwequest.wesuwt;
 
-  // On utilise la fonction addData() afin d'ajouter
-  // des données à la base de données
-  addData();
+  // o-on utiwise wa f-fonction adddata() afin d'ajoutew
+  // d-des données à w-wa base de données
+  adddata();
 };
 
-function addData() {
-  // On crée un nouvel objet prêt à être inséré
-  // dans la base de données
-  var newItem = [ { taskTitle: "Promener le chien", hours: 19, minutes: 30, day: 24, month: "Décembre", year: 2013, notified: "no" } ];
+f-function adddata() {
+  // o-on cwée un nyouvew objet pwêt à êtwe inséwé
+  // d-dans wa base de données
+  v-vaw nyewitem = [ { tasktitwe: "pwomenew w-we chien", (˘ω˘) houws: 19, m-minutes: 30, ^^;; day: 24, (✿oωo) month: "décembwe", (U ﹏ U) yeaw: 2013, -.- nyotified: "no" } ];
 
-  // On ouvre une transaction en lecture/écriture
-  // vers la base de données afin d'ajouter des
+  // on ouvwe une twansaction en wectuwe/écwituwe
+  // vews wa b-base de données a-afin d'ajoutew des
   // données
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  v-vaw twansaction = d-db.twansaction(["todowist"], ^•ﻌ•^ "weadwwite");
 
-  // On indique le succès de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification finie.</li>';
+  // o-on indique we succès de wa twansaction
+  twansaction.oncompwete = f-function(event) {
+    nyote.innewhtmw += '<wi>twansaction tewminée : modification finie.</wi>';
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction non-ouverte à cause d'une erreur. Les doublons ne sont pas autorisés.</li>';
+  twansaction.onewwow = f-function(event) {
+    nyote.innewhtmw += '<wi>twansaction n-nyon-ouvewte à c-cause d'une e-ewweuw. rawr wes doubwons nye sont pas a-autowisés.</wi>';
   };
 
-  // On crée un magasin d'objet pour la transaction
-  // et on affiche KeyPath dans la console
-  var objectStore = transaction.objectStore("toDoList");
-  console.log(objectStore.keyPath);
+  // o-on cwée un magasin d-d'objet pouw w-wa twansaction
+  // et on affiche keypath dans w-wa consowe
+  vaw o-objectstowe = t-twansaction.objectstowe("todowist");
+  c-consowe.wog(objectstowe.keypath);
 
-  // On ajoute l'objet newItem au magasin d'objets
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // on a-ajoute w'objet nyewitem au magasin d'objets
+  vaw objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // On indique le succès de l'ajout de l'objet
-    // dans la base de données
-    note.innerHTML += '<li>Un nouvel élément a été ajouté dans la base de données.</li>';
+  objectstowewequest.onsuccess = function(event) {
+    // on indique we succès de w'ajout de w'objet
+    // d-dans wa base de données
+    nyote.innewhtmw += '<wi>un nouvew éwément a-a été a-ajouté dans w-wa base de données.</wi>';
   };
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew e-et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (˘ω˘)

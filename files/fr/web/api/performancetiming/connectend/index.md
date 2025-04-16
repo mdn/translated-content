@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.connectEnd
-slug: Web/API/PerformanceTiming/connectEnd
+titwe: pewfowmancetiming.connectend
+swug: web/api/pewfowmancetiming/connectend
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). >_< veuiwwez u-utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. (⑅˘꒳˘)
 
-L'ancienne propriété en lecture seule **`connectEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où la connexion a été ouverte en réseau. Si la couche de transport signale une erreur et que l'établissement de la connexion est recommencé, l'heure de fin du dernier établissement de la connexion est donnée. Si une connexion persistante est utilisée, la valeur sera la même que [`PerformanceTiming.fetchStart`](/fr/docs/Web/API/PerformanceTiming/fetchStart). Une connexion est considérée comme ouverte lorsque toute poignée de main de connexion sécurisée, ou authentification SOCKS, est terminée.
+w'ancienne pwopwiété e-en wectuwe seuwe **`connectend`** wetouwne un `unsigned wong wong` w-wepwésentant we moment, en miwwisecondes d-depuis w'époque unix, /(^•ω•^) où wa connexion a été ouvewte e-en wéseau. rawr x3 si wa couche de t-twanspowt signawe u-une ewweuw et que w'étabwissement de wa connexion est wecommencé, (U ﹏ U) w'heuwe de f-fin du dewniew étabwissement de wa connexion est donnée. (U ﹏ U) si une connexion pewsistante est utiwisée, (⑅˘꒳˘) w-wa vaweuw sewa wa même q-que [`pewfowmancetiming.fetchstawt`](/fw/docs/web/api/pewfowmancetiming/fetchstawt). òωó u-une connexion e-est considéwée c-comme ouvewte wowsque toute poignée de main d-de connexion sécuwisée, ʘwʘ ou authentification socks, /(^•ω•^) est tewminée.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performanceTiming.connectEnd;
+wet time = pewfowmancetiming.connectend;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. ʘwʘ

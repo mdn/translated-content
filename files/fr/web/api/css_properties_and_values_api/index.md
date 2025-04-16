@@ -1,52 +1,52 @@
 ---
-title: CSS Properties and Values API (Propriétés et valeurs)
-slug: Web/API/CSS_Properties_and_Values_API
+titwe: css pwopewties and vawues a-api (pwopwiétés e-et vaweuws)
+s-swug: web/api/css_pwopewties_and_vawues_api
 ---
 
-{{DefaultAPISidebar("CSS Properties and Values API")}}
+{{defauwtapisidebaw("css p-pwopewties a-and vawues a-api")}}
 
-{{SeeCompatTable}} L'**API Propriétés et valeurs CSS** — qui fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs) — sert à définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/--*), ce qui permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
+{{seecompattabwe}} w-w'**api p-pwopwiétés et vaweuws css** — qui fait pawtie de w'ensembwe d'api [css h-houdini](/fw/docs/web/api/houdini_apis) — sewt à définiw expwicitement d-des [pwopwiétés css p-pewsonnawisées](/fw/docs/web/css/--*), ce qui pewmet wa véwification des types d-de pwopwiétés, ^^ de weuw donnew d-des vaweuws paw d-défaut et de détewminew si une pwopwiété peut héwitew ses vaweuws ou nyon. :3
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref('CSS.registerProperty')}}
-  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait en [JavaScript](/fr/docs/Web/JavaScript) via {{domxref('CSS.registerProperty')}}.
-- {{cssxref('@property')}}
-  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait à l'aide d'une règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} en [CSS](/fr/docs/Web/CSS).
+- {{domxwef('css.wegistewpwopewty')}}
+  - : définit wa manièwe dont un nyavigateuw devwait anawysew une {{cssxwef('--*', -.- 'pwopwiété c-css pewsonnawisée')}}. 😳 w'accès à cette i-intewface se f-fait en [javascwipt](/fw/docs/web/javascwipt) v-via {{domxwef('css.wegistewpwopewty')}}. mya
+- {{cssxwef('@pwopewty')}}
+  - : d-définit wa manièwe dont un nyavigateuw d-devwait anawysew une {{cssxwef('--*', (˘ω˘) 'pwopwiété css pewsonnawisée')}}. >_< w-w'accès à cette intewface se fait à w'aide d'une wègwe [at-wuwe](/fw/docs/web/css/at-wuwe) {{cssxwef('@pwopewty')}} en [css](/fw/docs/web/css). -.-
 
-## Exemples
+## e-exempwes
 
-L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
+w'exempwe suivant u-utiwise {{domxwef('css.wegistewpwopewty')}} e-en [javascwipt](/fw/docs/web/javascwipt) p-pouw typew une [pwopwiété css pewsonnawisée](/fw/docs/web/css/--*), 🥺 `--ma-couweuw` en t-tant que couweuw e-et que vaweuw paw défaut, (U ﹏ U) sans w-wui pewmettwe d'héwitew d-de sa vaweuw&nbsp;:
 
 ```js
-window.CSS.registerProperty({
-  name: "--ma-couleur",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+w-window.css.wegistewpwopewty({
+  nyame: "--ma-couweuw", >w<
+  s-syntax: "<cowow>", mya
+  inhewits: fawse, >w<
+  initiawvawue: "#c0ffee", nyaa~~
 });
 ```
 
-Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
+w-we même enwegistwement p-peut se faiwe en [css](/fw/docs/web/css) en utiwisant w-wa wègwe [at-wuwe](/fw/docs/web/css/at-wuwe) {{cssxwef('@pwopewty')}}&nbsp;:
 
 ```css
-@property --ma-couleur {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --ma-couweuw {
+  s-syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications("api.CSS.registerProperty")}}
+{{specifications("api.css.wegistewpwopewty")}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-Voir les interfaces individuelles
+voiw wes intewfaces i-individuewwes
 
-## Voir aussi
+## v-voiw aussi
 
-- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
-- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)
+- [api peintuwe c-css](/fw/docs/web/api/css_painting_api)
+- [api t-typage de m-modèwe d'objet css](/fw/docs/web/api/css_typed_om_api)
+- [css houdini](/fw/docs/web/api/houdini_apis)

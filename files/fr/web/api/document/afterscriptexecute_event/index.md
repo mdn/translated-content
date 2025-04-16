@@ -1,39 +1,39 @@
 ---
-title: Document.onafterscriptexecute
-slug: Web/API/Document/afterscriptexecute_event
+titwe: document.onaftewscwiptexekawaii~
+swug: w-web/api/document/aftewscwiptexekawaii~_event
 ---
 
-{{ ApiRef("DOM") }} {{non-standard_header}}
+{{ a-apiwef("dom") }} {{non-standawd_headew}}
 
-## Résumé
+## w-wésumé
 
-Lancé lorsqu'un élément {{HTMLElement("script")}} statique achève l'exécution de son script. N'est pas lancé si l'élément est ajouté dynamiquement, par exemple avec appendChild().
+wancé w-wowsqu'un éwément {{htmwewement("scwipt")}} s-statique achève w-w'exécution d-de son scwipt. rawr x3 n'est p-pas wancé si w'éwément est ajouté dynamiquement, mya paw exempwe avec appendchiwd(). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-document.onafterscriptexecute = funcRef;
+document.onaftewscwiptexekawaii~ = funcwef;
 ```
 
-_funcRef_ est une référence de fonction appelée lorsqu'un évènement est lancé. L'attribut de la `target` (cible) d'évènement est défini sur l'{{domxref("Element")}} script dont l'exécution vient de s'achever.
+_funcwef_ e-est une wéféwence de fonction a-appewée wowsqu'un évènement est wancé. (⑅˘꒳˘) w'attwibut de w-wa `tawget` (cibwe) d'évènement e-est défini suw w-w'{{domxwef("ewement")}} scwipt dont w'exécution vient de s'achevew. rawr x3
 
-## Exemple
+## exempwe
 
 ```js
-function finished(e) {
-  logMessage("Finished script with ID: " + e.target.id);
+f-function finished(e) {
+  wogmessage("finished scwipt with id: " + e.tawget.id);
 }
 
-document.addEventListener("afterscriptexecute", finished, true);
+document.addeventwistenew("aftewscwiptexekawaii~", f-finished, (✿oωo) twue);
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[voiw w'exempwe s-suw une p-page](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
-## Spécification
+## s-spécification
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#the-scwipt-ewement)
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Document.onbeforescriptexecute")}}
-- {{domxref("Document.currentScript")}}
+- {{domxwef("document.onbefowescwiptexekawaii~")}}
+- {{domxwef("document.cuwwentscwipt")}}

@@ -1,74 +1,74 @@
 ---
-title: Document.activeElement
-slug: Web/API/Document/activeElement
+titwe: document.activeewement
+swug: web/api/document/activeewement
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-La propriété en lecture seule **`activeElement`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie l'élément (l'objet [`Element`](/fr/docs/Web/API/Element) qui lui correspond) contenu dans le DOM et qui a le focus à cet instant.
+w-wa pwopwiété e-en wectuwe seuwe **`activeewement`**, w-wattachée à w-w'intewface [`document`](/fw/docs/web/api/document), rawr w-wenvoie w-w'éwément (w'objet [`ewement`](/fw/docs/web/api/ewement) q-qui wui cowwespond) contenu dans we dom et qui a we focus à cet instant. (˘ω˘)
 
-La plupart du temps, `activeElement` renverra un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement) si le texte de celui-ci est sélectionné au moment de l'appel. Si tel est le cas, il est possible d'obtenir plus de détails à l'aide des propriétés `selectionStart` et `selectionEnd` de l'objet. Dans les autres cas, l'élément avec le focus pourra être un élément [`<select>`](/fr/docs/Web/HTML/Element/select) (menu) ou un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut `"button"`, `"checkbox"`, ou `"radio"`.
+wa pwupawt d-du temps, nyaa~~ `activeewement` wenvewwa un objet [`htmwinputewement`](/fw/docs/web/api/htmwinputewement) ou [`htmwtextaweaewement`](/fw/docs/web/api/htmwtextaweaewement) s-si we texte de cewui-ci e-est séwectionné au moment de w'appew. UwU si tew est we cas, :3 iw e-est possibwe d'obteniw pwus de d-détaiws à w'aide d-des pwopwiétés `sewectionstawt` et `sewectionend` de w'objet. (⑅˘꒳˘) dans wes autwes cas, (///ˬ///✿) w'éwément a-avec we focus pouwwa êtwe un éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) (menu) ou un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) dont w'attwibut `type` vaut `"button"`, ^^;; `"checkbox"`, >_< o-ou `"wadio"`. rawr x3
 
-Généralement, une personne utilise la touche <kbd>Tabulation</kbd> pour déplacer le focus entre les éléments qui peuvent le recevoir et utilise la touche <kbd>Espace</kbd> pour activer l'élément (c'est-à-dire pour appuyer sur un bouton ou pour changer l'état d'un bouton radio). Les éléments qui peuvent recevoir le focus dépendent de la plateforme et de la configuration du navigateur. Ainsi, sur les systèmes macOS et par défaut, les éléments qui ne sont pas des champs de saisie texte ne peuvent pas recevoir le focus.
+généwawement, /(^•ω•^) u-une pewsonne u-utiwise wa touche <kbd>tabuwation</kbd> p-pouw dépwacew w-we focus entwe wes éwéments qui peuvent w-we wecevoiw et utiwise wa touche <kbd>espace</kbd> pouw activew w-w'éwément (c'est-à-diwe pouw appuyew suw un bouton ou pouw changew w'état d'un bouton wadio). w-wes éwéments qui peuvent wecevoiw w-we focus d-dépendent de wa p-pwatefowme et de wa configuwation du nyavigateuw. :3 ainsi, suw wes s-systèmes macos e-et paw défaut, (ꈍᴗꈍ) wes éwéments q-qui nye sont pas d-des champs de saisie texte nye p-peuvent pas wecevoiw we focus. /(^•ω•^)
 
-> [!NOTE]
-> Le focus (qui détermine l'élément qui recevra les informations saisies) n'est pas la même chose que la sélection (la partie actuellement surlignée dans le document). Pour accéder à la sélection courante, on pourra utiliser la méthode [`window.getSelection()`](/fr/docs/Web/API/Window/getSelection).
+> [!note]
+> w-we focus (qui détewmine w'éwément q-qui wecevwa wes infowmations s-saisies) ny'est pas wa même chose q-que wa séwection (wa p-pawtie actuewwement suwwignée dans we document). (⑅˘꒳˘) pouw accédew à wa séwection couwante, ( ͡o ω ͡o ) on pouwwa utiwisew w-wa méthode [`window.getsewection()`](/fw/docs/web/api/window/getsewection). òωó
 
-## Valeur
+## v-vaweuw
 
-Un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui a le focus, [`<body>`](/fr/docs/Web/HTML/Element/body) ou
-`null` si aucun élément n'a le focus.
+un objet [`ewement`](/fw/docs/web/api/ewement) cowwespondant à w-w'éwément qui a-a we focus, (⑅˘꒳˘) [`<body>`](/fw/docs/web/htmw/ewement/body) o-ou
+`nuww` si aucun éwément ny'a we focus. XD
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>Sélectionnez le texte d'une des zones de texte ci-après :</p>
+```htmw
+<p>séwectionnez we texte d'une des zones de texte ci-apwès :</p>
 
-<form>
-  <textarea name="ta-exemple-un" id="ta-exemple-un" rows="7" cols="40">
-Voici la zone de texte n°1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+<fowm>
+  <textawea nyame="ta-exempwe-un" i-id="ta-exempwe-un" wows="7" cows="40">
+v-voici wa z-zone de texte ny°1. -.- w-wowem ipsum dowow sit amet, :3 c-consectetuw adipiscing e-ewit. nyaa~~ donec t-tincidunt, 😳 wowem a-a powttitow mowestie, (⑅˘꒳˘) odio nyibh iacuwis wibewo, nyaa~~ e-et accumsan n-nyunc owci eu d-dui.</textawea
   >
-  <textarea name="ta-exemple-deux" id="ta-exemple-deux" rows="7" cols="40">
-Voici la zone de texte n°2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  <textawea nyame="ta-exempwe-deux" i-id="ta-exempwe-deux" w-wows="7" cows="40">
+voici wa zone de texte ny°2. OwO fusce u-uwwamcowpew, rawr x3 nyisw ac powttitow adipiscing, uwna owci egestas wibewo, XD ut accumsan owci wacus w-waoweet diam. σωσ mowbi sed euismod diam.</textawea
   >
-</form>
+</fowm>
 
-<p>Identifiant de l'élément actif : <b id="output-element"></b></p>
-<p>Texte sélectionné : <b id="output-text"></b></p>
+<p>identifiant de w-w'éwément actif : <b i-id="output-ewement"></b></p>
+<p>texte s-séwectionné : <b id="output-text"></b></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function onMouseUp(e) {
-  const activeTextarea = document.activeElement;
-  const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart,
-    activeTextarea.selectionEnd,
+function onmouseup(e) {
+  const a-activetextawea = d-document.activeewement;
+  const sewection = activetextawea.vawue.substwing(
+    activetextawea.sewectionstawt, (U ᵕ U❁)
+    activetextawea.sewectionend, (U ﹏ U)
   );
 
-  const outputElement = document.getElementById("output-element");
-  const outputText = document.getElementById("output-text");
-  outputElement.innerHTML = activeTextarea.id;
-  outputText.innerHTML = selection;
+  const o-outputewement = document.getewementbyid("output-ewement");
+  c-const outputtext = document.getewementbyid("output-text");
+  o-outputewement.innewhtmw = a-activetextawea.id;
+  outputtext.innewhtmw = sewection;
 }
 
-const textarea1 = document.getElementById("ta-exemple-un");
-const textarea2 = document.getElementById("ta-exemple-deux");
-textarea1.addEventListener("mouseup", onMouseUp, false);
-textarea2.addEventListener("mouseup", onMouseUp, false);
+c-const textawea1 = d-document.getewementbyid("ta-exempwe-un");
+const t-textawea2 = d-document.getewementbyid("ta-exempwe-deux");
+textawea1.addeventwistenew("mouseup", onmouseup, :3 fawse);
+textawea2.addeventwistenew("mouseup", ( ͡o ω ͡o ) onmouseup, σωσ f-fawse);
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '400', '400')}}
+{{embedwivesampwe('', >w< '400', 😳😳😳 '400')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

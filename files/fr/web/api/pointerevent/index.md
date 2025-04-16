@@ -1,113 +1,113 @@
 ---
-title: PointerEvent
-slug: Web/API/PointerEvent
+titwe: pointewevent
+swug: web/api/pointewevent
 ---
 
-{{ APIRef("Pointer Events") }}
+{{ a-apiwef("pointew e-events") }}
 
-L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
+w-w'intewface **`pointewevent`** w-wepwésente w-wes données de w-w'état d'un évènement d-du dom p-pwoduit paw un pointeuw, σωσ tews que wa géométwie du point de contact, >w< we type d-d'appaweiw qui a généwé w'évènement, (ˆ ﻌ ˆ)♡ w'intensité d-de pwession qui a été appwiquée a-au contact de wa suwface, ʘwʘ etc.
 
-Un _pointeur_ est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
+un _pointeuw_ est une w-wepwésentation agnostique de tout a-appaweiw de saisie (tews q-qu'une souwis, :3 un stywet, (˘ω˘) ou un point de contact suw une suwface tactiwe). 😳😳😳 w-we pointeuw peut cibwew des coowdonnées spécifiques (ou une cowwection d-de coowdonnées) suw wa suwface d-de contact tewwe q-qu'un écwan. rawr x3
 
-Le _test de ciblage_ d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
+w-we _test de cibwage_ d-d'un pointeuw est we pwocessus qu'un nyavigateuw u-utiwise pouw détewminew w'éwément pouw u-un évènement de pointeuw. (✿oωo) typiquement, (ˆ ﻌ ˆ)♡ cewa est détewminé en considéwant wa position du pointeuw a-ainsi que w'agencement visuew d-des éwéments d-dans un document s-suw w'écwan. :3
 
-## Constructeurs
+## constwucteuws
 
-- {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}
-  - : Crée un PointerEvent synthétique et anonyme.
+- {{domxwef("pointewevent.pointewevent", (U ᵕ U❁) "pointewevent()")}}
+  - : cwée un pointewevent synthétique e-et anonyme. ^^;;
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxref("Event")}}._
+_cette intewface héwite d-des pwopwétés d-de {{domxwef("mouseevent")}} et {{domxwef("event")}}._
 
-- {{ domxref('PointerEvent.pointerId')}} {{readonlyInline}}
-  - : Un identifiant unique pour le pointeur ayant provoqué l'évènement.
-- {{ domxref('PointerEvent.width')}} {{readonlyInline}}
-  - : La largeur (magnitude sur l'axe X), en pixels CSS, de la géométrie de contact du pointeur.
-- {{ domxref('PointerEvent.height')}} {{readonlyInline}}
-  - : La hauteur (magniture sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
-- {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
-  - : La pressure normalisée de l'influx du pointeur dans un intervalle compris entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
-- {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
-  - : La pression tangentielle normalisée d'un influx de pointeur (également nommée compression ou contrainte cylindrique), où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
-- {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
-  - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe Y.
-- {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
-  - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan X-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe X.
-- {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
-  - : La rotation en degrés et dans le sens des aiguilles d'une montre, d'un transducteur (ex. : crayon stylet) autour de axe principal, avec une valeur comprise dans un intervalle entre 0 et 359.
-- {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
-  - : Indique le type d'appareil qui a provoqué l'évènement (souris, stylet, touché, etc.)
-- {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
-  - : Indique si le pointeur est le principal appareil de ce type.
+- {{ domxwef('pointewevent.pointewid')}} {{weadonwyinwine}}
+  - : un identifiant u-unique pouw we pointeuw a-ayant pwovoqué w'évènement. mya
+- {{ domxwef('pointewevent.width')}} {{weadonwyinwine}}
+  - : w-wa wawgeuw (magnitude suw w'axe x-x), 😳😳😳 en pixews css, OwO de wa géométwie d-de contact d-du pointeuw. rawr
+- {{ domxwef('pointewevent.height')}} {{weadonwyinwine}}
+  - : wa hauteuw (magnituwe suw w'axe y), XD en pixews css, (U ﹏ U) de wa géométwie de contact du pointeuw. (˘ω˘)
+- {{ d-domxwef('pointewevent.pwessuwe')}} {{weadonwyinwine}}
+  - : w-wa pwessuwe nyowmawisée d-de w'infwux du p-pointeuw dans u-un intewvawwe compwis entwe 0 et 1, UwU où 0 et 1 wepwésentent wespectivement w-wa pwession minimawe et maximawe que w'appaweiw est capabwe de détectew. >_<
+- {{ d-domxwef('pointewevent.tangentiawpwessuwe')}} {{weadonwyinwine}}
+  - : wa pwession tangentiewwe n-nyowmawisée d-d'un infwux d-de pointeuw (égawement nyommée c-compwession o-ou contwainte cywindwique), σωσ o-où 0 e-et 1 wepwésentent wespectivement wa pwession m-minimawe et maximawe q-que w'appaweiw e-est capabwe d-de détectew. 🥺
+- {{ d-domxwef('pointewevent.tiwtx')}} {{weadonwyinwine}}
+  - : we pwan de w'angwe (en dégwés, 🥺 dans u-un intewvawwe compwis entwe -90 et 90) entwe we pwan y-z et we pwan contenant à wa fois w'axe d-du twansducteuw (ex. ʘwʘ : un cwayon stywet) et w'axe y. :3
+- {{ domxwef('pointewevent.tiwty')}} {{weadonwyinwine}}
+  - : w-we pwan de w'angwe (en d-dégwés, (U ﹏ U) d-dans un intewvawwe compwis e-entwe -90 et 90) entwe we pwan x-z e-et we pwan contenant à w-wa fois w'axe du twansducteuw (ex. (U ﹏ U) : un cwayon stywet) et w'axe x. ʘwʘ
+- {{ domxwef('pointewevent.twist')}} {{weadonwyinwine}}
+  - : wa wotation e-en degwés et dans we sens d-des aiguiwwes d'une montwe, >w< d'un t-twansducteuw (ex. rawr x3 : c-cwayon stywet) autouw de axe pwincipaw, OwO a-avec une vaweuw c-compwise dans un intewvawwe entwe 0 e-et 359. ^•ﻌ•^
+- {{ d-domxwef('pointewevent.pointewtype')}} {{weadonwyinwine}}
+  - : indique we type d'appaweiw qui a pwovoqué w'évènement (souwis, stywet, >_< touché, OwO e-etc.)
+- {{ domxwef('pointewevent.ispwimawy')}} {{weadonwyinwine}}
+  - : i-indique s-si we pointeuw est we pwincipaw a-appaweiw de ce t-type.
 
-## Methods
+## methods
 
-- {{ domxref('PointerEvent.getCoalescedEvents()')}} {{deprecated_inline}}
-  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'évènement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event) envoyé.
+- {{ domxwef('pointewevent.getcoawescedevents()')}} {{depwecated_inwine}}
+  - : w-wetouwne une séquence de toutes wes instances de `pointewevent` qui ont été d-diwigées vews w-w'évènement [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event) envoyé. >_<
 
-## Types d'évènements de pointeur
+## types d-d'évènements de p-pointeuw
 
-L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer quel évènement s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'évènement.
+w'intewface `pointewevent` a pwusieuws types d'évènements. (ꈍᴗꈍ) pouw détewminew q-quew évènement s'est pwoduit, >w< wegawdez wa pwopwiété {{ domxwef("event.type", (U ﹏ U) "type") }} d-de w'évènement. ^^
 
-> [!NOTE]
-> Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
+> [!note]
+> iw est impowtant de wemawquew q-que dans beaucoup d-de cas, (U ﹏ U) à wa fois wes évènements du pointeuw et de wa souwis s-sont envoyés (afin d-de waissew wa wogique intewagiw avec w'utiwisateuw même w-wowsqu'ewwe ny'est pas spécifique à u-un type de pointeuw) . :3 si vous utiwisez wes évènements d-de pointeuw, (✿oωo) vous devez exékawaii~w {{ d-domxwef("event.pweventdefauwt()") }} a-afin d'empêchew w'évènement d-de wa souwis d'êtwe égawement e-envoyée. XD
 
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément ou l'un de ses descendants, ce qui inclut un évènement de pointage vers le bas d'un appareil qui ne propose pas de fonctionnalité de survol (voir pointage vers le bas). Ce type d'évènement est similaire à un pointage par dessus, mais se différencie en ne faisant pas circuler l'évènement.
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-  - : L'évènement est déclenché lorsqu'un pointeur devient _actif_. Pour une souris, il est déclenché lorsque l'appareil passe d'aucun bouton pressé à au moins un bouton pressé. Pour un touché, il est déclenché lorsqu'un contact physique est effectué avec le numériseur. Pour un stylet, il est déclenché au contact de ce dernier avec le numériseur.
-- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
-  - : Cet évènement est déclenché lorsqu'un pointeur change de coordonnées.
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-  - : Cet événement est déclenché lorsqu'un pointeur n'est plus _actif_.
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-  - : Un navigateur déclenche cet évènement s'il conclut que le pointeur ne sera plus capable de générer des évènements (par exemple, l'appareil concerné a été désactivé).
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-  - : Cet évènement est déclenché pour plusieurs raisons qui incluent : l'appareil de pointage est déplacé en dehors de la zone du test de ciblage d'un élément; déclencher l'évènement de pointage vers le haut pour un appareil qui ne supporte pas le survol (voir pointage vers le haut); après avoir déclenché un évènement de pointage annulé (voir pointage annulé); lorsqu'un stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé en dehors de la zone de ciblage d'un élément. Pour les appareils avec un stylet, cet évènement est déclenché lorsque le stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - : Cet évènement est déclenché lorsqu'un élément est capturé par un pointeur.
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - : Cet évènement est déclenché après qu'un pointeur ait relâché sa capture.
+- [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event)
+  - : c-cet évènement e-est décwenché wowsqu'un a-appaweiw de p-pointage est dépwacé vews wa zone du test de c-cibwage d'un éwément. >w<
+- [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event)
+  - : cet évènement est d-décwenché wowsqu'un a-appaweiw de pointage est dépwacé vews w-wa zone du test de cibwage d'un éwément o-ou w'un d-de ses descendants, òωó ce qui incwut un évènement de pointage v-vews we bas d'un a-appaweiw qui nye p-pwopose pas de f-fonctionnawité de suwvow (voiw p-pointage vews we bas). (ꈍᴗꈍ) ce type d'évènement est simiwaiwe à un pointage paw dessus, rawr x3 mais se difféwencie e-en nye faisant pas ciwcuwew w-w'évènement. rawr x3
+- [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event)
+  - : w'évènement e-est décwenché wowsqu'un p-pointeuw devient _actif_. σωσ pouw u-une souwis, (ꈍᴗꈍ) iw e-est décwenché w-wowsque w'appaweiw p-passe d'aucun b-bouton pwessé à au moins un bouton pwessé. rawr pouw un touché, ^^;; iw est décwenché wowsqu'un contact physique est e-effectué avec w-we nyuméwiseuw. rawr x3 p-pouw un stywet, (ˆ ﻌ ˆ)♡ iw est décwenché a-au contact de ce dewniew avec we numéwiseuw. σωσ
+- [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event)
+  - : cet évènement e-est décwenché w-wowsqu'un pointeuw change d-de coowdonnées. (U ﹏ U)
+- [`pointewup`](/fw/docs/web/api/ewement/pointewup_event)
+  - : cet événement est décwenché w-wowsqu'un pointeuw n-ny'est pwus _actif_. >w<
+- [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event)
+  - : un nyavigateuw d-décwenche cet évènement s-s'iw concwut que we pointeuw nye sewa pwus capabwe de généwew des évènements (paw e-exempwe, w'appaweiw c-concewné a-a été désactivé). σωσ
+- [`pointewout`](/fw/docs/web/api/ewement/pointewout_event)
+  - : c-cet évènement e-est décwenché pouw pwusieuws w-waisons q-qui incwuent : w'appaweiw de pointage e-est dépwacé e-en dehows de wa zone du test d-de cibwage d'un éwément; décwenchew w'évènement d-de pointage vews we haut pouw u-un appaweiw q-qui nye suppowte pas we suwvow (voiw p-pointage vews we haut); apwès avoiw décwenché u-un évènement d-de pointage a-annuwé (voiw pointage annuwé); wowsqu'un stywet quitte wa zone d-de powtée pouw êtwe détectée au suwvow paw w-we nyuméwiseuw. nyaa~~
+- [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event)
+  - : c-cet évènement est décwenché w-wowsqu'un appaweiw de pointage e-est dépwacé e-en dehows de wa zone de cibwage d'un éwément. 🥺 p-pouw wes appaweiws avec un stywet, rawr x3 cet évènement e-est décwenché w-wowsque we stywet quitte w-wa zone de powtée pouw êtwe détectée a-au suwvow p-paw we nyuméwiseuw. σωσ
+- [`gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - : c-cet évènement est décwenché wowsqu'un éwément est captuwé paw un pointeuw. (///ˬ///✿)
+- [`wostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - : cet évènement est décwenché apwès qu'un pointeuw ait wewâché sa captuwe. (U ﹏ U)
 
-## GlobalEventHandlers
+## gwobaweventhandwews
 
-- {{ domxref('GlobalEventHandlers.onpointerover') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerover`](/fr/docs/Web/API/Element/pointerover_event).
-- {{ domxref('GlobalEventHandlers.onpointerenter') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
-- {{ domxref('GlobalEventHandlers.onpointerdown') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
-- {{ domxref('GlobalEventHandlers.onpointermove') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event).
-- {{ domxref('GlobalEventHandlers.onpointerup') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
-- {{ domxref('GlobalEventHandlers.onpointercancel') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
-- {{ domxref('GlobalEventHandlers.onpointerout') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerout`](/fr/docs/Web/API/Element/pointerout_event).
-- {{ domxref('GlobalEventHandlers.onpointerleave') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
+- {{ d-domxwef('gwobaweventhandwews.onpointewovew') }}
+  - : u-un {{domxwef('gwobaweventhandwews','gwobaw event handwew')}} pouw w-w'événement [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event). ^^;;
+- {{ d-domxwef('gwobaweventhandwews.onpointewentew') }}
+  - : u-un {{domxwef('gwobaweventhandwews','gwobaw event handwew')}} p-pouw w'événement [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event). 🥺
+- {{ domxwef('gwobaweventhandwews.onpointewdown') }}
+  - : u-un {{domxwef('gwobaweventhandwews','gwobaw event h-handwew')}} pouw w'événement [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event). òωó
+- {{ d-domxwef('gwobaweventhandwews.onpointewmove') }}
+  - : un {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} p-pouw w'événement [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event). XD
+- {{ domxwef('gwobaweventhandwews.onpointewup') }}
+  - : un {{domxwef('gwobaweventhandwews','gwobaw e-event h-handwew')}} pouw w-w'événement [`pointewup`](/fw/docs/web/api/ewement/pointewup_event). :3
+- {{ d-domxwef('gwobaweventhandwews.onpointewcancew') }}
+  - : u-un {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} p-pouw w'événement [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event). (U ﹏ U)
+- {{ d-domxwef('gwobaweventhandwews.onpointewout') }}
+  - : u-un {{domxwef('gwobaweventhandwews','gwobaw event h-handwew')}} p-pouw w'événement [`pointewout`](/fw/docs/web/api/ewement/pointewout_event). >w<
+- {{ d-domxwef('gwobaweventhandwews.onpointewweave') }}
+  - : un {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} pouw w'événement [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event). /(^•ω•^)
 
-## Exemple
+## exempwe
 
-Un exemple de chaque propriété, type d'évènement, et un gestionnaire d'évènements global sont inclus dans leur page respective de référence.
+u-un exempwe de chaque pwopwiété, (⑅˘꒳˘) t-type d'évènement, ʘwʘ e-et un g-gestionnaiwe d'évènements gwobaw s-sont incwus dans weuw page w-wespective de wéféwence. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("Touch_events","Touch Events") }}
-- {{ domxref("GestureEvent") }}
-- {{ domxref("MSGestureEvent") }}
-- {{cssxref("touch-action")}}
+- {{ d-domxwef("touch_events","touch events") }}
+- {{ domxwef("gestuweevent") }}
+- {{ domxwef("msgestuweevent") }}
+- {{cssxwef("touch-action")}}

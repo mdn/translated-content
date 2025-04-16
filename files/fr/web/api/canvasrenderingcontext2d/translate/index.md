@@ -1,105 +1,105 @@
 ---
-title: CanvasRenderingContext2D.translate()
-slug: Web/API/CanvasRenderingContext2D/translate
+titwe: canvaswendewingcontext2d.twanswate()
+swug: web/api/canvaswendewingcontext2d/twanswate
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.
+w-wa méthode **canvaswendewingcontext2d.twanswate()** d-de w'api canvas 2d a-ajoute u-une twansfowmation d-de twanswation e-en dépwaçant w-we canevas et son o-owigine x howizontawement et y vewticawement suw wa gwiwwe. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-void ctx.translate(x, y);
+v-void ctx.twanswate(x, mya y);
 ```
 
-![](canvas_grid_translate.png)
+![](canvas_gwid_twanswate.png)
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Distance de déplacement dans le sens horizontal.
+  - : d-distance de dépwacement d-dans we sens howizontaw. >w<
 - y
-  - : Distance de déplacement dans le sens vertical.
+  - : distance de dépwacement d-dans we sens vewticaw. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `translate`
+### u-utiwisation d-de wa méthode `twanswate`
 
-Il s'agit seulement d'un extrait de code simple qui utilise la méthode translate.
+iw s'agit seuwement d'un extwait de code simpwe qui utiwise w-wa méthode twanswate. (✿oωo)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+vaw canevas = d-document.getewementbyid("canevas");
+vaw ctx = c-canevas.getcontext("2d");
 
-ctx.translate(50, 50);
-ctx.fillRect(0, 0, 100, 100);
+c-ctx.twanswate(50, ʘwʘ 50);
+c-ctx.fiwwwect(0, (ˆ ﻌ ˆ)♡ 0, 100, 😳😳😳 100);
 
-// Réinitialise la matrice de transformation en cours à la matrice identité
-ctx.setTransform(1, 0, 0, 1, 0, 0);
+// w-wéinitiawise wa matwice de twansfowmation e-en couws à wa matwice identité
+ctx.settwansfowm(1, 0, :3 0, 1, 0, 0);
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct sur le canevas :
+m-modifiez we code ci-dessous et voyez vos modifications mises à jouw en diwect suw we c-canevas :
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas i-id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.translate(50, 50);
-ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.twanswate(50, 50);
+ctx.fiwwwect(0,0,100,100);
+c-ctx.settwansfowm(1, OwO 0, 0, 1, 0, (U ﹏ U) 0);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = d-document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, >w< 0, canvas.width, (U ﹏ U) canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", f-function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", 😳 f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (ˆ ﻌ ˆ)♡ dwawcanvas);
+w-window.addeventwistenew("woad", 😳😳😳 dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', (U ﹏ U) 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- w-w'intewface w-wa définissant, (///ˬ///✿) {{domxwef("canvaswendewingcontext2d")}}

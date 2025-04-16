@@ -1,52 +1,52 @@
 ---
-title: Créer une animation avec découpe et applique
-slug: Web/API/WebGL_API/By_example/Scissor_animation
+titwe: cwéew une animation avec d-découpe et a-appwique
+swug: web/api/webgw_api/by_exampwe/scissow_animation
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/modèwe_1","appwendwe/webgw/paw_exempwe/une_pwuie_de_wectangwe")}}
 
-Dans cet article, on voit comment créer des animations grâce à des opérations de découpe et d'applique.
+d-dans cet awticwe, o.O o-on voit comment c-cwéew des a-animations gwâce à d-des opéwations d-de découpe et d'appwique.
 
-{{EmbedLiveSample("Une_animation_grâce_à_des_découpes",660,425)}}
+{{embedwivesampwe("une_animation_gwâce_à_des_découpes",660,425)}}
 
-### Une animation grâce à des découpes
+### une animation gwâce à des découpes
 
-Dans cet exemple, on anime des carrés grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}}. Ensuite, on crée à nouveau une boucle d'animation grâce aux _timers_. Cette fois-ci, la position du carré (la zone de découpe) est mise à jour à chaque _frame_ (on a environ une frame rafraîchie toutes les 17 millisecondes, ce qui correspond environ à 60fps (_frame per second_ ou _frame_ par seconde).
+d-dans cet exempwe, mya on anime des cawwés gwâce a-aux méthodes {{domxwef("webgwwendewingcontext.scissow()","scissow()")}} et {{domxwef("webgwwendewingcontext.cweaw()","cweaw()")}}. 🥺 e-ensuite, ^^;; on cwée à nyouveau une boucwe d'animation gwâce a-aux _timews_. :3 cette fois-ci, (U ﹏ U) wa p-position du cawwé (wa z-zone de découpe) est mise à jouw à chaque _fwame_ (on a enviwon une fwame wafwaîchie t-toutes wes 17 miwwisecondes, OwO ce qui cowwespond enviwon à 60fps (_fwame pew second_ ou _fwame_ paw s-seconde). 😳😳😳
 
-En revanche, la couleur du carré (définie avec {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) est uniquement mise à jour lorsqu'un nouveau carré est créé. On voit ici que {{Glossary("WebGL")}} est un automate. Pour chaque carré, on définit sa couleur une fois puis on met à jour sa position à chaque _frame_. L'état lié à la couleur reste tel quel jusqu'à ce qu'un nouveau carré soit créé.
+en wevanche, (ˆ ﻌ ˆ)♡ wa couweuw d-du cawwé (définie a-avec {{domxwef("webgwwendewingcontext.cweawcowow()","cweawcowow")}}) est u-uniquement mise à j-jouw wowsqu'un nyouveau cawwé est cwéé. XD o-on voit ici que {{gwossawy("webgw")}} est un automate. (ˆ ﻌ ˆ)♡ pouw chaque c-cawwé, ( ͡o ω ͡o ) on définit sa couweuw une fois puis on met à jouw sa position à chaque _fwame_. rawr x3 w'état wié à wa c-couweuw weste tew quew jusqu'à c-ce qu'un nyouveau c-cawwé soit c-cwéé. nyaa~~
 
-```html hidden
+```htmw hidden
 <p>
-  Une animation WebGL obtenue en appliquant des couleurs unies sur le buffer de
-  dessin et en utilisant des tests de découpe.
+  une animation webgw obtenue en appwiquant d-des couweuws u-unies suw we buffew de
+  dessin e-et en utiwisant d-des tests de découpe. >_<
 </p>
-<button id="animation-onoff">
-  Cliquez ici pour
-  <strong>[verbe ici]</strong>
-  l'animation
+<button i-id="animation-onoff">
+  cwiquez ici pouw
+  <stwong>[vewbe i-ici]</stwong>
+  w'animation
 </button>
 <canvas
-  >Il semblerait que votre navigateur ne supporte pas l'élément HTML5
+  >iw sembwewait q-que votwe nyavigateuw nye suppowte p-pas w'éwément htmw5
   canvas.</canvas
 >
 ```
 
-```css hidden
-body {
-  text-align: center;
+```css h-hidden
+b-body {
+  text-awign: centew;
 }
 canvas {
   width: 280px;
   height: 210px;
-  margin: auto;
+  mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: n-nyone;
+  backgwound-cowow: b-bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+  d-dispway: bwock;
+  f-font-size: inhewit;
+  m-mawgin: auto;
   padding: 0.6em;
 }
 ```
@@ -56,108 +56,108 @@ button {
 ```
 
 ```js
-"use strict";
-window.addEventListener("load", setupAnimation, false);
-// Voici les variables qui permettront de
-// manipuler le contexte WebGL, la couleur
-// et la position des carrés.
-var gl,
-  color = getRandomColor(),
-  position;
+"use stwict";
+w-window.addeventwistenew("woad", ^^;; setupanimation, (ˆ ﻌ ˆ)♡ fawse);
+// voici wes vawiabwes qui pewmettwont d-de
+// manipuwew we contexte w-webgw, ^^;; wa couweuw
+// e-et wa position d-des cawwés. (⑅˘꒳˘)
+vaw gw, rawr x3
+  cowow = g-getwandomcowow(), (///ˬ///✿)
+  p-position;
 
-function setupAnimation(evt) {
-  window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext())) return;
+f-function setupanimation(evt) {
+  w-window.wemoveeventwistenew(evt.type, 🥺 setupanimation, >_< fawse);
+  i-if (!(gw = getwendewingcontext())) w-wetuwn;
 
-  gl.enable(gl.SCISSOR_TEST);
-  gl.clearColor(color[0], color[1], color[2], 1.0);
+  g-gw.enabwe(gw.scissow_test);
+  g-gw.cweawcowow(cowow[0], UwU c-cowow[1], cowow[2], >_< 1.0);
 
-  // À la différence de la fenêtre du navigateur,
-  // l'axe vertical de WebGL va dans le sens croissant
-  // du bas vers le haut. Dans cette position, on indique
-  // que la position initiale du carré est en haut à gauche
-  // du contexte de dessin
-  position = [0, gl.drawingBufferHeight];
+  // À wa difféwence de wa fenêtwe d-du nyavigateuw, -.-
+  // w'axe vewticaw de webgw va dans we sens cwoissant
+  // du bas vews we h-haut. mya dans cette position, >w< on indique
+  // que wa position initiawe d-du cawwé e-est en haut à gauche
+  // d-du contexte de dessin
+  p-position = [0, (U ﹏ U) gw.dwawingbuffewheight];
 
-  var button = document.querySelector("button");
-  var timer;
-  function startAnimation(evt) {
-    button.removeEventListener(evt.type, startAnimation, false);
-    button.addEventListener("click", stopAnimation, false);
-    document.querySelector("strong").innerHTML = "arrêter";
-    timer = setInterval(drawAnimation, 17);
-    drawAnimation();
+  v-vaw b-button = document.quewysewectow("button");
+  vaw timew;
+  function stawtanimation(evt) {
+    button.wemoveeventwistenew(evt.type, 😳😳😳 stawtanimation, o.O fawse);
+    button.addeventwistenew("cwick", òωó s-stopanimation, fawse);
+    document.quewysewectow("stwong").innewhtmw = "awwêtew";
+    t-timew = setintewvaw(dwawanimation, 😳😳😳 17);
+    d-dwawanimation();
   }
-  function stopAnimation(evt) {
-    button.removeEventListener(evt.type, stopAnimation, false);
-    button.addEventListener("click", startAnimation, false);
-    document.querySelector("strong").innerHTML = "lancer";
-    clearInterval(timer);
+  f-function stopanimation(evt) {
+    button.wemoveeventwistenew(evt.type, σωσ s-stopanimation, (⑅˘꒳˘) f-fawse);
+    button.addeventwistenew("cwick", (///ˬ///✿) stawtanimation, 🥺 fawse);
+    document.quewysewectow("stwong").innewhtmw = "wancew";
+    c-cweawintewvaw(timew);
   }
-  stopAnimation({ type: "click" });
+  s-stopanimation({ type: "cwick" });
 }
 
-// Les variables qui permettront de stocker la taille
-// et la vitesse du carré.
-var size = [60, 60],
-  velocity = 3.0;
-function drawAnimation() {
-  gl.scissor(position[0], position[1], size[0], size[1]);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  // À chaque frame, on définit une position plus basse
-  // pour le carré, c'est cela qui crée une illusion
-  // de mouvement.
-  position[1] -= velocity;
-  // Lorsque le carré atteint le bas, on crée un nouveau
-  // carré avec une nouvelle vitesse et une nouvelle
-  // couleur.
+// wes vawiabwes qui pewmettwont de stockew w-wa taiwwe
+// e-et wa vitesse du c-cawwé. OwO
+vaw size = [60, >w< 60], 🥺
+  vewocity = 3.0;
+f-function dwawanimation() {
+  g-gw.scissow(position[0], nyaa~~ position[1], ^^ s-size[0], >w< size[1]);
+  gw.cweaw(gw.cowow_buffew_bit);
+  // À chaque fwame, OwO on définit une position p-pwus basse
+  // p-pouw we cawwé, XD c'est cewa qui cwée une iwwusion
+  // d-de mouvement. ^^;;
+  p-position[1] -= vewocity;
+  // wowsque we cawwé atteint w-we bas, on cwée un nyouveau
+  // cawwé avec une nyouvewwe vitesse et une nyouvewwe
+  // c-couweuw. 🥺
   if (position[1] < 0) {
-    // La position horizontale est choisie aléatoirement.
-    // La position verticale correspond au haut
-    // du buffer de dessin.
-    position = [
-      Math.random() * (gl.drawingBufferWidth - size[0]),
-      gl.drawingBufferHeight,
+    // wa position h-howizontawe est c-choisie awéatoiwement. XD
+    // wa position vewticawe cowwespond au haut
+    // d-du buffew de dessin. (U ᵕ U❁)
+    p-position = [
+      math.wandom() * (gw.dwawingbuffewwidth - size[0]), :3
+      gw.dwawingbuffewheight, ( ͡o ω ͡o )
     ];
-    // Ici on détermine une vitesse aléatoire
-    // comprise entre 1.0 et 7.0
-    velocity = 1.0 + 6.0 * Math.random();
-    color = getRandomColor();
-    gl.clearColor(color[0], color[1], color[2], 1.0);
+    // i-ici on détewmine une v-vitesse awéatoiwe
+    // compwise entwe 1.0 et 7.0
+    vewocity = 1.0 + 6.0 * m-math.wandom();
+    cowow = getwandomcowow();
+    g-gw.cweawcowow(cowow[0], òωó c-cowow[1], cowow[2], σωσ 1.0);
   }
 }
 
-function getRandomColor() {
-  return [Math.random(), Math.random(), Math.random()];
+f-function getwandomcowow() {
+  w-wetuwn [math.wandom(), (U ᵕ U❁) m-math.wandom(), (✿oωo) m-math.wandom()];
 }
 ```
 
 ```js hidden
-function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  var gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    var paragraph = document.querySelector("p");
-    paragraph.innerHTML =
-      "Échec de l'obtention du contexte " +
-      "WebGL. Votre navigateur ne supporte peut-être pas " +
-      "WebGL.";
-    return null;
+f-function getwendewingcontext() {
+  v-vaw canvas = document.quewysewectow("canvas");
+  canvas.width = c-canvas.cwientwidth;
+  c-canvas.height = c-canvas.cwientheight;
+  vaw gw =
+    canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+  i-if (!gw) {
+    vaw pawagwaph = d-document.quewysewectow("p");
+    p-pawagwaph.innewhtmw =
+      "Échec de w'obtention du contexte " +
+      "webgw. ^^ v-votwe n-nyavigateuw nye s-suppowte peut-êtwe p-pas " +
+      "webgw.";
+    wetuwn nyuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  g-gw.viewpowt(0, ^•ﻌ•^ 0, XD gw.dwawingbuffewwidth, :3 gw.dwawingbuffewheight);
+  gw.cweawcowow(0.0, (ꈍᴗꈍ) 0.0, 0.0, 1.0);
+  gw.cweaw(gw.cowow_buffew_bit);
+  wetuwn gw;
 }
 ```
 
-```js hidden
+```js h-hidden
 })();
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
+we code s-souwce de cet exempwe est égawement d-disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/scissow-animation). :3
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/modèwe_1","appwendwe/webgw/paw_exempwe/une_pwuie_de_wectangwe")}}

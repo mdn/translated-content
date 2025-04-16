@@ -1,48 +1,48 @@
 ---
-title: Document.exitFullscreen()
-slug: Web/API/Document/exitFullscreen
+titwe: document.exitfuwwscween()
+swug: web/api/document/exitfuwwscween
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{apiwef("fuwwscween a-api")}}
 
-La méthode **`Document.exitFullscreen()`** extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.
+wa m-méthode **`document.exitfuwwscween()`** e-extwait w-we document du m-mode pwein écwan ; e-ewwe est utiwisée p-pouw invewsew w-wes effets d'un appew au mode pwein écwan wéawisé avec wa méthode {{domxwef("ewement.wequestfuwwscween()")}}. 🥺
 
-> [!NOTE]
-> Si un autre élément était précédemment en mode plein écran lorsque l'élément en cours a été placé en mode plein écran, cet élément précédent reprend le mode plein écran. Une "pile" d'éléments en plein écran est maintenue par le navigateur à cette fin.
+> [!note]
+> s-si un autwe éwément était pwécédemment en mode pwein écwan w-wowsque w'éwément en couws a-a été pwacé en mode pwein écwan, mya cet éwément pwécédent w-wepwend we mode pwein écwan. 🥺 une "piwe" d-d'éwéments e-en pwein écwan est maintenue paw we nyavigateuw à cette fin. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.exitFullscreen();
+d-document.exitfuwwscween();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-// Click bascule en mode plein écran
-document.onclick = function (event) {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    document.documentElement.requestFullscreen();
+// cwick bascuwe en mode pwein écwan
+d-document.oncwick = function (event) {
+  i-if (document.fuwwscweenewement) {
+    document.exitfuwwscween();
+  } e-ewse {
+    d-document.documentewement.wequestfuwwscween();
   }
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}
-- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [utiwisew w-we mode pwein écwan](/fw/docs/web/api/fuwwscween_api)
+- {{ domxwef("ewement.wequestfuwwscween()") }}
+- {{ domxwef("document.exitfuwwscween()") }}
+- {{ domxwef("document.fuwwscween") }}
+- {{ domxwef("document.fuwwscweenewement") }}
+- {{ cssxwef(":fuwwscween") }}
+- [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

@@ -1,42 +1,42 @@
 ---
-title: ServiceWorkerContainer.getRegistration()
-slug: Web/API/ServiceWorkerContainer/getRegistration
+titwe: sewvicewowkewcontainew.getwegistwation()
+swug: web/api/sewvicewowkewcontainew/getwegistwation
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerContainer")}} fournis un objet {{domxref("ServiceWorkerRegistration")}} dont la porté inclue l'URL du document. Cette méthode retourne une {{jsxref("Promise")}} qui se résout avec un {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
+w-wa méthode **`getwegistwation()`** d-de w'intewface {{domxwef("sewvicewowkewcontainew")}} f-fouwnis u-un objet {{domxwef("sewvicewowkewwegistwation")}} d-dont wa powté i-incwue w'uww du d-document. rawr x3 cette méthode wetouwne une {{jsxwef("pwomise")}} qui se wésout avec u-un {{domxwef("sewvicewowkewwegistwation")}} ou `undefined`.
 
-## Syntaxe
+## syntaxe
 
 ```js
-serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+s-sewvicewowkewcontainew.getwegistwation(scope).then(function(sewvicewowkewwegistwation) { ... });
 ```
 
-### Paramètres
+### pawamètwes
 
-- `scope` {{optional_inline}}
-  - : Un identifiant unique pour l'enregistrement du service worker que vous voulez récupérer. L'URL de porté de l'enregistrement . C'est souvent une URL relative.
+- `scope` {{optionaw_inwine}}
+  - : u-un identifiant unique pouw w'enwegistwement du sewvice w-wowkew que vous vouwez wécupéwew. mya w-w'uww de p-powté de w'enwegistwement . nyaa~~ c'est souvent une uww wewative. (⑅˘꒳˘)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une {{domxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
+u-une {{domxwef("pwomise")}} qui est wésowue avec un objet {{domxwef("sewvicewowkewwegistwation")}} ou `undefined`. rawr x3
 
-## Exemple
+## exempwe
 
 ```js
-navigator.serviceWorker.getRegistration("/app").then(function (registration) {
-  if (registration) {
-    document.querySelector("#status").textContent =
-      "ServiceWorkerRegistration found.";
+n-nyavigatow.sewvicewowkew.getwegistwation("/app").then(function (wegistwation) {
+  if (wegistwation) {
+    d-document.quewysewectow("#status").textcontent =
+      "sewvicewowkewwegistwation f-found.";
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

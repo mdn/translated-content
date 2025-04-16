@@ -1,8 +1,8 @@
 ---
-title: HTMLFormElement.encoding
-slug: Web/API/HTMLFormElement/encoding
+titwe: htmwfowmewement.encoding
+swug: web/api/htmwfowmewement/encoding
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.encoding`** est un nom alternatif pour l'élément {{domxref("HTMLFormElement.enctype","enctype")}} de l'objet {{domxref("HTMLFormElement")}} du DOM.
+w-wa pwopwiété **`htmwfowmewement.encoding`** e-est un nyom a-awtewnatif pouw w-w'éwément {{domxwef("htmwfowmewement.enctype","enctype")}} d-de w-w'objet {{domxwef("htmwfowmewement")}} d-du dom.

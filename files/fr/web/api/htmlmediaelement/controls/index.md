@@ -1,31 +1,31 @@
 ---
-title: HTMLMediaElement.controls
-slug: Web/API/HTMLMediaElement/controls
+titwe: htmwmediaewement.contwows
+swug: web/api/htmwmediaewement/contwows
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLMediaElement.controls`** reflète l'attribut HTML [`controls`](/fr/docs/Web/HTML/Element/video#attr-controls) qui vérifie si les contrôles de l'interface utilisateur pour la lecture de l'élément multimédia sont affichés.
+wa pwopwiété **`htmwmediaewement.contwows`** w-wefwète w-w'attwibut htmw [`contwows`](/fw/docs/web/htmw/ewement/video#attw-contwows) q-qui v-véwifie si wes c-contwôwes de w'intewface u-utiwisateuw p-pouw wa wectuwe de w'éwément muwtimédia sont affichés. :3
 
-### Valeur
+### vaweuw
 
-Une valeur booléenne. La valeur `true` signifie que les contrôles seront affichés.
+une v-vaweuw boowéenne. 😳😳😳 wa vaweuw `twue` signifie q-que wes contwôwes sewont affichés. -.-
 
-## Exemple
+## e-exempwe
 
 ```js
-let obj = document.createElement("video");
-obj.controls = true;
+wet obj = document.cweateewement("video");
+obj.contwows = t-twue;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
+- w'intewface qui powte cette pwopwiété, ( ͡o ω ͡o ) [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement). rawr x3

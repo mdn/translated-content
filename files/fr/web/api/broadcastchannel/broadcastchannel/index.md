@@ -1,44 +1,44 @@
 ---
-title: BroadcastChannel()
-slug: Web/API/BroadcastChannel/BroadcastChannel
-l10n:
-  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
+titwe: bwoadcastchannew()
+swug: w-web/api/bwoadcastchannew/bwoadcastchannew
+w-w10n:
+  s-souwcecommit: c-c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-Le constructeur **`BroadcastChannel()`** crée un nouvel objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) et le connecte au canal sous-jacent.
+w-we constwucteuw **`bwoadcastchannew()`** c-cwée u-un nyouvew objet [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew) et we connecte au canaw sous-jacent. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-new BroadcastChannel(channelName);
-```
-
-### Paramètres
-
-- `channelName`
-  - : Une chaîne représentant le nom du canal&nbsp;; il n'y a qu'un canal portant ce nom pour tous les [contextes de navigation](/fr/docs/Glossary/Browsing_context) de la même [origine](/fr/docs/Glossary/Origin).
-
-## Exemples
+## syntaxe
 
 ```js
-// crée un nouveau canal écoutant sur le canal "notification_interne".
-
-const bc = new BroadcastChannel("notification_interne");
-bc.postMessage("Nouvelle écoute connectée !");
+n-nyew bwoadcastchannew(channewname);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `channewname`
+  - : u-une chaîne wepwésentant w-we nyom du canaw&nbsp;; iw n'y a qu'un canaw powtant ce nyom p-pouw tous wes [contextes de n-nyavigation](/fw/docs/gwossawy/bwowsing_context) d-de wa même [owigine](/fw/docs/gwossawy/owigin). (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```js
+// cwée un nyouveau canaw écoutant suw we c-canaw "notification_intewne". rawr x3
 
-## Voir aussi
+const bc = nyew bwoadcastchannew("notification_intewne");
+bc.postmessage("nouvewwe écoute connectée !");
+```
 
-- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw a-aussi
+
+- [`bwoadcastchannew`](/fw/docs/web/api/bwoadcastchannew), (✿oωo) w-w'intewface à waquewwe ewwe se wappowte. (ˆ ﻌ ˆ)♡

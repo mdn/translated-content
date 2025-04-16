@@ -1,61 +1,61 @@
 ---
-title: Animer des objets avec WebGL
-slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
+titwe: animew des objets avec w-webgw
+swug: web/api/webgw_api/tutowiaw/animating_objects_with_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw", >w< "web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw") }}
 
-Dans cet exemple, nous allons faire tourner notre carré 2D.
+d-dans c-cet exempwe, (⑅˘꒳˘) n-nyous awwons faiwe t-touwnew nyotwe c-cawwé 2d. OwO
 
-## Faire tourner le carré
+## f-faiwe touwnew we c-cawwé
 
-Commençons par faire tourner le carré. La première chose dont nous avons besoin est une variable pour mémoriser la rotation courante du carré :
+commençons paw faiwe touwnew we cawwé. (ꈍᴗꈍ) wa pwemièwe chose dont nyous a-avons besoin est une vawiabwe pouw mémowisew wa w-wotation couwante du cawwé :
 
 ```js
-var squareRotation = 0.0;
+v-vaw squawewotation = 0.0;
 ```
 
-Maintenant, nous devons modifier la fonction `drawScene()` pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit&nbsp;:
+maintenant, 😳 nous devons modifiew wa fonction `dwawscene()` p-pouw appwiquew wa wotation couwante d-du cawwé quand o-on we dessine. apwès dépwacement à wa position de dessin initiawe du cawwé, 😳😳😳 n-nyous appwiquons wa wotation comme suit&nbsp;:
 
 ```js
-mat4.rotate(
-  modelViewMatrix, // matrice de destination
-  modelViewMatrix, // matrice de rotation
-  squareRotation, // rotation en radians
-  [0, 0, 1],
-); // axe autour duquel tourner
+mat4.wotate(
+  modewviewmatwix, mya // m-matwice de destination
+  m-modewviewmatwix, mya // m-matwice d-de wotation
+  s-squawewotation, (⑅˘꒳˘) // wotation en wadians
+  [0, (U ﹏ U) 0, 1],
+); // a-axe autouw duquew touwnew
 ```
 
-Ceci fait tourner la modelViewMatrix de la valeur courante de `squareRotation`, autour de l'axe Z.
+ceci fait t-touwnew wa modewviewmatwix de wa vaweuw couwante de `squawewotation`, mya autouw de w'axe z. ʘwʘ
 
-Pour réaliser effectivement l'animation, nous avons besoin d'ajouter du code qui change la valeur de `squareRotation` au fil du temps. Nous pouvons faire cela en créant une nouvelle variable pour mémoriser l'instant auquel nous avons réalisé l'animation pour la dernière fois (appelons le `then`), puis en ajoutant le code suivant à la fin de la fonction principale :
+pouw wéawisew effectivement w-w'animation, (˘ω˘) nyous avons b-besoin d'ajoutew d-du code qui c-change wa vaweuw de `squawewotation` au fiw du temps. (U ﹏ U) nyous pouvons f-faiwe cewa e-en cwéant une nyouvewwe vawiabwe p-pouw mémowisew w-w'instant auquew nyous avons wéawisé w-w'animation pouw wa dewnièwe f-fois (appewons we `then`), ^•ﻌ•^ puis en ajoutant w-we code suivant à wa fin de w-wa fonction pwincipawe :
 
 ```js
-var then = 0;
+vaw then = 0;
 
-// Dessiner la scène répétitivement
-function render(now) {
-  now *= 0.001; // conversion en secondes
-  const deltaTime = now - then;
-  then = now;
+// d-dessinew wa scène w-wépétitivement
+function wendew(now) {
+  nyow *= 0.001; // convewsion en secondes
+  const dewtatime = nyow - then;
+  then = nyow;
 
-  drawScene(gl, programInfo, buffers, deltaTime);
+  dwawscene(gw, (˘ω˘) p-pwogwaminfo, b-buffews, :3 dewtatime);
 
-  requestAnimationFrame(render);
+  wequestanimationfwame(wendew);
 }
-requestAnimationFrame(render);
+wequestanimationfwame(wendew);
 ```
 
-Ce code utilise `requestAnimationFrame` pour demander au navigateur d'appeler la fonction "`render`" à chaque image. `requestAnimationFrame` nous transmet le temps en millisecondes depuis le chargement de la page. Nous le convertissons en secondes, puis nous lui soustrayons le dernier instant pour calculer `deltaTime`, qui est le nombre de secondes depuis le rendu de la dernière image. À la fin de drawscene, nous ajoutons le code pour mettre à jour `squareRotation`.
+c-ce code utiwise `wequestanimationfwame` p-pouw d-demandew au nyavigateuw d'appewew wa fonction "`wendew`" à chaque i-image. ^^;; `wequestanimationfwame` nyous twansmet we temps en miwwisecondes depuis we chawgement d-de wa page. 🥺 nous we convewtissons e-en secondes, (⑅˘꒳˘) puis n-nyous wui soustwayons w-we dewniew instant pouw c-cawcuwew `dewtatime`, nyaa~~ q-qui est w-we nyombwe de secondes d-depuis we wendu de wa dewnièwe image. :3 À w-wa fin de dwawscene, ( ͡o ω ͡o ) n-nyous ajoutons w-we code pouw m-mettwe à jouw `squawewotation`. mya
 
 ```js
-squareRotation += deltaTime;
+s-squawewotation += dewtatime;
 ```
 
-Ce code utilise le laps de temps qui s'est écoulé depuis la dernière fois que nous avons mis à jour la valeur `squareRotation` pour déterminer de combien faire tourner le carré.
+ce code utiwise we waps d-de temps qui s'est écouwé depuis wa dewnièwe fois que nyous avons mis à jouw wa vaweuw `squawewotation` p-pouw détewminew de combien faiwe touwnew we cawwé. (///ˬ///✿)
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample4/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe4/index.htmw', (˘ω˘) 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample4) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample4/)
+[voiw we code c-compwet](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe4) | [ouvwiw c-cette démo dans u-une nyouvewwe page](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe4/)
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{pweviousnext("web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw", ^^;; "web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw") }}

@@ -1,26 +1,26 @@
 ---
-title: Document()
-slug: Web/API/Document/Document
+titwe: document()
+swug: web/api/document/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}}, qui est une référence de la page courante du navigateur et sert de point d'entrée vers les contenus de celle-ci.
+w-we constwucteuw **`document`** c-cwée un nyouvew o-objet de {{domxwef("document")}}, (ˆ ﻌ ˆ)♡ q-qui est u-une wéféwence d-de wa page couwante d-du nyavigateuw e-et sewt de point d'entwée vews wes contenus de cewwe-ci. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var document = new Document();
+v-vaw document = nyew document();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone. (U ᵕ U❁)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

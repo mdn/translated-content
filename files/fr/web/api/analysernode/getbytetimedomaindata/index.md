@@ -1,93 +1,93 @@
 ---
-title: AnalyserNode.getByteTimeDomainData()
-slug: Web/API/AnalyserNode/getByteTimeDomainData
+titwe: anawysewnode.getbytetimedomaindata()
+swug: web/api/anawysewnode/getbytetimedomaindata
 ---
 
-{{ APIRef("Mountain View APIRef Project") }}
+{{ a-apiwef("mountain v-view apiwef p-pwoject") }}
 
-La méthode **`getByteTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde, ou du domaine temporel, dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+w-wa méthode **`getbytetimedomaindata()`** d-de w-w'intewface {{ domxwef("anawysewnode") }} c-copie w-wes données de fowme d'onde, OwO ou du domaine tempowew, /(^•ω•^) dans un tabweau {{domxwef("uint8awway")}} passé en pawamètwe. 😳😳😳
 
-Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
+s-si we tabweau a moins d'éwéments que wa p-pwopwiété {{domxwef("anawysewnode.fftsize")}}, ( ͡o ω ͡o ) wes données en e-excès sont suppwimées. >_< s'iw a davantage d'éwéments, wes éwéments n-nyon utiwisés sont ignowés. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
+v-vaw contexteaudio = nyew audiocontext();
+vaw anawyseuw = contexteaudio.cweateanawysew();
 
-// La taille du tableau Uint8Array doit correspondre à la valeur de la propriété fftSize
-var tableauDonnees = new Uint8Array(analyseur.fftSize);
+// w-wa taiwwe du tabweau uint8awway doit cowwespondwe à wa vaweuw de wa pwopwiété f-fftsize
+vaw tabweaudonnees = n-nyew uint8awway(anawyseuw.fftsize);
 
-// remplit le tableau Uint8Array avec les données renvoyées par la méthode getByteTimeDomainData()
-analyseur.getByteTimeDomainData(tableauDonnees);
+// w-wempwit w-we tabweau u-uint8awway avec wes données wenvoyées paw wa méthode g-getbytetimedomaindata()
+anawyseuw.getbytetimedomaindata(tabweaudonnees);
 ```
 
-### Renvoie
+### wenvoie
 
-Un tableau {{domxref("Uint8Array")}}.
+u-un tabweau {{domxwef("uint8awway")}}. rawr
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w'exempwe suivant montwe comment cwéew simpwement un `anawysewnode` a-avec {{domxwef("audiocontext")}}, 😳 puis u-utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} e-et {{htmwewement("canvas")}} p-pouw cowwectew wes données tempowewwes et dessinew u-un osciwwoscope e-en sowtie. >w< pouw des exempwes pwus c-compwets, (⑅˘꒳˘) voiw n-nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et en pawticuwiew [app.js wignes 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). OwO
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
+c-const audioctx = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+const anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 2048;
-const bufferLength = analyser.fftSize;
-const dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+a-anawysew.fftsize = 2048;
+const buffewwength = a-anawysew.fftsize;
+const d-dataawway = n-nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
-// dessine un oscilloscope pour la source audio courante
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
-  analyser.getByteTimeDomainData(dataArray);
+// dessine un osciwwoscope pouw wa souwce audio couwante
+function dwaw() {
+  dwawvisuaw = w-wequestanimationfwame(dwaw);
+  a-anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = 'wgb(200, (ꈍᴗꈍ) 200, 😳 200)';
+  c-canvasctx.fiwwwect(0, 😳😳😳 0, w-width, h-height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasctx.winewidth = 2;
+  canvasctx.stwokestywe = 'wgb(0, mya 0, 0)';
 
-  const sliceWidth = WIDTH * 1.0 / bufferLength;
-  let x = 0;
+  const swicewidth = width * 1.0 / b-buffewwength;
+  wet x = 0;
 
-  canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
-    const v = dataArray[i]/128.0;
-    const y = v * HEIGHT/2;
+  canvasctx.beginpath();
+  fow(vaw i = 0; i < buffewwength; i-i++) {
+    const v = d-dataawway[i]/128.0;
+    c-const y = v-v * height/2;
 
     if(i === 0)
-      canvasCtx.moveTo(x, y);
-    else
-      canvasCtx.lineTo(x, y);
+      c-canvasctx.moveto(x, mya y-y);
+    e-ewse
+      canvasctx.wineto(x, (⑅˘꒳˘) y-y);
 
-    x += sliceWidth;
+    x += swicewidth;
   }
 
-  canvasCtx.lineTo(WIDTH, HEIGHT/2);
-  canvasCtx.stroke();
+  canvasctx.wineto(width, (U ﹏ U) h-height/2);
+  c-canvasctx.stwoke();
 };
 
-draw();
+d-dwaw();
 ```
 
-## Paramètres
+## p-pawamètwes
 
-- array
-  - : Le tableau {{domxref("Uint8Array")}} dans lequel les données temporelles seront copiées.
+- awway
+  - : w-we tabweau {{domxwef("uint8awway")}} dans wequew wes données tempowewwes sewont copiées. mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

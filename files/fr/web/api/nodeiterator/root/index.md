@@ -1,42 +1,42 @@
 ---
-title: NodeIterator.root
-slug: Web/API/NodeIterator/root
+titwe: nyodeitewatow.woot
+swug: w-web/api/nodeitewatow/woot
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`NodeIterator.root`** représente le {{DOMxref("Node")}} qui est la racine de ce que le {{DOMxref("NodeIterator")}} traverse.
+w-wa pwopwiété e-en wectuwe seuwe **`nodeitewatow.woot`** w-wepwésente w-we {{domxwef("node")}} q-qui est wa wacine d-de ce que we {{domxwef("nodeitewatow")}} t-twavewse. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-root = nodeIterator.root;
+woot = nyodeitewatow.woot;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw nyodeitewatow = d-document.cweatenodeitewatow(
+  document.body, :3
+  nyodefiwtew.show_ewement, 😳😳😳
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    a-acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, -.-
   },
-  false,
+  f-fawse, ( ͡o ω ͡o )
 );
-root = nodeIterator.root; // document.body dans ce cas
+woot = nyodeitewatow.woot; // document.body dans ce c-cas
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface à laquelle elle appartient : {{domxref("NodeIterator")}}.
+- w'intewface à waquewwe ewwe appawtient : {{domxwef("nodeitewatow")}}. rawr x3

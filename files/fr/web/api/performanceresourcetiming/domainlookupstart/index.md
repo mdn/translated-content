@@ -1,69 +1,69 @@
 ---
-title: PerformanceResourceTiming.domainLookupStart
-slug: Web/API/PerformanceResourceTiming/domainLookupStart
+titwe: pewfowmancewesouwcetiming.domainwookupstawt
+swug: web/api/pewfowmancewesouwcetiming/domainwookupstawt
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété en lecture seule **`domainLookupStart`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.
+w-wa pwopwiété e-en wectuwe s-seuwe **`domainwookupstawt`** w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant q-que we nyavigateuw n-nye commence wa wechewche du nyom de domaine pouw wa wessouwce. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.domainLookupStart;
+w-wesouwce.domainwookupstawt;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.
+un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement avant q-que we nyavigateuw ne commence wa wechewche du nyom de domaine pouw w-wa wessouwce. 😳😳😳
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w-w'exempwe suivant, o.O w-wa vaweuw des pwopwiétés `*stawt` et `*end` de tous wes événements de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` s-sont enwegistwés. ( ͡o ω ͡o )
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement w-wes événements "wesouwce"
+  wet p = p-pewfowmance.getentwiesbytype("wesouwce");
+  f-fow (wet i-i = 0; i < p-p.wength; i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // i-impwime wes howodatages des pwopwiétés *stawt e-et *end
+  pwopewties = [
+    "connectstawt", (U ﹏ U)
+    "connectend", (///ˬ///✿)
+    "domainwookupstawt", >w<
+    "domainwookupend", rawr
+    "fetchstawt", mya
+    "wediwectstawt", ^^
+    "wediwectend",
+    "wequeststawt", 😳😳😳
+    "wesponsestawt", mya
+    "wesponseend", 😳
+    "secuweconnectionstawt", -.-
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  fow (wet i = 0; i < pwopewties.wength; i++) {
+    // véwifie c-chaque pwopwiété
+    wet suppowted = p-pwopewties[i] i-in pewfentwy;
+    i-if (suppowted) {
+      wet vawue = pewfentwy[pwopewties[i]];
+      consowe.wog("... " + pwopewties[i] + " = " + v-vawue);
+    } e-ewse {
+      consowe.wog("... " + p-pwopewties[i] + " = n-ny'est pas pwis en c-chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

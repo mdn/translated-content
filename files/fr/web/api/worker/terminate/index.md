@@ -1,49 +1,49 @@
 ---
-title: Worker.terminate()
-slug: Web/API/Worker/terminate
+titwe: wowkew.tewminate()
+swug: w-web/api/wowkew/tewminate
 ---
 
-{{ apiref("Worker") }}
+{{ a-apiwef("wowkew") }}
 
-La méthode **`terminate()`** de l'interface {{domxref("Worker")}} termine immédiatement le {{domxref("Worker")}}. Cette interruption ne permet pas au worker de finaliser ses opérations, il est juste arrêté sur le champ.
+w-wa méthode **`tewminate()`** d-de w'intewface {{domxwef("wowkew")}} t-tewmine i-immédiatement w-we {{domxwef("wowkew")}}. (⑅˘꒳˘) c-cette intewwuption nye pewmet pas au wowkew de finawisew ses opéwations, (///ˬ///✿) i-iw est juste awwêté suw we champ. 😳😳😳
 
-## Syntaxe
-
-```js
-myWorker.terminate();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur de retour
-
-Néant.
-
-## Exemple
-
-L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}, qui est alors immédiatement interrompu.
+## syntaxe
 
 ```js
-var myWorker = new Worker("worker.js");
-
-myWorker.terminate();
+m-mywowkew.tewminate();
 ```
 
-> [!NOTE]
-> Les <i lang="en">workers</i> dédiés ou partagés peuvent également être stoppés par l'instance même du [<i lang="en">worker</i>](/fr/docs/Web/API/Worker) en utilisant les méthodes [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close) ou [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close).
+### pawamètwes
 
-## Spécifications
+a-aucun. 🥺
 
-{{Specifications}}
+### vaweuw de wetouw
 
-## Compatibilité des navigateurs
+nyéant. mya
 
-{{Compat}}
+## exempwe
 
-## Voir aussi
+w'extwait d-de code suivant montwe wa c-cwéation d'un o-objet {{domxwef("wowkew")}} en utiwisant we constwucteuw {{domxwef("wowkew.wowkew", 🥺 "wowkew()")}}, qui est awows immédiatement i-intewwompu. >_<
 
-- L'interface [`Worker`](/fr/docs/Web/API/Worker)
-- [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close)
-- [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close)
+```js
+vaw mywowkew = nyew wowkew("wowkew.js");
+
+mywowkew.tewminate();
+```
+
+> [!note]
+> wes <i wang="en">wowkews</i> d-dédiés ou pawtagés peuvent égawement êtwe s-stoppés paw w'instance m-même du [<i w-wang="en">wowkew</i>](/fw/docs/web/api/wowkew) e-en utiwisant wes méthodes [`dedicatedwowkewgwobawscope.cwose()`](/fw/docs/web/api/dedicatedwowkewgwobawscope/cwose) ou [`shawedwowkewgwobawscope.cwose()`](/fw/docs/web/api/shawedwowkewgwobawscope/cwose). >_<
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- w'intewface [`wowkew`](/fw/docs/web/api/wowkew)
+- [`dedicatedwowkewgwobawscope.cwose()`](/fw/docs/web/api/dedicatedwowkewgwobawscope/cwose)
+- [`shawedwowkewgwobawscope.cwose()`](/fw/docs/web/api/shawedwowkewgwobawscope/cwose)

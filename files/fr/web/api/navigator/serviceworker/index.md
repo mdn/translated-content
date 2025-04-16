@@ -1,41 +1,41 @@
 ---
-title: Navigator.serviceWorker
-slug: Web/API/Navigator/serviceWorker
+titwe: nyavigatow.sewvicewowkew
+swug: web/api/navigatow/sewvicewowkew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-Le **`Navigator.serviceWorker`** est une propriété en lecture seule qui renvoie un objet {{domxref("ServiceWorkerContainer")}}, et qui permet d'accéder à l'enregistrement, la suppression, la mise à jour, et la communication avec les objets {{domxref("ServiceWorker")}} pour le [document associé](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+w-we **`navigatow.sewvicewowkew`** e-est une pwopwiété e-en wectuwe s-seuwe qui wenvoie u-un objet {{domxwef("sewvicewowkewcontainew")}}, nyaa~~ e-et qui pewmet d-d'accédew à w'enwegistwement, /(^•ω•^) wa suppwession, rawr wa mise à jouw, OwO et wa communication avec wes objets {{domxwef("sewvicewowkew")}} p-pouw we [document associé](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#concept-document-window).
 
-## Syntaxe
+## syntaxe
 
 ```js
-var workerContainerInstance = navigator.serviceWorker;
+v-vaw wowkewcontainewinstance = nyavigatow.sewvicewowkew;
 ```
 
-### Valeur
+### vaweuw
 
-L'objet {{domxref("ServiceWorkerContainer")}}.
+w'objet {{domxwef("sewvicewowkewcontainew")}}. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Le code ci-dessous vérifie si le navigateur supporte les service workers.
+we code ci-dessous véwifie si we nyavigateuw s-suppowte wes sewvice wowkews. >_<
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Supported!
+i-if ("sewvicewowkew" i-in nyavigatow) {
+  // suppowted! rawr x3
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [Utilisation de Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [sewvicewowkew api](/fw/docs/web/api/sewvice_wowkew_api)
+- [utiwisation de sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)

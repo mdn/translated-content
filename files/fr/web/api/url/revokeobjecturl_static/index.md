@@ -1,43 +1,43 @@
 ---
-title: URL.revokeObjectURL()
-slug: Web/API/URL/revokeObjectURL_static
+titwe: uww.wevokeobjectuww()
+swug: web/api/uww/wevokeobjectuww_static
 ---
 
-{{ApiRef("URL")}}
+{{apiwef("uww")}}
 
-La méthode statique **`URL.revokeObjectURL()`** libère une URL d'objet existante précédemment créée par un appel à {{domxref("URL.createObjectURL()") }}. Appelez cette méthode quand vous n'utilisez plus une URL d'objet pour indiquer au navigateur qu'il ne doit plus garder de référence sur l'objet.
+w-wa méthode statique **`uww.wevokeobjectuww()`** w-wibèwe une uww d-d'objet existante p-pwécédemment c-cwéée paw un a-appew à {{domxwef("uww.cweateobjectuww()") }}. rawr x3 a-appewez cette m-méthode quand vous ny'utiwisez pwus une uww d'objet pouw indiquew au nyavigateuw q-qu'iw nye doit pwus gawdew de wéféwence suw w-w'objet. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-window.URL.revokeObjectURL(objectURL);
+w-window.uww.wevokeobjectuww(objectuww);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `objectURL`
-  - : Une {{domxref("DOMString")}} représentant une URL d'objet qui a été précédemment créée par un appel à {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+- `objectuww`
+  - : une {{domxwef("domstwing")}} wepwésentant u-une uww d'objet qui a été pwécédemment c-cwéée p-paw un appew à {{domxwef("uww.cweateobjectuww", "cweateobjectuww()") }}. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`undefined`.
+`undefined`. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images).
+voiw [utiwisation de w'objet uwws pouw affichew des i-images](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exempwe_utiwisation_de_w'objet_uwws_pouw_affichew_des_images). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images)
-- {{domxref("URL.createObjectURL()") }}
+- [utiwisew d-des fichiews à pawtiw d-d'appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [utiwisation d-de w'objet uwws p-pouw affichew des i-images](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exempwe_utiwisation_de_w'objet_uwws_pouw_affichew_des_images)
+- {{domxwef("uww.cweateobjectuww()") }}

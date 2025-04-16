@@ -1,66 +1,66 @@
 ---
-title: AudioBuffer.duration
-slug: Web/API/AudioBuffer/duration
+titwe: audiobuffew.duwation
+swug: web/api/audiobuffew/duwation
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriéré `duration` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
+w-wa pwopwiéwé `duwation` d-de w'intewface {{ d-domxwef("audiobuffew") }} w-wenvoie u-un nyombwe fwottant à d-doubwe pwécision wepwésentant wa duwée, >w< en secondes, rawr des données p-pcm stockées dans we buffew.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var tableauTampon = audioCtx.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+v-vaw tabweautampon = audioctx.cweatebuffew(
+  n-nyombwecanaux, mya
+  nyombwefwames, ^^
+  contexteaudio.sampwewate,
 );
-tableauTampon.duration;
+tabweautampon.duwation;
 ```
 
-### Valeur
+### vaweuw
 
-Nombre flottant à double précision.
+n-nyombwe fwottant à doubwe p-pwécision. 😳😳😳
 
-## Exemple
+## e-exempwe
 
 ```js
-// Stereo
-var nombreCanaux = 2;
+// steweo
+vaw nyombwecanaux = 2;
 
-// Crée une mémoire tampon vide de 2 secondes
-// à la fréquence d'échantillonage du contexte AudioContext
-var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+// cwée une mémoiwe tampon vide de 2 secondes
+// à w-wa fwéquence d'échantiwwonage du contexte audiocontext
+vaw nyombwefwames = c-contexteaudio.sampwewate * 2.0;
+vaw tabweaudonnees = a-audioctx.cweatebuffew(
+  n-nyombwecanaux, mya
+  n-nyombwefwames, 😳
+  c-contexteaudio.sampwewate, -.-
 );
 
-bouton.onclick = function () {
-  // remplit la mémoire tampon avec du bruit blanc
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal < nombreCanaux; canal++) {
-    // génère le tableau contenant les données
-    var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i < nombreFrames; i++) {
-      // Math.random() donne une valeur comprise entre [0; 1.0]
-      // l'audio doit être compris entre [-1.0; 1.0]
-      tampon[i] = Math.random() * 2 - 1;
+bouton.oncwick = function () {
+  // w-wempwit wa mémoiwe tampon avec du bwuit b-bwanc
+  // vaweuws awéatoiwes entwe -1.0 et 1.0
+  fow (vaw canaw = 0; canaw < nyombwecanaux; canaw++) {
+    // g-génèwe we tabweau contenant wes d-données
+    vaw t-tampon = tabweaudonnees.getchannewdata(canaw);
+    f-fow (vaw i = 0; i < nyombwefwames; i++) {
+      // math.wandom() d-donne une v-vaweuw compwise entwe [0; 1.0]
+      // w-w'audio d-doit êtwe compwis entwe [-1.0; 1.0]
+      t-tampon[i] = math.wandom() * 2 - 1;
     }
   }
-  console.log(tableauDonnees.duration);
+  c-consowe.wog(tabweaudonnees.duwation);
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

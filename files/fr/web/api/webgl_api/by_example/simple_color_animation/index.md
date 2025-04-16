@@ -1,137 +1,137 @@
 ---
-title: Créer une animation colorée
-slug: Web/API/WebGL_API/By_example/Simple_color_animation
+titwe: cwéew une animation cowowée
+s-swug: web/api/webgw_api/by_exampwe/simpwe_cowow_animation
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_une_couweuw_à_wa_souwis","appwendwe/webgw/paw_exempwe/masque_de_couweuw")}}
 
-Dans cet exemple, on crée une animation avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu {{Glossary("WebGL")}}.
+d-dans c-cet exempwe, 😳😳😳 on c-cwée une animation a-avec des couweuws e-en appwiquant c-chaque seconde u-une couweuw awéatoiwe dans we contexte de wendu {{gwossawy("webgw")}}. ^^;;
 
-{{EmbedLiveSample("Créer_une_animation_avec_clear",660,425)}}
+{{embedwivesampwe("cwéew_une_animation_avec_cweaw",660,425)}}
 
-### Créer une animation avec `clear`
+### cwéew une animation avec `cweaw`
 
-Cet exemple illustre comment lancer une animation avec WebGL et gérer les interactions de l'utilisateur. L'utilisateur peut lancer, arrêter et reprendre l'animation en cliquant sur le bouton.
+c-cet exempwe iwwustwe comment wancew une animation a-avec webgw et géwew wes intewactions d-de w'utiwisateuw. o.O w'utiwisateuw peut wancew, (///ˬ///✿) awwêtew e-et wepwendwe w'animation en cwiquant s-suw we bouton. σωσ
 
-Cette fois, on place les appels à la fonction WebGL à l'intérieur d'un gestionnaire d'événement de _timer_. Un gestionnaire d'événements pour les clics permet de gérer les interactions simples (lancer et arrêter l'animation). Le _timer_ et la fonction de gestion du _timer_ créent une boucle d'animation qui permet d'exécuter un ensemble de commandes pour le dessin à des intervalles réguliers (généralement, pour chaque _frame_, dans ce cas, on a une fréquence d'une _frame_ par seconde).
+c-cette fois, nyaa~~ on pwace wes appews à wa fonction webgw à w'intéwieuw d'un g-gestionnaiwe d'événement de _timew_. ^^;; un gestionnaiwe d'événements pouw wes cwics p-pewmet de géwew wes intewactions s-simpwes (wancew e-et awwêtew w-w'animation). ^•ﻌ•^ w-we _timew_ et wa fonction de gestion du _timew_ c-cwéent une boucwe d'animation qui pewmet d'exékawaii~w u-un ensembwe de commandes pouw we dessin à des intewvawwes wéguwiews (généwawement, σωσ pouw chaque _fwame_, -.- d-dans ce cas, ^^;; on a une fwéquence d-d'une _fwame_ p-paw seconde). XD
 
-```html
-<p>Un programme WebGL simple qui crée une animation colorée.</p>
-<p>Vous pouvez sur le bouton pour activer/désactiver l'animation.</p>
-<canvas id="canvas-view"
-  >Il semblerait que votre navigateur ne supporte pas l'élément canvas.</canvas
+```htmw
+<p>un p-pwogwamme webgw simpwe qui cwée une animation cowowée.</p>
+<p>vous p-pouvez suw w-we bouton pouw activew/désactivew w-w'animation.</p>
+<canvas i-id="canvas-view"
+  >iw sembwewait q-que votwe nyavigateuw nye suppowte p-pas w'éwément canvas.</canvas
 >
 <button id="animation-onoff">
-  Cliquez ici pour
-  <strong>[le verbe de l'action]</strong>
-  l'animation
+  c-cwiquez ici pouw
+  <stwong>[we v-vewbe de w'action]</stwong>
+  w'animation
 </button>
 ```
 
 ```css
-body {
-  text-align: center;
+b-body {
+  text-awign: c-centew;
 }
 button {
-  display: inline-block;
-  font-size: inherit;
-  margin: auto;
+  dispway: inwine-bwock;
+  font-size: inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 canvas {
-  display: block;
+  dispway: b-bwock;
   width: 280px;
-  height: 210px;
-  margin: auto;
+  h-height: 210px;
+  mawgin: a-auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  b-bowdew: n-nyone;
+  backgwound-cowow: bwack;
 }
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function setupAnimation(evt) {
-    "use strict";
-    window.removeEventListener(evt.type, setupAnimation, false);
+window.addeventwistenew(
+  "woad", 🥺
+  function s-setupanimation(evt) {
+    "use stwict";
+    window.wemoveeventwistenew(evt.type, òωó setupanimation, (ˆ ﻌ ˆ)♡ fawse);
 
-    // Une variable pour gérer le timer qui contrôle
-    // l'animation.
-    var timer;
+    // une vawiabwe pouw g-géwew we timew qui contwôwe
+    // w-w'animation. -.-
+    v-vaw timew;
 
-    // On ajoute un gestionnaire d'événement pour le clic.
-    var button = document.querySelector("#animation-onoff");
-    var verb = document.querySelector("strong");
-    function startAnimation(evt) {
-      button.removeEventListener(evt.type, startAnimation, false);
-      button.addEventListener("click", stopAnimation, false);
-      verb.innerHTML = "arrêter";
+    // o-on ajoute un gestionnaiwe d-d'événement p-pouw we cwic. :3
+    v-vaw button = d-document.quewysewectow("#animation-onoff");
+    vaw vewb = document.quewysewectow("stwong");
+    function stawtanimation(evt) {
+      b-button.wemoveeventwistenew(evt.type, ʘwʘ s-stawtanimation, 🥺 f-fawse);
+      b-button.addeventwistenew("cwick", >_< s-stopanimation, ʘwʘ fawse);
+      vewb.innewhtmw = "awwêtew";
 
-      // On place une boucle d'animation : on repeint
-      // environ chaque seconde.
-      timer = setInterval(drawAnimation, 1000);
+      // on pwace une boucwe d-d'animation : on wepeint
+      // enviwon chaque seconde. (˘ω˘)
+      timew = setintewvaw(dwawanimation, (✿oωo) 1000);
 
-      // On dessine une frame d'animation afin de
-      // fournir un feedback à l'utilisateur.
-      drawAnimation();
+      // on dessine u-une fwame d'animation afin de
+      // fouwniw un feedback à w-w'utiwisateuw. (///ˬ///✿)
+      d-dwawanimation();
     }
 
-    function stopAnimation(evt) {
-      button.removeEventListener(evt.type, stopAnimation, false);
-      button.addEventListener("click", startAnimation, false);
-      verb.innerHTML = "lancer";
-      // On arrête l'animation en réinitialisant le timer.
-      clearInterval(timer);
+    f-function stopanimation(evt) {
+      button.wemoveeventwistenew(evt.type, rawr x3 s-stopanimation, -.- fawse);
+      b-button.addeventwistenew("cwick", ^^ s-stawtanimation, (⑅˘꒳˘) fawse);
+      vewb.innewhtmw = "wancew";
+      // on awwête w'animation en wéinitiawisant w-we timew.
+      cweawintewvaw(timew);
     }
 
-    // On appelle stopAnimation() une fois pour mettre en place
-    // les gestionnaires d'événement pour le canevas et le bouton.
-    stopAnimation({ type: "click" });
+    // o-on appewwe stopanimation() u-une fois pouw m-mettwe en pwace
+    // wes gestionnaiwes d'événement p-pouw we c-canevas et we bouton. nyaa~~
+    stopanimation({ t-type: "cwick" });
 
-    var gl;
-    function drawAnimation() {
-      if (!gl) {
-        var canvas = document.getElementById("canvas-view");
-        gl =
-          canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-        if (!gl) {
-          // On ne veut pas avoir plusieurs messages d'alerte
-          // donc on arrête l'animation en réinitialisant le
-          // timer.
-          clearInterval(timer);
-          alert(
-            "Échec du chargement du contexte WebGL.\n" +
-              "Votre navigateur peut ne pas supporter WebGL.",
+    v-vaw gw;
+    function dwawanimation() {
+      if (!gw) {
+        vaw canvas = document.getewementbyid("canvas-view");
+        g-gw =
+          canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
+        i-if (!gw) {
+          // on nye veut p-pas avoiw pwusieuws m-messages d'awewte
+          // donc on awwête w-w'animation en wéinitiawisant we
+          // timew. /(^•ω•^)
+          cweawintewvaw(timew);
+          a-awewt(
+            "Échec d-du chawgement du contexte webgw.\n" +
+              "votwe nyavigateuw p-peut nye p-pas suppowtew webgw.", (U ﹏ U)
           );
-          return;
+          wetuwn;
         }
-        gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+        gw.viewpowt(0, 😳😳😳 0, gw.dwawingbuffewwidth, >w< g-gw.dwawingbuffewheight);
       }
 
-      // On génère une couleur aléatoire avec une fonction
-      // auxiliaire.
-      var color = getRandomColor();
+      // on génèwe une couweuw awéatoiwe avec une fonction
+      // a-auxiwiaiwe. XD
+      vaw cowow = getwandomcowow();
 
-      // On applique la couleur obtenue dans le
-      // contexte WebGLRenderingContext
-      gl.clearColor(color[0], color[1], color[2], 1.0);
+      // o-on appwique w-wa couweuw obtenue dans we
+      // contexte webgwwendewingcontext
+      gw.cweawcowow(cowow[0], o.O c-cowow[1], mya cowow[2], 🥺 1.0);
 
-      // On propage le changement dans le contexte
-      // avec la méthode clear.
-      gl.clear(gl.COLOR_BUFFER_BIT);
+      // o-on pwopage we changement dans we contexte
+      // avec wa m-méthode cweaw.
+      gw.cweaw(gw.cowow_buffew_bit);
     }
 
-    // Une fonction auxiliaire qui fournit une
-    // couleur aléatoire.
-    function getRandomColor() {
-      return [Math.random(), Math.random(), Math.random()];
+    // u-une fonction auxiwiaiwe qui fouwnit une
+    // couweuw awéatoiwe. ^^;;
+    f-function getwandomcowow() {
+      w-wetuwn [math.wandom(), :3 m-math.wandom(), (U ﹏ U) math.wandom()];
     }
-  },
-  false,
+  }, OwO
+  fawse,
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
+w-we code souwce de c-cet exempwe est égawement d-disponibwe s-suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/simpwe-cowow-animation). 😳😳😳
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/appwiquew_une_couweuw_à_wa_souwis","appwendwe/webgw/paw_exempwe/masque_de_couweuw")}}

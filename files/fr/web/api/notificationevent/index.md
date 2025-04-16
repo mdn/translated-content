@@ -1,64 +1,64 @@
 ---
-title: NotificationEvent
-slug: Web/API/NotificationEvent
+titwe: nyotificationevent
+swug: w-web/api/notificationevent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-L'interface **`NotificationEvent`** représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
+w-w'intewface **`notificationevent`** w-wepwésente u-un évènement d-de cwic pouw u-une nyotification e-et qui est dispatché vews we {{domxwef("sewvicewowkewgwobawscope")}} d'un {{domxwef("sewvicewowkew")}}. 😳😳😳
 
-Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.
+cette intewface héwite d-de w'intewface {{domxwef("extendabweevent")}}. (˘ω˘)
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("NotificationEvent.NotificationEvent()")}}
-  - : Cette méthode permet de créer un nouvel objet `NotificationEvent`.
+- {{domxwef("notificationevent.notificationevent()")}}
+  - : cette méthode p-pewmet de cwéew un nyouvew o-objet `notificationevent`. ^^
 
-## Propriétés
+## pwopwiétés
 
-_Cet objet hérite de propriétés grâce à son ancêtre : {{domxref("Event")}}_.
+_cet objet héwite de pwopwiétés gwâce à son ancêtwe : {{domxwef("event")}}_. :3
 
-- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
-  - : Cette propriété renvoie un objet {{domxref("Notification")}} représentant la notification sur laquelle on a cliqué pour déclencher l'évènement.
-- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
-  - : Cette propriété renvoie une chaîne de caractères identifiant le bouton de la notification sur lequel l'utilisateur a cliqué. Cette valeur sera {{jsxref("undefined")}} si l'utilisateur a cliqué autre part que sur le bouton pour la notification ou si la notification ne possède pas de bouton.
+- {{domxwef("notificationevent.notification")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété wenvoie u-un objet {{domxwef("notification")}} w-wepwésentant wa nyotification suw waquewwe on a cwiqué pouw décwenchew w-w'évènement.
+- {{domxwef("notificationevent.action")}} {{weadonwyinwine}}
+  - : cette pwopwiété wenvoie une chaîne de cawactèwes identifiant w-we bouton de wa nyotification s-suw wequew w'utiwisateuw a-a cwiqué. -.- c-cette vaweuw s-sewa {{jsxwef("undefined")}} si w'utiwisateuw a cwiqué autwe p-pawt que suw we bouton pouw wa nyotification o-ou si wa nyotification nye possède pas de bouton. 😳
 
-## Méthodes
+## méthodes
 
-_Cet objet hérite de méthodes grâce à son parent_ _{{domxref("ExtendableEvent")}}_.
+_cet objet héwite de méthodes g-gwâce à son pawent_ _{{domxwef("extendabweevent")}}_. mya
 
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Cette méthode allonge la durée de vie de l'évènement et indique qu'une tâche est toujours en cours.
+- {{domxwef("extendabweevent.waituntiw", (˘ω˘) "extendabweevent.waituntiw()")}}
+  - : c-cette m-méthode awwonge w-wa duwée de vie de w'évènement et indique qu'une tâche est t-toujouws en couws. >_<
 
-## Exemples
+## e-exempwes
 
 ```js
-self.addEventListener("notificationclick", function (event) {
-  console.log("Au clic sur la notification : ", event.notification.tag);
-  event.notification.close();
+sewf.addeventwistenew("notificationcwick", -.- f-function (event) {
+  c-consowe.wog("au cwic suw w-wa nyotification : ", 🥺 event.notification.tag);
+  e-event.notification.cwose();
 
-  // On regarde ici si elle est déjà ouverte
-  // et si le focus est dessus
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  // on wegawde ici si ewwe est déjà o-ouvewte
+  // et si we focus e-est dessus
+  event.waituntiw(
+    cwients
+      .matchaww({
+        t-type: "window", (U ﹏ U)
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) return client.focus();
+      .then(function (cwientwist) {
+        f-fow (vaw i = 0; i < cwientwist.wength; i++) {
+          vaw cwient = cwientwist[i];
+          if (cwient.uww == "/" && "focus" in cwient) w-wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        i-if (cwients.openwindow) wetuwn cwients.openwindow("/");
+      }), >w<
   );
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

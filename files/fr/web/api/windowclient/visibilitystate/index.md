@@ -1,46 +1,46 @@
 ---
-title: WindowClient.visibilityState
-slug: Web/API/WindowClient/visibilityState
+titwe: windowcwient.visibiwitystate
+swug: web/api/windowcwient/visibiwitystate
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-La propriété **`visibilityState`**, en lecture seule de l'interface {{domxref("WindowClient")}} indique la visibilité du client courant. La valeur pourra être : `hidden`, `visible`, `prerender`, or `unloaded`.
+wa pwopwiété **`visibiwitystate`**, ( ͡o ω ͡o ) e-en wectuwe seuwe d-de w'intewface {{domxwef("windowcwient")}} i-indique w-wa visibiwité d-du cwient couwant. rawr x3 w-wa vaweuw pouwwa êtwe : `hidden`, nyaa~~ `visibwe`, /(^•ω•^) `pwewendew`, rawr ow `unwoaded`. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-myVisState = WindowClient.visibilityState;
+myvisstate = w-windowcwient.visibiwitystate;
 ```
 
-### Value
+### vawue
 
-une {{domxref("DOMString")}}.
+une {{domxwef("domstwing")}}.
 
-## Example
+## e-exampwe
 
 ```js
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        if(visibilityState === 'hidden')
-          return client.focus();
+  event.waituntiw(cwients.matchaww({
+    t-type: "window"
+  }).then(function(cwientwist) {
+    fow (vaw i = 0; i < cwientwist.wength; i-i++) {
+      vaw cwient = cwientwist[i];
+      i-if (cwient.uww == '/' && 'focus' i-in cwient) {
+        if(visibiwitystate === 'hidden')
+          wetuwn cwient.focus();
         }
       }
     }
-    if (clients.openWindow)
-      return clients.openWindow('/');
+    if (cwients.openwindow)
+      wetuwn cwients.openwindow('/');
   }));
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

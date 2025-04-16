@@ -1,63 +1,63 @@
 ---
-title: WebSockets
-slug: Web/API/WebSockets_API
+titwe: websockets
+swug: web/api/websockets_api
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal de communication bidirectionnelle entre un navigateur (côté client) et un serveur. Avec cette API vous pouvez envoyer des messages à un serveur et recevoir ses réponses de manière événementielle sans avoir à aller consulter le serveur pour obtenir une réponse.
+w-w'**api websocket** e-est une technowogie évowuée q-qui pewmet d'ouvwiw u-un canaw de c-communication b-bidiwectionnewwe e-entwe un nyavigateuw (côté cwient) et un sewveuw. >w< avec cette api vous pouvez e-envoyew des messages à un sewveuw et wecevoiw ses w-wéponses de manièwe événementiewwe s-sans avoiw à awwew consuwtew we sewveuw pouw obteniw u-une wéponse. 😳😳😳
 
-> [!NOTE]
-> Bien que les connexions WebSocket soient fonctionnellement similaires aux sockets standard de type Unix, elles ne sont pas liées.
+> [!note]
+> bien q-que wes connexions w-websocket soient fonctionnewwement simiwaiwes aux sockets standawd de type unix, e-ewwes nye sont pas wiées. OwO
 
-## Interfaces
+## intewfaces
 
-- [`WebSocket`](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-  - : Interface principale pour se connecter à un serveur WebSocket. Il permet d'envoyer et de recevoir des données sur la connexion.
-- [`CloseEvent`](/fr/docs/Web/API/CloseEvent)
-  - : Evénement envoyé par l'objet WebSocket lors de la fermeture de la connexion.
-- [`MessageEvent`](/fr/docs/Web/API/MessageEvent)
-  - : Evénement envoyé par l'objet WebSocket lorsqu'un message est reçu par le serveur.
+- [`websocket`](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+  - : intewface pwincipawe p-pouw se connectew à un sewveuw w-websocket. 😳 iw pewmet d-d'envoyew e-et de wecevoiw des d-données suw wa connexion. 😳😳😳
+- [`cwoseevent`](/fw/docs/web/api/cwoseevent)
+  - : evénement envoyé p-paw w'objet websocket wows de wa fewmetuwe d-de wa connexion. (˘ω˘)
+- [`messageevent`](/fw/docs/web/api/messageevent)
+  - : evénement envoyé paw w'objet websocket wowsqu'un message est weçu paw w-we sewveuw. ʘwʘ
 
-## Guides
+## guides
 
-- [Ecrire des applications client WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Écriture de serveurs WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
-- [Écrire un serveur WebSocket en C#](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Écrire un serveur WebSocket en Java](/fr/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [ecwiwe d-des appwications c-cwient websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [Écwituwe d-de sewveuws websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_sewvews)
+- [Écwiwe un sewveuw websocket en c-c#](/fw/docs/web/api/websockets_api/wwiting_websocket_sewvew)
+- [Écwiwe u-un sewveuw websocket en j-java](/fw/docs/web/api/websockets_api/wwiting_a_websocket_sewvew_in_java)
 
-## Outils
+## outiws
 
-- [HumbleNet](https://humblenet.github.io/) :Bibliothèque de réseau multiplateforme qui fonctionne dans un navigateur. Il s'agit bibliothèque écrite en C qui enveloppe WebSockets et WebRTC. Elle gomme toutes les différences qui existent entre les navigateurs et les logiciels, ce qui facilite la création d'une fonctionnalité de réseau multi-joueurs pour les jeux, par exemple, et autres applications.
-- [µWebSockets](https://github.com/uWebSockets/uWebSockets): Déclinaison plus légère et plus performante de WebSocket et écrite en [C++11](https://isocpp.org/) et en [Node.js](https://nodejs.org/fr/).
-- [ClusteWS](https://github.com/ClusterWS/ClusterWS): Framework léger, rapide et puissant qui permet de construire des application en [Node.js](https://nodejs.org/fr/).
-- [Socket.IO](http://socket.io): API WebSocket puissante et multiplateformes en [Node.js](https://nodejs.org).
-- [SocketCluster](https://socketcluster.io/#!/): Framework open source en temps réel en [Node.js](https://nodejs.org). Il prend en charge à la fois la communication directe client-serveur et la communication de groupe via les pub/sub canaux. Il est conçu pour s'adapter facilement à n'importe quel nombre de processus/hôtes et est idéal pour construire de chat de discution.
-- [Node.js](https://nodejs.org).
-- [Total.js](https://www.totaljs.com/): FrameWork pour web application en [Node.js](https://nodejs.org).
-- [Faye](https://www.npmjs.com/package/faye-websocket): Combine WebSocket(bidirectionnelle) et EventSource(unidirectionnelle) , côté serveur et côté client en [Node.js](https://nodejs.org).
-- [SignalR](https://signalr.net/): SignalR est une nouvelle bibliothèque pour les développeurs [ASP.NET](https://dotnet.microsoft.com/apps/aspnet). Elle simplifie l'ajout des WebSockets dans les applications. SignalR utilise les canaux de WebSockets lorsqu'elles sont disponibles, dans le cas contraire elle utilise d'autres technos, sans modifier votre application.
-- [Caddy](https://caddyserver.com/docs/websocket): Serveur web capable de créer des WebSockets serveur/proxy(stdin/stdout, echo, cat, ...).
-- [ws](https://github.com/websockets/ws): La plus populaire des WebSockets pour client & serveur en [Node.js](https://nodejs.org).
-- [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).
-- [cowboy](https://github.com/ninenines/cowboy): Cowboy est un petit serveur HTTP rapide et moderne pour Erlang/OTP basé sur WebSocket.
-- [ZeroMQ](https://zeromq.org): ZeroMQ est une bibliothèque de fonctions pour transporter des messages avec divers protocoles IPC, TCP, UDP, TIPC, diffusion de groupe et WebSocket.
+- [humbwenet](https://humbwenet.github.io/) :bibwiothèque d-de wéseau muwtipwatefowme qui f-fonctionne dans un nyavigateuw. ( ͡o ω ͡o ) i-iw s'agit bibwiothèque écwite en c qui envewoppe websockets et w-webwtc. o.O ewwe gomme toutes wes d-difféwences qui existent entwe w-wes nyavigateuws e-et wes wogiciews, >w< ce qui faciwite wa cwéation d'une fonctionnawité de wéseau muwti-joueuws pouw wes jeux, 😳 paw e-exempwe, 🥺 et autwes a-appwications. rawr x3
+- [µwebsockets](https://github.com/uwebsockets/uwebsockets): décwinaison pwus w-wégèwe et pwus p-pewfowmante d-de websocket et écwite en [c++11](https://isocpp.owg/) et en [node.js](https://nodejs.owg/fw/). o.O
+- [cwustews](https://github.com/cwustewws/cwustewws): fwamewowk w-wégew, rawr wapide et puissant qui pewmet de constwuiwe des appwication en [node.js](https://nodejs.owg/fw/). ʘwʘ
+- [socket.io](http://socket.io): a-api websocket puissante e-et muwtipwatefowmes e-en [node.js](https://nodejs.owg). 😳😳😳
+- [socketcwustew](https://socketcwustew.io/#!/): f-fwamewowk open souwce e-en temps wéew e-en [node.js](https://nodejs.owg). ^^;; i-iw pwend en chawge à w-wa fois wa communication diwecte cwient-sewveuw e-et wa communication d-de gwoupe v-via wes pub/sub c-canaux. o.O iw e-est conçu pouw s'adaptew faciwement à ny'impowte quew nyombwe d-de pwocessus/hôtes et est idéaw pouw constwuiwe de chat de discution. (///ˬ///✿)
+- [node.js](https://nodejs.owg). σωσ
+- [totaw.js](https://www.totawjs.com/): fwamewowk pouw web appwication e-en [node.js](https://nodejs.owg). nyaa~~
+- [faye](https://www.npmjs.com/package/faye-websocket): combine websocket(bidiwectionnewwe) et eventsouwce(unidiwectionnewwe) , ^^;; c-côté sewveuw e-et côté cwient e-en [node.js](https://nodejs.owg). ^•ﻌ•^
+- [signaww](https://signaww.net/): signaww e-est une nyouvewwe bibwiothèque p-pouw wes dévewoppeuws [asp.net](https://dotnet.micwosoft.com/apps/aspnet). σωσ e-ewwe simpwifie w'ajout des websockets dans wes appwications. -.- signaww utiwise wes canaux d-de websockets wowsqu'ewwes sont d-disponibwes, ^^;; dans we cas contwaiwe e-ewwe utiwise d-d'autwes technos, XD sans modifiew votwe appwication. 🥺
+- [caddy](https://caddysewvew.com/docs/websocket): s-sewveuw w-web capabwe de cwéew des websockets s-sewveuw/pwoxy(stdin/stdout, òωó e-echo, (ˆ ﻌ ˆ)♡ cat, ...). -.-
+- [ws](https://github.com/websockets/ws): wa pwus popuwaiwe des websockets pouw cwient & sewveuw e-en [node.js](https://nodejs.owg). :3
+- [jsonwpc-bidiwectionaw](https://github.com/bigstepinc/jsonwpc-bidiwectionaw): a-asynchwonous w-wpc which, ʘwʘ on a singwe connection, 🥺 m-may have f-functions expowted on the sewvew a-and, and the same time, >_< on the cwient (cwient may caww sewvew, ʘwʘ sewvew may awso c-caww cwient). (˘ω˘)
+- [cowboy](https://github.com/ninenines/cowboy): cowboy e-est un petit sewveuw http wapide et modewne p-pouw ewwang/otp b-basé suw websocket. (✿oωo)
+- [zewomq](https://zewomq.owg): zewomq est une bibwiothèque de fonctions p-pouw twanspowtew des messages avec divews pwotocowes ipc, (///ˬ///✿) tcp, rawr x3 udp, tipc, diffusion d-de gwoupe et websocket. -.-
 
-## Ressources liées
+## wessouwces wiées
 
-- [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [JavaScript](/fr/docs/Web/JavaScript)
+- [ajax](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+- [javascwipt](/fw/docs/web/javascwipt)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [RFC 6455 - Le protocole WebSocket](https://tools.ietf.org/html/rfc6455)
-- [Les spécifications de l'API WebSocket](https://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/fr/docs/Web/API/Server-sent_events)
+- [wfc 6455 - we pwotocowe w-websocket](https://toows.ietf.owg/htmw/wfc6455)
+- [wes s-spécifications de w'api websocket](https://www.w3.owg/tw/websockets/)
+- [sewvew-sent events](/fw/docs/web/api/sewvew-sent_events)

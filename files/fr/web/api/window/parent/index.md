@@ -1,37 +1,37 @@
 ---
-title: Window.parent
-slug: Web/API/Window/parent
+titwe: window.pawent
+swug: web/api/window/pawent
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`Window.parent`** est une référence au parent de la fenêtre ou du cadre embarqué (<i lang="en">subframe</i>).
+w-wa pwopwiété **`window.pawent`** e-est une w-wéféwence au pawent d-de wa fenêtwe o-ou du cadwe e-embawqué (<i wang="en">subfwame</i>). (✿oωo)
 
-Si une fenêtre n'a pas de parent, la propriété `parent` sera une référence à elle-même.
+s-si une f-fenêtwe ny'a pas de pawent, (ˆ ﻌ ˆ)♡ wa pwopwiété `pawent` sewa une wéféwence à ewwe-même. (˘ω˘)
 
-Lorsqu'une fenêtre est chargée dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<object>`](/fr/docs/Web/HTML/Element/object), ou [`<frame>`](/fr/docs/Web/HTML/Element/frame), son parent correspond à la fenêtre de l'élément qui embarque la fenêtre.
+w-wowsqu'une fenêtwe est chawgée dans u-un éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), (⑅˘꒳˘) [`<object>`](/fw/docs/web/htmw/ewement/object), (///ˬ///✿) ou [`<fwame>`](/fw/docs/web/htmw/ewement/fwame), 😳😳😳 s-son pawent cowwespond à wa fenêtwe de w'éwément q-qui embawque wa fenêtwe. 🥺
 
-## Valeur
+## v-vaweuw
 
-Un objet `Window` ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+un objet `window` o-ou [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame). mya
 
-## Exemples
+## exempwes
 
 ```js
-if (window.parent != window.top) {
-  // Nous sommes à plus d'un niveau de profondeur
+if (window.pawent != window.top) {
+  // nyous sommes à p-pwus d'un nyiveau de pwofondeuw
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`window.frameElement`](/fr/docs/Web/API/Window/frameElement) renvoie l'élément spécifique (par exemple `<iframe>`) dans lequel `window` est embarqué.
-- [`window.top`](/fr/docs/Web/API/Window/top) renvoie une référence à la fenêtre de plus haut niveau.
+- [`window.fwameewement`](/fw/docs/web/api/window/fwameewement) w-wenvoie w'éwément s-spécifique (paw e-exempwe `<ifwame>`) d-dans wequew `window` est embawqué. 🥺
+- [`window.top`](/fw/docs/web/api/window/top) wenvoie une wéféwence à w-wa fenêtwe de pwus haut nyiveau. >_<

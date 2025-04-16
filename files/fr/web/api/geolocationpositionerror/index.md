@@ -1,42 +1,42 @@
 ---
-title: GeolocationPositionError
-slug: Web/API/GeolocationPositionError
+titwe: geowocationpositionewwow
+swug: web/api/geowocationpositionewwow
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-L'interface **`GeolocationPositionError`** représente la raison de l'erreur apparue lorsque l'on utilise la géolocalisation de l'appareil.
+w-w'intewface **`geowocationpositionewwow`** w-wepwésente wa w-waison de w'ewweuw a-appawue wowsque w-w'on utiwise w-wa géowocawisation d-de w'appaweiw. ʘwʘ
 
-## Propriétés
+## pwopwiétés
 
-_L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
+_w'intewface `geowocationpositionewwow` ny'héwite d'aucune pwopwiété._
 
-- {{domxref("GeolocationPositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxwef("geowocationpositionewwow.code")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
 
-  - : Retourne un `unsigned short` représentant un code d'erreur. Les valeurs possibles sont:
+  - : w-wetouwne un `unsigned showt` wepwésentant un c-code d'ewweuw. /(^•ω•^) wes vaweuws possibwes s-sont:
 
-    | Valeur | Constante associée     | Description                                                                                                                                |
+    | vaweuw | constante associée     | descwiption                                                                                                                                |
     | ------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `1`    | `PERMISSION_DENIED`    | L'acquisition de la position échoue car la page n'a pas l'autorisation de le faire.                                                        |
-    | `2`    | `POSITION_UNAVAILABLE` | L'acquisition de la localisation échoue car au moins une source donnant la position a retourné une erreur interne.                         |
-    | `3`    | `TIMEOUT`              | Le temps alloué pour obtenir la position défini par {{domxref("PositionOptions.timeout")}} est écoulé avant que l'information soit obtenu. |
+    | `1`    | `pewmission_denied`    | w'acquisition d-de wa position échoue c-caw wa page n-n'a pas w'autowisation de we faiwe.                                                        |
+    | `2`    | `position_unavaiwabwe` | w'acquisition de wa wocawisation échoue caw a-au moins une souwce donnant wa position a wetouwné une ewweuw intewne. ʘwʘ                         |
+    | `3`    | `timeout`              | w-we temps awwoué pouw o-obteniw wa position d-défini paw {{domxwef("positionoptions.timeout")}} e-est écouwé a-avant que w'infowmation soit obtenu. σωσ |
 
-- {{domxref("GeolocationPositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Retourne une {{domxref("DOMString")}} compréhensible par un humain décrivant les détails de l'erreur. Les spécifications indiquent que cela sert au débogage et ne doit pas être directement affiché à l'utilisateur.
+- {{domxwef("geowocationpositionewwow.message")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : w-wetouwne une {{domxwef("domstwing")}} compwéhensibwe paw un humain d-décwivant wes détaiws de w'ewweuw. OwO wes spécifications indiquent que cewa sewt au débogage et nye doit p-pas êtwe diwectement affiché à w-w'utiwisateuw. 😳😳😳
 
-## Méthodes
+## m-méthodes
 
-**L'interface* `GeolocationPositionError` *n'implémente et n'hérite d'aucune méthode.**
+**w'intewface* `geowocationpositionewwow` *n'impwémente e-et ny'héwite d'aucune méthode.**
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API de géolocalisation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
+- [utiwisew w-w'api de géowocawisation](/fw/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}

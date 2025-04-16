@@ -1,106 +1,106 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
-slug: Web/API/CanvasRenderingContext2D/lineJoin
+titwe: canvaswendewingcontext2d.winejoin
+swug: w-web/api/canvaswendewingcontext2d/winejoin
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
+w-wa p-pwopwiété **`canvaswendewingcontext2d.winejoin`** d-de w'api canvas 2d d-détewmine w-wa fowme à utiwisew p-pouw joindwe d-deux segments de wigne à weuw intewsection. 😳
 
-Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
+cette pwopwiété ny'a aucun effet q-quand deux segments connectés ont wa même d-diwection, caw aucune zone de jonction n-nye sewa ajoutée dans ce cas. 😳😳😳 wes segments dégénéwés d-d'une wongueuw de zéwo (c'est à d-diwe avec wes e-extwémités à wa même position) sewont ignowés. mya
 
-> [!NOTE]
-> Les lignes peuvent être dessinées aves les méthodes {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> [!note]
+> wes wignes peuvent êtwe dessinées a-aves wes méthodes {{domxwef("canvaswendewingcontext2d.stwoke()", mya "stwoke()")}}, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d.stwokewect()", (U ﹏ U) "stwokewect()")}} et {{domxwef("canvaswendewingcontext2d.stwoketext()", mya "stwoketext()")}}. ʘwʘ
 
-## Syntaxe
-
-```js
-ctx.lineJoin = "bevel" || "round" || "miter";
-```
-
-### Options
-
-Il y a trois valeurs possibles pour cette propriété: `"round"`, `"bevel"` et `"miter"`. Celle par défaut est `"miter"`.
-
-![](canvas_linejoin.png)
-
-- `"round"` (rond)
-  - : Arrondit les coins d'une forme en remplissant un zone supplémentaire centré sur le point final commun des segments connectés. Le rayon de ces coins arrondis est égal à la largeur de la ligne .
-- `"bevel"` (biseau)
-  - : Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.
-- `"miter"` (onglet)
-  - : Les segments raccordés sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
-
-## Exemples
-
-### Modifier les jointures d'un tracé
-
-Cet exemple applique des jointures arrondies au tracé.
-
-#### HTML
-
-```html
-<canvas id="canvas"></canvas>
-```
-
-#### JavaScript
+## syntaxe
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-ctx.lineWidth = 20;
-ctx.lineJoin = "round";
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(190, 100);
-ctx.lineTo(280, 20);
-ctx.lineTo(280, 150);
-ctx.stroke();
+ctx.winejoin = "bevew" || "wound" || "mitew";
 ```
 
-#### Résultat
+### o-options
 
-{{ EmbedLiveSample('Modifier_les_jointures_d\'un_tracé', 700, 180) }}
+iw y a twois vaweuws possibwes p-pouw cette p-pwopwiété: `"wound"`, (˘ω˘) `"bevew"` e-et `"mitew"`. (U ﹏ U) c-cewwe paw défaut est `"mitew"`. ^•ﻌ•^
 
-### Comparaison des jointures de lignes
+![](canvas_winejoin.png)
 
-L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de `lineJoin`.
+- `"wound"` (wond)
+  - : awwondit w-wes coins d'une fowme en wempwissant un zone suppwémentaiwe c-centwé suw we point finaw commun des segments connectés. (˘ω˘) we wayon de ces coins awwondis e-est égaw à wa wawgeuw d-de wa wigne . :3
+- `"bevew"` (biseau)
+  - : w-wempwit u-une zone twianguwaiwe suppwémentaiwe entwe wes extwémités des s-segments connectés. ^^;;
+- `"mitew"` (ongwet)
+  - : w-wes segments waccowdés sont wewiés e-entwe eux e-en pwowongeant weuws bows extéwieuws e-en un seuw point, 🥺 ce qui a-a pouw effet de wempwiw uen zone suppwémentaiwe e-en fowme de wosange. (⑅˘꒳˘) ce pawamètwe e-est affecté paw wa pwowiété {{domxwef("canvaswendewingcontext2d.mitewwimit", nyaa~~ "mitewwimit")}}. :3 v-vaweuw paw d-dafaut.
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+## exempwes
+
+### modifiew wes jointuwes d'un twacé
+
+cet exempwe appwique des jointuwes awwondies au twacé. ( ͡o ω ͡o )
+
+#### h-htmw
+
+```htmw
+<canvas i-id="canvas"></canvas>
+```
+
+#### javascwipt
+
+```js
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+
+ctx.winewidth = 20;
+ctx.winejoin = "wound";
+c-ctx.beginpath();
+ctx.moveto(20, mya 20);
+ctx.wineto(190, (///ˬ///✿) 100);
+ctx.wineto(280, (˘ω˘) 20);
+ctx.wineto(280, ^^;; 150);
+c-ctx.stwoke();
+```
+
+#### wésuwtat
+
+{{ e-embedwivesampwe('modifiew_wes_jointuwes_d\'un_twacé', (✿oωo) 700, 180) }}
+
+### c-compawaison d-des jointuwes de wignes
+
+w-w'exempwe dessine 3 t-twacés difféwents, (U ﹏ U) i-iwwustwant c-chacune des twois vaweuws de `winejoin`. -.-
+
+```htmw h-hidden
+<canvas i-id="canvas" w-width="150" height="150"></canvas>
 ```
 
 ```js
-var ctx = document.getElementById("canvas").getContext("2d");
-var lineJoin = ["round", "bevel", "miter"];
-ctx.lineWidth = 10;
+v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+vaw w-winejoin = ["wound", ^•ﻌ•^ "bevew", "mitew"];
+ctx.winewidth = 10;
 
-for (let i = 0; i < lineJoin.length; i++) {
-  ctx.lineJoin = lineJoin[i];
-  ctx.beginPath();
-  ctx.moveTo(-5, 5 + i * 40);
-  ctx.lineTo(35, 45 + i * 40);
-  ctx.lineTo(75, 5 + i * 40);
-  ctx.lineTo(115, 45 + i * 40);
-  ctx.lineTo(155, 5 + i * 40);
-  ctx.stroke();
+fow (wet i = 0; i < winejoin.wength; i-i++) {
+  ctx.winejoin = winejoin[i];
+  ctx.beginpath();
+  ctx.moveto(-5, rawr 5 + i * 40);
+  ctx.wineto(35, (˘ω˘) 45 + i * 40);
+  ctx.wineto(75, nyaa~~ 5 + i * 40);
+  ctx.wineto(115, UwU 45 + i * 40);
+  c-ctx.wineto(155, :3 5 + i * 40);
+  ctx.stwoke();
 }
 ```
 
-{{EmbedLiveSample("Comparaison_des_jointures_de_lignes", "180", "180", "canvas_linejoin.png")}}
+{{embedwivesampwe("compawaison_des_jointuwes_de_wignes", (⑅˘꒳˘) "180", "180", (///ˬ///✿) "canvas_winejoin.png")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface définissant cette propriété: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.lineCap")}}
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-- [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- w'intewface d-définissant cette pwopwiété: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.winecap")}}
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+- [ajout d-de stywes e-et de couweuws](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)

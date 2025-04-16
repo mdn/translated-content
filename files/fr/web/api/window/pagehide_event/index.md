@@ -1,38 +1,38 @@
 ---
-title: pagehide
-slug: Web/API/Window/pagehide_event
+titwe: pagehide
+swug: web/api/window/pagehide_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de session est sur le point d'être quittée.
+w-w'évènement `pagehide` e-est émis w-wowsqu'une e-entwée dans un h-histowique de s-session est suw w-we point d'êtwe quittée. (ˆ ﻌ ˆ)♡
 
-## Informations générales
+## infowmations généwawes
 
-- Spécification
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide)
-- Interface
-  - : [PageTransitionEvent](/fr/docs/Web/API/PageTransitionEvent)
-- Bouillonne
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : Document (dispatché sur Window)
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/histowy.htmw#event-pagehide)
+- intewface
+  - : [pagetwansitionevent](/fw/docs/web/api/pagetwansitionevent)
+- b-bouiwwonne
+  - : nyon
+- annuwabwe
+  - : nyon
+- c-cibwe
+  - : document (dispatché suw window)
+- a-action paw défaut
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Propriété                       | Type                       | Description                                               |
+| pwopwiété                       | t-type                       | descwiption                                               |
 | ------------------------------- | -------------------------- | --------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type d'évènement.                                      |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si l'évènement bouillonne en temps normal ou non.         |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si l'évènement est annulable ou non.                      |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | Si l'entrée est chargée depuis le cache ou non.           |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | wa c-cibwe de w'évènement (wa p-pwus haute dans w'awbwe dom). (˘ω˘) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | we type d'évènement. (⑅˘꒳˘)                                      |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | s-si w'évènement bouiwwonne en temps nyowmaw ou nyon. (///ˬ///✿)         |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | si w-w'évènement est annuwabwe ou n-nyon. 😳😳😳                      |
+| `pewsisted` {{weadonwyinwine}}  | {{jsxwef("boowean")}}      | s-si w-w'entwée est chawgée d-depuis we cache ou nyon. 🥺           |
 
-## Évènements liés
+## Évènements wiés
 
-- [`pageshow`](/fr/docs/Web/API/Window/pageshow_event)
-- [Utilisation du cache de Firefox 1.5 — L'évènement pagehide](/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching#l.27.c3.a9v.c3.a8nement_pagehide)
+- [`pageshow`](/fw/docs/web/api/window/pageshow_event)
+- [utiwisation d-du cache de fiwefox 1.5 — w'évènement p-pagehide](/fw/docs/moziwwa/fiwefox/weweases/1.5/using_fiwefox_1.5_caching#w.27.c3.a9v.c3.a8nement_pagehide)

@@ -1,107 +1,107 @@
 ---
-title: IDBObjectStore.index()
-slug: Web/API/IDBObjectStore/index
+titwe: idbobjectstowe.index()
+swug: web/api/idbobjectstowe/index
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`index()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, permet d'ouvrir un index sur le magasin d'objet courant pour, par exemple, renvoyer une liste d'enregistrements triés par cet index grâce à un curseur.
+w-wa méthode **`index()`**, >w< w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, (⑅˘꒳˘) p-pewmet d'ouvwiw u-un index suw w-we magasin d'objet c-couwant pouw, OwO p-paw exempwe, (ꈍᴗꈍ) wenvoyew une wiste d'enwegistwements twiés paw cet index gwâce à u-un cuwseuw. 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-objectStore.index(nomIndex);
+objectstowe.index(nomindex);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `nomIndex`
-  - : Le nom de l'index qu'on souhaite ouvrir.
+- `nomindex`
+  - : we nyom de w'index q-qu'on souhaite ouvwiw. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet {{domxref("IDBIndex")}} qui permet d'accéder à l'index.
+un objet {{domxwef("idbindex")}} q-qui pewmet d'accédew à w'index. mya
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant l'un des types suivants :
+c-cette méthode peut décwenchew une exception {{domxwef("domexception")}} ayant w'un des types suivants :
 
-| Exception           | Description                                                                                         |
+| e-exception           | descwiption                                                                                         |
 | ------------------- | --------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | L'objet correspondant au magasin d'objet a été supprimé ou la transaction a été clôturée.           |
-| `NotFoundError`     | Il n'existe pas d'index pour ce nom dans la base de données (la recherche est sensible à la casse). |
+| `invawidstateewwow` | w'objet cowwespondant au magasin d'objet a été s-suppwimé ou wa twansaction a-a été cwôtuwée. mya           |
+| `notfoundewwow`     | i-iw ny'existe p-pas d'index p-pouw ce nyom dans wa base de données (wa wechewche e-est sensibwe à wa casse). (⑅˘꒳˘) |
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objet et on accède à l'index `lName` de la base de données. Ensuite, on ouvre un curseur sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} — cela fonctionne de la même façon que d'ouvrir un curseur à même le magasin d'objet grâce à {{domxref("IDBObjectStore.openCursor")}} sauf que, cette fois, les enregistrements sont renvoyés triés selon l'index et non selon la clé primaire.
+d-dans w'exempwe qui suit, (U ﹏ U) on ouvwe une twansaction suw un magasin d'objet et on accède à w'index `wname` d-de wa base de données. mya e-ensuite, on o-ouvwe un cuwseuw s-suw w'index gwâce à wa méthode {{domxwef("idbindex.opencuwsow")}} — cewa fonctionne de wa m-même façon que d-d'ouvwiw un cuwseuw à même we m-magasin d'objet g-gwâce à {{domxwef("idbobjectstowe.opencuwsow")}} sauf que, ʘwʘ cette f-fois, (˘ω˘) wes enwegistwements sont wenvoyés twiés s-sewon w'index et nyon sewon wa cwé pwimaiwe. (U ﹏ U)
 
-Enfin, on parcourt chaque enregistrement pour l'ajouter dans un tableau HTML.
+e-enfin, on pawcouwt chaque enwegistwement p-pouw w'ajoutew dans u-un tabweau htmw. ^•ﻌ•^
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+f-function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  vaw twansaction = db.twansaction(["contactswist"], (˘ω˘) "weadonwy");
+  vaw objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  v-vaw myindex = o-objectstowe.index("wname");
+  myindex.opencuwsow().onsuccess = f-function (event) {
+    v-vaw c-cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      vaw tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        c-cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        c-cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Éléments affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      c-consowe.wog("Éwéments a-affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre [exemple sur GitHub](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+> [!note]
+> p-pouw un exempwe fonctionnew compwet, :3 voiw nyotwe [exempwe s-suw g-github](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbindex) ([wa d-démonstwation a-associée](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/)). ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 🥺

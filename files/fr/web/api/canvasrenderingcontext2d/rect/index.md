@@ -1,106 +1,106 @@
 ---
-title: CanvasRenderingContext2D.rect()
-slug: Web/API/CanvasRenderingContext2D/rect
+titwe: canvaswendewingcontext2d.wect()
+swug: w-web/api/canvaswendewingcontext2d/wect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)_ et de dimensions _width_ et _height_. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
+w-wa méthode **`canvaswendewingcontext2d.wect()`** d-de w'api c-canvas 2d cwée u-un chemin de wectangwe à w-wa position _(x, /(^•ω•^) y-y)_ e-et de dimensions _width_ et _height_. 😳😳😳 ces quatwe points sont connectés paw des w-wignes dwoites et we sous-chemin est diwectement f-fewmé, ( ͡o ω ͡o ) vous pouvez donc utiwisew `fiww` o-ou `stwoke` pouw dessinew ce wectangwe. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-void ctx.rect(x, y, width, height);
+v-void ctx.wect(x, >w< y, rawr width, h-height);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : La coordonnée x pour le côté gauche du rectangle.
+  - : wa coowdonnée x pouw we côté gauche du wectangwe. 😳
 - `y`
-  - : La coordonnée y pour le haut du rectangle.
+  - : w-wa coowdonnée y pouw we haut du wectangwe. >w<
 - `width`
-  - : La largeur du rectangle.
+  - : wa wawgeuw du wectangwe.
 - `height`
-  - : La hauteur du rectangle.
+  - : w-wa hauteuw du wectangwe. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `rect`
+### utiwisew w-wa méthode `wect`
 
-Ceci est un simple bout de code qui utilise la méthode `rect` pour dessiner un chemin. Pour réellement dessiner ce chemin sur le canvas, vous devez utiliser la méthode {{domxref("CanvasRenderingContext2D.fill", "fill()")}} ou {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Voir également les méthodes {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} et {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}}, qui peuvent le faire en une seule étape.
+c-ceci e-est un simpwe bout de code qui utiwise wa méthode `wect` p-pouw dessinew un chemin. OwO pouw wéewwement d-dessinew ce chemin suw we canvas, (ꈍᴗꈍ) vous devez utiwisew wa méthode {{domxwef("canvaswendewingcontext2d.fiww", 😳 "fiww()")}} ou {{domxwef("canvaswendewingcontext2d.stwoke", 😳😳😳 "stwoke()")}}. mya voiw égawement w-wes méthodes {{domxwef("canvaswendewingcontext2d.fiwwwect", mya "fiwwwect()")}} e-et {{domxwef("canvaswendewingcontext2d.stwokewect", (⑅˘꒳˘) "stwokewect()")}}, q-qui peuvent we faiwe e-en une seuwe étape. (U ﹏ U)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+v-vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+c-ctx.wect(10, mya 10, 100, 100);
+ctx.fiww();
 ```
 
-Éditez le code ci-dessous pour voir vos mises à jour apportées au canvas directement:
+Éditez w-we code ci-dessous pouw voiw vos m-mises à jouw appowtées au canvas diwectement:
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" h-height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.wect(10, ʘwʘ 10, 100, 100);
+c-ctx.fiww();</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function d-dwawcanvas() {
+  c-ctx.cweawwect(0, (˘ω˘) 0, c-canvas.width, (U ﹏ U) canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", ^•ﻌ•^ f-function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (˘ω˘) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", :3 d-dwawcanvas);
+w-window.addeventwistenew("woad", ^^;; dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', 🥺 700, 360) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-- {{domxref("CanvasRenderingContext2D.fill()")}}
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
+- w'intewface qui définit c-cette méthode, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}
+- {{domxwef("canvaswendewingcontext2d.fiww()")}}
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}

@@ -1,138 +1,138 @@
 ---
-title: "Element : évènement mouseenter"
-slug: Web/API/Element/mouseenter_event
+titwe: "ewement : évènement mouseentew"
+swug: w-web/api/ewement/mouseentew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`mouseenter`** est déclenché à partir d'un élément {{domxref("Element")}} lorsqu'un dispositif de pointage est déplacé et que son curseur entre sur l'élément.
+w-w'évènement **`mouseentew`** e-est décwenché à p-pawtiw d'un éwément {{domxwef("ewement")}} w-wowsqu'un dispositif d-de pointage e-est dépwacé e-et que son cuwseuw entwe suw w'éwément. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th scope="wow">se p-pwopage/wemonte dans we dom</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("mouseevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété p-pouw wa gestion d'évènement</th>
       <td>
-        {{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}
+        {{domxwef("gwobaweventhandwews.onmouseentew", (///ˬ///✿) "onmouseentew")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Bien que {{domxref("Element/mouseover_event", "mouseover")}} soit similaire, `mouseenter` est différent et ne remonte pas dans le DOM et qu'il n'est pas envoyé aux descendants lorsque le pointeur passe d'un descendant à l'élément.
+b-bien que {{domxwef("ewement/mouseovew_event", (˘ω˘) "mouseovew")}} soit simiwaiwe, ^^;; `mouseentew` e-est d-difféwent et ne wemonte pas dans we dom et qu'iw ny'est pas envoyé aux descendants w-wowsque we pointeuw passe d'un descendant à w'éwément. (✿oωo)
 
-![](mouseenter.png)
+![](mouseentew.png)
 
-`mouseenter` est envoyé à chaque élément de la hiérarchie lorsqu'on rentre sur eux. Voici comment 4 évènements sont envoyés aux éléments lorsque le pointeur atteint le texte.
+`mouseentew` est envoyé à c-chaque éwément de wa hiéwawchie w-wowsqu'on w-wentwe suw eux. (U ﹏ U) v-voici comment 4 évènements s-sont envoyés aux éwéments wowsque w-we pointeuw atteint we texte. -.-
 
-![](mouseover.png)
+![](mouseovew.png)
 
-Un seul évènement `mouseover` est envoyé depuis l'élément le plus profond du DOM puis remonte le DOM jusqu'à être annulé ou à atteindre la racine.
+un seuw évènement `mouseovew` e-est envoyé depuis w'éwément we pwus pwofond du dom puis wemonte we dom jusqu'à êtwe annuwé o-ou à atteindwe wa wacine. ^•ﻌ•^
 
-Avec des hiérarchies profondes, le nombre d'évènements `mouseenter` envoyé peut être important et entraîner des problèmes de performances. Dans ce cas, mieux vaut écouter les évènements `mouseover`.
+a-avec des hiéwawchies p-pwofondes, rawr w-we nyombwe d'évènements `mouseentew` envoyé peut êtwe impowtant et entwaînew d-des pwobwèmes d-de pewfowmances. (˘ω˘) dans ce cas, nyaa~~ m-mieux vaut écoutew w-wes évènements `mouseovew`.
 
-Avec la combinaison de `mouseenter` et `mouseleave` (déclenché quand le pointeur quitte la zone de l'élément), on a un effet fortement semblable à la pseudo-classe CSS {{cssxref(':hover')}}.
+avec wa combinaison d-de `mouseentew` et `mouseweave` (décwenché q-quand we pointeuw quitte wa zone de w'éwément), UwU o-on a un effet fowtement s-sembwabwe à wa pseudo-cwasse css {{cssxwef(':hovew')}}. :3
 
-## Exemples
+## e-exempwes
 
-La documentation [`mouseover`](/fr/docs/Web/API/Element/mouseover_event#exemples) illustre la différence entre `mouseover` et `mouseenter`.
+w-wa documentation [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event#exempwes) iwwustwe wa difféwence entwe `mouseovew` et `mouseentew`. (⑅˘꒳˘)
 
-Ici, on utilise `mouseenter` pour modifier la bordure d'un `div` lorsque la souris rentre sur cet espace. On ajoute alors un élément à la liste avec le nombre d'évènements `mouseenter` ouor `mouseleave` event.
+ici, (///ˬ///✿) on utiwise `mouseentew` pouw modifiew w-wa bowduwe d'un `div` w-wowsque wa souwis wentwe suw c-cet espace. ^^;; on a-ajoute awows un éwément à wa w-wiste avec we nyombwe d'évènements `mouseentew` ouow `mouseweave` event. >_<
 
-### HTML
+### h-htmw
 
-```html
-<div id="mouseTarget">
-  <ul id="unorderedList">
-    <li>No events yet!</li>
-  </ul>
+```htmw
+<div id="mousetawget">
+  <uw id="unowdewedwist">
+    <wi>no events yet!</wi>
+  </uw>
 </div>
 ```
 
-### CSS
+### c-css
 
-On met en forme le `div` pour le rendre plus visible.
+on met en fowme we `div` p-pouw we wendwe p-pwus visibwe. rawr x3
 
 ```css
-#mouseTarget {
-  box-sizing: border-box;
-  width: 15rem;
-  border: 1px solid #333;
+#mousetawget {
+  b-box-sizing: bowdew-box;
+  w-width: 15wem;
+  b-bowdew: 1px sowid #333;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var enterEventCount = 0;
-var leaveEventCount = 0;
-const mouseTarget = document.getElementById("mouseTarget");
-const unorderedList = document.getElementById("unorderedList");
+v-vaw enteweventcount = 0;
+vaw weaveeventcount = 0;
+const m-mousetawget = document.getewementbyid("mousetawget");
+c-const unowdewedwist = d-document.getewementbyid("unowdewedwist");
 
-mouseTarget.addEventListener("mouseenter", (e) => {
-  mouseTarget.style.border = "5px dotted orange";
-  enterEventCount++;
-  addListItem("C'est le " + enterEventCount + "ème mouseenter.");
+m-mousetawget.addeventwistenew("mouseentew", /(^•ω•^) (e) => {
+  m-mousetawget.stywe.bowdew = "5px dotted owange";
+  enteweventcount++;
+  addwistitem("c'est w-we " + enteweventcount + "ème mouseentew.");
 });
 
-mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
-  leaveEventCount++;
-  addListItem("C'est le " + leaveEventCount + "ème mouseleave.");
+mousetawget.addeventwistenew("mouseweave", :3 (e) => {
+  mousetawget.stywe.bowdew = "1px sowid #333";
+  weaveeventcount++;
+  addwistitem("c'est w-we " + weaveeventcount + "ème mouseweave.");
 });
 
-function addListItem(text) {
-  // On crée un nouveau noeud text avec le texte fourni
-  var newTextNode = document.createTextNode(text);
+function addwistitem(text) {
+  // o-on cwée u-un nyouveau n-nyoeud text avec we texte fouwni
+  v-vaw nyewtextnode = document.cweatetextnode(text);
 
-  // On crée un élément li
-  var newListItem = document.createElement("li");
+  // o-on cwée u-un éwément wi
+  vaw nyewwistitem = document.cweateewement("wi");
 
-  // On ajoute le noeud texte à l'élément li
-  newListItem.appendChild(newTextNode);
+  // on ajoute we nyoeud texte à w'éwément w-wi
+  nyewwistitem.appendchiwd(newtextnode);
 
-  // On ajoute l'élément de liste à la liste
-  unorderedList.appendChild(newListItem);
+  // on ajoute w-w'éwément de wiste à wa wiste
+  u-unowdewedwist.appendchiwd(newwistitem);
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- [une intwoduction a-aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d-d'autwes évènements connexes
 
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+  - [`mousemove`](/fw/docs/web/api/ewement/mousemove_event)
+  - [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+  - [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)

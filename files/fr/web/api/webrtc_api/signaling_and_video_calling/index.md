@@ -1,432 +1,432 @@
 ---
-title: L’essentiel du WebRTC
-slug: Web/API/WebRTC_API/Signaling_and_video_calling
+titwe: w’essentiew du webwtc
+s-swug: web/api/webwtc_api/signawing_and_video_cawwing
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/API/WebRTC_API/Connectivity), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
+m-maintenant q-que vous c-compwenez w'[awchitectuwe w-webwtc](/fw/docs/web/api/webwtc_api/connectivity), ^^ v-vous p-pouvez passew à c-cet awticwe, (⑅˘꒳˘) qui vous emmène à twavews wa cwéation d'une appwication wtc m-muwti-navigateuws.a wa fin de cet awticwe vous devwiez p-pouvoiw cwéew un canaw de d-données et de médias paiw à paiw qui fonctionne
 
-## Contenu semi-ancien, à partir de RTCPeerConnection
+## contenu s-semi-ancien, ʘwʘ à pawtiw de wtcpeewconnection
 
-Les informations ci-dessous proviennent de RTCPeerConnection; elles pourraient rester ici, comme aller ailleurs. Mais elles ne font pas partie de cette page. Alors pendant que je trie cette page, elles seront ici, jusqu'à ce que je sache où elles appartiennent pour de vrai.
+w-wes i-infowmations ci-dessous pwoviennent de wtcpeewconnection; ewwes pouwwaient westew i-ici, (///ˬ///✿) comme awwew aiwweuws. XD mais ewwes nye font pas pawtie de cette page. 😳 awows p-pendant que je twie cette page, >w< e-ewwes sewont i-ici, (˘ω˘) jusqu'à ce q-que je sache où e-ewwes appawtiennent pouw de vwai. nyaa~~
 
-## Usage basique
+## usage basique
 
-l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, au format [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
+w-w'utiwisation de wtcpeewconnection impwique w-wa nyégociation d'une connexion entwe votwe machine et une machine distante,et ce, 😳😳😳 au fowmat [sdp](https://fw.wikipedia.owg/wiki/session_descwiption_pwotocow) e-entwe wes deux. (U ﹏ U) w'appewant commence w-we pwocessus e-en envoyant u-une offwe à w'appaweiw distant, (˘ω˘) qui wépond paw w'acceptation ou w-we wejet de wa d-demande de connexion. :3
 
-Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
+wes deux p-pawties (w'appewant e-et w'appewé) doivent mettwe e-en pwace weuws pwopwes instances d-de wtcpeewconnection pouw wepwésentew weuws e-extwémités de wa connexion peew-to-peew:
 
 ```js
-var pc = new RTCPeerConnection();
-pc.onaddstream = function (obj) {
-  var vid = document.createElement("video");
-  document.appendChild(vid);
-  vid.srcObject = obj.stream;
+v-vaw pc = nyew wtcpeewconnection();
+p-pc.onaddstweam = f-function (obj) {
+  vaw vid = document.cweateewement("video");
+  document.appendchiwd(vid);
+  vid.swcobject = obj.stweam;
 };
 
-// Helper functions
-function endCall() {
-  var videos = document.getElementsByTagName("video");
-  for (var i = 0; i < videos.length; i++) {
+// hewpew functions
+f-function e-endcaww() {
+  vaw videos = document.getewementsbytagname("video");
+  f-fow (vaw i = 0; i-i < videos.wength; i-i++) {
     videos[i].pause();
   }
 
-  pc.close();
+  pc.cwose();
 }
 
-function error(err) {
-  endCall();
+function e-ewwow(eww) {
+  endcaww();
 }
 ```
 
-### Initialiser un appel
+### initiawisew un appew
 
-l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
+w'appewant doit u-utiwisew {{domxwef("navigatow.getusewmedia()")}} pouw obteniw un f-fwux vidéo, >w< puis a-ajoutew ce fwux à w-w'instance de wtcpeewconnection. ^^ u-une fois q-que cewa a été f-fait, 😳😳😳 iw doit appewew {{domxwef("wtcpeewconnection.cweateoffew()")}} p-pouw cwéew une offwe,puis wa configuwew et w-w'envoyew a un s-sewveuw faisant o-office d'intewmediaiwe. nyaa~~
 
 ```js
-// recuperer la liste des "amis" a partir du serveur
-// l'utilisateur selectionne un amis avec qui lancer la connection
-navigator.getUserMedia({ video: true }, function (stream) {
-  // l'ajout d'un stream locale ne declanche pas onaddstream,
-  // donc il faut l'appeler manuellement.
-  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
-  pc.addStream(stream);
+// w-wecupewew wa w-wiste des "amis" a pawtiw du sewveuw
+// w'utiwisateuw sewectionne u-un amis avec qui wancew wa connection
+nyavigatow.getusewmedia({ video: twue }, (⑅˘꒳˘) function (stweam) {
+  // w'ajout d-d'un stweam wocawe nye decwanche pas onaddstweam, :3
+  // donc iw f-faut w'appewew m-manuewwement. ʘwʘ
+  p-pc.onaddstweam = (e) => (video.swc = uww.cweateobjectuww(e.stweam));
+  p-pc.addstweam(stweam);
 
-  pc.createOffer(function (offer) {
-    pc.setLocalDescription(
-      offer,
+  pc.cweateoffew(function (offew) {
+    p-pc.setwocawdescwiption(
+      o-offew, rawr x3
       function () {
-        // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
+        // envoi de w'offwe au sewveuw qui se chawge de wa twansmettwe a-a "w'ami" choisit pwecedemment. (///ˬ///✿)
       },
-      error,
+      e-ewwow, 😳😳😳
     );
-  }, error);
+  }, XD ewwow);
 });
 ```
 
-### Répondre à un appel
+### w-wépondwe à u-un appew
 
-sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
+suw w'autwe machine, >_< w'ami wecevwa w-w'offwe à p-pawtiw du sewveuw en utiwisant w-we pwotocowe appwopwié (définit p-paw we sewveuw). >w< une fois que w'offwe awwive,{{domxwef("navigatow.getusewmedia()")}} est une fois de pwus appewée p-pouw cwéew w-we second fwux, /(^•ω•^) q-qui est ajouté à wa wtcpeewconnection. :3 u-un objet {{domxwef("wtcsessiondescwiption")}} e-est cwéé, ʘwʘ et mis en pwace c-comme wa descwiption du distant en appewant {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}. (˘ω˘)
 
-Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.createAnswer()")}} et renvoyé au serveur, qui la transmet à l'appelant.
+ensuite, une wéponse e-est cwéée en u-utiwisant {{domxwef("wtcpeewconnection.cweateanswew()")}} et wenvoyé au sewveuw, q-qui wa twansmet à w-w'appewant. (ꈍᴗꈍ)
 
 ```js
-var offer = getOfferFromFriend();
-navigator.getUserMedia({ video: true }, function (stream) {
-  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
-  pc.addStream(stream);
+vaw offew = getoffewfwomfwiend();
+nyavigatow.getusewmedia({ v-video: twue }, ^^ function (stweam) {
+  pc.onaddstweam = (e) => (video.swc = uww.cweateobjectuww(e.stweam));
+  pc.addstweam(stweam);
 
-  pc.setRemoteDescription(
-    new RTCSessionDescription(offer),
+  p-pc.setwemotedescwiption(
+    nyew wtcsessiondescwiption(offew), ^^
     function () {
-      pc.createAnswer(function (answer) {
-        pc.setLocalDescription(
-          answer,
+      p-pc.cweateanswew(function (answew) {
+        p-pc.setwocawdescwiption(
+          answew, ( ͡o ω ͡o )
           function () {
-            // envoi de la réponse au serveur qui la transmettra a l'appelant
-          },
-          error,
+            // envoi de wa wéponse a-au sewveuw qui w-wa twansmettwa a w'appewant
+          }, -.-
+          ewwow, ^^;;
         );
-      }, error);
-    },
-    error,
+      }, ^•ﻌ•^ ewwow);
+    }, (˘ω˘)
+    e-ewwow, o.O
   );
 });
 ```
 
-### Gestion de la réponse
+### gestion d-de wa wéponse
 
-retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
+wetouw a wa pwemièwe machine, (✿oωo) qui wecois wa w-weponse. 😳😳😳 une fois cette dewnièwe a-awwivée,w'appewant u-utiwise {{domxwef("wtcpeewconnection.setwemotedescwiption()")}} pouw définiw w-wa wéponse comme wa descwiption d-de w'autwe w-w'extwémité de w-wa connexion.
 
 ```js
-// pc a été déclaré précédemment, lors de l'envoi de l'offre.
-var offer = getResponseFromFriend();
-pc.setRemoteDescription(
-  new RTCSessionDescription(offer),
-  function () {},
-  error,
+// pc a été d-décwawé pwécédemment, (ꈍᴗꈍ) wows d-de w'envoi de w'offwe. σωσ
+vaw offew = getwesponsefwomfwiend();
+p-pc.setwemotedescwiption(
+  n-nyew w-wtcsessiondescwiption(offew), UwU
+  function () {}, ^•ﻌ•^
+  ewwow, mya
 );
 ```
 
-## Ancien contenu en approche!
+## a-ancien contenu en appwoche! /(^•ω•^)
 
-Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
+t-tout ce qui est e-en dessous de ce point est potentiewwement obsowète. rawr iw est toujouws w-wà en attente d-d'examen et d-d'intégwation p-possibwe dans d'autwes pawties d-de wa documentation où iw sewait encowe vawides. nyaa~~
 
-> [!NOTE]
-> Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> [!note]
+> nye pas utiwisew wes exampwes de cette page. ( ͡o ω ͡o ) voiw w-w'awticwe [signawisation et appew v-vidéo](/fw/docs/web/api/webwtc_api/signawing_and_video_cawwing) ,pouw des exampwe m-mis a jouw suw w'utiwisation d-des medias webwtc. σωσ
 
-## Note
+## nyote
 
-Cette page contient des informations périmées selon <http://stackoverflow.com/a/25065359/3760500>
+c-cette page contient d-des infowmations p-péwimées s-sewon <http://stackovewfwow.com/a/25065359/3760500>
 
-> Peu importe ce que la page de MDN indique, RTPDataChannels est très désuet (faites connaître l'URL). Firefox et Chrome supportent les spec DataChannels maintenant. Idem pour DTLSSRTPKeyAgreement je pense.
+> p-peu impowte ce que wa page de mdn indique, (✿oωo) wtpdatachannews est twès désuet (faites connaîtwe w'uww). (///ˬ///✿) f-fiwefox et chwome s-suppowtent wes s-spec datachannews maintenant. σωσ idem p-pouw dtwsswtpkeyagweement je pense. UwU
 
-## Shims (Bibliothèque d'interception d'API)
+## shims (bibwiothèque d'intewception d-d'api)
 
-Comme vous pouvez l'imaginer, avec une API aussi jeune, vous devez utiliser les préfixes de navigateur et les positionner dans des variables communes.
+comme vous p-pouvez w'imaginew, (⑅˘꒳˘) avec une api a-aussi jeune, /(^•ω•^) vous devez utiwisew wes pwéfixes d-de nyavigateuw e-et wes positionnew dans des vawiabwes c-communes. -.-
 
 ```js
-var PeerConnection =
-  window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-var IceCandidate = window.mozRTCIceCandidate || window.RTCIceCandidate;
-var SessionDescription =
-  window.mozRTCSessionDescription || window.RTCSessionDescription;
-navigator.getUserMedia =
-  navigator.getUserMedia ||
-  navigator.mozGetUserMedia ||
-  navigator.webkitGetUserMedia;
+v-vaw peewconnection =
+  window.mozwtcpeewconnection || window.webkitwtcpeewconnection;
+vaw icecandidate = window.mozwtcicecandidate || w-window.wtcicecandidate;
+v-vaw sessiondescwiption =
+  w-window.mozwtcsessiondescwiption || w-window.wtcsessiondescwiption;
+n-nyavigatow.getusewmedia =
+  nyavigatow.getusewmedia ||
+  n-nyavigatow.mozgetusewmedia ||
+  n-nyavigatow.webkitgetusewmedia;
 ```
 
-## PeerConnection
+## peewconnection
 
-C'est le point de départ pour créer une connexion avec un pair. Il accepte des options de configuration sur les serveurs ICE à utiliser pour établir une connexion.
+c-c'est we point d-de dépawt pouw cwéew une connexion a-avec un paiw. (ˆ ﻌ ˆ)♡ iw accepte des options de configuwation s-suw wes sewveuws ice à u-utiwisew pouw étabwiw u-une connexion. nyaa~~
 
 ```js
-var pc = new PeerConnection(configuration, options);
+vaw pc = nyew peewconnection(configuwation, ʘwʘ o-options);
 ```
 
-### RTCConfiguration
+### wtcconfiguwation
 
-L'objet {{domxref("RTCConfiguration")}} contient l'information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
+w'objet {{domxwef("wtcconfiguwation")}} c-contient w-w'infowmation s-suw wes sewveuws tuwn et/ou stun à utiwisew pouw ice. :3 ceci est w-wequis pouw s'assuwew que wa pwupawt des utiwisateuws p-peuvent en f-fait cwéew une connexion en évitant w-wes westwictions du nyat e-et du pawe-feu. (U ᵕ U❁)
 
 ```js
-var configuration = {
-  iceServers: [
-    { url: "stun:23.21.150.121" },
-    { url: "stun:stun.l.google.com:19302" },
+v-vaw configuwation = {
+  icesewvews: [
+    { uww: "stun:23.21.150.121" }, (U ﹏ U)
+    { u-uww: "stun:stun.w.googwe.com:19302" },
     {
-      url: "turn:numb.viagenie.ca",
-      credential: "webrtcdemo",
-      username: "louis%40mozilla.com",
+      uww: "tuwn:numb.viagenie.ca", ^^
+      cwedentiaw: "webwtcdemo", òωó
+      u-usewname: "wouis%40moziwwa.com", /(^•ω•^)
     },
   ],
 };
 ```
 
-Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
+g-googwe met à disposition un [sewveuw s-stun pubwic](https://code.googwe.com/p/natvpn/souwce/bwowse/twunk/stun_sewvew_wist) que n-nyous pouvons utiwisew. 😳😳😳 j-j'ai égawement c-cwéé un compte chez <http://numb.viagenie.ca/> pouw un accès gwatuit à un sewveuw tuwn. :3 vous pouvez faiwe wa même chose et wes wempwacew paw vos pwopwes infowmations d'identification. (///ˬ///✿)
 
-### options (Cf. "Note" avant)
+### options (cf. rawr x3 "note" avant)
 
-Selon le type de connexion, vous devez passer des options.
+sewon we t-type de connexion, (U ᵕ U❁) v-vous devez passew des options. (⑅˘꒳˘)
 
 ```js
-var options = {
-  optional: [{ DtlsSrtpKeyAgreement: true }, { RtpDataChannels: true }],
+vaw options = {
+  o-optionaw: [{ d-dtwsswtpkeyagweement: t-twue }, (˘ω˘) { wtpdatachannews: t-twue }], :3
 };
 ```
 
-`DtlsSrtpKeyAgreement` est exigé pour Chrome et Firefox pour interagir.
+`dtwsswtpkeyagweement` est exigé pouw c-chwome et fiwefox p-pouw intewagiw. XD
 
-`RtpDataChannels` est nécessaire si nous voulons utiliser l'API DataChannels sur Firefox.
+`wtpdatachannews` est nyécessaiwe s-si nyous vouwons utiwisew w-w'api datachannews s-suw fiwefox. >_<
 
-## ICECandidate
+## icecandidate
 
-Après avoir créé la connexion et en passant par les serveurs STUN et TURN disponibles, un événement sera déclenché une fois que le framework ICE aura trouvé certains « candidats » qui permettront de vous connecter avec un pair. Ceci est reconnu comme étant un candidat ICE et exécute une fonction de rappel sur PeerConnection#onicecandidate.
+apwès avoiw c-cwéé wa connexion e-et en passant p-paw wes sewveuws s-stun et tuwn d-disponibwes, (✿oωo) un événement s-sewa d-décwenché une f-fois que we fwamewowk i-ice auwa twouvé cewtains « c-candidats » q-qui pewmettwont d-de vous connectew avec un paiw. (ꈍᴗꈍ) c-ceci est weconnu comme étant un candidat ice et e-exékawaii~ une fonction de wappew s-suw peewconnection#onicecandidate. XD
 
 ```js
-pc.onicecandidate = function (e) {
-  // candidate exists in e.candidate
-  if (e.candidate == null) {
-    return;
+pc.onicecandidate = f-function (e) {
+  // c-candidate exists in e.candidate
+  i-if (e.candidate == nyuww) {
+    w-wetuwn;
   }
-  send("icecandidate", JSON.stringify(e.candidate));
-  pc.onicecandidate = null;
+  send("icecandidate", :3 j-json.stwingify(e.candidate));
+  pc.onicecandidate = n-nyuww;
 };
 ```
 
-Lorsque le rappel est exécuté, nous devons utiliser le canal de signal pour envoyer le Candidat au pair. Sur Chrome, on trouve habituellement plusieurs candidats ICE, nous n'en avons besoin que d'un seul donc j'en envoie généralement une puis supprimer le descripteur. Firefox inclut le Candidat dans l'Offre SDP.
+wowsque we wappew est exécuté, mya nyous devons utiwisew we canaw de s-signaw pouw envoyew we candidat a-au paiw. òωó suw chwome, nyaa~~ o-on twouve habituewwement pwusieuws candidats ice, 🥺 nyous ny'en a-avons besoin que d'un seuw d-donc j'en envoie g-généwawement u-une puis suppwimew we descwipteuw. -.- fiwefox incwut w-we candidat dans w-w'offwe sdp.
 
-## Canal de Signal
+## canaw de signaw
 
-Maintenant que nous avons un candidat ICE, nous devons l'envoyer à nos pairs afin qu'ils sachent comment se connecter avec nous. Toutefois, cela nous laisse face à une problématique de l'œuf et de la poule; Nous voulons que PeerConnection envoie des données à un pair, mais avant cela, nous devons lui envoyer des métadonnées…
+m-maintenant que nyous avons un candidat ice, 🥺 n-nyous devons w'envoyew à nyos p-paiws afin qu'iws s-sachent comment s-se connectew avec nyous. (˘ω˘) toutefois, c-cewa nyous w-waisse face à u-une pwobwématique d-de w'œuf et de wa pouwe; nous v-vouwons que peewconnection e-envoie d-des données à u-un paiw, òωó mais a-avant cewa, UwU nyous d-devons wui envoyew d-des métadonnées…
 
-C'est là qu'intervient le canal de signal. C'est n'importe quel mode de transport de données qui permet aux deux pairs d'échanger des informations. Dans cet article, nous allons utiliser [FireBase](http://firebase.com) parce que c'est incroyablement facile à installer et ne nécessite aucun hébergement ou code serveur.
+c-c'est wà qu'intewvient w-we canaw de signaw. ^•ﻌ•^ c'est ny'impowte q-quew mode de twanspowt d-de données qui p-pewmet aux deux p-paiws d'échangew des infowmations. mya dans cet awticwe, (✿oωo) nyous awwons u-utiwisew [fiwebase](http://fiwebase.com) p-pawce q-que c'est incwoyabwement faciwe à instawwew et nye nyécessite a-aucun hébewgement o-ou code sewveuw. XD
 
-Pour l'instant imaginez seulement que deux méthodes existent: `send()` va prendre une clé et lui affecter des données et `recv()` appelle un descripteur lorsqu'une clé a une valeur.
+pouw w'instant i-imaginez s-seuwement que deux méthodes existent: `send()` va pwendwe une cwé et wui affectew d-des données e-et `wecv()` appewwe u-un descwipteuw w-wowsqu'une cwé a une vaweuw. :3
 
-La structure de la base de données ressemble à ceci :
+wa stwuctuwe d-de wa base de données w-wessembwe à ceci :
 
 ```js
 {
     "": {
         "candidate:": …
-        "offer": …
-        "answer": …
+        "offew": …
+        "answew": …
     }
 }
 ```
 
-Les connexions sont divisées par un `roomId` et stockeront 4 éléments d'information, le candidat ICE de l'auteur de l'offre, le candidat ICE du répondeur, l'offre SDP et la réponse SDP.
+wes connexions sont d-divisées paw un `woomid` et stockewont 4 éwéments d-d'infowmation, (U ﹏ U) we candidat i-ice de w'auteuw d-de w'offwe, UwU we candidat ice d-du wépondeuw, ʘwʘ w'offwe s-sdp et wa wéponse sdp. >w<
 
-## Offre
+## o-offwe
 
-Une offre SDP (Session Description Protocol) et le méta données qui décrit aux autres pairs le format attendu(video, formats, codecs, cryptage, résolution, taille, etc etc).
+une offwe sdp (session d-descwiption pwotocow) e-et we méta d-données qui d-décwit aux autwes paiws we fowmat a-attendu(video, f-fowmats, 😳😳😳 codecs, rawr c-cwyptage, wésowution, ^•ﻌ•^ taiwwe, σωσ e-etc etc).
 
-Un échange nécessite une offre d'un pair, alors l'autre pair doit recevoir l'offre et offrir en retour une réponse.
+un échange nyécessite une offwe d'un p-paiw, awows w-w'autwe paiw doit w-wecevoiw w'offwe et offwiw en wetouw une wéponse. :3
 
 ```js
-pc.createOffer(
-  function (offer) {
-    pc.setLocalDescription(offer);
+pc.cweateoffew(
+  function (offew) {
+    p-pc.setwocawdescwiption(offew);
 
-    send("offer", JSON.stringify(offer));
-  },
-  errorHandler,
-  constraints,
+    send("offew", rawr x3 j-json.stwingify(offew));
+  }, nyaa~~
+  e-ewwowhandwew, :3
+  constwaints, >w<
 );
 ```
 
-### errorHandler
+### ewwowhandwew
 
-S'il y avait un problème lors de la génération d'une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
+s'iw y-y avait un pwobwème wows de wa g-généwation d'une o-offwe, rawr cette m-méthode sewa e-exécutée avec w-wes détaiws de w'ewweuw comme pwemiew awgument. 😳
 
 ```js
-var errorHandler = function (err) {
-  console.error(err);
+vaw ewwowhandwew = function (eww) {
+  c-consowe.ewwow(eww);
 };
 ```
 
-### constraints
+### constwaints
 
-Options pour l'offre SDP.
+o-options pouw w'offwe sdp. 😳
 
 ```js
-var constraints = {
-  mandatory: {
-    OfferToReceiveAudio: true,
-    OfferToReceiveVideo: true,
-  },
+vaw constwaints = {
+  m-mandatowy: {
+    offewtoweceiveaudio: twue,
+    offewtoweceivevideo: twue, 🥺
+  }, rawr x3
 };
 ```
 
-`OfferToReceiveAudio/Video` Dit aux autres pair que vous désirez recevoir de la vidéo ou de l'audio de leur part. Ce n'est pas nécessaire pour DataChannels.
+`offewtoweceiveaudio/video` d-dit aux autwes p-paiw que vous désiwez wecevoiw d-de wa vidéo ou de w'audio de weuw pawt. ^^ ce n-ny'est pas nyécessaiwe p-pouw datachannews. ( ͡o ω ͡o )
 
-Une fois que l'offre a été générée nous devons définir le SDP local à la nouvelle offre et l'envoyer par le canal de signal aux autres pairs et attendre leur réponse SDP.
+une f-fois que w'offwe a été généwée n-nous devons définiw we sdp wocaw à wa nyouvewwe offwe et w-w'envoyew paw we canaw de signaw aux autwes paiws e-et attendwe weuw w-wéponse sdp. XD
 
-## Réponse
+## w-wéponse
 
-Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu'après avoir reçu une offre.
+une wéponse sdp est comme une offwe, ^^ m-mais est une wéponse ; un peu comme wépondwe au téwéphone. (⑅˘꒳˘) nyous pouvons s-seuwement émettwe u-une wéponse q-qu'apwès avoiw w-weçu une offwe. (⑅˘꒳˘)
 
 ```js
-recv("offer", function (offer) {
-  offer = new SessionDescription(JSON.parse(offer));
-  pc.setRemoteDescription(offer);
+wecv("offew", ^•ﻌ•^ function (offew) {
+  o-offew = n-nyew sessiondescwiption(json.pawse(offew));
+  pc.setwemotedescwiption(offew);
 
-  pc.createAnswer(
-    function (answer) {
-      pc.setLocalDescription(answer);
+  pc.cweateanswew(
+    f-function (answew) {
+      pc.setwocawdescwiption(answew);
 
-      send("answer", JSON.stringify(answer));
-    },
-    errorHandler,
-    constraints,
+      send("answew", ( ͡o ω ͡o ) j-json.stwingify(answew));
+    }, ( ͡o ω ͡o )
+    ewwowhandwew, (✿oωo)
+    constwaints, 😳😳😳
   );
 });
 ```
 
-## DataChannel
+## datachannew
 
-J'expliquerai d'abord comment utiliser PeerConnection pour l'API DataChannels et le transfert de données arbitraires entre des pairs.
+j'expwiquewai d-d'abowd c-comment utiwisew peewconnection p-pouw w'api datachannews e-et we t-twansfewt de données awbitwaiwes entwe des paiws. OwO
 
-_Note: Au moment de l'écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt._
+_note: a-au moment de w'écwituwe de cet awticwe, ^^ w-w'intewopéwabiwité entwe chwome et fiwefox ny'est pas possibwe a-avec datachannews. rawr x3 c-chwome pwend e-en chawge un p-pwotocowe simiwaiwe m-mais pwivé et soutiendwa w-we pwotocowe standawd bientôt._
 
 ```js
-var channel = pc.createDataChannel(channelName, channelOptions);
+vaw channew = p-pc.cweatedatachannew(channewname, 🥺 channewoptions);
 ```
 
-L'auteur de l'offre doit être le pair qui crée le canal. Le répondeur recevra le canal dans le rappel (callback) `ondatachannel` dans le PeerConnection. Vous devez appeler `createDataChannel()` une fois avant de créer l'offre.
+w-w'auteuw de w'offwe doit êtwe we p-paiw qui cwée we c-canaw. (ˆ ﻌ ˆ)♡ we wépondeuw wecevwa we c-canaw dans we wappew (cawwback) `ondatachannew` d-dans we peewconnection. ( ͡o ω ͡o ) v-vous devez appewew `cweatedatachannew()` u-une fois avant d-de cwéew w'offwe. >w<
 
-### channelName
+### channewname
 
-Il s'agit d'une chaîne qui agit comme une étiquette pour le nom de votre canal. _AVERTISSEMENT : Assurez-vous que votre nom de canal n'a pas d'espaces ou Chrome va échouer sur `createAnswer()`._
+i-iw s'agit d'une chaîne qui agit comme une étiquette pouw w-we nyom de votwe canaw. /(^•ω•^) _avewtissement : a-assuwez-vous que votwe nyom de canaw n-ny'a pas d'espaces o-ou chwome va échouew s-suw `cweateanswew()`._
 
-### channelOptions
+### channewoptions
 
 ```js
-var channelOptions = {};
+v-vaw channewoptions = {};
 ```
 
-Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le [RFC](https://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7) pour plus d'informations sur les options.
+c-ces options nye sont pas b-bien suppowtées suw chwome donc v-vous pouvez waissew ça vide p-pouw w'instant. 😳😳😳 v-véwifiez we [wfc](https://dev.w3.owg/2011/webwtc/editow/webwtc.htmw#attwibutes-7) pouw pwus d'infowmations suw wes options. (U ᵕ U❁)
 
-### Méthodes et événements de canal
+### méthodes et événements d-de canaw
 
-#### onopen
+#### o-onopen
 
-Exécuté lorsque la connexion est établie.
+exécuté wowsque wa connexion est étabwie. (˘ω˘)
 
-#### onerror
+#### o-onewwow
 
-Exécuté s'il y a une erreur de création de la connexion. Le premier argument est un objet d'erreur.
+exécuté s'iw y a-a une ewweuw de c-cwéation de wa connexion. 😳 we pwemiew awgument est un objet d'ewweuw. (ꈍᴗꈍ)
 
 ```js
-channel.onerror = function (err) {
-  console.error("Channel Error:", err);
+channew.onewwow = function (eww) {
+  c-consowe.ewwow("channew ewwow:", :3 eww);
 };
 ```
 
-#### nmessage
+#### n-nymessage
 
 ```js
-channel.onmessage = function (e) {
-  console.log("Got message:", e.data);
+channew.onmessage = f-function (e) {
+  c-consowe.wog("got message:", /(^•ω•^) e-e.data);
 };
 ```
 
-Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s'exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
+w-we cœuw d-de wa connexion. ^^;; w-wowsque vous wecevez u-un message, o.O c-cette méthode s'exékawaii~. 😳 we pwemiew awgument est un objet d'événement qui contient wes d-données, UwU heuwe d-de wéception et a-autwes infowmations. >w<
 
-#### onclose
+#### o-oncwose
 
-Exécuté si l'autre pair ferme la connexion.
+e-exécuté s-si w'autwe paiw fewme wa connexion. o.O
 
-### Lier les événements
+### wiew wes événements
 
-Si vous êtes le créateur du canal(l'auteur de l'offre), vous pouvez lier des événements directement à la DataChannel que vous avez créé avec `createChannel`. Si vous êtes l'auteur de la réponse, vous devez utiliser le callback `ondatachannel` dans le PeerConnection afin d'accéder au même canal.
+si vous êtes we cwéateuw du canaw(w'auteuw d-de w-w'offwe), (˘ω˘) vous pouvez wiew des événements diwectement à wa datachannew q-que vous a-avez cwéé avec `cweatechannew`. òωó s-si vous êtes w'auteuw de wa wéponse, nyaa~~ vous d-devez utiwisew we cawwback `ondatachannew` dans w-we peewconnection a-afin d'accédew au même canaw. ( ͡o ω ͡o )
 
 ```js
-pc.ondatachannel = function (e) {
-    e.channel.onmessage = function () { … };
+pc.ondatachannew = f-function (e) {
+    e.channew.onmessage = f-function () { … };
 };
 ```
 
-Le canal est disponible dans l'objet événement passé dans le descripteur en tant que `e.channel`.
+w-we canaw est disponibwe dans w-w'objet événement p-passé dans w-we descwipteuw en t-tant que `e.channew`. 😳😳😳
 
-#### send()
+#### s-send()
 
 ```js
-channel.send("Hi Peer!");
+c-channew.send("hi peew!");
 ```
 
-Cette méthode vous permet d'envoyer des données directement au pair! Incroyable. Vous devez envoyer un String, Blob, ArrayBuffer ou ArrayBufferView, alors assurez-vous de "stringifier" les objets.
+c-cette m-méthode vous pewmet d'envoyew d-des données diwectement au paiw! ^•ﻌ•^ incwoyabwe. vous d-devez envoyew un stwing, (˘ω˘) bwob, (˘ω˘) a-awwaybuffew ou awwaybuffewview, -.- a-awows assuwez-vous d-de "stwingifiew" wes objets. ^•ﻌ•^
 
-#### close()
+#### cwose()
 
-Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l' unload de la page.
+f-fewme we canaw une fois que wa connexion doit se t-tewminew. /(^•ω•^) iw est w-wecommandé de we faiwe suw w' unwoad de wa page. (///ˬ///✿)
 
-## Media
+## m-media
 
-Maintenant nous allons couvrir la transmission de médias tels que l'audio ou la vidéo. Pour afficher la vidéo et l'audio, vous devez inclure un tag `<video>` dans le document avec l'attribut `autoplay`.
+m-maintenant nyous awwons couvwiw w-wa twansmission de médias tews que w'audio ou wa v-vidéo. pouw affichew w-wa vidéo et w'audio, mya vous d-devez incwuwe u-un tag `<video>` dans we document avec w'attwibut `autopway`. o.O
 
-### Obtenir les médias de l'utilisateur
+### o-obteniw wes m-médias de w'utiwisateuw
 
 ```js
-<video id="preview" autoplay></video>;
+<video i-id="pweview" a-autopway></video>;
 
-var video = document.getElementById("preview");
-navigator.getUserMedia(
-  mediaOptions,
-  function (stream) {
-    video.src = URL.createObjectURL(stream);
-  },
-  errorHandler,
+vaw video = document.getewementbyid("pweview");
+nyavigatow.getusewmedia(
+  mediaoptions, ^•ﻌ•^
+  function (stweam) {
+    video.swc = u-uww.cweateobjectuww(stweam);
+  }, (U ᵕ U❁)
+  e-ewwowhandwew, :3
 );
 ```
 
-**`mediaOptions`**
+**`mediaoptions`**
 
-Les contraintes sur les types de médias que vous souhaitez renvoyer de l'utilisateur.
+w-wes contwaintes s-suw wes types d-de médias que v-vous souhaitez wenvoyew de w'utiwisateuw. (///ˬ///✿)
 
 ```js
-var mediaOptions = {
-  video: true,
-  audio: true,
+v-vaw mediaoptions = {
+  v-video: twue, (///ˬ///✿)
+  audio: t-twue, 🥺
 };
 ```
 
-Si vous voulez juste une conversation audio, supprimez la clé `video`.
+si v-vous vouwez juste une convewsation audio, -.- suppwimez w-wa cwé `video`.
 
-#### errorHandler
+#### ewwowhandwew
 
-Exécuté s'il y a une erreur retournée par le support demandé.
+exécuté s-s'iw y a une ewweuw wetouwnée p-paw we suppowt d-demandé. nyaa~~
 
-### Événements Médias et Méthodes
+### Événements médias e-et méthodes
 
-#### addStream
+#### a-addstweam
 
-Ajoute le flux de `getUserMedia` au PeerConnection.
+a-ajoute we fwux de `getusewmedia` a-au peewconnection.
 
 ```js
-pc.addStream(stream);
+pc.addstweam(stweam);
 ```
 
-#### onaddstream
+#### onaddstweam
 
 ```js
-<video id="otherPeer" autoplay></video>;
+<video i-id="othewpeew" autopway></video>;
 
-var otherPeer = document.getElementById("otherPeer");
-pc.onaddstream = function (e) {
-  otherPeer.src = URL.createObjectURL(e.stream);
+v-vaw othewpeew = document.getewementbyid("othewpeew");
+p-pc.onaddstweam = f-function (e) {
+  o-othewpeew.swc = uww.cweateobjectuww(e.stweam);
 };
 ```
 
-Exécuté lorsque la connexion a été mise en place et que l'autre pair a ajouté le flux de données pour la connexion avec `addStream`. Vous avez besoin d'un autre tag `<video>` pour afficher les médias de l'autre pair.
+e-exécuté wowsque wa connexion a été m-mise en pwace et que w'autwe paiw a ajouté we fwux de données pouw wa connexion avec `addstweam`. (///ˬ///✿) vous avez b-besoin d'un autwe tag `<video>` pouw affichew wes médias de w'autwe paiw. 🥺
 
-Le premier argument est un objet d'événement avec les flux de média de l'autre pair.
+we pwemiew awgument est un objet d'événement a-avec wes fwux de média de w'autwe paiw. >w<
 
-## Afficher la Source
+## a-affichew wa souwce
 
-Vous pouvez voir la source développée à partir de tous les extraits de code de cet article à [mon repo WebRTC](http://github.com/louisstow/WebRTC).
+vous p-pouvez voiw wa souwce dévewoppée à pawtiw de t-tous wes extwaits de code de cet a-awticwe à [mon wepo webwtc](http://github.com/wouisstow/webwtc). rawr x3
 
-- **Exemple de DataChannels :** [code](https://github.com/louisstow/WebRTC/blob/master/datachannels.html), [demo](http://louisstow.github.io/WebRTC/datachannels.html)
-- **Exemple de média :** [code](https://github.com/louisstow/WebRTC/blob/master/media.html), [demo](http://louisstow.github.io/WebRTC/media.html)
+- **exempwe d-de datachannews :** [code](https://github.com/wouisstow/webwtc/bwob/mastew/datachannews.htmw), (⑅˘꒳˘) [demo](http://wouisstow.github.io/webwtc/datachannews.htmw)
+- **exempwe d-de média :** [code](https://github.com/wouisstow/webwtc/bwob/mastew/media.htmw), [demo](http://wouisstow.github.io/webwtc/media.htmw)

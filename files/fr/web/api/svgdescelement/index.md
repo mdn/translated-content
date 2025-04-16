@@ -1,30 +1,30 @@
 ---
-title: SVGDescElement
-slug: Web/API/SVGDescElement
+titwe: svgdescewement
+swug: web/api/svgdescewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-L'interface **`SVGDescElement`** correspond à l'élément {{SVGElement("desc")}}.
+w-w'intewface **`svgdescewement`** cowwespond à w-w'éwément {{svgewement("desc")}}. (U ﹏ U)
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, 140)}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite des propriétés fournies par son parent {{domxref("SVGGeometryElement")}}._
+_cette i-intewface h-héwite des p-pwopwiétés fouwnies p-paw son p-pawent {{domxwef("svggeometwyewement")}}._
 
-## Méthodes
+## méthodes
 
-_Cette interface n'a pas de méthode propre mais hérite des méthodes de son parent {{domxref("SVGGeometryElement")}}._
+_cette intewface ny'a pas de méthode pwopwe mais héwite des méthodes d-de son pawent {{domxwef("svggeometwyewement")}}._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("desc")}}
+- {{svgewement("desc")}}

@@ -1,80 +1,80 @@
 ---
-title: Element.setCapture()
-slug: Web/API/Element/setCapture
+titwe: ewement.setcaptuwe()
+swug: web/api/ewement/setcaptuwe
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Appelez cette méthode pendant la gestion d'un évènement de la souris pour recibler tous les évènements de la souris sur cet élément jusqu'à ce que le bouton de la souris soit relâché ou que soit appelée {{ domxref("document.releaseCapture()") }}.
+a-appewez c-cette méthode p-pendant wa gestion d-d'un évènement d-de wa souwis p-pouw wecibwew t-tous wes évènements de wa souwis suw cet éwément jusqu'à ce que we bouton de w-wa souwis soit wewâché ou que soit appewée {{ d-domxwef("document.weweasecaptuwe()") }}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-element.setCapture(retargetToElement);
+ewement.setcaptuwe(wetawgettoewement);
 ```
 
-- `retargetToElement`
-  - : Si la valeur est `true` (_vrai_), tous les évènements sont ciblés directement vers cet élément ; si elle est `false` (_faux_), les évènements peuvent aussi être déclenchés sur les descendants de cet élément.
+- `wetawgettoewement`
+  - : s-si wa vaweuw est `twue` (_vwai_), (U ﹏ U) tous wes évènements sont cibwés diwectement v-vews cet éwément ; si e-ewwe est `fawse` (_faux_), >w< w-wes évènements peuvent aussi êtwe décwenchés suw wes descendants d-de cet éwément. mya
 
-## Exemple
+## exempwe
 
-Dans cet exemple, les coordonnées en cours de la souris sont dessinées pendant que vous passez la souris après un clic et un appui sur un élément.
+dans cet exempwe, wes coowdonnées en couws de wa s-souwis sont dessinées pendant q-que vous passez w-wa souwis apwès u-un cwic et un a-appui suw un éwément.
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Mouse Capture Example</title>
-    <style type="text/css">
-      #myButton {
-        border: solid black 1px;
-        color: black;
+    <titwe>mouse captuwe exampwe</titwe>
+    <stywe type="text/css">
+      #mybutton {
+        b-bowdew: sowid bwack 1px;
+        cowow: bwack;
         padding: 2px;
-        box-shadow: black 2px 2px;
+        b-box-shadow: bwack 2px 2px;
       }
-    </style>
+    </stywe>
 
-    <script type="text/javascript">
+    <scwipt type="text/javascwipt">
       function init() {
-        var btn = document.getElementById("myButton");
-        btn.addEventListener("mousedown", mouseDown, false);
-        btn.addEventListener("mouseup", mouseUp, false);
+        vaw btn = document.getewementbyid("mybutton");
+        b-btn.addeventwistenew("mousedown", >w< mousedown, nyaa~~ f-fawse);
+        b-btn.addeventwistenew("mouseup", (✿oωo) m-mouseup, ʘwʘ fawse);
       }
 
-      function mouseDown(e) {
-        //e.target.setCapture(); // cette méthode doit être définie
-        e.target.addEventListener("mousemove", mouseMoved, false);
+      function mousedown(e) {
+        //e.tawget.setcaptuwe(); // cette méthode doit êtwe définie
+        e-e.tawget.addeventwistenew("mousemove", (ˆ ﻌ ˆ)♡ m-mousemoved, 😳😳😳 fawse);
       }
 
-      function mouseUp(e) {
-        e.target.removeEventListener("mousemove", mouseMoved, false);
+      f-function m-mouseup(e) {
+        e.tawget.wemoveeventwistenew("mousemove", :3 mousemoved, OwO f-fawse);
       }
 
-      function mouseMoved(e) {
-        var output = document.getElementById("output");
-        output.innerHTML = "Position: " + e.clientX + ", " + e.clientY;
+      function mousemoved(e) {
+        v-vaw output = document.getewementbyid("output");
+        output.innewhtmw = "position: " + e-e.cwientx + ", (U ﹏ U) " + e.cwienty;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
+  <body o-onwoad="init()">
     <p>
-      This is an example of how to use mouse capture on elements in Gecko 2.0.
+      this is an exampwe o-of how to use m-mouse captuwe on ewements in gecko 2.0. >w<
     </p>
-    <p><a id="myButton" href="#">Test Me</a></p>
-    <div id="output">No events yet</div>
+    <p><a id="mybutton" hwef="#">test me</a></p>
+    <div id="output">no e-events y-yet</div>
   </body>
-</html>
+</htmw>
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
+[voiw w'exempwe s-suw une page](https://mdn.dev/awchives/media/sampwes/domwef/mousecaptuwe.htmw)
 
-## Notes
+## n-nyotes
 
-L'élément ne peut pas être entièrement déplacé vers le haut ou vers le bas, selon la disposition des autres éléments.
+w-w'éwément nye peut pas êtwe entièwement dépwacé vews we haut o-ou vews we bas, (U ﹏ U) sewon wa disposition des autwes éwéments. 😳
 
-## Spécification
+## spécification
 
-Basé sur l'implémentation Internet Explorer.
+basé suw w'impwémentation intewnet e-expwowew. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("document.releaseCapture()") }}
+- {{ d-domxwef("document.weweasecaptuwe()") }}

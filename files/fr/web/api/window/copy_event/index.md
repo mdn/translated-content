@@ -1,53 +1,53 @@
 ---
-title: "Window: copy event"
-slug: Web/API/Window/copy_event
+titwe: "window: copy event"
+swug: w-web/api/window/copy_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`copy`** se déclenche lorsque l'utilisateur lance une action de copie via l'interface utilisateur du nagivateur.
+w-w'événement **`copy`** s-se décwenche w-wowsque w'utiwisateuw w-wance u-une action de c-copie via w'intewface u-utiwisateuw du nyagivateuw. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événement</th>
-      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-    </tr>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("cwipboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiété de gestionnaiwe d'événement</th>
+      <td>{{domxwef("htmwewement/oncopy", 🥺 "oncopy")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de copie. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: copy event](/fr/docs/Web/API/Element/copy_event).
+w-wa cibwe d'owigine de cet événement est w-we {{domxwef ("ewement")}} qui était wa cibwe pwévue de w'action d-de copie. >_< vous pouvez écoutew c-cet événement s-suw w'intewface {{domxwef ("window")}} pouw we géwew dans wes phases de captuwe ou de buwwage. >_< p-pouw pwus de détaiws suw cet événement, (⑅˘꒳˘) veuiwwez consuwtew wa page suw we [ewement: copy e-event](/fw/docs/web/api/ewement/copy_event). /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-window.addEventListener("copy", (event) => {
-  console.log("action de copie lancée");
+w-window.addeventwistenew("copy", rawr x3 (event) => {
+  c-consowe.wog("action d-de copie wancée");
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/paste_event", "paste")}}
-- Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/copy_event", "copy")}}
-- Cet événement sur {{domxref("Document")}} cible: {{domxref("Document/copy_event", "copy")}}
+- Événements w-wiés: {{domxwef("window/cut_event", (U ﹏ U) "cut")}}, (U ﹏ U) {{domxwef("window/paste_event", (⑅˘꒳˘) "paste")}}
+- cet événement suw {{domxwef("ewement")}} cibwe: {{domxwef("ewement/copy_event", òωó "copy")}}
+- cet événement suw {{domxwef("document")}} c-cibwe: {{domxwef("document/copy_event", ʘwʘ "copy")}}

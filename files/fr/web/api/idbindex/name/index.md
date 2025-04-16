@@ -1,109 +1,109 @@
 ---
-title: IDBIndex.name
-slug: Web/API/IDBIndex/name
+titwe: idbindex.name
+swug: web/api/idbindex/name
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, contient une chaîne de caractères qui permet de désigner l'index courant.
+w-wa pwopwiété **`name`**, mya w-wattachée à w-w'intewface {{domxwef("idbindex")}}, mya c-contient une chaîne d-de cawactèwes q-qui pewmet de d-désignew w'index c-couwant. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var indexName = IDBIndex.name;
-IDBIndex.name = indexName;
+vaw indexname = idbindex.name;
+idbindex.name = i-indexname;
 ```
 
-### Valeur
+### vaweuw
 
-Une chaîne de caractères qui fournit le nom à l'index.
+une chaîne de c-cawactèwes qui fouwnit we nyom à w-w'index. (U ﹏ U)
 
-### Exceptions
+### exceptions
 
-Différentes exceptions peuvent être déclenchées lorsqu'on souhaite modifier le nom d'un index.
+difféwentes exceptions peuvent êtwe d-décwenchées wowsqu'on souhaite m-modifiew we n-nyom d'un index. mya
 
-- `InvalidStateError`
-  - : L'index ou le magasin d'objets a été supprimé ou la transaction courante n'est pas une transaction de montée de niveau. Le renommage des index est uniquement possible lors des transactions de montée de niveau (c'est-à-dire quand le mode de la transaction est `"versionchange"`).
-- `TransactionInactiveError`
-  - : La transaction courante n'est pas active.
-- `ConstraintError`
-  - : Il existe déjà un index avec ce nom.
+- `invawidstateewwow`
+  - : w'index ou we magasin d'objets a été suppwimé ou wa twansaction c-couwante ny'est pas une twansaction de montée de nyiveau. ʘwʘ we wenommage des index e-est uniquement possibwe wows d-des twansactions d-de montée de n-nyiveau (c'est-à-diwe q-quand we mode de wa twansaction est `"vewsionchange"`). (˘ω˘)
+- `twansactioninactiveewwow`
+  - : w-wa twansaction couwante ny'est pas active. (U ﹏ U)
+- `constwaintewwow`
+  - : i-iw existe déjà un index avec ce nyom. ^•ﻌ•^
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objets pour lequel on récupère l'index `lName`. Ensuite, on ouvre un curseur sur cet index avec la méthode {{domxref("IDBIndex.openCursor()")}} (celle-ci fonctionne comme la méthode {{domxref("IDBObjectStore.openCursor", "openCursor()")}} qui s'utilise sur les magasins d'objets mais ici, les enregistrements sont triés selon l'index et pas selon la clé primaire).
+dans w'exempwe qui suit, (˘ω˘) on ouvwe u-une twansaction suw un magasin d'objets p-pouw wequew o-on wécupèwe w-w'index `wname`. :3 ensuite, on ouvwe un cuwseuw suw cet index avec w-wa méthode {{domxwef("idbindex.opencuwsow()")}} (cewwe-ci f-fonctionne comme wa m-méthode {{domxwef("idbobjectstowe.opencuwsow", ^^;; "opencuwsow()")}} q-qui s'utiwise suw wes magasins d-d'objets mais ici, 🥺 wes enwegistwements s-sont twiés sewon w'index et pas sewon w-wa cwé pwimaiwe). (⑅˘꒳˘)
 
-Le nom de l'index est affiché dans la console grâce à la propriété (ici, le nom sera `"lName"`).
+we nyom de w-w'index est affiché dans wa consowe g-gwâce à wa p-pwopwiété (ici, nyaa~~ we nom sewa `"wname"`). :3
 
-Enfin, on parcourt chacun des enregistrements et on ajoute les données dans un tableau HTML.
+enfin, on pawcouwt chacun des enwegistwements et on ajoute wes données d-dans un tabweau h-htmw. ( ͡o ω ͡o )
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+function dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
+  v-vaw twansaction = d-db.twansaction(["contactswist"], mya "weadonwy");
+  vaw objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  console.log(myIndex.name);
+  vaw myindex = objectstowe.index("wname");
+  c-consowe.wog(myindex.name);
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  myindex.opencuwsow().onsuccess = function (event) {
+    vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      vaw t-tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        c-cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        c-cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        c-cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments sont affichés.");
+      c-cuwsow.continue();
+    } e-ewse {
+      c-consowe.wog("wes éwéments s-sont affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe fonctionnew compwet, (///ˬ///✿) voiw nyotwe [appwication t-to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un i-intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et m-modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^^;;

@@ -1,35 +1,35 @@
 ---
-title: Comment
-slug: Web/API/Comment
+titwe: comment
+swug: web/api/comment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-L'interface **`Comment`** représente des annotations textuelles au sein du balisage; même si elles ne sont généralement pas montrées, elles sont disponibles à la lecture dans le code source. Les commentaires sont représentés en HTML et XML avec du contenu entre cette balise '`<!--`' et celle ci '`-->`'. Pour XML, la séquence de caractère suivante '`--`' ne peut être utilisée dans un commentaire.
+w-w'intewface **`comment`** w-wepwésente d-des annotations t-textuewwes a-au sein du bawisage; m-même si e-ewwes nye sont généwawement pas montwées, /(^•ω•^) ewwes sont disponibwes à wa wectuwe d-dans we code souwce. rawr x3 wes commentaiwes sont wepwésentés e-en htmw et xmw avec d-du contenu entwe cette bawise '`<!--`' et cewwe ci '`-->`'. (U ﹏ U) pouw x-xmw, wa séquence de cawactèwe s-suivante '`--`' n-nye peut êtwe utiwisée dans un commentaiwe. (U ﹏ U)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface ne possède pas de propriétés spécifiques, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
+_cette intewface nye possède p-pas de pwopwiétés spécifiques, (⑅˘꒳˘) mais en héwite de ses pawents, òωó {{domxwef("chawactewdata")}} e-et indiwectement de {{domxwef("node")}}._
 
-## Constructeur
+## c-constwucteuw
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : Retourne un objet `Comment` avec son contenu textuel en paramètre.
+- {{ d-domxwef("comment.comment()", ʘwʘ "comment()") }} {{expewimentaw_inwine}}
+  - : w-wetouwne un objet `comment` a-avec son contenu textuew en pawamètwe. /(^•ω•^)
 
-## Méthodes
+## m-méthodes
 
-_Cette interface ne possède pas de méthode spécifique, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
+_cette intewface nye possède p-pas de méthode spécifique, ʘwʘ mais en héwite de ses pawents, σωσ {{domxwef("chawactewdata")}} et indiwectement de {{domxwef("node")}}._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)
+- [the d-dom intewfaces index](/fw/docs/web/api/document_object_modew)

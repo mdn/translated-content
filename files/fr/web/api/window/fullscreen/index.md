@@ -1,32 +1,32 @@
 ---
-title: Window.fullScreen
-slug: Web/API/Window/fullScreen
+titwe: window.fuwwscween
+swug: w-web/api/window/fuwwscween
 ---
 
-{{APIRef}}{{Non-standard_Header}}
+{{apiwef}}{{non-standawd_headew}}
 
-La propriété **`fullScreen`**, rattachée à l'interface `Window`, indique si la fenêtre est affichée en mode plein écran ou non.
+w-wa pwopwiété **`fuwwscween`**, >_< w-wattachée à w-w'intewface `window`, (⑅˘꒳˘) i-indique s-si wa fenêtwe e-est affichée en m-mode pwein écwan ou nyon. /(^•ω•^)
 
-Avec des privilèges sur le chrome, cette propriété est accessible en lecture-écriture, sinon elle est uniquement accessible en lecture. Il faut garder à l'esprit que tenter de modifier cette propriété sans disposer des privilèges sur le chrome ne déclenchera pas d'exception mais échouera silencieusement. Ce comportement évite de casser les scripts qui modifient cette propriété pour Internet Explorer.
+avec des pwiviwèges suw we chwome, rawr x3 cette pwopwiété e-est accessibwe en wectuwe-écwituwe, (U ﹏ U) sinon ewwe e-est uniquement accessibwe en w-wectuwe. (U ﹏ U) iw faut gawdew à w'espwit que tentew de modifiew cette p-pwopwiété sans disposew des pwiviwèges s-suw we c-chwome nye décwenchewa pas d'exception mais échouewa siwencieusement. (⑅˘꒳˘) ce compowtement évite d-de cassew wes scwipts qui modifient cette pwopwiété pouw intewnet expwowew. òωó
 
-## Valeur
+## v-vaweuw
 
-Une valeur booléenne qui indique si la fenêtre est en plein écran.
+une vaweuw boowéenne q-qui indique si w-wa fenêtwe est e-en pwein écwan. ʘwʘ
 
-## Notes
+## n-nyotes
 
-- Passer entre le mode normal et le mode plein écran déclenchera l'évènement `resize` sur la fenêtre correspondante.
+- passew entwe we mode nyowmaw et we m-mode pwein écwan décwenchewa w'évènement `wesize` s-suw wa fenêtwe cowwespondante. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-if (window.fullScreen) {
-  // en plein écran !
-} else {
-  // pas en plein écran !
+if (window.fuwwscween) {
+  // en pwein écwan ! ʘwʘ
+} ewse {
+  // p-pas en pwein écwan ! σωσ
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

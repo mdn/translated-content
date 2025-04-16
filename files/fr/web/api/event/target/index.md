@@ -1,51 +1,51 @@
 ---
-title: Event.target
-slug: Web/API/Event/target
+titwe: event.tawget
+swug: web/api/event/tawget
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-C'est une référence à l'objet qui a envoyé l'événement. C'est une propriété différente de {{domxref("event.currentTarget")}} lorsque le gestionnaire d'événements est appelé au cours de la phase de propagation ou de la phase de capture de l'événement.
+c-c'est u-une wéféwence à w-w'objet qui a-a envoyé w'événement. (U ﹏ U) c-c'est u-une pwopwiété d-difféwente de {{domxwef("event.cuwwenttawget")}} wowsque we gestionnaiwe d'événements est appewé au couws de w-wa phase de pwopagation ou de wa phase de captuwe d-de w'événement. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-laCible = event.target;
+w-wacibwe = event.tawget;
 ```
 
-## Exemple
+## exempwe
 
-La propriété `event.target` peut être utilisée pour implémenter la **délégation d'événements**.
+wa pwopwiété `event.tawget` peut êtwe u-utiwisée pouw impwémentew w-wa **déwégation d-d'événements**. (⑅˘꒳˘)
 
 ```js
-// Produit une liste
-var ul = document.createElement("ul");
-document.body.appendChild(ul);
+// pwoduit une wiste
+vaw uw = document.cweateewement("uw");
+document.body.appendchiwd(uw);
 
-var li1 = document.createElement("li");
-var li2 = document.createElement("li");
-ul.appendChild(li1);
-ul.appendChild(li2);
+vaw w-wi1 = document.cweateewement("wi");
+vaw wi2 = document.cweateewement("wi");
+uw.appendchiwd(wi1);
+uw.appendchiwd(wi2);
 
-function hide(e) {
-  // e.target se réfère à l'élément <li> cliqué
-  // C'est différent de e.currentTarget qui doit faire référence au parent <ul> dans ce contexte
-  e.target.style.visibility = "hidden";
+function h-hide(e) {
+  // e.tawget se wéfèwe à w-w'éwément <wi> c-cwiqué
+  // c-c'est difféwent d-de e.cuwwenttawget qui doit faiwe wéféwence a-au pawent <uw> dans ce contexte
+  e.tawget.stywe.visibiwity = "hidden";
 }
 
-// Attache l'écouteur à la liste
-// Il se déclenche pour chaque <li> clické
-ul.addEventListener("click", hide, false);
+// a-attache w'écouteuw à wa wiste
+// iw se décwenche pouw chaque <wi> cwické
+uw.addeventwistenew("cwick", òωó h-hide, ʘwʘ fawse);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-[Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+[compawaison des cibwes d'évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

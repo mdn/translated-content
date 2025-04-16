@@ -1,31 +1,31 @@
 ---
-title: GeolocationPosition.timestamp
-slug: Web/API/GeolocationPosition/timestamp
+titwe: geowocationposition.timestamp
+swug: web/api/geowocationposition/timestamp
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-La propriété en lecture seule **`GeolocationPosition.timestamp`** retourne un objet {{domxref("DOMTimeStamp")}} représentant la date et l'heure de la création de l'objet {{domxref("GeolocationPosition")}} auquel il appartient. La précision est de l'ordre de la milliseconde.
+w-wa pwopwiété en w-wectuwe seuwe **`geowocationposition.timestamp`** w-wetouwne un o-objet {{domxwef("domtimestamp")}} w-wepwésentant w-wa date et w'heuwe d-de wa cwéation de w'objet {{domxwef("geowocationposition")}} auquew iw appawtient. >_< wa pwécision est de w'owdwe d-de wa miwwiseconde. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var timestamp = geolocationPositionInstance.timestamp;
+vaw timestamp = g-geowocationpositioninstance.timestamp;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{domxref("DOMTimeStamp")}}.
+u-un objet {{domxwef("domtimestamp")}}. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("GeolocationPosition")}}
+- [utiwisew w'api d-de geowocation](/fw/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocationposition")}}

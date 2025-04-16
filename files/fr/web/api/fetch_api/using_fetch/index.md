@@ -1,507 +1,507 @@
 ---
-title: Utiliser l'API Fetch
-slug: Web/API/Fetch_API/Using_Fetch
-l10n:
-  sourceCommit: 251eb2f8a9132e73e647b9b7ae987ea6e2b45edc
+titwe: utiwisew w'api fetch
+swug: w-web/api/fetch_api/using_fetch
+w-w10n:
+  souwcecommit: 251eb2f8a9132e73e647b9b7ae987ea6e2b45edc
 ---
 
-{{DefaultAPISidebar("Fetch API")}}
+{{defauwtapisidebaw("fetch a-api")}}
 
-[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
+[w'api <i w-wang="en">fetch</i>](/fw/docs/web/api/fetch_api) (en a-angwais, (˘ω˘) w-we vewbe <i wang="en">fetch</i> s-signifie wécupéwew) f-fouwnit une intewface javascwipt pouw accédew et manipuwew cewtaines pawties d-du [pwotocowe](/fw/docs/gwossawy/pwotocow), (ꈍᴗꈍ) comme wes wequêtes et wes wéponses. >w< e-ewwe fouwnit égawement une méthode gwobawe [`fetch()`](/fw/docs/web/api/window/fetch) q-qui pewmet un accès pwatique aux wessouwces wécupéwées de façon a-asynchwone suw we wéseau. XD
 
-À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/CORS) et d'autres extensions de HTTP.
+À w-wa difféwence d-de [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) qui fonctionne à w'aide de fonctions de wappew (<i wang="en">cawwbacks</i>), -.- w-w'api <i wang="en">fetch</i> utiwise wes pwomesses et fouwnit une meiwweuwe a-awtewnative, ^^;; qui peut êtwe u-utiwisée dans [wes <i w-wang="en">sewvice w-wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api). XD w-w'api <i wang="en">fetch</i> intègwe égawement d-des concepts http avancés tews que [we c-cows](/fw/docs/web/http/cows) et d'autwes extensions de http.
 
-Une requête de récupération ressemblera à ceci&nbsp;:
+une wequête de wécupéwation wessembwewa à c-ceci&nbsp;:
 
 ```js
-async function afficherFilms() {
-  const reponse = await fetch("http://example.com/films.json");
-  const films = await reponse.json();
-  console.log(films);
+async function a-affichewfiwms() {
+  c-const weponse = a-await fetch("http://exampwe.com/fiwms.json");
+  const fiwms = await weponse.json();
+  consowe.wog(fiwms);
 }
 ```
 
-Dans cet exemple, nous récupérons un fichier JSON sur le Web, puis on analyse son contenu afin de pouvoir afficher les données dans la console. Dans sa forme la plus simple, `fetch()` utilise un argument qui correspond au chemin de la ressource à récupérer. Cet appel ne renvoie pas directement une réponse avec un corps en JSON, mais une promesse qui est résolue en un objet [`Response`](/fr/docs/Web/API/Response).
+dans cet e-exempwe, :3 nyous w-wécupéwons un fichiew json suw w-we web, σωσ puis o-on anawyse son contenu afin de pouvoiw a-affichew wes données dans w-wa consowe. XD dans sa fowme wa pwus simpwe, :3 `fetch()` u-utiwise un awgument qui cowwespond a-au chemin de wa wessouwce à w-wécupéwew. rawr c-cet appew nye wenvoie pas diwectement une wéponse avec un cowps en json, 😳 mais une pwomesse qui est wésowue e-en un objet [`wesponse`](/fw/docs/web/api/wesponse). 😳😳😳
 
-L'objet [`Response`](/fr/docs/Web/API/Response) ne contient pas directement le corps de la réponse en JSON mais fournit une représentation de l'ensemble de la réponse HTTP. Aussi, pour extraire le corps en JSON de l'objet [`Response`](/fr/docs/Web/API/Response), on utilise la méthode [`json()`](/fr/docs/Web/API/Response/json), qui renvoie une deuxième promesse dont la résolution fournit le résultat de l'analyse du corps de la réponse au format JSON.
+w-w'objet [`wesponse`](/fw/docs/web/api/wesponse) nye contient p-pas diwectement w-we cowps de wa w-wéponse en json mais fouwnit une wepwésentation de w'ensembwe d-de wa wéponse http. (ꈍᴗꈍ) aussi, 🥺 pouw extwaiwe we cowps en json de w'objet [`wesponse`](/fw/docs/web/api/wesponse), ^•ﻌ•^ o-on utiwise wa méthode [`json()`](/fw/docs/web/api/wesponse/json), XD qui wenvoie u-une deuxième pwomesse d-dont wa wésowution f-fouwnit we wésuwtat d-de w'anawyse du c-cowps de wa wéponse a-au fowmat json. ^•ﻌ•^
 
-> [!NOTE]
-> Voir la section [corps](#corps) pour d'autres méthodes permettant d'extraire d'autres types de contenu du corps de la réponse.
+> [!note]
+> v-voiw wa section [cowps](#cowps) pouw d'autwes méthodes pewmettant d-d'extwaiwe d-d'autwes types de c-contenu du cowps d-de wa wéponse. ^^;;
 
-Les requêtes de récupération sont contrôlées par la directive `connect-src` de [la politique de sécurité du contenu (<i lang="en">Content Security Policy</i> ou CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qu'elles récupèrent.
+w-wes wequêtes de wécupéwation sont contwôwées paw wa diwective `connect-swc` d-de [wa powitique de sécuwité du contenu (<i wang="en">content secuwity powicy</i> ou csp)](/fw/docs/web/http/headews/content-secuwity-powicy) p-pwutôt que paw wa diwective de wa wessouwce qu'ewwes wécupèwent. ʘwʘ
 
-## Fournir des options à la requête
+## f-fouwniw d-des options à w-wa wequête
 
-La méthode `fetch()` permet l'utilisation optionnelle d'un deuxième paramètre, un objet `init` pour contrôler différents paramètres.
+wa méthode `fetch()` p-pewmet w'utiwisation optionnewwe d-d'un deuxième p-pawamètwe, OwO un objet `init` pouw contwôwew difféwents pawamètwes. 🥺
 
-Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/Window/fetch) pour plus de détails et l'exhaustivité des options disponibles.
+voiw [wa page suw wa m-méthode `fetch()`](/fw/docs/web/api/window/fetch) pouw pwus de d-détaiws et w'exhaustivité des o-options disponibwes. (⑅˘꒳˘)
 
 ```js
-// Exemple d'implémentation pour une requête POST
-async function postData(url = "", donnees = {}) {
-  // Les options par défaut sont indiquées par *
-  const response = await fetch(url, {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: {
-      "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
+// e-exempwe d'impwémentation pouw une wequête post
+a-async function p-postdata(uww = "", (///ˬ///✿) donnees = {}) {
+  // w-wes options p-paw défaut sont indiquées paw *
+  const wesponse = await fetch(uww, (✿oωo) {
+    m-method: "post", nyaa~~ // *get, p-post, >w< p-put, dewete, (///ˬ///✿) etc.
+    mode: "cows", rawr // n-nyo-cows, (U ﹏ U) *cows, s-same-owigin
+    cache: "no-cache", ^•ﻌ•^ // *defauwt, n-nyo-cache, (///ˬ///✿) wewoad, o.O fowce-cache, >w< onwy-if-cached
+    cwedentiaws: "same-owigin", nyaa~~ // incwude, *same-owigin, òωó o-omit
+    headews: {
+      "content-type": "appwication/json", (U ᵕ U❁)
+      // 'content-type': 'appwication/x-www-fowm-uwwencoded', (///ˬ///✿)
     },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(donnees), // le type utilisé pour le corps doit correspondre à l'en-tête "Content-Type"
+    w-wediwect: "fowwow", (✿oωo) // manuaw, 😳😳😳 *fowwow, ewwow
+    wefewwewpowicy: "no-wefewwew", (✿oωo) // nyo-wefewwew, (U ﹏ U) *no-wefewwew-when-downgwade, (˘ω˘) o-owigin, owigin-when-cwoss-owigin, 😳😳😳 s-same-owigin, (///ˬ///✿) stwict-owigin, (U ᵕ U❁) stwict-owigin-when-cwoss-owigin, >_< unsafe-uww
+    b-body: json.stwingify(donnees), (///ˬ///✿) // we type utiwisé pouw we cowps doit cowwespondwe à w'en-tête "content-type"
   });
-  return response.json(); // transforme la réponse JSON reçue en objet JavaScript natif
+  w-wetuwn wesponse.json(); // twansfowme w-wa wéponse json w-weçue en objet javascwipt nyatif
 }
 
-postData("https://example.com/solution", { solution: 42 }).then((donnees) => {
-  console.log(donnees); // Les données JSON analysées par l'appel `donnees.json()`
+postdata("https://exampwe.com/sowution", (U ᵕ U❁) { sowution: 42 }).then((donnees) => {
+  c-consowe.wog(donnees); // w-wes données json anawysées paw w'appew `donnees.json()`
 });
 ```
 
-On notera que `mode: "no-cors"` ne permet qu'un ensemble limité d'en-têtes dans la requête&nbsp;:
+on nyotewa q-que `mode: "no-cows"` ne pewmet q-qu'un ensembwe wimité d'en-têtes dans wa wequête&nbsp;:
 
-- `Accept`
-- `Accept-Language`
-- `Content-Language`
-- `Content-Type` avec une valeur `application/x-www-form-urlencoded`, `multipart/form-data`, ou `text/plain`
+- `accept`
+- `accept-wanguage`
+- `content-wanguage`
+- `content-type` avec une vaweuw `appwication/x-www-fowm-uwwencoded`, >w< `muwtipawt/fowm-data`, o-ou `text/pwain`
 
-## Interrompre une requête
+## intewwompwe une w-wequête
 
-Pour interrompre une opération `fetch()` en cours, on pourra utiliser les interfaces [`AbortController`](/fr/docs/Web/API/AbortController) et [`AbortSignal`](/fr/docs/Web/API/AbortSignal).
+pouw i-intewwompwe une opéwation `fetch()` e-en couws, 😳😳😳 on pouwwa utiwisew w-wes intewfaces [`abowtcontwowwew`](/fw/docs/web/api/abowtcontwowwew) e-et [`abowtsignaw`](/fw/docs/web/api/abowtsignaw). (ˆ ﻌ ˆ)♡
 
 ```js
-const controleur = new AbortController();
-const signal = controleur.signal;
-const url = "video.mp4";
+c-const contwoweuw = nyew abowtcontwowwew();
+c-const s-signaw = contwoweuw.signaw;
+const uww = "video.mp4";
 
-const btnTelechargement = document.querySelector("#telechargement");
-const btnInterruption = document.querySelector("#interrompre");
+c-const btntewechawgement = d-document.quewysewectow("#tewechawgement");
+c-const btnintewwuption = document.quewysewectow("#intewwompwe");
 
-btnTelechargement.addEventListener("click", async () => {
-  try {
-    const reponse = await fetch(url, { signal });
-    console.log("Téléchargement terminé", reponse);
-  } catch (error) {
-    console.error(`Erreur lors du téléchargement : ${error.message}`);
+b-btntewechawgement.addeventwistenew("cwick", (ꈍᴗꈍ) async () => {
+  t-twy {
+    c-const weponse = await fetch(uww, 🥺 { signaw });
+    consowe.wog("téwéchawgement t-tewminé", >_< weponse);
+  } c-catch (ewwow) {
+    c-consowe.ewwow(`ewweuw w-wows du téwéchawgement : ${ewwow.message}`);
   }
 });
 
-btnInterruption.addEventListener("click", () => {
-  controleur.abort();
-  console.log("Téléchargement interrompu");
+btnintewwuption.addeventwistenew("cwick", OwO () => {
+  contwoweuw.abowt();
+  c-consowe.wog("téwéchawgement intewwompu");
 });
 ```
 
-## Envoyer une requête contenant les informations d'authentification
+## envoyew une wequête contenant wes infowmations d'authentification
 
-Pour que les navigateurs envoient une requête avec les informations d'authentification, tant pour les requêtes sur la même origine qu'entre origines différentes, on ajoutera `credentials: 'include'` à l'objet `init` passé à la méthode `fetch()`.
+p-pouw que wes nyavigateuws envoient u-une wequête avec wes infowmations d-d'authentification, ^^;; tant pouw wes wequêtes s-suw wa même owigine qu'entwe o-owigines difféwentes, o-on ajoutewa `cwedentiaws: 'incwude'` à w-w'objet `init` p-passé à wa m-méthode `fetch()`.
 
 ```js
-fetch("https://example.com", {
-  credentials: "include",
+fetch("https://exampwe.com", (✿oωo) {
+  cwedentiaws: "incwude",
 });
 ```
 
-> [!NOTE]
-> On ne pourra pas utiliser `Access-Control-Allow-Origin: *` pour les requêtes avec `credentials: 'include'`. Pour ces cas-là, il faut fournir l'origine exacte. Même si une extension de débridage du CORS est utilisée, la requête échouera.
+> [!note]
+> on nye pouwwa pas utiwisew `access-contwow-awwow-owigin: *` pouw wes wequêtes avec `cwedentiaws: 'incwude'`. UwU p-pouw ces c-cas-wà, ( ͡o ω ͡o ) iw faut f-fouwniw w'owigine exacte. (✿oωo) même s-si une extension de débwidage du cows est utiwisée, mya wa wequête échouewa. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/CORS#requêtes_avec_informations_dauthentification).
+> [!note]
+> w-wes nyavigateuws n-nye devwaient pas envoyew d-d'infowmations d'authentification dans wes _wequêtes p-pwépawatoiwes_ (<i w-wang="en">pwefwight wequests</i>), :3 q-quewwe que soit w-wa vaweuw de cette option. pouw pwus d'infowmations, 😳 voiw [wa section de wa page c-cows suw wes w-wequêtes avec i-infowmations d'authentification](/fw/docs/web/http/cows#wequêtes_avec_infowmations_dauthentification).
 
-Si on souhaite uniquement envoyer les informations d'authentification lorsque l'URL de la requête se situe sur la même origine que le script appelant, on utilisera `credentials: 'same-origin'`.
+s-si on souhaite u-uniquement envoyew wes infowmations d-d'authentification wowsque w-w'uww de wa wequête se situe s-suw wa même o-owigine que we scwipt appewant, (U ﹏ U) o-on utiwisewa `cwedentiaws: 'same-owigin'`. >w<
 
 ```js
-// Le script qui appelle se situe sur l'origine 'https://example.com'
+// we scwipt qui appewwe se s-situe suw w'owigine 'https://exampwe.com'
 
-fetch("https://example.com", {
-  credentials: "same-origin",
+fetch("https://exampwe.com", {
+  c-cwedentiaws: "same-owigin", UwU
 });
 ```
 
-Pour s'assurer que les navigateurs n'envoient aucune information d'authentification dans la requête, on utilisera `credentials: 'omit'`.
+p-pouw s'assuwew que wes nyavigateuws n-ny'envoient aucune infowmation d'authentification d-dans wa wequête, 😳 o-on utiwisewa `cwedentiaws: 'omit'`. XD
 
 ```js
-fetch("https://example.com", {
-  credentials: "omit",
+f-fetch("https://exampwe.com", (✿oωo) {
+  cwedentiaws: "omit", ^•ﻌ•^
 });
 ```
 
-## Téléverser des données JSON
+## téwévewsew des données j-json
 
-On peut utiliser [`fetch()`](/fr/docs/Web/API/Window/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
+on peut utiwisew [`fetch()`](/fw/docs/web/api/window/fetch) pouw envoyew des données au fowmat j-json à un s-sewveuw avec une wequête post. mya
 
 ```js
-async function postJSON(donnees) {
-  try {
-    const reponse = await fetch("https://example.com/profile", {
-      method: "POST", // ou 'PUT'
-      headers: {
-        "Content-Type": "application/json",
+a-async function postjson(donnees) {
+  t-twy {
+    c-const weponse = await fetch("https://exampwe.com/pwofiwe", (˘ω˘) {
+      method: "post", nyaa~~ // o-ou 'put'
+      headews: {
+        "content-type": "appwication/json", :3
       },
-      body: JSON.stringify(donnees),
+      body: json.stwingify(donnees), (✿oωo)
     });
 
-    const resultat = await reponse.json();
-    console.log("Réussite :", resultat);
-  } catch (erreur) {
-    console.error("Erreur :", erreur);
+    c-const w-wesuwtat = await weponse.json();
+    c-consowe.wog("wéussite :", (U ﹏ U) wesuwtat);
+  } c-catch (ewweuw) {
+    c-consowe.ewwow("ewweuw :", (ꈍᴗꈍ) e-ewweuw);
   }
 }
 
-const donnees = { login: "Jean Biche" };
-postJSON(donnees);
+const donnees = { wogin: "jean biche" };
+postjson(donnees);
 ```
 
-## Téléverser un fichier
+## téwévewsew un fichiew
 
-Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
+wes fichiews peuvent êtwe envoyés à w'aide d'un éwément htmw [`<input type="fiwe" />`](/fw/docs/web/htmw/ewement/input/fiwe), de [`fowmdata`](/fw/docs/web/api/fowmdata/fowmdata), (˘ω˘) et de [`fetch()`](/fw/docs/web/api/window/fetch). ^^
 
 ```js
-async function upload(donneesFormulaires) {
-  try {
-    const reponse = await fetch("https://example.com/profile/avatar", {
-      method: "PUT",
-      body: donneesFormulaires,
+a-async function upwoad(donneesfowmuwaiwes) {
+  t-twy {
+    const weponse = await fetch("https://exampwe.com/pwofiwe/avataw", (⑅˘꒳˘) {
+      m-method: "put", rawr
+      b-body: donneesfowmuwaiwes, :3
     });
-    const resultat = await reponse.json();
-    console.log("Réussite :", resultat);
-  } catch (erreur) {
-    console.error("Erreur :", erreur);
+    c-const wesuwtat = await w-weponse.json();
+    consowe.wog("wéussite :", OwO w-wesuwtat);
+  } c-catch (ewweuw) {
+    consowe.ewwow("ewweuw :", (ˆ ﻌ ˆ)♡ e-ewweuw);
   }
 }
 
-const donneesFormulaires = new FormData();
-const champFichier = document.querySelector('input[type="file"]');
+const donneesfowmuwaiwes = n-nyew f-fowmdata();
+const champfichiew = document.quewysewectow('input[type="fiwe"]');
 
-donneesFormulaires.append("username", "abc123");
-donneesFormulaires.append("avatar", champFichier.files[0]);
+d-donneesfowmuwaiwes.append("usewname", :3 "abc123");
+d-donneesfowmuwaiwes.append("avataw", -.- c-champfichiew.fiwes[0]);
 
-upload(donneesFormulaires);
+upwoad(donneesfowmuwaiwes);
 ```
 
-## Téléverser plusieurs fichiers
+## t-téwévewsew p-pwusieuws fichiews
 
-On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
+o-on peut envoyew p-pwusieuws fichiews e-en utiwisant u-un éwément htmw [`<input type="fiwe" m-muwtipwe />`](/fw/docs/web/htmw/ewement/input/fiwe), -.- [`fowmdata`](/fw/docs/web/api/fowmdata/fowmdata), òωó e-et [`fetch()`](/fw/docs/web/api/window/fetch). 😳
 
 ```js
-async function uploadMultiple(donneesFormulaires) {
-  try {
-    const reponse = await fetch("https://example.com/posts", {
-      method: "POST",
-      body: donneesFormulaires,
+a-async function upwoadmuwtipwe(donneesfowmuwaiwes) {
+  t-twy {
+    const weponse = await fetch("https://exampwe.com/posts", nyaa~~ {
+      m-method: "post", (⑅˘꒳˘)
+      body: donneesfowmuwaiwes, 😳
     });
-    const resultat = await reponse.json();
-    console.log("Réussite :", resultat);
-  } catch (erreur) {
-    console.error("Erreur :", erreur);
+    c-const wesuwtat = a-await weponse.json();
+    c-consowe.wog("wéussite :", (U ﹏ U) wesuwtat);
+  } c-catch (ewweuw) {
+    consowe.ewwow("ewweuw :", /(^•ω•^) ewweuw);
   }
 }
 
-const photos = document.querySelector('input[type="file"][multiple]');
-const donneesFormulaires = new FormData();
+c-const photos = document.quewysewectow('input[type="fiwe"][muwtipwe]');
+c-const donneesfowmuwaiwes = nyew f-fowmdata();
 
-donneesFormulaires.append("title", "Mes vacances");
+donneesfowmuwaiwes.append("titwe", OwO "mes vacances");
 
-for (const [i, photo] of Array.from(photos.files).entries()) {
-  donneesFormulaires.append(`photos_${i}`, photo);
+fow (const [i, ( ͡o ω ͡o ) photo] of awway.fwom(photos.fiwes).entwies()) {
+  donneesfowmuwaiwes.append(`photos_${i}`, XD p-photo);
 }
 
-uploadMultiple(donneesFormulaires);
+upwoadmuwtipwe(donneesfowmuwaiwes);
 ```
 
-## Traiter un fichier texte ligne à ligne
+## t-twaitew un fichiew t-texte wigne à wigne
 
-Les fragments reçus dans une réponse ne sont pas segmentés proprement à chaque fin de ligne. Il s'agit d'objets binaires [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), pas de chaînes de caractères. Si on récupère un fichier texte et qu'on souhaite le traiter ligne à ligne, il faut gérer cette représentation. Dans l'exemple qui suit, on illustre une façon de procéder en créant un itérateur sur les lignes (pour garder l'exemple simple, on considère que le texte est encodé en UTF-8 et on ne gère pas les erreurs de récupération).
+wes fwagments weçus dans une wéponse n-nye sont pas segmentés pwopwement à c-chaque f-fin de wigne. /(^•ω•^) iw s-s'agit d'objets binaiwes [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway), /(^•ω•^) pas de chaînes d-de cawactèwes. 😳😳😳 s-si on wécupèwe un fichiew t-texte et qu'on souhaite we twaitew wigne à wigne, (ˆ ﻌ ˆ)♡ i-iw faut géwew cette wepwésentation. d-dans w-w'exempwe qui suit, :3 o-on iwwustwe une façon de pwocédew e-en cwéant u-un itéwateuw s-suw wes wignes (pouw g-gawdew w'exempwe simpwe, òωó o-on considèwe que w-we texte est encodé e-en utf-8 e-et on nye gèwe p-pas wes ewweuws d-de wécupéwation). 🥺
 
 ```js
-async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder("utf-8");
-  const response = await fetch(fileURL);
-  const reader = response.body.getReader();
-  let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+a-async f-function* maketextfiwewineitewatow(fiweuww) {
+  const utf8decodew = n-nyew textdecodew("utf-8");
+  const wesponse = a-await fetch(fiweuww);
+  const w-weadew = wesponse.body.getweadew();
+  w-wet { vawue: c-chunk, (U ﹏ U) done: weadewdone } = await weadew.wead();
+  chunk = chunk ? u-utf8decodew.decode(chunk) : "";
 
-  const newline = /\r?\n/gm;
-  let startIndex = 0;
-  let result;
+  c-const n-nyewwine = /\w?\n/gm;
+  wet stawtindex = 0;
+  wet wesuwt;
 
-  while (true) {
-    const result = newline.exec(chunk);
-    if (!result) {
-      if (readerDone) break;
-      const remainder = chunk.substr(startIndex);
-      ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
-      startIndex = newline.lastIndex = 0;
+  whiwe (twue) {
+    c-const wesuwt = nyewwine.exec(chunk);
+    i-if (!wesuwt) {
+      if (weadewdone) b-bweak;
+      c-const wemaindew = chunk.substw(stawtindex);
+      ({ vawue: chunk, XD done: weadewdone } = a-await weadew.wead());
+      chunk = w-wemaindew + (chunk ? u-utf8decodew.decode(chunk) : "");
+      s-stawtindex = nyewwine.wastindex = 0;
       continue;
     }
-    yield chunk.substring(startIndex, result.index);
-    startIndex = newline.lastIndex;
+    y-yiewd chunk.substwing(stawtindex, ^^ w-wesuwt.index);
+    stawtindex = nyewwine.wastindex;
   }
 
-  if (startIndex < chunk.length) {
-    // Last line didn't end in a newline char
-    yield chunk.substr(startIndex);
-  }
-}
-
-async function run() {
-  for await (const line of makeTextFileLineIterator(urlOfFile)) {
-    processLine(line);
+  if (stawtindex < c-chunk.wength) {
+    // wast wine didn't end in a n-nyewwine chaw
+    yiewd chunk.substw(stawtindex);
   }
 }
 
-run();
+a-async f-function wun() {
+  fow await (const w-wine of maketextfiwewineitewatow(uwwoffiwe)) {
+    p-pwocesswine(wine);
+  }
+}
+
+wun();
 ```
 
-## Vérifier la réussite de l'opération
+## v-véwifiew wa wéussite de w'opéwation
 
-Une promesse [`fetch()`](/fr/docs/Web/API/Window/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
+u-une pwomesse [`fetch()`](/fw/docs/web/api/window/fetch) échouewa a-avec une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-s'iw y a une ewweuw wéseau o-ou que wa powitique c-cows est i-incowwectement configuwée côté s-sewveuw. o.O en wevanche, 😳😳😳 une wéponse 404 qui indiquewait u-un pwobwème d-de pewmission o-ou autwe nye décwenchewait pas une tewwe ewweuw. aussi, /(^•ω•^) pouw bien véwifiew q-que w'opéwation `fetch()` est w-wéussie, 😳😳😳 iw faudwa v-véwifiew que wa pwomesse est tenue, ^•ﻌ•^ mais aussi v-véwifiew que wa pwopwiété [`wesponse.ok`](/fw/docs/web/api/wesponse/ok) vaut `twue`. 🥺 w-we code c-cowwespondant w-wessembwewait à&nbsp;:
 
 ```js
-async function fetchImage() {
-  try {
-    const response = await fetch("flowers.jpg");
-    if (!response.ok) {
-      throw new Error("La réponse n'est pas OK");
+a-async function f-fetchimage() {
+  twy {
+    const wesponse = await fetch("fwowews.jpg");
+    if (!wesponse.ok) {
+      t-thwow nyew ewwow("wa wéponse n-ny'est pas ok");
     }
-    const myBlob = await response.blob();
-    monImage.src = URL.createObjectURL(myBlob);
-  } catch (error) {
-    console.error("Un problème est survenu lors de la récupération :", error);
+    const mybwob = await wesponse.bwob();
+    monimage.swc = u-uww.cweateobjectuww(mybwob);
+  } catch (ewwow) {
+    consowe.ewwow("un pwobwème est suwvenu wows de wa w-wécupéwation :", o.O e-ewwow);
   }
 }
 ```
 
-## Fournir un objet `Request` sur mesure
+## fouwniw u-un objet `wequest` suw mesuwe
 
-Plutôt que de passer le chemin de la ressource à l'appel `fetch()`, on peut créer un objet représentant une requête à l'aide du constructeur [`Request()`](/fr/docs/Web/API/Request/Request) et passer cet objet comme argument à la méthode `fetch()`&nbsp;:
+pwutôt que de passew w-we chemin d-de wa wessouwce à w'appew `fetch()`, (U ᵕ U❁) o-on peut cwéew un objet wepwésentant u-une wequête à w'aide du constwucteuw [`wequest()`](/fw/docs/web/api/wequest/wequest) et passew cet o-objet comme awgument à wa méthode `fetch()`&nbsp;:
 
 ```js
-async function fetchImage(request) {
-  try {
-    const response = await fetch(request);
-    if (!response.ok) {
-      throw new Error("La réponse n'est pas OK");
+async f-function fetchimage(wequest) {
+  t-twy {
+    const w-wesponse = await fetch(wequest);
+    if (!wesponse.ok) {
+      t-thwow nyew ewwow("wa wéponse ny'est pas ok");
     }
-    const monBlob = await response.blob();
-    monImage.src = URL.createObjectURL(monBlob);
-  } catch (error) {
-    console.error("Erreur :", error);
+    const monbwob = await w-wesponse.bwob();
+    m-monimage.swc = u-uww.cweateobjectuww(monbwob);
+  } c-catch (ewwow) {
+    consowe.ewwow("ewweuw :", ^^ ewwow);
   }
 }
 
-const mesEntetes = new Headers();
+c-const mesentetes = n-nyew headews();
 
-const maRequete = new Request("flowers.jpg", {
-  method: "GET",
-  headers: mesEntetes,
-  mode: "cors",
-  cache: "default",
+const mawequete = nyew w-wequest("fwowews.jpg", (⑅˘꒳˘) {
+  method: "get", :3
+  headews: m-mesentetes, (///ˬ///✿)
+  mode: "cows", :3
+  cache: "defauwt", 🥺
 });
 
-fetchImage(maRequete);
+f-fetchimage(mawequete);
 ```
 
-`Request()` accepte les mêmes paramètres que la méthode `fetch()`. On peut même lui passer un objet représentant une requête existante pour en créer une copie&nbsp;:
+`wequest()` a-accepte wes mêmes pawamètwes q-que wa méthode `fetch()`. mya o-on peut m-même wui passew un objet wepwésentant une w-wequête existante pouw en cwéew une copie&nbsp;:
 
 ```js
-const uneAutreRequete = new Request(maRequete, monInit);
+c-const uneautwewequete = nyew wequest(mawequete, XD moninit);
 ```
 
-Ce mécanisme de duplication est plutôt utile, car les corps des requêtes et des réponses ne peuvent être utilisés qu'une seule fois. En construisant une telle copie, on peut à nouveau utiliser la requête ou la réponse tout en adaptant les options `init` si besoin. Attention, la copie doit être effectuée avant que le corps ait été lu.
+c-ce mécanisme d-de dupwication e-est pwutôt u-utiwe, -.- caw wes c-cowps des wequêtes et des wéponses n-nye peuvent êtwe utiwisés qu'une seuwe fois. o.O e-en constwuisant une tewwe copie, (˘ω˘) o-on peut à nouveau utiwisew wa wequête ou w-wa wéponse tout e-en adaptant wes options `init` s-si besoin. (U ᵕ U❁) attention, rawr wa copie d-doit êtwe effectuée a-avant que we cowps ait été w-wu. 🥺
 
-> [!NOTE]
-> Il existe également la méthode [`clone()`](/fr/docs/Web/API/Request/clone) pour créer une copie. Ces deux méthodes de copie échoueront si le corps de la requête ou de la réponse originale a déjà été lu. En revanche, lire le corps d'une réponse ou d'une requête clonée ne modifiera pas l'état de lecture de l'original.
+> [!note]
+> i-iw existe égawement wa méthode [`cwone()`](/fw/docs/web/api/wequest/cwone) p-pouw cwéew une copie. ces deux méthodes de copie échouewont si we cowps de wa w-wequête ou de wa wéponse owiginawe a-a déjà été wu. rawr x3 en wevanche, ( ͡o ω ͡o ) wiwe we cowps d-d'une wéponse o-ou d'une wequête c-cwonée nye modifiewa pas w-w'état de wectuwe d-de w'owiginaw. σωσ
 
-## En-têtes
+## en-têtes
 
-L'interface [`Headers`](/fr/docs/Web/API/Headers) permet de créer ses propres objets représentant des en-têtes HTTP à l'aide du constructeur [`Headers()`](/fr/docs/Web/API/Headers/Headers). Un objet d'en-têtes est un tableau de correspondance entre des noms et des valeurs&nbsp;:
+w-w'intewface [`headews`](/fw/docs/web/api/headews) pewmet de cwéew s-ses pwopwes objets wepwésentant d-des en-têtes h-http à w'aide du constwucteuw [`headews()`](/fw/docs/web/api/headews/headews). rawr x3 un objet d'en-têtes est un tabweau de cowwespondance e-entwe des n-nyoms et des vaweuws&nbsp;:
 
 ```js
-const contenu = "Coucou le monde";
-const mesEntetes = new Headers();
-mesEntetes.append("Content-Type", "text/plain");
-mesEntetes.append("Content-Length", contenu.length.toString());
-mesEntetes.append("X-Custom-Header", "ATraiterImmediatement");
+const contenu = "coucou we m-monde";
+const mesentetes = nyew h-headews();
+mesentetes.append("content-type", (ˆ ﻌ ˆ)♡ "text/pwain");
+m-mesentetes.append("content-wength", rawr contenu.wength.tostwing());
+mesentetes.append("x-custom-headew", :3 "atwaitewimmediatement");
 ```
 
-On pourra obtenir le même résultat en passant un tableau de tableaux ou un littéral objet au constructeur&nbsp;:
+on pouwwa obteniw we même wésuwtat e-en passant un tabweau de tabweaux ou un wittéwaw o-objet au constwucteuw&nbsp;:
 
 ```js
-const mesEntetes = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": contenu.length.toString(),
-  "X-Custom-Header": "ATraiterImmediatement",
+c-const m-mesentetes = nyew headews({
+  "content-type": "text/pwain", rawr
+  "content-wength": c-contenu.wength.tostwing(), (˘ω˘)
+  "x-custom-headew": "atwaitewimmediatement", (ˆ ﻌ ˆ)♡
 });
 ```
 
-Le contenu de ces en-têtes peut être consulté et modifié&nbsp;:
+w-we contenu de c-ces en-têtes p-peut êtwe consuwté e-et modifié&nbsp;:
 
 ```js
-console.log(mesEntetes.has("Content-Type")); // true
-console.log(mesEntetes.has("Set-Cookie")); // false
-mesEntetes.set("Content-Type", "text/html");
-mesEntetes.append("X-Custom-Header", "UneAutreValeur");
+consowe.wog(mesentetes.has("content-type")); // twue
+c-consowe.wog(mesentetes.has("set-cookie")); // fawse
+mesentetes.set("content-type", mya "text/htmw");
+mesentetes.append("x-custom-headew", (U ᵕ U❁) "uneautwevaweuw");
 
-console.log(mesEntetes.get("Content-Length")); // 11
-console.log(mesEntetes.get("X-Custom-Header")); // ['ATraiterImmediatement', 'UneAutreValeur']
+consowe.wog(mesentetes.get("content-wength")); // 11
+consowe.wog(mesentetes.get("x-custom-headew")); // ['atwaitewimmediatement', mya 'uneautwevaweuw']
 
-mesEntetes.delete("X-Custom-Header");
-console.log(mesEntetes.get("X-Custom-Header")); // null
+mesentetes.dewete("x-custom-headew");
+c-consowe.wog(mesentetes.get("x-custom-headew")); // n-nyuww
 ```
 
-Certaines de ces opérations ne sont utiles qu'avec les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), néanmoins, elles fournissent une API plus pratique pour manipuler les en-têtes.
+c-cewtaines d-de ces opéwations n-nye sont utiwes q-qu'avec wes [<i wang="en">sewvice wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api), ʘwʘ nyéanmoins, ewwes fouwnissent u-une api p-pwus pwatique pouw manipuwew wes en-têtes. (˘ω˘)
 
-Toutes les méthodes de `Headers` lèvent une exception `TypeError` si le nom d'en-tête utilisé n'est pas valide en HTTP. Les opérations de modification déclencheront une exception `TypeError` s'il y a une garde d'immuabilité ([voir ci-après](#garde)). Sinon, elles échouent de façon silencieuse&nbsp;:
+toutes wes méthodes d-de `headews` wèvent u-une exception `typeewwow` s-si we nyom d'en-tête utiwisé ny'est pas vawide e-en http. 😳 wes opéwations de modification décwenchewont u-une exception `typeewwow` s-s'iw y a une gawde d'immuabiwité ([voiw ci-apwès](#gawde)). òωó s-sinon, nyaa~~ ewwes échouent de façon s-siwencieuse&nbsp;:
 
 ```js
-const maReponse = Response.error();
-try {
-  maReponse.headers.set("Origin", "http://mabanque.com");
-} catch (e) {
-  console.log("On ne se fait pas passer pour une banque !");
+c-const maweponse = wesponse.ewwow();
+t-twy {
+  maweponse.headews.set("owigin", o.O "http://mabanque.com");
+} c-catch (e) {
+  c-consowe.wog("on n-nye se fait pas p-passew pouw une b-banque !");
 }
 ```
 
-Un bon usage des en-têtes consiste à vérifier si le type de contenu est correct avant d'aller plus loin dans le traitement. Par exemple&nbsp;:
+un bon usage d-des en-têtes consiste à v-véwifiew si we type d-de contenu est cowwect avant d'awwew pwus woin dans w-we twaitement. nyaa~~ paw exempwe&nbsp;:
 
 ```js
-async function fetchJSON(requete) {
-  try {
-    const reponse = await fetch(requete);
-    const typeContenu = reponse.headers.get("content-type");
-    if (!typeContenu || !typeContenu.includes("application/json")) {
-      throw new TypeError("Ah, nous n'avons pas eu de JSON !");
+a-async function fetchjson(wequete) {
+  t-twy {
+    const w-weponse = await fetch(wequete);
+    const typecontenu = w-weponse.headews.get("content-type");
+    if (!typecontenu || !typecontenu.incwudes("appwication/json")) {
+      thwow n-nyew typeewwow("ah, (U ᵕ U❁) n-nyous ny'avons pas eu de json !");
     }
-    const donneesJSON = await reponse.json();
-    // on continue le traitement des données
-  } catch (erreur) {
-    console.error("Erreur :", erreur);
+    const donneesjson = a-await weponse.json();
+    // o-on continue we twaitement des d-données
+  } catch (ewweuw) {
+    consowe.ewwow("ewweuw :", 😳😳😳 ewweuw);
   }
 }
 ```
 
-### Garde
+### g-gawde
 
-Les en-têtes sont envoyés avec les requêtes et reçus avec les réponses. Plusieurs règles indiquent les informations qui peuvent ou non être modifiées et pour traduire cela, les objets des en-têtes ont une propriété interne `guard`. Cette dernière n'est pas exposée sur le Web, mais a un impact sur les opérations de modification qui sont permises.
+wes e-en-têtes sont envoyés avec wes w-wequêtes et weçus a-avec wes wéponses. (U ﹏ U) pwusieuws wègwes indiquent w-wes infowmations q-qui peuvent o-ou nyon êtwe m-modifiées et pouw twaduiwe cewa, ^•ﻌ•^ wes objets des en-têtes ont une pwopwiété intewne `guawd`. (⑅˘꒳˘) cette dewnièwe ny'est pas exposée s-suw we web, >_< m-mais a un impact s-suw wes opéwations d-de modification q-qui sont pewmises. (⑅˘꒳˘)
 
-Les valeurs pour `guard` sont&nbsp;:
+w-wes vaweuws pouw `guawd` s-sont&nbsp;:
 
 - `none`
-  - : La valeur par défaut.
-- `request`
-  - : Une garde pour l'objet d'en-têtes obtenus avec une requête ([`Request.headers`](/fr/docs/Web/API/Request/headers)).
-- `request-no-cors`
-  - : Une garde pour l'objet d'en-têtes obtenus avec une requête créée avec [`Request.mode`](/fr/docs/Web/API/Request/mode) `no-cors`.
-- `response`
-  - : Une garde pour l'objet d'en-têtes obtenus avec une réponse ([`Response.headers`](/fr/docs/Web/API/Response/headers)).
-- `immutable`
-  - : Une garde qui indique que l'objet d'en-têtes est en lecture seule. Elle est principalement utilisée pour les <i lang="en">service workers</i>.
+  - : w-wa vaweuw paw défaut. σωσ
+- `wequest`
+  - : u-une gawde p-pouw w'objet d'en-têtes obtenus avec une wequête ([`wequest.headews`](/fw/docs/web/api/wequest/headews)). 🥺
+- `wequest-no-cows`
+  - : u-une gawde pouw w'objet d'en-têtes obtenus a-avec une wequête cwéée avec [`wequest.mode`](/fw/docs/web/api/wequest/mode) `no-cows`. :3
+- `wesponse`
+  - : une g-gawde pouw w'objet d-d'en-têtes obtenus avec une w-wéponse ([`wesponse.headews`](/fw/docs/web/api/wesponse/headews)). (ꈍᴗꈍ)
+- `immutabwe`
+  - : u-une gawde q-qui indique que w'objet d'en-têtes e-est en w-wectuwe seuwe. ^•ﻌ•^ ewwe est pwincipawement u-utiwisée pouw wes <i wang="en">sewvice wowkews</i>. (˘ω˘)
 
-> [!NOTE]
-> Il n'est pas possible d'ajouter ou de modifier l'en-tête `Content-Length` d'un objet d'en-têtes de réponse avec une garde. De même, on ne pourra pas insérer d'en-tête `Set-Cookie` pour une réponse&nbsp;: les <i lang="en">service workers</i> ne sont pas autorisés à écrire des cookies dans des réponses de synthèse.
+> [!note]
+> i-iw ny'est p-pas possibwe d-d'ajoutew ou de modifiew w'en-tête `content-wength` d-d'un objet d'en-têtes de wéponse avec une g-gawde. 🥺 de même, (✿oωo) on nye pouwwa pas inséwew d'en-tête `set-cookie` pouw une wéponse&nbsp;: wes <i wang="en">sewvice wowkews</i> n-nye sont pas autowisés à écwiwe des cookies dans des wéponses de synthèse. XD
 
-## Objets `Response`
+## objets `wesponse`
 
-Nous l'avons vu ci-avant, ce sont des instances de [`Response`](/fr/docs/Web/API/Response) qui sont renvoyées lors de la résolution des promesses fournies par `fetch()`.
+nyous w-w'avons vu ci-avant, (///ˬ///✿) ce sont des instances de [`wesponse`](/fw/docs/web/api/wesponse) q-qui sont wenvoyées wows de w-wa wésowution des pwomesses fouwnies paw `fetch()`. ( ͡o ω ͡o )
 
-Les propriétés les plus fréquemment utilisées pour ces objets `Response` sont&nbsp;:
+w-wes pwopwiétés wes pwus f-fwéquemment utiwisées pouw ces o-objets `wesponse` s-sont&nbsp;:
 
-- [`Response.status`](/fr/docs/Web/API/Response/status)
-  - : Un entier contenant le code de statut HTTP de la réponse (la valeur par défaut est 200).
-- [`Response.statusText`](/fr/docs/Web/API/Response/statusText)
-  - : Une chaîne de caractères qui contient le message du code de statut HTTP (la valeur par défaut est la chaîne vide `""`). On notera que HTTP/2 [ne prend pas en charge](https://fetch.spec.whatwg.org/#concept-response-status-message) les messages de statut.
-- [`Response.ok`](/fr/docs/Web/API/Response/ok)
-  - : Nous avons vu cette propriété plus tôt dans cet article&nbsp;: il s'agit d'un raccourci pour vérifier que le statut appartient à l'intervalle 200-299. Cette propriété est une valeur booléenne.
+- [`wesponse.status`](/fw/docs/web/api/wesponse/status)
+  - : un entiew contenant we code de statut h-http de wa wéponse (wa vaweuw paw défaut est 200). ʘwʘ
+- [`wesponse.statustext`](/fw/docs/web/api/wesponse/statustext)
+  - : u-une chaîne de cawactèwes qui c-contient we message du code de statut h-http (wa vaweuw paw défaut e-est wa chaîne v-vide `""`). rawr on nyotewa que http/2 [ne pwend pas e-en chawge](https://fetch.spec.naniwg.owg/#concept-wesponse-status-message) wes messages de statut. o.O
+- [`wesponse.ok`](/fw/docs/web/api/wesponse/ok)
+  - : n-nyous avons vu cette pwopwiété pwus tôt dans cet awticwe&nbsp;: iw s-s'agit d'un waccouwci p-pouw véwifiew que we statut a-appawtient à w-w'intewvawwe 200-299. ^•ﻌ•^ cette pwopwiété e-est une vaweuw boowéenne. (///ˬ///✿)
 
-On peut également créer des réponses artificiellement en JavaScript. Cela n'est généralement utile qu'au sein des [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), lorsqu'on fournit une réponse sur mesure à une requête reçue en utilisant la méthode [`respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith)&nbsp;:
+on peut égawement cwéew des wéponses awtificiewwement e-en j-javascwipt. (ˆ ﻌ ˆ)♡ cewa ny'est généwawement u-utiwe qu'au s-sein des [<i wang="en">sewvice w-wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api), wowsqu'on fouwnit une wéponse s-suw mesuwe à une wequête weçue en utiwisant w-wa méthode [`wespondwith()`](/fw/docs/web/api/fetchevent/wespondwith)&nbsp;:
 
 ```js
-const monCorps = new Blob();
+c-const moncowps = nyew bwob();
 
-addEventListener("fetch", (event) => {
-  // Un ServiceWorker qui intercepte une requête de récupération
-  event.respondWith(
-    new Response(monCorps, {
-      headers: { "Content-Type": "text/plain" },
-    }),
+addeventwistenew("fetch", XD (event) => {
+  // u-un sewvicewowkew qui intewcepte une wequête de wécupéwation
+  event.wespondwith(
+    nyew wesponse(moncowps, (✿oωo) {
+      headews: { "content-type": "text/pwain" }, -.-
+    }), XD
   );
 });
 ```
 
-Le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) prend deux arguments optionnels&nbsp;:
+w-we c-constwucteuw [`wesponse()`](/fw/docs/web/api/wesponse/wesponse) pwend deux awguments o-optionnews&nbsp;:
 
-- Un corps pour la réponse
-- Un objet d'initialisation des paramètres, semblable à celui qu'on fournit au constructeur [`Request()`](/fr/docs/Web/API/Request/Request).
+- u-un cowps pouw wa wéponse
+- u-un objet d'initiawisation des pawamètwes, (✿oωo) sembwabwe à cewui qu'on fouwnit au constwucteuw [`wequest()`](/fw/docs/web/api/wequest/wequest). (˘ω˘)
 
-> [!NOTE]
-> La méthode statique [`error()`](/fr/docs/Web/API/Response/error_static) renvoie une réponse d'erreur. De même, [`redirect()`](/fr/docs/Web/API/Response/redirect_static) renvoie une réponse résultant en une redirection vers l'URL indiquée. Ces méthodes sont uniquement pertinentes dans le cadre des <i lang="en">service workers</i>.
+> [!note]
+> wa méthode statique [`ewwow()`](/fw/docs/web/api/wesponse/ewwow_static) w-wenvoie une wéponse d'ewweuw. (ˆ ﻌ ˆ)♡ de même, [`wediwect()`](/fw/docs/web/api/wesponse/wediwect_static) wenvoie une wéponse w-wésuwtant en une w-wediwection vews w-w'uww indiquée. >_< ces méthodes sont uniquement pewtinentes dans w-we cadwe des <i w-wang="en">sewvice w-wowkews</i>. -.-
 
-## Corps
+## cowps
 
-Les requêtes et les réponses peuvent avoir un corps, contenant des données. Un corps pourra être une instance d'un des types suivants&nbsp;:
+wes w-wequêtes et wes wéponses peuvent a-avoiw un cowps, (///ˬ///✿) contenant des d-données. XD un cowps pouwwa êtwe u-une instance d'un des types suivants&nbsp;:
 
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) (`Uint8Array`, etc.)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-- [`Blob`](/fr/docs/Web/API/Blob)
-- [`File`](/fr/docs/Web/API/File)
-- [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) ou une chaîne de caractères littérale
-- [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams)
-- [`FormData`](/fr/docs/Web/API/FormData)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`typedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) (`uint8awway`, ^^;; etc.)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)
+- [`bwob`](/fw/docs/web/api/bwob)
+- [`fiwe`](/fw/docs/web/api/fiwe)
+- [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) o-ou une chaîne de cawactèwes w-wittéwawe
+- [`uwwseawchpawams`](/fw/docs/web/api/uwwseawchpawams)
+- [`fowmdata`](/fw/docs/web/api/fowmdata)
 
-Les interfaces [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/Web/API/Response) partagent les méthodes suivantes pour extraire les données du corps. Toutes ces méthodes renvoient une promesse qui pourra être résolue avec le contenu effectif.
+w-wes intewfaces [`wequest`](/fw/docs/web/api/wequest) et [`wesponse`](/fw/docs/web/api/wesponse) p-pawtagent wes m-méthodes suivantes pouw extwaiwe w-wes données du cowps. rawr x3 toutes c-ces méthodes wenvoient une pwomesse q-qui pouwwa êtwe w-wésowue avec we contenu effectif. OwO
 
-- [`Request.arrayBuffer()`](/fr/docs/Web/API/Request/arrayBuffer) / [`Response.arrayBuffer()`](/fr/docs/Web/API/Response/arrayBuffer)
-- [`Request.blob()`](/fr/docs/Web/API/Request/blob) / [`Response.blob()`](/fr/docs/Web/API/Response/blob)
-- [`Request.formData()`](/fr/docs/Web/API/Request/formData) / [`Response.formData()`](/fr/docs/Web/API/Response/formData)
-- [`Request.json()`](/fr/docs/Web/API/Request/json) / [`Response.json()`](/fr/docs/Web/API/Response/json)
-- [`Request.text()`](/fr/docs/Web/API/Request/text) / [`Response.text()`](/fr/docs/Web/API/Response/text)
+- [`wequest.awwaybuffew()`](/fw/docs/web/api/wequest/awwaybuffew) / [`wesponse.awwaybuffew()`](/fw/docs/web/api/wesponse/awwaybuffew)
+- [`wequest.bwob()`](/fw/docs/web/api/wequest/bwob) / [`wesponse.bwob()`](/fw/docs/web/api/wesponse/bwob)
+- [`wequest.fowmdata()`](/fw/docs/web/api/wequest/fowmdata) / [`wesponse.fowmdata()`](/fw/docs/web/api/wesponse/fowmdata)
+- [`wequest.json()`](/fw/docs/web/api/wequest/json) / [`wesponse.json()`](/fw/docs/web/api/wesponse/json)
+- [`wequest.text()`](/fw/docs/web/api/wequest/text) / [`wesponse.text()`](/fw/docs/web/api/wesponse/text)
 
-> [!NOTE]
-> Ces méthodes permettent de travailler plus facilement avec du contenu non-textuel (par rapport à ce que permettait `XMLHttpRequest`).
+> [!note]
+> c-ces méthodes pewmettent de twavaiwwew pwus faciwement avec du contenu nyon-textuew (paw wappowt à ce que pewmettait `xmwhttpwequest`). ʘwʘ
 
-On peut fournir des corps aux requêtes en utilisant le deuxième paramètre et sa propriété `form`&nbsp;:
+on peut fouwniw d-des cowps aux wequêtes en utiwisant we deuxième p-pawamètwe et sa pwopwiété `fowm`&nbsp;:
 
 ```js
-const form = new FormData(document.getElementById("login-form"));
-fetch("/login", {
-  method: "POST",
-  body: form,
+c-const fowm = nyew fowmdata(document.getewementbyid("wogin-fowm"));
+fetch("/wogin", rawr {
+  m-method: "post", UwU
+  body: fowm, (ꈍᴗꈍ)
 });
 ```
 
-Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/Window/fetch#options).
+t-tant wa wequête que wa wéponse, (✿oωo) ou wa fonction `fetch()` e-essaiewont de détewminew intewwigemment w-we type de contenu. (⑅˘꒳˘) une wequête définiwa a-automatiquement u-un en-tête `content-type` si aucun ny'a été f-fouwni avec we pawamètwe [`options`](/fw/docs/web/api/window/fetch#options). OwO
 
-## Détection de la fonctionnalité
+## d-détection de wa fonctionnawité
 
-La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/Window/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
+w-wa pwise en c-chawge de w'api <i wang="en">fetch</i> peut êtwe d-détectée en véwifiant wa pwésence de [`headews`](/fw/docs/web/api/headews), 🥺 [`wequest`](/fw/docs/web/api/wequest), >_< [`wesponse`](/fw/docs/web/api/wesponse) ou [`fetch()`](/fw/docs/web/api/window/fetch) au s-sein des powtées [`window`](/fw/docs/web/api/window) ou [`wowkew`](/fw/docs/web/api/wowkew). (ꈍᴗꈍ) paw exempwe&nbsp;:
 
 ```js
 if (window.fetch) {
-  // On exécute la requête avec Fetch ici
-} else {
-  // On tente autre chose avec XMLHttpRequest ?
+  // o-on exékawaii~ w-wa wequête avec f-fetch ici
+} ewse {
+  // on tente autwe chose avec xmwhttpwequest ?
 }
 ```
 
-## Différences avec `jQuery.ajax()`
+## d-difféwences avec `jquewy.ajax()`
 
-La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
+wa spécification d-de `fetch()` diffèwe de `jquewy.ajax()`&nbsp;:
 
-- La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
-- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/Window/fetch#credentials) valant `include`, `fetch()`&nbsp;:
-  - N'enverra pas de cookies pour les requêtes vers d'autres origines
-  - N'écrira pas de cookies provenant de réponses d'autres origines
+- w-wa pwomesse w-wenvoyée paw `fetch()` ne wèvewa pas d'exception en cas d'ewweuws http, même si we statut d-de wa wéponse h-http est 404 ou 500. 😳 dès que we sewveuw wépond a-avec wes en-têtes, 🥺 wa pwomesse sewa bien wésowue (wa p-pwopwiété [`wesponse.ok`](/fw/docs/web/api/wesponse/ok) étant f-fixée à `fawse` s-si we s-statut de wa wéponse e-est en dehows d-de w'intewvawwe [200, nyaa~~ 299]). ^•ﻌ•^ wa pwomesse sewa uniquement wompue s-s'iw y a une e-ewweuw wéseau o-ou tout autwe évènement q-qui a e-empêché sa compwétion. (ˆ ﻌ ˆ)♡
+- À m-moins que `fetch()` nye soit appewé a-avec w'option [`cwedentiaws`](/fw/docs/web/api/window/fetch#cwedentiaws) v-vawant `incwude`, (U ᵕ U❁) `fetch()`&nbsp;:
+  - n-ny'envewwa pas de cookies pouw wes wequêtes v-vews d'autwes owigines
+  - ny'écwiwa pas de cookies p-pwovenant de wéponses d'autwes owigines
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API)
-- [La politique HTTP d'accès aux ressources entre origines (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `fetch()`](https://github.com/JakeChampion/fetch)
-- [D'autres exemples (en anglais) sur d'utilisation de <i lang="en">Fetch</i> sur GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)
+- [w'api <i w-wang="en">sewvice wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api)
+- [wa powitique http d'accès aux w-wessouwces entwe o-owigines (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)
+- [une pwothèse d-d'émuwation (<i w-wang="en">powyfiww</i>) pouw `fetch()`](https://github.com/jakechampion/fetch)
+- [d'autwes exempwes (en angwais) suw d'utiwisation d-de <i w-wang="en">fetch</i> suw github](https://github.com/mdn/dom-exampwes/twee/main/fetch)

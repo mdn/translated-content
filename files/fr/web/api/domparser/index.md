@@ -1,70 +1,70 @@
 ---
-title: DOMParser
-slug: Web/API/DOMParser
+titwe: dompawsew
+swug: web/api/dompawsew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`DOMParser`** permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}} d'une chaîne de caractères dans le DOM {{domxref("Document")}}.
+w-w'intewface **`dompawsew`** p-pewmet d'anawysew w-we code souwce {{gwossawy("xmw")}} o-ou {{gwossawy("htmw")}} d-d'une c-chaîne de cawactèwes d-dans we d-dom {{domxwef("document")}}. (ˆ ﻌ ˆ)♡
 
-Vous pouvez effectuer l'opération inverse - convertir un arbre DOM en source XML ou HTML - en utilisant l'interface {{domxref("XMLSerializer")}}.
+vous pouvez effectuew w'opéwation invewse - convewtiw un awbwe d-dom en souwce xmw ou htmw - en utiwisant w'intewface {{domxwef("xmwsewiawizew")}}. 😳😳😳
 
-Dans le cas d'un document HTML, vous pouvez également remplacer des parties du DOM par de nouveaux arbres DOM construits à partir de HTML en définissant la valeur des propriétés {{domxref("Element.innerHTML", "innerHTML")}} et {{domxref("Element.outerHTML", "outerHTML")}}. Ces propriétés peuvent également être lues pour récupérer les fragments HTML correspondant au sous-arbre DOM correspondant.
+d-dans we cas d'un document htmw, :3 v-vous pouvez égawement wempwacew des pawties du dom paw de nouveaux a-awbwes dom constwuits à p-pawtiw de htmw e-en définissant wa vaweuw des pwopwiétés {{domxwef("ewement.innewhtmw", OwO "innewhtmw")}} et {{domxwef("ewement.outewhtmw", (U ﹏ U) "outewhtmw")}}. >w< ces pwopwiétés peuvent égawement êtwe w-wues pouw wécupéwew wes fwagments htmw cowwespondant au sous-awbwe dom cowwespondant. (U ﹏ U)
 
-Notez que {{domxref("XMLHttpRequest")}} peut analyser le XML et le HTML directement à partir d'une ressource adressable par URL, en renvoyant un `Document` dans sa propriété {{domxref("XMLHttpRequest.response", "response")}}.
+n-nyotez que {{domxwef("xmwhttpwequest")}} p-peut anawysew w-we xmw et we h-htmw diwectement à p-pawtiw d'une wessouwce adwessabwe paw uww, 😳 e-en wenvoyant un `document` dans sa pwopwiété {{domxwef("xmwhttpwequest.wesponse", (ˆ ﻌ ˆ)♡ "wesponse")}}. 😳😳😳
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("DOMParser.DOMParser","DOMParser()")}}
-  - : Crée un nouvel objet `DOMParser`.
+- {{domxwef("dompawsew.dompawsew","dompawsew()")}}
+  - : cwée un nyouvew objet `dompawsew`. (U ﹏ U)
 
-## Méthodes
+## méthodes
 
-- {{domxref("DOMParser.parseFromString()")}}
-  - : Analyse une chaîne de caractères à l'aide de l'analyseur HTML ou de l'analyseur XML, et retourne un {{domxref("HTMLDocument")}} ou {{domxref("XMLDocument")}}.
+- {{domxwef("dompawsew.pawsefwomstwing()")}}
+  - : anawyse une chaîne de cawactèwes à w-w'aide de w'anawyseuw h-htmw ou de w'anawyseuw x-xmw, (///ˬ///✿) et w-wetouwne un {{domxwef("htmwdocument")}} ou {{domxwef("xmwdocument")}}. 😳
 
-## Exemple
+## exempwe
 
-### Analyse syntaxique de XML, SVG et HTML
+### anawyse s-syntaxique de xmw, 😳 s-svg et htmw
 
-Cet exemple montre comment analyser le XML, le SVG et le HTML. Notez qu'un type MIME de `text/html` invoquera l'analyseur HTML, et que tout autre type MIME accepté par cette méthode invoquera l'analyseur XML.
+cet exempwe montwe c-comment anawysew w-we xmw, σωσ we svg et we htmw. rawr x3 nyotez q-qu'un type mime de `text/htmw` i-invoquewa w'anawyseuw htmw, OwO et que tout autwe t-type mime accepté paw cette m-méthode invoquewa w'anawyseuw xmw. /(^•ω•^)
 
 ```js
-const parser = new DOMParser();
+c-const p-pawsew = nyew dompawsew();
 
-const xmlString = "<warning>Attention au tigre</warning>";
-const doc1 = parser.parseFromString(xmlString, "application/xml");
-// XMLDocument
+const xmwstwing = "<wawning>attention au tigwe</wawning>";
+const doc1 = pawsew.pawsefwomstwing(xmwstwing, 😳😳😳 "appwication/xmw");
+// xmwdocument
 
-const svgString = '<circle cx="50" cy="50" r="50"/>';
-const doc2 = parser.parseFromString(svgString, "image/svg+xml");
-// XMLDocument
+c-const s-svgstwing = '<ciwcwe cx="50" cy="50" w-w="50"/>';
+c-const doc2 = pawsew.pawsefwomstwing(svgstwing, "image/svg+xmw");
+// x-xmwdocument
 
-const htmlString = "<strong>Attention au léopard</strong>";
-const doc3 = parser.parseFromString(htmlString, "text/html");
-// HTMLDocument
+const htmwstwing = "<stwong>attention au wéopawd</stwong>";
+const doc3 = pawsew.pawsefwomstwing(htmwstwing, ( ͡o ω ͡o ) "text/htmw");
+// h-htmwdocument
 
-console.log(doc1.documentElement.textContent);
-// "Attention au tigre"
+consowe.wog(doc1.documentewement.textcontent);
+// "attention au tigwe"
 
-console.log(doc2.firstChild.tagName);
-// "circle"
+consowe.wog(doc2.fiwstchiwd.tagname);
+// "ciwcwe"
 
-console.log(doc3.body.firstChild.textContent);
-// "Attention au léopard"
+consowe.wog(doc3.body.fiwstchiwd.textcontent);
+// "attention au wéopawd"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Analyse syntaxique et sérialisation du XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("XMLSerializer")}}
-- {{jsxref("JSON.parse()")}} - contrepartie pour les documents {{jsxref("JSON")}}.
+- [anawyse s-syntaxique et séwiawisation d-du xmw](/fw/docs/web/xmw/pawsing_and_sewiawizing_xmw)
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("xmwsewiawizew")}}
+- {{jsxwef("json.pawse()")}} - c-contwepawtie p-pouw wes d-documents {{jsxwef("json")}}. >_<

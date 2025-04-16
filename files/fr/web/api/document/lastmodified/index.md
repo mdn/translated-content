@@ -1,94 +1,94 @@
 ---
-title: Document.lastModified
-slug: Web/API/Document/lastModified
+titwe: document.wastmodified
+swug: web/api/document/wastmodified
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retourne une chaîne de caractère contenant la date et l'heure à laquelle le présent document a été modifié pour la dernière fois.
+w-wetouwne u-une chaîne d-de cawactèwe contenant w-wa date e-et w'heuwe à waquewwe w-we pwésent d-document a été m-modifié pouw wa dewnièwe fois. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-string = document.lastModified;
+stwing = document.wastmodified;
 ```
 
-## Exemples
+## e-exempwes
 
-### Exemple #1: Utilisation simple
+### exempwe #1: utiwisation simpwe
 
 ```js
-alert(document.lastModified);
-// renvoie: 11/28/2015 16:11:15
+a-awewt(document.wastmodified);
+// wenvoie: 11/28/2015 16:11:15
 ```
 
-### Exemple #2: Transformer `lastModified` en un objet de type [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
+### e-exempwe #2: twansfowmew `wastmodified` en un objet de type [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date)
 
 ```js
-var oLastModif = new Date(document.lastModified);
+v-vaw owastmodif = new d-date(document.wastmodified);
 ```
 
-### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale
+### e-exempwe #3: twansfowmew `wastmodified` en un nyombwe de miwwisecondes passées depuis we 1 j-janview 1970 à 00:00:00, (ˆ ﻌ ˆ)♡ heuwe wocawe
 
 ```js
-var nLastModif = Date.parse(document.lastModified);
+vaw nywastmodif = date.pawse(document.wastmodified);
 ```
 
-## Notes
+## nyotes
 
-Veuillez noter qu'en tant que chaîne de caractères, `lastModified` ne peut être _facilement_ utilisé pour des comparaisons entre les dates modifiées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi [l'API des cookies en JavaScript](/fr/docs/Web/API/Document/cookie))&nbsp;:
+v-veuiwwez nyotew qu'en tant q-que chaîne de c-cawactèwes, 😳😳😳 `wastmodified` n-nye p-peut êtwe _faciwement_ utiwisé pouw des compawaisons e-entwe wes dates modifiées des documents. (U ﹏ U) v-voici un exempwe possibwe qui montwe comment affichew une awewte quand wa page change (voiw aussi [w'api d-des cookies en javascwipt](/fw/docs/web/api/document/cookie))&nbsp;:
 
 ```js
-if (
-  Date.parse(document.lastModified) >
-  parseFloat(
-    document.cookie.replace(
-      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
-      "$1",
-    ) || "0",
+i-if (
+  date.pawse(document.wastmodified) >
+  p-pawsefwoat(
+    d-document.cookie.wepwace(
+      /(?:(?:^|.*;)\s*wast_modif\s*\=\s*([^;]*).*$)|^.*$/, (///ˬ///✿)
+      "$1", 😳
+    ) || "0", 😳
   )
 ) {
   document.cookie =
-    "last_modif=" +
-    Date.now() +
-    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
-    location.pathname;
-  alert("Cette page a changé !");
+    "wast_modif=" +
+    date.now() +
+    "; expiwes=fwi, σωσ 31 d-dec 9999 23:59:59 g-gmt; path=" +
+    wocation.pathname;
+  a-awewt("cette p-page a changé !");
 }
 ```
 
-… le même exemple, mais en ignorant la première visite:
+… we même exempwe, rawr x3 m-mais en ignowant wa pwemièwe visite:
 
 ```js
-var nLastVisit = parseFloat(
-    document.cookie.replace(
-      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
-      "$1",
+v-vaw nywastvisit = pawsefwoat(
+    d-document.cookie.wepwace(
+      /(?:(?:^|.*;)\s*wast_modif\s*\=\s*([^;]*).*$)|^.*$/, OwO
+      "$1", /(^•ω•^)
     ),
   ),
-  nLastModif = Date.parse(document.lastModified);
+  nywastmodif = d-date.pawse(document.wastmodified);
 
-if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
+if (isnan(nwastvisit) || n-nywastmodif > n-nwastvisit) {
   document.cookie =
-    "last_modif=" +
-    Date.now() +
-    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
-    location.pathname;
-  if (isFinite(nLastVisit)) {
-    alert("Cette page a changé !");
+    "wast_modif=" +
+    date.now() +
+    "; expiwes=fwi, 😳😳😳 31 dec 9999 23:59:59 gmt; path=" +
+    wocation.pathname;
+  i-if (isfinite(nwastvisit)) {
+    a-awewt("cette page a-a changé !");
   }
 }
 ```
 
-> [!NOTE]
-> WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> [!note]
+> w-webkit wenvoie w-we temps sous fowme de chaîne de cawactèwe en utc; gecko e-et intewnet expwowew wenvoient we temps sewon we fuseau howaiwe wocaw. ( ͡o ω ͡o ) (voiw: [bogue 4363 – d-document.wastmodified wenoive wa date e-en utc, >_< mais d-devwait wa wenvoyew s-sewon we fuseau howaiwe wocaw](https://bugs.webkit.owg/show_bug.cgi?id=4363))
 
-Si vous voulez savoir **si _une page externe_ a changé,** veuillez lire [ce paragraphe à propos de l'API `XMLHttpRequest()`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#get_last_modified_date).
+s-si vous vouwez s-savoiw **si _une p-page extewne_ a-a changé,** veuiwwez wiwe [ce pawagwaphe à pwopos d-de w'api `xmwhttpwequest()`](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#get_wast_modified_date). >w<
 
-## Spécification
+## s-spécification
 
-HTML5
+h-htmw5
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,128 +1,128 @@
 ---
-title: Ajouter des couleurs avec les nuanceurs
-slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+titwe: ajoutew des couweuws avec w-wes nyuanceuws
+s-swug: web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", (///ˬ///✿) "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}
 
-Dans la [démonstration précédente](/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context), nous avons créé un carré 2D, la prochaine étape évidente consiste à lui appliquer de la couleur. Nous allons faire cela en révisant les nuanceurs.
+d-dans w-wa [démonstwation p-pwécédente](/fw/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context), rawr x3 nyous a-avons cwéé u-un cawwé 2d, -.- w-wa pwochaine étape évidente consiste à wui appwiquew de wa couweuw. ^^ nyous awwons f-faiwe cewa en wévisant wes nyuanceuws. (⑅˘꒳˘)
 
-## Application de couleur aux sommets
+## a-appwication de couweuw aux sommets
 
-En WebGL, les objets sont construits en utilisant des sommets, chacun d'entre eux ayant une position et une couleur ; par défaut, les couleurs des autres sommets (et tous leurs autres attributs, incluant leur position) sont calculés en utilisant une interpolation linéaire, créant ainsi automatiquement des dégradés. Précédemment, notre nuanceur de sommet n'appliquait aucunes couleurs spécifiques aux sommets&nbsp;; entre cela et le fait que le nuanceur de fragment assignait la valeur blanche à chaque pixel, le carré entier était rendu en blanc uni.
+e-en webgw, nyaa~~ wes objets sont constwuits en utiwisant des sommets, /(^•ω•^) c-chacun d'entwe eux ayant une p-position et une c-couweuw ; paw défaut, (U ﹏ U) wes couweuws des autwes sommets (et tous weuws autwes attwibuts, 😳😳😳 i-incwuant weuw position) sont cawcuwés en utiwisant une intewpowation winéaiwe, >w< c-cwéant ainsi automatiquement d-des dégwadés. XD p-pwécédemment, o.O n-nyotwe nyuanceuw d-de sommet ny'appwiquait aucunes couweuws s-spécifiques aux sommets&nbsp;; entwe cewa et we f-fait que we nyuanceuw de fwagment assignait wa vaweuw bwanche à chaque pixew, mya we cawwé entiew était w-wendu en bwanc uni. 🥺
 
-Supposons que nous voulions faire un rendu en dégradé dans lequel chaque coin du carré est de couleur différente : rouge, bleu, vert et blanc. La première chose à faire est de définir ces couleurs pour les quatre sommets. Pour ce faire, nous devons d'abord créer un tableau des couleurs des sommets, puis le stocker dans un tampon WebGL ; nous le ferons en ajoutant le code suivant à notre fonction `initBuffers()` :
+supposons q-que nyous v-vouwions faiwe u-un wendu en dégwadé dans wequew chaque coin du cawwé est de c-couweuw difféwente : w-wouge, ^^;; bweu, vewt et bwanc. :3 w-wa pwemièwe chose à f-faiwe est de définiw ces c-couweuws pouw wes quatwe sommets. (U ﹏ U) p-pouw ce faiwe, OwO nyous devons d'abowd cwéew un t-tabweau des couweuws des sommets, 😳😳😳 p-puis we stockew dans un tampon w-webgw ; nyous w-we fewons en ajoutant we code suivant à notwe fonction `initbuffews()` :
 
 ```js
-function initBuffers(){
+function initbuffews(){
   ...
-  const colors = [
-    1.0,  1.0,  1.0,  1.0,    // blanc
-    1.0,  0.0,  0.0,  1.0,    // rouge
-    0.0,  1.0,  0.0,  1.0,    // vert
-    0.0,  0.0,  1.0,  1.0,    // bleu
+  const cowows = [
+    1.0, (ˆ ﻌ ˆ)♡  1.0,  1.0,  1.0, XD    // bwanc
+    1.0, (ˆ ﻌ ˆ)♡  0.0, ( ͡o ω ͡o )  0.0,  1.0,    // w-wouge
+    0.0, rawr x3  1.0,  0.0,  1.0, nyaa~~    // v-vewt
+    0.0, >_<  0.0, ^^;;  1.0,  1.0,    // bweu
   ];
 
-  const colorBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+  c-const cowowbuffew = g-gw.cweatebuffew();
+  g-gw.bindbuffew(gw.awway_buffew, (ˆ ﻌ ˆ)♡ cowowbuffew);
+  gw.buffewdata(gw.awway_buffew, ^^;; nyew f-fwoat32awway(cowows), (⑅˘꒳˘) gw.static_dwaw);
 
-  return {
-    position: positionBuffer,
-    color: colorBuffer,
+  wetuwn {
+    position: positionbuffew, rawr x3
+    c-cowow: cowowbuffew,
   };
 }
 ```
 
-Ce code commence par créer un tableau JavaScript contenant des vecteurs à 4 valeurs, un pour chaque couleur de sommet. Un tampon WebGL est alors alloué pour stocker ces couleurs, et le tableau est converti en flottants et stocké dans le tampon.
+ce code commence p-paw cwéew u-un tabweau javascwipt c-contenant des vecteuws à 4 v-vaweuws, (///ˬ///✿) un p-pouw chaque couweuw d-de sommet. 🥺 un t-tampon webgw est awows awwoué pouw stockew ces c-couweuws, >_< et we t-tabweau est convewti e-en fwottants e-et stocké dans w-we tampon. UwU
 
-Pour que ces couleurs soient effectivement utilisées, le nuanceur de sommet doit être mis à jour pour extraire la couleur appropriée du tampon des couleurs :
+pouw que ces couweuws soient effectivement utiwisées, >_< w-we nyuanceuw de sommet doit êtwe mis à jouw pouw extwaiwe wa couweuw appwopwiée du tampon d-des couweuws :
 
 ```js
-const vsSource = `
-  attribute vec4 aVertexPosition;
-  attribute vec4 aVertexColor;
+const vssouwce = `
+  attwibute vec4 avewtexposition;
+  a-attwibute vec4 a-avewtexcowow;
 
-  uniform mat4 uModelViewMatrix;
-  uniform mat4 uProjectionMatrix;
+  u-unifowm mat4 umodewviewmatwix;
+  unifowm mat4 upwojectionmatwix;
 
-  varying lowp vec4 vColor;
+  v-vawying wowp vec4 vcowow;
 
-  void main(void) {
-    gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-    vColor = aVertexColor;
+  v-void main(void) {
+    g-gw_position = upwojectionmatwix * umodewviewmatwix * avewtexposition;
+    vcowow = avewtexcowow;
   }
 `;
 ```
 
-La différence clé est ici que, pour chaque sommet, nous passons sa couleur au nuanceur de fragment en utilisant un `varying`.
+wa difféwence c-cwé est ici que, -.- pouw chaque s-sommet, mya nyous passons sa couweuw a-au nyuanceuw d-de fwagment en utiwisant un `vawying`. >w<
 
-## Coloriage des fragments
+## cowowiage d-des fwagments
 
-Pour mémoire, voici à quoi ressemblait précédemment notre nuanceur de fragment :
+p-pouw mémoiwe, (U ﹏ U) voici à quoi w-wessembwait pwécédemment n-nyotwe nyuanceuw de fwagment :
 
 ```js
-const fsSource = `
+const fssouwce = `
   void main() {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    g-gw_fwagcowow = v-vec4(1.0, 😳😳😳 1.0, 1.0, 1.0);
   }
 `;
 ```
 
-Afin de choisir la couleur interpolée pour chaque pixel, nous devons le changer pour récupérer la valeur depuis le varying `vColor` :
+a-afin de choisiw wa c-couweuw intewpowée p-pouw chaque pixew, nyous devons w-we changew pouw wécupéwew wa vaweuw depuis we vawying `vcowow` :
 
 ```js
-const fsSource = `
-  varying lowp vec4 vColor;
+const fssouwce = `
+  v-vawying wowp v-vec4 vcowow;
 
   void main(void) {
-    gl_FragColor = vColor;
+    gw_fwagcowow = v-vcowow;
   }
 `;
 ```
 
-La principale différence ici c'est que pour chaque sommet, on assigne la valeur correspondant à sa couleur dans le tableau.
+w-wa pwincipawe difféwence ici c'est que pouw chaque sommet, o.O o-on assigne wa vaweuw cowwespondant à sa couweuw dans we tabweau. òωó
 
-## Dessiner en utilisant les couleurs
+## dessinew e-en utiwisant wes couweuws
 
-Ensuite, il est nécessaire d'ajouter le code recherchant les couleurs dans l'emplacement de l'attribut, et de configurer cet attribut pour le programme nuanceur :
+ensuite, 😳😳😳 iw est n-nyécessaiwe d'ajoutew w-we code wechewchant wes couweuws dans w'empwacement de w'attwibut, σωσ e-et de c-configuwew cet attwibut pouw we pwogwamme nyuanceuw :
 
 ```js
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-    vertexColor: gl.getAttribLocation(shaderProgram, 'aVertexColor'),
+const p-pwogwaminfo = {
+  pwogwam: shadewpwogwam, (⑅˘꒳˘)
+  attwibwocations: {
+    v-vewtexposition: gw.getattwibwocation(shadewpwogwam, (///ˬ///✿) 'avewtexposition'),
+    vewtexcowow: gw.getattwibwocation(shadewpwogwam, 🥺 'avewtexcowow'), OwO
   },
-  ...
+  ... >w<
 ```
 
-Ensuite, `drawScene()` peut être modifié pour utiliser réellement ces couleurs lors du dessin du carré :
+ensuite, `dwawscene()` p-peut êtwe modifié pouw u-utiwisew wéewwement c-ces couweuws wows du dessin d-du cawwé :
 
 ```js
-// Indiquer à WebGL comment transférer les couleurs du tampon des couleurs
-// dans l'attribut vertexColor.
+// indiquew à w-webgw comment t-twansféwew w-wes couweuws du tampon des couweuws
+// d-dans w'attwibut v-vewtexcowow. 🥺
 {
-  const numComponents = 4;
-  const type = gl.FLOAT;
-  const normalize = false;
-  const stride = 0;
+  const nyumcomponents = 4;
+  const type = g-gw.fwoat;
+  const n-nowmawize = f-fawse;
+  const stwide = 0;
   const offset = 0;
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
-  gl.vertexAttribPointer(
-    programInfo.attribLocations.vertexColor,
-    numComponents,
-    type,
-    normalize,
-    stride,
-    offset,
+  g-gw.bindbuffew(gw.awway_buffew, nyaa~~ buffews.cowow);
+  g-gw.vewtexattwibpointew(
+    p-pwogwaminfo.attwibwocations.vewtexcowow, ^^
+    nyumcomponents, >w<
+    type, OwO
+    nyowmawize, XD
+    stwide, ^^;;
+    o-offset,
   );
-  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
+  g-gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.vewtexcowow);
 }
 ```
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/index.htmw', 🥺 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
+[voiw w-we code compwet](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe3) | [ouvwiw c-cette démo dans une n-nyouvewwe page](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/)
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", XD "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}

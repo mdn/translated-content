@@ -1,52 +1,52 @@
 ---
-title: GlobalEventHandlers.onloadstart
-slug: Web/API/HTMLMediaElement/loadstart_event
+titwe: gwobaweventhandwews.onwoadstawt
+swug: w-web/api/htmwmediaewement/woadstawt_event
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement `loadstart` est déclenché (quand la progression est commencée sur le chargement d'une ressource).
+w-wa pwopwiété **`onwoadstawt`** d-du "mixin" {{domxwef("gwobaweventhandwews")}} u-un gestionnaiwe d-d'évènement w-wepwésentant w-we code à a-appewew wowsque w'évènement `woadstawt` est décwenché (quand wa pwogwession est commencée suw w-we chawgement d'une wessouwce). (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-img.onloadstart = funcRef;
-```
-
-### Valeur
-
-`funcRef` est la fonction du gestionnaire à appeler lorsque l'évènement `loadstart` de la ressource est déclenché.
-
-## Exemples
-
-### Contenu HTML
-
-```html
-<img src="myImage.jpg" />
-```
-
-### Contenu JavaScript
+## syntaxe
 
 ```js
-// 'loadstart' est lancé le premier, puis 'load', puis 'loadend'
+i-img.onwoadstawt = funcwef;
+```
 
-image.addEventListener("load", function (e) {
-  console.log("Image loaded");
+### v-vaweuw
+
+`funcwef` est wa fonction du gestionnaiwe à appewew wowsque w'évènement `woadstawt` d-de wa wessouwce est décwenché. (///ˬ///✿)
+
+## e-exempwes
+
+### c-contenu htmw
+
+```htmw
+<img swc="myimage.jpg" />
+```
+
+### contenu javascwipt
+
+```js
+// 'woadstawt' est w-wancé we pwemiew, 😳😳😳 puis 'woad', puis 'woadend'
+
+image.addeventwistenew("woad", 🥺 function (e) {
+  c-consowe.wog("image woaded");
 });
 
-image.addEventListener("loadstart", function (e) {
-  console.log("Image load started");
+i-image.addeventwistenew("woadstawt", mya f-function (e) {
+  c-consowe.wog("image w-woad stawted");
 });
 
-image.addEventListener("loadend", function (e) {
-  console.log("Image load finished");
+image.addeventwistenew("woadend", 🥺 f-function (e) {
+  consowe.wog("image woad finished");
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

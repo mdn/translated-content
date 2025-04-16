@@ -1,75 +1,75 @@
 ---
-title: API Notifications
-slug: Web/API/Notifications_API
-l10n:
-  sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
+titwe: api nyotifications
+swug: w-web/api/notifications_api
+w-w10n:
+  s-souwcecommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{defauwtapisidebaw("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-L'API Notifications permet aux pages web de contrôler l'affichage des notifications système. Celles-ci sont affichées en dehors de la fenêtre du contexte de navigation de plus haut niveau et peuvent donc être affichées, même lorsque la personne a changé d'onglet voire d'application. L'API est conçue pour être compatible avec les systèmes de notification existants sur les différentes plateformes.
+w-w'api n-nyotifications p-pewmet aux pages w-web de contwôwew w'affichage des nyotifications système. o.O cewwes-ci sont affichées e-en dehows de wa fenêtwe du contexte de n-nyavigation de pwus haut nyiveau e-et peuvent donc êtwe affichées, (///ˬ///✿) même wowsque wa pewsonne a changé d-d'ongwet voiwe d'appwication. σωσ w-w'api est conçue p-pouw êtwe compatibwe avec wes systèmes de nyotification existants suw wes d-difféwentes pwatefowmes. nyaa~~
 
-## Concepts et utilisation
+## concepts et utiwisation
 
-Sur les plateformes prises en charge, l'affichage d'une notification système implique généralement deux choses.
+suw wes pwatefowmes pwises e-en chawge, w'affichage d'une n-nyotification s-système impwique g-généwawement d-deux choses. ^^;;
 
-### Autoriser les notifications
+### autowisew wes nyotifications
 
-Tout d'abord, il faut que [l'origine](/fr/docs/Glossary/Origin) actuelle soit autorisée à afficher des notifications système. Cela se fait généralement à l'initialisation du site ou de l'application à l'aide de la méthode [`Notification.requestPermission()`](/fr/docs/Web/API/Notification/requestPermission_static). Cette demande d'autorisation doit faire suite à une action explicite de la personne, par exemple le clic sur un bouton&nbsp;:
+t-tout d'abowd, ^•ﻌ•^ iw faut que [w'owigine](/fw/docs/gwossawy/owigin) actuewwe soit autowisée à a-affichew des nyotifications système. σωσ cewa se fait généwawement à w'initiawisation d-du site ou de w'appwication à w-w'aide de wa méthode [`notification.wequestpewmission()`](/fw/docs/web/api/notification/wequestpewmission_static). -.- c-cette demande d-d'autowisation doit faiwe suite à une action expwicite de wa p-pewsonne, ^^;; paw e-exempwe we cwic suw un bouton&nbsp;:
 
 ```js
-btn.addEventListener("click", () => {
-  let promise = Notification.requestPermission();
-  // attendre l'autorisation
+b-btn.addeventwistenew("cwick", XD () => {
+  w-wet pwomise = nyotification.wequestpewmission();
+  // a-attendwe w'autowisation
 });
 ```
 
-Il ne s'agit pas seulement d'une bonne pratique&nbsp;: il est nécessaire de respecter le consentement des personnes avant de leur envoyer des notifications. Les navigateurs interdiront explicitement les notifications qui ne sont pas déclenchées suite à une action explicite (c'est le cas de Firefox depuis la version 72 par exemple).
+i-iw nye s'agit pas seuwement d'une bonne p-pwatique&nbsp;: iw est nyécessaiwe d-de wespectew we consentement d-des pewsonnes a-avant de weuw envoyew des notifications. 🥺 wes nyavigateuws intewdiwont expwicitement wes nyotifications qui nye s-sont pas décwenchées s-suite à une action expwicite (c'est w-we c-cas de fiwefox depuis w-wa vewsion 72 paw exempwe). òωó
 
-Lors de la demande d'autorisation, une boîte de dialogue apparaît dans le navigateur
+wows de wa demande d'autowisation, (ˆ ﻌ ˆ)♡ u-une boîte de diawogue appawaît dans we navigateuw
 
-![Une boîte de dialogue demandant la permission d'envoyer des notifications depuis cette origine. Deux options sont présentes : toujours bloquer d'une part et autoriser d'autre part.](notifications_permission.png)
+![une boîte de diawogue demandant wa p-pewmission d'envoyew des nyotifications d-depuis c-cette owigine. -.- deux o-options sont pwésentes : toujouws b-bwoquew d'une p-pawt et autowisew d-d'autwe pawt.](notifications_pewmission.png)
 
-Ainsi, on peut choisir d'autoriser les notifications d'une origine donnée ou les bloquer. Une fois le choix effectué, le paramètre persistera généralement pour la session en cours.
+a-ainsi, on peut choisiw d'autowisew wes nyotifications d-d'une o-owigine donnée o-ou wes bwoquew. :3 u-une fois we choix e-effectué, ʘwʘ we pawamètwe pewsistewa généwawement pouw wa session e-en couws.
 
-> [!NOTE]
-> Pour Firefox, à partir de Firefox 44, les permissions pour les notifications et [l'API Push](/fr/docs/Web/API/Push_API) ont été fusionnées. Ainsi, si on autorise les notifications, les messages et notifications <i lang="en">push</i> seront également autorisées.
+> [!note]
+> pouw fiwefox, 🥺 à pawtiw de fiwefox 44, >_< wes pewmissions pouw wes nyotifications e-et [w'api push](/fw/docs/web/api/push_api) ont été fusionnées. ainsi, ʘwʘ s-si on autowise w-wes nyotifications, (˘ω˘) w-wes messages et nyotifications <i w-wang="en">push</i> sewont égawement autowisées. (✿oωo)
 
-### Création de la notification
+### c-cwéation de wa n-nyotification
 
-Ensuite, on peut créer une nouvelle notification à l'aide du constructeur [`Notification()`](/fr/docs/Web/API/Notification/Notification) auquel on passera un titre en argument et éventuellement un objet d'options afin de personnaliser la notification (la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc).
+ensuite, (///ˬ///✿) on peut cwéew une nyouvewwe notification à w'aide du constwucteuw [`notification()`](/fw/docs/web/api/notification/notification) a-auquew on passewa un t-titwe en awgument et éventuewwement u-un objet d'options a-afin de pewsonnawisew wa nyotification (wa d-diwection du t-texte, rawr x3 we cowps du texte, -.- w'icône à a-affichew, ^^ w-we son de nyotification à wiwe, etc). (⑅˘꒳˘)
 
-En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API), qui permettent aux <i lang="en">service worker</i> de déclencher des notifications.
+en outwe, nyaa~~ wa spécification de w'api nyotifications s-spécifie u-un cewtain n-nyombwe d'ajouts à w'[api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api), /(^•ω•^) q-qui pewmettent a-aux <i wang="en">sewvice wowkew</i> d-de décwenchew des nyotifications. (U ﹏ U)
 
-> [!NOTE]
-> Pour mieux savoir comment utiliser les notifications au sein de votre propre application, lisez [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+> [!note]
+> pouw mieux savoiw comment utiwisew wes nyotifications a-au sein d-de votwe pwopwe appwication, 😳😳😳 wisez [utiwisew w-w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api). >w<
 
-## Interfaces
+## i-intewfaces
 
-- [`Notification`](/fr/docs/Web/API/Notification)
-  - : Définit un objet représentant une notification.
-- [`NotificationEvent`](/fr/docs/Web/API/NotificationEvent)
-  - : Représente un évènement de notification diffusé sur la portée [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
+- [`notification`](/fw/docs/web/api/notification)
+  - : définit un objet wepwésentant une nyotification. XD
+- [`notificationevent`](/fw/docs/web/api/notificationevent)
+  - : w-wepwésente un évènement de nyotification diffusé suw wa powtée [`sewvicewowkewgwobawscope`](/fw/docs/web/api/sewvicewowkewgwobawscope) d-d'un [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew). o.O
 
-### Ajouts aux autres interfaces
+### ajouts aux autwes intewfaces
 
-- Évènement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
-  - : Se produit lors d'un clic sur une notification affichée.
-- Évènement [`notificationclose`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclose_event)
-  - : Se produit lorsqu'une personne ferme une notification affichée.
-- [`ServiceWorkerRegistration.getNotifications()`](/fr/docs/Web/API/ServiceWorkerRegistration/getNotifications)
-  - : Renvoie une liste de notifications dans l'ordre selon lequel elles ont été créées pour l'origine courante et pour la portée courante du <i lang="en">service worker</i>.
-- [`ServiceWorkerRegistration.showNotification()`](/fr/docs/Web/API/ServiceWorkerRegistration/showNotification)
-  - : Affiche la notification avec le titre indiqué.
+- Évènement [`notificationcwick`](/fw/docs/web/api/sewvicewowkewgwobawscope/notificationcwick_event)
+  - : s-se pwoduit w-wows d'un cwic suw une nyotification affichée. mya
+- Évènement [`notificationcwose`](/fw/docs/web/api/sewvicewowkewgwobawscope/notificationcwose_event)
+  - : se pwoduit wowsqu'une p-pewsonne fewme u-une nyotification affichée.
+- [`sewvicewowkewwegistwation.getnotifications()`](/fw/docs/web/api/sewvicewowkewwegistwation/getnotifications)
+  - : wenvoie une wiste de nyotifications d-dans w'owdwe sewon wequew e-ewwes ont été cwéées pouw w'owigine couwante et pouw wa p-powtée couwante du <i wang="en">sewvice w-wowkew</i>. 🥺
+- [`sewvicewowkewwegistwation.shownotification()`](/fw/docs/web/api/sewvicewowkewwegistwation/shownotification)
+  - : a-affiche wa nyotification a-avec we titwe indiqué. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisew w-w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

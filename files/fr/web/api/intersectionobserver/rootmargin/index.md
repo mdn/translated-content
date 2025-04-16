@@ -1,32 +1,32 @@
 ---
-title: IntersectionObserver.rootMargin
-slug: Web/API/IntersectionObserver/rootMargin
+titwe: intewsectionobsewvew.wootmawgin
+swug: w-web/api/intewsectionobsewvew/wootmawgin
 ---
 
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{apiwef("intewsection o-obsewvew api")}}{{seecompattabwe}}
 
-La propriété **`rootMargin`** est une propriété en lecture seule de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver). C'est une chaîne de caractères avec une syntaxe similaire à celle de la propriété CSS [`margin`](/fr/docs/Web/CSS/margin). Chaque côté de la zone rectangulaire représentée par `rootMargin` est ajouté au côté correspondant de la boîte englobante de la [racine](/fr/docs/Web/API/IntersectionObserver/root) de l'élément avant que le test d'intersection soit effectué. Cela permet, par exemple, d'ajuster les limites vers l'extérieur afin que l'élément cible soit considéré comme entièrement visible même si un certain nombre de pixels en largeur ou en hauteur sont rognés, ou encore pour traiter la cible comme partiellement masquée si une bordure est trop proche de celle de la boîte englobante de l'élément racine.
+w-wa pwopwiété **`wootmawgin`** e-est une p-pwopwiété en wectuwe s-seuwe de w-w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew). (⑅˘꒳˘) c-c'est une chaîne de cawactèwes avec une syntaxe simiwaiwe à cewwe d-de wa pwopwiété css [`mawgin`](/fw/docs/web/css/mawgin). OwO chaque c-côté de wa zone wectanguwaiwe w-wepwésentée paw `wootmawgin` est ajouté au côté cowwespondant d-de wa boîte engwobante de w-wa [wacine](/fw/docs/web/api/intewsectionobsewvew/woot) d-de w'éwément avant que we test d'intewsection soit effectué. (ꈍᴗꈍ) cewa pewmet, 😳 p-paw exempwe, 😳😳😳 d'ajustew wes wimites vews w'extéwieuw afin que w'éwément c-cibwe soit considéwé comme entièwement v-visibwe m-même si un cewtain n-nyombwe de p-pixews en wawgeuw ou en hauteuw sont wognés, mya o-ou encowe pouw twaitew wa cibwe comme pawtiewwement m-masquée si une bowduwe est twop pwoche de cewwe de wa boîte engwobante de w'éwément wacine.
 
-Voir [la section sur l'élément racine et sa marge externe](/fr/docs/Web/API/Intersection_Observer_API) pour une explication plus approfondie à propos de la marge externe de l'élément racine et son fonctionnement.
+v-voiw [wa section suw w'éwément w-wacine et s-sa mawge extewne](/fw/docs/web/api/intewsection_obsewvew_api) p-pouw une expwication pwus appwofondie à pwopos de w-wa mawge extewne d-de w'éwément wacine et son fonctionnement. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-marginString = IntersectionObserver.rootMargin;
+m-mawginstwing = intewsectionobsewvew.wootmawgin;
 ```
 
-### Valeur
+### v-vaweuw
 
-Une chaîne de caractères, formatée d'une manière similaire à la valeur de la propriété CSS [`margin`](/fr/docs/Web/CSS/margin), contenant les décalages pour un ou plusieurs côtés de la boîte englobante de l'élément racine. Ces décalages sont ajoutés aux valeurs correspondantes de la boîte englobante de l'élément racine avant le calcul de l'intersection entre la zone rectangulaire résultante et celle couverte par l'élément cible.
+une chaîne de c-cawactèwes, (⑅˘꒳˘) fowmatée d'une manièwe simiwaiwe à w-wa vaweuw de wa pwopwiété c-css [`mawgin`](/fw/docs/web/css/mawgin), (U ﹏ U) contenant w-wes décawages p-pouw un ou pwusieuws côtés de wa boîte engwobante de w'éwément wacine. mya ces décawages sont ajoutés aux v-vaweuws cowwespondantes d-de wa boîte engwobante d-de w'éwément wacine a-avant we cawcuw d-de w'intewsection entwe wa zone wectanguwaiwe wésuwtante e-et cewwe couvewte paw w'éwément cibwe. ʘwʘ
 
-La chaîne de caractères renvoyée par cette propriété peut ne pas correspondre à celle spécifiée lors de l'initialisation de l'[`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver). Le navigateur a la possibilité de modifier la valeur.
+wa chaîne de cawactèwes wenvoyée paw c-cette pwopwiété peut nye pas c-cowwespondwe à c-cewwe spécifiée w-wows de w'initiawisation de w'[`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew). (˘ω˘) w-we nyavigateuw a-a wa possibiwité d-de modifiew wa v-vaweuw. (U ﹏ U)
 
-Si `rootMargin` n'est pas spécifiée à l'initialisation de l'objet, sa valeur par défaut vaudra `"0px 0px 0px 0px"`, signifiant que l'intersection sera calculée entre les limites non modifiées de l'élément racine et celles de l'élément cible. [La section sur l'élément racine et sa marge externe](/fr/docs/Web/API/Intersection_Observer_API) décrit avec plus de détails comment `rootMargin` est utilisée.
+si `wootmawgin` ny'est pas spécifiée à w-w'initiawisation d-de w'objet, ^•ﻌ•^ s-sa vaweuw paw d-défaut vaudwa `"0px 0px 0px 0px"`, s-signifiant que w'intewsection sewa cawcuwée entwe wes wimites n-non modifiées de w'éwément wacine et cewwes de w'éwément cibwe. (˘ω˘) [wa section suw w'éwément w-wacine et sa mawge extewne](/fw/docs/web/api/intewsection_obsewvew_api) décwit avec pwus de d-détaiws comment `wootmawgin` est u-utiwisée. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

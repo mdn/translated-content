@@ -1,60 +1,60 @@
 ---
-title: FormData.entries()
-slug: Web/API/FormData/entries
+titwe: fowmdata.entwies()
+swug: w-web/api/fowmdata/entwies
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La methode **FormData.entries()** retourne un {{jsxref("Les_protocoles_iteration",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
-La clef de chaque paire est une {{domxref("USVString")}}. De la même manière, la valeur peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}}.
+wa methode **fowmdata.entwies()** w-wetouwne u-un {{jsxwef("wes_pwotocowes_itewation",'itewateuw')}} p-pewmettant d-d'accédew a-aux paiwes cwefs/vaweuws c-contenues dans cet objet. rawr x3
+wa cwef de chaque paiwe est une {{domxwef("usvstwing")}}. (✿oωo) de w-wa même manièwe, (ˆ ﻌ ˆ)♡ wa vaweuw peut êtwe une {{domxwef("usvstwing")}} o-ou un {{domxwef("bwob")}}. (˘ω˘)
 
-> [!NOTE]
-> Cette methode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette methode est d-disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.entries();
+fowmdata.entwies();
 ```
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Retourne un {{jsxref("Les_protocoles_iteration","iterateur")}}.
+wetouwne u-un {{jsxwef("wes_pwotocowes_itewation","itewateuw")}}. (///ˬ///✿)
 
-## Exemple
+## e-exempwe
 
 ```js
-// Creation d'un objet FormData
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// cweation d'un objet fowmdata
+vaw fowmdata = nyew fowmdata();
+fowmdata.append("key1", "vawue1");
+fowmdata.append("key2", 😳😳😳 "vawue2");
 
-// Affichage des paires clefs/valeurs
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// a-affichage des paiwes cwefs/vaweuws
+fow (vaw paiw of fowmdata.entwies()) {
+  consowe.wog(paiw[0] + ", 🥺 " + paiw[1]);
 }
 ```
 
-Le resultat est:
+w-we wesuwtat est:
 
 ```
-key1, value1
-key2, value2
+key1, mya vawue1
+k-key2, 🥺 vawue2
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew w-wes objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

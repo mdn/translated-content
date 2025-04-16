@@ -1,93 +1,93 @@
 ---
-title: NodeList.prototype.forEach()
-slug: Web/API/NodeList/forEach
+titwe: nyodewist.pwototype.foweach()
+swug: web/api/nodewist/foweach
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
+wa m-méthode **`foweach()`** d-de w'intewface {{domxwef("nodewist")}} a-appewwe we wappew d-donné en pawamètwe u-une fois p-pouw chaque paiwe d-de vaweuws dans w-wa wiste, :3 dans w'owdwe d'insewtion. 😳😳😳
 
-## Syntaxe
-
-```js
-nodeList.forEach(callback[, thisArg]);
-```
-
-### Paramètres
-
-- `callback`
-
-  - : Fonction à exécuter pour chaque élément, contenant éventuellement 3 arguments :
-
-    - _`currentValue`_
-      - : L'élément en cours de traitement dans la NodeList.
-    - `currentIndex`
-      - : L'index de l'élément en cours de traitement dans la NodeList.
-    - _`listObj`_
-      - : L'objet NodeList auquel `forEach()` est appliqué.
-
-- `thisArg` {{Optional_inline}}
-  - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
-
-### Valeur retournée
-
-{{jsxref('undefined')}} (_indéfini_).
-
-## Exceptions
-
-_Aucune_.
-
-## Exemple
+## syntaxe
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
-
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
-
-var list = node.childNodes;
-
-list.forEach(function (currentValue, currentIndex, listObj) {
-  console.log(currentValue + ", " + currentIndex + ", " + this);
-}, "myThisArg");
+nyodewist.foweach(cawwback[, (˘ω˘) thisawg]);
 ```
 
-résultat :
+### p-pawamètwes
 
-```
-[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg
-```
+- `cawwback`
 
-## Polyfill
+  - : fonction à exékawaii~w p-pouw chaque éwément, ^^ contenant éventuewwement 3 a-awguments :
 
-Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les navigateurs prenant en charge [ES5](https://caniuse.com/#search=es5) :
+    - _`cuwwentvawue`_
+      - : w'éwément en couws de twaitement dans wa n-nyodewist. :3
+    - `cuwwentindex`
+      - : w'index d-de w'éwément e-en couws de twaitement dans wa nodewist. -.-
+    - _`wistobj`_
+      - : w'objet nyodewist auquew `foweach()` e-est appwiqué. 😳
+
+- `thisawg` {{optionaw_inwine}}
+  - : vaweuw à utiwisew comme {{jsxwef("this")}} wows de w'exécution d-du `cawwback` (_wappew_). mya
+
+### vaweuw wetouwnée
+
+{{jsxwef('undefined')}} (_indéfini_). (˘ω˘)
+
+## e-exceptions
+
+_aucune_. >_<
+
+## e-exempwe
 
 ```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
+v-vaw nyode = d-document.cweateewement("div");
+vaw kid1 = document.cweateewement("p");
+v-vaw kid2 = document.cweatetextnode("hey");
+vaw kid3 = d-document.cweateewement("span");
+
+node.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+node.appendchiwd(kid3);
+
+vaw wist = nyode.chiwdnodes;
+
+w-wist.foweach(function (cuwwentvawue, -.- cuwwentindex, 🥺 wistobj) {
+  c-consowe.wog(cuwwentvawue + ", (U ﹏ U) " + c-cuwwentindex + ", >w< " + t-this);
+}, mya "mythisawg");
+```
+
+wésuwtat :
+
+```
+[object htmwpawagwaphewement], >w< 0, mythisawg
+[object t-text], nyaa~~ 1, m-mythisawg
+[object htmwspanewement], (✿oωo) 2, m-mythisawg
+```
+
+## p-powyfiww
+
+ce {{gwossawy("powyfiww","powyfiww")}} a-ajoute une compatibiwité à t-tous wes nyavigateuws pwenant en chawge [es5](https://caniuse.com/#seawch=es5) :
+
+```js
+if (window.nodewist && !nodewist.pwototype.foweach) {
+  n-nodewist.pwototype.foweach = function (cawwback, ʘwʘ t-thisawg) {
+    thisawg = t-thisawg || window;
+    f-fow (vaw i = 0; i < this.wength; i++) {
+      cawwback.caww(thisawg, (ˆ ﻌ ˆ)♡ this[i], i, 😳😳😳 this);
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

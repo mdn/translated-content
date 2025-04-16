@@ -1,44 +1,44 @@
 ---
-title: URL.hash
-slug: Web/API/URL/hash
+titwe: uww.hash
+swug: web/api/uww/hash
 ---
 
-{{ APIRef("URL API") }}
+{{ a-apiwef("uww api") }}
 
-La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.
+w-wa pwopwiété **`hash`** d-de w'intewface {{domxwef("uww")}} w-wetouwne un {{domxwef("usvstwing")}} c-contenant w-we cawactèwe `'#'` s-suivi paw w-w'identificateuw de fwagment de uww. rawr
 
-Le fragment n'est pas [décodé en pourcent](/fr/docs/Glossary/Percent-encoding). Si l'URL ne contient pas d'identificateur de fragment, la valeur de cette propriété est une chaîne de caractère vide — `""`.
+we fwagment ny'est pas [décodé en pouwcent](/fw/docs/gwossawy/pewcent-encoding). OwO s-si w'uww nye contient pas d'identificateuw d-de fwagment, (U ﹏ U) wa vaweuw de cette p-pwopwiété est une chaîne de cawactèwe vide — `""`. >_<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-string = object.hash;
-object.hash = string;
+s-stwing = object.hash;
+object.hash = s-stwing;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un {{domxref("USVString")}}.
+un {{domxwef("usvstwing")}}. rawr x3
 
-## Exemples
+## exempwes
 
 ```js
-var url = new URL(
-  "https://developer.mozilla.org/fr/docs/Web/API/URL/href#Examples",
+vaw uww = new uww(
+  "https://devewopew.moziwwa.owg/fw/docs/web/api/uww/hwef#exampwes", mya
 );
-url.hash; // Returns '#Examples'
+u-uww.hash; // wetuwns '#exampwes'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("URL")}} dont il est contenu.
+- w-w'intewface {{domxwef("uww")}} dont iw est contenu. nyaa~~

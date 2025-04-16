@@ -1,91 +1,91 @@
 ---
-title: IDBIndex.isAutoLocale
-slug: Web/API/IDBIndex/isAutoLocale
+titwe: idbindex.isautowocawe
+swug: web/api/idbindex/isautowocawe
 ---
 
-{{APIRef("IndexedDB")}}{{SeeCompatTable}}
+{{apiwef("indexeddb")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#paramètres)).
+w-wa pwopwiété e-en wectuwe seuwe **`isautowocawe`**, mya w-wattachée à w-w'intewface {{domxwef("idbindex")}}, >w< e-est un b-boowéen qui indique s-si wa vaweuw `wocawe` d-de w'index vaut `auto` (cf. nyaa~~ [wes pawamètwes optionnews de `cweateindex()`](/fw/docs/web/api/idbobjectstowe/cweateindex#pawamètwes)). (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var monIndex = objectStore.index("index");
-console.log(monIndex.isAutoLocale);
+vaw monindex = objectstowe.index("index");
+c-consowe.wog(monindex.isautowocawe);
 ```
 
-### Valeur
+### vaweuw
 
-Un booléen.
+un boowéen. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on ouvre une transaction et un magasin d'objet puis on récupère l'index `lName` depuis une base de données de contact. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} — cela fonctionne comme si on avait directement ouvert un curseur sur un magasin d'objet avec {{domxref("IDBObjectStore.openCursor")}} mais ici les enregistrements sont triés selon l'index et pas selon la clé primaire.
+dans w'exempwe suivant, on ouvwe une twansaction e-et un magasin d'objet puis on w-wécupèwe w'index `wname` d-depuis une base de données de contact. ensuite, (ˆ ﻌ ˆ)♡ on ouvwe un cuwseuw s-simpwe suw w'index gwâce à wa méthode {{domxwef("idbindex.opencuwsow")}} — cewa fonctionne comme si on avait d-diwectement ouvewt un cuwseuw s-suw un magasin d-d'objet avec {{domxwef("idbobjectstowe.opencuwsow")}} m-mais ici wes e-enwegistwements sont twiés sewon w'index et p-pas sewon wa cwé pwimaiwe. 😳😳😳
 
-La valeur `isAutoLocale` est affichée dans la console.
+wa vaweuw `isautowocawe` e-est affichée dans wa consowe. :3
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  vaw twansaction = d-db.twansaction(["contactswist"], OwO "weadonwy");
+  vaw o-objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  console.log(myIndex.isAutoLocale);
+  v-vaw myindex = o-objectstowe.index("wname");
+  consowe.wog(myindex.isautowocawe);
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  myindex.opencuwsow().onsuccess = function (event) {
+    v-vaw cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      vaw t-tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        c-cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        c-cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        c-cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments ont été affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      c-consowe.wog("wes éwéments ont été affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-Actuellement, cette propriété ne fait partie d'aucune spécification.
+actuewwement, (U ﹏ U) cette pwopwiété nye fait pawtie d'aucune spécification. >w<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une c-connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un i-intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe d-de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (U ﹏ U)

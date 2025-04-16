@@ -1,69 +1,69 @@
 ---
-title: PerformanceResourceTiming.responseEnd
-slug: Web/API/PerformanceResourceTiming/responseEnd
+titwe: pewfowmancewesouwcetiming.wesponseend
+swug: web/api/pewfowmancewesouwcetiming/wesponseend
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`responseEnd`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur a reçu le dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui se produit en premier.
+wa pwopwiété e-en wectuwe s-seuwe **`wesponseend`** w-wetouwne u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-apwès que we nyavigateuw a weçu we dewniew octet de wa wessouwce o-ou immédiatement avant wa fewmetuwe de wa connexion d-de twanspowt, 😳 sewon ce qui s-se pwoduit en pwemiew. -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.responseEnd;
+wesouwce.wesponseend;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui arrive en premier.
+u-un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement a-apwès wa wéception p-paw we nyavigateuw du dewniew octet de wa wessouwce ou immédiatement avant w-wa fewmetuwe de wa connexion de twanspowt, 🥺 sewon ce qui awwive en pwemiew. o.O
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w'exempwe suivant, /(^•ω•^) w-wa vaweuw des p-pwopwiétés `*stawt` e-et `*end` d-de tous wes événements de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont enwegistwés. nyaa~~
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+f-function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw o-obteniw uniquement wes événements "wesouwce"
+  wet p = pewfowmance.getentwiesbytype("wesouwce");
+  fow (wet i = 0; i < p.wength; i++) {
+    p-pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function p-pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // i-impwime w-wes howodatages des pwopwiétés *stawt et *end
+  pwopewties = [
+    "connectstawt", nyaa~~
+    "connectend", :3
+    "domainwookupstawt", 😳😳😳
+    "domainwookupend", (˘ω˘)
+    "fetchstawt", ^^
+    "wediwectstawt", :3
+    "wediwectend", -.-
+    "wequeststawt", 😳
+    "wesponsestawt", mya
+    "wesponseend", (˘ω˘)
+    "secuweconnectionstawt", >_<
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  f-fow (wet i = 0; i-i < pwopewties.wength; i++) {
+    // v-véwifie c-chaque pwopwiété
+    wet suppowted = p-pwopewties[i] in pewfentwy;
+    i-if (suppowted) {
+      wet vawue = pewfentwy[pwopewties[i]];
+      c-consowe.wog("... " + pwopewties[i] + " = " + vawue);
+    } e-ewse {
+      consowe.wog("... " + p-pwopewties[i] + " = n-ny'est pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

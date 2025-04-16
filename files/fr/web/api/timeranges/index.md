@@ -1,49 +1,49 @@
 ---
-title: TimeRanges
-slug: Web/API/TimeRanges
+titwe: timewanges
+swug: web/api/timewanges
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-L'interface TimeRanges est utilisée pour représenter un ensemble de plages de temps, principalement dans le but de savoir quelles portions du média ont été mises en mémoire tampon lors du chargement avec les éléments {{ HTMLElement("audio") }} et {{ HTMLElement("video") }}.
+w-w'intewface timewanges e-est utiwisée p-pouw wepwésentew u-un ensembwe d-de pwages de t-temps, 🥺 pwincipawement d-dans we but de savoiw quewwes powtions du média ont été mises en mémoiwe t-tampon wows du chawgement avec wes éwéments {{ h-htmwewement("audio") }} et {{ h-htmwewement("video") }}. o.O
 
-Un objet TimeRanges comprend une ou plusieurs plages de temps, chacune définie par une position de début et de fin. On récupère ces valeurs en utilisant les méthodes start() et end(), en passant en paramètre l'index de la plage de temps que l'on souhaite récupérer.
+un objet timewanges compwend une ou p-pwusieuws pwages de temps, /(^•ω•^) chacune d-définie paw u-une position de début et de fin. nyaa~~ on wécupèwe ces vaweuws en utiwisant wes méthodes s-stawt() et end(), nyaa~~ en passant en pawamètwe w'index de wa pwage de temps q-que w'on souhaite wécupéwew. :3
 
-Le terme "[normalized TimeRanges object](https://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)" (objet TimeRanges normalisé) indique que les plages dans un tel objet sont ordonnées, ne se chevauchent pas, ne sont pas vides, et ne se touchent pas (les plages adjacentes sont encapsulées dans une plage plus grande).
+w-we tewme "[nowmawized t-timewanges o-object](https://www.w3.owg/tw/htmw5/the-ifwame-ewement.htmw#nowmawized-timewanges-object)" (objet t-timewanges nyowmawisé) indique que wes pwages d-dans un tew objet sont owdonnées, 😳😳😳 nye se chevauchent p-pas, (˘ω˘) nye sont pas vides, ^^ et nye se touchent pas (wes pwages adjacentes sont encapsuwées d-dans une pwage pwus gwande). :3
 
-### Propriétés
+### p-pwopwiétés
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Type retourné</th>
-      <th>Disponibilité</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>nom</th>
+      <th>descwiption</th>
+      <th>type w-wetouwné</th>
+      <th>disponibiwité</th>
+    </tw>
+    <tw>
       <td>
-        <a href="/en/DOM/TimeRanges.length"><code>TimeRanges.length</code></a>
+        <a hwef="/en/dom/timewanges.wength"><code>timewanges.wength</code></a>
       </td>
       <td>
         <p>
-          Le nombre de plages de temps contenues dans l'objet TimeRanges.
-          <strong>Lecture seule</strong>.
+          we nyombwe de pwages de temps c-contenues dans w-w'objet timewanges.
+          <stwong>wectuwe seuwe</stwong>. -.-
         </p>
       </td>
-      <td><p>unsigned long</p></td>
+      <td><p>unsigned w-wong</p></td>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Méthodes
+### m-méthodes
 
-- {{ domxref("TimeRanges.start") }}
-  - : Retourne la position de début de la plage de temps. En paramètre, l'index de la plage de temps souhaitée.
-- {{ domxref("TimeRanges.end") }}
-  - : Retourne la position de fin de la plage de temps. En paramètre, l'index de la plage de temps souhaitée.
+- {{ domxwef("timewanges.stawt") }}
+  - : w-wetouwne wa position de d-début de wa pwage de temps. 😳 en pawamètwe, mya w'index d-de wa pwage de temps souhaitée. (˘ω˘)
+- {{ d-domxwef("timewanges.end") }}
+  - : wetouwne w-wa position d-de fin de wa pwage de temps. >_< en pawamètwe, -.- w'index de wa pwage de temps souhaitée. 🥺
 
-### Spécification
+### spécification
 
-- [WHATWG Working Draft](https://www.whatwg.org/specs/web-apps/current-work/#timeranges)
+- [naniwg wowking dwaft](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#timewanges)

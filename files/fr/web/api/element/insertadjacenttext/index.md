@@ -1,96 +1,96 @@
 ---
-title: Element.insertAdjacentText()
-slug: Web/API/Element/insertAdjacentText
+titwe: ewement.insewtadjacenttext()
+swug: web/api/ewement/insewtadjacenttext
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
+w-wa méthode `insewtadjacenttext()` i-insèwe u-un nyoeud texte d-donné à une p-position donnée p-paw wappowt à w-w'éwément suw w-wequew ewwe est appewé. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-element.insertAdjacentText(position, element);
+ewement.insewtadjacenttext(position, >w< ewement);
 ```
 
-### Paramètres
+### pawamètwes
 
-- position
+- p-position
 
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à l'`element` ; elle doit être l'une des chaînes suivantes :
+  - : une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) w-wepwésentant wa position p-paw wappowt à w'`ewement` ; ewwe doit êtwe w'une des chaînes s-suivantes :
 
-    - `'beforebegin'` : avant l'`element` lui-même ;
-    - `'afterbegin'` : à l'intérieur de l'`element`, avant son premier enfant ;
-    - `'beforeend'` : à l'intérieur de l'`element`, avant son dernier enfant ;
-    - `'afterend'` : après l'`element` lui-même.
+    - `'befowebegin'` : avant w-w'`ewement` wui-même ;
+    - `'aftewbegin'` : à w-w'intéwieuw de w'`ewement`, (⑅˘꒳˘) avant son pwemiew enfant ;
+    - `'befoweend'` : à w'intéwieuw d-de w'`ewement`, OwO avant son dewniew enfant ;
+    - `'aftewend'` : apwès w'`ewement` wui-même. (ꈍᴗꈍ)
 
-- element
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le texte à insérer dans l'arbre.
+- e-ewement
+  - : une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) w-wepwésentant w-we texte à i-inséwew dans w'awbwe. 😳
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Vide.
+v-vide.
 
-### Exceptions
+### exceptions
 
-| Exception     | Explication                                           |
+| exception     | expwication                                           |
 | ------------- | ----------------------------------------------------- |
-| `SyntaxError` | La `position` indiquée n'est pas une valeur reconnue. |
+| `syntaxewwow` | w-wa `position` indiquée ny'est pas une vaweuw weconnue. 😳😳😳 |
 
-### Visualisation des noms de position
+### visuawisation des nyoms d-de position
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin> -->
-  machin
-  <!-- beforeend -->
+  <!-- a-aftewbegin> -->
+  m-machin
+  <!-- b-befoweend -->
 </p>
-<!-- afterend -->
+<!-- aftewend -->
 ```
 
-> [!NOTE]
-> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
+> [!note]
+> wes positions `befowebegin` et `aftewend` n-nye fonctionnent q-que si we nyoeud est dans w-w'awbwe et possède u-un éwément pawent. mya
 
-## Exemple
+## e-exempwe
 
 ```js
-beforeBtn.addEventListener("click", function () {
-  para.insertAdjacentText("afterbegin", textInput.value);
+befowebtn.addeventwistenew("cwick", mya f-function () {
+  pawa.insewtadjacenttext("aftewbegin", (⑅˘꒳˘) textinput.vawue);
 });
 
-afterBtn.addEventListener("click", function () {
-  para.insertAdjacentText("beforeend", textInput.value);
+a-aftewbtn.addeventwistenew("cwick", (U ﹏ U) function () {
+  p-pawa.insewtadjacenttext("befoweend", mya textinput.vawue);
 });
 ```
 
-Jetez un œil à notre démo [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) sur GitHub (voir le [code source](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) aussi). Ici, nous avons un simple paragraphe. Vous pouvez entrer du texte dans l'élément de formulaire, puis presser les boutons _Insert before_ (_insère avant_) et _Insert after_ (_insère après_) pour l'insérer avant ou après le texte de paragraphe existant en utilisant `insertAdjacentText()`. Notez que le nœud texte existant n'y est pas ajouté — d'autres nœuds de texte sont créés contenant le nouvel ajout.
+j-jetez un œiw à n-nyotwe démo [insewtadjacenttext.htmw](https://mdn.github.io/dom-exampwes/insewt-adjacent/insewtadjacenttext.htmw) suw github (voiw we [code souwce](https://github.com/mdn/dom-exampwes/bwob/mastew/insewt-adjacent/insewtadjacenttext.htmw) aussi). ʘwʘ ici, nyous avons un simpwe pawagwaphe. (˘ω˘) v-vous pouvez entwew d-du texte dans w'éwément de f-fowmuwaiwe, (U ﹏ U) puis p-pwessew wes boutons _insewt befowe_ (_insèwe a-avant_) et _insewt aftew_ (_insèwe apwès_) pouw w'inséwew avant o-ou apwès we texte de pawagwaphe existant en utiwisant `insewtadjacenttext()`. ^•ﻌ•^ nyotez que we n-nyœud texte existant ny'y est p-pas ajouté — d-d'autwes nœuds d-de texte sont cwéés contenant w-we nyouvew ajout.
 
-## Émulation
+## Émuwation
 
-Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans Internet Explorer 5.5 (et peut-être antérieur) et supérieur avec le code suivant :
+v-vous pouvez utiwisew u-une émuwation d-de wa méthode `insewtadjacenttext()` dans intewnet expwowew 5.5 (et p-peut-êtwe a-antéwieuw) e-et supéwieuw a-avec we code suivant :
 
 ```js
-if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function (type, txt) {
-    this.insertAdjacentHTML(
-      type,
-      (txt + "") // convertir en chaîne de caractères
-        .replace(/&/g, "&amp;") // intégrer des symboles d'esperluette
-        .replace(/</g, "&lt;"), // intégrer les symboles "plus petit que"
+i-if (!ewement.pwototype.insewtadjacenttext)
+  ewement.pwototype.insewtadjacenttext = function (type, txt) {
+    this.insewtadjacenthtmw(
+      t-type, (˘ω˘)
+      (txt + "") // convewtiw en chaîne de cawactèwes
+        .wepwace(/&/g, :3 "&amp;") // intégwew des symbowes d'espewwuette
+        .wepwace(/</g, ^^;; "&wt;"), 🥺 // i-intégwew wes symbowes "pwus petit que"
     );
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("ewement.insewtadjacenthtmw()")}}

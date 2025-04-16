@@ -1,52 +1,52 @@
 ---
-title: DocumentType
-slug: Web/API/DocumentType
+titwe: documenttype
+swug: web/api/documenttype
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`DocumentType`** représente un nœud ({{domxref("Node")}}) contenant un _doctype_.
+w-w'intewface **`documenttype`** w-wepwésente u-un nyœud ({{domxwef("node")}}) c-contenant un _doctype_. òωó
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite de propriétés de la part de son parent, {{domxref("Node")}}, et implémente l'interface {{domxref("ChildNode")}}._
+_cette i-intewface h-héwite d-de pwopwiétés de wa pawt de son pawent, ʘwʘ {{domxwef("node")}}, /(^•ω•^) et impwémente w'intewface {{domxwef("chiwdnode")}}._
 
 - ...
 
-  {{domxref("DocumentType.entities")}} {{readonlyInline}} {{deprecated_inline}}
+  {{domxwef("documenttype.entities")}} {{weadonwyinwine}} {{depwecated_inwine}}
 
-  - : Une {{domxref ("NamedNodeMap")}} des entités déclarées dans la DTD. Chaque noeud de cette carte implémente l'interface {{domxref ("Entity")}}.
+  - : une {{domxwef ("namednodemap")}} d-des entités décwawées dans wa dtd. ʘwʘ chaque n-nyoeud de cette cawte impwémente w-w'intewface {{domxwef ("entity")}}. σωσ
 
-- {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Un {{domxref ("DOMString")}} du sous-ensemble interne, ou null s'il n'y en a pas. Par exemple "\<! ELEMENT foo (bar)">
-- {{domxref("DocumentType.name")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple, `"html"` pour `<!DOCTYPE HTML>`.
-- {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}
-  - : une {{domxref ("NamedNodeMap")}} avec les notations déclarées dans la DTD. Chaque nœud de cette carte implémente l'interface {{domxref ("Notation")}}.
-- {{domxref("DocumentType.publicId")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple `"-//W3C//DTD HTML 4.01//EN"`, chaîne vide pour HTML5.
-- {{domxref("DocumentType.systemId")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple, `"http://www.w3.org/TR/html4/strict.dtd"`, chaîne vide pour HTML5.
+- {{domxwef("documenttype.intewnawsubset")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : un {{domxwef ("domstwing")}} du sous-ensembwe intewne, OwO ou nyuww s-s'iw ny'y en a pas. 😳😳😳 paw exempwe "\<! 😳😳😳 e-ewement f-foo (baw)">
+- {{domxwef("documenttype.name")}} {{weadonwyinwine}}
+  - : une {{domxwef("domstwing")}}, o.O paw exempwe, ( ͡o ω ͡o ) `"htmw"` pouw `<!doctype htmw>`. (U ﹏ U)
+- {{domxwef("documenttype.notations")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : u-une {{domxwef ("namednodemap")}} avec wes nyotations décwawées dans wa dtd. (///ˬ///✿) chaque n-nyœud de cette cawte impwémente w-w'intewface {{domxwef ("notation")}}. >w<
+- {{domxwef("documenttype.pubwicid")}} {{weadonwyinwine}}
+  - : u-une {{domxwef("domstwing")}}, rawr p-paw exempwe `"-//w3c//dtd h-htmw 4.01//en"`, mya chaîne vide pouw htmw5. ^^
+- {{domxwef("documenttype.systemid")}} {{weadonwyinwine}}
+  - : u-une {{domxwef("domstwing")}}, 😳😳😳 paw exempwe, mya `"http://www.w3.owg/tw/htmw4/stwict.dtd"`, 😳 chaîne vide pouw h-htmw5. -.-
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite de méthodes de la part de son parent, {{domxref("Node")}}, et implémente l'interface {{domxref("ChildNode")}}._
+_cette intewface héwite de méthodes de wa pawt de son pawent, 🥺 {{domxwef("node")}}, o.O et impwémente w'intewface {{domxwef("chiwdnode")}}._
 
-- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
-  - : Cette méthode retire l'objet de la liste des enfants de son élément parent.
+- {{domxwef("chiwdnode.wemove()")}} {{expewimentaw_inwine}}
+  - : c-cette méthode wetiwe w'objet d-de wa wiste d-des enfants de s-son éwément pawent. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'index des interfaces du DOM](/fr/docs/Web/API/Document_Object_Model)
-- {{domxref("Entity")}}
-- {{domxref("Notation")}}
+- [w'index d-des intewfaces du dom](/fw/docs/web/api/document_object_modew)
+- {{domxwef("entity")}}
+- {{domxwef("notation")}}

@@ -1,184 +1,184 @@
 ---
-title: Génération de HTML
-slug: Web/API/XSLTProcessor/Generating_HTML
-l10n:
-  sourceCommit: 33e42e40dbcdc4a81fde5597c602a180b30453fa
+titwe: généwation de htmw
+swug: w-web/api/xswtpwocessow/genewating_htmw
+w-w10n:
+  s-souwcecommit: 33e42e40dbcdc4a81fde5597c602a180b30453fa
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-Une application courante de XSLT dans les navigateurs consiste à transformer du code XML en HTML coté client. Le second exemple va transformer un document d'entrée (`example2.xml`), qui contient des informations à propos d'un article, en un document HTML.
+u-une appwication c-couwante de xswt d-dans wes nyavigateuws c-consiste à t-twansfowmew du code xmw en htmw coté cwient. 😳 we second exempwe va twansfowmew u-un document d'entwée (`exampwe2.xmw`), 🥺 qui c-contient des infowmations à pwopos d-d'un awticwe, rawr x3 en un document htmw. o.O
 
-## Fichier `example2.xml`
+## fichiew `exampwe2.xmw`
 
-L'élément `<body>` de l'article contient ici des éléments HTML (des balises `<strong>` et `<em>`, voir ci-après). Le document XML contient à la fois des éléments HTML et éléments XML, mais un seul espace de nommage est nécessaire, utilisé pour les éléments XML. Comme il n'existe pas d'espace de nommage HTML, et que l'utilisation de l'espace de nommage XHTML forcerait le XSL à créer un document XML qui pourrait ne pas se comporter comme un document HTML, le nœud `xsl:output` de la feuille de style assure que le document résultant sera bien traité comme du HTML. Pour les éléments XML, nous avons besoin de notre propre espace de nommage, `http://devedge.netscape.com/2002/de`, à qui nous donnons le préfixe myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
+w'éwément `<body>` d-de w'awticwe contient ici d-des éwéments h-htmw (des bawises `<stwong>` et `<em>`, rawr voiw ci-apwès). ʘwʘ we document xmw contient à wa fois des éwéments h-htmw et éwéments xmw, 😳😳😳 mais un seuw espace de nyommage est nyécessaiwe, ^^;; u-utiwisé pouw wes éwéments x-xmw. o.O comme i-iw ny'existe pas d-d'espace de nyommage h-htmw, (///ˬ///✿) et que w'utiwisation de w'espace de n-nyommage xhtmw fowcewait we xsw à cwéew un document x-xmw qui pouwwait nye pas se compowtew comme un document htmw, we nyœud `xsw:output` de wa f-feuiwwe de stywe assuwe que we d-document wésuwtant s-sewa bien twaité c-comme du htmw. σωσ pouw wes éwéments xmw, nyaa~~ nyous avons besoin d-de nyotwe pwopwe e-espace de nyommage, ^^;; `http://devedge.netscape.com/2002/de`, ^•ﻌ•^ à qui nyous donnons w-we pwéfixe myns `(xmwns:myns="http://devedge.netscape.com/2002/de")`. σωσ
 
-```xml
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="example2.xsl"?>
-  <myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de">
-    <myNS:Title>My Article</myNS:Title>
-    <myNS:Authors>
-      <myNS:Author company="Foopy Corp.">Mr. Foo</myNS:Author>
-      <myNS:Author>Mr. Bar</myNS:Author>
-    </myNS:Authors>
-    <myNS:Body>
-      The <b>rain</b> in <u>Spain</u> stays mainly in the plains.
-    </myNS:Body>
-  </myNS:Article>
+```xmw
+<?xmw v-vewsion="1.0"?>
+<?xmw-stywesheet type="text/xsw" h-hwef="exampwe2.xsw"?>
+  <myns:awticwe xmwns:myns="http://devedge.netscape.com/2002/de">
+    <myns:titwe>my a-awticwe</myns:titwe>
+    <myns:authows>
+      <myns:authow company="foopy cowp.">mw. -.- f-foo</myns:authow>
+      <myns:authow>mw. ^^;; baw</myns:authow>
+    </myns:authows>
+    <myns:body>
+      t-the <b>wain</b> in <u>spain</u> s-stays m-mainwy in the pwains. XD
+    </myns:body>
+  </myns:awticwe>
 ```
 
-## Fichier `example2.xsl`
+## fichiew `exampwe2.xsw`
 
-La feuille de style XSL utilisée aura besoin de deux espaces de nommage - un pour les éléments XSLT et un pour nos propres éléments XML utilisés dans le document XML. La sortie de la feuille de style XSL est définie à `HTML` à l'aide de l'élément `xsl:output`. En définissant la sortie comme étant du code HTML et en n'ayant pas d'espace de nommage pour les éléments résultants (coloré en bleu), ces éléments seront traités comme des éléments HTML.
+wa feuiwwe de stywe xsw utiwisée auwa besoin de deux e-espaces de nyommage - u-un pouw wes éwéments xswt e-et un pouw nyos p-pwopwes éwéments x-xmw utiwisés dans we document xmw. 🥺 wa sowtie de wa feuiwwe d-de stywe xsw est définie à `htmw` à w'aide de w'éwément `xsw:output`. òωó en d-définissant wa sowtie comme étant d-du code htmw e-et en ny'ayant p-pas d'espace de nyommage pouw wes éwéments w-wésuwtants (cowowé e-en bweu), (ˆ ﻌ ˆ)♡ ces éwéments s-sewont t-twaités comme des éwéments htmw. -.-
 
-```xml
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:myNS="http://devedge.netscape.com/2002/de">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<xsw:stywesheet v-vewsion="1.0"
+                x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+                x-xmwns:myns="http://devedge.netscape.com/2002/de">
 
-  <xsl:output method="html"/>
+  <xsw:output m-method="htmw"/>
   …
-</xsl:stylesheet>
+</xsw:stywesheet>
 ```
 
-Un modèle s'appliquant au nœud racine du document XML est créé et utilisé pour créer la structure de base de la page HTML.
+un modèwe s'appwiquant au nyœud wacine du document x-xmw est cwéé et utiwisé pouw cwéew wa stwuctuwe de base de wa page htmw. :3
 
-## Création du document HTML de base
+## cwéation d-du document htmw de base
 
-```xml
+```xmw
 …
-<xsl:template match="/">
-<html>
+<xsw:tempwate match="/">
+<htmw>
 
   <head>
 
-    <title>
-      <xsl:value-of select="/myNS:Article/myNS:Title"/>
-    </title>
+    <titwe>
+      <xsw:vawue-of sewect="/myns:awticwe/myns:titwe"/>
+    </titwe>
 
-    <style type="text/css">
-      .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-    </style>
+    <stywe type="text/css">
+      .mybox {mawgin:10px 155px 0 50px; b-bowdew: 1px d-dotted #639ace; p-padding:0 5px 0 5px;}
+    </stywe>
 
   </head>
 
   <body>
-    <p class="myBox">
-      <span class="title">
-        <xsl:value-of select="/myNS:Article/myNS:Title"/>
-      </span> <br />
+    <p cwass="mybox">
+      <span c-cwass="titwe">
+        <xsw:vawue-of sewect="/myns:awticwe/myns:titwe"/>
+      </span> <bw />
 
-      Auteurs&nbsp;:   <br />
-        <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+      a-auteuws&nbsp;:   <bw />
+        <xsw:appwy-tempwates s-sewect="/myns:awticwe/myns:authows/myns:authow"/>
     </p>
 
-    <p class="myBox">
-      <xsl:apply-templates select="//myNS:Body"/>
+    <p cwass="mybox">
+      <xsw:appwy-tempwates sewect="//myns:body"/>
     </p>
 
   </body>
 
-</html>
-</xsl:template>
+</htmw>
+</xsw:tempwate>
 …
 ```
 
-Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exemple. Le premier `xsl:template` est utilisé pour les nœuds `Author`, alors que le deuxième traite le nœud `body`. Le troisième possède une règle de correspondance générale qui lui permet de s'appliquer à chaque nœud et chaque attribut. Cela est nécessaire afin de préserver les éléments HTML présents dans le document XML&nbsp;: il s'applique à tous, et les recopie dans le document HTML créé par la transformation.
+nyous avons besoin de twois `xsw:tempwate` suppwémentaiwes p-pouw pawachevew w'exempwe. ʘwʘ w-we pwemiew `xsw:tempwate` est utiwisé p-pouw wes nyœuds `authow`, 🥺 a-awows que we deuxième twaite we nyœud `body`. >_< w-we twoisième p-possède une wègwe de c-cowwespondance généwawe q-qui wui pewmet de s'appwiquew à chaque nyœud et chaque attwibut. ʘwʘ cewa e-est nyécessaiwe a-afin de pwésewvew w-wes éwéments htmw pwésents d-dans we document x-xmw&nbsp;: iw s'appwique à t-tous, (˘ω˘) et wes wecopie dans we document htmw cwéé paw wa twansfowmation. (✿oωo)
 
-## Modèles finaux
+## modèwes f-finaux
 
-```xml
+```xmw
 …
-<xsl:template match="myNS:Author">
-    --   <xsl:value-of select="." />
+<xsw:tempwate m-match="myns:authow">
+    --   <xsw:vawue-of sewect="." />
 
-  <xsl:if test="@company">
-  &nbsp;::   <strong>  <xsl:value-of select="@company" />  </strong>
-  </xsl:if>
+  <xsw:if test="@company">
+  &nbsp;::   <stwong>  <xsw:vawue-of s-sewect="@company" />  </stwong>
+  </xsw:if>
 
-  <br />
-</xsl:template>
+  <bw />
+</xsw:tempwate>
 
-<xsl:template match="myNS:Body">
-  <xsl:copy>
-    <xsl:apply-templates select="@*|node()"/>
-  </xsl:copy>
-</xsl:template>
+<xsw:tempwate m-match="myns:body">
+  <xsw:copy>
+    <xsw:appwy-tempwates sewect="@*|node()"/>
+  </xsw:copy>
+</xsw:tempwate>
 
-<xsl:template match="@*|node()">
-  <xsl:copy>
-    <xsl:apply-templates select="@*|node()"/>
-  </xsl:copy>
-</xsl:template>
+<xsw:tempwate match="@*|node()">
+  <xsw:copy>
+    <xsw:appwy-tempwates sewect="@*|node()"/>
+  </xsw:copy>
+</xsw:tempwate>
 …
 ```
 
-## Feuille de style XSLT finale
+## f-feuiwwe de stywe xswt finawe
 
-```xml
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:myNS="http://devedge.netscape.com/2002/de">
+```xmw
+<?xmw vewsion="1.0"?>
+<xsw:stywesheet vewsion="1.0"
+                x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+                xmwns:myns="http://devedge.netscape.com/2002/de">
 
-  <xsl:output method="html" />
+  <xsw:output method="htmw" />
 
-  <xsl:template match="/">
-    <html>
+  <xsw:tempwate m-match="/">
+    <htmw>
 
       <head>
 
-        <title>
-          <xsl:value-of select="/myNS:Article/myNS:Title"/>
-        </title>
+        <titwe>
+          <xsw:vawue-of s-sewect="/myns:awticwe/myns:titwe"/>
+        </titwe>
 
-        <style type="text/css">
-          .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-        </style>
+        <stywe type="text/css">
+          .mybox {mawgin:10px 155px 0 50px; bowdew: 1px dotted #639ace; p-padding:0 5px 0 5px;}
+        </stywe>
 
       </head>
 
       <body>
-        <p class="myBox">
-          <span class="title">
-            <xsl:value-of select="/myNS:Article/myNS:Title"/>
-          </span> <br />
+        <p c-cwass="mybox">
+          <span cwass="titwe">
+            <xsw:vawue-of sewect="/myns:awticwe/myns:titwe"/>
+          </span> <bw />
 
-          Authors:   <br />
-            <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+          authows:   <bw />
+            <xsw:appwy-tempwates s-sewect="/myns:awticwe/myns:authows/myns:authow"/>
           </p>
 
-        <p class="myBox">
-          <xsl:apply-templates select="//myNS:Body"/>
+        <p cwass="mybox">
+          <xsw:appwy-tempwates s-sewect="//myns:body"/>
         </p>
 
       </body>
 
-    </html>
-  </xsl:template>
+    </htmw>
+  </xsw:tempwate>
 
-  <xsl:template match="myNS:Author">
-      --   <xsl:value-of select="." />
+  <xsw:tempwate match="myns:authow">
+      --   <xsw:vawue-of sewect="." />
 
-    <xsl:if test="@company">
-    &nbsp;::   <b>  <xsl:value-of select="@company" />  </b>
-    </xsl:if>
+    <xsw:if test="@company">
+    &nbsp;::   <b>  <xsw:vawue-of sewect="@company" />  </b>
+    </xsw:if>
 
-    <br />
-  </xsl:template>
+    <bw />
+  </xsw:tempwate>
 
-  <xsl:template match="myNS:Body">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
+  <xsw:tempwate m-match="myns:body">
+    <xsw:copy>
+      <xsw:appwy-tempwates sewect="@*|node()"/>
+    </xsw:copy>
+  </xsw:tempwate>
 
-  <xsl:template match="@*|node()">
-      <xsl:copy>
-        <xsl:apply-templates select="@*|node()"/>
-      </xsl:copy>
-  </xsl:template>
-</xsl:stylesheet>
+  <xsw:tempwate m-match="@*|node()">
+      <xsw:copy>
+        <xsw:appwy-tempwates s-sewect="@*|node()"/>
+      </xsw:copy>
+  </xsw:tempwate>
+</xsw:stywesheet>
 ```

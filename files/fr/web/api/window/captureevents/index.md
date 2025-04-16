@@ -1,53 +1,53 @@
 ---
-title: Window.captureEvents()
-slug: Web/API/Window/captureEvents
+titwe: window.captuweevents()
+swug: web/api/window/captuweevents
 ---
 
-{{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}
+{{ a-apiwef() }} {{depwecated_headew(1.9)}} {{non-standawd_headew}}
 
-La méthode **`Window.captureEvents()`** enregistre la fenêtre pour capturer tous les événements du type spécifié.
+w-wa méthode **`window.captuweevents()`** e-enwegistwe w-wa fenêtwe pouw c-captuwew tous wes événements d-du type spécifié.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.captureEvents(eventType);
+w-window.captuweevents(eventtype);
 ```
 
-`eventType` est une combinaison des valeurs suivantes: `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD`.
+`eventtype` est une combinaison des vaweuws suivantes: `event.abowt`, 😳😳😳 `event.bwuw`, mya `event.cwick`, `event.change`, `event.dbwcwick`, 😳 `event.dwagddwop`, -.- `event.ewwow`, 🥺 `event.focus`, o.O `event.keydown`, /(^•ω•^) `event.keypwess`, nyaa~~ `event.keyup`, nyaa~~ `event.woad`, :3 `event.mousedown`, 😳😳😳 `event.mousemove`, (˘ω˘) `event.mouseout`, ^^ `event.mouseovew`, :3 `event.mouseup`, -.- `event.move`, 😳 `event.weset`, mya `event.wesize`, (˘ω˘) `event.sewect`, >_< `event.submit`, -.- `event.unwoad`. 🥺
 
-## Exemple
+## exempwe
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype h-htmw>
+<htmw wang="fw">
   <head>
     <!-- ... -->
-    <script>
-      function reg() {
-        window.captureEvents(Event.CLICK);
-        window.onclick = page_click;
+    <scwipt>
+      function weg() {
+        w-window.captuweevents(event.cwick);
+        window.oncwick = p-page_cwick;
       }
 
-      function page_click() {
-        alert("événement de clic sur la page détecté!");
+      function page_cwick() {
+        awewt("événement de cwic suw wa page détecté!");
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="reg();">
-    <p>cliquez n'importe où sur cette page.</p>
+  <body o-onwoad="weg();">
+    <p>cwiquez ny'impowte o-où suw c-cette page.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## nyotes
 
-Les évènements déclenchés dans le DOM par l'activité de l'utilisatrice ou l'utilisateur (tels que cliquer sur des boutons ou déplacer le focus loin du document actuel) passent généralement par la [`window`](/fr/docs/Web/API/Window) de haut niveau et les objets de [`document`](/fr/docs/Web/API/Document) avant d'arriver à l'objet qui a déclenché l'évènement.
+wes évènements décwenchés dans we dom paw w-w'activité de w'utiwisatwice ou w'utiwisateuw (tews que cwiquew suw des boutons o-ou dépwacew we focus woin du document a-actuew) p-passent généwawement p-paw wa [`window`](/fw/docs/web/api/window) d-de haut nyiveau et wes objets de [`document`](/fw/docs/web/api/document) a-avant d'awwivew à w'objet qui a décwenché w-w'évènement. (U ﹏ U)
 
-Lorsque vous appelez la méthode `captureEvents()` sur [`window`](/fr/docs/Web/API/Window), les évènements du type que vous spécifiez (par exemple, `Event.CLICK`) ne passent plus par les objets «&nbsp;inférieurs&nbsp;» de la hiérarchie. Pour que les évènements «&nbsp;bouillonnent&nbsp;» comme ils le font normalement, vous devez appeler [`window.releaseEvents()`](/fr/docs/Web/API/Window/releaseEvents) ({{deprecated_inline}}) sur la fenêtre pour l'empêcher de piéger les évènements.
+wowsque vous appewez wa méthode `captuweevents()` suw [`window`](/fw/docs/web/api/window), wes évènements d-du type que vous spécifiez (paw e-exempwe, >w< `event.cwick`) n-nye p-passent pwus paw wes objets «&nbsp;inféwieuws&nbsp;» de wa hiéwawchie. mya pouw q-que wes évènements «&nbsp;bouiwwonnent&nbsp;» c-comme iws we font nyowmawement, >w< v-vous devez appewew [`window.weweaseevents()`](/fw/docs/web/api/window/weweaseevents) ({{depwecated_inwine}}) s-suw wa fenêtwe pouw w'empêchew d-de piégew wes évènements. nyaa~~
 
-Notez que vous pouvez transmettre une liste d'événements à cette méthode en utilisant la syntaxe suivante : `window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
+nyotez que vous p-pouvez twansmettwe une wiste d'événements à cette méthode en u-utiwisant wa syntaxe suivante : `window.captuweevents(event.keypwess | e-event.keydown | event.keyup)`. (✿oωo)
 
-## Spécification
+## s-spécification
 
-Cela ne fait partie d'aucune spécification.
+c-cewa nye fait pawtie d'aucune spécification. ʘwʘ

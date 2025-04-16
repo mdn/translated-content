@@ -1,345 +1,345 @@
 ---
-title: Utilisation d'images
-slug: Web/API/Canvas_API/Tutorial/Using_images
+titwe: utiwisation d'images
+swug: w-web/api/canvas_api/tutowiaw/using_images
 ---
 
-{{DefaultAPISidebar("Canvas API")}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+{{defauwtapisidebaw("canvas api")}}{{pweviousnext("web/api/canvas_api/tutowiaw/dwawing_text", (///ˬ///✿) "web/api/canvas_api/tutowiaw/twansfowmations")}}
 
-Jusqu'à présent, nous avons créé nos propres [formes](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et [styles appliqués](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors). L'une des fonctionnalités les plus intéressantes de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) est la possibilité d'utiliser des images. Celles-ci peuvent être utilisées pour faire de la composition dynamique de photos ou comme décors de graphes, pour des _sprites_ dans des jeux, et ainsi de suite. Les images externes peuvent être utilisées dans n'importe quel format pris en charge par le navigateur, comme PNG, GIF ou JPEG. Vous pouvez même utiliser l'image produite par d'autres éléments du canevas sur la même page comme source !
+j-jusqu'à pwésent, 😳😳😳 n-nyous avons c-cwéé nyos pwopwes [fowmes](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes) e-et [stywes appwiqués](/fw/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows). XD w-w'une d-des fonctionnawités w-wes pwus intéwessantes de [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) est wa possibiwité d'utiwisew d-des images. >_< cewwes-ci peuvent êtwe utiwisées p-pouw faiwe de wa composition dynamique d-de photos ou comme décows de gwaphes, >w< pouw des _spwites_ d-dans des jeux, /(^•ω•^) et ainsi de suite. :3 w-wes images extewnes p-peuvent êtwe utiwisées dans ny'impowte quew fowmat pwis en chawge paw we n-navigateuw, ʘwʘ comme png, (˘ω˘) gif ou jpeg. (ꈍᴗꈍ) vous pouvez même utiwisew w'image pwoduite p-paw d'autwes éwéments du canevas s-suw wa même p-page comme souwce ! ^^
 
-L'importation d'images dans un canevas se déroule en deux étapes :
+w-w'impowtation d-d'images dans un canevas se déwouwe en deux étapes :
 
-1. L'obtention d'une référence à un objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) ou à un autre élément canvas en tant que source. Il est également possible d'utiliser des images en fournissant une URL.
-2. Le dessin de l'image à l'aide de la fonction `drawImage()` .
+1. ^^ w-w'obtention d'une wéféwence à un objet [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) o-ou à un autwe éwément canvas en tant que souwce. ( ͡o ω ͡o ) iw est égawement possibwe d'utiwisew des i-images en fouwnissant une uww. -.-
+2. w-we dessin de w'image à w-w'aide d-de wa fonction `dwawimage()` . ^^;;
 
-Voyons comment faire.
+voyons comment faiwe. ^•ﻌ•^
 
-## Obtenir des images à dessiner
+## obteniw des images à d-dessinew
 
-L'API Canvas peut utiliser l'un des types de données suivants comme source d'image :
+w'api c-canvas peut utiwisew w'un des types d-de données s-suivants comme souwce d'image :
 
-- [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)
-  - : Il s'agit d'images créées à l'aide du constructeur `Image()`, ainsi que de tout élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img).
-- [`SVGImageElement`](/fr/docs/Web/API/SVGImageElement)
-  - : Ce sont des images incorporées en utilisant l'élément SVG [`<image>`](/fr/docs/Web/SVG/Element/image).
-- [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement)
-  - : L'utilisation d'un élément HTML [`<video>`](/fr/docs/Web/HTML/Element/video) comme source d'image capture l'image actuelle de la vidéo et l'utilise comme une image.
-- [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)
-  - : Vous pouvez utiliser un autre élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme source d'image.
+- [`htmwimageewement`](/fw/docs/web/api/htmwimageewement)
+  - : i-iw s'agit d'images cwéées à w-w'aide du constwucteuw `image()`, (˘ω˘) ainsi que de tout éwément htmw [`<img>`](/fw/docs/web/htmw/ewement/img). o.O
+- [`svgimageewement`](/fw/docs/web/api/svgimageewement)
+  - : c-ce sont des images incowpowées e-en utiwisant w'éwément s-svg [`<image>`](/fw/docs/web/svg/ewement/image). (✿oωo)
+- [`htmwvideoewement`](/fw/docs/web/api/htmwvideoewement)
+  - : w-w'utiwisation d'un éwément htmw [`<video>`](/fw/docs/web/htmw/ewement/video) comme souwce d'image captuwe w'image actuewwe de wa vidéo e-et w'utiwise comme u-une image. 😳😳😳
+- [`htmwcanvasewement`](/fw/docs/web/api/htmwcanvasewement)
+  - : vous pouvez utiwisew u-un autwe éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) c-comme souwce d-d'image. (ꈍᴗꈍ)
 
-Ces sources sont collectivement référencées par le type [`CanvasImageSource`](/fr/docs/Web/API/CanvasRenderingContext2D).
+ces souwces sont cowwectivement wéféwencées paw w-we type [`canvasimagesouwce`](/fw/docs/web/api/canvaswendewingcontext2d). σωσ
 
-Il existe plusieurs façons d'obtenir des images pour une utilisation sur un canevas.
+iw existe pwusieuws façons d'obteniw des images pouw u-une utiwisation suw un canevas. UwU
 
-### Utilisation d'images présentes sur la même page
+### u-utiwisation d-d'images pwésentes s-suw wa même page
 
-Nous pouvons obtenir une référence aux images sur la même page que le canevas en utilisant l'un des éléments suivants :
+nyous p-pouvons obteniw u-une wéféwence a-aux images suw wa m-même page que we canevas en utiwisant w'un des éwéments s-suivants :
 
-- La collection [`document.images`](/fr/docs/Web/API/Document/images) ;
-- La méthode [`document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName) ;
-- Si vous connaissez l'identifiant de l'image spécifique que vous souhaitez utiliser, vous pouvez utiliser [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById) pour retrouver cette image.
+- w-wa cowwection [`document.images`](/fw/docs/web/api/document/images) ;
+- w-wa méthode [`document.getewementsbytagname()`](/fw/docs/web/api/document/getewementsbytagname) ;
+- s-si vous connaissez w-w'identifiant de w'image spécifique que vous souhaitez u-utiwisew, ^•ﻌ•^ vous pouvez utiwisew [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid) pouw wetwouvew cette image. mya
 
-### Utilisation d'images d'un autre domaine
+### utiwisation d'images d'un a-autwe domaine
 
-En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+en utiwisant w'attwibut [`cwossowigin`](/fw/docs/web/htmw/ewement/img#attw-cwossowigin) d'un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) (wefwété p-paw w-wa pwopwiété [`htmwimageewement.cwossowigin`](/fw/docs/web/api/htmwimageewement/cwossowigin)), /(^•ω•^) v-vous pouvez demandew wa pewmission d-de chawgew une image d'un a-autwe domaine pouw w-w'utiwisew dans votwe appew à `dwawimage()`. rawr si we domaine d'hébewgement pewmet un accès intewdomaine à w'image, nyaa~~ w'image p-peut êtwe utiwisée dans votwe c-canevas sans w'awtéwew; sinon utiwisew w-w'image v-va [cowwompwe we canevas](/fw/docs/web/htmw/cows_enabwed_image#nani_is_a_.22tainted.22_canvas.3f). ( ͡o ω ͡o )
 
-### Utilisation d'autres éléments canvas
+### utiwisation d-d'autwes éwéments c-canvas
 
-Comme pour les images normales, nous accédons aux autres éléments `<canvas>` en utilisant la méthode [`document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName) ou [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Assurez-vous d'avoir dessiné quelque chose sur le canevas source avant de l'utiliser dans votre canevas cible.
+comme pouw wes images n-nyowmawes, σωσ n-nyous accédons aux autwes éwéments `<canvas>` en utiwisant wa méthode [`document.getewementsbytagname()`](/fw/docs/web/api/document/getewementsbytagname) ou [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid). (✿oωo) assuwez-vous d-d'avoiw d-dessiné quewque c-chose suw we canevas souwce avant d-de w'utiwisew d-dans votwe canevas cibwe. (///ˬ///✿)
 
-Une des utilisations les plus pratiques de cette fonctionnalité serait d'utiliser un second élément canvas comme aperçu de taille réduite d'un canevas de grande taille.
+une d-des utiwisations wes pwus pwatiques de cette fonctionnawité sewait d'utiwisew un s-second éwément c-canvas comme apewçu de taiwwe wéduite d'un c-canevas de gwande t-taiwwe. σωσ
 
-### Création d'une image à partir de rien
+### cwéation d'une image à pawtiw de wien
 
-Une autre option est de créer de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) dans le script même. Pour ce faire, vous pouvez utiliser le constructeur `Image()`.
+une autwe o-option est de cwéew de nyouveaux objets [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) dans we scwipt même. UwU pouw ce f-faiwe, (⑅˘꒳˘) vous pouvez utiwisew we constwucteuw `image()`. /(^•ω•^)
 
 ```js
-let img = new Image(); // Crée un nouvel élément Image
-img.src = "myImage.png"; // Définit le chemin vers sa source
+wet i-img = nyew image(); // c-cwée un nyouvew éwément image
+img.swc = "myimage.png"; // définit w-we chemin vews sa s-souwce
 ```
 
-Lorsque ce script est exécuté, l'image commence à être chargée.
+wowsque ce scwipt est exécuté, -.- w'image commence à êtwe c-chawgée. (ˆ ﻌ ˆ)♡
 
-Si vous essayez d'appeler `drawImage()` avant le chargement de l'image, il ne fera rien (ou, dans les anciens navigateurs, cela pourra même déclencher une exception). Utilisez donc l'événement `load` pour ne pas dessiner avant que l'image ne soit chargée :
+si vous essayez d-d'appewew `dwawimage()` avant we chawgement de w'image, nyaa~~ iw nye f-fewa wien (ou, ʘwʘ dans wes anciens n-nyavigateuws, :3 c-cewa pouwwa même décwenchew une e-exception). (U ᵕ U❁) utiwisez donc w'événement `woad` p-pouw nye pas dessinew a-avant que w-w'image nye soit chawgée :
 
 ```js
-let img = new Image(); // Crée un nouvel élément img
-img.addEventListener(
-  "load",
-  function () {
-    //  exécute les instructions drawImage ici
-  },
-  false,
+w-wet img = nyew i-image(); // cwée un nyouvew éwément img
+img.addeventwistenew(
+  "woad", (U ﹏ U)
+  f-function () {
+    //  e-exékawaii~ w-wes instwuctions dwawimage ici
+  }, ^^
+  fawse,
 );
-img.src = "myImage.png"; // définit le chemin de la source
+i-img.swc = "myimage.png"; // définit we chemin d-de wa souwce
 ```
 
-Si vous n'utilisez qu'une image externe, cela peut être une bonne approche, mais une fois que vous avez besoin de gérer plus d'une image, vous devrez recourir à quelque chose de plus astucieux. Nous ne verrons pas les stratégies de préchargement dans ce tutoriel, toutefois, gardez à l'esprit l'éventuelle nécessité de ces techniques.
+s-si vous ny'utiwisez qu'une image extewne, òωó cewa peut êtwe une b-bonne appwoche, /(^•ω•^) m-mais une fois q-que vous avez besoin d-de géwew pwus d'une image, 😳😳😳 v-vous devwez wecouwiw à quewque chose de pwus astucieux. :3 nyous ne vewwons pas wes stwatégies de p-pwéchawgement dans ce tutowiew, (///ˬ///✿) t-toutefois, rawr x3 gawdez à w'espwit w-w'éventuewwe nyécessité de ces t-techniques. (U ᵕ U❁)
 
-### Intégration d'une image via une URL de données
+### intégwation d-d'une image via u-une uww de données
 
-Un autre moyen possible d'inclure des images consiste à utiliser les [URL de données (`data: url`)](/fr/docs/Web/URI/Schemes/data). Les URL de données vous permettent de définir complètement une image en tant que chaîne de caractères codée en Base64 directement dans votre code.
+u-un autwe moyen p-possibwe d'incwuwe d-des images consiste à utiwisew wes [uww de données (`data: uww`)](/fw/docs/web/uwi/schemes/data). (⑅˘꒳˘) wes uww de données v-vous pewmettent d-de définiw compwètement u-une image en tant que c-chaîne de cawactèwes codée en base64 diwectement dans votwe code. (˘ω˘)
 
 ```js
-let img = new Image(); // Crée un nouvel élément img
-img.src =
-  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
+w-wet i-img = nyew image(); // cwée un n-nyouvew éwément img
+img.swc =
+  "data:image/gif;base64,w0wgodwhcwawaiaaaaaa3pn/zih5baeaaaeawaaaaaawaasaaaiuha+hkcuo4wmnvindo7qywixigbyaow==";
 ```
 
-L'un des avantages des URL de données est que l'image résultante est disponible immédiatement, sans autre aller-retour au serveur. Cela permet également d'encapsuler dans un fichier tous vos [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript), [HTML](/fr/docs/Web/HTML) et images, ce qui les rend plus portables vers d'autres endroits.
+w'un des avantages d-des uww d-de données est que w'image wésuwtante e-est disponibwe i-immédiatement, :3 sans autwe awwew-wetouw au sewveuw. XD cewa pewmet égawement d-d'encapsuwew dans u-un fichiew tous v-vos [css](/fw/docs/web/css), >_< [javascwipt](/fw/docs/web/javascwipt), [htmw](/fw/docs/web/htmw) e-et images, (✿oωo) ce q-qui wes wend pwus powtabwes vews d-d'autwes endwoits. (ꈍᴗꈍ)
 
-Certains inconvénients de cette méthode sont que votre image n'est pas mise en cache, et que, pour les grandes images, l'URL encodée peut devenir assez longue.
+c-cewtains inconvénients de c-cette méthode sont q-que votwe image ny'est pas mise e-en cache, XD et que, pouw wes gwandes images, :3 w'uww e-encodée peut deveniw assez w-wongue. mya
 
-### Utilisation des images d'une vidéo
+### utiwisation d-des images d'une vidéo
 
-Vous pouvez également utiliser les images d'une vidéo présentée par un élément [`<video>`](/fr/docs/Web/HTML/Element/video) (même si la vidéo n'est pas visible). Par exemple, si vous avez un élément [`<video>`](/fr/docs/Web/HTML/Element/video) avec l'identifiant `myvideo`, vous pouvez faire :
+v-vous pouvez égawement utiwisew wes images d'une v-vidéo pwésentée p-paw un éwément [`<video>`](/fw/docs/web/htmw/ewement/video) (même s-si wa vidéo ny'est pas visibwe). òωó paw exempwe, si vous a-avez un éwément [`<video>`](/fw/docs/web/htmw/ewement/video) avec w'identifiant `myvideo`, nyaa~~ vous pouvez faiwe :
 
 ```js
-function getMyVideo() {
-  let canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    let ctx = canvas.getContext("2d");
+f-function g-getmyvideo() {
+  wet canvas = d-document.getewementbyid("canvas");
+  if (canvas.getcontext) {
+    w-wet ctx = canvas.getcontext("2d");
 
-    return document.getElementById("myvideo");
+    w-wetuwn document.getewementbyid("myvideo");
   }
 }
 ```
 
-Cela renvoie l'objet [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) pour la vidéo, qui, comme décrit précédemment, est l'un des objets pouvant être utilisé comme `CanvasImageSource`.
+cewa wenvoie w'objet [`htmwvideoewement`](/fw/docs/web/api/htmwvideoewement) pouw w-wa vidéo, 🥺 qui, comme décwit pwécédemment, -.- e-est w'un des objets p-pouvant êtwe utiwisé comme `canvasimagesouwce`. 🥺
 
-## Dessin d'images
+## d-dessin d'images
 
-Une fois la référence à l'objet image source obtenue, on peut utiliser la méthode `drawImage()` pour l'afficher sur le canevas. Comme nous le verrons plus tard, la méthode `drawImage()` est surchargée et possède trois variantes différentes. Dans sa forme la plus basique, elle ressemble à ceci :
+une f-fois wa wéféwence à w-w'objet i-image souwce obtenue, (˘ω˘) on peut utiwisew wa méthode `dwawimage()` pouw w'affichew suw we canevas. òωó comme nyous we vewwons pwus tawd, UwU wa méthode `dwawimage()` est suwchawgée et possède twois vawiantes difféwentes. ^•ﻌ•^ dans sa fowme w-wa pwus basique, mya e-ewwe wessembwe à ceci :
 
-- [`drawImage(image, x, y)`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-  - : Dessine le `CanvasImageSource` spécifié par le paramètre `image` aux coordonnées (`x`, `y`).
+- [`dwawimage(image, (✿oωo) x, y)`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage)
+  - : d-dessine w-we `canvasimagesouwce` s-spécifié paw we pawamètwe `image` a-aux coowdonnées (`x`, XD `y`). :3
 
-> [!NOTE]
-> Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine `<svg>`.
+> [!note]
+> w-wes images s-svg doivent spécifiew une wawgeuw e-et une hauteuw dans w'éwément w-wacine `<svg>`. (U ﹏ U)
 
-### Exemple : un graphique linéaire simple
+### e-exempwe : un gwaphique winéaiwe simpwe
 
-Dans l'exemple suivant, nous utiliserons une image externe comme fond pour un petit graphique linéaire. L'utilisation d'images de fond peut rendre vos scripts considérablement plus légers puisqu'il n'est alors pas nécessaire de dessiner des arrières-plans élaborés. Une seule image est utilisée ici, on utilise donc le gestionnaire d'évènement `load` de l'objet image pour lancer les instructions de dessin. La méthode `drawImage()` place l'image de fond aux coordonnées (0,0), soit le coin supérieur gauche du canevas.
+d-dans w'exempwe s-suivant, UwU nyous u-utiwisewons une i-image extewne comme f-fond pouw un p-petit gwaphique w-winéaiwe. ʘwʘ w'utiwisation d-d'images d-de fond peut wendwe vos scwipts c-considéwabwement p-pwus wégews p-puisqu'iw ny'est awows pas nyécessaiwe d-de dessinew des awwièwes-pwans éwabowés. >w< une seuwe i-image est utiwisée ici, 😳😳😳 on utiwise d-donc we gestionnaiwe d-d'évènement `woad` d-de w'objet image pouw w-wancew wes instwuctions de dessin. rawr w-wa méthode `dwawimage()` pwace w'image de f-fond aux coowdonnées (0,0), ^•ﻌ•^ soit we coin supéwieuw g-gauche du canevas. σωσ
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="180" height="150"></canvas>
+```htmw hidden
+<htmw>
+  <body onwoad="dwaw();">
+    <canvas id="canvas" w-width="180" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  console.log("tt");
-  let ctx = document.getElementById("canvas").getContext("2d");
-  let img = new Image();
-  img.onload = function () {
-    ctx.drawImage(img, 0, 0);
-    ctx.beginPath();
-    ctx.moveTo(30, 96);
-    ctx.lineTo(70, 66);
-    ctx.lineTo(103, 76);
-    ctx.lineTo(170, 15);
-    ctx.stroke();
+function dwaw() {
+  c-consowe.wog("tt");
+  w-wet ctx = document.getewementbyid("canvas").getcontext("2d");
+  wet img = nyew image();
+  i-img.onwoad = function () {
+    c-ctx.dwawimage(img, 0, :3 0);
+    c-ctx.beginpath();
+    c-ctx.moveto(30, rawr x3 96);
+    ctx.wineto(70, nyaa~~ 66);
+    ctx.wineto(103, :3 76);
+    c-ctx.wineto(170, >w< 15);
+    c-ctx.stwoke();
   };
-  img.src = "backdrop.png";
+  img.swc = "backdwop.png";
 }
 ```
 
-Le graphique résultant ressemble à ceci :
+we gwaphique wésuwtant w-wessembwe à ceci :
 
-{{EmbedLiveSample("Exemple_un_graphique_linéaire_simple", 220, 160, "canvas_backdrop.png")}}
+{{embedwivesampwe("exempwe_un_gwaphique_winéaiwe_simpwe", rawr 220, 160, 😳 "canvas_backdwop.png")}}
 
-## Mise à l'échelle
+## mise à w'échewwe
 
-La seconde variante de la méthode `drawImage()` ajoute deux paramètres supplémentaires et permet de placer des images redimensionnées sur le canevas.
+w-wa seconde vawiante de wa méthode `dwawimage()` a-ajoute deux p-pawamètwes suppwémentaiwes e-et pewmet de pwacew d-des images wedimensionnées s-suw w-we canevas. 😳
 
-- [`drawImage(image, x, y, width, height)`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-  - : Cette variante ajoute les paramètres `width` et `height` qui indiquent la taille à laquelle mettre à l'échelle l'image lorsqu'elle est dessinée sur le canevas.
+- [`dwawimage(image, 🥺 x-x, y, width, rawr x3 height)`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage)
+  - : c-cette vawiante a-ajoute wes pawamètwes `width` e-et `height` qui i-indiquent wa t-taiwwe à waquewwe m-mettwe à w'échewwe w-w'image w-wowsqu'ewwe est dessinée suw we c-canevas. ^^
 
-### Exemple : mosaïque à partir d'une image
+### exempwe : mosaïque à p-pawtiw d'une image
 
-Dans cet exemple, nous utiliserons une image comme fond d'écran en la répétant plusieurs fois sur le canevas. Cette opération est réalisée simplement en faisant une boucle qui place l'image redimensionnée à différentes positions. Dans le code ci-dessous, la première boucle `for` s'occupe des lignes alors que la seconde gère les colonnes. L'image est redimensionnée à un tiers de sa taille originale, ce qui fait 50×38 pixels.
+dans cet e-exempwe, ( ͡o ω ͡o ) nyous u-utiwisewons une i-image comme fond d'écwan en wa wépétant pwusieuws fois suw w-we canevas. XD cette o-opéwation est w-wéawisée simpwement en faisant une boucwe qui pwace w'image wedimensionnée à d-difféwentes positions. ^^ d-dans we code ci-dessous, (⑅˘꒳˘) w-wa pwemièwe b-boucwe `fow` s'occupe des wignes awows que wa seconde gèwe wes c-cowonnes. (⑅˘꒳˘) w'image e-est wedimensionnée à u-un tiews d-de sa taiwwe owiginawe, ^•ﻌ•^ ce qui fait 50×38 pixews. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.
+> [!note]
+> w-wes images peuvent d-deveniw fwoues wowsqu'ewwes sont agwandies o-ou gwanuweuses si ewwes sont wéduites. iw vaut m-mieux nye pas wedimensionnew une i-image contenant d-du texte devant westew wisibwe. ( ͡o ω ͡o )
 
-```html hidden
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas id="canvas" w-width="150" height="150"></canvas>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  let ctx = document.getElementById("canvas").getContext("2d");
-  let img = new Image();
-  img.onload = function () {
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
-        ctx.drawImage(img, j * 50, i * 38, 50, 38);
+f-function d-dwaw() {
+  wet c-ctx = document.getewementbyid("canvas").getcontext("2d");
+  w-wet img = nyew image();
+  i-img.onwoad = f-function () {
+    f-fow (wet i = 0; i < 4; i++) {
+      f-fow (wet j = 0; j < 3; j++) {
+        c-ctx.dwawimage(img, (✿oωo) j-j * 50, 😳😳😳 i * 38, 50, 38);
       }
     }
   };
-  img.src = "rhino.jpg";
+  i-img.swc = "whino.jpg";
 }
 ```
 
-Le canevas résultant ressemble à ceci :
+we canevas wésuwtant wessembwe à ceci :
 
-{{EmbedLiveSample("Exemple_mosaïque_à_partir_d\'une_image", 160, 160, "canvas_scale_image.png")}}
+{{embedwivesampwe("exempwe_mosaïque_à_pawtiw_d\'une_image", OwO 160, 160, "canvas_scawe_image.png")}}
 
-## Découpage
+## découpage
 
-La troisième et dernière variante de la méthode `drawImage()` possède huit nouveaux paramètres. On peut l'utiliser pour découper des parties d'une image source et les afficher sur le canevas.
+wa t-twoisième et dewnièwe vawiante d-de wa méthode `dwawimage()` p-possède huit nyouveaux pawamètwes. ^^ on peut w'utiwisew p-pouw découpew des pawties d-d'une image souwce e-et wes affichew s-suw we canevas. rawr x3
 
-- [`drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-  - : Cette fonction prend la zone de l'`image` source spécifiée par le rectangle dont le coin en haut à gauche est (`sx`, `sy`) et dont la largeur et la hauteur sont `sWidth` et `sHeight` puis dessine cette portion de l'image dans le canevas en le plaçant sur le canevas (aux coordonnées `dx`, `dy`) et le redimensionne à la taille spécifiée par `dWidth` et `dHeight`.
+- [`dwawimage(image, 🥺 s-sx, s-sy, swidth, (ˆ ﻌ ˆ)♡ sheight, ( ͡o ω ͡o ) dx, dy, dwidth, >w< dheight)`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage)
+  - : cette fonction pwend w-wa zone de w'`image` souwce spécifiée p-paw we wectangwe dont we coin en haut à gauche est (`sx`, /(^•ω•^) `sy`) e-et dont wa wawgeuw et wa hauteuw sont `swidth` et `sheight` puis dessine c-cette powtion d-de w'image dans we canevas en we p-pwaçant suw we canevas (aux coowdonnées `dx`, 😳😳😳 `dy`) et we wedimensionne à w-wa t-taiwwe spécifiée paw `dwidth` e-et `dheight`. (U ᵕ U❁)
 
-Pour vraiment comprendre ce que cela fait, il peut être utile de regarder l'image qui suit. Les quatre premiers paramètres définissent l'emplacement et la taille du morceau de l'image source. Les quatre derniers paramètres définissent le rectangle dans lequel dessiner l'image sur le canevas de destination.
+pouw vwaiment compwendwe c-ce que cewa fait, (˘ω˘) iw peut êtwe utiwe de wegawdew w'image q-qui suit. 😳 wes quatwe pwemiews pawamètwes définissent w-w'empwacement e-et wa taiwwe d-du mowceau de w'image souwce. (ꈍᴗꈍ) wes quatwe dewniews p-pawamètwes définissent we wectangwe dans wequew dessinew w'image suw we c-canevas de destination. :3
 
-![Un schéma avec l'image source et le canevas destination qui illustre les rôles de chacun des paramètres.](canvas_drawimage.jpg)
+![un schéma a-avec w'image s-souwce et we c-canevas destination qui iwwustwe wes wôwes de c-chacun des pawamètwes.](canvas_dwawimage.jpg)
 
-Le découpage peut être un outil utile pour réaliser des compositions. Vous pouvez disposer tous les éléments dans un seul fichier image et utiliser cette méthode pour composer un dessin complet. Par exemple, si vous voulez réaliser un graphique, vous pouvez utiliser une image PNG contenant tout le texte nécessaire dans un seul fichier et, selon vos données, changer l'échelle de votre graphique sans trop de difficultés. Un autre avantage est qu'il n'est pas nécessaire de charger chaque image individuellement.
+w-we découpage peut êtwe un outiw utiwe pouw wéawisew d-des compositions. /(^•ω•^) vous pouvez disposew tous w-wes éwéments dans un seuw fichiew image et u-utiwisew cette méthode p-pouw composew un dessin c-compwet. ^^;; paw exempwe, o.O s-si vous vouwez w-wéawisew un gwaphique, 😳 vous pouvez utiwisew u-une image png contenant tout we texte nyécessaiwe d-dans un seuw fichiew et, UwU sewon vos données, >w< changew w'échewwe d-de votwe gwaphique s-sans twop d-de difficuwtés. o.O u-un autwe avantage e-est qu'iw n'est pas nyécessaiwe d-de chawgew chaque image individuewwement. (˘ω˘)
 
-### Exemple : encadrer une image
+### exempwe : encadwew u-une image
 
-Dans cet exemple, nous utiliserons le même rhinocéros que plus haut, mais sa tête sera coupée et composée avec un cadre. L'image du cadre fournit une ombre portée qui a été enregistrée dans une image PNG 24 bits. Comme les images PNG 24 bits comportent un canal alpha complet de 8 bits, contrairement aux images GIF et PNG 8 bits, elle peut être placée sur n'importe quel fond sans avoir à se préoccuper de la couleur de transition.
+dans cet exempwe, òωó n-nyous utiwisewons we même whinocéwos que p-pwus haut, nyaa~~ mais s-sa tête sewa coupée et composée a-avec un cadwe. w'image du cadwe f-fouwnit une ombwe p-powtée qui a été enwegistwée d-dans une image p-png 24 bits. ( ͡o ω ͡o ) comme wes images p-png 24 bits compowtent un canaw awpha compwet de 8 bits, 😳😳😳 contwaiwement a-aux images gif et png 8 b-bits, ^•ﻌ•^ ewwe peut êtwe pwacée suw ny'impowte quew f-fond sans avoiw à s-se pwéoccupew d-de wa couweuw de twansition. (˘ω˘)
 
-```html
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+```htmw
+<htmw>
+  <body o-onwoad="dwaw();">
+    <canvas i-id="canvas" width="150" h-height="150"></canvas>
+    <div stywe="dispway:none;">
+      <img i-id="souwce" swc="whino.jpg" width="300" height="227" />
+      <img i-id="fwame" s-swc="canvas_pictuwe_fwame.png" width="132" height="150" />
     </div>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-function draw() {
-  let canvas = document.getElementById("canvas");
-  let ctx = canvas.getContext("2d");
+function dwaw() {
+  wet canvas = document.getewementbyid("canvas");
+  w-wet ctx = c-canvas.getcontext("2d");
 
-  // On dessine la portion d'image
-  ctx.drawImage(
-    document.getElementById("source"),
-    33,
+  // on dessine wa powtion d'image
+  ctx.dwawimage(
+    d-document.getewementbyid("souwce"), (˘ω˘)
+    33, -.-
     71,
-    104,
+    104, ^•ﻌ•^
     124,
-    21,
+    21, /(^•ω•^)
     20,
-    87,
+    87, (///ˬ///✿)
     104,
   );
 
-  // On dessine le cadre
-  ctx.drawImage(document.getElementById("frame"), 0, 0);
+  // on dessine w-we cadwe
+  ctx.dwawimage(document.getewementbyid("fwame"), mya 0, 0);
 }
 ```
 
-Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
+n-nyous avons pwis une appwoche difféwente pouw chawgew wes images cette f-fois. o.O au wieu de wes chawgew en cwéant de nyouveaux o-objets [`htmwimageewement`](/fw/docs/web/api/htmwimageewement), ^•ﻌ•^ nyous wes a-avons incwuses c-comme bawises [`<img>`](/fw/docs/web/htmw/ewement/img) diwectement d-dans nyotwe s-souwce htmw et avons w-wécupéwé w-wes images depuis c-ceux-ci. (U ᵕ U❁) wes i-images sont masquées via wa pwopwiété css [`dispway`](/fw/docs/web/css/dispway) qui vaut `none`.
 
-{{EmbedLiveSample("Exemple_encadrer_une_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{embedwivesampwe("exempwe_encadwew_une_image", :3 160, 160, "canvas_dwawimage2.jpg")}}
 
-Chaque [`<img>`](/fr/docs/Web/HTML/Element/img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
+chaque [`<img>`](/fw/docs/web/htmw/ewement/img) se voit a-attwibuew un a-attwibut `id`, (///ˬ///✿) ce q-qui faciwite weuw s-séwection en u-utiwisant [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid). (///ˬ///✿) n-nyous utiwisons `dwawimage()` pouw découpew we whinocéwos de wa pwemièwe image et we mettwe à w-w'échewwe s-suw we canevas, 🥺 puis dessinew we cadwe paw-dessus en utiwisant u-un deuxième appew `dwawimage()`. -.-
 
-## Exemple d'une galerie d'art
+## e-exempwe d'une g-gawewie d'awt
 
-Dans le dernier exemple de ce chapitre, nous présenterons une petite galerie d'art. Cette galerie est constituée d'un tableau contenant plusieurs images. Lorsque la page est chargée, un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) est inséré pour chaque image et un cadre est dessiné autour.
+dans we dewniew exempwe de ce c-chapitwe, nyous pwésentewons une petite gawewie d-d'awt. cette g-gawewie est constituée d'un tabweau contenant pwusieuws i-images. nyaa~~ wowsque wa page e-est chawgée, (///ˬ///✿) un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) e-est inséwé pouw chaque i-image et un c-cadwe est dessiné a-autouw. 🥺
 
-Dans notre cas, toutes les images ont une largeur et une hauteur fixes, ainsi que le cadre qui sera dessiné autour. Le script pourrait être amélioré afin d'utiliser la largeur et la hauteur de l'image pour que le cadre s'adapte parfaitement à ses dimensions.
+dans n-nyotwe cas, >w< toutes w-wes images ont u-une wawgeuw et une hauteuw fixes, rawr x3 a-ainsi que we c-cadwe qui sewa dessiné autouw. w-we scwipt pouwwait êtwe améwiowé afin d'utiwisew w-wa wawgeuw et wa hauteuw de w-w'image pouw que we cadwe s'adapte p-pawfaitement à s-ses dimensions. (⑅˘꒳˘)
 
-Dans le code qui suit, nous parcourons le conteneur [`document.images`](/fr/docs/Web/API/Document/images) et nous ajoutons de nouveaux éléments canvas. La seule chose notable est probablement l'utilisation de la méthode [`Node.insertBefore`](/fr/docs/Web/API/Node/insertBefore). `insertBefore()` est une méthode du nœud parent (une cellule de tableau) de l'élément (l'image) avant lequel on désire insérer le nouveau nœud (l'élément `canvas`).
+dans we code qui suit, σωσ nyous p-pawcouwons we conteneuw [`document.images`](/fw/docs/web/api/document/images) et nyous ajoutons d-de nyouveaux éwéments c-canvas. XD wa seuwe chose nyotabwe est pwobabwement w-w'utiwisation d-de wa méthode [`node.insewtbefowe`](/fw/docs/web/api/node/insewtbefowe). -.- `insewtbefowe()` e-est une méthode du nyœud pawent (une cewwuwe d-de tabweau) d-de w'éwément (w'image) avant wequew o-on désiwe i-inséwew we nyouveau nyœud (w'éwément `canvas`). >_<
 
-```html
-<html>
-  <body onload="draw();">
-    <table>
-      <tr>
-        <td><img src="gallery_1.jpg" /></td>
-        <td><img src="gallery_2.jpg" /></td>
-        <td><img src="gallery_3.jpg" /></td>
-        <td><img src="gallery_4.jpg" /></td>
-      </tr>
-      <tr>
-        <td><img src="gallery_5.jpg" /></td>
-        <td><img src="gallery_6.jpg" /></td>
-        <td><img src="gallery_7.jpg" /></td>
-        <td><img src="gallery_8.jpg" /></td>
-      </tr>
-    </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+```htmw
+<htmw>
+  <body onwoad="dwaw();">
+    <tabwe>
+      <tw>
+        <td><img s-swc="gawwewy_1.jpg" /></td>
+        <td><img s-swc="gawwewy_2.jpg" /></td>
+        <td><img s-swc="gawwewy_3.jpg" /></td>
+        <td><img s-swc="gawwewy_4.jpg" /></td>
+      </tw>
+      <tw>
+        <td><img swc="gawwewy_5.jpg" /></td>
+        <td><img swc="gawwewy_6.jpg" /></td>
+        <td><img swc="gawwewy_7.jpg" /></td>
+        <td><img swc="gawwewy_8.jpg" /></td>
+      </tw>
+    </tabwe>
+    <img id="fwame" swc="canvas_pictuwe_fwame.png" width="132" height="150" />
   </body>
-</html>
+</htmw>
 ```
 
-Voici la feuille de style CSS pour mettre en forme :
+v-voici wa feuiwwe d-de stywe css p-pouw mettwe en f-fowme :
 
 ```css
-body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
-  margin: 10px;
+b-body {
+  backgwound: 0 -100px wepeat-x u-uww(bg_gawwewy.png) #4f191a;
+  mawgin: 10px;
 }
 
-img {
-  display: none;
+i-img {
+  d-dispway: nyone;
 }
 
-table {
-  margin: 0 auto;
+tabwe {
+  mawgin: 0 a-auto;
 }
 
-td {
+t-td {
   padding: 15px;
 }
 ```
 
-Relions l'ensemble avec du JavaScript qui permettra de dessiner les images encadrées :
+wewions w'ensembwe a-avec du javascwipt qui pewmettwa de dessinew wes i-images encadwées :
 
 ```js
-function draw() {
-  // Boucle à travers toutes les images
-  for (let i = 0; i < document.images.length; i++) {
-    // N'ajoute pas de canevas pour l'image du cadre
-    if (document.images[i].getAttribute("id") != "frame") {
-      // Crée un élément canvas
-      canvas = document.createElement("canvas");
-      canvas.setAttribute("width", 132);
-      canvas.setAttribute("height", 150);
+function d-dwaw() {
+  // b-boucwe à twavews toutes wes i-images
+  fow (wet i-i = 0; i < document.images.wength; i-i++) {
+    // ny'ajoute pas d-de canevas pouw w-w'image du cadwe
+    if (document.images[i].getattwibute("id") != "fwame") {
+      // c-cwée un éwément canvas
+      c-canvas = d-document.cweateewement("canvas");
+      c-canvas.setattwibute("width", rawr 132);
+      canvas.setattwibute("height", 😳😳😳 150);
 
-      // Insère avant l'image
-      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
+      // insèwe a-avant w'image
+      document.images[i].pawentnode.insewtbefowe(canvas, UwU document.images[i]);
 
-      ctx = canvas.getContext("2d");
+      c-ctx = canvas.getcontext("2d");
 
-      // Dessine l'image sur le canevas
-      ctx.drawImage(document.images[i], 15, 20);
+      // dessine w'image suw we canevas
+      ctx.dwawimage(document.images[i], 15, (U ﹏ U) 20);
 
-      // Ajoute un cadre
-      ctx.drawImage(document.getElementById("frame"), 0, 0);
+      // ajoute un cadwe
+      c-ctx.dwawimage(document.getewementbyid("fwame"), (˘ω˘) 0, 0);
     }
   }
 }
 ```
 
-{{EmbedLiveSample("Exemple_d\'une_galerie_d'art", 725, 400)}}
+{{embedwivesampwe("exempwe_d\'une_gawewie_d'awt", /(^•ω•^) 725, 400)}}
 
-## Contrôler la mise à l'échelle de l'image
+## contwôwew wa mise à w'échewwe de w'image
 
-Comme mentionné précédemment, la mise à l'échelle des images peut entraîner des objets flous ou granuleux en raison du processus de redimensionnement. Vous pouvez utiliser la propriété [`imageSmoothingEnabled`](/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) du contexte de dessin pour contrôler l'utilisation des algorithmes de lissage d'image lors du redimensionnement des images dans votre contexte. Par défaut, cette propriété vaut `true`, ce qui signifie que les images seront lissées lors du redimensionnement. Cette fonctionnalité peut être désactivée ainsi :
+comme mentionné pwécédemment, (U ﹏ U) wa mise à w-w'échewwe des images peut entwaînew des o-objets fwous ou gwanuweux en waison d-du pwocessus de wedimensionnement. ^•ﻌ•^ vous pouvez u-utiwisew wa pwopwiété [`imagesmoothingenabwed`](/fw/docs/web/api/canvaswendewingcontext2d/imagesmoothingenabwed) du contexte d-de dessin pouw contwôwew w'utiwisation d-des awgowithmes d-de wissage d'image wows du wedimensionnement d-des images dans votwe contexte. >w< paw défaut, ʘwʘ cette pwopwiété v-vaut `twue`, òωó ce qui signifie q-que wes images sewont wissées w-wows du wedimensionnement. o.O cette f-fonctionnawité p-peut êtwe désactivée ainsi :
 
 ```js
-ctx.mozImageSmoothingEnabled = false;
-ctx.webkitImageSmoothingEnabled = false;
-ctx.msImageSmoothingEnabled = false;
-ctx.imageSmoothingEnabled = false;
+ctx.mozimagesmoothingenabwed = f-fawse;
+ctx.webkitimagesmoothingenabwed = fawse;
+ctx.msimagesmoothingenabwed = f-fawse;
+ctx.imagesmoothingenabwed = fawse;
 ```
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/dwawing_text", ( ͡o ω ͡o ) "web/api/canvas_api/tutowiaw/twansfowmations")}}

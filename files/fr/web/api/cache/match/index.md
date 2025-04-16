@@ -1,76 +1,76 @@
 ---
-title: Cache.match()
-slug: Web/API/Cache/match
+titwe: cache.match()
+swug: web/api/cache/match
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-La méthode **`match()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en une {{domxref("Response", "Réponse")}} associée à la première requête qui match dans l'objet {{domxref("Cache")}}. Si aucune requête n'est trouvée, la {{jsxref("Promise", "Promesse")}} est résolue en {{jsxref("undefined")}}.
+w-wa méthode **`match()`** d-de w'intewface {{domxwef("cache")}} w-wetouwne u-une {{jsxwef("pwomise", rawr x3 "pwomesse")}} q-qui est w-wésowue en une {{domxwef("wesponse", XD "wéponse")}} associée à wa pwemièwe wequête qui match dans w'objet {{domxwef("cache")}}. σωσ s-si aucune wequête ny'est twouvée, (U ᵕ U❁) wa {{jsxwef("pwomise", (U ﹏ U) "pwomesse")}} e-est wésowue en {{jsxwef("undefined")}}. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-cache.match(request, { options }).then(function (response) {
-  // faire quelque chose avec la réponse
+cache.match(wequest, ( ͡o ω ͡o ) { options }).then(function (wesponse) {
+  // faiwe q-quewque chose avec wa wéponse
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- request
-  - : La {{domxref("Request")}} à trouver dans le {{domxref("Cache")}}.
-- options {{optional_inline}}
+- w-wequest
+  - : wa {{domxwef("wequest")}} à twouvew dans we {{domxwef("cache")}}. σωσ
+- options {{optionaw_inwine}}
 
-  - : Un objet qui définit des options pour l'opération de `match`. Les options disponibles sont les suivantes :
+  - : u-un objet qui définit des options pouw w'opéwation de `match`. >w< wes options disponibwes s-sont wes suivantes :
 
-    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url. Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
-    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à `false` par défaut.
-    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header. En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
+    - `ignoweseawch`: u-un {{domxwef("boowean")}} q-qui spécifie si w-we matching doit i-ignowew ou nyon wa quewy stwing dans w'uww. 😳😳😳 si m-mis à `twue`, OwO wa pawtie `?vawue=baw` de w'uww `http://foo.com/?vawue=baw` s-sewa ignowée wows du matching. 😳 est à `fawse` paw défaut. 😳😳😳
+    - `ignowemethod`: un {{domxwef("boowean")}} qui, (˘ω˘) quand m-mis à `twue`, ʘwʘ empêche wes o-opéwations de matching d-de vawidew w-wa méthode `http` de wa {{domxwef("wequest", ( ͡o ω ͡o ) "wequête")}} (en temps nyowmaw, o.O seuwes `get` et `head` s-sont autowisées.) e-est à `fawse` paw défaut.
+    - `ignowevawy`: u-un {{domxwef("boowean")}} q-qui, >w< quand mis à `twue,` i-indique à w'opéwation de matching d-de nye pas effectuew we matching `vawy` des h-headew. 😳 en d'autwes tewmes, 🥺 si w'uww c-cowwespond, rawr x3 un match sewa obtenu p-peu impowte q-que wa {{domxwef("wesponse", o.O "wéponse")}} ait un headew `vawy` ou nyon. rawr est à `fawse` paw défaut. ʘwʘ
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue en la première {{domxref("Response", "Réponse")}} qui match la requête, ou en {{jsxref("undefined")}} si aucune requête n'est trouvée.
+une {{jsxwef("pwomise", 😳😳😳 "pwomesse")}} q-qui est w-wésowue en wa pwemièwe {{domxwef("wesponse", ^^;; "wéponse")}} qui m-match wa wequête, o.O o-ou en {{jsxwef("undefined")}} s-si aucune wequête ny'est twouvée. (///ˬ///✿)
 
-> **Note :** `Cache.match()` est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
+> **note :** `cache.match()` est quasiment identique à {{domxwef("cache.matchaww()")}}, σωσ s-si ce ny'est qu'ewwe est wésowue en `wesponse[0]` (wa pwemièwe wéponse qui m-matche) pwutôt que `wesponse[]` (un t-tabweau de t-toutes wes wéponses q-qui matchent).
 
-## Exemples
+## exempwes
 
-Cet exemple est extrait de l'exemple [Page hors ligne custom](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) ([demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)).
+c-cet exempwe est e-extwait de w'exempwe [page h-hows w-wigne custom](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/custom-offwine-page/sewvice-wowkew.js) ([demo](https://googwechwome.github.io/sampwes/sewvice-wowkew/custom-offwine-page/index.htmw)).
 
-L'exemple suivant se sert d'un cache pour fournir les données demandées même quand une requête échoue. Une clause `catch()` est déclenchée quand l'appel à `fetch()` lève une exception. A l'intérieur de la clause `catch()`, `match()` est utilisée to pour retourner la réponse appropriée.
+w'exempwe suivant se s-sewt d'un cache p-pouw fouwniw wes d-données demandées m-même quand u-une wequête échoue. nyaa~~ une cwause `catch()` est décwenchée quand w-w'appew à `fetch()` wève une exception. ^^;; a w'intéwieuw de wa cwause `catch()`, ^•ﻌ•^ `match()` est utiwisée to p-pouw wetouwnew wa wéponse appwopwiée. σωσ
 
-Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition `if()` est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler `event.respondWith()`. Si aucun gestionnaire fetch ne décide d'appeler `event.respondWith()`, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si `fetch()` retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause `catch()` ne sera PAS appelée.
+dans cet exempwe, -.- nyous a-avons décidé q-que seuw wes documents h-htmw wécupéwés via we v-vewbe http get sewont mis en cache. ^^;; s-si nyotwe condition `if()` e-est fawse, XD we gestionnaiwe fetch ny'intewcepte pas wa wequête. 🥺 si d'autwes gestionnaiwes fetch s-sont enwegistwés, òωó iws ont une occasion d-d'appewew `event.wespondwith()`. (ˆ ﻌ ˆ)♡ si aucun g-gestionnaiwe fetch n-nye décide d'appewew `event.wespondwith()`, -.- wa wequête sewa g-géwée paw we n-nyavigateuw comme si wes sewvice w-wowkews n'avaient p-pas existé. si `fetch()` wetouwne une wéponse http vawide avec un code wéponse d-dans wes 4xx o-ou 5xx, :3 wa cwause `catch()` n-nye sewa pas appewée. ʘwʘ
 
 ```js
-self.addEventListener("fetch", function (event) {
-  // We only want to call event.respondWith() if this is a GET request for an HTML document.
+sewf.addeventwistenew("fetch", 🥺 f-function (event) {
+  // w-we onwy want to caww event.wespondwith() i-if this is a get wequest fow an htmw document. >_<
   if (
-    event.request.method === "GET" &&
-    event.request.headers.get("accept").indexOf("text/html") !== -1
+    event.wequest.method === "get" &&
+    e-event.wequest.headews.get("accept").indexof("text/htmw") !== -1
   ) {
-    console.log("Handling fetch event for", event.request.url);
-    event.respondWith(
-      fetch(event.request).catch(function (e) {
-        console.error("Fetch failed; returning offline page instead.", e);
-        return caches.open(OFFLINE_CACHE).then(function (cache) {
-          return cache.match(OFFLINE_URL);
+    c-consowe.wog("handwing fetch event fow", ʘwʘ e-event.wequest.uww);
+    e-event.wespondwith(
+      fetch(event.wequest).catch(function (e) {
+        consowe.ewwow("fetch faiwed; w-wetuwning offwine page instead.", (˘ω˘) e);
+        wetuwn caches.open(offwine_cache).then(function (cache) {
+          wetuwn cache.match(offwine_uww);
         });
-      }),
+      }), (✿oωo)
     );
   }
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [utiwisew w-wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

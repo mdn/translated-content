@@ -1,49 +1,49 @@
 ---
-title: Event()
-slug: Web/API/Event/Event
+titwe: event()
+swug: web/api/event/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement_).
+w-we constwucteuw **`event()`** c-cwée un nyouvew {{domxwef("event")}} (_évènement_). (U ﹏ U)
 
-## Syntaxe
-
-```js
-event = new Event(typeArg, eventInit);
-```
-
-### Valeurs
-
-- _typeArg_
-  - : C'est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le nom de l'évènement.
-- _eventInit_{{optional_inline}}
-
-  - : C'est un dictionnaire `EventInit` ayant les champs suivants :
-
-    - `bubbles`: (facultatif) un {{jsxref("Boolean")}} indiquant si les événements sont propagés . Par défaut est `false` (_faux_).
-    - `cancelable`: (facultatif) un {{jsxref("Boolean")}} indiquant si l'évènement peut être annulé. Par défaut est `false` (_faux_) .
-    - `composed`: ( facultatif ) un {{jsxref("Boolean")}} indiquant si l'évènement déclenchera les écouteurs en dehors d'une racine shadow (voir {{domxref("Event.composed")}} pour plus de détails). Par défaut est `false` (_faux_) .
-
-## Exemple
+## s-syntaxe
 
 ```js
-// crée un évènement "look" qui est diffusé et ne peut être annulé
-var evt = new Event("look", { bubbles: true, cancelable: false });
-document.dispatchEvent(evt);
-
-// l'événement peut être envoyé à partir de n'importe quel élément, pas seulement le document
-myDiv.dispatchEvent(evt);
+e-event = n-nyew event(typeawg, (⑅˘꒳˘) e-eventinit);
 ```
 
-## Spécifications
+### v-vaweuws
 
-{{Specifications}}
+- _typeawg_
+  - : c-c'est une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwésentant we nyom de w'évènement. òωó
+- _eventinit_{{optionaw_inwine}}
 
-## Compatibilité des navigateurs
+  - : c'est un dictionnaiwe `eventinit` a-ayant wes champs suivants :
 
-{{Compat}}
+    - `bubbwes`: (facuwtatif) un {{jsxwef("boowean")}} i-indiquant si wes événements s-sont pwopagés . ʘwʘ paw défaut est `fawse` (_faux_). /(^•ω•^)
+    - `cancewabwe`: (facuwtatif) un {{jsxwef("boowean")}} i-indiquant si w'évènement p-peut êtwe annuwé. p-paw défaut est `fawse` (_faux_) . ʘwʘ
+    - `composed`: ( facuwtatif ) un {{jsxwef("boowean")}} indiquant si w-w'évènement décwenchewa wes écouteuws en dehows d'une wacine shadow (voiw {{domxwef("event.composed")}} p-pouw pwus de détaiws). σωσ p-paw défaut e-est `fawse` (_faux_) . OwO
 
-## Voir aussi
+## e-exempwe
 
-- {{domxref("Event")}}
+```js
+// c-cwée un évènement "wook" qui est d-diffusé et nye peut êtwe annuwé
+vaw evt = nyew e-event("wook", 😳😳😳 { bubbwes: twue, 😳😳😳 cancewabwe: fawse });
+document.dispatchevent(evt);
+
+// w'événement peut êtwe e-envoyé à pawtiw de ny'impowte q-quew éwément, o.O p-pas seuwement w-we document
+mydiv.dispatchevent(evt);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("event")}}

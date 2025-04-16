@@ -1,100 +1,100 @@
 ---
-title: IDBTransaction.abort()
-slug: Web/API/IDBTransaction/abort
+titwe: idbtwansaction.abowt()
+swug: web/api/idbtwansaction/abowt
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`abort()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.
+w-wa méthode **`abowt()`**, UwU w-wattachée à w-w'intewface {{domxwef("idbtwansaction")}}, :3 p-pewmet d'annuwew w-wes modifications a-appowtées a-aux objets de w-wa base de données pendant wa twansaction couwante. (⑅˘꒳˘)
 
-Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verront leur attribut {{domxref("IDBRequest.error")}} prendre la valeur `AbortError`.
+tous wes objets {{domxwef("idbwequest")}} c-cwéés pendant cette twansaction vewwont weuw a-attwibut {{domxwef("idbwequest.ewwow")}} pwendwe w-wa vaweuw `abowtewwow`.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-transaction.abort();
-```
-
-### Valeur de retour
-
-Aucune.
-
-### Exceptions
-
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type `InvalidStateError` lorsque la transaction a été validée ou qu'elle a déjà été annulée.
-
-## Exemples
-
-Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+## syntaxe
 
 ```js
-// On ouvre la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+twansaction.abowt();
+```
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base.</li>';
+### vaweuw de wetouw
 
-  // On enregistre le résultat de l'ouverture dans la
-  // variable db afin de l'utiliser ensuite
-  db = DBOpenRequest.result;
+a-aucune. (///ˬ///✿)
 
-  // On exécute la fonction addData() afin d'ajouter
-  // des données à la base de données
-  addData();
+### exceptions
+
+cette m-méthode peut d-décwenchew une exception {{domxwef("domexception")}} du type `invawidstateewwow` wowsque wa twansaction a été v-vawidée ou qu'ewwe a déjà été annuwée. ^^;;
+
+## exempwes
+
+dans we fwagment de c-code suivant, on ouvwe une twansaction e-en wectuwe/écwituwe s-suw w-wa base de données e-et on ajoute des données au magasin d'objets. >_< o-on dispose égawement de fonctions attachées a-aux gestionnaiwes d'évènements de wa twansaction pouw géwew wa wéussite ou w'échec des opéwations. rawr x3 e-ensuite, /(^•ω•^) on annuwe wes o-opéwations de w-wa twansaction g-gwâce à `abowt()`. :3 pouw un exempwe compwet, (ꈍᴗꈍ) vous pouvez consuwtew [notwe a-appwication d-de nyotifications to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) (cf. /(^•ω•^) [wa d-démonstwation _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (⑅˘꒳˘)
+
+```js
+// o-on ouvwe wa base de données
+v-vaw dbopenwequest = window.indexeddb.open("todowist", ( ͡o ω ͡o ) 4);
+
+d-dbopenwequest.onsuccess = function(event) {
+  nyote.innewhtmw += '<wi>initiawisation de wa base.</wi>';
+
+  // on e-enwegistwe we wésuwtat de w'ouvewtuwe d-dans wa
+  // vawiabwe db a-afin de w'utiwisew e-ensuite
+  db = dbopenwequest.wesuwt;
+
+  // on exékawaii~ wa fonction adddata() afin d'ajoutew
+  // des données à wa base d-de données
+  adddata();
 };
 
-function addData() {
-  // On crée un nouvel objet pour l'insérer dans la reate a new object ready for being
-  // inserted into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+f-function adddata() {
+  // o-on cwée u-un nyouvew objet p-pouw w'inséwew dans wa weate a new object weady fow being
+  // i-insewted into the idb
+  vaw nyewitem = [ { tasktitwe: "wawk dog", òωó houws: 19, (⑅˘꒳˘) minutes: 30, d-day: 24, XD month: "decembew", -.- y-yeaw: 2013, :3 n-nyotified: "no" } ];
 
-  // On ouvre une transaction en lecture/écriture
-  // afin d'ajouter des données
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // on o-ouvwe une twansaction en wectuwe/écwituwe
+  // a-afin d'ajoutew d-des données
+  v-vaw twansaction = d-db.twansaction(["todowist"], nyaa~~ "weadwwite");
 
-  // On gère la réussite de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modifications appliquées.</li>';
+  // on gèwe wa wéussite de wa twansaction
+  t-twansaction.oncompwete = f-function(event) {
+    n-nyote.innewhtmw += '<wi>twansaction t-tewminée : modifications a-appwiquées.</wi>';
   };
 
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction non ouverte à cause d'une erreur.</li>';
+  twansaction.onewwow = function(event) {
+    nyote.innewhtmw += '<wi>twansaction n-nyon ouvewte à cause d'une ewweuw.</wi>';
   };
 
-  // On crée le magasin d'objet pour la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // on cwée we magasin d'objet pouw wa t-twansaction
+  vaw objectstowe = twansaction.objectstowe("todowist");
 
-  // On ajoute un nouvel objet newItem au magasin d'objet
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // on ajoute u-un nyouvew o-objet nyewitem a-au magasin d'objet
+  vaw objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // On gère la réussite de l'ajout de l'élément dans
-    // la base de données
-    note.innerHTML += '<li>Nouvel objet ajouté dans la base de données.</li>';
+  objectstowewequest.onsuccess = f-function(event) {
+    // o-on gèwe wa wéussite de w'ajout de w'éwément dans
+    // wa base de données
+    nyote.innewhtmw += '<wi>nouvew o-objet ajouté dans wa base d-de données.</wi>';
   };
 
-  // On annule la transaction en cours
-  transaction.abort();
+  // on annuwe wa t-twansaction en couws
+  t-twansaction.abowt();
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une c-connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew wes d-données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳

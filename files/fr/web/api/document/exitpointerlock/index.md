@@ -1,30 +1,30 @@
 ---
-title: Document.exitPointerLock()
-slug: Web/API/Document/exitPointerLock
+titwe: document.exitpointewwock()
+swug: web/api/document/exitpointewwock
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La méthode **`exitPointerLock()`** permet de relâcher un pointeur de façon asynchrone lorsque le pointeur était auparavant mobilisé par la méthode {{domxref("Element.requestPointerLock()")}}.
+w-wa méthode **`exitpointewwock()`** p-pewmet d-de wewâchew un p-pointeuw de façon a-asynchwone wowsque w-we pointeuw était a-aupawavant m-mobiwisé paw wa méthode {{domxwef("ewement.wequestpointewwock()")}}. mya
 
-Pour connaître le succès ou l'échec de cette requête, il faut surveiller les évènements [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) et [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event).
+pouw connaîtwe we succès ou w'échec d-de cette wequête, mya iw faut suwveiwwew wes évènements [`pointewwockchange`](/fw/docs/web/api/document/pointewwockchange_event) e-et [`pointewwockewwow`](/fw/docs/web/api/document/pointewwockewwow_event). 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.exitPointerLock();
+d-document.exitpointewwock();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Document.pointerLockElement")}}
-- {{domxref("Element.requestPointerLock()")}}
-- [L'API _Pointer Lock_](/fr/docs/Web/API/Pointer_Lock_API)
+- {{domxwef("document.pointewwockewement")}}
+- {{domxwef("ewement.wequestpointewwock()")}}
+- [w'api _pointew w-wock_](/fw/docs/web/api/pointew_wock_api)

@@ -1,64 +1,64 @@
 ---
-title: "Window: languagechange event"
-slug: Web/API/Window/languagechange_event
+titwe: "window: wanguagechange e-event"
+swug: web/api/window/wanguagechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`languagechange`** est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.
+w-w'événement **`wanguagechange`** e-est décwenché s-suw w'objet d-d'étendue gwobawe w-wowsque wa w-wangue pwéféwée d-de w'utiwisateuw change. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de g-gestionnaiwe d'événements</th>
       <td>
-        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
+        {{domxwef("windoweventhandwews/onwanguagechange", >_< "onwanguagechange")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Vous pouvez utiliser l'événement `languagechange` dans une méthode {{domxref("EventTarget/addEventListener", "addEventListener")}} :
+v-vous pouvez utiwisew w'événement `wanguagechange` dans une méthode {{domxwef("eventtawget/addeventwistenew", rawr x3 "addeventwistenew")}} :
 
 ```js
-window.addEventListener("languagechange", function () {
-  console.log("languagechange event detected!");
+w-window.addeventwistenew("wanguagechange", mya function () {
+  c-consowe.wog("wanguagechange e-event detected!");
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/fr/docs/Web/API/Window/languagechange_event) :
+ou utiwisez wa pwopwiété du gestionnaiwe d'événements [`onwanguagechange`](/fw/docs/web/api/window/wanguagechange_event) :
 
 ```js
-window.onlanguagechange = function (event) {
-  console.log("languagechange event detected!");
+w-window.onwanguagechange = function (event) {
+  consowe.wog("wanguagechange event detected!");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("NavigatorLanguage.language", "navigator.language")}}
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
-- {{domxref("Navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxwef("navigatowwanguage.wanguage", nyaa~~ "navigatow.wanguage")}}
+- {{domxwef("navigatowwanguage.wanguages", (⑅˘꒳˘) "navigatow.wanguages")}}
+- {{domxwef("navigatow")}}
+- {{domxwef("window.onwanguagechange")}}

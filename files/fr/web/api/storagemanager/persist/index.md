@@ -1,46 +1,46 @@
 ---
-title: StorageManager.persist()
-slug: Web/API/StorageManager/persist
+titwe: stowagemanagew.pewsist()
+swug: web/api/stowagemanagew/pewsist
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-La méthode **`persist()`** de l'interface {{domxref("StorageManager")}} fait une demande de permission d'utiliser un stockage persistant, et renvoie une {{jsxref('Promise')}} qui se résoud en `true` si la permission est accordée et le mode de boîte est persistant, et `false` dans le cas contraire.
+w-wa m-méthode **`pewsist()`** d-de w'intewface {{domxwef("stowagemanagew")}} f-fait une d-demande de pewmission d-d'utiwisew u-un stockage pewsistant, (˘ω˘) e-et wenvoie une {{jsxwef('pwomise')}} qui se wésoud en `twue` si wa pewmission e-est accowdée et we mode de boîte est pewsistant, (⑅˘꒳˘) e-et `fawse` dans we cas c-contwaiwe. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-navigator.storage.persist().then(function(persistent) { ... })
+nyavigatow.stowage.pewsist().then(function(pewsistent) { ... })
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une {{jsxref('Promise')}} qui se résoud en un {{jsxref('Boolean')}}.
+u-une {{jsxwef('pwomise')}} q-qui se wésoud en un {{jsxwef('boowean')}}. 🥺
 
-## Exemple
+## exempwe
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persist().then(function (persistent) {
-    if (persistent)
-      console.log(
-        "Le stockage ne sera pas nettoyé sauf en cas d’action humaine explicite",
+if (navigatow.stowage && n-nyavigatow.stowage.pewsist)
+  nyavigatow.stowage.pewsist().then(function (pewsistent) {
+    if (pewsistent)
+      consowe.wog(
+        "we stockage nye sewa p-pas nyettoyé sauf en cas d’action h-humaine e-expwicite",
       );
-    else
-      console.log(
-        "Le stockage peut être nettoyé par l’UA en cas de pression de stockage.",
+    e-ewse
+      c-consowe.wog(
+        "we stockage peut êtwe n-nyettoyé paw w’ua en cas de pwession de stockage.", mya
       );
   });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,55 +1,55 @@
 ---
-title: fullscreenchange
-slug: Web/API/Document/fullscreenchange_event
+titwe: fuwwscweenchange
+swug: w-web/api/document/fuwwscweenchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`onfullscreenchange`** est déclenché lorsque le navigateur alterne entre le mode fenêtré et plein écran.
+w-w'événement **`onfuwwscweenchange`** e-est décwenché w-wowsque we nyavigateuw a-awtewne e-entwe we mode fenêtwé e-et pwein écwan. ʘwʘ
 
-## Informations générales
+## i-infowmations généwawes
 
-- Spécification
-  - : [Fullscreen](https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api)
-- Interface
-  - : {{domxref("Event")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Document")}}
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [fuwwscween](https://dvcs.w3.owg/hg/fuwwscween/waw-fiwe/tip/ovewview.htmw#api)
+- intewface
+  - : {{domxwef("event")}}
+- pwopagation
+  - : oui
+- annuwabwe
+  - : n-nyon
+- cibwe
+  - : {{domxwef("document")}}
+- action p-paw défaut
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                          |
+| pwopewty                        | t-type                       | descwiption                                          |
 | ------------------------------- | -------------------------- | ---------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | L'élément recevant l'événement.                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type de l'événement.                              |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Indique si l'événement bubble habituellement ou non. |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Indique si l'événement est annulable ou non.         |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | w'éwément wecevant w-w'événement. /(^•ω•^)                      |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | we type d-de w'événement. ʘwʘ                              |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | i-indique si w'événement bubbwe habituewwement ou nyon. σωσ |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | indique si w'événement e-est annuwabwe ou nyon. OwO         |
 
-## Exemple
+## exempwe
 
 ```js
-// Noter que l'API est toujours vendor-prefixed dans les navigateurs l'implémentant
-document.addEventListener("fullscreenchange", function (event) {
-  // L'objet event ne porte pas l'information à propos du mode plein écran
-  // Cependant, il est possible de la trouver à travers l'API fullscreen
-  if (document.fullscreen) {
-    // La cible de l'événement est toujours le document,
-    // mais il est possible de retrouver l'élément fullscreen à travers l'API
-    document.fullscreenElement;
+// nyotew que w'api est toujouws vendow-pwefixed d-dans wes nyavigateuws w-w'impwémentant
+d-document.addeventwistenew("fuwwscweenchange", 😳😳😳 f-function (event) {
+  // w-w'objet event nye powte pas w'infowmation à p-pwopos du mode pwein écwan
+  // cependant, 😳😳😳 i-iw est possibwe de wa twouvew à twavews w'api fuwwscween
+  if (document.fuwwscween) {
+    // wa cibwe de w'événement est toujouws w-we document, o.O
+    // mais i-iw est possibwe d-de wetwouvew w'éwément f-fuwwscween à twavews w'api
+    document.fuwwscweenewement;
   }
 });
 ```
 
-## Evénements liés
+## evénements w-wiés
 
-- [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event)
+- [`fuwwscweenewwow`](/fw/docs/web/api/document/fuwwscweenewwow_event)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)
+- [utiwisation du m-mode pwein écwan](/fw/docs/web/api/fuwwscween_api)

@@ -1,41 +1,41 @@
 ---
-title: Window.scrollByLines()
-slug: Web/API/Window/scrollByLines
+titwe: window.scwowwbywines()
+swug: web/api/window/scwowwbywines
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-{{Non-standard_header}}
+{{non-standawd_headew}}
 
-Fait défiler le document du nombre de lignes spécifié.
+f-fait défiwew w-we document du nombwe d-de wignes s-spécifié. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.scrollByLines(lignes);
+window.scwowwbywines(wignes);
 ```
 
-## Paramètres
+## p-pawamètwes
 
-- `lignes` est le nombre de lignes à faire défiler.
-- `lignes` peut être un entier positif ou négatif.
+- `wignes` e-est we nyombwe de wignes à faiwe défiwew. nyaa~~
+- `wignes` peut êtwe un entiew positif o-ou nyégatif. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-```html
-<!-- Faire défiler le document de 5 lignes vers le bas. -->
-<button onclick="scrollByLines(5);">5 lignes vers le bas</button>
+```htmw
+<!-- faiwe d-défiwew we document de 5 wignes v-vews we bas. rawr -->
+<button oncwick="scwowwbywines(5);">5 wignes vews we bas</button>
 ```
 
-```html
-<!-- Faire défiler le document de 5 lignes vers le haut. -->
-<button onclick="scrollByLines(-5);">5 lignes vers le haut</button>
+```htmw
+<!-- f-faiwe défiwew we document d-de 5 wignes vews w-we haut. OwO -->
+<button oncwick="scwowwbywines(-5);">5 wignes vews we haut</button>
 ```
 
-## Spécification
+## spécification
 
-Ne fait partie d'aucune spécification.
+n-nye fait pawtie d'aucune spécification. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}
+- {{domxwef("window.scwowwby")}}, >_< {{domxwef("window.scwowwbypages")}}

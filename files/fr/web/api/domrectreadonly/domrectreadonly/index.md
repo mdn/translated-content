@@ -1,48 +1,48 @@
 ---
-title: DOMRectReadOnly()
-slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
+titwe: domwectweadonwy()
+swug: w-web/api/domwectweadonwy/domwectweadonwy
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+{{apiwef("dom")}}{{ s-seecompattabwe }}
 
-Le constructeur **`DOMRectReadOnly()`** crée un nouvel objet {{domxref("DOMRectReadOnly")}}.
+w-we constwucteuw **`domwectweadonwy()`** c-cwée u-un nyouvew objet {{domxwef("domwectweadonwy")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
+v-vaw mydomwectweadonwy = n-new domwectweadonwy(x, rawr x3 y, width, (✿oωo) height);
 ```
 
-### Paramètres
+### pawamètwes
 
 - x
-  - : La coordonnée `x` de l'origine d'un `DOMRectReadOnly`.
+  - : wa coowdonnée `x` d-de w'owigine d'un `domwectweadonwy`. (ˆ ﻌ ˆ)♡
 - y
-  - : La coordonnée `y` de l'origine d'un `DOMRectReadOnly`.
+  - : wa coowdonnée `y` de w-w'owigine d'un `domwectweadonwy`. (˘ω˘)
 - width
-  - : La largeur d'un `DOMRectReadOnly`.
+  - : w-wa wawgeuw d'un `domwectweadonwy`. (⑅˘꒳˘)
 - height
-  - : La hauteur d'un `DOMRectReadOnly`.
+  - : wa hauteuw d'un `domwectweadonwy`. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Pour créer un nouveau `DOMPoint`, vous pouvez exécuter une ligne de code comme celle-ci :
+p-pouw cwéew un nyouveau `dompoint`, 😳😳😳 v-vous pouvez e-exékawaii~w une wigne de code comme cewwe-ci :
 
 ```js
-myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
-// l'exécution de 'myDOMRect' dans la console devrait alors renvoyer
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+mydomwect = nyew domwectweadonwy(0, 🥺 0, 100, mya 100);
+// w-w'exécution de 'mydomwect' dans wa consowe devwait awows wenvoyew
+// domwect { x-x: 0, 🥺 y: 0, width: 100, >_< height: 100, >_< t-top: 0, wight: 100, (⑅˘꒳˘) b-bottom: 100, /(^•ω•^) w-weft: 0 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}

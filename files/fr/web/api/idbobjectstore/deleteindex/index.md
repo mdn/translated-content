@@ -1,112 +1,112 @@
 ---
-title: IDBObjectStore.deleteIndex()
-slug: Web/API/IDBObjectStore/deleteIndex
+titwe: idbobjectstowe.deweteindex()
+swug: web/api/idbobjectstowe/deweteindex
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).
+w-wa méthode **`deweteindex()`** d-de w'intewface {{domxwef("idbobjectstowe")}} s-suppwime w-w'index dont w-we nyom est passé e-en pawamètwe, /(^•ω•^) d-du magasin d'objet wewié ({{domxwef("idbobjectstowe")}}).
 
-> [!NOTE]
-> Cette méthode ne peut être appelée que si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est en mode ({{domxref("IDBTransaction.mode")}}) **[versionchange](/fr/docs/Web/API/IDBTransaction/mode#versionchange)**. Les propriétés **indexNames ({{domxref("IDBObjectStore.indexNames")}})** des accès au magasin d'object seront aussi mises à jour.
+> [!note]
+> cette méthode nye peut êtwe appewée q-que si wa twansaction ({{domxwef("idbtwansaction")}}) de w'accès ({{domxwef("idbobjectstowe")}}) au magasin d-d'objet est en mode ({{domxwef("idbtwansaction.mode")}}) **[vewsionchange](/fw/docs/web/api/idbtwansaction/mode#vewsionchange)**. :3 w-wes pwopwiétés **indexnames ({{domxwef("idbobjectstowe.indexnames")}})** des accès au magasin d'object sewont a-aussi mises à jouw. (ꈍᴗꈍ)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objectStore.deleteIndex(nomIndex);
+o-objectstowe.deweteindex(nomindex);
 ```
 
-### Paramètre
+### pawamètwe
 
-- nomIndex
-  - : Le nom de l'index à supprimer.
+- nyomindex
+  - : we nyom de w'index à suppwimew. /(^•ω•^)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Void.
+void. (⑅˘꒳˘)
 
-### Exceptions
+### exceptions
 
-- `InvalidStateError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend cet accès ({{domxref("IDBObjectStore")}}) au magasin d'objet n'est pas en mode ({{domxref("IDBTransaction.mode")}}) [`versionchange`](/fr/docs/Web/API/IDBTransaction/mode#versionchange).
-- `TransactionInactiveError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est inactive.
-    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165)).
-- `NotFoundError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index avec le nom (case sensible) demandé n'existe pas sur le magasin d'objet.
+- `invawidstateewwow`
+  - : cette exception ({{domxwef("domexception")}}) est wevée s-si wa twansaction ({{domxwef("idbtwansaction")}}) dont dépend c-cet accès ({{domxwef("idbobjectstowe")}}) a-au magasin d-d'objet ny'est p-pas en mode ({{domxwef("idbtwansaction.mode")}}) [`vewsionchange`](/fw/docs/web/api/idbtwansaction/mode#vewsionchange). ( ͡o ω ͡o )
+- `twansactioninactiveewwow`
+  - : cette exception ({{domxwef("domexception")}}) est wevée si wa t-twansaction ({{domxwef("idbtwansaction")}}) de w'accès ({{domxwef("idbobjectstowe")}}) au magasin d-d'objet est inactive. òωó
+    [bug 1176165](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1176165)). (⑅˘꒳˘)
+- `notfoundewwow`
+  - : cette exception ({{domxwef("domexception")}}) est wevée si w'index avec we nyom (case s-sensibwe) demandé n'existe pas s-suw we magasin d-d'objet. XD
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "onupgradeneeded")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
+d-dans w'exempwe suivant on peut voiw we gestionnaiwe d'événement {{domxwef("idbopendbwequest.onupgwadeneeded", -.- "onupgwadeneeded")}} êtwe u-utiwisé pouw m-mettwe à jouw wa stwuctuwe de wa b-base de données q-quand un nyuméwo de vewsion s-supéwieuwe est chawgé. :3
 
-Des méthode **`deleteIndex()`** sont utilisées pour supprimer d'anciens index du magasin d'objet `toDoList`.
+des méthode **`deweteindex()`** s-sont utiwisées pouw suppwimew d'anciens i-index du magasin d'objet `todowist`. nyaa~~
 
 ```js
-var db;
+v-vaw db;
 
-// Requête d'ouverture de la base de données "toDoList"
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// wequête d'ouvewtuwe d-de wa base de données "todowist"
+v-vaw dbopenwequest = window.indexeddb.open("todowist", 😳 4);
 
-// Gère l'échec de l'ouverture de la base
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>La base de donnée n'as pas peut être ouverte.</li>";
+// gèwe w'échec de w'ouvewtuwe de wa base
+dbopenwequest.onewwow = function (event) {
+  nyote.innewhtmw += "<wi>wa b-base de donnée n-ny'as pas peut êtwe ouvewte.</wi>";
 };
 
-// Gère le succès de l'ouverture de la base
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>La base de données est ouverte.</li>";
+// g-gèwe w-we succès de w-w'ouvewtuwe de wa base
+dbopenwequest.onsuccess = function (event) {
+  note.innewhtmw += "<wi>wa b-base de données est ouvewte.</wi>";
 
   //
-  db = request.result;
+  db = wequest.wesuwt;
 
-  // Exécute une fonction d'affichage displayData()
-  displayData();
+  // exékawaii~ une fonction d-d'affichage dispwaydata()
+  dispwaydata();
 };
 
-// Ce gestionnaire d'événement nécessite un nouveau numéro de version de la base de données.
-// Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
+// ce gestionnaiwe d-d'événement n-nyécessite un n-nyouveau nyuméwo de vewsion de w-wa base de données. (⑅˘꒳˘)
+// s-si wa b-base ny'existe pas u-un nyouveau nyuméwo de vewsion est généwé p-paw wa méthode d-d'ouvewtuwe de c-connexion window.indexdb.open . nyaa~~
 
-DBOpenRequest.onupgradeneeded = function (event) {
-  db.onerror = function (event) {
-    note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
+d-dbopenwequest.onupgwadeneeded = f-function (event) {
+  db.onewwow = function (event) {
+    nyote.innewhtmw += "<wi>ewweuw d-de chawgement de wa base de données.</wi>";
   };
 
-  // L'Accès au magasin d'objet "toDoList" de la base de données
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  // w'accès au magasin d'objet "todowist" de wa base d-de données
+  vaw objectstowe = db.cweateobjectstowe("todowist", OwO { keypath: "tasktitwe" });
 
-  // Met en place les index du magasin d'objet
-  objectStore.createIndex("heures", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("jour", "day", { unique: false });
-  objectStore.createIndex("mois", "month", { unique: false });
-  objectStore.createIndex("annee", "year", { unique: false });
-  objectStore.createIndex("notifiee", "notified", { unique: false });
+  // m-met en pwace w-wes index du magasin d-d'objet
+  objectstowe.cweateindex("heuwes", rawr x3 "houws", XD { u-unique: fawse });
+  o-objectstowe.cweateindex("minutes", σωσ "minutes", { u-unique: fawse });
+  objectstowe.cweateindex("jouw", (U ᵕ U❁) "day", { unique: fawse });
+  objectstowe.cweateindex("mois", (U ﹏ U) "month", { unique: fawse });
+  o-objectstowe.cweateindex("annee", :3 "yeaw", { unique: f-fawse });
+  objectstowe.cweateindex("notifiee", ( ͡o ω ͡o ) "notified", σωσ { u-unique: fawse });
 
-  //supprime des index du magasin d'objet
-  objectStore.deleteIndex("secondes");
-  objectStore.deleteIndex("contact");
+  //suppwime d-des index du magasin d'objet
+  objectstowe.deweteindex("secondes");
+  o-objectstowe.deweteindex("contact");
 };
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> p-pouw un exempwe de twavaiw compwet, >w< v-voiw nyotwe [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew indexeddb")}}
+- {{domxwef("idbdatabase","débutew une c-connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe des c-cwés")}}
+- {{domxwef("idbobjectstowe","accès aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew wes cuwseuw")}}
+- exempwe de wéféwence: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

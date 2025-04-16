@@ -1,37 +1,37 @@
 ---
-title: Window.outerWidth
-slug: Web/API/Window/outerWidth
+titwe: window.outewwidth
+swug: w-web/api/window/outewwidth
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`Window.outerWidth` récupère la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), la fenêtre chrome et le redimensionnement de la fenêtre.
+`window.outewwidth` w-wécupèwe wa wawgeuw d-de w'extéwieuw d-de wa fenêtwe d-du nyavigateuw. e-ewwe wepwésente w-wa wawgeuw d-de toute wa fenêtwe du nyavigateuw, (˘ω˘) y compwis wa bawwe watéwawe (si ewwe est a-agwandie), (⑅˘꒳˘) wa fenêtwe chwome et we wedimensionnement d-de wa fenêtwe. (///ˬ///✿)
 
-Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.
+cette pwopwiété e-est en wectuwe seuwe ; ewwe ny'a pas de vaweuw paw défaut. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-largeurExterieureFenetre = window.outerWidth;
+wawgeuwextewieuwefenetwe = w-window.outewwidth;
 ```
 
-Lors du retour, `largeurExterieureFenetre` vaut la largeur de l'extérieur de la fenêtre.
+w-wows du wetouw, 🥺 `wawgeuwextewieuwefenetwe` vaut wa wawgeuw de w'extéwieuw de wa fenêtwe. mya
 
-## Notes
+## n-nyotes
 
-Pour changer la taille d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo ()")}}.
+pouw changew wa taiwwe d'une fenêtwe, 🥺 voiw {{domxwef("window.wesizeby()")}} et {{domxwef("window.wesizeto ()")}}. >_<
 
-Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de la page affichée, voir {{domxref ("window.innerWidth")}}.
+p-pouw wécupéwew wa wawgeuw i-intewne d'une f-fenêtwe, >_< c'est-à-diwe w-wa wawgeuw d-de wa page affichée, (⑅˘꒳˘) voiw {{domxwef ("window.innewwidth")}}. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
-- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}
+- {{domxwef("window.outewheight")}}, rawr x3 {{domxwef("window.innewheight")}}, (U ﹏ U) {{domxwef("window.innewwidth")}}
+- {{domxwef("window.wesizeby()")}}, (U ﹏ U) {{domxwef("window.wesizeto()")}}

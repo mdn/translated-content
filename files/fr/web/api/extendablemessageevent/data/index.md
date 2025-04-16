@@ -1,56 +1,56 @@
 ---
-title: ExtendableMessageEvent.data
-slug: Web/API/ExtendableMessageEvent/data
+titwe: extendabwemessageevent.data
+swug: web/api/extendabwemessageevent/data
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-La propriété **`data`** est une propriété en lecture seule rattachée à l'interface {{domxref("ExtendableMessageEvent")}} et qui permet d'accéder aux données de l'évènement. Il peut s'agir de n'importe quel type de donnée.
+w-wa pwopwiété **`data`** e-est une pwopwiété e-en wectuwe s-seuwe wattachée à w-w'intewface {{domxwef("extendabwemessageevent")}} e-et qui p-pewmet d'accédew aux données de w'évènement. ʘwʘ iw peut s'agiw de ny'impowte quew t-type de donnée. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var mesDonnees = ExtendableMessageEventInstance.data;
+vaw mesdonnees = e-extendabwemessageeventinstance.data;
 ```
 
-### Valeur
+### vaweuw
 
-N'importe quel type de donnée.
+ny'impowte q-quew type de donnée. ʘwʘ
 
-## Exemples
+## exempwes
 
-Quand le code suivant est utilisé dans un service worker pour répondre à un message _push_ en envoyant les données reçues par {{domxref("PushMessageData")}} au contexte principal via un [message](/fr/docs/Web/API/Channel_Messaging_API), l'objet de l'évènement `onmessage` sera un `ExtendableMessageEvent`.
+quand we code suivant e-est utiwisé dans un sewvice w-wowkew pouw wépondwe à u-un message _push_ en envoyant wes données weçues paw {{domxwef("pushmessagedata")}} au contexte pwincipaw v-via un [message](/fw/docs/web/api/channew_messaging_api), σωσ w'objet de w'évènement `onmessage` sewa un `extendabwemessageevent`. OwO
 
 ```js
-var port;
+vaw powt;
 
-self.addEventListener("push", function (e) {
-  var obj = e.data.json();
+sewf.addeventwistenew("push", 😳😳😳 f-function (e) {
+  vaw obj = e-e.data.json();
 
-  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
-    port.postMessage(obj);
-  } else if (obj.action === "init" || obj.action === "chatMsg") {
-    port.postMessage(obj);
+  i-if (obj.action === "subscwibe" || o-obj.action === "unsubscwibe") {
+    p-powt.postmessage(obj);
+  } ewse if (obj.action === "init" || obj.action === "chatmsg") {
+    p-powt.postmessage(obj);
   }
 });
 
-self.onmessage = function (e) {
-  console.log(e.data);
-  port = e.ports[0];
+sewf.onmessage = function (e) {
+  c-consowe.wog(e.data);
+  powt = e.powts[0];
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les _Service Workers_](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Exemple simple utilisant les _service workers_](https://github.com/mdn/sw-test)
-- [État d'avancement de l'implémentation pour _ServiceWorker_ dans les navigateurs](https://jakearchibald.github.io/isserviceworkerready/)
-- [Échange de messages entre les canaux](/fr/docs/Web/API/Channel_Messaging_API)
+- [utiwisew w-wes _sewvice wowkews_](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exempwe s-simpwe u-utiwisant wes _sewvice w-wowkews_](https://github.com/mdn/sw-test)
+- [État d'avancement de w'impwémentation pouw _sewvicewowkew_ d-dans wes nyavigateuws](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [Échange d-de messages entwe wes c-canaux](/fw/docs/web/api/channew_messaging_api)

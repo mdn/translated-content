@@ -1,26 +1,26 @@
 ---
-title: Document.featurePolicy
-slug: Web/API/Document/featurePolicy
+titwe: document.featuwepowicy
+swug: web/api/document/featuwepowicy
 ---
 
-{{APIRef("Feature Policy")}}
+{{apiwef("featuwe p-powicy")}}
 
-La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Document")}} retourne l'interface {{domxref("FeaturePolicy")}}, qui fournit une API permettant de consulter facilement les règles de fonctionnalités appliquées sur un document spécifique.
+w-wa pwopwiété e-en wectuwe s-seuwe **`featuwepowicy`** d-de w-w'intewface {{domxwef("document")}} w-wetouwne w'intewface {{domxwef("featuwepowicy")}}, :3 q-qui fouwnit une api pewmettant de consuwtew faciwement wes wègwes de fonctionnawités a-appwiquées suw un document spécifique. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var policy = iframeElement.featurePolicy;
+vaw powicy = i-ifwameewement.featuwepowicy;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{domxref("FeaturePolicy")}} pouvant être utilisé pour consulter les paramètres de Feature Policy appliqués au document.
+un objet {{domxwef("featuwepowicy")}} pouvant êtwe u-utiwisé pouw consuwtew w-wes pawamètwes d-de featuwe powicy appwiqués au document. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

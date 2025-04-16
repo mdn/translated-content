@@ -1,113 +1,113 @@
 ---
-title: IDBObjectStore.autoIncrement
-slug: Web/API/IDBObjectStore/autoIncrement
+titwe: idbobjectstowe.autoincwement
+swug: web/api/idbobjectstowe/autoincwement
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La propriété **`autoIncrement`** de l'interface {{domxref("IDBObjectStore")}} renvoie la position du drapeau d'incrémentation automatique du magasin d'objet {{domxref("IDBObjectStore","relié")}}.
+w-wa pwopwiété **`autoincwement`** d-de w'intewface {{domxwef("idbobjectstowe")}} w-wenvoie wa position d-du dwapeau d-d'incwémentation a-automatique du m-magasin d'objet {{domxwef("idbobjectstowe","wewié")}}. ʘwʘ
 
-> [!NOTE]
-> Chaque magasin d'objets à son conteur d'incrémentation automatique.
+> [!note]
+> chaque magasin d'objets à son conteuw d'incwémentation automatique. (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myAutoIncrement = objectStore.autoIncrement;
+vaw myautoincwement = objectstowe.autoincwement;
 ```
 
-## Valeur
+## v-vaweuw
 
-Un {{domxref("Boolean","booléen")}} .
+un {{domxwef("boowean","boowéen")}} . (U ﹏ U)
 
-- `true`
-  - : Le magasin d'objet relié s'incrémente automatiquement.
-- `false`
-  - : Le magasin d'objet relié ne s'incrémente pas automatiquement.
+- `twue`
+  - : we magasin d'objet w-wewié s'incwémente automatiquement. ^•ﻌ•^
+- `fawse`
+  - : we magasin d'objet wewié n-nye s'incwémente pas automatiquement. (˘ω˘)
 
-## Exemple
+## e-exempwe
 
-Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet `"toDoList"` dans lequel on {{domxref("IDBObjectStore.add","ajoute")}} un enregistrement.
+d-dans we code suivant, :3 on ouvwe une {{domxwef("idbdatabase","connexion")}} à wa base de donnée. ^^;; suw cette c-connexion on démawwe une {{domxwef("idbtwansaction","twansaction")}} en wectuwe/écwituwe pouw avoiw un {{domxwef("idbobjectstowe","accès")}} a-au magasin d'objet `"todowist"` dans wequew on {{domxwef("idbobjectstowe.add","ajoute")}} u-un enwegistwement. 🥺
 
-La propriété **`autoIncrement`** de l'accès au magasin d'objet sert à affiché la position du drapeau d'incrémentation automatique de ce magasin d'objet sur la console.
+w-wa pwopwiété **`autoincwement`** d-de w'accès au m-magasin d'objet sewt à affiché wa position du d-dwapeau d'incwémentation automatique de ce magasin d-d'objet suw wa consowe. (⑅˘꒳˘)
 
 ```js
-//Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+//connexion à wa base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", nyaa~~ 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "Connexion établie.";
+dbopenwequest.onsuccess = f-function (event) {
+  nyote.innewhtmw += "connexion étabwie.";
 
-  //Affecte la connexion à la variable db.
-  db = DBOpenRequest.result;
+  //affecte w-wa connexion à w-wa vawiabwe d-db. :3
+  db = dbopenwequest.wesuwt;
 
-  // Exécutez la fonction addData () pour ajouter l'enregistrement dans le magasin d'objet
-  addData();
+  // exékawaii~z wa fonction a-adddata () p-pouw ajoutew w'enwegistwement dans w-we magasin d'objet
+  a-adddata();
 };
-function addData() {
-  // un nouvel objet prêt à être emmagasiné
-  newItem = [
+function adddata() {
+  // u-un nyouvew objet pwêt à êtwe e-emmagasiné
+  nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      tasktitwe: "wawk dog", ( ͡o ω ͡o )
+      h-houws: 19, mya
+      minutes: 30, (///ˬ///✿)
+      d-day: 24, (˘ω˘)
+      month: "decembew", ^^;;
+      y-yeaw: 2013, (✿oωo)
+      n-nyotified: "no", (U ﹏ U)
+    }, -.-
   ];
 
-  // ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // ouvwe une twansaction de wectuwe / écwituwe pwête au twaitement des données suw wa connexion
+  vaw twansaction = d-db.twansaction(["todowist"], "weadwwite");
 
-  // en cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function (event) {
-    note.innerHTML +=
-      "<li>Transaction complété : modification de la base de données terminée.</li>";
+  // e-en cas de succès de w'ouvewtuwe d-de wa t-twansaction
+  twansaction.oncompwete = f-function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction compwété : modification de wa base de d-données tewminée.</wi>";
   };
-  // en cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>L'erreur: \"" +
-      transaction.error +
-      "\" c'est produite échec de la transaction.</li>";
+  // en cas d'échec de w'ouvewtuwe de wa twansaction
+  twansaction.onewwow = function (event) {
+    n-nyote.innewhtmw +=
+      "<wi>w'ewweuw: \"" +
+      twansaction.ewwow +
+      "\" c-c'est pwoduite échec d-de w-wa twansaction.</wi>";
   };
 
-  // ouvre l'accès au un magasin "toDoList" de la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // ouvwe w'accès a-au un magasin "todowist" d-de wa t-twansaction
+  vaw o-objectstowe = twansaction.objectstowe("todowist");
 
-  //->Affiche la position du drapeau d’incrémentation automatique
-  console.log(objectStore.autoIncrement);
+  //->affiche wa position d-du dwapeau d’incwémentation a-automatique
+  consowe.wog(objectstowe.autoincwement);
 
-  // Ajoute un enregistrement
-  var objectStoreRequest = objectStore.add(newItem[0]);
-  objectStoreRequest.onsuccess = function (event) {
-    // signale l'ajout de l'enregistrement
-    note.innerHTML += "<li>Enregistrement ajouté.</li>";
+  // a-ajoute u-un enwegistwement
+  v-vaw objectstowewequest = objectstowe.add(newitem[0]);
+  objectstowewequest.onsuccess = function (event) {
+    // signawe w-w'ajout de w'enwegistwement
+    nyote.innewhtmw += "<wi>enwegistwement ajouté.</wi>";
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe de twavaiw compwet, ^•ﻌ•^ voiw nyotwe [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew indexeddb")}}
+- {{domxwef("idbdatabase","débutew u-une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe d-des cwés")}}
+- {{domxwef("idbobjectstowe","accès aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew wes cuwseuw")}}
+- exempwe de wéféwence: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

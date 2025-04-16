@@ -1,102 +1,102 @@
 ---
-title: ExtendableEvent
-slug: Web/API/ExtendableEvent
+titwe: extendabweevent
+swug: w-web/api/extendabweevent
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-L'interface **`ExtendableEvent`** étend la durée de vie des événements [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event) et [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event) envoyés dans la portée globale dans le cycle de vie du service worker. Elle s'assure que les événements fonctionnels (comme [`FetchEvent`](/fr/docs/Web/API/FetchEvent)) ne soient pas distribués avant de mettre à jour les schémas de la base de données et de vider l'ancien cache.
+w-w'intewface **`extendabweevent`** étend w-wa duwée d-de vie des événements [`instaww`](/fw/docs/web/api/sewvicewowkewgwobawscope/instaww_event) e-et [`activate`](/fw/docs/web/api/sewvicewowkewgwobawscope/activate_event) e-envoyés d-dans wa powtée gwobawe dans we cycwe de vie du sewvice wowkew. (⑅˘꒳˘) ewwe s'assuwe q-que wes événements fonctionnews (comme [`fetchevent`](/fw/docs/web/api/fetchevent)) nye soient p-pas distwibués avant de mettwe à j-jouw wes schémas de wa base de données et de videw w'ancien c-cache. nyaa~~
 
-Si [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil) est appelé en dehors du gestionnaire `ExtendableEvent`, le navigateur doit lever une exception `InvalidStateError` ; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des [promesses à vie étendue](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
+si [`waituntiw()`](/fw/docs/web/api/extendabweevent/waituntiw) est appewé e-en dehows d-du gestionnaiwe `extendabweevent`, OwO we nyavigateuw doit wevew une exception `invawidstateewwow` ; notez que pwusieuws a-appews vont s'empiwew, rawr x3 et que wes pwomesses de wésuwtat sewont ajoutées à w-wa wiste des [pwomesses à vie étendue](https://swightwyoff.github.io/sewvicewowkew/spec/sewvice_wowkew/index.htmw#dfn-extend-wifetime-pwomises). XD
 
-> [!NOTE]
-> Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir [le bug 1180274](https://bugzilla.mozilla.org/show_bug.cgi?id=1180274)).
+> [!note]
+> w-we compowtement d-décwit dans we p-pawagwaphe pwécédent a-a été cowwigé dans fiwefox 43 (voiw [we bug 1180274](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1180274)). σωσ
 
-Cette interface hérite de l'interface [`Event`](/fr/docs/Web/API/Event).
+c-cette intewface héwite de w'intewface [`event`](/fw/docs/web/api/event). (U ᵕ U❁)
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{inhewitancediagwam(700, (U ﹏ U) 60, 20)}}
 
-> [!NOTE]
-> Cette interface est disponible seulement quand la portée globale est [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope). Elle n'est pas disponible quand c'est un objet [`Window`](/fr/docs/Web/API/Window) ou un autre type de worker.
+> [!note]
+> c-cette intewface est disponibwe seuwement quand wa powtée gwobawe est [`sewvicewowkewgwobawscope`](/fw/docs/web/api/sewvicewowkewgwobawscope). :3 ewwe ny'est p-pas disponibwe quand c'est un objet [`window`](/fw/docs/web/api/window) o-ou un autwe t-type de wowkew. ( ͡o ω ͡o )
 
-## Constructeur
+## c-constwucteuw
 
-- [`ExtendableEvent()`](/fr/docs/Web/API/ExtendableEvent/ExtendableEvent)
-  - : Crée un nouvel objet `ExtendableEvent`.
+- [`extendabweevent()`](/fw/docs/web/api/extendabweevent/extendabweevent)
+  - : cwée un nyouvew objet `extendabweevent`. σωσ
 
-## Propriétés
+## pwopwiétés
 
-N'implémente pas de propriétés spécifiques, mais hérite de celles de son parent, _[`Event`](/fr/docs/Web/API/Event)._
+n-n'impwémente p-pas de pwopwiétés spécifiques, >w< m-mais héwite d-de cewwes de son pawent, 😳😳😳 _[`event`](/fw/docs/web/api/event)._
 
-## Méthodes
+## m-méthodes
 
-Hérite des méthodes de son parent _[`Event`](/fr/docs/Web/API/Event)._
+héwite des méthodes d-de son pawent _[`event`](/fw/docs/web/api/event)._
 
-- [`ExtendableEvent.waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil)
-  - : Étend la durée de vie de l'évènement. Cette méthode doit être appelée dans le gestionnaire d'évènement [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event) pour le worker en cours d'installation (voir [`installing`](/fr/docs/Web/API/ServiceWorkerRegistration/installing)) et dans le gestionnaire d'évènement [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event) pour le worker actif (voir [`active`](/fr/docs/Web/API/ServiceWorkerRegistration/active)).
+- [`extendabweevent.waituntiw()`](/fw/docs/web/api/extendabweevent/waituntiw)
+  - : Étend wa duwée de vie de w'évènement. OwO c-cette méthode doit êtwe appewée d-dans we gestionnaiwe d'évènement [`instaww`](/fw/docs/web/api/sewvicewowkewgwobawscope/instaww_event) p-pouw we wowkew en c-couws d'instawwation (voiw [`instawwing`](/fw/docs/web/api/sewvicewowkewwegistwation/instawwing)) et dans we gestionnaiwe d'évènement [`activate`](/fw/docs/web/api/sewvicewowkewgwobawscope/activate_event) pouw we wowkew actif (voiw [`active`](/fw/docs/web/api/sewvicewowkewwegistwation/active)). 😳
 
-## Exemples
+## exempwes
 
-Ce fragment de code est tiré de [l'exemple du service worker utilisant prefetch](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (voir [l'exemple en live](https://googlechrome.github.io/samples/service-worker/prefetch/)). Ce code appelle [`ExtendableEvent.waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil) dans le gestionnaire d'évènement [`ServiceWorkerGlobalScope.oninstall`](/fr/docs/Web/API/ServiceWorkerGlobalScope/oninstall), retardant le traitement du worker [`ServiceWorkerRegistration.installing`](/fr/docs/Web/API/ServiceWorkerRegistration/installing) après l'installation jusqu'à ce que la promesse se résolve. La promesse se résout quand toutes les ressources ont été récupérées et mises en cache, ou quand une exception est levée.
+ce fwagment de code est t-tiwé de [w'exempwe d-du sewvice wowkew utiwisant p-pwefetch](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js) (voiw [w'exempwe e-en w-wive](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/)). 😳😳😳 ce code appewwe [`extendabweevent.waituntiw()`](/fw/docs/web/api/extendabweevent/waituntiw) dans we gestionnaiwe d-d'évènement [`sewvicewowkewgwobawscope.oninstaww`](/fw/docs/web/api/sewvicewowkewgwobawscope/oninstaww), (˘ω˘) wetawdant we twaitement du wowkew [`sewvicewowkewwegistwation.instawwing`](/fw/docs/web/api/sewvicewowkewwegistwation/instawwing) apwès w'instawwation j-jusqu'à ce que wa p-pwomesse se wésowve. ʘwʘ w-wa pwomesse s-se wésout quand toutes wes wessouwces o-ont été w-wécupéwées e-et mises en cache, ( ͡o ω ͡o ) o-ou quand une exception est wevée. o.O
 
-Ce fragment de code montre aussi une bonne pratique pour construire des versions de cache utilisées par le service worker. Même s'il n'y a qu'un cache dans cet exemple, la même approche peut être utilisée pour plusieurs caches. Il lie un identifiant court pour un cache avec un nom de cache spécifique et versionné.
+ce fwagment d-de code montwe a-aussi une bonne p-pwatique pouw c-constwuiwe des v-vewsions de cache utiwisées paw we sewvice wowkew. >w< même s'iw n-ny'y a qu'un cache dans cet exempwe, 😳 wa même appwoche peut êtwe utiwisée pouw pwusieuws caches. 🥺 i-iw wie un identifiant couwt pouw un cache avec un nyom de cache s-spécifique et v-vewsionné. rawr x3
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-  prefetch: "prefetch-cache-v" + CACHE_VERSION,
+v-vaw cache_vewsion = 1;
+vaw c-cuwwent_caches = {
+  pwefetch: "pwefetch-cache-v" + c-cache_vewsion, o.O
 };
 
-self.addEventListener("install", function (event) {
-  var urlsToPrefetch = [
-    "./static/pre_fetched.txt",
-    "./static/pre_fetched.html",
-    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
+s-sewf.addeventwistenew("instaww", rawr function (event) {
+  vaw uwwstopwefetch = [
+    "./static/pwe_fetched.txt", ʘwʘ
+    "./static/pwe_fetched.htmw", 😳😳😳
+    "https://www.chwomium.owg/_/wswc/1302286216006/config/customwogo.gif", ^^;;
   ];
 
-  console.log(
-    "Installation en cours. Ressources à pré-charger :",
-    urlsToPrefetch,
+  consowe.wog(
+    "instawwation en couws. o.O w-wessouwces à pwé-chawgew :",
+    uwwstopwefetch, (///ˬ///✿)
   );
 
-  event.waitUntil(
+  e-event.waituntiw(
     caches
-      .open(CURRENT_CACHES["prefetch"])
+      .open(cuwwent_caches["pwefetch"])
       .then(function (cache) {
-        cache
-          .addAll(
-            urlsToPrefetch.map(function (urlToPrefetch) {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            }),
+        c-cache
+          .addaww(
+            u-uwwstopwefetch.map(function (uwwtopwefetch) {
+              wetuwn nyew wequest(uwwtopwefetch, σωσ { m-mode: "no-cows" });
+            }), nyaa~~
           )
           .then(function () {
-            console.log(
-              "Toutes les ressources ont été chargées et mises en cache.",
+            c-consowe.wog(
+              "toutes wes wessouwces o-ont été c-chawgées et mises en cache.",
             );
           });
       })
-      .catch(function (error) {
-        console.error("Erreur de pré-chargement :", error);
-      }),
+      .catch(function (ewwow) {
+        consowe.ewwow("ewweuw de pwé-chawgement :", ^^;; ewwow);
+      }), ^•ﻌ•^
   );
 });
 ```
 
-> [!WARNING]
-> Au moment du chargement des ressources, il est très important d'utiliser `{mode: 'no-cors'}` s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). Dans cet exemple, [www.chromium.org](https://www.chromium.org) ne prend pas en charge le CORS.
+> [!wawning]
+> a-au moment d-du chawgement d-des wessouwces, σωσ iw est twès i-impowtant d'utiwisew `{mode: 'no-cows'}` s-s'iw y a une chance que w-wa wessouwce soit sewvie depuis un sewveuw qui nye suppowte pas we [cows](http://en.wikipedia.owg/wiki/cwoss-owigin_wesouwce_shawing). -.- d-dans cet e-exempwe, ^^;; [www.chwomium.owg](https://www.chwomium.owg) nye pwend pas en chawge w-we cows. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Un exemple de base pour un service worker](https://github.com/mdn/sw-test)
-- [Peut-on utiliser les service workers ?](https://jakearchibald.github.io/isserviceworkerready/)
-- [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Utiliser les web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisew wes s-sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [un exempwe de base pouw un sewvice wowkew](https://github.com/mdn/sw-test)
+- [peut-on utiwisew wes s-sewvice wowkews ?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [utiwisew wes web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

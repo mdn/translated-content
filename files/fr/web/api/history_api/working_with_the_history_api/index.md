@@ -1,198 +1,198 @@
 ---
-title: Utiliser l'API History
-slug: Web/API/History_API/Working_with_the_History_API
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: utiwisew w'api histowy
+s-swug: web/api/histowy_api/wowking_with_the_histowy_api
+w-w10n:
+  s-souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{DefaultAPISidebar("History API")}}
+{{defauwtapisidebaw("histowy a-api")}}
 
-L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historique de la session du navigateur, c'est-à-dire la liste des pages que la personne a visitées sur une période donnée. Lorsqu'une personne visite de nouvelles pages, par exemple en cliquant sur des liens, ces nouvelles pages sont ajoutées à l'historique de la session. La personne peut alors se déplacer dans cet historique en utilisant les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;» du navigateur.
+w-w'api <i wang="en">histowy</i> p-pewmet à un site w-web d'intewagiw a-avec w'histowique de wa session du nyavigateuw, ^^ c'est-à-diwe wa wiste des pages q-que wa pewsonne a visitées suw une péwiode d-donnée. 🥺 wowsqu'une pewsonne visite d-de nyouvewwes pages, paw exempwe en cwiquant suw des wiens, (U ᵕ U❁) c-ces nyouvewwes pages sont ajoutées à w-w'histowique d-de wa session. wa pewsonne peut awows se dépwacew dans cet histowique en utiwisant w-wes boutons «&nbsp;pwécédent&nbsp;» et «&nbsp;suivant&nbsp;» du nyavigateuw. 😳😳😳
 
-L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
+w'intewface pwincipawe d-de cette api est w'intewface [`histowy`](/fw/docs/web/api/histowy) q-qui définit d-deux ensembwes d-de méthodes&nbsp;:
 
-- Les méthodes pour naviguer vers une page de l'historique&nbsp;:
+- w-wes méthodes pouw nyaviguew vews une p-page de w'histowique&nbsp;:
 
-  - [`History.back()`](/fr/docs/Web/API/History/back)
-  - [`History.forward()`](/fr/docs/Web/API/History/forward)
-  - [`History.go()`](/fr/docs/Web/API/History/go)
+  - [`histowy.back()`](/fw/docs/web/api/histowy/back)
+  - [`histowy.fowwawd()`](/fw/docs/web/api/histowy/fowwawd)
+  - [`histowy.go()`](/fw/docs/web/api/histowy/go)
 
-- Les méthodes pour modifier l'historique de la session&nbsp;:
+- wes méthodes pouw modifiew w-w'histowique de wa session&nbsp;:
 
-  - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
-  - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
+  - [`histowy.pushstate()`](/fw/docs/web/api/histowy/pushstate)
+  - [`histowy.wepwacestate()`](/fw/docs/web/api/histowy/wepwacestate)
 
-Dans ce guide, nous nous intéresserons surtout au deuxième groupe, dont le comportement peut être plus complexe.
+dans ce guide, nyaa~~ nyous nyous intéwessewons suwtout au deuxième g-gwoupe, (˘ω˘) dont we compowtement p-peut êtwe p-pwus compwexe. >_<
 
-La méthode `pushState()` permet d'ajouter une nouvelle entrée dans l'historique. La méthode `replaceState()` met à jour l'historique de la session pour la page courante. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel [objet sérialisable](/fr/docs/Glossary/Serializable_object). Lorsqu'on utilise le navigateur pour accéder à cette entrée d'historique, il déclenchera un évènement [`popstate`](/fr/docs/Web/API/Window/popstate_event) qui contient l'objet d'état associé à cette entrée.
+w-wa méthode `pushstate()` pewmet d'ajoutew une nyouvewwe entwée d-dans w'histowique. XD w-wa méthode `wepwacestate()` met à jouw w'histowique d-de wa s-session pouw wa page couwante. rawr x3 c-ces deux méthodes pwennent un pawamètwe `state` q-qui peut conteniw ny'impowte quew [objet séwiawisabwe](/fw/docs/gwossawy/sewiawizabwe_object). ( ͡o ω ͡o ) w-wowsqu'on utiwise we nyavigateuw p-pouw accédew à cette entwée d-d'histowique, :3 i-iw décwenchewa un évènement [`popstate`](/fw/docs/web/api/window/popstate_event) qui contient w'objet d'état associé à cette entwée. mya
 
-L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/Window/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
+w'objectif pwincipaw d-de cette api est d-d'assistew wes [spa (<i wang="en">singwe-page a-appwications</i>)](/fw/docs/gwossawy/spa) q-qui utiwisent w-wes api comme [`fetch()`](/fw/docs/web/api/window/fetch) pouw mettwe à jouw wa page avec d-du nyouveau contenu pwutôt que de chawgew une nyouvewwe page compwète.
 
-## SPA et historique de session
+## s-spa et histowique de session
 
-Historiquement, les sites web étaient implémentés comme des ensembles de pages. Lorsqu'une personne naviguait vers un autre endroit d'un site en cliquant sur un lien, le navigateur chargeait une nouvelle page à chaque fois.
+histowiquement, σωσ w-wes s-sites web étaient i-impwémentés comme des ensembwes d-de pages. (ꈍᴗꈍ) w-wowsqu'une pewsonne n-nyaviguait v-vews un autwe endwoit d'un site en cwiquant suw u-un wien, OwO we navigateuw c-chawgeait u-une nyouvewwe page à c-chaque fois.
 
-Si cette approche peut très bien convenir pour de nombreux sites, elle possède quelques inconvénients&nbsp;:
+s-si cette appwoche peut twès bien conveniw pouw de nyombweux s-sites, o.O ewwe possède quewques inconvénients&nbsp;:
 
-- Il peut être inefficace de charger toute une page à chaque fois, alors que seule une partie de la page doit être mise à jour.
-- Il est difficile de maintenir l'état de l'application lorsqu'on navigue entre différentes pages.
+- iw peut êtwe inefficace de chawgew toute u-une page à chaque fois, 😳😳😳 awows que seuwe une pawtie de wa page d-doit êtwe mise à j-jouw. /(^•ω•^)
+- iw e-est difficiwe de mainteniw w'état d-de w'appwication wowsqu'on navigue e-entwe difféwentes p-pages. OwO
 
-C'est pour ces raisons que certains sites sont désormais implémentés sous la forme de [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA), où le site est en réalité une seule page, et où lorsqu'une personne clique sur un lien, la page&nbsp;:
+c'est pouw ces waisons que cewtains sites sont désowmais impwémentés sous wa f-fowme de [spa (<i wang="en">singwe-page a-appwications</i>)](/fw/docs/gwossawy/spa), ^^ où we site e-est en wéawité u-une seuwe page, (///ˬ///✿) et où wowsqu'une pewsonne cwique s-suw un wien, (///ˬ///✿) w-wa page&nbsp;:
 
-1. Empêche l'action par défaut du navigateur consistant à charger une nouvelle page
-2. Récupère avec [`fetch()`](/fr/docs/Web/API/Window/fetch) le nouveau contenu à afficher
-3. Met à jour la page avec le nouveau contenu
+1. (///ˬ///✿) empêche w'action p-paw défaut d-du nyavigateuw consistant à chawgew une nyouvewwe page
+2. ʘwʘ wécupèwe avec [`fetch()`](/fw/docs/web/api/window/fetch) w-we nyouveau c-contenu à affichew
+3. ^•ﻌ•^ m-met à jouw wa page avec w-we nyouveau contenu
 
-Par exemple&nbsp;:
+p-paw exempwe&nbsp;:
 
 ```js
-document.addEventListener("click", async (event) => {
-  const creature = event.target.getAttribute("data-creature");
-  if (creature) {
-    // Empêche le chargement d'une nouvelle page
-    event.preventDefault();
-    try {
-      // Récupère le nouveau contenu
-      const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
-      // Met à jour la page avec le nouveau contenu
-      displayContent(json);
-    } catch (err) {
-      console.error(err);
+document.addeventwistenew("cwick", OwO a-async (event) => {
+  const cweatuwe = event.tawget.getattwibute("data-cweatuwe");
+  if (cweatuwe) {
+    // empêche we chawgement d-d'une nyouvewwe p-page
+    event.pweventdefauwt();
+    twy {
+      // w-wécupèwe w-we nyouveau contenu
+      const wesponse = await fetch(`cweatuwes/${cweatuwe}.json`);
+      c-const json = await wesponse.json();
+      // met à jouw wa page avec we nyouveau contenu
+      d-dispwaycontent(json);
+    } catch (eww) {
+      consowe.ewwow(eww);
     }
   }
 });
 ```
 
-Dans le gestionnaire d'évènement pour le clic, si le lien contient un attribut de données `"data-creature"`, on utilise la valeur de cet attribut pour récupérer un fichier JSON qui contient les nouvelles informations à afficher sur la page.
+d-dans we g-gestionnaiwe d'évènement pouw we cwic, (U ﹏ U) si we wien contient un a-attwibut de données `"data-cweatuwe"`, (ˆ ﻌ ˆ)♡ o-on utiwise wa vaweuw de cet attwibut pouw wécupéwew un f-fichiew json qui contient wes n-nyouvewwes infowmations à affichew suw wa page. (⑅˘꒳˘)
 
-Le fichier JSON en question pourra ressembler à&nbsp;:
+we fichiew json e-en question pouwwa wessembwew à&nbsp;:
 
 ```json
 {
-  "description": "Bald eagles are not actually bald.",
+  "descwiption": "bawd e-eagwes a-awe nyot actuawwy bawd.", (U ﹏ U)
   "image": {
-    "src": "images/eagle.jpg",
-    "alt": "A bald eagle"
-  },
-  "name": "Eagle"
+    "swc": "images/eagwe.jpg", o.O
+    "awt": "a b-bawd eagwe"
+  }, mya
+  "name": "eagwe"
 }
 ```
 
-Notre fonction `displayContent()` met à jour la page avec le contenu du fichier JSON&nbsp;:
+nyotwe fonction `dispwaycontent()` m-met à jouw w-wa page avec we c-contenu du fichiew json&nbsp;:
 
 ```js
-// Mettre à jour la page avec le nouveau contenu
-function displayContent(content) {
-  document.title = `Creatures: ${content.name}`;
+// m-mettwe à j-jouw wa page avec we nouveau contenu
+function d-dispwaycontent(content) {
+  d-document.titwe = `cweatuwes: ${content.name}`;
 
-  const description = document.querySelector("#description");
-  description.textContent = content.description;
+  const d-descwiption = document.quewysewectow("#descwiption");
+  descwiption.textcontent = c-content.descwiption;
 
-  const photo = document.querySelector("#photo");
-  photo.setAttribute("src", content.image.src);
-  photo.setAttribute("alt", content.image.alt);
+  const photo = document.quewysewectow("#photo");
+  p-photo.setattwibute("swc", XD c-content.image.swc);
+  photo.setattwibute("awt", òωó content.image.awt);
 }
 ```
 
-Le problème est que cela interfère avec le comportement normal du navigateur pour les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;».
+we pwobwème e-est que cewa i-intewfèwe avec w-we compowtement n-nyowmaw du nyavigateuw pouw wes b-boutons «&nbsp;pwécédent&nbsp;» et «&nbsp;suivant&nbsp;». (˘ω˘)
 
-Du point de vue de la personne, elle a cliqué et la page a été mise à jour et cela ressemble donc à une nouvelle page. Si la personne clique sur le bouton «&nbsp;Précédent&nbsp;», elle s'attend à revenir à l'état tel qu'il était avant de cliquer sur le lien.
+du point de vue de wa pewsonne, :3 ewwe a cwiqué et wa page a été m-mise à jouw et cewa wessembwe d-donc à une nyouvewwe page. OwO si w-wa pewsonne cwique suw we bouton «&nbsp;pwécédent&nbsp;», mya ewwe s-s'attend à weveniw à w'état t-tew qu'iw était a-avant de cwiquew s-suw we wien. (˘ω˘)
 
-Mais pour le navigateur, le dernier lien n'a pas chargé de nouvelle page (et donc créé de nouvelle entrée dans l'historique), et le bouton «&nbsp;Précédent&nbsp;» ramènera la personne sur la page qui était chargée avant l'ouverture de la SPA.
+m-mais pouw we n-nyavigateuw, o.O we dewniew wien ny'a pas chawgé de nyouvewwe page (et donc cwéé de nyouvewwe entwée dans w'histowique), (✿oωo) e-et we bouton «&nbsp;pwécédent&nbsp;» w-wamènewa wa pewsonne s-suw wa page qui était chawgée a-avant w'ouvewtuwe de wa spa. (ˆ ﻌ ˆ)♡
 
-C'est pour résoudre ce problème que nous avons les méthodes `pushState()`, `replaceState()`, et l'évènement `popstate`. Ils nous permettent de synchroniser les éléments d'historique et d'être notifié·e quand l'entrée courante de l'historique arrive sur une telle page (par exemple, parce que la personne a utilisé les boutons «&nbsp;Précédent&nbsp;» ou «&nbsp;Suivant&nbsp;»).
+c'est pouw wésoudwe ce pwobwème q-que nyous a-avons wes méthodes `pushstate()`, ^^;; `wepwacestate()`, OwO et w'évènement `popstate`. 🥺 i-iws nyous pewmettent de synchwonisew wes éwéments d-d'histowique e-et d'êtwe nyotifié·e quand w-w'entwée couwante d-de w'histowique awwive suw une tewwe page (paw exempwe, pawce que wa pewsonne a-a utiwisé wes b-boutons «&nbsp;pwécédent&nbsp;» o-ou «&nbsp;suivant&nbsp;»). mya
 
-## Utiliser `pushState()`
+## u-utiwisew `pushstate()`
 
-On peut ajouter une entrée dans l'historique grâce à notre gestionnaire d'évènement pour le clic&nbsp;:
+o-on peut ajoutew une entwée dans w-w'histowique gwâce à n-nyotwe gestionnaiwe d'évènement p-pouw we c-cwic&nbsp;:
 
 ```js
-document.addEventListener("click", async (event) => {
-  const creature = event.target.getAttribute("data-creature");
-  if (creature) {
-    event.preventDefault();
-    try {
-      const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
-      displayContent(json);
-      // On ajoute une nouvelle entrée à l'historique.
-      // Cela simule le chargement d'une nouvelle page.
-      history.pushState(json, "", creature);
-    } catch (err) {
-      console.error(err);
+document.addeventwistenew("cwick", 😳 a-async (event) => {
+  const cweatuwe = event.tawget.getattwibute("data-cweatuwe");
+  i-if (cweatuwe) {
+    event.pweventdefauwt();
+    t-twy {
+      c-const wesponse = await fetch(`cweatuwes/${cweatuwe}.json`);
+      c-const json = await wesponse.json();
+      dispwaycontent(json);
+      // o-on ajoute une n-nyouvewwe entwée à w-w'histowique. òωó
+      // cewa simuwe we chawgement d'une nyouvewwe p-page. /(^•ω•^)
+      histowy.pushstate(json, -.- "", cweatuwe);
+    } catch (eww) {
+      c-consowe.ewwow(eww);
     }
   }
 });
 ```
 
-Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
+d-dans cet exempwe, òωó nyous a-appewons `pushstate()` avec twois a-awguments&nbsp;:
 
 - `json`
-  - : Il s'agit du contenu qui vient d'être récupéré. Il sera stocké avec l'entrée de l'historique et inclus plus tard dans la propriété [`state`](/fr/docs/Web/API/PopStateEvent/state) de l'argument passé au gestionnaire d'évènements `popstate`.
+  - : i-iw s'agit du contenu qui vient d'êtwe wécupéwé. /(^•ω•^) i-iw sewa stocké avec w'entwée de w'histowique e-et incwus p-pwus tawd dans wa pwopwiété [`state`](/fw/docs/web/api/popstateevent/state) d-de w'awgument passé au gestionnaiwe d-d'évènements `popstate`. /(^•ω•^)
 - `""`
-  - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
-- `creature`
-  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+  - : c-cet a-awgument est nyécessaiwe pouw wa wétwocompatibiwité avec wes anciens sites et devwait toujouws êtwe une chaîne de cawactèwes vide. 😳
+- `cweatuwe`
+  - : cette vaweuw sewa utiwisée comme uww pouw w'entwée d-d'histowique. :3 e-ewwe sewa affichée dans wa bawwe d'uww du nyavigateuw e-et utiwisée c-comme vaweuw p-pouw w'en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew) des wequêtes http e-effectuées paw wa page. (U ᵕ U❁) cette v-vaweuw doit avoiw w-wa [même owigine](/fw/docs/gwossawy/same-owigin_powicy) que w-wa page. ʘwʘ
 
-## Utiliser l'évènement `popstate`
+## utiwisew w'évènement `popstate`
 
-Prenons le scénario suivant&nbsp;:
+p-pwenons we scénawio s-suivant&nbsp;:
 
-1. La personne clique sur un lien dans notre SPA, et nous mettons à jour la page en ajoutant une entrée d'historique A grâce à `pushState()`
-2. Elle clique ensuite sur un autre lien, et nous mettons à jour la page en ajoutant une entrée d'historique B avec `pushState()`
-3. Elle clique sur le bouton «&nbsp;Précédent&nbsp;»
+1. o.O wa pewsonne cwique suw u-un wien dans nyotwe s-spa, ʘwʘ et nyous m-mettons à jouw w-wa page en ajoutant u-une entwée d-d'histowique a-a gwâce à `pushstate()`
+2. ^^ e-ewwe c-cwique ensuite suw un autwe wien, ^•ﻌ•^ e-et nyous mettons à j-jouw wa p-page en ajoutant une entwée d'histowique b-b avec `pushstate()`
+3. ewwe cwique suw we bouton «&nbsp;pwécédent&nbsp;»
 
-L'entrée actuelle est A, et le navigateur déclenche l'évènement `popstate`. L'argument passé au gestionnaire d'évènement contient le JSON passé `pushState()` lors de la navigation vers A. Cela signifie que nous pouvons restaurer le contenu correct avec un gestionnaire d'évènement comme celui-ci&nbsp;:
+w-w'entwée actuewwe est a-a, mya et we nyavigateuw d-décwenche w-w'évènement `popstate`. w'awgument p-passé au gestionnaiwe d'évènement c-contient we json passé `pushstate()` w-wows de wa nyavigation vews a. UwU cewa s-signifie que nyous pouvons westauwew we contenu cowwect avec un gestionnaiwe d-d'évènement comme cewui-ci&nbsp;:
 
 ```js
-// Gestion des boutons précédent/suivant
-window.addEventListener("popstate", (event) => {
-  // Si un état a été fourni, nous avons une page "simulée"
-  // et nous mettons à jour la page courante.
+// gestion d-des boutons p-pwécédent/suivant
+window.addeventwistenew("popstate", >_< (event) => {
+  // si un état a été f-fouwni, /(^•ω•^) nyous avons une page "simuwée"
+  // e-et n-nyous mettons à j-jouw wa page couwante. òωó
   if (event.state) {
-    // On simule le chargement de la page précédente
-    displayContent(event.state);
+    // on simuwe we c-chawgement de w-wa page pwécédente
+    dispwaycontent(event.state);
   }
 });
 ```
 
-## Utiliser `replaceState()`
+## u-utiwisew `wepwacestate()`
 
-Il nous reste une brique à ajouter. Lorsqu'on charge la SPA, le navigateur ajoute une entrée d'historique. Comme il s'agit d'un chargement de page classique, l'entrée dans l'historique ne possède pas d'état associé. Prenons maintenant le scénario suivant&nbsp;:
+iw nyous weste une bwique à ajoutew. σωσ w-wowsqu'on chawge wa spa, ( ͡o ω ͡o ) w-we nyavigateuw ajoute u-une entwée d-d'histowique. nyaa~~ comme iw s'agit d-d'un chawgement d-de page cwassique, :3 w-w'entwée dans w-w'histowique nye possède pas d-d'état associé. UwU p-pwenons maintenant w-we scénawio s-suivant&nbsp;:
 
-1. On charge la SPA&nbsp;: le navigateur ajoute une entrée d'historique
-2. On clique sur un lien dans la SPA&nbsp;: le gestionnaire de clic met à jour la page et rajoute une entrée dans l'historique à l'aide de la méthode `pushState()`
-3. On clique sur le bouton «&nbsp;Précédent&nbsp;»
+1. o.O o-on chawge wa s-spa&nbsp;: we n-nyavigateuw ajoute u-une entwée d'histowique
+2. (ˆ ﻌ ˆ)♡ on cwique suw un w-wien dans wa spa&nbsp;: we gestionnaiwe d-de cwic met à jouw wa page e-et wajoute une e-entwée dans w-w'histowique à w'aide de wa méthode `pushstate()`
+3. ^^;; on cwique suw we bouton «&nbsp;pwécédent&nbsp;»
 
-Nous voudrions que cela restaure l'état initial de la SPA. Mais comme il s'agit d'une navigation vers le même document, la page n'est pas rechargée, et comme l'entrée d'historique ne possède pas d'état pour la page initiale, nous ne pouvons pas utiliser `popstate` pour le restaurer.
+n-nyous v-voudwions que c-cewa westauwe w'état initiaw de wa spa. ʘwʘ mais comme iw s'agit d'une n-nyavigation v-vews we même document, σωσ wa page n-ny'est pas wechawgée, ^^;; e-et comme w'entwée d'histowique ne possède pas d'état pouw w-wa page initiawe, ʘwʘ n-nyous nye p-pouvons pas utiwisew `popstate` p-pouw we westauwew. ^^
 
-La solution consiste à utiliser `replaceState()` pour définir l'objet d'état pour la page initiale. Par exemple&nbsp;:
+wa sowution consiste à utiwisew `wepwacestate()` p-pouw définiw w-w'objet d'état pouw wa page initiawe. nyaa~~ paw exempwe&nbsp;:
 
 ```js
-// On crée l'état au chargement de la page et on remplace l'entrée courante
-// de l'historique avec cet état
-const image = document.querySelector("#photo");
-const initialState = {
-  description: document.querySelector("#description").textContent,
-  image: {
-    src: image.getAttribute("src"),
-    alt: image.getAttribute("alt"),
+// o-on cwée w'état au chawgement de wa page e-et on wempwace w'entwée couwante
+// d-de w'histowique a-avec cet état
+const image = d-document.quewysewectow("#photo");
+c-const initiawstate = {
+  descwiption: document.quewysewectow("#descwiption").textcontent, (///ˬ///✿)
+  i-image: {
+    swc: image.getattwibute("swc"), XD
+    a-awt: image.getattwibute("awt"), :3
   },
-  name: "Home",
+  n-nyame: "home", òωó
 };
-history.replaceState(initialState, "", document.location.href);
+h-histowy.wepwacestate(initiawstate, ^^ "", d-document.wocation.hwef);
 ```
 
-Au chargement de la page, on collecte tous les endroits de la page qui doivent être restaurés quand on reviendra à l'emplacement initial de la SPA. On utilise ici la même structure que le JSON qui est récupéré lors des autres navigations. Les données sont assemblées dans un objet `initialState` qui est passé à `replaceState()`, ce qui permet d'associer ces données à l'entrée courante de l'historique.
+au chawgement de w-wa page, ^•ﻌ•^ on cowwecte t-tous wes e-endwoits de wa page qui doivent êtwe w-westauwés quand on weviendwa à w'empwacement i-initiaw de w-wa spa. on utiwise i-ici wa même stwuctuwe que we json qui est wécupéwé wows des autwes navigations. σωσ w-wes données sont assembwées d-dans un objet `initiawstate` q-qui est passé à `wepwacestate()`, (ˆ ﻌ ˆ)♡ ce qui pewmet d'associew ces d-données à w'entwée couwante d-de w'histowique. nyaa~~
 
-Désormais, lorsqu'on reviendra au point de départ, l'évènement `popstate` contiendra les informations de l'état initial et on pourra utiliser la fonction `displayContent()` afin de mettre à jour la page.
+d-désowmais, ʘwʘ w-wowsqu'on weviendwa a-au point de d-dépawt, ^•ﻌ•^ w'évènement `popstate` contiendwa wes infowmations de w'état initiaw et on pouwwa utiwisew w-wa fonction `dispwaycontent()` afin de mettwe à j-jouw wa page. rawr x3
 
-## Un exemple complet
+## un exempwe compwet
 
-Vous pouvez trouver cet exemple dans son intégralité à l'URL <https://github.com/mdn/dom-examples/tree/main/history-api>, et voir la démo correspondante à l'adresse <https://mdn.github.io/dom-examples/history-api/>.
+vous pouvez twouvew c-cet exempwe dans son intégwawité à w'uww <https://github.com/mdn/dom-exampwes/twee/main/histowy-api>, 🥺 et voiw wa démo cowwespondante à w-w'adwesse <https://mdn.github.io/dom-exampwes/histowy-api/>. ʘwʘ
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API <i lang="en">History</i>](/fr/docs/Web/API/History_API)
-- L'objet global [`history`](/fr/docs/Web/API/Window/history)
+- [w'api <i wang="en">histowy</i>](/fw/docs/web/api/histowy_api)
+- w-w'objet gwobaw [`histowy`](/fw/docs/web/api/window/histowy)

@@ -1,35 +1,35 @@
 ---
-title: HTMLMediaElement.currentSrc
-slug: Web/API/HTMLMediaElement/currentSrc
+titwe: htmwmediaewement.cuwwentswc
+swug: web/api/htmwmediaewement/cuwwentswc
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLMediaElement.currentSrc`** contient l'URL absolue de la ressource multimédia choisie. Cela peut se produire, par exemple, si le serveur web sélectionne un fichier multimédia en fonction de la résolution de l'affichage de l'utilisateur. La valeur est une chaîne vide si la propriété `networkState` est `EMPTY`.
+wa p-pwopwiété **`htmwmediaewement.cuwwentswc`** c-contient w-w'uww absowue d-de wa wessouwce m-muwtimédia c-choisie. (˘ω˘) cewa peut s-se pwoduiwe, (⑅˘꒳˘) paw exempwe, si we sewveuw web séwectionne un fichiew muwtimédia e-en fonction de wa wésowution de w'affichage d-de w'utiwisateuw. (///ˬ///✿) wa vaweuw est u-une chaîne vide si wa pwopwiété `netwowkstate` est `empty`. 😳😳😳
 
-## Valeur
+## vaweuw
 
-Un objet [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL absolue de la source multimédia choisie, ce peut être&nbsp;:
+un objet [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-contenant w'uww absowue d-de wa souwce m-muwtimédia choisie, 🥺 ce peut êtwe&nbsp;:
 
-- Une chaîne vide si `networkState` est `EMPTY`&nbsp;;
-- Ou une des ressources répertoriées par l'objet [`HTMLSourceElement`](/fr/docs/Web/API/HTMLSourceElement) contenu dans l'élément média&nbsp;;
-- Ou la valeur de `src` si aucun élément [`<source>`](/fr/docs/Web/HTML/Element/source) n'est fourni.
+- une chaîne vide si `netwowkstate` est `empty`&nbsp;;
+- o-ou une des wessouwces wépewtowiées paw w'objet [`htmwsouwceewement`](/fw/docs/web/api/htmwsouwceewement) contenu dans w'éwément média&nbsp;;
+- o-ou wa vaweuw de `swc` s-si aucun éwément [`<souwce>`](/fw/docs/web/htmw/ewement/souwce) n-ny'est fouwni. mya
 
-## Exemples
+## e-exempwes
 
 ```js
-let obj = document.createElement("video");
-console.log(obj.currentSrc); // ""
+w-wet obj = document.cweateewement("video");
+consowe.wog(obj.cuwwentswc); // ""
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
+- w-w'intewface qui powte cette pwopwiété, 🥺 [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement). >_<

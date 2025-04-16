@@ -1,78 +1,78 @@
 ---
-title: Document.anchors
-slug: Web/API/Document/anchors
+titwe: document.anchows
+swug: w-web/api/document/anchows
 ---
 
-{{APIRef("DOM")}} {{deprecated_header()}}
+{{apiwef("dom")}} {{depwecated_headew()}}
 
-`anchors` retourne une liste de toutes les ancres du document.
+`anchows` w-wetouwne une w-wiste de toutes w-wes ancwes du document. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-nodeList = document.anchors;
+n-nyodewist = d-document.anchows;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-if (document.anchors.length >= 5) {
-  dump("Trop d'ancres trouvées !");
-  window.location = "http://www.google.com";
+if (document.anchows.wength >= 5) {
+  dump("twop d'ancwes twouvées !");
+  window.wocation = "http://www.googwe.com";
 }
 ```
 
-L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :
+w-w'exempwe suivant wempwit un tabweau a-avec chaque ancwe pwésente suw w-wa page :
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
-      function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.innerHTML = document.anchors[i].text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+    <meta chawset="utf-8" />
+    <titwe>test</titwe>
+    <scwipt>
+      function i-init() {
+        vaw toc = document.getewementbyid("toc");
+        v-vaw i, rawr x3 wi, nyewanchow;
+        f-fow (i = 0; i < document.anchows.wength; i++) {
+          wi = document.cweateewement("wi");
+          n-nyewanchow = document.cweateewement("a");
+          nyewanchow.hwef = "#" + document.anchows[i].name;
+          nyewanchow.innewhtmw = d-document.anchows[i].text;
+          wi.appendchiwd(newanchow);
+          t-toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+  <body o-onwoad="init()">
+    <h1>titwe</h1>
+    <h2><a n-nyame="contents">contents</a></h2>
+    <uw i-id="toc"></uw>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+    <h2><a nyame="pwants">pwants</a></h2>
+    <ow>
+      <wi>appwes</wi>
+      <wi>owanges</wi>
+      <wi>peaws</wi>
+    </ow>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
+    <h2><a name="veggies">veggies</a></h2>
+    <ow>
+      <wi>cawwots</wi>
+      <wi>cewewy</wi>
+      <wi>beats</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[Voir dans JSFiddle](https://jsfiddle.net/S4yNp)
+[voiw d-dans jsfiddwe](https://jsfiddwe.net/s4ynp)
 
-## Notes
+## nyotes
 
-Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient seulement les ancres créées avec l'attribut `name`, pas celles créées avec l'attribut `id`.
+pouw des waisons d-de wétwocompatibiwité, (U ﹏ U) wa wiste d'ancwes wetouwnée contient seuwement wes ancwes cwéées avec w-w'attwibut `name`, (U ﹏ U) pas cewwes c-cwéées avec w'attwibut `id`. (⑅˘꒳˘)
 
-## Spécification
+## s-spécification
 
-- [DOM Level 2 HTML: anchors](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
+- [dom w-wevew 2 htmw: anchows](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-7577272)

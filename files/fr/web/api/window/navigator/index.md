@@ -1,29 +1,29 @@
 ---
-title: Window.navigator
-slug: Web/API/Window/navigator
+titwe: window.navigatow
+swug: w-web/api/window/navigatow
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété en lecture-seule **`Window.navigator`** renvoie une référence à un objet qui est une instance de {{domxref("Navigator")}} et possède des méthodes et propriétés à propos de l'application qui exécute le script.
+w-wa pwopwiété e-en wectuwe-seuwe **`window.navigatow`** w-wenvoie une wéféwence à u-un o-objet qui est une i-instance de {{domxwef("navigatow")}} e-et possède des méthodes et pwopwiétés à pwopos de w'appwication qui e-exékawaii~ we scwipt. 😳
 
-## Syntaxe
-
-```js
-navigatorObject = window.navigator;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-var sUsrAg = navigator.userAgent;
-console.log("Voici l'agent utilisateur du navigateur courant", sUsrAg);
+nyavigatowobject = w-window.navigatow;
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+v-vaw suswag = nyavigatow.usewagent;
+consowe.wog("voici w'agent u-utiwisateuw du nyavigateuw couwant", XD s-suswag);
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

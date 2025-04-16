@@ -1,150 +1,150 @@
 ---
-title: XMLHttpRequest
-slug: Web/API/XMLHttpRequest
+titwe: xmwhttpwequest
+swug: web/api/xmwhttpwequest
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{defauwtapisidebaw("xmwhttpwequest")}}
 
-Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur.
+w-wes objets `xmwhttpwequest` (xhw) p-pewmettent d-d'intewagiw avec d-des sewveuws. :3 o-on peut wécupéwew d-des données à p-pawtiw d'une u-uww sans avoiw à wafwaîchiw compwètement wa page. σωσ cewa pewmet à une page web d-d'êtwe mise à jouw sans pewtuwbew wes actions d-de w'utiwisateuw. >w<
 
-`XMLHttpRequest` est beaucoup utilisé par l'approche {{Glossary("AJAX")}}.
+`xmwhttpwequest` est beaucoup u-utiwisé paw w'appwoche {{gwossawy("ajax")}}. (ˆ ﻌ ˆ)♡
 
-{{InheritanceDiagram(650, 150)}}
+{{inhewitancediagwam(650, ʘwʘ 150)}}
 
-Malgré son nom, `XMLHttpRequest` peut être utilisé afin de récupérer tout type de données et pas uniquement du XML.
+mawgwé son nyom, :3 `xmwhttpwequest` p-peut êtwe utiwisé afin d-de wécupéwew tout t-type de données et pas uniquement du xmw. (˘ω˘)
 
-Si vos opérations de communication nécessitent l'échange d'évènements ou de messages avec un serveur, pensez à utiliser [les évènements serveur](/fr/docs/Web/API/Server-sent_events) via l'interface {{domxref("EventSource")}}. Pour une communication bidirectionnelle complète, les [WebSockets](/fr/docs/Web/API/WebSockets_API) peuvent être une meilleure alternative.
+si vos opéwations de communication n-nyécessitent w'échange d'évènements ou de messages avec un sewveuw, 😳😳😳 pensez à u-utiwisew [wes évènements sewveuw](/fw/docs/web/api/sewvew-sent_events) via w-w'intewface {{domxwef("eventsouwce")}}. rawr x3 p-pouw u-une communication b-bidiwectionnewwe compwète, (✿oωo) wes [websockets](/fw/docs/web/api/websockets_api) peuvent êtwe une m-meiwweuwe awtewnative. (ˆ ﻌ ˆ)♡
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
-  - : Le constructeur initialise un objet `XMLHttpRequest`. Il doit être appelé avant toute autre méthode.
+- {{domxwef("xmwhttpwequest.xmwhttpwequest", :3 "xmwhttpwequest()")}}
+  - : we constwucteuw i-initiawise un objet `xmwhttpwequest`. (U ᵕ U❁) iw doit êtwe appewé avant toute autwe méthode. ^^;;
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite également des propriétés de {{domxref("XMLHttpRequestEventTarget")}} et de {{domxref("EventTarget")}}._
+_cette intewface héwite égawement d-des pwopwiétés d-de {{domxwef("xmwhttpwequesteventtawget")}} et d-de {{domxwef("eventtawget")}}._
 
-- {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : Un gestionnaire d'évènement invoqué à chaque fois que l'attribut `readyState` change.
-- {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
-  - : L'état de la requête sous la forme d'un `unsigned short`.
-- {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
-  - : Un objet {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, un objet JavaScript ou une chaîne de caractères ({{domxref("DOMString")}}) selon la valeur de {{domxref("XMLHttpRequest.responseType")}}. Cet objet contient le corps de la réponse.
-- {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui contient la réponse à la requête sous forme de texte ou la valeur `null` si la requête a échoué ou n'a pas encore été envoyée.
-- {{domxref("XMLHttpRequest.responseType")}}
-  - : Une valeur parmi une liste qui définit le type de réponse.
-- {{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}
-  - : L'URL sérialisée de la réponse ou la chaîne vide si l'URL est nulle.
-- {{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}
-  - : Un objet {{domxref("Document")}} qui contient la réponse de la requête ou `null` si la requête a échoué, qu'elle n'a pas encore été envoyée ou qu'elle ne peut pas être analysée comme XML ou HTML. Cette propriété n'est pas disponible dans les _workers_.
-- {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
-  - : Une valeur numérique `unsigned short` qui décrit le statut de la réponse à la requête.
-- {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-  - : Une chaîne {{domxref("DOMString")}} qui contient la chaîne de caractères / réponse renvoyée par le serveur HTTP. À la différence de {{domxref("XMLHttpRequest.status")}}, tout le texte du statut est inclus ("`200 OK`" plutôt que "`200`" par exemple).
+- {{domxwef("xmwhttpwequest.onweadystatechange")}}
+  - : un gestionnaiwe d'évènement invoqué à c-chaque fois q-que w'attwibut `weadystate` change. mya
+- {{domxwef("xmwhttpwequest.weadystate")}} {{weadonwyinwine}}
+  - : w-w'état d-de wa wequête sous wa fowme d'un `unsigned s-showt`. 😳😳😳
+- {{domxwef("xmwhttpwequest.wesponse")}} {{weadonwyinwine}}
+  - : un objet {{jsxwef("awwaybuffew")}}, OwO {{domxwef("bwob")}}, rawr {{domxwef("document")}}, XD u-un objet javascwipt ou une chaîne de c-cawactèwes ({{domxwef("domstwing")}}) sewon wa v-vaweuw de {{domxwef("xmwhttpwequest.wesponsetype")}}. (U ﹏ U) cet objet c-contient we cowps d-de wa wéponse. (˘ω˘)
+- {{domxwef("xmwhttpwequest.wesponsetext")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("domstwing")}} qui contient wa wéponse à wa wequête sous fowme de t-texte ou wa vaweuw `nuww` s-si wa wequête a échoué o-ou ny'a pas e-encowe été envoyée. UwU
+- {{domxwef("xmwhttpwequest.wesponsetype")}}
+  - : u-une vaweuw pawmi une wiste qui définit we type de wéponse. >_<
+- {{domxwef("xmwhttpwequest.wesponseuww")}} {{weadonwyinwine}}
+  - : w-w'uww séwiawisée de wa wéponse ou wa chaîne vide si w'uww est n-nyuwwe. σωσ
+- {{domxwef("xmwhttpwequest.wesponsexmw")}} {{weadonwyinwine}}
+  - : un o-objet {{domxwef("document")}} q-qui c-contient wa wéponse de wa wequête o-ou `nuww` s-si wa wequête a échoué, 🥺 q-qu'ewwe n-n'a pas encowe été envoyée ou qu'ewwe nye p-peut pas êtwe anawysée c-comme xmw o-ou htmw. 🥺 cette p-pwopwiété ny'est p-pas disponibwe dans wes _wowkews_. ʘwʘ
+- {{domxwef("xmwhttpwequest.status")}} {{weadonwyinwine}}
+  - : une vaweuw nyuméwique `unsigned s-showt` qui décwit we statut de wa wéponse à wa wequête. :3
+- {{domxwef("xmwhttpwequest.statustext")}} {{weadonwyinwine}}
+  - : une chaîne {{domxwef("domstwing")}} qui c-contient wa chaîne de cawactèwes / wéponse wenvoyée paw we s-sewveuw http. (U ﹏ U) À w-wa difféwence d-de {{domxwef("xmwhttpwequest.status")}}, (U ﹏ U) tout we t-texte du statut est incwus ("`200 o-ok`" pwutôt q-que "`200`" paw exempwe). ʘwʘ
 
-> [!NOTE]
-> Selon la spécification HTTP/2 ([voir 8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 ne définit pas de méthode pour porter la version ou la raison/phrase incluse dans la ligne de statut HTTP/1.1.
+> [!note]
+> sewon wa spécification http/2 ([voiw 8.1.2.4](https://http2.github.io/http2-spec/#wfc.section.8.1.2.4) [wesponse pseudo-headew f-fiewds](https://http2.github.io/http2-spec/#httpwesponse)), >w< http/2 nye définit p-pas de méthode pouw powtew w-wa vewsion ou w-wa waison/phwase incwuse dans wa wigne de statut h-http/1.1. rawr x3
 
-- {{domxref("XMLHttpRequest.timeout")}}
-  - : Un entier `unsigned long` qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.
-- {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : Un gestionnaire d'évènement appelé lorsque la requête a expiré.
-- {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
-  - : Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'_upload_.
-- {{domxref("XMLHttpRequest.withCredentials")}}
-  - : Un booléen ({{domxref("Boolean")}}) qui indique si des requêtes `Access-Control` d'origines différentes peuvent être effectuées avec des informations d'authentification telles que des cookies ou des en-têtes d'autorisation.
+- {{domxwef("xmwhttpwequest.timeout")}}
+  - : u-un entiew `unsigned wong` qui wepwésente w-we nyombwe d-de miwwisecondes qu'une wequête peut pwendwe avant d'êtwe tewminée automatiquement. OwO
+- {{domxwef("xmwhttpwequesteventtawget.ontimeout")}}
+  - : u-un gestionnaiwe d-d'évènement a-appewé wowsque wa wequête a expiwé. ^•ﻌ•^
+- {{domxwef("xmwhttpwequest.upwoad")}} {{weadonwyinwine}}
+  - : u-un objet {{domxwef("xmwhttpwequestupwoad")}} q-qui wepwésente we pwocessus d-d'_upwoad_. >_<
+- {{domxwef("xmwhttpwequest.withcwedentiaws")}}
+  - : un boowéen ({{domxwef("boowean")}}) qui indique si des wequêtes `access-contwow` d'owigines d-difféwentes peuvent êtwe e-effectuées avec des infowmations d'authentification t-tewwes que des c-cookies ou des en-têtes d'autowisation. OwO
 
-### Propriétés non-standard
+### pwopwiétés nyon-standawd
 
-- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
-  - : Un objet `nsIChannel`. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
-- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
-  - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
-- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
-  - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : Un booléen qui indique si l'objet représente une requête de service en arrière-plan.
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{deprecated_inline}}{{ReadOnlyInline}}
-  - : Un objet {{jsxref("ArrayBuffer")}} qui est la réponse à la requête sous la forme d'un tableau typé JavaScript.
-- {{domxref("XMLHttpRequest.multipart")}} {{deprecated_inline}}
-  - : **Cette fonctionnalité spécifique à Gecko a été retirée avec Firefox/Gecko 22.** Veuillez utiliser [les évènements serveurs](/fr/docs/Web/API/Server-sent_events) ou [les web sockets](/fr/docs/Web/API/WebSockets_API) ou encore la propriété `responseText` des évènements de progression.
+- {{domxwef("xmwhttpwequest.channew")}}{{weadonwyinwine}}
+  - : un objet `nsichannew`. >_< w-we canaw à utiwisew paw w'objet wowsqu'iw effectue wa wequête. (ꈍᴗꈍ)
+- {{domxwef("xmwhttpwequest.mozanon")}}{{weadonwyinwine}}
+  - : un boowéen. >w< s-s'iw est vwai, (U ﹏ U) wa wequête sewa envoyée sans cookie o-ou en-tête d-d'autowisation. ^^
+- {{domxwef("xmwhttpwequest.mozsystem")}}{{weadonwyinwine}}
+  - : un boowéen. (U ﹏ U) s'iw est vwai, :3 wa powitique d'owigine u-unique nye s-sewa pas véwifiée pouw wa wequête. (✿oωo)
+- {{domxwef("xmwhttpwequest.mozbackgwoundwequest")}}
+  - : un boowéen qui indique si w'objet w-wepwésente une wequête de s-sewvice en awwièwe-pwan. XD
+- {{domxwef("xmwhttpwequest.mozwesponseawwaybuffew")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : un objet {{jsxwef("awwaybuffew")}} qui est wa wéponse à wa wequête s-sous wa fowme d'un tabweau t-typé javascwipt. >w<
+- {{domxwef("xmwhttpwequest.muwtipawt")}} {{depwecated_inwine}}
+  - : **cette f-fonctionnawité spécifique à g-gecko a été wetiwée avec fiwefox/gecko 22.** v-veuiwwez utiwisew [wes évènements s-sewveuws](/fw/docs/web/api/sewvew-sent_events) o-ou [wes web sockets](/fw/docs/web/api/websockets_api) ou encowe w-wa pwopwiété `wesponsetext` d-des évènements de pwogwession. òωó
 
-### Gestionnaires d'évènement
+### gestionnaiwes d-d'évènement
 
-Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRequest`, est pris en charge par l'ensemble des navigateurs.
+w-we gestionnaiwe `onweadystatechange`, (ꈍᴗꈍ) c-comme pwopwiété des instances `xmwhttpwequest`, rawr x3 e-est pwis en chawge paw w-w'ensembwe des n-nyavigateuws.
 
-D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+d'autwes gestionnaiwes d'évènements ont égawement été i-impwémentés d-dans difféwents n-navigateuws (`onwoad`, rawr x3 `onewwow`, σωσ `onpwogwess`, (ꈍᴗꈍ) e-etc.). voiw we guide [manipuwew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest).
 
-La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes `on*`).
+wa pwupawt des nyavigateuws wécents gèwe égawement wes évènements via w-wa méthode {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} (en pwus des méthodes `on*`). ^^;;
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("XMLHttpRequest.abort()")}}
-  - : Interrompt la requête si elle a déjà été envoyée.
-- {{domxref("XMLHttpRequest.getAllResponseHeaders()")}}
-  - : Renvoie, via une chaîne de caractères, l'ensemble des en-têtes de la réponse, séparés par {{Glossary("CRLF")}} ou la valeur `null` si aucune réponse n'a été reçue.
-- {{domxref("XMLHttpRequest.getResponseHeader()")}}
-  - : Renvoie la chaîne de caractères contenant le texte de l'en-tête voulue ou `null` si aucune des réponse n'a été reçue ou si l'en-tête n'existe pas dans la réponse.
-- {{domxref("XMLHttpRequest.open()")}}
-  - : Initialise une requête. Cette méthode doit être utilisée par du code JavaScript.
-- {{domxref("XMLHttpRequest.overrideMimeType()")}}
-  - : Surcharge le type MIME renvoyé par le serveur.
-- {{domxref("XMLHttpRequest.send()")}}
-  - : Envoie la requête. Si la requête est asynchrone (le comportement par défaut), la méthode renvoie un résultat dès que la requête est envoyée.
-- {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : Définit la valeur d'un en-tête de requête HTTP. Cette méthode doit être appelée après `open()` mais avant`send()`.
+- {{domxwef("xmwhttpwequest.abowt()")}}
+  - : intewwompt w-wa wequête si ewwe a déjà été e-envoyée. rawr x3
+- {{domxwef("xmwhttpwequest.getawwwesponseheadews()")}}
+  - : wenvoie, (ˆ ﻌ ˆ)♡ via une c-chaîne de cawactèwes, σωσ w-w'ensembwe d-des en-têtes d-de wa wéponse, (U ﹏ U) s-sépawés paw {{gwossawy("cwwf")}} ou wa vaweuw `nuww` si aucune wéponse ny'a été weçue. >w<
+- {{domxwef("xmwhttpwequest.getwesponseheadew()")}}
+  - : wenvoie wa chaîne de c-cawactèwes contenant w-we texte d-de w'en-tête vouwue ou `nuww` si a-aucune des wéponse ny'a été weçue ou si w'en-tête ny'existe p-pas dans wa wéponse. σωσ
+- {{domxwef("xmwhttpwequest.open()")}}
+  - : i-initiawise une wequête. nyaa~~ cette m-méthode doit êtwe utiwisée paw du code javascwipt. 🥺
+- {{domxwef("xmwhttpwequest.ovewwidemimetype()")}}
+  - : s-suwchawge we t-type mime wenvoyé paw we sewveuw. rawr x3
+- {{domxwef("xmwhttpwequest.send()")}}
+  - : e-envoie wa wequête. σωσ s-si wa wequête est asynchwone (we compowtement paw défaut), (///ˬ///✿) wa méthode wenvoie u-un wésuwtat d-dès que wa wequête e-est envoyée. (U ﹏ U)
+- {{domxwef("xmwhttpwequest.setwequestheadew()")}}
+  - : définit w-wa vaweuw d-d'un en-tête de wequête http. ^^;; c-cette méthode d-doit êtwe appewée apwès `open()` m-mais avant`send()`. 🥺
 
-### Méthodes non-standard
+### m-méthodes nyon-standawd
 
-- {{domxref("XMLHttpRequest.init()")}}
-  - : Initialise l'objet depuis pour une utilisation depuis du code C++.
+- {{domxwef("xmwhttpwequest.init()")}}
+  - : i-initiawise w'objet depuis pouw une utiwisation d-depuis du code c++. òωó
 
-> [!WARNING]
-> Cette méthode ne doit pas être appelée depuis du code JavaScript.
+> [!wawning]
+> c-cette méthode n-nye doit pas êtwe appewée d-depuis du code javascwipt. XD
 
-- {{domxref("XMLHttpRequest.openRequest()")}}
-  - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open) ci-avant pour initialiser une requête de façon standard en JavaSCript.
-- {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
-  - : Une variante de `send()` afin d'envoyer des données binaires.
+- {{domxwef("xmwhttpwequest.openwequest()")}}
+  - : initiawise une w-wequête depuis d-du code nyatif. :3 v-voiw wa méthode [`open()`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsixmwhttpwequest#open) ci-avant pouw initiawisew une wequête de façon s-standawd en javascwipt. (U ﹏ U)
+- {{domxwef("xmwhttpwequest.sendasbinawy()")}}{{depwecated_inwine()}}
+  - : une vawiante d-de `send()` a-afin d'envoyew des données binaiwes. >w<
 
 ## Évènements
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-  - : Se déclenche lorsqu'une requête a été interrompue (par exemple via {{domxref("XMLHttpRequest.abort()")}}). Le gestionnaire
-    {{domxref("XMLHttpRequestEventTarget/onabort", "onabort")}} est également disponible.
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-  - : Se déclenche lorsqu'une requête a rencontré une erreur.
-    Le gestionnaire {{domxref("XMLHttpRequestEventTarget/onerror", "onerror")}} est également disponible.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : Se déclenche lorsqu'une transaction {{domxref("XMLHttpRequest")}} se termine correctement. Le gestionnaire {{domxref("XMLHttpRequestEventTarget/onload", "onload")}} est également disponible.
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : Se déclenche lorsqu'une requête est terminée (avec une erreur ou non). Quand elle a réussi, l'évènement a lieu après {{domxref("XMLHttpRequest/load_event", "load")}}). Quand elle a échoué, l'évènement survient après {{domxref("XMLHttpRequest/error_event", "error")}}).
-    Le gestionnaire {{domxref("XMLHttpRequestEventTarget/onloadend", "onloadend")}} est également disponible.
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-  - : Se déclenche lorsqu'une requête commence à charger des données.
-    Le gestionnaire {{domxref("XMLHttpRequestEventTarget/onloadstart", "onloadstart")}} est également disponible.
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-  - : Se déclenche périodiquement lorsqu'une requête reçoit des données supplémentaires. Le gestionnaire {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}} est également disponible.
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-  - : Se déclenche lorsque la progression est terminée du fait de l'expiration de la durée limite. Le gestionnaire {{domxref("XMLHttpRequestEventTarget/ontimeout", "ontimeout")}} est également disponible.
+- {{domxwef("xmwhttpwequest/abowt_event", /(^•ω•^) "abowt")}}
+  - : s-se décwenche wowsqu'une wequête a-a été i-intewwompue (paw exempwe via {{domxwef("xmwhttpwequest.abowt()")}}). (⑅˘꒳˘) we gestionnaiwe
+    {{domxwef("xmwhttpwequesteventtawget/onabowt", ʘwʘ "onabowt")}} e-est égawement disponibwe. rawr x3
+- {{domxwef("xmwhttpwequest/ewwow_event", (˘ω˘) "ewwow")}}
+  - : se décwenche w-wowsqu'une w-wequête a wencontwé une ewweuw. o.O
+    w-we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/onewwow", 😳 "onewwow")}} est égawement d-disponibwe. o.O
+- {{domxwef("xmwhttpwequest/woad_event", ^^;; "woad")}}
+  - : s-se décwenche w-wowsqu'une twansaction {{domxwef("xmwhttpwequest")}} se tewmine cowwectement. ( ͡o ω ͡o ) we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/onwoad", ^^;; "onwoad")}} est égawement disponibwe. ^^;;
+- {{domxwef("xmwhttpwequest/woadend_event", XD "woadend")}}
+  - : se décwenche wowsqu'une wequête est tewminée (avec une ewweuw ou nyon). 🥺 quand ewwe a wéussi, (///ˬ///✿) w'évènement a-a wieu a-apwès {{domxwef("xmwhttpwequest/woad_event", "woad")}}). (U ᵕ U❁) quand ewwe a échoué, ^^;; w-w'évènement suwvient a-apwès {{domxwef("xmwhttpwequest/ewwow_event", ^^;; "ewwow")}}). rawr
+    w-we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/onwoadend", (˘ω˘) "onwoadend")}} est égawement d-disponibwe. 🥺
+- {{domxwef("xmwhttpwequest/woadstawt_event", nyaa~~ "woadstawt")}}
+  - : se décwenche w-wowsqu'une wequête c-commence à chawgew des d-données. :3
+    we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/onwoadstawt", /(^•ω•^) "onwoadstawt")}} e-est égawement d-disponibwe. ^•ﻌ•^
+- {{domxwef("xmwhttpwequest/pwogwess_event", UwU "pwogwess")}}
+  - : se décwenche péwiodiquement w-wowsqu'une w-wequête w-weçoit des données s-suppwémentaiwes. 😳😳😳 w-we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/onpwogwess", OwO "onpwogwess")}} e-est égawement d-disponibwe. ^•ﻌ•^
+- {{domxwef("xmwhttpwequest/timeout_event", (ꈍᴗꈍ) "timeout")}}
+  - : s-se décwenche w-wowsque wa pwogwession est tewminée d-du fait de w-w'expiwation de w-wa duwée wimite. (⑅˘꒳˘) we gestionnaiwe {{domxwef("xmwhttpwequesteventtawget/ontimeout", "ontimeout")}} e-est égawement disponibwe. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("XMLSerializer")}} : sérialiser un arbre DOM en XML
-- Les tutoriels MDN sur `XMLHttpRequest`:
+- {{domxwef("xmwsewiawizew")}} : s-séwiawisew u-un awbwe dom en xmw
+- wes tutowiews m-mdn suw `xmwhttpwequest`:
 
-  - [Introduction à AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-  - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-  - [Manipuler le HTML avec XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-  - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
+  - [intwoduction à ajax](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+  - [utiwisew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+  - [manipuwew we htmw avec xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)
+  - [w'api f-fetch](/fw/docs/web/api/fetch_api)
 
-- [HTML5 Rocks — Nouvelles astuces avec XMLHttpRequest2 (en anglais)](https://www.html5rocks.com/en/tutorials/file/xhr2/)
+- [htmw5 wocks — nyouvewwes a-astuces avec xmwhttpwequest2 (en angwais)](https://www.htmw5wocks.com/en/tutowiaws/fiwe/xhw2/)

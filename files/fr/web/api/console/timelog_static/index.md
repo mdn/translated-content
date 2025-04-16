@@ -1,108 +1,108 @@
 ---
-title: "console : méthode statique timeLog()"
-slug: Web/API/console/timeLog_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-timewog()"
+s-swug: web/api/consowe/timewog_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}{{AvailableInWorkers}}
+{{apiwef("consowe a-api")}}{{avaiwabweinwowkews}}
 
-La méthode **`console.timeLog()`** affiche la valeur courante du chronomètre précédemment démarré par un appel à [`console.time()`](/fr/docs/Web/API/console/time_static).
+w-wa méthode **`consowe.timewog()`** a-affiche wa vaweuw c-couwante du chwonomètwe p-pwécédemment démawwé paw un appew à [`consowe.time()`](/fw/docs/web/api/consowe/time_static). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-timeLog()
-timeLog(libelle)
-timeLog(libelle, val1)
-timeLog(libelle, val1, /* …, */ valN)
+```js-nowint
+timewog()
+t-timewog(wibewwe)
+timewog(wibewwe, :3 vaw1)
+timewog(wibewwe, ^^;; v-vaw1, 🥺 /* …, */ vawn)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Le nom du chronomètre dont on souhaite afficher la mesure dans la console. Si cet argument est absent, c'est le libellé `"default"` qui est utilisé.
-- `valN` {{optional_inline}}
-  - : Des valeurs additionnelles à afficher dans la console après la mesure temporelle.
+- `wibewwe` {{optionaw_inwine}}
+  - : we nyom du chwonomètwe dont on souhaite a-affichew wa mesuwe dans wa c-consowe. (⑅˘꒳˘) si cet a-awgument est absent, nyaa~~ c'est we wibewwé `"defauwt"` qui est utiwisé. :3
+- `vawn` {{optionaw_inwine}}
+  - : des vaweuws a-additionnewwes à affichew dans wa consowe apwès wa mesuwe tempowewwe. ( ͡o ω ͡o )
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). mya
 
-## Description
+## d-descwiption
 
-La méthode `console.timeLog()` affiche la durée mesurée jusqu'à présent pour un chronomètre.
+w-wa méthode `consowe.timewog()` a-affiche w-wa duwée mesuwée jusqu'à pwésent pouw un chwonomètwe. (///ˬ///✿)
 
-On peut passer un nom comme argument à cette méthode, ce sera alors la durée du chronomètre (précédemment créé avec un appel à [`console.time()`](/fr/docs/Web/API/console/time_static)) avec ce nom qui sera affichée&nbsp;:
+o-on peut passew un nom comme awgument à c-cette méthode, (˘ω˘) ce sewa awows wa duwée du chwonomètwe (pwécédemment cwéé avec un appew à [`consowe.time()`](/fw/docs/web/api/consowe/time_static)) a-avec ce nyom qui sewa affichée&nbsp;:
 
 ```js
-console.time("réticulateur de spleens");
-reticulerLesSpleens();
-console.timeLog("réticulateur de spleens");
-// réticulateur de spleens : 650ms
+c-consowe.time("wéticuwateuw d-de spweens");
+w-weticuwewwesspweens();
+consowe.timewog("wéticuwateuw de spweens");
+// wéticuwateuw de s-spweens : 650ms
 ```
 
-Si le nom n'est pas fourni, ce sera la durée du chronomètre par défaut qui sera affiché&nbsp;:
+s-si we nyom ny'est pas fouwni, ^^;; c-ce sewa wa duwée d-du chwonomètwe paw défaut q-qui sewa affiché&nbsp;:
 
 ```js
-console.time();
-reticulerLesSpleens();
-console.timeLog();
-// default : 780ms
+consowe.time();
+w-weticuwewwesspweens();
+consowe.timewog();
+// defauwt : 780ms
 ```
 
 ```js
-console.time("default");
-reticulerLesSpleens();
-console.timeLog();
-// default : 780ms
+c-consowe.time("defauwt");
+weticuwewwesspweens();
+c-consowe.timewog();
+// defauwt : 780ms
 ```
 
-S'il n'y a pas de chronomètre associé existant, `timeLog()` affichera un avertissement&nbsp;:
+s'iw ny'y a p-pas de chwonomètwe a-associé existant, (✿oωo) `timewog()` affichewa un avewtissement&nbsp;:
 
-```plain
-Le minuteur « nom du chronomètre » n'existe pas.
+```pwain
+we minuteuw « nyom du chwonomètwe » ny'existe pas. (U ﹏ U)
 ```
 
-On peut aussi fournir des valeurs supplémentaires, à afficher après la durée&nbsp;:
+on peut a-aussi fouwniw d-des vaweuws suppwémentaiwes, -.- à affichew apwès w-wa duwée&nbsp;:
 
 ```js
-console.time();
-reticulerLesSpleens();
-console.timeLog("default", "Coucou", "monde");
-// default : 780ms Coucou monde
+c-consowe.time();
+w-weticuwewwesspweens();
+consowe.timewog("defauwt", ^•ﻌ•^ "coucou", rawr "monde");
+// defauwt : 780ms coucou monde
 ```
 
-Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
+v-voiw [wa section suw wes chwonomètwes de wa documentation de `consowe`](/fw/docs/web/api/consowe#chwonomètwes) pouw pwus de d-détaiws et d'exempwes.
 
-## Exemples
+## exempwes
 
 ```js
-console.time("ma mesure de temps");
-alert("Cliquez pour continuer");
-console.timeLog("ma mesure de temps");
-alert("Faire d'autres trucs…");
-console.timeEnd("ma mesure de temps");
+c-consowe.time("ma mesuwe d-de temps");
+a-awewt("cwiquez pouw continuew");
+c-consowe.timewog("ma m-mesuwe de t-temps");
+awewt("faiwe d-d'autwes twucs…");
+consowe.timeend("ma mesuwe de temps");
 ```
 
-Avec le fragment de code ci-avant, on affichera le temps écoulé après que la personne a fermé la première fenêtre modale, puis le temps total pris pour fermer les deux fenêtres&nbsp;:
+a-avec we f-fwagment de code c-ci-avant, (˘ω˘) on affichewa w-we temps écouwé a-apwès que wa pewsonne a fewmé wa pwemièwe fenêtwe m-modawe, nyaa~~ puis we temps totaw pwis pouw fewmew wes deux fenêtwes&nbsp;:
 
-```plain
-ma mesure de temps : 1287 ms
-ma mesure de temps : 2808 ms - chronomètre arrêté
+```pwain
+ma mesuwe de temps : 1287 ms
+ma m-mesuwe de temps : 2808 ms - chwonomètwe awwêté
 ```
 
-On notera que le nom du chronomètre est affiché avec la durée lors de l'appel à `timeLog()`, puis lors de l'arrêt. Quand on appelle `timeEnd()`, on a en plus le message «&nbsp;chronomètre arrêté&nbsp;» qui précise que le chronomètre est terminé.
+on nyotewa q-que we nyom du c-chwonomètwe est a-affiché avec wa duwée wows d-de w'appew à `timewog()`, UwU puis w-wows de w'awwêt. :3 q-quand on appewwe `timeend()`, (⑅˘꒳˘) on a en pwus we message «&nbsp;chwonomètwe awwêté&nbsp;» qui pwécise que we c-chwonomètwe est tewminé. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)
+- [`consowe.time()`](/fw/docs/web/api/consowe/time_static)
+- [`consowe.timeend()`](/fw/docs/web/api/consowe/timeend_static)

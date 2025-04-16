@@ -1,48 +1,48 @@
 ---
-title: TextMetrics
-slug: Web/API/TextMetrics
+titwe: textmetwics
+swug: web/api/textmetwics
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-L'interface **TextMetrics** représente la dimension d'un texte dans le canevas, tel que créée par la méthode {{domxref ("CanvasRenderingContext2D.measureText()")}}.
+w'intewface **textmetwics** w-wepwésente w-wa dimension d-d'un texte dans w-we canevas, (✿oωo) t-tew que cwéée p-paw wa méthode {{domxwef ("canvaswendewingcontext2d.measuwetext()")}}. (U ﹏ U)
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("TextMetrics.width")}} {{readonlyInline}}
-  - : est un `double` donnant la largeur calculée en pixels CSS d'un segment de texte en ligne. Il prend en compte la police en cours du contexte.
-- {{domxref("TextMetrics.actualBoundingBoxLeft")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS parallèlement à la ligne de base entre le point d'alignement donné par la propriété {{domxref ("CanvasRenderingContext2D.textAlign")}}, et le côté gauche du rectangle délimitant du texte donné.
-- {{domxref("TextMetrics.actualBoundingBoxRight")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS parallèlement à la ligne de base entre le point d'alignement donné par la propriété {{domxref ("CanvasRenderingContext2D.textAlign")}}, et le côté droit du rectangle délimitant du texte donné.
-- {{domxref("TextMetrics.fontBoundingBoxAscent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le haut du rectangle de délimitation le plus élevé de toutes les polices utilisées pour restituer le texte.
-- {{domxref("TextMetrics.fontBoundingBoxDescent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le bas du rectangle délimitant de toutes les polices utilisées pour restituer le texte.
-- {{domxref("TextMetrics.actualBoundingBoxAscent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le haut du rectangle de délimitation utilisé pour restituer le texte.
-- {{domxref("TextMetrics.actualBoundingBoxDescent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le bas du rectangle de délimitation utilisé pour restituer le texte.
-- {{domxref("TextMetrics.emHeightAscent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le haut du carré _em_ dans la boîte de ligne.
-- {{domxref("TextMetrics.emHeightDescent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le bas du carré _em_ dans la boîte de ligne.
-- {{domxref("TextMetrics.hangingBaseline")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et la ligne de base supérieure de la boîte de ligne.
-- {{domxref("TextMetrics.alphabeticBaseline")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et la ligne de base alphabétique de la boîte de ligne.
-- {{domxref("TextMetrics.ideographicBaseline")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et la ligne de base idéographique de la boîte de ligne.
+- {{domxwef("textmetwics.width")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant wa wawgeuw cawcuwée en pixews css d-d'un segment de texte en wigne. -.- iw pwend en compte w-wa powice en couws du contexte. ^•ﻌ•^
+- {{domxwef("textmetwics.actuawboundingboxweft")}} {{weadonwyinwine}}
+  - : e-est un `doubwe` donnant wa distance en pixews css pawawwèwement à w-wa wigne de base entwe we point d-d'awignement d-donné paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textawign")}}, rawr et we côté gauche du wectangwe déwimitant du texte donné. (˘ω˘)
+- {{domxwef("textmetwics.actuawboundingboxwight")}} {{weadonwyinwine}}
+  - : e-est un `doubwe` donnant wa distance en pixews css pawawwèwement à wa w-wigne de base entwe we point d'awignement d-donné p-paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textawign")}}, nyaa~~ e-et we côté d-dwoit du wectangwe déwimitant du texte donné. UwU
+- {{domxwef("textmetwics.fontboundingboxascent")}} {{weadonwyinwine}}
+  - : e-est un `doubwe` donnant wa distance en pixews c-css entwe wa wigne howizontawe indiquée paw w'attwibut {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, :3 et we haut du wectangwe de déwimitation we pwus éwevé d-de toutes wes powices utiwisées p-pouw westituew w-we texte. (⑅˘꒳˘)
+- {{domxwef("textmetwics.fontboundingboxdescent")}} {{weadonwyinwine}}
+  - : est u-un `doubwe` donnant wa distance en pixews css entwe wa wigne h-howizontawe indiquée p-paw w'attwibut {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, (///ˬ///✿) et we b-bas du wectangwe d-déwimitant de toutes wes powices u-utiwisées pouw westituew we t-texte. ^^;;
+- {{domxwef("textmetwics.actuawboundingboxascent")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant wa d-distance en pixews css entwe wa w-wigne howizontawe indiquée paw w-w'attwibut {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, >_< e-et we haut du wectangwe de déwimitation utiwisé pouw westituew we texte. rawr x3
+- {{domxwef("textmetwics.actuawboundingboxdescent")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant w-wa distance e-en pixews css entwe wa wigne howizontawe i-indiquée p-paw w'attwibut {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, /(^•ω•^) e-et we bas du wectangwe de déwimitation utiwisé pouw w-westituew we texte. :3
+- {{domxwef("textmetwics.emheightascent")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant wa distance en pixews css entwe w-wa wigne howizontawe indiquée p-paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, (ꈍᴗꈍ) e-et we h-haut du cawwé _em_ dans wa boîte d-de wigne. /(^•ω•^)
+- {{domxwef("textmetwics.emheightdescent")}} {{weadonwyinwine}}
+  - : e-est un `doubwe` d-donnant wa distance e-en pixews css entwe wa wigne howizontawe i-indiquée paw wa p-pwopwiété {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, (⑅˘꒳˘) e-et we bas du c-cawwé _em_ dans w-wa boîte de wigne. ( ͡o ω ͡o )
+- {{domxwef("textmetwics.hangingbasewine")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant w-wa distance en pixews css entwe wa wigne howizontawe indiquée paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, òωó et w-wa wigne de base supéwieuwe de wa boîte de wigne. (⑅˘꒳˘)
+- {{domxwef("textmetwics.awphabeticbasewine")}} {{weadonwyinwine}}
+  - : est u-un `doubwe` donnant w-wa distance e-en pixews css entwe wa wigne howizontawe i-indiquée paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, XD et w-wa wigne de base a-awphabétique de wa boîte de wigne. -.-
+- {{domxwef("textmetwics.ideogwaphicbasewine")}} {{weadonwyinwine}}
+  - : est un `doubwe` donnant wa distance en pixews c-css entwe wa wigne howizontawe indiquée p-paw wa pwopwiété {{domxwef ("canvaswendewingcontext2d.textbasewine")}}, :3 e-et wa wigne de b-base idéogwaphique de wa boîte de wigne. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La méthode de création dans {{domxref("CanvasRenderingContext2D")}}.
-- L'élément {{HTMLElement("canvas")}} et son interface associée, {{domxref("HTMLCanvasElement")}}
+- w-wa méthode de cwéation dans {{domxwef("canvaswendewingcontext2d")}}. 😳
+- w'éwément {{htmwewement("canvas")}} et son intewface a-associée, (⑅˘꒳˘) {{domxwef("htmwcanvasewement")}}

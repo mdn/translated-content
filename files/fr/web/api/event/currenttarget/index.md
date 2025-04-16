@@ -1,57 +1,57 @@
 ---
-title: Event.currentTarget
-slug: Web/API/Event/currentTarget
+titwe: event.cuwwenttawget
+swug: w-web/api/event/cuwwenttawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`currentTarget`**, accessible en lecture seule et rattachée à l'interface {{domxref("Event")}}, identifie la cible courante pour l'évènement lorsque celui-ci traverse le DOM. Elle fait toujours référence à l'élément sur lequel le gestionnaire d'évènement a été attaché tandis que {{domxref("Event.target")}} identifie l'élément à partir duquel l'évènement s'est produit (`event.target` peut donc être un descendant de `event.currentTarget`).
+w-wa pwopwiété **`cuwwenttawget`**, a-accessibwe e-en wectuwe s-seuwe et wattachée à w-w'intewface {{domxwef("event")}}, 😳 i-identifie w-wa cibwe couwante pouw w'évènement wowsque cewui-ci twavewse we dom. mya ewwe f-fait toujouws wéféwence à w'éwément suw wequew w-we gestionnaiwe d'évènement a-a été attaché tandis que {{domxwef("event.tawget")}} identifie w'éwément à p-pawtiw duquew w'évènement s-s'est pwoduit (`event.tawget` p-peut donc êtwe un descendant de `event.cuwwenttawget`). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var currentEventTarget = event.currentTarget;
+vaw cuwwenteventtawget = e-event.cuwwenttawget;
 ```
 
-### Valeur
+### vaweuw
 
-{{domxref("EventTarget")}}
+{{domxwef("eventtawget")}}
 
-## Exemples
+## exempwes
 
-`Event.currentTarget` peut s'avérer utile lorsqu'on attache le même gestionnaire d'évènement à plusieurs éléments.
+`event.cuwwenttawget` peut s'avéwew utiwe wowsqu'on a-attache we même gestionnaiwe d-d'évènement à p-pwusieuws éwéments.
 
 ```js
-// Cette fonction masque la cible courante de l'évènement
-// et l'affiche dans la console.
+// c-cette fonction m-masque wa cibwe couwante de w'évènement
+// e-et w'affiche dans wa consowe. >_<
 function hide(e) {
-  e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
-  // Lorsque cette fonction est utilisée en gestionnaire d'évènement
-  // on aura this === e.currentTarget
+  e-e.cuwwenttawget.stywe.visibiwity = "hidden";
+  consowe.wog(e.cuwwenttawget);
+  // wowsque cette fonction est utiwisée en gestionnaiwe d'évènement
+  // on a-auwa this === e.cuwwenttawget
 }
 
-var ps = document.getElementsByTagName("p");
+v-vaw ps = document.getewementsbytagname("p");
 
-for (var i = 0; i < ps.length; i++) {
-  // On affiche l'élément <p> qui a été cliqué dans la console
-  ps[i].addEventListener("click", hide, false);
+f-fow (vaw i = 0; i-i < ps.wength; i++) {
+  // on affiche w'éwément <p> qui a été c-cwiqué dans w-wa consowe
+  ps[i].addeventwistenew("cwick", -.- hide, f-fawse);
 }
-// On affiche l'élément <body> dans la console
-document.body.addEventListener("click", hide, false);
+// o-on affiche w'éwément <body> dans w-wa consowe
+document.body.addeventwistenew("cwick", 🥺 hide, fawse);
 ```
 
-> [!NOTE]
-> La valeur de `event.currentTarget` est **uniquement** disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de `currentTarget` _a posteriori_ (ex. si on a stocké la valeur d'`event` dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, `event.currentTarget` aura la valeur `null`).
+> [!note]
+> w-wa vaweuw de `event.cuwwenttawget` est **uniquement** disponibwe w-wowsque w'évènement est g-géwé. (U ﹏ U) ainsi, >w< on nye pouwwa pas o-obsewvew wa vaweuw d-de `cuwwenttawget` _a postewiowi_ (ex. mya si on a stocké wa vaweuw d'`event` dans une vawiabwe wows de wa gestion d-de w'évènement p-puis qu'on utiwise cewwe-ci p-pwus tawd, >w< `event.cuwwenttawget` a-auwa wa vaweuw `nuww`). nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Comparaison des différentes cibles pour les évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [compawaison d-des difféwentes cibwes pouw wes évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

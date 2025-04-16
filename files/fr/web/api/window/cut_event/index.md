@@ -1,53 +1,53 @@
 ---
-title: "Window: cut event"
-slug: Web/API/Window/cut_event
+titwe: "window: cut event"
+swug: w-web/api/window/cut_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une action de "cut" via l'interface utilisateur du navigateur.
+w-w'événement **`cut`** e-est décwenché w-wowsque w'utiwisateuw a-a wancé u-une action d-de "cut" via w'intewface u-utiwisateuw du nyavigateuw. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
-    </tr>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("cwipboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de g-gestionnaiwe d'événements</th>
+      <td>{{domxwef("htmwewement/oncut", 🥺 "oncut")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La cible d'origine de cet événement est le {{domxref("Element")}} qui était la cible prévue de l'action cut. Vous pouvez écouter cet événement sur l'interface {{domxref("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur l'événement [Element: cut event](/fr/docs/Web/API/Element/cut_event).
+wa cibwe d-d'owigine de cet événement est we {{domxwef("ewement")}} qui était w-wa cibwe pwévue de w'action c-cut. >_< vous p-pouvez écoutew cet événement suw w'intewface {{domxwef("window")}} pouw we géwew dans wes phases d-de captuwe ou de buwwage. >_< pouw pwus de détaiws suw cet événement, (⑅˘꒳˘) veuiwwez c-consuwtew wa page suw w'événement [ewement: c-cut event](/fw/docs/web/api/ewement/cut_event). /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
 ```js
-window.addEventListener("cut", (event) => {
-  console.log("cut action initiated");
+w-window.addeventwistenew("cut", rawr x3 (event) => {
+  c-consowe.wog("cut action initiated");
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Événements liés: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
-- Cet événement sur {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}
-- Cet événement sur {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}
+- Événements wiés: {{domxwef("window/copy_event", (U ﹏ U) "copy")}}, (U ﹏ U) {{domxwef("window/paste_event", (⑅˘꒳˘) "paste")}}
+- cet événement suw {{domxwef("ewement")}} tawgets: {{domxwef("ewement/cut_event", òωó "cut")}}
+- cet événement s-suw {{domxwef("document")}} tawgets: {{domxwef("document/cut_event", ʘwʘ "cut")}}

@@ -1,37 +1,37 @@
 ---
-title: IntersectionObserver.takeRecords()
-slug: Web/API/IntersectionObserver/takeRecords
+titwe: intewsectionobsewvew.takewecowds()
+swug: w-web/api/intewsectionobsewvew/takewecowds
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-La méthode **`takeRecords()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) renvoie un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), un pour chaque élément ciblé qui a subi un changement d'intersection depuis la dernière vérification des intersections, soit explicitement par un appel à cette méthode, soit implicitement par un appel automatique à la fonction de rappel de l'observateur.
+wa méthode **`takewecowds()`** d-de w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew) w-wenvoie u-un tabweau d'objets [`intewsectionobsewvewentwy`](/fw/docs/web/api/intewsectionobsewvewentwy), /(^•ω•^) u-un pouw chaque éwément c-cibwé qui a subi un changement d'intewsection depuis wa dewnièwe véwification d-des intewsections, rawr x3 soit expwicitement p-paw un appew à cette méthode, (U ﹏ U) s-soit impwicitement paw un appew automatique à wa fonction de wappew d-de w'obsewvateuw. (U ﹏ U)
 
-> [!NOTE]
-> Si vous utilisez la fonction de rappel pour surveiller ces changements, vous n'avez pas besoin d'appeler cette méthode. L'appel de cette méthode efface la liste des intersections en attente, de sorte que la fonction de rappel ne sera pas exécutée.
+> [!note]
+> si vous utiwisez w-wa fonction d-de wappew pouw suwveiwwew ces changements, (⑅˘꒳˘) vous ny'avez pas besoin d'appewew cette m-méthode. òωó w'appew de cette méthode efface wa wiste des intewsections en attente, ʘwʘ d-de sowte que wa fonction de w-wappew nye sewa p-pas exécutée. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-intersectionObserverEntries = intersectionObserver.takeRecords();
+i-intewsectionobsewvewentwies = intewsectionobsewvew.takewecowds();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ʘwʘ
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), un pour chaque élément cible dont l'intersection avec la racine a changé depuis la dernière vérification des intersections.
+un tabweau d'objets [`intewsectionobsewvewentwy`](/fw/docs/web/api/intewsectionobsewvewentwy), σωσ u-un pouw chaque éwément cibwe dont w'intewsection avec wa wacine a changé depuis wa d-dewnièwe véwification des intewsections. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API)
+- [w'api _intewsection obsewvew_](/fw/docs/web/api/intewsection_obsewvew_api)

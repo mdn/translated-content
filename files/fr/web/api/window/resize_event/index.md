@@ -1,64 +1,64 @@
 ---
-title: GlobalEventHandlers.onresize
-slug: Web/API/Window/resize_event
+titwe: gwobaweventhandwews.onwesize
+swug: web/api/window/wesize_event
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-La propriété **`onresize`**,rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`resize`](/fr/docs/Web/API/Window/resize_event).
+w-wa pwopwiété **`onwesize`**,wattachée a-au mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), (⑅˘꒳˘) e-est [un g-gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui pewmet de t-twaitew wes évènements [`wesize`](/fw/docs/web/api/window/wesize_event). /(^•ω•^)
 
-Un évènement `resize` est déclenché après que la fenêtre a été redimensionnée.
+u-un évènement `wesize` est décwenché apwès que wa fenêtwe a été wedimensionnée. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.onresize = refFonction;
+window.onwesize = weffonction;
 ```
 
-### Value
+### v-vawue
 
-`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
+`weffonction` est un nyom d-de fonction ou une [expwession de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function). (U ﹏ U) wa fonction w-weçoit un objet [`focusevent`](/fw/docs/web/api/focusevent) comme u-unique awgument. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
-### Journaliser l'évolution de la taille de la fenêtre
+### jouwnawisew w'évowution de wa taiwwe de wa fenêtwe
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Redimensionnez la fenêtre pour déclencher l'évènement <code>resize</code>.
+  wedimensionnez wa fenêtwe pouw décwenchew w'évènement <code>wesize</code>. (⑅˘꒳˘)
 </p>
-<p>Hauteur de la fenêtre : <span id="height"></span></p>
-<p>Largeur de la fenêtre : <span id="width"></span></p>
+<p>hauteuw d-de wa fenêtwe : <span id="height"></span></p>
+<p>wawgeuw d-de w-wa fenêtwe : <span i-id="width"></span></p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const heightOutput = document.querySelector("#height");
-const widthOutput = document.querySelector("#width");
+const heightoutput = document.quewysewectow("#height");
+c-const widthoutput = document.quewysewectow("#width");
 
-function resize() {
-  heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
+function w-wesize() {
+  heightoutput.textcontent = window.innewheight;
+  widthoutput.textcontent = window.innewwidth;
 }
 
-window.onresize = resize;
+window.onwesize = wesize;
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'évènement [`resize`](/fr/docs/Web/API/Window/resize_event)
+- w'évènement [`wesize`](/fw/docs/web/api/window/wesize_event)

@@ -1,26 +1,26 @@
 ---
-title: PasswordCredential.name
-slug: Web/API/PasswordCredential/name
+titwe: passwowdcwedentiaw.name
+swug: web/api/passwowdcwedentiaw/name
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{seecompattabwe}}{{apiwef("")}}
 
-La propriété **`name`** est accessible en lecture seule et est rattachée à l'interface {{domxref("PasswordCredential")}}. C'est une chaîne de caractères {{domxref("USVSTring")}} qui contient un nom public, compréhensible pour un humain et qui est destiné à être affiché dans un sélecteur de fournisseur d'authentification.
+wa p-pwopwiété **`name`** e-est accessibwe e-en wectuwe s-seuwe et est w-wattachée à w'intewface {{domxwef("passwowdcwedentiaw")}}. >_< c-c'est u-une chaîne de c-cawactèwes {{domxwef("usvstwing")}} qui contient un nyom pubwic, mya compwéhensibwe pouw un humain e-et qui est destiné à êtwe affiché dans un séwecteuw de fouwnisseuw d-d'authentification. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-name = passwordCredential.name;
+n-nyame = passwowdcwedentiaw.name;
 ```
 
-### Valeur
+### vaweuw
 
-A {{domxref("USVString")}} containing a name.
+a {{domxwef("usvstwing")}} containing a nyame. 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}

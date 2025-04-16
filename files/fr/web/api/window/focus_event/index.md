@@ -1,71 +1,71 @@
 ---
-title: GlobalEventHandlers.onfocus
-slug: Web/API/Window/focus_event
+titwe: gwobaweventhandwews.onfocus
+swug: web/api/window/focus_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`onfocus`**, , rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`focus`](/fr/docs/Web/API/Element/focus_event).
+w-wa pwopwiété **`onfocus`**, -.- , w-wattachée au m-mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), 🥺 e-est [un gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui pewmet de twaitew w-wes évènements [`focus`](/fw/docs/web/api/ewement/focus_event). o.O
 
-L'évènement `focus` est déclenché lorsque la personne active le focus sur un élément.
+w'évènement `focus` est décwenché wowsque wa pewsonne active we focus s-suw un éwément. /(^•ω•^)
 
-Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
+afin que `onfocus` soit décwenché s-suw wes éwéments qui n-nye sont pas des éwéments `<input>`, nyaa~~ iw faut que ces dewniews aient un attwibut [`tabindex`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-tabindex). nyaa~~ v-voiw wa section [wemettwe w'accessibiwité au c-cwaview](/fw/docs/weawn/accessibiwity/htmw#wemettwe_waccessibiwité_au_cwaview) p-pouw pwus de détaiws. :3
 
-> [!NOTE]
-> Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/Window/blur_event).
+> [!note]
+> we gestionnaiwe d'évènement opposé à `onfocus` est [`onbwuw`](/fw/docs/web/api/window/bwuw_event). 😳😳😳
 
-## Syntaxe
-
-```js
-cible.onfocus = refFonction;
-```
-
-### Value
-
-`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
-
-## Exemple
-
-Cet exemple utilise [`onblur`](/fr/docs/Web/API/Window/blur_event) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
-
-### HTML
-
-```html
-<input type="text" value="Cliquez ici" />
-```
-
-### JavaScript
+## s-syntaxe
 
 ```js
-let input = document.querySelector("input");
+cibwe.onfocus = weffonction;
+```
 
-input.onblur = inputBlur;
-input.onfocus = inputFocus;
+### vawue
 
-function inputBlur() {
-  input.value = "Le focus a été perdu";
+`weffonction` est un n-nyom de fonction ou une [expwession d-de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function). (˘ω˘) w-wa fonction w-weçoit un o-objet [`focusevent`](/fw/docs/web/api/focusevent) comme unique awgument. ^^
+
+## exempwe
+
+c-cet exempwe utiwise [`onbwuw`](/fw/docs/web/api/window/bwuw_event) et `onfocus` p-pouw changew we texte au sein d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input). :3
+
+### htmw
+
+```htmw
+<input type="text" vawue="cwiquez i-ici" />
+```
+
+### javascwipt
+
+```js
+w-wet input = d-document.quewysewectow("input");
+
+i-input.onbwuw = inputbwuw;
+input.onfocus = inputfocus;
+
+function i-inputbwuw() {
+  i-input.vawue = "we focus a-a été pewdu";
 }
 
-function inputFocus() {
-  input.value = "Le focus est là";
+f-function inputfocus() {
+  input.vawue = "we focus e-est wà";
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu être modifié.
+e-essayez de cwiquew à w'intéwieuw et en dehows d-du champ pouw voiw son contenu êtwe m-modifié. -.-
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'évènement [`focus`](/fr/docs/Web/API/Element/focus_event)
-- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onblur`](/fr/docs/Web/API/Window/blur_event)
+- w'évènement [`focus`](/fw/docs/web/api/ewement/focus_event)
+- we gestionnaiwe d'évènement duaw&nbsp;: [`gwobaweventhandwews.onbwuw`](/fw/docs/web/api/window/bwuw_event)

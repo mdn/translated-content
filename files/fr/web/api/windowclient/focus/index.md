@@ -1,57 +1,57 @@
 ---
-title: WindowClient.focus()
-slug: Web/API/WindowClient/focus
+titwe: windowcwient.focus()
+swug: web/api/windowcwient/focus
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le client en cours et retourne une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.
+wa méthode **`focus()`** d-de w'intewface {{domxwef("windowcwient")}} focus w-we cwient en c-couws et wetouwne u-une {{jsxwef("pwomise")}} q-qui e-est wésowue vews we {{domxwef("windowcwient")}} existant. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Client.focus().then(function (WindowClient) {
-  // utilisez le WindowClient une fois qu'il est focus
+cwient.focus().then(function (windowcwient) {
+  // u-utiwisez we windowcwient une fois qu'iw est focus
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Nil.
+niw. (///ˬ///✿)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.
+une {{jsxwef("pwomise")}} qui est wésowue vews we {{domxwef("windowcwient")}} existant. 😳😳😳
 
-## Exemple
+## e-exempwe
 
 ```js
-self.addEventListener("notificationclick", function (event) {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+sewf.addeventwistenew("notificationcwick", 🥺 f-function (event) {
+  c-consowe.wog("on nyotification cwick: ", mya event.notification.tag);
+  event.notification.cwose();
 
-  // Vérifie si le client en cours est ouvert et
-  // le focus le cas échéant
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  // véwifie s-si we cwient en couws est ouvewt et
+  // we focus we cas échéant
+  event.waituntiw(
+    cwients
+      .matchaww({
+        t-type: "window", 🥺
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) return client.focus();
+      .then(function (cwientwist) {
+        fow (vaw i = 0; i-i < cwientwist.wength; i-i++) {
+          v-vaw c-cwient = cwientwist[i];
+          if (cwient.uww == "/" && "focus" in cwient) w-wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        if (cwients.openwindow) wetuwn cwients.openwindow("/");
+      }), >_<
   );
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

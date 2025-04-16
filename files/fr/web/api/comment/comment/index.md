@@ -1,33 +1,33 @@
 ---
-title: Comment()
-slug: Web/API/Comment/Comment
+titwe: comment()
+swug: web/api/comment/comment
 ---
 
-{{ApiRef("DOM")}}{{seeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commentaire)_ nouvellement créé avec le {{domxref ("DOMString")}} donné en paramètre comme contenu textuel.
+w-we constwucteuw **`comment()`** w-wenvoie u-un objet {{domxwef("comment")}} _(commentaiwe)_ n-nyouvewwement c-cwéé avec we {{domxwef ("domstwing")}} d-donné e-en pawamètwe c-comme contenu textuew. mya
 
-## Syntaxe
-
-```js
-comment1 = new Comment(); // Create an empty comment
-comment2 = new Comment("This is a comment");
-```
-
-## Exemple
+## syntaxe
 
 ```js
-var comment = new Comment("Test");
+comment1 = nyew comment(); // cweate an e-empty comment
+comment2 = nyew comment("this is a-a comment");
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+v-vaw comment = nyew comment("test");
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)
+{{compat}}
+
+## voiw aussi
+
+- [the d-dom i-intewfaces index](/fw/docs/web/api/document_object_modew)

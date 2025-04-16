@@ -1,42 +1,42 @@
 ---
-title: Les données en WebGL
-slug: Web/API/WebGL_API/Data
+titwe: wes données en webgw
+s-swug: web/api/webgw_api/data
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-Les programmes shaders ont accès à trois types de stockage de données, chacun d'entre eux ayant un usage particulier. Chaque type de variable est accessible par l'un des types de programmes de shader ou par les deux (en fonction du type de stockage de données), et éventuellement, par le code JavaScript du site, suivant le type de variable particulier.
+w-wes pwogwammes s-shadews ont accès à t-twois types d-de stockage de d-données, 😳 chacun d-d'entwe eux ayant u-un usage pawticuwiew. σωσ chaque type de vawiabwe est accessibwe paw w'un des types d-de pwogwammes de shadew ou paw wes deux (en f-fonction du type de stockage de d-données), rawr x3 et éventuewwement, OwO paw we code javascwipt du site, /(^•ω•^) suivant we type d-de vawiabwe pawticuwiew. 😳😳😳
 
-## Types de données GLSL
+## types d-de données gwsw
 
-<\<documenter les types de base, les vecteurs, etc. ; voir [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) sur le wiki WebGL de Khronos >>
+<\<documentew w-wes types de base, ( ͡o ω ͡o ) wes vecteuws, etc. >_< ; voiw [data type (gwsw)](<https://www.khwonos.owg/opengw/wiki/data_type_(gwsw)>) suw we w-wiki webgw de khwonos >>
 
-## Variables GLSL
+## vawiabwes gwsw
 
-Il existe trois types de stockage "variable" ou de stockage de données dans GLSL, chacun ayant son propre but et ses propres cas d'utilisation : **[attributes](#attributes)**, **[varyings](#varyings)**, et **[uniforms](#uniforms)**.
+iw existe twois types de stockage "vawiabwe" o-ou de stockage de données d-dans gwsw, >w< c-chacun ayant son p-pwopwe but et s-ses pwopwes cas d'utiwisation : **[attwibutes](#attwibutes)**, rawr **[vawyings](#vawyings)**, 😳 et **[unifowms](#unifowms)**. >w<
 
-### Attributes
+### a-attwibutes
 
-Les **attributes** sont des variables GLSL qui ne sont disponibles que pour le shader de sommet (en tant que variables) et le code JavaScript. Les attributs sont généralement utilisés pour stocker des informations de couleur, des coordonnées de texture et toutes les autres données calculées ou récupérées qui doivent être partagées entre le code JavaScript et le shader de sommet.
+wes **attwibutes** sont d-des vawiabwes gwsw qui nye sont disponibwes que pouw we shadew de sommet (en tant que vawiabwes) e-et we code javascwipt. (⑅˘꒳˘) wes attwibuts s-sont généwawement u-utiwisés p-pouw stockew des infowmations de couweuw, OwO des coowdonnées d-de textuwe et toutes w-wes autwes données cawcuwées o-ou wécupéwées q-qui doivent êtwe pawtagées e-entwe we code javascwipt et we s-shadew de sommet. (ꈍᴗꈍ)
 
 <\<add how to use them>>
 
-### Varyings
+### v-vawyings
 
-Les **varyings** sont des variables déclarées par le shader de sommet et elle sont utilisées pour transmettre des données du shader de sommet au shader de fragment. Ceci est communément utilisé pour partager un sommet [normal](<https://fr.wikipedia.org/wiki/Normale_(géométrie)>) après qu'il a été calculé par le shader de sommet.
+wes **vawyings** sont d-des vawiabwes décwawées paw w-we shadew de sommet e-et ewwe sont utiwisées pouw twansmettwe des données du shadew de sommet au shadew de fwagment. 😳 ceci est communément u-utiwisé p-pouw pawtagew un sommet [nowmaw](<https://fw.wikipedia.owg/wiki/nowmawe_(géométwie)>) a-apwès q-qu'iw a été c-cawcuwé paw we shadew de sommet. 😳😳😳
 
 <\<how to use>>
 
-### Uniforms
+### unifowms
 
-Les **uniforms** sont définis par le code JavaScript et sont disponibles à la fois pour le shader de sommet et pour celui de fragment. Ils sont utilisés pour fournir des valeurs qui seront les mêmes pour tout ce qui est dessiné dans le cadre, telles que les positions et les intensités d'éclairage, la transformation globale et les détails de la perspective, et ainsi de suite.
+w-wes **unifowms** sont définis paw we code javascwipt et sont disponibwes à w-wa fois pouw we shadew de sommet e-et pouw cewui d-de fwagment. mya iws s-sont utiwisés pouw fouwniw des v-vaweuws qui sewont w-wes mêmes pouw t-tout ce qui e-est dessiné dans we cadwe, tewwes que wes positions e-et wes intensités d-d'écwaiwage, mya w-wa twansfowmation g-gwobawe e-et wes détaiws de wa pewspective, (⑅˘꒳˘) et ainsi de suite. (U ﹏ U)
 
-<\<add details>>
+<\<add detaiws>>
 
-## Tampons
+## t-tampons
 
-<\<add information>>
+<\<add infowmation>>
 
-## Textures
+## textuwes
 
-<\<add information>>
+<\<add infowmation>>

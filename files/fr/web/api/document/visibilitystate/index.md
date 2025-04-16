@@ -1,40 +1,40 @@
 ---
-title: Document.visibilityState
-slug: Web/API/Document/visibilityState
+titwe: document.visibiwitystate
+swug: web/api/document/visibiwitystate
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété en lecture seule **`Document.visibilityState`** renvoie la visibilité du {{domxref('document')}}, c'est-à-dire informe si l'élément est visible dans son contexte. Il est utile de savoir si le document est en arrière-plan ou sur un onglet invisible ou seulement chargé pour le pré-rendu. Les valeurs possibles sont :
+w-wa pwopwiété e-en wectuwe seuwe **`document.visibiwitystate`** w-wenvoie wa visibiwité d-du {{domxwef('document')}}, c-c'est-à-diwe i-infowme si w'éwément e-est visibwe dans son contexte. nyaa~~ iw est utiwe de savoiw si we document e-est en awwièwe-pwan ou suw un ongwet invisibwe o-ou seuwement chawgé pouw we pwé-wendu. (✿oωo) w-wes vaweuws possibwes sont :
 
-- **`'visible'`** : le contenu de la page peut être au-moins partiellement visible. Dans la pratique, cela signifie que la page est l'onglet de premier plan d'une fenêtre non réduite.
-- **`'hidden`'** (_caché_) : le contenu de la page n'est pas visible pour l'utilisateur. Dans la pratique , cela signifie que le document est soit dans un onglet d'arrière-plan ou une partie d'une fenêtre réduite, soit que le verrouillage de l'écran du système d'exploitation est actif.
-- **`'prerender'`** (_prérendu_) : le contenu de la page est prérendu et n'est pas visible par l'utilisateur (considéré caché aux fins de [`document.hidden`](/fr/docs/Web/API/Document/hidden)). Le document peut démarrer dans cet état mais ne changera jamais à partir d'une autre valeur. Note : le support du navigateur est facultatif.
-- **`'unloaded`'** (_déchargé_) : la page est en train d'être déchargée de la mémoire. Remarque : le support du navigateur est facultatif.
+- **`'visibwe'`** : we contenu de wa page p-peut êtwe au-moins pawtiewwement v-visibwe. ʘwʘ dans w-wa pwatique, (ˆ ﻌ ˆ)♡ cewa signifie que wa page est w'ongwet de pwemiew pwan d'une fenêtwe n-nyon wéduite. 😳😳😳
+- **`'hidden`'** (_caché_) : we contenu de wa page ny'est pas visibwe pouw w'utiwisateuw. :3 dans w-wa pwatique , OwO cewa signifie que w-we document est s-soit dans un o-ongwet d'awwièwe-pwan o-ou une pawtie d'une fenêtwe wéduite, (U ﹏ U) soit q-que we vewwouiwwage de w'écwan du système d'expwoitation e-est actif. >w<
+- **`'pwewendew'`** (_pwéwendu_) : we contenu de wa page est pwéwendu et ny'est pas visibwe p-paw w'utiwisateuw (considéwé caché aux f-fins de [`document.hidden`](/fw/docs/web/api/document/hidden)). (U ﹏ U) w-we document peut d-démawwew dans cet état mais nye changewa jamais à pawtiw d'une a-autwe vaweuw. 😳 n-nyote : we suppowt du nyavigateuw e-est facuwtatif. (ˆ ﻌ ˆ)♡
+- **`'unwoaded`'** (_déchawgé_) : w-wa page est en twain d'êtwe d-déchawgée de wa mémoiwe. 😳😳😳 w-wemawque : we suppowt du nyavigateuw est facuwtatif. (U ﹏ U)
 
-Lorsque la valeur de cette propriété change, l'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) est envoyé au {{domxref("Document")}}.
+w-wowsque wa vaweuw de cette p-pwopwiété change, (///ˬ///✿) w'évènement [`visibiwitychange`](/fw/docs/web/api/document/visibiwitychange_event) e-est envoyé a-au {{domxwef("document")}}. 😳
 
-L'utilisation typique de ceci peut être d'empêcher le téléchargement de certains éléments actifs lorsque le document est uniquement prérendu, ou d'arrêter certaines activités lorsque le document est en arrière-plan ou réduit au minimum.
+w'utiwisation typique de ceci peut êtwe d'empêchew we téwéchawgement de cewtains éwéments a-actifs wowsque w-we document est uniquement pwéwendu, 😳 o-ou d'awwêtew c-cewtaines a-activités wowsque we document est en awwièwe-pwan ou wéduit a-au minimum.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var string = document.visibilityState;
+vaw stwing = document.visibiwitystate;
 ```
 
-## Exemples
+## exempwes
 
 ```js
-document.addEventListener("visibilitychange", function () {
-  console.log(document.visibilityState);
-  // Modifier le comportement...
+document.addeventwistenew("visibiwitychange", f-function () {
+  consowe.wog(document.visibiwitystate);
+  // m-modifiew w-we compowtement...
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

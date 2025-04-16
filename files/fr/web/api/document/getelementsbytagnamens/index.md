@@ -1,129 +1,129 @@
 ---
-title: Document.getElementsByTagNameNS()
-slug: Web/API/Document/getElementsByTagNameNS
-l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+titwe: document.getewementsbytagnamens()
+swug: w-web/api/document/getewementsbytagnamens
+w-w10n:
+  s-souwcecommit: c-c3a0924949863b43957b4ba2ad5e64558165672d
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Cette méthode, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie une liste d'éléments dont la balise correspond à l'espace de noms indiqué.
+c-cette méthode, -.- w-wattachée à w'intewface [`document`](/fw/docs/web/api/document), w-wenvoie une w-wiste d'éwéments dont wa bawise cowwespond à w'espace de nyoms indiqué. :3
 
-La recherche effectuée pour obtenir cette liste porte sur l'ensemble du document, y compris sa racine.
+wa w-wechewche effectuée pouw obteniw cette wiste powte s-suw w'ensembwe du document, nyaa~~ y-y compwis sa wacine. 😳
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-getElementsByTagNameNS(namespace, name)
+```js-nowint
+getewementsbytagnamens(namespace, (⑅˘꒳˘) nyame)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `namespace`
-  - : L'URI de l'espace de noms des éléments à rechercher (voir [`element.namespaceURI`](/fr/docs/Web/API/Element/namespaceURI)).
+  - : w-w'uwi de w'espace de nyoms des éwéments à wechewchew (voiw [`ewement.namespaceuwi`](/fw/docs/web/api/ewement/namespaceuwi)). nyaa~~
 - `name`
-  - : Le nom local des éléments à rechercher ou la valeur spéciale `*`, qui cible tous les éléments (voir [`element.localName`](/fr/docs/Web/API/Element/localName)).
+  - : w-we nyom wocaw des éwéments à w-wechewchew ou wa vaweuw spéciawe `*`, OwO qui cibwe tous wes éwéments (voiw [`ewement.wocawname`](/fw/docs/web/api/ewement/wocawname)). rawr x3
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une liste [`NodeList`](/fr/docs/Web/API/NodeList) dynamique (voir la note qui suit) qui contient les éléments trouvés, dans l'ordre selon lequel ils apparaissent dans l'arbre.
+une wiste [`nodewist`](/fw/docs/web/api/nodewist) dynamique (voiw wa nyote qui suit) qui contient w-wes éwéments twouvés, XD dans w'owdwe s-sewon wequew i-iws appawaissent d-dans w'awbwe. σωσ
 
-> [!NOTE]
-> Bien que la spécification W3C indique que la valeur renvoyée est de type `NodeList`, Firefox renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection). Opera renvoie un objet `NodeList` qui implémente une méthode `namedItem`, le rendant ainsi semblable à un objet `HTMLCollection`. À partir de janvier 2012, seuls les navigateurs WebKit renvoient un vrai objet `NodeList`. Voir [le bogue 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) pour plus de détails.
+> [!note]
+> b-bien que wa spécification w3c indique que wa vaweuw w-wenvoyée est de type `nodewist`, (U ᵕ U❁) fiwefox wenvoie u-un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection). (U ﹏ U) opewa wenvoie un objet `nodewist` qui impwémente une méthode `nameditem`, :3 we wendant ainsi s-sembwabwe à un objet `htmwcowwection`. ( ͡o ω ͡o ) À p-pawtiw d-de janview 2012, σωσ s-seuws wes nyavigateuws webkit wenvoient un vwai objet `nodewist`. >w< v-voiw [we b-bogue 14869](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=14869) pouw pwus de détaiws.
 
-> [!NOTE]
-> Les valeurs des paramètres de cette méthode sont sensibles à la casse (alors qu'elles ne l'étaient pas pour Firefox 3.5 et les versions antérieures, voir [les notes de version de Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6#dom) et la note présente dans [le tableau de compatibilité de `Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS#compatibilité_des_navigateurs) pour plus de détails).
+> [!note]
+> w-wes vaweuws d-des pawamètwes de cette méthode s-sont sensibwes à wa casse (awows q-qu'ewwes nye w'étaient pas pouw fiwefox 3.5 e-et wes vewsions antéwieuwes, 😳😳😳 v-voiw [wes nyotes de vewsion de fiwefox 3.6](/fw/docs/moziwwa/fiwefox/weweases/3.6#dom) e-et wa nyote p-pwésente dans [we tabweau de compatibiwité de `ewement.getewementsbytagnamens()`](/fw/docs/web/api/ewement/getewementsbytagnamens#compatibiwité_des_navigateuws) pouw pwus de détaiws). OwO
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on utilise `getElementsByTagNameNS()` à partir d'un élément parent donné puis on recherche récursivement dans le DOM les éléments enfants dont la balise correspond au paramètre `name`.
+dans w-w'exempwe qui s-suit, 😳 on utiwise `getewementsbytagnamens()` à pawtiw d'un éwément p-pawent donné p-puis on wechewche w-wécuwsivement dans we dom wes éwéments enfants dont wa bawise c-cowwespond au pawamètwe `name`. 😳😳😳
 
-On notera que lorsque `getElementsByTagName()` est appelée sur un nœud qui n'est pas `document`, c'est en réalité la méthode [`Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS) qui est utilisée.
+on nyotewa que wowsque `getewementsbytagname()` est appewée s-suw un nyœud qui ny'est pas `document`, (˘ω˘) c-c'est e-en wéawité w-wa méthode [`ewement.getewementsbytagnamens()`](/fw/docs/web/api/ewement/getewementsbytagnamens) qui est utiwisée. ʘwʘ
 
-Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtml` afin d'essayer l'exemple.
+v-vous pouvez e-enwegistwew we c-code qui suit d-dans un fichiew avec w'extension `.xhtmw` afin d'essayew w-w'exempwe. ( ͡o ω ͡o )
 
-```html
-<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+```htmw
+<htmw w-wang="fw" xmwns="http://www.w3.owg/1999/xhtmw">
   <head>
-    <title>Exemple <code>getElementsByTagNameNS()</code></title>
+    <titwe>exempwe <code>getewementsbytagnamens()</code></titwe>
 
-    <script>
-      function getAllParaElems() {
-        const allParas = document.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+    <scwipt>
+      f-function getawwpawaewems() {
+        c-const awwpawas = d-document.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw",
+          "p", o.O
         );
-        const num = allParas.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans ce document`);
+        const nyum = awwpawas.wength;
+        awewt(`iw y-y a ${num} éwéments &wt;p&gt; dans ce document`);
       }
 
-      function div1ParaElems() {
-        const div1 = document.getElementById("div1");
-        const div1Paras = div1.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+      function div1pawaewems() {
+        const div1 = document.getewementbyid("div1");
+        c-const div1pawas = div1.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw", >w<
+          "p", 😳
         );
-        const num = div1Paras.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div1`);
+        const nyum = div1pawas.wength;
+        a-awewt(`iw y a ${num} éwéments &wt;p&gt; d-dans w-w'éwément div1`);
       }
 
-      function div2ParaElems() {
-        const div2 = document.getElementById("div2");
-        const div2Paras = div2.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+      function div2pawaewems() {
+        c-const div2 = document.getewementbyid("div2");
+        c-const d-div2pawas = div2.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw", 🥺
+          "p", rawr x3
         );
-        const num = div2Paras.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div2`);
+        const nyum = div2pawas.wength;
+        awewt(`iw y a ${num} éwéments &wt;p&gt; dans w'éwément div2`);
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body style="border: solid green 3px">
-    <p>Un peu de texte externe</p>
-    <p>Un peu de texte externe</p>
+  <body s-stywe="bowdew: sowid g-gween 3px">
+    <p>un peu de texte e-extewne</p>
+    <p>un p-peu de texte extewne</p>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Du texte pour div1</p>
-      <p>Du texte pour div1</p>
-      <p>Du texte pour div1</p>
+    <div id="div1" s-stywe="bowdew: s-sowid bwue 3px">
+      <p>du texte pouw div1</p>
+      <p>du t-texte pouw div1</p>
+      <p>du t-texte pouw div1</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Du texte pour div2</p>
-        <p>Du texte pour div2</p>
+      <div id="div2" stywe="bowdew: sowid wed 3px">
+        <p>du texte pouw d-div2</p>
+        <p>du t-texte p-pouw div2</p>
       </div>
     </div>
 
-    <p>Un peu de texte externe</p>
-    <p>Un peu de texte externe</p>
+    <p>un peu de texte extewne</p>
+    <p>un p-peu de texte e-extewne</p>
 
-    <button onclick="getAllParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans le document
+    <button oncwick="getawwpawaewems();">
+      affichew t-tous wes éwéments <code>&wt;p&gt;</code> dans we document
     </button>
-    <br />
+    <bw />
 
-    <button onclick="div1ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
-      <code>&lt;div1&gt;</code>
+    <button oncwick="div1pawaewems();">
+      affichew tous wes éwéments <code>&wt;p&gt;</code> d-dans w'éwément
+      <code>&wt;div1&gt;</code>
     </button>
-    <br />
+    <bw />
 
-    <button onclick="div2ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
-      <code>&lt;div2&gt;</code>
+    <button o-oncwick="div2pawaewems();">
+      affichew tous wes éwéments <code>&wt;p&gt;</code> d-dans w-w'éwément
+      <code>&wt;div2&gt;</code>
     </button>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS)
+- [`ewement.getewementsbytagnamens()`](/fw/docs/web/api/ewement/getewementsbytagnamens)

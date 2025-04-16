@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.width
-slug: Web/API/DOMRectReadOnly/width
+titwe: domwectweadonwy.width
+swug: web/api/domwectweadonwy/width
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`width`** de l'interface **`DOMRectReadOnly`** représente la largeur du `DOMRect`.
+w-wa pwopwiété e-en wectuwe seuwe **`width`** d-de w-w'intewface **`domwectweadonwy`** w-wepwésente wa w-wawgeuw du `domwect`. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var recWidth = DOMRect.width;
+vaw wecwidth = domwect.width;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+un doubwe. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

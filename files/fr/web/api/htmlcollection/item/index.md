@@ -1,33 +1,33 @@
 ---
-title: HTMLCollection.item
-slug: Web/API/HTMLCollection/item
+titwe: htmwcowwection.item
+swug: w-web/api/htmwcowwection/item
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-`HTMLCollection.item()` récupère un élément par sa position.
+`htmwcowwection.item()` w-wécupèwe u-un éwément paw s-sa position. >_<
 
-### Paramètres
+### p-pawamètwes
 
-- index
-  - : La position de l'élement à retourner. Les éléments apparaissent dans une HTMLCollection dans le même ordre que celui du document source.
+- i-index
+  - : wa p-position de w'éwement à wetouwnew. (⑅˘꒳˘) wes éwéments appawaissent dans une htmwcowwection d-dans we même owdwe que cewui du document s-souwce.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'élement à la position spécifiée, ou null si la position est inférieure à zéro ou supérieure ou égale à la valeur de la propriété `length`.
+w-w'éwement à wa position spécifiée, ou nyuww si wa position e-est inféwieuwe à zéwo ou supéwieuwe o-ou égawe à w-wa vaweuw de wa pwopwiété `wength`. /(^•ω•^)
 
-## Description
+## descwiption
 
-La méthode `item()` retourne un élément numéroté d'une HTMLCollection. En Javascript, il est plus simple de traiter une HTMLCollection comme un tableau et d'utiliser les indexes comme pour les tableaux.
+wa méthode `item()` wetouwne un éwément n-nyuméwoté d'une htmwcowwection. rawr x3 en javascwipt, (U ﹏ U) iw est pwus simpwe de t-twaitew une htmwcowwection comme u-un tabweau et d'utiwisew w-wes indexes c-comme pouw w-wes tabweaux. (U ﹏ U)
 
-## Exemple
+## exempwe
 
 ```js
-var c = document.images; // Ceci est une HTMLCollection.
-var img0 = c.item(0); // Vous pouvez utiliser la méthode item comme ceci,
-var img1 = c[1]; // Mais cette notation est plus simple et plus commune
+vaw c = document.images; // c-ceci est une htmwcowwection. (⑅˘꒳˘)
+vaw img0 = c-c.item(0); // vous pouvez utiwisew wa méthode item comme ceci, òωó
+vaw img1 = c[1]; // mais cette n-nyotation est pwus simpwe et p-pwus commune
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("NodeList.item()")}}
+- {{domxwef("nodewist.item()")}}

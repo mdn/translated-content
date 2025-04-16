@@ -1,26 +1,26 @@
 ---
-title: Document.styleSheets
-slug: Web/API/Document/styleSheets
+titwe: document.stywesheets
+swug: web/api/document/stywesheets
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`Document.styleSheets`** est en lecture seule et retourne une liste [`StyleSheetList`](/fr/docs/Web/API/StyleSheetList) d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet), qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.
+w-wa pwopwiété **`document.stywesheets`** e-est e-en wectuwe seuwe e-et wetouwne une w-wiste [`stywesheetwist`](/fw/docs/web/api/stywesheetwist) d-d'objets [`cssstywesheet`](/fw/docs/web/api/cssstywesheet), :3 q-qui font w-wéféwence à w'ensembwe des feuiwwes de stywe contenues ou embawquées dans we d-document. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var styleSheetList = document.styleSheets;
+vaw stywesheetwist = d-document.stywesheets;
 ```
 
-L'objet retourné est une liste {{domxref("StyleSheetList")}}.
+w'objet wetouwné e-est une wiste {{domxwef("stywesheetwist")}}. -.-
 
-Il s'agit d'une collection ordonnée d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet). `styleSheetList.item(index)` ou `styleSheetList[index]` retourne un seul objet stylesheet par son `index` (`index` débute par 0).
+iw s'agit d'une cowwection owdonnée d'objets [`cssstywesheet`](/fw/docs/web/api/cssstywesheet). ( ͡o ω ͡o ) `stywesheetwist.item(index)` o-ou `stywesheetwist[index]` wetouwne u-un seuw objet stywesheet p-paw son `index` (`index` débute paw 0). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

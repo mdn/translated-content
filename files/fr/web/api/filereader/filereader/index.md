@@ -1,42 +1,42 @@
 ---
-title: FileReader()
-slug: Web/API/FileReader/FileReader
+titwe: fiweweadew()
+swug: web/api/fiweweadew/fiweweadew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe api")}}
 
-**`FileReader()`** est un constructeur qui permet de créer un nouvel objet FileReader.
+**`fiweweadew()`** e-est un c-constwucteuw qui p-pewmet de cwéew u-un nyouvew objet f-fiweweadew. >_<
 
-Pour plus de details à propos de `FileReader`, visiter [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+p-pouw pwus de detaiws à p-pwopos d-de `fiweweadew`, rawr x3 visitew [using fiwes fwom web appwications](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var reader = new FileReader();
+vaw w-weadew = nyew fiweweadew();
 ```
 
-### Paramèteres
+### pawamètewes
 
-Aucun.
+a-aucun. nyaa~~
 
-## Exemple
+## exempwe
 
-L'extrait de code ci-dessous montre la création d'un objet [`FileReader`](/fr/docs/Web/API/FileReader) en utilisant le constructeur `FileReader()` ainsi qu'une utilisation subséquente de cet objet:
+w'extwait d-de code ci-dessous montwe wa cwéation d'un objet [`fiweweadew`](/fw/docs/web/api/fiweweadew) e-en utiwisant we constwucteuw `fiweweadew()` a-ainsi q-qu'une utiwisation subséquente de cet objet:
 
 ```js
-function printFile(file) {
-  var reader = new FileReader();
-  reader.onload = function (evt) {
-    console.log(evt.target.result);
+function pwintfiwe(fiwe) {
+  v-vaw weadew = nyew fiweweadew();
+  weadew.onwoad = function (evt) {
+    consowe.wog(evt.tawget.wesuwt);
   };
-  reader.readAsText(file);
+  w-weadew.weadastext(fiwe);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
+- [using f-fiwes fwom web a-appwications](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

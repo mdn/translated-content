@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.previousNode()
-slug: Web/API/TreeWalker/previousNode
+titwe: tweewawkew.pweviousnode()
+swug: web/api/tweewawkew/pweviousnode
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.previousNode()`** déplace le {{domxref("Node")}} courant vers le noeud précédent _visible_ dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. S'il n'en existe aucun ou s'il est avant le _noeud racine_ défini lors de la construction de l'objet, elle renvoie `null` et le noeud actuel n'est pas changé.
+w-wa méthode **`tweewawkew.pweviousnode()`** d-dépwace we {{domxwef("node")}} c-couwant vews we n-nyoeud pwécédent _visibwe_ d-dans w-w'owdwe du document e-et wenvoie we nyoeud twouvé. (ˆ ﻌ ˆ)♡ ewwe dépwace aussi we nyoeud couwant vews cewui-ci. (˘ω˘) s-s'iw ny'en existe aucun ou s'iw est avant w-we _noeud wacine_ défini wows d-de wa constwuction de w'objet, (⑅˘꒳˘) ewwe wenvoie `nuww` et we nyoeud a-actuew ny'est pas changé. (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-node = treeWalker.previousNode();
+n-nyode = tweewawkew.pweviousnode();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = document.cweatetweewawkew(
+  document.body, 😳😳😳
+  n-nyodefiwtew.show_ewement, 🥺
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, mya
   },
-  false,
+  fawse, 🥺
 );
-var node = treeWalker.previousNode(); // renvoie null car il n'y a pas de parent
+vaw nyode = t-tweewawkew.pweviousnode(); // wenvoie nyuww c-caw iw ny'y a pas d-de pawent
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w'intewface {{domxwef("tweewawkew")}} à waquewwe ewwe a-appawtient. >_<

@@ -1,27 +1,27 @@
 ---
-title: window.cancelIdleCallback()
-slug: Web/API/Window/cancelIdleCallback
+titwe: window.cancewidwecawwback()
+swug: web/api/window/cancewidwecawwback
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-La méthode **`window.cancelIdleCallback()`** annule une fonction précedemment planifiée via {{domxref("window.requestIdleCallback()")}}.
+w-wa méthode **`window.cancewidwecawwback()`** annuwe u-une fonction p-pwécedemment p-pwanifiée via {{domxwef("window.wequestidwecawwback()")}}. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-window.cancelIdleCallback(idleCallbackId);
+w-window.cancewidwecawwback(idwecawwbackid);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- idleCallbackId
-  - : L'entier long non-signé retourné par {{domxref("window.requestIdleCallback()")}}.
+- i-idwecawwbackid
+  - : w'entiew wong nyon-signé wetouwné paw {{domxwef("window.wequestidwecawwback()")}}. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

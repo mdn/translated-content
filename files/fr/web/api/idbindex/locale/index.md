@@ -1,84 +1,84 @@
 ---
-title: IDBIndex.locale
-slug: Web/API/IDBIndex/locale
+titwe: idbindex.wocawe
+swug: w-web/api/idbindex/wocawe
 ---
 
-{{APIRef("IndexedDB")}}{{SeeCompatTable}}
+{{apiwef("indexeddb")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`locale`**, rattachée à l'interface [`IDBIndex`](/fr/docs/Web/API/IDBIndex), fournit la locale de l'index (par exemple `en-US`, ou `pl`) si une valeur `locale` a été fournie lors sa création (voir [le paramètre d'options pour `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#parametresindexoptionnel)). On notera que cette propriété renvoie toujours la locale courante utilisée par l'index. Autrement dit, elle ne renvoie jamais `"auto"`.
+w-wa pwopwiété e-en wectuwe s-seuwe **`wocawe`**, (U ﹏ U) w-wattachée à w-w'intewface [`idbindex`](/fw/docs/web/api/idbindex), 😳 f-fouwnit w-wa wocawe de w'index (paw exempwe `en-us`, (ˆ ﻌ ˆ)♡ ou `pw`) si une vaweuw `wocawe` a été f-fouwnie wows sa cwéation (voiw [we pawamètwe d-d'options pouw `cweateindex()`](/fw/docs/web/api/idbobjectstowe/cweateindex#pawametwesindexoptionnew)). 😳😳😳 on nyotewa q-que cette pwopwiété wenvoie toujouws wa wocawe couwante u-utiwisée paw w'index. (U ﹏ U) autwement d-dit, ewwe nye wenvoie j-jamais `"auto"`. (///ˬ///✿)
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères.
+une chaîne de cawactèwes. 😳
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets puis on récupère l'index `lName` d'une base de données de contacts. On utilise ensuite un curseur sur l'index en utilisant [`IDBIndex.openCursor`](/fr/docs/Web/API/IDBIndex/openCursor), ce qui est similaire à l'ouverture d'un curseur directement sur un objet `ObjectStore` avec [`IDBObjectStore.openCursor`](/fr/docs/Web/API/IDBObjectStore/openCursor), mais qui permet de trier les enregistrements renvoyés selon l'index et pas selon la clé primaire.
+dans w-w'exempwe qui suit, 😳 on ouvwe une twansaction et un magasin d'objets puis on wécupèwe w-w'index `wname` d'une b-base de données d-de contacts. σωσ on u-utiwise ensuite u-un cuwseuw suw w'index en utiwisant [`idbindex.opencuwsow`](/fw/docs/web/api/idbindex/opencuwsow), rawr x3 ce qui est simiwaiwe à w-w'ouvewtuwe d'un cuwseuw diwectement s-suw un objet `objectstowe` avec [`idbobjectstowe.opencuwsow`](/fw/docs/web/api/idbobjectstowe/opencuwsow), OwO mais qui pewmet de twiew wes enwegistwements wenvoyés s-sewon w'index et pas sewon wa c-cwé pwimaiwe.
 
-La valeur `locale` est affichée dans la console.
+w-wa vaweuw `wocawe` e-est affichée dans wa consowe. /(^•ω•^)
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  const transaction = db.transaction(["contactsList"], "readonly");
-  const objectStore = transaction.objectStore("contactsList");
+function dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
+  c-const twansaction = db.twansaction(["contactswist"], 😳😳😳 "weadonwy");
+  c-const o-objectstowe = twansaction.objectstowe("contactswist");
 
-  const monIndex = objectStore.index("lName");
-  console.log(monIndex.locale);
+  c-const monindex = objectstowe.index("wname");
+  c-consowe.wog(monindex.wocawe);
 
-  monIndex.openCursor().onsuccess = function (event) {
-    const cursor = event.target.result;
-    if (cursor) {
-      const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  monindex.opencuwsow().onsuccess = function (event) {
+    const cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      c-const tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        c-cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        c-cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Tous les résultats ont été affichés.");
+      c-cuwsow.continue();
+    } ewse {
+      consowe.wog("tous w-wes wésuwtats ont été a-affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette propriété ne fait partie d'aucune spécification.
+cette pwopwiété nye fait pawtie d'aucune s-spécification. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier des transactions&nbsp;: [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase)
-- Utiliser des transactions&nbsp;: [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction)
-- Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
-- Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
-- Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [utiwisew w-w'api indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew des t-twansactions&nbsp;: [`idbdatabase`](/fw/docs/web/api/idbdatabase)
+- u-utiwisew d-des twansactions&nbsp;: [`idbtwansaction`](/fw/docs/web/api/idbtwansaction)
+- définiw u-un intewvawwe d-de cwés&nbsp;: [`idbkeywange`](/fw/docs/web/api/idbkeywange)
+- w-wécupéwew e-et modifiew wes données&nbsp;: [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe)
+- utiwisew w-wes cuwseuws&nbsp;: [`idbcuwsow`](/fw/docs/web/api/idbcuwsow)
+- e-exempwes&nbsp;: [notifications d'une w-wiste de tâches](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe qui fonctionne](https://mdn.github.io/dom-exampwes/to-do-notifications/))

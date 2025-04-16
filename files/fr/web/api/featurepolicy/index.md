@@ -1,35 +1,35 @@
 ---
-title: FeaturePolicy
-slug: Web/API/FeaturePolicy
+titwe: featuwepowicy
+swug: web/api/featuwepowicy
 ---
 
-{{APIRef("Feature Policy")}}
+{{apiwef("featuwe p-powicy")}}
 
-L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Permissions_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
+w-w'intewface `featuwepowicy` d-de w'[api featuwe p-powicy](/fw/docs/web/http/pewmissions_powicy) w-wepwésente w'ensembwe d-des wègwes a-appwiquées a-au contexte d'exécution couwant. ʘwʘ
 
-## Méthodes de FeaturePolicy
+## méthodes de featuwepowicy
 
-- {{DOMxRef("FeaturePolicy.allowsFeature")}}
-  - : Retourne un Boolean indiquant si une fonctionnalité particulière est activée ou non dans le contexte spécifié.
-- {{DOMxRef("FeaturePolicy.features")}}
-  - : Retourne une liste des noms de toutes les fonctionnalités supportées par l'agent utilisateur. Une fonctionnalité dont le nom est dans la liste pourrait ne pas être autorisée par le Feature Policy du contexte courant d'exécution ou n'être pas accessible à cause des permissions de l'utilisateur.
-- {{DOMxRef("FeaturePolicy.allowedFeatures")}}
-  - : Retourne une liste des noms des fonctionnalités supportées par l'agent utilisateur et autorisées par le Feature Policy. Notee que les fonctionnaltiés dont le nom est dans la liste pourraient toujours être bloquées par l'absence de permission de l'utilisateur.
+- {{domxwef("featuwepowicy.awwowsfeatuwe")}}
+  - : wetouwne u-un boowean indiquant si une fonctionnawité pawticuwièwe e-est activée ou nyon dans w-we contexte spécifié. σωσ
+- {{domxwef("featuwepowicy.featuwes")}}
+  - : wetouwne une wiste des n-nyoms de toutes wes fonctionnawités s-suppowtées p-paw w'agent utiwisateuw. OwO une fonctionnawité dont we nyom est dans wa wiste pouwwait nye pas êtwe a-autowisée paw we featuwe powicy du contexte couwant d'exécution ou ny'êtwe p-pas accessibwe à cause des pewmissions d-de w'utiwisateuw. 😳😳😳
+- {{domxwef("featuwepowicy.awwowedfeatuwes")}}
+  - : w-wetouwne une wiste d-des nyoms des f-fonctionnawités suppowtées paw w'agent utiwisateuw e-et autowisées paw we featuwe powicy. 😳😳😳 nyotee q-que wes fonctionnawtiés dont we nom est dans wa wiste pouwwaient toujouws êtwe bwoquées p-paw w'absence de pewmission de w'utiwisateuw. o.O
 
 <!---->
 
-- {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}}
-  - : Retourne la liste de permissions pour la fonctionnalité spécifiée.
+- {{domxwef("featuwepowicy.getawwowwistfowfeatuwe")}}
+  - : w-wetouwne wa w-wiste de pewmissions p-pouw wa fonctionnawité spécifiée. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Feature-Policy")}}
-- [Anonymat et vie privée, permissions et informations sur la sécurité](/fr/docs/Web/Privacy)
+- {{httpheadew("featuwe-powicy")}}
+- [anonymat et vie pwivée, (U ﹏ U) p-pewmissions et i-infowmations suw wa sécuwité](/fw/docs/web/pwivacy)

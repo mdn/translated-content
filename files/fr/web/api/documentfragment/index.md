@@ -1,57 +1,57 @@
 ---
-title: DocumentFragment
-slug: Web/API/DocumentFragment
+titwe: documentfwagment
+swug: w-web/api/documentfwagment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-L'interface **`DocumentFragment`** représente un objet document minimal qui n'a pas de parent. Il est utilisé comme une version légère de {{domxref("Document")}} pour stocker un segment de structure de document composé de nœuds, tout comme un document standard. La différence fondamentale est que, comme le fragment de document ne fait pas réellement partie de la structure du DOM, les changements faits au fragment n'affectent pas le document, ne causent pas de {{Glossary("Reflow")}} , et ne provoquent pas les éventuels impacts de performance qui peuvent avoir lieu quand des changements sont faits.
+w-w'intewface **`documentfwagment`** w-wepwésente u-un objet document m-minimaw qui n-ny'a pas de pawent. rawr x3 i-iw est utiwisé comme une vewsion wégèwe de {{domxwef("document")}} pouw s-stockew un segment de stwuctuwe de document composé d-de nyœuds, /(^•ω•^) tout comme un document s-standawd. :3 wa difféwence fondamentawe est que, (ꈍᴗꈍ) comme we f-fwagment de document nye fait pas w-wéewwement pawtie d-de wa stwuctuwe du dom, /(^•ω•^) wes changements faits au fwagment ny'affectent pas w-we document, (⑅˘꒳˘) nye causent pas de {{gwossawy("wefwow")}} , ( ͡o ω ͡o ) et nye pwovoquent pas wes éventuews impacts d-de pewfowmance qui peuvent a-avoiw wieu quand d-des changements s-sont faits. òωó
 
-Un usage courant de `DocumentFragment` est de créer un fragment, assembler un sous-arbre DOM au sein de celui-ci, puis ajouter ou insérer le fragment dans le DOM en utilisant les méthodes de l'interface {{domxref("Node")}} (telles que {{domxref("Node.appendChild", "appendChild()")}} ou {{domxref("Node.insertBefore", "insertBefore()")}}). En faisant ainsi, on place les nœuds du fragment dans le DOM, en laissant derrière un `DocumentFragment` vide. Comme tous les nœuds sont insérés dans le document en une seule fois, un seul _reflow_ et un seul rendu sont déclenchés, au lieu de potentiellement un pour chaque nœud inséré s'ils avaient été insérés séparément.
+un u-usage couwant de `documentfwagment` est de cwéew u-un fwagment, (⑅˘꒳˘) assembwew un sous-awbwe dom au s-sein de cewui-ci, XD puis ajoutew ou inséwew we fwagment dans we dom en utiwisant wes méthodes de w-w'intewface {{domxwef("node")}} (tewwes que {{domxwef("node.appendchiwd", -.- "appendchiwd()")}} o-ou {{domxwef("node.insewtbefowe", "insewtbefowe()")}}). :3 e-en faisant a-ainsi, nyaa~~ on pwace wes nœuds du fwagment dans we dom, 😳 en waissant d-dewwièwe un `documentfwagment` v-vide. (⑅˘꒳˘) comme tous wes nyœuds sont i-inséwés dans w-we document en une seuwe fois, nyaa~~ u-un seuw _wefwow_ et un seuw wendu s-sont décwenchés, OwO au wieu de potentiewwement u-un pouw chaque nyœud inséwé s-s'iws avaient été inséwés sépawément.
 
-Cette interface est également beaucoup utilisée avec les Web components : les éléments {{HTMLElement("template")}} contiennent un `DocumentFragment` dans leur propriété {{domxref("HTMLTemplateElement.content")}}.
+c-cette i-intewface est égawement beaucoup utiwisée avec wes web components : wes éwéments {{htmwewement("tempwate")}} contiennent un `documentfwagment` d-dans weuw p-pwopwiété {{domxwef("htmwtempwateewement.content")}}. rawr x3
 
-Un `DocumentFragment` vide peut être créé en utilisant la méthode {{domxref("document.createDocumentFragment()")}} ou le constructeur.
+un `documentfwagment` vide p-peut êtwe cwéé e-en utiwisant w-wa méthode {{domxwef("document.cweatedocumentfwagment()")}} ou we constwucteuw. XD
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface n'a pas de propriétés spécifiques, mais hérite de celles de son parent,_ _{{domxref("Node")}}, et implémente celles de l'interface {{domxref("ParentNode")}}._
+_cette intewface ny'a p-pas de pwopwiétés spécifiques, σωσ mais héwite de cewwes de son pawent,_ _{{domxwef("node")}}, (U ᵕ U❁) e-et impwémente cewwes de w'intewface {{domxwef("pawentnode")}}._
 
-- {{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}
-  - : Retourne une {{domxref("HTMLCollection")}} dynamique contenant tous les objets de type {{domxref("Element")}} enfants de l'objet `DocumentFragment`.
-- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Retourne un {{domxref("Element")}} qui est le premier enfant de l'objet `DocumentFragment`, ou `null` s'il n'y en a aucun.
-- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Retourne un {{domxref("Element")}} qui est le dernier enfant de l'objet `DocumentFragment`, ou `null` s'il n'y en a aucun.
-- {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
-  - : Retourne un `unsigned long` indiquant le nomble d'enfants que le `DocumentFragment` possède.
+- {{ d-domxwef("pawentnode.chiwdwen") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : w-wetouwne u-une {{domxwef("htmwcowwection")}} dynamique c-contenant tous w-wes objets de type {{domxwef("ewement")}} e-enfants d-de w'objet `documentfwagment`. (U ﹏ U)
+- {{ domxwef("pawentnode.fiwstewementchiwd") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetouwne un {{domxwef("ewement")}} q-qui est we pwemiew e-enfant de w-w'objet `documentfwagment`, :3 o-ou `nuww` s-s'iw ny'y en a aucun. ( ͡o ω ͡o )
+- {{ domxwef("pawentnode.wastewementchiwd") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetouwne u-un {{domxwef("ewement")}} qui est we dewniew enfant de w'objet `documentfwagment`, σωσ ou `nuww` s'iw ny'y en a aucun. >w<
+- {{ domxwef("pawentnode.chiwdewementcount") }} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : w-wetouwne un `unsigned wong` indiquant we nyombwe d'enfants q-que we `documentfwagment` p-possède. 😳😳😳
 
-## Constructeur
+## c-constwucteuw
 
-- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}
-  - : Retourne un objet `DocumentFragment` vide.
+- {{ domxwef("documentfwagment.documentfwagment()", OwO "documentfwagment()") }} {{expewimentaw_inwine}}
+  - : w-wetouwne un objet `documentfwagment` v-vide. 😳
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite des méthodes de son parent, {{domxref("Node")}}_, et implémente celles de l'interface {{domxref("ParentNode")}}.
+_cette intewface héwite des méthodes de son pawent, 😳😳😳 {{domxwef("node")}}_, (˘ω˘) et impwémente cewwes d-de w'intewface {{domxwef("pawentnode")}}. ʘwʘ
 
-- {{domxref("DocumentFragment.querySelector()")}}
-  - : Retourne le premier nœud {{domxref("Element")}} du `DocumentFragment`, dans l'ordre du document, correspondant aux sélécteurs spécifiés.
-- {{domxref("DocumentFragment.querySelectorAll()")}}
-  - : Retourne une {{domxref("NodeList")}} de tous les nœuds {{domxref("Element")}} du `DocumentFragment` qui correspondent aux sélecteurs spécifiés.
-- {{domxref("DocumentFragment.getElementById()")}}
-  - : Retourne le premier nœud {{domxref("Element")}} du `DocumentFragment`, dans l'ordre du document, qui correspond à l'ID spécifié.
+- {{domxwef("documentfwagment.quewysewectow()")}}
+  - : wetouwne we pwemiew n-nyœud {{domxwef("ewement")}} du `documentfwagment`, ( ͡o ω ͡o ) d-dans w-w'owdwe du document, o.O cowwespondant aux séwécteuws s-spécifiés. >w<
+- {{domxwef("documentfwagment.quewysewectowaww()")}}
+  - : w-wetouwne une {{domxwef("nodewist")}} d-de tous wes nyœuds {{domxwef("ewement")}} d-du `documentfwagment` qui cowwespondent aux séwecteuws spécifiés.
+- {{domxwef("documentfwagment.getewementbyid()")}}
+  - : wetouwne w-we pwemiew nyœud {{domxwef("ewement")}} d-du `documentfwagment`, 😳 d-dans w'owdwe du document, 🥺 qui c-cowwespond à w-w'id spécifié. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+- [index d-des intewfaces d-dom](/fw/docs/web/api/document_object_modew)

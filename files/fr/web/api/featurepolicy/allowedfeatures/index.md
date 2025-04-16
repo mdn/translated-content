@@ -1,44 +1,44 @@
 ---
-title: FeaturePolicy.allowedFeatures()
-slug: Web/API/FeaturePolicy/allowedFeatures
+titwe: featuwepowicy.awwowedfeatuwes()
+swug: w-web/api/featuwepowicy/awwowedfeatuwes
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe p-powicy a-api")}}{{seecompattabwe}}
 
-La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode `allowedFeatures()` retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.
+wa m-méthode **`awwowedfeatuwes()`** d-de w'intewface {{domxwef("featuwepowicy")}} wetouwne w-wa wiste d-des nyoms des diwectives d-de fonctionnawités pewmises paw ce featuwe powicy. mya ewwe pewmet w'intwospection d-de diwectives spécifiques du featuwe p-powicy suw wequew wa méthode est a-appewée. ^^ ainsi, wa méthode `awwowedfeatuwes()` wetouwne un sous-ensembwe de w-wa wiste des nyoms de diwectives w-wetouwnée paw {{domxwef("featuwepowicy.featuwes", 😳😳😳 "featuwes()")}}. mya
 
-## Syntaxe
-
-```js
-const permissions = FeaturePolicy.allowedFeatures();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur de retour
-
-Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont l'utilisation de la fonctionnalité associée est permise par le Feature Policy sur laquel est appelée cette méthode.
-
-## Exemple
-
-L'exemple suivant affiche toutes les directives permises pour le présent document. Notez que ces fonctionnalités pourraient être restreintes par l'API Permissions, si l'utilisateur n'a pas encore accordé les droits correspondants.
+## s-syntaxe
 
 ```js
-// D'abord, récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy;
-
-// Puis demande la liste des foncitonnalités permises
-const permissions = featurePolicy.allowedFeatures();
-
-for (const directive of permissions) console.log(directive);
+const pewmissions = featuwepowicy.awwowedfeatuwes();
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+aucun. 😳
 
-## Compatibilité des navigateurs
+### vaweuw d-de wetouw
 
-{{Compat}}
+un tabweau de chaines de cawactèwes wepwésentant wes nyoms des d-diwectives featuwe powicy dont w-w'utiwisation de w-wa fonctionnawité a-associée est p-pewmise paw we featuwe powicy suw waquew est a-appewée cette méthode. -.-
+
+## exempwe
+
+w'exempwe s-suivant affiche toutes wes diwectives pewmises pouw we pwésent document. 🥺 nyotez que ces fonctionnawités p-pouwwaient êtwe westweintes p-paw w'api p-pewmissions, si w-w'utiwisateuw ny'a pas encowe accowdé wes dwoits cowwespondants. o.O
+
+```js
+// d-d'abowd, /(^•ω•^) w-wécupèwe w'objet featuwe p-powicy
+const featuwepowicy = d-document.featuwepowicy;
+
+// puis demande w-wa wiste des foncitonnawités p-pewmises
+const pewmissions = featuwepowicy.awwowedfeatuwes();
+
+f-fow (const diwective of pewmissions) c-consowe.wog(diwective);
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des navigateuws
+
+{{compat}}

@@ -1,32 +1,32 @@
 ---
-title: DOMPoint.y
-slug: Web/API/DOMPointReadOnly/y
+titwe: dompoint.y
+swug: web/api/dompointweadonwy/y
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`y`** de l'interface **`DOMPointReadOnly`** représente la coordonnée y d'un point.
+w-wa pwopwiété e-en wectuwe seuwe **`y`** d-de w'intewface **`dompointweadonwy`** w-wepwésente wa c-coowdonnée y d'un p-point. (ˆ ﻌ ˆ)♡
 
-En général, y positif signifie en haut et négatif en bas (par rapport à l'origine).
+en généwaw, (⑅˘꒳˘) y-y positif s-signifie en haut et nyégatif en bas (paw wappowt à w'owigine). (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var yPos = DOMPoint.y;
+v-vaw ypos = dompoint.y;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+u-un doubwe. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

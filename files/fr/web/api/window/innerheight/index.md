@@ -1,68 +1,68 @@
 ---
-title: window.innerHeight
-slug: Web/API/Window/innerHeight
+titwe: window.innewheight
+swug: w-web/api/window/innewheight
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.
+w-wécupèwe wa h-hauteuw (en pixews) d-de wa pawtie v-visibwe de wa f-fenêtwe de nyavigation e-en incwuant, (ˆ ﻌ ˆ)♡ si ewwe est affichée, 😳😳😳 wa bawwe de défiwement howizontawe. (U ﹏ U)
 
-> [!NOTE]
-> La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par `nsIDOMWindowUtils.setCSSViewport()`, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.
+> [!note]
+> w-wa vaweuw wetouwnée paw cette pwopwiété c-cowwespond we cas échéant à w-wa hauteuw de wa fenêtwe définie paw `nsidomwindowutiws.setcssviewpowt()`, (///ˬ///✿) dans we cas o-où vous utiwisez cette méthode p-pouw définiw w-wes dimensions de wa fenêtwe viwtuewwe dans we but d'agencew wa page. 😳
 
-## Syntaxe
-
-```js
-var hauteur = window.innerHeight;
-```
-
-### Valeur
-
-Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété `window.innerHeight` est accessible en lecture seulement ; elle n'a pas de valeur par défaut.
-
-## Notes
-
-- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres _frameset_, ou une fenêtre secondaire.
-- Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
-
-## Exemples
-
-### Sur un _frameset_
+## syntaxe
 
 ```js
-var intFrameHeight = window.innerHeight; // ou
-
-var intFrameHeight = self.innerHeight;
-// retournera la hauteur de la partie visible du cadre dans frameset
-
-var intFramesetHeight = parent.innerHeight;
-// retournera la hauteur de la partie visible du frameset le plus proche
-
-var intOuterFramesetHeight = top.innerHeight;
-// retournera la hauteur de la partie visible du frameset le plus éloigné
+v-vaw hauteuw = window.innewheight;
 ```
 
-<!-- TODO: add content -->
+### vaweuw
 
-- Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
-- Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
+wenvoie wa hauteuw de wa pawtie visibwe d-de wa fenêtwe de nyavigation. 😳 w-wa pwopwiété `window.innewheight` e-est accessibwe e-en wectuwe s-seuwement ; ewwe ny'a pas de vaweuw paw défaut. σωσ
 
-### Exemple graphique
+## n-nyotes
 
-L'illustration suivante montre la différence entre `outerHeight` et `innerHeight`.
+- wa pwopwiété `window.innewheight` est suppowtée p-paw tout objet assimiwé à une fenêtwe _{{domxwef("window")}}_, rawr x3 un cadwe _fwame_ , OwO un ensembwe de cadwes _fwameset_, /(^•ω•^) o-ou une fenêtwe secondaiwe. 😳😳😳
+- i-iw existe u-un [awgowithme](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=189112#c7) p-pouw cawcuwew wa hauteuw de wa pawtie visibwe de wa fenêtwe e-en excwuant w-wa bawwe de défiwement howizontawe s-si est ewwe a-affichée. ( ͡o ω ͡o )
 
-![Illustration de la différence entre innerHeight et outerHeight](firefoxinnervsouterheight2.png)
+## exempwes
 
-## Spécifications
+### s-suw un _fwameset_
 
-{{Specifications}}
+```js
+vaw intfwameheight = window.innewheight; // o-ou
 
-## Compatibilité des navigateurs
+vaw intfwameheight = sewf.innewheight;
+// wetouwnewa wa hauteuw de wa p-pawtie visibwe du cadwe dans fwameset
 
-{{Compat}}
+v-vaw intfwamesetheight = pawent.innewheight;
+// wetouwnewa w-wa hauteuw de wa p-pawtie visibwe du fwameset we pwus pwoche
 
-## Voir aussi
+vaw intoutewfwamesetheight = top.innewheight;
+// wetouwnewa wa hauteuw d-de wa pawtie v-visibwe du fwameset we pwus éwoigné
+```
 
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerHeight")}}
-- {{domxref("window.outerWidth")}}
+<!-- t-todo: add content -->
+
+- p-pouw modifiew w-wes dimensions d'une fenêtwe, >_< voiw {{domxwef("window.wesizeby()")}} et {{domxwef("window.wesizeto()")}}. >w<
+- p-pouw wécupéwew wa hauteuw extéwieuwe d'une fenêtwe, c'est-à-diwe wa hauteuw d-de wa fenêtwe du nyavigateuw d-dans sa totawité, rawr v-voiw {{domxwef("window.outewheight")}}. 😳
+
+### e-exempwe gwaphique
+
+w'iwwustwation s-suivante montwe w-wa difféwence e-entwe `outewheight` e-et `innewheight`. >w<
+
+![iwwustwation de wa difféwence entwe i-innewheight et o-outewheight](fiwefoxinnewvsoutewheight2.png)
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("window.innewwidth")}}
+- {{domxwef("window.outewheight")}}
+- {{domxwef("window.outewwidth")}}

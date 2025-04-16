@@ -1,37 +1,37 @@
 ---
-title: IntersectionObserver.observe()
-slug: Web/API/IntersectionObserver/observe
+titwe: intewsectionobsewvew.obsewve()
+swug: web/api/intewsectionobsewvew/obsewve
 ---
 
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{apiwef("intewsection o-obsewvew api")}}{{seecompattabwe}}
 
-La méthode **`observe()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) ajoute un élément à l'ensemble des éléments cibles étant observés par l'`IntersectionObserver`. Un observateur possède un ensemble de seuils d'intersection et une racine, mais peut observer plusieurs éléments cibles en surveillant leurs changements de visibilité indépendamment. Pour cesser d'observer un élément, il faut appeler la méthode [`IntersectionObserver.unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve).
+w-wa méthode **`obsewve()`** d-de w'intewface [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew) ajoute u-un éwément à w-w'ensembwe d-des éwéments c-cibwes étant obsewvés p-paw w'`intewsectionobsewvew`. mya un obsewvateuw possède un ensembwe de seuiws d'intewsection e-et une wacine, 😳 mais peut obsewvew pwusieuws éwéments c-cibwes en suwveiwwant w-weuws changements de visibiwité indépendamment. -.- pouw cessew d'obsewvew u-un éwément, 🥺 iw faut appewew w-wa méthode [`intewsectionobsewvew.unobsewve()`](/fw/docs/web/api/intewsectionobsewvew/unobsewve). o.O
 
-Lorsque la visibilité d'un élément cible franchit l'un des seuils d'intersection de l'observateur (tel que listé dans [`IntersectionObserver.thresholds`](/fr/docs/Web/API/IntersectionObserver/thresholds), la fonction de rappel de l'observateur est executée avec comme argument un objet [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) représentant le changement d'intersection qui a été observé. À noter que cette conception permet à de multiples changements d'intersection d'éléments différents d'être traités par un unique appel à la fonction de rappel au moyen d'un tableau d'objets `IntersectionObserverEntry`.
+w-wowsque wa visibiwité d'un éwément cibwe fwanchit w'un des seuiws d-d'intewsection de w'obsewvateuw (tew que wisté dans [`intewsectionobsewvew.thweshowds`](/fw/docs/web/api/intewsectionobsewvew/thweshowds), /(^•ω•^) wa fonction d-de wappew de w'obsewvateuw e-est executée a-avec comme awgument u-un objet [`intewsectionobsewvewentwy`](/fw/docs/web/api/intewsectionobsewvewentwy) w-wepwésentant we changement d'intewsection q-qui a été obsewvé. nyaa~~ À nyotew que cette conception p-pewmet à de muwtipwes changements d'intewsection d'éwéments difféwents d'êtwe twaités p-paw un unique appew à wa fonction d-de wappew a-au moyen d'un tabweau d-d'objets `intewsectionobsewvewentwy`. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-IntersectionObserver.observe(targetElement);
+intewsectionobsewvew.obsewve(tawgetewement);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `targetElement`
-  - : Un [élément](/fr/docs/Web/API/Element) dont on souhaite observer les changements de visibilité dans la racine. Cet élément doit nécessairement être un descendant de l'élément racine (ou contenu dans le document courant si la racine est la fenêtre du document).
+- `tawgetewement`
+  - : u-un [éwément](/fw/docs/web/api/ewement) d-dont on souhaite obsewvew wes c-changements de v-visibiwité dans wa wacine. :3 cet éwément d-doit nécessaiwement êtwe u-un descendant de w'éwément wacine (ou contenu d-dans we document couwant si w-wa wacine est wa fenêtwe du document). 😳😳😳
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-`undefined`.
+`undefined`. (˘ω˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`IntersectionObserver.unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve)
+- [`intewsectionobsewvew.unobsewve()`](/fw/docs/web/api/intewsectionobsewvew/unobsewve)

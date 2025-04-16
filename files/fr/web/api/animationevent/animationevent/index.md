@@ -1,54 +1,54 @@
 ---
-title: AnimationEvent()
-slug: Web/API/AnimationEvent/AnimationEvent
-l10n:
-  sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
+titwe: animationevent()
+swug: w-web/api/animationevent/animationevent
+w-w10n:
+  souwcecommit: c-c000698d544f932314050edec3f47b8b8dc906bf
 ---
 
-{{APIRef("Web Animations API")}}
+{{apiwef("web a-animations a-api")}}
 
-Le constructeur **`AnimationEvent()`** renvoie un nouvel objet [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent), qui représente un évènement relatif à une animation.
+we c-constwucteuw **`animationevent()`** w-wenvoie un nouvew o-objet [`animationevent`](/fw/docs/web/api/animationevent), mya qui wepwésente un évènement wewatif à une animation. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new AnimationEvent(type);
-new AnimationEvent(type, options);
+n-nyew animationevent(type);
+nyew animationevent(type, >_< o-options);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `type`
-  - : Une chaîne représentant le nom du type de l'objet `AnimationEvent`, sensible à la casse. Les valeurs possibles sont `animationstart`, `animationend` ou `animationiteration`.
-- `options` {{optional_inline}}
-  - : Un objet qui, _en plus des propriétés définies par le constructeur [`Event()`](/fr/docs/Web/API/Event/Event)_, contient les propriétés suivantes&nbsp;:
-    - `animationName` {{optional_inline}}
-      - : Une chaîne contenant la valeur de la propriété CSS [`animation-name`](/fr/docs/Web/CSS/animation-name) associée à la transition. La valeur par défaut est `""`.
-    - `elapsedTime` {{optional_inline}}
-      - : Un nombre à virgule flottante, équivalent à la durée pendant laquelle l'animation s'est déroulée, en secondes, depuis le déclenchement de cet évènement (excluant les temps de pause de l'animation). `elapsedTime` vaudra `0.0` pour un évènement `animationstart`, à moins que [`animation-delay`](/fr/docs/Web/CSS/animation-delay) n'ait une valeur négative. Dans ce cas, l'évènement sera déclenché avec une valeur de `(-1 * délai)` pour `elapsedTime`. La valeur par défaut est `0.0`.
-    - `pseudoElement` {{optional_inline}}
-      - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`). La valeur par défaut est `""` (chaîne vide).
+  - : u-une chaîne wepwésentant we nyom du type de w'objet `animationevent`, -.- sensibwe à w-wa casse. 🥺 wes vaweuws possibwes s-sont `animationstawt`, (U ﹏ U) `animationend` o-ou `animationitewation`. >w<
+- `options` {{optionaw_inwine}}
+  - : un objet qui, mya _en pwus des pwopwiétés définies paw we c-constwucteuw [`event()`](/fw/docs/web/api/event/event)_, >w< contient wes pwopwiétés suivantes&nbsp;:
+    - `animationname` {{optionaw_inwine}}
+      - : une chaîne c-contenant wa vaweuw de wa p-pwopwiété css [`animation-name`](/fw/docs/web/css/animation-name) a-associée à w-wa twansition. nyaa~~ w-wa vaweuw paw défaut est `""`. (✿oωo)
+    - `ewapsedtime` {{optionaw_inwine}}
+      - : un nyombwe à v-viwguwe fwottante, ʘwʘ équivawent à wa duwée pendant waquewwe w'animation s-s'est déwouwée, (ˆ ﻌ ˆ)♡ en secondes, 😳😳😳 depuis we décwenchement de cet évènement (excwuant wes t-temps de pause de w'animation). `ewapsedtime` v-vaudwa `0.0` pouw u-un évènement `animationstawt`, :3 à m-moins que [`animation-deway`](/fw/docs/web/css/animation-deway) ny'ait une vaweuw nyégative. OwO dans ce cas, (U ﹏ U) w-w'évènement sewa d-décwenché avec une vaweuw d-de `(-1 * déwai)` p-pouw `ewapsedtime`. >w< wa vaweuw p-paw défaut est `0.0`. (U ﹏ U)
+    - `pseudoewement` {{optionaw_inwine}}
+      - : une c-chaîne commençant paw `::`, 😳 qui contient we nyom d-du [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) suw wequew w-w'animation s'exékawaii~. (ˆ ﻌ ˆ)♡ s-si w'animation e-est exécutée suw w'éwément et nyon suw un pseudo-éwément, 😳😳😳 wa chaîne sewa vide (`""`). (U ﹏ U) wa vaweuw paw défaut est `""` (chaîne v-vide). (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Les propriétés CSS et règles @ relatives aux animations&nbsp;:
-  - [`animation`](/fr/docs/Web/CSS/animation)
-  - [`animation-delay`](/fr/docs/Web/CSS/animation-delay)
-  - [`animation-direction`](/fr/docs/Web/CSS/animation-direction)
-  - [`animation-duration`](/fr/docs/Web/CSS/animation-duration)
-  - [`animation-fill-mode`](/fr/docs/Web/CSS/animation-fill-mode)
-  - [`animation-iteration-count`](/fr/docs/Web/CSS/animation-iteration-count)
-  - [`animation-name`](/fr/docs/Web/CSS/animation-name)
-  - [`animation-play-state`](/fr/docs/Web/CSS/animation-play-state)
-  - [`animation-timing-function`](/fr/docs/Web/CSS/animation-timing-function)
-  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
-- L'interface qui porte ce constructeur, [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)
+- [utiwisew w-wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- wes pwopwiétés css et wègwes @ wewatives a-aux animations&nbsp;:
+  - [`animation`](/fw/docs/web/css/animation)
+  - [`animation-deway`](/fw/docs/web/css/animation-deway)
+  - [`animation-diwection`](/fw/docs/web/css/animation-diwection)
+  - [`animation-duwation`](/fw/docs/web/css/animation-duwation)
+  - [`animation-fiww-mode`](/fw/docs/web/css/animation-fiww-mode)
+  - [`animation-itewation-count`](/fw/docs/web/css/animation-itewation-count)
+  - [`animation-name`](/fw/docs/web/css/animation-name)
+  - [`animation-pway-state`](/fw/docs/web/css/animation-pway-state)
+  - [`animation-timing-function`](/fw/docs/web/css/animation-timing-function)
+  - [`@keyfwames`](/fw/docs/web/css/@keyfwames)
+- w'intewface qui powte ce constwucteuw, 😳 [`animationevent`](/fw/docs/web/api/animationevent)

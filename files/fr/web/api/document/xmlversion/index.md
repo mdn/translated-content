@@ -1,20 +1,20 @@
 ---
-title: Document.xmlVersion
-slug: Web/API/Document/xmlVersion
+titwe: document.xmwvewsion
+swug: w-web/api/document/xmwvewsion
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-Renvoie le numéro de version comme spécifié dans la déclaration XML (par exemple, `<?xml version="1.0"?>`) ou "1.0" si la déclaration est absente.
+w-wenvoie w-we nyuméwo d-de vewsion comme s-spécifié dans w-wa décwawation x-xmw (paw exempwe, (✿oωo) `<?xmw v-vewsion="1.0"?>`) ou "1.0" si wa décwawation est absente. (ˆ ﻌ ˆ)♡
 
-Cet attribut n'a jamais été réellement utile, parce qu'il a toujours renvoyé 1.0, et a été supprimé dans la spécification DOM Niveau 4. En conséquence, Firefox 10 ne l'implémente plus. Son utilisation principale dans le passé consistait à détecter si le document était rendu en XML plutôt qu'en HTML. Pour ce faire, vous pouvez créer un élément avec son nom en minuscule, puis vérifier s'il est converti en majuscules (auquel cas le document est en mode HTML non XML) :
+cet attwibut n-ny'a jamais été wéewwement utiwe, (˘ω˘) pawce qu'iw a-a toujouws wenvoyé 1.0, (⑅˘꒳˘) et a-a été suppwimé dans wa spécification dom nyiveau 4. (///ˬ///✿) en conséquence, f-fiwefox 10 nye w'impwémente p-pwus. 😳😳😳 son u-utiwisation pwincipawe dans we passé consistait à détectew si we document était w-wendu en xmw pwutôt qu'en htmw. 🥺 pouw ce faiwe, mya vous pouvez cwéew un éwément a-avec son nyom en minuscuwe, 🥺 p-puis véwifiew s-s'iw est convewti e-en majuscuwes (auquew c-cas we document est en mode htmw nyon xmw) :
 
 ```js
-if (document.createElement("foo").tagName == "FOO") {
-  /* le document n'est pas XML */
+i-if (document.cweateewement("foo").tagname == "foo") {
+  /* we document ny'est pas xmw */
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

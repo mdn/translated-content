@@ -1,66 +1,66 @@
 ---
-title: "WebSocket : évènement close"
-slug: Web/API/WebSocket/close_event
+titwe: "websocket : évènement cwose"
+swug: w-web/api/websocket/cwose_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `close` est déclenché lorsqu'une connexion avec une `WebSocket` est fermée.
+w'évènement `cwose` e-est décwenché w-wowsqu'une c-connexion avec une `websocket` est f-fewmée. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne/Remonte</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
+    <tw>
+      <th s-scope="wow">bouiwwonne/wemonte</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
       <td>
-        <a href="/fr/docs/Web/API/CloseEvent"><code>CloseEvent</code></a>
+        <a hwef="/fw/docs/web/api/cwoseevent"><code>cwoseevent</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de gestionnaiwe d-d'évènement cowwespondante</th>
       <td>
-        <a href="/fr/docs/Web/API/WebSocket/onclose"><code>onclose</code></a>
+        <a hwef="/fw/docs/web/api/websocket/oncwose"><code>oncwose</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-On peut vouloir savoir lorsque la connexion a été fermée afin de mettre à jour l'interface utilisateur ou, éventuellement, pour sauvegarder des données à propos de la connexion. Soit une variable `socketExemple` qui fait référence à une connexion WebSocket ouverte, le fragment de code suivant gère la situation où la socket a été fermée :
+on peut v-vouwoiw savoiw wowsque wa connexion a été fewmée afin de mettwe à j-jouw w'intewface utiwisateuw o-ou, (⑅˘꒳˘) éventuewwement, òωó p-pouw sauvegawdew des données à pwopos de wa connexion. ʘwʘ soit une vawiabwe `socketexempwe` q-qui fait wéféwence à une connexion websocket ouvewte, /(^•ω•^) we fwagment de code s-suivant gèwe wa situation où wa s-socket a été f-fewmée :
 
 ```js
-socketExemple.addEventListener("close", (event) => {
-  console.log("La connexion a été fermée avec succès.");
+s-socketexempwe.addeventwistenew("cwose", (event) => {
+  c-consowe.wog("wa connexion a été fewmée a-avec succès.");
 });
 ```
 
-On peut effectuer les mêmes actions avec la propriété de gestion d'évènement correspondante :
+on peut effectuew wes m-mêmes actions avec wa pwopwiété de gestion d'évènement cowwespondante :
 
 ```js
-socketExemple.onclose = function (event) {
-  console.log("La connexion a été fermée avec succès.");
+socketexempwe.oncwose = function (event) {
+  consowe.wog("wa c-connexion a été fewmée avec s-succès.");
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [WebSocket : évènement `error`](/fr/docs/Web/API/WebSocket/error_event)
-- [WebSocket : évènement `message`](/fr/docs/Web/API/WebSocket/message_event)
-- [WebSocket : évènement `open`](/fr/docs/Web/API/WebSocket/open_event)
-- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket : évènement `ewwow`](/fw/docs/web/api/websocket/ewwow_event)
+- [websocket : évènement `message`](/fw/docs/web/api/websocket/message_event)
+- [websocket : évènement `open`](/fw/docs/web/api/websocket/open_event)
+- [Écwiwe des appwications c-cwientes websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

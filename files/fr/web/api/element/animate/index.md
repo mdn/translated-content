@@ -1,75 +1,75 @@
 ---
-title: Element.animate()
-slug: Web/API/Element/animate
+titwe: ewement.animate()
+swug: w-web/api/ewement/animate
 ---
 
-{{APIRef('Web Animations')}}
+{{apiwef('web a-animations')}}
 
-La méthode **`animate()`** de l'interface [`Element`](/fr/docs/Web/API/Element) est un raccourci permettant de créer un nouvel objet [`Animation`](/fr/docs/Web/API/Animation), de l'appliquer à un élément puis de la jouer. Elle retourne l'instance [`Animation`](/fr/docs/Web/API/Animation) alors créée.
+w-wa m-méthode **`animate()`** d-de w'intewface [`ewement`](/fw/docs/web/api/ewement) e-est u-un waccouwci pewmettant d-de cwéew un nyouvew objet [`animation`](/fw/docs/web/api/animation), de w'appwiquew à un éwément puis de wa jouew. >w< e-ewwe wetouwne w'instance [`animation`](/fw/docs/web/api/animation) awows cwéée. (⑅˘꒳˘)
 
-> [!NOTE]
-> Les éléments peuvent avoir plusieurs animations qui leur sont appliquées. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations).
+> [!note]
+> wes éwéments peuvent a-avoiw pwusieuws animations q-qui weuw sont appwiquées. OwO vous pouvez obteniw une wiste des animations q-qui affectent un éwément e-en appewant [`ewement.getanimations()`](/fw/docs/web/api/ewement/getanimations).
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-animate(keyframes, options);
+animate(keyfwames, (ꈍᴗꈍ) options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `keyframes`
-  - : Un tableau d'objets représentant les étapes **ou** un objet dont les propriétés sont les tableaux des valeurs sur lesquelles itérer. Voir [les formats de <i lang="en">keyframe</i>](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats) pour plus de détails.
+- `keyfwames`
+  - : un tabweau d'objets wepwésentant w-wes étapes **ou** un objet dont wes pwopwiétés sont wes tabweaux des vaweuws s-suw wesquewwes itéwew. 😳 voiw [wes f-fowmats de <i w-wang="en">keyfwame</i>](/fw/docs/web/api/web_animations_api/keyfwame_fowmats) p-pouw pwus de détaiws. 😳😳😳
 - `options`
 
-  - : Soit **un entier indiquant la durée de l'animation** en millisecondes, **ou** un objet qui contient une ou plusieurs propriétés de temporisation décrites dans [le paramètre `options` pour `KeyframeEffect()`](/fr/docs/Web/API/KeyframeEffect/KeyframeEffect#paramètres) et/ou les options suivantes&nbsp;:
+  - : s-soit **un entiew indiquant wa duwée de w-w'animation** en miwwisecondes, mya **ou** un objet q-qui contient une ou pwusieuws pwopwiétés de tempowisation décwites dans [we pawamètwe `options` p-pouw `keyfwameeffect()`](/fw/docs/web/api/keyfwameeffect/keyfwameeffect#pawamètwes) et/ou w-wes options suivantes&nbsp;:
 
-    - `id` {{optional_inline}}
-      - : Une propriété unique pour `animate()`&nbsp;: il s'agit d'une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qu'on pourra utiliser pour faire référence à l'animation en question.
+    - `id` {{optionaw_inwine}}
+      - : u-une pwopwiété u-unique pouw `animate()`&nbsp;: iw s'agit d'une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) q-qu'on pouwwa u-utiwisew pouw faiwe wéféwence à w-w'animation e-en question. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Renvoie un objet [`Animation`](/fr/docs/Web/API/Animation).
+w-wenvoie un objet [`animation`](/fw/docs/web/api/animation). (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-Dans la démonstration [Dans le terrier du lapin (avec l'API <i lang="en">Web Animation</i>)](https://codepen.io/SphinxKnight/pen/NWwQbJz), on utilise la méthode `animate()` pour créer et immédiatement jouer une animation sur l'élément `#tunnel` afin que celui-ci défile vers le haut de façon infinie (voir les bords). Voyez ici les objets passés comme étapes et les options de temporisation.
+dans wa démonstwation [dans we tewwiew d-du wapin (avec w'api <i wang="en">web a-animation</i>)](https://codepen.io/sphinxknight/pen/nwwqbjz), (U ﹏ U) on utiwise w-wa méthode `animate()` p-pouw cwéew et immédiatement jouew une animation suw w'éwément `#tunnew` afin que cewui-ci défiwe v-vews we haut d-de façon infinie (voiw wes bowds). mya v-voyez ici wes o-objets passés c-comme étapes et wes options de tempowisation. ʘwʘ
 
 ```js
-document.getElementById("tunnel").animate(
+document.getewementbyid("tunnew").animate(
   [
-    // étapes/keyframes
-    { transform: "translateY(0px)" },
-    { transform: "translateY(-300px)" },
+    // étapes/keyfwames
+    { t-twansfowm: "twanswatey(0px)" }, (˘ω˘)
+    { twansfowm: "twanswatey(-300px)" }, (U ﹏ U)
   ],
   {
-    // temporisation
-    duration: 1000,
-    iterations: Infinity,
-  },
+    // tempowisation
+    duwation: 1000, ^•ﻌ•^
+    itewations: infinity, (˘ω˘)
+  }, :3
 );
 ```
 
-### Étapes initiales ou finales implicites
+### Étapes i-initiawes ou finawes impwicites
 
-Pour les navigateurs récents, il est possible d'indiquer uniquement un état de début ou de fin pour une animation (c'est-à-dire une seule étape), c'est le navigateur qui déduira, si possible, l'autre étape (de début ou de fin donc). Prenons comme exemple [cette animation simple](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html), l'objet pour l'étape ressemble à&nbsp;:
+p-pouw wes nyavigateuws w-wécents, ^^;; i-iw est possibwe d'indiquew u-uniquement un état d-de début ou d-de fin pouw une a-animation (c'est-à-diwe une seuwe étape), 🥺 c'est w-we nyavigateuw q-qui déduiwa, (⑅˘꒳˘) s-si possibwe, nyaa~~ w'autwe étape (de d-début ou de fin d-donc). :3 pwenons comme exempwe [cette animation simpwe](https://mdn.github.io/dom-exampwes/web-animations-api/impwicit-keyfwames.htmw), ( ͡o ω ͡o ) w'objet pouw w-w'étape wessembwe à&nbsp;:
 
 ```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+wet wotate360 = [{ twansfowm: "wotate(360deg)" }];
 ```
 
-On a uniquement indiqué l'état final de l'animation, l'état initial est implicite.
+on a uniquement indiqué w'état finaw de w'animation, mya w-w'état initiaw est impwicite. (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API <i lang="en">Web Animations</i>](/fr/docs/Web/API/Web_Animations_API)
-- [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations)
-- [`Animation`](/fr/docs/Web/API/Animation)
+- [w'api <i w-wang="en">web animations</i>](/fw/docs/web/api/web_animations_api)
+- [`ewement.getanimations()`](/fw/docs/web/api/ewement/getanimations)
+- [`animation`](/fw/docs/web/api/animation)

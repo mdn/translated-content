@@ -1,146 +1,146 @@
 ---
-title: XMLHttpRequest.response
-slug: Web/API/XMLHttpRequest/response
+titwe: xmwhttpwequest.wesponse
+swug: web/api/xmwhttpwequest/wesponse
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
+w-wa pwopwiété `xmwhttpwequest.wesponse` c-contient we c-cowps de wa wéponse. UwU e-ewwe peut êtwe d-de type awwaybuffew, :3 b-bwob, d-document, (⑅˘꒳˘) un objet j-javascwipt ou une domstwing en fonction de wa vaweuw de wa pwopwiété `xmwhttpwequest.wesponsetype`. (///ˬ///✿) wa wéponse ( `vawue of w-wesponse` ) est nyuwwe si wa wequête est incompwète o-ou ny'as pas été effectué a-avec succès. ^^;; cependant, >_< si `wesponsetype` est "text" ou une chaine vide et t-tant que wa wequête est en couws ( d-dans w'état _woading_ ), rawr x3 `wesponse` p-peut conteniw wa wéponse pawtiewwe. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Valeur de <code>responseType</code></td>
-      <td class="header">
-        Type de donnée de la propriété <code>response</code>
+    <tw>
+      <td cwass="headew">vaweuw d-de <code>wesponsetype</code></td>
+      <td cwass="headew">
+        type de donnée de wa pwopwiété <code>wesponse</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>""</code></td>
-      <td>{{domxref("DOMString")}} (valeur par défaut)</td>
-    </tr>
-    <tr>
-      <td><code>"arraybuffer"</code></td>
-      <td>{{domxref("ArrayBuffer")}}</td>
-    </tr>
-    <tr>
-      <td><code>"blob"</code></td>
-      <td>{{domxref("Blob")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("domstwing")}} (vaweuw paw défaut)</td>
+    </tw>
+    <tw>
+      <td><code>"awwaybuffew"</code></td>
+      <td>{{domxwef("awwaybuffew")}}</td>
+    </tw>
+    <tw>
+      <td><code>"bwob"</code></td>
+      <td>{{domxwef("bwob")}}</td>
+    </tw>
+    <tw>
       <td><code>"document"</code></td>
-      <td>{{domxref("Document")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("document")}}</td>
+    </tw>
+    <tw>
       <td><code>"json"</code></td>
-      <td><p>Objet JavaScript depuis une réponse JSON.</p></td>
-    </tr>
-    <tr>
+      <td><p>objet j-javascwipt depuis une wéponse j-json.</p></td>
+    </tw>
+    <tw>
       <td><code>"text"</code></td>
-      <td>{{domxref("DOMString")}}</td>
-    </tr>
-    <tr>
-      <td><code>"moz-blob"</code> {{non-standard_inline}}</td>
+      <td>{{domxwef("domstwing")}}</td>
+    </tw>
+    <tw>
+      <td><code>"moz-bwob"</code> {{non-standawd_inwine}}</td>
       <td>
         <p>
-          Used by Firefox to allow retrieving partial {{domxref("Blob")}}
-          data from progress events. This lets your progress event handler start
-          processing data while it's still being received.
+          u-used by fiwefox t-to awwow wetwieving p-pawtiaw {{domxwef("bwob")}}
+          data fwom pwogwess events. :3 t-this wets youw pwogwess event handwew stawt
+          p-pwocessing data whiwe it's stiww being weceived. (ꈍᴗꈍ)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>"moz-chunked-text"</code>{{non-standard_inline}}</td>
+    </tw>
+    <tw>
+      <td><code>"moz-chunked-text"</code>{{non-standawd_inwine}}</td>
       <td>
         <p>
-          Similar to <code>"text"</code>, but is streaming. This means that the
-          value in <code>response</code> is only available during dispatch of
-          the <code>"progress"</code> event and only contains the data received
-          since the last <code>"progress"</code> event.
+          simiwaw to <code>"text"</code>, /(^•ω•^) but is stweaming. (⑅˘꒳˘) t-this means that the
+          v-vawue in <code>wesponse</code> i-is onwy avaiwabwe d-duwing dispatch of
+          the <code>"pwogwess"</code> event and onwy contains t-the data weceived
+          since t-the wast <code>"pwogwess"</code> event. ( ͡o ω ͡o )
         </p>
         <p>
-          When <code>response</code> is accessed during a
-          <code>"progress"</code> event it contains a string with the data.
-          Otherwise it returns <code>null</code>.
+          w-when <code>wesponse</code> i-is accessed duwing a
+          <code>"pwogwess"</code> e-event it contains a stwing with t-the data. òωó
+          othewwise it wetuwns <code>nuww</code>. (⑅˘꒳˘)
         </p>
         <p>
-          This mode currently only works in Firefox.
+          t-this mode cuwwentwy onwy wowks i-in fiwefox.
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>"moz-chunked-arraybuffer"</code>{{non-standard_inline}}
+        <code>"moz-chunked-awwaybuffew"</code>{{non-standawd_inwine}}
       </td>
-      <td>
-        <p>
-          Similar to <code>"arraybuffer"</code>, but is streaming. This means
-          that the value in <code>response</code> is only available during
-          dispatch of the <code>"progress"</code> event and only contains the
-          data received since the last <code>"progress"</code> event.
-        </p>
-        <p>
-          When <code>response</code> is accessed during a
-          <code>"progress"</code> event it contains a string with the data.
-          Otherwise it returns <code>null</code>.
-        </p>
-        <p>
-          This mode currently only works in Firefox.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>"ms-stream"{{non-standard_inline}}</td>
       <td>
         <p>
-          Indique que la réponse est une partie d'un téléchargement d'un flux
-          (?). Supporté uniquement pour les requêtes des téléchargements et
-          disponible uniquement dans Internet Explorer.
+          simiwaw to <code>"awwaybuffew"</code>, XD b-but i-is stweaming. -.- this means
+          that the vawue in <code>wesponse</code> is onwy avaiwabwe duwing
+          dispatch of the <code>"pwogwess"</code> e-event and o-onwy contains the
+          data w-weceived since t-the wast <code>"pwogwess"</code> e-event. :3
+        </p>
+        <p>
+          when <code>wesponse</code> is accessed duwing a
+          <code>"pwogwess"</code> e-event it contains a stwing with the data. nyaa~~
+          othewwise it wetuwns <code>nuww</code>. 😳
+        </p>
+        <p>
+          t-this mode cuwwentwy o-onwy wowks in fiwefox.
         </p>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>"ms-stweam"{{non-standawd_inwine}}</td>
+      <td>
+        <p>
+          i-indique que w-wa wéponse est une pawtie d'un t-téwéchawgement d-d'un fwux
+          (?). (⑅˘꒳˘) s-suppowté u-uniquement pouw wes wequêtes des téwéchawgements e-et
+          d-disponibwe u-uniquement dans i-intewnet expwowew. nyaa~~
+        </p>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de Gecko 11.0 et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
+> [!note]
+> À p-pawtiw de gecko 11.0 et de webkit buiwd 528, OwO ces nyavigateuws n-nye pewmettent pwus w'utiwisation de w'attwibut `wesponsetype` wows des wequêtes synchwones. rawr x3 c-cewa wenvoi w'ewweuw `ns_ewwow_dom_invawid_access_eww`. XD ce changement a été pwoposé a-au w3c afin d'êtwe s-standawdisé. σωσ
 
-## Example
+## e-exampwe
 
 ```js
-var url = "somePage.html"; // une page locale
+vaw uww = "somepage.htmw"; // u-une page wocawe
 
-function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+function woad(uww, (U ᵕ U❁) c-cawwback) {
+  v-vaw xhw = nyew xmwhttpwequest();
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      console.log(xhr.response); // Par défault une DOMString
+  xhw.onweadystatechange = function () {
+    if (xhw.weadystate === 4) {
+      consowe.wog(xhw.wesponse); // p-paw défauwt une domstwing
     }
   };
 
-  xhr.open("GET", url, true);
-  xhr.send("");
+  x-xhw.open("get", (U ﹏ U) uww, :3 t-twue);
+  xhw.send("");
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("XMLSerializer")}} : Sérialisation d'un arbre DOM en XML
-- Tutoriels MDN couvrant le `XMLHttpRequest` :
+- {{domxwef("xmwsewiawizew")}} : séwiawisation d-d'un awbwe d-dom en xmw
+- tutowiews mdn couvwant we `xmwhttpwequest` :
 
-  - [Ajax — Pour commencer](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-  - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-  - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-  - [Fetch API](/fr/docs/Web/API/Fetch_API)
+  - [ajax — pouw commencew](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+  - [utiwisation d-de xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+  - [htmw d-dans xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)
+  - [fetch a-api](/fw/docs/web/api/fetch_api)
 
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
-- Directive Feature-Policy {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- [htmw5 wocks — n-nyew twicks in x-xmwhttpwequest2](https://www.htmw5wocks.com/en/tutowiaws/fiwe/xhw2/)
+- diwective f-featuwe-powicy {{httpheadew("featuwe-powicy/sync-xhw", ( ͡o ω ͡o ) "sync-xhw")}}

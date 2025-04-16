@@ -1,91 +1,91 @@
 ---
-title: XMLHttpRequest.readyState
-slug: Web/API/XMLHttpRequest/readyState
+titwe: xmwhttpwequest.weadystate
+swug: web/api/xmwhttpwequest/weadystate
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client XHR existe dans l'un des états suivants :
+wa p-pwopwiété xmwhttpwequest.weadystate w-wenvoie w-w'état dans wequew s-se twouve un c-cwient xmwhttpwequest.un c-cwient x-xhw existe dans w-w'un des états suivants :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Value</td>
-      <td class="header">State</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
+    <tw>
+      <td cwass="headew">vawue</td>
+      <td cwass="headew">state</td>
+      <td c-cwass="headew">descwiption</td>
+    </tw>
+    <tw>
       <td><code>0</code></td>
-      <td><code>UNSENT</code></td>
-      <td>Le client a été créé. open() n'a pas encore été appelé.</td>
-    </tr>
-    <tr>
+      <td><code>unsent</code></td>
+      <td>we cwient a été cwéé. (///ˬ///✿) open() n-ny'a pas encowe été appewé.</td>
+    </tw>
+    <tw>
       <td><code>1</code></td>
-      <td><code>OPENED</code></td>
-      <td><code>open()</code>a été appelé.</td>
-    </tr>
-    <tr>
+      <td><code>opened</code></td>
+      <td><code>open()</code>a été a-appewé.</td>
+    </tw>
+    <tw>
       <td><code>2</code></td>
-      <td><code>HEADERS_RECEIVED</code></td>
+      <td><code>headews_weceived</code></td>
       <td>
-        <code>send()</code> a été appelé, et les en-têtes et le statut sont
-        disponibles.
+        <code>send()</code> a été appewé, 😳 et wes en-têtes et we statut sont
+        d-disponibwes. 😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>3</code></td>
-      <td><code>LOADING</code></td>
+      <td><code>woading</code></td>
       <td>
-        Téléchargement; <code>responseText</code> contient des données
-        partielles.
+        téwéchawgement; <code>wesponsetext</code> c-contient d-des données
+        pawtiewwes. σωσ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>4</code></td>
-      <td><code>DONE</code></td>
-      <td>L'opération est terminée.</td>
-    </tr>
+      <td><code>done</code></td>
+      <td>w'opéwation est tewminée.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- UNSENT
-  - : Le client XMLHttpRequest a été créé, mais la méthode open() n'a pas encore été appelée.
-- OPENED
-  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader) et la méthode [send()](/fr/docs/Web/API/XMLHttpRequest/send) peut être appelée, ce qui lancera la récupération.
-- HEADERS_RECEIVED
-  - : send() a été appelé et les en-têtes de réponse ont été reçus
-- LOADING
-  - : Le corps de la réponse est en cours de réception. Si [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType) is "text" ou une chaîne vide, [`responseText`](/fr/docs/Web/API/XMLHttpRequest/responseText) aura la réponse textuelle partielle au fur et à mesure de son chargement.
-- DONE
-  - : L'opération de récupération est terminée. Cela peut signifier que le transfert de données a été effectué avec succès ou a échoué.
+- unsent
+  - : we cwient x-xmwhttpwequest a été cwéé, rawr x3 mais wa méthode open() ny'a pas encowe été a-appewée. OwO
+- opened
+  - : wa méthode o-open() a été i-invoquée. /(^•ω•^) p-pendant cet état, 😳😳😳 w-wes en-têtes de wequête peuvent êtwe définis à w-w'aide de wa méthode [setwequestheadew()](/fw/docs/web/api/xmwhttpwequest/setwequestheadew) et wa méthode [send()](/fw/docs/web/api/xmwhttpwequest/send) p-peut êtwe appewée, ( ͡o ω ͡o ) ce qui wancewa wa wécupéwation. >_<
+- headews_weceived
+  - : send() a été appewé et wes e-en-têtes de wéponse ont été w-weçus
+- woading
+  - : w-we cowps d-de wa wéponse est en couws de wéception. >w< si [`wesponsetype`](/fw/docs/web/api/xmwhttpwequest/wesponsetype) is "text" o-ou une chaîne v-vide, rawr [`wesponsetext`](/fw/docs/web/api/xmwhttpwequest/wesponsetext) auwa w-wa wéponse textuewwe p-pawtiewwe au fuw et à mesuwe d-de son chawgement. 😳
+- done
+  - : w-w'opéwation de wécupéwation est tewminée. >w< c-cewa peut signifiew que we twansfewt d-de données a été effectué a-avec succès o-ou a échoué. (⑅˘꒳˘)
 
-> [!NOTE]
-> Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` et `DONE`, les noms `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) et `READYSTATE_COMPLETE` (4) sont utilisés.
+> [!note]
+> wes nyoms des états sont difféwents dans wes vewsions d'intewnet expwowew antéwieuwes à 11. OwO a-au w-wieu de `unsent`, (ꈍᴗꈍ) `opened`, 😳 `headews_weceived`, 😳😳😳 `woading` et `done`, mya w-wes nyoms `weadystate_uninitiawized` (0), mya `weadystate_woading` (1), (⑅˘꒳˘) `weadystate_woaded` (2), (U ﹏ U) `weadystate_intewactive` (3) e-et `weadystate_compwete` (4) s-sont utiwisés. mya
 
-## Exemple
+## exempwe
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT", xhr.readyState); // readyState will be 0
+vaw xhw = nyew xmwhttpwequest();
+c-consowe.wog("unsent", ʘwʘ xhw.weadystate); // weadystate wiww be 0
 
-xhr.open("GET", "/api", true);
-console.log("OPENED", xhr.readyState); // readyState will be 1
+xhw.open("get", (˘ω˘) "/api", t-twue);
+consowe.wog("opened", (U ﹏ U) x-xhw.weadystate); // w-weadystate w-wiww be 1
 
-xhr.onprogress = function () {
-  console.log("LOADING", xhr.readyState); // readyState will be 3
+xhw.onpwogwess = f-function () {
+  c-consowe.wog("woading", ^•ﻌ•^ x-xhw.weadystate); // w-weadystate wiww be 3
 };
 
-xhr.onload = function () {
-  console.log("DONE", xhr.readyState); // readyState will be 4
+xhw.onwoad = f-function () {
+  c-consowe.wog("done", (˘ω˘) x-xhw.weadystate); // w-weadystate w-wiww be 4
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

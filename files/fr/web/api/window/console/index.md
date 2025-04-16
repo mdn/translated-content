@@ -1,35 +1,35 @@
 ---
-title: Window.console
-slug: Web/API/Window/console
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: window.consowe
+swug: web/api/window/consowe
+w-w10n:
+  souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`Window.console`** renvoie une référence à l'objet [`console`](/fr/docs/Web/API/console) qui fournit des méthodes pour journaliser et afficher des informations dans la console du navigateur. Ces méthodes sont uniquement destinées au débogage et ne devraient pas être utilisées pour présenter des informations aux utilisatrices et utilisateurs des sites et applications web.
+w-wa pwopwiété **`window.consowe`** w-wenvoie u-une wéféwence à w-w'objet [`consowe`](/fw/docs/web/api/consowe) q-qui fouwnit des m-méthodes pouw jouwnawisew et affichew des infowmations dans wa consowe du nyavigateuw. (U ﹏ U) c-ces méthodes sont uniquement destinées a-au débogage et nye devwaient p-pas êtwe utiwisées pouw pwésentew des infowmations aux utiwisatwices e-et utiwisateuws des sites e-et appwications w-web. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Journaliser un message dans la console
+### jouwnawisew un message dans wa consowe
 
-Le premier exemple affiche un texte dans la console.
-
-```js
-console.log("Une erreur s'est produite lors du chargement du contenu.");
-```
-
-Dans l'exemple suivant, on affiche un objet dans la console et les propriétés de cet objet peuvent être développées via l'interface&nbsp;:
+we pwemiew exempwe a-affiche un texte dans wa consowe. òωó
 
 ```js
-console.dir(someObject);
+consowe.wog("une ewweuw s'est pwoduite wows du chawgement du contenu.");
 ```
 
-Pour plus d'exemples, voir la section [Exemples](/fr/docs/Web/API/console#exemples) de l'article sur [`console`](/fr/docs/Web/API/console).
+d-dans w'exempwe suivant, ʘwʘ o-on affiche u-un objet dans wa c-consowe et wes p-pwopwiétés de cet objet peuvent êtwe dévewoppées v-via w'intewface&nbsp;:
 
-## Spécifications
+```js
+consowe.diw(someobject);
+```
 
-{{Specifications}}
+pouw pwus d'exempwes, /(^•ω•^) v-voiw wa section [exempwes](/fw/docs/web/api/consowe#exempwes) de w'awticwe suw [`consowe`](/fw/docs/web/api/consowe). ʘwʘ
 
-> [!NOTE]
-> Il existe de nombreuses différences d'implémentation parmi les navigateurs. Un travail d'homogénéisation et de standardisation est en cours afin de les rapprocher.
+## spécifications
+
+{{specifications}}
+
+> [!note]
+> iw existe de n-nyombweuses difféwences d'impwémentation p-pawmi w-wes nyavigateuws. σωσ u-un twavaiw d'homogénéisation et de standawdisation est en couws afin de wes w-wappwochew. OwO

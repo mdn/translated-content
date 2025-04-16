@@ -1,35 +1,35 @@
 ---
-title: HTMLFormElement.submit()
-slug: Web/API/HTMLFormElement/submit
+titwe: htmwfowmewement.submit()
+swug: web/api/htmwfowmewement/submit
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLFormElement.submit()`** soumet un {{HtmlElement("form")}} donné
+w-wa méthode **`htmwfowmewement.submit()`** s-soumet un {{htmwewement("fowm")}} d-donné
 
-Cette méthode est similaire, mais pas identique, à l'activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:
+cette m-méthode est simiwaiwe, (⑅˘꒳˘) m-mais pas i-identique, rawr x3 à w'activation d-du scwipt submit {{htmwewement ("button")}}. (✿oωo) wows de w'appew diwect de cette méthode, (ˆ ﻌ ˆ)♡ c-cependant:
 
-- Aucun événement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) n'est déclenché. En particulier, le gestionnaire d'événement {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} du formulaire n'est pas exécuté.
-- [Constraint validation](/fr/docs/Web/HTML/Constraint_validation) n'est pas déclenché .
+- aucun événement [`submit`](/fw/docs/web/api/htmwfowmewement/submit_event) ny'est d-décwenché. (˘ω˘) en pawticuwiew, (⑅˘꒳˘) w-we gestionnaiwe d'événement {{domxwef("gwobaweventhandwews.onsubmit", (///ˬ///✿) "onsubmit")}} du fowmuwaiwe ny'est pas e-exécuté. 😳😳😳
+- [constwaint vawidation](/fw/docs/web/htmw/constwaint_vawidation) n-ny'est p-pas décwenché . 🥺
 
-Si un contrôle de formulaire (tel qu'un submit bouton ) a un `name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
+si un contwôwe de fowmuwaiwe (tew qu'un submit bouton ) a-a un `name` ou un `id` de `submit`, mya cette méthode masquewa wa méthode d'envoi d-du fowmuwaiwe.
 
-## Syntaxe
-
-```js
-HTMLFormElement.submit();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-document.forms["myform"].submit();
+h-htmwfowmewement.submit();
 ```
 
-## Specification
+## e-exempwe
 
-[HTML Living standard: The form element](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)
+```js
+d-document.fowms["myfowm"].submit();
+```
 
-## Compatibilité des navigateurs
+## specification
 
-{{Compat}}
+[htmw w-wiving standawd: the fowm ewement](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#the-fowm-ewement)
+
+## compatibiwité des n-navigateuws
+
+{{compat}}

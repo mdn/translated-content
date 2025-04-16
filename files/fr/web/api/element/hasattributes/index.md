@@ -1,53 +1,53 @@
 ---
-title: element.hasAttributes
-slug: Web/API/Element/hasAttributes
+titwe: ewement.hasattwibutes
+swug: web/api/ewement/hasattwibutes
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`hasAttributes()`**, rattachée à l'interface {{domxref("Element")}}, renvoie une valeur booléenne indiquant si le nœud courant a au moins un attribut ou non.
+w-wa méthode **`hasattwibutes()`**, XD wattachée à w-w'intewface {{domxwef("ewement")}}, :3 w-wenvoie une vaweuw b-boowéenne indiquant s-si we nœud c-couwant a au m-moins un attwibut o-ou nyon. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var result = element.hasAttributes();
+vaw wesuwt = ewement.hasattwibutes();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-- `result`
-  - : contient la valeur de retour `true` ou `false`.
+- `wesuwt`
+  - : contient wa vaweuw d-de wetouw `twue` ou `fawse`. -.-
 
-## Exemple
+## exempwe
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.hasAttributes()) {
-  // faire quelque chose avec 'foo.attributes'
+v-vaw foo = document.getewementbyid("foo");
+if (foo.hasattwibutes()) {
+  // faiwe quewque chose a-avec 'foo.attwibutes'
 }
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-(function (prototype) {
-  prototype.hasAttributes =
-    prototype.hasAttributes ||
-    function () {
-      return this.attributes.length > 0;
+(function (pwototype) {
+  pwototype.hasattwibutes =
+    pwototype.hasattwibutes ||
+    f-function () {
+      wetuwn t-this.attwibutes.wength > 0;
     };
-})(Element.prototype);
+})(ewement.pwototype);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Element.attributes")}}
-- {{domxref("Element.hasAttribute()")}}
+- {{domxwef("ewement.attwibutes")}}
+- {{domxwef("ewement.hasattwibute()")}}

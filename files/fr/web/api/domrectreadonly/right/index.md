@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.right
-slug: Web/API/DOMRectReadOnly/right
+titwe: domwectweadonwy.wight
+swug: web/api/domwectweadonwy/wight
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`right`** de l'interface **`DOMRectReadOnly`** renvoie la valeur de la coordonnée droite du `DOMRect.` (a la même valeur que `x + width` _(x + largeur)_, ou `x` si `width` est négative).
+w-wa pwopwiété e-en wectuwe seuwe **`wight`** d-de w-w'intewface **`domwectweadonwy`** w-wenvoie wa vaweuw d-de wa coowdonnée d-dwoite du `domwect.` (a wa même vaweuw que `x + width` _(x + wawgeuw)_, ou `x` si `width` e-est nyégative). ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-var recRight = DOMRect.right;
+vaw wecwight = d-domwect.wight;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+u-un doubwe. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

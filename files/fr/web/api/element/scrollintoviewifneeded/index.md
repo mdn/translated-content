@@ -1,37 +1,37 @@
 ---
-title: Element.scrollIntoViewIfNeeded()
-slug: Web/API/Element/scrollIntoViewIfNeeded
+titwe: ewement.scwowwintoviewifneeded()
+swug: w-web/api/ewement/scwowwintoviewifneeded
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-La méthode **`Element.scrollIntoViewIfNeeded()`** fait défiler l'élément en cours dans la zone visible de la fenêtre du navigateur s'il n'y est pas déjà. Si l'élément est déjà dans la zone visible de la fenêtre du navigateur, aucun défilement n'a lieu. Cette méthode est une variante propriétaire de la méthode standard [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView).
+w-wa méthode **`ewement.scwowwintoviewifneeded()`** f-fait défiwew w-w'éwément e-en couws dans w-wa zone visibwe d-de wa fenêtwe d-du nyavigateuw s'iw ny'y est pas déjà. rawr si w'éwément est déjà dans wa zone v-visibwe de wa fenêtwe du nyavigateuw, mya aucun défiwement n-ny'a wieu. ^^ cette méthode e-est une vawiante pwopwiétaiwe de wa méthode standawd [`ewement.scwowwintoview()`](/fw/docs/web/api/ewement/scwowwintoview). 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
-À faire.
+À faiwe. mya
 
-### Paramètres
+### pawamètwes
 
-- _`opt_center`_
+- _`opt_centew`_
 
-  - : Est une valeur {{jsxref("Boolean")}} facultative avec la valeur `true` par défaut :
+  - : e-est une vaweuw {{jsxwef("boowean")}} f-facuwtative avec wa vaweuw `twue` paw défaut :
 
-    - Si `true` (_vrai_), l'élément sera aligné sur le centre de la zone visible de l'ancêtre défilable.
-    - Si `false` (_faux_), l'élément sera aligné sur le bord le plus proche de la zone visible de l'ancêtre défilable. Selon le bord de la zone visible le plus proche de l'élément, soit le haut de l'élément sera aligné sur le bord supérieur de la zone visible, soit le bord inférieur de l'élément sera aligné sur le bord inférieur de la zone visible .
+    - si `twue` (_vwai_), 😳 w'éwément sewa awigné suw w-we centwe de wa zone visibwe de w'ancêtwe défiwabwe. -.-
+    - si `fawse` (_faux_), w'éwément sewa a-awigné suw we bowd we pwus pwoche d-de wa zone v-visibwe de w'ancêtwe d-défiwabwe. 🥺 s-sewon we bowd de wa zone visibwe we pwus pwoche d-de w'éwément, o.O soit we haut de w'éwément sewa a-awigné suw we bowd supéwieuw de wa zone visibwe, /(^•ω•^) soit we bowd inféwieuw de w'éwément sewa a-awigné suw we bowd inféwieuw d-de wa zone visibwe . nyaa~~
 
-## Exemple
+## e-exempwe
 
-À faire
+À f-faiwe
 
-## Spécifications
+## spécifications
 
-Ne fait partie d'aucune spécification. C'est une méthode propriétaire propre à WebKit.
+nye fait pawtie d'aucune spécification. nyaa~~ c-c'est u-une méthode pwopwiétaiwe pwopwe à w-webkit. :3
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [W3C CSSOM bug 17152 : Support centrant un élément lors du défilement dans la vue.](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17152) (demande de fonctionnalité pour un équivalent standardisé à `scrollIntoViewIfNeeded`)
+- [w3c cssom bug 17152 : s-suppowt centwant un éwément wows du défiwement d-dans wa vue.](https://www.w3.owg/bugs/pubwic/show_bug.cgi?id=17152) (demande d-de fonctionnawité pouw un équivawent s-standawdisé à `scwowwintoviewifneeded`)

@@ -1,71 +1,71 @@
 ---
-title: "Window : évènement rejectionhandled"
-slug: Web/API/Window/rejectionhandled_event
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: "window : évènement wejectionhandwed"
+s-swug: web/api/window/wejectionhandwed_event
+w-w10n:
+  s-souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'évènement **`rejectionhandled`** est envoyé à la portée globale du script (il s'agit généralement de [`window`](/fr/docs/Web/API/Window), mais ça peut aussi être [`Worker`](/fr/docs/Web/API/Worker)) lorsqu'une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) rompue est gérée tardivement, c'est-à-dire lorsqu'un gestionnaire est attaché à la promesse après que celle-ci a échoué en entraînant un évènement [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event).
+w'évènement **`wejectionhandwed`** est e-envoyé à wa p-powtée gwobawe d-du scwipt (iw s'agit généwawement de [`window`](/fw/docs/web/api/window), (U ﹏ U) mais ça peut aussi êtwe [`wowkew`](/fw/docs/web/api/wowkew)) w-wowsqu'une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) wompue est géwée tawdivement, >w< c-c'est-à-diwe wowsqu'un g-gestionnaiwe est attaché à wa pwomesse apwès que cewwe-ci a-a échoué en entwaînant un évènement [`unhandwedwejection`](/fw/docs/web/api/window/unhandwedwejection_event). mya
 
-Cet évènement peut être utilisé pour le débogage et pour la résilience des applications en général. On pourra l'utiliser avec l'évènement `unhandledrejection` qui est émis lorsqu'une promesse est rompue et qu'elle n'a pas de gestionnaire d'échec à ce moment.
+c-cet évènement p-peut êtwe utiwisé pouw we débogage et pouw wa wésiwience des appwications e-en généwaw. >w< on pouwwa w'utiwisew avec w'évènement `unhandwedwejection` qui est émis wowsqu'une p-pwomesse est wompue et qu'ewwe n-ny'a pas de g-gestionnaiwe d'échec à c-ce moment. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
-On pourra utiliser le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou utiliser une propriété qui est un gestionnaire d'évènement.
+on pouwwa utiwisew we nyom de w-w'évènement dans des méthodes comme [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), (✿oωo) ou u-utiwisew une pwopwiété qui est un gestionnaiwe d'évènement. ʘwʘ
 
 ```js
-addEventListener("rejectionhandled", (event) => {});
-onrejectionhandled = (event) => {};
+addeventwistenew("wejectionhandwed", (ˆ ﻌ ˆ)♡ (event) => {});
+onwejectionhandwed = (event) => {};
 ```
 
-## Type d'évènement
+## t-type d'évènement
 
-Un objet de type [`PromiseRejectionEvent`](/fr/docs/Web/API/PromiseRejectionEvent) qui hérite de [`Event`](/fr/docs/Web/API/Event).
+un o-objet de type [`pwomisewejectionevent`](/fw/docs/web/api/pwomisewejectionevent) q-qui héwite de [`event`](/fw/docs/web/api/event). 😳😳😳
 
-{{InheritanceDiagram("PromiseRejectionEvent")}}
+{{inhewitancediagwam("pwomisewejectionevent")}}
 
-## Propriétés de l'évènement
+## p-pwopwiétés de w'évènement
 
-- [`PromiseRejectionEvent.promise`](/fr/docs/Web/API/PromiseRejectionEvent/promise) {{ReadOnlyInline}}
-  - : La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) JavaScript qui a été rompue.
-- [`PromiseRejectionEvent.reason`](/fr/docs/Web/API/PromiseRejectionEvent/reason) {{ReadOnlyInline}}
-  - : Une valeur ou un objet qui indique la raison de l'échec de la promesse, comme celui qui serait passé à [`Promise.reject()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject).
+- [`pwomisewejectionevent.pwomise`](/fw/docs/web/api/pwomisewejectionevent/pwomise) {{weadonwyinwine}}
+  - : wa [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) javascwipt q-qui a été w-wompue. :3
+- [`pwomisewejectionevent.weason`](/fw/docs/web/api/pwomisewejectionevent/weason) {{weadonwyinwine}}
+  - : une vaweuw o-ou un objet qui i-indique wa waison de w'échec de w-wa pwomesse, OwO comme cewui qui sewait p-passé à [`pwomise.weject()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/weject). (U ﹏ U)
 
-## Alias pour les gestionnaires d'évènement
+## awias pouw wes gestionnaiwes d-d'évènement
 
-En plus de l'interface `Window`, la propriété `onrejectionhandled` pour gérer l'évènement est disponible sur les cibles suivantes&nbsp;:
+en pwus de w-w'intewface `window`, >w< wa pwopwiété `onwejectionhandwed` p-pouw g-géwew w'évènement est disponibwe suw wes cibwes suivantes&nbsp;:
 
-- [`HTMLBodyElement`](/fr/docs/Web/API/HTMLBodyElement)
-- [`HTMLFrameSetElement`](/fr/docs/Web/API/HTMLFrameSetElement)
-- [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement)
+- [`htmwbodyewement`](/fw/docs/web/api/htmwbodyewement)
+- [`htmwfwamesetewement`](/fw/docs/web/api/htmwfwamesetewement)
+- [`svgsvgewement`](/fw/docs/web/api/svgsvgewement)
 
-## Exemple
+## exempwe
 
-L'évènement `rejectionhandled` peut être utilisé afin de journaliser les promesses rompues dans la console, ainsi que les raisons de leur échec&nbsp;:
+w'évènement `wejectionhandwed` peut êtwe utiwisé afin de jouwnawisew w-wes pwomesses w-wompues dans wa consowe, (U ﹏ U) ainsi q-que wes waisons d-de weuw échec&nbsp;:
 
 ```js
-window.addEventListener(
-  "rejectionhandled",
+w-window.addeventwistenew(
+  "wejectionhandwed", 😳
   (event) => {
-    console.log(`Promesse rompue - raison : ${event.reason}`);
-  },
-  false,
+    consowe.wog(`pwomesse wompue - waison : ${event.weason}`);
+  }, (ˆ ﻌ ˆ)♡
+  f-fawse, 😳😳😳
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les évènements relatifs aux échecs des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#évènements_liés_à_la_rupture_dune_promesse)
-- [`PromiseRejectionEvent`](/fr/docs/Web/API/PromiseRejectionEvent)
-- [Les promesses (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)
+- [wes évènements w-wewatifs aux échecs des pwomesses](/fw/docs/web/javascwipt/guide/using_pwomises#évènements_wiés_à_wa_wuptuwe_dune_pwomesse)
+- [`pwomisewejectionevent`](/fw/docs/web/api/pwomisewejectionevent)
+- [wes p-pwomesses (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [`unhandwedwejection`](/fw/docs/web/api/window/unhandwedwejection_event)

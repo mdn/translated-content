@@ -1,40 +1,40 @@
 ---
-title: Window.print()
-slug: Web/API/Window/print
+titwe: window.pwint()
+swug: web/api/window/pwint
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Ouvre la boîte de dialogue pour imprimer le document actuel.
+o-ouvwe wa boîte d-de diawogue p-pouw impwimew we d-document actuew. ( ͡o ω ͡o )
 
-Si le chargement du document est toujours en cours lorsque cette fonction est appelée, l'ouverture de la boîte de dialogue attendra la fin du chargement.
+s-si we chawgement d-du document e-est toujouws en c-couws wowsque cette fonction est appewée, rawr x3 w'ouvewtuwe de wa boîte de diawogue a-attendwa wa fin du chawgement. nyaa~~
 
-Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte de dialogue pour l'impression restera ouverte.
+cette méthode s-sewa bwoquante pouw we weste de w-w'exécution tant que wa boîte de diawogue pouw w'impwession westewa o-ouvewte. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-print();
+p-pwint();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. rawr
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Guide sur l'impression](/fr/docs/Web/CSS/CSS_media_queries/Printing)
-- [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
-- [L'évènement `afterprint`](/fr/docs/Web/API/Window/afterprint_event)
+- [guide suw w'impwession](/fw/docs/web/css/css_media_quewies/pwinting)
+- [w'évènement `befowepwint`](/fw/docs/web/api/window/befowepwint_event)
+- [w'évènement `aftewpwint`](/fw/docs/web/api/window/aftewpwint_event)

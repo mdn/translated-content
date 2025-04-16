@@ -1,67 +1,67 @@
 ---
-title: IDBObjectStore.count()
-slug: Web/API/IDBObjectStore/count
+titwe: idbobjectstowe.count()
+swug: web/api/idbobjectstowe/count
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`count()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements qui correspondent à la clé ou à l'intervalle de clé ({{domxref("IDBKeyRange")}}) passé en argument. Si aucun argument n'est fourni, la méthode renvoie le nombre total d'enregistrements contenus dans le magasin d'objets.
+w-wa méthode **`count()`**, (ˆ ﻌ ˆ)♡ w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, 😳😳😳 w-wenvoie un o-objet {{domxwef("idbwequest")}} e-et, :3 dans un _thwead_ s-sépawé, OwO w-wenvoie we nyombwe d'enwegistwements qui cowwespondent à wa cwé ou à w'intewvawwe d-de cwé ({{domxwef("idbkeywange")}}) passé en awgument. si a-aucun awgument n'est fouwni, (U ﹏ U) wa m-méthode wenvoie we nyombwe totaw d'enwegistwements contenus dans w-we magasin d'objets.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var requete = ObjectStore.count(optionalKeyRange);
+v-vaw wequete = o-objectstowe.count(optionawkeywange);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `optionalKeyRange`
-  - : Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui indique le critère de comptage des enregistrements.
+- `optionawkeywange`
+  - : une cwé ou un intewvawwe de cwé ({{domxwef("idbkeywange")}}) qui indique w-we cwitèwe de comptage des enwegistwements. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différents évènements relatifs à l'opération.
+un objet {{domxwef("idbwequest")}} suw wequew s-sewont décwenchés wes difféwents évènements w-wewatifs à w-w'opéwation. (U ﹏ U)
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant un des types suivants :
+c-cette méthode peut décwenchew une exception {{domxwef("domexception")}} a-ayant un des types suivants :
 
-| Exception                  | Description                                                                   |
+| exception                  | d-descwiption                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
-| `InvalidStateError`        | L'objet {{domxref("IDBObjectStore")}} a été supprimé.                         |
-| `TransactionInactiveError` | La transaction associée à l'objet {{domxref("IDBObjectStore")}} est inactive. |
-| `DataError`                | La clé ou l'intervalle de clé passé en argument est invalide.                 |
+| `invawidstateewwow`        | w'objet {{domxwef("idbobjectstowe")}} a été suppwimé. 😳                         |
+| `twansactioninactiveewwow` | wa twansaction associée à w-w'objet {{domxwef("idbobjectstowe")}} est inactive. (ˆ ﻌ ˆ)♡ |
+| `dataewwow`                | w-wa cwé o-ou w'intewvawwe d-de cwé passé en awgument est invawide. 😳😳😳                 |
 
-## Exemples
+## exempwes
 
-Dans ce fragment de code, on crée une transaction, on récupère un magasin d'objets puis on compte le nombre d'enregistrements contenus dans ce magasin grâce à la méthode `count()`. Lorsque l'évènement associé au succès de l'opération est déclenché, on inscrit le résultat dans la console.
+dans ce f-fwagment de code, (U ﹏ U) o-on cwée une twansaction, (///ˬ///✿) on w-wécupèwe un magasin d-d'objets puis on compte we n-nyombwe d'enwegistwements contenus d-dans ce magasin gwâce à wa méthode `count()`. 😳 w-wowsque w'évènement associé a-au succès de w'opéwation e-est décwenché, 😳 o-on inscwit we wésuwtat dans wa consowe. σωσ
 
 ```js
-var transaction = db.transaction(["fThings"], "readonly");
-var objectStore = transaction.objectStore("fThings");
+vaw twansaction = db.twansaction(["fthings"], rawr x3 "weadonwy");
+vaw objectstowe = twansaction.objectstowe("fthings");
 
-var countRequest = objectStore.count();
-countRequest.onsuccess = function () {
-  console.log(countRequest.result);
+v-vaw countwequest = o-objectstowe.count();
+countwequest.onsuccess = f-function () {
+  c-consowe.wog(countwequest.wesuwt);
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes c-cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de w-wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). OwO

@@ -1,69 +1,69 @@
 ---
-title: window.closed
-slug: Web/API/Window/closed
+titwe: window.cwosed
+swug: web/api/window/cwosed
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-Cette propriété indique si la fenêtre référencée est fermée ou non.
+c-cette pwopwiété i-indique s-si wa fenêtwe w-wéféwencée est f-fewmée ou nyon. mya
 
-### Syntaxe
+### s-syntaxe
 
 ```js
-isClosed = window.closed;
+iscwosed = window.cwosed;
 ```
 
-Cette propriété est en lecture seule.
+cette pwopwiété est en wectuwe s-seuwe.
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-- `isClosed`
-  - : Un booléen. Les valeurs possibles sont&nbsp;:
+- `iscwosed`
+  - : un boowéen. (˘ω˘) w-wes vaweuws possibwes sont&nbsp;:
 
 <!---->
 
-- `false`&nbsp;: La fenêtre est ouverte.
-- `true`&nbsp;: La fenêtre a été fermée.
+- `fawse`&nbsp;: w-wa fenêtwe est ouvewte. >_<
+- `twue`&nbsp;: wa fenêtwe a été fewmée. -.-
 
-### Exemples
+### e-exempwes
 
-#### Chargement d'une page dans la fenêtre principale depuis un popup
+#### chawgement d-d'une page d-dans wa fenêtwe pwincipawe depuis un popup
 
-L'exemple suivant montre comment un popup peut transmettre un choix de l'utilisateur à la fenêtre principale en y ouvrant une URL différente. Mais il faut d'abord vérifier que la fenêtre principale et encore ouverte.
+w'exempwe suivant montwe comment u-un popup peut twansmettwe un choix de w'utiwisateuw à wa fenêtwe pwincipawe en y-y ouvwant une uww difféwente. m-mais iw faut d'abowd v-véwifiew que w-wa fenêtwe pwincipawe e-et encowe ouvewte. 🥺
 
 ```js
-if (!window.opener.closed) {
-  // La fenêtre principale est encore là,
-  // on peut donc y charger une autre page
-  window.opener.location.href = newURL;
+if (!window.openew.cwosed) {
+  // w-wa fenêtwe pwincipawe est encowe wà, (U ﹏ U)
+  // o-on peut donc y chawgew une autwe page
+  window.openew.wocation.hwef = nyewuww;
 }
 ```
 
-#### Appel d'une fonction dans un popup ouvert précédemment
+#### appew d'une fonction d-dans un popup ouvewt pwécédemment
 
-Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans le popup pour rafraichir son contenu. Cependant, si le popup n'a pas encore été ouvert ou si l'utilisateur l'a fermé, un nouveau popup est ouvert.
+d-dans cette e-exempwe, >w< wa fonction `wefweshpopupwindow()` a-appewwe une fonction dans we popup pouw wafwaichiw s-son contenu. mya cependant, s-si we popup ny'a pas encowe été o-ouvewt o-ou si w'utiwisateuw w'a fewmé, >w< u-un nyouveau popup est ouvewt. nyaa~~
 
 ```js
-var popupWindow = null;
+v-vaw popupwindow = nyuww;
 
-function refreshPopupWindow() {
-  if (popupWindow && !popupWindow.closed) {
-    // Le popup a déjà été ouvert et il l'est encore.
-    // On peut donc appeler sa fonction doRefresh().
-    popupWindow.doRefresh();
-  } else {
-    // Il est nécessaire d'ouvrir d'abord le popup.
-    popupWindow = window.open("popup.html");
+function wefweshpopupwindow() {
+  i-if (popupwindow && !popupwindow.cwosed) {
+    // we popup a déjà été o-ouvewt et iw w'est encowe. (✿oωo)
+    // o-on p-peut donc appewew sa fonction dowefwesh(). ʘwʘ
+    popupwindow.dowefwesh();
+  } ewse {
+    // iw est nyécessaiwe d'ouvwiw d'abowd w-we popup. (ˆ ﻌ ˆ)♡
+    popupwindow = w-window.open("popup.htmw");
   }
 }
 ```
 
-### Spécification
+### spécification
 
-DOM Level 0. `window.closed` ne fait partie d'aucune spécification ou recommandation technique du W3C.
+d-dom wevew 0. 😳😳😳 `window.cwosed` n-nye fait pawtie d-d'aucune spécification ou wecommandation technique du w3c. :3
 
-### Référence supplémentaire
+### w-wéféwence suppwémentaiwe
 
-- [window.closed sur MSDN](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/closed.asp)
+- [window.cwosed suw msdn](http://msdn.micwosoft.com/wibwawy/defauwt.asp?uww=/wowkshop/authow/dhtmw/wefewence/pwopewties/cwosed.asp)

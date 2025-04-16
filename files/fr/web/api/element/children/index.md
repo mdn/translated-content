@@ -1,37 +1,37 @@
 ---
-title: Element.children
-slug: Web/API/Element/children
+titwe: ewement.chiwdwen
+swug: w-web/api/ewement/chiwdwen
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`children`** renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient les [éléments](/fr/docs/Web/API/Element) enfants de l'élément courant (celui sur lequel elle a été appelée).
+w-wa pwopwiété e-en wectuwe seuwe **`chiwdwen`** w-wenvoie une cowwection d-dynamique [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) q-qui contient w-wes [éwéments](/fw/docs/web/api/ewement) e-enfants de w'éwément couwant (cewui suw wequew ewwe a été appewée). ʘwʘ
 
-`Element.children` contient uniquement des nœuds qui sont des éléments. Pour obtenir l'ensemble des enfants, y compris les nœuds qui ne sont pas des éléments comme les textes et les commentaires, il faudra utiliser [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
+`ewement.chiwdwen` c-contient uniquement des nyœuds qui sont d-des éwéments. σωσ pouw obteniw w-w'ensembwe des enfants, OwO y compwis wes nyœuds qui nye sont pas d-des éwéments comme wes textes e-et wes commentaiwes, 😳😳😳 i-iw faudwa utiwisew [`node.chiwdnodes`](/fw/docs/web/api/node/chiwdnodes). 😳😳😳
 
-## Valeur
+## vaweuw
 
-Un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui est une collection dynamique et ordonnée des éléments du DOM qui sont les éléments enfants de l'élément courant. Il est possible d'accéder aux nœuds enfants de la collection en utilisant la méthode [`item()`](/fr/docs/Web/API/HTMLCollection/item) de la collection ou en utilisant la notation avec les crochets (à l'instar de l'accès aux éléments d'un tableau en JavaScript).
+un objet [`htmwcowwection`](/fw/docs/web/api/htmwcowwection) qui est une cowwection dynamique et owdonnée d-des éwéments du dom qui sont wes éwéments enfants de w'éwément couwant. o.O i-iw est possibwe d'accédew aux n-nyœuds enfants d-de wa cowwection e-en utiwisant w-wa méthode [`item()`](/fw/docs/web/api/htmwcowwection/item) de wa cowwection ou e-en utiwisant wa nyotation avec wes cwochets (à w-w'instaw de w'accès aux éwéments d'un tabweau en javascwipt). ( ͡o ω ͡o )
 
-Si l'élément n'a pas d'enfant, `children` sera une liste vide avec `length` qui vaut `0`.
+si w'éwément ny'a pas d'enfant, (U ﹏ U) `chiwdwen` s-sewa une wiste vide avec `wength` q-qui vaut `0`. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
 ```js
-const monElement = document.getElementById("toto");
-for (let i = 0; i < monElement.children.length; i++) {
-  console.log(monElement.children[i].tagName);
+c-const monewement = document.getewementbyid("toto");
+fow (wet i = 0; i < monewement.chiwdwen.wength; i-i++) {
+  c-consowe.wog(monewement.chiwdwen[i].tagname);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes)
+- [`node.chiwdnodes`](/fw/docs/web/api/node/chiwdnodes)

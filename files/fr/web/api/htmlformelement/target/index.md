@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.target
-slug: Web/API/HTMLFormElement/target
+titwe: htmwfowmewement.tawget
+swug: web/api/htmwfowmewement/tawget
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.e., le cadre de destination dans lequel produire le résultat).
+w-wa pwopwiété **`htmwfowmewement.tawget`** wepwésente w-wa cibwe d-de w'action (i.e., w-we cadwe d-de destination dans w-wequew pwoduiwe w-we wésuwtat). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
-
-```js
-string = form.target;
-form.target = string;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-myForm.target = document.frames[1].name;
+stwing = fowm.tawget;
+fowm.tawget = stwing;
 ```
 
-## Spécification
+## e-exempwe
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+```js
+myfowm.tawget = document.fwames[1].name;
+```
 
-[DOM Level 2 HTML: target](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)
+## s-spécification
+
+[htmw 5, (⑅˘꒳˘) section 4.10.19.6, (U ᵕ U❁) f-fowm submission](https://www.w3.owg/tw/htmw5/association-of-contwows-and-fowms.htmw#dom-fs-method)
+
+[dom wevew 2 htmw: tawget](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-6512890)

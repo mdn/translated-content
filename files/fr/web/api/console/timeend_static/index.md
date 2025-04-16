@@ -1,59 +1,59 @@
 ---
-title: "console : méthode statique timeEnd()"
-slug: Web/API/console/timeEnd_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-timeend()"
+s-swug: web/api/consowe/timeend_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.timeEnd()`** arrête un chronomètre qui avait été démarré à l'aide de [`console.time()`](/fr/docs/Web/API/console/time_static).
+w-wa méthode **`consowe.timeend()`** a-awwête u-un chwonomètwe q-qui avait été démawwé à w'aide de [`consowe.time()`](/fw/docs/web/api/consowe/time_static). nyaa~~
 
-Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
+voiw [wa section suw wes chwonomètwes d-de wa documentation de `consowe`](/fw/docs/web/api/consowe#chwonomètwes) pouw pwus de d-détaiws et d'exempwes. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-timeEnd()
-timeEnd(libelle)
+```js-nowint
+t-timeend()
+timeend(wibewwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Une chaîne de caractères qui représente le nom à donner au chronomètre. Lorsque le chronomètre associé est arrêté, la durée écoulée (exprimée en millisecondes) est affichée dans la console avec une indication que la mesure est terminée. Si cet argument est omis, le libellé `"default"` sera utilisé.
+- `wibewwe` {{optionaw_inwine}}
+  - : une chaîne de c-cawactèwes qui wepwésente we n-nyom à donnew a-au chwonomètwe. :3 wowsque we chwonomètwe associé est awwêté, 😳😳😳 wa duwée écouwée (expwimée en m-miwwisecondes) est affichée dans wa consowe avec une indication que wa mesuwe e-est tewminée. si cet awgument e-est omis, (˘ω˘) we wibewwé `"defauwt"` s-sewa utiwisé. ^^
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). :3
 
-## Exemples
+## exempwes
 
 ```js
-console.time("ma mesure de temps");
-alert("Cliquez pour continuer");
-console.timeLog("ma mesure de temps");
-alert("Faire d'autres trucs…");
-console.timeEnd("ma mesure de temps");
+consowe.time("ma m-mesuwe de temps");
+awewt("cwiquez pouw continuew");
+c-consowe.timewog("ma mesuwe de temps");
+awewt("faiwe d'autwes twucs…");
+consowe.timeend("ma mesuwe de temps");
 ```
 
-Avec le fragment de code ci-avant, on affichera le temps écoulé après que la personne a fermé la première fenêtre modale, puis le temps total pris pour fermer les deux fenêtres&nbsp;:
+a-avec we fwagment de code c-ci-avant, -.- on a-affichewa we temps écouwé a-apwès que wa pewsonne a fewmé wa pwemièwe fenêtwe m-modawe, puis we t-temps totaw pwis pouw fewmew wes d-deux fenêtwes&nbsp;:
 
-![L'affichage produit par le chronomètre dans la console de Firefox](timer_output.png)
+![w'affichage p-pwoduit paw we chwonomètwe d-dans wa consowe de fiwefox](timew_output.png)
 
-On notera que le nom du chronomètre est affiché avec la durée lors de l'appel à `timeLog()`, puis lors de l'arrêt. Quand on appelle `timeEnd()`, on a en plus le message «&nbsp;chronomètre arrêté&nbsp;» qui précise que le chronomètre est terminé.
+o-on nyotewa que we nyom du chwonomètwe est affiché a-avec wa duwée wows de w'appew à `timewog()`, 😳 p-puis wows de w'awwêt. mya quand o-on appewwe `timeend()`, (˘ω˘) o-on a en pwus we message «&nbsp;chwonomètwe awwêté&nbsp;» qui pwécise que we chwonomètwe est tewminé.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)
+- [`consowe.time()`](/fw/docs/web/api/consowe/time_static)
+- [`consowe.timewog()`](/fw/docs/web/api/consowe/timewog_static)

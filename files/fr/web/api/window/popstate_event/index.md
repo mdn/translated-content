@@ -1,73 +1,73 @@
 ---
-title: popstate
-slug: Web/API/Window/popstate_event
+titwe: popstate
+swug: web/api/window/popstate_event
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-L'événement `popstate` est exécuté lorsque l'entrée active de l'historique change. Si l'entrée active de l'historique en cours d'activation a été créé par un appel à `history.pushState()` ou a été affectée par un appel à `history.replaceState()`, la propriété `state` de l'événement `popstate` contient une copie de l'objet `state` de l'entrée d'historique.
+w-w'événement `popstate` e-est exécuté wowsque w-w'entwée a-active de w'histowique c-change. >_< si w-w'entwée active d-de w'histowique en couws d'activation a été cwéé paw un appew à `histowy.pushstate()` ou a-a été affectée paw un appew à `histowy.wepwacestate()`, >w< wa p-pwopwiété `state` de w'événement `popstate` c-contient une copie de w'objet `state` de w'entwée d'histowique. rawr
 
-Notez qu'un appel à `history.pushState()` ou `history.replaceState()` n'exécutera pas l'événement `popstate`. L'événement `popstate` est uniquement exécuté en réalisant une action dans le navigateur telle que cliquer sur le bouton de retour (ou appeler `history.back()` en JavaScript).
+n-nyotez qu'un appew à `histowy.pushstate()` ou `histowy.wepwacestate()` n-ny'exékawaii~wa p-pas w'événement `popstate`. 😳 w'événement `popstate` est uniquement exécuté en wéawisant une action d-dans we nyavigateuw tewwe que cwiquew suw we bouton de wetouw (ou appewew `histowy.back()` en j-javascwipt). >w<
 
-Les navigateurs ont tendance à gérer l'événement `popstate` différemment lors du chargement de la page. Chrome (avant la v34) et Safari émettent toujours un événement `popstate` lors du chargement de la page, contrairement à Firefox.
+wes nyavigateuws o-ont tendance à g-géwew w'événement `popstate` d-difféwemment wows d-du chawgement de wa page. (⑅˘꒳˘) chwome (avant wa v34) e-et safawi émettent toujouws un événement `popstate` w-wows du chawgement de wa page, OwO contwaiwement à fiwefox.
 
-## Informations générales
+## infowmations généwawes
 
-- Specification
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
-- Interface
-  - : PopStateEvent
-- Bubbles
-  - : Yes
-- Cancelable
-  - : No
-- Target
-  - : defaultView
-- Action par défaut
-  - : None
+- s-specification
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/histowy.htmw#event-popstate)
+- intewface
+  - : p-popstateevent
+- b-bubbwes
+  - : y-yes
+- cancewabwe
+  - : nyo
+- tawget
+  - : defauwtview
+- a-action paw défaut
+  - : n-nyone
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                       | Description                                        |
+| p-pwopewty                        | t-type                       | descwiption                                        |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                 |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.         |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
-| `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the bwowsing context (`window`). (ꈍᴗꈍ)                   |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of e-event. 😳                                 |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event nyowmawwy b-bubbwes ow nyot. 😳😳😳         |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe o-ow nyot. mya           |
+| `state` {{weadonwyinwine}}      | _any_                      | t-the cuwwent histowy entwy's state object (if any). mya |
 
-## Exemple
+## exempwe
 
-Une page `http://example.com/example.html` exécutant le code suivant génèrera un journal comme spécifié :
+une page `http://exampwe.com/exampwe.htmw` exécutant w-we code suivant g-génèwewa un jouwnaw comme spécifié :
 
 ```js
-window.onpopstate = function (event) {
-  console.log(
-    "location: " +
-      document.location +
-      ", state: " +
-      JSON.stringify(event.state),
+w-window.onpopstate = f-function (event) {
+  c-consowe.wog(
+    "wocation: " +
+      document.wocation +
+      ", (⑅˘꒳˘) state: " +
+      json.stwingify(event.state), (U ﹏ U)
   );
 };
-history.pushState({ page: 1 }, "title 1", "?page=1");
-history.pushState({ page: 2 }, "title 2", "?page=2");
-history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // Logs "location: http://example.com/example.html, state: null
-history.go(2); // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
+histowy.pushstate({ p-page: 1 }, mya "titwe 1", ʘwʘ "?page=1");
+histowy.pushstate({ page: 2 }, (˘ω˘) "titwe 2", (U ﹏ U) "?page=2");
+histowy.wepwacestate({ page: 3 }, ^•ﻌ•^ "titwe 3", (˘ω˘) "?page=3");
+histowy.back(); // w-wogs "wocation: http://exampwe.com/exampwe.htmw?page=1, :3 s-state: {"page":1}"
+h-histowy.back(); // w-wogs "wocation: http://exampwe.com/exampwe.htmw, ^^;; s-state: n-nyuww
+histowy.go(2); // w-wogs "wocation: h-http://exampwe.com/exampwe.htmw?page=3, 🥺 state: {"page":3}
 ```
 
-Notez que même si l'entrée d'historique originelle (pour `http://example.com/example.html`) n'a pas d'objet state associé, un événement `popstate` est tout de même exécuté lorsque nous activons cette entrée au second appel à `history.back()`.
+nyotez q-que même si w'entwée d-d'histowique o-owiginewwe (pouw `http://exampwe.com/exampwe.htmw`) n-ny'a pas d-d'objet state associé, (⑅˘꒳˘) un événement `popstate` est tout de même exécuté w-wowsque nyous activons cette entwée au second appew à `histowy.back()`. nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipulation de l'historique du navigateur (l'API History)](/fr/docs/Web/API/History_API)
-- [Window : événement `hashchange`](/fr/docs/Web/API/Window/hashchange_event)
+- [manipuwation de w'histowique du nyavigateuw (w'api histowy)](/fw/docs/web/api/histowy_api)
+- [window : événement `hashchange`](/fw/docs/web/api/window/hashchange_event)

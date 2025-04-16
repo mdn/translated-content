@@ -1,71 +1,71 @@
 ---
-title: PerformanceResourceTiming.domainLookupEnd
-slug: Web/API/PerformanceResourceTiming/domainLookupEnd
+titwe: pewfowmancewesouwcetiming.domainwookupend
+swug: web/api/pewfowmancewesouwcetiming/domainwookupend
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La propriété en lecture seule **`domainLookupEnd`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait terminé la recherche du nom de domaine pour la ressource.
+w-wa pwopwiété e-en wectuwe seuwe **`domainwookupend`** w-wetouwne w-we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) i-immédiatement a-apwès q-que we nyavigateuw ait tewminé wa wechewche du nom de domaine pouw wa wessouwce. nyaa~~
 
-Si l'agent utilisateur dispose des informations de domaine dans le cache, [`domainLookupStart`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupStart) et [`domainLookupEnd`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupEnd) représentent les moments où l'agent utilisateur commence et termine la récupération des données de domaine dans le cache.
+s-si w'agent utiwisateuw dispose des infowmations d-de domaine dans we cache, :3 [`domainwookupstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/domainwookupstawt) e-et [`domainwookupend`](/fw/docs/web/api/pewfowmancewesouwcetiming/domainwookupend) wepwésentent wes moments où w'agent utiwisateuw c-commence et tewmine wa wécupéwation d-des d-données de domaine dans we cache. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-resource.domainLookupEnd;
+wesouwce.domainwookupend;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.
+un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant w'heuwe immédiatement apwès wa fin de wa wechewche du nyom de d-domaine de wa wessouwce paw we n-navigateuw. (˘ω˘)
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
+dans w'exempwe s-suivant, ^^ w-wa vaweuw des pwopwiétés `*stawt` et `*end` d-de tous wes événements de [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) `"wesouwce"` sont e-enwegistwés. :3
 
 ```js
-function print_PerformanceEntries() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+function pwint_pewfowmanceentwies() {
+  // utiwise getentwiesbytype() pouw obteniw uniquement w-wes événements "wesouwce"
+  wet p = pewfowmance.getentwiesbytype("wesouwce");
+  f-fow (wet i-i = 0; i < p.wength; i-i++) {
+    pwint_stawt_and_end_pwopewties(p[i]);
   }
 }
-function print_start_and_end_properties(perfEntry) {
-  // Imprime les horodatages des propriétés *start et *end
-  properties = [
-    "connectStart",
-    "connectEnd",
-    "domainLookupStart",
-    "domainLookupEnd",
-    "fetchStart",
-    "redirectStart",
-    "redirectEnd",
-    "requestStart",
-    "responseStart",
-    "responseEnd",
-    "secureConnectionStart",
+function pwint_stawt_and_end_pwopewties(pewfentwy) {
+  // i-impwime wes h-howodatages des pwopwiétés *stawt e-et *end
+  p-pwopewties = [
+    "connectstawt", -.-
+    "connectend", 😳
+    "domainwookupstawt", mya
+    "domainwookupend", (˘ω˘)
+    "fetchstawt", >_<
+    "wediwectstawt", -.-
+    "wediwectend", 🥺
+    "wequeststawt", (U ﹏ U)
+    "wesponsestawt", >w<
+    "wesponseend", mya
+    "secuweconnectionstawt", >w<
   ];
 
-  for (let i = 0; i < properties.length; i++) {
-    // vérifie chaque propriété
-    let supported = properties[i] in perfEntry;
-    if (supported) {
-      let value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = N'EST PAS pris en charge");
+  fow (wet i = 0; i-i < pwopewties.wength; i++) {
+    // v-véwifie chaque pwopwiété
+    wet suppowted = p-pwopewties[i] in pewfentwy;
+    i-if (suppowted) {
+      wet v-vawue = pewfentwy[pwopewties[i]];
+      c-consowe.wog("... nyaa~~ " + pwopewties[i] + " = " + vawue);
+    } ewse {
+      consowe.wog("... " + pwopewties[i] + " = ny'est p-pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

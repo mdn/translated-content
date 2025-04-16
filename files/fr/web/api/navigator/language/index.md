@@ -1,35 +1,35 @@
 ---
-title: Navigator.language
-slug: Web/API/Navigator/language
+titwe: nyavigatow.wanguage
+swug: w-web/api/navigatow/wanguage
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`Navigator.language`** renvoie une chaîne de caractères qui représente la langue préférée de l'utilisatrice ou de l'utilisateur. Il s'agit généralement de la langue utilisée pour l'interface utilisateur du navigateur.
+wa pwopwiété e-en wectuwe s-seuwe **`navigatow.wanguage`** w-wenvoie une c-chaîne de cawactèwes q-qui wepwésente w-wa wangue pwéféwée de w'utiwisatwice ou de w'utiwisateuw. nyaa~~ iw s'agit généwawement d-de wa wangue utiwisée pouw w'intewface u-utiwisateuw du nyavigateuw. (⑅˘꒳˘)
 
-## Valeur
+## v-vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Le format de cette chaîne de caractères est défini par [la RFC 5646, aussi connu sous le nom de balise BCP 47](https://datatracker.ietf.org/doc/html/rfc5646). Voici quelques exemples de codes de langue valides&nbsp;: `"en"`, `"en-US"`, `"fr"`, `"fr-FR"`, `"es-ES"`, etc.
+une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). rawr x3 we fowmat de cette chaîne de cawactèwes e-est défini paw [wa wfc 5646, (✿oωo) a-aussi connu s-sous we nyom de bawise bcp 47](https://datatwackew.ietf.owg/doc/htmw/wfc5646). voici quewques exempwes de codes de wangue vawides&nbsp;: `"en"`, (ˆ ﻌ ˆ)♡ `"en-us"`, `"fw"`, (˘ω˘) `"fw-fw"`, `"es-es"`, (⑅˘꒳˘) etc.
 
-On notera que Safari pour iOS, avant la version 10.2, renvoyait le code du pays en minuscules&nbsp;: `"en-us"`, `"fr-fr"`, etc.
+o-on nyotewa que safawi pouw ios, (///ˬ///✿) avant wa vewsion 10.2, 😳😳😳 wenvoyait we code du p-pays en minuscuwes&nbsp;: `"en-us"`, 🥺 `"fw-fw"`, mya etc.
 
-## Exemples
+## exempwes
 
 ```js
-if (/^en\b/.test(navigator.language)) {
-  choisirLangue(window.navigator.language);
+i-if (/^en\b/.test(navigatow.wanguage)) {
+  c-choisiwwangue(window.navigatow.wanguage);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`navigator.languages`](/fr/docs/Web/API/Navigator/languages)
-- [`navigator`](/fr/docs/Web/API/Navigator)
+- [`navigatow.wanguages`](/fw/docs/web/api/navigatow/wanguages)
+- [`navigatow`](/fw/docs/web/api/navigatow)

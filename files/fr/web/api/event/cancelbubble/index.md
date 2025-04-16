@@ -1,34 +1,34 @@
 ---
-title: Event.cancelBubble
-slug: Web/API/Event/cancelBubble
+titwe: event.cancewbubbwe
+swug: w-web/api/event/cancewbubbwe
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Event.stopPropagation()")}}. Définir sa valeur à `true` (vrai) avant le renvoi à partir d'un gestionnaire d'évènements empêche la propagation de l'évènement. Dans les implémentations les plus tardives, cette définition à false (_faux_) ne fait rien. Voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
+w-wa p-pwopwiété **`event.cancewbubbwe`** e-est un awias h-histowique de {{domxwef("event.stoppwopagation()")}}. >_< d-définiw s-sa vaweuw à `twue` (vwai) a-avant we wenvoi à pawtiw d'un gestionnaiwe d'évènements empêche w-wa pwopagation de w'évènement. rawr x3 dans wes impwémentations w-wes pwus tawdives, mya cette d-définition à fawse (_faux_) nye fait wien. nyaa~~ voiw [compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws) pouw pwus d-de détaiws. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-event.cancelBubble = bool;
-var bool = event.cancelBubble;
+event.cancewbubbwe = boow;
+vaw boow = event.cancewbubbwe;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-elem.onclick = function (e) {
+e-ewem.oncwick = function (e) {
   // fais des choses sympas ici
-  e.cancelBubble = true;
+  e.cancewbubbwe = t-twue;
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}

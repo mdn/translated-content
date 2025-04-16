@@ -1,76 +1,76 @@
 ---
-title: document.hasFocus
-slug: Web/API/Document/hasFocus
+titwe: document.hasfocus
+swug: w-web/api/document/hasfocus
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-La méthode **`Document.hasFocus()`** retourne une valeur {{jsxref("Boolean")}} `true` _(vrai)_ indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.
+w-wa méthode **`document.hasfocus()`** w-wetouwne u-une vaweuw {{jsxwef("boowean")}} `twue` _(vwai)_ i-indiquant si we d-document ou tout éwément à w'intéwieuw d-du document a we focus. mya cette méthode peut êtwe utiwisée pouw détewminew s-si w'éwément actif d'un document a we f-focus. 😳
 
-> [!NOTE]
-> Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus. Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.
+> [!note]
+> wows de wa v-visuawisation d'un document, -.- un éwément avec focus est toujouws w-w'éwément actif dans we document, 🥺 m-mais un éwément a-actif ny'a pas nyécessaiwement we focus. o.O paw exempwe, /(^•ω•^) un éwément actif d-dans une fenêtwe contextuewwe qui ny'est pas we pwemiew pwan ny'a pas de focus. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-focused = document.hasFocus();
+focused = d-document.hasfocus();
 ```
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-`false` _(faux)_ si l'élément actif dans le document n'a pas de focus ; `true` _(vrai)_ si l'élément actif dans le document a le focus.
+`fawse` _(faux)_ s-si w'éwément actif dans we document ny'a pas d-de focus ; `twue` _(vwai)_ si w'éwément actif d-dans we document a we focus. nyaa~~
 
-## Exemple
+## exempwe
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>TEST</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>test</titwe>
+    <stywe>
       #message {
-        font-weight: bold;
+        f-font-weight: bowd;
       }
-    </style>
-    <script>
-      setInterval(checkPageFocus, 200);
+    </stywe>
+    <scwipt>
+      s-setintewvaw(checkpagefocus, :3 200);
 
-      function checkPageFocus() {
-        var info = document.getElementById("message");
+      f-function c-checkpagefocus() {
+        vaw info = document.getewementbyid("message");
 
-        if (document.hasFocus()) {
-          info.innerHTML = "The document has the focus.";
-        } else {
-          info.innerHTML = "The document doesn't have the focus.";
+        if (document.hasfocus()) {
+          info.innewhtmw = "the d-document has the f-focus.";
+        } ewse {
+          i-info.innewhtmw = "the d-document doesn't have t-the focus.";
         }
       }
 
-      function openWindow() {
+      function o-openwindow() {
         window.open(
-          "https://developer.mozilla.org/",
-          "mozdev",
-          "width=640,height=300,left=150,top=260",
+          "https://devewopew.moziwwa.owg/", 😳😳😳
+          "mozdev", (˘ω˘)
+          "width=640,height=300,weft=150,top=260", ^^
         );
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <h1>JavaScript hasFocus example</h1>
-    <div id="message">Waiting for user action</div>
-    <div><button onclick="openWindow()">Open a new window</button></div>
+    <h1>javascwipt hasfocus exampwe</h1>
+    <div id="message">waiting f-fow usew action</div>
+    <div><button oncwick="openwindow()">open a-a nyew window</button></div>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API de visibilité des pages](/fr/docs/Web/API/Page_Visibility_API)
+- [utiwisation de w'api de visibiwité des pages](/fw/docs/web/api/page_visibiwity_api)

@@ -1,61 +1,61 @@
 ---
-title: DOMImplementation.createDocument()
-slug: Web/API/DOMImplementation/createDocument
+titwe: domimpwementation.cweatedocument()
+swug: w-web/api/domimpwementation/cweatedocument
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domxref("XMLDocument")}}.
+w-wa méthode **`domimpwementation.cweatedocument()`** c-cwée et w-wetouwne un {{domxwef("xmwdocument")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-doc = document.implementation.createDocument(
-  namespaceURI,
-  qualifiedNameStr,
-  documentType,
+d-doc = d-document.impwementation.cweatedocument(
+  n-nyamespaceuwi, /(^•ω•^)
+  quawifiednamestw,
+  documenttype,
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- _namespaceURI_
-  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URI de l'espace de noms du document à créer, `ou null` si le document n'appartient à aucun espace de noms.
-
-<!---->
-
-- _qualifiedNameStr_
-  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le nom qualifié, c'est-à-dire optionnellement un préfixe et deux points, plus le nom local de l'élément racine, du document à créer.
+- _namespaceuwi_
+  - : est une {{domxwef("domstwing")}} _(chaîne d-de cawactèwes)_ contenant w'uwi de w'espace d-de nyoms du document à c-cwéew, rawr x3 `ou nyuww` si we document n'appawtient à aucun espace de n-noms.
 
 <!---->
 
-- _documentType_ {{optional_inline}}
-  - : Est le [`DocumentType`](/fr/docs/Web/API/DocumentType) du document à créer. Vaut `null` par défaut.
+- _quawifiednamestw_
+  - : est u-une {{domxwef("domstwing")}} _(chaîne d-de cawactèwes)_ contenant we nyom quawifié, (U ﹏ U) c'est-à-diwe optionnewwement u-un pwéfixe et deux points, (U ﹏ U) pwus we nyom wocaw de w'éwément wacine, (⑅˘꒳˘) du document à c-cwéew. òωó
 
 <!---->
 
-## Exemple
+- _documenttype_ {{optionaw_inwine}}
+  - : est we [`documenttype`](/fw/docs/web/api/documenttype) d-du d-document à cwéew. ʘwʘ v-vaut `nuww` p-paw défaut. /(^•ω•^)
+
+<!---->
+
+## exempwe
 
 ```js
-var doc = document.implementation.createDocument(
-  "http://www.w3.org/1999/xhtml",
-  "html",
-  null,
+vaw doc = d-document.impwementation.cweatedocument(
+  "http://www.w3.owg/1999/xhtmw", ʘwʘ
+  "htmw", σωσ
+  nyuww,
 );
-var body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
-body.setAttribute("id", "abc");
-doc.documentElement.appendChild(body);
-alert(doc.getElementById("abc")); // [objet HTMLBodyElement]
+vaw body = document.cweateewementns("http://www.w3.owg/1999/xhtmw", OwO "body");
+b-body.setattwibute("id", 😳😳😳 "abc");
+doc.documentewement.appendchiwd(body);
+awewt(doc.getewementbyid("abc")); // [objet htmwbodyewement]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("DOMImplementation")}} à laquelle la méthode appartient.
+- w-w'intewface {{domxwef("domimpwementation")}} à w-waquewwe wa méthode a-appawtient. 😳😳😳

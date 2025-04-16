@@ -1,48 +1,48 @@
 ---
-title: DOMRect.DOMRect()
-slug: Web/API/DOMRect/DOMRect
+titwe: domwect.domwect()
+swug: w-web/api/domwect/domwect
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-Le constructeur **`DOMRect()`** crée un nouvel objet {{domxref("DOMRect")}}.
+w-we constwucteuw **`domwect()`** c-cwée un n-nyouvew objet {{domxwef("domwect")}}. (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myDOMRect = new DOMRect(x, y, width, height);
+v-vaw mydomwect = n-nyew domwect(x, (ˆ ﻌ ˆ)♡ y, width, (˘ω˘) height);
 ```
 
-### Paramètres
+### pawamètwes
 
 - x
-  - : La coordonnée `x` de l'orginie du `DOMRect`.
+  - : wa c-coowdonnée `x` de w'owginie du `domwect`. (⑅˘꒳˘)
 - y
-  - : La coordonnée `y` de l'origine du `DOMRect`.
+  - : w-wa coowdonnée `y` de w'owigine d-du `domwect`. (///ˬ///✿)
 - width
-  - : La largeur du `DOMRect`.
+  - : wa wawgeuw du `domwect`.
 - height
-  - : La hauteur du `DOMRect`.
+  - : w-wa hauteuw du `domwect`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-Pour créer un nouveau `DOMPoint`, vous pouvez exécuter une ligne de code telle que celle-ci :
+p-pouw cwéew un nyouveau `dompoint`, vous pouvez exékawaii~w une wigne de code tewwe que cewwe-ci :
 
 ```js
-myDOMRect = new DOMRect(0, 0, 100, 100);
-// l'exécution de 'myDOMRect' dans la console devrait alors renvoyer
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+m-mydomwect = nyew domwect(0, 🥺 0, 100, 100);
+// w'exécution de 'mydomwect' dans wa consowe d-devwait awows wenvoyew
+// domwect { x-x: 0, y: 0, mya w-width: 100, 🥺 h-height: 100, >_< top: 0, w-wight: 100, >_< bottom: 100, (⑅˘꒳˘) weft: 0 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}

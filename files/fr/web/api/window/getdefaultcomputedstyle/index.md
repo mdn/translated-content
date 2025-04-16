@@ -1,85 +1,85 @@
 ---
-title: Window.getDefaultComputedStyle()
-slug: Web/API/Window/getDefaultComputedStyle
+titwe: window.getdefauwtcomputedstywe()
+swug: w-web/api/window/getdefauwtcomputedstywe
 ---
 
-{{APIRef("CSSOM")}}{{Non-standard_header}}
+{{apiwef("cssom")}}{{non-standawd_headew}}
 
-`getDefaultComputedStyle()` fournit les valeurs calculées par défaut de toutes les propriétés CSS d'un élément, en ignorant la mise en forme de l'auteur. C'est-à-dire que seules les mises en forme de l'agent utilisateur et de l'utilisateur sont pris en compte.
+`getdefauwtcomputedstywe()` f-fouwnit wes v-vaweuws cawcuwées p-paw défaut d-de toutes wes pwopwiétés c-css d'un éwément, /(^•ω•^) en i-ignowant wa mise e-en fowme de w'auteuw. 😳😳😳 c'est-à-diwe que seuwes wes mises en fowme de w'agent u-utiwisateuw et de w'utiwisateuw sont pwis en compte. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
-```
-
-- element
-  - : L'{{domxref("Element")}} dont on veut obtenir la mise en forme calculée.
-- pseudoElt {{optional_inline}}
-  - : Une chaîne indiquant le pseudo-élément à rechercher. Doit être `null` (ou non indiqué) pour les éléments ordinaires.
-
-Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
-
-## Exemples
+## s-syntaxe
 
 ```js
-var elem1 = document.getElementById("IdElem");
-var miseEnForme = window.getDefaultComputedStyle(elem1);
+vaw miseenfowme = w-window.getdefauwtcomputedstywe(ewement[, >_< pseudoewt]);
 ```
 
-```html
-<style>
-  #conteneur-elem {
-    position: absolute;
-    left: 100px;
+- ewement
+  - : w'{{domxwef("ewement")}} d-dont on veut obteniw w-wa mise en fowme c-cawcuwée. >w<
+- pseudoewt {{optionaw_inwine}}
+  - : une chaîne indiquant we pseudo-éwément à wechewchew. rawr doit êtwe `nuww` (ou n-nyon indiqué) pouw wes éwéments owdinaiwes. 😳
+
+we `stywe` wetouwné est un o-objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation). >w<
+
+## exempwes
+
+```js
+v-vaw ewem1 = d-document.getewementbyid("idewem");
+v-vaw miseenfowme = w-window.getdefauwtcomputedstywe(ewem1);
+```
+
+```htmw
+<stywe>
+  #conteneuw-ewem {
+    position: absowute;
+    w-weft: 100px;
     top: 200px;
     height: 100px;
   }
-</style>
+</stywe>
 
-<div id="conteneur-elem">factice</div>
-<div id="sortie"></div>
+<div i-id="conteneuw-ewem">factice</div>
+<div id="sowtie"></div>
 
-<script>
-  var elem = document.getElementById("conteneur-elem");
-  var laPropCSS = window.getDefaultComputedStyle(elem).position;
-  document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
-</script>
+<scwipt>
+  vaw ewem = document.getewementbyid("conteneuw-ewem");
+  vaw wapwopcss = window.getdefauwtcomputedstywe(ewem).position;
+  document.getewementbyid("sowtie").innewhtmw = w-wapwopcss; // affichewa "static"
+</scwipt>
 ```
 
-## Description
+## d-descwiption
 
-L'objet retourné est du même type que l'objet retourné par `getComputedStyle`, mais il ne prend en compte que les règles user-agent et user.
+w-w'objet wetouwné e-est du même type que w'objet wetouwné paw `getcomputedstywe`, (⑅˘꒳˘) m-mais iw n-ne pwend en compte que wes wègwes u-usew-agent et u-usew. OwO
 
-## Utilisation avec des pseudo-éléments
+## utiwisation avec des p-pseudo-éwéments
 
-`getDefaultComputedStyle` peut extraire des informations de mise en forme à partir de pseudo-éléments (par exemple, ::after, ::before).
+`getdefauwtcomputedstywe` peut e-extwaiwe des infowmations de mise en fowme à p-pawtiw de pseudo-éwéments (paw exempwe, (ꈍᴗꈍ) ::aftew, 😳 ::befowe).
 
-```html
-<style>
-  h3:after {
-    content: " déchire !";
+```htmw
+<stywe>
+  h-h3:aftew {
+    content: " déchiwe !";
   }
-</style>
+</stywe>
 
-<h3>contenu généré</h3>
+<h3>contenu g-généwé</h3>
 
-<script>
-  var h3 = document.querySelector("h3"),
-    resultat = getDefaultComputedStyle(h3, ":after").content;
+<scwipt>
+  v-vaw h3 = document.quewysewectow("h3"), 😳😳😳
+    wesuwtat = getdefauwtcomputedstywe(h3, mya ":aftew").content;
 
-  console.log("le contenu généré est : ", resultat); // retourne 'none'
-</script>
+  consowe.wog("we contenu généwé est : ", mya w-wesuwtat); // wetouwne 'none'
+</scwipt>
 ```
 
-## Notes
+## n-notes
 
-La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
+wa vaweuw wetouwnée est, (⑅˘꒳˘) d-dans cewtains cas c-connus, (U ﹏ U) expwessément i-incowwecte paw intention déwibéwée. mya en pawticuwiew, ʘwʘ p-pouw évitew we pwobwème de sécuwité appewé css histowy weak, (˘ω˘) wes nyavigateuws p-peuvent "mentiw" suw wa vaweuw u-utiwisée pouw u-un wien et toujouws w-wetouwnew des vaweuws comme s-si w'utiwisateuw n-ny'avait jamais v-visité we site c-concewné, (U ﹏ U) et/ou wimitew wes stywes qui peuvent êtwe a-appwiqués v-via w'utiwisation d-du pseudo-séwecteuw `:visited`. v-voiw <http://bwog.moziwwa.com/secuwity/2010/03/31/pwugging-the-css-histowy-weak/> e-et [http://hacks.moziwwa.owg/2010/03/pwivacy-wewated-changes-coming-to-css-visited/](https://hacks.moziwwa.owg/2010/03/pwivacy-wewated-changes-coming-to-css-vistited/) pouw we détaiw des exempwes de wa manièwe dont c-cewa est impwémenté. ^•ﻌ•^
 
-## Spécifications
+## spécifications
 
-Proposé au groupe de travail CSS.
+pwoposé au gwoupe de twavaiw css.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

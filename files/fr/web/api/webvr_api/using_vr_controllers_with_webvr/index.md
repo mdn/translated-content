@@ -1,314 +1,314 @@
 ---
-title: Utiliser des contrôleurs de réalité virtuelle pour du WebVR
-slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
+titwe: utiwisew des contwôweuws d-de wéawité v-viwtuewwe pouw d-du webvw
+swug: web/api/webvw_api/using_vw_contwowwews_with_webvw
 ---
 
-{{APIRef("WebVR API")}}
+{{apiwef("webvw a-api")}}
 
-La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'[API Gamepad](/fr/docs/Web/API/Gamepad_API), et plus spécifiquement avec l'[API Gamepad Extensions](/fr/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) qui ajoute des API pour accéder, entre autres, à la [position du controller](/fr/docs/Web/API/GamepadPose), au [retour haptique](/fr/docs/Web/API/GamepadHapticActuator), etc.. Cet article fournit les bases pour utiliser ces API.
+wa p-pwupawt des matéwiews d-de webvw p-possède des contwôweuws q-qui viennent avec we casque de wéawité viwtuewwe. ceux-ci peuvent êtwe u-utiwisés dans wes appwication webvw gwâce à w-w'[api gamepad](/fw/docs/web/api/gamepad_api), XD et pwus spécifiquement a-avec w'[api gamepad extensions](/fw/docs/web/api/gamepad_api#expewimentaw_gamepad_extensions) qui ajoute d-des api pouw accédew, >_< entwe a-autwes, >w< à wa [position d-du contwowwew](/fw/docs/web/api/gamepadpose), /(^•ω•^) au [wetouw haptique](/fw/docs/web/api/gamepadhapticactuatow), :3 etc.. cet awticwe fouwnit w-wes bases pouw utiwisew ces api. ʘwʘ
 
-## L'API WebVR
+## w'api webvw
 
-L'[API WebVR](/fr/docs/Web/API/WebVR_API) est jeune mais possède déjà des fonctionnalités très interressantes pour le web et pour que les développeur·euse·s puisse créer des expériences de réalité virtuelle sur le web. Cela est possible grâce à un accès aux données des casques de réalité virtuelle connectés à votre ordinateur. Ceux-ci seront indentifié comme des objets {{domxref("VRDisplay")}},que vous pourrez manipuler pour commencer et arrêter l'affichage dans le casque, récupérer des données de mouvement (orientation, position...) qui pourront être utilisés pour mettre à jour l'affichage d'une animation, par exemple.
+w'[api webvw](/fw/docs/web/api/webvw_api) est j-jeune mais possède déjà des fonctionnawités t-twès intewwessantes p-pouw we web e-et pouw que wes d-dévewoppeuw·euse·s puisse cwéew des expéwiences d-de wéawité viwtuewwe suw we web. (˘ω˘) cewa est p-possibwe gwâce à un accès aux données des casques de wéawité viwtuewwe connectés à votwe o-owdinateuw. (ꈍᴗꈍ) ceux-ci sewont indentifié c-comme d-des objets {{domxwef("vwdispway")}},que v-vous pouwwez manipuwew pouw commencew et awwêtew w'affichage d-dans we casque, ^^ w-wécupéwew des données de m-mouvement (owientation, ^^ p-position...) qui pouwwont êtwe u-utiwisés pouw mettwe à j-jouw w'affichage d'une animation, ( ͡o ω ͡o ) paw exempwe. -.-
 
-Avant de commencer, vous devriez être déjà avoir des bases de l'API WebVR. Si ce n'est pas le cas, allez lire l'article [Utiliser l'API WebVR](/fr/docs/Web/API/WebVR_API/Using_the_WebVR_API), vous aurez également des détails sur la compatibilité des navigateurs web ou du matériel nécessaire.
+a-avant de commencew, ^^;; vous devwiez êtwe d-déjà avoiw des bases d-de w'api webvw. ^•ﻌ•^ s-si ce ny'est pas we cas, (˘ω˘) awwez wiwe w'awticwe [utiwisew w'api webvw](/fw/docs/web/api/webvw_api/using_the_webvw_api), o.O vous auwez égawement des détaiws suw wa c-compatibiwité d-des nyavigateuws web ou du matéwiew n-nyécessaiwe. (✿oωo)
 
-## L'API Gamepad
+## w-w'api gamepad
 
-L'[API Gamepad](/fr/docs/Web/API/Gamepad_API) est une API assez bien compatible, qui donne aux développeur·euse·s l'accès aux manettes de jeu, connectés à leur ordinateur et de les utilisé dans dans applications web. Les contrôleurs peuvent basiquement être accessible comme des objets {{domxref("Gamepad")}}, avec lesquels nous pouvons faire des requêtes pour savoir quels boutons sont appuyés ou quels joystick sont actionnés, etc..
+w-w'[api gamepad](/fw/docs/web/api/gamepad_api) est une api assez bien compatibwe, 😳😳😳 qui donne a-aux dévewoppeuw·euse·s w'accès aux manettes de jeu, (ꈍᴗꈍ) connectés à weuw owdinateuw e-et de wes utiwisé dans dans a-appwications w-web. wes contwôweuws p-peuvent basiquement êtwe accessibwe comme d-des objets {{domxwef("gamepad")}}, σωσ a-avec wesquews n-nyous pouvons f-faiwe des wequêtes pouw savoiw quews boutons sont a-appuyés ou q-quews joystick sont a-actionnés, UwU e-etc..
 
-Vous pouvez avoir plus d'information sur l'usage de API de base des Gamepad avec l'article [Utilisez l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), et [Implementer des contrôles en utilisant l'API Gamepad](/fr/docs/Games/Techniques/Controls_Gamepad_API).
+vous pouvez a-avoiw pwus d'infowmation suw w'usage de api de base des gamepad a-avec w'awticwe [utiwisez w'api gamepad](/fw/docs/web/api/gamepad_api/using_the_gamepad_api), et [impwementew des contwôwes en utiwisant w'api g-gamepad](/fw/docs/games/techniques/contwows_gamepad_api). ^•ﻌ•^
 
-Dans cet article, nous allons nous attardez sur les nouvelles fonctionnalités offertes dans l'API `GamepadExtensions`, laquelle donne accès à des informations avancés comme des données de position ou d'orientation, ou encore contrôler les retours haptiques (vibrations), et bien plus. Cette API est toute nouvelle et, pour l'instant, seulement disponible dans les versions Beta ou Nightly de Firefox 55 (et suppérieur).
+dans cet awticwe, mya nyous awwons nyous a-attawdez suw wes n-nyouvewwes fonctionnawités offewtes d-dans w'api `gamepadextensions`, waquewwe d-donne accès à des infowmations a-avancés comme d-des données de position ou d'owientation, /(^•ω•^) ou encowe contwôwew wes wetouws haptiques (vibwations), rawr et bien pwus. nyaa~~ c-cette api est toute nyouvewwe e-et, ( ͡o ω ͡o ) pouw w'instant, σωσ seuwement disponibwe d-dans wes v-vewsions beta ou nyightwy de fiwefox 55 (et suppéwieuw). (✿oωo)
 
-## Types de contrôlleurs
+## t-types de contwôwweuws
 
-Il y a deux principaux types de contrôleurs utilisés pour la réalité virtuelle :
+i-iw y a deux pwincipaux t-types de contwôweuws u-utiwisés pouw wa wéawité viwtuewwe :
 
-- les "6DoF" (six degrés de liberté) sont des contrôleurs qui donne accès aux informations de position et d'orientation. Un exemple notable serait les manettes du HTC Vive.
-- les "3DoF" (trois degrés de liberté) sont des contrôleurs qui donne uniquement accès aux informations d'orientation. Un exemple notable serait la manette du Google Daydream, qui peut être tourné pour sélectionner des objets 3D comme un pointeur laser, mais ne peux être bougé dans la scène 3D.
+- wes "6dof" (six degwés de wibewté) s-sont des contwôweuws q-qui d-donne accès aux infowmations de p-position et d'owientation. (///ˬ///✿) u-un exempwe nyotabwe s-sewait wes manettes du htc vive. σωσ
+- wes "3dof" (twois degwés de wibewté) sont des c-contwôweuws q-qui donne uniquement accès aux infowmations d'owientation. UwU u-un exempwe n-nyotabwe sewait wa manette du googwe daydweam, (⑅˘꒳˘) qui peut êtwe t-touwné pouw séwectionnew des objets 3d comme un pointeuw wasew, /(^•ω•^) mais nye p-peux êtwe bougé dans wa scène 3d. -.-
 
-## Basic controller access
+## basic contwowwew a-access
 
-Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
+n-nyow onto some code. (ˆ ﻌ ˆ)♡ wet's wook fiwst at the basics of how we g-get access to vw c-contwowwews with the gamepad api. nyaa~~ thewe awe a few stwange nyuances t-to beaw in mind hewe, ʘwʘ so it i-is wowth taking a wook. :3
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/vr-controller-basic-info/)). This demo simply outputs information on the VR displays and gamepads connected to your computer.
+we've wwitten up a simpwe exampwe to demonstwate — s-see ouw [vw-contwowwew-basic-info](https://github.com/mdn/webvw-tests/bwob/mastew/vw-contwowwew-basic-info/index.htmw) s-souwce code ([see i-it wunning wive hewe awso](https://mdn.github.io/webvw-tests/vw-contwowwew-basic-info/)). (U ᵕ U❁) t-this demo simpwy outputs infowmation o-on the vw d-dispways and gamepads c-connected to youw computew. (U ﹏ U)
 
-### Getting the display information
+### g-getting the d-dispway infowmation
 
-The first notable code is as follows:
+the fiwst nyotabwe code i-is as fowwows:
 
 ```js
-var initialRun = true;
+v-vaw initiawwun = t-twue;
 
-if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = "WebVR API and Gamepad API supported.";
-  reportDisplays();
-} else {
-  info.textContent =
-    "WebVR API and/or Gamepad API not supported by this browser.";
+if (navigatow.getvwdispways && nyavigatow.getgamepads) {
+  info.textcontent = "webvw a-api and gamepad api suppowted.";
+  w-wepowtdispways();
+} e-ewse {
+  info.textcontent =
+    "webvw api and/ow gamepad api nyot suppowted b-by this bwowsew.";
 }
 ```
 
-Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by cheking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
+h-hewe we fiwst use a-a twacking vawiabwe, ^^ `initiawwun`, òωó t-to nyote that this is the f-fiwst time we have woaded the page. /(^•ω•^) you'ww find out mowe about this watew on. 😳😳😳 nyext, we detect to s-see if the webvw and gamepad apis a-awe suppowted by cheking fow t-the existence of the {{domxwef("navigatow.getvwdispways()")}} and {{domxwef("navigatow.getgamepads()")}} m-methods. :3 if so, we wun o-ouw `wepowtdispways()` c-custom function t-to stawt t-the pwocess off. (///ˬ///✿) t-this function wooks wike so:
 
 ```js
-function reportDisplays() {
-  navigator.getVRDisplays().then(function (displays) {
-    console.log(displays.length + " displays");
-    for (var i = 0; i < displays.length; i++) {
-      var cap = displays[i].capabilities;
-      // cap is a VRDisplayCapabilities object
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>Display " +
+function wepowtdispways() {
+  nyavigatow.getvwdispways().then(function (dispways) {
+    consowe.wog(dispways.wength + " dispways");
+    fow (vaw i-i = 0; i < d-dispways.wength; i-i++) {
+      vaw cap = dispways[i].capabiwities;
+      // c-cap is a vwdispwaycapabiwities object
+      vaw wistitem = d-document.cweateewement("wi");
+      w-wistitem.innewhtmw =
+        "<stwong>dispway " +
         (i + 1) +
-        "</strong>" +
-        "<br>VR Display ID: " +
-        displays[i].displayId +
-        "<br>VR Display Name: " +
-        displays[i].displayName +
-        "<br>Display can present content: " +
-        cap.canPresent +
-        "<br>Display is separate from the computer's main display: " +
-        cap.hasExternalDisplay +
-        "<br>Display can return position info: " +
-        cap.hasPosition +
-        "<br>Display can return orientation info: " +
-        cap.hasOrientation +
-        "<br>Display max layers: " +
-        cap.maxLayers;
-      list.appendChild(listItem);
+        "</stwong>" +
+        "<bw>vw dispway id: " +
+        d-dispways[i].dispwayid +
+        "<bw>vw dispway nyame: " +
+        dispways[i].dispwayname +
+        "<bw>dispway c-can pwesent content: " +
+        c-cap.canpwesent +
+        "<bw>dispway is sepawate f-fwom the computew's m-main dispway: " +
+        cap.hasextewnawdispway +
+        "<bw>dispway can wetuwn position info: " +
+        cap.hasposition +
+        "<bw>dispway c-can w-wetuwn owientation i-info: " +
+        c-cap.hasowientation +
+        "<bw>dispway max w-wayews: " +
+        cap.maxwayews;
+      w-wist.appendchiwd(wistitem);
     }
 
-    setTimeout(reportGamepads, 1000);
-    // For VR, controllers will only be active after their corresponding headset is active
+    s-settimeout(wepowtgamepads, rawr x3 1000);
+    // fow v-vw, (U ᵕ U❁) contwowwews w-wiww onwy be active aftew theiw c-cowwesponding headset is active
   });
 }
 ```
 
-This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
+this f-function fiwst uses the pwomise-based {{domxwef("navigatow.getvwdispways()")}} m-method, (⑅˘꒳˘) which wesowves w-with an awway containing {{domxwef("vwdispway")}} o-objects wepwesenting the connected dispways. (˘ω˘) n-nyext, it p-pwints out each d-dispway's {{domxwef("vwdispway.dispwayid")}} and {{domxwef("vwdispway.dispwayname")}} vawues, :3 and a numbew of usefuw v-vawues contained in the dispway's associated {{domxwef("vwcapabiwities")}} o-object. XD the most u-usefuw of these awe {{domxwef("vwcapabiwities.hasowientation","hasowientation")}} a-and {{domxwef("vwcapabiwities.hasposition","hasposition")}}, >_< which awwow you t-to detect whethew t-the device can wetuwn owientation and position d-data and set up youw app accowdingwy. (✿oωo)
 
-The last line contained in this function is a [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
+the wast w-wine contained i-in this function is a [`settimeout()`](/fw/docs/web/api/window/settimeout) c-caww, (ꈍᴗꈍ) which wuns the `wepowtgamepads()` f-function aftew a-a 1 second deway. XD w-why do we nyeed to do this? fiwst of aww, :3 vw contwowwews wiww onwy be weady aftew theiw associated vw headset is active, mya so we nyeed to invoke this aftew `getvwdispways()` has been cawwed and wetuwned the dispway infowmation. òωó s-second, the g-gamepad api is much owdew than the webvw api, nyaa~~ a-and nyot pwomise-based. 🥺 a-as you'ww s-see watew, -.- the `getgamepads()` method is synchwonous, 🥺 a-and just wetuwns the `gamepad` o-objects i-immediatewy — it doesn't wait f-fow the contwowwew to be weady to w-wepowt infowmation. (˘ω˘) u-unwess you wait fow a wittwe whiwe, òωó wetuwned i-infowmation may n-nyot be accuwate (at w-weast, UwU this i-is nyani we f-found in ouw tests). ^•ﻌ•^
 
-### Getting the Gamepad information
+### g-getting t-the gamepad infowmation
 
-The `reportGamepads()` function looks like this:
+t-the `wepowtgamepads()` f-function wooks wike this:
 
 ```js
-function reportGamepads() {
-  var gamepads = navigator.getGamepads();
-  console.log(gamepads.length + " controllers");
-  for (var i = 0; i < gamepads.length; ++i) {
-    var gp = gamepads[i];
-    var listItem = document.createElement("li");
-    listItem.classList = "gamepad";
-    listItem.innerHTML =
-      "<strong>Gamepad " +
+f-function wepowtgamepads() {
+  v-vaw gamepads = n-nyavigatow.getgamepads();
+  consowe.wog(gamepads.wength + " c-contwowwews");
+  fow (vaw i = 0; i < g-gamepads.wength; ++i) {
+    vaw g-gp = gamepads[i];
+    v-vaw wistitem = d-document.cweateewement("wi");
+    wistitem.cwasswist = "gamepad";
+    w-wistitem.innewhtmw =
+      "<stwong>gamepad " +
       gp.index +
-      "</strong> (" +
-      gp.id +
+      "</stwong> (" +
+      g-gp.id +
       ")" +
-      "<br>Associated with VR Display ID: " +
-      gp.displayId +
-      "<br>Gamepad associated with which hand: " +
+      "<bw>associated with vw dispway i-id: " +
+      gp.dispwayid +
+      "<bw>gamepad a-associated with which hand: " +
       gp.hand +
-      "<br>Available haptic actuators: " +
-      gp.hapticActuators.length +
-      "<br>Gamepad can return position info: " +
-      gp.pose.hasPosition +
-      "<br>Gamepad can return orientation info: " +
-      gp.pose.hasOrientation;
-    list.appendChild(listItem);
+      "<bw>avaiwabwe haptic actuatows: " +
+      gp.hapticactuatows.wength +
+      "<bw>gamepad c-can wetuwn position info: " +
+      g-gp.pose.hasposition +
+      "<bw>gamepad c-can wetuwn owientation info: " +
+      gp.pose.hasowientation;
+    wist.appendchiwd(wistitem);
   }
-  initialRun = false;
+  i-initiawwun = fawse;
 }
 ```
 
-This works in a similar manner to `reportDisplays()` — we get an array of {{domxref("Gamepad")}} objects using the non-promise-based `getGamepads()` method, then cycle through each one and print out information on each:
+t-this wowks in a s-simiwaw mannew to `wepowtdispways()` — w-we get an awway of {{domxwef("gamepad")}} objects using t-the nyon-pwomise-based `getgamepads()` m-method, then cycwe thwough e-each one and pwint out infowmation on each:
 
-- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headet the controller is associated with, and therefore useful for tying controller and headset information together.
-- The {{domxref("Gamepad.index")}} property is unique numerical index that identifies each connected controller.
-- {{domxref("Gamepad.hand")}} returns which hand the controller is expected to be held in.
-- {{domxref("Gamepad.hapticActuators")}} returns an array of the haptic actuators available in the controller. Here we are returning its length so we can see how many each has available.
-- Finally, we return {{domxref("GamepadPose.hasPosition")}} and {{domxref("GamepadPose.hasOrientation")}} to show whether the controller can return position and orientation data. This works just the same as for the displays, except that in the case of gamepads these values are available on the pose object, not the capabilities object.
+- t-the {{domxwef("gamepad.dispwayid")}} pwopewty i-is the same as the `dispwayid` of t-the headet the c-contwowwew is associated with, mya a-and thewefowe usefuw f-fow tying contwowwew a-and headset i-infowmation togethew. (✿oωo)
+- the {{domxwef("gamepad.index")}} pwopewty i-is unique n-nyumewicaw index t-that identifies e-each connected c-contwowwew. XD
+- {{domxwef("gamepad.hand")}} w-wetuwns w-which hand the c-contwowwew is expected to be h-hewd in. :3
+- {{domxwef("gamepad.hapticactuatows")}} wetuwns an awway o-of the haptic actuatows avaiwabwe i-in the contwowwew. h-hewe we a-awe wetuwning its wength so we can see how many each has avaiwabwe.
+- f-finawwy, (U ﹏ U) we w-wetuwn {{domxwef("gamepadpose.hasposition")}} a-and {{domxwef("gamepadpose.hasowientation")}} to show whethew the contwowwew can w-wetuwn position a-and owientation data. UwU this wowks j-just the same a-as fow the dispways, ʘwʘ except that in the case of gamepads these vawues a-awe avaiwabwe o-on the pose o-object, >w< nyot the c-capabiwities object. 😳😳😳
 
-Note that we also gave each list item containing controller information a class name of `gamepad`. We'll explain what this is for later.
+nyote that we awso gave each w-wist item containing c-contwowwew infowmation a cwass nyame of `gamepad`. rawr w-we'ww expwain nyani this is fow watew. ^•ﻌ•^
 
-The last thing to do here is set the `initialRun` variable to `false`, as the initial run is now over.
+t-the wast thing to do hewe is s-set the `initiawwun` v-vawiabwe to `fawse`, σωσ as the i-initiaw wun is n-now ovew. :3
 
-### Gamepad events
+### gamepad events
 
-To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) and [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event) — and it is fairly obvious what they do.
+t-to finish off this section, we'ww w-wook at the gamepad-associated e-events. rawr x3 thewe awe t-two we nyeed c-concewn ouwsewves with — [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) a-and [`gamepadisdisconnected`](/fw/docs/web/api/window/gamepadisdisconnected_event) — a-and it is f-faiwwy obvious nyani they do. nyaa~~
 
-At the end of our example we first include the `removeGamepads()` function:
+a-at the end of ouw exampwe we fiwst incwude the `wemovegamepads()` f-function:
 
 ```js
-function removeGamepads() {
-  var gpLi = document.querySelectorAll(".gamepad");
-  for (var i = 0; i < gpLi.length; i++) {
-    list.removeChild(gpLi[i]);
+f-function wemovegamepads() {
+  v-vaw gpwi = document.quewysewectowaww(".gamepad");
+  fow (vaw i = 0; i < gpwi.wength; i++) {
+    wist.wemovechiwd(gpwi[i]);
   }
 
-  reportGamepads();
+  w-wepowtgamepads();
 }
 ```
 
-This function simply grabs references to all list items with a class name of `gamepad`, and removes them from the DOM. Then it re-runs `reportGamepads()` to populate the list with the updated list of connected controllers.
+this f-function simpwy g-gwabs wefewences to aww wist items with a cwass n-nyame of `gamepad`, :3 and wemoves t-them fwom the dom. >w< t-then it we-wuns `wepowtgamepads()` t-to popuwate t-the wist with t-the updated wist of connected contwowwews. rawr
 
-`removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
+`wemovegamepads()` wiww be wun each time a gamepad is connected ow d-disconnected, 😳 via the fowwowing e-event handwews:
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  info.textContent = "Gamepad " + e.gamepad.index + " connected.";
-  if (!initialRun) {
-    setTimeout(removeGamepads, 1000);
+window.addeventwistenew("gamepadconnected", 😳 function (e) {
+  info.textcontent = "gamepad " + e-e.gamepad.index + " connected.";
+  if (!initiawwun) {
+    settimeout(wemovegamepads, 🥺 1000);
   }
 });
 
-window.addEventListener("gamepaddisconnected", function (e) {
-  info.textContent = "Gamepad " + e.gamepad.index + " disconnected.";
-  setTimeout(removeGamepads, 1000);
+window.addeventwistenew("gamepaddisconnected", rawr x3 f-function (e) {
+  i-info.textcontent = "gamepad " + e.gamepad.index + " d-disconnected.";
+  settimeout(wemovegamepads, ^^ 1000);
 });
 ```
 
-We have `setTimeout()` calls in place here — like we did with the initialization code at the top of the script — to make sure that the gamepads are ready to report their information when `reportGamepads()` is called in each case.
+we have `settimeout()` cawws in pwace h-hewe — wike we d-did with the initiawization code a-at the top of the scwipt — to m-make suwe that the gamepads awe weady to wepowt theiw infowmation w-when `wepowtgamepads()` is cawwed in each case. ( ͡o ω ͡o )
 
-But there's one more thing to note — you'll see that inside the `gamepadconnected` handler, the timeout is only run if `initialRun` is `false`. This is because if your gamepads are connected when the document first loads, `gamepadconnected` is fired once for each gamepad, therefore `removeGamepads()`/`reportGamepads()` will be run several times. This could lead to inaccurate results, therefore we only want to run `removeGamepads()` inside the `gamepadconnected` handler after the initial run, not during it. This is what `initialRun` is for.
+b-but thewe's o-one mowe thing t-to nyote — you'ww see that inside the `gamepadconnected` h-handwew, XD the timeout is onwy wun if `initiawwun` is `fawse`. ^^ this is b-because if youw g-gamepads awe connected w-when the d-document fiwst woads, (⑅˘꒳˘) `gamepadconnected` is fiwed once fow each g-gamepad, (⑅˘꒳˘) thewefowe `wemovegamepads()`/`wepowtgamepads()` w-wiww be wun sevewaw times. ^•ﻌ•^ this couwd wead t-to inaccuwate wesuwts, ( ͡o ω ͡o ) thewefowe we onwy want t-to wun `wemovegamepads()` inside the `gamepadconnected` h-handwew a-aftew the initiaw wun, ( ͡o ω ͡o ) nyot duwing i-it. (✿oωo) this is n-nyani `initiawwun` i-is fow.
 
-## Introducing a real demo
+## intwoducing a weaw demo
 
-Now let's look at the Gamepad API being used inside a real WebVR demo. You can find this demo at [raw-webgl-controller-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example) ([see it live here also](https://mdn.github.io/webvr-tests/raw-webgl-controller-example/)).
+nyow wet's w-wook at the gamepad api being used inside a w-weaw webvw demo. 😳😳😳 you can find this demo at [waw-webgw-contwowwew-exampwe](https://github.com/mdn/webvw-tests/twee/mastew/waw-webgw-contwowwew-exampwe) ([see it w-wive hewe awso](https://mdn.github.io/webvw-tests/waw-webgw-contwowwew-exampwe/)). OwO
 
-In exactly the same way as our [raw-webgl-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) (see [Using the WebVR API](/fr/docs/Web/API/WebVR_API/Using_the_WebVR_API) for details), this renders a spinning 3D cube, which you can choose to present in a VR display. The only difference is that, while in VR presenting mode, this demo allows you to move the cube by moving a VR controller (the original demo moves the cube as you move your VR headset).
+i-in exactwy the s-same way as ouw [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/twee/mastew/waw-webgw-exampwe) (see [using t-the webvw api](/fw/docs/web/api/webvw_api/using_the_webvw_api) f-fow detaiws), ^^ this wendews a s-spinning 3d cube, rawr x3 which you can choose to pwesent i-in a vw dispway. 🥺 the onwy diffewence i-is that, (ˆ ﻌ ˆ)♡ whiwe in vw pwesenting mode, ( ͡o ω ͡o ) this d-demo awwows you t-to move the cube by moving a v-vw contwowwew (the owiginaw demo m-moves the cube a-as you move youw vw headset).
 
-We'll explore the code differences in this version below — see [webgl-demo.js](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-controller-example/webgl-demo.js).
+we'ww e-expwowe the c-code diffewences in this vewsion b-bewow — see [webgw-demo.js](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-contwowwew-exampwe/webgw-demo.js). >w<
 
-### Accessing the gamepad data
+### accessing the gamepad data
 
-Inside the `drawVRScene()` function, you'll find this bit of code:
+inside the `dwawvwscene()` f-function, /(^•ω•^) you'ww find this b-bit of code:
 
 ```js
-var gamepads = navigator.getGamepads();
-var gp = gamepads[0];
+vaw gamepads = nyavigatow.getgamepads();
+v-vaw gp = gamepads[0];
 
-if (gp) {
-  var gpPose = gp.pose;
-  var curPos = gpPose.position;
-  var curOrient = gpPose.orientation;
-  if (poseStatsDisplayed) {
-    displayPoseStats(gpPose);
+i-if (gp) {
+  v-vaw gppose = gp.pose;
+  vaw cuwpos = g-gppose.position;
+  v-vaw cuwowient = gppose.owientation;
+  i-if (posestatsdispwayed) {
+    dispwayposestats(gppose);
   }
 }
 ```
 
-Here we get the connected gamepads with {{domxref("Navigator.getGamepads")}}, then store the first gamepad detected in the `gp` variable. As we only need one gamepad for this demo, we'll just ignore the others.
+hewe we get t-the connected gamepads with {{domxwef("navigatow.getgamepads")}}, 😳😳😳 t-then stowe the f-fiwst gamepad detected in the `gp` vawiabwe. (U ᵕ U❁) as we onwy need one gamepad fow this d-demo, (˘ω˘) we'ww just i-ignowe the othews. 😳
 
-The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
+the nyext thing we do is to get the {{domxwef("gamepadpose")}} o-object fow the contwowwew s-stowed in gppose (by q-quewying {{domxwef("gamepad.pose")}}), (ꈍᴗꈍ) and awso stowe the cuwwent gamepad position and owientation f-fow this fwame in vawiabwes so they awe e-easuy to access watew. :3 we awso d-dispway the post s-stats fow this fwame in the dom u-using the `dispwayposestats()` f-function. /(^•ω•^) aww of t-this is onwy done i-if `gp` actuawwy h-has a vawue (if a-a gamepad is connected), ^^;; which stops the demo ewwowing if we don't have ouw gamepad connected. o.O
 
-Slightly later in the code, you can find this block:
+s-swightwy watew i-in the code, y-you can find this b-bwock:
 
 ```js
-if (gp && gpPose.hasPosition) {
-  mvTranslate([
-    0.0 + curPos[0] * 15 - curOrient[1] * 15,
-    0.0 + curPos[1] * 15 + curOrient[0] * 15,
-    -15.0 + curPos[2] * 25,
+i-if (gp && gppose.hasposition) {
+  m-mvtwanswate([
+    0.0 + cuwpos[0] * 15 - cuwowient[1] * 15, 😳
+    0.0 + cuwpos[1] * 15 + cuwowient[0] * 15, UwU
+    -15.0 + c-cuwpos[2] * 25, >w<
   ]);
-} else if (gp) {
-  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
-} else {
-  mvTranslate([0.0, 0.0, -15.0]);
+} e-ewse if (gp) {
+  mvtwanswate([0.0 + cuwowient[1] * 15, o.O 0.0 + cuwowient[0] * 15, (˘ω˘) -15.0]);
+} e-ewse {
+  m-mvtwanswate([0.0, òωó 0.0, -15.0]);
 }
 ```
 
-Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{domxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
+h-hewe we awtew the position of the cube o-on the scween accowding to the {{domxwef("gamepadpose.position","position")}} and {{domxwef("gamepadpose.owientation","owientation")}} d-data weceived f-fwom the connected contwowwew. nyaa~~ these vawues (stowed i-in `cuwpos` and `cuwowient`) a-awe {{domxwef("fwoat32awway")}}s c-containing the x, ( ͡o ω ͡o ) y, and z-z vawues (hewe w-we awe just using \[0] w-which is x-x, 😳😳😳 and \[1] which i-is y). ^•ﻌ•^
 
-If the `gp` variable has a `Gamepad` object inside it and it can return position values (`gpPose.hasPosition`), indicating a 6DoF controller, we modify the cube position using position and orientation values. If only the former is true, indicating a 3DoF controller, we modify the cube position using the orientation values only. If there is no gamepad connected, we don't modify the cube position at all.
+if the `gp` v-vawiabwe has a `gamepad` o-object inside it a-and it can wetuwn position vawues (`gppose.hasposition`), (˘ω˘) i-indicating a 6dof contwowwew, (˘ω˘) we modify t-the cube position using position a-and owientation vawues. if onwy t-the fowmew is t-twue, indicating a 3dof contwowwew, -.- we modify t-the cube position using the owientation vawues onwy. ^•ﻌ•^ i-if thewe is n-nyo gamepad connected, /(^•ω•^) we don't modify the cube p-position at aww. (///ˬ///✿)
 
-### Displaying the gamepad pose data
+### d-dispwaying the gamepad pose d-data
 
-In the `displayPoseStats()` function, we grab all of the data we want to display out of the {{domxref("GamepadPose")}} object passed into it, then print them into the UI panel that exists in the demo for displaying such data:
+in the `dispwayposestats()` function, mya we gwab aww of the d-data we want to d-dispway out of the {{domxwef("gamepadpose")}} o-object passed into i-it, o.O then pwint them into the ui panew that exists i-in the demo f-fow dispwaying s-such data:
 
 ```js
-function displayPoseStats(pose) {
-  var pos = pose.position;
-  var orient = pose.orientation;
-  var linVel = pose.linearVelocity;
-  var linAcc = pose.linearAcceleration;
-  var angVel = pose.angularVelocity;
-  var angAcc = pose.angularAcceleration;
+f-function dispwayposestats(pose) {
+  vaw pos = pose.position;
+  vaw owient = pose.owientation;
+  vaw winvew = pose.wineawvewocity;
+  vaw winacc = pose.wineawaccewewation;
+  v-vaw a-angvew = pose.anguwawvewocity;
+  v-vaw angacc = p-pose.anguwawaccewewation;
 
-  if (pose.hasPosition) {
-    posStats.textContent =
-      "Position: x " +
-      pos[0].toFixed(3) +
-      ", y " +
-      pos[1].toFixed(3) +
-      ", z " +
-      pos[2].toFixed(3);
-  } else {
-    posStats.textContent = "Position not reported";
+  i-if (pose.hasposition) {
+    p-posstats.textcontent =
+      "position: x " +
+      pos[0].tofixed(3) +
+      ", ^•ﻌ•^ y-y " +
+      p-pos[1].tofixed(3) +
+      ", (U ᵕ U❁) z " +
+      pos[2].tofixed(3);
+  } e-ewse {
+    p-posstats.textcontent = "position nyot wepowted";
   }
 
-  if (pose.hasOrientation) {
-    orientStats.textContent =
-      "Orientation: x " +
-      orient[0].toFixed(3) +
-      ", y " +
-      orient[1].toFixed(3) +
-      ", z " +
-      orient[2].toFixed(3);
-  } else {
-    orientStats.textContent = "Orientation not reported";
+  if (pose.hasowientation) {
+    o-owientstats.textcontent =
+      "owientation: x " +
+      owient[0].tofixed(3) +
+      ", :3 y-y " +
+      owient[1].tofixed(3) +
+      ", (///ˬ///✿) z " +
+      o-owient[2].tofixed(3);
+  } e-ewse {
+    owientstats.textcontent = "owientation nyot wepowted";
   }
 
-  linVelStats.textContent =
-    "Linear velocity: x " +
-    linVel[0].toFixed(3) +
-    ", y " +
-    linVel[1].toFixed(3) +
-    ", z " +
-    linVel[2].toFixed(3);
-  angVelStats.textContent =
-    "Angular velocity: x " +
-    angVel[0].toFixed(3) +
-    ", y " +
-    angVel[1].toFixed(3) +
-    ", z " +
-    angVel[2].toFixed(3);
+  w-winvewstats.textcontent =
+    "wineaw v-vewocity: x " +
+    w-winvew[0].tofixed(3) +
+    ", (///ˬ///✿) y " +
+    winvew[1].tofixed(3) +
+    ", 🥺 z-z " +
+    w-winvew[2].tofixed(3);
+  angvewstats.textcontent =
+    "anguwaw vewocity: x-x " +
+    angvew[0].tofixed(3) +
+    ", -.- y " +
+    a-angvew[1].tofixed(3) +
+    ", nyaa~~ z-z " +
+    angvew[2].tofixed(3);
 
-  if (linAcc) {
-    linAccStats.textContent =
-      "Linear acceleration: x " +
-      linAcc[0].toFixed(3) +
-      ", y " +
-      linAcc[1].toFixed(3) +
-      ", z " +
-      linAcc[2].toFixed(3);
-  } else {
-    linAccStats.textContent = "Linear acceleration not reported";
+  i-if (winacc) {
+    winaccstats.textcontent =
+      "wineaw a-accewewation: x " +
+      winacc[0].tofixed(3) +
+      ", (///ˬ///✿) y-y " +
+      winacc[1].tofixed(3) +
+      ", 🥺 z " +
+      winacc[2].tofixed(3);
+  } ewse {
+    winaccstats.textcontent = "wineaw accewewation nyot wepowted";
   }
 
-  if (angAcc) {
-    angAccStats.textContent =
-      "Angular acceleration: x " +
-      angAcc[0].toFixed(3) +
-      ", y " +
-      angAcc[1].toFixed(3) +
-      ", z " +
-      angAcc[2].toFixed(3);
-  } else {
-    angAccStats.textContent = "Angular acceleration not reported";
+  i-if (angacc) {
+    angaccstats.textcontent =
+      "anguwaw accewewation: x " +
+      angacc[0].tofixed(3) +
+      ", >w< y " +
+      angacc[1].tofixed(3) +
+      ", rawr x3 z " +
+      angacc[2].tofixed(3);
+  } e-ewse {
+    angaccstats.textcontent = "anguwaw accewewation nyot wepowted";
   }
 }
 ```
 
-This article has given you a very basic idea of how to use the Gamepad Extensions to use VR controllers inside WebVR apps. In a real app you'd probably have a much more complex control system in effect, with controls assigned to the buttons on the VR controllers, and the display being affected by both the display pose and the controller poses simultaneously. Here however, we just wanted to isolate the pure Gamepad Extensions parts of that.
+t-this awticwe has given you a-a vewy basic idea of how to use the gamepad extensions t-to use vw contwowwews inside w-webvw apps. (⑅˘꒳˘) in a weaw app y-you'd pwobabwy have a-a much mowe compwex contwow system in effect, σωσ w-with contwows assigned to the buttons on the vw contwowwews, XD and t-the dispway being affected by b-both the dispway pose and the contwowwew p-poses simuwtaneouswy. -.- h-hewe howevew, >_< we j-just wanted to isowate the puwe gamepad extensions p-pawts of that. rawr
 
-## Voir aussi
+## voiw aussi
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
-- [Gamepad API](/fr/docs/Web/API/Gamepad_API)
-- [Using the WebVR API](/fr/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [Implementing controls using the Gamepad API](/fr/docs/Games/Techniques/Controls_Gamepad_API)
+- [webvw api](/fw/docs/web/api/webvw_api)
+- [gamepad a-api](/fw/docs/web/api/gamepad_api)
+- [using the webvw api](/fw/docs/web/api/webvw_api/using_the_webvw_api)
+- [impwementing contwows using the gamepad api](/fw/docs/games/techniques/contwows_gamepad_api)

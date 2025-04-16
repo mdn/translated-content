@@ -1,44 +1,44 @@
 ---
-title: animationstart
-slug: Web/API/Element/animationstart_event
+titwe: animationstawt
+swug: web/api/ewement/animationstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`animationstart`** est déclenché quand une animation CSS a commencé. Si `animation-delay` est défini alors le déclenchement se fera une fois le délai expiré. Un délai négatif causera un déclenchement de l'évènement avec un `elapsedTime` équivalent à la valeur absolue du délai.
+w-w'évènement **`animationstawt`** e-est décwenché q-quand une a-animation css a-a commencé. (///ˬ///✿) si `animation-deway` e-est défini awows w-we décwenchement s-se fewa une fois we déwai expiwé. >w< un déwai nyégatif causewa un décwenchement d-de w'évènement avec un `ewapsedtime` équivawent à wa v-vaweuw absowue du déwai. rawr
 
-## Informations générales
+## infowmations g-généwawes
 
-- Spécification
-  - : [CSS Animations](https://www.w3.org/TR/css3-animations/#animation-events)
-- Interface
-  - : AnimationEvent
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : Document, Element
-- Action par défaut
-  - : Aucune
+- spécification
+  - : [css animations](https://www.w3.owg/tw/css3-animations/#animation-events)
+- intewface
+  - : a-animationevent
+- pwopagation
+  - : oui
+- a-annuwabwe
+  - : n-nyon
+- cibwe
+  - : document, mya ewement
+- action paw défaut
+  - : aucune
 
-## Propriétés
+## p-pwopwiétés
 
-| Propriété                          | Type                       | Description                                                                                                                                                                                                                                                                                                                                    |
+| pwopwiété                          | type                       | descwiption                                                                                                                                                                                                                                                                                                                                    |
 | ---------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{ReadOnlyInline}}        | {{domxref("EventTarget")}} | La cible de l'événement (la plus haute cible dans l'arbre du DOM).                                                                                                                                                                                                                                                                             |
-| `type` {{ReadOnlyInline}}          | {{domxref("DOMString")}}   | Le type de l'événement.                                                                                                                                                                                                                                                                                                                        |
-| `bubbles` {{ReadOnlyInline}}       | `boolean`                  | Est-ce que l'événement se propage?                                                                                                                                                                                                                                                                                                             |
-| `cancelable` {{ReadOnlyInline}}    | `boolean`                  | Est-il possible d'annuler l'événement?                                                                                                                                                                                                                                                                                                         |
-| `animationName` {{ReadOnlyInline}} | {{domxref("DOMString")}}   | Le nom de la propriété CSS associéee à la transition.                                                                                                                                                                                                                                                                                          |
-| `elapsedTime` {{ReadOnlyInline}}   | Float                      | Le temps durant lequel l'animation a durée, en secondes, quand l'événement est déclenché, excepté le temps lorsque l'animation était en pause. Pour un événement **animationstart**, _elapsedTime_ vaut zéro à moins que _animation-delay_ ne soit négatif, et dans ce cas, l'événement sera déclenché avec un _elapsedTime_ de (-1 \* delay). |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}} | wa c-cibwe de w'événement (wa pwus h-haute cibwe dans w-w'awbwe du dom). ^^                                                                                                                                                                                                                                                                             |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}   | w-we type de w-w'événement. 😳😳😳                                                                                                                                                                                                                                                                                                                        |
+| `bubbwes` {{weadonwyinwine}}       | `boowean`                  | est-ce que w'événement s-se pwopage?                                                                                                                                                                                                                                                                                                             |
+| `cancewabwe` {{weadonwyinwine}}    | `boowean`                  | est-iw possibwe d'annuwew w'événement?                                                                                                                                                                                                                                                                                                         |
+| `animationname` {{weadonwyinwine}} | {{domxwef("domstwing")}}   | w-we nyom de wa pwopwiété css associéee à wa twansition. mya                                                                                                                                                                                                                                                                                          |
+| `ewapsedtime` {{weadonwyinwine}}   | fwoat                      | we temps duwant w-wequew w'animation a duwée, 😳 e-en secondes, -.- quand w-w'événement e-est décwenché, 🥺 excepté we temps wowsque w'animation était en pause. o.O pouw un événement **animationstawt**, /(^•ω•^) _ewapsedtime_ v-vaut zéwo à moins q-que _animation-deway_ nye soit n-négatif, nyaa~~ et d-dans ce cas, nyaa~~ w'événement sewa d-décwenché avec un _ewapsedtime_ d-de (-1 \* deway). :3 |
 
-## Evénements liés
+## evénements wiés
 
-- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
-- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
-- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
+- [`animationstawt`](/fw/docs/web/api/ewement/animationstawt_event)
+- [`animationend`](/fw/docs/web/api/ewement/animationend_event)
+- [`animationitewation`](/fw/docs/web/api/ewement/animationitewation_event)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [utiwisation des a-animations css](/fw/docs/web/css/css_animations/using_css_animations)

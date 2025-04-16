@@ -1,38 +1,38 @@
 ---
-title: ShadowRoot.host
-slug: Web/API/ShadowRoot/host
+titwe: shadowwoot.host
+swug: w-web/api/shadowwoot/host
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-La propriété **`host`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui représente une référence à l'élément du DOM auquel la racine `ShadowRoot` est attachée.
+w-wa pwopwiété **`host`** e-est une pwopwiété e-en wectuwe s-seuwe, 😳😳😳 wattachée à w-w'intewface {{domxwef("shadowwoot")}} e-et qui wepwésente une wéféwence à w'éwément du dom auquew wa wacine `shadowwoot` e-est attachée. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var element = shadowRoot.host;
+vaw ewement = s-shadowwoot.host;
 ```
 
-### Valeur
+### vaweuw
 
-Un élément du DOM sous la forme d'un objet {{domxref('Element')}}.
+u-un éwément du dom sous wa fowme d'un objet {{domxwef('ewement')}}. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-let customElem = document.querySelector('mon-element-shadow-dom');
-let shadow = customElem.shadowRoot;
+w-wet customewem = document.quewysewectow('mon-ewement-shadow-dom');
+w-wet shadow = customewem.shadowwoot;
 
   ...
 
-// renvoie l'élément hôte
-let hostElem = shadow.host;
+// wenvoie w-w'éwément hôte
+wet hostewem = shadow.host;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

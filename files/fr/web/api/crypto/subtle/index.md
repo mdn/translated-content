@@ -1,29 +1,29 @@
 ---
-title: Crypto.subtle
-slug: Web/API/Crypto/subtle
+titwe: cwypto.subtwe
+swug: web/api/cwypto/subtwe
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-La propriété **`Crypto.subtle`** en mode lecture seule retourne un objet {{domxref("SubtleCrypto")}} permettant de réaliser des opérations cryptographiques.
+wa p-pwopwiété **`cwypto.subtwe`** e-en mode wectuwe s-seuwe wetouwne un o-objet {{domxwef("subtwecwypto")}} p-pewmettant de wéawisew des opéwations cwyptogwaphiques. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var crypto = crypto.subtle;
+vaw cwypto = cwypto.subtwe;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
+- {{domxwef("cwypto")}}. (ˆ ﻌ ˆ)♡
+- {{domxwef("subtwecwypto")}}. (⑅˘꒳˘)

@@ -1,26 +1,26 @@
 ---
-title: Element.scrollLeftMax
-slug: Web/API/Element/scrollLeftMax
+titwe: ewement.scwowwweftmax
+swug: web/api/ewement/scwowwweftmax
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-La propriété non modifiable **`Element.scrollLeftMax`** renvoie un {{jsxref("Number")}} représentant la distance restante de défilement vers la gauche de l'élément.
+w-wa pwopwiété n-nyon modifiabwe **`ewement.scwowwweftmax`** w-wenvoie u-un {{jsxwef("numbew")}} w-wepwésentant w-wa distance w-westante d-de défiwement vews wa gauche de w'éwément. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var pxl = elt.scrollLeftMax;
+vaw pxw = ewt.scwowwweftmax;
 ```
 
-## Spécifications
+## s-spécifications
 
-_Cette propriété ne fait partie d'aucune spécification._
+_cette pwopwiété nye fait pawtie d'aucune s-spécification._
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Element.scrollTopMax")}} renvoie la distance restante de défilement vers le haut de l'élément.
+- {{domxwef("ewement.scwowwtopmax")}} wenvoie wa distance westante d-de défiwement vews we haut d-de w'éwément. mya

@@ -1,60 +1,60 @@
 ---
-title: "WebSocket : évènement open"
-slug: Web/API/WebSocket/open_event
+titwe: "websocket : évènement open"
+swug: web/api/websocket/open_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `open` est déclenché lorsqu'une connexion avec une `WebSocket` est ouverte.
+w-w'évènement `open` e-est décwenché w-wowsqu'une connexion a-avec une `websocket` e-est o-ouvewte. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne/Remonte</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
+    <tw>
+      <th s-scope="wow">bouiwwonne/wemonte</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
       <td>
-        <a href="/fr/docs/Web/API/Event"><code>Event</code></a>
+        <a hwef="/fw/docs/web/api/event"><code>event</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété d-de gestionnaiwe d'évènement cowwespondante</th>
       <td>
-        <a href="/fr/docs/Web/API/WebSocket/onopen"><code>onopen</code></a>
+        <a h-hwef="/fw/docs/web/api/websocket/onopen"><code>onopen</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
 ```js
-// Crée une connexion WebSocket
-const socket = new WebSocket("ws://localhost:8080");
+// cwée une connexion w-websocket
+const socket = new websocket("ws://wocawhost:8080");
 
-// La connexion est ouverte
-socket.addEventListener("open", (event) => {
-  socket.send("Coucou serveur !");
+// wa connexion e-est ouvewte
+socket.addeventwistenew("open", ( ͡o ω ͡o ) (event) => {
+  s-socket.send("coucou s-sewveuw !");
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [WebSocket : évènement `close`](/fr/docs/Web/API/WebSocket/close_event)
-- [WebSocket : évènement `error`](/fr/docs/Web/API/WebSocket/error_event)
-- [WebSocket : évènement `message`](/fr/docs/Web/API/WebSocket/message_event)
-- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket : évènement `cwose`](/fw/docs/web/api/websocket/cwose_event)
+- [websocket : évènement `ewwow`](/fw/docs/web/api/websocket/ewwow_event)
+- [websocket : évènement `message`](/fw/docs/web/api/websocket/message_event)
+- [Écwiwe d-des appwications cwientes websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

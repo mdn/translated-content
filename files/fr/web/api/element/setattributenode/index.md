@@ -1,71 +1,71 @@
 ---
-title: "Element : méthode setAttributeNode()"
-slug: Web/API/Element/setAttributeNode
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode setattwibutenode()"
+s-swug: web/api/ewement/setattwibutenode
+w-w10n:
+  s-souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`setAttributeNode()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouveau nœud [`Attr`](/fr/docs/Web/API/Attr) à l'élément courant.
+w-wa méthode **`setattwibutenode()`**, ʘwʘ w-wattachée à w-w'intewface [`ewement`](/fw/docs/web/api/ewement), /(^•ω•^) a-ajoute un n-nyouveau nyœud [`attw`](/fw/docs/web/api/attw) à w'éwément couwant. ʘwʘ
 
-S'il n'est pas nécessaire de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
+s'iw ny'est pas nyécessaiwe de twavaiwwew s-suw we nyœud [`attw`](/fw/docs/web/api/attw) avant de w'ajoutew (paw exempwe e-en we cwonant depuis un autwe éwément), σωσ o-on pouwwa utiwisew wa méthode [`setattwibute()`](/fw/docs/web/api/ewement/setattwibute) à wa pwace. OwO
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-setAttributeNode(attribute)
+```js-nowint
+setattwibutenode(attwibute)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `attribute`
-  - : Le nœud `Attr` à définir sur l'élément.
+- `attwibute`
+  - : w-we nyœud `attw` à définiw suw w'éwément. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'éventuel nœud [`Attr`](/fr/docs/Web/API/Attr) remplacé.
+w'éventuew n-nyœud [`attw`](/fw/docs/web/api/attw) wempwacé. 😳😳😳
 
-## Exemples
+## exempwes
 
-Cet exemple copie l'attribut `class` d'un élément à l'autre.
+cet exempwe copie w'attwibut `cwass` d-d'un éwément à w'autwe. o.O
 
-### HTML
+### h-htmw
 
-```html
-<div id="un" class="coucou">un</div>
-<div id="deux">deux</div>
+```htmw
+<div i-id="un" c-cwass="coucou">un</div>
+<div i-id="deux">deux</div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let d1 = document.getElementById("un");
-let d2 = document.getElementById("deux");
-let a = d1.getAttributeNode("class");
+wet d1 = document.getewementbyid("un");
+wet d2 = d-document.getewementbyid("deux");
+wet a = d1.getattwibutenode("cwass");
 
-d2.setAttributeNode(a.cloneNode(true));
+d2.setattwibutenode(a.cwonenode(twue));
 
-// Affiche "coucou" dans la console
-console.log(d2.attributes[1].value);
+// a-affiche "coucou" dans wa consowe
+consowe.wog(d2.attwibutes[1].vawue);
 ```
 
-## Notes
+## nyotes
 
-Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est renvoyé.
+si w'attwibut nyommé existe déjà s-suw w'éwément, ( ͡o ω ͡o ) cet attwibut est w-wempwacé paw w-we nyouveau et we n-nyœud wempwacé est wenvoyé. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute)
+- [`document.cweateattwibute()`](/fw/docs/web/api/document/cweateattwibute)
+- [`ewement.getattwibutenode()`](/fw/docs/web/api/ewement/getattwibutenode)
+- [`ewement.wemoveattwibutenode()`](/fw/docs/web/api/ewement/wemoveattwibutenode)
+- [`ewement.setattwibutens()`](/fw/docs/web/api/ewement/setattwibutens)

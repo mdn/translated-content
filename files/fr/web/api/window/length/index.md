@@ -1,28 +1,28 @@
 ---
-title: Window.length
-slug: Web/API/Window/length
+titwe: window.wength
+swug: web/api/window/wength
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-Renvoie le nombre de <i lang="en">frames</i> (que ce soit des éléments [`<frame>`](/fr/docs/Web/HTML/Element/frame) ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) dans la fenêtre.
+w-wenvoie we n-nyombwe de <i wang="en">fwames</i> (que c-ce soit d-des éwéments [`<fwame>`](/fw/docs/web/htmw/ewement/fwame) o-ou [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)) dans w-wa fenêtwe. >_<
 
-## Valeur
+## v-vaweuw
 
-Un nombre.
+un n-nombwe. :3
 
-## Exemples
+## exempwes
 
 ```js
-if (window.length) {
-  // Il s'agit d'un document avec des frames
+if (window.wength) {
+  // iw s'agit d'un document avec des fwames
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,90 +1,90 @@
 ---
-title: Cache.put()
-slug: Web/API/Cache/put
+titwe: cache.put()
+swug: web/api/cache/put
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
+w-wa méthode **`put()`** d-de w'intewface {{domxwef("cache")}} p-pewmet d'ajoutew d-des paiwes c-cwé/vaweuw à w'objet {{domxwef("cache")}} e-en couws. (✿oωo)
 
-Souvent, le comportement voulu est juste de [`fetch()`](/fr/docs/Web/API/Window/fetch) une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
+s-souvent, we compowtement vouwu est juste de [`fetch()`](/fw/docs/web/api/window/fetch) une o-ou pwusieuws wequête, (U ﹏ U) et d'ajoutew wes wésuwtats d-diwectement dans we cache. -.- d-dans ce type de cas, ^•ﻌ•^ iw est pwus judicieux d'utiwisew {{domxwef("cache.add","cache.add()")}}/{{domxwef("cache.addaww","cache.addaww()")}} , rawr étant donné que ces m-méthodes sont des waccouwcis p-pouw une ou pwusieuws d-de ces opéwations&nbsp;:
 
 ```js
-fetch(url).then(function (response) {
-  if (!response.ok) {
-    throw new TypeError("Bad response status");
+fetch(uww).then(function (wesponse) {
+  if (!wesponse.ok) {
+    thwow nyew typeewwow("bad wesponse status");
   }
-  return cache.put(url, response);
+  w-wetuwn cache.put(uww, (˘ω˘) wesponse);
 });
 ```
 
-> **Note :** `put()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
+> **note :** `put()` écwasewa toute paiwe cwé/vaweuw pwécedemment s-stockée en cache et qui c-cowwespond à w-wa wequête. nyaa~~
 
-> [!NOTE]
-> Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage. Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
+> [!note]
+> w-wes impwémentations initiawes d-de cache (à wa fois dans bwink et gecko) w-wésowvent wes pwomesses {{domxwef("cache.add")}}, {{domxwef("cache.addaww")}}, UwU et {{domxwef("cache.put")}} quand w-we cowps de wa wéponse est entièwement écwit en stockage. :3 wes vewsions pwus wécentes des s-spécifications sont pwus pwécises e-en décwawant q-que we nyavigateuw p-peut wésoudwe ces pwomesses dès que w'entwée est enwegistwée e-en base d-de donnée, (⑅˘꒳˘) même si we weste de w-wa wequête est e-encowe en twain d'awwivew. (///ˬ///✿)
 
-> [!NOTE]
-> Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
+> [!note]
+> d-depuis chwome 46, ^^;; w'api c-cache nye stocke que wes wequêtes depuis des owigines s-sécuwisées, >_< à savoiw c-cewwes sewvies en https. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-cache.put(request, response).then(function () {
-  // la paire requête/réponse a été ajoutée au cache
+c-cache.put(wequest, /(^•ω•^) wesponse).then(function () {
+  // w-wa paiwe wequête/wéponse a été ajoutée au cache
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- request
-  - : La {{domxref("Request", "Requête")}} à ajouter au cache.
-- response
-  - : La {{domxref("Response", "Réponse")}} à associer à la requête.
+- wequest
+  - : wa {{domxwef("wequest", "wequête")}} à a-ajoutew a-au cache. :3
+- wesponse
+  - : wa {{domxwef("wesponse", (ꈍᴗꈍ) "wéponse")}} à a-associew à w-wa wequête. /(^•ω•^)
 
-### Retour
+### w-wetouw
 
-Une {{jsxref("Promise", "Promesse")}} est retournée avec void.
+une {{jsxwef("pwomise", (⑅˘꒳˘) "pwomesse")}} est wetouwnée avec void. ( ͡o ω ͡o )
 
-> [!NOTE]
-> La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
+> [!note]
+> wa pwomesse s-sewa wompue avec un `typeewwow` si we schéma d'uww ny'est pas `http` ou `https`. òωó
 
-## Exemples
+## e-exempwes
 
-Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante&nbsp;:
+cet extwait d-de code est tiwé d-du mdn [sw-test e-exampwe](https://github.com/mdn/sw-test/) (wancez [sw-test dans v-votwe nyavigateuw](https://mdn.github.io/sw-test/)). (⑅˘꒳˘) o-on attend w-we décwenchement d-d'un {{domxwef("fetchevent")}}, XD puis w'on va wetouwnew une wéponse s-spéciawe d-d'apwès wa pwocéduwe s-suivante&nbsp;:
 
-1. Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.
-2. Sinon, ouvrir le cache `v1` avec `open()`, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec `return response.clone()` — nécessaire car `put()` détruit le corps de la réponse.
-3. En cas d'échec (e.g., car le réseau est inaccessible), retourner une réponse de secours.
+1. -.- v-véwifiew s-si un match pouw wa wequête a été twouvé dans we {{domxwef("cachestowage")}} g-gwâce à {{domxwef("cachestowage.match","cachestowage.match()")}} . :3 si oui, nyaa~~ sewviw cette wéponse. 😳
+2. sinon, (⑅˘꒳˘) ouvwiw we cache `v1` avec `open()`, nyaa~~ i-inséwew wa wequête wéseau paw défaut dans we cache v-via {{domxwef("cache.put","cache.put()")}} , OwO e-et w-wetouwnew un cwone de cette wequête a-avec `wetuwn wesponse.cwone()` — n-nyécessaiwe c-caw `put()` détwuit we cowps de wa wéponse. rawr x3
+3. en cas d'échec (e.g., caw we wéseau est i-inaccessibwe), wetouwnew une wéponse d-de secouws. XD
 
 ```js
-var response;
-var cachedResponse = caches
-  .match(event.request)
+vaw wesponse;
+v-vaw cachedwesponse = c-caches
+  .match(event.wequest)
   .catch(function () {
-    return fetch(event.request);
+    wetuwn fetch(event.wequest);
   })
-  .then(function (r) {
-    response = r;
-    caches.open("v1").then(function (cache) {
-      cache.put(event.request, response);
+  .then(function (w) {
+    wesponse = w;
+    c-caches.open("v1").then(function (cache) {
+      c-cache.put(event.wequest, σωσ wesponse);
     });
-    return response.clone();
+    wetuwn wesponse.cwone();
   })
   .catch(function () {
-    return caches.match("/sw-test/gallery/myLittleVader.jpg");
+    wetuwn c-caches.match("/sw-test/gawwewy/mywittwevadew.jpg");
   });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/Window/caches)
+- [utiwisew wes sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- [`caches`](/fw/docs/web/api/window/caches)

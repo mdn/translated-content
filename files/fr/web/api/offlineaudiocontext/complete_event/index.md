@@ -1,43 +1,43 @@
 ---
-title: complete
-slug: Web/API/OfflineAudioContext/complete_event
+titwe: compwete
+swug: web/api/offwineaudiocontext/compwete_event
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio api")}}
 
-L'événement **complete** est déclenché lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.
+w-w'événement **compwete** e-est d-décwenché wowsque w-we wendu d'un {{domxwef("offwineaudiocontext")}} e-est tewminé. >_<
 
-## Informations générales
+## i-infowmations g-généwawes
 
-- Interface
-  - : {{domxref("OfflineAudioCompletionEvent")}}
-- Propagation
+- intewface
+  - : {{domxwef("offwineaudiocompwetionevent")}}
+- pwopagation
   - : ?
-- Annulable
+- annuwabwe
   - : ?
-- Cible
-  - : {{domxref("OfflineAudioContext")}}
-- Action par défaut
-  - : Aucune
+- cibwe
+  - : {{domxwef("offwineaudiocontext")}}
+- a-action paw défaut
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                            | Type                       | Description                                                                                  |
+| pwopewty                            | t-type                       | descwiption                                                                                  |
 | ----------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}         | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                       |
-| `type` {{readonlyInline}}           | {{domxref("DOMString")}}   | The type of event.                                                                           |
-| `bubbles` {{readonlyInline}}        | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                   |
-| `cancelable` {{readonlyInline}}     | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                     |
-| `renderedBuffer` {{readonlyInline}} | {{domxref("AudioBuffer")}} | The buffer containing the result of the processing of an {{domxref("OfflineAudioContext")}}. |
+| `tawget` {{weadonwyinwine}}         | {{domxwef("eventtawget")}} | t-the event tawget (the topmost tawget in the dom twee). rawr x3                                       |
+| `type` {{weadonwyinwine}}           | {{domxwef("domstwing")}}   | t-the type of event. mya                                                                           |
+| `bubbwes` {{weadonwyinwine}}        | {{jsxwef("boowean")}}      | w-whethew the event n-nyowmawwy bubbwes ow nyot. nyaa~~                                                   |
+| `cancewabwe` {{weadonwyinwine}}     | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe ow nyot. (⑅˘꒳˘)                                                     |
+| `wendewedbuffew` {{weadonwyinwine}} | {{domxwef("audiobuffew")}} | t-the buffew containing the wesuwt of the pwocessing of an {{domxwef("offwineaudiocontext")}}. rawr x3 |
 
-## Evénements liés
+## e-evénements wiés
 
-_Aucun._
+_aucun._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
+- [web a-audio a-api](/fw/docs/web/api/web_audio_api)

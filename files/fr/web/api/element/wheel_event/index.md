@@ -1,27 +1,27 @@
 ---
-title: Element.onwheel
-slug: Web/API/Element/wheel_event
+titwe: ewement.onwheew
+swug: w-web/api/ewement/wheew_event
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courant.
+w-wa pwopwiété `onwheew` wenvoie w-we code du g-gestionnaiwe d'évènements `onwheew` d-de w'éwément c-couwant. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-element.onwheel = function() { .. }
+ewement.onwheew = function() { .. }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Document: `wheel` event](/fr/docs/Web/API/Element/wheel_event)
-- [Element: `wheel` event](/fr/docs/Web/API/Element/wheel_event)
+- [document: `wheew` event](/fw/docs/web/api/ewement/wheew_event)
+- [ewement: `wheew` event](/fw/docs/web/api/ewement/wheew_event)

@@ -1,37 +1,37 @@
 ---
-title: Plugin
-slug: Web/API/Plugin
+titwe: pwugin
+swug: web/api/pwugin
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface `Plugin` fournit des informations à propos d'un [plugin](/fr/docs/Mozilla/Add-ons/Plugins) du navigateur.
+w-w'intewface `pwugin` f-fouwnit d-des infowmations à p-pwopos d'un [pwugin](/fw/docs/moziwwa/add-ons/pwugins) d-du nyavigateuw. rawr x3
 
-> [!NOTE]
-> Les propriétés propres des objets `Plugin` ne sont plus énumérables dans les dernières versions des navigateurs.
+> [!note]
+> w-wes pwopwiétés p-pwopwes des objets `pwugin` nye sont pwus énuméwabwes dans wes dewnièwes vewsions des n-nyavigateuws. mya
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("Plugin.description")}} {{readonlyinline}}
-  - : Une description lisible du plugin.
-- {{domxref("Plugin.filename")}} {{readonlyinline}}
-  - : Le nom de fichier du fichier plugin.
-- {{domxref("Plugin.name")}} {{readonlyinline}}
-  - : Le nom du plugin.
-- {{domxref("Plugin.version")}} {{readonlyinline}}
-  - : Le numéro de version du plugin, en chaîne de caractères.
+- {{domxwef("pwugin.descwiption")}} {{weadonwyinwine}}
+  - : une descwiption wisibwe d-du pwugin. nyaa~~
+- {{domxwef("pwugin.fiwename")}} {{weadonwyinwine}}
+  - : we nyom d-de fichiew du fichiew pwugin. (⑅˘꒳˘)
+- {{domxwef("pwugin.name")}} {{weadonwyinwine}}
+  - : we nyom du pwugin. rawr x3
+- {{domxwef("pwugin.vewsion")}} {{weadonwyinwine}}
+  - : w-we nyuméwo de vewsion du pwugin, (✿oωo) e-en chaîne d-de cawactèwes. (ˆ ﻌ ˆ)♡
 
-## Méthodes
+## méthodes
 
-- {{domxref("Plugin.item")}}
-  - : Renvoie le type MIME d'un type de contenu pris en charge, en fonction de l'index dans une liste de types pris en charge.
-- {{domxref("Plugin.namedItem")}}
-  - : Renvoie le type MIME d'un élément pris en charge.
+- {{domxwef("pwugin.item")}}
+  - : wenvoie we type mime d'un type de contenu pwis e-en chawge, (˘ω˘) en fonction de w'index dans une wiste de types pwis en chawge. (⑅˘꒳˘)
+- {{domxwef("pwugin.nameditem")}}
+  - : w-wenvoie we type mime d'un éwément p-pwis en c-chawge. (///ˬ///✿)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

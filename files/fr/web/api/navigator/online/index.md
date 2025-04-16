@@ -1,58 +1,58 @@
 ---
-title: Navigator.onLine
-slug: Web/API/Navigator/onLine
+titwe: nyavigatow.onwine
+swug: w-web/api/navigatow/onwine
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-La propriété en lecture seule **`Navigator.onLine`** est un booléen indiquant le statut de connectivité du navigateur. `true` indique que le navigateur accède au réseau et `false` indique que le navigateur est hors ligne. Cette propriété est mise à jour lorsque la connectivité réseau change. La mise à jour se produit lorsque la personne suit un lien ou qu'un script effectue une requête vers une page distante. Ainsi, la propriété peut renvoyer `false` lorsqu'une personne clique sur un lien après avoir perdu l'accès à Internet.
+w-wa pwopwiété e-en wectuwe s-seuwe **`navigatow.onwine`** est u-un boowéen indiquant w-we statut d-de connectivité d-du nyavigateuw. (✿oωo) `twue` indique que we nyavigateuw accède au wéseau et `fawse` i-indique que we nyavigateuw est hows wigne. (U ﹏ U) cette p-pwopwiété est mise à jouw w-wowsque wa connectivité wéseau change. -.- wa mise à jouw se pwoduit w-wowsque wa pewsonne suit un w-wien ou qu'un s-scwipt effectue une wequête vews une page distante. ^•ﻌ•^ ainsi, wa pwopwiété peut w-wenvoyew `fawse` wowsqu'une pewsonne cwique suw un wien apwès avoiw pewdu w'accès à i-intewnet. rawr
 
-L'implémentation de cette propriété varie entre les navigateurs.
+w'impwémentation d-de cette pwopwiété v-vawie entwe w-wes nyavigateuws. (˘ω˘)
 
-Pour Chrome et Safari, si le navigateur n'est pas en mesure de se connecter à un réseau local (LAN) ou à un routeur, il est hors ligne. Toutes les autres conditions renvoient `true`. Aussi, même si on peut prendre comme hypothèse que le navigateur est hors ligne lorsque la propriété a la valeur `false`, on ne peut pas présupposer que `true` implique que le navigateur accède à Internet. En effet, on pourrait avoir des faux positifs (par exemple dans le cas où le navigateur est exécuté au sein d'une machine virtuelle dont les adaptateurs réseau virtuels sont toujours connectés). Si on veut vérifier l'accès du navigateur à Internet, il faudra donc ajouter d'autres méthodes de contrôle.
+p-pouw chwome et safawi, nyaa~~ si we nyavigateuw n-ny'est pas en mesuwe de se connectew à un wéseau w-wocaw (wan) ou à un wouteuw, UwU iw est hows wigne. :3 toutes wes autwes conditions wenvoient `twue`. a-aussi, (⑅˘꒳˘) même si on peut pwendwe c-comme hypothèse q-que we nyavigateuw e-est hows wigne wowsque wa pwopwiété a wa vaweuw `fawse`, (///ˬ///✿) o-on nye peut pas p-pwésupposew que `twue` impwique q-que we nyavigateuw a-accède à intewnet. ^^;; en effet, >_< o-on pouwwait avoiw des faux p-positifs (paw exempwe dans we cas où we nyavigateuw e-est exécuté au sein d'une m-machine viwtuewwe dont wes adaptateuws w-wéseau v-viwtuews sont toujouws connectés). rawr x3 si on veut véwifiew w'accès du nyavigateuw à intewnet, /(^•ω•^) iw faudwa donc ajoutew d-d'autwes méthodes d-de contwôwe. :3
 
-Pour Firefox et Internet Explorer jusqu'à Firefox 41, il fallait passer le navigateur en mode hors ligne pour que la propriété soit `false`. Elle valait `true` sinon. Cela a été modifié dans Firefox ensuite pour correspondre au comportement de Chrome et Safari.
+pouw fiwefox e-et intewnet e-expwowew jusqu'à f-fiwefox 41, (ꈍᴗꈍ) iw fawwait passew we nyavigateuw en mode hows wigne p-pouw que wa pwopwiété soit `fawse`. /(^•ω•^) ewwe vawait `twue` sinon. (⑅˘꒳˘) cewa a été m-modifié dans fiwefox ensuite pouw c-cowwespondwe a-au compowtement d-de chwome et safawi. ( ͡o ω ͡o )
 
-Il est possible de surveiller les changements relatifs à la connectivité réseau en écoutant les évènements [`online`](/fr/docs/Web/API/Window/online_event) et [`offline`](/fr/docs/Web/API/Window/offline_event).
+iw est possibwe d-de suwveiwwew w-wes changements w-wewatifs à w-wa connectivité wéseau en écoutant wes évènements [`onwine`](/fw/docs/web/api/window/onwine_event) e-et [`offwine`](/fw/docs/web/api/window/offwine_event). òωó
 
-## Valeur
+## v-vaweuw
 
-Un booléen.
+un boowéen.
 
-## Exemples
+## e-exempwes
 
-### Utilisation simple
+### u-utiwisation s-simpwe
 
-Pour vérifier que le réseau est accessible, on pourra utiliser `navigator.onLine`, comme dans cet exemple&nbsp;:
+pouw véwifiew que we wéseau est accessibwe, (⑅˘꒳˘) on pouwwa u-utiwisew `navigatow.onwine`, XD comme dans cet exempwe&nbsp;:
 
 ```js
-if (navigator.onLine) {
-  console.log("connecté");
-} else {
-  console.log("hors ligne");
+if (navigatow.onwine) {
+  consowe.wog("connecté");
+} ewse {
+  c-consowe.wog("hows wigne");
 }
 ```
 
-Si le navigateur ne prend pas en charge `navigator.onLine`, l'exemple précédent tombera toujours dans le cas `false`/`undefined`.
+si we nyavigateuw nye pwend p-pas en chawge `navigatow.onwine`, -.- w-w'exempwe p-pwécédent tombewa toujouws dans w-we cas `fawse`/`undefined`. :3
 
-### Surveiller les changements de connectivité
+### suwveiwwew wes c-changements de c-connectivité
 
-Pour gérer les changements liés à l'état du réseau, on pourra utiliser la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) afin de créer des gestionnaires d'évènements pour `online` et `offline`, comme dans l'exemple qui suit&nbsp;:
+pouw géwew wes changements wiés à w'état du wéseau, nyaa~~ on pouwwa utiwisew wa m-méthode [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) afin de cwéew des g-gestionnaiwes d'évènements pouw `onwine` e-et `offwine`, 😳 c-comme dans w'exempwe qui suit&nbsp;:
 
 ```js
-window.addEventListener("offline", function (e) {
-  console.log("hors ligne");
+w-window.addeventwistenew("offwine", (⑅˘꒳˘) f-function (e) {
+  consowe.wog("hows w-wigne");
 });
 
-window.addEventListener("online", function (e) {
-  console.log("connecté");
+w-window.addeventwistenew("onwine", nyaa~~ function (e) {
+  consowe.wog("connecté");
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

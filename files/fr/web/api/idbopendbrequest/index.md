@@ -1,97 +1,97 @@
 ---
-title: IDBOpenDBRequest
-slug: Web/API/IDBOpenDBRequest
+titwe: idbopendbwequest
+swug: w-web/api/idbopendbwequest
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).
+w-w'intewface **`idbopendbwequest`** d-de w'api i-indexeddb donne u-un accès aux w-wésuwtats des w-wequêtes pewmettant d-d'ouvwiw ou de suppwimew des bases de donnée (effectuée via {{domxwef("idbfactowy.open")}} et {{domxwef("idbfactowy.dewetedatabase")}}). (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
+_héwite des méthodes de ses p-pawents {{domxwef("idbwequest")}} et {{domxwef("eventtawget")}}_. XD
 
 ### Évènements
 
-- {{domxref("IDBOpenDBRequest.onblocked")}}
-  - : Le gestionnaire d'évènements pour l'évènement bloqué. Cet évènement est lancé lorsqu'un évènement `upgradeneeded` doit être déclenché en raison d'un changement de version, mais que la base de données est toujours en cours d'utilisation (c'est-à-dire, non fermée) quelque part, même après l'envoi de l'évènement `versionchange`.
-- {{domxref("IDBOpenDBRequest.onupgradeneeded")}}
-  - : Le gestionnaire d'évènement pour évènement `upgradeneeded` _(mise-à-jour nécessaire)_, lancé quand une base de données d'une version supérieure à celle de la base de données existante est chargé.
+- {{domxwef("idbopendbwequest.onbwocked")}}
+  - : w-we gestionnaiwe d'évènements pouw w'évènement bwoqué. -.- c-cet évènement est wancé wowsqu'un évènement `upgwadeneeded` d-doit êtwe décwenché e-en waison d'un changement de vewsion, :3 mais que wa base de données est t-toujouws en couws d'utiwisation (c'est-à-diwe, nyon fewmée) quewque pawt, nyaa~~ même apwès w'envoi d-de w'évènement `vewsionchange`. 😳
+- {{domxwef("idbopendbwequest.onupgwadeneeded")}}
+  - : we g-gestionnaiwe d'évènement p-pouw évènement `upgwadeneeded` _(mise-à-jouw n-nyécessaiwe)_, (⑅˘꒳˘) w-wancé quand une base de données d'une v-vewsion supéwieuwe à cewwe de wa base de données e-existante est chawgé. nyaa~~
 
-## Méthodes
+## méthodes
 
-_Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}._
+_pas de méthodes, OwO mais héwite des méthodes de ses p-pawents {{domxwef("idbwequest")}} et {{domxwef("eventtawget")}}._
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple ci-dessous, le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir cet exemple réel](https://mdn.github.io/dom-examples/to-do-notifications/))
+d-dans w'exempwe c-ci-dessous, we gestionnaiwe `onupgwadeneeded` est utiwisé pouw mettwe à jouw wa s-stwuctuwe de wa b-base de données, rawr x3 si une base p-pwus wécente est c-chawgée. XD pouw voiw un exempwe c-compwet, σωσ wéféwez-vous à nyotwe a-appwication [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw cet exempwe wéew](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
-var db;
+v-vaw db;
 
-// Ouvre la base de données.
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// ouvwe wa base de d-données. (U ᵕ U❁)
+vaw dbopenwequest = window.indexeddb.open("todowist", (U ﹏ U) 4);
 
-// Ces gestionnaires d'évènements agissent sur la base de données en cours d'ouverture.
-  note.innerHTML += '<li>Error loading database.</li>';
+// ces gestionnaiwes d-d'évènements a-agissent suw wa base de données en couws d'ouvewtuwe. :3
+  note.innewhtmw += '<wi>ewwow woading database.</wi>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+dbopenwequest.onsuccess = f-function(event) {
+  n-nyote.innewhtmw += '<wi>database initiawised.</wi>';
 
-  // stocke le résultat de l'ouverture de la base de données dans la variable db .
-  // Ceci est beaucoup moins utilisé.
-  db = DBOpenRequest.result;
+  // s-stocke we w-wésuwtat de w'ouvewtuwe d-de wa base de données dans wa vawiabwe db . ( ͡o ω ͡o )
+  // ceci e-est beaucoup moins utiwisé. σωσ
+  db = dbopenwequest.wesuwt;
 
-  // Exécute la fonction displayData() pour remplir la liste de tâches
-  // avec toutes les données de la lste de tâches déjà dans la base.
-  displayData();
+  // exékawaii~ wa fonction dispwaydata() p-pouw wempwiw wa wiste de tâches
+  // a-avec t-toutes wes données d-de wa wste de tâches déjà d-dans wa base. >w<
+  d-dispwaydata();
 };
 
-// Cet évènement gère l'évènement par lequel une nouvelle version
-// de la base de données doit être créée. Soit elle n'a pas
-// été créée avant, soit un nouveau numéro de version a été
-// soumis via la ligne "window.indexedDB.open" ci-dessous.
-// Il n'est implémenté que dans les navigateurs récents.
-DBOpenRequest.onupgradeneeded = function(event) {
-  var db = this.result;
+// c-cet évènement g-gèwe w'évènement paw wequew une nyouvewwe v-vewsion
+// d-de wa base de données d-doit êtwe c-cwéée. 😳😳😳 soit e-ewwe n'a pas
+// été cwéée avant, OwO soit un nyouveau numéwo de v-vewsion a été
+// soumis via wa wigne "window.indexeddb.open" ci-dessous. 😳
+// iw ny'est impwémenté que dans wes n-nyavigateuws wécents. 😳😳😳
+dbopenwequest.onupgwadeneeded = function(event) {
+  vaw d-db = this.wesuwt;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+  d-db.onewwow = f-function(event) {
+    nyote.innewhtmw += '<wi>ewwow w-woading database.</wi>';
   };
 
-  // Crée un objet de stockage pour cette base de données.
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  // c-cwée u-un objet de stockage pouw cette base de données. (˘ω˘)
+  vaw objectstowe = db.cweateobjectstowe("todowist", ʘwʘ { keypath: "tasktitwe" });
 
-  // définit quels éléments de données l'objet de stockage contiendra.
+  // d-définit quews éwéments d-de données w'objet de stockage c-contiendwa. ( ͡o ω ͡o )
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  o-objectstowe.cweateindex("houws", o.O "houws", >w< { unique: fawse });
+  objectstowe.cweateindex("minutes", 😳 "minutes", 🥺 { u-unique: fawse });
+  o-objectstowe.cweateindex("day", "day", rawr x3 { unique: fawse });
+  o-objectstowe.cweateindex("month", "month", o.O { unique: f-fawse });
+  objectstowe.cweateindex("yeaw", rawr "yeaw", { unique: fawse });
+  objectstowe.cweateindex("notified", ʘwʘ "notified", { u-unique: fawse });
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrage de transactions : {{domxref("IDBDatabase")}}
-- Utilisation de transactions : {{domxref("IDBTransaction")}}
-- Définition un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupération et modification des données : {{domxref("IDBObjectStore")}}
-- Utilisation de curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwage d-de twansactions : {{domxwef("idbdatabase")}}
+- utiwisation de twansactions : {{domxwef("idbtwansaction")}}
+- définition un intewvawwe de c-cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwation et modification des données : {{domxwef("idbobjectstowe")}}
+- u-utiwisation d-de cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do notifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

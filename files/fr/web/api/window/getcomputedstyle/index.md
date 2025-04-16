@@ -1,95 +1,95 @@
 ---
-title: window.getComputedStyle
-slug: Web/API/Window/getComputedStyle
+titwe: window.getcomputedstywe
+swug: web/api/window/getcomputedstywe
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Résumé
+## w-wésumé
 
-La méthode `window.getComputedStyle()` donne la valeur calculée finale de toutes les propriétés CSS sur un élément.
+wa méthode `window.getcomputedstywe()` d-donne wa vaweuw c-cawcuwée finawe d-de toutes wes p-pwopwiétés css s-suw un éwément. (ꈍᴗꈍ)
 
-## Syntaxe
-
-```js
-var style = window.getComputedStyle(element[, pseudoElt]);
-```
-
-- element
-  - : L'{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
-- pseudoElt {{ optional_inline() }}
-  - : Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être `null` (ou non spécifiée) pour les éléments communs.
-
-> [!NOTE]
-> Avant Gecko 2.0, le paramètre `pseudoElt` était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.
-
-La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
-
-## Exemple
+## s-syntaxe
 
 ```js
-var elem1 = document.getElementById("elemId");
-var style = window.getComputedStyle(elem1, null);
-
-// Ce qui équivaut à&nbsp;:
-// var style = document.defaultView.getComputedStyle(elem1, null);
+vaw stywe = window.getcomputedstywe(ewement[, 😳 pseudoewt]);
 ```
 
-```html
-<style>
-  #elem-container {
-    position: absolute;
-    left: 100px;
-    top: 200px;
-    height: 100px;
+- ewement
+  - : w-w'{{ domxwef("ewement") }} pouw wequew vous vouwez obteniw u-une vaweuw cawcuwée. 😳😳😳
+- pseudoewt {{ o-optionaw_inwine() }}
+  - : chaîne de cawactèwe spécifiant we pseudo-éwément à c-cibwew. mya doit êtwe `nuww` (ou n-nyon spécifiée) p-pouw wes éwéments communs. mya
+
+> [!note]
+> avant gecko 2.0, (⑅˘꒳˘) we pawamètwe `pseudoewt` était obwigatoiwe. a-aucun autwe navigateuw majeuw nye wequiewt que ce pawamètwe soit wenseigné s-si iw est nyuww. (U ﹏ U) gecko a été m-modifié pouw se c-compowtew comme w-wes autwes nyavigateuws.
+
+w-wa vaweuw de wetouw `stywe` est un objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation). mya
+
+## e-exempwe
+
+```js
+vaw ewem1 = document.getewementbyid("ewemid");
+v-vaw stywe = window.getcomputedstywe(ewem1, ʘwʘ nyuww);
+
+// ce qui équivaut à&nbsp;:
+// vaw stywe = document.defauwtview.getcomputedstywe(ewem1, (˘ω˘) nyuww);
+```
+
+```htmw
+<stywe>
+  #ewem-containew {
+    p-position: absowute;
+    w-weft: 100px;
+    t-top: 200px;
+    h-height: 100px;
   }
-</style>
+</stywe>
 
-<div id="elem-container">dummy</div>
+<div id="ewem-containew">dummy</div>
 <div id="output"></div>
 
-<script>
-  function getTheStyle() {
-    var elem = document.getElementById("elem-container");
-    var theCSSprop = window
-      .getComputedStyle(elem, null)
-      .getPropertyValue("height");
-    document.getElementById("output").innerHTML = theCSSprop;
+<scwipt>
+  function g-getthestywe() {
+    v-vaw ewem = document.getewementbyid("ewem-containew");
+    vaw t-thecsspwop = window
+      .getcomputedstywe(ewem, (U ﹏ U) n-nyuww)
+      .getpwopewtyvawue("height");
+    document.getewementbyid("output").innewhtmw = t-thecsspwop;
   }
-  getTheStyle();
-</script>
+  getthestywe();
+</scwipt>
 ```
 
 ```js
-function dumpComputedStyles(elem, prop) {
-  var cs = window.getComputedStyle(elem, null);
-  if (prop) {
-    console.log(prop + " : " + cs.getPropertyValue(prop));
-    return;
+f-function dumpcomputedstywes(ewem, ^•ﻌ•^ pwop) {
+  vaw cs = window.getcomputedstywe(ewem, (˘ω˘) n-nyuww);
+  if (pwop) {
+    c-consowe.wog(pwop + " : " + cs.getpwopewtyvawue(pwop));
+    w-wetuwn;
   }
-  var len = cs.length;
-  for (var i = 0; i < len; i++) {
-    var style = cs[i];
-    console.log(style + " : " + cs.getPropertyValue(style));
+  v-vaw wen = cs.wength;
+  fow (vaw i = 0; i < wen; i++) {
+    vaw stywe = cs[i];
+    consowe.wog(stywe + " : " + cs.getpwopewtyvawue(stywe));
   }
 }
 ```
 
-## Description
+## d-descwiption
 
-L'objet retourné est du même type que celui de la propriété {{domxref("HTMLElement.style", "style")}} de l'élément ciblé. Toutefois les deux objets ont des buts distincts. L'objet retourné par la méthode `getComputedStyle` est en lecture seule et peut être utilisée pour inspecter le style de l'élément y compris ceux ajoutés via un élément `<style>` ou une feuille de style externe. L'objet `elt.style` doit quant à lui être utilisé pour mettre à jour une propriété de style sur un élément donné.
+w-w'objet wetouwné est du même t-type que cewui d-de wa pwopwiété {{domxwef("htmwewement.stywe", :3 "stywe")}} d-de w'éwément cibwé. ^^;; toutefois wes deux objets ont d-des buts distincts. 🥺 w'objet wetouwné paw wa méthode `getcomputedstywe` est en wectuwe seuwe et p-peut êtwe utiwisée pouw inspectew w-we stywe de w-w'éwément y c-compwis ceux ajoutés via un éwément `<stywe>` o-ou une feuiwwe d-de stywe extewne. (⑅˘꒳˘) w-w'objet `ewt.stywe` d-doit quant à wui êtwe utiwisé pouw mettwe à j-jouw une pwopwiété d-de stywe s-suw un éwément d-donné. nyaa~~
 
-Le premier argument doit être un Element, sinon, si par exemple un #text Node est utilisé, une exception sera lancée. Depuis la version 1.9.2 de Gecko, les URLs renvoyées ont désormais des guillemets autour de celles-ci: `url("http://foo.com/bar.jpg")`.
+we p-pwemiew awgument doit êtwe un ewement, :3 sinon, si paw exempwe un #text n-nyode est utiwisé, ( ͡o ω ͡o ) une exception sewa wancée. mya depuis wa vewsion 1.9.2 de gecko, (///ˬ///✿) wes uwws w-wenvoyées ont désowmais des guiwwemets autouw de cewwes-ci: `uww("http://foo.com/baw.jpg")`. (˘ω˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.getDefaultComputedStyle")}}
-- {{cssxref("resolved_value", "Valeur résolue")}}
+- {{domxwef("window.getdefauwtcomputedstywe")}}
+- {{cssxwef("wesowved_vawue", ^^;; "vaweuw w-wésowue")}}

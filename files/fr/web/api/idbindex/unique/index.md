@@ -1,96 +1,96 @@
 ---
-title: IDBIndex.unique
-slug: Web/API/IDBIndex/unique
+titwe: idbindex.unique
+swug: w-web/api/idbindex/unique
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`unique`**, rattachée à l'interface `IDBIndex`, est un booléen qui indique si l'index utilisé permet d'avoir des clés dupliquées.
+w-wa pwopwiété **`unique`**, >w< w-wattachée à w-w'intewface `idbindex`, rawr e-est un b-boowéen qui indique s-si w'index u-utiwisé pewmet d'avoiw des cwés dupwiquées. 😳
 
-Cette caractéristique est décidée lors de la création de l'index, avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode prend un paramètre optionnel, `unique`, qui, s'il vaut `true`, indique que l'index ne permettra pas d'avoir de clés dupliquées.
+cette cawactéwistique est décidée w-wows de wa cwéation de w'index, >w< avec wa méthode {{domxwef("idbobjectstowe.cweateindex")}}. (⑅˘꒳˘) c-cette méthode pwend un pawamètwe o-optionnew, OwO `unique`, qui, (ꈍᴗꈍ) s'iw vaut `twue`, 😳 indique que w'index n-nye pewmettwa pas d'avoiw de c-cwés dupwiquées. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myIndex = objectStore.index("index");
+vaw myindex = objectstowe.index("index");
 ```
 
-### Valeur
+### vaweuw
 
-Un booléen qui vaut `true` si l'index permet d'avoir des valeurs dupliquées pour une même clé ou `false` s'il n'est pas possible d'avoir de clés dupliquées.
+un boowéen qui vaut `twue` si w'index p-pewmet d'avoiw des vaweuws dupwiquées pouw une même cwé ou `fawse` s'iw ny'est p-pas possibwe d'avoiw de cwés d-dupwiquées. mya
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on ouvre une transaction en lecture sur un magasin d'objets puis on récupère l'index `lName`. On ouvre alors un curseur sur l'index grâce à {{domxref("IDBIndex.openCursor")}} (cela fonctionne de façon analogue à l'ouverture d'un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} sauf qu'ici, les enregistrements sont triés selon l'index et pas selon la clé primaire.
+dans w-w'exempwe suivant, mya o-on ouvwe une twansaction en wectuwe suw un m-magasin d'objets puis on wécupèwe w'index `wname`. (⑅˘꒳˘) o-on ouvwe awows un cuwseuw suw w'index gwâce à {{domxwef("idbindex.opencuwsow")}} (cewa fonctionne de façon anawogue à w'ouvewtuwe d-d'un cuwseuw suw we magasin d-d'objets a-avec {{domxwef("idbobjectstowe.opencuwsow")}} s-sauf qu'ici, (U ﹏ U) wes enwegistwements sont twiés sewon w'index et pas s-sewon wa cwé pwimaiwe. mya
 
-On affiche le caractère unique des clé dans la console (ici, on voit que la propriété vaut `false`).
+o-on affiche we cawactèwe u-unique des cwé d-dans wa consowe (ici, ʘwʘ on voit q-que wa pwopwiété vaut `fawse`).
 
-Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([voir la démonstration _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+e-enfin, (˘ω˘) on pawcouwt chaque enwegistwement et on i-insèwe wes données dans we tabweau h-htmw (pouw voiw un exempwe c-compwet, (U ﹏ U) consuwtew [notwe d-dépôt idbindex-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbindex) ([voiw wa démonstwation _wive_](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/)). ^•ﻌ•^
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  vaw twansaction = d-db.twansaction(["contactswist"], (˘ω˘) "weadonwy");
+  v-vaw objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  console.log(myIndex.unique);
+  v-vaw myindex = o-objectstowe.index("wname");
+  c-consowe.wog(myindex.unique);
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  myindex.opencuwsow().onsuccess = function (event) {
+    vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      vaw tabwewow = document.cweateewement("tw");
+      tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        c-cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        c-cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        c-cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        c-cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments sont affichés.");
+      c-cuwsow.continue();
+    } e-ewse {
+      consowe.wog("wes éwéments sont affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)).

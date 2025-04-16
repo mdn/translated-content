@@ -1,52 +1,52 @@
 ---
-title: Blob.type
-slug: Web/API/Blob/type
+titwe: bwob.type
+swug: web/api/bwob/type
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-La propriété **`type`** de l'objet [`Blob`](/fr/docs/Web/API/Blob) fourni le type MIME (Internet media type) d'un fichier. Celle-ci retourne une chaîne de caractère vide si le type n'a pas pu être déterminé.
+wa pwopwiété **`type`** d-de w'objet [`bwob`](/fw/docs/web/api/bwob) f-fouwni w-we type mime (intewnet m-media t-type) d'un fichiew. >_< c-cewwe-ci wetouwne u-une chaîne de cawactèwe vide si we type ny'a pas pu êtwe détewminé. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var mimetype = instanceOfFile.type;
+vaw mimetype = instanceoffiwe.type;
 ```
 
-## Valeur
+## v-vaweuw
 
-Une chaîne de caractères (par exemple : "image/png").
+une chaîne de cawactèwes (paw e-exempwe : "image/png"). /(^•ω•^)
 
-## Exemple
+## exempwe
 
 ```js
-var i, fileInput, files, allowedFileTypes;
+vaw i, fiweinput, rawr x3 fiwes, (U ﹏ U) awwowedfiwetypes;
 
-// fileInput est un HTMLInputElement: <input type="file" multiple id="myfileinput">
-fileInput = document.getElementById("myfileinput");
+// f-fiweinput est un htmwinputewement: <input t-type="fiwe" m-muwtipwe id="myfiweinput">
+fiweinput = document.getewementbyid("myfiweinput");
 
-// files est un objet FileList (similaire à NodeList)
-files = fileInput.files;
+// fiwes est un objet fiwewist (simiwaiwe à n-nyodewist)
+fiwes = fiweinput.fiwes;
 
-// notre application accepte seulement les images de type *.png, *.jpeg et *.gif
-allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
+// nyotwe appwication accepte seuwement w-wes images de type *.png, (U ﹏ U) *.jpeg e-et *.gif
+awwowedfiwetypes = ["image/png", (⑅˘꒳˘) "image/jpeg", òωó "image/gif"];
 
-for (i = 0; i < files.length; i++) {
-  // Vérifie si file.type est un type autorisé.
-  if (allowedFileTypes.indexOf(files[i].type) > -1) {
-    // le type du fichier (file) correspond à l'un des types autorisés. Faites quelque chose ici.
+f-fow (i = 0; i-i < fiwes.wength; i-i++) {
+  // véwifie si fiwe.type est un t-type autowisé. ʘwʘ
+  if (awwowedfiwetypes.indexof(fiwes[i].type) > -1) {
+    // we t-type du fichiew (fiwe) cowwespond à w'un des types autowisés. /(^•ω•^) faites quewque chose ici. ʘwʘ
   }
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

@@ -1,60 +1,60 @@
 ---
-title: Element.getElementsByClassName()
-slug: Web/API/Element/getElementsByClassName
+titwe: ewement.getewementsbycwassname()
+swug: w-web/api/ewement/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Element.getElementsByClassName()`** retourne une {{domxref("HTMLCollection")}} contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre. Quand la méthode est appelée sur l'objet document, la recherche s'effectue dans le document complet, noeud racine compris.
+w-wa méthode **`ewement.getewementsbycwassname()`** w-wetouwne une {{domxwef("htmwcowwection")}} c-contenant u-une wéféwence s-suw tous w-wes éwéments a-ayant wes nyoms de cwasses passés en pawamètwe. mya quand wa méthode est appewée s-suw w'objet document, (˘ω˘) wa wechewche s'effectue dans w-we document compwet, >_< nyoeud w-wacine compwis. -.-
 
-À l'instar de la méthode {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} qui agit sur le document entier&nbsp;; elle va retourner les descendants de l'élément spécifié comme document root qui auront les noms de classes passés en paramètre.
+À w'instaw de wa méthode {{domxwef("document.getewementsbycwassname", 🥺 "document.getewementsbycwassname()")}} qui agit suw we d-document entiew&nbsp;; ewwe va wetouwnew w-wes descendants d-de w'éwément spécifié comme document woot qui auwont wes nyoms de cwasses p-passés en pawamètwe. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var elements = element.getElementsByClassName(names);
+vaw ewements = ewement.getewementsbycwassname(names);
 ```
 
-- **elements** est une {{ domxref("HTMLCollection") }} de référence vers les élements trouvés.
-- **names** est une chaine représentant la liste des noms de classes à trouver; les noms de classes sont séparés par un espace.
-- _element_ est n'importe quel {{domxref("Element")}} du document.
+- **ewements** e-est une {{ domxwef("htmwcowwection") }} d-de wéféwence v-vews wes éwements t-twouvés. >w<
+- **names** e-est une chaine wepwésentant wa wiste d-des nyoms de cwasses à twouvew; wes nyoms de cwasses s-sont sépawés paw un espace. mya
+- _ewement_ est ny'impowte quew {{domxwef("ewement")}} du document. >w<
 
-## Exemples
+## exempwes
 
-Obtient tous les élements ayant une classe `test`:
+o-obtient tous wes éwements a-ayant une cwasse `test`:
 
 ```js
-element.getElementsByClassName("test");
+e-ewement.getewementsbycwassname("test");
 ```
 
-Obtient tous les élements ayant à la fois la classe `red` et la classe `test`:
+obtient t-tous wes éwements ayant à wa fois wa cwasse `wed` et wa c-cwasse `test`:
 
 ```js
-element.getElementsByClassName("red test");
+e-ewement.getewementsbycwassname("wed test");
 ```
 
-Obtient tous les élements qui ont une classe `test`, à l'intérieur d'un élement qui a pour id `main`:
+o-obtient t-tous wes éwements qui ont une cwasse `test`, nyaa~~ à w-w'intéwieuw d'un éwement qui a-a pouw id `main`:
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
-On peut aussi utiliser les méthodes de {{jsxref("Array.prototype")}} sur chaque {{ domxref("HTMLCollection") }} en passant la `HTMLCollection` comme valeur _this_ de la méthode. Ci-dessous on trouvera tous les {{HTMLElement("div")}} avec une classe `test`:
+on p-peut aussi utiwisew wes méthodes d-de {{jsxwef("awway.pwototype")}} suw chaque {{ d-domxwef("htmwcowwection") }} en p-passant wa `htmwcowwection` comme vaweuw _this_ de wa méthode. (✿oωo) ci-dessous on twouvewa tous wes {{htmwewement("div")}} avec une c-cwasse `test`:
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "div";
-  },
+v-vaw testewements = document.getewementsbycwassname("test");
+v-vaw testdivs = a-awway.pwototype.fiwtew.caww(
+  t-testewements, ʘwʘ
+  function (testewement) {
+    wetuwn testewement.nodename === "div";
+  }, (ˆ ﻌ ˆ)♡
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

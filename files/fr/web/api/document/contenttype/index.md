@@ -1,24 +1,24 @@
 ---
-title: Document.contentType
-slug: Web/API/Document/contentType
+titwe: document.contenttype
+swug: web/api/document/contenttype
 ---
 
-{{ ApiRef("DOM") }}{{Non-standard_header}}
+{{ a-apiwef("dom") }}{{non-standawd_headew}}
 
-Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-têtes HTTP ou d'autres sources d'informations MIME et peut être affecté par les conversions automatiques de type effectuées par le navigateur ou les extensions.
+w-wenvoie we type m-mime dans wequew w-we document e-est wendu. 😳 iw peut p-pwoveniw d'en-têtes h-http ou d-d'autwes souwces d'infowmations mime et peut êtwe affecté paw wes convewsions a-automatiques de type effectuées paw we nyavigateuw o-ou wes extensions. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-contentType = document.contentType;
+c-contenttype = document.contenttype;
 ```
 
-`contentType` est une propriété en lecture seule.
+`contenttype` est une pwopwiété en wectuwe s-seuwe. :3
 
-## Notes
+## nyotes
 
-La propriété n'est pas affectée par les balises META.
+wa pwopwiété n-ny'est pas affectée p-paw wes bawises meta. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

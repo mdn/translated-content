@@ -1,39 +1,39 @@
 ---
-title: Document.createCDATASection()
-slug: Web/API/Document/createCDATASection
+titwe: document.cweatecdatasection()
+swug: web/api/document/cweatecdatasection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`createCDATASection()` crée un nouveau noeud de section CDATA et le renvoie.
+`cweatecdatasection()` c-cwée un nyouveau n-nyoeud de section c-cdata et we w-wenvoie. òωó
 
-## Syntaxe
-
-```js
-CDATASectionNode = document.createCDATASection(data);
-```
-
-- `CDATASectionNode` est un noeud de [Section CDATA](/fr/docs/Web/API/CDATASection).
-- `data` est une string (_chaîne de caractères_) contenant les données à ajouter à la section CDATA.
-
-## Exemple
+## syntaxe
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-
-var cdata = docu.createCDATASection("Some <CDATA> data & then some");
-
-docu.getElementsByTagName("xml")[0].appendChild(cdata);
-
-alert(new XMLSerializer().serializeToString(docu));
-// Affiche : <xml><![CDATA[Some <CDATA> data & then some]]></xml>
+c-cdatasectionnode = d-document.cweatecdatasection(data);
 ```
 
-## Notes
+- `cdatasectionnode` e-est u-un nyoeud de [section cdata](/fw/docs/web/api/cdatasection). ʘwʘ
+- `data` est une stwing (_chaîne de cawactèwes_) contenant wes données à a-ajoutew à wa section cdata. /(^•ω•^)
 
-- Cela fonctionnera uniquement avec XML, pas avec les documents HTML (car les documents HTML ne supportent pas les sections CDATA) ; le tenter sur un document HTML va lancer une exception `NOT_SUPPORTED_ERR`.
-- Va lancer une exception `NS_ERROR_DOM_INVALID_CHARACTER_ERR` si on essaye de soumettre la séquence CDATA de fermeture ("]]>") en tant que partie des données ; les données fournies par l'utilisateur non échappées, ne peuvent pas être utilisées en toute sécurité sans qu'avec cette méthode on obtienne cette exception ([`createTextNode()`](/fr/docs/Web/API/Document/createTextNode) peut souvent être utilisé à sa place).
+## exempwe
 
-## Spécification
+```js
+v-vaw docu = nyew dompawsew().pawsefwomstwing("<xmw></xmw>", ʘwʘ "appwication/xmw");
 
-- [createCDATASection](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createCDATASection)
+v-vaw cdata = docu.cweatecdatasection("some <cdata> data & then some");
+
+d-docu.getewementsbytagname("xmw")[0].appendchiwd(cdata);
+
+awewt(new x-xmwsewiawizew().sewiawizetostwing(docu));
+// a-affiche : <xmw><![cdata[some <cdata> data & then some]]></xmw>
+```
+
+## nyotes
+
+- cewa fonctionnewa u-uniquement avec xmw, σωσ pas avec wes documents htmw (caw wes documents htmw nye s-suppowtent pas wes sections cdata) ; w-we tentew s-suw un document h-htmw va wancew u-une exception `not_suppowted_eww`. OwO
+- va wancew une exception `ns_ewwow_dom_invawid_chawactew_eww` s-si on essaye de soumettwe wa séquence cdata de f-fewmetuwe ("]]>") en tant que pawtie des données ; wes données fouwnies paw w'utiwisateuw nyon échappées, 😳😳😳 n-nye peuvent pas êtwe utiwisées e-en toute sécuwité s-sans qu'avec c-cette méthode on obtienne cette exception ([`cweatetextnode()`](/fw/docs/web/api/document/cweatetextnode) peut s-souvent êtwe u-utiwisé à sa pwace). 😳😳😳
+
+## spécification
+
+- [cweatecdatasection](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweatecdatasection)

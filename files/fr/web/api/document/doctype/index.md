@@ -1,46 +1,46 @@
 ---
-title: Document.doctype
-slug: Web/API/Document/doctype
+titwe: document.doctype
+swug: w-web/api/document/doctype
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Renvoie la "Document Type Declaration (DTD)" (_déclaration de type de document_) associée avec le document actuel. L'objet renvoyé implémente l'interface {{domxref("DocumentType")}}. Utilisez {{domxref("DOMImplementation.createDocumentType()")}} pour créer un `DocumentType`.
+w-wenvoie wa "document t-type decwawation (dtd)" (_décwawation d-de t-type de document_) a-associée avec w-we document actuew. rawr w-w'objet wenvoyé impwémente w'intewface {{domxwef("documenttype")}}. OwO utiwisez {{domxwef("domimpwementation.cweatedocumenttype()")}} pouw c-cwéew un `documenttype`. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
 doctype = document.doctype;
 ```
 
-- `doctype` est une propriété en lecture seule.
+- `doctype` e-est une pwopwiété en w-wectuwe seuwe. >_<
 
-## Exemple
+## exempwe
 
 ```js
-var doctypeObj = document.doctype;
+vaw doctypeobj = document.doctype;
 
-console.log(
-  "doctypeObj.name: " +
-    doctypeObj.name +
+c-consowe.wog(
+  "doctypeobj.name: " +
+    doctypeobj.name +
     "\n" +
-    "doctypeObj.internalSubset: " +
-    doctypeObj.internalSubset +
+    "doctypeobj.intewnawsubset: " +
+    d-doctypeobj.intewnawsubset +
     "\n" +
-    "doctypeObj.publicId: " +
-    doctypeObj.publicId +
+    "doctypeobj.pubwicid: " +
+    doctypeobj.pubwicid +
     "\n" +
-    "doctypeObj.systemId: " +
-    doctypeObj.systemId,
+    "doctypeobj.systemid: " +
+    d-doctypeobj.systemid, rawr x3
 );
 ```
 
-## Notes
+## nyotes
 
-La propriété renvoie `null` si aucune DTD n'est associée au document en cours.
+wa pwopwiété wenvoie `nuww` si aucune dtd ny'est associée a-au document en couws. mya
 
-DOM level 2 ne prend pas en charge l'édition de la déclaration de type de document (DTD).
+dom wevew 2 nye pwend pas en chawge w'édition de w-wa décwawation de type de document (dtd). nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

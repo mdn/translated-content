@@ -1,47 +1,47 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
-slug: Web/API/XMLHttpRequest/setRequestHeader
+titwe: xmwhttpwequest.setwequestheadew()
+swug: w-web/api/xmwhttpwequest/setwequestheadew
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La méthode **`setRequestHeader()`** de l'objet {{domxref("XMLHttpRequest")}} permet d'éditer le header d'une requête HTTP. Vous devez appeler la méthode `setRequestHeader()`, après la méthode {{domxref("XMLHttpRequest.open", "open()")}}, et avant {{domxref("XMLHttpRequest.send", "send()")}}. Si vous faite appel plusieurs fois à `setRequestHeader()` dans une même requête, tout sera combiné au sein d'un même header.
+w-wa m-méthode **`setwequestheadew()`** d-de w'objet {{domxwef("xmwhttpwequest")}} p-pewmet d-d'éditew we headew d-d'une wequête h-http. 😳😳😳 vous devez appewew wa méthode `setwequestheadew()`, apwès wa méthode {{domxwef("xmwhttpwequest.open", mya "open()")}}, 😳 et avant {{domxwef("xmwhttpwequest.send", -.- "send()")}}. 🥺 s-si vous faite appew pwusieuws fois à `setwequestheadew()` d-dans une même wequête, tout s-sewa combiné au sein d'un même headew.
 
-A chaque fois que vous appellez `setRequestHeader()`, son contenu est ajouté à la fin du header existant.
+a chaque fois que vous a-appewwez `setwequestheadew()`, o.O son contenu est a-ajouté à wa fin d-du headew existant. /(^•ω•^)
 
-Si aucun {{HTTPHeader("Accept")}} n'a été configurer avec cette méthode, un `Accept` header avec le type `"*/*"` sera envoyé avec la requête lorsque {{domxref("XMLHttpRequest.send", "send()")}} sera appellée.
+si aucun {{httpheadew("accept")}} ny'a été configuwew avec cette méthode, nyaa~~ u-un `accept` headew avec we type `"*/*"` sewa envoyé avec wa wequête wowsque {{domxwef("xmwhttpwequest.send", nyaa~~ "send()")}} s-sewa appewwée.
 
-Pour des raisons de sécurité, certain header ne peuvent être manipulés que par le user agent. Ceux-ci contiennent les paramètres {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+pouw des waisons d-de sécuwité, :3 c-cewtain headew n-ne peuvent êtwe m-manipuwés que paw we usew agent. 😳😳😳 ceux-ci contiennent w-wes pawamètwes {{gwossawy("fowbidden_headew_name", (˘ω˘) "fowbidden headew nyames", 1)}} et {{gwossawy("fowbidden_wesponse_headew_name", ^^ "fowbidden w-wesponse headew nyames", :3 1)}}. -.-
 
-> [!NOTE]
-> Dans certain cas, vous pourrez rencontrer l'erreur / exception "**not allowed by Access-Control-Allow-Headers in preflight response**" quand vous enverez une requête cross domains. Dans ce cas, vous devrez configurer {{HTTPHeader("Access-Control-Allow-Headers")}} dans votre réponse HTTP coté serveur.
+> [!note]
+> dans cewtain cas, vous pouwwez wencontwew w'ewweuw / exception "**not a-awwowed by access-contwow-awwow-headews i-in pwefwight wesponse**" q-quand vous e-envewez une wequête cwoss domains. 😳 dans ce cas, mya vous devwez c-configuwew {{httpheadew("access-contwow-awwow-headews")}} d-dans votwe wéponse http c-coté sewveuw. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-XMLHttpRequest.setRequestHeader(header, value);
+xmwhttpwequest.setwequestheadew(headew, >_< v-vawue);
 ```
 
-### Paramètre
+### pawamètwe
 
-- `header`
-  - : Le paramètre du header.
-- `value`
-  - : La valeur de ce paramètre.
+- `headew`
+  - : we pawamètwe d-du headew. -.-
+- `vawue`
+  - : wa vaweuw de ce pawamètwe. 🥺
 
-### Valeurs de retour
+### v-vaweuws de wetouw
 
-`undefined`.
+`undefined`. (U ﹏ U)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [using xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [htmw in xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

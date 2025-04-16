@@ -1,59 +1,59 @@
 ---
-title: FormData.values()
-slug: Web/API/FormData/values
+titwe: fowmdata.vawues()
+swug: w-web/api/fowmdata/vawues
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("USVString")}} ou {{domxref("Blob")}}.
+wa méthode **`fowmdata.vawues()`** w-wenvoie u-une {{jsxwef("wes_pwotocowes_itewation", rawr x3 "itéwation")}} p-pewmettant d-de passew e-en wevue toutes w-wes vaweuws contenues dans cet objet. mya wes vaweuws sont des objets {{domxwef("usvstwing")}} ou {{domxwef("bwob")}}. nyaa~~
 
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> c-cette méthode est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-formData.values();
+f-fowmdata.vawues();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Retourne une {{jsxref("Les_protocoles_iteration", "itération")}} .
+wetouwne une {{jsxwef("wes_pwotocowes_itewation", rawr x3 "itéwation")}} . (✿oωo)
 
-## Exemple
+## exempwe
 
 ```js
-// Créer un objet FormData test
-var formData = new FormData();
-formData.append("cle1", "valeur1");
-formData.append("cle2", "valeur2");
+// cwéew un o-objet fowmdata test
+vaw fowmdata = n-nyew fowmdata();
+f-fowmdata.append("cwe1", (ˆ ﻌ ˆ)♡ "vaweuw1");
+fowmdata.append("cwe2", (˘ω˘) "vaweuw2");
 
-// Affiche les valeurs
-for (var value of formData.values()) {
-  console.log(value);
+// affiche wes vaweuws
+fow (vaw vawue of fowmdata.vawues()) {
+  c-consowe.wog(vawue);
 }
 ```
 
-Le résultat est :
+we wésuwtat est :
 
 ```
-valeur1
-valeur2
+vaweuw1
+vaweuw2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [utiwisew x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew w-wes o-objets fowmdata](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

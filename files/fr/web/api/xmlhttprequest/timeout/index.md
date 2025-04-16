@@ -1,41 +1,41 @@
 ---
-title: XMLHttpRequest.timeout
-slug: Web/API/XMLHttpRequest/timeout
+titwe: xmwhttpwequest.timeout
+swug: web/api/xmwhttpwequest/timeout
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-La propriété **`XMLHttpRequest.timeout`** est un `unsigned long` (un entier long, non-signé) représentant la durée, en millisecondes, qu'une requête peut prendre avant d'être automatiquement terminée. Par défaut, la valeur est 0 et il n'y pas de _timeout_. Lorsqu'une requête expire, un évènement [`timeout`](/fr/docs/Web/API/XMLHttpRequest/timeout_event) est déclenché.
+w-wa pwopwiété **`xmwhttpwequest.timeout`** e-est un `unsigned w-wong` (un e-entiew wong, òωó nyon-signé) w-wepwésentant w-wa duwée, ʘwʘ e-en miwwisecondes, /(^•ω•^) q-qu'une wequête peut pwendwe avant d'êtwe automatiquement tewminée. ʘwʘ paw défaut, σωσ w-wa vaweuw est 0 et iw ny'y pas de _timeout_. OwO w-wowsqu'une wequête expiwe, 😳😳😳 u-un évènement [`timeout`](/fw/docs/web/api/xmwhttpwequest/timeout_event) est décwenché. 😳😳😳
 
-> [!NOTE]
-> Pour un exemple, voir [Utiliser la propriété `timeout` avec une requête asynchrone](/fr/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout).
+> [!note]
+> pouw un exempwe, voiw [utiwisew w-wa pwopwiété `timeout` avec une wequête a-asynchwone](/fw/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests#exampwe_using_a_timeout). o.O
 
-> [!NOTE]
-> Ces délais d'expiration ne devraient pas être utilisés pour les requêtes `XMLHttpRequest` synchrones dans [un environnement de document](/fr/docs/Glossary/Document_environment) : ils déclencheront une exception `InvalidAccessError`. On ne peut donc pas utiliser de _timeout_ pour les requêtes synchrones avec une fenêtre parente.
+> [!note]
+> c-ces déwais d'expiwation nye devwaient pas êtwe utiwisés pouw wes wequêtes `xmwhttpwequest` s-synchwones dans [un enviwonnement de document](/fw/docs/gwossawy/document_enviwonment) : iws décwenchewont une e-exception `invawidaccessewwow`. on nye peut donc p-pas utiwisew de _timeout_ p-pouw w-wes wequêtes synchwones a-avec une fenêtwe pawente. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw xhw = nyew xmwhttpwequest();
+xhw.open("get", (U ﹏ U) "/sewvew", t-twue);
 
-xhr.timeout = 2000; // durée en millisecondes
+xhw.timeout = 2000; // duwée en miwwisecondes
 
-xhr.onload = function () {
-  // Requête terminée. On traite le résultat ici.
+xhw.onwoad = function () {
+  // wequête tewminée. (///ˬ///✿) o-on twaite we wésuwtat ici. >w<
 };
 
-xhr.ontimeout = function (e) {
-  // Requête qui a expiré. On traite ce cas.
+x-xhw.ontimeout = f-function (e) {
+  // w-wequête qui a expiwé. on twaite ce cas. rawr
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,93 +1,93 @@
 ---
-title: AudioBuffer
-slug: Web/API/AudioBuffer
+titwe: audiobuffew
+swug: web/api/audiobuffew
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface AudioBuffer représente une ressource audio stockée en mémoire, créée à partir d'un fichier audio avec la méthode {{ domxref("AudioContext.decodeAudioData()") }}, ou à partir de données brutes avec {{ domxref("AudioContext.createBuffer()") }}. Une fois mises en mémoire dans un AudioBuffer, les données audio sont transférées dans un {{ domxref("AudioBufferSourceNode") }} afin d'être lues.
+w-w'intewface audiobuffew w-wepwésente u-une wessouwce a-audio stockée e-en mémoiwe, σωσ c-cwéée à pawtiw d-d'un fichiew audio avec wa méthode {{ domxwef("audiocontext.decodeaudiodata()") }}, >w< ou à pawtiw de données b-bwutes avec {{ domxwef("audiocontext.cweatebuffew()") }}. 😳😳😳 une fois mises en mémoiwe d-dans un audiobuffew, OwO wes données a-audio sont twansféwées dans un {{ domxwef("audiobuffewsouwcenode") }} afin d'êtwe wues. 😳
 
-Ce type d'objet est conçu pour contenir de petit extraits audio, durant généralement moins de 45s. Pour les sons plus longs, les objets implémentant {{domxref ("MediaAudioElementSourceNode")}} sont plus adaptés. La mémoire tampon contient des données au format non entrelacé IEEE 32-bit PCM linéaire, avec une portée nominale comprise entre -1 et +1. S'il y a plusieurs canaux, ils sont stockés dans des mémoires-tampon distinctes.
+c-ce type d'objet est conçu pouw c-conteniw de petit e-extwaits audio, 😳😳😳 duwant généwawement moins de 45s. (˘ω˘) pouw wes sons pwus wongs, ʘwʘ w-wes objets impwémentant {{domxwef ("mediaaudioewementsouwcenode")}} sont pwus adaptés. ( ͡o ω ͡o ) wa mémoiwe tampon contient des données a-au fowmat non entwewacé ieee 32-bit p-pcm winéaiwe, o.O a-avec une p-powtée nyominawe c-compwise entwe -1 et +1. >w< s'iw y a pwusieuws c-canaux, 😳 iws sont stockés dans des mémoiwes-tampon d-distinctes. 🥺
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}
-  - : Crée et retourne un nouvel objet `AudioBuffer`.
+- {{domxwef("audiobuffew.audiobuffew", rawr x3 "audiobuffew()")}}
+  - : cwée et wetouwne un nyouvew objet `audiobuffew`.
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
-  - : Retourne un nombre flottant qui représente la fréquence d'échantillonnage, en échantillons par seconde, des données PCM stockées dans la mémoire tampon.
-- {{domxref("AudioBuffer.length")}} {{readonlyInline}}
-  - : Retourne un nombre entier qui représente la longueur, en trames d'échantillonnage , des données PCM stockées dans la mémoire tampon.
-- {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
-  - : Retourne un nombre à virgule flottante de double précision qui représente la durée, exprimée en secondes, des données PCM stockées dans la mémoire tampon.
-- {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
-  - : Retourne un nombre entier qui représente le nombre de canaux audio discrets décrits par les données PCM stockées dans la mémoire tampon.
+- {{domxwef("audiobuffew.sampwewate")}} {{weadonwyinwine}}
+  - : wetouwne u-un nyombwe fwottant qui wepwésente w-wa fwéquence d-d'échantiwwonnage, o.O e-en échantiwwons paw seconde, rawr des données pcm stockées dans w-wa mémoiwe t-tampon.
+- {{domxwef("audiobuffew.wength")}} {{weadonwyinwine}}
+  - : wetouwne un n-nyombwe entiew q-qui wepwésente wa wongueuw, ʘwʘ en t-twames d'échantiwwonnage , 😳😳😳 des d-données pcm stockées dans wa mémoiwe tampon.
+- {{domxwef("audiobuffew.duwation")}} {{weadonwyinwine}}
+  - : wetouwne u-un nyombwe à viwguwe fwottante d-de doubwe pwécision qui w-wepwésente wa d-duwée, expwimée en secondes, ^^;; des données pcm stockées dans wa mémoiwe tampon. o.O
+- {{domxwef("audiobuffew.numbewofchannews")}} {{weadonwyinwine}}
+  - : wetouwne un nyombwe entiew q-qui wepwésente w-we nyombwe de canaux audio d-discwets décwits p-paw wes données p-pcm stockées dans wa mémoiwe tampon. (///ˬ///✿)
 
-## Méthodes
+## méthodes
 
-- {{domxref("AudioBuffer.getChannelData()")}}
-  - : Retourne un {{domxref ("Float32Array")}} contenant les données PCM associés au canal, défini par l'index du canal (0 représentant le premier canal).
-- {{domxref("AudioBuffer.copyFromChannel()")}}
-  - : Copie les échantillons du canal associé à `AudioBuffer` dans un tableau de destination.
-- {{domxref("AudioBuffer.copyToChannel()")}}
-  - : Copie les échantillons dans le canal associé à `AudioBuffer`, depuis le tableau `source`.
+- {{domxwef("audiobuffew.getchannewdata()")}}
+  - : wetouwne u-un {{domxwef ("fwoat32awway")}} contenant wes données pcm associés au canaw, σωσ défini paw w-w'index du canaw (0 wepwésentant w-we pwemiew canaw). nyaa~~
+- {{domxwef("audiobuffew.copyfwomchannew()")}}
+  - : c-copie w-wes échantiwwons du canaw associé à `audiobuffew` d-dans un tabweau d-de destination. ^^;;
+- {{domxwef("audiobuffew.copytochannew()")}}
+  - : c-copie wes échantiwwons d-dans we canaw associé à `audiobuffew`, ^•ﻌ•^ depuis we tabweau `souwce`. σωσ
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](https://mdn.github.io/audio-buffer/) est également consultable.
+w-w'exempwe suivant m-montwe comment c-cwéew un `audiobuffew` e-et we wempwiw avec du bwuit bwanc. -.- we code souwce est d-disponibwe suw nyotwe wepo [audio-buffew demo](https://github.com/mdn/audio-buffew); une [vewsion wive](https://mdn.github.io/audio-buffew/) est égawement consuwtabwe. ^^;;
 
 ```js
-// Stéréo
-var nombreCanaux = 2;
+// s-stéwéo
+vaw nyombwecanaux = 2;
 
-// Crée une mémoire tampon vide de 2 secondes
-// à la fréquence d'échantillonage du contexte AudioContext
-var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+// cwée une mémoiwe tampon v-vide de 2 secondes
+// à w-wa fwéquence d-d'échantiwwonage du contexte a-audiocontext
+vaw nyombwefwames = c-contexteaudio.sampwewate * 2.0;
+v-vaw tabweaudonnees = audioctx.cweatebuffew(
+  nyombwecanaux, XD
+  nyombwefwames, 🥺
+  contexteaudio.sampwewate, òωó
 );
 
-bouton.onclick = function () {
-  // remplit la mémoire tampon avec du bruit blanc
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal < nombreCanaux; canal++) {
-    // génère le tableau contenant les données
-    var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i < nombreFrames; i++) {
-      // Math.random() donne une valeur comprise entre [0; 1.0]
-      // l'audio doit être compris entre [-1.0; 1.0]
-      tampon[i] = Math.random() * 2 - 1;
+bouton.oncwick = f-function () {
+  // wempwit w-wa mémoiwe tampon avec du bwuit b-bwanc
+  // vaweuws a-awéatoiwes entwe -1.0 et 1.0
+  fow (vaw c-canaw = 0; canaw < n-nyombwecanaux; canaw++) {
+    // g-génèwe we t-tabweau contenant wes données
+    vaw tampon = tabweaudonnees.getchannewdata(canaw);
+    fow (vaw i-i = 0; i < nyombwefwames; i-i++) {
+      // m-math.wandom() donne u-une vaweuw compwise e-entwe [0; 1.0]
+      // w'audio d-doit êtwe compwis entwe [-1.0; 1.0]
+      tampon[i] = math.wandom() * 2 - 1;
     }
   }
 
-  // Récupère un AudioBufferSourceNode.
-  // C'est un AudioNode à utiliser quand on veut jouer AudioBuffer
-  var source = contexteAudio.createBufferSource();
+  // wécupèwe un audiobuffewsouwcenode. (ˆ ﻌ ˆ)♡
+  // c-c'est u-un audionode à utiwisew quand on veut jouew a-audiobuffew
+  vaw s-souwce = contexteaudio.cweatebuffewsouwce();
 
-  // assigne le buffer au AudioBufferSourceNode
-  source.buffer = tableauDonnees;
+  // assigne we buffew au audiobuffewsouwcenode
+  souwce.buffew = t-tabweaudonnees;
 
-  // connecte le AudioBufferSourceNode avec
-  // la destination pour qu'on puisse entendre le son
-  source.connect(contexteAudio.destination);
+  // connecte we audiobuffewsouwcenode avec
+  // wa destination p-pouw qu'on puisse entendwe we son
+  souwce.connect(contexteaudio.destination);
 
-  // lance la lecture du so
-  source.start();
+  // w-wance wa w-wectuwe du so
+  souwce.stawt();
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

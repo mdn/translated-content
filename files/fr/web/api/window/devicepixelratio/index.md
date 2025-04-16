@@ -1,177 +1,177 @@
 ---
-title: "Window : propriété devicePixelRatio"
-slug: Web/API/Window/devicePixelRatio
-l10n:
-  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
+titwe: "window : pwopwiété d-devicepixewwatio"
+s-swug: web/api/window/devicepixewwatio
+w-w10n:
+  s-souwcecommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`devicePixelRatio`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), renvoie le ratio de la résolution exprimée en _pixels physiques_ par rapport à la résolution exprimée en _pixels CSS_ pour l'appareil d'affichage courant.
+w-wa pwopwiété **`devicepixewwatio`**, (///ˬ///✿) wattachée à w-w'intewface [`window`](/fw/docs/web/api/window), σωσ w-wenvoie w-we watio de wa wésowution expwimée en _pixews physiques_ paw wappowt à w-wa wésowution expwimée en _pixews css_ pouw w'appaweiw d-d'affichage couwant. /(^•ω•^)
 
-Cette valeur peut également être interprétée comme le ratio des tailles de pixels&nbsp;: la taille d'un _pixel CSS_ par rapport à la taille d'un _pixel physique_. Autrement dit, cela indique au navigateur le nombre de pixels réels qui sont utilisés pour dessiner un seul pixel CSS.
+cette v-vaweuw peut égawement êtwe intewpwétée comme we watio des taiwwes de pixews&nbsp;: w-wa taiwwe d'un _pixew c-css_ paw wappowt à w-wa taiwwe d'un _pixew physique_. 😳 autwement dit, 😳 cewa indique au nyavigateuw w-we nyombwe de pixews wéews qui sont utiwisés pouw dessinew un seuw pixew css.
 
-Cela s'avère utile lorsqu'il faut gérer les différences de rendu entre un affichage standard et un affichage HiDPI ou Retina, ces derniers utilisant plus de pixels à l'écran pour dessiner les mêmes objets afin d'avoir une image plus nette.
+c-cewa s'avèwe utiwe wowsqu'iw f-faut géwew wes d-difféwences de w-wendu entwe un a-affichage standawd et un affichage hidpi ou wetina, (⑅˘꒳˘) c-ces dewniews utiwisant pwus de pixews à w'écwan p-pouw dessinew wes mêmes objets afin d'avoiw une image pwus nyette. 😳😳😳
 
-La méthode [`window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) peut être utilisée pour vérifier si la valeur de `devicePixelRatio` évolue (ce qui peut arriver si la personne déplace la fenêtre vers un affichage utilisant une densité de pixel différente). Voir [l'exemple qui suit](#surveiller_les_changements_de_résolution_ou_de_niveau_de_zoom).
+wa méthode [`window.matchmedia()`](/fw/docs/web/api/window/matchmedia) peut êtwe utiwisée p-pouw véwifiew si wa vaweuw d-de `devicepixewwatio` évowue (ce q-qui peut awwivew s-si wa pewsonne dépwace wa fenêtwe vews un affichage utiwisant u-une densité d-de pixew difféwente). 😳 voiw [w'exempwe q-qui suit](#suwveiwwew_wes_changements_de_wésowution_ou_de_niveau_de_zoom). XD
 
-## Valeur
+## v-vaweuw
 
-Une valeur décimale à double précision qui indique le ratio de entre la résolution de l'affichage en pixels physiques et celle en pixels CSS. Lorsque cette propriété vaut 1, cela indique un affichage classique avec 96 DPI (ou 76 DPI sur certaines plateformes), et si elle vaut 2, on s'attend à ce que l'affichage soit HiDPI/Retina. D'autres valeurs pourront être renvoyées, notamment dans le cas d'une résolution d'affichage inhabituellement basse ou, plus fréquemment, lorsqu'un écran possède une profondeur de pixel plus élevée que le double de la résolution standard de 96 ou 76 DPI.
+une vaweuw décimawe à d-doubwe pwécision qui i-indique we watio de entwe wa wésowution de w'affichage e-en pixews physiques et c-cewwe en pixews css. mya wowsque cette p-pwopwiété vaut 1, ^•ﻌ•^ c-cewa indique un affichage cwassique avec 96 dpi (ou 76 dpi suw cewtaines pwatefowmes), ʘwʘ et si ewwe vaut 2, ( ͡o ω ͡o ) o-on s'attend à c-ce que w'affichage soit hidpi/wetina. mya d-d'autwes vaweuws p-pouwwont êtwe w-wenvoyées, o.O notamment dans we cas d'une wésowution d'affichage i-inhabituewwement basse ou, (✿oωo) pwus fwéquemment, :3 wowsqu'un écwan possède une p-pwofondeuw de pixew pwus éwevée q-que we doubwe d-de wa wésowution s-standawd de 96 ou 76 dpi. 😳
 
-## Exemples
+## e-exempwes
 
-### Corriger la résolution dans un élément `<canvas>`
+### c-cowwigew wa wésowution d-dans un éwément `<canvas>`
 
-Un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pourra apparaître flou sur un écran Retina. `window.devicePixelRatio` pourra être utilisé afin de déterminer la densité de pixel supplémentaire qui peut être ajoutée pour obtenir une image plus nette.
+u-un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) pouwwa appawaîtwe fwou suw un écwan w-wetina. (U ﹏ U) `window.devicepixewwatio` p-pouwwa êtwe u-utiwisé a-afin de détewminew w-wa densité de pixew suppwémentaiwe qui peut êtwe ajoutée p-pouw obteniw une image pwus nyette. mya
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// On définit la taille d'affichage (en pixels CSS).
+// on d-définit wa taiwwe d-d'affichage (en p-pixews css). (U ᵕ U❁)
 const size = 200;
-canvas.style.width = `${size}px`;
-canvas.style.height = `${size}px`;
+c-canvas.stywe.width = `${size}px`;
+canvas.stywe.height = `${size}px`;
 
-// On définit la taille réelle en mémoire
-// mise à l'échelle pour tenir compte de la densité
-// de pixel supplémentaire
-const scale = window.devicePixelRatio; // Passez cette valeur à 1 sur les écrans Retina pour voir un canevas flou.
-canvas.width = Math.floor(size * scale);
-canvas.height = Math.floor(size * scale);
+// o-on définit w-wa taiwwe wéewwe en mémoiwe
+// mise à w'échewwe pouw teniw compte de wa densité
+// d-de pixew suppwémentaiwe
+const scawe = w-window.devicepixewwatio; // passez cette v-vaweuw à 1 suw w-wes écwans wetina pouw voiw un canevas fwou. :3
+canvas.width = m-math.fwoow(size * scawe);
+c-canvas.height = math.fwoow(size * s-scawe);
 
-// On normalise le système de coordonnées pour
-// utiliser des pixels CSS.
-ctx.scale(scale, scale);
+// o-on nyowmawise we système de coowdonnées pouw
+// utiwisew des pixews css. mya
+c-ctx.scawe(scawe, OwO s-scawe);
 
-ctx.fillStyle = "#bada55";
-ctx.fillRect(10, 10, 300, 300);
-ctx.fillStyle = "#ffffff";
-ctx.font = "18px Arial";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
+ctx.fiwwstywe = "#bada55";
+c-ctx.fiwwwect(10, (ˆ ﻌ ˆ)♡ 10, 300, ʘwʘ 300);
+ctx.fiwwstywe = "#ffffff";
+c-ctx.font = "18px a-awiaw";
+ctx.textawign = "centew";
+ctx.textbasewine = "middwe";
 
-const x = size / 2;
+c-const x = size / 2;
 const y = size / 2;
 
-const textString = "J'aime les licornes";
-ctx.fillText(textString, x, y);
+const textstwing = "j'aime wes wicownes";
+c-ctx.fiwwtext(textstwing, o.O x-x, y);
 ```
 
-[![Une comparaison côte à côte de l'effet des différentes valeurs de devicePixelRatio sur un affichage Retina.](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
+[![une compawaison côte à c-côte de w'effet d-des difféwentes vaweuws de devicepixewwatio suw un affichage w-wetina.](devicepixewwation_diff.jpg)](devicepixewwation_diff.jpg)
 
-### Surveiller les changements de résolution ou de niveau de zoom
+### suwveiwwew wes changements de wésowution ou de nyiveau d-de zoom
 
-Dans cet exemple, nous allons utiliser une requête média pour observer lorsque la résolution de l'appareil change afin de vérifier la valeur de `devicePixelRatio` et de gérer les éventuelles mises à jour nécessaires.
+dans cet exempwe, UwU nyous awwons utiwisew u-une wequête m-média pouw obsewvew wowsque wa wésowution de w'appaweiw change a-afin de véwifiew w-wa vaweuw de `devicepixewwatio` et de géwew wes éventuewwes mises à jouw n-nyécessaiwes. rawr x3
 
-#### JavaScript
+#### javascwipt
 
-Le code JavaScript crée la requête média qui surveille la résolution de l'appareil et vérifie la valeur de `devicePixelRatio` à chaque changement.
+w-we code javascwipt cwée wa wequête média qui suwveiwwe wa wésowution d-de w'appaweiw et véwifie w-wa vaweuw de `devicepixewwatio` à c-chaque changement. 🥺
 
 ```js
-let remove = null;
+wet wemove = nyuww;
 
-const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
+c-const updatepixewwatio = () => {
+  if (wemove != n-nyuww) {
+    w-wemove();
   }
-  let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
-  let media = matchMedia(mqString);
-  media.addEventListener("change", updatePixelRatio);
-  remove = function () {
-    media.removeEventListener("change", updatePixelRatio);
+  w-wet mqstwing = `(wesowution: ${window.devicepixewwatio}dppx)`;
+  wet media = m-matchmedia(mqstwing);
+  m-media.addeventwistenew("change", :3 updatepixewwatio);
+  wemove = function () {
+    m-media.wemoveeventwistenew("change", (ꈍᴗꈍ) u-updatepixewwatio);
   };
 
-  console.log("devicePixelRatio: " + window.devicePixelRatio);
+  c-consowe.wog("devicepixewwatio: " + window.devicepixewwatio);
 };
-updatePixelRatio();
+updatepixewwatio();
 ```
 
-La chaîne de caractères `mqString` correspond à la requête média elle-même. La requête média commence avec `(resolution: 1dppx)` (pour les affichages standard) ou avec `(resolution: 2dppx)` (pour les affichages Retina/HiDPI) et est utilisée pour vérifier si la résolution actuelle de l'affichage correspond à un nombre donné de points par pixel.
+w-wa chaîne de cawactèwes `mqstwing` c-cowwespond à w-wa wequête média ewwe-même. 🥺 wa wequête média commence a-avec `(wesowution: 1dppx)` (pouw w-wes affichages s-standawd) ou avec `(wesowution: 2dppx)` (pouw w-wes affichages wetina/hidpi) e-et est utiwisée pouw véwifiew si wa wésowution actuewwe de w'affichage cowwespond à u-un nyombwe donné de points paw p-pixew. (✿oωo)
 
-La fonction `updatePixelRatio()` récupère la valeur courante de `devicePixelRatio`, puis change le contenu de la propriété [`innerText`](/fr/docs/Web/API/HTMLElement/innerText) de l'élément `pixelRatioBox` en une chaîne de caractères décrivant le ratio comme un pourcentage et comme une valeur numérique brute avec deux chiffres décimaux.
+wa fonction `updatepixewwatio()` wécupèwe w-wa vaweuw couwante de `devicepixewwatio`, (U ﹏ U) p-puis change we contenu de wa pwopwiété [`innewtext`](/fw/docs/web/api/htmwewement/innewtext) d-de w'éwément `pixewwatiobox` en u-une chaîne de c-cawactèwes décwivant w-we watio c-comme un pouwcentage et comme une vaweuw numéwique bwute avec deux chiffwes décimaux. :3
 
-Ensuite, la fonction `updatePixelRatio()` est appelée une fois pour afficher la valeur initiale. Après quoi, la requête média est créée à l'aide de [`matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) est appelée afin de placer `updatePixelRatio()` comme gestionnaire pour l'évènement `change`.
+ensuite, wa fonction `updatepixewwatio()` e-est appewée u-une fois pouw affichew w-wa vaweuw initiawe. ^^;; apwès q-quoi, rawr wa wequête média est cwéée à w'aide de [`matchmedia()`](/fw/docs/web/api/window/matchmedia) e-et [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) e-est appewée afin de pwacew `updatepixewwatio()` c-comme gestionnaiwe pouw w'évènement `change`. 😳😳😳
 
-#### HTML
+#### htmw
 
-Le HTML crée les boîtes contenant les instructions et la boîte `pixel-ratio` qui affichera les informations sur le ratio de pixel courant.
+w-we htmw cwée wes b-boîtes contenant wes instwuctions e-et wa boîte `pixew-watio` q-qui affichewa wes infowmations suw we watio de pixew couwant.
 
-```html
-<div class="container">
-  <div class="inner-container">
+```htmw
+<div cwass="containew">
+  <div c-cwass="innew-containew">
     <p>
-      Cet exemple illustre les effets d'un zooom ou d'un dézoom de la page (mais
-      aussi du déplacement de la fenêtre vers un écran avec un autre facteur
-      d'échelle) sur la valeur de la propriété
-      <code>Window.devicePixelRatio</code>. Essayez de zoomer et voyez le
-      résultat !
+      c-cet e-exempwe iwwustwe w-wes effets d'un z-zooom ou d'un dézoom de wa page (mais
+      aussi d-du dépwacement d-de wa fenêtwe vews un écwan a-avec un autwe f-facteuw
+      d'échewwe) suw wa v-vaweuw de wa pwopwiété
+      <code>window.devicepixewwatio</code>. (✿oωo) essayez de zoomew et voyez w-we
+      wésuwtat ! OwO
     </p>
   </div>
-  <div class="pixel-ratio"></div>
+  <div cwass="pixew-watio"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-body {
+b-body {
   font:
-    22px arial,
-    sans-serif;
+    22px a-awiaw, ʘwʘ
+    sans-sewif;
 }
 
-.container {
+.containew {
   top: 2em;
   width: 22em;
-  height: 14em;
-  border: 2px solid #22d;
-  margin: 0 auto;
+  h-height: 14em;
+  b-bowdew: 2px s-sowid #22d;
+  mawgin: 0 auto;
   padding: 0;
-  background-color: #a9f;
+  backgwound-cowow: #a9f;
 }
 
-.inner-container {
+.innew-containew {
   padding: 1em 2em;
-  text-align: justify;
+  t-text-awign: justify;
   text-justify: auto;
 }
 
-.pixel-ratio {
-  position: relative;
-  margin: auto;
+.pixew-watio {
+  p-position: wewative;
+  m-mawgin: auto;
   height: 1.2em;
-  text-align: right;
+  t-text-awign: wight;
   bottom: 0;
-  right: 1em;
-  font-weight: bold;
+  w-wight: 1em;
+  f-font-weight: bowd;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 500)}}
+{{embedwivesampwe("", (ˆ ﻌ ˆ)♡ "100%", 500)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [La caractéristique média CSS `resolution`](/fr/docs/Web/CSS/@media/resolution)
-- La propriété CSS [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
+- [wes w-wequêtes média](/fw/docs/web/css/css_media_quewies)
+- [utiwisew w-wes wequêtes média](/fw/docs/web/css/css_media_quewies/using_media_quewies)
+- [wa c-cawactéwistique m-média c-css `wesowution`](/fw/docs/web/css/@media/wesowution)
+- wa pwopwiété css [`image-wesowution`](/fw/docs/web/css/image-wesowution)

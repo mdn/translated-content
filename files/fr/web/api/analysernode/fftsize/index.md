@@ -1,92 +1,92 @@
 ---
-title: AnalyserNode.fftSize
-slug: Web/API/AnalyserNode/fftSize
+titwe: anawysewnode.fftsize
+swug: web/api/anawysewnode/fftsize
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété `fftSize` de l'objet {{ domxref("AnalyserNode") }} est un nombre entier non signé qui représente la taille de la FFT ([transfomation de Fourier rapide](/fr/docs/Web)) à utiliser pour déterminer le domaine fréquentiel.
+w-wa pwopwiété `fftsize` de w-w'objet {{ domxwef("anawysewnode") }} e-est un nombwe e-entiew nyon s-signé qui wepwésente w-wa taiwwe de wa fft ([twansfomation de fouwiew wapide](/fw/docs/web)) à utiwisew pouw d-détewminew we domaine fwéquentiew. 😳
 
-La valeur de la propriété `fftSize` property's doit être une puissance de 2 non nulle située dans l'intervalle compris entre `32` et 32768 ; sa valeur par défaut est `2048`.
+wa vaweuw d-de wa pwopwiété `fftsize` pwopewty's d-doit êtwe une puissance de 2 nyon nyuwwe située dans w'intewvawwe c-compwis entwe `32` et 32768 ; s-sa vaweuw p-paw défaut est `2048`. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Si la valeur n'est pas une puissance de 2, ou si elle ne se trouve pas dans l'intervalle spécifiée, l'exception `INDEX_SIZE_ERR` est levée.
+> [!note]
+> si wa vaweuw ny'est pas une puissance de 2, ou si ewwe nye s-se twouve pas dans w'intewvawwe spécifiée, 😳😳😳 w'exception `index_size_eww` est w-wevée. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.fftSize = 2048;
+vaw c-contexteaudio = n-nyew audiocontext();
+v-vaw anawyseuw = c-contexteaudio.cweateanawysew();
+anawyseuw.fftsize = 2048;
 ```
 
-### Valeur
+### vaweuw
 
-Un nombre entier non signé.
+u-un nyombwe entiew nyon signé. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w'exempwe s-suivant montwe comment cwéew simpwement un `anawysewnode` avec {{domxwef("audiocontext")}}, 😳 puis utiwisew {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} et {{htmwewement("canvas")}} p-pouw cowwectew wes données t-tempowewwes et dessinew u-un osciwwoscope e-en sowtie. 😳 pouw des exempwes pwus compwets, σωσ voiw nyotwe d-démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et e-en pawticuwiew [app.js w-wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). rawr x3
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+v-vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+anawysew.fftsize = 2048;
+v-vaw buffewwength = anawysew.fwequencybincount;
+vaw dataawway = n-nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
-// dessine un oscilloscope pour la source audio courante
+// d-dessine un osciwwoscope pouw w-wa souwce audio c-couwante
 
-function draw() {
+function dwaw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      dwawvisuaw = wequestanimationfwame(dwaw);
 
-      analyser.getByteTimeDomainData(dataArray);
+      anawysew.getbytetimedomaindata(dataawway);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasctx.fiwwstywe = 'wgb(200, 200, OwO 200)';
+      canvasctx.fiwwwect(0, /(^•ω•^) 0, w-width, 😳😳😳 height);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      c-canvasctx.winewidth = 2;
+      canvasctx.stwokestywe = 'wgb(0, ( ͡o ω ͡o ) 0, 0)';
 
-      canvasCtx.beginPath();
+      c-canvasctx.beginpath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      v-vaw swicewidth = w-width * 1.0 / buffewwength;
+      vaw x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
+      fow(vaw i-i = 0; i < buffewwength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        vaw v = dataawway[i] / 128.0;
+        vaw y = v * height/2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
+        i-if(i === 0) {
+          canvasctx.moveto(x, >_< y-y);
+        } e-ewse {
+          c-canvasctx.wineto(x, >w< y);
         }
 
-        x += sliceWidth;
+        x-x += swicewidth;
       }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
+      c-canvasctx.wineto(canvas.width, rawr c-canvas.height/2);
+      c-canvasctx.stwoke();
     };
 
-    draw();
+    dwaw();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa w-web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

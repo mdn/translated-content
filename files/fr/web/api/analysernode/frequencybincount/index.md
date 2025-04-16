@@ -1,76 +1,76 @@
 ---
-title: AnalyserNode.frequencyBinCount
-slug: Web/API/AnalyserNode/frequencyBinCount
+titwe: anawysewnode.fwequencybincount
+swug: web/api/anawysewnode/fwequencybincount
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-La propriété **`frequencyBinCount`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) est un nombre entier non signé équivalent à la moitié la taille de la FFT. Il correspond en général au nombre de valeurs que vous aurez à manipuler pour la visualisation.
+wa pwopwiété **`fwequencybincount`** d-de w'objet [`anawysewnode`](/fw/docs/web/api/anawysewnode) e-est u-un nyombwe entiew n-nyon signé équivawent à w-wa moitié wa taiwwe de wa fft. -.- iw cowwespond en généwaw au nyombwe d-de vaweuws que vous auwez à manipuwew pouw wa v-visuawisation. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var analyseur = contexteAudio.createAnalyser();
-var tailleMemoireTampon = analyseur.frequencyBinCount;
+v-vaw contexteaudio = nyew audiocontext();
+vaw anawyseuw = contexteaudio.cweateanawysew();
+v-vaw taiwwememoiwetampon = a-anawyseuw.fwequencybincount;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un nombre entier non signé.
+un nyombwe entiew nyon signé.
 
-## Example
+## exampwe
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour collecter les données temporelles et dessiner un oscilloscopeen sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+w'exempwe suivant m-montwe comment cwéew simpwement un `anawysewnode` avec [`audiocontext`](/fw/docs/web/api/audiocontext), mya puis u-utiwisew [`wequestanimationfwame`](/fw/docs/web/api/window/wequestanimationfwame) et [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) p-pouw cowwectew w-wes données t-tempowewwes et d-dessinew un osciwwoscopeen sowtie. (˘ω˘) pouw des exempwes p-pwus compwets, >_< voiw nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et e-en pawticuwiew [app.js wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). -.-
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
-analyseur.minDecibels = -90;
-analyseur.maxDecibels = -10;
+vaw contexteaudio = nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw anawyseuw = contexteaudio.cweateanawysew();
+a-anawyseuw.mindecibews = -90;
+anawyseuw.maxdecibews = -10;
 
   ...
 
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 256;
+v-vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+consowe.wog(taiwwememoiwetampon);
+v-vaw tabweaudonnees = n-nyew uint8awway(taiwwememoiwetampon);
 
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+c-contextecanvas.cweawwect(0, 🥺 0, w-wawgeuw, (U ﹏ U) hauteuw);
 
-function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
+function dessinew() {
+  d-dessin = wequestanimationfwame(dessinew);
 
-  analyseur.getByteFrequencyData(tableauDonnees);
+  a-anawyseuw.getbytefwequencydata(tabweaudonnees);
 
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  contextecanvas.fiwwstywe = 'wgb(0, 0, >w< 0)';
+  contextecanvas.fiwwwect(0, mya 0, w-wawgeuw, >w< hauteuw);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5 - 1;
-  var hauteurBarre;
-  var x = 0;
+  vaw w-wawgeuwbawwe = (wawgeuw / taiwwememoiwetampon) * 2.5 - 1;
+  v-vaw h-hauteuwbawwe;
+  vaw x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = tableauDonnees[i];
+  fow(vaw i = 0; i < taiwwememoiwetampon; i++) {
+    hauteuwbawwe = tabweaudonnees[i];
 
-    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-       contexteCanvas.fillRect(x,HAUTEUR-hauteurBarre/2,largeurBarre,hauteurBarre/2);
+    c-contextecanvas.fiwwstywe = 'wgb(' + (hauteuwbawwe+100) + ',50,50)';
+       c-contextecanvas.fiwwwect(x,hauteuw-hauteuwbawwe/2,wawgeuwbawwe,hauteuwbawwe/2);
 
-    x += largeurBarre;
+    x += wawgeuwbawwe;
   }
 };
 
-dessiner();
+d-dessinew();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

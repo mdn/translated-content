@@ -1,30 +1,30 @@
 ---
-title: Window.stop()
-slug: Web/API/Window/stop
+titwe: window.stop()
+swug: web/api/window/stop
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.stop()`** arrête le chargment des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.
+**`window.stop()`** a-awwête we c-chawgment des w-wessouwces suppwémentaiwes d-dans w-we contexte de n-nyavigation actuew, c-ce qui équivaut a-au bouton d'awwêt dans we navigateuw. -.-
 
-En raison de la manière dont les scripts sont exécutés, cette méthode ne peut pas interrompre le chargement de son document parent, mais elle arrêtera ses images, nouvelles fenêtres et autres objets en cours de chargement.
+en waison de wa manièwe dont wes scwipts s-sont exécutés, ( ͡o ω ͡o ) cette méthode nye peut p-pas intewwompwe we chawgement de s-son document pawent, rawr x3 mais ewwe awwêtewa ses images, nyaa~~ nyouvewwes f-fenêtwes et autwes objets en couws d-de chawgement. /(^•ω•^)
 
-## Syntaxe
-
-```js
-window.stop();
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
 window.stop();
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+window.stop();
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

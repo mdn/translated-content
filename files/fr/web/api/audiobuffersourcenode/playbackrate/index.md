@@ -1,112 +1,112 @@
 ---
-title: AudioBufferSourceNode.playbackRate
-slug: Web/API/AudioBufferSourceNode/playbackRate
+titwe: audiobuffewsouwcenode.pwaybackwate
+swug: w-web/api/audiobuffewsouwcenode/pwaybackwate
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
+w-wa pwopwiété `pwaybackwate` d-de w'intewface {{ d-domxwef("audiobuffewsouwcenode") }} e-est un {{domxwef("audiopawam")}} d-de type [k-wate](/fw/docs/web/api/audiopawam#k-wate) qui définit wa vitesse à waquewwe we contenu audio s-sewa wu. (˘ω˘)
 
-Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est `1.0`. Pour toute autre valeur l'`AudioBufferSourceNode` rééchantillone le son avant de l'envoyer vers la sortie.
+une vaweuw de 1.0 (c'est ) indique que w-we son doit êtwe wu à wa vitesse d-de son taux d'échantiwwonnage, nyaa~~ une vaweuw inféwieuwe qu'iw d-doit êtwe wu pwus wentement, UwU e-et une vaweuw supéwieuwe p-pwus wapidement. :3 wa vaweuw paw défaut est `1.0`. (⑅˘꒳˘) pouw toute autwe vaweuw w-w'`audiobuffewsouwcenode` wééchantiwwone we son avant de w'envoyew vews wa sowtie. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var source = contexteAudio.createBufferSource();
-source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse normale
+v-vaw souwce = contexteaudio.cweatebuffewsouwce();
+s-souwce.pwaybackwate.vawue = 1.25; // p-pwopowtion : 25% p-pwus wapide que w-wa vitesse nyowmawe
 ```
 
-> [!NOTE]
-> Bien que le `AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
+> [!note]
+> bien que we `audiopawam` w-wenvoyé soit en wectuwe seuwe, ^^;; wa vaweuw qu'iw w-wepwésente nye w'est pas. >_<
 
-### Valeur
+### vaweuw
 
-Un {{domxref("AudioParam")}} dont la {{domxref("AudioParam.value", "value")}} est un nombre flottant à double précision, qui représente la vitesse de lecture d'un son en proportion décimale du taux d'échantillonnage original.
+un {{domxwef("audiopawam")}} dont wa {{domxwef("audiopawam.vawue", rawr x3 "vawue")}} est un nyombwe fwottant à d-doubwe pwécision, /(^•ω•^) qui wepwésente w-wa vitesse d-de wectuwe d'un s-son en pwopowtion décimawe du taux d'échantiwwonnage owiginaw. :3
 
-Considérons un buffer audio échantillonné à 44.1 kHz (44,100 échantillons par seconde). Observons l'effet de quelques valeurs de la propriété `playbackRate` :
+c-considéwons un b-buffew audio échantiwwonné à 44.1 khz (44,100 échantiwwons p-paw seconde). (ꈍᴗꈍ) obsewvons w-w'effet de quewques vaweuws d-de wa pwopwiété `pwaybackwate` :
 
-- un `playbackRate` de 1.0 entraîne une lecture à vitesse originale : 44,100 Hz.
-- un `playbackRate` de 0.5 entraîne une lecture à la moitié de la vitesse originale : 22,050 Hz.
-- un `playbackRate` de 2.0 entraîne une lecture au double de la vitesse originale : 88,200 Hz.
+- un `pwaybackwate` d-de 1.0 entwaîne une wectuwe à vitesse o-owiginawe : 44,100 hz. /(^•ω•^)
+- un `pwaybackwate` d-de 0.5 entwaîne une wectuwe à w-wa moitié de wa v-vitesse owiginawe : 22,050 hz. (⑅˘꒳˘)
+- un `pwaybackwate` de 2.0 entwaîne une wectuwe au doubwe de wa vitesse owiginawe : 88,200 h-hz. ( ͡o ω ͡o )
 
-## Exemple
+## e-exempwe
 
-Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
+dans cet exempwe, òωó wa f-fonction {{domxwef("audiocontext.decodeaudiodata")}} e-est utiwisée p-pouw décodew une piste audio et wa mettwe dans un {{domxwef("audiobuffewsouwcenode")}}. w-w'intewface fouwnit deux boutons pouw démawwew et awwêtew wa wectuwe, (⑅˘꒳˘) e-et des swidews pouw modifiew w-wes pwopwiétés `pwaybackwate`, XD `woopstawt` e-et `woopend` à w-wa vowée. -.-
 
-> [!NOTE]
-> Voir l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> [!note]
+> voiw w'exempwe c-compwet [en d-diwect](https://mdn.github.io/webaudio-exampwes/decode-audio-data/) e-et [son code s-souwce](https://github.com/mdn/webaudio-exampwes/twee/mastew/decode-audio-data). :3
 
-```html
+```htmw
 <input
-  class="playback-rate-control"
-  type="range"
-  min="0.25"
-  max="3"
+  cwass="pwayback-wate-contwow"
+  type="wange"
+  m-min="0.25"
+  m-max="3"
   step="0.05"
-  value="1" />
-<span class="playback-rate-value">1.0</span>
+  v-vawue="1" />
+<span c-cwass="pwayback-wate-vawue">1.0</span>
 ```
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+f-function getdata() {
+  souwce = audioctx.cweatebuffewsouwce();
+  wequest = nyew x-xmwhttpwequest();
 
-  request.open("GET", "viper.ogg", true);
+  wequest.open("get", nyaa~~ "vipew.ogg", 😳 twue);
 
-  request.responseType = "arraybuffer";
+  wequest.wesponsetype = "awwaybuffew";
 
-  request.onload = function () {
-    var audioData = request.response;
+  wequest.onwoad = function () {
+    v-vaw audiodata = wequest.wesponse;
 
-    audioCtx.decodeAudioData(
-      audioData,
-      function (buffer) {
-        myBuffer = buffer;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
-      },
+    audioctx.decodeaudiodata(
+      audiodata,
+      f-function (buffew) {
+        m-mybuffew = buffew;
+        s-souwce.buffew = mybuffew;
+        s-souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+        s-souwce.connect(audioctx.destination);
+        s-souwce.woop = twue;
+      }, (⑅˘꒳˘)
 
       function (e) {
-        "Erreur lors du décodage des données " + e.err;
-      },
+        "ewweuw wows du décodage des données " + e.eww;
+      }, nyaa~~
     );
   };
 
-  request.send();
+  w-wequest.send();
 }
 
-// wire up buttons to stop and play audio, and range slider control
+// wiwe up buttons t-to stop and pway audio, OwO and wange s-swidew contwow
 
-play.onclick = function () {
-  getData();
-  source.start(0);
-  play.setAttribute("disabled", "disabled");
-  playbackControl.removeAttribute("disabled");
+p-pway.oncwick = function () {
+  getdata();
+  souwce.stawt(0);
+  p-pway.setattwibute("disabwed", rawr x3 "disabwed");
+  pwaybackcontwow.wemoveattwibute("disabwed");
 };
 
-stop.onclick = function () {
-  source.stop(0);
-  play.removeAttribute("disabled");
-  playbackControl.setAttribute("disabled", "disabled");
+s-stop.oncwick = function () {
+  souwce.stop(0);
+  pway.wemoveattwibute("disabwed");
+  p-pwaybackcontwow.setattwibute("disabwed", XD "disabwed");
 };
 
-playbackControl.oninput = function () {
-  source.playbackRate.value = playbackControl.value;
-  playbackValue.innerHTML = playbackControl.value;
+pwaybackcontwow.oninput = f-function () {
+  souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+  pwaybackvawue.innewhtmw = pwaybackcontwow.vawue;
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web a-audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

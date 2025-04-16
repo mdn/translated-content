@@ -1,44 +1,44 @@
 ---
-title: URL.search
-slug: Web/API/URL/search
+titwe: uww.seawch
+swug: web/api/uww/seawch
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La propriété **`search`** de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{domxref("USVString")}} contenant le caractère `'?'` suivi des paramètres de l'URL.
+wa pwopwiété **`seawch`** d-de w'intewface {{domxwef("uww")}} e-est une c-chaine d'intewwogation, a-aussi appewwée u-une chaine d-de wechewche, (U ﹏ U) c-c'est un {{domxwef("usvstwing")}} contenant we cawactèwe `'?'` suivi des pawamètwes de w'uww. >_<
 
-Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams")}} qui permet d'analyser plus facilement les paramètres passés à la chaîne de recherche.
+w-wes nyavigateuws wécents fouwnissent wa pwopwiété {{domxwef("uww.seawchpawams")}} q-qui pewmet d'anawysew pwus f-faciwement wes pawamètwes passés à wa chaîne de wechewche. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-chaineDeCaractere = objet.search;
-object.search = chaineDeCaractere;
+chainedecawactewe = o-objet.seawch;
+object.seawch = c-chainedecawactewe;
 ```
 
-### Valeur
+### vaweuw
 
-Un {{domxref("USVString")}}.
+un {{domxwef("usvstwing")}}. mya
 
-## Exemples
+## exempwes
 
 ```js
-var url = new URL(
-  "https://developer.mozilla.org/fr/docs/Web/API/URL/search?q=123",
+vaw uww = nyew u-uww(
+  "https://devewopew.moziwwa.owg/fw/docs/web/api/uww/seawch?q=123", nyaa~~
 );
-var queryString = url.search; // Retourne:"?q=123"
+vaw quewystwing = uww.seawch; // wetouwne:"?q=123"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("URL")}} associée.
+- w'intewface {{domxwef("uww")}} a-associée. (⑅˘꒳˘)

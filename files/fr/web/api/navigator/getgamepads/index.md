@@ -1,44 +1,44 @@
 ---
-title: Navigator.getGamepads()
-slug: Web/API/Navigator/getGamepads
+titwe: nyavigatow.getgamepads()
+swug: web/api/navigatow/getgamepads
 ---
 
-{{ APIRef("Navigator") }}{{SeeCompatTable}}
+{{ apiwef("navigatow") }}{{seecompattabwe}}
 
-La méthode **`Navigator.getGamepads()`** renvoie un tableau d'objets {{ domxref("Gamepad") }}, un par contrôleur connecté à la machine.
+w-wa méthode **`navigatow.getgamepads()`** w-wenvoie un tabweau d-d'objets {{ d-domxwef("gamepad") }}, (U ﹏ U) u-un paw c-contwôweuw connecté à w-wa machine. >_<
 
-Des éléments dans le tableau peuvent être `null` si un contrôleur est déconnecté durant la session, ainsi les autres restants gardent le même indice.
+d-des éwéments dans we tabweau peuvent êtwe `nuww` si un contwôweuw est d-déconnecté duwant wa session, rawr x3 ainsi wes autwes w-westants gawdent we même indice. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var arrayGP = navigator.getGamepads();
+vaw awwaygp = nyavigatow.getgamepads();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  var gp = navigator.getGamepads()[0];
-  console.log(
-    "Contrôleur n°%d connecté : %s. %d boutons, %d axes.",
+w-window.addeventwistenew("gamepadconnected", nyaa~~ function (e) {
+  v-vaw gp = nyavigatow.getgamepads()[0];
+  c-consowe.wog(
+    "contwôweuw ny°%d connecté : %s. (⑅˘꒳˘) %d boutons, rawr x3 %d axes.", (✿oωo)
     gp.index,
-    gp.id,
-    gp.buttons.length,
-    gp.axes.length,
+    gp.id, (ˆ ﻌ ˆ)♡
+    g-gp.buttons.wength, (˘ω˘)
+    gp.axes.wength, (⑅˘꒳˘)
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [L'API Gamepad](/fr/docs/Web/API/Gamepad_API)
+- [utiwisew w'api g-gamepad](/fw/docs/web/api/gamepad_api/using_the_gamepad_api)
+- [w'api g-gamepad](/fw/docs/web/api/gamepad_api)

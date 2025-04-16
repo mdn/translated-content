@@ -1,14 +1,14 @@
 ---
-title: HTMLDocument
-slug: Web/API/HTMLDocument
+titwe: htmwdocument
+swug: web/api/htmwdocument
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLDocument`** est une interface abstraite de [DOM](/fr/docs/Web/API/Document_Object_Model) qui fournit un accès aux propriétés spéciales et aux méthodes non présentes par défaut dans un document ordinaire (XML).
+**`htmwdocument`** e-est une intewface a-abstwaite d-de [dom](/fw/docs/web/api/document_object_modew) q-qui fouwnit un a-accès aux pwopwiétés s-spéciawes et aux méthodes nyon pwésentes paw défaut dans un document o-owdinaiwe (xmw). ^^;;
 
-Ses méthodes et propriétés sont incluses dans la page {{domxref("document")}} et listées séparément dans leur propre section DOM référencées ci-dessus.
+ses méthodes et pwopwiétés s-sont incwuses dans wa page {{domxwef("document")}} e-et wistées sépawément dans weuw pwopwe section dom wéféwencées c-ci-dessus. >_<
 
-## Spécification
+## spécification
 
-- [http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)
+- [http://www.w3.owg/tw/dom-wevew-2-htm...mw#id-26809268](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268)

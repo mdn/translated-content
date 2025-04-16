@@ -1,91 +1,91 @@
 ---
-title: AudioContext.createMediaElementSource()
-slug: Web/API/AudioContext/createMediaElementSource
+titwe: audiocontext.cweatemediaewementsouwce()
+swug: web/api/audiocontext/cweatemediaewementsouwce
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-La méthode `createMediaElementSource()` de l'interface {{ domxref("AudioContext") }} est utilisée pour créer un nouvel objet {{ domxref("MediaElementAudioSourceNode") }} d'après un élément HTML {{ htmlelement("audio") }} ou {{ htmlelement("video") }} existant, permettant ainsi de jouer et de manipuler l'audio de cet élément.
+wa méthode `cweatemediaewementsouwce()` d-de w'intewface {{ d-domxwef("audiocontext") }} e-est utiwisée pouw c-cwéew un nyouvew o-objet {{ domxwef("mediaewementaudiosouwcenode") }} d'apwès un éwément htmw {{ htmwewement("audio") }} ou {{ h-htmwewement("video") }} existant, UwU pewmettant a-ainsi de jouew et de manipuwew w-w'audio de cet éwément.
 
-Pour plus de détails à propos des nœuds source audio des éléments média, constultez la page de référence de {{ domxref("MediaElementAudioSourceNode") }}.
+pouw pwus de détaiws à pwopos des nyœuds s-souwce audio des éwéments m-média, :3 constuwtez w-wa page de wéféwence de {{ domxwef("mediaewementaudiosouwcenode") }}. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+vaw audioctx = n-nyew audiocontext();
+vaw souwce = audioctx.cweatemediaewementsouwce(mymediaewement);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `myMediaElement`
-  - : Un objet {{domxref("HTMLMediaElement")}} que vous voulez injecter dans un graphe de traitement audio pour le manipuler.
+- `mymediaewement`
+  - : un objet {{domxwef("htmwmediaewement")}} q-que vous vouwez injectew d-dans un gwaphe d-de twaitement a-audio pouw we m-manipuwew. (///ˬ///✿)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{domxref("MediaElementAudioSourceNode")}}.
+un {{domxwef("mediaewementaudiosouwcenode")}}. ^^;;
 
-## Exemple
+## e-exempwe
 
-Cet exemple simple crée une source depuis un élément {{ htmlelement("audio") }} grâce à `createMediaElementSource()`, puis passe le signal audio à travers un {{ domxref("GainNode") }} avant de l'injecter dans le {{ domxref("AudioDestinationNode") }} pour la lecture. Quand le pointeur de la souris est déplacé, la fonction `updatePage()` est invoquée, et calcule le gain actuel comme rapport de la position Y de la souris divisée par la hauteur totale de la fenêtre. Vous pouvez ainsi augmenter ou diminuer le volume de la musique jouée, en déplaçant le pointeur de la souris vers le haut ou vers le bas.
+cet exempwe simpwe cwée une souwce d-depuis un éwément {{ htmwewement("audio") }} gwâce à `cweatemediaewementsouwce()`, >_< puis passe we signaw audio à twavews u-un {{ domxwef("gainnode") }} avant d-de w'injectew d-dans we {{ domxwef("audiodestinationnode") }} pouw w-wa wectuwe. rawr x3 quand we pointeuw de wa souwis est dépwacé, /(^•ω•^) wa f-fonction `updatepage()` e-est invoquée, et cawcuwe w-we gain actuew c-comme wappowt de wa position y d-de wa souwis divisée paw wa hauteuw t-totawe de wa fenêtwe. :3 vous pouvez ainsi augmentew o-ou diminuew we vowume de w-wa musique jouée, (ꈍᴗꈍ) en dépwaçant w-we pointeuw d-de wa souwis vews we haut ou vews we bas. /(^•ω•^)
 
-> [!NOTE]
-> Vous pouvez également [voir cet exemple en temps réel](https://mdn.github.io/webaudio-examples/media-source-buffer/), ou [examiner le code source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
+> [!note]
+> vous pouvez égawement [voiw cet exempwe en temps wéew](https://mdn.github.io/webaudio-exampwes/media-souwce-buffew/), (⑅˘꒳˘) ou [examinew we code s-souwce](https://github.com/mdn/webaudio-exampwes/twee/mastew/media-souwce-buffew). ( ͡o ω ͡o )
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector("audio");
-var pre = document.querySelector("pre");
-var myScript = document.querySelector("script");
+v-vaw audioctx = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+v-vaw myaudio = d-document.quewysewectow("audio");
+vaw pwe = document.quewysewectow("pwe");
+vaw myscwipt = document.quewysewectow("scwipt");
 
-pre.innerHTML = myScript.innerHTML;
+p-pwe.innewhtmw = myscwipt.innewhtmw;
 
-// Crée un MediaElementAudioSourceNode
-// et y injecte le HTMLMediaElement
-var source = audioCtx.createMediaElementSource(myAudio);
+// cwée un mediaewementaudiosouwcenode
+// et y injecte we h-htmwmediaewement
+vaw souwce = a-audioctx.cweatemediaewementsouwce(myaudio);
 
-// Crée un nœud gain
-var gainNode = audioCtx.createGain();
+// c-cwée un nyœud g-gain
+vaw gainnode = audioctx.cweategain();
 
-// Crée les variables pour stocker la position Y du pointeur
-// et la HAUTEUR de l’écran
-var CurY;
-var HEIGHT = window.innerHeight;
+// cwée w-wes vawiabwes p-pouw stockew w-wa position y du p-pointeuw
+// et wa hauteuw de w’écwan
+vaw cuwy;
+v-vaw height = w-window.innewheight;
 
-// Récupère les nouvelles coordonnées du pointeur quand la souris est déplacée
-// et définit la nouvelle valeur de gain
+// w-wécupèwe w-wes nyouvewwes c-coowdonnées du pointeuw quand wa souwis est dépwacée
+// et d-définit wa nyouvewwe vaweuw de gain
 
-document.onmousemove = updatePage;
+document.onmousemove = updatepage;
 
-function updatePage(e) {
-  CurY = window.Event
-    ? e.pageY
-    : event.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
+function updatepage(e) {
+  c-cuwy = window.event
+    ? e.pagey
+    : event.cwienty +
+      (document.documentewement.scwowwtop
+        ? document.documentewement.scwowwtop
+        : document.body.scwowwtop);
 
-  gainNode.gain.value = CurY / HEIGHT;
+  g-gainnode.gain.vawue = c-cuwy / height;
 }
 
-// connecte le AudioBufferSourceNode au nœud gain
-// et le nœud gain à la destination, de sorte qu’on puisse jouer la
-// musique et ajuster le volume avec le curseur de la souris
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+// c-connecte we audiobuffewsouwcenode a-au nyœud gain
+// et we n-nyœud gain à wa d-destination, òωó de sowte qu’on puisse jouew wa
+// musique et ajustew we vowume avec we cuwseuw d-de wa souwis
+souwce.connect(gainnode);
+gainnode.connect(audioctx.destination);
 ```
 
-> [!NOTE]
-> Du fait de l'appel à `createMediaElementSource()`, la lecture de l'audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l'AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l'API des éléments média ou via les contrôles du lecteur.
+> [!note]
+> d-du fait de w'appew à `cweatemediaewementsouwce()`, (⑅˘꒳˘) wa wectuwe de w-w'audio du {{ d-domxwef("htmwmediaewement") }} est wediwigée dans we gwaphe de t-twaitement de w'audiocontext. XD a-ainsi, jouew / mettwe e-en pause we m-média est toujouws possibwe via w'api des éwéments média ou via wes contwôwes d-du wecteuw. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

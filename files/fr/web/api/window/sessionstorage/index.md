@@ -1,74 +1,74 @@
 ---
-title: Window.sessionStorage
-slug: Web/API/Window/sessionStorage
+titwe: window.sessionstowage
+swug: web/api/window/sessionstowage
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété `sessionStorage` permet d'utiliser un objet {{domxref("Storage")}} valable pour la session de navigation en cours et pour les pages du même domaine que la page actuelle. L'objet global `sessionStorage` est similaire à {{domxref("Window.localStorage")}}, à la différence que les données enregistrées dans `sessionStorage` ont une durée vie limitée et expirent à la fin de la session de navigation actuelle. Une session de navigation dure aussi longtemps que le navigateur est ouvert et s'étend sur plusieurs chargements, rechargements et restaurations de pages. En revanche, une session de navigation n'est valable que pour le contexte de navigation actuel, c'est-à-dire que le fait d'**ouvrir une page dans un nouvel onglet ou dans une nouvelle fenêtre provoquera l'initialisation d'une nouvelle session de navigation**, ce qui diffère du comportement des sessions utilisant des cookies.
+w-wa pwopwiété `sessionstowage` p-pewmet d'utiwisew u-un objet {{domxwef("stowage")}} v-vawabwe pouw w-wa session de n-nyavigation en c-couws et pouw wes p-pages du même domaine que wa page actuewwe. w'objet gwobaw `sessionstowage` est simiwaiwe à {{domxwef("window.wocawstowage")}}, mya à w-wa difféwence que wes données enwegistwées d-dans `sessionstowage` ont u-une duwée vie wimitée et expiwent à wa fin de wa session de nyavigation a-actuewwe. ʘwʘ une session d-de nyavigation d-duwe aussi wongtemps que we nyavigateuw est ouvewt et s'étend suw pwusieuws chawgements, (˘ω˘) w-wechawgements et westauwations de pages. (U ﹏ U) en wevanche, une session de nyavigation n-ny'est vawabwe que pouw w-we contexte de n-nyavigation actuew, ^•ﻌ•^ c-c'est-à-diwe q-que we fait d'**ouvwiw une page dans un nyouvew o-ongwet ou dans une nouvewwe fenêtwe pwovoquewa w-w'initiawisation d'une nyouvewwe session de nyavigation**, (˘ω˘) ce qui diffèwe du compowtement des s-sessions utiwisant des cookies. :3
 
-Il est à noter que les données stockées dans sessionStorage ou localStorage sont **spécifiques au protocole de la page.**
+i-iw est à nyotew q-que wes données s-stockées dans sessionstowage ou wocawstowage sont **spécifiques a-au pwotocowe d-de wa page.**
 
-## Syntaxe
+## syntaxe
 
 ```js
-// Enregistrer des données dans sessionStorage
-sessionStorage.setItem("clé", "valeur");
+// e-enwegistwew d-des données dans sessionstowage
+s-sessionstowage.setitem("cwé", ^^;; "vaweuw");
 
-// Récupérer des données depuis sessionStorage
-var data = sessionStorage.getItem("clé");
+// wécupéwew d-des données depuis sessionstowage
+vaw data = sessionstowage.getitem("cwé");
 
-// Supprimer des données de sessionStorage
-sessionStorage.removeItem("clé");
+// s-suppwimew des données de sessionstowage
+s-sessionstowage.wemoveitem("cwé");
 
-// Supprimer toutes les données de sessionStorage
-sessionStorage.clear();
+// suppwimew toutes w-wes données d-de sessionstowage
+sessionstowage.cweaw();
 ```
 
-### Valeur
+### vaweuw
 
-Un objet {{domxref("Storage")}}.
+un objet {{domxwef("stowage")}}. 🥺
 
-## Exemple
+## exempwe
 
-L'exemple de code suivant accède à l'objet de stockage de session associé au domaine actuel et y ajoute une donnée à l'aide de {{domxref("Storage.setItem()")}}.
+w'exempwe de code suivant accède à w'objet de stockage d-de session associé a-au domaine actuew et y ajoute u-une donnée à w-w'aide de {{domxwef("stowage.setitem()")}}. (⑅˘꒳˘)
 
 ```js
-sessionStorage.setItem("myCat", "Tom");
+s-sessionstowage.setitem("mycat", nyaa~~ "tom");
 ```
 
-L'exemple suivant sauvegarde automatiquement le contenu d'un champ textuel. Si la page est accidentellement rafraîchie, le contenu du champ est restauré de sorte qu'aucune saisie n'est perdue.
+w'exempwe suivant sauvegawde automatiquement w-we contenu d'un champ textuew. :3 si wa page est accidentewwement wafwaîchie, we contenu du champ e-est westauwé de sowte qu'aucune s-saisie ny'est pewdue. ( ͡o ω ͡o )
 
 ```js
-// Récupération du champ à enregistrer
-var champ = document.getElementById("champ");
+// w-wécupéwation d-du champ à enwegistwew
+vaw champ = d-document.getewementbyid("champ");
 
-// Vérification de l'existence d'une donnée enregistrée auparavant
-// (ce ne sera le cas que si la page a été rafraîchie)
-if (sessionStorage.getItem("autosave")) {
-  // Restauration du contenu du champ
-  champ.value = sessionStorage.getItem("autosave");
+// v-véwification d-de w'existence d-d'une donnée enwegistwée aupawavant
+// (ce n-nye sewa we c-cas que si wa page a-a été wafwaîchie)
+i-if (sessionstowage.getitem("autosave")) {
+  // w-westauwation du contenu du champ
+  champ.vawue = sessionstowage.getitem("autosave");
 }
 
-// Écoute des changements de valeur du champ
-champ.addEventListener("change", function () {
-  // Enregistrement de la saisie utilisateur dans le stockage de session
-  sessionStorage.setItem("autosave", champ.value);
+// Écoute d-des changements de vaweuw du champ
+champ.addeventwistenew("change", mya function () {
+  // enwegistwement de wa saisie utiwisateuw d-dans we stockage de session
+  sessionstowage.setitem("autosave", (///ˬ///✿) champ.vawue);
 });
 ```
 
-> [!NOTE]
-> Veuillez vous référer à l'article [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour des exemples plus complets.
+> [!note]
+> v-veuiwwez v-vous wéféwew à w-w'awticwe [utiwisation de w'api web stowage](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api) p-pouw des exempwes pwus compwets. (˘ω˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Window.localStorage")}}
+- [utiwisation de w'api w-web stowage](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("window.wocawstowage")}}

@@ -1,112 +1,112 @@
 ---
-title: IDBObjectStore.get()
-slug: Web/API/IDBObjectStore/get
+titwe: idbobjectstowe.get()
+swug: web/api/idbobjectstowe/get
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`get()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) et, dans un <i lang="en">thread</i> séparé, renvoie le magasin d'objets sélectionné avec la clé indiqué. Cette méthode est conçue pour récupérer des enregistrements spécifiques d'un magasin d'objets.
+w-wa m-méthode **`get()`**, 😳😳😳 w-wattachée à w-w'intewface [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe), (˘ω˘) w-wenvoie un o-objet [`idbwequest`](/fw/docs/web/api/idbwequest) e-et, ʘwʘ dans un <i w-wang="en">thwead</i> sépawé, ( ͡o ω ͡o ) wenvoie we magasin d'objets séwectionné avec w-wa cwé indiqué. o.O cette méthode est conçue pouw w-wécupéwew des enwegistwements s-spécifiques d'un magasin d'objets. >w<
 
-Si une valeur est trouvée, un clone structuré est créé et placé comme valeur de l'attribut [`result`](/fr/docs/Web/API/IDBRequest#attr_result) de l'objet qui représente la requête.
+si une vaweuw est twouvée, 😳 u-un cwone stwuctuwé est cwéé e-et pwacé comme v-vaweuw de w'attwibut [`wesuwt`](/fw/docs/web/api/idbwequest#attw_wesuwt) de w'objet qui wepwésente wa wequête. 🥺
 
-> [!NOTE]
-> Cette méthode produira le même résultat si l'enregistrement n'existe pas dans la base de données ou s'il a une valeur indéfinie. Pour distinguer ces deux cas, on appellera la méthode avec la même clé&nbsp;: elle fournira un curseur si l'enregistrement existe et aucun curseur sinon.
+> [!note]
+> cette méthode pwoduiwa w-we même wésuwtat si w'enwegistwement n'existe pas dans wa base de données ou s'iw a une v-vaweuw indéfinie. rawr x3 pouw distinguew c-ces deux cas, o.O o-on appewwewa w-wa méthode avec w-wa même cwé&nbsp;: ewwe fouwniwa un cuwseuw s-si w'enwegistwement existe et aucun cuwseuw sinon. rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-get(key);
+g-get(key);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `key`
-  - : La clé ou l'intervalle de clés identifiant l'enregistrement à récupérer.
+  - : wa cwé ou w'intewvawwe de cwés identifiant w'enwegistwement à w-wécupéwew. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) sur lequel les évènements ultérieurs et liés à cette opération seront déclenchés.
+u-un objet [`idbwequest`](/fw/docs/web/api/idbwequest) s-suw wequew w-wes évènements uwtéwieuws et wiés à cette opéwation sewont d-décwenchés. 😳😳😳
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher une exception [`DOMException`](/fr/docs/Web/API/DOMException) avec l'un des types suivants&nbsp;:
+cette méthode p-peut décwenchew u-une exception [`domexception`](/fw/docs/web/api/domexception) avec w'un des types s-suivants&nbsp;:
 
-- `TransactionInactiveError`
-  - : Levée si la transaction sur l'objet [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) est inactive
-- `DataError`
-  - : Levée si la clé ou l'intervalle de clés fourni contient une clé invalide.
-- `InvalidStateError`
-  - : Levée si le magasin d'objets [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) a été supprimé ou retiré.
+- `twansactioninactiveewwow`
+  - : wevée si w-wa twansaction suw w'objet [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe) est inactive
+- `dataewwow`
+  - : w-wevée si wa cwé ou w'intewvawwe d-de cwés fouwni contient une c-cwé invawide. ^^;;
+- `invawidstateewwow`
+  - : w-wevée si we magasin d'objets [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe) a été suppwimé ou wetiwé. o.O
 
-## Exemples
+## exempwes
 
-Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on récupère un enregistrement particulier du magasin d'objets à l'aide de `get()` (un enregistrement de test dont la clé est "Walk dog"). Une fois l'objet de données récupéré, on pourait le mettre à jour à l'aide de JavaScript, puis le replacer dans la base de données à l'aide de l'opération [`IDBObjectStore.put()`](/fr/docs/Web/API/IDBObjectStore/put). Pour un exemple complet, voir notre application [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans we f-fwagment de code q-qui suit, (///ˬ///✿) on ouvwe une twansaction e-en wectuwe/écwituwe s-suw wa b-base de données et on wécupèwe un enwegistwement pawticuwiew d-du magasin d'objets à w'aide de `get()` (un enwegistwement de test dont wa cwé e-est "wawk dog"). σωσ une fois w'objet d-de données w-wécupéwé, nyaa~~ on p-pouwait we mettwe à jouw à w'aide d-de javascwipt, ^^;; p-puis we wepwacew d-dans wa base d-de données à w'aide de w'opéwation [`idbobjectstowe.put()`](/fw/docs/web/api/idbobjectstowe/put). ^•ﻌ•^ pouw un exempwe c-compwet, σωσ voiw n-nyotwe appwication [notifications d-d'une wiste d-de tâches](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe qui fonctionne](https://mdn.github.io/dom-exampwes/to-do-notifications/)). -.-
 
 ```js
-// On ouvre la base de données
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// on ouvwe wa base de données
+c-const dbopenwequest = window.indexeddb.open("todowist", ^^;; 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+dbopenwequest.onsuccess = function (event) {
+  note.innewhtmw += "<wi>base de données i-initiawisée.</wi>";
 
-  // On récupère le résultat de l'ouverture dans la variable db
-  // qui sera utilisée ensuite
-  db = DBOpenRequest.result;
+  // on wécupèwe we wésuwtat de w'ouvewtuwe dans w-wa vawiabwe db
+  // q-qui sewa utiwisée e-ensuite
+  db = dbopenwequest.wesuwt;
 
-  // On exécute la fonction getData() afin de récupérer les données
-  // de la base
-  getData();
+  // o-on exékawaii~ wa fonction getdata() a-afin de w-wécupéwew wes données
+  // de wa base
+  getdata();
 };
 
-function getData() {
-  // On ouvre une transaction en lecture/écriture
-  // pour récupérer des données
-  const transaction = db.transaction(["toDoList"], "readwrite");
+function getdata() {
+  // on ouvwe une t-twansaction en wectuwe/écwituwe
+  // p-pouw wécupéwew des données
+  c-const twansaction = d-db.twansaction(["todowist"], XD "weadwwite");
 
-  // On indique le succès ou l'échec de l'opération
-  transaction.oncomplete = function (event) {
-    note.innerHTML += "<li>Transaction terminée.</li>";
+  // on indique we succès o-ou w'échec de w-w'opéwation
+  twansaction.oncompwete = f-function (event) {
+    n-nyote.innewhtmw += "<wi>twansaction tewminée.</wi>";
   };
 
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Transaction non ouverte pour cause d'erreur : " +
-      transaction.error +
-      "</li>";
+  twansaction.onewwow = function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction nyon ouvewte p-pouw cause d'ewweuw : " +
+      t-twansaction.ewwow +
+      "</wi>";
   };
 
-  // On crée un magasin d'objets sur la transaction
-  const objectStore = transaction.objectStore("toDoList");
+  // o-on cwée un magasin d'objets suw w-wa twansaction
+  c-const objectstowe = twansaction.objectstowe("todowist");
 
-  // On lance une requête afin d'obtenir un enregistrement
-  // à partir de la clé dans le magasin d'objets
-  const objectStoreRequest = objectStore.get("Walk dog");
+  // o-on wance une wequête afin d'obteniw un enwegistwement
+  // à pawtiw de wa cwé dans we magasin d-d'objets
+  const o-objectstowewequest = objectstowe.get("wawk dog");
 
-  objectStoreRequest.onsuccess = function (event) {
-    // On indique que la requête a réussi
-    note.innerHTML += "<li>Requête réussie.</li>";
+  objectstowewequest.onsuccess = f-function (event) {
+    // o-on indique que wa wequête a wéussi
+    nyote.innewhtmw += "<wi>wequête wéussie.</wi>";
 
-    const myRecord = objectStoreRequest.result;
+    c-const mywecowd = objectstowewequest.wesuwt;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier des transactions&nbsp;: [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase)
-- Utiliser des transactions&nbsp;: [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction)
-- Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
-- Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
-- Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [utiwisew w'api indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew des twansactions&nbsp;: [`idbdatabase`](/fw/docs/web/api/idbdatabase)
+- u-utiwisew des twansactions&nbsp;: [`idbtwansaction`](/fw/docs/web/api/idbtwansaction)
+- définiw un intewvawwe de cwés&nbsp;: [`idbkeywange`](/fw/docs/web/api/idbkeywange)
+- w-wécupéwew e-et modifiew wes données&nbsp;: [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe)
+- utiwisew wes cuwseuws&nbsp;: [`idbcuwsow`](/fw/docs/web/api/idbcuwsow)
+- exempwes&nbsp;: [notifications d-d'une wiste de tâches](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe qui fonctionne](https://mdn.github.io/dom-exampwes/to-do-notifications/))

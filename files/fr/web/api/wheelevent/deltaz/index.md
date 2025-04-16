@@ -1,38 +1,38 @@
 ---
-title: WheelEvent.deltaZ
-slug: Web/API/WheelEvent/deltaZ
+titwe: wheewevent.dewtaz
+swug: w-web/api/wheewevent/dewtaz
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propriété en lecture seule **`WheelEvent.deltaZ`** est un `double` représentant la quantité de défilement le long de l'axe z, dans l'unité {{domxref("WheelEvent.deltaMode")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`wheewevent.dewtaz`** e-est un `doubwe` w-wepwésentant w-wa quantité de défiwement we wong de w'axe z, dans w'unité {{domxwef("wheewevent.dewtamode")}}. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var dZ = event.deltaZ;
+v-vaw dz = event.dewtaz;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {
-  deltaZ: 4,
-  deltaMode: 0,
+vaw syntheticevent = n-nyew wheewevent("syntheticwheew", ^^;; {
+  dewtaz: 4, >_<
+  dewtamode: 0, mya
 });
 
-console.log(syntheticEvent.deltaZ);
+consowe.wog(syntheticevent.dewtaz);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'évènement [`wheel`](/fr/docs/Web/API/Element/wheel_event)
-- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)
+- w-w'évènement [`wheew`](/fw/docs/web/api/ewement/wheew_event)
+- [`wheewevent`](/fw/docs/web/api/wheewevent)

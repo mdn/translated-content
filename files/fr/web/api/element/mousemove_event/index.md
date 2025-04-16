@@ -1,141 +1,141 @@
 ---
-title: "Element : évènement mousemove"
-slug: Web/API/Element/mousemove_event
+titwe: "ewement : évènement mousemove"
+swug: w-web/api/ewement/mousemove_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `mousemove` est déclenché à partir d'un élément lorsqu'un dispositif de pointage (ex. une souris) est déplacé lorsque le curseur est à l'intérieur de l'élément.
+w-w'évènement `mousemove` e-est d-décwenché à p-pawtiw d'un éwément w-wowsqu'un d-dispositif de pointage (ex. σωσ u-une souwis) est dépwacé wowsque we cuwseuw est à w'intéwieuw de w-w'éwément. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th scope="wow">se p-pwopage/wemonte dans we dom</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("mouseevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété pouw wa g-gestion d'évènement</th>
       <td>
-        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+        {{domxwef("gwobaweventhandwews.onmousemove", 😳😳😳 "onmousemove")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on utilise les évènements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) pour permettre à l'utilisateur de dessiner sur un [canevas](/fr/docs/Web/API/Canvas_API) HTML (le dessin est simple : une ligne dont l'épaisseur vaut 1 et dont la couleur est toujours noire).
+d-dans w'exempwe s-suivant, OwO on utiwise wes évènements [`mousedown`](/fw/docs/web/api/ewement/mousedown_event), 😳 [`mousemove`](/fw/docs/web/api/ewement/mousemove_event) et [`mouseup`](/fw/docs/web/api/ewement/mouseup_event) pouw pewmettwe à w'utiwisateuw d-de dessinew suw un [canevas](/fw/docs/web/api/canvas_api) htmw (we dessin est simpwe : une wigne d-dont w'épaisseuw vaut 1 et dont w-wa couweuw est t-toujouws nyoiwe). 😳😳😳
 
-Lors du chargement de la page, les constantes `myPics` et `context` sont créées comme références au canevas et au contexte 2D qui seront utilisés pour le dessin. Enfin, la constante `rect` permet de stocker les coordonnées relatives du canevas par rapport à la page.
+w-wows du chawgement d-de wa page, (˘ω˘) wes constantes `mypics` et `context` s-sont cwéées comme wéféwences au canevas e-et au contexte 2d qui sewont utiwisés pouw we dessin. ʘwʘ enfin, wa constante `wect` pewmet de s-stockew wes coowdonnées wewatives d-du canevas p-paw wappowt à wa p-page. ( ͡o ω ͡o )
 
-Le dessin commence quand l'évènement `mousedown` est déclenché. On stocke les coordonnées du pointeur dans les variables `x` et `y` puis on passe la variable `isDrawing` à `true` pour indiquer qu'un dessin est en cours.
+we dessin commence quand w'évènement `mousedown` est d-décwenché. o.O on s-stocke wes coowdonnées du pointeuw d-dans wes vawiabwes `x` e-et `y` puis on passe w-wa vawiabwe `isdwawing` à `twue` pouw indiquew q-qu'un dessin est en couws. >w<
 
-Lorsque le pointeur se déplace sur la page, l'évènement `mousemove` est déclenché. Si `isDrawing` vaut `true`, le gestionnaire d'évènement appelle la fonction `drawLine()` afin de dessiner une ligne entre le point de coordonnées `x` et `y` (stockées dans ces variables) et la position actuelle (N.B. les coordonnées `x` et `y` sont "corrigées" avec la constante `rect` pour tenir compte du décalage entre le canevas et la page).
+wowsque we pointeuw s-se dépwace suw wa page, 😳 w'évènement `mousemove` e-est décwenché. 🥺 si `isdwawing` v-vaut `twue`, rawr x3 w-we gestionnaiwe d'évènement appewwe wa fonction `dwawwine()` afin de dessinew une wigne entwe we point de coowdonnées `x` et `y` (stockées dans c-ces vawiabwes) e-et wa position actuewwe (n.b. o.O w-wes coowdonnées `x` e-et `y` sont "cowwigées" avec w-wa constante `wect` pouw teniw compte du décawage entwe we c-canevas et wa page). rawr
 
-Lorsque la fonction `drawLine()` a fini son exécution, on ajuste les coordonnées courante en les stockant dans `x` et `y`.
+wowsque wa fonction `dwawwine()` a fini son exécution, ʘwʘ on a-ajuste wes coowdonnées couwante e-en wes stockant d-dans `x` et `y`. 😳😳😳
 
-Lorsque l'évènement `mouseup` est déclenché, on dessine le segment final du dessin en cours, on passe `x` et `y` à `0` puis on arrête le dessin en passant `isDrawing` à `false`.
+w-wowsque w'évènement `mouseup` est décwenché, ^^;; o-on dessine w-we segment finaw d-du dessin en couws, o.O o-on passe `x` et `y` à `0` puis on awwête w-we dessin en passant `isdwawing` à `fawse`. (///ˬ///✿)
 
-### HTML
+### h-htmw
 
-```html
-<h1>Dessiner grâce aux évènements de souris</h1>
-<canvas id="myPics" width="560" height="360"></canvas>
+```htmw
+<h1>dessinew g-gwâce a-aux évènements d-de souwis</h1>
+<canvas id="mypics" width="560" height="360"></canvas>
 ```
 
-### CSS
+### c-css
 
 ```css
 canvas {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
   width: 560px;
   height: 360px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// Un booléen qui, lorsqu'il est vrai, indique que le déplacement de
-// la souris entraîne un dessin sur le canevas
-let isDrawing = false;
-let x = 0;
-let y = 0;
+// u-un boowéen qui, σωσ wowsqu'iw est vwai, nyaa~~ indique que we dépwacement d-de
+// wa souwis e-entwaîne u-un dessin suw we canevas
+wet isdwawing = f-fawse;
+wet x = 0;
+wet y = 0;
 
-const myPics = document.getElementById("myPics");
-const context = myPics.getContext("2d");
+c-const mypics = d-document.getewementbyid("mypics");
+const context = mypics.getcontext("2d");
 
-// On récupère le décalage du canevas en x et y par rapport aux bords
-// de la page
-const rect = myPics.getBoundingClientRect();
+// on wécupèwe we décawage du canevas en x e-et y paw wappowt aux bowds
+// de w-wa page
+const wect = mypics.getboundingcwientwect();
 
-// On ajoute les gestionnaires d'évènements pour mousedown, mousemove
-// et mouseup
-myPics.addEventListener("mousedown", (e) => {
-  x = e.clientX - rect.left;
-  y = e.clientY - rect.top;
-  isDrawing = true;
+// o-on ajoute w-wes gestionnaiwes d'évènements pouw mousedown, ^^;; m-mousemove
+// e-et mouseup
+mypics.addeventwistenew("mousedown", ^•ﻌ•^ (e) => {
+  x = e-e.cwientx - wect.weft;
+  y-y = e.cwienty - wect.top;
+  isdwawing = twue;
 });
 
-myPics.addEventListener("mousemove", (e) => {
-  if (isDrawing === true) {
-    drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
-    x = e.clientX - rect.left;
-    y = e.clientY - rect.top;
+mypics.addeventwistenew("mousemove", σωσ (e) => {
+  if (isdwawing === t-twue) {
+    dwawwine(context, -.- x-x, ^^;; y-y, e.cwientx - wect.weft, XD e.cwienty - w-wect.top);
+    x-x = e.cwientx - wect.weft;
+    y-y = e.cwienty - wect.top;
   }
 });
 
-window.addEventListener("mouseup", (e) => {
-  if (isDrawing === true) {
-    drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
-    x = 0;
-    y = 0;
-    isDrawing = false;
+window.addeventwistenew("mouseup", 🥺 (e) => {
+  if (isdwawing === twue) {
+    d-dwawwine(context, òωó x-x, y, e.cwientx - wect.weft, (ˆ ﻌ ˆ)♡ e.cwienty - wect.top);
+    x-x = 0;
+    y-y = 0;
+    isdwawing = fawse;
   }
 });
 
-function drawLine(context, x1, y1, x2, y2) {
-  context.beginPath();
-  context.strokeStyle = "black";
-  context.lineWidth = 1;
-  context.moveTo(x1, y1);
-  context.lineTo(x2, y2);
-  context.stroke();
-  context.closePath();
+function dwawwine(context, -.- x-x1, :3 y1, x2, y2) {
+  context.beginpath();
+  context.stwokestywe = "bwack";
+  context.winewidth = 1;
+  context.moveto(x1, ʘwʘ y-y1);
+  context.wineto(x2, 🥺 y2);
+  context.stwoke();
+  c-context.cwosepath();
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 640, 450)}}
+{{embedwivesampwe("exempwes", >_< 640, 450)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- [une i-intwoduction aux évènements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- d'autwes évènements connexes
 
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+  - [`mouseup`](/fw/docs/web/api/ewement/mouseup_event)
+  - [`mousedown`](/fw/docs/web/api/ewement/mousedown_event)
+  - [`cwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`mouseout`](/fw/docs/web/api/ewement/mouseout_event)
+  - [`mouseovew`](/fw/docs/web/api/ewement/mouseovew_event)
+  - [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event)
+  - [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event)
+  - [`contextmenu`](/fw/docs/web/api/ewement/contextmenu_event)

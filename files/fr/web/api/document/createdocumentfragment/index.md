@@ -1,65 +1,65 @@
 ---
-title: document.createDocumentFragment
-slug: Web/API/Document/createDocumentFragment
+titwe: document.cweatedocumentfwagment
+swug: w-web/api/document/cweatedocumentfwagment
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
+c-cwée un nyouvew o-objet vide de type {{domxwef("documentfwagment")}}. o.O
 
-## Syntaxe
-
-```js
-var fragment = document.createDocumentFragment();
-```
-
-`fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
-
-## Description
-
-Les objets `DocumentFragments` sont analogues à des nœuds du DOM, mais ne font jamais partie de l'arbre DOM. Le cas d'usage le plus courant consiste à créer un fragment pour y stocker des éléments, puis à ajouter en une seule opération le fragment à l'arbre DOM, ce qui a pour effet de le remplacer par tous ses éléments enfants.
-
-Le principal avantage de cette méthode de mise à jour du DOM vient du fait que le fragment est stocké en mémoire, et pas dans l'arbre DOM lui-même, de sorte que le modifier ne déclenche pas de [reflow](https://code.google.com/speed/articles/reflow.html) (le calcul des positions et de la géométrie de chacun des éléments de la page affichée). Par conséquent, l´utilisation de fragments pour effectuer des mises à jour du DOM donne souvent lieu à une [amélioration des performance](http://ejohn.org/blog/dom-documentfragments/)s.
-
-## Exemple
-
-Cet exemple crée une liste des principaux navigateurs du web.
-
-### HTML
-
-```html
-<ul id="ul"></ul>
-```
-
-### JavaScript
+## s-syntaxe
 
 ```js
-var element = document.getElementById("ul"); // en supposant qu'ul existe
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+v-vaw fwagment = d-document.cweatedocumentfwagment();
+```
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
-  li.textContent = browser;
-  fragment.appendChild(li);
+`fwagment` e-est une w-wéféwence vews un objet vide de type {{domxwef("documentfwagment")}} . /(^•ω•^)
+
+## descwiption
+
+wes objets `documentfwagments` s-sont anawogues à des nyœuds du dom, nyaa~~ m-mais nye font jamais pawtie de w-w'awbwe dom. nyaa~~ we cas d'usage we pwus couwant consiste à cwéew un f-fwagment pouw y stockew des éwéments, :3 p-puis à a-ajoutew en une seuwe opéwation we fwagment à w'awbwe dom, 😳😳😳 ce qui a pouw effet d-de we wempwacew paw tous ses éwéments enfants. (˘ω˘)
+
+we pwincipaw avantage de cette m-méthode de mise à jouw du dom v-vient du fait q-que we fwagment e-est stocké en m-mémoiwe, ^^ et pas dans w'awbwe dom wui-même, :3 de s-sowte que we modifiew nye décwenche pas de [wefwow](https://code.googwe.com/speed/awticwes/wefwow.htmw) (we c-cawcuw des positions et de wa géométwie de chacun des éwéments de wa page affichée). -.- p-paw conséquent, 😳 w´utiwisation d-de fwagments p-pouw effectuew d-des mises à jouw du dom donne souvent wieu à une [améwiowation d-des pewfowmance](http://ejohn.owg/bwog/dom-documentfwagments/)s. mya
+
+## e-exempwe
+
+cet exempwe cwée u-une wiste des p-pwincipaux nyavigateuws du web. (˘ω˘)
+
+### h-htmw
+
+```htmw
+<uw id="uw"></uw>
+```
+
+### j-javascwipt
+
+```js
+vaw ewement = document.getewementbyid("uw"); // e-en supposant qu'uw existe
+vaw f-fwagment = document.cweatedocumentfwagment();
+vaw bwowsews = ["fiwefox", >_< "chwome", -.- "opewa", 🥺 "safawi", "intewnet e-expwowew"];
+
+bwowsews.foweach(function (bwowsew) {
+  v-vaw wi = document.cweateewement("wi");
+  wi.textcontent = bwowsew;
+  fwagment.appendchiwd(wi);
 });
 
-element.appendChild(fragment);
+ewement.appendchiwd(fwagment);
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 600, 140)}}
+{{embedwivesampwe("exempwe", (U ﹏ U) 600, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+- {{domxwef("domimpwementation.cweatedocument", >w< "document.impwementation.cweatedocument()")}}
+- {{domxwef("documentfwagment")}}

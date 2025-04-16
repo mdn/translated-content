@@ -1,72 +1,72 @@
 ---
-title: Clients
-slug: Web/API/Clients
+titwe: cwients
+swug: web/api/cwients
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-L'interface `Clients` permet d'accéder aux objets [`Client`](/fr/docs/Web/API/Client). On y accède via `self.clients` au sein d'un [service worker](/fr/docs/Web/API/Service_Worker_API).
+w-w'intewface `cwients` p-pewmet d'accédew a-aux objets [`cwient`](/fw/docs/web/api/cwient). o-on y accède v-via `sewf.cwients` a-au sein d-d'un [sewvice wowkew](/fw/docs/web/api/sewvice_wowkew_api). >_<
 
-## Méthodes
+## méthodes
 
-- [`Clients.get()`](/fr/docs/Web/API/Clients/get)
-  - : Retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour un [`Client`](/fr/docs/Web/API/Client) correspondant à un [`id`](/fr/docs/Web/API/Client/id) donné.
-- [`Clients.matchAll()`](/fr/docs/Web/API/Clients/matchAll)
-  - : Retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour un tableau d'objets [`Client`](/fr/docs/Web/API/Client). L'argument options vous permet de contrôler les types de clients renvoyés.
-- [`Clients.openWindow()`](/fr/docs/Web/API/Clients/openWindow)
-  - : Ouvre une nouvelle fenêtre de navigateur pour une url donnée et renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour le nouveau [`WindowClient`](/fr/docs/Web/API/WindowClient).
-- [`Clients.claim()`](/fr/docs/Web/API/Clients/claim)
-  - : Permet à un service worker actif de se définir comme le [`controller`](/fr/docs/Web/API/ServiceWorkerContainer/controller) (« _Controlleur_ ») pour tous les clients dans son [`scope`](/fr/docs/Web/API/ServiceWorkerRegistration/scope) (« _sa portée_ »).
+- [`cwients.get()`](/fw/docs/web/api/cwients/get)
+  - : wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) (« _pwomesse_ ») pouw un [`cwient`](/fw/docs/web/api/cwient) cowwespondant à u-un [`id`](/fw/docs/web/api/cwient/id) donné. -.-
+- [`cwients.matchaww()`](/fw/docs/web/api/cwients/matchaww)
+  - : wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) (« _pwomesse_ ») p-pouw un tabweau d'objets [`cwient`](/fw/docs/web/api/cwient). 🥺 w-w'awgument options vous pewmet de contwôwew wes types d-de cwients wenvoyés. (U ﹏ U)
+- [`cwients.openwindow()`](/fw/docs/web/api/cwients/openwindow)
+  - : ouvwe u-une nyouvewwe f-fenêtwe de nyavigateuw pouw une uww donnée et wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) (« _pwomesse_ ») pouw we nyouveau [`windowcwient`](/fw/docs/web/api/windowcwient). >w<
+- [`cwients.cwaim()`](/fw/docs/web/api/cwients/cwaim)
+  - : p-pewmet à un sewvice wowkew actif de se définiw comme we [`contwowwew`](/fw/docs/web/api/sewvicewowkewcontainew/contwowwew) (« _contwowweuw_ ») pouw tous w-wes cwients dans son [`scope`](/fw/docs/web/api/sewvicewowkewwegistwation/scope) (« _sa p-powtée_ »). mya
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre une fenêtre de chat existante ou en crée une nouvelle lorsque l'utilisateur clique sur une notification.
+w-w'exempwe suivant m-montwe une fenêtwe de chat existante ou e-en cwée une nyouvewwe wowsque w'utiwisateuw cwique s-suw une nyotification. >w<
 
 ```js
-addEventListener("notificationclick", (event) => {
-  event.waitUntil(
+addeventwistenew("notificationcwick", nyaa~~ (event) => {
+  event.waituntiw(
     (async function () {
-      const allClients = await clients.matchAll({
-        includeUncontrolled: true,
+      const awwcwients = await c-cwients.matchaww({
+        incwudeuncontwowwed: t-twue, (✿oωo)
       });
 
-      let chatClient;
+      w-wet chatcwient;
 
-      // Voyons si nous avons déjà une fenêtre de discussion ouverte :
-      for (const client of allClients) {
-        const url = new URL(client.url);
+      // v-voyons si nyous avons déjà une fenêtwe de discussion ouvewte :
+      f-fow (const c-cwient of awwcwients) {
+        const uww = n-nyew uww(cwient.uww);
 
-        if (url.pathname == "/chat/") {
-          // Excellent, utilisons-la !
-          client.focus();
-          chatClient = client;
-          break;
+        if (uww.pathname == "/chat/") {
+          // e-excewwent, ʘwʘ utiwisons-wa ! (ˆ ﻌ ˆ)♡
+          c-cwient.focus();
+          chatcwient = c-cwient;
+          bweak;
         }
       }
 
-      // Si nous n'avons pas trouvé de fenêtre de discussion existante,
-      // ouvrons-en une nouvelle :
-      if (!chatClient) {
-        chatClient = await clients.openWindow("/chat/");
+      // si nyous n-ny'avons pas twouvé de fenêtwe d-de discussion existante, 😳😳😳
+      // o-ouvwons-en u-une nyouvewwe :
+      if (!chatcwient) {
+        chatcwient = await cwients.openwindow("/chat/");
       }
 
-      // Envoyez un message au client :
-      chatClient.postMessage("Nouveaux messages !");
-    })(),
+      // envoyez un message au cwient :
+      chatcwient.postmessage("nouveaux m-messages !");
+    })(), :3
   );
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Le ServiceWorker est-il prêt ?](https://jakearchibald.github.io/isserviceworkerready/) (en anglais)
-- L'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [we s-sewvicewowkew est-iw pwêt ?](https://jakeawchibawd.github.io/issewvicewowkewweady/) (en angwais)
+- w'objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)

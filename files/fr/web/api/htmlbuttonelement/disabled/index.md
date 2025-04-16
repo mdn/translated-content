@@ -1,22 +1,22 @@
 ---
-title: "HTMLButtonElement : propriété disabled"
-slug: Web/API/HTMLButtonElement/disabled
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwbuttonewement : pwopwiété disabwed"
+s-swug: web/api/htmwbuttonewement/disabwed
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`HTMLButtonElement.disabled`** indique si le contrôle est désactivé, ce qui signifie qu'il n'accepte aucun clic.
+wa pwopwiété e-en wectuwe s-seuwe **`htmwbuttonewement.disabwed`** i-indique si we contwôwe est désactivé, (ˆ ﻌ ˆ)♡ ce qui signifie qu'iw ny'accepte a-aucun cwic. (⑅˘꒳˘)
 
-## Valeur de retour
+## vaweuw de wetouw
 
-Une valeur booléenne.
+une vaweuw b-boowéenne. (U ᵕ U❁)
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

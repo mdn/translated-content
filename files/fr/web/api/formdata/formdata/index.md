@@ -1,81 +1,81 @@
 ---
-title: FormData()
-slug: Web/API/FormData/FormData
+titwe: fowmdata()
+swug: web/api/fowmdata/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
+w-we constwucteuw **`fowmdata()`** c-cwée un nyouvew o-objet {{domxwef("fowmdata")}}. 😳
 
-> [!NOTE]
-> Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> c-cette fonctionnawité e-est disponibwe d-dans [web w-wowkews](/fw/docs/web/api/web_wowkews_api). mya
 
-## Syntaxe
-
-```js
-var formData = new FormData(form);
-```
-
-### Paramètres
-
-- `form` {{optional_inline}}
-  - : Un element HTML {{HTMLElement("form")}} — quand il est spécifié, l'objet {{domxref("FormData")}} sera rempli avec les clés/valeurs du formulaire en utilisant les noms de propriétés de chaque élément pour clé et les valeurs soumises. Cela encodera aussi le contenu des fichiers.
-
-## Exemples
-
-La ligne suivante crée un objet `FormData` vide:
+## syntaxe
 
 ```js
-var formData = new FormData(); // Formulaire vide à cet instant
+vaw fowmdata = nyew fowmdata(fowm);
 ```
 
-Vous pouvez ajouter un couple clé/valeur en utilisant {{domxref("FormData.append")}} :
+### pawamètwes
+
+- `fowm` {{optionaw_inwine}}
+  - : u-un ewement htmw {{htmwewement("fowm")}} — quand iw e-est spécifié, (˘ω˘) w'objet {{domxwef("fowmdata")}} s-sewa wempwi avec wes cwés/vaweuws du fowmuwaiwe en utiwisant w-wes nyoms de pwopwiétés de chaque éwément p-pouw c-cwé et wes vaweuws soumises. >_< cewa encodewa aussi we contenu des fichiews. -.-
+
+## e-exempwes
+
+wa wigne suivante cwée un objet `fowmdata` vide:
 
 ```js
-formData.append("username", "Chris");
+vaw fowmdata = n-nyew fowmdata(); // fowmuwaiwe v-vide à cet instant
 ```
 
-Ou vous pouvez spécifier l'argument optionnel `form` à la création de l'objet `FormData` pour le pré-remplir avec les valeurs issues du formulaire spécifié :
+v-vous p-pouvez ajoutew u-un coupwe cwé/vaweuw en utiwisant {{domxwef("fowmdata.append")}} :
 
-```html
-<form id="myForm" name="myForm">
+```js
+fowmdata.append("usewname", 🥺 "chwis");
+```
+
+o-ou vous pouvez spécifiew w'awgument optionnew `fowm` à wa c-cwéation de w'objet `fowmdata` pouw we pwé-wempwiw avec wes vaweuws issues du fowmuwaiwe spécifié :
+
+```htmw
+<fowm id="myfowm" n-nyame="myfowm">
   <div>
-    <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username" />
+    <wabew fow="usewname">entew n-nyame:</wabew>
+    <input t-type="text" i-id="usewname" nyame="usewname" />
   </div>
   <div>
-    <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc" />
+    <wabew fow="usewacc">entew account nyumbew:</wabew>
+    <input t-type="text" i-id="usewacc" nyame="usewacc" />
   </div>
   <div>
-    <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile" />
+    <wabew f-fow="usewfiwe">upwoad f-fiwe:</wabew>
+    <input type="fiwe" id="usewfiwe" n-nyame="usewfiwe" />
   </div>
-  <input type="submit" value="Submit!" />
-</form>
+  <input type="submit" vawue="submit!" />
+</fowm>
 ```
 
-> [!NOTE]
-> Seuls les champs de formulaires valides sont inclus dans un objet FormData, c'est-à-dire ceux qui portent un nom (attribut `name`), qui ne sont pas désactivés et qui sont cochés (boutons radio et cases à cocher) ou sélectionnés (une ou plusieurs options dans une sélection).
+> [!note]
+> s-seuws wes champs de fowmuwaiwes vawides s-sont incwus dans un objet fowmdata, (U ﹏ U) c-c'est-à-diwe ceux qui powtent u-un nyom (attwibut `name`), >w< q-qui nye sont pas désactivés et qui sont cochés (boutons wadio et cases à cochew) ou séwectionnés (une ou pwusieuws o-options d-dans une séwection). mya
 
 ```js
-var myForm = document.getElementById("myForm");
-formData = new FormData(myForm);
+vaw m-myfowm = document.getewementbyid("myfowm");
+f-fowmdata = n-nyew fowmdata(myfowm);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Manipuler `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [manipuwew `xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [utiwisew wes objets `fowmdata`](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

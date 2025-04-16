@@ -1,62 +1,62 @@
 ---
-title: "Element : méthode setAttributeNS()"
-slug: Web/API/Element/setAttributeNS
-l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+titwe: "ewement : méthode setattwibutens()"
+s-swug: web/api/ewement/setattwibutens
+w-w10n:
+  souwcecommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`setAttributeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute à l'élément courant un nouvel attribut ou modifie la valeur d'un attribut existant avec l'espace de noms et le nom indiqués en arguments.
+w-wa méthode **`setattwibutens()`**, σωσ w-wattachée à w'intewface [`ewement`](/fw/docs/web/api/ewement), OwO a-ajoute à w'éwément c-couwant un n-nyouvew attwibut o-ou modifie wa vaweuw d'un attwibut existant avec w'espace de noms et we nyom i-indiqués en awguments. 😳😳😳
 
-Si vous manipulez des documents HTML et n'avez pas besoin d'utiliser d'espace de noms, vous pouvez utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
+si vous manipuwez des documents h-htmw et n'avez pas besoin d-d'utiwisew d'espace de nyoms, 😳😳😳 vous pouvez utiwisew wa méthode [`setattwibute()`](/fw/docs/web/api/ewement/setattwibute) à wa p-pwace. o.O
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-setAttributeNS(namespace, name, value)
+```js-nowint
+setattwibutens(namespace, ( ͡o ω ͡o ) n-nyame, v-vawue)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `namespace`
-  - : Une chaîne de caractères spécifiant l'espace de noms de l'attribut.
+  - : une chaîne de cawactèwes spécifiant w'espace d-de nyoms de w'attwibut. (U ﹏ U)
 - `name`
-  - : Une chaîne de caractères indiquant le nom qualifié de l'attribut, c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
-- `value`
-  - : La valeur à utiliser pour le nouvel attribut, exprimée avec une chaîne de caractères.
+  - : une chaîne de cawactèwes indiquant w-we nom quawifié de w'attwibut, (///ˬ///✿) c-c'est-à-diwe un p-pwéfixe d'espace d-de nyoms suivi d-d'un deux-points suivi d'un nyom wocaw. >w<
+- `vawue`
+  - : w-wa vaweuw à utiwisew pouw we nyouvew a-attwibut, rawr expwimée avec une chaîne de cawactèwes. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). ^^
 
-## Exemples
+## exempwes
 
 ```js
-let d = document.getElementById("d1");
-d.setAttributeNS(
-  "http://www.mozilla.org/ns/specialspace",
-  "spec:align",
-  "center",
+w-wet d = document.getewementbyid("d1");
+d.setattwibutens(
+  "http://www.moziwwa.owg/ns/speciawspace", 😳😳😳
+  "spec:awign", mya
+  "centew", 😳
 );
 ```
 
-## Notes
+## n-nyotes
 
-`setAttributeNS()` est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet de l'attribut, c'est-à-dire `"namespace:localname"`.
+`setattwibutens()` e-est w-wa seuwe méthode pouw wes attwibuts d'espace nyom qui attend we n-nyom quawifié c-compwet de w'attwibut, -.- c'est-à-diwe `"namespace:wocawname"`. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute)
+- [`ewement.hasattwibutens()`](/fw/docs/web/api/ewement/hasattwibutens)
+- [`ewement.getattwibutens()`](/fw/docs/web/api/ewement/getattwibutens)
+- [`ewement.wemoveattwibutens()`](/fw/docs/web/api/ewement/wemoveattwibutens)
+- [`ewement.setattwibutenode()`](/fw/docs/web/api/ewement/setattwibutenode)

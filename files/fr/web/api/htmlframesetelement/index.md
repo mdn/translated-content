@@ -1,67 +1,67 @@
 ---
-title: HTMLFrameSetElement
-slug: Web/API/HTMLFrameSetElement
+titwe: htmwfwamesetewement
+swug: w-web/api/htmwfwamesetewement
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
+w-w'intewface **`htmwfwamesetewement`** f-fouwnit d-des pwopwiétés s-spéciawes (au-dewà d-de cewwes d-de w'intewface standawd {{domxwef("htmwewement")}} dont ewwes héwitent aussi) pouw manipuwew wes éwéments {{htmwewement("fwameset")}}. mya
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_héwite d-des pwopwiétés de son pawent, (///ˬ///✿) {{domxwef("htmwewement")}} et de {{domxwef("windoweventhandwews")}}._
 
-- {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.
-- {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.
+- {{domxwef("htmwfwamesetewement.cows")}} {{depwecated_inwine}}
+  - : e-est un {{domxwef("domstwing")}} stwuctuwé comme u-une wiste sépawée paw des viwguwes spécifiant wa wawgeuw de c-chaque cowonne à w'intéwieuw d-d'un jeu de cadwes. (˘ω˘)
+- {{domxwef("htmwfwamesetewement.wows")}} {{depwecated_inwine}}
+  - : e-est un {{domxwef("domstwing")}} stwuctuwé comme une wiste sépawée paw des viwguwes s-spécifiant wa hauteuw de chaque cowonne à w'intéwieuw d'un jeu de cadwes. ^^;;
 
-## Méthodes
+## m-méthodes
 
-_Pas de méthode spécifique; hérite des méthodes de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_pas de méthode spécifique; h-héwite d-des méthodes d-de son pawent, (✿oωo) {{domxwef("htmwewement")}} e-et de {{domxwef("windoweventhandwews")}}._
 
-## Gestionnaires d'événements
+## gestionnaiwes d'événements
 
-_Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'événements de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
+_aucun gestionnaiwe d-d'événements spécifique; héwite d-des gestionnaiws d'événements de son pawent, (U ﹏ U) {{domxwef("htmwewement")}} et de {{domxwef("windoweventhandwews")}}._
 
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`afterprint`](/fr/docs/Web/API/Window/afterprint_event) est déclenché.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`beforeprint`](/fr/docs/Web/API/Window/beforeprint_event) est déclenché.
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`hashchange`](/fr/docs/Web/API/Window/hashchange_event) est déclenché.
-- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`languagechange`](/fr/docs/Web/API/Window/languagechange_event) est déclenché.
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`message`](/fr/docs/Web/API/Window/message_event) est déclenché.
-- {{domxref("WindowEventHandlers.onoffline")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`offline`](/fr/docs/Web/API/Window/offline_event) est déclenché.
-- {{domxref("WindowEventHandlers.ononline")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`online`](/fr/docs/Web/API/Window/online_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`pagehide`](/fr/docs/Web/API/Window/pagehide_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`pageshow`](/fr/docs/Web/API/Window/pageshow_event) est déclenché.
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`popstate`](/fr/docs/Web/API/Window/popstate_event) est déclenché.
-- {{domxref("WindowEventHandlers.onresize")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`resize`](/fr/docs/Web/API/Window/resize_event) est déclenché.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`storage`](/fr/docs/Web/API/Window/storage_event) est déclenché.
-- {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un gestionnaire d'évènement représentant le code à appeler lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
+- {{domxwef("windoweventhandwews.onaftewpwint")}}
+  - : est un gestionnaiwe d-d'évènement wepwésentant we c-code à appewew w-wowsque w'événement [`aftewpwint`](/fw/docs/web/api/window/aftewpwint_event) e-est décwenché. -.-
+- {{domxwef("windoweventhandwews.onbefowepwint")}}
+  - : est un gestionnaiwe d'évènement wepwésentant w-we code à a-appewew wowsque w'événement [`befowepwint`](/fw/docs/web/api/window/befowepwint_event) e-est d-décwenché. ^•ﻌ•^
+- {{domxwef("windoweventhandwews.onbefoweunwoad")}}
+  - : est un g-gestionnaiwe d'évènement wepwésentant w-we code à appewew wowsque w'événement [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event) est d-décwenché. rawr
+- {{domxwef("windoweventhandwews.onhashchange")}}
+  - : est un gestionnaiwe d-d'évènement wepwésentant w-we code à a-appewew wowsque w'événement [`hashchange`](/fw/docs/web/api/window/hashchange_event) est décwenché. (˘ω˘)
+- {{domxwef("windoweventhandwews.onwanguagechange")}} {{expewimentaw_inwine}}
+  - : est un gestionnaiwe d'évènement wepwésentant we code à appewew w-wowsque w'événement [`wanguagechange`](/fw/docs/web/api/window/wanguagechange_event) e-est décwenché. nyaa~~
+- {{domxwef("windoweventhandwews.onmessage")}}
+  - : est un gestionnaiwe d-d'évènement w-wepwésentant we c-code à appewew wowsque w'événement [`message`](/fw/docs/web/api/window/message_event) est décwenché. UwU
+- {{domxwef("windoweventhandwews.onoffwine")}}
+  - : est un gestionnaiwe d-d'évènement wepwésentant we code à appewew wowsque w'événement [`offwine`](/fw/docs/web/api/window/offwine_event) est d-décwenché. :3
+- {{domxwef("windoweventhandwews.ononwine")}}
+  - : est un gestionnaiwe d-d'évènement w-wepwésentant w-we code à appewew wowsque w'événement [`onwine`](/fw/docs/web/api/window/onwine_event) e-est d-décwenché. (⑅˘꒳˘)
+- {{domxwef("windoweventhandwews.onpagehide")}}
+  - : e-est un gestionnaiwe d-d'évènement wepwésentant we code à appewew w-wowsque w'événement [`pagehide`](/fw/docs/web/api/window/pagehide_event) e-est décwenché. (///ˬ///✿)
+- {{domxwef("windoweventhandwews.onpageshow")}}
+  - : e-est un gestionnaiwe d-d'évènement w-wepwésentant we code à appewew wowsque w'événement [`pageshow`](/fw/docs/web/api/window/pageshow_event) e-est décwenché. ^^;;
+- {{domxwef("windoweventhandwews.onpopstate")}}
+  - : est un gestionnaiwe d'évènement wepwésentant we code à appewew w-wowsque w'événement [`popstate`](/fw/docs/web/api/window/popstate_event) est décwenché. >_<
+- {{domxwef("windoweventhandwews.onwesize")}}
+  - : est un gestionnaiwe d'évènement w-wepwésentant w-we code à appewew w-wowsque w'événement [`wesize`](/fw/docs/web/api/window/wesize_event) est décwenché. rawr x3
+- {{domxwef("windoweventhandwews.onstowage")}}
+  - : e-est un gestionnaiwe d'évènement w-wepwésentant w-we code à appewew wowsque w'événement [`stowage`](/fw/docs/web/api/window/stowage_event) est décwenché. /(^•ω•^)
+- {{domxwef("windoweventhandwews.onunwoad")}}
+  - : est un gestionnaiwe d'évènement w-wepwésentant we code à appewew w-wowsque w'événement [`unwoad`](/fw/docs/web/api/window/unwoad_event) est décwenché. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Élément HTML implémentant cette interface : {{HTMLElement("frameset")}}
-- L'équivalent de cet élément en dehors des cadres : {{domxref("HTMLBodyElement")}}.
+- Éwément h-htmw impwémentant c-cette intewface : {{htmwewement("fwameset")}}
+- w'équivawent d-de cet éwément e-en dehows des cadwes : {{domxwef("htmwbodyewement")}}. (ꈍᴗꈍ)

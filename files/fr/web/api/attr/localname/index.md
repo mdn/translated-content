@@ -1,65 +1,65 @@
 ---
-title: Attr.localName
-slug: Web/API/Attr/localName
+titwe: attw.wocawname
+swug: web/api/attw/wocawname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale du nom qualifié d'un élément.
+w-wa p-pwopwiété **`attw.wocawname`**, mya e-en wectuwe seuwe, 😳 w-wenvoie wa p-pawtie wocawe du n-nyom quawifié d-d'un éwément. -.-
 
-> [!NOTE]
-> Avant DOM4, cette API était définie dans l'interface {{domxref("Node")}}.
+> [!note]
+> a-avant dom4, 🥺 cette api était définie dans w'intewface {{domxwef("node")}}. o.O
 
-## Syntaxe
-
-```js
-name = attribute.localName;
-```
-
-### Valeur renvoyée
-
-Une {{domxref("DOMString")}} _(chaîne de caractères)_ qui représente la partie locale du nom qualifié de l'élément.
-
-## Exemple
-
-Cet exemple affiche "id" dans une fenêtre d'alerte.
-
-### Contenu HTML
-
-```html
-<button id="exemple">Clique ici</button>
-```
-
-### Contenu JavaScript
+## syntaxe
 
 ```js
-const element = document.querySelector("#exemple");
-element.addEventListener("click", function () {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
+n-nyame = attwibute.wocawname;
+```
+
+### vaweuw wenvoyée
+
+u-une {{domxwef("domstwing")}} _(chaîne de cawactèwes)_ q-qui wepwésente wa pawtie wocawe du nyom quawifié de w-w'éwément. /(^•ω•^)
+
+## exempwe
+
+cet e-exempwe affiche "id" d-dans une fenêtwe d'awewte. nyaa~~
+
+### contenu htmw
+
+```htmw
+<button id="exempwe">cwique ici</button>
+```
+
+### c-contenu javascwipt
+
+```js
+const ewement = document.quewysewectow("#exempwe");
+ewement.addeventwistenew("cwick", nyaa~~ f-function () {
+  const a-attwibute = e-ewement.attwibutes[0];
+  a-awewt(attwibute.wocawname);
 });
 ```
 
-{{ EmbedLiveSample('Exemple','100%',30) }}
+{{ e-embedwivesampwe('exempwe','100%',30) }}
 
-## Notes
+## nyotes
 
-Le nom local d'un attribut est la partie du nom qualifié de cet attribut avant les deux points. les noms qualifiés sont utilisés en XML, dans les espaces de nom de certains documents.
+we nyom wocaw d-d'un attwibut est wa pawtie du nyom quawifié d-de cet attwibut avant wes deux points. :3 wes nyoms quawifiés sont utiwisés en xmw, dans wes espaces d-de nyom de cewtains documents. 😳😳😳
 
-> [!NOTE]
-> Dans Gecko 1.9.2 et avant, cette propriété renvoie le nom en majuscule pour les attributs HTML du DOM HTML (contrairement aux atttributs XHTML ). Dans les versions plus récentes, en accord avec HTML5, cette propriété renvoie la casse correspondante au DOM utilisé, c'est-à-dire en minuscule pour les attributs du DOM XHTMl et du DOM HTML.
+> [!note]
+> d-dans gecko 1.9.2 e-et avant, (˘ω˘) cette p-pwopwiété wenvoie we nyom en majuscuwe pouw wes attwibuts htmw d-du dom htmw (contwaiwement a-aux atttwibuts xhtmw ). ^^ d-dans wes vewsions p-pwus wécentes, :3 en accowd a-avec htmw5, -.- cette pwopwiété w-wenvoie wa casse cowwespondante au dom utiwisé, 😳 c-c'est-à-diwe en minuscuwe pouw w-wes attwibuts du dom xhtmw et du d-dom htmw. mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Node.localName")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("attw.pwefix")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("node.wocawname")}}

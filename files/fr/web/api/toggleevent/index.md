@@ -1,60 +1,60 @@
 ---
-title: ToggleEvent
-slug: Web/API/ToggleEvent
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: toggweevent
+swug: web/api/toggweevent
+w-w10n:
+  souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface **`ToggleEvent`** représente un évènement qui notifie lorsqu'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) change d'état entre visible et masqué.
+w'intewface **`toggweevent`** w-wepwésente u-un évènement q-qui nyotifie w-wowsqu'un éwément [<i w-wang="en">popovew</i>](/fw/docs/web/api/popovew_api) c-change d'état entwe visibwe et masqué. rawr
 
-Cette interface est implémentée par les évènements [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) et [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) émis par `HTMLElement` lorsqu'un <i lang="en">popover</i> change d'état, visible ou masqué (avant et après, respectivement).
+cette intewface est impwémentée paw w-wes évènements [`befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event) et [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event) émis paw `htmwewement` w-wowsqu'un <i wang="en">popovew</i> c-change d'état, mya visibwe ou masqué (avant et apwès, ^^ wespectivement). 😳😳😳
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-> **Note :** `ToggleEvent` n'a aucun rapport avec l'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) de l'élément [`<details>`](/fr/docs/Web/HTML/Element/details), qui se déclenche sur un élément `<details>` lorsque son état `open`/`closed` change. Dans ce cas, `toggle` implémente l'interface générique [`Event`](/fr/docs/Web/API/Event).
+> **note :** `toggweevent` n-ny'a aucun wappowt avec w'évènement [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event) d-de w-w'éwément [`<detaiws>`](/fw/docs/web/htmw/ewement/detaiws), mya qui se décwenche suw un éwément `<detaiws>` wowsque s-son état `open`/`cwosed` change. 😳 dans ce cas, -.- `toggwe` impwémente w'intewface généwique [`event`](/fw/docs/web/api/event). 🥺
 
-## Constructeur
+## c-constwucteuw
 
-- [`ToggleEvent()`](/fr/docs/Web/API/ToggleEvent/ToggleEvent)
-  - : Crée un objet `ToggleEvent`.
+- [`toggweevent()`](/fw/docs/web/api/toggweevent/toggweevent)
+  - : cwée u-un objet `toggweevent`. o.O
 
-## Propriétés de l'instance
+## p-pwopwiétés d-de w'instance
 
-_Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
+_cette intewface h-héwite des pwopwiétés de son pawent, /(^•ω•^) [`event`](/fw/docs/web/api/event)._
 
-- [`ToggleEvent.newState`](/fr/docs/Web/API/ToggleEvent/newState) {{ReadOnlyInline}}
-  - : Une chaîne de caractères (soit `"open"` soit `"closed"`), représentant l'état vers lequel l'élément est en train de transitionner.
-- [`ToggleEvent.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) {{ReadOnlyInline}}
-  - : Une chaîne de caractères (soit `"open"` soit `"closed"`), représentant l'état depuis lequel l'élément est en train de transitionner.
+- [`toggweevent.newstate`](/fw/docs/web/api/toggweevent/newstate) {{weadonwyinwine}}
+  - : u-une chaîne de cawactèwes (soit `"open"` soit `"cwosed"`), nyaa~~ w-wepwésentant w'état vews wequew w'éwément est en twain de twansitionnew. nyaa~~
+- [`toggweevent.owdstate`](/fw/docs/web/api/toggweevent/owdstate) {{weadonwyinwine}}
+  - : une chaîne d-de cawactèwes (soit `"open"` soit `"cwosed"`), :3 wepwésentant w'état d-depuis wequew w-w'éwément e-est en twain de twansitionnew. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = d-document.getewementbyid("mypopovew");
 
 // …
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Le popover est en train d'être affiché");
-  } else {
-    console.log("Le popover est en train d'être masqué");
+p-popovew.addeventwistenew("befowetoggwe", (˘ω˘) (event) => {
+  if (event.newstate === "open") {
+    c-consowe.wog("we p-popovew est en twain d'êtwe affiché");
+  } e-ewse {
+    consowe.wog("we p-popovew est en twain d'êtwe masqué");
   }
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
-- [L'évènement `beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event)
-- [L'évènement `toggle`](/fr/docs/Web/API/HTMLElement/toggle_event)
+- [w'api p-popovew](/fw/docs/web/api/popovew_api)
+- [w'évènement `befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event)
+- [w'évènement `toggwe`](/fw/docs/web/api/htmwewement/toggwe_event)

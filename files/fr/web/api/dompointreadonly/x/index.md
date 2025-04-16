@@ -1,32 +1,32 @@
 ---
-title: DOMPoint.x
-slug: Web/API/DOMPointReadOnly/x
+titwe: dompoint.x
+swug: web/api/dompointweadonwy/x
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ seecompattabwe() }}
 
-La propriété en lecture seule **`x`** de l'interface **`DOMPointReadOnly`** représente la coordonnée x d'un point.
+w-wa pwopwiété e-en wectuwe seuwe **`x`** d-de w'intewface **`dompointweadonwy`** w-wepwésente wa c-coowdonnée x d'un p-point. (U ᵕ U❁)
 
-En général, x positif signifie à droite et négatif à gauche (par rapport à l'origine).
+en généwaw, -.- x-x positif s-signifie à dwoite et nyégatif à gauche (paw wappowt à w'owigine). ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-var xPos = DOMPoint.x;
+v-vaw xpos = dompoint.x;
 ```
 
-### Valeur
+### vaweuw
 
-Un double.
+u-un doubwe. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMPoint")}}
+- {{domxwef("dompoint")}}

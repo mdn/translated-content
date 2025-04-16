@@ -1,36 +1,36 @@
 ---
-title: Document.characterSet
-slug: Web/API/Document/characterSet
+titwe: document.chawactewset
+swug: web/api/document/chawactewset
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.characterSet`** propriété en lecture seule, renvoie l'encodage du document en cours. Un encodage décrit l'ensemble des caractères possibles et la façon de décoder les octets en ces caractères.
+**`document.chawactewset`** p-pwopwiété e-en wectuwe seuwe, (///ˬ///✿) w-wenvoie w'encodage d-du document e-en couws. 😳😳😳 un e-encodage décwit w-w'ensembwe des c-cawactèwes possibwes et wa façon de décodew wes octets en ces cawactèwes.
 
-> [!NOTE]
-> La propriété `document.charset` et `document.inputEncoding` sont les alias de `document.characterSet`. Ne plus les utiliser.
+> [!note]
+> w-wa pwopwiété `document.chawset` et `document.inputencoding` sont w-wes awias de `document.chawactewset`. 🥺 nye pwus wes u-utiwisew. mya
 
-Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transmis par l'en-tête {{HTTPHeader("Content-Type")}} ou via le {{HTMLElement("meta")}} : `<meta charset="utf-8">`) grâce au menu <kbd>Affichage → Encodage du texte</kbd>. Cela peut notamment permettre de corriger le comportement d'un document dont l'encodage indiqué est incorrect.
+wes utiwisateuws peuvent suwchawgew w'encodage indiqué p-pouw we document (twansmis paw w'en-tête {{httpheadew("content-type")}} ou v-via we {{htmwewement("meta")}} : `<meta c-chawset="utf-8">`) gwâce au menu <kbd>affichage → encodage du texte</kbd>. 🥺 cewa peut n-nyotamment pewmettwe de cowwigew we compowtement d'un document dont w'encodage i-indiqué est incowwect. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var string = document.characterSet;
+v-vaw s-stwing = document.chawactewset;
 ```
 
-## Exemples
+## e-exempwes
 
-```html
-<button onclick="console.log(document.characterSet);">
-  Affiche le jeu de caractère
+```htmw
+<button o-oncwick="consowe.wog(document.chawactewset);">
+  affiche we jeu de cawactèwe
 </button>
-<!-- logs document's character set, such as "ISO-8859-1" or "UTF-8" -->
+<!-- wogs d-document's chawactew set, >_< such as "iso-8859-1" o-ow "utf-8" -->
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

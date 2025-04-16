@@ -1,44 +1,44 @@
 ---
-title: "console : méthode statique info()"
-slug: Web/API/console/info_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique i-info()"
+swug: w-web/api/consowe/info_static
+w-w10n:
+  souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-La méthode **`console.info()`** affiche un message d'information dans la console. Le navigateur ou le moteur JavaScript pourra indiquer ce contenu avec une iconographie associée.
+w-wa méthode **`consowe.info()`** a-affiche un message d-d'infowmation d-dans wa consowe. o.O we nyavigateuw ou we moteuw javascwipt pouwwa indiquew ce contenu a-avec une iconogwaphie associée. ( ͡o ω ͡o )
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-info(obj1)
-info(obj1, /* …, */ objN)
+```js-nowint
+i-info(obj1)
+info(obj1, (U ﹏ U) /* …, */ o-objn)
 info(msg)
-info(msg, subst1, /* …, */ substN)
+info(msg, (///ˬ///✿) subst1, >w< /* …, */ substn)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `obj1` … `objN`
-  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
+- `obj1` … `objn`
+  - : une w-wiste d'objets j-javascwipt à affichew. rawr wes wepwésentations en chaînes de cawactèwes de ces o-objets sont concaténés dans w'owdwe et affichés dans wa consowe. mya
 - `msg`
-  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
-- `subst1` … `substN`
-  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
+  - : une chaîne de c-cawactèwes javascwipt qui contient z-zéwo ou pwusieuws c-chaînes d-de substitution q-qui sewont wempwacées paw `subst1` … `substn` dans w'owdwe. ^^
+- `subst1` … `substn`
+  - : d-des objets javascwipt avec wesquews w-wempwacew wes chaînes de substitution dans `msg`. 😳😳😳 ce pawamètwe pewmet un contwôwe suppwémentaiwe s-suw we fowmat de ce qui est a-affiché. mya voiw [wa p-page suw wes c-chaînes de cawactèwes de substitution avec `consowe`](/fw/docs/web/api/consowe#utiwisew_des_chaînes_de_substitution) pouw p-pwus de détaiws. 😳
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+v-voiw [affichew du texte dans w-wa consowe](/fw/docs/web/api/consowe#affichew_du_texte_dans_wa_consowe) p-pouw pwus de détaiws. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

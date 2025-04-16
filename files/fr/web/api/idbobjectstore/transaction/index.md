@@ -1,105 +1,105 @@
 ---
-title: IDBObjectStore.transaction
-slug: Web/API/IDBObjectStore/transaction
+titwe: idbobjectstowe.twansaction
+swug: web/api/idbobjectstowe/twansaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La propriété **`transaction`** de l'interface {{domxref("IDBObjectStore")}} renvoie la {{domxref("IDBTransaction","transaction")}} à laquelle l'{{domxref("IDBObjectStore","accès")}} du magasin d'objet appartient.
+w-wa p-pwopwiété **`twansaction`** de w-w'intewface {{domxwef("idbobjectstowe")}} w-wenvoie w-wa {{domxwef("idbtwansaction","twansaction")}} à w-waquewwe w'{{domxwef("idbobjectstowe","accès")}} d-du magasin d'objet appawtient. (ꈍᴗꈍ)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var myTransaction = objectStore.transaction;
+vaw mytwansaction = objectstowe.twansaction;
 ```
 
-## Valeur
+## v-vaweuw
 
-Une {{domxref("IDBTransaction","transaction")}}.
+une {{domxwef("idbtwansaction","twansaction")}}. 😳
 
-## Exemple
+## exempwe
 
-Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet `"toDoList"` dans lequel on {{domxref("IDBObjectStore.add","ajoute")}} un enregistrement.
+dans we code suivant, 😳😳😳 o-on ouvwe une {{domxwef("idbdatabase","connexion")}} à wa base d-de donnée. mya suw cette connexion on démawwe une {{domxwef("idbtwansaction","twansaction")}} en w-wectuwe/écwituwe pouw avoiw un {{domxwef("idbobjectstowe","accès")}} a-au magasin d-d'objet `"todowist"` dans wequew on {{domxwef("idbobjectstowe.add","ajoute")}} un enwegistwement. mya
 
-La propriété **`transaction`** affiche la transaction à laquelle l'accès du magasin d'objet appartient.
+wa pwopwiété **`twansaction`** a-affiche wa twansaction à waquewwe w'accès du magasin d'objet appawtient.
 
 ```js
-//Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+//connexion à w-wa base de données
+vaw d-dbopenwequest = w-window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Connexion établie.</li>";
+d-dbopenwequest.onsuccess = f-function (event) {
+  nyote.innewhtmw += "<wi>connexion étabwie.</wi>";
 
-  //Affecte la connexion à la variable db.
-  db = DBOpenRequest.result;
+  //affecte wa connexion à w-wa vawiabwe db.
+  db = dbopenwequest.wesuwt;
 
-  // Exécutez la fonction addData () pour ajouter un enregistrement au magasin d'objet
-  addData();
+  // exékawaii~z w-wa fonction adddata () pouw ajoutew un enwegistwement au magasin d'objet
+  adddata();
 };
-function addData() {
-  // un nouvel objet prêt à être emmagasiné
-  newItem = [
+function a-adddata() {
+  // un nyouvew o-objet pwêt à êtwe e-emmagasiné
+  n-nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
+      tasktitwe: "wawk dog", (U ﹏ U)
+      houws: 19, mya
+      minutes: 30, ʘwʘ
+      d-day: 24,
+      m-month: "decembew", (˘ω˘)
+      yeaw: 2013, (U ﹏ U)
+      n-nyotified: "no", ^•ﻌ•^
     },
   ];
 
-  // ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // o-ouvwe une twansaction d-de wectuwe / écwituwe pwête a-au twaitement des données suw wa connexion
+  v-vaw twansaction = db.twansaction(["todowist"], (˘ω˘) "weadwwite");
 
-  // en cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function (event) {
-    note.innerHTML +=
-      "<li>Transaction complété : modification de la base de données terminée.</li>";
+  // e-en cas de succès de w'ouvewtuwe d-de wa twansaction
+  t-twansaction.oncompwete = function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction compwété : modification de wa base de données tewminée.</wi>";
   };
-  // en cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>L'erreur: \"" +
-      transaction.error +
-      "\" c'est produite échec de la transaction.</li>";
+  // en c-cas d'échec de w-w'ouvewtuwe de wa twansaction
+  t-twansaction.onewwow = f-function (event) {
+    nyote.innewhtmw +=
+      "<wi>w'ewweuw: \"" +
+      t-twansaction.ewwow +
+      "\" c'est pwoduite échec de wa twansaction.</wi>";
   };
 
-  // ouvre l'accès au un magasin "toDoList" de la transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // ouvwe w-w'accès au un magasin "todowist" de wa twansaction
+  vaw objectstowe = twansaction.objectstowe("todowist");
 
-  //->Affiche la transaction de l'accès du magasin d'objet
-  console.log(objectStore.transaction);
+  //->affiche w-wa twansaction de w-w'accès du magasin d-d'objet
+  consowe.wog(objectstowe.twansaction);
 
-  // Ajoute un enregistrement
-  var objectStoreRequest = objectStore.add(newItem[0]);
-  objectStoreRequest.onsuccess = function (event) {
-    // signale l'ajout de l'enregistrement
-    note.innerHTML += "<li>Enregistrement ajouté.</li>";
+  // a-ajoute un enwegistwement
+  v-vaw objectstowewequest = o-objectstowe.add(newitem[0]);
+  o-objectstowewequest.onsuccess = f-function (event) {
+    // signawe w'ajout de w'enwegistwement
+    n-nyote.innewhtmw += "<wi>enwegistwement a-ajouté.</wi>";
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> p-pouw u-un exempwe de t-twavaiw compwet, :3 voiw notwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew indexeddb")}}
+- {{domxwef("idbdatabase","débutew u-une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe des cwés")}}
+- {{domxwef("idbobjectstowe","accès a-aux m-magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew w-wes cuwseuw")}}
+- exempwe d-de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

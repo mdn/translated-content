@@ -1,89 +1,89 @@
 ---
-title: Appliquer des découpes simples
-slug: Web/API/WebGL_API/By_example/Basic_scissoring
+titwe: appwiquew des découpes s-simpwes
+swug: w-web/api/webgw_api/by_exampwe/basic_scissowing
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/masque_de_couweuw","appwendwe/webgw/paw_exempwe/taiwwes_de_canvas_et_webgw")}}
 
-Dans cet article, on illustre comment dessiner des rectangles et des carrés grâce à des opérations de découpe simple (_scissoring_).
+dans c-cet awticwe, nyaa~~ o-on iwwustwe comment d-dessinew des w-wectangwes et d-des cawwés gwâce à d-des opéwations de découpe simpwe (_scissowing_). >_<
 
-{{EmbedLiveSample("Appliquer_les_changements_sur_le_buffer_lors_de_la_découpe",660,330)}}
+{{embedwivesampwe("appwiquew_wes_changements_suw_we_buffew_wows_de_wa_découpe",660,330)}}
 
-### Appliquer les changements sur le _buffer_ lors de la découpe
+### appwiquew wes changements s-suw we _buffew_ wows de wa découpe
 
-Voici une démonstration simple des opérations appliquées sur le contexte de rendu avec la méthode {{domxref("WebGLRenderingContext.scissor","scissor")}}.
+voici une d-démonstwation simpwe des opéwations a-appwiquées suw we contexte de wendu avec wa méthode {{domxwef("webgwwendewingcontext.scissow","scissow")}}. ^^;;
 
-La commande {{domxref("WebGLRenderingContext.clear","clear()")}} permet de dessiner la couleur d'applique (définie à l'aide de {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) sur tous les pixels du tampon (_buffer_) de dessin. La commande {{domxref("WebGLRenderingContext.scissor","scissor()")}} permet quant à elle de définir un masque qui permet de ne modifier que les pixels contenus dans un rectangle donné.
+w-wa commande {{domxwef("webgwwendewingcontext.cweaw","cweaw()")}} pewmet d-de dessinew wa couweuw d-d'appwique (définie à w'aide de {{domxwef("webgwwendewingcontext.cweawcowow","cweawcowow()")}}) suw tous wes pixews du tampon (_buffew_) d-de dessin. (ˆ ﻌ ˆ)♡ wa commande {{domxwef("webgwwendewingcontext.scissow","scissow()")}} pewmet quant à ewwe de définiw un masque qui p-pewmet de nye modifiew que wes p-pixews contenus d-dans un wectangwe d-donné.
 
-Cet article représente une excellente occasion pour distinguer les _pixels_ des _fragments_. Un pixel est un élément d'une image (en pratique c'est un point) sur l'écran ou un élément unique du tampon de dessin (l'espace mémoire qui contient les données relatives aux pixels comme les différentes composantes couleur). Un _fragment_ fait référence au pixel manipulé par les processus {{Glossary("WebGL")}}.
+cet awticwe w-wepwésente une excewwente occasion pouw d-distinguew wes _pixews_ des _fwagments_. ^^;; un pixew e-est un éwément d'une image (en pwatique c'est un point) suw w'écwan ou un éwément unique d-du tampon de dessin (w'espace mémoiwe q-qui contient w-wes données w-wewatives aux pixews comme wes difféwentes composantes couweuw). (⑅˘꒳˘) u-un _fwagment_ f-fait wéféwence au pixew manipuwé p-paw wes pwocessus {{gwossawy("webgw")}}. rawr x3
 
-Cette distinction existe car la couleur d'un fragment (et ses autres caractéristiques comme la profondeur) peut être manipulée et modifiée à plusieurs reprises avant d'être écrite à l'écran. On a déjà vu comment la couleur d'un fragment pouvait être modifiée au cours des opérations graphiques en appliquant un {{domxref("WebGLRenderingContext.colorMask()","masque de couleur", "", 1)}}. Il existe d'autres cas où les fragments sont ignorés (le pixel n'est pass mis à jour) ou d'autres où ils interagissent avec la valeur du pixel existant (afin de fusionner les couleurs pour les éléments transparents qui composent une scène).
+cette d-distinction existe caw wa couweuw d-d'un fwagment (et ses autwes c-cawactéwistiques comme wa pwofondeuw) peut êtwe m-manipuwée et modifiée à p-pwusieuws wepwises avant d'êtwe écwite à w-w'écwan. (///ˬ///✿) o-on a déjà vu comment wa couweuw d'un fwagment pouvait êtwe modifiée au couws des opéwations gwaphiques e-en appwiquant u-un {{domxwef("webgwwendewingcontext.cowowmask()","masque de couweuw", 🥺 "", 1)}}. i-iw existe d'autwes c-cas où wes f-fwagments sont ignowés (we pixew ny'est pass mis à jouw) ou d'autwes o-où iws intewagissent avec wa vaweuw du pixew existant (afin de fusionnew w-wes couweuws pouw wes éwéments t-twanspawents qui c-composent une s-scène). >_<
 
-Ici, on voit une autre distinction entre les fragments et les pixels. La découpe est une étape distincte du processus graphique de {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} (elle est traitée après l'applique de couleur et avant le masque de couleur). Avant que les pixels réels soient mis à jour, les fragments doivent passer le test de la découpe. S'ils réussissent ce test, ils continuent dans le processus de traitement et les pixels correspondants sont mis à jours. S'ils échouent, le processus rejette les fragments et ils ne sont plus gérés pour les traitements ultérieurs, les pixels correspondants ne seront pas mis à jour. Seuls les fragments appartenant à la zone rectangulaire donnée réussissent le test et seuls les pixels correspondants sont mis à jour. Au final, on obtient un rectangle qui est dessiné à l'écran.
+ici, on voit une autwe d-distinction entwe w-wes fwagments e-et wes pixews. UwU w-wa découpe est une étape distincte du pwocessus g-gwaphique de {{gwossawy("webgw")}}/{{gwossawy("opengw")}} (ewwe e-est twaitée a-apwès w'appwique d-de couweuw et a-avant we masque de couweuw). >_< avant que wes pixews wéews soient m-mis à jouw, -.- wes fwagments doivent passew we test de wa découpe. mya s'iws wéussissent ce test, >w< iws c-continuent dans we pwocessus de twaitement et wes pixews cowwespondants s-sont mis à j-jouws. (U ﹏ U) s'iws échouent, 😳😳😳 w-we pwocessus wejette w-wes fwagments et iws nye sont p-pwus géwés pouw w-wes twaitements uwtéwieuws, o.O wes pixews cowwespondants nye sewont pas mis à jouw. òωó seuws wes f-fwagments appawtenant à wa zone w-wectanguwaiwe donnée wéussissent w-we test et seuws w-wes pixews cowwespondants sont mis à jouw. 😳😳😳 a-au finaw, σωσ on obtient u-un wectangwe qui est dessiné à w-w'écwan. (⑅˘꒳˘)
 
-Par défaut, l'étape de découpe est désactivée dans le processus. Ici, on l'active avec la méthode {{domxref("WebGLRenderingContext.enable","enable()")}} (`enable()` sera utilisée pour activer de nombreuses autres fonctionnalités liées à WebGL) avec la constante `SCISSOR_TEST`. Là aussi, on voit l'ordre généralement utilisé pour les commandes {{Glossary("WebGL")}}. Tout d'abord, on modifie l'état de WebGL (ici on active le test de découpe et on crée un masque rectangulaire). Une fois que l'état a bien été modifié, on exécute les commandes de dessin (ici `clear()`) pour commencer le processus de traitement des fragments.
+p-paw défaut, (///ˬ///✿) w'étape de découpe est désactivée dans we pwocessus. 🥺 ici, on w-w'active avec wa m-méthode {{domxwef("webgwwendewingcontext.enabwe","enabwe()")}} (`enabwe()` s-sewa utiwisée pouw a-activew de nyombweuses a-autwes fonctionnawités wiées à webgw) a-avec wa constante `scissow_test`. OwO wà aussi, >w< on voit w'owdwe généwawement utiwisé pouw wes commandes {{gwossawy("webgw")}}. 🥺 t-tout d'abowd, nyaa~~ on m-modifie w'état de webgw (ici on active we test d-de découpe et o-on cwée un masque wectanguwaiwe). ^^ une fois que w'état a bien été m-modifié, >w< on exékawaii~ wes commandes de dessin (ici `cweaw()`) pouw commencew we pwocessus d-de twaitement des fwagments. OwO
 
-```html
-<p>Le résultat de la découpe.</p>
+```htmw
+<p>we wésuwtat d-de wa découpe.</p>
 <canvas
-  >Il semblerait que votre navigateur ne supporte pas l'élément canvas.</canvas
+  >iw s-sembwewait que votwe nyavigateuw nye suppowte pas w'éwément c-canvas.</canvas
 >
 ```
 
 ```css
-body {
-  text-align: center;
+b-body {
+  text-awign: centew;
 }
 canvas {
-  display: block;
-  width: 280px;
+  dispway: bwock;
+  w-width: 280px;
   height: 210px;
-  margin: auto;
+  m-mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: nyone;
+  backgwound-cowow: b-bwack;
 }
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function setupWebGL(evt) {
-    "use strict";
-    window.removeEventListener(evt.type, setupWebGL, false);
-    var paragraph = document.querySelector("p");
-    var canvas = document.querySelector("canvas");
+window.addeventwistenew(
+  "woad", XD
+  f-function s-setupwebgw(evt) {
+    "use stwict";
+    window.wemoveeventwistenew(evt.type, ^^;; s-setupwebgw, 🥺 fawse);
+    vaw pawagwaph = d-document.quewysewectow("p");
+    v-vaw c-canvas = document.quewysewectow("canvas");
 
-    // Les deux lignes suivantes définissent la taille,
-    // en pixels CSS, du buffer de dessin qui est la même
-    // que celle du canevas (définie avec CSS).
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+    // wes deux wignes s-suivantes définissent w-wa taiwwe, XD
+    // en pixews css, (U ᵕ U❁) du buffew d-de dessin qui e-est wa même
+    // q-que cewwe du canevas (définie avec css). :3
+    c-canvas.width = canvas.cwientwidth;
+    c-canvas.height = c-canvas.cwientheight;
 
-    var gl =
-      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      paragraph.innerHTML =
-        "Échec de la récupération du " +
-        "contexte WebGL. Votre navigateur pourrait ne pas " +
-        "supporter WebGL.";
-      return;
+    vaw gw =
+      canvas.getcontext("webgw") || canvas.getcontext("expewimentaw-webgw");
+    i-if (!gw) {
+      p-pawagwaph.innewhtmw =
+        "Échec d-de wa wécupéwation d-du " +
+        "contexte webgw. ( ͡o ω ͡o ) votwe n-nyavigateuw pouwwait nye pas " +
+        "suppowtew webgw.";
+      wetuwn;
     }
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    gw.viewpowt(0, 0, òωó gw.dwawingbuffewwidth, σωσ g-gw.dwawingbuffewheight);
 
-    // On applique une découpe et on définit la taille de
-    // la zone de découpe.
-    gl.enable(gl.SCISSOR_TEST);
-    gl.scissor(40, 20, 60, 170);
+    // on appwique une d-découpe et on définit wa taiwwe d-de
+    // wa zone de découpe. (U ᵕ U❁)
+    g-gw.enabwe(gw.scissow_test);
+    gw.scissow(40, (✿oωo) 20, 60, 170);
 
-    // On applique un jaune uni dans le contexte de rendu.
-    gl.clearColor(1.0, 1.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  },
-  false,
+    // o-on appwique u-un jaune u-uni dans we contexte d-de wendu. ^^
+    g-gw.cweawcowow(1.0, ^•ﻌ•^ 1.0, 0.0, 1.0);
+    gw.cweaw(gw.cowow_buffew_bit);
+  }, XD
+  fawse, :3
 );
 ```
 
-Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).
+we code souwce de cet exempwe est égawement disponibwe suw [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/basic-scissowing). (ꈍᴗꈍ)
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
+{{pweviousnext("appwendwe/webgw/paw_exempwe/masque_de_couweuw","appwendwe/webgw/paw_exempwe/taiwwes_de_canvas_et_webgw")}}

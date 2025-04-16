@@ -1,27 +1,27 @@
 ---
-title: SyncManager
-slug: Web/API/SyncManager
+titwe: syncmanagew
+swug: web/api/syncmanagew
 ---
 
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+{{apiwef("sewvice w-wowkews api")}}{{non-standawd_headew}}
 
-L'interface **`SyncManager`** de l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API) fournit une interface pour l'enregistrement et l'énumération des instances de `SyncRegistration`.
+w'intewface **`syncmanagew`** d-de w-w'[api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api) f-fouwnit u-une intewface p-pouw w'enwegistwement e-et w'énuméwation d-des instances de `syncwegistwation`. mya
 
-## Properties
+## pwopewties
 
-None.
+none. mya
 
-## Methods
+## methods
 
-- {{domxref("SyncManager.register")}}
-  - : Créé une nouvelle sync registration et retourne une {{jsxref("Promise")}}
-- {{domxref("SyncManager.getTags")}}
-  - : Renvoie une liste d'identifiants définis par le développeur pour l'enregistrement du SyncManager.
+- {{domxwef("syncmanagew.wegistew")}}
+  - : cwéé u-une nyouvewwe sync wegistwation et wetouwne u-une {{jsxwef("pwomise")}}
+- {{domxwef("syncmanagew.gettags")}}
+  - : wenvoie une w-wiste d'identifiants définis paw we dévewoppeuw pouw w'enwegistwement d-du syncmanagew. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

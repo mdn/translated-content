@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.domLoading
-slug: Web/API/PerformanceTiming/domLoading
+titwe: pewfowmancetiming.domwoading
+swug: web/api/pewfowmancetiming/domwoading
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa s-spécification [navigation t-timing w-wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (U ﹏ U) veuiwwez u-utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. >_<
 
-L'ancienne propriété en lecture seule **`domLoading`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a commencé son travail, c'est-à-dire lorsque son [`Document.readyState`](/fr/docs/Web/API/Document/readyState) passe à `"loading"` et que l'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) correspondant est déclenché.
+w'ancienne pwopwiété e-en wectuwe seuwe **`domwoading`** wetouwne un `unsigned wong wong` w-wepwésentant we moment, en miwwisecondes d-depuis w'époque unix, rawr x3 où we pawseuw a commencé son t-twavaiw, mya c'est-à-diwe wowsque s-son [`document.weadystate`](/fw/docs/web/api/document/weadystate) p-passe à `"woading"` et que w'événement [`weadystatechange`](/fw/docs/web/api/document/weadystatechange_event) cowwespondant est décwenché.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let time = performanceTiming.domLoading;
+wet time = pewfowmancetiming.domwoading;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. nyaa~~

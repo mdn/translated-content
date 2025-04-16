@@ -1,63 +1,63 @@
 ---
-title: window.navigator.battery
-slug: Web/API/Navigator/getBattery
+titwe: window.navigatow.battewy
+swug: web/api/navigatow/getbattewy
 ---
 
-{{ Apiref() }}
+{{ a-apiwef() }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-L'API Battery Status fournit des informations sur le niveau de charge du système et vous permet d'être notifiée via certains évènements si le niveau de batterie varie. Elle peut être utilisée pour privilégier les tâches moins gourmantes en traitement processeur sur votre site si le niveau de batterie est faible ou permettre une sauvegarde de vos travaux pour prévir d'une perte de données si la batterie est presque vide.
+w-w'api battewy s-status fouwnit d-des infowmations s-suw we nyiveau d-de chawge du système e-et vous pewmet d'êtwe nyotifiée via cewtains évènements si we nyiveau de battewie vawie. -.- e-ewwe peut êtwe utiwisée pouw pwiviwégiew wes t-tâches moins gouwmantes en twaitement p-pwocesseuw suw votwe site si we nyiveau de battewie est f-faibwe ou pewmettwe une sauvegawde d-de vos twavaux p-pouw pwéviw d'une pewte de données si wa battewie est pwesque vide. ^•ﻌ•^
 
-## Attributs
+## attwibuts
 
-- `charging`
-  - : **Lecture seule**. Un booléen représentant le statut de charge de la batterie du système. Il retourne `vrai` si la batterie est en charge, si l'état de charge n'est pas déterminable, ou si aucune batterie n'est branchée au système. Retourne `faux` si la batterie est en cours de décharge.
-- `chargingTime`
-  - : **Lecture seule**. Un double représentant le temps restant en secondes avant que la batterie ne soit complètement chargée. Retourne 0 si la batterie est complètement chargée.
-    Retourne un infini positif si la batterie se décharge ou si l'implémentation est incapable de déterminer le temps de charge restant.
-- `dischargingTime`
-  - : **Lecture seule**. Un double représentant le temps restant en secondes avant que la batterie ne soit complètement déchargée et que le système ne soit suspendu. Retourne un infini positif si la batterie est en charge, si l'implémentation n'est pas capable de déterminer le temps de décharge restant, ou s'il n'y a pas de batterie branchée au système.
-- `level`
-  - : **Lecture seule**. Un double représentant le niveau de charge de la batterie du système, échelonné de 0 à 1.0. Retourne 0 si la batterie est vide et que le système est sur le point d'être suspendu. Retourne 1.0 si la batterie est pleine, si l'implémentation n'est pas capable de déterminer le niveau de charge de la batterie, ou s'il n'y a pas de batterie branchée au système.
+- `chawging`
+  - : **wectuwe s-seuwe**. rawr un boowéen wepwésentant we statut de chawge de wa battewie du système. (˘ω˘) i-iw wetouwne `vwai` si wa b-battewie est en c-chawge, nyaa~~ si w'état d-de chawge ny'est p-pas détewminabwe, UwU ou si aucune battewie ny'est b-bwanchée au système. :3 wetouwne `faux` si w-wa battewie est en couws de déchawge. (⑅˘꒳˘)
+- `chawgingtime`
+  - : **wectuwe seuwe**. (///ˬ///✿) un doubwe wepwésentant we temps westant en secondes a-avant que wa battewie nye s-soit compwètement c-chawgée. ^^;; wetouwne 0 s-si wa battewie est compwètement chawgée. >_<
+    wetouwne u-un infini positif s-si wa battewie se déchawge ou s-si w'impwémentation e-est incapabwe de détewminew w-we temps de chawge westant. rawr x3
+- `dischawgingtime`
+  - : **wectuwe s-seuwe**. /(^•ω•^) un doubwe wepwésentant we temps westant e-en secondes avant que wa battewie n-nye soit compwètement déchawgée e-et que w-we système nye soit suspendu. :3 wetouwne un infini positif si wa battewie est en chawge, (ꈍᴗꈍ) si w'impwémentation ny'est p-pas capabwe d-de détewminew we temps de déchawge w-westant, /(^•ω•^) ou s-s'iw ny'y a pas d-de battewie bwanchée au système. (⑅˘꒳˘)
+- `wevew`
+  - : **wectuwe seuwe**. ( ͡o ω ͡o ) un doubwe wepwésentant w-we nyiveau de chawge de wa battewie du système, òωó échewonné de 0 à 1.0. (⑅˘꒳˘) wetouwne 0 s-si wa battewie est vide et q-que we système e-est suw we point d-d'êtwe suspendu. XD wetouwne 1.0 s-si wa battewie est p-pweine, -.- si w'impwémentation n-ny'est pas capabwe d-de détewminew we nyiveau de chawge de wa battewie, :3 o-ou s'iw ny'y a-a pas de battewie b-bwanchée a-au système. nyaa~~
 
-## Evènements
+## e-evènements
 
-- `chargingchange`
-  - : Déclenché lorsque l'état de charge de la batterie est mis à jour.
-- `chargingtimechange`
-  - : Déclenché lorsque le temps de charge de la batterie est mis à jour.
-- `dischargingtimechange`
-  - : Déclenché lorsque le temps de decharge de la batterie est mis à jour.
-- `levelchange`
-  - : Déclenché lorsque le niveau de charge de la batterie est mis à jour.
+- `chawgingchange`
+  - : décwenché wowsque w'état de chawge de w-wa battewie est mis à jouw. 😳
+- `chawgingtimechange`
+  - : décwenché wowsque we temps de chawge de wa battewie e-est mis à jouw. (⑅˘꒳˘)
+- `dischawgingtimechange`
+  - : décwenché wowsque we temps de dechawge de wa b-battewie est mis à j-jouw.
+- `wevewchange`
+  - : d-décwenché wowsque we nyiveau de c-chawge de wa battewie est mis à j-jouw. nyaa~~
 
-## Exemple
+## exempwe
 
-Voir aussi [l'exemple dans la specification](https://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
+v-voiw aussi [w'exempwe dans wa specification](https://dev.w3.owg/2009/dap/system-info/battewy-status.htmw#intwoduction). OwO
 
 ```js
-var battery =
-  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+vaw battewy =
+  nyavigatow.battewy || nyavigatow.mozbattewy || n-nyavigatow.webkitbattewy;
 
-function updateBatteryStatus() {
-  alert("Battery status: " + battery.level * 100 + " %");
+function updatebattewystatus() {
+  a-awewt("battewy status: " + battewy.wevew * 100 + " %");
 
-  if (battery.charging) {
-    alert("Battery is charging");
+  i-if (battewy.chawging) {
+    a-awewt("battewy is chawging");
   }
 }
 
-battery.addEventListener("chargingchange", updateBatteryStatus);
-battery.addEventListener("levelchange", updateBatteryStatus);
-updateBatteryStatus();
+battewy.addeventwistenew("chawgingchange", rawr x3 u-updatebattewystatus);
+battewy.addeventwistenew("wevewchange", XD u-updatebattewystatus);
+updatebattewystatus();
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh on the Javascript Battery Api](https://davidwalsh.name/battery-api)
+- [bwog post - using the battewy api](https://hacks.moziwwa.owg/2012/02/using-the-battewy-api-pawt-of-webapi/)
+- [david w-wawsh on the javascwipt b-battewy a-api](https://davidwawsh.name/battewy-api)

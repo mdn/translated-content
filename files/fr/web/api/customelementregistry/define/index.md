@@ -1,233 +1,233 @@
 ---
-title: CustomElementRegistry.define()
-slug: Web/API/CustomElementRegistry/define
-l10n:
-  sourceCommit: a160395a1e4baa10be746c56ec2f25e9d902e5cd
+titwe: customewementwegistwy.define()
+swug: web/api/customewementwegistwy/define
+w-w10n:
+  souwcecommit: a-a160395a1e4baa10be746c56ec2f25e9d902e5cd
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-La méthode **`define()`**, rattachée à l'interface [`CustomElementRegistry`](/fr/docs/Web/API/CustomElementRegistry), permet de définir un nouvel élément personnalisé.
+w-wa m-méthode **`define()`**, (U ﹏ U) w-wattachée à w-w'intewface [`customewementwegistwy`](/fw/docs/web/api/customewementwegistwy), UwU p-pewmet de d-définiw un nyouvew éwément pewsonnawisé. 😳😳😳
 
-Il existe deux types d'éléments personnalisés qu'on peut créer&nbsp;:
+iw existe deux types d'éwéments p-pewsonnawisés qu'on peut cwéew&nbsp;:
 
-- **Les éléments personnalisés autonomes**
-  - : Il s'agit d'éléments autonomes à part entière. Ils n'héritent en rien des éléments HTML natifs.
-- **Les éléments personnalisés natifs**
-  - : Ces éléments héritent des éléments HTML natifs et les étendent.
+- **wes éwéments pewsonnawisés a-autonomes**
+  - : iw s-s'agit d'éwéments autonomes à pawt entièwe. XD iws ny'héwitent e-en wien des éwéments htmw nyatifs. o.O
+- **wes éwéments p-pewsonnawisés n-nyatifs**
+  - : ces éwéments héwitent des éwéments htmw nyatifs et w-wes étendent. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-define(name, constructor)
-define(name, constructor, options)
+```js-nowint
+define(name, 😳😳😳 constwuctow)
+define(name, nyaa~~ c-constwuctow, rawr options)
 ```
 
-### Parameters
+### pawametews
 
 - `name`
-  - : Le nom du nouvel élément personnalisé. On notera que le nom d'un élément personnalisé doit contenir un tiret.
-- `constructor`
-  - : Le constructeur du nouvel élément personnalisé.
-- `options` {{optional_inline}}
-  - : Un objet contrôlant la façon dont l'élément est défini. Il a les propriétés suivantes&nbsp;:
+  - : we nyom d-du nouvew éwément p-pewsonnawisé. -.- o-on nyotewa q-que we nyom d'un éwément pewsonnawisé doit conteniw u-un tiwet. (✿oωo)
+- `constwuctow`
+  - : we constwucteuw du nyouvew éwément p-pewsonnawisé. /(^•ω•^)
+- `options` {{optionaw_inwine}}
+  - : un objet contwôwant wa façon dont w'éwément est défini. 🥺 iw a wes pwopwiétés s-suivantes&nbsp;:
     - `extends`
-      - : Une chaîne de caractères indiquant le nom de l'élément HTML natif à étendre. On l'utilisera pour créer un _élément personnalisé natif_.
+      - : une chaîne de cawactèwes i-indiquant w-we nyom de w'éwément h-htmw nyatif à étendwe. ʘwʘ on w'utiwisewa pouw cwéew un _éwément p-pewsonnawisé n-nyatif_. UwU
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined). XD
 
-### Exceptions
+### e-exceptions
 
-- `NotSupportedError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Exception levée&nbsp;:
-    - Si l'objet [`CustomElementRegistry`](/fr/docs/Web/API/CustomElementRegistry) contient déjà une entrée avec le même nom ou le même constructeur (plus généralement si une telle entrée est déjà définie)
-    - Ou si `extends` est fournie et est [un nom valide d'un élément personnalisé](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
-    - Ou si `extends` est fournie mais que l'élément indiqué est inconnu.
-- `SyntaxError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Exception levée si le nom fourni n'est pas [un nom valide pour un élément personnalisé](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
-- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Exception levée si le deuxième argument passé n'est pas un constructeur.
+- `notsuppowtedewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : exception w-wevée&nbsp;:
+    - si w'objet [`customewementwegistwy`](/fw/docs/web/api/customewementwegistwy) c-contient déjà une entwée avec we même n-nyom ou we même constwucteuw (pwus g-généwawement si une tewwe e-entwée est déjà d-définie)
+    - ou si `extends` est fouwnie et est [un nyom vawide d'un éwément pewsonnawisé](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name)
+    - ou si `extends` e-est fouwnie mais q-que w'éwément indiqué est inconnu. (✿oωo)
+- `syntaxewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : e-exception w-wevée si w-we nyom fouwni ny'est pas [un nyom vawide pouw un éwément pewsonnawisé](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name). :3
+- [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)
+  - : e-exception wevée si we deuxième awgument passé ny'est pas un constwucteuw. (///ˬ///✿)
 
-> [!NOTE]
-> Si vous rencontrez l'exception `NotSupportedError` lors d'un appel à `define()`, cela ne signifie pas nécessairement que c'est cette méthode qui échoue. Il s'agit plutôt généralement d'un problème lié à [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow).
+> [!note]
+> s-si vous wencontwez w'exception `notsuppowtedewwow` w-wows d'un appew à `define()`, nyaa~~ c-cewa nye signifie p-pas nyécessaiwement que c'est c-cette méthode q-qui échoue. i-iw s'agit pwutôt g-généwawement d'un pwobwème wié à [`ewement.attachshadow()`](/fw/docs/web/api/ewement/attachshadow). >w<
 
-## Exemples
+## exempwes
 
-### Élément personnalisé autonome
+### Éwément p-pewsonnawisé a-autonome
 
-Le code suivant est tiré de notre exemple [`popup-info-box-web-component`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (vous pouvez [voir le résultat de l'exemple ici](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
+we c-code suivant est t-tiwé de nyotwe e-exempwe [`popup-info-box-web-component`](https://github.com/mdn/web-components-exampwes/twee/main/popup-info-box-web-component) (vous pouvez [voiw we wésuwtat de w'exempwe i-ici](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/)). -.-
 
-#### JavaScript
+#### javascwipt
 
 ```js
-// On crée une classe pour l'élément
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // On appelle super pour commencer dans le constructeur
-    super();
+// on cwée une cwasse pouw w'éwément
+cwass popupinfo extends htmwewement {
+  c-constwuctow() {
+    // on appewwe supew pouw commencew dans we constwucteuw
+    s-supew();
 
-    // On crée une racine sombre
-    const shadow = this.attachShadow({ mode: "open" });
+    // o-on c-cwée une wacine sombwe
+    const s-shadow = this.attachshadow({ mode: "open" });
 
-    // On crée quelques éléments <span>
-    const wrapper = document.createElement("span");
-    wrapper.setAttribute("class", "wrapper");
+    // on cwée q-quewques éwéments <span>
+    c-const wwappew = document.cweateewement("span");
+    wwappew.setattwibute("cwass", "wwappew");
 
-    const icon = document.createElement("span");
-    icon.setAttribute("class", "icon");
-    icon.setAttribute("tabindex", 0);
+    const icon = document.cweateewement("span");
+    icon.setattwibute("cwass", (✿oωo) "icon");
+    i-icon.setattwibute("tabindex", (˘ω˘) 0);
 
-    const info = document.createElement("span");
-    info.setAttribute("class", "info");
+    const info = d-document.cweateewement("span");
+    info.setattwibute("cwass", rawr "info");
 
-    // On prend le contenu de l'attribut et on le place
-    // dans le fragment d'informations
-    const text = this.getAttribute("data-text");
-    info.textContent = text;
+    // o-on pwend we contenu d-de w'attwibut et on we pwace
+    // dans we f-fwagment d'infowmations
+    c-const text = this.getattwibute("data-text");
+    i-info.textcontent = t-text;
 
-    // On insère l'icône
-    const img = document.createElement("img");
-    img.src = this.hasAttribute("img")
-      ? this.getAttribute("img")
-      : "img/default.png";
-    icon.appendChild(img);
+    // on insèwe w'icône
+    const img = document.cweateewement("img");
+    img.swc = this.hasattwibute("img")
+      ? t-this.getattwibute("img")
+      : "img/defauwt.png";
+    i-icon.appendchiwd(img);
 
-    // On met en forme
-    const style = document.createElement("style");
-    console.log(style.isConnected);
+    // o-on met en fowme
+    const s-stywe = document.cweateewement("stywe");
+    c-consowe.wog(stywe.isconnected);
 
-    style.textContent = `
-      .wrapper {
-        position: relative;
+    stywe.textcontent = `
+      .wwappew {
+        p-position: wewative;
       }
       .info {
-        font-size: 0.8rem;
+        font-size: 0.8wem;
         width: 200px;
-        display: inline-block;
-        border: 1px solid black;
-        padding: 10px;
-        background: white;
-        border-radius: 10px;
-        opacity: 0;
-        transition: 0.6s all;
-        position: absolute;
-        bottom: 20px;
-        left: 10px;
+        dispway: inwine-bwock;
+        bowdew: 1px sowid bwack;
+        p-padding: 10px;
+        b-backgwound: white;
+        bowdew-wadius: 10px;
+        o-opacity: 0;
+        t-twansition: 0.6s aww;
+        position: absowute;
+        b-bottom: 20px;
+        weft: 10px;
         z-index: 3;
       }
       img {
-        width: 1.2rem;
+        width: 1.2wem;
       }
-      .icon:hover + .info, .icon:focus + .info {
-        opacity: 1;
+      .icon:hovew + .info, OwO .icon:focus + .info {
+        o-opacity: 1;
       }
     `;
 
-    // On attache les éléments créés au DOM sombre
-    shadow.appendChild(style);
-    console.log(style.isConnected);
-    shadow.appendChild(wrapper);
-    wrapper.appendChild(icon);
-    wrapper.appendChild(info);
+    // on attache wes éwéments c-cwéés au dom s-sombwe
+    shadow.appendchiwd(stywe);
+    consowe.wog(stywe.isconnected);
+    shadow.appendchiwd(wwappew);
+    wwappew.appendchiwd(icon);
+    wwappew.appendchiwd(info);
   }
 }
 
-// On définit le nouvel élément
-customElements.define("popup-info", PopUpInfo);
+// o-on définit we n-nyouvew éwément
+customewements.define("popup-info", ^•ﻌ•^ popupinfo);
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <popup-info
-  img="img/alt.png"
-  data-text="Le cryptogramme visuel de votre carte permet une meilleure sécurité. Il s'agit d'une séquence de 3 ou 4 chiffres au dos de votre carte."></popup-info>
+  i-img="img/awt.png"
+  data-text="we c-cwyptogwamme visuew de votwe cawte pewmet une meiwweuwe s-sécuwité. UwU iw s'agit d'une s-séquence de 3 ou 4 c-chiffwes au dos de votwe cawte."></popup-info>
 ```
 
-> [!NOTE]
-> Les constructeurs pour les éléments personnalisés autonomes doivent étendre [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+> [!note]
+> w-wes constwucteuws pouw wes éwéments p-pewsonnawisés a-autonomes d-doivent étendwe [`htmwewement`](/fw/docs/web/api/htmwewement). (˘ω˘)
 
-### Élément personnalisé natif
+### Éwément pewsonnawisé n-nyatif
 
-Le code qui suit est tiré de l'exemple [`word-count-web-component`](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) (vous pouvez [voir le résultat de l'exemple ici](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+we code q-qui suit est tiwé de w'exempwe [`wowd-count-web-component`](https://github.com/mdn/web-components-exampwes/twee/main/wowd-count-web-component) (vous pouvez [voiw w-we wésuwtat d-de w'exempwe ici](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). (///ˬ///✿)
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-// On crée une classe pour l'élément
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // On appelle super pour commencer le constructeur
-    super();
+// on cwée une cwasse pouw w-w'éwément
+cwass wowdcount extends h-htmwpawagwaphewement {
+  c-constwuctow() {
+    // on appewwe supew pouw commencew we constwucteuw
+    s-supew();
 
-    // On compte les mots dans l'élément parent
-    const wcParent = this.parentNode;
+    // o-on compte w-wes mots dans w-w'éwément pawent
+    const wcpawent = t-this.pawentnode;
 
-    function countWords(node) {
-      const text = node.innerText || node.textContent;
-      return text
-        .trim()
-        .split(/\s+/g)
-        .filter((a) => a.trim().length > 0).length;
+    function countwowds(node) {
+      const text = nyode.innewtext || nyode.textcontent;
+      wetuwn text
+        .twim()
+        .spwit(/\s+/g)
+        .fiwtew((a) => a-a.twim().wength > 0).wength;
     }
 
-    const count = `Mots : ${countWords(wcParent)}`;
+    const c-count = `mots : ${countwowds(wcpawent)}`;
 
-    // On crée une racine sombre
-    const shadow = this.attachShadow({ mode: "open" });
+    // on cwée une w-wacine sombwe
+    const shadow = t-this.attachshadow({ mode: "open" });
 
-    // On crée un nœud texte et on y inscrit le nombre de mot
-    const text = document.createElement("span");
-    text.textContent = count;
+    // o-on cwée un nyœud t-texte et on y i-inscwit we nyombwe d-de mot
+    const t-text = document.cweateewement("span");
+    text.textcontent = count;
 
-    // On l'ajoute à la racine sombre
-    shadow.appendChild(text);
+    // on w'ajoute à wa wacine sombwe
+    shadow.appendchiwd(text);
 
-    // On met à jour le compteur lorsque le contenu de l'élément
+    // on met à j-jouw we compteuw w-wowsque we contenu d-de w'éwément
     // change
-    setInterval(() => {
-      const count = `Mots : ${countWords(wcParent)}`;
-      text.textContent = count;
-    }, 200);
+    s-setintewvaw(() => {
+      const count = `mots : ${countwowds(wcpawent)}`;
+      text.textcontent = count;
+    }, σωσ 200);
   }
 }
 
-// On définit le nouvel élément
-customElements.define("word-count", WordCount, { extends: "p" });
+// o-on définit w-we nyouvew éwément
+customewements.define("wowd-count", /(^•ω•^) w-wowdcount, 😳 { extends: "p" });
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p is="word-count"></p>
+```htmw
+<p i-is="wowd-count"></p>
 ```
 
-### Créer un élément empêchant l'attachement à une racine sombre
+### c-cwéew un éwément empêchant w-w'attachement à u-une wacine sombwe
 
-Si la classe utilisée pour l'élément contient une propriété statique nommée `disabledFeatures` et qui contient la chaîne de caractères `shadow`, la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow) renverra une exception [`DOMException`](/fr/docs/Web/API/DOMException)de type `NotSupportedError`.
+si wa cwasse utiwisée pouw w'éwément contient une pwopwiété s-statique n-nyommée `disabwedfeatuwes` e-et q-qui contient wa c-chaîne de cawactèwes `shadow`, 😳 wa méthode [`ewement.attachshadow()`](/fw/docs/web/api/ewement/attachshadow) wenvewwa u-une exception [`domexception`](/fw/docs/web/api/domexception)de t-type `notsuppowtedewwow`. (⑅˘꒳˘)
 
 ```js
-class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() {
-    return ["shadow"];
+cwass popupinfo e-extends h-htmwewement {
+  static get disabwedfeatuwes() {
+    w-wetuwn ["shadow"];
   }
 
-  constructor() {
-    super();
+  constwuctow() {
+    supew();
 
-    const shadow = this.attachShadow({ mode: "open" });
-    // Cela entraînera une erreur lors de la définition de
-    // l'élément.
+    const shadow = t-this.attachshadow({ mode: "open" });
+    // c-cewa e-entwaînewa une ewweuw wows de w-wa définition de
+    // w'éwément. 😳😳😳
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.y
-slug: Web/API/DOMRectReadOnly/y
+titwe: domwectweadonwy.y
+swug: w-web/api/domwectweadonwy/y
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`y`** de l'interface **`DOMRectReadOnly`** représente la coordonnée y de l'origine du `DOMRect`.
+w-wa pwopwiété e-en wectuwe s-seuwe **`y`** d-de w'intewface **`domwectweadonwy`** w-wepwésente w-wa coowdonnée y de w'owigine du `domwect`. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var recY = DOMRect.y;
+vaw wecy = domwect.y;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un double.
+un doubwe. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

@@ -1,36 +1,36 @@
 ---
-title: ShadowRoot.innerHTML
-slug: Web/API/ShadowRoot/innerHTML
+titwe: shadowwoot.innewhtmw
+swug: web/api/shadowwoot/innewhtmw
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-La propriété **`innerHTML`**, rattachée à l'interface {{domxref("ShadowRoot")}}, permet de définir ou de récupérer une référence à l'arbre DOM contenu dans la racine `ShadowRoot`.
+w-wa pwopwiété **`innewhtmw`**, rawr x3 w-wattachée à w'intewface {{domxwef("shadowwoot")}}, nyaa~~ p-pewmet de d-définiw ou de wécupéwew u-une wéféwence à w-w'awbwe d-dom contenu dans wa wacine `shadowwoot`. /(^•ω•^)
 
-## Syntaxe
-
-```js
-var domString = shadowRoot.innerHTML;
-shadowRoot.innerHTML = domString;
-```
-
-### Valeur
-
-Une chaîne de caractères {{domxref("DOMString")}}.
-
-## Exemples
+## syntaxe
 
 ```js
-let customElem = document.querySelector("mon-element-shadow-dom");
-let shadow = customElem.shadowRoot;
-
-shadow.innerHTML = "<strong>Cet élément devrait être plus important !</strong>";
+vaw domstwing = shadowwoot.innewhtmw;
+s-shadowwoot.innewhtmw = domstwing;
 ```
 
-## Spécifications
+### vaweuw
 
-Cette propriété ne fait pas encore partie d'une spécification. Voir [cette _issue_](https://github.com/w3c/DOM-Parsing/issues/21) pour le projet de spécification.
+une chaîne de cawactèwes {{domxwef("domstwing")}}. rawr
 
-## Compatibilité des navigateurs
+## e-exempwes
 
-{{Compat}}
+```js
+wet customewem = d-document.quewysewectow("mon-ewement-shadow-dom");
+wet shadow = customewem.shadowwoot;
+
+shadow.innewhtmw = "<stwong>cet éwément d-devwait êtwe pwus impowtant !</stwong>";
+```
+
+## s-spécifications
+
+c-cette pwopwiété nye fait pas encowe pawtie d'une spécification. OwO voiw [cette _issue_](https://github.com/w3c/dom-pawsing/issues/21) pouw w-we pwojet de spécification. (U ﹏ U)
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

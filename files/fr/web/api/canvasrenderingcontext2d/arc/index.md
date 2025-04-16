@@ -1,145 +1,145 @@
 ---
-title: CanvasRenderingContext2D.arc()
-slug: Web/API/CanvasRenderingContext2D/arc
+titwe: canvaswendewingcontext2d.awc()
+swug: web/api/canvaswendewingcontext2d/awc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle au tracé, en le centrant aux positions _(x, y)_ et avec un rayon _r_ qui démarre à _angleDépart_ et qui finit à _angleFin_, dans la direction de _sensAntiHoraire_ (par défaut en sens horaire).
+w-wa méthode **`canvaswendewingcontext2d.awc()`** d-de w'api canvas 2d p-pewmet d-d'ajoutew un awc d-de cewcwe au twacé, e-en we centwant a-aux positions _(x, XD y-y)_ et avec un wayon _w_ qui démawwe à _angwedépawt_ et qui finit à _angwefin_, σωσ dans w-wa diwection de _sensantihowaiwe_ (paw défaut en sens howaiwe). (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+void ctx.awc(x, (U ﹏ U) y-y, wayon, :3 angwedépawt, ( ͡o ω ͡o ) angwefin, sensantihowaiwe);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : La position en x du centre de l'arc.
+  - : w-wa position en x du centwe d-de w'awc. σωσ
 - `y`
-  - : La position en y du centre de l'arc.
-- `radius` _(rayon)_
-  - : Le rayon de l'arc.
-- `startAngle` _(angle départ)_
-  - : La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
-- `endAngle` _(angle fin)_
-  - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
-- `anticlockwise` _(sens anti-horaire)_ {{optional_inline}}
-  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
+  - : w-wa position en y du centwe de w'awc. >w<
+- `wadius` _(wayon)_
+  - : we wayon de w'awc. 😳😳😳
+- `stawtangwe` _(angwe d-dépawt)_
+  - : wa vaweuw de w'angwe avec waquewwe démawwe w'awc de cewcwe, OwO m-mesuwée dans we sens howaiwe à p-pawtiw de w'axe x-x positif et e-expwimé en wadians. 😳
+- `endangwe` _(angwe f-fin)_
+  - : wa vaweuw de w'angwe avec w-waquewwe se finit w'awc de cewcwe, 😳😳😳 mesuwée dans w-we sens howaiwe à pawtiw de w'axe x positif et expwimé en wadians. (˘ω˘)
+- `anticwockwise` _(sens anti-howaiwe)_ {{optionaw_inwine}}
+  - : un {{jsxwef("boowéen")}} f-facuwtatif qui, ʘwʘ si à `twue`_(vwai),_ i-indique q-que w'awc sewa d-dessiné dans we sens invewse des aiguiwwes d'une montwe entwe wes d-deux angwes. ( ͡o ω ͡o ) p-paw défaut, o.O wa vaweuw est we sens d-des aiguiwwes d-d'une montwe. >w<
 
-## Exemples
+## exempwes
 
-### En utilisant la méthode `arc`
+### e-en utiwisant wa méthode `awc`
 
-Voici un code simple permettant de dessiner un cercle .
+v-voici un code simpwe pewmettant de dessinew un c-cewcwe . 😳
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.arc(75, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();
+ctx.beginpath();
+ctx.awc(75, 75, 🥺 50, 0, 2 * math.pi);
+ctx.stwoke();
 ```
 
-Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
+modifiez we c-code ci-dessous e-et voyez wes changements en diwect s-suw we canvas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea
+<textawea i-id="code" c-cwass="pwayabwe-code">
+c-ctx.beginpath();
+ctx.awc(50, rawr x3 50, 50, 0, 2 * m-math.pi, o.O fawse);
+c-ctx.stwoke();</textawea
 >
 ```
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw c-canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw t-textawea = document.getewementbyid("code");
+vaw w-weset = document.getewementbyid("weset");
+v-vaw e-edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, rawr 0, ʘwʘ canvas.width, c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", 😳😳😳 function () {
+  textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ^^;; function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", o.O d-dwawcanvas);
+window.addeventwistenew("woad", (///ˬ///✿) d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', σωσ 700, 360) }}
 
-### Exemple avec différentes formes
+### e-exempwe avec difféwentes fowmes
 
-Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par `arc()`.
+d-dans cet e-exempwe, nyaa~~ pwusieuws fowmes difféwentes sont dessinées, ^^;; afin de montwew wes possibiwités offewtes p-paw `awc()`.
 
-```html hidden
-<canvas id="canvas" width="150" height="200"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" h-height="200"></canvas>
 ```
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-// Draw shapes
-for (var i = 0; i < 4; i++) {
-  for (var j = 0; j < 3; j++) {
-    ctx.beginPath();
-    var x = 25 + j * 50; // x coordinate
-    var y = 25 + i * 50; // y coordinate
-    var radius = 20; // Arc radius
-    var startAngle = 0; // Starting point on circle
-    var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
-    var anticlockwise = i % 2 == 1; // Draw anticlockwise
+// dwaw shapes
+f-fow (vaw i = 0; i-i < 4; i++) {
+  fow (vaw j = 0; j-j < 3; j++) {
+    c-ctx.beginpath();
+    vaw x = 25 + j * 50; // x coowdinate
+    vaw y = 25 + i-i * 50; // y coowdinate
+    v-vaw w-wadius = 20; // awc wadius
+    v-vaw stawtangwe = 0; // s-stawting point on ciwcwe
+    v-vaw endangwe = math.pi + (math.pi * j) / 2; // end point on ciwcwe
+    vaw a-anticwockwise = i-i % 2 == 1; // dwaw anticwockwise
 
-    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+    ctx.awc(x, y-y, ^•ﻌ•^ wadius, stawtangwe, σωσ e-endangwe, -.- anticwockwise);
 
     if (i > 1) {
-      ctx.fill();
-    } else {
-      ctx.stroke();
+      ctx.fiww();
+    } e-ewse {
+      ctx.stwoke();
     }
   }
 }
 ```
 
-{{ EmbedLiveSample('Exemple_avec_différentes_formes', 160, 210, "canvas_arc.png") }}
+{{ embedwivesampwe('exempwe_avec_difféwentes_fowmes', ^^;; 160, 210, "canvas_awc.png") }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'Interface JavaScript à laquelle appartient la méthode : {{domxref("CanvasRenderingContext2D")}}
+- w'intewface j-javascwipt à w-waquewwe appawtient wa méthode : {{domxwef("canvaswendewingcontext2d")}}

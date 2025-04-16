@@ -1,34 +1,34 @@
 ---
-title: ImageData.data
-slug: Web/API/ImageData/data
+titwe: imagedata.data
+swug: web/api/imagedata/data
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La propriété en lecteur seul `ImageData.data` retourne un {{jsxref("Uint8ClampedArray")}}. Il représente un tableau unidirectionnel contenant les données sous forme d'entiers inclus entre 0 et 255 dans l'ordre RGBA comme ceci&nbsp;: `[r1,g1,b1,a1,…,rn;gn;bn;an]`.
+w-wa pwopwiété e-en wecteuw seuw `imagedata.data` w-wetouwne un {{jsxwef("uint8cwampedawway")}}. mya i-iw wepwésente u-un tabweau unidiwectionnew c-contenant w-wes données sous fowme d'entiews incwus entwe 0 et 255 dans w'owdwe wgba c-comme ceci&nbsp;: `[w1,g1,b1,a1,…,wn;gn;bn;an]`. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
 imagedata.data;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var imagedata = new ImageData(100, 100);
-imagedata.data; // Uint8ClampedArray[40000]
+vaw i-imagedata = nyew imagedata(100, 😳 100);
+imagedata.data; // uint8cwampedawway[40000]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("ImageData.height")}}
-- {{domxref("ImageData.width")}}
+- {{domxwef("imagedata.height")}}
+- {{domxwef("imagedata.width")}}

@@ -1,22 +1,22 @@
 ---
-title: CSSMatrix
-slug: Web/API/DOMMatrix
+titwe: cssmatwix
+swug: web/api/dommatwix
 ---
 
-{{APIRef("CSSOM")}}{{Non-standard_header}}
+{{apiwef("cssom")}}{{non-standawd_headew}}
 
-Une **`CSSMatrix`** représente une matrice homogène 4x4 dans laquelle il est possible d'appliquer des transformations 2D ou 3D. Cette classe faisait à un moment partie du module de transitions CSS (Level 3) mais elle n'a pas été propagée dans le brouillon de travail (_Working Draft_) actuel. Utilisez plutôt `DOMMatrix.`
+u-une **`cssmatwix`** w-wepwésente une m-matwice homogène 4x4 d-dans waquewwe i-iw est possibwe d-d'appwiquew d-des twansfowmations 2d o-ou 3d. ( ͡o ω ͡o ) cette cwasse faisait à un moment pawtie du moduwe de twansitions c-css (wevew 3) mais ewwe ny'a pas été pwopagée d-dans we bwouiwwon de twavaiw (_wowking d-dwaft_) actuew. rawr x3 utiwisez pwutôt `dommatwix.`
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [MSDN&nbsp;: `Documentation sur MSCSSMatrix`](<https://msdn.microsoft.com/en-us/library/ie/hh772390(v=vs.85).aspx>)
-- [Safari Developer Library : Documentation sur WebKitCSSMatrix](https://developer.apple.com/library/safari/documentation/AudioVideo/Reference/WebKitCSSMatrixClassReference/index.html)
-- [Mozilla : Bug 717722 : Exécution de `(WebKit)CSSMatrix()`](https://bugzilla.mozilla.org/show_bug.cgi?id=717722)
+- [msdn&nbsp;: `documentation s-suw mscssmatwix`](<https://msdn.micwosoft.com/en-us/wibwawy/ie/hh772390(v=vs.85).aspx>)
+- [safawi devewopew wibwawy : documentation suw webkitcssmatwix](https://devewopew.appwe.com/wibwawy/safawi/documentation/audiovideo/wefewence/webkitcssmatwixcwasswefewence/index.htmw)
+- [moziwwa : b-bug 717722 : exécution de `(webkit)cssmatwix()`](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=717722)

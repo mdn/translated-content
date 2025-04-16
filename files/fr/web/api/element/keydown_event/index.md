@@ -1,76 +1,76 @@
 ---
-title: GlobalEventHandlers.onkeydown
-slug: Web/API/Element/keydown_event
+titwe: gwobaweventhandwews.onkeydown
+swug: web/api/ewement/keydown_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`onkeydown`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`keydown`](/fr/docs/Web/API/Element/keydown_event).
+wa pwopwiété **`onkeydown`**, :3 w-wattachée a-au mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews), -.- e-est [un g-gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui pewmet d-de twaitew wes évènements [`keydown`](/fw/docs/web/api/ewement/keydown_event). 😳
 
-L'évènement `keydown` est déclenché lorsque l'utilisatrice ou l'utilisateur appuie sur une touche du clavier.
+w'évènement `keydown` est décwenché wowsque w'utiwisatwice o-ou w'utiwisateuw appuie suw une touche du cwaview. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-cible.onkeydown = refFunction;
+cibwe.onkeydown = w-weffunction;
 ```
 
-### Value
+### vawue
 
-`refFunction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`KeyboardEvent`](/fr/docs/Web/API/KeyboardEvent) comme unique argument.
+`weffunction` est un nyom de fonction ou une [expwession de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function). (˘ω˘) w-wa fonction weçoit un objet [`keyboawdevent`](/fw/docs/web/api/keyboawdevent) c-comme unique awgument. >_<
 
-## Exemple
+## e-exempwe
 
-Cet exemple affiche la valeur de [`KeyboardEvent.code`](/fr/docs/Web/API/KeyboardEvent/code) à chaque fois qu'on appuie sur une touche à l'intérieur de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+cet exempwe affiche wa vaweuw de [`keyboawdevent.code`](/fw/docs/web/api/keyboawdevent/code) à chaque fois q-qu'on appuie suw une touche à w'intéwieuw de w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input). -.-
 
-### HTML
+### htmw
 
-```html
+```htmw
 <input />
-<p id="log"></p>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+c-const input = d-document.quewysewectow("input");
+c-const wog = document.getewementbyid("wog");
 
-input.onkeydown = logKey;
+i-input.onkeydown = wogkey;
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### nyotes de compatibiwité
 
-Depuis Firefox 65, les évènements [`keyup`](/fr/docs/Web/API/Element/keyup_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event) sont désormais déclenchés pendant la composition IME afin d'améliorer la compatibilité entre les navigateurs pour les locuteurs de langues asiatiques (CJKT) (voir [le bug 354358](https://bugzilla.mozilla.org/show_bug.cgi?id=354358)). Pour ignorer les évènements `keydown` qui font partie d'une composition, on pourra écrire quelque chose d'analogue au fragment qui suit (229 est une valeur spéciale de `keyCode` relative à un évènement qui a été traité par un IME)&nbsp;:
+depuis fiwefox 65, 🥺 w-wes évènements [`keyup`](/fw/docs/web/api/ewement/keyup_event) et [`keydown`](/fw/docs/web/api/ewement/keydown_event) s-sont désowmais d-décwenchés pendant w-wa composition ime afin d'améwiowew wa compatibiwité entwe w-wes nyavigateuws p-pouw wes wokawaii~uws de wangues a-asiatiques (cjkt) (voiw [we b-bug 354358](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=354358)). (U ﹏ U) pouw ignowew w-wes évènements `keydown` qui f-font pawtie d'une composition, on pouwwa écwiwe q-quewque chose d'anawogue au fwagment q-qui suit (229 est une vaweuw s-spéciawe de `keycode` w-wewative à un évènement qui a été twaité paw un ime)&nbsp;:
 
 ```js
-eventTarget.addEventListener("keydown", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
+eventtawget.addeventwistenew("keydown", >w< (event) => {
+  if (event.iscomposing || e-event.keycode === 229) {
+    w-wetuwn;
   }
-  // faire quelque chose
+  // faiwe quewque c-chose
 });
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- L'évènement [`keydown`](/fr/docs/Web/API/Element/keydown_event)
-- Les gestionnaires d'évènements associés
-  - [`GlobalEventHandlers.onkeypress`](/fr/docs/Web/API/Element/keypress_event)
-  - [`GlobalEventHandlers.onkeyup`](/fr/docs/Web/API/Element/keyup_event)
+- w-w'évènement [`keydown`](/fw/docs/web/api/ewement/keydown_event)
+- wes gestionnaiwes d'évènements associés
+  - [`gwobaweventhandwews.onkeypwess`](/fw/docs/web/api/ewement/keypwess_event)
+  - [`gwobaweventhandwews.onkeyup`](/fw/docs/web/api/ewement/keyup_event)

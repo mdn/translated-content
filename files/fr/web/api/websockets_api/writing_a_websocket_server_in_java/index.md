@@ -1,156 +1,156 @@
 ---
-title: Écrire un serveur WebSocket en Java
-slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
+titwe: Écwiwe un sewveuw websocket e-en java
+swug: w-web/api/websockets_api/wwiting_a_websocket_sewvew_in_java
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-## Introduction
+## i-intwoduction
 
-Cet exemple montre comment créer un serveur d'API WebSocket API utilisant Java d'Oracle.
+cet e-exempwe montwe c-comment cwéew u-un sewveuw d'api w-websocket api utiwisant java d'owacwe. >_<
 
-Bien que d'autres languages exécutés côté serveur peuvent être utilisés pour créer un serveur de WebSocket, cet exemple utilise Java d'Oracle pour simplifier le code en exemple.
+bien que d'autwes wanguages exécutés c-côté sewveuw peuvent êtwe utiwisés pouw cwéew u-un sewveuw de websocket, cet e-exempwe utiwise java d'owacwe pouw simpwifiew we code en exempwe. ^^;;
 
-Ce serveur respecte la [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), dont il prend uniquement en charge les connexions depuis Chrome 16, Firefox 11, IE 10 et au-delà.
+c-ce sewveuw wespecte wa [wfc 6455](https://datatwackew.ietf.owg/doc/htmw/wfc6455), (ˆ ﻌ ˆ)♡ d-dont iw pwend u-uniquement en chawge wes connexions depuis chwome 16, ^^;; fiwefox 11, (⑅˘꒳˘) ie 10 et au-dewà. rawr x3
 
-## Premiers pas
+## p-pwemiews pas
 
-WebSockets communique via une connexion [TCP (Transmission Control Protocol)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol). La classe Java [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) est située dans le paquet _java.net_.
+websockets communique via une connexion [tcp (twansmission contwow pwotocow)](http://en.wikipedia.owg/wiki/twansmission_contwow_pwotocow). (///ˬ///✿) w-wa cwasse java [sewvewsocket](https://docs.owacwe.com/javase/8/docs/api/java/net/sewvewsocket.htmw) est située d-dans we paquet _java.net_. 🥺
 
-### ServerSocket
+### s-sewvewsocket
 
-Constructeur :
+c-constwucteuw :
 
 ```java
-ServerSocket(int port)
+s-sewvewsocket(int powt)
 ```
 
-Lors de l'instanciation de la classe ServerSocket, celle-ci est liée au numéro de port renseigné par le paramètre _port_.
+wows de w'instanciation de w-wa cwasse sewvewsocket, >_< cewwe-ci est wiée au n-nyuméwo de powt wenseigné paw we pawamètwe _powt_. UwU
 
-Voici comment implémenter ce que nous venons d'apprendre :
+voici comment impwémentew ce que nyous venons d-d'appwendwe :
 
 ```java
-import java.net.ServerSocket;
-import java.net.Socket;
+impowt j-java.net.sewvewsocket;
+i-impowt j-java.net.socket;
 
-public class Server{
-    public static void main(String[] args){
-        ServerSocket server = new ServerSocket(80);
+pubwic cwass sewvew{
+    pubwic static void m-main(stwing[] awgs){
+        s-sewvewsocket sewvew = n-nyew sewvewsocket(80);
 
-        System.out.println("Démarrage du serveur sur 127.0.0.1:80.\r\nAttente d’une connexion...");
+        s-system.out.pwintwn("démawwage du sewveuw suw 127.0.0.1:80.\w\nattente d-d’une connexion...");
 
-        Socket client = server.accept();
+        s-socket cwient = sewvew.accept();
 
-        System.out.println("Un client s’est connecté.");
+        system.out.pwintwn("un c-cwient s’est connecté.");
     }
 }
 ```
 
-### Socket
+### s-socket
 
-Méthodes :
+méthodes :
 
-- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
-  Renvoie un flux d'entrée pour ce socket.
-- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
-  Renvoie un flux sortant pour ce socket.
+- `java.net.`[socket](https://docs.owacwe.com/javase/8/docs/api/java/net/socket.htmw) `getinputstweam()`
+  w-wenvoie u-un fwux d'entwée pouw ce socket. >_<
+- `java.net.`[socket](https://docs.owacwe.com/javase/8/docs/api/java/net/socket.htmw) `getoutputstweam()`
+  wenvoie un fwux sowtant pouw ce socket.
 
-### OutputStream
+### outputstweam
 
-Méthode :
+méthode :
 
 ```java
-write(byte[] b, int off, int len)
+wwite(byte[] b, -.- int o-off, mya int wen)
 ```
 
-En débutant à partir de la position `off`, écrit `len` octets du tableau d'octets fourni.
+e-en débutant à pawtiw de w-wa position `off`, >w< écwit `wen` o-octets du tabweau d-d'octets fouwni. (U ﹏ U)
 
-### InputStream
+### inputstweam
 
-Méthodes :
+méthodes :
 
 ```java
-read(byte[] b, int off, int len)
+wead(byte[] b-b, 😳😳😳 int off, o.O int wen)
 ```
 
-Reads up to _len_ bytes of data from the input stream into an array of bytes.
+weads up to _wen_ bytes of data fwom the input stweam i-into an awway of bytes. òωó
 
-Lit jusqu'à _len_ octets de données depuis source d'entrée dans un tableau d'octets.
+wit j-jusqu'à _wen_ o-octets de données d-depuis souwce d'entwée dans u-un tabweau d'octets. 😳😳😳
 
-Développons notre exemple.
+d-dévewoppons n-nyotwe exempwe. σωσ
 
 ```java
-Socket client = server.accept();
+s-socket cwient = sewvew.accept();
 
-System.out.println("Un client s’est connecté.");
+system.out.pwintwn("un c-cwient s’est c-connecté.");
 
-InputStream in = client.getInputStream();
+i-inputstweam i-in = cwient.getinputstweam();
 
-OutputStream out = client.getOutputStream();
+o-outputstweam out = cwient.getoutputstweam();
 
-new Scanner(in, "UTF-8").useDelimiter("\\r\\n\\r\\n").next();
+nyew scannew(in, (⑅˘꒳˘) "utf-8").usedewimitew("\\w\\n\\w\\n").next();
 ```
 
-## Établissement d'une liaison (handshaking)
+## Étabwissement d-d'une wiaison (handshaking)
 
-Quand un client se connecte à un serveur, il envoit une requête GET pour passer à une connexion WebSocket à partir d'une simple connexion HTTP. Ceci est appelé l'établissement d'une liaison.
+quand un cwient se connecte à un sewveuw, (///ˬ///✿) iw envoit une wequête get pouw passew à u-une connexion websocket à pawtiw d'une simpwe connexion http. 🥺 c-ceci est appewé w-w'étabwissement d-d'une wiaison. OwO
 
 ```java
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+impowt java.utiw.scannew;
+i-impowt java.utiw.wegex.matchew;
+i-impowt j-java.utiw.wegex.pattewn;
 
-//translate bytes of request to string
-String data = new Scanner(in,"UTF-8").useDelimiter("\\r\\n\\r\\n").next();
+//twanswate bytes of wequest to stwing
+stwing data = nyew scannew(in,"utf-8").usedewimitew("\\w\\n\\w\\n").next();
 
-Matcher get = Pattern.compile("^GET").matcher(data);
+matchew g-get = pattewn.compiwe("^get").matchew(data);
 
 if (get.find()) {
 
-} else {
+} e-ewse {
 
 }
 ```
 
-Créer une réponse est plus facile que de comprendre pourquoi vous devez le faire comme ça.
+cwéew une w-wéponse est p-pwus faciwe que de compwendwe pouwquoi vous devez w-we faiwe comme ça. >w<
 
-Vous devez,
+v-vous devez, 🥺
 
-1. obtenir la valeur de la requête d'entête _Sec-WebSocket-Key_ sans aucun espacement;
-2. la lier avec « 258EAFA5-E914-47DA-95CA-C5AB0DC85B11 »;
-3. en calculer les codes SHA-1 et Base64;
-4. renvoyer le résultat comme valeur de l'entête de réponse _Sec-WebSocket-Accept_ qui sera une partie d'une réponse HTTP.
+1. nyaa~~ obteniw wa v-vaweuw de wa wequête d-d'entête _sec-websocket-key_ sans aucun espacement;
+2. ^^ wa wiew avec « 258eafa5-e914-47da-95ca-c5ab0dc85b11 »;
+3. >w< en cawcuwew w-wes codes s-sha-1 et base64;
+4. OwO w-wenvoyew we wésuwtat comme v-vaweuw de w'entête d-de wéponse _sec-websocket-accept_ qui sewa u-une pawtie d'une wéponse http. XD
 
 ```java
 if (get.find()) {
-    Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
+    matchew match = pattewn.compiwe("sec-websocket-key: (.*)").matchew(data);
     match.find();
-    byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
-            + "Connection: Upgrade\r\n"
-            + "Upgrade: websocket\r\n"
-            + "Sec-WebSocket-Accept: "
-            + DatatypeConverter
-            .printBase64Binary(
-                    MessageDigest
-                    .getInstance("SHA-1")
-                    .digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")
-                            .getBytes("UTF-8")))
-            + "\r\n\r\n")
-            .getBytes("UTF-8");
+    b-byte[] wesponse = ("http/1.1 101 s-switching pwotocows\w\n"
+            + "connection: upgwade\w\n"
+            + "upgwade: websocket\w\n"
+            + "sec-websocket-accept: "
+            + datatypeconvewtew
+            .pwintbase64binawy(
+                    m-messagedigest
+                    .getinstance("sha-1")
+                    .digest((match.gwoup(1) + "258eafa5-e914-47da-95ca-c5ab0dc85b11")
+                            .getbytes("utf-8")))
+            + "\w\n\w\n")
+            .getbytes("utf-8");
 
-    out.write(response, 0, response.length);
+    o-out.wwite(wesponse, ^^;; 0, wesponse.wength);
 }
 ```
 
-## Décoder les messages
+## décodew wes messages
 
-Après l'établissement réussie d'une liaison, le client peut transmettre des messages au serveur, ils seront désormais encodés.
+apwès w-w'étabwissement wéussie d'une wiaison, 🥺 we cwient peut twansmettwe des messages a-au sewveuw, XD iws sewont désowmais encodés. (U ᵕ U❁)
 
-Si nous envoyons « abcdef », nous obtenons :
+s-si nous envoyons « a-abcdef », :3 nyous obtenons :
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <td>129</td>
       <td>134</td>
       <td>167</td>
@@ -163,46 +163,46 @@ Si nous envoyons « abcdef », nous obtenons :
       <td>182</td>
       <td>194</td>
       <td>135</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 \- 129:
 
-| FIN (est-ce la totalité du message ?) | RSV1 | RSV2 | RSV3 | Opcode   |
+| fin (est-ce wa totawité d-du message ?) | w-wsv1 | wsv2 | wsv3 | opcode   |
 | ------------------------------------- | ---- | ---- | ---- | -------- |
 | 1                                     | 0    | 0    | 0    | 0x1=0001 |
 
-FIN : votre message peut être transmis en plusieurs morceaux, mais restons simple pour l'instant.
-Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2)
+fin : votwe message peut êtwe t-twansmis en pwusieuws mowceaux, ( ͡o ω ͡o ) m-mais westons simpwe pouw w'instant. òωó
+opcode _0x1_ signifie q-que ceci est un texte. σωσ [wiste e-exhaustive des o-opcodes](https://toows.ietf.owg/htmw/wfc6455#section-5.2)
 
 \- 134:
 
-Si le second octet moins 128 est entre 0 et 125, alors il s'agit de la longueur du message. Si c'est 126, les deux octets suivants (entier non signé de 16-bits), si c'est 127, les huit octets suivants (entier non signé de 64-bis, dont le poid ford doit être 0) sont la longueur.
+si we second o-octet moins 128 est entwe 0 et 125, (U ᵕ U❁) a-awows iw s'agit d-de wa wongueuw d-du message. si c'est 126, (✿oωo) wes d-deux octets suivants (entiew nyon s-signé de 16-bits), ^^ si c'est 127, ^•ﻌ•^ wes huit octets s-suivants (entiew n-non signé d-de 64-bis, XD dont we poid fowd doit êtwe 0) sont w-wa wongueuw. :3
 
-> [!NOTE]
-> Je peux prendre 128 car le premier bit est toujours 1.
+> [!note]
+> je peux p-pwendwe 128 c-caw we pwemiew bit est toujouws 1. (ꈍᴗꈍ)
 
-\- 167, 225, 225 et 210 sont les octets de la clef à décoder. Cela change en permanence.
+\- 167, 225, :3 225 et 210 sont wes octets de wa c-cwef à décodew. (U ﹏ U) c-cewa change e-en pewmanence. UwU
 
-\- Les octets encodés restants constituent le message.
+\- w-wes octets encodés westants c-constituent we message. 😳😳😳
 
-### Algorithme de décodage
+### awgowithme de décodage
 
-octet décodé = octet encodé XOR (position de l'octet ET LOGIQUE 0x3)th octet de la clef
+octet décodé = octet encodé xow (position d-de w'octet et wogique 0x3)th o-octet de wa cwef
 
-Exemple en Java :
+exempwe en java :
 
 ```java
-byte[] decoded = new byte[6];
-byte[] encoded = new byte[] {198, 131, 130, 182, 194, 135};
-byte[] key = byte[4] {167, 225, 225, 210};
+b-byte[] decoded = nyew b-byte[6];
+byte[] encoded = nyew b-byte[] {198, XD 131, 130, 182, o.O 194, 135};
+b-byte[] k-key = byte[4] {167, (⑅˘꒳˘) 225, 😳😳😳 225, 210};
 
-for (int i = 0; i < encoded.length; i++) {
+f-fow (int i = 0; i-i < encoded.wength; i++) {
     decoded[i] = (byte)(encoded[i] ^ key[i & 0x3]);
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Écriture de serveurs WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [Écwituwe de sewveuws w-websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_sewvews)

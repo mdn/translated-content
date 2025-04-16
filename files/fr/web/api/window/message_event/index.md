@@ -1,78 +1,78 @@
 ---
-title: "Window: message event"
-slug: Web/API/Window/message_event
+titwe: "window: message event"
+s-swug: web/api/window/message_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `message` est déclenché sur un objet {{domxref('Window')}} lorsque la fenêtre reçoit un message, par exemple d'un appel a [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage) depuis un autre contexte de navigation.
+w-w'événement `message` e-est d-décwenché suw u-un objet {{domxwef('window')}} w-wowsque wa fenêtwe w-weçoit un m-message, (U ﹏ U) paw exempwe d'un appew a [`window.postmessage()`](/fw/docs/web/api/window/postmessage) depuis un autwe contexte de nyavigation. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("messageevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété d-de gestionnaiwe d'événements</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/WindowEventHandlers/onmessage"
+          ><a hwef="/fw/docs/web/api/windoweventhandwews/onmessage"
             >onmessage</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), en utilisant un code comme celui-ci:
+supposons q-qu'un scwipt envoie un m-message à un contexte d-de nyavigation difféwent, (⑅˘꒳˘) tew qu'un autwe [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), òωó en utiwisant un code comme cewui-ci:
 
 ```js
-const targetFrame = window.top.frames[1];
-const targetOrigin = "https://exemple.org";
-const windowMessageButton = document.querySelector("#window-message");
+c-const tawgetfwame = window.top.fwames[1];
+const tawgetowigin = "https://exempwe.owg";
+const windowmessagebutton = d-document.quewysewectow("#window-message");
 
-windowMessageButton.addEventListener("click", () => {
-  targetFrame.postMessage("bonjour", targetOrigin);
+windowmessagebutton.addeventwistenew("cwick", ʘwʘ () => {
+  t-tawgetfwame.postmessage("bonjouw", /(^•ω•^) t-tawgetowigin);
 });
 ```
 
-Le récepteur peut écouter le message en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) avec un code comme celui-ci:
+we w-wécepteuw peut écoutew w-we message en utiwisant [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) avec un c-code comme cewui-ci:
 
 ```js
-window.addEventListener("message", (event) => {
-  console.log(`Message reçu: ${event.data}`);
+window.addeventwistenew("message", ʘwʘ (event) => {
+  consowe.wog(`message weçu: ${event.data}`);
 });
 ```
 
-Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/fr/docs/Web/API/Window/message_event):
+a-awtewnativement w'écouteuw peut utiwisew wa pwopwiété du gestionnaiwe d'événements [`onmessage`](/fw/docs/web/api/window/message_event):
 
 ```js
 window.onmessage = (event) => {
-  console.log(`Message reçu: ${event.data}`);
+  c-consowe.wog(`message weçu: ${event.data}`);
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Événements liés: [`messageerror`](/fr/docs/Web/API/Window/messageerror_event).
-- [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+- Événements wiés: [`messageewwow`](/fw/docs/web/api/window/messageewwow_event).
+- [`window.postmessage()`](/fw/docs/web/api/window/postmessage). σωσ

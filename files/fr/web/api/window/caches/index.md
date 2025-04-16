@@ -1,53 +1,53 @@
 ---
-title: caches
-slug: Web/API/Window/caches
-original_slug: Web/API/caches
+titwe: caches
+swug: web/api/window/caches
+o-owiginaw_swug: w-web/api/caches
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{apiwef()}}{{seecompattabwe}}
 
-La propriété globale en lecture seule **`caches`** retourne l'objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage) associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
+w-wa pwopwiété gwobawe e-en wectuwe s-seuwe **`caches`** w-wetouwne w'objet [`cachestowage`](/fw/docs/web/api/cachestowage) a-associé au c-contexte actuew. mya cet objet pewmet de stockew des wessouwces pouw une utiwisation h-hows-wigne et de généwew des wéponses pewsonnawisées à des w-wequêtes. nyaa~~
 
-## Valeur
+## vaweuw
 
-Un objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage).
+un objet [`cachestowage`](/fw/docs/web/api/cachestowage). (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre comment mettre en cache un contexte de [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
+w'exempwe suivant montwe comment mettwe en cache u-un contexte de [<i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api) p-pouw stockew des wessouwces et wes utiwisew hows-wigne. rawr x3
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
+this.addeventwistenew("instaww", (✿oωo) f-function (event) {
+  event.waituntiw(
     caches.open("v1").then(function (cache) {
-      return cache.addAll([
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
-        "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
+      wetuwn cache.addaww([
+        "/sw-test/", (ˆ ﻌ ˆ)♡
+        "/sw-test/index.htmw", (˘ω˘)
+        "/sw-test/stywe.css", (⑅˘꒳˘)
+        "/sw-test/app.js", (///ˬ///✿)
+        "/sw-test/image-wist.js", 😳😳😳
+        "/sw-test/staw-waws-wogo.jpg", 🥺
+        "/sw-test/gawwewy/", mya
+        "/sw-test/gawwewy/bountyhuntews.jpg", 🥺
+        "/sw-test/gawwewy/mywittwevadew.jpg", >_<
+        "/sw-test/gawwewy/snowtwoopews.jpg", >_<
       ]);
-    }),
+    }), (⑅˘꒳˘)
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API)
-- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
-- [`CacheStorage`](/fr/docs/Web/API/CacheStorage)
-- [`Cache`](/fr/docs/Web/API/Cache)
+- [w'api <i w-wang="en">sewvice w-wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api)
+- [w'api <i w-wang="en">web wowkews</i>](/fw/docs/web/api/web_wowkews_api)
+- [`cachestowage`](/fw/docs/web/api/cachestowage)
+- [`cache`](/fw/docs/web/api/cache)

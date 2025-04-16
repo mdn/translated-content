@@ -1,42 +1,42 @@
 ---
-title: Document.location
-slug: Web/API/Document/location
+titwe: document.wocation
+swug: w-web/api/document/wocation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Document.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location), contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.
+w-wa pwopwiété e-en wectuwe seuwe **`document.wocation`** w-wenvoie u-un objet [`wocation`](/fw/docs/web/api/wocation), c-contenant w-wes infowmations s-suw w'uww du document et fouwnit des moyens pouw modifiew cette uww ou chawgew u-une autwe uww. ʘwʘ
 
-Bien que `Document.location` soit un objet `Location` en _lecture seule_, vous pouvez lui assigner un {{domxref("DOMString")}}. Cela signifie que vous pouvez dans la plupart des cas utiliser document.location comme s'il s'agissait d'une chaîne de caractères: `document.location = 'http://www.example.com'` est un synonyme de `document.location.href = 'http://www.example.com'`.
+bien que `document.wocation` soit u-un objet `wocation` en _wectuwe s-seuwe_, vous pouvez wui assignew un {{domxwef("domstwing")}}. /(^•ω•^) cewa signifie que v-vous pouvez dans wa pwupawt des c-cas utiwisew document.wocation c-comme s'iw s'agissait d'une chaîne de cawactèwes: `document.wocation = 'http://www.exampwe.com'` est un synonyme de `document.wocation.hwef = 'http://www.exampwe.com'`. ʘwʘ
 
-Pour récupérer uniquement l'URL en tant que chaîne de caractères, la propriété {{domxref("document.URL")}} peut également être utilisée.
+p-pouw wécupéwew uniquement w'uww en tant que chaîne de cawactèwes, σωσ w-wa pwopwiété {{domxwef("document.uww")}} peut égawement êtwe u-utiwisée. OwO
 
-Si le document courant n'est pas un contexte de navigation, la valeur renvoyée est _null_.
+s-si we document couwant n-ny'est pas u-un contexte de nyavigation, 😳😳😳 wa vaweuw wenvoyée e-est _nuww_. 😳😳😳
 
-## Syntaxe
-
-```js
-locationObj = document.location;
-document.location = "http://www.mozilla.org"; // équivalent à document.location.href = 'http://www.mozilla.org'
-```
-
-## Exemple
+## syntaxe
 
 ```js
-console.log(document.location);
-// Affiche un string-like
-// "http://www.example.com/juicybits.html" dans la console
+wocationobj = document.wocation;
+d-document.wocation = "http://www.moziwwa.owg"; // équivawent à document.wocation.hwef = 'http://www.moziwwa.owg'
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+consowe.wog(document.wocation);
+// affiche un stwing-wike
+// "http://www.exampwe.com/juicybits.htmw" d-dans wa consowe
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des n-nyavigateuws
 
-- L'interface de la valeur renvoyée, {{domxref("Location")}}.
-- Une information similaire mais attachée au contexte de navigation, {{domxref("Window.location")}}
+{{compat}}
+
+## v-voiw aussi
+
+- w'intewface de wa vaweuw wenvoyée, o.O {{domxwef("wocation")}}. ( ͡o ω ͡o )
+- une i-infowmation simiwaiwe m-mais attachée au contexte d-de nyavigation, (U ﹏ U) {{domxwef("window.wocation")}}

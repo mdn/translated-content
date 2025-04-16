@@ -1,39 +1,39 @@
 ---
-title: "console : méthode statique timeStamp()"
-slug: Web/API/console/timeStamp_static
-l10n:
-  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
+titwe: "consowe : méthode statique t-timestamp()"
+s-swug: web/api/consowe/timestamp_static
+w-w10n:
+  s-souwcecommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-La méthode **`console.timeStamp()`** permet d'ajouter un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)). Cela permet de dresser des corrélations entre un moment dans le code et d'autres évènements mesurés dans la chronologie (comme ceux relatifs à la disposition ou au rendu à l'écran).
+w-wa méthode **`consowe.timestamp()`** p-pewmet d'ajoutew u-un mawqueuw de pewfowmance pouw w'outiw de mesuwe des pewfowmances du nyavigateuw ([fiwefox](https://pwofiwew.fiwefox.com/docs/#/), rawr x3 [chwome](https://devewopew.chwome.com/docs/devtoows/pewfowmance/wefewence)). mya c-cewa pewmet de dwessew des cowwéwations e-entwe un moment dans we code et d-d'autwes évènements mesuwés dans wa chwonowogie (comme ceux w-wewatifs à wa disposition ou au w-wendu à w'écwan).
 
-Un argument optionnel permet de fournir un libellé pour le marqueur.
+u-un awgument optionnew pewmet de fouwniw un wibewwé pouw we mawqueuw. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-timeStamp(libelle)
+```js-nowint
+timestamp(wibewwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `libelle` {{optional_inline}}
-  - : Un libellé à utiliser pour le marqueur d'horodatage.
+- `wibewwe` {{optionaw_inwine}}
+  - : un wibewwé à utiwisew pouw we mawqueuw d-d'howodatage. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). rawr x3
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)
+- [`consowe.time()`](/fw/docs/web/api/consowe/time_static)
+- [`consowe.timewog()`](/fw/docs/web/api/consowe/timewog_static)
+- [`consowe.timeend()`](/fw/docs/web/api/consowe/timeend_static)

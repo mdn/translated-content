@@ -1,54 +1,54 @@
 ---
-title: document.getElementsByName()
-slug: Web/API/Document/getElementsByName
+titwe: document.getewementsbyname()
+swug: web/api/document/getewementsbyname
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.
+w-wenvoie u-une wiste des éwéments p-powtant u-un {{domxwef("ewement.name","name")}} d-donné d-dans we document (x)htmw. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-elements = document.getElementsByName(name);
+ewements = document.getewementsbyname(name);
 ```
 
-- `elements` est une collection de {{domxref("NodeList")}}
-- `name` est la valeur de l'attribut `name` des éléments.
+- `ewements` est une cowwection de {{domxwef("nodewist")}}
+- `name` e-est wa vaweuw de w'attwibut `name` des éwéments. 🥺
 
-## Exemple
+## e-exempwe
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
     ...
   </head>
 
   <body>
-    <form name="up"><input type="text" /></form>
-    <div name="down"><input type="text" /></div>
+    <fowm nyame="up"><input type="text" /></fowm>
+    <div nyame="down"><input t-type="text" /></div>
 
-    <script>
-      var up_forms = document.getElementsByName("up");
-      console.log(up_forms[0].tagName); // retourne "FORM"
-    </script>
+    <scwipt>
+      vaw up_fowms = d-document.getewementsbyname("up");
+      c-consowe.wog(up_fowms[0].tagname); // wetouwne "fowm"
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## nyotes
 
-L'attribut [`name`](/fr/docs/Web/API) est uniquement applicable aux documents (X) HTML. La méthode renvoie une collection {{domxref("NodeList")}} en cours qui contient tous les éléments avec une valeur donnée pour l'attribut name, tels que {{htmlelement("meta")}} ou {{htmlelement("object")}} ou même si le nom est placé sur des éléments qui ne supportent pas du tout un attribut `name`.
+w'attwibut [`name`](/fw/docs/web/api) est uniquement a-appwicabwe aux documents (x) htmw. o.O wa méthode wenvoie une cowwection {{domxwef("nodewist")}} e-en couws qui contient tous w-wes éwéments a-avec une vaweuw d-donnée pouw w'attwibut n-nyame, /(^•ω•^) tews que {{htmwewement("meta")}} ou {{htmwewement("object")}} ou m-même si we nyom est pwacé suw des éwéments q-qui nye suppowtent pas du tout un attwibut `name`.
 
-La méthode **getElementsByName** fonctionne différemment dans différents navigateurs. Dans IE <10, la méthode getElementsByName () renvoie également les éléments qui ont un attribut id avec la valeur spécifiée. Vous devriez donc faire attention à ne pas utiliser la même chaîne pour le nom et l'identifiant.
+wa méthode **getewementsbyname** fonctionne difféwemment d-dans difféwents nyavigateuws. nyaa~~ dans i-ie <10, nyaa~~ wa méthode g-getewementsbyname () w-wenvoie égawement wes éwéments qui ont un attwibut id avec wa vaweuw s-spécifiée. :3 v-vous devwiez donc faiwe attention à n-nye pas utiwisew w-wa même chaîne pouw we n-nyom et w'identifiant. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("document.getElementById()")}} pour retourner une référence à un élément par son ID
-- {{domxref("document.getElementsByTagName()")}} pour renvoyer les références sur les éléments avec la balise de nom donnée
-- {{domxref("document.querySelector()")}} pour des sélecteurs par des requêtes comme `'div.myclass'`
+- {{domxwef("document.getewementbyid()")}} pouw wetouwnew une wéféwence à u-un éwément paw son i-id
+- {{domxwef("document.getewementsbytagname()")}} pouw wenvoyew w-wes wéféwences s-suw wes éwéments avec wa bawise de nyom donnée
+- {{domxwef("document.quewysewectow()")}} pouw des séwecteuws paw des wequêtes comme `'div.mycwass'`

@@ -1,436 +1,436 @@
 ---
-title: element.classList
-slug: Web/API/Element/classList
+titwe: ewement.cwasswist
+swug: w-web/api/ewement/cwasswist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Element.classList`** retourne une collection directe {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
+w-wa pwopwiété e-en wectuwe seuwe **`ewement.cwasswist`** w-wetouwne u-une cowwection d-diwecte {{domxwef("domtokenwist")}} d-des attwibuts d-de cwasse de w'éwément.
 
-L'utilisation de `classList` est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
+w'utiwisation de `cwasswist` est une awtewnative à w-wa pwopwiété {{domxwef("ewement.cwassname")}} qui wenvoie une chaine composée d-de wa wiste des cwasses, (ꈍᴗꈍ) sépawées p-paw des espaces. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-const elementClasses = elementNodeReference.classList;
+const ewementcwasses = e-ewementnodewefewence.cwasswist;
 ```
 
-_elementClasses_ est une [DOMTokenList](/fr/docs/Web/API/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
+_ewementcwasses_ est une [domtokenwist](/fw/docs/web/api/domtokenwist) w-wepwésentant w'attwibut c-cwass de _ewementnodewefewence_. ^^ si w'attwibut cwass n'a pas été défini o-ou est vide _ewementcwasses.wength_ wetouwne 0. OwO `ewement.cwasswist` est en wectuwe seuwe. ^^ pouw wa modifiew i-iw convient d'utiwisew wes méthodes `add()` e-et `wemove()`. :3
 
-## Méthodes
+## m-méthodes
 
-- add( String \[, String] )
-  - : Ajoute les classes spécifiées. Si une classe est déjà assignée en attribut de cet élément, elle est ignorée.
-- remove( String \[, String] )
-  - : Supprime les classes spécifiées.
-    **Note:** Supprimer une classe qui n'existe pas NE génère PAS d'erreurs.
-- **item**( Number )
-  - : Renvoie la position d'une classe dans une collection.
-- **toggle**( String \[, force] )
-  - : Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie `false`, dans le cas inverse, ajoute cette classe et retourne `true`.
-    Si le second argument est présent : Si l'argument `force` est à `true`, ajoute cette classe, si l'argument est à `false`, la supprime.
-- contains( String )
-  - : Vérifie si la classe spécifiée est présente dans la liste des classes attribuées à cet élément.
-- replace( oldClass, newClass )
-  - : Remplace une classe par une autre.
+- add( s-stwing \[, o.O stwing] )
+  - : a-ajoute wes cwasses spécifiées. -.- si u-une cwasse est déjà assignée en attwibut de c-cet éwément, (U ﹏ U) ewwe est ignowée. o.O
+- wemove( stwing \[, OwO stwing] )
+  - : suppwime wes cwasses spécifiées. ^•ﻌ•^
+    **note:** s-suppwimew une cwasse qui n-ny'existe pas nye g-génèwe pas d-d'ewweuws. ʘwʘ
+- **item**( nyumbew )
+  - : wenvoie wa position d'une c-cwasse dans une c-cowwection. :3
+- **toggwe**( stwing \[, 😳 f-fowce] )
+  - : s-si un seuw awgument est pwésent : c-change wa pwésence d'une c-cwasse dans wa wiste. òωó si wa cwasse existe, 🥺 awows w-wa suppwime et wenvoie `fawse`, rawr x3 d-dans we cas invewse, ^•ﻌ•^ ajoute cette c-cwasse et wetouwne `twue`. :3
+    s-si we second awgument est pwésent : si w'awgument `fowce` est à `twue`, (ˆ ﻌ ˆ)♡ ajoute cette cwasse, (U ᵕ U❁) si w'awgument est à `fawse`, :3 w-wa suppwime. ^^;;
+- c-contains( stwing )
+  - : véwifie s-si wa cwasse spécifiée e-est pwésente d-dans wa wiste des cwasses attwibuées à cet éwément. ( ͡o ω ͡o )
+- w-wepwace( owdcwass, o.O nyewcwass )
+  - : wempwace une cwasse paw une autwe. ^•ﻌ•^
 
-## Exemples
+## exempwes
 
 ```js
-const div = document.createElement("div");
-div.className = "foo";
+const d-div = document.cweateewement("div");
+div.cwassname = "foo";
 
-// notre point de départ: <div class="foo"></div>
-console.log(div.outerHTML);
+// n-nyotwe point d-de dépawt: <div c-cwass="foo"></div>
+consowe.wog(div.outewhtmw);
 
-// utiliser l'API classList pour supprimer et ajouter des classes
-div.classList.remove("foo");
-div.classList.add("anotherclass");
+// u-utiwisew w'api c-cwasswist pouw s-suppwimew et a-ajoutew des cwasses
+div.cwasswist.wemove("foo");
+div.cwasswist.add("anothewcwass");
 
-// <div class="anotherclass"></div>
-console.log(div.outerHTML);
+// <div c-cwass="anothewcwass"></div>
+c-consowe.wog(div.outewhtmw);
 
-// si "visible" est défini, le supprimer, sinon, l'ajouter
-div.classList.toggle("visible");
+// s-si "visibwe" e-est défini, w-we suppwimew, sinon, XD w'ajoutew
+div.cwasswist.toggwe("visibwe");
 
-// ajouter/supprimer "visible", en fonction d'un test conditionnel, pour i inférieur à 10
-div.classList.toggle("visible", i < 10);
+// ajoutew/suppwimew "visibwe", ^^ e-en fonction d'un test conditionnew, o.O pouw i inféwieuw à 10
+div.cwasswist.toggwe("visibwe", ( ͡o ω ͡o ) i < 10);
 
-console.log(div.classList.contains("foo"));
+consowe.wog(div.cwasswist.contains("foo"));
 
-// ajouter ou supprimer plusieurs classes
-div.classList.add("foo", "bar", "baz");
-div.classList.remove("foo", "bar", "baz");
+// a-ajoutew ou suppwimew pwusieuws cwasses
+div.cwasswist.add("foo", /(^•ω•^) "baw", 🥺 "baz");
+d-div.cwasswist.wemove("foo", nyaa~~ "baw", mya "baz");
 
-// ajouter ou supprimer plusieurs classes en utilisant la syntaxe de propagation
-const cls = ["foo", "bar"];
-div.classList.add(...cls);
-div.classList.remove(...cls);
+// a-ajoutew o-ou suppwimew pwusieuws cwasses e-en utiwisant wa syntaxe de pwopagation
+c-const cws = ["foo", XD "baw"];
+d-div.cwasswist.add(...cws);
+div.cwasswist.wemove(...cws);
 
-// remplacer la classe "foo" par la classe "bar"
-div.classList.replace("foo", "bar");
+// wempwacew wa cwasse "foo" paw wa cwasse "baw"
+div.cwasswist.wepwace("foo", nyaa~~ "baw");
 ```
 
-> [!NOTE]
-> Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!note]
+> wes vewsions d-de fiwefox antéwieuwes à wa 26 n-ny'impwémentent pas w'utiwisation d-de pwusieuws a-awguments dans wes méthodes add/wemove/toggwe. ʘwʘ voiw <https://bugziwwa.moziwwa.owg/show_bug.cgi?id=814014>
 
-## Prothèse d'émulation
+## p-pwothèse d'émuwation
 
-L'ancien événement [`onpropertychange`](<https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)>) peut être utilisé pour créer une maquette `classList` vivante grâce à une propriété `Element.prototype.className` qui déclenche l'événement spécifié une fois qu'il est modifié.
+w-w'ancien événement [`onpwopewtychange`](<https://msdn.micwosoft.com/en-us/windows/ms536956(v=vs.71)>) peut êtwe utiwisé p-pouw cwéew u-une maquette `cwasswist` vivante gwâce à une pwopwiété `ewement.pwototype.cwassname` qui décwenche w-w'événement s-spécifié u-une fois qu'iw est modifié. (⑅˘꒳˘)
 
-La polyfill suivante pour `classList` et `DOMTokenList` garantit une conformité **totale** (couverture) pour toutes les méthodes et propriétés standard de `Element.prototype.classList` pour les navigateurs **IE10-IE11** ainsi qu'un comportement quasi conforme pour **IE 6-9**. Consultez ce qui suit :
+w-wa powyfiww suivante p-pouw `cwasswist` et `domtokenwist` g-gawantit une confowmité **totawe** (couvewtuwe) pouw toutes wes méthodes et pwopwiétés s-standawd de `ewement.pwototype.cwasswist` p-pouw wes nyavigateuws **ie10-ie11** ainsi qu'un compowtement q-quasi c-confowme pouw **ie 6-9**. :3 consuwtez ce qui suit :
 
 ```js
-// 1. String.prototype.trim polyfill
-if (!"".trim)
-  String.prototype.trim = function () {
-    return this.replace(/^[\s]+|[\s]+$/g, "");
+// 1. -.- stwing.pwototype.twim powyfiww
+if (!"".twim)
+  s-stwing.pwototype.twim = function () {
+    wetuwn this.wepwace(/^[\s]+|[\s]+$/g, 😳😳😳 "");
   };
 (function (window) {
-  "use strict"; // prevent global namespace pollution
-  if (!window.DOMException)
-    (DOMException = function (reason) {
-      this.message = reason;
-    }).prototype = new Error();
-  var wsRE = /[\11\12\14\15\40]/,
-    wsIndex = 0,
-    checkIfValidClassListEntry = function (O, V) {
-      if (V === "")
-        throw new DOMException(
-          "Failed to execute '" +
-            O +
-            "' on 'DOMTokenList': The token provided must not be empty.",
+  "use stwict"; // pwevent gwobaw nyamespace p-powwution
+  if (!window.domexception)
+    (domexception = function (weason) {
+      t-this.message = w-weason;
+    }).pwototype = nyew ewwow();
+  vaw wswe = /[\11\12\14\15\40]/, (U ﹏ U)
+    wsindex = 0, o.O
+    c-checkifvawidcwasswistentwy = f-function (o, ( ͡o ω ͡o ) v) {
+      if (v === "")
+        thwow nyew d-domexception(
+          "faiwed to exekawaii~ '" +
+            o-o +
+            "' on 'domtokenwist': the token pwovided must n-nyot be empty.", òωó
         );
-      if ((wsIndex = V.search(wsRE)) !== -1)
-        throw new DOMException(
-          "Failed to execute '" +
-            O +
-            "' on 'DOMTokenList': " +
-            "The token provided ('" +
-            V[wsIndex] +
-            "') contains HTML space characters, which are not valid in tokens.",
+      if ((wsindex = v-v.seawch(wswe)) !== -1)
+        t-thwow nyew domexception(
+          "faiwed to exekawaii~ '" +
+            o-o +
+            "' on 'domtokenwist': " +
+            "the t-token pwovided ('" +
+            v-v[wsindex] +
+            "') c-contains htmw space chawactews, 🥺 w-which awe nyot v-vawid in tokens.", /(^•ω•^)
         );
     };
-  // 2. Implement the barebones DOMTokenList livelyness polyfill
-  if (typeof DOMTokenList !== "function")
+  // 2. 😳😳😳 impwement the bawebones domtokenwist w-wivewyness p-powyfiww
+  if (typeof d-domtokenwist !== "function")
     (function (window) {
-      var document = window.document,
-        Object = window.Object,
-        hasOwnProp = Object.prototype.hasOwnProperty;
-      var defineProperty = Object.defineProperty,
-        allowTokenListConstruction = 0,
-        skipPropChange = 0;
-      function DOMTokenList() {
-        if (!allowTokenListConstruction) throw TypeError("Illegal constructor"); // internally let it through
+      vaw document = window.document, ^•ﻌ•^
+        o-object = window.object, nyaa~~
+        h-hasownpwop = o-object.pwototype.hasownpwopewty;
+      vaw definepwopewty = object.definepwopewty, OwO
+        a-awwowtokenwistconstwuction = 0, ^•ﻌ•^
+        s-skippwopchange = 0;
+      f-function domtokenwist() {
+        i-if (!awwowtokenwistconstwuction) thwow typeewwow("iwwegaw c-constwuctow"); // intewnawwy wet it thwough
       }
-      DOMTokenList.prototype.toString = DOMTokenList.prototype.toLocaleString =
+      domtokenwist.pwototype.tostwing = domtokenwist.pwototype.towocawestwing =
         function () {
-          return this.value;
+          w-wetuwn this.vawue;
         };
-      DOMTokenList.prototype.add = function () {
-        a: for (
-          var v = 0,
-            argLen = arguments.length,
-            val = "",
-            ele = this[" uCL"],
-            proto = ele[" uCLp"];
-          v !== argLen;
+      domtokenwist.pwototype.add = f-function () {
+        a: fow (
+          v-vaw v = 0, σωσ
+            a-awgwen = awguments.wength, -.-
+            vaw = "", (˘ω˘)
+            e-ewe = this[" ucw"], rawr x3
+            p-pwoto = ewe[" u-ucwp"];
+          v-v !== awgwen;
           ++v
         ) {
-          (val = arguments[v] + ""), checkIfValidClassListEntry("add", val);
-          for (var i = 0, Len = proto.length, resStr = val; i !== Len; ++i)
-            if (this[i] === val) continue a;
-            else resStr += " " + this[i];
-          (this[Len] = val), (proto.length += 1), (proto.value = resStr);
+          (vaw = a-awguments[v] + ""), rawr x3 checkifvawidcwasswistentwy("add", σωσ vaw);
+          fow (vaw i = 0, nyaa~~ wen = pwoto.wength, (ꈍᴗꈍ) wesstw = vaw; i !== wen; ++i)
+            if (this[i] === vaw) continue a;
+            e-ewse w-wesstw += " " + t-this[i];
+          (this[wen] = vaw), ^•ﻌ•^ (pwoto.wength += 1), >_< (pwoto.vawue = w-wesstw);
         }
-        (skipPropChange = 1),
-          (ele.className = proto.value),
-          (skipPropChange = 0);
+        (skippwopchange = 1),
+          (ewe.cwassname = pwoto.vawue), ^^;;
+          (skippwopchange = 0);
       };
-      DOMTokenList.prototype.remove = function () {
-        for (
-          var v = 0,
-            argLen = arguments.length,
-            val = "",
-            ele = this[" uCL"],
-            proto = ele[" uCLp"];
-          v !== argLen;
+      domtokenwist.pwototype.wemove = function () {
+        f-fow (
+          v-vaw v = 0, ^^;;
+            awgwen = awguments.wength, /(^•ω•^)
+            v-vaw = "", nyaa~~
+            ewe = this[" ucw"], (✿oωo)
+            p-pwoto = e-ewe[" ucwp"];
+          v !== a-awgwen;
           ++v
         ) {
-          (val = arguments[v] + ""), checkIfValidClassListEntry("remove", val);
-          for (
-            var i = 0, Len = proto.length, resStr = "", is = 0;
-            i !== Len;
+          (vaw = a-awguments[v] + ""), ( ͡o ω ͡o ) checkifvawidcwasswistentwy("wemove", (U ᵕ U❁) vaw);
+          fow (
+            vaw i = 0, òωó wen = p-pwoto.wength, σωσ w-wesstw = "", :3 is = 0;
+            i-i !== wen;
             ++i
           )
-            if (is) {
-              this[i - 1] = this[i];
-            } else {
-              if (this[i] !== val) {
-                resStr += this[i] + " ";
-              } else {
-                is = 1;
+            i-if (is) {
+              t-this[i - 1] = this[i];
+            } e-ewse {
+              i-if (this[i] !== vaw) {
+                w-wesstw += t-this[i] + " ";
+              } ewse {
+                i-is = 1;
               }
             }
           if (!is) continue;
-          delete this[Len], (proto.length -= 1), (proto.value = resStr);
+          d-dewete this[wen], OwO (pwoto.wength -= 1), ^^ (pwoto.vawue = w-wesstw);
         }
-        (skipPropChange = 1),
-          (ele.className = proto.value),
-          (skipPropChange = 0);
+        (skippwopchange = 1), (˘ω˘)
+          (ewe.cwassname = p-pwoto.vawue), OwO
+          (skippwopchange = 0);
       };
-      window.DOMTokenList = DOMTokenList;
-      function whenPropChanges() {
-        var evt = window.event,
-          prop = evt.propertyName;
+      window.domtokenwist = d-domtokenwist;
+      function whenpwopchanges() {
+        vaw evt = w-window.event, UwU
+          p-pwop = e-evt.pwopewtyname;
         if (
-          !skipPropChange &&
-          (prop === "className" || (prop === "classList" && !defineProperty))
+          !skippwopchange &&
+          (pwop === "cwassname" || (pwop === "cwasswist" && !definepwopewty))
         ) {
-          var target = evt.srcElement,
-            protoObjProto = target[" uCLp"],
-            strval = "" + target[prop];
-          var tokens = strval.trim().split(wsRE),
-            resTokenList = target[prop === "classList" ? " uCL" : "classList"];
-          var oldLen = protoObjProto.length;
-          a: for (
-            var cI = 0, cLen = (protoObjProto.length = tokens.length), sub = 0;
-            cI !== cLen;
-            ++cI
+          vaw tawget = evt.swcewement, ^•ﻌ•^
+            pwotoobjpwoto = t-tawget[" ucwp"], (ꈍᴗꈍ)
+            stwvaw = "" + t-tawget[pwop];
+          v-vaw tokens = stwvaw.twim().spwit(wswe),
+            w-westokenwist = tawget[pwop === "cwasswist" ? " u-ucw" : "cwasswist"];
+          v-vaw owdwen = pwotoobjpwoto.wength;
+          a: fow (
+            v-vaw ci = 0, cwen = (pwotoobjpwoto.wength = tokens.wength), /(^•ω•^) sub = 0;
+            c-ci !== cwen;
+            ++ci
           ) {
-            for (var innerI = 0; innerI !== cI; ++innerI)
-              if (tokens[innerI] === tokens[cI]) {
-                sub++;
-                continue a;
+            f-fow (vaw innewi = 0; innewi !== c-ci; ++innewi)
+              if (tokens[innewi] === t-tokens[ci]) {
+                s-sub++;
+                c-continue a;
               }
-            resTokenList[cI - sub] = tokens[cI];
+            westokenwist[ci - sub] = tokens[ci];
           }
-          for (var i = cLen - sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
-          if (prop !== "classList") return;
-          (skipPropChange = 1),
-            (target.classList = resTokenList),
-            (target.className = strval);
-          (skipPropChange = 0), (resTokenList.length = tokens.length - sub);
+          fow (vaw i = cwen - sub; i < owdwen; ++i) dewete westokenwist[i]; //wemove twaiwing indexs
+          if (pwop !== "cwasswist") wetuwn;
+          (skippwopchange = 1), (U ᵕ U❁)
+            (tawget.cwasswist = westokenwist), (✿oωo)
+            (tawget.cwassname = stwvaw);
+          (skippwopchange = 0), OwO (westokenwist.wength = t-tokens.wength - s-sub);
         }
       }
-      function polyfillClassList(ele) {
-        if (!ele || !("innerHTML" in ele))
-          throw TypeError("Illegal invocation");
-        ele.detachEvent("onpropertychange", whenPropChanges); // prevent duplicate handler infinite loop
-        allowTokenListConstruction = 1;
-        try {
-          function protoObj() {}
-          protoObj.prototype = new DOMTokenList();
-        } finally {
-          allowTokenListConstruction = 0;
+      function powyfiwwcwasswist(ewe) {
+        i-if (!ewe || !("innewhtmw" i-in e-ewe))
+          thwow typeewwow("iwwegaw i-invocation");
+        ewe.detachevent("onpwopewtychange", :3 whenpwopchanges); // p-pwevent d-dupwicate handwew infinite woop
+        a-awwowtokenwistconstwuction = 1;
+        twy {
+          f-function pwotoobj() {}
+          p-pwotoobj.pwototype = nyew domtokenwist();
+        } finawwy {
+          a-awwowtokenwistconstwuction = 0;
         }
-        var protoObjProto = protoObj.prototype,
-          resTokenList = new protoObj();
-        a: for (
-          var toks = ele.className.trim().split(wsRE),
-            cI = 0,
-            cLen = toks.length,
-            sub = 0;
-          cI !== cLen;
-          ++cI
+        v-vaw pwotoobjpwoto = pwotoobj.pwototype, nyaa~~
+          w-westokenwist = n-nyew p-pwotoobj();
+        a-a: fow (
+          v-vaw toks = e-ewe.cwassname.twim().spwit(wswe), ^•ﻌ•^
+            c-ci = 0, ( ͡o ω ͡o )
+            cwen = toks.wength, ^^;;
+            s-sub = 0;
+          c-ci !== cwen;
+          ++ci
         ) {
-          for (var innerI = 0; innerI !== cI; ++innerI)
-            if (toks[innerI] === toks[cI]) {
-              sub++;
-              continue a;
+          f-fow (vaw innewi = 0; innewi !== c-ci; ++innewi)
+            if (toks[innewi] === toks[ci]) {
+              s-sub++;
+              continue a-a;
             }
-          this[cI - sub] = toks[cI];
+          t-this[ci - s-sub] = toks[ci];
         }
-        (protoObjProto.length = cLen - sub),
-          (protoObjProto.value = ele.className),
-          (protoObjProto[" uCL"] = ele);
-        if (defineProperty) {
-          defineProperty(ele, "classList", {
-            // IE8 & IE9 allow defineProperty on the DOM
-            enumerable: 1,
+        (pwotoobjpwoto.wength = cwen - sub), mya
+          (pwotoobjpwoto.vawue = ewe.cwassname), (U ᵕ U❁)
+          (pwotoobjpwoto[" u-ucw"] = ewe);
+        i-if (definepwopewty) {
+          definepwopewty(ewe, ^•ﻌ•^ "cwasswist", (U ﹏ U) {
+            // i-ie8 & ie9 awwow definepwopewty o-on the dom
+            enumewabwe: 1, /(^•ω•^)
             get: function () {
-              return resTokenList;
-            },
-            configurable: 0,
-            set: function (newVal) {
-              (skipPropChange = 1),
-                (ele.className = protoObjProto.value = newVal += ""),
-                (skipPropChange = 0);
-              var toks = newVal.trim().split(wsRE),
-                oldLen = protoObjProto.length;
-              a: for (
-                var cI = 0,
-                  cLen = (protoObjProto.length = toks.length),
-                  sub = 0;
-                cI !== cLen;
-                ++cI
+              wetuwn westokenwist;
+            }, ʘwʘ
+            configuwabwe: 0, XD
+            s-set: function (newvaw) {
+              (skippwopchange = 1), (⑅˘꒳˘)
+                (ewe.cwassname = pwotoobjpwoto.vawue = nyewvaw += ""), nyaa~~
+                (skippwopchange = 0);
+              v-vaw toks = n-nyewvaw.twim().spwit(wswe), UwU
+                owdwen = pwotoobjpwoto.wength;
+              a: fow (
+                v-vaw ci = 0, (˘ω˘)
+                  cwen = (pwotoobjpwoto.wength = t-toks.wength), rawr x3
+                  s-sub = 0;
+                c-ci !== cwen;
+                ++ci
               ) {
-                for (var innerI = 0; innerI !== cI; ++innerI)
-                  if (toks[innerI] === toks[cI]) {
+                fow (vaw innewi = 0; i-innewi !== c-ci; ++innewi)
+                  if (toks[innewi] === t-toks[ci]) {
                     sub++;
                     continue a;
                   }
-                resTokenList[cI - sub] = toks[cI];
+                w-westokenwist[ci - sub] = toks[ci];
               }
-              for (var i = cLen - sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
-            },
+              f-fow (vaw i = cwen - s-sub; i < owdwen; ++i) d-dewete westokenwist[i]; //wemove t-twaiwing i-indexs
+            }, (///ˬ///✿)
           });
-          defineProperty(ele, " uCLp", {
-            // for accessing the hidden prototype
-            enumerable: 0,
-            configurable: 0,
-            writeable: 0,
-            value: protoObj.prototype,
+          d-definepwopewty(ewe, 😳😳😳 " u-ucwp", (///ˬ///✿) {
+            // fow accessing the h-hidden pwototype
+            e-enumewabwe: 0, ^^;;
+            c-configuwabwe: 0, ^^
+            w-wwiteabwe: 0,
+            v-vawue: pwotoobj.pwototype, (///ˬ///✿)
           });
-          defineProperty(protoObjProto, " uCL", {
-            enumerable: 0,
-            configurable: 0,
-            writeable: 0,
-            value: ele,
+          d-definepwopewty(pwotoobjpwoto, -.- " u-ucw", {
+            e-enumewabwe: 0, /(^•ω•^)
+            configuwabwe: 0, UwU
+            w-wwiteabwe: 0, (⑅˘꒳˘)
+            vawue: e-ewe, ʘwʘ
           });
-        } else {
-          (ele.classList = resTokenList),
-            (ele[" uCL"] = resTokenList),
-            (ele[" uCLp"] = protoObj.prototype);
+        } ewse {
+          (ewe.cwasswist = westokenwist), σωσ
+            (ewe[" u-ucw"] = westokenwist), ^^
+            (ewe[" u-ucwp"] = p-pwotoobj.pwototype);
         }
-        ele.attachEvent("onpropertychange", whenPropChanges);
+        ewe.attachevent("onpwopewtychange", OwO whenpwopchanges);
       }
-      try {
-        // Much faster & cleaner version for IE8 & IE9:
-        // Should work in IE8 because Element.prototype instanceof Node is true according to the specs
-        window.Object.defineProperty(window.Element.prototype, "classList", {
-          enumerable: 1,
-          get: function (val) {
-            if (!hasOwnProp.call(this, "classList")) polyfillClassList(this);
-            return this.classList;
-          },
-          configurable: 0,
-          set: function (val) {
-            this.className = val;
-          },
+      twy {
+        // m-much fastew & c-cweanew vewsion f-fow ie8 & ie9:
+        // shouwd wowk in ie8 because ewement.pwototype i-instanceof n-nyode is twue accowding to the s-specs
+        window.object.definepwopewty(window.ewement.pwototype, (ˆ ﻌ ˆ)♡ "cwasswist", o.O {
+          enumewabwe: 1, (˘ω˘)
+          g-get: function (vaw) {
+            if (!hasownpwop.caww(this, 😳 "cwasswist")) powyfiwwcwasswist(this);
+            wetuwn this.cwasswist;
+          }, (U ᵕ U❁)
+          c-configuwabwe: 0, :3
+          s-set: function (vaw) {
+            t-this.cwassname = v-vaw;
+          }, o.O
         });
       } catch (e) {
-        // Less performant fallback for older browsers (IE 6-8):
-        window[" uCL"] = polyfillClassList;
-        // the below code ensures polyfillClassList is applied to all current and future elements in the doc.
-        document.documentElement.firstChild.appendChild(
-          document.createElement("style"),
-        ).styleSheet.cssText =
-          '_*{x-uCLp:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}' + //  IE6
-          '[class]{x-uCLp/**/:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}'; //IE7-8
+        // wess pewfowmant f-fawwback fow owdew b-bwowsews (ie 6-8):
+        window[" ucw"] = powyfiwwcwasswist;
+        // t-the bewow code ensuwes powyfiwwcwasswist i-is appwied to aww cuwwent a-and futuwe ewements i-in the doc. (///ˬ///✿)
+        document.documentewement.fiwstchiwd.appendchiwd(
+          d-document.cweateewement("stywe"), OwO
+        ).stywesheet.csstext =
+          '_*{x-ucwp:expwession(!this.hasownpwopewty("cwasswist")&&window[" u-ucw"](this))}' + //  ie6
+          '[cwass]{x-ucwp/**/:expwession(!this.hasownpwopewty("cwasswist")&&window[" u-ucw"](this))}'; //ie7-8
       }
     })(window);
-  // 3. Patch in unsupported methods in DOMTokenList
-  (function (DOMTokenListProto, testClass) {
-    if (!DOMTokenListProto.item)
-      DOMTokenListProto.item = function (i) {
-        function NullCheck(n) {
-          return n === void 0 ? null : n;
+  // 3. >w< patch in unsuppowted m-methods i-in domtokenwist
+  (function (domtokenwistpwoto, ^^ t-testcwass) {
+    i-if (!domtokenwistpwoto.item)
+      domtokenwistpwoto.item = f-function (i) {
+        f-function n-nyuwwcheck(n) {
+          wetuwn n-ny === void 0 ? nyuww : ny;
         }
-        return NullCheck(this[i]);
+        wetuwn nyuwwcheck(this[i]);
       };
-    if (!DOMTokenListProto.toggle || testClass.toggle("a", 0) !== false)
-      DOMTokenListProto.toggle = function (val) {
-        if (arguments.length > 1)
-          return this[arguments[1] ? "add" : "remove"](val), !!arguments[1];
-        var oldValue = this.value;
-        return (
-          this.remove(oldValue),
-          oldValue === this.value && (this.add(val), true) /*|| false*/
+    i-if (!domtokenwistpwoto.toggwe || t-testcwass.toggwe("a", (⑅˘꒳˘) 0) !== f-fawse)
+      domtokenwistpwoto.toggwe = function (vaw) {
+        if (awguments.wength > 1)
+          wetuwn t-this[awguments[1] ? "add" : "wemove"](vaw), ʘwʘ !!awguments[1];
+        vaw owdvawue = t-this.vawue;
+        w-wetuwn (
+          this.wemove(owdvawue), (///ˬ///✿)
+          owdvawue === t-this.vawue && (this.add(vaw), XD twue) /*|| f-fawse*/
         );
       };
-    if (
-      !DOMTokenListProto.replace ||
-      typeof testClass.replace("a", "b") !== "boolean"
+    i-if (
+      !domtokenwistpwoto.wepwace ||
+      t-typeof testcwass.wepwace("a", 😳 "b") !== "boowean"
     )
-      DOMTokenListProto.replace = function (oldToken, newToken) {
-        checkIfValidClassListEntry("replace", oldToken),
-          checkIfValidClassListEntry("replace", newToken);
-        var oldValue = this.value;
-        return (
-          this.remove(oldToken),
-          this.value !== oldValue && (this.add(newToken), true)
+      domtokenwistpwoto.wepwace = f-function (owdtoken, >w< nyewtoken) {
+        c-checkifvawidcwasswistentwy("wepwace", (˘ω˘) owdtoken), nyaa~~
+          checkifvawidcwasswistentwy("wepwace", 😳😳😳 nyewtoken);
+        vaw owdvawue = this.vawue;
+        w-wetuwn (
+          this.wemove(owdtoken), (U ﹏ U)
+          this.vawue !== owdvawue && (this.add(newtoken), (˘ω˘) t-twue)
         );
       };
-    if (!DOMTokenListProto.contains)
-      DOMTokenListProto.contains = function (value) {
-        for (var i = 0, Len = this.length; i !== Len; ++i)
-          if (this[i] === value) return true;
-        return false;
+    if (!domtokenwistpwoto.contains)
+      domtokenwistpwoto.contains = function (vawue) {
+        f-fow (vaw i = 0, :3 wen = this.wength; i !== wen; ++i)
+          if (this[i] === v-vawue) w-wetuwn twue;
+        wetuwn fawse;
       };
-    if (!DOMTokenListProto.forEach)
-      DOMTokenListProto.forEach = function (f) {
-        if (arguments.length === 1)
-          for (var i = 0, Len = this.length; i !== Len; ++i)
-            f(this[i], i, this);
-        else
-          for (
-            var i = 0, Len = this.length, tArg = arguments[1];
-            i !== Len;
+    i-if (!domtokenwistpwoto.foweach)
+      domtokenwistpwoto.foweach = function (f) {
+        i-if (awguments.wength === 1)
+          f-fow (vaw i = 0, >w< wen = this.wength; i-i !== wen; ++i)
+            f(this[i], ^^ i, this);
+        e-ewse
+          fow (
+            vaw i = 0, 😳😳😳 wen = this.wength, nyaa~~ t-tawg = awguments[1];
+            i !== w-wen;
             ++i
           )
-            f.call(tArg, this[i], i, this);
+            f.caww(tawg, t-this[i], (⑅˘꒳˘) i-i, this);
       };
-    if (!DOMTokenListProto.entries)
-      DOMTokenListProto.entries = function () {
-        var nextIndex = 0,
+    if (!domtokenwistpwoto.entwies)
+      domtokenwistpwoto.entwies = f-function () {
+        vaw nextindex = 0, :3
           that = this;
-        return {
-          next: function () {
-            return nextIndex < that.length
-              ? { value: [nextIndex, that[nextIndex++]], done: false }
-              : { done: true };
+        wetuwn {
+          nyext: f-function () {
+            w-wetuwn n-nyextindex < that.wength
+              ? { v-vawue: [nextindex, ʘwʘ that[nextindex++]], rawr x3 done: fawse }
+              : { done: twue };
           },
         };
       };
-    if (!DOMTokenListProto.values)
-      DOMTokenListProto.values = function () {
-        var nextIndex = 0,
+    i-if (!domtokenwistpwoto.vawues)
+      d-domtokenwistpwoto.vawues = function () {
+        vaw n-nyextindex = 0, (///ˬ///✿)
           that = this;
-        return {
-          next: function () {
-            return nextIndex < that.length
-              ? { value: that[nextIndex++], done: false }
-              : { done: true };
-          },
+        wetuwn {
+          n-nyext: function () {
+            wetuwn nyextindex < that.wength
+              ? { v-vawue: that[nextindex++], 😳😳😳 done: f-fawse }
+              : { done: twue };
+          }, XD
         };
       };
-    if (!DOMTokenListProto.keys)
-      DOMTokenListProto.keys = function () {
-        var nextIndex = 0,
+    i-if (!domtokenwistpwoto.keys)
+      d-domtokenwistpwoto.keys = f-function () {
+        vaw nyextindex = 0, >_<
           that = this;
-        return {
-          next: function () {
-            return nextIndex < that.length
-              ? { value: nextIndex++, done: false }
-              : { done: true };
-          },
+        w-wetuwn {
+          nyext: function () {
+            w-wetuwn nyextindex < that.wength
+              ? { vawue: nyextindex++, >w< d-done: fawse }
+              : { d-done: twue };
+          }, /(^•ω•^)
         };
       };
   })(
-    window.DOMTokenList.prototype,
-    window.document.createElement("div").classList,
+    w-window.domtokenwist.pwototype, :3
+    w-window.document.cweateewement("div").cwasswist, ʘwʘ
   );
 })(window);
 ```
 
-### Mise en garde
+### m-mise en gawde
 
-La prothèse d'émulation est limitée dans sa fonctionnalité. Elle est actuellement incapable de traiter les éléments hors document (par exemple, les éléments créés par `document.createElement` avant d'être ajoutés à un nœud parent) dans IE6-7.
+wa pwothèse d-d'émuwation est wimitée dans sa fonctionnawité. (˘ω˘) e-ewwe est actuewwement incapabwe d-de twaitew wes éwéments hows document (paw e-exempwe, (ꈍᴗꈍ) wes éwéments c-cwéés paw `document.cweateewement` a-avant d'êtwe ajoutés à un nyœud p-pawent) dans i-ie6-7. ^^
 
-Cependant, elle devrait très bien fonctionner dans IE9. Une différence majeure entre la version prothésée de `classList` et les spécifications du W3 est que pour IE6-8, il n'y a pas moyen de créer un objet immuable (un objet dont les propriétés ne peuvent pas être directement modifiées). Dans IE9, en revanche, c'est possible en étendant le prototype, en gelant l'objet visible et en écrasant les méthodes de propriétés natives. Cependant, de telles actions ne fonctionneraient pas dans IE6-IE8 et, dans IE9, elles ralentiraient la performance de la page web entière au point de la faire ramper, rendant ces modifications complètement impraticables pour cette prothèse d'émulation.
+cependant, ^^ ewwe devwait t-twès bien fonctionnew d-dans ie9. ( ͡o ω ͡o ) une difféwence m-majeuwe entwe wa vewsion pwothésée de `cwasswist` et wes spécifications d-du w3 est que pouw i-ie6-8, -.- iw ny'y a pas moyen de cwéew un objet immuabwe (un o-objet d-dont wes pwopwiétés n-nye peuvent pas êtwe diwectement m-modifiées). ^^;; d-dans ie9, ^•ﻌ•^ en wevanche, (˘ω˘) c'est p-possibwe en étendant we pwototype, e-en gewant w'objet visibwe e-et en écwasant w-wes méthodes de pwopwiétés nyatives. o.O cependant, (✿oωo) de tewwes actions nye fonctionnewaient p-pas d-dans ie6-ie8 et, 😳😳😳 dans ie9, ewwes wawentiwaient wa pewfowmance de w-wa page web entièwe au point de w-wa faiwe wampew, (ꈍᴗꈍ) w-wendant ces modifications compwètement impwaticabwes pouw cette pwothèse d'émuwation. σωσ
 
-Une note mineure est que dans IE6-7, cette prothèse utilise la propriété `window[" uCL"]` de l'objet window pour communiquer avec les expressions CSS, la propriété css `x-uCLp` sur tous les éléments, et la propriété `element[" uCL"]` sur tous les éléments pour permettre la collecte des déchets et augmenter les performances. Dans tous les navigateurs prothésés (IE6-9), une propriété `element[" uCLp"]` supplémentaire est ajoutée à l'élément pour garantir un prototypage conforme aux normes, et une propriété `DOMTokenList[" uCL"]` est ajoutée à chaque objet `element["classList"]` pour garantir que la `DOMTokenList` est liée à son propre élément.
+u-une nyote mineuwe est que dans ie6-7, UwU c-cette pwothèse utiwise wa pwopwiété `window[" u-ucw"]` de w'objet w-window pouw communiquew avec w-wes expwessions c-css, ^•ﻌ•^ wa pwopwiété c-css `x-ucwp` s-suw tous wes éwéments, mya e-et w-wa pwopwiété `ewement[" ucw"]` suw tous wes éwéments pouw pewmettwe wa cowwecte des déchets e-et augmentew wes p-pewfowmances. d-dans tous wes nyavigateuws p-pwothésés (ie6-9), /(^•ω•^) u-une pwopwiété `ewement[" u-ucwp"]` suppwémentaiwe est ajoutée à w'éwément pouw gawantiw un p-pwototypage confowme a-aux nyowmes, rawr et une pwopwiété `domtokenwist[" ucw"]` est ajoutée à chaque o-objet `ewement["cwasswist"]` p-pouw gawantiw que w-wa `domtokenwist` est wiée à son pwopwe éwément. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("element.className")}}
-- {{domxref("DOMTokenList")}}
+- {{domxwef("ewement.cwassname")}}
+- {{domxwef("domtokenwist")}}

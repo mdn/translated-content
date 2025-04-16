@@ -1,46 +1,46 @@
 ---
-title: Window.outerHeight
-slug: Web/API/Window/outerHeight
+titwe: window.outewheight
+swug: w-web/api/window/outewheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`Window.outerHeight` retourne la hauteur de la fenêtre (du navigateur) en pixels. La hauteur retournée prends en compte la fenêtre du navigateur entier, y compris la barre latérale, window chrome and window resizing borders/handles.
+`window.outewheight` w-wetouwne wa h-hauteuw de wa fenêtwe (du n-nyavigateuw) e-en pixews. (˘ω˘) w-wa hauteuw wetouwnée p-pwends e-en compte wa fenêtwe du nyavigateuw entiew, (⑅˘꒳˘) y compwis wa bawwe watéwawe, (///ˬ///✿) window c-chwome and window wesizing bowdews/handwes.
 
-Cette propriété n'a pas de valeur par défaut.
+cette pwopwiété n-n'a pas de vaweuw paw défaut. 😳😳😳
 
-Syntaxe
+s-syntaxe
 
 ```js
-outWindowHeight = window.outerHeight;
+outwindowheight = window.outewheight;
 ```
 
-La valeur retournée correspond à la hauteur extérieure de la fenêtre.
+wa vaweuw w-wetouwnée cowwespond à wa h-hauteuw extéwieuwe d-de wa fenêtwe. 🥺
 
-## Notes
+## nyotes
 
-Pour changer la taille de la fenêtre, utilisez {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
+pouw changew wa taiwwe de wa fenêtwe, mya utiwisez {{domxwef("window.wesizeby()")}} e-et {{domxwef("window.wesizeto()")}}. 🥺
 
-Pour obtenir la hauteur intérieure de la fenêtre (la hauteur de la page actuelle), utilisez {{domxref("window.innerHeight")}}.
+pouw obteniw wa hauteuw intéwieuwe de wa fenêtwe (wa hauteuw d-de wa page actuewwe), >_< utiwisez {{domxwef("window.innewheight")}}. >_<
 
-### Exemple illustré
+### e-exempwe i-iwwustwé
 
-La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
+w-wa figuwe suivante m-montwe wa difféwence entwe `outewheight` et `innewheight`. (⑅˘꒳˘)
 
-![innerHeight vs outerHeight illustration](FirefoxInnerVsOuterHeight2.png)
+![innewheight vs o-outewheight iwwustwation](fiwefoxinnewvsoutewheight2.png)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("window.innerHeight")}}
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerWidth")}}
-- {{domxref("window.resizeBy()")}}
-- {{domxref("window.resizeTo()")}}
+- {{domxwef("window.innewheight")}}
+- {{domxwef("window.innewwidth")}}
+- {{domxwef("window.outewwidth")}}
+- {{domxwef("window.wesizeby()")}}
+- {{domxwef("window.wesizeto()")}}

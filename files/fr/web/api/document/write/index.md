@@ -1,79 +1,79 @@
 ---
-title: document.write
-slug: Web/API/Document/write
+titwe: document.wwite
+swug: web/api/document/wwite
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Écrit une chaîne de texte dans un document ouvert par [document.open()](/fr/docs/Web/API/Document/open).
+Écwit u-une chaîne d-de texte dans u-un document ouvewt p-paw [document.open()](/fw/docs/web/api/document/open). mya
 
-> [!NOTE]
-> Comme `document.write` écrit dans le flux de documents, appeler `document.write` sur un document fermé (chargé) appelle automatiquement `document.open`, ce qui efface le document.
+> [!note]
+> c-comme `document.wwite` écwit d-dans we fwux d-de documents, mya appewew `document.wwite` suw un document fewmé (chawgé) appewwe a-automatiquement `document.open`, (⑅˘꒳˘) ce qui efface we document. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-document.write(balisage);
+document.wwite(bawisage);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `markup`
-  - : est une chaîne de caractères contenant le texte à écrire dans le document.
+- `mawkup`
+  - : est une chaîne de cawactèwes contenant we texte à écwiwe d-dans we document. mya
 
-### Exemple
+### exempwe
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Exemple de document.write</title>
+    <titwe>exempwe d-de document.wwite</titwe>
 
-    <script type="text/javascript">
-      function nouveauContenu() {
-        alert("chargement du nouveau contenu");
-        document.open();
-        document.write(
-          "<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>",
+    <scwipt t-type="text/javascwipt">
+      function nyouveaucontenu() {
+        awewt("chawgement du nyouveau contenu");
+        d-document.open();
+        document.wwite(
+          "<h1>assez de w'ancien contenu, ʘwʘ passons au nyouveau&nbsp;!</h1>", (˘ω˘)
         );
-        document.close();
+        document.cwose();
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="nouveauContenu();">
-    <p>Ceci est le contenu original du document.</p>
+  <body o-onwoad="nouveaucontenu();">
+    <p>ceci est we contenu o-owiginaw du document.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-Écrire dans un document qui a déjà été chargé sans appeler [document.open()](/fr/docs/Web/API/Document/open) provoquera un appel automatique à `document.open`. Une fois l'écriture terminée, il est recommandé d'appeler [document.close()](/fr/docs/Web/API/Document/close) pour indiquer au navigateur qu'il peut terminer de charger la page. Le texte fourni est analysé et intégré à la structure du modèle de document. Dans l'exemple ci-dessus, l'élément `h1` devient un nœud dans le document.
+Écwiwe d-dans un document q-qui a déjà été chawgé sans appewew [document.open()](/fw/docs/web/api/document/open) pwovoquewa u-un appew automatique à `document.open`. (U ﹏ U) une fois w'écwituwe t-tewminée, ^•ﻌ•^ iw est wecommandé d'appewew [document.cwose()](/fw/docs/web/api/document/cwose) pouw indiquew au nyavigateuw qu'iw peut tewminew d-de chawgew wa page. (˘ω˘) we texte f-fouwni est anawysé e-et intégwé à w-wa stwuctuwe du modèwe de document. :3 dans w'exempwe ci-dessus, ^^;; w-w'éwément `h1` d-devient un nyœud dans we d-document. 🥺
 
-Si l'appel à `document.write()` est intégré directement dans le code HTML, il n'appellera pas `document.open()`. Par exemple&nbsp;:
+si w'appew à `document.wwite()` e-est intégwé diwectement d-dans we code htmw, (⑅˘꒳˘) iw ny'appewwewa p-pas `document.open()`. paw exempwe&nbsp;:
 
-```html
-<script>
-  document.write("<h1>Main title</h1>");
-</script>
+```htmw
+<scwipt>
+  document.wwite("<h1>main t-titwe</h1>");
+</scwipt>
 ```
 
-> **Note :** `document.write` et [`document.writeln`](/fr/docs/Web/API/Document/writeln) ne fonctionnent pas dans les documents XHTML (vous obtiendrez une erreur «&nbsp;Operation is not supported \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`]&nbsp;» dans la console d'erreurs). Cela arrive lors de l'ouverture d'un fichier local avec l'extension de fichier `.xhtm` ou pour tout document servi avec une `application/xhtml+xml` de [type MIME](/fr/docs/Glossary/MIME_type). Plus d'informations disponibles dans la [foire aux questions W3C XHTML (en anglais)](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **note :** `document.wwite` et [`document.wwitewn`](/fw/docs/web/api/document/wwitewn) n-ne fonctionnent pas dans wes d-documents xhtmw (vous o-obtiendwez une ewweuw «&nbsp;opewation is nyot suppowted \[`ns_ewwow_dom_not_suppowted_eww`]&nbsp;» dans wa consowe d'ewweuws). nyaa~~ cewa awwive wows de w'ouvewtuwe d'un f-fichiew wocaw avec w-w'extension de fichiew `.xhtm` o-ou pouw tout document s-sewvi avec u-une `appwication/xhtmw+xmw` de [type mime](/fw/docs/gwossawy/mime_type). :3 pwus d'infowmations d-disponibwes dans wa [foiwe aux questions w3c xhtmw (en angwais)](https://www.w3.owg/mawkup/2004/xhtmw-faq#docwwite). ( ͡o ω ͡o )
 
-> **Note :** `document.write` dans les scripts [deferred (_différé_)](/fr/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous (_asynchrone_)](/fr/docs/Web/HTML/Element/script#attr-async) sera ignoré et vous recevrez un message comme "A call to `document.write()` from an asynchronously-loaded external script was ignored" dans la console d'erreurs.
+> **note :** `document.wwite` dans wes scwipts [defewwed (_difféwé_)](/fw/docs/web/htmw/ewement/scwipt#attw-defew) o-ou [asynchwonous (_asynchwone_)](/fw/docs/web/htmw/ewement/scwipt#attw-async) sewa ignowé e-et vous wecevwez u-un message c-comme "a caww to `document.wwite()` f-fwom an asynchwonouswy-woaded e-extewnaw scwipt w-was ignowed" d-dans wa consowe d'ewweuws.
 
-> [!NOTE]
-> Dans Edge seulement, appeler plusieurs fois `document.write` dans un "iframe" déclenche une erreur "SCRIPT70: Permission denied." _(autorisation refusée)_.
+> [!note]
+> dans edge s-seuwement, mya appewew p-pwusieuws f-fois `document.wwite` d-dans un "ifwame" d-décwenche une ewweuw "scwipt70: pewmission denied." _(autowisation w-wefusée)_. (///ˬ///✿)
 
-> [!NOTE]
-> À partir de la version 55, Chrome n'exécute pas les éléments `<script>` injectés via `document.write()` en cas d'échec de cache HTTP pour les utilisateurs sur une connexion 2G.
+> [!note]
+> À pawtiw de wa vewsion 55, chwome n'exékawaii~ pas wes éwéments `<scwipt>` injectés via `document.wwite()` e-en cas d'échec de cache http pouw wes utiwisateuws suw une c-connexion 2g. (˘ω˘)
 
-## Spécification
+## s-spécification
 
-- [DOM Level 2 HTML: `write()` Method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
-- [Dynamic markup insertion in HTML](https://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
+- [dom w-wevew 2 htmw: `wwite()` m-method](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-75233634)
+- [dynamic mawkup insewtion i-in htmw](https://www.w3.owg/tw/2011/wd-htmw5-authow-20110705/apis-in-htmw-documents.htmw#dynamic-mawkup-insewtion)
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ domxref("element.innerHTML") }}
-- {{ domxref("document.createElement()") }}
+- {{ domxwef("ewement.innewhtmw") }}
+- {{ domxwef("document.cweateewement()") }}

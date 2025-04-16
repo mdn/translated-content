@@ -1,27 +1,27 @@
 ---
-title: PerformanceServerTiming.name
-slug: Web/API/PerformanceServerTiming/name
+titwe: pewfowmancesewvewtiming.name
+swug: web/api/pewfowmancesewvewtiming/name
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-La propriété en lecture seule **`name`** retourne une valeur [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est le nom de la métrique spécifiée par le serveur.
+wa pwopwiété e-en wectuwe s-seuwe **`name`** w-wetouwne une v-vaweuw [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) q-qui est we nyom d-de wa métwique spécifiée paw we sewveuw. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-serverTiming.name;
+sewvewtiming.name;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming)
+- [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing)

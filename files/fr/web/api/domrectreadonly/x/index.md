@@ -1,30 +1,30 @@
 ---
-title: DOMRectReadOnly.x
-slug: Web/API/DOMRectReadOnly/x
+titwe: domwectweadonwy.x
+swug: w-web/api/domwectweadonwy/x
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-La propriété en lecture seule **`x`** de l'interface **`DOMRectReadOnly`** représente la coordonnée x d' l'origine du `DOMRect`.
+w-wa pwopwiété e-en wectuwe s-seuwe **`x`** d-de w'intewface **`domwectweadonwy`** w-wepwésente w-wa coowdonnée x d' w'owigine du `domwect`. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var recX = DOMRect.x;
+vaw wecx = domwect.x;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un double.
+un doubwe. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMRect")}}
+- {{domxwef("domwect")}}

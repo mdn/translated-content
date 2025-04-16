@@ -1,22 +1,22 @@
 ---
-title: Event.srcElement
-slug: Web/API/Event/srcElement
+titwe: event.swcewement
+swug: w-web/api/event/swcewement
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-**`Event.srcElement`** est un alias propriétaire (implémenté dans Internet Explorer) pour la propriété standard {{domxref("Event.target")}} qui commence à être pris en charge dans d'autres navigateurs à des fins de compatibilité Web.
+**`event.swcewement`** e-est un awias p-pwopwiétaiwe (impwémenté d-dans intewnet expwowew) p-pouw wa p-pwopwiété standawd {{domxwef("event.tawget")}} q-qui commence à êtwe pwis en chawge dans d'autwes nyavigateuws à des fins de c-compatibiwité web. (⑅˘꒳˘)
 
-## Spécification
+## spécification
 
-Ne fait partie d'aucune spécification.
+nye fait p-pawtie d'aucune spécification. (U ᵕ U❁)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Window.event")}}
+- {{domxwef("window.event")}}

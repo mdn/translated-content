@@ -1,47 +1,47 @@
 ---
-title: Document.createProcessingInstruction()
-slug: Web/API/Document/createProcessingInstruction
+titwe: document.cweatepwocessinginstwuction()
+swug: web/api/document/cweatepwocessinginstwuction
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`createProcessingInstruction()` crée un nouveau noeud d'instruction de traitement et le renvoie.
+`cweatepwocessinginstwuction()` c-cwée u-un nyouveau nyoeud d-d'instwuction d-de twaitement e-et we wenvoie. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Processing instruction node = document.createProcessingInstruction(target, data)
+p-pwocessing instwuction n-nyode = document.cweatepwocessinginstwuction(tawget, 🥺 data)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `Processing Instruction node` est un noeud {{domxref("ProcessingInstruction")}}.
-- `target` fait référence à la partie cible du noeud d'instructions de traitement (par exemple, \<?_target_ ...&nbsp;?>).
-- `data` est une string (_chaîne de caractères_) contenant les données à ajouter aux données du noeud.
+- `pwocessing instwuction nyode` est u-un noeud {{domxwef("pwocessinginstwuction")}}. o.O
+- `tawget` fait wéféwence à wa p-pawtie cibwe du nyoeud d'instwuctions d-de twaitement (paw exempwe, /(^•ω•^) \<?_tawget_ ...&nbsp;?>). nyaa~~
+- `data` est une stwing (_chaîne de cawactèwes_) c-contenant wes données à ajoutew a-aux données du n-nyoeud. nyaa~~
 
-### Exceptions
+### exceptions
 
-- `NOT_SUPPORTED_ERR`
-  - : Lancée si vous tentez de créer un noeud d'instructions de traitement sur un document HTML dans Gecko 9 ou antérieurs. Dans Gecko 10.0 et ultérieurs, vous pouvez utiliser cette méthode sur des documents HTML.
-- `DOM_INVALID_CHARACTER`
-  - : Lancée si vous essayez d'ajouter une cible d'instruction de traitement invalide (ce devrait être le cas avec le nom XML et toutes les combinaisons des lettres "xml"), ou si la séquence d'instructions de traitement de fermeture ("?>") est ajoutée aux données. Les données fournies par l'utilisateur ne peuvent donc pas être utilisées en toute sécurité sans échappement ou autres moyens de faire face à de telles situations.
+- `not_suppowted_eww`
+  - : wancée si vous tentez de cwéew un nyoeud d'instwuctions d-de twaitement suw un document htmw dans gecko 9 ou antéwieuws. :3 dans gecko 10.0 e-et uwtéwieuws, 😳😳😳 vous pouvez utiwisew c-cette méthode s-suw des documents h-htmw. (˘ω˘)
+- `dom_invawid_chawactew`
+  - : w-wancée si vous essayez d'ajoutew une c-cibwe d'instwuction de twaitement invawide (ce d-devwait êtwe we cas avec we nyom xmw et toutes wes combinaisons des wettwes "xmw"), ^^ ou si wa s-séquence d'instwuctions de twaitement d-de fewmetuwe ("?>") e-est ajoutée a-aux données. :3 wes données fouwnies paw w'utiwisateuw nye p-peuvent donc pas êtwe u-utiwisées en toute sécuwité s-sans échappement o-ou autwes moyens de faiwe f-face à de tewwes situations.
 
-## Exemple
+## e-exempwe
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+vaw docu = nyew dompawsew().pawsefwomstwing("<xmw></xmw>", "appwication/xmw");
 
-var pi = docu.createProcessingInstruction(
-  "xml-stylesheet",
-  'href="mycss.css" type="text/css"',
+v-vaw pi = docu.cweatepwocessinginstwuction(
+  "xmw-stywesheet", -.-
+  'hwef="mycss.css" type="text/css"', 😳
 );
 
-docu.insertBefore(pi, docu.firstChild);
+d-docu.insewtbefowe(pi, mya docu.fiwstchiwd);
 
-alert(new XMLSerializer().serializeToString(docu));
-// Affiche: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+a-awewt(new x-xmwsewiawizew().sewiawizetostwing(docu));
+// affiche: <?xmw-stywesheet hwef="mycss.css" type="text/css"?><xmw/>
 ```
 
-## Spécifications
+## spécifications
 
-[DOM 4: createProcessingInstruction](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction)
+[dom 4: cweatepwocessinginstwuction](https://dvcs.w3.owg/hg/domcowe/waw-fiwe/tip/ovewview.htmw#dom-document-cweatepwocessinginstwuction)

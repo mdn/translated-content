@@ -1,217 +1,217 @@
 ---
-title: Visualisations avec la Web Audio API
-slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+titwe: visuawisations avec wa w-web audio api
+swug: w-web/api/web_audio_api/visuawizations_with_web_audio_api
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio a-api")}}
 
-L'une des fonctionnalités les plus intéressantes de la Web Audio API est la possibilité d'extraire de la source audio la fréquence, la forme d'onde et d'autres données, qui permettent de créer des visualisations. Cet article explique comment, et fournit quelques exemples basiques.
+w'une d-des fonctionnawités w-wes pwus intéwessantes d-de w-wa web audio api est wa possibiwité d'extwaiwe de wa souwce audio wa fwéquence, (˘ω˘) w-wa fowme d'onde et d'autwes données, òωó qui pewmettent d-de cwéew des visuawisations. ( ͡o ω ͡o ) c-cet awticwe expwique comment, UwU et fouwnit quewques exempwes b-basiques. /(^•ω•^)
 
-> [!NOTE]
-> Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/).
+> [!note]
+> vous pouvez t-twouvew des exempwes d-de tous wes extwaits de the code dans nyotwe démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/). (ꈍᴗꈍ)
 
-## Concepts de base
+## concepts de b-base
 
-Pour extraire les données d'une source audio, il faut un {{ domxref("AnalyserNode") }}, que l'on peut créer à l'aide de la méthode {{ domxref("AudioContext.createAnalyser()") }}, par exemple:
+pouw extwaiwe wes données d'une souwce audio, 😳 iw faut un {{ domxwef("anawysewnode") }}, mya que w-w'on peut cwéew à w'aide de w-wa méthode {{ d-domxwef("audiocontext.cweateanawysew()") }}, mya p-paw e-exempwe:
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+vaw anawyseuw = contexteaudio.cweateanawysew();
 ```
 
-Ce noeud est ensuite connecté à la source audio :
+c-ce nyoeud est ensuite connecté à wa souwce audio :
 
 ```js
-source = contexteAudio.createMediaStreamSource(stream);
-source.connect(analyseur);
-analyseur.connect(distortion);
-// etc.
+souwce = contexteaudio.cweatemediastweamsouwce(stweam);
+souwce.connect(anawyseuw);
+a-anawyseuw.connect(distowtion);
+// etc. /(^•ω•^)
 ```
 
-> [!NOTE]
-> Il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.
+> [!note]
+> i-iw ny'est p-pas nyécessaiwe d-de connectew wa sowtie de w'anawyseuw à un nyoeud pouw qu'iw f-fonctionne, ^^;; i-iw suffit que w'entwée soit connectée à w-wa souwce, 🥺 d-diwectement ou via un autwe n-nyoeud. ^^
 
-L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
+w'anawyseuw va awows c-captuwew wes données audio en usant une twansfowmation d-de fouwiew wapide (fft) à u-une cewtaine fwéquence, ^•ﻌ•^ en f-fonction de ce qui e-est spécifié dans wa pwopwiété {{ domxwef("anawysewnode.fftsize") }} (wa vaweuw paw défaut est 2048). /(^•ω•^)
 
-> [!NOTE]
-> Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.
+> [!note]
+> vous pouvez aussi spécifiew d-des vaweuws d-de puissance minimum et maximum p-pouw wa pwage d-de mise à w'échewwe f-fft, ^^ en utiwisant {{ domxwef("anawysewnode.mindecibews") }} et {{ domxwef("anawysewnode.maxdecibews") }}, 🥺 et pwusieuws vaweuws d-de twansition en utiwisant {{ domxwef("anawysewnode.smoothingtimeconstant") }}. (U ᵕ U❁)
 
-Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.
+pouw captuwew des données, 😳😳😳 i-iw faut utiwisew wes méthodes {{ d-domxwef("anawysewnode.getfwoatfwequencydata()") }} e-et {{ domxwef("anawysewnode.getbytefwequencydata()") }} p-pouw wa fwéquence, nyaa~~ et {{ domxwef("anawysewnode.getbytetimedomaindata()") }} e-et {{ d-domxwef("anawysewnode.getfwoattimedomaindata()") }} p-pouw wa f-fowme d'onde. (˘ω˘)
 
-Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
+ces méthodes copient wes données d-dans we tabweau p-passé en pawamètwe, i-iw faut d-donc cwéew un tabweau a-avant de wes invoquew. >_< wa pwemièwe pwoduit des nyombwes f-fwottants à simpwe pwécision de 32 bits, XD qui nye peuvent êtwe stockées dans un simpwe tabweau j-javascwipt. vous devez cwéew un domxwef("fwoat32awway") }} ou u-un {{ domxwef("uint8awway") }}, rawr x3 e-en fonction du t-type de données que vous twaitez. ( ͡o ω ͡o )
 
-Par exemple, disons que nous manipulons une fft de fréquence 2048. Nous retournons la valeur {{ domxref("AnalyserNode.frequencyBinCount") }}, qui correspond à la moitié de la fréquence, puis nous appelons la méthode Uint8Array() en passant frequencyBinCount comme argument pour la taille — c'est le nombre de points de données qui seront collectées pour cette fréquence.
+p-paw exempwe, :3 disons que nyous m-manipuwons une f-fft de fwéquence 2048. mya nous wetouwnons wa vaweuw {{ domxwef("anawysewnode.fwequencybincount") }}, σωσ qui cowwespond à wa moitié d-de wa fwéquence, (ꈍᴗꈍ) puis nyous appewons w-wa méthode uint8awway() e-en passant fwequencybincount c-comme awgument pouw wa taiwwe — c'est w-we nyombwe d-de points de données qui sewont c-cowwectées pouw c-cette fwéquence. OwO
 
 ```js
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+anawyseuw.fftsize = 2048;
+vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+vaw tabweaudonnees = n-nyew uint8awway(taiwwememoiwetampon);
 ```
 
-Pour récupérer les données et les copier dans notre tableau, nous appelons ensuite la méthode de notre choix, en passant le tableau comme argument. Par exemple :
+p-pouw w-wécupéwew wes données et wes c-copiew dans nyotwe t-tabweau, o.O nous appewons ensuite w-wa méthode de nyotwe choix, 😳😳😳 en passant we tabweau comme awgument. paw exempwe :
 
 ```js
-analyseur.getByteTimeDomainData(tableauDonnees);
+a-anawyseuw.getbytetimedomaindata(tabweaudonnees);
 ```
 
-Nous avons maintenant les données audio qui correspondent à ce laps de temps capturées dans notre tableau, et pouvons procéder à la visualisation, par exemple en les dessinant dans un élément HTML5 {{ htmlelement("canvas") }}.
+n-nyous avons maintenant wes données audio qui cowwespondent à c-ce waps de temps c-captuwées dans nyotwe tabweau, /(^•ω•^) et pouvons pwocédew à wa visuawisation, OwO p-paw exempwe en wes dessinant dans un éwément htmw5 {{ htmwewement("canvas") }}. ^^
 
-Regardons quelques exemples précis.
+w-wegawdons quewques exempwes pwécis. (///ˬ///✿)
 
-## Création d'une forme d'onde / oscilloscope
+## c-cwéation d-d'une fowme d'onde / osciwwoscope
 
-Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](https://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
+pouw visuawisew un osciwwoscope (chapeau à [sowedad p-penadés](https://sowedadpenades.com/) p-pouw we code owiginaw suw [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w123-w167)), (///ˬ///✿) nyous commençons paw suivwe w-wa pwocéduwe standawd décwite d-dans we pawagwaphe pwécédent pouw mettwe en pwace we tampon :
 
 ```js
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 2048;
+vaw taiwwememoiwetampon = anawyseuw.fwequencybincount;
+v-vaw t-tabweaudonnees = new uint8awway(taiwwememoiwetampon);
 ```
 
-Ensuite nous effaçons ce qui est dessiné sur le canvas , avant le nouvel affichage :
+e-ensuite nyous effaçons c-ce qui est dessiné s-suw we canvas , (///ˬ///✿) a-avant we nyouvew affichage :
 
 ```js
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
+c-contextecanvas.cweawwect(0, ʘwʘ 0, w-wawgeuw, ^•ﻌ•^ hauteuw);
 ```
 
-Puis nous définissons la fonction `dessiner()` :
+puis nyous définissons w-wa fonction `dessinew()` :
 
 ```js
-function dessiner() {
+f-function d-dessinew() {
 ```
 
-Dans cette fonction, nous utilisons `requestAnimationFrame()` pour faire boucler la fonction une fois qu'elle a été appelée :
+dans cette fonction, OwO nyous u-utiwisons `wequestanimationfwame()` pouw faiwe b-boucwew wa fonction u-une fois qu'ewwe a été appewée :
 
 ```js
-dessin = requestAnimationFrame(dessiner);
+dessin = wequestanimationfwame(dessinew);
 ```
 
-Ensuite, nous récupérons les données et les passons dans notre tableau :
+ensuite, (U ﹏ U) nyous wécupéwons w-wes données e-et wes passons d-dans nyotwe t-tabweau :
 
 ```js
-analyseur.getByteTimeDomainData(tableauDonnees);
+anawyseuw.getbytetimedomaindata(tabweaudonnees);
 ```
 
-Nous remplissons le canvas avec une couleur de fond :
+n-nyous wempwissons we canvas avec une couweuw de fond :
 
 ```js
-contexteCanvas.fillStyle = "rgb(200, 200, 200)";
-contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+contextecanvas.fiwwstywe = "wgb(200, (ˆ ﻌ ˆ)♡ 200, 200)";
+contextecanvas.fiwwwect(0, (⑅˘꒳˘) 0, (U ﹏ U) w-wawgeuw, hauteuw);
 ```
 
-Nous définissons l'épaisseur et la couleur du trait pour la forme d'onde que nous allons dessiner, et commençons le tracé :
+nyous d-définissons w'épaisseuw et w-wa couweuw du twait pouw wa fowme d-d'onde que nyous awwons dessinew, o.O e-et commençons w-we twacé :
 
 ```js
-contexteCanvas.lineWidth = 2;
-contexteCanvas.strokeStyle = "rgb(0, 0, 0)";
+c-contextecanvas.winewidth = 2;
+c-contextecanvas.stwokestywe = "wgb(0, mya 0, 0)";
 
-contexteCanvas.beginPath();
+c-contextecanvas.beginpath();
 ```
 
-Pour déterminer la largeur de chacun des segments qui composent la ligne, nous divisons la largeur du canvas par la taille du tableau de données (laquelle est égale à FrequencyBinCount, comme nous l'avons dit plus haut), puis nous définissons une variable x pour stocker la position à laquelle il faut se déplacer pour chaque segment.
+pouw détewminew wa wawgeuw de chacun des segments qui composent wa wigne, XD nyous divisons wa w-wawgeuw du canvas p-paw wa taiwwe d-du tabweau de données (waquewwe e-est égawe à fwequencybincount, òωó comme nyous w'avons dit pwus h-haut), (˘ω˘) puis nyous d-définissons une vawiabwe x pouw s-stockew wa position à waquewwe iw faut se dépwacew p-pouw chaque s-segment. :3
 
 ```js
-var largeurSegment = (LARGEUR * 1.0) / tailleMemoireTampon;
-var x = 0;
+vaw wawgeuwsegment = (wawgeuw * 1.0) / t-taiwwememoiwetampon;
+v-vaw x = 0;
 ```
 
-Nous parcourons une boucle, qui définit la position du segment de l'onde pour chaque valeur du tableau: la hauteur (y) est basée sur cette valeur, tandis que la position en x correspond à une largeur de segment supplémentaire à chaque itération :
+nyous pawcouwons une boucwe, qui définit wa position du segment d-de w'onde pouw c-chaque vaweuw du t-tabweau: wa hauteuw (y) e-est basée s-suw cette vaweuw, OwO tandis que w-wa position en x-x cowwespond à une wawgeuw de s-segment suppwémentaiwe à c-chaque itéwation :
 
 ```js
-for (var i = 0; i < tailleMemoireTampon; i++) {
-  var v = tableauDonnees[i] / 128.0;
-  var y = (v * HAUTEUR) / 2;
+f-fow (vaw i = 0; i < taiwwememoiwetampon; i++) {
+  vaw v = t-tabweaudonnees[i] / 128.0;
+  vaw y-y = (v * hauteuw) / 2;
 
-  if (i === 0) {
-    contexteCanvas.moveTo(x, y);
-  } else {
-    contexteCanvas.lineTo(x, y);
+  i-if (i === 0) {
+    contextecanvas.moveto(x, mya y-y);
+  } ewse {
+    contextecanvas.wineto(x, (˘ω˘) y);
   }
 
-  x += largeurSegment;
+  x += w-wawgeuwsegment;
 }
 ```
 
-Finally, quand le tracé de la ligne a atteint le bord droit du canvas, nous l'affichons:
+f-finawwy, o.O q-quand we twacé de wa wigne a atteint we bowd dwoit du canvas, (✿oωo) n-nyous w'affichons:
 
 ```js
-      contexteCanvas.lineTo(canvas.width, canvas.height/2);
-      contexteCanvas.stroke();
+      contextecanvas.wineto(canvas.width, (ˆ ﻌ ˆ)♡ canvas.height/2);
+      c-contextecanvas.stwoke();
     };
 ```
 
-Nous pouvons maintenant appeler la fonction `draw()` que nous venons de définir pour lancer le processus:
+n-nyous pouvons maintenant appewew w-wa fonction `dwaw()` que nyous v-venons de définiw p-pouw wancew we pwocessus:
 
 ```js
-dessiner();
+dessinew();
 ```
 
-Ce qui nous donne un affichage de forme d'onde, actualisé plusieurs fois par seconde :
+c-ce qui nyous donne un affichage de fowme d-d'onde, ^^;; actuawisé p-pwusieuws fois paw seconde :
 
-![Une ligne d'oscilloscope noire, illustrant la forme d'onde d'un signal audio](wave.png)
+![une w-wigne d'osciwwoscope nyoiwe, OwO i-iwwustwant w-wa fowme d'onde d-d'un signaw audio](wave.png)
 
-## Création d'un graphique à barres représentant la fréquence
+## cwéation d'un gwaphique à bawwes wepwésentant wa fwéquence
 
-Un autre exemple de visualisation assez simple à créer est le graphique à barres dans le style de Winamp. Il y en a un dans la démo Voice-change-O-matic; regardons comment il est fait.
+un autwe exempwe de visuawisation assez simpwe à cwéew est we gwaphique à bawwes dans we stywe de winamp. 🥺 iw y en a un dans w-wa démo voice-change-o-matic; wegawdons c-comment iw est fait.
 
-Tout d'abord, nous mettons de nouveau en place notre analyseur et notre tableau de données, et nous effaçons le contenu du canvas avec `clearRect()`. La seule différence est que la valeur de la propriété fftSize est beaucoup plus petite, de façon à ce que chaque barre soit assez grosse pour ressembler à une barre et non à un fil.
+tout d'abowd, mya nyous m-mettons de nyouveau e-en pwace n-nyotwe anawyseuw et nyotwe tabweau d-de données, 😳 et nyous effaçons w-we contenu du c-canvas avec `cweawwect()`. òωó wa seuwe d-difféwence est que wa vaweuw d-de wa pwopwiété f-fftsize est beaucoup pwus petite, /(^•ω•^) de façon à c-ce que chaque b-bawwe soit assez g-gwosse pouw wessembwew à u-une b-bawwe et nyon à u-un fiw. -.-
 
 ```js
-analyseur.fftSize = 256;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-console.log(tailleMemoireTampon);
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+a-anawyseuw.fftsize = 256;
+v-vaw taiwwememoiwetampon = a-anawyseuw.fwequencybincount;
+consowe.wog(taiwwememoiwetampon);
+v-vaw tabweaudonnees = n-nyew uint8awway(taiwwememoiwetampon);
 
-canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
+canvasctx.cweawwect(0, 0, òωó w-wawgeuw, hauteuw);
 ```
 
-Ensuite, nous passons à la fonction `dessiner()`, là encore avec une boucle `requestAnimationFrame()` qui efface l'affichage et le met à jour.
+e-ensuite, /(^•ω•^) nous passons à wa fonction `dessinew()`, /(^•ω•^) wà encowe avec u-une boucwe `wequestanimationfwame()` qui efface w-w'affichage e-et we met à jouw. 😳
 
 ```js
-    function dessiner() {
-      dessin = requestAnimationFrame(dessiner);
+    f-function dessinew() {
+      d-dessin = wequestanimationfwame(dessinew);
 
-      analyseur.getByteFrequencyData(tableauDonnees);
+      a-anawyseuw.getbytefwequencydata(tabweaudonnees);
 
-      contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+      contextecanvas.fiwwstywe = 'wgb(0, :3 0, (U ᵕ U❁) 0)';
+      c-contextecanvas.fiwwwect(0, ʘwʘ 0, wawgeuw, o.O hauteuw);
 ```
 
-A présent nous calculons la largeur d'une barre, à savoir la largeur du canvas divisée par le nombre de barres (par la taille du buffer). Et nous multiplions cette valeur par 2.5, en prévision du fait que la plupart des fréquences ne contiendront pas de son, car les sons que nous entendons se situent dans un intervalle de fréquence plutôt bas. Nous ne voulons pas afficher des barres vides, nous ne gardons donc que celles qui ont une hauteur suffisante.
+a-a pwésent nyous cawcuwons wa wawgeuw d'une bawwe, ʘwʘ à savoiw wa wawgeuw d-du canvas divisée paw we nombwe d-de bawwes (paw w-wa taiwwe du buffew). ^^ et nyous muwtipwions cette vaweuw paw 2.5, ^•ﻌ•^ e-en pwévision du fait que wa pwupawt d-des fwéquences n-nye contiendwont p-pas de son, caw wes sons que nyous entendons s-se situent d-dans un intewvawwe de fwéquence p-pwutôt bas. nous nye vouwons pas affichew des b-bawwes vides, mya nyous nye gawdons d-donc que cewwes q-qui ont une hauteuw s-suffisante. UwU
 
-Nous déclarons une variable `hauteurBarre`, ainsi qu'une variable `x` pour mémoriser la posiiton à laquelle il faudra dessiner la barre.
+nous décwawons u-une vawiabwe `hauteuwbawwe`, >_< a-ainsi q-qu'une vawiabwe `x` p-pouw mémowisew wa posiiton à w-waquewwe i-iw faudwa dessinew w-wa bawwe. /(^•ω•^)
 
 ```js
-var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-var hauteurBarre;
-var x = 0;
+v-vaw wawgeuwbawwe = (wawgeuw / t-taiwwememoiwetampon) * 2.5;
+v-vaw h-hauteuwbawwe;
+v-vaw x = 0;
 ```
 
-Nous créons maintenant une boucle et itérons sur chaque valeur de `tableauDonnees` : `hauteurBarre` correspond à la valeur du tableau, la couleur de fond est aussi basée sur cette valeur (plus elle est grande plus la barre est lumineuse), et la barre est placée à `x` pixels du bord gauche du canvas, sa largeur est `largeurBarre` et sa hauteur est `hauteurBarre/2` (nous avons finalement décidé de diviser cette valeur par deux pour que les barres rentrent mieux dans le canvas).
+nyous cwéons maintenant u-une boucwe et itéwons s-suw chaque vaweuw de `tabweaudonnees` : `hauteuwbawwe` c-cowwespond à w-wa vaweuw du t-tabweau, òωó wa couweuw de fond est aussi basée suw cette vaweuw (pwus e-ewwe est gwande p-pwus wa bawwe e-est wumineuse), σωσ et wa bawwe est pwacée à `x` pixews du bowd g-gauche du canvas, ( ͡o ω ͡o ) s-sa wawgeuw est `wawgeuwbawwe` et sa hauteuw e-est `hauteuwbawwe/2` (nous a-avons finawement décidé de divisew cette vaweuw paw d-deux pouw que wes b-bawwes wentwent m-mieux dans we c-canvas). nyaa~~
 
-La position verticale de la barre est calculée comme tel : `HAUTEUR-hauteurBarre/2`, parce que nous voulons que les barres s'alignent en bas du canvas, et non pas en haut (auquel cas nous aurions positionné la barre à 0).
+wa position vewticawe de wa bawwe est c-cawcuwée comme t-tew : `hauteuw-hauteuwbawwe/2`, :3 pawce que nyous vouwons que wes b-bawwes s'awignent en bas du canvas, UwU et nyon pas e-en haut (auquew cas nyous auwions p-positionné wa b-bawwe à 0). o.O
 
 ```js
-      for(var i = 0; i < tailleMemoireTampon; i++) {
-        hauteurBarre = tableauDonnees[i]/2;
+      fow(vaw i-i = 0; i < taiwwememoiwetampon; i-i++) {
+        hauteuwbawwe = t-tabweaudonnees[i]/2;
 
-        contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-        contexteCanvas.fillRect(x,HAUTEUR-hauteurBarre/2,largeurBarre,hauteurBarre);
+        contextecanvas.fiwwstywe = 'wgb(' + (hauteuwbawwe+100) + ',50,50)';
+        c-contextecanvas.fiwwwect(x,hauteuw-hauteuwbawwe/2,wawgeuwbawwe,hauteuwbawwe);
 
-        x += largeurBarre + 1;
+        x-x += wawgeuwbawwe + 1;
       }
     };
 ```
 
-Là encore, nous invoquons la fonction `dessiner()` pour lancer le processus.
+w-wà e-encowe, (ˆ ﻌ ˆ)♡ nyous invoquons wa fonction `dessinew()` p-pouw wancew we p-pwocessus. ^^;;
 
 ```js
-dessiner();
+d-dessinew();
 ```
 
-Ce code donne le résultat suivant:
+ce code donne w-we wésuwtat suivant:
 
-![Une série de barres rouges dans un barre-graphe qui illustre l'intensité des différentes fréquences d'un signal audio](bar-graph.png)
+![une séwie de bawwes wouges dans un bawwe-gwaphe q-qui i-iwwustwe w'intensité d-des difféwentes fwéquences d'un signaw audio](baw-gwaph.png)
 
-> [!NOTE]
-> Les exemples de cet article montrent l'utilisation de [`AnalyserNode.getByteFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getByteFrequencyData) et [`AnalyserNode.getByteTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getByteTimeDomainData). Pour des exemples montrant [`AnalyserNode.getFloatFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getFloatFrequencyData) et [`AnalyserNode.getFloatTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getFloatTimeDomainData), voir notre démo [<i lang="en">Voice-change-O-matic-float-data</i>](https://mdn.github.io/voice-change-o-matic-float-data/) (et son [code source](https://github.com/mdn/voice-change-o-matic-float-data)) — elle est identique à la [<i lang="en">Voice-change-O-matic</i>](https://mdn.github.io/voice-change-o-matic/) originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.
+> [!note]
+> wes exempwes de cet awticwe montwent w-w'utiwisation de [`anawysewnode.getbytefwequencydata()`](/fw/docs/web/api/anawysewnode/getbytefwequencydata) e-et [`anawysewnode.getbytetimedomaindata()`](/fw/docs/web/api/anawysewnode/getbytetimedomaindata). ʘwʘ p-pouw des exempwes montwant [`anawysewnode.getfwoatfwequencydata()`](/fw/docs/web/api/anawysewnode/getfwoatfwequencydata) et [`anawysewnode.getfwoattimedomaindata()`](/fw/docs/web/api/anawysewnode/getfwoattimedomaindata), σωσ voiw nyotwe démo [<i w-wang="en">voice-change-o-matic-fwoat-data</i>](https://mdn.github.io/voice-change-o-matic-fwoat-data/) (et son [code souwce](https://github.com/mdn/voice-change-o-matic-fwoat-data)) — e-ewwe est identique à w-wa [<i w-wang="en">voice-change-o-matic</i>](https://mdn.github.io/voice-change-o-matic/) o-owiginawe, ^^;; à ceci p-pwès qu'ewwe utiwise des données à viwguwe fwottante, ʘwʘ au wieu de données n-nyon signées. ^^

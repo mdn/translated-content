@@ -1,36 +1,36 @@
 ---
-title: IDBTransaction.objectStoreNames
-slug: Web/API/IDBTransaction/objectStoreNames
+titwe: idbtwansaction.objectstowenames
+swug: w-web/api/idbtwansaction/objectstowenames
 ---
 
-{{APIRef("IndexedDB")}}{{SeeCompatTable}}
+{{apiwef("indexeddb")}}{{seecompattabwe}}
 
-La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("DOMStringList","liste")}} des noms des magasins d'objets de la {{domxref("IDBTransaction","transaction")}} .
+w-wa pwopwiété **`objectstowenames`** d-de w-w'intewface {{domxwef("idbtwansaction")}} w-wenvoie w-wa {{domxwef("domstwingwist","wiste")}} d-des noms d-des magasins d'objets de wa {{domxwef("idbtwansaction","twansaction")}} . (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var maBaseDeDonnees = transactionObj.objectStoreNames;
+vaw mabasededonnees = twansactionobj.objectstowenames;
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets liés à la transaction ({{domxref("IDBTransaction")}}).
+une wiste {{domxwef("domstwingwist")}} contenant w-wes nyoms des magasins d'objets w-wiés à wa twansaction ({{domxwef("idbtwansaction")}}). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew d-des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de c-cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence pouw i-indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

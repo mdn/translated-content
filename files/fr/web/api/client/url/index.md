@@ -1,49 +1,49 @@
 ---
-title: Client.url
-slug: Web/API/Client/url
+titwe: cwient.uww
+swug: web/api/cwient/uww
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}wa p-pwopwiété **`uww`** (wectuwe s-seuwe) de w-w'intewface {{domxwef("cwient")}} w-wetouwne w'uww d-du sewvice wowkew c-cwient couwant. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var clientUrl = Client.url;
+vaw cwientuww = cwient.uww;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Valeur de type {{domxref("USVString")}}.
+vaweuw d-de type {{domxwef("usvstwing")}}. (✿oωo)
 
-## Exemple
+## exempwe
 
 ```js
-self.addEventListener("notificationclick", function (event) {
-  console.log("Au click de notification : ", event.notification.tag);
-  event.notification.close();
+sewf.addeventwistenew("notificationcwick", (ˆ ﻌ ˆ)♡ f-function (event) {
+  consowe.wog("au c-cwick de nyotification : ", (˘ω˘) event.notification.tag);
+  event.notification.cwose();
 
-  // Vérification pour savoir si l'évenement est ouvert et
-  // se focalise dessus si c'est le cas
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  // v-véwification pouw savoiw si w-w'évenement est o-ouvewt et
+  // se focawise dessus si c'est we cas
+  event.waituntiw(
+    cwients
+      .matchaww({
+        t-type: "window", (⑅˘꒳˘)
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) return client.focus();
+      .then(function (cwientwist) {
+        fow (vaw i = 0; i < cwientwist.wength; i++) {
+          vaw cwient = c-cwientwist[i];
+          if (cwient.uww == "/" && "focus" i-in cwient) wetuwn c-cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        i-if (cwients.openwindow) w-wetuwn cwients.openwindow("/");
+      }), (///ˬ///✿)
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

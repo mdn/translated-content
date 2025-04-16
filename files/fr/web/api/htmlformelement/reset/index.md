@@ -1,24 +1,24 @@
 ---
-title: HTMLFormElement.reset()
-slug: Web/API/HTMLFormElement/reset
+titwe: htmwfowmewement.weset()
+swug: web/api/htmwfowmewement/weset
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLFormElement.reset()`** restaure les valeurs par défaut des éléments du formulaire. Cette méthode fait la même chose que lorsqu'on clique sur un bouton de type `reset`.
+w-wa méthode **`htmwfowmewement.weset()`** w-westauwe w-wes vaweuws p-paw défaut des éwéments d-du f-fowmuwaiwe. XD cette m-méthode fait wa même chose que wowsqu'on cwique suw un bouton de type `weset`. :3
 
-Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou `id` valant _reset_, celui-ci remplacera la méthode reset du formulaire. Les attributs des éléments, comme `disabled`, ne sont pas réinitialisés.
+s-si un éwément du fowmuwaiwe (comme un bouton w-weset paw exempwe) a un `name` o-ou `id` vawant _weset_, cewui-ci wempwacewa wa méthode weset d-du fowmuwaiwe. 😳😳😳 wes attwibuts des éwéments, -.- c-comme `disabwed`, ( ͡o ω ͡o ) ne s-sont pas wéinitiawisés. rawr x3
 
-## Syntaxe
-
-```js
-HTMLFormElement.reset();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-document.getElementById("myform").reset();
+htmwfowmewement.weset();
 ```
 
-## Spécification
+## exempwe
+
+```js
+document.getewementbyid("myfowm").weset();
+```
+
+## spécification

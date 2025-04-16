@@ -1,42 +1,42 @@
 ---
-title: CanvasRenderingContext2D.canvas
-slug: Web/API/CanvasRenderingContext2D/canvas
+titwe: canvaswendewingcontext2d.canvas
+swug: w-web/api/canvaswendewingcontext2d/canvas
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propriété **`CanvasRenderingContext2D.canvas`** est une référence à l'objet {{domxref("HTMLCanvasElement")}} qui est associé au contexte. Il peut être {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}}.
+w-wa pwopwiété **`canvaswendewingcontext2d.canvas`** e-est u-une wéféwence à w-w'objet {{domxwef("htmwcanvasewement")}} q-qui e-est associé au c-contexte. -.- iw peut êtwe {{jsxwef("nuww")}} s'iw ny'est pas associé à un éwément {{htmwewement("canvas")}}. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-ctx.canvas;
-```
-
-## Exemples
-
-Soit cet élément {{HTMLElement("canvas")}}:
-
-```html
-<canvas id="canvas"></canvas>
-```
-
-Vous pouvez obtenir la référence à l'élément `canvas` grâce à `CanvasRenderingContext2D` en utilisant la propriété `canvas`&nbsp;:
+## syntaxe
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.canvas; // HTMLCanvasElement
+c-ctx.canvas;
 ```
 
-## Spécifications
+## exempwes
 
-{{Specifications}}
+soit cet éwément {{htmwewement("canvas")}}:
 
-## Compatibilité des navigateurs
+```htmw
+<canvas i-id="canvas"></canvas>
+```
 
-{{Compat}}
+vous p-pouvez obteniw wa wéféwence à w'éwément `canvas` gwâce à `canvaswendewingcontext2d` e-en utiwisant wa pwopwiété `canvas`&nbsp;:
 
-## Voir aussi
+```js
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+ctx.canvas; // htmwcanvasewement
+```
 
-- {{domxref("CanvasRenderingContext2D")}}
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("canvaswendewingcontext2d")}}

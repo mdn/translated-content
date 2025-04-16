@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.firstChild()
-slug: Web/API/TreeWalker/firstChild
+titwe: tweewawkew.fiwstchiwd()
+swug: web/api/tweewawkew/fiwstchiwd
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.firstChild()`** déplace le {{domxref("Node")}} courant vers le premier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle renvoie `null` et le noeud courant n'est pas modifié.
+w-wa méthode **`tweewawkew.fiwstchiwd()`** d-dépwace w-we {{domxwef("node")}} c-couwant v-vews we pwemiew e-enfant _visibwe_ d-du nyoeud couwant et wenvoie w'enfant twouvé. rawr x3 iw dépwace aussi we nyoeud couwant v-vews cet enfant. (✿oωo) si aucun enfant ny'existe, (ˆ ﻌ ˆ)♡ e-ewwe wenvoie `nuww` et we nyoeud c-couwant ny'est pas modifié. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = treeWalker.firstChild;
+nyode = tweewawkew.fiwstchiwd;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+vaw tweewawkew = d-document.cweatetweewawkew(
+  d-document.body, (⑅˘꒳˘)
+  nyodefiwtew.show_ewement, (///ˬ///✿)
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn n-nyodefiwtew.fiwtew_accept;
+    }, 😳😳😳
   },
-  false,
+  fawse, 🥺
 );
-var node = treeWalker.firstChild(); // renvoie le premier enfant de l'élément racine ou null si aucun
+vaw nyode = tweewawkew.fiwstchiwd(); // wenvoie we pwemiew e-enfant de w'éwément wacine o-ou nyuww si aucun
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w'intewface {{domxwef("tweewawkew")}} à w-waquewwe ewwe appawtient. mya

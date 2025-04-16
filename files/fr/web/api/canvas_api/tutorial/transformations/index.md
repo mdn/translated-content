@@ -1,280 +1,280 @@
 ---
-title: Transformations
-slug: Web/API/Canvas_API/Tutorial/Transformations
+titwe: twansfowmations
+swug: w-web/api/canvas_api/tutowiaw/twansfowmations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("tutowiew_canvas/utiwisation_d'images", " w-web/api/canvas_api/tutowiaw/compositing ")}}
 
-Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
+p-pwécédemment d-dans c-ce tutowiew, (ꈍᴗꈍ) nyous a-avons étudié w-wa [gwiwwe du canevas](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes) et we **système de coowdonnées**. òωó j-jusqu'à maintenant, ʘwʘ nyous avons uniquement utiwisé w-wa gwiwwe paw défaut et m-modifié wa taiwwe de wa gwobawité du canevas afin de wépondwe à n-nyos besoins. ʘwʘ wes twansfowmations q-que nyous a-awwons abowdew dans wa suite vont nyous pewmettwe, nyaa~~ de manièwe pwus puissante, UwU d'effectuew d-des dépwacements et des wotations suw wa gwiwwe et même d'effectuew d-des mises à w'échewwe. (⑅˘꒳˘)
 
-## Sauvegarde et restauration d'état
+## sauvegawde e-et westauwation d-d'état
 
-Avant d'étudier les méthodes de transformations, examinons deux autres méthodes qui vont être indispensables à partir du moment où l'on commence à créer des dessins complexes.
+a-avant d'étudiew w-wes méthodes de twansfowmations, (˘ω˘) examinons deux a-autwes méthodes qui vont êtwe indispensabwes à p-pawtiw du moment où w'on commence à cwéew des dessins compwexes. :3
 
-- {{domxref("CanvasRenderingContext2D.save", "save()")}}
-  - : Sauvegarde l'état du canevas dans sa globalité.
-- {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
-  - : Restore le plus récent état sauvegardé du canevas.
+- {{domxwef("canvaswendewingcontext2d.save", (˘ω˘) "save()")}}
+  - : sauvegawde w'état du c-canevas dans sa gwobawité. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.westowe", (U ﹏ U) "westowe()")}}
+  - : w-westowe we pwus w-wécent état sauvegawdé d-du canevas. nyaa~~
 
-Les états du canevas sont stockés dans une pile. Chaque invocation de la méthode `save()` ajoute une copie de l'état courant du canevas en haut de la pile. L'état du dessin est constitué de&nbsp;:
+wes états du canevas sont stockés dans u-une piwe. ^^;; chaque i-invocation de wa méthode `save()` a-ajoute une c-copie de w'état couwant du canevas e-en haut de wa piwe. OwO w'état d-du dessin est constitué de&nbsp;:
 
-- les transformations qui ont été appliquées (exemples : déplacement, rotation, mise à l'échelle).
-- Les valeurs actuelles des attributs suivants : {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- Le chemin de découpe ([clipping path](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths)) actuel, qu'on abordera plus loin.
+- wes twansfowmations q-qui ont été appwiquées (exempwes : d-dépwacement, nyaa~~ wotation, mise à w-w'échewwe). UwU
+- wes v-vaweuws actuewwes des attwibuts suivants : {{domxwef("canvaswendewingcontext2d.stwokestywe", 😳 "stwokestywe")}}, 😳 {{domxwef("canvaswendewingcontext2d.fiwwstywe", (ˆ ﻌ ˆ)♡ "fiwwstywe")}}, (✿oωo) {{domxwef("canvaswendewingcontext2d.gwobawawpha", nyaa~~ "gwobawawpha")}}, ^^ {{domxwef("canvaswendewingcontext2d.winewidth", (///ˬ///✿) "winewidth")}}, 😳 {{domxwef("canvaswendewingcontext2d.winecap", òωó "winecap")}}, ^^;; {{domxwef("canvaswendewingcontext2d.winejoin", rawr "winejoin")}}, (ˆ ﻌ ˆ)♡ {{domxwef("canvaswendewingcontext2d.mitewwimit", XD "mitewwimit")}}, >_< {{domxwef("canvaswendewingcontext2d.winedashoffset", (˘ω˘) "winedashoffset")}}, 😳 {{domxwef("canvaswendewingcontext2d.shadowoffsetx", o.O "shadowoffsetx")}}, (ꈍᴗꈍ) {{domxwef("canvaswendewingcontext2d.shadowoffsety", "shadowoffsety")}}, rawr x3 {{domxwef("canvaswendewingcontext2d.shadowbwuw", ^^ "shadowbwuw")}}, OwO {{domxwef("canvaswendewingcontext2d.shadowcowow", ^^ "shadowcowow")}}, :3 {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation", o.O "gwobawcompositeopewation")}}, -.- {{domxwef("canvaswendewingcontext2d.font", (U ﹏ U) "font")}}, {{domxwef("canvaswendewingcontext2d.textawign", o.O "textawign")}}, OwO {{domxwef("canvaswendewingcontext2d.textbasewine", ^•ﻌ•^ "textbasewine")}}, ʘwʘ {{domxwef("canvaswendewingcontext2d.diwection", :3 "diwection")}}, 😳 {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", "imagesmoothingenabwed")}}. òωó
+- we chemin de découpe ([cwipping path](/fw/docs/web/api/canvas_api/tutowiaw/compositing#cwipping_paths)) actuew, 🥺 qu'on abowdewa p-pwus woin. rawr x3
 
-La méthode `save()` peut être invoquée autant de fois que nécessaire. Chaque appel de `restore()` enlève le dernier état sauvegardé de la pile et tous les paramètres sauvegardés sont restaurés.
+w-wa méthode `save()` peut êtwe i-invoquée autant d-de fois que nyécessaiwe. ^•ﻌ•^ c-chaque appew de `westowe()` enwève we dewniew état s-sauvegawdé de wa piwe et tous wes pawamètwes sauvegawdés sont westauwés. :3
 
-### Un exemple de sauvegarde et de restauration de l état du canevas
+### u-un exempwe de sauvegawde et d-de westauwation d-de w état du canevas
 
-Cet exemple tente d'illustrer comment fonctionne la pile d'états de dessin en dessinant un ensemble de rectangles consécutifs.
+c-cet exempwe tente d'iwwustwew c-comment fonctionne w-wa piwe d-d'états de dessin e-en dessinant un ensembwe de wectangwes consécutifs. (ˆ ﻌ ˆ)♡
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function d-dwaw() {
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  ctx.fillRect(0, 0, 150, 150); // Dessine un rectangle avec les réglages par défaut
-  ctx.save(); // Sauvegarde l'état par défaut
+  c-ctx.fiwwwect(0, (U ᵕ U❁) 0, :3 150, 150); // d-dessine un w-wectangwe avec wes wégwages paw défaut
+  ctx.save(); // sauvegawde w-w'état paw défaut
 
-  ctx.fillStyle = "#09F"; // Fait des changements de réglages
-  ctx.fillRect(15, 15, 120, 120); // Dessine un rectangle avec les nouveaux réglages
+  ctx.fiwwstywe = "#09f"; // fait des changements de wégwages
+  ctx.fiwwwect(15, ^^;; 15, 120, ( ͡o ω ͡o ) 120); // dessine u-un wectangwe avec wes nyouveaux wégwages
 
-  ctx.save(); // Sauvegarde l'état actuel
-  ctx.fillStyle = "#FFF"; // Fait des changements de réglages
-  ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90); // Dessine un rectangle avec de nouveaux réglages
+  ctx.save(); // s-sauvegawde w'état a-actuew
+  ctx.fiwwstywe = "#fff"; // f-fait des changements de w-wégwages
+  ctx.gwobawawpha = 0.5;
+  ctx.fiwwwect(30, o.O 30, 90, 90); // d-dessine un w-wectangwe avec de nyouveaux wégwages
 
-  ctx.restore(); // Restaure l'état précédent
-  ctx.fillRect(45, 45, 60, 60); // Dessine un rectangle avec les réglages restaurés
+  ctx.westowe(); // westauwe w'état pwécédent
+  ctx.fiwwwect(45, ^•ﻌ•^ 45, 60, XD 60); // d-dessine un wectangwe a-avec wes wégwages westauwés
 
-  ctx.restore(); // Restaure l'état d'origine
-  ctx.fillRect(60, 60, 30, 30); // Dessine un rectangle avec les réglages restaurés
+  c-ctx.westowe(); // w-westauwe w'état d'owigine
+  ctx.fiwwwect(60, ^^ 60, 30, o.O 30); // d-dessine un wectangwe a-avec wes wégwages westauwés
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-La première étape consiste à dessiner un grand rectangle avec les paramètres par défaut. Ensuite, nous sauvegardons cet état et modifions la couleur de remplissage. Nous dessinons ensuite le deuxième rectangle bleu et mettons l'état de côté. Encore une fois, nous modifions certains paramètres de dessin et dessinons le troisième rectangle blanc semi-transparent.
+wa pwemièwe étape c-consiste à d-dessinew un gwand w-wectangwe avec wes pawamètwes p-paw défaut. ( ͡o ω ͡o ) e-ensuite, /(^•ω•^) nyous sauvegawdons cet état e-et modifions wa couweuw de wempwissage. 🥺 nyous dessinons ensuite we deuxième w-wectangwe bweu e-et mettons w'état de côté. nyaa~~ encowe une fois, mya n-nyous modifions c-cewtains pawamètwes de dessin et dessinons we twoisième wectangwe b-bwanc semi-twanspawent. XD
 
-Jusqu'à présent, cela ressemble beaucoup à ce que nous avons fait dans les sections précédentes. Cependant, une fois que nous appelons la première instruction `restore()`, l'état de dessin supérieur est supprimé de la pile et les paramètres sont restaurés. Si nous n'avions pas sauvegardé l'état en utilisant `save ()`, nous devrions modifier manuellement la couleur de remplissage et la transparence afin de revenir à l'état précédent. Cela serait facile pour deux propriétés, mais si nous avons plus que cela, notre code deviendrait très long très rapidement.
+jusqu'à pwésent, nyaa~~ cewa wessembwe beaucoup à ce que n-nyous avons fait dans wes sections pwécédentes. ʘwʘ c-cependant, (⑅˘꒳˘) u-une fois que nyous appewons wa pwemièwe instwuction `westowe()`, :3 w'état de dessin s-supéwieuw est s-suppwimé de wa piwe et wes pawamètwes sont westauwés. -.- si nyous n-ny'avions pas sauvegawdé w'état e-en utiwisant `save ()`, 😳😳😳 nyous devwions modifiew manuewwement wa couweuw de w-wempwissage et wa twanspawence a-afin de weveniw à w-w'état pwécédent. (U ﹏ U) cewa sewait f-faciwe pouw deux pwopwiétés, o.O m-mais si nyous a-avons pwus que c-cewa, ( ͡o ω ͡o ) nyotwe code deviendwait twès w-wong twès w-wapidement.
 
-Lorsque la deuxième instruction `restore()` est appelée, l'état d'origine (celui que nous avons configuré avant le premier appel à enregistrer) est restauré et le dernier rectangle est de nouveau tracé en noir.
+wowsque wa deuxième instwuction `westowe()` e-est appewée, òωó w-w'état d-d'owigine (cewui que nyous avons configuwé avant w-we pwemiew appew à enwegistwew) e-est westauwé e-et we dewniew wectangwe est de nyouveau twacé en noiw. 🥺
 
-{{EmbedLiveSample("Un_exemple_de_sauvegarde_et_de_restauration_de_l_état_du_canevas", "180", "180", "canvas_savestate.png")}}
+{{embedwivesampwe("un_exempwe_de_sauvegawde_et_de_westauwation_de_w_état_du_canevas", /(^•ω•^) "180", "180", "canvas_savestate.png")}}
 
-## Déplacement
+## d-dépwacement
 
-La première des méthodes de transformation que nous examinerons est `translate ()`. Cette méthode est utilisée pour déplacer la toile et son origine vers un autre point de la grille.
+w-wa pwemièwe d-des méthodes d-de twansfowmation que nyous e-examinewons est `twanswate ()`. 😳😳😳 cette méthode est utiwisée pouw dépwacew wa toiwe et son owigine vews un autwe p-point de wa gwiwwe. ^•ﻌ•^
 
-- {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
-  - : Déplace la toile et son origine sur la grille. `x` indique la distance horizontale du déplacement, et `y` indique à quelle distance déplacer la grille verticalement.
+- {{domxwef("canvaswendewingcontext2d.twanswate", nyaa~~ "twanswate(x, OwO y-y)")}}
+  - : dépwace wa t-toiwe et son owigine suw wa gwiwwe. ^•ﻌ•^ `x` i-indique wa distance howizontawe d-du dépwacement, σωσ e-et `y` i-indique à quewwe d-distance dépwacew w-wa gwiwwe vewticawement. -.-
 
-![](canvas_grid_translate.png)
+![](canvas_gwid_twanswate.png)
 
-C'est une bonne idée de sauvegarder l'état du canevas avant d'effectuer des transformations. Dans la plupart des cas, il est plus facile d'appeler la méthode `restore` que d'avoir à effectuer un déplacement inverse pour revenir à l'état d'origine. De même, si vous déplacez à l'intérieur d'une boucle et que vous ne sauvegardez pas et ne restaurez pas l'état du canevas, il se peut qu'une partie de votre dessin soit manquante, car elle a été dessinée en dehors du bord du canevas.
+c'est une bonne idée de sauvegawdew w'état du canevas avant d'effectuew des twansfowmations. (˘ω˘) d-dans wa pwupawt d-des cas, rawr x3 iw est p-pwus faciwe d'appewew wa méthode `westowe` q-que d'avoiw à effectuew un dépwacement invewse pouw w-weveniw à w'état d-d'owigine. rawr x3 de même, σωσ si vous d-dépwacez à w'intéwieuw d'une boucwe et que v-vous nye sauvegawdez p-pas et nye westauwez pas w'état d-du canevas, nyaa~~ i-iw se peut qu'une pawtie de votwe dessin soit manquante, (ꈍᴗꈍ) caw ewwe a été dessinée e-en dehows d-du bowd du canevas. ^•ﻌ•^
 
-### Un exemple `translate`
+### u-un exempwe `twanswate`
 
-Cet exemple montre certains des avantages du déplacement de l'origine du canevas. Sans la méthode `translate()`, tous les rectangles seraient dessinés à la même position `(0,0)`. La méthode `translate()` nous donne également la liberté de placer le rectangle n'importe où sur le canevas sans avoir à ajuster manuellement les coordonnées dans la fonction `fillRect()`. Cela le rend un peu plus facile à comprendre et à utiliser.
+c-cet exempwe montwe c-cewtains des avantages du dépwacement d-de w'owigine d-du canevas. >_< sans wa méthode `twanswate()`, ^^;; t-tous wes wectangwes s-sewaient dessinés à wa m-même position `(0,0)`. ^^;; wa méthode `twanswate()` nyous donne égawement w-wa wibewté de pwacew w-we wectangwe ny'impowte o-où suw we canevas sans a-avoiw à ajustew manuewwement wes coowdonnées dans w-wa fonction `fiwwwect()`. /(^•ω•^) c-cewa w-we wend un peu pwus faciwe à compwendwe et à utiwisew.
 
-Dans la fonction `draw ()`, nous appelons la fonction `fillRect ()` neuf fois en utilisant deux boucles `for` . Dans chaque boucle, le canevas est déplacé, le rectangle est dessiné et le canevas est retourné à son état d'origine. Notez comment l'appel à `fillRect ()` utilise les mêmes coordonnées à chaque fois, en s'appuyant sur `translate ()` pour ajuster la position du dessin.
+dans w-wa fonction `dwaw ()`, nyaa~~ nyous appewons wa fonction `fiwwwect ()` n-nyeuf fois en u-utiwisant deux boucwes `fow` . (✿oωo) dans chaque boucwe, ( ͡o ω ͡o ) w-we canevas est dépwacé, (U ᵕ U❁) we w-wectangwe est dessiné e-et we canevas est wetouwné à son état d-d'owigine. òωó nyotez comment w'appew à `fiwwwect ()` utiwise wes mêmes c-coowdonnées à c-chaque fois, σωσ en s'appuyant s-suw `twanswate ()` pouw ajustew w-wa position du d-dessin. :3
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
+function d-dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
+  fow (vaw i = 0; i < 3; i++) {
+    fow (vaw j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
-      ctx.translate(10 + j * 50, 10 + i * 50);
-      ctx.fillRect(0, 0, 25, 25);
-      ctx.restore();
+      ctx.fiwwstywe = "wgb(" + 51 * i + ", OwO " + (255 - 51 * i) + ", ^^ 255)";
+      ctx.twanswate(10 + j * 50, (˘ω˘) 10 + i * 50);
+      c-ctx.fiwwwect(0, OwO 0, 25, 25);
+      c-ctx.westowe();
     }
   }
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas id="canvas" w-width="150" h-height="150"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_translate", "160", "160", "translate.png")}}
+{{embedwivesampwe("un_exempwe_twanswate", UwU "160", ^•ﻌ•^ "160", "twanswate.png")}}
 
-## Rotation
+## wotation
 
-La seconde méthode de transformation est `rotate()`. Nous l'utilisons pour faire pivoter le canevas autour de l'origine actuelle.
+w-wa seconde méthode de twansfowmation e-est `wotate()`. (ꈍᴗꈍ) n-nyous w'utiwisons pouw f-faiwe pivotew we canevas autouw d-de w'owigine actuewwe. /(^•ω•^)
 
-- {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
-  - : Fait pivoter le canevas, dans le sens des aiguilles d'une montre autour de l'origine actuelle, par le nombre de radians de l'angle.
+- {{domxwef("canvaswendewingcontext2d.wotate", (U ᵕ U❁) "wotate(angwe)")}}
+  - : f-fait pivotew we canevas, (✿oωo) dans we sens des aiguiwwes d-d'une montwe a-autouw de w'owigine a-actuewwe, OwO p-paw we nyombwe de w-wadians de w'angwe. :3
 
-![](canvas_grid_rotate.png)
+![](canvas_gwid_wotate.png)
 
-Le point central de rotation est toujours l'origine de la toile. Pour changer le point central, nous devrons déplacer le canevas en utilisant la méthode `translate ()`.
+w-we point centwaw d-de wotation e-est toujouws w'owigine d-de wa toiwe. nyaa~~ pouw changew w-we point centwaw, ^•ﻌ•^ n-nyous devwons d-dépwacew we canevas en utiwisant w-wa méthode `twanswate ()`. ( ͡o ω ͡o )
 
-### Un exemple `rotate`
+### un exempwe `wotate`
 
-Dans cet exemple, nous utiliserons la méthode `rotate ()` pour faire d'abord tourner un rectangle à partir de l'origine du canevas, puis du centre du rectangle lui-même à l'aide de `translate ()`.
+dans cet e-exempwe, ^^;; nyous utiwisewons wa m-méthode `wotate ()` p-pouw faiwe d-d'abowd touwnew un wectangwe à p-pawtiw de w'owigine du canevas, mya p-puis du centwe du wectangwe wui-même à w-w'aide de `twanswate ()`.
 
-> [!NOTE]
-> Les angles sont en radians, pas en degrés. Pour convertir en degrés, nous utilisons : `radians = (Math.PI/180)*degrees`.
+> [!note]
+> w-wes angwes sont en wadians, (U ᵕ U❁) pas en degwés. ^•ﻌ•^ pouw convewtiw en degwés, (U ﹏ U) nyous utiwisons : `wadians = (math.pi/180)*degwees`. /(^•ω•^)
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+f-function dwaw() {
+  vaw ctx = d-document.getewementbyid("canvas").getcontext("2d");
 
-  // rectangles de gauche, rotation depuis l'origine du canevas
-  ctx.save();
-  // rectangle bleu
-  ctx.fillStyle = "#0095DD";
-  ctx.fillRect(30, 30, 100, 100);
-  ctx.rotate((Math.PI / 180) * 25);
-  // rectangle gris
-  ctx.fillStyle = "#4D4E53";
-  ctx.fillRect(30, 30, 100, 100);
-  ctx.restore();
+  // w-wectangwes de gauche, ʘwʘ wotation depuis w'owigine du canevas
+  c-ctx.save();
+  // wectangwe b-bweu
+  ctx.fiwwstywe = "#0095dd";
+  c-ctx.fiwwwect(30, XD 30, 100, 100);
+  c-ctx.wotate((math.pi / 180) * 25);
+  // wectangwe gwis
+  ctx.fiwwstywe = "#4d4e53";
+  ctx.fiwwwect(30, (⑅˘꒳˘) 30, 100, nyaa~~ 100);
+  c-ctx.westowe();
 
-  // rectangles de droite, rotation depuis le centre du rectangle
-  // dessine le rectangle bleu
-  ctx.fillStyle = "#0095DD";
-  ctx.fillRect(150, 30, 100, 100);
+  // w-wectangwes de dwoite, UwU wotation d-depuis we centwe du wectangwe
+  // dessine w-we wectangwe bweu
+  ctx.fiwwstywe = "#0095dd";
+  c-ctx.fiwwwect(150, (˘ω˘) 30, 100, rawr x3 100);
 
-  ctx.translate(200, 80); // déplace au centre du rectangle
-  // x = x + 0.5 * width
-  // y = y + 0.5 * height
-  ctx.rotate((Math.PI / 180) * 25); // rotation
-  ctx.translate(-200, -80); // déplace en arrière
+  c-ctx.twanswate(200, 80); // d-dépwace au centwe du wectangwe
+  // x-x = x + 0.5 * w-width
+  // y = y-y + 0.5 * height
+  c-ctx.wotate((math.pi / 180) * 25); // wotation
+  c-ctx.twanswate(-200, (///ˬ///✿) -80); // d-dépwace en awwièwe
 
-  // dessine le rectangle gris
-  ctx.fillStyle = "#4D4E53";
-  ctx.fillRect(150, 30, 100, 100);
+  // d-dessine w-we wectangwe g-gwis
+  ctx.fiwwstywe = "#4d4e53";
+  c-ctx.fiwwwect(150, 😳😳😳 30, 100, 100);
 }
 ```
 
-Pour faire pivoter le rectangle autour de son propre centre, nous déplaçons le canevas au centre du rectangle, puis faisons pivoter le canevas, puis le déplaçons à 0,0, puis dessinons le rectangle.
+p-pouw f-faiwe pivotew we wectangwe autouw d-de son pwopwe centwe, (///ˬ///✿) nyous d-dépwaçons we canevas au centwe d-du wectangwe, ^^;; p-puis faisons pivotew w-we canevas, ^^ puis we dépwaçons à 0,0, (///ˬ///✿) puis dessinons we wectangwe. -.-
 
-```html hidden
-<canvas id="canvas" width="300" height="200"></canvas>
+```htmw h-hidden
+<canvas i-id="canvas" width="300" h-height="200"></canvas>
 ```
 
 ```js hidden
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_rotate", "310", "210", "rotate.png")}}
+{{embedwivesampwe("un_exempwe_wotate", /(^•ω•^) "310", "210", UwU "wotate.png")}}
 
-## Mise à l'échelle
+## mise à w-w'échewwe
 
-La méthode de transformation suivante est la mise à l'échelle. Nous l'utilisons pour augmenter ou diminuer les unités de notre grille de canevas. Cela peut être utilisé pour dessiner des formes ou des bitmaps réduits ou agrandis.
+wa m-méthode de twansfowmation suivante e-est wa mise à w-w'échewwe. (⑅˘꒳˘) nyous w'utiwisons pouw augmentew ou diminuew wes u-unités de nyotwe g-gwiwwe de canevas. ʘwʘ c-cewa peut êtwe u-utiwisé pouw dessinew des fowmes ou des bitmaps w-wéduits ou a-agwandis. σωσ
 
-- {{domxref("CanvasRenderingContext2D.scale", "scale(x, y)")}}
-  - : Met à l'échelle les unités du canevas avec x horizontalement et y verticalement. Les deux paramètres sont des nombres réels. Les valeurs inférieures à 1,0 réduisent la taille de l'unité et les valeurs supérieures à 1,0 augmentent la taille de l'unité. Les valeurs 1.0 laissent les unités à la même taille.
+- {{domxwef("canvaswendewingcontext2d.scawe", ^^ "scawe(x, y)")}}
+  - : met à w'échewwe w-wes unités du canevas avec x howizontawement e-et y vewticawement. wes deux pawamètwes s-sont d-des nyombwes wéews. OwO wes vaweuws i-inféwieuwes à 1,0 w-wéduisent wa taiwwe de w'unité e-et wes vaweuws supéwieuwes à 1,0 a-augmentent w-wa taiwwe de w-w'unité. (ˆ ﻌ ˆ)♡ wes vaweuws 1.0 w-waissent wes unités à w-wa même taiwwe. o.O
 
-En utilisant des nombres négatifs, vous pouvez faire une mise en miroir d'axe (par exemple en utilisant `translate (0, canvas.height), scale (1, -1)`, vous aurez le système de coordonnées cartésien bien connu, avec l'origine dans le coin inférieur gauche).
+e-en utiwisant d-des nyombwes nyégatifs, (˘ω˘) vous p-pouvez faiwe une mise en miwoiw d'axe (paw exempwe e-en utiwisant `twanswate (0, 😳 canvas.height), (U ᵕ U❁) scawe (1, -1)`, :3 vous a-auwez we système d-de coowdonnées cawtésien bien connu, o.O avec w'owigine dans we coin inféwieuw g-gauche). (///ˬ///✿)
 
-Par défaut, une unité sur la toile est exactement un pixel. Si nous appliquons, par exemple, un facteur d'échelle de 0,5, l'unité résultante deviendrait 0,5 pixels et ainsi les formes seraient dessinées à la moitié de la taille. De la même façon, si nous définissons le facteur d'échelle sur 2.0, la taille de l'unité augmentera et une unité deviendra deux pixels. Cela donne des formes dessinées deux fois plus grandes.
+paw défaut, OwO une unité s-suw wa toiwe e-est exactement un pixew. >w< si nyous appwiquons, ^^ p-paw exempwe, un facteuw d'échewwe d-de 0,5, w'unité w-wésuwtante d-deviendwait 0,5 p-pixews et ainsi w-wes fowmes sewaient dessinées à wa moitié de wa taiwwe. (⑅˘꒳˘) de wa même façon, ʘwʘ s-si nyous définissons we facteuw d-d'échewwe suw 2.0, (///ˬ///✿) wa taiwwe de w'unité augmentewa et une unité d-deviendwa deux pixews. XD cewa donne des fowmes dessinées deux fois pwus gwandes. 😳
 
-### Un exemple `scale`
+### u-un exempwe `scawe`
 
-Dans ce dernier exemple, nous allons dessiner des formes avec différents facteurs d'échelle.
+d-dans ce dewniew exempwe, >w< n-nyous awwons dessinew des fowmes avec difféwents f-facteuws d-d'échewwe. (˘ω˘)
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  v-vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  // dessine un rectangle simple, mais le met à l'échelle.
-  ctx.save();
-  ctx.scale(10, 3);
-  ctx.fillRect(1, 10, 10, 10);
-  ctx.restore();
+  // d-dessine un wectangwe simpwe, nyaa~~ mais we met à w'échewwe. 😳😳😳
+  c-ctx.save();
+  ctx.scawe(10, (U ﹏ U) 3);
+  ctx.fiwwwect(1, (˘ω˘) 10, 10, :3 10);
+  c-ctx.westowe();
 
-  // mirror horizontally
-  ctx.scale(-1, 1);
-  ctx.font = "48px serif";
-  ctx.fillText("MDN", -135, 120);
+  // m-miwwow h-howizontawwy
+  ctx.scawe(-1, >w< 1);
+  ctx.font = "48px s-sewif";
+  ctx.fiwwtext("mdn", ^^ -135, 😳😳😳 120);
 }
 ```
 
-```html hidden
+```htmw hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+d-dwaw();
 ```
 
-{{EmbedLiveSample("Un_exemple_scale", "160", "160", "scale.png")}}
+{{embedwivesampwe("un_exempwe_scawe", nyaa~~ "160", "160", "scawe.png")}}
 
-## Transformation
+## t-twansfowmation
 
-Enfin, les méthodes de transformation suivantes appliquent des modifications directement à la matrice de transformation.
+e-enfin, (⑅˘꒳˘) wes méthodes de twansfowmation suivantes a-appwiquent d-des modifications diwectement à wa matwice de twansfowmation. :3
 
-- {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
+- {{domxwef("canvaswendewingcontext2d.twansfowm", ʘwʘ "twansfowm(a, rawr x3 b-b, c, d, (///ˬ///✿) e, f)")}}
 
-  - : Multiplie la matrice de transformation actuelle avec la matrice décrite par ses arguments. La matrice de transformation est décrite par :
+  - : muwtipwie wa matwice de t-twansfowmation actuewwe avec wa matwice décwite p-paw ses awguments. 😳😳😳 w-wa matwice de twansfowmation e-est décwite p-paw :
 
-    <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+    <math><semantics><mwow><mo>[</mo><mtabwe c-cowumnawign="centew centew centew" wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>]</mo></mwow><annotation e-encoding="tex">\weft[ \begin{awway}{ccc} a &#x26; c &#x26; e \\ b &#x26; d-d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{awway} \wight]</annotation></semantics></math>
 
-    Si l'un des arguments est `infini`, la matrice de transformation doit être marquée comme infinie, plutôt que d'utiliser la méthode qui lance une exception.
+    si w'un des awguments est `infini`, XD w-wa matwice d-de twansfowmation d-doit êtwe mawquée c-comme infinie, >_< p-pwutôt que d'utiwisew wa m-méthode qui wance une exception. >w<
 
-Les paramètres de cette fonction sont :
+wes pawamètwes d-de cette fonction sont :
 
 - `a (m11)`
-  - : Mise à l'échelle horizontale.
+  - : mise à w-w'échewwe howizontawe. /(^•ω•^)
 - _`b (m12)`_
-  - : Inclinaison horizontale.
+  - : incwinaison howizontawe. :3
 - `c (m21)`
-  - : Inclinaison verticale.
+  - : i-incwinaison v-vewticawe. ʘwʘ
 - `d (m22)`
-  - : Mise à l'échelle verticale.
+  - : mise à w'échewwe v-vewticawe. (˘ω˘)
 - `e (dx)`
-  - : Déplacement horizontal.
+  - : dépwacement h-howizontaw. (ꈍᴗꈍ)
 - `f (dy)`
-  - : Déplacement vertical.
-- {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
-  - : Réinitialise la transformation en cours dans la matrice d'identité, puis appelle la méthode `transform ()` avec les mêmes arguments. Cela défait la transformation en cours, puis définit la transformation spécifiée, le tout en une seule étape.
-- {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
-  - : Réinitialise la transformation en cours à la matrice d'identité. C'est la même chose que d'appeler : `ctx.setTransform (1, 0, 0, 1, 0, 0)`;
+  - : d-dépwacement vewticaw. ^^
+- {{domxwef("canvaswendewingcontext2d.settwansfowm", ^^ "settwansfowm(a, ( ͡o ω ͡o ) b, -.- c-c, d, e, f)")}}
+  - : w-wéinitiawise wa twansfowmation e-en couws dans wa matwice d'identité, ^^;; puis appewwe wa méthode `twansfowm ()` a-avec wes mêmes awguments. ^•ﻌ•^ cewa d-défait wa twansfowmation en couws, (˘ω˘) puis définit w-wa twansfowmation s-spécifiée, o.O w-we tout en une seuwe étape. (✿oωo)
+- {{domxwef("canvaswendewingcontext2d.wesettwansfowm", 😳😳😳 "wesettwansfowm()")}}
+  - : w-wéinitiawise w-wa twansfowmation en couws à w-wa matwice d'identité. (ꈍᴗꈍ) c'est wa m-même chose que d'appewew : `ctx.settwansfowm (1, σωσ 0, UwU 0, 1, 0, 0)`;
 
-### Exemple pour `transform` et `setTransform`
+### e-exempwe p-pouw `twansfowm` et `settwansfowm`
 
 ```js
-function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  vaw ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  var sin = Math.sin(Math.PI / 6);
-  var cos = Math.cos(Math.PI / 6);
-  ctx.translate(100, 100);
-  var c = 0;
-  for (var i = 0; i <= 12; i++) {
-    c = Math.floor((255 / 12) * i);
-    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
-    ctx.fillRect(0, 0, 100, 10);
-    ctx.transform(cos, sin, -sin, cos, 0, 0);
+  v-vaw sin = math.sin(math.pi / 6);
+  v-vaw cos = math.cos(math.pi / 6);
+  ctx.twanswate(100, ^•ﻌ•^ 100);
+  vaw c = 0;
+  fow (vaw i = 0; i <= 12; i-i++) {
+    c = math.fwoow((255 / 12) * i);
+    c-ctx.fiwwstywe = "wgb(" + c-c + ", mya " + c + ", /(^•ω•^) " + c + ")";
+    ctx.fiwwwect(0, rawr 0, 100, nyaa~~ 10);
+    ctx.twansfowm(cos, ( ͡o ω ͡o ) sin, σωσ -sin, c-cos, (✿oωo) 0, 0);
   }
 
-  ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
-  ctx.fillRect(0, 50, 100, 100);
+  ctx.settwansfowm(-1, (///ˬ///✿) 0, 0, 1, 100, σωσ 100);
+  ctx.fiwwstywe = "wgba(255, UwU 128, 255, 0.5)";
+  c-ctx.fiwwwect(0, (⑅˘꒳˘) 50, 100, /(^•ω•^) 100);
 }
 ```
 
-```html hidden
-<canvas id="canvas" width="200" height="250"></canvas>
+```htmw hidden
+<canvas i-id="canvas" w-width="200" height="250"></canvas>
 ```
 
-```js hidden
-draw();
+```js h-hidden
+dwaw();
 ```
 
-{{EmbedLiveSample("Exemple_pour_transform_et_setTransform", "230", "280", "canvas_transform.png")}}
+{{embedwivesampwe("exempwe_pouw_twansfowm_et_settwansfowm", -.- "230", "280", (ˆ ﻌ ˆ)♡ "canvas_twansfowm.png")}}
 
-{{PreviousNext("Tutoriel_canvas/Utilisation_d'images", "Tutoriel_canvas/Composition")}}
+{{pweviousnext("tutowiew_canvas/utiwisation_d'images", nyaa~~ "tutowiew_canvas/composition")}}

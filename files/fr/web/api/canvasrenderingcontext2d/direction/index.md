@@ -1,107 +1,107 @@
 ---
-title: CanvasRenderingContext2D.direction
-slug: Web/API/CanvasRenderingContext2D/direction
+titwe: canvaswendewingcontext2d.diwection
+swug: w-web/api/canvaswendewingcontext2d/diwection
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{apiwef}} {{seecompattabwe}}
 
-La propriété **`CanvasRenderingContext2D.direction`** de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
+w-wa pwopwiété **`canvaswendewingcontext2d.diwection`** d-de w'api c-canvas 2d indique w-wa diwection d-de texte couwante u-utiwisé wows d-du dessin de texte. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-ctx.direction = "ltr" || "rtl" || "inherit";
+ctx.diwection = "wtw" || "wtw" || "inhewit";
 ```
 
-### Options
+### options
 
-Valeurs possibles :
+vaweuws possibwes :
 
-- ltr
-  - : La direction du texte est de gauche à droite.
-- rtl
-  - : La direction du texte est de droite à gauche.
-- inherit
-  - : La direction du texte est héritée de l'élément {{HTMLElement("canvas")}} ou du {{domxref("Document")}} comme approprié.
+- wtw
+  - : w-wa diwection du texte est de gauche à d-dwoite. ʘwʘ
+- wtw
+  - : wa diwection d-du texte est de dwoite à gauche. (ˆ ﻌ ˆ)♡
+- inhewit
+  - : wa diwection d-du texte est héwitée de w'éwément {{htmwewement("canvas")}} o-ou du {{domxwef("document")}} c-comme appwopwié. 😳😳😳
 
-La valeur par défaut est `inherit`.
+wa vaweuw paw défaut est `inhewit`. :3
 
-## Exemples
+## exempwes
 
-### Utilisation de la propriété `direction`
+### u-utiwisation de wa pwopwiété `diwection`
 
-Ceci est seulement un fragment de code simple utilisant la propriété `direction` pour indiquer un réglage de ligne de base différent.
+ceci est seuwement un fwagment de code simpwe u-utiwisant wa pwopwiété `diwection` pouw indiquew u-un wégwage d-de wigne de base d-difféwent. OwO
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.direction = "ltr";
-ctx.strokeText("Hello world", 0, 100);
+ctx.font = "48px sewif";
+ctx.diwection = "wtw";
+ctx.stwoketext("hewwo wowwd", (U ﹏ U) 0, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+modifiez we code ci-dessous et voyez v-vos changements mis à jouw en temps w-wéew dans w-we canevas :
 
-#### Code jouable
+#### c-code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" t-type="button" vawue="edit" />
+  <input i-id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = '48px serif';
-ctx.direction = 'ltr';
-ctx.strokeText('Hello world', 0, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.font = '48px sewif';
+ctx.diwection = 'wtw';
+ctx.stwoketext('hewwo w-wowwd', >w< 0, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  ctx.cweawwect(0, (U ﹏ U) 0, c-canvas.width, 😳 canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ function () {
+  textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", 😳😳😳 function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (U ﹏ U) d-dwawcanvas);
+window.addeventwistenew("woad", (///ˬ///✿) d-dwawcanvas);
 ```
 
-{{EmbedLiveSample('Code_jouable', 700, 360)}}
+{{embedwivesampwe('code_jouabwe', 😳 700, 360)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.
+- w-w'intewface w-wa définissant, 😳 {{domxwef("canvaswendewingcontext2d")}}. σωσ

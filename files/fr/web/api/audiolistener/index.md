@@ -1,79 +1,79 @@
 ---
-title: AudioListener
-slug: Web/API/AudioListener
+titwe: audiowistenew
+swug: web/api/audiowistenew
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-L'interface `AudioListener` représente la position et l'orientation de l'unique personne écoutant la scène audio&nbsp;; elle est utilisée dans le cadre d'une [spatialisation audio](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics). Tous les objets [`PannerNode`](/fr/docs/Web/API/PannerNode) sont spatialisés par rapport à l'objet `AudioListener` stocké dans la propriété [`BaseAudioContext.listener`](/fr/docs/Web/API/BaseAudioContext/listener).
+w-w'intewface `audiowistenew` w-wepwésente wa p-position et w'owientation d-de w'unique p-pewsonne écoutant w-wa scène a-audio&nbsp;; ewwe est utiwisée dans we cadwe d'une [spatiawisation audio](/fw/docs/web/api/web_audio_api/web_audio_spatiawization_basics). t-tous wes objets [`pannewnode`](/fw/docs/web/api/pannewnode) sont spatiawisés paw w-wappowt à w'objet `audiowistenew` stocké dans w-wa pwopwiété [`baseaudiocontext.wistenew`](/fw/docs/web/api/baseaudiocontext/wistenew). (///ˬ///✿)
 
-Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il ne s'agit pas d'un [`AudioNode`](/fr/docs/Web/API/AudioNode).
+iw est impowtant de nyotew qu'iw ny'y a-a qu'un seuw auditeuw paw contexte, nyaa~~ e-et qu'iw n-nye s'agit pas d'un [`audionode`](/fw/docs/web/api/audionode). >w<
 
-![On voit ici la position, les vecteurs haut et face d'un AudioListener, avec les vecteurs haut et face à 90° l'un de l'autre.](webaudiolistenerreduced.svg)
+![on voit ici wa position, -.- wes vecteuws haut et face d'un audiowistenew, (✿oωo) a-avec wes vecteuws haut et face à 90° w'un de w'autwe.](webaudiowistenewweduced.svg)
 
-## Propriétés
+## pwopwiétés
 
-> [!NOTE]
-> Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définie à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées en lecture seule, bien qu'elles apparaissent comme telle dans la spécification IDL.
+> [!note]
+> w-wes vaweuws de position, (˘ω˘) d-d'owientation, rawr e-et du haut d-de wa tête peuvent êtwe d-définies et wues à w'aide de difféwentes s-syntaxes. OwO paw exempwe, ^•ﻌ•^ w'accès se fait à w-w'aide de wa pwopwiété, UwU `audiowistenew.positionx`, (˘ω˘) tandis que wa même pwopwiété est définie à w'aide de `audiowistenew.positionx.vawue`. (///ˬ///✿) c'est pouwquoi c-ces vaweuws nye sont pas mawquées e-en wectuwe seuwe, σωσ b-bien qu'ewwes a-appawaissent comme tewwe dans wa spécification idw. /(^•ω•^)
 
-- [`AudioListener.positionX`](/fr/docs/Web/API/AudioListener/positionX)
-  - : La position horizontale de la personne qui écoute avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est `0`.
-- [`AudioListener.positionY`](/fr/docs/Web/API/AudioListener/positionY)
-  - : La position verticale de la personne qui écoute avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est `0`.
-- [`AudioListener.positionZ`](/fr/docs/Web/API/AudioListener/positionZ)
-  - : La position longitudinale (avant et arrière) de la personne qui écoute avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est `0`.
-- [`AudioListener.forwardX`](/fr/docs/Web/API/AudioListener/forwardX)
-  - : La position horizontale de l'orientation vers l'avant de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `0`.
-- [`AudioListener.forwardY`](/fr/docs/Web/API/AudioListener/forwardY)
-  - : La position verticale de l'orientation vers l'avant de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `0`.
-- [`AudioListener.forwardZ`](/fr/docs/Web/API/AudioListener/forwardZ)
-  - : La position longitudinale (avant et arrière) de l'orientation vers l'avant de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `-1`.
-- [`AudioListener.upX`](/fr/docs/Web/API/AudioListener/upX)
-  - : La position horizontale du haut de la tête de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `0`.
-- [`AudioListener.upY`](/fr/docs/Web/API/AudioListener/upY)
-  - : La position verticale du haut de la tête de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `1`.
-- [`AudioListener.upZ`](/fr/docs/Web/API/AudioListener/upZ)
-  - : La position longitudinale (avant et arrière) du haut de la tête de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est `0`.
+- [`audiowistenew.positionx`](/fw/docs/web/api/audiowistenew/positionx)
+  - : w-wa position h-howizontawe de wa pewsonne qui écoute a-avec des c-coowdonnées cawtésiennes sewon w-wa wègwe de wa main dwoite. 😳 w-wa vaweuw paw défaut est `0`.
+- [`audiowistenew.positiony`](/fw/docs/web/api/audiowistenew/positiony)
+  - : wa p-position vewticawe de wa pewsonne q-qui écoute avec des coowdonnées c-cawtésiennes s-sewon wa wègwe de wa main dwoite. 😳 wa vaweuw paw défaut est `0`. (⑅˘꒳˘)
+- [`audiowistenew.positionz`](/fw/docs/web/api/audiowistenew/positionz)
+  - : wa position wongitudinawe (avant et awwièwe) de wa pewsonne q-qui écoute avec d-des coowdonnées cawtésiennes s-sewon wa wègwe d-de wa main dwoite. 😳😳😳 w-wa vaweuw paw défaut est `0`. 😳
+- [`audiowistenew.fowwawdx`](/fw/docs/web/api/audiowistenew/fowwawdx)
+  - : wa position howizontawe d-de w'owientation vews w'avant de wa pewsonne qui écoute avec we même système d-de coowdonnées cawtésiennes q-que wes vaweuws d-de position (`positionx`, XD `positiony`, mya e-et `positionz`). ^•ﻌ•^ wes v-vaweuws de diwection v-vews w'avant e-et vews we haut s-sont indépendantes winéaiwement w'une de w'autwe. ʘwʘ w-wa vaweuw p-paw défaut est `0`. ( ͡o ω ͡o )
+- [`audiowistenew.fowwawdy`](/fw/docs/web/api/audiowistenew/fowwawdy)
+  - : w-wa position vewticawe d-de w'owientation v-vews w'avant de wa pewsonne qui écoute avec we même système d-de coowdonnées cawtésiennes que wes vaweuws de position (`positionx`, mya `positiony`, o.O et `positionz`). (✿oωo) wes v-vaweuws de diwection vews w'avant et vews we haut sont indépendantes w-winéaiwement w-w'une de w'autwe. :3 w-wa vaweuw paw défaut est `0`. 😳
+- [`audiowistenew.fowwawdz`](/fw/docs/web/api/audiowistenew/fowwawdz)
+  - : w-wa position wongitudinawe (avant et awwièwe) d-de w'owientation v-vews w'avant de wa pewsonne qui écoute avec we même système de coowdonnées cawtésiennes que w-wes vaweuws de position (`positionx`, (U ﹏ U) `positiony`, mya e-et `positionz`). (U ᵕ U❁) wes vaweuws d-de diwection vews w-w'avant et vews we haut sont indépendantes w-winéaiwement w'une d-de w'autwe. :3 wa vaweuw paw défaut e-est `-1`. mya
+- [`audiowistenew.upx`](/fw/docs/web/api/audiowistenew/upx)
+  - : w-wa position howizontawe du haut de wa tête de wa pewsonne qui écoute avec we m-même système d-de coowdonnées c-cawtésiennes que wes vaweuws de p-position (`positionx`, OwO `positiony`, (ˆ ﻌ ˆ)♡ e-et `positionz`). ʘwʘ wes vaweuws d-de diwection vews w'avant et vews we haut sont indépendantes winéaiwement w'une d-de w'autwe. o.O w-wa vaweuw paw défaut est `0`. UwU
+- [`audiowistenew.upy`](/fw/docs/web/api/audiowistenew/upy)
+  - : wa position vewticawe d-du haut de w-wa tête de wa pewsonne qui écoute avec we même système de c-coowdonnées cawtésiennes que wes vaweuws de position (`positionx`, rawr x3 `positiony`, 🥺 et `positionz`). :3 wes vaweuws de d-diwection vews w'avant et vews we haut sont indépendantes w-winéaiwement w-w'une de w'autwe. (ꈍᴗꈍ) wa vaweuw paw défaut est `1`. 🥺
+- [`audiowistenew.upz`](/fw/docs/web/api/audiowistenew/upz)
+  - : w-wa p-position wongitudinawe (avant et awwièwe) du haut de wa tête de wa pewsonne qui écoute a-avec we même système d-de coowdonnées cawtésiennes que wes vaweuws de position (`positionx`, (✿oωo) `positiony`, (U ﹏ U) e-et `positionz`). :3 wes vaweuws d-de diwection v-vews w'avant et vews we haut sont i-indépendantes winéaiwement w-w'une de w'autwe. ^^;; w-wa vaweuw paw d-défaut est `0`. rawr
 
-## Méthodes
+## méthodes
 
-- [`AudioListener.setOrientation()`](/fr/docs/Web/API/AudioListener/setOrientation) {{deprecated_inline}}
-  - : Définit l'orientation de la personne qui écoute.
-- [`AudioListener.setPosition()`](/fr/docs/Web/API/AudioListener/setPosition) {{deprecated_inline}}
-  - : Définit la position de la personne qui écoute.
+- [`audiowistenew.setowientation()`](/fw/docs/web/api/audiowistenew/setowientation) {{depwecated_inwine}}
+  - : d-définit w'owientation d-de wa pewsonne qui écoute. 😳😳😳
+- [`audiowistenew.setposition()`](/fw/docs/web/api/audiowistenew/setposition) {{depwecated_inwine}}
+  - : définit w-wa position d-de wa pewsonne q-qui écoute. (✿oωo)
 
-> [!NOTE]
-> Bien que ces méthodes soient dépréciées, il s'agit de l'unique façon de définir l'orientation et la position pour Firefox, Internet Explorer et Safari.
+> [!note]
+> bien que ces méthodes s-soient dépwéciées, OwO iw s'agit d-de w'unique façon d-de définiw w'owientation et wa position pouw fiwefox, ʘwʘ intewnet e-expwowew et s-safawi. (ˆ ﻌ ˆ)♡
 
-## Fonctionnalités dépréciées
+## fonctionnawités d-dépwéciées
 
-- [`AudioListener.dopplerFactor`](/fr/docs/Web/API/AudioListener/dopplerFactor) {{deprecated_inline}}
-  - : Nombre flottant à double précision représentant la quantité de décalage de fréquence (<i lang="en">pitch shift</i>) à utiliser pour le rendu d'un [effet doppler](https://fr.wikipedia.org/wiki/Effet_Doppler).
-- [`AudioListener.speedOfSound`](/fr/docs/Web/API/AudioListener/speedOfSound) {{deprecated_inline}}
-  - : Nombre flottant à précision double représentant la vitesse du son, en _mètres par seconde_.
+- [`audiowistenew.doppwewfactow`](/fw/docs/web/api/audiowistenew/doppwewfactow) {{depwecated_inwine}}
+  - : n-nyombwe fwottant à doubwe p-pwécision wepwésentant wa quantité de décawage de fwéquence (<i wang="en">pitch shift</i>) à u-utiwisew pouw we wendu d'un [effet d-doppwew](https://fw.wikipedia.owg/wiki/effet_doppwew). (U ﹏ U)
+- [`audiowistenew.speedofsound`](/fw/docs/web/api/audiowistenew/speedofsound) {{depwecated_inwine}}
+  - : nyombwe f-fwottant à pwécision doubwe w-wepwésentant wa vitesse du son, UwU e-en _mètwes paw s-seconde_. XD
 
-Dans une version précédente de la spécification, les propriétés `dopplerFactor` et `speedOfSound` et la méthode `setPosition()` pouvaient être utilisés pour contrôler un effet Doppler appliqué à un [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) connecté en aval. Ils pouvaient être transposés en fonction de la vitesse relative du [`PannerNode`](/fr/docs/Web/API/PannerNode), et de l'`AudioListener`. Ces fonctionnalités soulevaient un certain nombre de problèmes&nbsp;:
+dans u-une vewsion pwécédente d-de wa s-spécification, ʘwʘ wes pwopwiétés `doppwewfactow` et `speedofsound` et wa méthode `setposition()` pouvaient êtwe utiwisés pouw contwôwew un e-effet doppwew appwiqué à u-un [`audiobuffewsouwcenode`](/fw/docs/web/api/audiobuffewsouwcenode) c-connecté en avaw. rawr x3 iws pouvaient êtwe t-twansposés en fonction de wa vitesse wewative du [`pannewnode`](/fw/docs/web/api/pannewnode), ^^;; e-et de w'`audiowistenew`. ʘwʘ ces f-fonctionnawités souwevaient u-un cewtain nyombwe de pwobwèmes&nbsp;:
 
-- Seuls les [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) étaient transposés, pas les autres nœuds source.
-- Le comportement à adopter lorsqu'un [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) était connecté à plusieurs [`PannerNode`](/fr/docs/Web/API/PannerNode) n'était pas clair.
-- Comme la vélocité du panoramique et de la personne qui écoute n'étaient pas des [`AudioParam`](/fr/docs/Web/API/AudioParam), la modification du pitch ne pouvait pas être appliquée uniformément, ce qui provoquait des irrégularités dans le son.
+- seuws w-wes [`audiobuffewsouwcenode`](/fw/docs/web/api/audiobuffewsouwcenode) étaient t-twansposés, (U ﹏ U) pas wes autwes nyœuds s-souwce. (˘ω˘)
+- we c-compowtement à adoptew wowsqu'un [`audiobuffewsouwcenode`](/fw/docs/web/api/audiobuffewsouwcenode) était connecté à pwusieuws [`pannewnode`](/fw/docs/web/api/pannewnode) ny'était pas cwaiw. (ꈍᴗꈍ)
+- c-comme wa véwocité d-du panowamique e-et de wa p-pewsonne qui écoute n-ny'étaient pas des [`audiopawam`](/fw/docs/web/api/audiopawam), /(^•ω•^) w-wa modification d-du pitch nye pouvait pas êtwe a-appwiquée u-unifowmément, >_< ce qui pwovoquait d-des iwwéguwawités dans we son. σωσ
 
-C'est la raison pour laquelle elles ont été supprimées.
+c'est wa waison p-pouw waquewwe ewwes ont été s-suppwimées. ^^;;
 
-Les méthodes `setOrientation()` et `setPosition()` ont été remplacées par la capacité à modifier les valeurs des propriétés correspondantes. Ainsi, `setPosition(x, y, z)` pourra être réalisé en agissant sur les propriétés `positionX.value`, `positionY.value`, et `positionZ.value`.
+w-wes méthodes `setowientation()` et `setposition()` o-ont été wempwacées paw wa capacité à modifiew w-wes vaweuws d-des pwopwiétés c-cowwespondantes. 😳 ainsi, >_< `setposition(x, -.- y, z)` pouwwa êtwe w-wéawisé en agissant suw wes pwopwiétés `positionx.vawue`, UwU `positiony.vawue`, :3 et `positionz.vawue`. σωσ
 
-## Exemples
+## e-exempwes
 
-Voir la page sur [`BaseAudioContext.createPanner()`](/fr/docs/Web/API/BaseAudioContext/createPanner#exemple) pour un exemple de code.
+v-voiw wa page suw [`baseaudiocontext.cweatepannew()`](/fw/docs/web/api/baseaudiocontext/cweatepannew#exempwe) p-pouw un exempwe de code. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-w'api <i wang="en">web audio</i>](/fw/docs/web/api/web_audio_api/using_web_audio_api)

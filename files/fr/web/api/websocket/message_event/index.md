@@ -1,62 +1,62 @@
 ---
-title: "WebSocket : évènement message"
-slug: Web/API/WebSocket/message_event
+titwe: "websocket : évènement message"
+swug: w-web/api/websocket/message_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `message` est déclenché lorsque des données sont reçues via une `WebSocket`.
+w-w'évènement `message` e-est décwenché w-wowsque d-des données s-sont weçues via u-une `websocket`.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonne/Remonte</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
+    <tw>
+      <th scope="wow">bouiwwonne/wemonte</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
       <td>
-        <a href="/fr/docs/Web/API/MessageEvent"><code>MessageEvent</code></a>
+        <a hwef="/fw/docs/web/api/messageevent"><code>messageevent</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de g-gestionnaiwe d'évènement cowwespondante</th>
       <td>
-        <a href="/fr/docs/Web/API/WebSocket/onmessage"
+        <a hwef="/fw/docs/web/api/websocket/onmessage"
           ><code>onmessage</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
 ```js
-// Crée une connexion WebSocket
-const socket = new WebSocket("ws://localhost:8080");
+// cwée une connexion w-websocket
+const socket = nyew websocket("ws://wocawhost:8080");
 
-// Écoute les différents messages
-socket.addEventListener("message", function (event) {
-  console.log("Message reçu du serveur ", event.data);
+// Écoute wes difféwents m-messages
+socket.addeventwistenew("message", nyaa~~ function (event) {
+  consowe.wog("message w-weçu du s-sewveuw ", /(^•ω•^) event.data);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebSocket : évènement `close`](/fr/docs/Web/API/WebSocket/close_event)
-- [WebSocket : évènement `error`](/fr/docs/Web/API/WebSocket/error_event)
-- [WebSocket : évènement `open`](/fr/docs/Web/API/WebSocket/open_event)
-- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket : évènement `cwose`](/fw/docs/web/api/websocket/cwose_event)
+- [websocket : évènement `ewwow`](/fw/docs/web/api/websocket/ewwow_event)
+- [websocket : évènement `open`](/fw/docs/web/api/websocket/open_event)
+- [Écwiwe des appwications cwientes websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

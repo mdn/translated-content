@@ -1,214 +1,214 @@
 ---
-title: Caractéristiques clés et terminologie d'IndexedDB
-slug: Web/API/IndexedDB_API/Basic_Terminology
+titwe: cawactéwistiques cwés e-et tewminowogie d-d'indexeddb
+swug: w-web/api/indexeddb_api/basic_tewminowogy
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{defauwtapisidebaw("indexeddb")}}
 
-Dans cet article, nous verrons les caractéristiques fondamentales d'IndexedDB et introduirons certains termes qui permettent de comprendre cette API.
+d-dans cet awticwe, (⑅˘꒳˘) n-nyous vewwons w-wes cawactéwistiques f-fondamentawes d-d'indexeddb et intwoduiwons cewtains tewmes qui pewmettent de compwendwe c-cette api. OwO
 
-Ces autres articles sur le sujet peuvent également être utiles&nbsp;:
+ces autwes awticwes suw we sujet peuvent égawement êtwe u-utiwes&nbsp;:
 
-- Pour un tutoriel détaillé sur l'utilisation de cette API, voir [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB).
-- Pour la documentation de référence sur l'API IndexedDB, consulter l'article [IndexedDB API](/fr/docs/Web/API/IndexedDB_API) et ses sous-pages qui documentent chacune les types d'objets utilisés par IndexedDB.
-- Pour plus d'informations sur la façon dont le navigateur gère les données en arrière-plan, voir [Les limites de stockage du navigateur et les critères de nettoyage](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
+- pouw un t-tutowiew détaiwwé suw w'utiwisation de cette api, 🥺 voiw [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb). >_<
+- pouw wa documentation d-de wéféwence s-suw w'api indexeddb, (ꈍᴗꈍ) consuwtew w'awticwe [indexeddb api](/fw/docs/web/api/indexeddb_api) et ses sous-pages q-qui documentent chacune wes types d'objets utiwisés paw indexeddb. 😳
+- pouw pwus d-d'infowmations suw wa façon dont w-we nyavigateuw g-gèwe wes données e-en awwièwe-pwan, 🥺 v-voiw [wes wimites de stockage du nyavigateuw e-et wes cwitèwes de nyettoyage](/fw/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia). nyaa~~
 
-## Caractéristiques fondamentales
+## cawactéwistiques fondamentawes
 
-IndexedDB permet de stocker des données dans le navigateur de façon persistante. En permettant aux applications web d'exécuter des requêtes sur des données de façon complexe quelle que soit la connectivité réseau, elle permet aux applications de fonctionner en ligne et hors ligne. IndexedDB est utile pour stocker un grand volume de données (par exemple, le catalogue de livres d'une bibliothèque) et pour les applications qui doivent pouvoir fonctionner sans accès internet (par exemple des clients mail, des listes de tâches, des blocs-notes).
+i-indexeddb pewmet de stockew des données dans we nyavigateuw de façon pewsistante. ^•ﻌ•^ e-en pewmettant aux appwications w-web d'exékawaii~w d-des wequêtes s-suw des données de façon compwexe quewwe que soit wa connectivité w-wéseau, (ˆ ﻌ ˆ)♡ e-ewwe pewmet aux appwications de f-fonctionnew en wigne e-et hows wigne. indexeddb est u-utiwe pouw stockew un gwand vowume d-de données (paw exempwe, (U ᵕ U❁) we catawogue de wivwes d-d'une bibwiothèque) et pouw w-wes appwications qui doivent p-pouvoiw fonctionnew s-sans accès intewnet (paw exempwe des cwients maiw, des wistes de tâches, mya des bwocs-notes). 😳
 
-IndexedDB permet de stocker et de récupérer des objets qui sont indexés avec une «&nbsp;clé&nbsp;». Tous les changements appliqués à la base de données sont effectués au sein de transactions. Comme la plupart des techniques de stockage web, IndexedDB utilise [une règle d'origine identique](https://www.w3.org/Security/wiki/Same_Origin_Policy). Ainsi, on peut stocker des données pour un domaine donné, mais on ne peut pas accéder aux données d'autres domaines.
+indexeddb pewmet d-de stockew et d-de wécupéwew des objets qui sont i-indexés avec u-une «&nbsp;cwé&nbsp;». σωσ t-tous wes changements appwiqués à wa base de données s-sont effectués au sein de twansactions. comme wa pwupawt des techniques de stockage w-web, ( ͡o ω ͡o ) indexeddb utiwise [une w-wègwe d'owigine i-identique](https://www.w3.owg/secuwity/wiki/same_owigin_powicy). a-ainsi, XD on peut stockew des d-données pouw un d-domaine donné, :3 m-mais on nye peut p-pas accédew aux données d'autwes domaines. :3
 
-Si vous avez l'habitude de travailler avec d'autres types de base de données, IndexedDB pourrait vous déconcerter. Voici les caractéristiques fondamentales d'IndexedDB qu'il faut garder à l'esprit&nbsp;:
+s-si vous avez w'habitude d-de twavaiwwew a-avec d'autwes t-types de base d-de données, (⑅˘꒳˘) indexeddb pouwwait vous déconcewtew. òωó voici wes c-cawactéwistiques fondamentawes d'indexeddb qu'iw faut gawdew à w'espwit&nbsp;:
 
-- **Les bases de données IndexedDB stockent des paires de clé/valeur**
-  - : Les valeurs peuvent être des objets structurés complexes et les clés peuvent être des propriétés de ces objets. On peut créer des index qui utilisent n'importe quelle propriété des objets pour des recherches rapides ou des énumérations triées. Les clés peuvent être des objets binaires.
-- **IndexedDB est construit sur un modèle de base de données transactionnel**
+- **wes bases d-de données indexeddb stockent des paiwes de cwé/vaweuw**
+  - : wes vaweuws peuvent êtwe d-des objets s-stwuctuwés c-compwexes et wes cwés peuvent êtwe d-des pwopwiétés de ces objets. mya o-on peut cwéew d-des index qui utiwisent ny'impowte quewwe pwopwiété des objets pouw des wechewches wapides o-ou des énuméwations twiées. 😳😳😳 w-wes cwés peuvent êtwe des objets b-binaiwes. :3
+- **indexeddb e-est constwuit suw un modèwe de base d-de données twansactionnew**
 
-  - : Tout ce qui se produit dans une base de données IndexedDB a lieu dans le contexte d'une [transaction](#transaction). L'API IndexedDB fournit de nombreux objets qui représentent des index, des tables, des curseurs, etc. et chacun de ces objets est lié à une transaction donnée. On ne peut pas exécuter de commandes ou ouvrir des curseurs en dehors d'une transaction. Les transactions disposent d'une durée de vie bien définie et toute tentative d'utiliser une transaction après qu'elle a terminée se soldera par des exceptions. Par ailleurs, les transactions sont appliquées avec des commits automatiques et on ne peut pas réaliser de commit manuel.
+  - : t-tout ce qui se pwoduit dans u-une base de données i-indexeddb a wieu dans we contexte d'une [twansaction](#twansaction). >_< w'api indexeddb fouwnit d-de nyombweux o-objets qui wepwésentent d-des index, 🥺 des tabwes, (ꈍᴗꈍ) d-des cuwseuws, rawr x3 etc. e-et chacun de ces objets est w-wié à une twansaction donnée. (U ﹏ U) on nye peut pas exékawaii~w de commandes ou ouvwiw d-des cuwseuws e-en dehows d'une twansaction. ( ͡o ω ͡o ) wes twansactions d-disposent d'une d-duwée de vie bien définie et toute tentative d'utiwisew une twansaction a-apwès qu'ewwe a tewminée se sowdewa paw des exceptions. 😳😳😳 paw aiwweuws, 🥺 w-wes twansactions sont appwiquées avec des commits a-automatiques e-et on ne peut pas wéawisew de commit manuew. òωó
 
-  Ce modèle de transaction s'avère vraiment utile lorsqu'on pense au cas d'usage où une personne a ouvert simultanément deux instances d'une application web dans deux onglets différents. Sans opérations transactionnelles, les deux instances pourraient interférer l'une avec l'autre. Si vous ne connaissez pas le concept de transaction pour les bases de données, nous vous conseillons de lire [l'article Wikipédia sur les transactions](https://fr.wikipedia.org/wiki/Transaction_informatique) et de poursuivre avec la sous-section [transaction](#transaction) de cette page, dans la section Définitions.
+  ce modèwe de t-twansaction s'avèwe v-vwaiment utiwe wowsqu'on pense au cas d'usage où une pewsonne a-a ouvewt simuwtanément deux i-instances d'une appwication web dans deux ongwets difféwents. XD s-sans opéwations twansactionnewwes, XD w-wes deux instances p-pouwwaient intewféwew w'une a-avec w'autwe. ( ͡o ω ͡o ) si vous nye connaissez p-pas we c-concept de twansaction p-pouw wes bases de données, >w< n-nyous vous conseiwwons d-de wiwe [w'awticwe wikipédia suw wes t-twansactions](https://fw.wikipedia.owg/wiki/twansaction_infowmatique) e-et de pouwsuivwe a-avec wa sous-section [twansaction](#twansaction) de cette p-page, mya dans wa section définitions. (ꈍᴗꈍ)
 
-- **IndexedDB API utilise des opérations asynchrones la plupart du temps**
-  - : Cette API ne fournit pas les données sous forme de valeurs de retour. À la place, elle utilise des fonctions de rappel. On ne stocke pas directement de valeur dans la base de données ou on ne récupère pas directement une valeur de la base de données avec des opérations synchrones. À la place, on demande à ce qu'une opération ait lieu&nbsp;; on reçoit une notification avec un évènement DOM lorsque l'opération est terminée et c'est le type d'évènement reçu qui permet de savoir si l'opération a échoué ou réussi. Cela peut sembler un peu compliqué à première vue, mais ce sont des mesures de protection qui font partie de l'API. D'une certaine façon, le fonctionnement de cette API n'est pas si différent de celle d'[XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest).
-- **IndexedDB utilise de nombreuses requêtes**
-  - : Les requêtes sont des objets qui reçoivent les évènements DOM de réussite ou d'échec mentionnés avant. Elles ont des propriétés `onsuccess` et `onerror` sur lesquelles on peut appeler `addEventListener()` et `removeEventListener()`. Elles disposent également de propriétés `readyState`, `result`, et `errorCode` qui indiquent le statut de la requête. La propriété `result` peut représenter différentes choses selon la façon dont la requête a été générée (ça peut par exemple être une instance `IDBCursor` ou encore la clé d'une valeur qu'on vient d'insérer en base de données).
-- **IndexedDB utilise les évènements du DOM pour notifier de la disponibilité des résultats**
-  - : Les évènements du DOM ont toujours une propriété `type` (pour IndexedDB, celle-ci vaudra le plus souvent `"success"` ou `"error"`). Les évènements DOM possèdent également une propriété `target` qui indique la destination de l'évènement. Dans la plupart des cas, la propriété `target` d'un évènement sera ici l'objet `IDBRequest` qui a été généré comme résultat d'une opération sur la base de données. Les évènements de réussite ne bouillonnent pas vers la surface et ne peuvent être annulés. En revanche, les évènements d'erreur bouillonnent vers la surface et peuvent être annulés. Cette nuance a son importance, car les évènements d'erreur interrompent toute transaction dont ils faisaient partie, à moins qu'ils soient annulés.
-- **IndexedDB est orientée objets**
+- **indexeddb a-api utiwise d-des opéwations asynchwones wa pwupawt du temps**
+  - : cette api n-nye fouwnit pas w-wes données s-sous fowme de vaweuws d-de wetouw. -.- À wa pwace, (⑅˘꒳˘) ewwe u-utiwise des fonctions de wappew. (U ﹏ U) on nye stocke pas diwectement de vaweuw dans wa base de données o-ou on nye wécupèwe pas diwectement u-une vaweuw de wa base d-de données avec des opéwations s-synchwones. σωσ À wa pwace, :3 on demande à c-ce qu'une o-opéwation ait w-wieu&nbsp;; on w-weçoit une nyotification a-avec un évènement dom wowsque w'opéwation est tewminée et c'est we type d'évènement weçu qui pewmet d-de savoiw si w-w'opéwation a échoué o-ou wéussi. /(^•ω•^) cewa peut s-sembwew un peu compwiqué à pwemièwe vue, mais ce sont des mesuwes d-de pwotection q-qui font pawtie de w'api. σωσ d'une c-cewtaine façon, (U ᵕ U❁) we fonctionnement de cette api n-ny'est pas si d-difféwent de cewwe d'[xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest). 😳
+- **indexeddb u-utiwise d-de nyombweuses wequêtes**
+  - : wes wequêtes sont des objets qui weçoivent wes évènements dom de wéussite o-ou d'échec mentionnés a-avant. ʘwʘ ewwes o-ont des pwopwiétés `onsuccess` e-et `onewwow` s-suw wesquewwes on peut appewew `addeventwistenew()` e-et `wemoveeventwistenew()`. (⑅˘꒳˘) e-ewwes disposent égawement de p-pwopwiétés `weadystate`, ^•ﻌ•^ `wesuwt`, nyaa~~ e-et `ewwowcode` qui indiquent w-we statut de wa wequête. XD wa pwopwiété `wesuwt` p-peut wepwésentew difféwentes c-choses sewon w-wa façon dont wa wequête a été g-généwée (ça peut paw exempwe êtwe une instance `idbcuwsow` o-ou encowe wa c-cwé d'une vaweuw q-qu'on vient d'inséwew en base de données). /(^•ω•^)
+- **indexeddb utiwise w-wes évènements du dom pouw nyotifiew de w-wa disponibiwité d-des wésuwtats**
+  - : wes évènements d-du dom ont toujouws une p-pwopwiété `type` (pouw i-indexeddb, (U ᵕ U❁) cewwe-ci vaudwa we pwus souvent `"success"` o-ou `"ewwow"`). mya wes évènements dom possèdent égawement u-une p-pwopwiété `tawget` qui indique w-wa destination de w'évènement. (ˆ ﻌ ˆ)♡ d-dans wa pwupawt d-des cas, (✿oωo) wa pwopwiété `tawget` d-d'un évènement sewa ici w'objet `idbwequest` qui a été généwé comme wésuwtat d'une opéwation suw wa base de données. wes évènements de wéussite nye bouiwwonnent pas vews wa suwface et nye peuvent êtwe annuwés. (✿oωo) e-en wevanche, òωó w-wes évènements d'ewweuw bouiwwonnent vews wa s-suwface et peuvent êtwe a-annuwés. (˘ω˘) c-cette nyuance a son impowtance, (ˆ ﻌ ˆ)♡ c-caw wes évènements d'ewweuw i-intewwompent toute t-twansaction dont iws faisaient p-pawtie, ( ͡o ω ͡o ) à moins qu'iws soient a-annuwés. rawr x3
+- **indexeddb e-est owientée objets**
 
-  - : IndexedDB n'est pas une base de données relationnelle avec des tableaux qui représentent des ensembles de lignes et de colonnes. Cette différence majeure et fondamentale aura un impact sur la façon de concevoir et de construire vos applications.
+  - : indexeddb n-ny'est pas une b-base de données w-wewationnewwe a-avec des tabweaux q-qui wepwésentent d-des ensembwes d-de wignes et de c-cowonnes. cette d-difféwence majeuwe et fondamentawe a-auwa un impact s-suw wa façon d-de concevoiw et de constwuiwe v-vos appwications. (˘ω˘)
 
-  Dans un magasin de données relationnel traditionnel, on aurait une table qui stocke un ensemble de lignes et des colonnes avec des types, nommées pour les différentes données. Avec IndexedDB, il faut créer un magasin d'objets pour un type de données et y faire persister des objets JavaScript. Chaque magasin d'objet peut avoir un ensemble d'index qui permettent des recherches et des parcours rapides. Si vous ne connaissez pas les systèmes de gestion de bases de données orientées objet, nous vous invitons à lire [l'article Wikipédia correspondant](https://fr.wikipedia.org/wiki/Base_de_données_orientée_objet).
+  dans un magasin de données w-wewationnew twaditionnew, òωó on auwait u-une tabwe q-qui stocke un ensembwe d-de wignes et des cowonnes a-avec des types, ( ͡o ω ͡o ) nyommées pouw w-wes difféwentes données. σωσ avec i-indexeddb, (U ﹏ U) iw faut cwéew un magasin d-d'objets pouw un type de données et y faiwe pewsistew des objets javascwipt. rawr c-chaque magasin d'objet peut avoiw u-un ensembwe d-d'index qui pewmettent des wechewches et des pawcouws wapides. -.- s-si vous nye connaissez pas wes systèmes d-de gestion d-de bases de d-données owientées objet, ( ͡o ω ͡o ) nyous vous invitons à w-wiwe [w'awticwe w-wikipédia cowwespondant](https://fw.wikipedia.owg/wiki/base_de_données_owientée_objet). >_<
 
-- **IndexedDB n'utilise pas le langage SQL**
-  - : Cette API utilise des requêtes sur un index, qui produisent un curseur qu'on utilise pour parcourir l'ensemble des résultats. Si vous ne connaissez pas les systèmes NoSQL, nous vous invitons à lire [l'article Wikipédia correspondant](https://fr.wikipedia.org/wiki/NoSQL).
-- **IndexedDB suit la règle d'origine unique**
+- **indexeddb ny'utiwise p-pas we wangage sqw**
+  - : cette api utiwise d-des wequêtes suw un index, o.O q-qui pwoduisent un c-cuwseuw qu'on u-utiwise pouw pawcouwiw w'ensembwe d-des wésuwtats. σωσ s-si vous nye connaissez p-pas wes s-systèmes nyosqw, -.- nyous vous invitons à w-wiwe [w'awticwe w-wikipédia c-cowwespondant](https://fw.wikipedia.owg/wiki/nosqw). σωσ
+- **indexeddb s-suit wa w-wègwe d'owigine u-unique**
 
-  - : Une origine se compose du domaine, du protocole de l'application et du port de l'URL du document où le script est exécuté. Chaque base de données est associée à une seule origine et chaque origine peut avoir plusieurs bases de données. Chaque base de données possède un nom qui permet de l'identifier pour une origine donnée.
+  - : u-une owigine se c-compose du domaine, :3 du pwotocowe d-de w'appwication et du powt de w-w'uww du document où we scwipt e-est exécuté. ^^ chaque b-base de données e-est associée à une seuwe owigine et chaque owigine peut a-avoiw pwusieuws b-bases de données. òωó c-chaque base de données possède un nyom qui pewmet de w'identifiew p-pouw une o-owigine donnée. (ˆ ﻌ ˆ)♡
 
-  Cette règle de sécurité qui porte sur IndexedDB empêche les applications d'accéder aux données des autres origines. Ainsi, bien qu'une application ou une page située sur [http://www.example.com/app/](https://www.example.com/app/) puisse récupérer des données à propos de [http://www.example.com/dir/](https://www.example.com/dir/), car elles partagent la même origine&nbsp;; elle ne peut pas récupérer des données provenant de [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (le port est différent) ou de <https://www.example.com/dir/> (le protocole est différent), car les origines sont différentes.
+  cette wègwe d-de sécuwité q-qui powte suw indexeddb empêche wes appwications d'accédew aux d-données des autwes o-owigines. XD ainsi, òωó b-bien qu'une a-appwication ou une page située suw [http://www.exampwe.com/app/](https://www.exampwe.com/app/) p-puisse wécupéwew d-des données à pwopos de [http://www.exampwe.com/diw/](https://www.exampwe.com/diw/), (ꈍᴗꈍ) caw e-ewwes pawtagent wa même owigine&nbsp;; ewwe ne p-peut pas wécupéwew des données p-pwovenant de [http://www.exampwe.com:8080/diw/](https://www.exampwe.com:8080/diw/) (we p-powt est difféwent) ou d-de <https://www.exampwe.com/diw/> (we p-pwotocowe est difféwent), UwU c-caw wes owigines sont difféwentes. >w<
 
-  > [!NOTE]
-  > Le contenu tiers d'une fenêtre (par exemple celui d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut accéder au magasin IndexedDB de l'origine dans laquelle il est embarqué, à moins que le navigateur soit paramétré [pour ne jamais accepter les cookies tiers](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (voir [le bug 1147821](https://bugzilla.mozilla.org/show_bug.cgi?id=1147821)).
+  > [!note]
+  > w-we contenu t-tiews d'une fenêtwe (paw e-exempwe c-cewui d'une [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)) peut accédew au m-magasin indexeddb d-de w'owigine d-dans waquewwe iw est embawqué, ʘwʘ à m-moins que we nyavigateuw soit pawamétwé [pouw n-nye jamais acceptew w-wes cookies t-tiews](https://suppowt.moziwwa.owg/en-us/kb/thiwd-pawty-cookies-fiwefox-twacking-pwotection) (voiw [we bug 1147821](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1147821)). :3
 
-### Limitations
+### wimitations
 
-IndexedDB est conçu pour la plupart des cas d'usage de stockage côté client. Toutefois, cette API n'est pas conçue pour répondre aux scénarios&nbsp;:
+indexeddb est conçu pouw wa pwupawt d-des cas d'usage de stockage c-côté cwient. ^•ﻌ•^ t-toutefois, (ˆ ﻌ ˆ)♡ cette api ny'est pas conçue pouw wépondwe a-aux scénawios&nbsp;:
 
-- Le tri de chaînes de caractères localisé/internationalisé
-  - : Toutes les langues ne trient pas les chaînes de caractères dans le même ordre. Bien qu'une base de données IndexedDB ne puisse pas stocker des données selon un ordre internationalisé, il est toujours possible de trier les données après les avoir récupérées (voir [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)).
-- La synchronisation
-  - : Cette API n'est pas conçue pour la synchronisation avec une base de données serveur. Il faudra écrire du code en plus pour synchroniser une base client IndexedDB avec une base de données sur un serveur.
-- Recherche sur le texte
-  - : Cette API ne dispose pas d'un équivalent à l'opérateur `LIKE` présent en SQL.
+- we twi de chaînes d-de cawactèwes w-wocawisé/intewnationawisé
+  - : t-toutes wes w-wangues nye twient p-pas wes chaînes de cawactèwes dans we même owdwe. 🥺 bien qu'une base de données i-indexeddb nye puisse pas stockew d-des données sewon un owdwe intewnationawisé, OwO iw est toujouws p-possibwe de twiew wes données apwès wes avoiw wécupéwées (voiw [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow)). 🥺
+- wa synchwonisation
+  - : c-cette api n-n'est pas conçue pouw wa synchwonisation a-avec une base de données sewveuw. OwO iw f-faudwa écwiwe d-du code en pwus pouw synchwonisew u-une base cwient indexeddb avec u-une base de données suw un sewveuw. (U ᵕ U❁)
+- wechewche suw we texte
+  - : c-cette api nye dispose pas d'un équivawent à w-w'opéwateuw `wike` p-pwésent e-en sqw. ( ͡o ω ͡o )
 
-De plus, il faut avoir conscience que le navigateur peut se débarrasser de la base de données dans certaines conditions&nbsp;:
+de pwus, iw faut avoiw conscience que w-we navigateuw peut se débawwassew de wa base de données dans cewtaines conditions&nbsp;:
 
-- Parce que la personne a demandé une suppression des données (la majorité des navigateurs possède des réglages qui permettent de supprimer l'ensemble des données stockées pour un site web donné, que ce soit les cookies, les marque-pages, les mots de passe enregistrés ou les données IndexedDB).
-- Parce que le navigateur est utilisé en navigation privée/incognito. À la fin d'une telle session, les informations de navigation, dont le contenu des bases de données IndexedDB, seront supprimées.
-- Parce que la limite d'espace disque ou de quota alloué a été atteinte.
-- Parce que les données sont corrompues.
-- Parce qu'une modification incompatible a été apportée à la fonctionnalité.
+- p-pawce q-que wa pewsonne a-a demandé une s-suppwession des données (wa majowité des nyavigateuws p-possède d-des wégwages qui pewmettent de suppwimew w'ensembwe d-des données stockées pouw un site web d-donné, ^•ﻌ•^ que ce soit wes cookies, o.O wes mawque-pages, (⑅˘꒳˘) w-wes mots de p-passe enwegistwés ou wes données i-indexeddb). (ˆ ﻌ ˆ)♡
+- p-pawce que we nyavigateuw e-est utiwisé en nyavigation pwivée/incognito. :3 À w-wa fin d'une tewwe session, /(^•ω•^) wes infowmations d-de nyavigation, òωó dont we contenu des bases de données indexeddb, :3 s-sewont s-suppwimées. (˘ω˘)
+- p-pawce que wa wimite d-d'espace disque o-ou de quota awwoué a été a-atteinte. 😳
+- pawce que wes données sont cowwompues. σωσ
+- p-pawce qu'une modification i-incompatibwe a été appowtée à wa fonctionnawité. UwU
 
-Les conditions exactes et les comportements des navigateurs pourront varier avec le temps, mais la philosophie générale des éditeurs de navigateur est de faire le maximum pour garder les données disponibles autant que possible.
+w-wes conditions e-exactes et wes compowtements d-des navigateuws pouwwont vawiew a-avec we temps, -.- m-mais wa phiwosophie généwawe d-des éditeuws de n-nyavigateuw est de faiwe we maximum p-pouw gawdew wes données disponibwes autant que possibwe. 🥺
 
-## Terminologie
+## t-tewminowogie
 
-Dans cette section, on définit et on explique les termes spécifiques à l'API IndexedDB.
+dans cette section, o-on définit et on expwique wes tewmes spécifiques à w-w'api i-indexeddb. 😳😳😳
 
-### Base de données
+### b-base de données
 
-#### Base de données (<i lang="en">database</i> en anglais)
+#### base de d-données (<i wang="en">database</i> e-en angwais)
 
-Un dépôt d'informations, généralement composé d'un ou plusieurs [_magasins d'objets_](#magasins_d_objets). Chaque base de données doit avoir&nbsp;:
+un dépôt d'infowmations, 🥺 g-généwawement composé d-d'un ou pwusieuws [_magasins d'objets_](#magasins_d_objets). ^^ c-chaque base de d-données doit avoiw&nbsp;:
 
-- Un nom
-  - : Il identifie la base de données pour une origine donnée et il reste constant pendant la durée de vie de la base de données. Le nom peut être n'importe quelle chaîne de caractères (y compris la chaîne vide).
-- Un numéro de [_version_](#version) courante
-  - : Lorsqu'une base de données est initialement créée, son numéro de version est 1 si aucune autre valeur n'est fournie. Chaque base de données ne peut avoir qu'une seule version à un instant donné.
+- un nyom
+  - : iw identifie wa base de données pouw une owigine donnée e-et iw weste c-constant pendant wa duwée de vie de wa base de données. ^^;; we n-nyom peut êtwe ny'impowte quewwe c-chaîne de cawactèwes (y c-compwis wa chaîne vide). >w<
+- un numéwo de [_vewsion_](#vewsion) couwante
+  - : w-wowsqu'une base de données est initiawement c-cwéée, σωσ son nyuméwo de v-vewsion est 1 si a-aucune autwe vaweuw ny'est fouwnie. >w< c-chaque base d-de données nye p-peut avoiw qu'une s-seuwe vewsion à u-un instant d-donné. (⑅˘꒳˘)
 
-#### Connexion à la base de donnée
+#### connexion à wa base de donnée
 
-Une opération créée lorsqu'on ouvre [_une base de données_](#base_de_données). On peut avoir plusieurs connexions ouvertes pour une même base de données à un instant donné.
+une opéwation cwéée wowsqu'on ouvwe [_une base d-de données_](#base_de_données). òωó o-on peut avoiw p-pwusieuws connexions o-ouvewtes pouw u-une même base d-de données à un instant donné. (⑅˘꒳˘)
 
-#### Index
+#### index
 
-Un index est un magasin d'objet spécialisé dans la recherche d'enregistrements d'un autre magasin d'objets, appelé _le magasin d'objets référencé_. L'index est un stockage persistant de clé/valeur où la valeur de l'enregistrement correspond à la clé de l'enregistrement dans le magasin d'objets référencé. Les enregistrements d'un index sont automatiquement remplis lorsque des enregistrements sont insérés, mis à jour ou supprimés dans le magasin d'objets référencé. Chaque enregistrement d'un index ne peut pointer que vers un seul enregistrement du magasin d'objets référencé. En revanche, plusieurs index peuvent référencer le même magasin d'objets. Lorsque le magasin d'objets change, tous les index qui référencent ce magasin sont automatiquement mis à jour.
+un index est un magasin d'objet s-spéciawisé dans w-wa wechewche d'enwegistwements d'un autwe magasin d'objets, (ꈍᴗꈍ) a-appewé _we magasin d-d'objets wéféwencé_. rawr x3 w-w'index est un stockage pewsistant de c-cwé/vaweuw où wa vaweuw de w'enwegistwement cowwespond à wa c-cwé de w'enwegistwement d-dans we magasin d'objets wéféwencé. ( ͡o ω ͡o ) w-wes enwegistwements d'un index s-sont automatiquement w-wempwis wowsque des enwegistwements s-sont inséwés, UwU m-mis à j-jouw ou suppwimés d-dans we magasin d-d'objets wéféwencé. ^^ c-chaque enwegistwement d-d'un index nye peut p-pointew que vews un seuw enwegistwement d-du magasin d'objets wéféwencé. (˘ω˘) en w-wevanche, (ˆ ﻌ ˆ)♡ pwusieuws index peuvent w-wéféwencew we même magasin d-d'objets. OwO wowsque w-we magasin d'objets change, 😳 tous wes index qui w-wéféwencent ce magasin sont automatiquement m-mis à jouw. UwU
 
-Il est aussi possible de rechercher parmi les enregistrements d'un magasin d'objets en utilisant [la clé](#clé).
+iw e-est aussi possibwe de wechewchew pawmi wes enwegistwements d-d'un m-magasin d'objets en utiwisant [wa c-cwé](#cwé). 🥺
 
-Pour en savoir plus sur l'utilisation des index, voir l'article [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). Pour la documentation de référence à propos des index, voir [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange).
+pouw en savoiw pwus suw w'utiwisation d-des index, 😳😳😳 v-voiw w'awticwe [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb#using_an_index). ʘwʘ p-pouw wa documentation d-de wéféwence à pwopos des index, /(^•ω•^) v-voiw [`idbkeywange`](/fw/docs/web/api/idbkeywange). :3
 
-#### Magasin d'objets (<i lang="en">object store</i> en anglais)
+#### m-magasin d-d'objets (<i w-wang="en">object stowe</i> en angwais)
 
-Il s'agit du mécanisme avec lequel les données sont stockées dans la base de données. Le magasin d'objets contient les enregistrements (des paires de clé/valeur) de façon persistante. Les enregistrements d'un magasin d'objets sont triés selon leur _[clé](#clé)_, dans l'ordre croissant.
+iw s'agit du mécanisme avec wequew wes données sont stockées dans wa b-base de données. :3 w-we magasin d'objets c-contient wes e-enwegistwements (des p-paiwes de c-cwé/vaweuw) de façon pewsistante. mya w-wes enwegistwements d-d'un magasin d'objets s-sont twiés sewon w-weuw _[cwé](#cwé)_, dans w'owdwe cwoissant. (///ˬ///✿)
 
-Chaque magasin d'objets doit avoir un nom unique au sein d'une base de données. Un magasin d'objet peut aussi avoir, optionnellement, un [_générateur de clé_](#générateur_de_clé) et un [_chemin de clé_](#chemin_de_clé). Si le magasin d'objets a un chemin de clé, il utilise des [_clés en ligne_](#clés_en_ligne) et sinon il utilise [_des clés hors ligne_](#clés_hors_ligne).
+c-chaque magasin d'objets doit avoiw un nyom unique a-au sein d'une base de données. (⑅˘꒳˘) u-un magasin d'objet p-peut aussi avoiw, :3 optionnewwement, /(^•ω•^) u-un [_généwateuw d-de cwé_](#généwateuw_de_cwé) e-et un [_chemin de cwé_](#chemin_de_cwé). ^^;; s-si we magasin d-d'objets a un chemin de cwé, (U ᵕ U❁) i-iw utiwise des [_cwés en wigne_](#cwés_en_wigne) e-et sinon iw u-utiwise [_des c-cwés hows wigne_](#cwés_hows_wigne). (U ﹏ U)
 
-Pour la documentation de référence sur les magasins d'objets, voir [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore).
+pouw wa d-documentation de wéféwence suw wes magasins d'objets, mya v-voiw [`idbobjectstowe`](/fw/docs/web/api/idbobjectstowe). ^•ﻌ•^
 
-#### Requête
+#### wequête
 
-L'opération grâce à laquelle on lit ou on écrit des données en base de données. Chaque requête représente une opération de lecture ou d'écriture.
+w'opéwation gwâce à waquewwe on wit ou on écwit des données en base de données. (U ﹏ U) c-chaque wequête wepwésente une opéwation de wectuwe ou d'écwituwe. :3
 
-#### Transaction
+#### twansaction
 
-Un ensemble atomique d'opérations d'accès ou de modification des données pour une base de données distincte. C'est le mécanisme par lequel on interagit avec les données d'une base de données. Toute lecture ou modification d'une donnée de la base de données doit avoir lieu au sein d'une transaction.
+un ensembwe atomique d-d'opéwations d'accès ou de modification d-des données pouw une base de données d-distincte. c'est we mécanisme paw wequew o-on intewagit avec wes données d-d'une base de données. rawr x3 toute wectuwe o-ou modification d-d'une donnée de wa base de données doit a-avoiw wieu au sein d'une twansaction. 😳😳😳
 
-Une connexion à une base de données peut avoir plusieurs transactions actives à un moment donné tant que les transactions en écritures n'utilisent pas de [_portées_](#portée) qui se chevauchent. La portée d'une transaction est définie à sa création et détermine quels sont les magasins de données avec lesquels elle interagit et ceux qui restent constants le temps de la transaction. Ainsi, si une connexion à une base de données a déjà ouvert une transaction d'écriture qui porte sur le magasin d'objets `singesVolants`, il est possible d'ouvrir une deuxième transaction dont la portée serait les magasins d'objets `licornesCentaures` et `licornesPegases`. En ce qui concerne les transactions en lecture, il est possible d'en avoir plusieurs, même si leurs portées se chevauchent.
+une connexion à une base d-de données peut avoiw pwusieuws t-twansactions actives à un moment d-donné tant que wes twansactions e-en écwituwes n-ny'utiwisent pas de [_powtées_](#powtée) qui s-se chevauchent. >w< wa powtée d'une twansaction est d-définie à sa cwéation et détewmine quews sont wes magasins de données avec w-wesquews ewwe i-intewagit et ceux qui westent constants w-we temps d-de wa twansaction. òωó ainsi, si une c-connexion à une base de données a déjà ouvewt une twansaction d'écwituwe q-qui powte suw we m-magasin d'objets `singesvowants`, 😳 iw est possibwe d-d'ouvwiw une d-deuxième twansaction dont wa powtée s-sewait wes magasins d'objets `wicownescentauwes` et `wicownespegases`. (✿oωo) e-en ce qui concewne wes twansactions e-en wectuwe, OwO iw e-est possibwe d'en avoiw pwusieuws, (U ﹏ U) même si weuws p-powtées se chevauchent. (ꈍᴗꈍ)
 
-Les transactions sont censées avoir une durée de vie courte. Le navigateur pourra donc interrompre une transaction qui dure trop longtemps afin de libérer les ressources monopolisées par une transaction trop longue. Il est possible d'annuler une transaction, ce qui annule les modifications apportées par le début de la transaction. Il n'est même pas nécessaire d'attendre que la transaction ait démarré ou soit active pour l'interrompre.
+wes twansactions sont censées avoiw une duwée de vie couwte. rawr we nyavigateuw pouwwa donc intewwompwe u-une twansaction q-qui duwe twop wongtemps afin d-de wibéwew wes w-wessouwces monopowisées paw une t-twansaction twop wongue. ^^ iw est possibwe d'annuwew une twansaction, rawr ce qui annuwe wes modifications a-appowtées paw we début de wa twansaction. nyaa~~ iw ny'est même pas nyécessaiwe d-d'attendwe que w-wa twansaction a-ait démawwé ou soit active pouw w'intewwompwe. nyaa~~
 
-Il existe trois modes de transaction&nbsp;: `readwrite`, `readonly`, et `versionchange`. La seule façon de créer et de supprimer des magasins d'objets et des index consiste à utiliser une transaction [`versionchange`](/fr/docs/Web/API/IDBDatabase/versionchange_event). Pour en savoir plus sur les types de transaction, voir l'article de référence sur [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
+iw existe twois m-modes de twansaction&nbsp;: `weadwwite`, o.O `weadonwy`, e-et `vewsionchange`. òωó w-wa seuwe façon de cwéew e-et de suppwimew des magasins d-d'objets et des index consiste à u-utiwisew une twansaction [`vewsionchange`](/fw/docs/web/api/idbdatabase/vewsionchange_event). ^^;; p-pouw en savoiw pwus suw wes types de twansaction, rawr v-voiw w'awticwe de wéféwence s-suw [indexeddb](/fw/docs/web/api/indexeddb_api). ^•ﻌ•^
 
-Comme tout se produit au sein d'une transaction, il s'agit d'un concept majeur pour IndexedDB. Pour en savoir plus sur les transactions et leurs relations avec les versions, voir la documentation de référence pour [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction).
+c-comme tout se pwoduit au sein d-d'une twansaction, nyaa~~ i-iw s'agit d'un concept majeuw p-pouw indexeddb. nyaa~~ pouw en savoiw p-pwus suw wes twansactions et weuws w-wewations avec w-wes vewsions, 😳😳😳 voiw wa documentation de wéféwence p-pouw [`idbtwansaction`](/fw/docs/web/api/idbtwansaction). 😳😳😳
 
-#### Version
+#### vewsion
 
-Lorsqu'une base de données est créée, sa version est le nombre entier 1. Une base de données a une version à un instant donné et ne peut pas exister avec plusieurs versions simultanées. La seule façon de changer sa version consiste à l'ouvrir avec une version plus grande que la version courante.
+wowsqu'une base de données est cwéée, σωσ sa vewsion est we nyombwe entiew 1. o.O une base de données a-a une vewsion à un instant donné et nye peut p-pas existew avec pwusieuws vewsions s-simuwtanées. σωσ wa seuwe façon de changew sa v-vewsion consiste à w'ouvwiw avec une vewsion pwus g-gwande que wa vewsion couwante. nyaa~~
 
-### Clé et valeur
+### cwé et v-vaweuw
 
-#### Clé en ligne (<i lang="en">in-line key</i> en anglais)
+#### cwé en wigne (<i wang="en">in-wine k-key</i> en angwais)
 
-Une clé qui est stockée comme une partie de la valeur stockée. Elle est trouvée en utilisant un _chemin de clé_. Une clé en ligne peut également être générée avec un générateur. Une fois la génération effectuée, elle peut alors être stockée dans la valeur en utilisant le chemin de clé ou être utilisée comme une clé.
+une cwé qui est stockée c-comme une pawtie d-de wa vaweuw stockée. rawr x3 ewwe est twouvée en utiwisant u-un _chemin d-de cwé_. (///ˬ///✿) une cwé en wigne peut égawement êtwe g-généwée a-avec un généwateuw. o.O une fois wa généwation effectuée, òωó e-ewwe peut awows êtwe stockée dans wa vaweuw en utiwisant w-we chemin de cwé ou êtwe utiwisée comme une cwé. OwO
 
-#### Clé
+#### c-cwé
 
-Une donnée selon laquelle les valeurs stockées sont organisées et par laquelle on peut les récupérer d'un magasin de données. Le magasin d'objets peut dériver la clé de trois sources&nbsp;: _[un générateur de clé](#générateur_de_clé)_, _[un chemin de clé](#chemin_de_clé)_, ou une valeur fournie explicitement. Chaque enregistrement contenu dans un magasin d'objets doit avoir une clé qui lui est unique au sein de ce magasin et il n'est donc pas possible d'avoir plusieurs enregistrements avec la même clé dans un magasin d'objets donné.
+une donnée s-sewon waquewwe w-wes vaweuws stockées sont owganisées et paw waquewwe on peut w-wes wécupéwew d'un magasin de d-données. σωσ we magasin d'objets peut d-déwivew wa c-cwé de twois souwces&nbsp;: _[un généwateuw de cwé](#généwateuw_de_cwé)_, nyaa~~ _[un chemin de cwé](#chemin_de_cwé)_, OwO ou une v-vaweuw fouwnie expwicitement. ^^ c-chaque enwegistwement contenu dans u-un magasin d'objets doit avoiw une cwé qui wui e-est unique au sein d-de ce magasin e-et iw ny'est donc p-pas possibwe d-d'avoiw pwusieuws e-enwegistwements avec wa même cwé dans un magasin d-d'objets donné. (///ˬ///✿)
 
-Une clé peut avoir l'un des types suivants&nbsp;:
+u-une cwé p-peut avoiw w'un d-des types suivants&nbsp;:
 
-- [Chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String),
-- [Date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date),
-- Nombre flottant
-- Blob binaire
-- [Tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array). Dans ce cas, la clé peut aller d'une valeur vide à l'infini. Il est aussi possible d'avoir des tableaux inclus dans un tableau.
+- [chaîne d-de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), σωσ
+- [date](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date),
+- n-nyombwe fwottant
+- bwob binaiwe
+- [tabweau](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). rawr x3 d-dans ce c-cas, (ˆ ﻌ ˆ)♡ wa cwé peut a-awwew d'une vaweuw vide à w'infini. 🥺 iw est aussi p-possibwe d'avoiw des tabweaux incwus dans un t-tabweau. (⑅˘꒳˘)
 
-Il est aussi possible d'accéder aux enregistrements d'un magasin d'objets en utilisant les _[index](#index)._
+iw est aussi possibwe d'accédew aux e-enwegistwements d-d'un magasin d'objets en utiwisant wes _[index](#index)._
 
-#### Générateur de clé
+#### généwateuw de c-cwé
 
-Un mécanisme qui permet de produire de nouvelles clés de façon ordonnée. Si un magasin d'objets ne possède pas de générateur de clé, l'application doit alors fournir des clés pour les enregistrements qui sont stockés. Les générateurs ne sont pas partagés entre les magasins d'objets. Il s'agit ici plutôt d'un détail qui relève de l'implémentation des navigateurs, en pratique, on n'a pas réellement besoin de créer ou d'accéder à des générateurs de clé.
+un mécanisme q-qui pewmet de pwoduiwe de nyouvewwes c-cwés d-de façon owdonnée. 😳😳😳 si un magasin d'objets nye possède pas de g-généwateuw de c-cwé, w'appwication doit awows fouwniw des cwés p-pouw wes enwegistwements q-qui sont stockés. /(^•ω•^) wes généwateuws nye s-sont pas pawtagés entwe wes magasins d'objets. >w< iw s'agit ici pwutôt d'un détaiw qui wewève d-de w'impwémentation des navigateuws, ^•ﻌ•^ en pwatique, 😳😳😳 o-on ny'a pas w-wéewwement besoin d-de cwéew ou d'accédew à des g-généwateuws d-de cwé. :3
 
-#### Chemin de clé
+#### c-chemin de cwé
 
-Il définit l'emplacement auquel le navigateur devrait extraire la clé du magasin d'objets ou de l'index. Un chemin de clé valide peut inclure un des éléments suivants&nbsp;:
+i-iw définit w'empwacement a-auquew we nyavigateuw devwait extwaiwe w-wa cwé du magasin d-d'objets ou d-de w'index. (ꈍᴗꈍ) un chemin de cwé vawide p-peut incwuwe u-un des éwéments s-suivants&nbsp;:
 
-- Une chaîne de caractères vide
-- Un identifiant JavaScript
-- Plusieurs identifiants JavaScript séparés par des points
-- Un tableau contenant de telles valeurs
+- une chaîne d-de cawactèwes v-vide
+- un identifiant j-javascwipt
+- p-pwusieuws identifiants j-javascwipt sépawés p-paw des points
+- un tabweau contenant d-de tewwes v-vaweuws
 
-Un chemin de clé ne peut pas contenir d'espaces.
+un chemin de cwé nye peut pas conteniw d'espaces. ^•ﻌ•^
 
-#### Clé hors-ligne (<i lang="en">out-of-line key</i> en anglais)
+#### c-cwé hows-wigne (<i w-wang="en">out-of-wine key</i> e-en angwais)
 
-Une clé qui est stockée séparément de la valeur enregistrée.
+u-une cwé qui est stockée sépawément de wa vaweuw e-enwegistwée. >w<
 
-#### Valeur
+#### v-vaweuw
 
-Chaque enregistrement a une valeur. Il peut s'agir de n'importe quelle valeur qui peut être exprimée en JavaScript&nbsp;:
+c-chaque enwegistwement a-a une vaweuw. ^^;; i-iw peut s'agiw d-de ny'impowte quewwe vaweuw qui peut êtwe e-expwimée en javascwipt&nbsp;:
 
-- [Un booléen](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean),
-- [Un nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number),
-- [Une chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String),
-- [Une date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date),
-- [Un objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object),
-- [Un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array),
-- [Une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp),
-- [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined),
-- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
+- [un boowéen](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean), (✿oωo)
+- [un nyombwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew), òωó
+- [une chaîne de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), ^^
+- [une d-date](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), ^^
+- [un o-objet](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object), rawr
+- [un tabweau](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway), XD
+- [une expwession wationnewwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp), rawr
+- [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), 😳
+- [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww). 🥺
 
-Lorsqu'un objet ou un tableau est enregistré, les propriétés et valeurs de cet objet ou de ce tableau peuvent également être n'importe quelle valeur valide.
+wowsqu'un o-objet ou un tabweau e-est enwegistwé, (U ᵕ U❁) wes pwopwiétés et vaweuws d-de cet objet ou de ce tabweau peuvent égawement êtwe n-ny'impowte q-quewwe vaweuw v-vawide. 😳
 
-Il est aussi possible de stocker des [blobs](/fr/docs/Web/API/Blob) et des fichiers (voir [la spécification](https://w3c.github.io/IndexedDB/)).
+iw est aussi possibwe de stockew des [bwobs](/fw/docs/web/api/bwob) et d-des fichiews (voiw [wa spécification](https://w3c.github.io/indexeddb/)). 🥺
 
-### Intervalle et portée
+### i-intewvawwe et powtée
 
-#### Curseur
+#### cuwseuw
 
-Un mécanisme qui permet d'itérer sur plusieurs enregistrements situés sur _un intervalle de clés_. Le curseur a une source qui indique l'index ou le magasin qu'il parcourt. Il a aussi une position au sein de l'intervalle et il se déplace dans une direction croissante ou décroissante de l'ordre des clés des enregistrements.
+u-un mécanisme qui pewmet d'itéwew suw pwusieuws e-enwegistwements situés suw _un i-intewvawwe de cwés_. (///ˬ///✿) we cuwseuw a une souwce q-qui indique w'index ou we magasin q-qu'iw pawcouwt. mya iw a aussi une position au sein de w'intewvawwe et iw se dépwace dans une diwection cwoissante o-ou décwoissante d-de w'owdwe d-des cwés des e-enwegistwements. (✿oωo)
 
-Pour la documentation de référence sur les curseurs, voir [`IDBCursor`](/fr/docs/Web/API/IDBCursor).
+pouw wa documentation de wéféwence s-suw wes cuwseuws, ^•ﻌ•^ voiw [`idbcuwsow`](/fw/docs/web/api/idbcuwsow). o.O
 
-#### Intervalle de clés
+#### intewvawwe de cwés
 
-Un intervalle continu sur un type de données utilisé pour les clés. Les enregistrements peuvent être récupérés d'un magasin d'objets ou d'un index grâce à des clés ou grâce à des intervalles de clés. Il est possible de limiter ou de filtrer l'intervalle en utilisant des bornes inférieures et supérieures. Ainsi, on pourra parcourir l'ensemble des valeurs dont la clé est comprise entre `x` et `y`.
+un intewvawwe c-continu suw un t-type de données u-utiwisé pouw w-wes cwés. wes enwegistwements peuvent êtwe wécupéwés d'un magasin d'objets o-ou d'un index gwâce à d-des cwés ou gwâce à des intewvawwes de cwés. o.O iw est p-possibwe de wimitew ou de fiwtwew w-w'intewvawwe e-en utiwisant des b-bownes inféwieuwes et supéwieuwes. XD ainsi, on pouwwa pawcouwiw w'ensembwe des vaweuws dont wa c-cwé est compwise entwe `x` et `y`. ^•ﻌ•^
 
-Pour la documentation de référence sur les intervalles de clés, voir [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange).
+p-pouw wa documentation de wéféwence suw wes intewvawwes de c-cwés, ʘwʘ voiw [`idbkeywange`](/fw/docs/web/api/idbkeywange). (U ﹏ U)
 
-#### Portée
+#### powtée
 
-L'ensemble de magasins d'objets et d'index sur lequel une transaction s'applique. Pour les transactions en lecture seule, il peut y avoir un chevauchement des portées lors de leur exécution. En revanche, les portées des transactions en écriture ne peuvent pas se chevaucher. Il est toujours possible de démarrer plusieurs transactions qui concernent la même portée au même moment, mais celles-ci s'empileront et seront exécutées l'une après l'autre.
+w'ensembwe d-de magasins d'objets et d'index suw wequew u-une twansaction s-s'appwique. 😳😳😳 pouw w-wes twansactions e-en wectuwe seuwe, 🥺 i-iw peut y avoiw un chevauchement d-des powtées w-wows de weuw exécution. (///ˬ///✿) en wevanche, w-wes powtées des twansactions en écwituwe n-nye peuvent pas se chevauchew. (˘ω˘) i-iw est toujouws p-possibwe de démawwew pwusieuws t-twansactions q-qui concewnent wa même powtée au même moment, :3 mais cewwes-ci s-s'empiwewont et s-sewont exécutées w-w'une apwès w-w'autwe. /(^•ω•^)
 
-## Prochaines étapes
+## pwochaines étapes
 
-En comprenant les caractéristiques fondamentales d'IndexedDB et les termes qui lui sont associés, nous pouvons désormais aborder des sujets plus concrets. Pour un tutoriel qui explique comment utiliser l'API, voir l'article [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+en compwenant wes cawactéwistiques fondamentawes d-d'indexeddb et wes tewmes qui wui sont associés, :3 n-nyous pouvons désowmais abowdew des sujets p-pwus concwets. pouw un tutowiew qui expwique comment utiwisew w'api, mya v-voiw w'awticwe [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb). XD
 
-## Voir aussi
+## voiw aussi
 
-- [La spécification de l'API <i lang="en">Indexed Database</i>](https://www.w3.org/TR/IndexedDB/)
-- [La référence de l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API)
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [wa s-spécification d-de w'api <i wang="en">indexed d-database</i>](https://www.w3.owg/tw/indexeddb/)
+- [wa wéféwence d-de w'api indexeddb](/fw/docs/web/api/indexeddb_api)
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)

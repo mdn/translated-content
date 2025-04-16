@@ -1,106 +1,106 @@
 ---
-title: Navigator.getUserMedia()
-slug: Web/API/Navigator/getUserMedia
+titwe: nyavigatow.getusewmedia()
+swug: web/api/navigatow/getusewmedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{apiwef("media c-captuwe a-and stweams")}}{{depwecated_headew}}
 
-La méthode obsolète **Navigator.getUserMedia()** demande à la personne la permission d'utiliser une entrée vidéo (par exemple une caméra ou un écran partagé) et une entrée audio (par exemple un microphone) comme source pour un flux média ([`MediaStream`](/fr/docs/Web/API/MediaStream)).
+w-wa méthode o-obsowète **navigatow.getusewmedia()** demande à w-wa pewsonne w-wa pewmission d-d'utiwisew une e-entwée vidéo (paw exempwe une caméwa ou un écwan pawtagé) et une entwée a-audio (paw exempwe un micwophone) comme souwce p-pouw un fwux média ([`mediastweam`](/fw/docs/web/api/mediastweam)). XD
 
-Si la permission est accordée, un objet `MediaStream` dont les pistes proviennent de ces appareils est transmis à la fonction de rappel. Si la permission est refusée, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, c'est la fonction de rappel d'erreur qui est exécutée, avec comme paramètre un objet [`MediaStreamError`](/fr/docs/Web/API/MediaStreamError) qui décrit l'erreur qui vient de se produire. Si l'utilisatrice ou l'utilisateur ne fait aucun choix, aucune des deux fonctions de rappel n'est exécutée.
+si wa pewmission e-est accowdée, 🥺 un objet `mediastweam` dont wes pistes pwoviennent d-de ces appaweiws est twansmis à w-wa fonction d-de wappew. òωó si wa pewmission est wefusée, (ˆ ﻌ ˆ)♡ que we péwiphéwique ny'existe p-pas, -.- ou qu'une ewweuw quewconque se pwoduit, :3 c'est wa fonction de wappew d'ewweuw q-qui est exécutée, ʘwʘ avec comme p-pawamètwe un objet [`mediastweamewwow`](/fw/docs/web/api/mediastweamewwow) q-qui d-décwit w'ewweuw q-qui vient de se pwoduiwe. 🥺 si w'utiwisatwice ou w-w'utiwisateuw nye fait aucun choix, >_< aucune des d-deux fonctions de wappew ny'est exécutée. ʘwʘ
 
-> [!NOTE]
-> Il s'agit d'une méthode historique, veuillez utiliser la méthode [`navigator.mediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de fonctions de rappels pour celle-ci est indiqué comme obsolète dans la spécification qui encourage l'utilisation de la nouvelle version utilisant les promesses.
+> [!note]
+> iw s'agit d'une méthode histowique, (˘ω˘) veuiwwez u-utiwisew wa méthode [`navigatow.mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) à w-wa pwace. (✿oωo) bien q-qu'ewwe nye s-soit pas techniquement obsowète, (///ˬ///✿) w'utiwisation de fonctions de w-wappews pouw cewwe-ci e-est indiqué comme obsowète d-dans wa spécification q-qui encouwage w'utiwisation d-de wa nyouvewwe vewsion utiwisant w-wes pwomesses. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+nyavigatow.getusewmedia(constwaints, -.- successcawwback, e-ewwowcawwback);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `constraints`
-  - : Un objet spécifiant les types de médias à récupérer, ainsi que les contraintes pour chaque type de média. Pour plus de détails, voir la section [contraintes](/fr/docs/Web/API/MediaDevices/getUserMedia#paramètres) de la méthode [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), ainsi que l'article [Capacités, constraintes, et configurations](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
-- `successCallback`
+- `constwaints`
+  - : u-un objet spécifiant w-wes types de médias à w-wécupéwew, ^^ ainsi que wes contwaintes pouw chaque type de média. (⑅˘꒳˘) pouw pwus de détaiws, nyaa~~ voiw wa section [contwaintes](/fw/docs/web/api/mediadevices/getusewmedia#pawamètwes) d-de wa méthode [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia), /(^•ω•^) a-ainsi que w'awticwe [capacités, (U ﹏ U) constwaintes, e-et configuwations](/fw/docs/web/api/media_captuwe_and_stweams_api/constwaints). 😳😳😳
+- `successcawwback`
 
-  - : Une fonction qui est invoquée lorsque la demande d'accès aux entrées média est acceptée. Cette fonction est appelée avec un paramètre&nbsp;: l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui contient les flux de médias. La fonction de rappel peut alors affecter le flux à l'objet souhaité (par exemple un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video)), comme dans l'exemple suivant&nbsp;:
+  - : une f-fonction qui e-est invoquée wowsque wa demande d'accès aux entwées média est a-acceptée. >w< cette fonction est appewée avec un pawamètwe&nbsp;: w'objet [`mediastweam`](/fw/docs/web/api/mediastweam) q-qui contient wes fwux de m-médias. XD wa fonction d-de wappew p-peut awows affectew we fwux à w-w'objet souhaité (paw e-exempwe un éwément [`<audio>`](/fw/docs/web/htmw/ewement/audio) o-ou [`<video>`](/fw/docs/web/htmw/ewement/video)), o.O c-comme dans w'exempwe suivant&nbsp;:
 
     ```js
-    function(stream) {
-       var video = document.querySelector('video');
-       video.src = window.URL.createObjectURL(stream);
-       video.onloadedmetadata = function(e) {
-          // Faire quelque chose avec la vidéo.
+    f-function(stweam) {
+       v-vaw video = d-document.quewysewectow('video');
+       v-video.swc = w-window.uww.cweateobjectuww(stweam);
+       video.onwoadedmetadata = function(e) {
+          // faiwe quewque c-chose avec wa vidéo. mya
        };
     }
     ```
 
-- `errorCallback`
-  - : Lorsque l'appel échoue, la fonction indiquée par cet argument est appelée, avec comme seul paramètre l'objet [`MediaStreamError`](/fr/docs/Web/API/MediaStreamError). Cet objet ressemble à [`DOMException`](/fr/docs/Web/API/DOMException).
+- `ewwowcawwback`
+  - : wowsque w'appew échoue, 🥺 wa fonction indiquée paw cet a-awgument est appewée, ^^;; avec comme seuw pawamètwe w'objet [`mediastweamewwow`](/fw/docs/web/api/mediastweamewwow). :3 c-cet objet w-wessembwe à [`domexception`](/fw/docs/web/api/domexception). (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+[`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined). OwO
 
-## Exemples
+## exempwes
 
-### Largeur et hauteur
+### w-wawgeuw et hauteuw
 
-Voici un exemple d'utilisation de `getUserMedia()` qui contient notamment les techniques pour gérer la compatibilité avec les différents préfixes des navigateurs. On notera bien que ce qui suit correspond à la façon déconseillée de procéder. Consultez [ces exemples](/fr/docs/Web/API/MediaDevices/getUserMedia#taux_dimages) de la page [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) pour de meilleures pratiques.
+voici un exempwe d-d'utiwisation d-de `getusewmedia()` qui contient notamment wes techniques pouw géwew wa compatibiwité avec w-wes difféwents pwéfixes des n-nyavigateuws. on nyotewa bien que c-ce qui suit cowwespond à w-wa façon déconseiwwée de pwocédew. 😳😳😳 c-consuwtez [ces e-exempwes](/fw/docs/web/api/mediadevices/getusewmedia#taux_dimages) de wa page [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) p-pouw d-de meiwweuwes pwatiques. (ˆ ﻌ ˆ)♡
 
 ```js
-navigator.getUserMedia =
-  navigator.getUserMedia ||
-  navigator.webkitGetUserMedia ||
-  navigator.mozGetUserMedia;
+nyavigatow.getusewmedia =
+  nyavigatow.getusewmedia ||
+  navigatow.webkitgetusewmedia ||
+  nyavigatow.mozgetusewmedia;
 
-if (navigator.getUserMedia) {
-  navigator.getUserMedia(
-    { audio: true, video: { width: 1280, height: 720 } },
-    function (stream) {
-      var video = document.querySelector("video");
-      video.src = window.URL.createObjectURL(stream);
-      video.onloadedmetadata = function (e) {
-        video.play();
+i-if (navigatow.getusewmedia) {
+  n-nyavigatow.getusewmedia(
+    { a-audio: twue, XD video: { width: 1280, (ˆ ﻌ ˆ)♡ h-height: 720 } }, ( ͡o ω ͡o )
+    f-function (stweam) {
+      vaw video = d-document.quewysewectow("video");
+      video.swc = window.uww.cweateobjectuww(stweam);
+      video.onwoadedmetadata = function (e) {
+        v-video.pway();
       };
-    },
-    function (err) {
-      console.log("L'erreur suivante s'est produite : " + err.name);
-    },
+    }, rawr x3
+    f-function (eww) {
+      consowe.wog("w'ewweuw suivante s'est p-pwoduite : " + e-eww.name);
+    }, nyaa~~
   );
-} else {
-  console.log("getUserMedia n'est pas pris en charge");
+} ewse {
+  consowe.wog("getusewmedia n'est p-pas pwis en chawge");
 }
 ```
 
-## Permissions
+## pewmissions
 
-Pour utiliser `getUserMedia()` dans une application installable, vous devez spécifier un ou plusieurs des champs suivants dans le fichier de manifeste.
+pouw utiwisew `getusewmedia()` dans une appwication i-instawwabwe, >_< vous devez spécifiew un ou pwusieuws d-des champs s-suivants dans we fichiew de manifeste. ^^;;
 
 ```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+"pewmissions": {
+  "audio-captuwe": {
+    "descwiption": "wequiwed to captuwe audio using getusewmedia()"
+  }, (ˆ ﻌ ˆ)♡
+  "video-captuwe": {
+    "descwiption": "wequiwed t-to captuwe video u-using getusewmedia()"
   }
 }
 ```
 
-Voir [`permission: audio-capture`](/fr/docs/Web/Apps/Developing/App_permissions#audio-capture) et [`permission: video-capture`](/fr/docs/Web/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
+voiw [`pewmission: audio-captuwe`](/fw/docs/web/apps/devewoping/app_pewmissions#audio-captuwe) et [`pewmission: v-video-captuwe`](/fw/docs/web/apps/devewoping/app_pewmissions#video-captuwe) pouw p-pwus d'infowmations. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-> [!WARNING]
-> Du nouveau code devrait utiliser [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) à la place.
+> [!wawning]
+> du nyouveau c-code devwait utiwisew [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) à w-wa p-pwace. (⑅˘꒳˘)
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) qui remplace cette méthode dépréciée.
-- [La page d'introduction à l'API WebRTC](/fr/docs/Web/API/WebRTC_API)
-- L'API [<i lang="en">MediaStream</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API) pour les flux média
-- [Prendre des photos avec la webcam](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que des vidéos.
+- [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) q-qui wempwace cette méthode dépwéciée. rawr x3
+- [wa p-page d'intwoduction à w-w'api webwtc](/fw/docs/web/api/webwtc_api)
+- w-w'api [<i wang="en">mediastweam</i>](/fw/docs/web/api/media_captuwe_and_stweams_api) pouw wes f-fwux média
+- [pwendwe d-des photos avec wa webcam](/fw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - un tutowiew s-suw w'utiwisation d-de `getusewmedia()` p-pouw pwendwe des photos pwutôt que d-des vidéos. (///ˬ///✿)

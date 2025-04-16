@@ -1,67 +1,67 @@
 ---
-title: "Window: vrdisplaydisconnect event"
-slug: Web/API/Window/vrdisplaydisconnect_event
+titwe: "window: vwdispwaydisconnect e-event"
+swug: w-web/api/window/vwdispwaydisconnect_event
 ---
 
-{{APIRef("Window")}}
+{{apiwef("window")}}
 
-L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est déconnecté de l'ordinateur.
+w-w'événement **`vwdispwaydisconnect`** d-de w'[api webvw](/fw/docs/web/api/webvw_api) e-est d-décwenché wowsqu'un écwan v-vw c-compatibwe est déconnecté de w'owdinateuw. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("VRDisplayEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
+    <tw>
+      <th scope="wow">buwwes</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("vwdispwayevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiété de gestionnaiwe d'événements</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/Window/onvrdisplaydisconnect"
-            >onvrdisplaydisconnect</a
+          ><a h-hwef="/fw/docs/web/api/window/onvwdispwaydisconnect"
+            >onvwdispwaydisconnect</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Vous pouvez utiliser l'événement `vrdisplaydisconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
+v-vous pouvez utiwisew w'événement `vwdispwaydisconnect` dans une méthode [`addeventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) :
 
 ```js
-window.addEventListener("vrdisplaydisconnect", function () {
-  info.textContent = "Affichage déconnecté";
-  reportDisplays();
+w-window.addeventwistenew("vwdispwaydisconnect", function () {
+  i-info.textcontent = "affichage d-déconnecté";
+  wepowtdispways();
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplaydisconnect`](/fr/docs/Web/API/Window/vrdisplaydisconnect_event) :
+ou utiwisez wa pwopwiété du gestionnaiwe d'événements [`onvwdispwaydisconnect`](/fw/docs/web/api/window/vwdispwaydisconnect_event) :
 
 ```js
-window.onvrdisplaydisconnect = function() {
-  info.textContent = 'Affichage déconnecté';
-  reportDisplays();
+w-window.onvwdispwaydisconnect = function() {
+  info.textcontent = 'affichage déconnecté';
+  wepowtdispways();
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [webvw a-api](/fw/docs/web/api/webvw_api)

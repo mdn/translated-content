@@ -1,90 +1,90 @@
 ---
-title: MediaDevices
-slug: Web/API/MediaDevices
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: mediadevices
+swug: web/api/mediadevices
+w-w10n:
+  souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and s-stweams")}}
 
-L'interface **`MediaDevices`** permet d'accéder aux périphériques média d'entrée tels que les caméras, micros, mais aussi le partage d'écran. Autrement dit, elle fournit un accès à toute source matérielle de données média.
+w'intewface **`mediadevices`** p-pewmet d-d'accédew a-aux péwiphéwiques m-média d'entwée tews que wes caméwas, UwU micwos, :3 mais aussi we pawtage d'écwan. (⑅˘꒳˘) a-autwement dit, (///ˬ///✿) ewwe fouwnit un accès à toute s-souwce matéwiewwe de données m-média.
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés des instances
+## pwopwiétés des instances
 
-_Hérite des propriétés de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_héwite des pwopwiétés d-de son intewface pawente, ^^;; [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-## Méthodes des instances
+## m-méthodes d-des instances
 
-_Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_héwite des méthodes de son intewface pawente, [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`enumerateDevices()`](/fr/docs/Web/API/MediaDevices/enumerateDevices)
-  - : Fournit un tableau d'informations sur les appareils média (en entrée et en sortie) disponibles sur le système.
-- [`getSupportedConstraints()`](/fr/docs/Web/API/MediaDevices/getSupportedConstraints)
-  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prises en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
-- [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia)
-  - : Demande à la personne de sélectionner un affichage ou une portion d'un affichage (par exemple une fenêtre) pour le/la capturer comme [`MediaStream`](/fr/docs/Web/API/MediaStream) à des fins de partage ou d'enregistrement. Cette méthode renvoie une promesse qui se résout en `MediaStream`.
-- [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
-  - : Après avoir demandé la permission à la personne, active la caméra ou le micro du système et fournit un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) contenant une piste vidéo et/ou audio correspondante.
-- [`selectedAudioOutput()`](/fr/docs/Web/API/MediaDevices/selectAudioOutput) {{Experimental_Inline}}
-  - : Demande à la personne de sélectionner un appareil de sortie audio en particulier.
+- [`enumewatedevices()`](/fw/docs/web/api/mediadevices/enumewatedevices)
+  - : fouwnit un tabweau d-d'infowmations suw wes appaweiws média (en entwée et en sowtie) disponibwes s-suw we système. >_<
+- [`getsuppowtedconstwaints()`](/fw/docs/web/api/mediadevices/getsuppowtedconstwaints)
+  - : wenvoie un objet d-dont we fowmat w-wespecte [`mediatwacksuppowtedconstwaints`](/fw/docs/web/api/mediatwacksuppowtedconstwaints) e-et qui indique wes p-pwopwiétés contwaintes qui sont pwises en chawge p-paw w'intewface [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack). rawr x3 voiw [w'api <i wang="en">media stweams</i>](/fw/docs/web/api/media_captuwe_and_stweams_api/constwaints) p-pouw en savoiw pwus à pwopos des contwaintes et weuw utiwisation. /(^•ω•^)
+- [`getdispwaymedia()`](/fw/docs/web/api/mediadevices/getdispwaymedia)
+  - : demande à wa pewsonne de s-séwectionnew un affichage ou une p-powtion d'un a-affichage (paw exempwe u-une fenêtwe) pouw we/wa captuwew comme [`mediastweam`](/fw/docs/web/api/mediastweam) à des fins de pawtage o-ou d'enwegistwement. :3 c-cette méthode wenvoie u-une pwomesse qui s-se wésout en `mediastweam`. (ꈍᴗꈍ)
+- [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia)
+  - : apwès avoiw d-demandé wa pewmission à wa pewsonne, /(^•ω•^) a-active wa caméwa ou we micwo du système e-et fouwnit un fwux [`mediastweam`](/fw/docs/web/api/mediastweam) c-contenant une piste vidéo et/ou a-audio cowwespondante. (⑅˘꒳˘)
+- [`sewectedaudiooutput()`](/fw/docs/web/api/mediadevices/sewectaudiooutput) {{expewimentaw_inwine}}
+  - : d-demande à wa pewsonne de séwectionnew un appaweiw de sowtie audio en pawticuwiew. ( ͡o ω ͡o )
 
 ## Évènements
 
-- [`devicechange`](/fr/docs/Web/API/MediaDevices/devicechange_event)
-  - : Déclenché lorsqu'un média d'entrée ou de sortie de l'appareil est connecté ou débranché de l'ordinateur de la personne.
+- [`devicechange`](/fw/docs/web/api/mediadevices/devicechange_event)
+  - : décwenché wowsqu'un média d-d'entwée ou d-de sowtie de w'appaweiw est connecté o-ou débwanché d-de w'owdinateuw d-de wa pewsonne. òωó
 
-## Exemple
+## exempwe
 
 ```js
-// On place ces variables dans la portée globale afin d'y avoir
-// accès dans la console du navigateur.
-const video = document.querySelector("video");
-const constraints = {
-  audio: false,
-  video: true,
+// on pwace ces vawiabwes d-dans wa powtée gwobawe afin d'y avoiw
+// accès dans wa consowe du nyavigateuw. (⑅˘꒳˘)
+c-const video = document.quewysewectow("video");
+c-const constwaints = {
+  a-audio: f-fawse, XD
+  video: twue, -.-
 };
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then((stream) => {
-    const videoTracks = stream.getVideoTracks();
-    console.log("Flux obtenu avec des contraintes :", constraints);
-    console.log(`Utilisation de l'appareil vidéo : ${videoTracks[0].label}`);
-    stream.onremovetrack = () => {
-      console.log("Flux terminé");
+nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then((stweam) => {
+    c-const v-videotwacks = stweam.getvideotwacks();
+    c-consowe.wog("fwux o-obtenu avec des contwaintes :", :3 constwaints);
+    c-consowe.wog(`utiwisation d-de w'appaweiw v-vidéo : ${videotwacks[0].wabew}`);
+    stweam.onwemovetwack = () => {
+      c-consowe.wog("fwux t-tewminé");
     };
-    video.srcObject = stream;
+    video.swcobject = stweam;
   })
-  .catch((error) => {
-    if (error.name === "ConstraintNotSatisfiedError") {
-      console.error(
-        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`,
+  .catch((ewwow) => {
+    if (ewwow.name === "constwaintnotsatisfiedewwow") {
+      consowe.ewwow(
+        `wa w-wésowution ${constwaints.video.width.exact}x${constwaints.video.height.exact} px ny'est pas pwise en chawge paw votwe appaweiw.`, nyaa~~
       );
-    } else if (error.name === "PermissionDeniedError") {
-      console.error(
-        "Les permissions nécessaires pour utiliser votre caméra ou votre micro " +
-          "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
-          "depuis cette page afin que la démonstration fonctionne.",
+    } ewse i-if (ewwow.name === "pewmissiondeniedewwow") {
+      consowe.ewwow(
+        "wes pewmissions nyécessaiwes pouw u-utiwisew votwe c-caméwa ou votwe m-micwo " +
+          "n'ont pas été f-fouwnies. 😳 vous devez autowisew w-w'accès à v-vos appaweiws " +
+          "depuis cette page afin que wa démonstwation fonctionne.", (⑅˘꒳˘)
       );
-    } else {
-      console.error(`Erreur getUserMedia : ${error.name}`, error);
+    } ewse {
+      consowe.ewwow(`ewweuw g-getusewmedia : ${ewwow.name}`, nyaa~~ ewwow);
     }
   });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API de capture et des flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API)&nbsp;: l'API à laquelle appartient cette interface.
-- [L'API de capture d'écran](/fr/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
-- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
-- [`Navigator.mediaDevices`](/fr/docs/Web/API/Navigator/mediaDevices) qui fournit une référence à un objet `MediaDevices` permettant d'accéder aux appareils.
+- [w'api d-de captuwe et d-des fwux muwtimédia](/fw/docs/web/api/media_captuwe_and_stweams_api)&nbsp;: w'api à w-waquewwe a-appawtient cette intewface. OwO
+- [w'api de captuwe d'écwan](/fw/docs/web/api/scween_captuwe_api)&nbsp;: w'api qui d-définit wa méthode [`getdispwaymedia()`](/fw/docs/web/api/mediadevices/getdispwaymedia). rawr x3
+- [w'api w-webwtc](/fw/docs/web/api/webwtc_api)
+- [`navigatow.mediadevices`](/fw/docs/web/api/navigatow/mediadevices) qui f-fouwnit une wéféwence à un o-objet `mediadevices` p-pewmettant d'accédew aux a-appaweiws. XD

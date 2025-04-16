@@ -1,50 +1,50 @@
 ---
-title: Document.queryCommandSupported()
-slug: Web/API/Document/queryCommandSupported
+titwe: document.quewycommandsuppowted()
+swug: w-web/api/document/quewycommandsuppowted
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Document.queryCommandSupported()`** indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.
+w-wa méthode **`document.quewycommandsuppowted()`** i-indique si wa c-commande d'éditeuw s-spécifiée e-est pwise en chawge p-paw we nyavigateuw. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-isSupported = document.queryCommandSupported(command);
+issuppowted = document.quewycommandsuppowted(command);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `command`
-  - : La commande pour laquelle on veut déterminer si elle est prise en charge.
+  - : wa commande p-pouw waquewwe on veut détewminew si ewwe e-est pwise en chawge. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Renvoie un {{jsxref("Boolean")}} qui est `true` (_vrai_) si la commande est prise en charge et `false` (_faux_) sinon.
+wenvoie un {{jsxwef("boowean")}} qui est `twue` (_vwai_) s-si wa commande est pwise en c-chawge et `fawse` (_faux_) s-sinon.
 
-## Notes
+## nyotes
 
-La commande `'paste'` (_coller_) renvoie `false` (_faux_), pas seulement si la fonctionnalité n'est pas disponible, mais également si le script l'appelant a des privilèges insuffisants pour réaliser l'action [\[1\]](#note1).
+wa commande `'paste'` (_cowwew_) wenvoie `fawse` (_faux_), (///ˬ///✿) pas seuwement s-si wa fonctionnawité ny'est pas disponibwe, 😳😳😳 mais égawement si we scwipt w'appewant a d-des pwiviwèges insuffisants pouw w-wéawisew w'action [\[1\]](#note1). 🥺
 
-## Exemple
+## e-exempwe
 
 ```js
-var flg = document.queryCommandSupported("SelectAll");
+v-vaw fwg = d-document.quewycommandsuppowted("sewectaww");
 
-if (flg) {
-  // ...Faire quelque chose
+if (fwg) {
+  // ...faiwe quewque c-chose
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandEnabled()")}}
+- {{domxwef("document.execcommand()")}}
+- {{domxwef("document.quewycommandenabwed()")}}

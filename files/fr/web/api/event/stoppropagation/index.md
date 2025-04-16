@@ -1,32 +1,32 @@
 ---
-title: Event.stopPropagation()
-slug: Web/API/Event/stopPropagation
+titwe: event.stoppwopagation()
+swug: web/api/event/stoppwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Évite que l'évènement courant ne se propage plus loin dans les phases de capture et de déploiement.
+Évite q-que w'évènement c-couwant ne s-se pwopage pwus w-woin dans wes p-phases de captuwe e-et de dépwoiement. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-event.stopPropagation();
+e-event.stoppwopagation();
 ```
 
-## Exemple
+## exempwe
 
-Voir la section Exemple 5 : [Propagation d'évènements](/fr/docs/Web/API/Document_Object_Model/Examples#Exemple_5_:_propagation_d%27évènements) dans le chapitre Exemples pour un exemple plus détaillé de cette méthode et de la propagation d'évènements dans le DOM.
+voiw wa section exempwe 5 : [pwopagation d'évènements](/fw/docs/web/api/document_object_modew/exampwes#exempwe_5_:_pwopagation_d%27évènements) d-dans we chapitwe exempwes pouw un exempwe p-pwus détaiwwé de cette méthode e-et de wa pwopagation d'évènements dans we dom. mya
 
-## Notes
+## nyotes
 
-Voir [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en) pour une explication du flux d'évènements. (Une illustration est disponible dans le brouillon [DOM Level 3 Event draft](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) (en)).
+voiw [dom s-specification](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) (en) pouw une e-expwication du fwux d-d'évènements. (une iwwustwation est disponibwe dans we bwouiwwon [dom wevew 3 e-event dwaft](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow) (en)). nyaa~~
 
-[preventDefault](/fr/docs/Web/API/Event/preventDefault) est une méthode complémentaire qui peut être utilisée pour empêcher l'action par défaut de l'évènement.
+[pweventdefauwt](/fw/docs/web/api/event/pweventdefauwt) est une méthode compwémentaiwe qui peut êtwe utiwisée p-pouw empêchew w'action paw défaut d-de w'évènement. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

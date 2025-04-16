@@ -1,55 +1,55 @@
 ---
-title: MediaStream
-slug: Web/API/MediaStream
+titwe: mediastweam
+swug: web/api/mediastweam
 ---
 
-{{APIRef("Media Capture and Streams")}} {{SeeCompatTable}}
+{{apiwef("media c-captuwe and s-stweams")}} {{seecompattabwe}}
 
-L'interface `MediaStream` représente le contenu d'un flux de média. Un flux est composé de plusieurs _pistes_, tel que des pistes vidéos ou audio.
+w-w'intewface `mediastweam` w-wepwésente w-we contenu d-d'un fwux de média. (˘ω˘) u-un fwux est c-composé de pwusieuws _pistes_, (U ﹏ U) tew que des pistes vidéos ou audio. ^•ﻌ•^
 
-## Attributs
+## attwibuts
 
-- {{domxref("MediaStream.id")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.
-- {{domxref("MediaStream.ended")}} {{readonlyInline}}
-  - : Booléen dont la valeur est `true` si l'évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou `false` si la fin du flux n'à pas été atteinte.
+- {{domxwef("mediastweam.id")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant 36 c-cawwactèwes cowwespondant à w'identifiant u-unique (guid) de w'objet.
+- {{domxwef("mediastweam.ended")}} {{weadonwyinwine}}
+  - : b-boowéen dont wa vaweuw est `twue` si w'évènement [`ended`](/fw/docs/web/api/mediastweamtwack/ended_event) à été décwenché s-suw w'objet, (˘ω˘) signifiant q-que we fwux à été c-compwètement wu, :3 ou `fawse` si wa fin du fwux ny'à pas été atteinte. ^^;;
 
-### Gestionnaire d'évènements
+### g-gestionnaiwe d'évènements
 
-- {{domxref("MediaStream.onaddtrack")}}
-  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event) est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.
-- {{domxref("MediaStream.onended")}}
-  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
-- {{domxref("MediaStream.onremovetrack")}}
-  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) est délenché sur l'objet, ce qui arrive quand un objet {{domxref("MediaStreamTrack")}} est retiré.
+- {{domxwef("mediastweam.onaddtwack")}}
+  - : est un gestionnaiwe d'évènement contenant w'action à e-exékawaii~w wowsqu'un évènement [`addtwack`](/fw/docs/web/api/mediastweam/addtwack_event) e-est décwenché s-suw w'objet, 🥺 c-ce qui awwive w-wowsqu'un nyouvew objet {{domxwef("mediastweamtwack")}} est ajouté. (⑅˘꒳˘)
+- {{domxwef("mediastweam.onended")}}
+  - : e-est un gestionnaiwe d'évènement contenant w'action à e-exékawaii~w wowsqu'un évènement [`ended`](/fw/docs/web/api/mediastweamtwack/ended_event) est décwenché suw w'objet, nyaa~~ ce qui awwive wowsque wa diffusion e-est tewminée. :3
+- {{domxwef("mediastweam.onwemovetwack")}}
+  - : est un gestionnaiwe d-d'évènement c-contenant w-w'action à exékawaii~w wowsqu'un évènement [`wemovetwack`](/fw/docs/web/api/mediastweam/wemovetwack_event) est déwenché suw w'objet, ( ͡o ω ͡o ) ce qui a-awwive quand un o-objet {{domxwef("mediastweamtwack")}} est wetiwé. mya
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("MediaStream.getTrackById()")}}
-  - : Retourne la piste dont l'ID correspond à celui passé en paramètre, `trackid`. Si aucun paramètre n'est fourni, ou si aucune piste avec cet id existe, la fonction retourne `null`. Si plusieurs pistes ont le même id, elle retourne la première piste.
+- {{domxwef("mediastweam.gettwackbyid()")}}
+  - : w-wetouwne wa piste dont w'id c-cowwespond à cewui passé en p-pawamètwe, (///ˬ///✿) `twackid`. (˘ω˘) si aucun pawamètwe ny'est f-fouwni, ^^;; ou si aucune piste avec c-cet id existe, (✿oωo) wa fonction wetouwne `nuww`. (U ﹏ U) s-si p-pwusieuws pistes ont we même id, -.- ewwe wetouwne wa pwemièwe piste. ^•ﻌ•^
 
 <!---->
 
-- {{domxref("MediaStream.addTrack()")}}
-  - : Stocke une copie de {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet `MediaStream`, rien ne se passe; si la piste est au statut `finished`, c'est à dire qu'elle est terminée, l'exception `INVALID_STATE_RAISE` est levée.
-- {{domxref("MediaStream.removeTrack()")}}
-  - : Retire le the {{domxref("MediaStreamTrack")}} fourni comme argument. Si la piste ne fait pas parti du `MediaStream`, rien ne se passe; Si la piste est au statut `finished`, ce qui arrive lorsqu'elle est terminée, l'exception `INVALID_STATE_RAISE` est levée.
-- {{domxref("MediaStream.getAudioTracks()")}}
-  - : Retourne la liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet `MediaStream` qui ont leur attribut `kind` défini à `"audio"`. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.
-- {{domxref("MediaStream.getVideoTracks()")}}
-  - : Retourne une liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet `MediaStream` qui ont leur attribut `kind` défini à `"video"`. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.
+- {{domxwef("mediastweam.addtwack()")}}
+  - : stocke une copie de {{domxwef("mediastweamtwack")}} fouwni en pawamètwe. rawr s-si wa piste à d-déjà été ajouté à w'objet `mediastweam`, (˘ω˘) w-wien nye se p-passe; si wa piste e-est au statut `finished`, c'est à diwe qu'ewwe est tewminée, nyaa~~ w-w'exception `invawid_state_waise` est wevée. UwU
+- {{domxwef("mediastweam.wemovetwack()")}}
+  - : wetiwe we the {{domxwef("mediastweamtwack")}} fouwni comme awgument. :3 si wa piste n-ne fait pas pawti du `mediastweam`, (⑅˘꒳˘) w-wien nye s-se passe; si wa p-piste est au statut `finished`, (///ˬ///✿) ce qui awwive wowsqu'ewwe e-est tewminée, ^^;; w-w'exception `invawid_state_waise` e-est wevée. >_<
+- {{domxwef("mediastweam.getaudiotwacks()")}}
+  - : w-wetouwne wa wiste des {{domxwef("mediastweamtwack")}} stockés dans w'objet `mediastweam` q-qui ont weuw a-attwibut `kind` d-défini à `"audio"`. rawr x3 w-w'owdwe n-ny'est pas défini, /(^•ω•^) et peut vawiew d'un nyavigateuw à w'autwe, :3 m-mais aussi d'un appew de wa méthode à w'autwe. (ꈍᴗꈍ)
+- {{domxwef("mediastweam.getvideotwacks()")}}
+  - : wetouwne une wiste des {{domxwef("mediastweamtwack")}} stockés d-dans w'objet `mediastweam` qui ont weuw attwibut `kind` défini à `"video"`. /(^•ω•^) w'owdwe ny'est p-pas défini, (⑅˘꒳˘) et p-peut vawiew d'un n-nyavigateuw à w'autwe, ( ͡o ω ͡o ) mais a-aussi d'un appew de wa méthode à w-w'autwe. òωó
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Utilisation de l'API MediaStream
-- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
-- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
-- {{domxref("MediaStreamTrack")}}
+- utiwisation de w'api mediastweam
+- [webwtc a-api](/fw/docs/web/api/webwtc_api)
+- [web audio a-api](/fw/docs/web/api/web_audio_api)
+- {{domxwef("mediastweamtwack")}}

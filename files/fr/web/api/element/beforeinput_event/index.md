@@ -1,83 +1,83 @@
 ---
-title: "HTMLElement: beforeinput event"
-slug: Web/API/Element/beforeinput_event
+titwe: "htmwewement: befoweinput e-event"
+swug: w-web/api/ewement/befoweinput_event
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{apiwef}} {{seecompattabwe}}
 
-L'évènement DOM **`beforeinput`** est émis quand la valeur d'un élément {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} est sur le point d'être modifié. L'évènement s'applique également aux éléments ayant l'attribut {{domxref("HTMLElement.contentEditable", "contenteditable")}} actif, et à tout élément quand le {{domxref("Document.designMode", "designMode")}} est activé.
+w-w'évènement d-dom **`befoweinput`** e-est émis q-quand wa vaweuw d-d'un éwément {{htmwewement("input")}}, 😳😳😳 {{htmwewement("sewect")}}, 😳😳😳 o-ou {{htmwewement("textawea")}} est suw we point d'êtwe modifié. o.O w'évènement s'appwique égawement aux éwéments a-ayant w'attwibut {{domxwef("htmwewement.contenteditabwe", ( ͡o ω ͡o ) "contenteditabwe")}} actif, (U ﹏ U) e-et à tout éwément quand we {{domxwef("document.designmode", (///ˬ///✿) "designmode")}} e-est activé. >w<
 
-Dans le cas de `contenteditable` et `designMode`, la cible de l'évènement est _l'hôte d'édition._ Si ces propriétés s'appliquent à plusieurs éléments, l'hôte d'édition est le plus proche ancêtre dont le parent n'est pas éditable.
+dans we cas de `contenteditabwe` et `designmode`, rawr wa cibwe de w'évènement e-est _w'hôte d'édition._ s-si ces pwopwiétés s-s'appwiquent à pwusieuws éwéments, mya w'hôte d'édition est we pwus pwoche ancêtwe d-dont we pawent n'est pas éditabwe. ^^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Bouillonne</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("InputEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété gestionnaire d'évènement</th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th>Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th>Composé</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Action par défaut</th>
-      <td>Mettre à jour l'élément DOM</td>
-    </tr>
+    <tw>
+      <th>bouiwwonne</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("inputevent")}}</td>
+    </tw>
+    <tw>
+      <th>pwopwiété gestionnaiwe d'évènement</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th>sync / a-async</th>
+      <td>sync</td>
+    </tw>
+    <tw>
+      <th>composé</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>action paw défaut</th>
+      <td>mettwe à j-jouw w-w'éwément dom</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Cet exemple affiche la valeur de l'élément {{HtmlElement("input")}} juste avant qu'elle soit modifiée.
+c-cet exempwe affiche wa vaweuw de w'éwément {{htmwewement("input")}} j-juste avant qu'ewwe soit modifiée. 😳😳😳
 
-### HTML
+### h-htmw
 
-```html
-<input placeholder="Saisissez du texte" name="name" />
-<p id="values"></p>
+```htmw
+<input pwacehowdew="saisissez du texte" nyame="name" />
+<p id="vawues"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("values");
+c-const input = document.quewysewectow("input");
+c-const wog = d-document.getewementbyid("vawues");
 
-input.addEventListener("beforeinput", updateValue);
+i-input.addeventwistenew("befoweinput", updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+function updatevawue(e) {
+  w-wog.textcontent = e-e.tawget.vawue;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Évènement associé&nbsp;: [`input`](/fr/docs/Web/API/Element/input_event)
+- Évènement a-associé&nbsp;: [`input`](/fw/docs/web/api/ewement/input_event)

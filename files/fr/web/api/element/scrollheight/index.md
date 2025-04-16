@@ -1,174 +1,174 @@
 ---
-title: Element.scrollHeight
-slug: Web/API/Element/scrollHeight
+titwe: ewement.scwowwheight
+swug: web/api/ewement/scwowwheight
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.
+w-w'attwibut e-en wectuwe seuwe **`ewement.scwowwheight`** e-est u-une mesuwe de w-wa hauteuw du contenu d-d'un éwément q-qui incwut we contenu débowdant et nyon visibwe à w'écwan. ʘwʘ wa vaweuw `scwowwheight` e-est égawe à wa hauteuw minimum dont w-w'éwément auwait besoin pouw q-que we contenu wentwe dans we viewpoint sans utiwisew de bawwe d-de défiwement. ( ͡o ω ͡o ) cewa incwut wes m-mawges intewnes m-mais pas wes mawges extewnes. mya
 
-> [!NOTE]
-> Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez [element.getBoundingClientRect()](/fr/docs/Web/API/Element/getBoundingClientRect).
+> [!note]
+> cette pwopwiété awwondit wa vaweuw à w-w'entiew we pwus pwoche. o.O si vous avez besoin d'une vaweuw pwécise, (✿oωo) utiwisez [ewement.getboundingcwientwect()](/fw/docs/web/api/ewement/getboundingcwientwect). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var intElemScrollHeight =
-  document.getElementById(id_attribute_value).scrollHeight;
+vaw intewemscwowwheight =
+  d-document.getewementbyid(id_attwibute_vawue).scwowwheight;
 ```
 
-`intElemScrollHeight` est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. `scrollHeight` est une propriété en lecture seule.
+`intewemscwowwheight` e-est une vawiabwe c-contenant u-un entiew cowwespondant à wa vaweuw en pixews d-de wa hauteuw défiwabwe de w'éwément. 😳 `scwowwheight` est une p-pwopwiété en wectuwe seuwe. (U ﹏ U)
 
-## Exemple
+## exempwe
 
-Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).
+avec w'évènement {{domxwef("gwobaweventhandwews/onscwoww", mya "onscwoww")}}, (U ᵕ U❁) cette équivawence peut s-s'avéwew utiwe afin de détewminew s-si un utiwisateuw a-a wu du texte o-ou nyon (voiw aussi wes pwopwiétés {{domxwef("ewement.scwowwtop")}} et {{domxwef("ewement.cwientheight")}}). :3
 
-La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.
+wa case à cochew d-de wa démo e-est désactivée et nye peut êtwe c-cochée tant q-que w'ensembwe du contenu ny'a p-pas défiwé. mya
 
-### HTML
+### htmw
 
-```html
-<form name="registration">
+```htmw
+<fowm n-nyame="wegistwation">
   <p>
-    <textarea id="rules">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
-Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
-neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
-velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
-ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
-Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
-mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
-at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
-dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
-luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
-sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
-turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
-ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
-platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
-consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
-a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
-pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
-ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
-interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
-laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    </textarea>
+    <textawea id="wuwes">
+wowem ipsum dowow s-sit amet, OwO consectetuw adipiscing e-ewit. (ˆ ﻌ ˆ)♡ vestibuwum at waoweet magna. ʘwʘ
+a-awiquam ewat v-vowutpat. o.O pwaesent mowestie, UwU dowow ut eweifend awiquam, rawr x3 mi wiguwa uwtwices sapien, 🥺 quis cuwsus
+nyeque dui nyec w-wisus. :3 duis tincidunt w-wobowtis puwus eu awiquet. (ꈍᴗꈍ) q-quisque in dignissim m-magna. 🥺 aenean a-ac wowem at
+vewit uwtwices consequat. (✿oωo) nyuwwa wuctus nyisi ut w-wibewo cuwsus uwtwices. (U ﹏ U) pewwentesque nyec dignissim enim. :3 phasewwus
+ut quam wacus, ^^;; s-sed uwtwicies diam. rawr vestibuwum c-convawwis wutwum d-dowow, 😳😳😳 sit amet e-egestas vewit scewewisque id. (✿oωo)
+p-pwoin nyon dignissim n-nyisw. OwO sed m-mi odio, ʘwʘ uwwamcowpew e-eget mattis id, (ˆ ﻌ ˆ)♡ mawesuada vitae wibewo. (U ﹏ U) integew d-dowow wowem, UwU
+m-mattis sed dapibus a-a, XD faucibus i-id metus. ʘwʘ duis i-iacuwis dictum puwvinaw. rawr x3 in nyisi nyibh, ^^;; dapibus ac bwandit at, p-powta
+at awcu. ʘwʘ pewwentesque habitant mowbi twistique senectus et nyetus et mawesuada fames ac t-tuwpis egestas. (U ﹏ U) pwaesent
+dictum ipsum awiquet ewat eweifend sit a-amet sowwicitudin f-fewis tempus. (˘ω˘) a-awiquam congue cuwsus venenatis. (ꈍᴗꈍ) m-maecenas
+wuctus pewwentesque pwacewat. /(^•ω•^) m-mauwis nyisw o-odio, >_< condimentum sed fwingiwwa a, σωσ consectetuw id wiguwa. ^^;; pwaesent sem
+sem, 😳 awiquet nyon faucibus v-vitae, >_< iacuwis nyec ewit. -.- n-nuwwam vowutpat, UwU wectus et bwandit b-bibendum, :3 nyuwwa w-wowem congue
+tuwpis, ac pwetium towtow sem u-ut nyibh. σωσ donec v-vew mi in wiguwa hendwewit sagittis. >w< d-donec faucibus v-vivewwa fewmentum. (ˆ ﻌ ˆ)♡
+fusce in awcu awcu. ʘwʘ nyuwwam at dignissim massa. :3 cwas nyibh e-est, (˘ω˘) pwetium sit a-amet faucibus e-eget, 😳😳😳 sowwicitudin in
+wiguwa. rawr x3 vivamus v-vitae uwna m-mauwis, (✿oωo) eget euismod nyunc. (ˆ ﻌ ˆ)♡ aenean s-sempew gwavida enim nyon feugiat. :3 in hac habitasse
+pwatea dictumst. (U ᵕ U❁) cwas eweifend n-nisw vowutpat a-ante condimentum convawwis. ^^;; donec vawius dowow m-mawesuada ewat
+c-consequat congue. mya donec eu wacus ut sapien venenatis tincidunt. 😳😳😳 q-quisque sit amet tewwus et enim bibendum vawius et
+a owci. OwO donec awiquet vowutpat s-scewewisque. rawr pwoin et towtow dowow. XD ut awiquet, (U ﹏ U) d-dowow a mattis s-sodawes, (˘ω˘) odio diam
+puwvinaw sem, UwU egestas pwetium magna ewos v-vitae fewis. >_< nyam v-vitae magna wectus, σωσ et ownawe ewit. 🥺 mowbi feugiat, 🥺 ipsum
+ac mattis c-congue, ʘwʘ quam nyeque mowwis t-towtow, :3 nyec mowwis nyisw dowow a towtow. (U ﹏ U) maecenas vawius est sit a-amet ewit
+intewdum quis pwacewat m-metus posuewe. (U ﹏ U) d-duis mawesuada justo a diam vestibuwum v-vew awiquam nyisi ownawe. ʘwʘ i-integew
+waoweet n-nyisi a odio o-ownawe nyon congue tuwpis eweifend. >w< c-cum sociis nyatoque p-penatibus et magnis dis pawtuwient montes, rawr x3
+n-nyascetuw widicuwus m-mus. OwO cwas v-vuwputate wibewo sed awcu iacuwis nyec wobowtis o-owci fewmentum. ^•ﻌ•^
+    </textawea>
   </p>
   <p>
-    <input type="checkbox" id="agree" name="accept" />
-    <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" />
+    <input type="checkbox" i-id="agwee" n-nyame="accept" />
+    <wabew fow="agwee">i agwee</wabew>
+    <input type="submit" id="nextstep" v-vawue="next" />
   </p>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
 #notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  width: 600px;
+  d-dispway: inwine-bwock;
+  m-mawgin-bottom: 12px;
+  bowdew-wadius: 5px;
+  w-width: 600px;
   padding: 5px;
-  border: 2px #7fdf55 solid;
+  bowdew: 2px #7fdf55 sowid;
 }
 
-#rules {
+#wuwes {
   width: 600px;
   height: 130px;
-  padding: 5px;
-  border: #2a9f00 solid 2px;
-  border-radius: 5px;
+  p-padding: 5px;
+  bowdew: #2a9f00 s-sowid 2px;
+  bowdew-wadius: 5px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
+function checkweading() {
+  i-if (checkweading.wead) {
+    wetuwn;
   }
-  checkReading.read =
-    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read
-    ? "Thank you."
-    : "Please, scroll and read the following text.";
+  c-checkweading.wead =
+    t-this.scwowwheight - m-math.wound(this.scwowwtop) === t-this.cwientheight;
+  d-document.wegistwation.accept.disabwed = document.getewementbyid(
+    "nextstep", >_<
+  ).disabwed = !checkweading.wead;
+  checkweading.noticebox.textcontent = checkweading.wead
+    ? "thank you."
+    : "pwease, OwO scwoww and wead the fowwowing text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+o-onwoad = function () {
+  v-vaw otobewead = d-document.getewementbyid("wuwes");
+  checkweading.noticebox = d-document.cweateewement("span");
+  document.wegistwation.accept.checked = fawse;
+  checkweading.noticebox.id = "notice";
+  otobewead.pawentnode.insewtbefowe(checkweading.noticebox, >_< o-otobewead);
+  o-otobewead.pawentnode.insewtbefowe(document.cweateewement("bw"), (ꈍᴗꈍ) otobewead);
+  o-otobewead.onscwoww = checkweading;
+  checkweading.caww(otobewead);
 };
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemple', '640', '400')}}
+{{embedwivesampwe('exempwe', >w< '640', (U ﹏ U) '400')}}
 
-## Problèmes et solutions
+## p-pwobwèmes et sowutions
 
-### Déterminer si un élément a complètement été défilé
+### détewminew s-si un éwément a-a compwètement été défiwé
 
-L'expression suivante renvoie `true` si l'élément est à la fin du défilement, `false` si ça ne l'est pas.
+w'expwession suivante wenvoie `twue` si w'éwément est à w-wa fin du d-défiwement, ^^ `fawse` s-si ça nye w-w'est pas. (U ﹏ U)
 
 ```js
-element.scrollHeight - element.scrollTop === element.clientHeight;
+e-ewement.scwowwheight - ewement.scwowwtop === ewement.cwientheight;
 ```
 
-Associée à l'événement [element.onscroll](/fr/docs/Web/API/Element/scroll_event), l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés [element.scrollTop](/fr/docs/Web/API/Element/scrollTop) et [element.clientHeight](/fr/docs/Web/API/Element/clientHeight). Par exemple :
+a-associée à w-w'événement [ewement.onscwoww](/fw/docs/web/api/ewement/scwoww_event), w'expwession peut êtwe u-utiwe pouw d-détewminew si un utiwisateuw a-a wu un texte ou nyon (voiw aussi wes pwopwiétés [ewement.scwowwtop](/fw/docs/web/api/ewement/scwowwtop) e-et [ewement.cwientheight](/fw/docs/web/api/ewement/cwientheight). :3 paw e-exempwe :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-function checkReading () {
-  if (checkReading.read) { return; }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ?
-    "Merci." :
-    "Veuillez faire défiler la page et lire le texte qui suit.";
+<meta h-http-equiv="content-type" content="text/htmw; c-chawset=utf-8" />
+<titwe>mdn exampwe</titwe>
+<scwipt type="text/javascwipt">
+f-function checkweading () {
+  i-if (checkweading.wead) { w-wetuwn; }
+  checkweading.wead = this.scwowwheight - this.scwowwtop === t-this.cwientheight;
+  document.wegistwation.accept.disabwed = document.getewementbyid("nextstep").disabwed = !checkweading.wead;
+  c-checkweading.noticebox.innewhtmw = c-checkweading.wead ?
+    "mewci." :
+    "veuiwwez faiwe défiwew w-wa page et wiwe we texte qui s-suit.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+onwoad = f-function () {
+  vaw otobewead = document.getewementbyid("wuwes");
+  c-checkweading.noticebox = document.cweateewement("span");
+  document.wegistwation.accept.checked = f-fawse;
+  c-checkweading.noticebox.id = "notice";
+  otobewead.pawentnode.insewtbefowe(checkweading.noticebox, (✿oωo) o-otobewead);
+  otobewead.pawentnode.insewtbefowe(document.cweateewement("bw"), XD o-otobewead);
+  o-otobewead.onscwoww = c-checkweading;
+  checkweading.caww(otobewead);
 }
 ```
 
-[Voir l'exemple en action](/files/4589/readme-example.html)
+[voiw w'exempwe en action](/fiwes/4589/weadme-exampwe.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
-- [element.clientHeight](/fr/docs/Web/API/Element/clientHeight)
-- [element.offsetHeight](/fr/docs/Web/API/HTMLElement/offsetHeight)
+- [msdn: measuwing ewement dimension and wocation with cssom in windows intewnet e-expwowew 9](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)
+- [ewement.cwientheight](/fw/docs/web/api/ewement/cwientheight)
+- [ewement.offsetheight](/fw/docs/web/api/htmwewement/offsetheight)

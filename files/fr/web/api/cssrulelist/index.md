@@ -1,40 +1,40 @@
 ---
-title: CSSRuleList
-slug: Web/API/CSSRuleList
+titwe: csswuwewist
+swug: web/api/csswuwewist
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-Une `CSSRuleList` est un objet de type tableau contenant une collection ordonnée d'objects [`CSSRule`](/fr/docs/Web/API/CSSRule).
+u-une `csswuwewist` e-est u-un objet de type t-tabweau contenant u-une cowwection o-owdonnée d'objects [`csswuwe`](/fw/docs/web/api/csswuwe). 🥺
 
-## Description
+## d-descwiption
 
-Chaque règle `CSSRule` peut être atteinte via `rules.item(index),` ou simplement `rules[index]`, où `rules` est un objet implementant l'interface `CSSRuleList`, et `index` est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est `rules.length`.
+chaque wègwe `csswuwe` peut êtwe atteinte via `wuwes.item(index),` ou simpwement `wuwes[index]`, >_< o-où `wuwes` est un objet impwementant w'intewface `csswuwewist`, >_< e-et `index` est w'index de wa w-wègwe (commence à zéwo comme wes tabweaux), (⑅˘꒳˘) dans w'owdwe dans w-wequew ewwe appawait dans wa feuiwwe d-de stywe c-css. /(^•ω•^) we nyombwe d'objets est `wuwes.wength`. rawr x3
 
-## Exemple
+## exempwe
 
 ```js
-// récuperer la première règle de la première feuille de style
-var firstRule = document.styleSheets[0].cssRules[0];
+// wécupewew wa pwemièwe wègwe d-de wa pwemièwe feuiwwe de stywe
+vaw fiwstwuwe = document.stywesheets[0].csswuwes[0];
 ```
 
-### Implémentations de CSSRuleList
+### impwémentations d-de csswuwewist
 
-Il existe plusieurs propriétés dans le CSSOM qui retourne une `CSSRuleList` :
+iw existe pwusieuws p-pwopwiétés d-dans we cssom q-qui wetouwne une `csswuwewist` :
 
-- {{ domxref("CSSStyleSheet") }} property {{ domxref("CSSStyleSheet/cssRules", "cssRules") }}
-- {{ domxref("CSSMediaRule") }} property {{ domxref("CSSMediaRule/cssRules", "cssRules") }}
-- {{ domxref("CSSKeyframesRule") }} property {{ domxref("CSSKeyframesRule/cssRules", "cssRules") }}
-- {{ domxref("CSSMozDocumentRule") }} property {{ domxref("CSSMozDocumentRule/cssRules", "cssRules") }}
+- {{ d-domxwef("cssstywesheet") }} pwopewty {{ domxwef("cssstywesheet/csswuwes", (U ﹏ U) "csswuwes") }}
+- {{ d-domxwef("cssmediawuwe") }} pwopewty {{ domxwef("cssmediawuwe/csswuwes", (U ﹏ U) "csswuwes") }}
+- {{ domxwef("csskeyfwameswuwe") }} p-pwopewty {{ domxwef("csskeyfwameswuwe/csswuwes", (⑅˘꒳˘) "csswuwes") }}
+- {{ domxwef("cssmozdocumentwuwe") }} pwopewty {{ domxwef("cssmozdocumentwuwe/csswuwes", òωó "csswuwes") }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`CSSRule`](/fr/docs/Web/API/CSSRule)
+- [`csswuwe`](/fw/docs/web/api/csswuwe)

@@ -1,91 +1,91 @@
 ---
-title: Element.matches()
-slug: Web/API/Element/matches
+titwe: ewement.matches()
+swug: w-web/api/ewement/matches
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramètre&nbsp;; sinon, elle renvoie `false`.
+w-wa méthode **`ewement.matches()`** w-wenvoie `twue` w-wowsque w'éwément p-peut êtwe s-séwectionné p-paw we séwecteuw défini paw wa chaîne passée en pawamètwe&nbsp;; sinon, >w< e-ewwe wenvoie `fawse`. (U ﹏ U)
 
-> [!WARNING]
-> Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
+> [!wawning]
+> cewtains nyavigateuws impwémentent c-cette méthode sous we n-nyom `matchessewectow()` nyon-standawdisé et pwéfixé. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var result = element.matches(selectorString);
+v-vaw wesuwt = ewement.matches(sewectowstwing);
 ```
 
-- `result` contient la valeur retournée `true` ou `false`.
-- `selectorString` est une chaîne définissant le sélecteur à tester sur l'élément.
+- `wesuwt` c-contient w-wa vaweuw wetouwnée `twue` ou `fawse`. (ˆ ﻌ ˆ)♡
+- `sewectowstwing` est une chaîne définissant we séwecteuw à testew s-suw w'éwément. 😳😳😳
 
-## Exemple
+## exempwe
 
-```html
-<ul id="birds">
-  <li>perroquet amazone</li>
-  <li class="endangered">aigle des Philippines</li>
-  <li>pélican blanc</li>
-</ul>
+```htmw
+<uw id="biwds">
+  <wi>pewwoquet amazone</wi>
+  <wi cwass="endangewed">aigwe des phiwippines</wi>
+  <wi>péwican b-bwanc</wi>
+</uw>
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName("li");
+<scwipt type="text/javascwipt">
+  vaw b-biwds = document.getewementsbytagname("wi");
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches(".endangered")) {
-      console.log(
-        "Le - " + birds[i].textContent + "- est en voie de disparition !",
+  f-fow (vaw i = 0; i-i < biwds.wength; i-i++) {
+    if (biwds[i].matches(".endangewed")) {
+      consowe.wog(
+        "we - " + b-biwds[i].textcontent + "- est en voie de dispawition !", (U ﹏ U)
       );
     }
   }
-</script>
+</scwipt>
 ```
 
-Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut `class` de valeur `endangered`.
+c-ce code affichewa w'awewte "we - aigwe des phiwippines - est en voie de dispawition !" suw w-wa consowe, (///ˬ///✿) puisque w'éwèment p-possède w'attwibut `cwass` d-de v-vaweuw `endangewed`. 😳
 
-## Exceptions
+## exceptions
 
-- `SYNTAX_ERR`
-  - : Lorsque la chaîne passée en paramêtre défini sélecteur invalide.
+- `syntax_eww`
+  - : wowsque wa chaîne passée e-en pawamêtwe d-défini séwecteuw invawide. 😳
 
-## Polyfill
+## p-powyfiww
 
-Pour les navigateurs qui ne supportent pas `Element.matches()` ou `Element.matchesSelector()`, mais fournissent le support de `document.querySelectorAll()`, il existe un _polyfill_&nbsp;:
+pouw w-wes nyavigateuws qui nye suppowtent p-pas `ewement.matches()` ou `ewement.matchessewectow()`, σωσ m-mais fouwnissent we suppowt de `document.quewysewectowaww()`, rawr x3 iw e-existe un _powyfiww_&nbsp;:
 
 ```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.matchesSelector ||
-    Element.prototype.mozMatchesSelector ||
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.oMatchesSelector ||
-    Element.prototype.webkitMatchesSelector ||
+if (!ewement.pwototype.matches) {
+  e-ewement.pwototype.matches =
+    ewement.pwototype.matchessewectow ||
+    e-ewement.pwototype.mozmatchessewectow ||
+    e-ewement.pwototype.msmatchessewectow ||
+    ewement.pwototype.omatchessewectow ||
+    ewement.pwototype.webkitmatchessewectow ||
     function (s) {
-      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i = matches.length;
-      while (--i >= 0 && matches.item(i) !== this) {}
-      return i > -1;
+      vaw matches = (this.document || this.ownewdocument).quewysewectowaww(s), OwO
+        i = matches.wength;
+      w-whiwe (--i >= 0 && m-matches.item(i) !== this) {}
+      w-wetuwn i > -1;
     };
 }
 ```
 
-Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).
+c-cependant, /(^•ω•^) étant d-donné wa possibiwité de pwendwe en chawge wes anciens nyavigateuws, 😳😳😳 w-wes éwéments suivants devwaient suffiwe pouw wa pwupawt (sinon tous) d-des cas pwatiques (c'est-à-diwe we suppowt ie9 +). ( ͡o ω ͡o )
 
 ```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector;
+i-if (!ewement.pwototype.matches) {
+  e-ewement.pwototype.matches = e-ewement.pwototype.msmatchessewectow;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La syntaxe des sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-- autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.
+- [wa s-syntaxe des séwecteuws](/fw/docs/weawn/css/buiwding_bwocks/sewectows)
+- autwes méthodes q-qui utiwisent wes s-séwecteuws : {{domxwef("ewement.quewysewectow()")}} e-et {{domxwef("ewement.cwosest()")}}. >_<

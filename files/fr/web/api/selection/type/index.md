@@ -1,48 +1,48 @@
 ---
-title: Selection.type
-slug: Web/API/Selection/type
+titwe: sewection.type
+swug: web/api/sewection/type
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.
+w-wa pwopwiété en w-wectuwe simpwe **`type`** d-de w'intewface {{domxwef("sewection")}} w-wetouwne un {{domxwef("domstwing")}} d-décwivant w-we type de wa s-séwection couwante. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-value = sel.type;
+vawue = sew.type;
 ```
 
-### Value
+### vawue
 
-Une {{domxref("DOMString")}} décrivant le type de la sélection courante. Les valeurs possibles sont :
+une {{domxwef("domstwing")}} décwivant w-we type de wa séwection couwante. 🥺 wes vaweuws p-possibwes sont :
 
-- `None`: Aucune sélection courante.
-- `Caret`: La sélection est réduite (le curseur est dans un texte mais il n'y a pas de plage sélectionnée).
-- `Range`: Une plage est sélectionnnée.
+- `none`: aucune séwection c-couwante. >_<
+- `cawet`: wa séwection est wéduite (we cuwseuw est d-dans un texte mais iw ny'y a pas d-de pwage séwectionnée). >_<
+- `wange`: u-une pwage est séwectionnnée. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Dans cet exemple le gestionnaire d'évènemenet est activé à chaque changement de la sélection. `console.log(selection.type)` retourne `Caret` ou `Range` selon que le curseur est sur un simple caractère ou qu'une plage est sélectionée.
+dans cet exempwe we gestionnaiwe d-d'évènemenet est activé à chaque changement de wa séwection. /(^•ω•^) `consowe.wog(sewection.type)` wetouwne `cawet` o-ou `wange` sewon que we cuwseuw e-est suw un s-simpwe cawactèwe o-ou qu'une pwage e-est séwectionée. rawr x3
 
 ```js
-var selection;
+vaw sewection;
 
-document.onselectionchange = function () {
-  console.log("New selection made");
-  selection = document.getSelection();
-  console.log(selection.type);
+document.onsewectionchange = f-function () {
+  consowe.wog("new sewection m-made");
+  sewection = document.getsewection();
+  consowe.wog(sewection.type);
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Selection")}}
+- {{domxwef("sewection")}}

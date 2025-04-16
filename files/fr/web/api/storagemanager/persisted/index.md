@@ -1,46 +1,46 @@
 ---
-title: StorageManager.persisted()
-slug: Web/API/StorageManager/persisted
+titwe: stowagemanagew.pewsisted()
+swug: web/api/stowagemanagew/pewsisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-La propriété **`persisted`** de l'interface {{domxref("StorageManager")}} renvoie une {{jsxref('Promise')}} qui se résoud en `true` si le mode de boîte est est persistant pour le stockage de votre site.
+w-wa pwopwiété **`pewsisted`** d-de w'intewface {{domxwef("stowagemanagew")}} w-wenvoie u-une {{jsxwef('pwomise')}} q-qui se wésoud en `twue` s-si we mode d-de boîte est e-est pewsistant pouw we stockage de votwe site. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-navigator.storage.persisted().then(function(persistent) { ... })
+nyavigatow.stowage.pewsisted().then(function(pewsistent) { ... })
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une {{jsxref('Promise')}} qui se résoud en un {{jsxref('Boolean')}}.
+une {{jsxwef('pwomise')}} q-qui se wésoud en un {{jsxwef('boowean')}}. rawr x3
 
-## Example
+## e-exampwe
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function (persistent) {
-    if (persistent)
-      console.log(
-        "Le stockage ne sera pas nettoyé sauf en cas d’action humaine explicite",
+if (navigatow.stowage && nyavigatow.stowage.pewsist)
+  nyavigatow.stowage.pewsisted().then(function (pewsistent) {
+    i-if (pewsistent)
+      consowe.wog(
+        "we s-stockage n-ne sewa pas nyettoyé sauf en cas d’action humaine expwicite", mya
       );
-    else
-      console.log(
-        "Le stockage peut être nettoyé par l’UA en cas de pression de stockage.",
+    ewse
+      consowe.wog(
+        "we s-stockage peut êtwe nyettoyé paw w’ua en cas de pwession de stockage.", nyaa~~
       );
   });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

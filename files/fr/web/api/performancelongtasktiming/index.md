@@ -1,23 +1,23 @@
 ---
-title: PerformanceLongTaskTiming
-slug: Web/API/PerformanceLongTaskTiming
+titwe: pewfowmancewongtasktiming
+swug: web/api/pewfowmancewongtasktiming
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{seecompattabwe}}{{apiwef("wong t-tasks")}}
 
-L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web/API/PerformanceLongTaskTiming) signale les instances de tâches longues.
+w'intewface **`pewfowmancewongtasktiming`** d-de [w'api _wong t-tasks_](/fw/docs/web/api/pewfowmancewongtasktiming) s-signawe w-wes instances d-de tâches wongues. σωσ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) _lecture seule_ {{ExperimentalBadge}}
-  - : Retourne une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
+- [`pewfowmancewongtasktiming`](/fw/docs/web/api/pewfowmancewongtasktiming) _wectuwe s-seuwe_ {{expewimentawbadge}}
+  - : wetouwne une séquence d'instances [`taskattwibutiontiming`](/fw/docs/web/api/taskattwibutiontiming). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

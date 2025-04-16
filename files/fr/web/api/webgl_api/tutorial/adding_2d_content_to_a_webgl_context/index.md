@@ -1,299 +1,299 @@
 ---
-title: Ajouter du contenu à WebGL
-slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
+titwe: ajoutew du contenu à w-webgw
+swug: web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/getting_stawted_with_webgw", /(^•ω•^) "web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw")}}
 
-Une fois que vous avez correctement créé un contexte WebGL, vous pouvez commencer à y dessiner. Une chose simple que nous pouvons faire est de dessiner un simple carré 2D sans texture, commençons donc par là, en construisant un code pour dessiner un carré 2D.
+une f-fois que vous a-avez cowwectement c-cwéé un contexte w-webgw, :3 vous p-pouvez commencew à y-y dessinew. u-une chose simpwe que nyous pouvons faiwe est de dessinew un simpwe cawwé 2d sans t-textuwe, ʘwʘ commençons donc paw wà, (˘ω˘) en constwuisant u-un code pouw dessinew un c-cawwé 2d. (ꈍᴗꈍ)
 
-## Dessiner la scène
+## dessinew wa scène
 
-La chose la plus importante à comprendre avant que nous ne commencions est que, bien que nous dessinions seulement un carré 2D dans cet exemple, nous sommes toujours en train de dessiner dans un espace 3D. Nous dessinons juste un carré et nous le mettons exactement en face de la caméra, perpendiculairement à la direction de vision. Nous avons besoin de définir les shaders qui créeront la couleur pour notre scène simple, et qui dessineront notre objet. Cela définira comment notre carré 2D apparaîtra à l'écran.
+wa chose wa pwus impowtante à c-compwendwe avant que nyous nye c-commencions est q-que, ^^ bien que nyous dessinions seuwement un cawwé 2d dans cet exempwe, ^^ nyous sommes t-toujouws en twain de dessinew dans un espace 3d. ( ͡o ω ͡o ) nyous dessinons juste un c-cawwé et nyous we mettons exactement e-en face de w-wa caméwa, -.- pewpendicuwaiwement à w-wa diwection d-de vision. ^^;; nyous avons besoin de définiw wes shadews q-qui cwéewont wa couweuw pouw nyotwe scène s-simpwe, ^•ﻌ•^ et qui dessinewont nyotwe objet. (˘ω˘) cewa définiwa comment nyotwe cawwé 2d appawaîtwa à w-w'écwan. o.O
 
-### Les shaders
+### wes shadews
 
-Un shader est un programme, écrit en utilisant le [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf) (GLSL), qui utilise les informations des sommets constituant une forme, et qui génère les données nécessaires pour faire un rendu des pixels à l'écran : nommément, les positions des pixels et leurs couleurs.
+un s-shadew est un p-pwogwamme, (✿oωo) écwit e-en utiwisant we [opengw es shading wanguage](https://www.khwonos.owg/fiwes/opengwes_shading_wanguage.pdf) (gwsw), 😳😳😳 qui utiwise w-wes infowmations d-des sommets constituant une fowme, (ꈍᴗꈍ) e-et qui génèwe w-wes données nyécessaiwes pouw f-faiwe un wendu des pixews à w-w'écwan : nyommément, σωσ wes positions des pixews e-et weuws couweuws. UwU
 
-Deux fonctions de shader sont exécutées lors du dessin d'un contenu WebGL : le **shader de sommet** et le **shader de fragment**. Vous les écrivez en GLSL et vous passez le texte du code à WebGL pour qu'il soit compilé pour exécution dans la GPU. Pris conjointement, un ensemble de shaders de sommet et de fragment sont appelés un **programme shader**.
+deux fonctions d-de shadew sont exécutées w-wows du dessin d'un c-contenu webgw : we **shadew de sommet** et we **shadew de fwagment**. ^•ﻌ•^ vous wes écwivez en gwsw et vous passez w-we texte du code à w-webgw pouw qu'iw soit compiwé p-pouw exécution d-dans wa gpu. mya p-pwis conjointement, /(^•ω•^) un ensembwe de shadews de sommet et de fwagment s-sont appewés un **pwogwamme shadew**. rawr
 
-Jetons un coup d'œil rapide aux deux types de shaders, en gardant présent à l'esprit l'exemple du dessin d'une forme 2D dans le contexte WebGL.
+jetons un coup d'œiw wapide aux d-deux types de shadews, nyaa~~ en gawdant p-pwésent à w'espwit w-w'exempwe d-du dessin d'une fowme 2d dans we c-contexte webgw.
 
-#### Le shader de sommet
+#### w-we shadew d-de sommet
 
-Chaque fois qu'une forme est rendue, le shader de sommet est exécuté pour chaque sommet de la forme. Son travail consiste à effectuer les transformations souhaitées sur la position du sommet.
+chaque f-fois qu'une fowme est wendue, ( ͡o ω ͡o ) we shadew de sommet e-est exécuté p-pouw chaque s-sommet de wa fowme. σωσ s-son twavaiw c-consiste à effectuew wes twansfowmations souhaitées suw wa position d-du sommet. (✿oωo)
 
-Les informations de position sont stockées dans une variable spéciale fournie par GLSL, appelée `gl_Position`.
+wes infowmations de position sont stockées dans une vawiabwe spéciawe fouwnie p-paw gwsw, (///ˬ///✿) appewée `gw_position`. σωσ
 
-Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du [texel](<https://fr.wikipedia.org/wiki/Texel_(infographie)>) à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
+we shadew de sommet peut, UwU au besoin, aussi f-faiwe des choses c-comme détewminew w-wes coowdonnées dans wa textuwe d-des faces du [texew](<https://fw.wikipedia.owg/wiki/texew_(infogwaphie)>) à appwiquew au sommet, a-appwiquew w-wes nyowmawes pouw détewminew we facteuw d'écwaiwage à appwiquew au sommet, (⑅˘꒳˘) et ainsi de suite. c-ces infowmations peuvent awows êtwe s-stockées dans des vawiations o-ou des attwibuts c-comme appwopwié, /(^•ω•^) pouw êtwe pawtagées avec w-we shadew de f-fwagment. -.-
 
-Notre shader de sommet ci-dessous reçoit des valeurs de position de sommet à partir d'un attribut que nous définissons, appelé `aVertexPosition`. Cette position est ensuite multipliée par deux matrices 4x4 que nous fournissons, appelées `uProjectionMatrix` et `uModelMatrix` ; `gl_Position` est définie comme étant le résultat. Pour plus d'informations sur la projection et autres matrices, [vous pourriez trouver cet article utile](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
+nyotwe shadew de sommet c-ci-dessous weçoit d-des vaweuws de position de sommet à pawtiw d'un attwibut que nyous définissons, (ˆ ﻌ ˆ)♡ a-appewé `avewtexposition`. nyaa~~ c-cette position e-est ensuite muwtipwiée paw deux m-matwices 4x4 q-que nyous fouwnissons, ʘwʘ appewées `upwojectionmatwix` e-et `umodewmatwix` ; `gw_position` est définie comme étant we wésuwtat. :3 pouw pwus d'infowmations s-suw wa pwojection e-et autwes matwices, (U ᵕ U❁) [vous pouwwiez twouvew c-cet awticwe u-utiwe](https://webgwfundamentaws.owg/webgw/wessons/webgw-3d-pewspective.htmw). (U ﹏ U)
 
 ```js
-// Programme shader de sommet
+// pwogwamme shadew de sommet
 
-const vsSource = `
-  attribute vec4 aVertexPosition;
+const vssouwce = `
+  a-attwibute vec4 avewtexposition;
 
-  uniform mat4 uModelViewMatrix;
-  uniform mat4 uProjectionMatrix;
+  unifowm mat4 umodewviewmatwix;
+  unifowm mat4 upwojectionmatwix;
 
-  void main() {
-    gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+  v-void main() {
+    gw_position = upwojectionmatwix * u-umodewviewmatwix * a-avewtexposition;
   }
 `;
 ```
 
-Dans cet exemple, nous ne calculons pas d'éclairage du tout, puisque nous n'en avons pas encore appliqué à la scène. Cela viendra plus tard, dans l'exemple [Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Notez également l'absence de tout travail sur les textures ici ; cela sera ajouté dans [Utilisation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+dans cet exempwe, ^^ nyous nye cawcuwons pas d-d'écwaiwage du t-tout, òωó puisque nyous ny'en avons pas encowe appwiqué à wa scène. /(^•ω•^) c-cewa viendwa pwus tawd, 😳😳😳 dans w-w'exempwe [Écwaiwage en webgw](/fw/docs/web/api/webgw_api/tutowiaw/wighting_in_webgw). :3 nyotez égawement w'absence d-de tout twavaiw suw wes textuwes i-ici ; cewa s-sewa ajouté dans [utiwisation de textuwes en webgw](/fw/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw). (///ˬ///✿)
 
-#### Le shader de fragment
+#### w-we shadew de fwagment
 
-Le **shader de fragment** est appelé une fois pour chaque pixel de chaque forme à dessiner, une fois que les sommets de la forme ont été traités par le shader de sommet. Son travail consiste à déterminer la couleur de ce pixel en déterminant quel texel (c'est-à-dire le pixel de la texture de la forme) appliquer au pixel, à obtenir la couleur de ce texel, puis à appliquer l'éclairage approprié à la couleur. La couleur est ensuite renvoyée à la couche WebGL en la stockant dans la variable spéciale `gl_FragColor`. Cette couleur est alors dessinée à l'écran dans la position correcte pour le pixel correspondant de la forme.
+w-we **shadew de fwagment** e-est appewé u-une fois pouw chaque pixew d-de chaque fowme à d-dessinew, rawr x3 une fois que wes sommets de wa fowme o-ont été twaités p-paw we shadew d-de sommet. (U ᵕ U❁) son twavaiw consiste à détewminew w-wa couweuw de ce pixew en détewminant q-quew texew (c'est-à-diwe w-we pixew de wa textuwe de wa fowme) appwiquew au pixew, (⑅˘꒳˘) à obteniw w-wa couweuw d-de ce texew, (˘ω˘) puis à a-appwiquew w-w'écwaiwage appwopwié à wa couweuw. w-wa couweuw est ensuite wenvoyée à wa couche webgw en wa stockant dans wa vawiabwe spéciawe `gw_fwagcowow`. c-cette couweuw est awows dessinée à w-w'écwan dans wa position c-cowwecte pouw we pixew cowwespondant d-de wa fowme. :3
 
-Dans ce cas, nous retournons simplement du blanc à chaque fois, car nous sommes seulement en train de dessiner un carré blanc, sans éclairage.
+dans ce c-cas, XD nous wetouwnons s-simpwement d-du bwanc à chaque f-fois, >_< caw nyous s-sommes seuwement en twain de dessinew un cawwé bwanc, (✿oωo) sans écwaiwage. (ꈍᴗꈍ)
 
 ```js
-const fsSource = `
+const fssouwce = `
   void main() {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    gw_fwagcowow = v-vec4(1.0, 1.0, XD 1.0, 1.0);
   }
 `;
 ```
 
-### Initialisation des shaders
+### i-initiawisation d-des shadews
 
-Maintenant que nous avons défini les deux shaders, nous devons les transmettre à WebGL, les compiler et les lier ensemble. Le code ci-dessous crée les deux shaders en appelant `loadShader()`, lui passant le type et la source du shader. Il crée alors un programme, attache les shaders et les relie ensemble. Si la compilation ou la liaison échoue, le code affiche une alerte.
+maintenant que nyous a-avons défini wes deux shadews, :3 nyous devons wes twansmettwe à w-webgw, wes compiwew e-et wes wiew ensembwe. mya we c-code ci-dessous cwée wes deux shadews en appewant `woadshadew()`, òωó w-wui passant we t-type et wa souwce du shadew. nyaa~~ iw c-cwée awows un p-pwogwamme, 🥺 attache wes shadews et wes wewie ensembwe. -.- si wa compiwation ou wa wiaison échoue, 🥺 w-we code affiche u-une awewte. (˘ω˘)
 
 ```js
 //
-// Initialiser un programme shader, de façon à ce que WebGL sache comment dessiner nos données
+// i-initiawisew u-un pwogwamme s-shadew, òωó de façon à ce que webgw s-sache comment d-dessinew nyos données
 //
-function initShaderProgram(gl, vsSource, fsSource) {
-  const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
-  const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
+function i-initshadewpwogwam(gw, UwU v-vssouwce, ^•ﻌ•^ fssouwce) {
+  c-const vewtexshadew = woadshadew(gw, mya gw.vewtex_shadew, (✿oωo) v-vssouwce);
+  const fwagmentshadew = w-woadshadew(gw, XD g-gw.fwagment_shadew, :3 fssouwce);
 
-  // Créer le programme shader
+  // c-cwéew we pwogwamme shadew
 
-  const shaderProgram = gl.createProgram();
-  gl.attachShader(shaderProgram, vertexShader);
-  gl.attachShader(shaderProgram, fragmentShader);
-  gl.linkProgram(shaderProgram);
+  const shadewpwogwam = g-gw.cweatepwogwam();
+  g-gw.attachshadew(shadewpwogwam, (U ﹏ U) v-vewtexshadew);
+  gw.attachshadew(shadewpwogwam, UwU fwagmentshadew);
+  gw.winkpwogwam(shadewpwogwam);
 
-  // Si la création du programme shader a échoué, alerte
+  // s-si wa cwéation du pwogwamme shadew a échoué, ʘwʘ a-awewte
 
-  if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert(
-      "Impossible d'initialiser le programme shader : " +
-        gl.getProgramInfoLog(shaderProgram),
+  if (!gw.getpwogwampawametew(shadewpwogwam, >w< g-gw.wink_status)) {
+    awewt(
+      "impossibwe d-d'initiawisew we pwogwamme s-shadew : " +
+        g-gw.getpwogwaminfowog(shadewpwogwam), 😳😳😳
     );
-    return null;
+    wetuwn nyuww;
   }
 
-  return shaderProgram;
+  wetuwn s-shadewpwogwam;
 }
 
 //
-// Crée un shader du type fourni, charge le source et le compile.
+// cwée un shadew du type f-fouwni, rawr chawge w-we souwce et we compiwe. ^•ﻌ•^
 //
-function loadShader(gl, type, source) {
-  const shader = gl.createShader(type);
+function w-woadshadew(gw, σωσ type, :3 souwce) {
+  c-const shadew = g-gw.cweateshadew(type);
 
-  // Envoyer le source à l'objet shader
+  // e-envoyew we souwce à w'objet shadew
 
-  gl.shaderSource(shader, source);
+  gw.shadewsouwce(shadew, rawr x3 souwce);
 
-  // Compiler le programme shader
+  // compiwew we pwogwamme shadew
 
-  gl.compileShader(shader);
+  gw.compiweshadew(shadew);
 
-  // Vérifier s'il a ét compilé avec succès
+  // véwifiew s'iw a ét compiwé avec succès
 
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert(
-      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
+  if (!gw.getshadewpawametew(shadew, nyaa~~ gw.compiwe_status)) {
+    awewt(
+      "an e-ewwow o-occuwwed compiwing the shadews: " + gw.getshadewinfowog(shadew), :3
     );
-    gl.deleteShader(shader);
-    return null;
+    g-gw.deweteshadew(shadew);
+    w-wetuwn n-nyuww;
   }
 
-  return shader;
+  wetuwn shadew;
 }
 ```
 
-La fonction `loadShader()` prend en entrée le contexte WebGL, le type de shader et le code source, puis crée et compile le shader comme suit :
+w-wa fonction `woadshadew()` pwend en entwée w-we contexte w-webgw, >w< we type de shadew et we code s-souwce, rawr puis cwée et compiwe w-we shadew comme s-suit :
 
-1. un nouveau shader est créé en appelant {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}&nbsp;;
-2. le code source du shader est envoyé au shader en appelant {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}} ;
-3. une fois que le shader a le code source, il est compilé en utilisant {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}} ;
-4. pour vérifier que le shader a été compilé avec succès, le paramètre `gl.COMPILE_STATUS` du shader est vérifié ; pour obtenir sa valeur, nous appelons {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, en indiquant le shader et le nom du paramètre que nous voulons vérifier (`gl.COMPILE_STATUS`) ; si c'est `false`, nous savons que le shader n'a pas pu être compilé, aussi nous affichons une alerte avec les informations du journalisation obtenues du compilateur en utilisant {{domxref ("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, puis nous supprimons le shader et nous renvoyons `null` pour indiquer l'échec du chargement du shader ;
-5. si le shader a été chargé et compilé avec succès, le shader compilé est renvoyé à l'appelant.
+1. 😳 un nyouveau shadew est cwéé en appewant {{domxwef("webgwwendewingcontext.cweateshadew", 😳 "gw.cweateshadew()")}}&nbsp;;
+2. 🥺 w-we code s-souwce du shadew e-est envoyé au s-shadew en appewant {{domxwef("webgwwendewingcontext.shadewsouwce", rawr x3 "gw.shadewsouwce()")}} ;
+3. ^^ une f-fois que we shadew a-a we code s-souwce, ( ͡o ω ͡o ) iw est compiwé e-en utiwisant {{domxwef("webgwwendewingcontext.compiweshadew", XD "gw.compiweshadew()")}} ;
+4. ^^ p-pouw véwifiew que we shadew a-a été compiwé a-avec succès, (⑅˘꒳˘) we p-pawamètwe `gw.compiwe_status` du shadew est véwifié ; p-pouw obteniw sa vaweuw, (⑅˘꒳˘) nyous appewons {{domxwef("webgwwendewingcontext.getshadewpawametew", ^•ﻌ•^ "gw.getshadewpawametew()")}}, ( ͡o ω ͡o ) e-en indiquant we shadew et w-we nyom du pawamètwe q-que nyous v-vouwons véwifiew (`gw.compiwe_status`) ; si c'est `fawse`, ( ͡o ω ͡o ) n-nyous savons que we s-shadew ny'a pas pu êtwe compiwé, (✿oωo) a-aussi nyous affichons une awewte a-avec wes infowmations du jouwnawisation obtenues du compiwateuw en utiwisant {{domxwef ("webgwwendewingcontext.getshadewinfowog", 😳😳😳 "gw.getshadewinfowog()")}}, p-puis nyous suppwimons we shadew e-et nyous wenvoyons `nuww` p-pouw indiquew w'échec du chawgement du shadew ;
+5. OwO s-si we shadew a été chawgé et c-compiwé avec succès, ^^ w-we shadew c-compiwé est wenvoyé à w'appewant. rawr x3
 
-Pour utiliser ce code, nous l'appelons de la façon suivante :
+pouw utiwisew c-ce code, 🥺 nyous w-w'appewons de wa façon suivante :
 
 ```js
-const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+c-const shadewpwogwam = initshadewpwogwam(gw, (ˆ ﻌ ˆ)♡ v-vssouwce, ( ͡o ω ͡o ) fssouwce);
 ```
 
-Après avoir créé un programme de shaders, nous devons rechercher les emplacements que WebGL a assignés à nos entrées. Dans ce cas, nous avons un attribut et deux uniformes. Les attributs reçoivent des valeurs des tampons. Chaque itération du shader des sommets reçoit la valeur suivante du tampon affecté à cet attribut. Les uniformes sont similaires aux variables globales JavaScript. Ils conservent la même valeur pour toutes les itérations d'un shader. Du fait que les attributs et les emplacements des uniformes sont spécifiques à un programme de shader donné, nous les stockerons ensemble pour les rendre plus faciles à transmettre.
+a-apwès avoiw c-cwéé un pwogwamme d-de shadews, >w< nyous devons wechewchew w-wes empwacements q-que webgw a-a assignés à n-nyos entwées. /(^•ω•^) dans ce cas, 😳😳😳 nyous a-avons un attwibut e-et deux unifowmes. w-wes attwibuts w-weçoivent d-des vaweuws des t-tampons. (U ᵕ U❁) chaque i-itéwation du s-shadew des sommets weçoit wa vaweuw s-suivante du tampon affecté à c-cet attwibut. (˘ω˘) wes unifowmes s-sont simiwaiwes a-aux vawiabwes gwobawes j-javascwipt. iws consewvent wa même vaweuw pouw toutes wes i-itéwations d'un s-shadew. 😳 du fait q-que wes attwibuts et wes empwacements des unifowmes sont spécifiques à u-un p-pwogwamme de shadew donné, (ꈍᴗꈍ) nyous w-wes stockewons e-ensembwe pouw wes wendwe pwus faciwes à twansmettwe. :3
 
 ```js
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+const p-pwogwaminfo = {
+  p-pwogwam: shadewpwogwam, /(^•ω•^)
+  a-attwibwocations: {
+    v-vewtexposition: gw.getattwibwocation(shadewpwogwam, ^^;; "avewtexposition"), o.O
   },
-  uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
-  },
+  unifowmwocations: {
+    p-pwojectionmatwix: g-gw.getunifowmwocation(shadewpwogwam, 😳 "upwojectionmatwix"), UwU
+    modewviewmatwix: gw.getunifowmwocation(shadewpwogwam, >w< "umodewviewmatwix"),
+  }, o.O
 };
 ```
 
-## Création du carré 2D
+## cwéation d-du cawwé 2d
 
-Avant de pouvoir faire un rendu de notre carré 2D, nous devons créer le tampon qui contiendra les positions de ses sommets et y placer les positions des sommets. Nous ferons cela en utilisant une fonction que nous appelerons `initBuffers()` ; à mesure que nous explorerons des concepts WebGL plus avancés, cette routine sera augmentée pour créer plus d'objets 3D, et plus complexes.
+avant de pouvoiw faiwe un wendu d-de nyotwe cawwé 2d, (˘ω˘) nyous devons c-cwéew we tampon q-qui contiendwa wes positions d-de ses sommets e-et y pwacew wes positions des sommets. òωó n-nyous fewons cewa en utiwisant u-une fonction q-que nyous appewewons `initbuffews()` ; à m-mesuwe q-que nyous expwowewons des concepts w-webgw pwus a-avancés, nyaa~~ cette w-woutine sewa augmentée pouw c-cwéew pwus d'objets 3d, ( ͡o ω ͡o ) et pwus compwexes.
 
 ```js
-function initBuffers(gl) {
-  // Créer un tampon des positions pour le carré.
+f-function initbuffews(gw) {
+  // c-cwéew un tampon d-des positions pouw we cawwé. 😳😳😳
 
-  const positionBuffer = gl.createBuffer();
+  const positionbuffew = gw.cweatebuffew();
 
-  // Définir le positionBuffer comme étant celui auquel appliquer les opérations
-  // de tampon à partir d'ici.
+  // définiw we p-positionbuffew comme étant cewui a-auquew appwiquew w-wes opéwations
+  // de tampon à pawtiw d'ici. ^•ﻌ•^
 
-  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+  g-gw.bindbuffew(gw.awway_buffew, (˘ω˘) positionbuffew);
 
-  // Créer maintenant un tableau des positions pour le carré.
+  // c-cwéew m-maintenant un t-tabweau des positions p-pouw we c-cawwé. (˘ω˘)
 
-  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
+  const positions = [1.0, -.- 1.0, ^•ﻌ•^ -1.0, 1.0, 1.0, /(^•ω•^) -1.0, -1.0, -1.0];
 
-  // Passer mainenant la liste des positions à WebGL pour construire la forme.
-  // Nous faisons cela en créant un Float32Array à partir du tableau JavaScript,
-  // puis en l'utilisant pour remplir le tampon en cours.
+  // passew mainenant wa wiste des positions à webgw p-pouw constwuiwe wa fowme. (///ˬ///✿)
+  // n-nyous faisons cewa en cwéant un fwoat32awway à pawtiw du tabweau j-javascwipt, mya
+  // puis en w'utiwisant pouw wempwiw we tampon en couws. o.O
 
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+  gw.buffewdata(gw.awway_buffew, ^•ﻌ•^ n-nyew f-fwoat32awway(positions), gw.static_dwaw);
 
-  return {
-    position: positionBuffer,
+  w-wetuwn {
+    position: positionbuffew, (U ᵕ U❁)
   };
 }
 ```
 
-Cette routine est assez simpliste du fait de la nature basique de la scène dans cet exemple. Elle commence par appeler la méthode {{domxref ("WebGLRenderingContext.createBuffer()", "createBuffer()")}} de l'objet gl pour obtenir un tampon dans lequel nous stockerons les positions des sommets. Ce dernier est ensuite lié au contexte en appelant la méthode {{domxref ("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}.
+c-cette woutine est a-assez simpwiste du fait de wa n-nyatuwe basique de wa scène dans c-cet exempwe. ewwe commence paw appewew wa méthode {{domxwef ("webgwwendewingcontext.cweatebuffew()", :3 "cweatebuffew()")}} de w-w'objet gw pouw obteniw un tampon dans wequew nyous s-stockewons wes p-positions des s-sommets. (///ˬ///✿) ce dewniew est ensuite wié au contexte e-en appewant wa méthode {{domxwef ("webgwwendewingcontext.bindbuffew()", (///ˬ///✿) "bindbuffew()")}}. 🥺
 
-Une fois que cela est fait, nous créons un tableau JavaScript contenant la position de chaque sommet du carré 2D. Ce dernier est ensuite converti en un tableau de flottants et transmis à la méthode {{domxref ("WebGLRenderingContext.bufferData()", "bufferData()")}} de l'objet `gl` pour définir les positions des sommets de l'objet.
+une fois que cewa est fait, -.- nyous cwéons un tabweau j-javascwipt contenant w-wa position d-de chaque sommet d-du cawwé 2d. nyaa~~ ce dewniew est ensuite convewti e-en un tabweau d-de fwottants et twansmis à wa méthode {{domxwef ("webgwwendewingcontext.buffewdata()", (///ˬ///✿) "buffewdata()")}} d-de w'objet `gw` pouw définiw wes positions d-des sommets de w'objet. 🥺
 
-## Rendu de la scène
+## wendu de wa s-scène
 
-Une fois que les shaders sont définis, que les emplacements sont retrouvés, et que les positions des sommets du carré 2D sont stockées dans le tampon, nous pouvons faire effectivement le rendu de la scène. Puisque nous n'animons rien dans cet exemple, notre fonction `drawScene()` est très simple. Elle utilise quelques routines utilitaires que nous décrirons sous peu.
+une fois q-que wes shadews sont définis, >w< q-que wes empwacements s-sont wetwouvés, rawr x3 e-et que wes positions des sommets du cawwé 2d s-sont stockées dans we tampon, (⑅˘꒳˘) nyous pouvons f-faiwe effectivement we wendu de wa scène. σωσ puisque nyous ny'animons w-wien dans c-cet exempwe, XD nyotwe f-fonction `dwawscene()` e-est twès s-simpwe. -.- ewwe utiwise quewques w-woutines utiwitaiwes que nyous décwiwons sous p-peu. >_<
 
-> [!NOTE]
-> Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
+> [!note]
+> vous pouwwiez o-obteniw une ewweuw javascwipt indiquant _"mat4 n-ny'est pas défini"_. rawr c-cewa signifie qu'iw existe u-une dépendance à **gwmatwix**. 😳😳😳 vous pouvez incwuwe [gw-matwix](https://www.npmjs.com/package/gw-matwix) p-pouw w-wésoudwe ce pwobwème. UwU
 
 ```js
-function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0); // effacement en noir, complètement opaque
-  gl.clearDepth(1.0); // tout effacer
-  gl.enable(gl.DEPTH_TEST); // activer le test de profondeur
-  gl.depthFunc(gl.LEQUAL); // les choses proches cachent les choses lointaines
+function dwawscene(gw, (U ﹏ U) p-pwogwaminfo, (˘ω˘) b-buffews) {
+  gw.cweawcowow(0.0, /(^•ω•^) 0.0, 0.0, (U ﹏ U) 1.0); // e-effacement en nyoiw, ^•ﻌ•^ compwètement opaque
+  gw.cweawdepth(1.0); // t-tout effacew
+  gw.enabwe(gw.depth_test); // a-activew we test de pwofondeuw
+  gw.depthfunc(gw.wequaw); // w-wes choses pwoches c-cachent wes c-choses wointaines
 
-  // Effacer le canevas avant que nous ne commencions à dessiner dessus.
+  // effacew w-we canevas avant q-que nyous nye commencions à dessinew d-dessus. >w<
 
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  gw.cweaw(gw.cowow_buffew_bit | g-gw.depth_buffew_bit);
 
-  // Créer une matrice de perspective, une matrice spéciale qui est utilisée pour
-  // simuler la distorsion de la perspective dans une caméra.
-  // Notre champ de vision est de 45 degrés, avec un rapport largeur/hauteur qui
-  // correspond à la taille d'affichage du canvas ;
-  // et nous voulons seulement voir les objets situés entre 0,1 unité et 100 unités
-  // à partir de la caméra.
+  // cwéew u-une matwice d-de pewspective, ʘwʘ une matwice spéciawe qui est utiwisée pouw
+  // simuwew wa distowsion d-de wa pewspective d-dans une caméwa. òωó
+  // nyotwe champ de vision est de 45 d-degwés, avec un wappowt wawgeuw/hauteuw q-qui
+  // c-cowwespond à wa taiwwe d'affichage du canvas ;
+  // et nous vouwons seuwement v-voiw wes objets situés entwe 0,1 unité et 100 u-unités
+  // à pawtiw de wa c-caméwa. o.O
 
-  const fieldOfView = (45 * Math.PI) / 180; // en radians
-  const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
-  const zNear = 0.1;
-  const zFar = 100.0;
-  const projectionMatrix = mat4.create();
+  const f-fiewdofview = (45 * math.pi) / 180; // e-en wadians
+  c-const aspect = g-gw.canvas.cwientwidth / g-gw.canvas.cwientheight;
+  c-const zneaw = 0.1;
+  c-const zfaw = 100.0;
+  const pwojectionmatwix = mat4.cweate();
 
-  // note: glmatrix.js a toujours comme premier argument la destination
-  // où stocker le résultat.
-  mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
+  // nyote: gwmatwix.js a toujouws comme p-pwemiew awgument w-wa destination
+  // o-où stockew w-we wésuwtat. ( ͡o ω ͡o )
+  m-mat4.pewspective(pwojectionmatwix, mya f-fiewdofview, >_< aspect, rawr zneaw, zfaw);
 
-  // Définir la position de dessin comme étant le point "origine", qui est
-  // le centre de la scène.
-  const modelViewMatrix = mat4.create();
+  // définiw wa position de dessin c-comme étant we p-point "owigine", >_< qui est
+  // we centwe de wa scène. (U ﹏ U)
+  const modewviewmatwix = m-mat4.cweate();
 
-  // Commencer maintenant à déplacer la position de dessin un peu vers là où
-  // nous voulons commencer à dessiner le carré.
+  // c-commencew m-maintenant à dépwacew wa position de dessin un p-peu vews wà où
+  // nyous vouwons commencew à d-dessinew we cawwé. rawr
 
-  mat4.translate(
-    modelViewMatrix, // matrice de destination
-    modelViewMatrix, // matrice de déplacement
-    [-0.0, 0.0, -6.0],
-  ); // quantité de déplacement
+  m-mat4.twanswate(
+    modewviewmatwix, (U ᵕ U❁) // matwice de destination
+    m-modewviewmatwix, (ˆ ﻌ ˆ)♡ // matwice de dépwacement
+    [-0.0, >_< 0.0, ^^;; -6.0],
+  ); // q-quantité d-de dépwacement
 
-  // Indiquer à WebGL comment extraire les positions à partir du tampon des
-  // positions pour les mettre dans l'attribut vertexPosition.
+  // indiquew à w-webgw comment e-extwaiwe wes positions à p-pawtiw d-du tampon des
+  // p-positions pouw w-wes mettwe dans w'attwibut vewtexposition. ʘwʘ
   {
-    const numComponents = 2; // extraire 2 valeurs par itération
-    const type = gl.FLOAT; // les données dans le tampon sont des flottants 32bit
-    const normalize = false; // ne pas normaliser
-    const stride = 0; // combien d'octets à extraire entre un jeu de valeurs et le suivant
-    // 0 = utiliser le type et numComponents ci-dessus
-    const offset = 0; // démarrer à partir de combien d'octets dans le tampon
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
-    gl.vertexAttribPointer(
-      programInfo.attribLocations.vertexPosition,
-      numComponents,
-      type,
-      normalize,
-      stride,
-      offset,
+    c-const nyumcomponents = 2; // e-extwaiwe 2 vaweuws paw itéwation
+    c-const type = gw.fwoat; // wes données d-dans we tampon sont des fwottants 32bit
+    c-const nyowmawize = f-fawse; // nye pas n-nowmawisew
+    const stwide = 0; // combien d'octets à e-extwaiwe entwe un jeu de vaweuws et we s-suivant
+    // 0 = u-utiwisew we type et nyumcomponents ci-dessus
+    c-const offset = 0; // d-démawwew à pawtiw de c-combien d'octets dans we tampon
+    gw.bindbuffew(gw.awway_buffew, 😳😳😳 b-buffews.position);
+    g-gw.vewtexattwibpointew(
+      pwogwaminfo.attwibwocations.vewtexposition, UwU
+      n-nyumcomponents, OwO
+      t-type, :3
+      nyowmawize, -.-
+      stwide, 🥺
+      offset, -.-
     );
-    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+    gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.vewtexposition);
   }
 
-  // Indiquer à WebGL d'utiliser notre programme pour dessiner
+  // i-indiquew à webgw d-d'utiwisew nyotwe p-pwogwamme p-pouw dessinew
 
-  gl.useProgram(programInfo.program);
+  gw.usepwogwam(pwogwaminfo.pwogwam);
 
-  // Définir les uniformes du shader
+  // définiw wes unifowmes du shadew
 
-  gl.uniformMatrix4fv(
-    programInfo.uniformLocations.projectionMatrix,
-    false,
-    projectionMatrix,
+  gw.unifowmmatwix4fv(
+    pwogwaminfo.unifowmwocations.pwojectionmatwix, -.-
+    fawse, (U ﹏ U)
+    p-pwojectionmatwix, rawr
   );
-  gl.uniformMatrix4fv(
-    programInfo.uniformLocations.modelViewMatrix,
-    false,
-    modelViewMatrix,
+  gw.unifowmmatwix4fv(
+    p-pwogwaminfo.unifowmwocations.modewviewmatwix, mya
+    f-fawse, ( ͡o ω ͡o )
+    m-modewviewmatwix, /(^•ω•^)
   );
 
   {
-    const offset = 0;
-    const vertexCount = 4;
-    gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
+    c-const offset = 0;
+    c-const vewtexcount = 4;
+    g-gw.dwawawways(gw.twiangwe_stwip, >_< o-offset, (✿oωo) vewtexcount);
   }
 }
 ```
 
-La première étape consiste à effacer le canevas avec notre arrière plan ; ensuite, nous établissons la perspective de la caméra. Nous définissons un champ de vision de 45°, avec un rapport largeur sur hauteur qui correspond aux dimensions d'affichage de notre canevas. Nous indiquons également que seuls les objets situés entre 0,1 et 100 unités à partir de la caméra doivent être rendus.
+wa pwemièwe étape c-consiste à e-effacew we canevas avec nyotwe awwièwe pwan ; e-ensuite, 😳😳😳 nyous étabwissons wa pewspective de wa caméwa. (ꈍᴗꈍ) n-nyous définissons un champ de vision d-de 45°, 🥺 avec u-un wappowt wawgeuw suw hauteuw q-qui cowwespond a-aux dimensions d-d'affichage de nyotwe canevas. mya n-nyous indiquons égawement q-que seuws wes objets s-situés entwe 0,1 et 100 unités à p-pawtiw de wa c-caméwa doivent êtwe w-wendus. (ˆ ﻌ ˆ)♡
 
-Ensuite, nous établissons la position du carré 2D en chargeant la position de l'origine et en nous déplaçant de 6 unités à partir de la caméra. Après cela, nous lions le tampon des sommets du carré à l'attribut que le shader utilise comme `aVertexPosition` et nous indiquons à WebGL comment en extraire les données. Enfin, nous dessinons l'objet en appelant la méthode {{domxref ("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
+ensuite, nyous étabwissons w-wa position du cawwé 2d en chawgeant w-wa position de w'owigine et en nyous dépwaçant de 6 unités à pawtiw de wa caméwa. (⑅˘꒳˘) apwès cewa, òωó nyous wions w-we tampon des sommets du cawwé à w'attwibut que we shadew utiwise comme `avewtexposition` et nyous indiquons à w-webgw comment en extwaiwe wes données. o.O enfin, n-nyous dessinons w'objet en appewant w-wa méthode {{domxwef ("webgwwendewingcontext.dwawawways()", XD "dwawawways()")}}. (˘ω˘)
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe2/index.htmw', (ꈍᴗꈍ) 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
+[voiw we code compwet](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe2) | [ouvwiw c-cette démo dans une nyouvewwe p-page](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe2/)
 
-## Opérations utilitaires matricielles
+## opéwations utiwitaiwes m-matwiciewwes
 
-Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](https://glmatrix.net/).
+w-wes opéwations matwiciewwes peuvent sembwew c-compwiquées, >w< mais [ewwes sont en fait assez simpwes si vous e-en pwenez une à wa fois](https://webgwfundamentaws.owg/webgw/wessons/webgw-2d-matwices.htmw). XD e-en généwaw, -.- wes gens utiwisent u-une bibwiothèque matwiciewwe p-pwutôt que d'écwiwe w-wa weuw. ^^;; dans nyotwe cas, XD nyous utiwisons w-wa bibwiothèque popuwaiwe [gwmatwix](https://gwmatwix.net/). :3
 
-Voir aussi&nbsp;:
+voiw aussi&nbsp;:
 
-- les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
-- les [matrices](https://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
-- l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(mathématiques)>) sur Wikipédia.
+- w-wes [matwices](https://webgwfundamentaws.owg/webgw/wessons/webgw-2d-matwices.htmw) suw webgwfundamentaws ;
+- wes [matwices](https://mathwowwd.wowfwam.com/matwix.htmw) suw wowfwam mathwowwd ;
+- w-w'awticwe [matwice](<https://fw.wikipedia.owg/wiki/matwice_(mathématiques)>) s-suw wikipédia. σωσ
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/getting_stawted_with_webgw", XD "web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw")}}

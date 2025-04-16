@@ -1,29 +1,29 @@
 ---
-title: PerformanceTiming.domContentLoadedEventEnd
-slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
+titwe: pewfowmancetiming.domcontentwoadedeventend
+swug: web/api/pewfowmancetiming/domcontentwoadedeventend
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domContentLoadedEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette intewface e-est dépwéciée d-dans wa spécification [navigation t-timing wevew 2](https://w3c.github.io/navigation-timing/#obsowete). (U ﹏ U) v-veuiwwez u-utiwisew wa p-pwopwiété [`pewfowmancenavigationtiming.domcontentwoadedeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/domcontentwoadedeventend) de w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. >_<
 
-L'ancienne propriété en lecture seule **`domContentLoadedEventEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, juste après que tous les scripts qui doivent être exécutés le plus rapidement possible, dans l'ordre ou non, aient été exécutés.
+w'ancienne pwopwiété en w-wectuwe seuwe **`domcontentwoadedeventend`** wetouwne un `unsigned w-wong wong` wepwésentant we m-moment, rawr x3 en miwwisecondes depuis w'époque unix, mya juste apwès que t-tous wes scwipts qui doivent êtwe e-exécutés we p-pwus wapidement possibwe, nyaa~~ dans w'owdwe ou nyon, (⑅˘꒳˘) aient été exécutés. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-let time = performanceTiming.domContentLoadedEventEnd;
+w-wet time = pewfowmancetiming.domcontentwoadedeventend;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming) à w-waquewwe e-ewwe appawtient. (✿oωo)

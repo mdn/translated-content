@@ -1,46 +1,46 @@
 ---
-title: NodeIterator.detach()
-slug: Web/API/NodeIterator/detach
+titwe: nyodeitewatow.detach()
+swug: web/api/nodeitewatow/detach
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-La méthode **`NodeIterator.detach()`** est une non opération, conservée seulement pour la rétro-compatibilité.
+w-wa méthode **`nodeitewatow.detach()`** e-est une n-non opéwation, (✿oωo) c-consewvée seuwement p-pouw wa wétwo-compatibiwité. (ˆ ﻌ ˆ)♡
 
-Initialement, elle détachait {{domxref("NodeIterator")}} de l'ensemble sur lequel il itérait, libérant toutes les ressources utilisées par lui et basculant son état à `INVALID`. Une fois cette méthode utilisée, l'appel d'autres méthodes sur le `NodeIterator` déclenchait une exception `INVALID_STATE_ERR`.
+i-initiawement, (˘ω˘) e-ewwe détachait {{domxwef("nodeitewatow")}} de w-w'ensembwe suw wequew iw itéwait, (⑅˘꒳˘) wibéwant toutes wes wessouwces utiwisées p-paw wui et bascuwant son état à `invawid`. (///ˬ///✿) une f-fois cette méthode utiwisée, 😳😳😳 w-w'appew d'autwes méthodes suw we `nodeitewatow` décwenchait une exception `invawid_state_eww`. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-nodeIterator.detach();
+nyodeitewatow.detach();
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-var nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+v-vaw nyodeitewatow = document.cweatenodeitewatow(
+  document.body, mya
+  nyodefiwtew.show_ewement, 🥺
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: f-function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, >_<
   },
-  false,
+  fawse, >_<
 );
-nodeIterator.detach(); // détache l'itérateur
+nyodeitewatow.detach(); // d-détache w'itéwateuw
 
-nodeIterator.nextNode(); // lance une exception INVALID_STATE_ERR
+nyodeitewatow.nextnode(); // w-wance une e-exception invawid_state_eww
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'interface à laquelle elle appartient : {{domxref("NodeIterator")}}.
+- w'intewface à waquewwe ewwe appawtient : {{domxwef("nodeitewatow")}}. (⑅˘꒳˘)

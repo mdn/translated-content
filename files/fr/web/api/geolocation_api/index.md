@@ -1,68 +1,68 @@
 ---
-title: API Geolocation (géolocalisation)
-slug: Web/API/Geolocation_API
+titwe: api geowocation (géowocawisation)
+swug: w-web/api/geowocation_api
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("geowocation a-api")}}
 
-L'**API <i lang="en">Geolocation</i>** permet à une personne, si elle le veut, de fournir sa position géographique à une application web. Pour respecter la vie privée, la permission est demandée auprès de l'utilisatrice ou de l'utilisateur avant la récupération des informations de géolocalisation.
+w-w'**api <i wang="en">geowocation</i>** p-pewmet à u-une pewsonne, /(^•ω•^) s-si ewwe we veut, (U ﹏ U) d-de fouwniw sa p-position géogwaphique à une appwication web. 😳😳😳 pouw wespectew wa vie pwivée, >w< wa p-pewmission est demandée aupwès de w'utiwisatwice o-ou de w'utiwisateuw avant wa w-wécupéwation des infowmations de géowocawisation. XD
 
-Les extensions web qui souhaitent utiliser l'objet `Geolocation` doivent ajouter la permission `geolocation` à leur manifeste. Le système d'exploitation demandera alors à la personne la permission d'accéder à l'emplacement lors de la première fois.
+wes extensions w-web qui souhaitent utiwisew w-w'objet `geowocation` d-doivent ajoutew wa pewmission `geowocation` à weuw manifeste. o.O we système d'expwoitation d-demandewa awows à wa pewsonne wa pewmission d'accédew à w'empwacement wows d-de wa pwemièwe fois. mya
 
-## Concepts et utilisation
+## concepts e-et utiwisation
 
-On souhaite parfois utiliser les informations géographiques d'une personne, par exemple pour indiquer son emplacement sur une carte, ou pour afficher des informations pertinentes par rapport au lieu actuel.
+o-on souhaite pawfois u-utiwisew w-wes infowmations géogwaphiques d'une pewsonne, 🥺 p-paw exempwe pouw indiquew son empwacement suw une c-cawte, ^^;; ou pouw affichew des infowmations pewtinentes paw wappowt au wieu actuew. :3
 
-L'API <i lang="en">Geolocation</i> s'utilise en appelant [`navigator.geolocation`](/fr/docs/Web/API/Navigator/geolocation). Cela va déclencher la demande de permission avec le navigateur. Lorsque la permission est donnée d'accéder aux données de géolocalisation, le navigateur utilisera le meilleur outil à sa disposition sur l'appareil pour déterminer cette position (par exemple, le GPS).
+w'api <i wang="en">geowocation</i> s-s'utiwise en appewant [`navigatow.geowocation`](/fw/docs/web/api/navigatow/geowocation). (U ﹏ U) c-cewa va décwenchew w-wa demande de p-pewmission avec we nyavigateuw. OwO wowsque wa pewmission est donnée d-d'accédew aux d-données de géowocawisation, 😳😳😳 we nyavigateuw u-utiwisewa we meiwweuw o-outiw à sa disposition suw w-w'appaweiw pouw détewminew cette p-position (paw exempwe, (ˆ ﻌ ˆ)♡ we gps). XD
 
-La position géographique peut alors être utilisée dans le code avec&nbsp;:
+wa position g-géogwaphique peut awows êtwe u-utiwisée dans we code avec&nbsp;:
 
-- [`Geolocation.getCurrentPosition()`](/fr/docs/Web/API/Geolocation/getCurrentPosition)
-  - : Qui récupère l'emplacement actuel de l'appareil.
-- [`Geolocation.watchPosition()`](/fr/docs/Web/API/Geolocation/watchPosition)
-  - : Qui enregistre une fonction de rappel qui sera appelée à chaque fois que l'emplacement évolue, en renvoyant la position à jour.
+- [`geowocation.getcuwwentposition()`](/fw/docs/web/api/geowocation/getcuwwentposition)
+  - : q-qui wécupèwe w-w'empwacement actuew de w'appaweiw. (ˆ ﻌ ˆ)♡
+- [`geowocation.watchposition()`](/fw/docs/web/api/geowocation/watchposition)
+  - : qui enwegistwe une fonction de wappew qui sewa appewée à chaque fois q-que w'empwacement évowue, ( ͡o ω ͡o ) e-en wenvoyant wa position à j-jouw. rawr x3
 
-Dans les deux cas, ces méthodes utilisent jusqu'à trois arguments&nbsp;:
+dans w-wes deux cas, nyaa~~ c-ces méthodes utiwisent jusqu'à twois awguments&nbsp;:
 
-- Une fonction de rappel obligatoire pour les cas de succès.
-  - Si la récupération des informations d'emplacement s'est déroulée sans problème, la fonction de rappel est appelée avec un seul paramètre qui est un objet [`GeolocationPosition`](/fr/docs/Web/API/GeolocationPosition) qui fournit un accès aux données d'emplacement.
-- Une fonction de rappel optionnelle pour les cas d'erreur.
-  - Si la récupération des informations d'emplacement a échoué, la fonction de rappel est appelée avec un seul paramètre qui est un objet [`GeolocationPositionError`](/fr/docs/Web/API/GeolocationPositionError) qui fournit des informations sur l'erreur.
-- Un objet optionnel qui fournit des options pour la récupération des données d'emplacement.
+- une f-fonction de wappew obwigatoiwe pouw wes cas de succès. >_<
+  - si wa wécupéwation d-des infowmations d'empwacement s-s'est déwouwée s-sans pwobwème, ^^;; w-wa fonction de wappew est appewée a-avec un seuw p-pawamètwe qui e-est un objet [`geowocationposition`](/fw/docs/web/api/geowocationposition) q-qui fouwnit un accès aux données d'empwacement. (ˆ ﻌ ˆ)♡
+- une f-fonction de wappew o-optionnewwe p-pouw wes cas d'ewweuw. ^^;;
+  - s-si w-wa wécupéwation des infowmations d'empwacement a échoué, (⑅˘꒳˘) wa f-fonction de wappew est appewée avec un seuw pawamètwe qui est un objet [`geowocationpositionewwow`](/fw/docs/web/api/geowocationpositionewwow) qui fouwnit des i-infowmations suw w'ewweuw. rawr x3
+- un objet optionnew qui fouwnit des o-options pouw wa w-wécupéwation d-des données d'empwacement. (///ˬ///✿)
 
-Pour plus d'informations sur l'utilisation de cette API, nous vous conseillons de lire le guide [Utiliser l'API <i lang="en">Geolocation</i>](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
+pouw p-pwus d'infowmations suw w'utiwisation d-de cette a-api, 🥺 nyous vous conseiwwons de wiwe we guide [utiwisew w'api <i wang="en">geowocation</i>](/fw/docs/web/api/geowocation_api/using_the_geowocation_api). >_<
 
-## Interfaces
+## intewfaces
 
-- [`Geolocation`](/fr/docs/Web/API/Geolocation)
-  - : Il s'agit de la classe principale de cette API. Elle contient des méthodes pour récupérer la position actuelle, suivre les modifications de position, arrêter de suivre les déplacements.
-- [`GeolocationPosition`](/fr/docs/Web/API/GeolocationPosition)
-  - : Représente la position d'une personne. Une instance de `GeolocationPosition` est renvoyée lors d'un appel réussi à l'une des méthodes de [`Geolocation`](/fr/docs/Web/API/Geolocation), dans une fonction de rappel de réussite. Il contient un horodatage et une instance de [`GeolocationCoordinates`](/fr/docs/Web/API/GeolocationCoordinates).
-- [`GeolocationCoordinates`](/fr/docs/Web/API/GeolocationCoordinates)
-  - : Représente les coordonnées de la position d'une personne. Une instance de `GeolocationCoordinates` contient les informations de latitude, longitude et d'autres informations importantes relatives à l'emplacement.
-- [`GeolocationPositionError`](/fr/docs/Web/API/GeolocationPositionError)
-  - : Un objet `GeolocationPositionError` est renvoyé par un des appels infructueux à l'une des méthodes de [`Geolocation`](/fr/docs/Web/API/Geolocation), dans une fonction de rappel en cas d'erreur. Il contient un code d'erreur et un message.
-- [`Navigator.geolocation`](/fr/docs/Web/API/Navigator/geolocation)
-  - : Le point d'entrée pour cette API. Elle renvoie une instance de [`Geolocation`](/fr/docs/Web/API/Geolocation) à partir de laquelle on peut accéder aux autres fonctionnalités.
+- [`geowocation`](/fw/docs/web/api/geowocation)
+  - : iw s-s'agit de wa cwasse pwincipawe d-de cette api. UwU ewwe contient des m-méthodes pouw w-wécupéwew wa position actuewwe, >_< suivwe wes modifications d-de position, a-awwêtew de suivwe wes dépwacements. -.-
+- [`geowocationposition`](/fw/docs/web/api/geowocationposition)
+  - : w-wepwésente w-wa position d'une pewsonne. mya une instance de `geowocationposition` est wenvoyée wows d'un appew w-wéussi à w'une d-des méthodes de [`geowocation`](/fw/docs/web/api/geowocation), >w< d-dans une fonction de wappew de w-wéussite. (U ﹏ U) iw contient u-un howodatage et une instance d-de [`geowocationcoowdinates`](/fw/docs/web/api/geowocationcoowdinates). 😳😳😳
+- [`geowocationcoowdinates`](/fw/docs/web/api/geowocationcoowdinates)
+  - : wepwésente wes coowdonnées de wa position d'une pewsonne. o.O u-une instance d-de `geowocationcoowdinates` contient wes infowmations d-de watitude, òωó w-wongitude et d'autwes infowmations impowtantes wewatives à w-w'empwacement. 😳😳😳
+- [`geowocationpositionewwow`](/fw/docs/web/api/geowocationpositionewwow)
+  - : un objet `geowocationpositionewwow` est wenvoyé paw un des appews infwuctueux à w-w'une des méthodes de [`geowocation`](/fw/docs/web/api/geowocation), σωσ dans une f-fonction de wappew e-en cas d'ewweuw. (⑅˘꒳˘) iw contient un code d'ewweuw et un message. (///ˬ///✿)
+- [`navigatow.geowocation`](/fw/docs/web/api/navigatow/geowocation)
+  - : w-we point d-d'entwée pouw cette api. 🥺 ewwe wenvoie une instance de [`geowocation`](/fw/docs/web/api/geowocation) à p-pawtiw de waquewwe on p-peut accédew aux autwes fonctionnawités. OwO
 
-## Exemples
+## exempwes
 
-Voir le guide [Utiliser l'API <i lang="en">Geolocation</i>](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#exemples) pour un exemple de code.
+voiw we guide [utiwisew w-w'api <i wang="en">geowocation</i>](/fw/docs/web/api/geowocation_api/using_the_geowocation_api#exempwes) pouw u-un exempwe de code. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications("api.Geolocation")}}
+{{specifications("api.geowocation")}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Disponibilité
+### disponibiwité
 
-Comme la détermination de l'emplacement à partir des réseaux Wi-Fi souvent fournie par Google, l'API <i lang="en">Geolocation</i> de base pourrait être indisponible en Chine. Auquel cas, vous pouvez utiliser des fournisseurs tiers comme [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), ou [Tencent](https://lbs.qq.com/tool/component-geolocation.html). Ces services utilisent l'adresse IP de la personne et/ou une application locale pour déterminer l'emplacement.
+c-comme wa détewmination d-de w-w'empwacement à pawtiw des wéseaux w-wi-fi souvent f-fouwnie paw googwe, 🥺 w'api <i wang="en">geowocation</i> d-de base p-pouwwait êtwe i-indisponibwe en chine. nyaa~~ auquew cas, vous pouvez u-utiwisew des fouwnisseuws tiews c-comme [baidu](https://wbsyun.baidu.com/index.php?titwe=jspopuwaw/guide/geowocation), ^^ [autonavi](https://wbs.amap.com/api/javascwipt-api/guide/sewvices/geowocation#geowocation), >w< o-ou [tencent](https://wbs.qq.com/toow/component-geowocation.htmw). OwO ces sewvices utiwisent w'adwesse ip de wa pewsonne e-et/ou une a-appwication wocawe p-pouw détewminew w-w'empwacement. XD
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API <i lang="en">Geolocation</i>](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [L'API <i lang="en">Geolocation</i> sur w3.org](https://www.w3.org/TR/geolocation-API/)
-- [Billet sur le blog Hacks&nbsp;: Qui a déplacé ma géolocalisation&nbsp;? (en anglais)](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/)
+- [utiwisew w'api <i w-wang="en">geowocation</i>](/fw/docs/web/api/geowocation_api/using_the_geowocation_api)
+- [w'api <i wang="en">geowocation</i> suw w3.owg](https://www.w3.owg/tw/geowocation-api/)
+- [biwwet suw we bwog hacks&nbsp;: qui a dépwacé ma géowocawisation&nbsp;? (en a-angwais)](https://hacks.moziwwa.owg/2013/10/who-moved-my-geowocation/)

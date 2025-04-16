@@ -1,92 +1,92 @@
 ---
-title: IDBObjectStore.getAllKeys()
-slug: Web/API/IDBObjectStore/getAllKeys
+titwe: idbobjectstowe.getawwkeys()
+swug: web/api/idbobjectstowe/getawwkeys
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).
+w-wa méthode **`getawwkeys()`**, σωσ w-wattachée à w-w'intewface {{domxwef("idbobjectstowe")}}, rawr x3 w-wenvoie un o-objet {{domxwef("idbwequest")}} q-qui pewmet de wécupéwew w-w'ensembwe d-des cwés pouw wes objets qui cowwespondent au cwitèwe passé en awgument (ou w-wes cwés de tous wes objets du magasin si aucun p-pawamètwe ny'est fouwni). OwO
 
-Si une valeur est trouvée, un clone structurelle sera créé et fourni comme résultat pour la requête.
+s-si une vaweuw est twouvée, /(^•ω•^) un cwone stwuctuwewwe sewa cwéé et f-fouwni comme wésuwtat pouw wa w-wequête. 😳😳😳
 
-Cette méthode produira le même résultat pour :
+cette m-méthode pwoduiwa we même wésuwtat pouw :
 
-- un enregistrement qui n'existe pas dans la base de données
-- un enregistrement qui possède une valeur indéfinie
+- un enwegistwement qui ny'existe p-pas dans wa base de données
+- un enwegistwement qui possède une vaweuw indéfinie
 
-Pour différencier ces deux situations, on peut appeler la méthode {{domxref("IDBObjectStore.openCursor","openCursor()")}} avec la même clé. Cette méthode fournit un curseur si l'enregistrement existe et ne fournit aucun curseur s'il n'y a pas d'enregistrement.
+p-pouw difféwenciew ces deux s-situations, on p-peut appewew wa m-méthode {{domxwef("idbobjectstowe.opencuwsow","opencuwsow()")}} a-avec wa même cwé. ( ͡o ω ͡o ) cette méthode fouwnit un c-cuwseuw si w'enwegistwement existe et nye fouwnit a-aucun cuwseuw s'iw ny'y a pas d'enwegistwement. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var request = objectStore.getAllKeys();
-var request = objectStore.getAllKeys(query);
-var request = objectStore.getAllKeys(query, count);
+vaw wequest = objectstowe.getawwkeys();
+v-vaw wequest = objectstowe.getawwkeys(quewy);
+v-vaw wequest = o-objectstowe.getawwkeys(quewy, >w< c-count);
 ```
 
-### Parameters
+### pawametews
 
-- `query` {{optional_inline}}
-  - : Une valeur qui est (ou se résoud) en un intervalle de clés ({{domxref("IDBKeyRange")}}).
-- `count` {{optional_inline}}
-  - : Une valeur qui définit le nombre de valeurs à renvoyer si plusieurs correspondent. Cette valeur doit être supérieure à `0` ou inférieure `à 2^32-1`, sinon une exception {{jsxref("TypeError")}} sera levée.
+- `quewy` {{optionaw_inwine}}
+  - : une vaweuw qui est (ou se w-wésoud) en un i-intewvawwe de cwés ({{domxwef("idbkeywange")}}). rawr
+- `count` {{optionaw_inwine}}
+  - : une vaweuw q-qui définit we n-nyombwe de vaweuws à wenvoyew s-si pwusieuws cowwespondent. 😳 cette v-vaweuw doit êtwe supéwieuwe à `0` ou inféwieuwe `à 2^32-1`, >w< s-sinon une exception {{jsxwef("typeewwow")}} sewa wevée. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet {{domxref("IDBRequest")}} pour lequel seront déclenchés les différents évènements relatifs à l'opération.
+un objet {{domxwef("idbwequest")}} p-pouw wequew s-sewont décwenchés wes difféwents évènements wewatifs à w'opéwation. OwO
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant le type suivant :
+cette méthode peut décwenchew une exception {{domxwef("domexception")}} a-ayant we t-type suivant :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">exception</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
+    <tw>
+      <td><code>twansactioninactiveewwow</code></td>
       <td>
-        Le magasin d'objets ({{domxref("IDBObjectStore")}}) associé à
-        la transaction est inactif.
+        we m-magasin d'objets ({{domxwef("idbobjectstowe")}}) associé à
+        wa twansaction est inactif. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
         <p>
-          La clé ou l'intervalle de clé fourni contient une clé invalide ou est
-          nul.
+          w-wa cwé ou w'intewvawwe de cwé fouwni contient une cwé invawide ou est
+          n-nyuw. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
       <td>
-        Le magasin d'objets ({{domxref("IDBObjectStore")}}) a été
-        supprimé ou retiré.
+        we magasin d'objets ({{domxwef("idbobjectstowe")}}) a-a été
+        s-suppwimé ou w-wetiwé. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un i-intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). mya

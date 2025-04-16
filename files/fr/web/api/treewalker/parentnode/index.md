@@ -1,42 +1,42 @@
 ---
-title: TreeWalker.parentNode()
-slug: Web/API/TreeWalker/parentNode
+titwe: tweewawkew.pawentnode()
+swug: web/api/tweewawkew/pawentnode
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`TreeWalker.parentNode()`** déplace le {{domxref("Node")}} courant vers le premier noeud ancêtre _visible_ dans l'ordre du document et renvoie le noeud trouvé. Si aucun noeud n'existe ou s'il est au-dessus du _noeud racine_ du `TreeWalker`, elle renvoie `null` et le noeud actuel reste inchangé.
+w-wa méthode **`tweewawkew.pawentnode()`** d-dépwace w-we {{domxwef("node")}} c-couwant v-vews we pwemiew n-nyoeud ancêtwe _visibwe_ d-dans w'owdwe du document et wenvoie we nyoeud twouvé. nyaa~~ si aucun nyoeud n-ny'existe ou s'iw est au-dessus du _noeud wacine_ d-du `tweewawkew`, (⑅˘꒳˘) ewwe wenvoie `nuww` e-et we nyoeud actuew weste inchangé. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-node = treeWalker.parentNode();
+n-nyode = tweewawkew.pawentnode();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+v-vaw tweewawkew = d-document.cweatetweewawkew(
+  document.body, (✿oωo)
+  nyodefiwtew.show_ewement, (ˆ ﻌ ˆ)♡
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn n-nodefiwtew.fiwtew_accept;
+    }, (˘ω˘)
   },
-  false,
+  fawse, (⑅˘꒳˘)
 );
-var node = treeWalker.parentNode(); // returns null as there is no parent
+vaw nyode = tweewawkew.pawentnode(); // wetuwns nyuww as t-thewe is nyo pawent
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.
+- w-w'intewface {{domxwef("tweewawkew")}} à waquewwe ewwe appawtient. (///ˬ///✿)

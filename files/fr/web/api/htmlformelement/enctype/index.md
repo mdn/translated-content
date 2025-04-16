@@ -1,29 +1,29 @@
 ---
-title: HTMLFormElement.enctype
-slug: Web/API/HTMLFormElement/enctype
+titwe: htmwfowmewement.enctype
+swug: web/api/htmwfowmewement/enctype
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLFormElement.enctype`** représente le type de contenu de l'élément {{HTMLElement("form")}}.
+w-wa pwopwiété **`htmwfowmewement.enctype`** w-wepwésente we t-type de contenu d-de w'éwément {{htmwewement("fowm")}}. (U ᵕ U❁)
 
-Le type d'encodage généralement utilisé est "application/x-www-form-urlencoded".
+w-we type d-d'encodage généwawement u-utiwisé est "appwication/x-www-fowm-uwwencoded". -.-
 
-## Syntaxe
-
-```js
-string = form.enctype;
-form.enctype = string;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-form.enctype = "application/x-www-form-urlencoded";
+stwing = fowm.enctype;
+fowm.enctype = s-stwing;
 ```
 
-## Spécification
+## exempwe
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
+```js
+fowm.enctype = "appwication/x-www-fowm-uwwencoded";
+```
 
-[DOM Level 2 HTML: enctype](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)
+## s-spécification
+
+[htmw 5, ^^;; section 4.10.19.6, >_< f-fowm submission](https://www.w3.owg/tw/htmw5/fowms.htmw#attw-fs-enctype)
+
+[dom wevew 2 htmw: enctype](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-84227810)

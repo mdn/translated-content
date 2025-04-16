@@ -1,163 +1,163 @@
 ---
-title: document.execCommand
-slug: Web/API/Document/execCommand
+titwe: document.execcommand
+swug: web/api/document/execcommand
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-Lorsqu'un document HTML passe en [`designMode`](/fr/docs/Web/API/Document/designMode), l'objet `document` correspondant expose une méthode **`execCommand()`** permettant d'exécuter des commandes manipulant la région éditable courante tels que [les champs de formulaire](/fr/docs/Web/HTML/Element/input) ou les éléments [`contentEditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+wowsqu'un d-document h-htmw passe en [`designmode`](/fw/docs/web/api/document/designmode), ^•ﻌ•^ w-w'objet `document` c-cowwespondant e-expose une m-méthode **`execcommand()`** pewmettant d-d'exékawaii~w d-des commandes manipuwant wa wégion éditabwe couwante tews que [wes champs d-de fowmuwaiwe](/fw/docs/web/htmw/ewement/input) ou wes éwéments [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe). OwO
 
-La plupart des commandes affectent la [sélection](/fr/docs/Web/API/Selection) du document (mise en gras, italique, etc.), tandis que
-d'autres insèrent de nouveaux éléments (un lien) ou modifient toute une ligne (indentation). Lorsqu'on
-utilise `contentEditable`, `execCommand()` affecte l'élément éditable
-courant.
+wa pwupawt des c-commandes affectent wa [séwection](/fw/docs/web/api/sewection) d-du document (mise en gwas, (U ﹏ U) itawique, etc.), (ˆ ﻌ ˆ)♡ tandis que
+d'autwes i-insèwent de nyouveaux éwéments (un wien) ou m-modifient toute u-une wigne (indentation). (⑅˘꒳˘) wowsqu'on
+utiwise `contenteditabwe`, (U ﹏ U) `execcommand()` affecte w'éwément éditabwe
+c-couwant. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
+document.execcommand(acommandname, mya ashowdefauwtui, XD avawueawgument);
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un booléen ({{jsxref('Boolean')}}) qui vaut `false` si la commande n'est pas
-prise en charge ou si elle est désactivée.
+un boowéen ({{jsxwef('boowean')}}) q-qui vaut `fawse` s-si wa c-commande ny'est p-pas
+pwise en chawge ou si ewwe est désactivée. òωó
 
-> **Note :** `document.execCommand()` ne renvoie
-> `true` que s'il est appelé à partir d'une interaction utilisateur. On ne
-> peut pas l'invoquer dans un script afin de vérifier la prise en charge navigateur avant
-> d'appeler une commande. À partir de Firefox 82, les appels imbriqués à
-> `document.execCommand()` renverront toujours `false`.
+> **note :** `document.execcommand()` n-nye wenvoie
+> `twue` que s'iw est appewé à pawtiw d'une i-intewaction utiwisateuw. (˘ω˘) on nye
+> peut pas w'invoquew dans un scwipt afin de véwifiew wa pwise e-en chawge nyavigateuw avant
+> d-d'appewew une c-commande. :3 À pawtiw d-de fiwefox 82, OwO wes appews imbwiqués à
+> `document.execcommand()` wenvewwont toujouws `fawse`. mya
 
-### Paramètres
+### p-pawamètwes
 
-- `aCommandName`
-  - : Une chaîne de caractères {{domxref("DOMString")}} indiquant le nom de la commande à
-    exécuter. Voir [Commandes](#commandes) pour une liste de commandes possibles.
-- `aShowDefaultUI`
-  - : Un booléen ({{jsxref("Boolean")}}) indiquant si l'interface utilisateur par défaut
-    devrait être affichée. Ce n'est pas implémenté par Mozilla.
-- `aValueArgument`
-  - : Pour les commandes utilisant un argument en entrée, il s'agit d'une chaîne {{domxref("DOMString")}}
-    qui fournit cette information. On pourra, par exemple, `insertImage` utilise
-    l'URL de l'image à insérer. On utilisera `null` si aucun argument n'est utilisé.
+- `acommandname`
+  - : u-une chaîne de cawactèwes {{domxwef("domstwing")}} i-indiquant we nyom d-de wa commande à
+    exékawaii~w. (˘ω˘) v-voiw [commandes](#commandes) pouw une wiste d-de commandes possibwes. o.O
+- `ashowdefauwtui`
+  - : un boowéen ({{jsxwef("boowean")}}) i-indiquant si w'intewface u-utiwisateuw paw défaut
+    devwait êtwe a-affichée. (✿oωo) c-ce ny'est pas impwémenté paw moziwwa. (ˆ ﻌ ˆ)♡
+- `avawueawgument`
+  - : pouw wes commandes utiwisant un awgument en entwée, ^^;; iw s'agit d-d'une chaîne {{domxwef("domstwing")}}
+    q-qui fouwnit cette infowmation. OwO o-on pouwwa, 🥺 paw exempwe, mya `insewtimage` u-utiwise
+    w-w'uww de w'image à inséwew. 😳 on utiwisewa `nuww` si aucun awgument n-n'est utiwisé. òωó
 
-### Commandes
+### commandes
 
-- `backColor`
-  - : Modifie la couleur d'arrière-plan du document. Avec le mode `styleWithCss` cela affecte la couleur d'arrière-plan du bloc englobant. Une chaîne de caractères décrivant une valeur {{cssxref("&lt;color&gt;")}} doit être passée en argument. On notera qu'Internet Explorer utilise ceci pour la couleur d'arrière-plan du texte.
-- `bold`
-  - : Active ou désactive la mise en gras pour la sélection ou à partir du point d'insertion Internet Explorer utilise la balise {{HTMLElement("strong")}} plutôt que {{HTMLElement("b")}}.
-- `ClearAuthenticationCache`
-  - : Supprime toutes les informations d'authentification _credentials_) du cache.
-- `contentReadOnly`
-  - : Rend le contenu du document en lecture seule ou éditable en fonction du booléen passé en argument (n'est pas pris en charge par Internet Explorer)
+- `backcowow`
+  - : modifie wa couweuw d'awwièwe-pwan du d-document. avec we mode `stywewithcss` c-cewa affecte w-wa couweuw d'awwièwe-pwan d-du bwoc engwobant. /(^•ω•^) u-une chaîne de c-cawactèwes décwivant u-une vaweuw {{cssxwef("&wt;cowow&gt;")}} doit êtwe p-passée en awgument. -.- on nyotewa qu'intewnet e-expwowew utiwise c-ceci pouw w-wa couweuw d'awwièwe-pwan d-du texte. òωó
+- `bowd`
+  - : a-active ou désactive wa mise en gwas pouw wa séwection ou à p-pawtiw du point d'insewtion intewnet expwowew utiwise wa bawise {{htmwewement("stwong")}} pwutôt que {{htmwewement("b")}}. /(^•ω•^)
+- `cweawauthenticationcache`
+  - : s-suppwime toutes wes infowmations d'authentification _cwedentiaws_) du cache. /(^•ω•^)
+- `contentweadonwy`
+  - : w-wend we c-contenu du document e-en wectuwe seuwe ou éditabwe e-en fonction du boowéen passé e-en awgument (n'est p-pas pwis en chawge paw intewnet expwowew)
 - `copy`
-  - : Copie la sélection courante vers le presse-papier. Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de compatibilité ci-après.
-- `createLink`
-  - : Crée un hyperlien à partir de la sélection (sous réserve qu'il y en ait une). Une chaîne de caractères formant un URI est nécessaire comme argument afin de fournir la valeur de l'attribut `href`. L'URI doit contenir au moins un caractère (qui peut être un blanc). (Internet Explorer créera un lien avec une valeur `null`.)
+  - : copie wa séwection couwante vews w-we pwesse-papiew. 😳 wes conditions p-pouw obteniw ce compowtement peuvent v-vawiew d'un n-nyavigateuw à w'autwe. veuiwwez voiw we tabweau d-de compatibiwité c-ci-apwès. :3
+- `cweatewink`
+  - : cwée un hypewwien à p-pawtiw d-de wa séwection (sous wésewve qu'iw y en ait une). (U ᵕ U❁) une chaîne de cawactèwes f-fowmant un uwi e-est nyécessaiwe c-comme awgument afin de fouwniw w-wa vaweuw de w'attwibut `hwef`. ʘwʘ w-w'uwi doit conteniw au moins un c-cawactèwe (qui peut êtwe un bwanc). o.O (intewnet expwowew cwéewa un wien avec une vaweuw `nuww`.)
 - `cut`
-  - : Coupe le contenu de la sélection courante et le copie dans le presse-papier. Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de compatibilité ci-après.
-- `decreaseFontSize`
-  - : Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point d'insertion. (Non pris en charge par Internet Explorer.)
-- `defaultParagraphSeparator`
-  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) pour plus de détails.
-- `delete`
-  - : Supprimer la sélection courante.
-- `enableAbsolutePositionEditor`
-  - : Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
-- `enableInlineTableEditing`
-  - : Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
-- `enableObjectResizing`
-  - : Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
-- `fontName`
-  - : Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un nom de police (ex. `"Arial"`).
-- `fontSize`
-  - : Modifie la taille de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un entier compris entre 1 et 7.
-- `foreColor`
-  - : Modifie la couleur de la police pour la sélection ou à partir du point d'insertion. La valeur passée en argument doit être une chaîne de caractères décrivant une couleur exprimée en notation hexadécimale.
-- `formatBlock`
-  - : Ajoute un élément HTML de bloc autour de la ligne contenant la sélection courante et remplace l'éventuel élément de bloc englobant s'il en existe un (pour Firefox, {{HTMLElement("blockquote")}} fera exception et englobera n'importe quel bloc). L'argument passé doit être un nom de balise. Tous les éléments de bloc peuvent en théorie être utilisés. (Internet Explorer et Edge ne prennent en charge que les balises `H1` à `H6`, `ADDRESS`, et `PRE` qui doivent être passées entre chevrons : `"<H1>"`.)
-- `forwardDelete`
-  - : Supprime un caractère à la position du curseur. Le comportement obtenu est le même que lorsqu'on appuie sur la touche <kbd>Suppr</kbd> d'un clavier Windows.
+  - : c-coupe we contenu d-de wa séwection couwante et we copie dans we p-pwesse-papiew. ʘwʘ wes c-conditions pouw obteniw ce compowtement peuvent vawiew d'un nyavigateuw à w-w'autwe. ^^ veuiwwez voiw we tabweau de compatibiwité ci-apwès. ^•ﻌ•^
+- `decweasefontsize`
+  - : a-ajoute une bawise {{htmwewement("smow")}} autouw de wa séwection o-ou au p-point d'insewtion. mya (non pwis en chawge paw intewnet expwowew.)
+- `defauwtpawagwaphsepawatow`
+  - : m-modifie we sépawateuw d-de pawagwaphe utiwisé wowsque de nyouveaux pawagwaphes s-sont cwéés dans wes zones de t-texte éditabwes. UwU voiw [difféwences dans wa généwation du bawisage](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe#diffewences_in_mawkup_genewation) p-pouw pwus de détaiws. >_<
+- `dewete`
+  - : s-suppwimew w-wa séwection couwante.
+- `enabweabsowutepositioneditow`
+  - : active ou désactive w-wa poignée qui pewmet de dépwacew w-wes éwéments p-positionnés d-de façon absowue. /(^•ω•^) cewwe-ci e-est désactivée p-paw défaut depuis fiwefox 64 ([bug fiwefox 1490641](https://bugziw.wa/1490641)). òωó
+- `enabweinwinetabweediting`
+  - : a-active ou d-désactive wes contwôwes p-pouw w'insewtion ou wa suppwession des w-wignes ou cowonnes de tabweau. σωσ w-wes contwôwes sont d-désactivés paw défaut depuis fiwefox 64 ([bug fiwefox 1490641](https://bugziw.wa/1490641)). ( ͡o ω ͡o )
+- `enabweobjectwesizing`
+  - : a-active ou désactive w-wes contwôwes p-pewmettant d-de wedimensionnew wes images, nyaa~~ tabweaux o-ou wes éwéments positionnés de façon absowue. :3 wes poignées sont désactivées paw défaut d-depuis fiwefox 64 ([bug fiwefox 1490641](https://bugziw.wa/1490641)). UwU
+- `fontname`
+  - : modifie we nom de w-wa powice pouw wa séwection ou à p-pawtiw du point d'insewtion. o.O w-wa vaweuw fouwnie en awgument d-doit êtwe un nyom d-de powice (ex. (ˆ ﻌ ˆ)♡ `"awiaw"`). ^^;;
+- `fontsize`
+  - : m-modifie wa taiwwe d-de wa powice p-pouw wa séwection ou à pawtiw du point d'insewtion. ʘwʘ wa vaweuw fouwnie en awgument doit êtwe un entiew compwis e-entwe 1 et 7. σωσ
+- `fowecowow`
+  - : m-modifie wa couweuw d-de wa powice pouw wa séwection o-ou à pawtiw du point d'insewtion. ^^;; wa vaweuw passée en awgument d-doit êtwe u-une chaîne de cawactèwes décwivant u-une couweuw expwimée en nyotation hexadécimawe. ʘwʘ
+- `fowmatbwock`
+  - : a-ajoute un éwément h-htmw de bwoc autouw de wa wigne c-contenant wa s-séwection couwante et wempwace w'éventuew éwément de bwoc engwobant s'iw en e-existe un (pouw f-fiwefox, {{htmwewement("bwockquote")}} f-fewa exception e-et engwobewa n-ny'impowte quew bwoc). ^^ w'awgument p-passé doit êtwe u-un nyom de bawise. nyaa~~ tous w-wes éwéments de b-bwoc peuvent en théowie êtwe u-utiwisés. (///ˬ///✿) (intewnet expwowew et edge nye pwennent e-en chawge que wes bawises `h1` à `h6`, XD `addwess`, e-et `pwe` q-qui doivent êtwe passées entwe c-chevwons : `"<h1>"`.)
+- `fowwawddewete`
+  - : suppwime un cawactèwe à wa position d-du cuwseuw. :3 w-we compowtement o-obtenu est we même que wowsqu'on appuie suw wa touche <kbd>suppw</kbd> d-d'un cwaview windows. òωó
 - `heading`
-  - : Ajoute un élément de titre autour de la sélection ou au niveau du point d'insertion. L'argument doit être le nom d'une balise de titre (`"H1"` à `"H6"`). (Non pris en charge par Internet Explorer et Safari.)
-- `hiliteColor`
-  - : Modifie la couleur d'arrière-plan pour la sélection ou à partir du point d'insertion. La valeur passée en argument doit être une chaîne de caractères définissant une couleur et `useCSS` doit valoir `true`. (Non pris en charge par Internet Explorer.)
-- `increaseFontSize`
-  - : Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou à partir du point d'insertion. (Non pris en charge par Internet Explorer).
+  - : ajoute un éwément d-de titwe autouw d-de wa séwection ou au nyiveau d-du point d'insewtion. ^^ w'awgument d-doit êtwe w-we nyom d'une bawise de titwe (`"h1"` à `"h6"`). ^•ﻌ•^ (non pwis en chawge p-paw intewnet expwowew et safawi.)
+- `hiwitecowow`
+  - : modifie w-wa couweuw d-d'awwièwe-pwan pouw wa séwection o-ou à pawtiw du point d'insewtion. σωσ w-wa vaweuw p-passée en awgument d-doit êtwe une chaîne de cawactèwes définissant une couweuw et `usecss` doit vawoiw `twue`. (ˆ ﻌ ˆ)♡ (non pwis en chawge paw intewnet expwowew.)
+- `incweasefontsize`
+  - : ajoute une bawise {{htmwewement("big")}} autouw de wa séwection ou à p-pawtiw du point d-d'insewtion. nyaa~~ (non pwis en chawge paw intewnet e-expwowew). ʘwʘ
 - `indent`
-  - : Augmente l'indentation de la ligne contenant la sélection ou le point d'insertion. Pour Firefox, si la sélection s'étend sur plusieurs lignes ayant différents niveaux d'indentation, seules les lignes les moins indentées seront décalées.
-- `insertBrOnReturn`
-  - : Contrôle si la touche <kbd>Entrée</kbd> insère un élément {{HTMLElement("br")}} ou si le bloc courant est scindé en deux. (Non pris en charge par Internet Explorer.)
-- `insertHorizontalRule`
-  - : Insère un élément {{HTMLElement("hr")}} au point d'insertion ou remplace la sélection courante par cet élément.
-- `insertHTML`
-  - : Insère un élément au point d'insertion en supprimant la sélection. Une chaîne de caractères HTML valide doit être fournie en argument. (Non pris en charge par Internet Explorer.)
-- `insertImage`
-  - : Insère une image au point d'insertion en supprimant la sélection. L'argument doit être une chaîne de caractères indiquant l'URL à utiliser pour l'attribut `src` de l'image. Les prérequis de cette valeur sont les mêmes que pour `createLink`.
-- `insertOrderedList`
-  - : Crée une [liste numérotée ordonnée](/fr/docs/Web/HTML/Element/ol) pour la sélection ou à partir du point d'insertion.
-- `insertUnorderedList`
-  - : Crée une [liste non-ordonnée](/fr/docs/Web/HTML/Element/ul) pour la sélection ou à partir du point d'insertion.
-- `insertParagraph`
-  - : Insère un [paragraphe](/fr/docs/Web/HTML/Element/p) autour de la sélection pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion et supprime la sélection.)
-- `insertText`
-  - : Insère le texte indiqué au point d'insertion (quitte à supprimer l'éventuelle sélection courante).
-- `italic`
-  - : Active ou désactive la mise en italique pour la sélection ou à partir du point d'insertion. (Internet Explorer utilisera l'élément {{HTMLElement("em")}} plutôt que {{HTMLElement("i")}}.)
-- `justifyCenter`
-  - : Centre la sélection ou le point d'insertion.
-- `justifyFull`
-  - : Justifie la sélection ou le point d'insertion.
-- `justifyLeft`
-  - : Justifie à gauche la sélection ou le point d'insertion.
-- `justifyRight`
-  - : Justifie à droite la sélection ou le point d'insertion.
+  - : a-augmente w-w'indentation de wa wigne contenant w-wa séwection ou we point d-d'insewtion. ^•ﻌ•^ p-pouw fiwefox, rawr x3 si wa séwection s'étend s-suw pwusieuws wignes ayant d-difféwents nyiveaux d-d'indentation, 🥺 seuwes wes wignes wes moins i-indentées sewont d-décawées. ʘwʘ
+- `insewtbwonwetuwn`
+  - : c-contwôwe s-si wa touche <kbd>entwée</kbd> i-insèwe un éwément {{htmwewement("bw")}} o-ou si we bwoc couwant e-est scindé e-en deux. (non p-pwis en chawge paw intewnet expwowew.)
+- `insewthowizontawwuwe`
+  - : i-insèwe un éwément {{htmwewement("hw")}} a-au point d'insewtion o-ou wempwace wa séwection c-couwante paw cet éwément. (˘ω˘)
+- `insewthtmw`
+  - : insèwe un éwément au point d-d'insewtion en suppwimant wa séwection. o.O u-une chaîne d-de cawactèwes h-htmw vawide doit êtwe fouwnie e-en awgument. σωσ (non pwis en chawge p-paw intewnet expwowew.)
+- `insewtimage`
+  - : i-insèwe une image au point d'insewtion e-en suppwimant wa séwection. (ꈍᴗꈍ) w'awgument doit êtwe une chaîne de cawactèwes i-indiquant w'uww à utiwisew p-pouw w'attwibut `swc` d-de w'image. (ˆ ﻌ ˆ)♡ wes pwéwequis de cette vaweuw sont wes mêmes q-que pouw `cweatewink`. o.O
+- `insewtowdewedwist`
+  - : cwée une [wiste n-nyuméwotée o-owdonnée](/fw/docs/web/htmw/ewement/ow) p-pouw wa séwection ou à pawtiw du p-point d'insewtion. :3
+- `insewtunowdewedwist`
+  - : c-cwée une [wiste nyon-owdonnée](/fw/docs/web/htmw/ewement/uw) p-pouw wa séwection ou à pawtiw du point d'insewtion. -.-
+- `insewtpawagwaph`
+  - : i-insèwe un [pawagwaphe](/fw/docs/web/htmw/ewement/p) autouw de w-wa séwection pouw w-wa wigne couwante. ( ͡o ω ͡o ) (intewnet e-expwowew insèwe un pawagwaphe au p-point d'insewtion e-et suppwime w-wa séwection.)
+- `insewttext`
+  - : i-insèwe we texte indiqué au p-point d'insewtion (quitte à suppwimew w-w'éventuewwe s-séwection c-couwante). /(^•ω•^)
+- `itawic`
+  - : a-active o-ou désactive w-wa mise en itawique p-pouw wa séwection ou à p-pawtiw du point d'insewtion. (⑅˘꒳˘) (intewnet e-expwowew utiwisewa w'éwément {{htmwewement("em")}} p-pwutôt q-que {{htmwewement("i")}}.)
+- `justifycentew`
+  - : c-centwe wa séwection ou we point d'insewtion. òωó
+- `justifyfuww`
+  - : justifie w-wa séwection o-ou we point d'insewtion. 🥺
+- `justifyweft`
+  - : j-justifie à gauche wa séwection ou we point d'insewtion. (ˆ ﻌ ˆ)♡
+- `justifywight`
+  - : justifie à dwoite w-wa séwection o-ou we point d'insewtion. -.-
 - `outdent`
-  - : Effectue un retrait d'indentation pour la ligne courante.
+  - : effectue u-un wetwait d-d'indentation pouw wa wigne couwante. σωσ
 - `paste`
-  - : Colle le contenu du presse-papier au point d'insertion (et remplace éventuellement la sélection actuelle). Fonctionnalité désactivée pour le contenu web.
-- `redo`
-  - : Rejoue l'action annulée par la précédente commande `undo`.
-- `removeFormat`
-  - : Supprime toute mise en forme pour la sélection courante.
-- `selectAll`
-  - : Sélectionne l'ensemble du contenu de la région éditable.
-- `strikeThrough`
-  - : Active ou désactive la rayure de la sélection ou à partir d'un point d'insertion.
-- `subscript`
-  - : Active ou désactive [la mise en indice](/fr/docs/Web/HTML/Element/sub) pour la sélection ou au point d'insertion
-- `superscript`
-  - : Active ou désactive [la mise en exposant](/fr/docs/Web/HTML/Element/sup) pour la sélection ou au point d'insertion
-- `underline`
-  - : Active ou désactive [le soulignement](/fr/docs/Web/HTML/Element/u) pour la sélection ou au point d'insertion.
+  - : cowwe we contenu du pwesse-papiew a-au point d-d'insewtion (et w-wempwace éventuewwement w-wa séwection actuewwe). >_< fonctionnawité d-désactivée p-pouw we contenu web. :3
+- `wedo`
+  - : wejoue w'action a-annuwée paw wa pwécédente commande `undo`. OwO
+- `wemovefowmat`
+  - : s-suppwime toute mise en f-fowme pouw wa s-séwection couwante. rawr
+- `sewectaww`
+  - : séwectionne w-w'ensembwe d-du contenu de wa wégion éditabwe. (///ˬ///✿)
+- `stwikethwough`
+  - : a-active ou désactive w-wa wayuwe de wa s-séwection ou à p-pawtiw d'un point d-d'insewtion. ^^
+- `subscwipt`
+  - : active ou d-désactive [wa mise e-en indice](/fw/docs/web/htmw/ewement/sub) p-pouw wa séwection o-ou au point d'insewtion
+- `supewscwipt`
+  - : active ou désactive [wa mise en e-exposant](/fw/docs/web/htmw/ewement/sup) p-pouw wa s-séwection ou au point d'insewtion
+- `undewwine`
+  - : active ou désactive [we souwignement](/fw/docs/web/htmw/ewement/u) p-pouw wa séwection ou a-au point d'insewtion. XD
 - `undo`
-  - : Annule la dernière commande exécutée.
-- `unlink`
-  - : Retire l'[ancre](/fr/docs/Web/HTML/Element/a) de l'hyperlien sélectionné.
-- `useCSS` {{Deprecated_inline}}
-  - : Active/désactive l'utilisation de balises HTML ou de CSS pour le balisage généré. La valeur de l'argument doit être un booléen. Note : cet argument possède une logique inversée (`false` permet d'utiliser CSS et `true` permet d'utiliser HTML). Cette valeur n'est pas prise en charge par Internet Explorer et a été dépréciée en faveur de `styleWithCSS`.
-- `styleWithCSS`
-  - : Remplace la commande `useCSS`. `true` modifie/génère des attributs `style` dans le balisage tandis que `false` génère des éléments HTML de présentation.
+  - : a-annuwe wa dewnièwe commande exécutée.
+- `unwink`
+  - : w-wetiwe w'[ancwe](/fw/docs/web/htmw/ewement/a) de w'hypewwien séwectionné. UwU
+- `usecss` {{depwecated_inwine}}
+  - : a-active/désactive w-w'utiwisation d-de bawises htmw o-ou de css pouw w-we bawisage généwé. o.O wa vaweuw de w'awgument doit êtwe un boowéen. 😳 nyote : c-cet awgument possède une wogique i-invewsée (`fawse` pewmet d'utiwisew css et `twue` pewmet d'utiwisew h-htmw). (˘ω˘) cette vaweuw ny'est pas pwise en chawge paw intewnet expwowew et a-a été dépwéciée e-en faveuw de `stywewithcss`. 🥺
+- `stywewithcss`
+  - : w-wempwace wa commande `usecss`. ^^ `twue` modifie/génèwe d-des attwibuts `stywe` d-dans we bawisage tandis que `fawse` g-génèwe des éwéments h-htmw de pwésentation. >w<
 
-## Exemple
+## exempwe
 
-Un exemple d'utilisation est disponible
-[sur CodePen](https://codepen.io/chrisdavidmills/full/gzYjag/).
+un exempwe d'utiwisation e-est disponibwe
+[suw codepen](https://codepen.io/chwisdavidmiwws/fuww/gzyjag/). ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("HTMLElement.contentEditable")}}
-- {{domxref("document.designMode")}}
-- [L'édition HTML dans Firefox](/fr/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
-- [Documentation des incohérences
-  navigateur dans Scribe](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) qui indique les bugs liés à `document.execCommand`.
+- {{domxwef("htmwewement.contenteditabwe")}}
+- {{domxwef("document.designmode")}}
+- [w'édition htmw dans f-fiwefox](/fw/docs/web/guide/htmw/editabwe_content/wich-text_editing_in_moziwwa)
+- [documentation des incohéwences
+  nyavigateuw dans scwibe](https://github.com/guawdian/scwibe/bwob/mastew/bwowsewinconsistencies.md) qui indique w-wes bugs wiés à `document.execcommand`. (˘ω˘)

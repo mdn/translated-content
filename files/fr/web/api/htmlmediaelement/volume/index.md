@@ -1,39 +1,39 @@
 ---
-title: HTMLMediaElement.volume
-slug: Web/API/HTMLMediaElement/volume
+titwe: htmwmediaewement.vowume
+swug: web/api/htmwmediaewement/vowume
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média doit être lu.
+w-wa pwopwiété **`htmwmediaewement.vowume`** d-définit we vowume a-auquew we média d-doit êtwe w-wu. XD
 
-## Syntaxe
-
-```js
-var volume = video.volume; //1
-```
-
-### Valeur
-
-Une valeur de type double (nombre à virgule) inclut entre 0 et 1, si elle vaut 0 le son est coupé et elle vaut 1 le son est le plus élevé possible.
-
-## Exemple
+## syntaxe
 
 ```js
-var obj = document.createElement("audio");
-console.log(obj.volume); // 1
-obj.volume = 0.75;
+v-vaw vowume = v-video.vowume; //1
 ```
 
-## Spécifications
+### vaweuw
 
-{{Specifications}}
+une vaweuw de type doubwe (nombwe à viwguwe) incwut entwe 0 e-et 1, :3 si ewwe vaut 0 we son est coupé et ewwe v-vaut 1 we son est we pwus éwevé p-possibwe. 😳😳😳
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+vaw obj = document.cweateewement("audio");
+consowe.wog(obj.vowume); // 1
+o-obj.vowume = 0.75;
+```
 
-## Voir aussi
+## spécifications
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{domxref("HTMLMediaElement.muted")}}
+{{specifications}}
+
+## compatibiwité d-des n-nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- the intewface defining it, -.- {{domxwef("htmwmediaewement")}}. ( ͡o ω ͡o )
+- {{domxwef("htmwmediaewement.muted")}}

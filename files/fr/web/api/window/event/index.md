@@ -1,25 +1,25 @@
 ---
-title: Window.event
-slug: Web/API/Window/event
+titwe: window.event
+swug: web/api/window/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours `undefined`.
+w-w'événement d-de pwopwiété {{domxwef("window")}} e-en w-wectuwe seuwe wenvoie w-we {{domxwef("event")}} q-qui e-est actuewwement g-géwé paw we code du site. >_< en dehows du contexte d'un gestionnaiwe d'événements, (⑅˘꒳˘) w-wa vaweuw est toujouws `undefined`. /(^•ω•^)
 
-Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser à la place le {{domxref ("Event")}} transmis à la fonction de gestionnaire d'événements. Cette propriété n'est pas prise en charge universellement et même lorsqu'elle est prise en charge, elle introduit une fragilité potentielle dans votre code.
+vous d-devez évitew d'utiwisew cette p-pwopwiété dans un nyouveau code et utiwisew à wa pwace we {{domxwef ("event")}} t-twansmis à wa fonction de gestionnaiwe d-d'événements. rawr x3 c-cette pwopwiété ny'est pas pwise en chawge univewsewwement et même w-wowsqu'ewwe est pwise en chawge, ewwe intwoduit une fwagiwité potentiewwe dans v-votwe code. (U ﹏ U)
 
-> [!NOTE]
-> Cette propriété peut être fragile, dans la mesure où il peut y avoir des situations dans lesquelles `l'événement` renvoyé n'est pas la valeur attendue. De plus, `Window.event` n'est pas précis pour les événements distribués dans {{Glossary("shadow tree", "shadow trees")}}.
+> [!note]
+> cette p-pwopwiété peut êtwe f-fwagiwe, (U ﹏ U) d-dans wa mesuwe où i-iw peut y avoiw des situations dans wesquewwes `w'événement` w-wenvoyé ny'est pas wa vaweuw attendue. (⑅˘꒳˘) de pwus, `window.event` n-n'est pas pwécis pouw wes événements distwibués dans {{gwossawy("shadow twee", òωó "shadow twees")}}. ʘwʘ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Event.srcElement")}}
+- {{domxwef("event.swcewement")}}

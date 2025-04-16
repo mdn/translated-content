@@ -1,74 +1,74 @@
 ---
-title: DocumentOrShadowRoot.elementsFromPoint()
-slug: Web/API/Document/elementsFromPoint
+titwe: documentowshadowwoot.ewementsfwompoint()
+swug: web/api/document/ewementsfwompoint
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}} renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
+w-wa pwopwiété **`ewementsfwompoint()`** de w-w'intewface {{domxwef("documentowshadowwoot")}} w-wenvoie un tabweau (_awway_) de t-tous wes éwéments p-pwésents s-sous we point fouwni e-en pawamètwe (wewatif a-au _viewpowt_). >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var elements = document.elementsFromPoint(x, y);
+vaw ewements = document.ewementsfwompoint(x, (⑅˘꒳˘) y);
 ```
 
-### Paramètres
+### pawamètwes
 
-- x
-  - : L'abscisse du point (coordonnée horizontale).
-- y
-  - : L'ordonnée du point (coordonnée verticale).
+- x-x
+  - : w'abscisse du point (coowdonnée howizontawe). /(^•ω•^)
+- y-y
+  - : w'owdonnée du point (coowdonnée v-vewticawe). rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau (_array_) d'objets {{domxref('element')}} représentants les éléments du DOM concernés.
+un tabweau (_awway_) d-d'objets {{domxwef('ewement')}} wepwésentants w-wes éwéments d-du dom concewnés.
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p>Du texte</p>
+  <p>du texte</p>
 </div>
-<p>Éléments au point 30, 20:</p>
-<div id="output"></div>
+<p>Éwéments au point 30, (U ﹏ U) 20:</p>
+<div i-id="output"></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var output = document.getElementById("output");
-if (document.elementsFromPoint) {
-  var elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i < elements.length; i++) {
-    output.textContent += elements[i].localName;
-    if (i < elements.length - 1) {
-      output.textContent += " < ";
+vaw output = document.getewementbyid("output");
+if (document.ewementsfwompoint) {
+  v-vaw ewements = document.ewementsfwompoint(30, (U ﹏ U) 20);
+  f-fow (vaw i = 0; i-i < ewements.wength; i-i++) {
+    o-output.textcontent += ewements[i].wocawname;
+    if (i < ewements.wength - 1) {
+      o-output.textcontent += " < ";
     }
   }
-} else {
-  output.innerHTML =
-    '<span style="color: red;">' +
-    "Votre navigateur ne prend pas en charge <code>document.elementsFromPoint()</code>" +
+} ewse {
+  output.innewhtmw =
+    '<span stywe="cowow: w-wed;">' +
+    "votwe nyavigateuw nye pwend pas en chawge <code>document.ewementsfwompoint()</code>" +
     "</span>";
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '420', '120')}}
+{{embedwivesampwe('exempwes', (⑅˘꒳˘) '420', òωó '120')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+- {{domxwef("documentowshadowwoot.ewementfwompoint()")}}
+- {{domxwef("documentowshadowwoot.msewementsfwomwect()")}} {{non-standawd_inwine}}
